@@ -1,0 +1,129 @@
+{
+    "title": "Contextual sentiment embeddings via bi-directional GRU language model",
+    "url": "https://openalex.org/W3210070512",
+    "year": 2021,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2105468542",
+            "name": "Jin Wang",
+            "affiliations": [
+                "Yunnan University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2137750834",
+            "name": "You Zhang",
+            "affiliations": [
+                "Yunnan University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4373347396",
+            "name": "Liang-Chih Yu",
+            "affiliations": [
+                "Yuan Ze University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2115527613",
+            "name": "XueJie Zhang",
+            "affiliations": [
+                "Yunnan University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2105468542",
+            "name": "Jin Wang",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2137750834",
+            "name": "You Zhang",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A4373347396",
+            "name": "Liang-Chih Yu",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2115527613",
+            "name": "XueJie Zhang",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2117130368",
+        "https://openalex.org/W6683738474",
+        "https://openalex.org/W2250539671",
+        "https://openalex.org/W6600018615",
+        "https://openalex.org/W2606776062",
+        "https://openalex.org/W3163841364",
+        "https://openalex.org/W3000271234",
+        "https://openalex.org/W2250879510",
+        "https://openalex.org/W2017292107",
+        "https://openalex.org/W3038880648",
+        "https://openalex.org/W2904760604",
+        "https://openalex.org/W2788889673",
+        "https://openalex.org/W2549624289",
+        "https://openalex.org/W2558875217",
+        "https://openalex.org/W2242874043",
+        "https://openalex.org/W2890002577",
+        "https://openalex.org/W2962739339",
+        "https://openalex.org/W6702248584",
+        "https://openalex.org/W3003048870",
+        "https://openalex.org/W2964046515",
+        "https://openalex.org/W6600020652",
+        "https://openalex.org/W3094173182",
+        "https://openalex.org/W3161925192",
+        "https://openalex.org/W3159156469",
+        "https://openalex.org/W3081987387",
+        "https://openalex.org/W6680532216",
+        "https://openalex.org/W2251771443",
+        "https://openalex.org/W6600297362",
+        "https://openalex.org/W2979860911",
+        "https://openalex.org/W3009874600",
+        "https://openalex.org/W6608548112",
+        "https://openalex.org/W2740582239",
+        "https://openalex.org/W2776249353",
+        "https://openalex.org/W6604204020",
+        "https://openalex.org/W2125076245",
+        "https://openalex.org/W2100664567",
+        "https://openalex.org/W2514588627",
+        "https://openalex.org/W2740782137",
+        "https://openalex.org/W2507974895",
+        "https://openalex.org/W2081580037",
+        "https://openalex.org/W2250243742",
+        "https://openalex.org/W6812014127",
+        "https://openalex.org/W2023736093",
+        "https://openalex.org/W1832693441",
+        "https://openalex.org/W2963355447",
+        "https://openalex.org/W2518202280",
+        "https://openalex.org/W2757205734",
+        "https://openalex.org/W4285719527",
+        "https://openalex.org/W2952566282",
+        "https://openalex.org/W2963012544",
+        "https://openalex.org/W2153579005",
+        "https://openalex.org/W2952230511",
+        "https://openalex.org/W3106003309",
+        "https://openalex.org/W4297747548",
+        "https://openalex.org/W2251939518",
+        "https://openalex.org/W2963626623",
+        "https://openalex.org/W2525778437",
+        "https://openalex.org/W2964121744",
+        "https://openalex.org/W2397710600",
+        "https://openalex.org/W2493916176",
+        "https://openalex.org/W2998704965",
+        "https://openalex.org/W2158139315",
+        "https://openalex.org/W2460474657",
+        "https://openalex.org/W2963341956",
+        "https://openalex.org/W2814750830",
+        "https://openalex.org/W2468328197",
+        "https://openalex.org/W2394700483",
+        "https://openalex.org/W2158899491",
+        "https://openalex.org/W2760392765",
+        "https://openalex.org/W1614298861"
+    ],
+    "abstract": "Compared with conventional word embeddings, sentiment embeddings can distinguish words with similar contexts but opposite sentiment. They can be used to incorporate sentiment information from labeled corpora or lexicons by either end-to-end training or sentiment refinement. However, these methods present two major limitations. First, traditional approaches provide a fixed representation to each word but ignore the alternation of word meaning in different contexts. As a result, the polarity of a certain emotional word may vary with context, but will be assigned with a same representation. Another problem is the handling of out-of-vocabulary (OOV) or informal-writing sentiment words that would be assigned generic vectors (e.g., <UNK>). In addition, if affective words are not included in affective corpora or lexicons, they would be treated as neutral. Using such low-quality embeddings for building a neural model will reduce performance. This study proposes a training model of contextual sentiment embeddings. A stacked two-layer GRU model was used as the language model, simultaneously trained to incorporate semantic and sentiment information from labeled corpora and lexicons. To deal with OOV or informal-writing sentiment words, the WordPiece tokenizer was used to divide the text into subwords. The resulting model can be transferred to downstream applications by either feature extractor or fine-tuning. The results show that the proposed model can handle unseen or informal writing sentiment words and thus outperforms previously proposed methods.",
+    "full_text": null
+}

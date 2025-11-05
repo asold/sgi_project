@@ -1,0 +1,142 @@
+{
+    "title": "Sub-Character Tokenization for Chinese Pretrained Language Models",
+    "url": "https://openalex.org/W4377116057",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2963115205",
+            "name": "Chenglei Si",
+            "affiliations": [
+                "University of Maryland, College Park",
+                "Tsinghua University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2104573188",
+            "name": "Zhengyan Zhang",
+            "affiliations": [
+                "Tsinghua University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2108482218",
+            "name": "Ying-Fa Chen",
+            "affiliations": [
+                "Tsinghua University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2890604480",
+            "name": "Fanchao Qi",
+            "affiliations": [
+                "Tsinghua University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2102849134",
+            "name": "Xiao-Zhi Wang",
+            "affiliations": [
+                "Tsinghua University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2051269448",
+            "name": "Zhiyuan Liu",
+            "affiliations": [
+                "Tsinghua University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2111728759",
+            "name": "Ya-sheng Wang",
+            "affiliations": [
+                "Huawei Technologies (China)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2109590494",
+            "name": "Qun Liu",
+            "affiliations": [
+                "Huawei Technologies (China)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2157167650",
+            "name": "Maosong Sun",
+            "affiliations": [
+                "Tsinghua University"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2560939934",
+        "https://openalex.org/W2788009253",
+        "https://openalex.org/W2131988669",
+        "https://openalex.org/W2964144280",
+        "https://openalex.org/W2889968917",
+        "https://openalex.org/W3135427360",
+        "https://openalex.org/W6771917389",
+        "https://openalex.org/W3021636956",
+        "https://openalex.org/W6802852670",
+        "https://openalex.org/W2897356710",
+        "https://openalex.org/W6755207826",
+        "https://openalex.org/W3098065087",
+        "https://openalex.org/W2559281960",
+        "https://openalex.org/W3171008115",
+        "https://openalex.org/W6779068807",
+        "https://openalex.org/W3099911888",
+        "https://openalex.org/W3173175058",
+        "https://openalex.org/W6845834095",
+        "https://openalex.org/W2963979492",
+        "https://openalex.org/W2963250244",
+        "https://openalex.org/W3170962005",
+        "https://openalex.org/W6768021236",
+        "https://openalex.org/W6635469476",
+        "https://openalex.org/W6631435780",
+        "https://openalex.org/W2944852028",
+        "https://openalex.org/W2010576059",
+        "https://openalex.org/W6736595860",
+        "https://openalex.org/W6766673545",
+        "https://openalex.org/W3095771422",
+        "https://openalex.org/W2951286828",
+        "https://openalex.org/W6758737940",
+        "https://openalex.org/W6682691769",
+        "https://openalex.org/W4285208773",
+        "https://openalex.org/W2962739339",
+        "https://openalex.org/W2121879602",
+        "https://openalex.org/W2962784628",
+        "https://openalex.org/W6850258700",
+        "https://openalex.org/W3014328670",
+        "https://openalex.org/W6635306185",
+        "https://openalex.org/W6761910064",
+        "https://openalex.org/W3174396451",
+        "https://openalex.org/W3174418826",
+        "https://openalex.org/W6739901393",
+        "https://openalex.org/W6789719078",
+        "https://openalex.org/W6767852069",
+        "https://openalex.org/W3171291687",
+        "https://openalex.org/W3023143096",
+        "https://openalex.org/W3015253856",
+        "https://openalex.org/W3164045210",
+        "https://openalex.org/W2759366113",
+        "https://openalex.org/W3177365697",
+        "https://openalex.org/W6765039553",
+        "https://openalex.org/W2986753851",
+        "https://openalex.org/W3176617251",
+        "https://openalex.org/W3187018546",
+        "https://openalex.org/W2949884065",
+        "https://openalex.org/W6785415556",
+        "https://openalex.org/W3106031450",
+        "https://openalex.org/W3210120707",
+        "https://openalex.org/W2938830017",
+        "https://openalex.org/W3102725307",
+        "https://openalex.org/W3101918878",
+        "https://openalex.org/W2965373594",
+        "https://openalex.org/W2971871542",
+        "https://openalex.org/W4303647954",
+        "https://openalex.org/W4385570900",
+        "https://openalex.org/W3124386064"
+    ],
+    "abstract": "Abstract Tokenization is fundamental to pretrained language models (PLMs). Existing tokenization methods for Chinese PLMs typically treat each character as an indivisible token. However, they ignore the unique feature of the Chinese writing system where additional linguistic information exists below the character level, i.e., at the sub-character level. To utilize such information, we propose sub-character (SubChar for short) tokenization. Specifically, we first encode the input text by converting each Chinese character into a short sequence based on its glyph or pronunciation, and then construct the vocabulary based on the encoded text with sub-word segmentation. Experimental results show that SubChar tokenizers have two main advantages over existing tokenizers: 1) They can tokenize inputs into much shorter sequences, thus improving the computational efficiency. 2) Pronunciation-based SubChar tokenizers can encode Chinese homophones into the same transliteration sequences and produce the same tokenization output, hence being robust to homophone typos. At the same time, models trained with SubChar tokenizers perform competitively on downstream tasks. We release our code and models at https://github.com/thunlp/SubCharTokenization to facilitate future work.",
+    "full_text": null
+}

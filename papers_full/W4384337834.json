@@ -1,0 +1,128 @@
+{
+    "title": "On the limitations of large language models in clinical diagnosis",
+    "url": "https://openalex.org/W4384337834",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2129670558",
+            "name": "Justin T. Reese",
+            "affiliations": [
+                "Lawrence Berkeley National Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2008470690",
+            "name": "Daniel Danis",
+            "affiliations": [
+                "Jackson Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1819457079",
+            "name": "J. Harry Caufield",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2893521534",
+            "name": "Tudor Groza",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2119862246",
+            "name": "Elena Casiraghi",
+            "affiliations": [
+                "University of Milan"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1977709779",
+            "name": "Giorgio Valentini",
+            "affiliations": [
+                "University of Milan"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A575195435",
+            "name": "Christopher J. Mungall",
+            "affiliations": [
+                "Lawrence Berkeley National Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2340305778",
+            "name": "Peter N. Robinson",
+            "affiliations": [
+                "University of Connecticut",
+                "Jackson Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2129670558",
+            "name": "Justin T. Reese",
+            "affiliations": [
+                "Lawrence Berkeley National Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2008470690",
+            "name": "Daniel Danis",
+            "affiliations": [
+                "Jackson Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2119862246",
+            "name": "Elena Casiraghi",
+            "affiliations": [
+                "University of Milan"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1977709779",
+            "name": "Giorgio Valentini",
+            "affiliations": [
+                "University of Milan",
+                "Intelligent Systems Research (United States)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A575195435",
+            "name": "Christopher J. Mungall",
+            "affiliations": [
+                "Lawrence Berkeley National Laboratory"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2340305778",
+            "name": "Peter N. Robinson",
+            "affiliations": [
+                "Jackson Laboratory",
+                "UConn Health"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4291023040",
+        "https://openalex.org/W4384561707",
+        "https://openalex.org/W2911489562",
+        "https://openalex.org/W4365143687",
+        "https://openalex.org/W4361289889",
+        "https://openalex.org/W4320920036",
+        "https://openalex.org/W4322208207",
+        "https://openalex.org/W4367041395",
+        "https://openalex.org/W4378673928",
+        "https://openalex.org/W4385647263",
+        "https://openalex.org/W4380730209",
+        "https://openalex.org/W4392619039",
+        "https://openalex.org/W3106811464",
+        "https://openalex.org/W4293103363",
+        "https://openalex.org/W2901332105",
+        "https://openalex.org/W2170282111",
+        "https://openalex.org/W4382918229",
+        "https://openalex.org/W3133702157",
+        "https://openalex.org/W2909934462",
+        "https://openalex.org/W4386045865"
+    ],
+    "abstract": "Abstract Objective Large Language Models such as GPT-4 previously have been applied to differential diagnostic challenges based on published case reports. Published case reports have a sophisticated narrative style that is not readily available from typical electronic health records (EHR). Furthermore, even if such a narrative were available in EHRs, privacy requirements would preclude sending it outside the hospital firewall. We therefore tested a method for parsing clinical texts to extract ontology terms and programmatically generating prompts that by design are free of protected health information. Materials and Methods We investigated different methods to prepare prompts from 75 recently published case reports. We transformed the original narratives by extracting structured terms representing phenotypic abnormalities, comorbidities, treatments, and laboratory tests and creating prompts programmatically. Results Performance of all of these approaches was modest, with the correct diagnosis ranked first in only 5.3-17.6% of cases. The performance of the prompts created from structured data was substantially worse than that of the original narrative texts, even if additional information was added following manual review of term extraction. Moreover, different versions of GPT-4 demonstrated substantially different performance on this task. Discussion The sensitivity of the performance to the form of the prompt and the instability of results over two GPT-4 versions represent important current limitations to the use of GPT-4 to support diagnosis in real-life clinical settings. Conclusion Research is needed to identify the best methods for creating prompts from typically available clinical data to support differential diagnostics.",
+    "full_text": "On the limitations of large language models in clinical diagnosis \n \nJustin T Reese,\n1 Daniel Danis,2 J Harry Caulfied,1 Elena Casiraghi,3 Giorgio Valentini,3,4 \nChristopher J Mungall,1 Peter N Robinson2,5,* \n \n1. Division of Environmental Genomics and Systems Biology, Lawrence Berkeley National Laboratory, \nBerkeley, CA, 94720, USA. \n2. The Jackson Laboratory for Genomic Medicine, Farmington CT, 06032, USA. \n3. AnacletoLab, Dipartimento di Informatica, Università degli Studi di Milano, Milano, Italy. \n4. ELLIS-European Laboratory for Learning and Intelligent Systems. \n5. Institute for Systems Genomics, University of Connecticut, Farmington, CT 06032, United States. \n* correspondence to: The Jackson Laboratory for Genomic Medicine, 10 Discovery Drive, Farmington \nCT, 06032, USA; peter.robinson@jax.org \n \n \nAbstrac t  \nBackground: The potential of large language models (LLM) such as GPT to support complex tasks \nsuch as differential diagnosis has been a subject of debate, with some ascribing near sentient abilities \nto the models and others claiming that LLMs merely perform “autocomplete on steroids”. A recent \nstudy reported that the Generative Pretrained Transformer 4 (GPT-4) model performed well in \ncomplex differential diagnostic reasoning. The authors assessed the performance of GPT-4 in \nidentifying the correct diagnosis in a series of case records from the New England Journal of \nMedicine. The authors constructed prompts based on the clinical presentation section of the case \nreports, and compared the results of GPT-4 to the actual diagnosis. GPT-4 returned the correct \ndiagnosis as a part of its response in 64% of cases, with the correct diagnosis being at rank 1 in 39% \nof cases. However, such concise but comprehensive narratives of the clinical course are not typically \navailable in electronic health records (EHRs). Further, if they were available, EHR records contain \nidentifying information whose transmission is prohibited by  Health Insurance Portability and \nAccountability Act (HIPAA) regulations.  \nMethods: To assess the expected performance of GPT on comparable datasets that can be \ngenerated by text mining and by design cannot contain identifiable information, we parsed the texts of \nthe case reports and extracted Human Phenotype Ontology (HPO) terms, from which prompts for \nGPT were constructed that contain largely the same clinical abnormalities but lack the surrounding \nnarrative. \nResults: While the performance of GPT-4 on the original narrative-based text was good, with the final \ndiagnosis being included in its differential in 29/75 cases (38.7%; rank 1 in 17.3% of cases; mean \nrank of 3.4), the performance of GPT-4 on the feature-based approach that includes the major clinical \nabnormalities without additional narrative texas substantially worse, with GPT-4 including the final \ndiagnosis in its differential in 8/75 cases (10.7%; rank 1 in 4.0% of cases; mean rank of 3.9). \nInterpretation: We consider the feature-based queries to be a more appropriate test of the \nperformance of GPT-4 in diagnostic tasks, since it is unlikely that the narrative approach can be used \nin actual clinical practice. Future research and algorithmic development is needed to determine the \noptimal approach to leveraging LLMs for clinical diagnosis.  \n \n . CC-BY 4.0 International licenseIt is made available under a \n is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. (which was not certified by peer review)\nThe copyright holder for this preprint this version posted July 14, 2023. ; https://doi.org/10.1101/2023.07.13.23292613doi: medRxiv preprint \nNOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.\n \nIntroduction  \nA recent study1 reported that the Generative Pretrained Transformer 4 (GPT-4) model performed well \nin complex differential diagnostic reasoning. They evaluated the performance of GPT-4 on 74 case \nrecords from the New England Journal of Medicine (NEJM) published in 2021 and 2022 by sending to \nGPT-4 a standard prompt, followed by the part of the case report that included the case presentation \nup to but not including the discussant’s initial response. The authors found that GPT-4 returned the \ncorrect diagnosis as a part of its response in 64% of cases, with the correct diagnosis being at rank 1 \nin 39% of cases.\n1 \n \nWe examined the influence of linguistic context on the performance of GPT-4 in differential diagnostic \nreasoning by developing equivalent queries that contained the phenotypic abnormalities described in \nthe original reports without the accompanying narrative text. \n \nMethods \nWe included NEJM case reports from Case 2-2021 to 40-2022 in our study, omitting 5 of 80 case \nreports that did not describe a diagnostic dilemma. The text representing the initial clinical \npresentation was taken from the documents by extracting the first discussant’s section. We appended \nthis text to the standardized prompt as described in the recent study,\n1 and used the OntoGPT2 tool to \nquery GPT-4. To assess the influence of the narrative context of the case reports, we extracted the \nclinical abnormalities as human phenotype ontology (HPO) terms. 3 Observed and excluded \nabnormalities were included in the prompt using a standard template, whereby the clinical features \nwere arranged according to the time point of presentation (Figure 1).  \n \n \n . CC-BY 4.0 International licenseIt is made available under a \n is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. (which was not certified by peer review)\nThe copyright holder for this preprint this version posted July 14, 2023. ; https://doi.org/10.1101/2023.07.13.23292613doi: medRxiv preprint \n \n \nFigure 1. GPT-4 prompt templates. (A) An example showing the narrative template provided to GPT-4 (case \n38-2021).4 (B) The corresponding example using the simplified, feature-based template. The features in the \noriginal text that were mined to generate the feature-based query are highlighted (Observed features in blue \nand excluded features in red; the phrases introducing the time periods are underlined).. The actual diagnosis in \nthis case was lead poisoning GPT-4 returned the correct diagnosis at rank 11 using the narrative query and did \nnot return any related diagnosis with the feature based query. In this example, the case presentation is \nrelatively short; in many of the analyzed cases, the presentation had a length of a page or longer. \n \nResults \nWe presented GPT-4 with the original description by the primary discussant (narrative approach), and \nobserved that GPT-4 included the final diagnosis in its differential in 29/75 cases (38.7%; rank 1 in \n17.3% of cases; mean rank of 3.4). These results are similar to but not identical to those of the above \nmentioned study, perhaps because of the stochasticity of the GPT-4 algorithm or changes to the \napplication subsequent to the original study. We then tested the feature-based approach that includes \nthe major clinical abnormalities without additional narrative text. Here, GPT-4 included the final \ndiagnosis in its differential in 8/75 cases (10.7%; rank 1 in 4.0% of cases; mean rank of 3.9) (Figure \n2). \n \n \n \n . CC-BY 4.0 International licenseIt is made available under a \n is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. (which was not certified by peer review)\nThe copyright holder for this preprint this version posted July 14, 2023. ; https://doi.org/10.1101/2023.07.13.23292613doi: medRxiv preprint \nFigure 2. Performance of GPT-4 in diagnostic challenges using narrative and feature- based queries\nhistogram of scores (0-5) denoting accuracy of GPT- 4 diagnosis using narrative (blue bars) and extracted \n(orange bars) from NEJM case reports. (B) A histogram of the ranks of the correc t diagnosis in the differential di\nproduced by GPT-4 in cases where the score was 4 (nearly the correct diagnosis) or 5 (correct diagnosis) using n\n(blue bars) and extracted features (orange bars) from NEJM case reports. The count of unranke d cases (scores \nshown for comparison. The results were assigned scores using the same scale as in the previous study. 1 Resu\nscored independently by three coauthors (P.N.R, D.D., J.T.R.) and disagreements were resolved by consensus.\nactual diagnosis was suggested in the differential; 4 = the suggestions included something very close, but not ex\nthe suggestions included something closely related that might have been helpful; 2 = the suggestions included so\nrelated, but unlikely to be helpful; 0 = no suggestions close to the target diagnosis. \n  \nDiscussion \nThe potential of large language models (LLM) such as GPT has been a subject of debate, with\nascribing near sentient abilities to the models and others claiming that LLMs merely p\n“autocomplete on steroids”. For the purpose of applying LLMs to the problem of clinical diagnos\nimportant to realize that LLMs generate text based on patterns learned from huge amounts of t\ntexts5. LLMs such as GPT- 4 do not possess an explicit model of medical domain knowledge a\nnot perform a symbolic human- like reasoning, but instead performs autocompletion by im\nlearning medical domain knowledge from the data. \n \nWe compared the performance of GPT-\n4 on the original narrative texts and simplified versions\ncases in which only clinical features representable by HPO terms are presented to GPT -\nperformance on the feature- based queries was substantially worse than that of the narrative q\n(Figure 2). We consider the feature- based queries to be a more appropriate test of the perfor\nof GPT-4 in diagnostic tasks, since it is unlikely that the narrative approach can be used in \nclinical practice. NEJM-style clinical narratives are not readily available for most cases and EHR\ncannot be transmitted across the internet without violating privacy regul ations. In contras\nstraightforward to generate a feature- based list of clinical problems, symptoms, and \nabnormalities that can be used to generate a prompt for GPT. Currently, GPT- 4 is not availa\ninstallation within medical centers, and it remains an open question as to whether smaller m\neventually embedding structured information, will demonstrate comparable performance. A po\nsolution could consist in coupling LLMs with a formal representation of medi cal knowledg\nexample using biomed ical knowledge graphs. 6 Future research and algorithmic developm\nneeded to determine the optimal approach to leveraging LLMs for clinical diagnosis.  \n \nies. (A) A \nd features \nl diagnosis \ng narrative \ns 0-3) are \nsults were \ns. 5 = the \n exact; 3 = \nsomething \nith some \n perform \nosis, it is \nf training \ne and do \nimplicitly \nns of the \n-4. The \ne queries \nformance \nin actual \nHR texts \nast, it is \nnd other \nilable for \n models, \n possible \ndge, for \npment is \n . CC-BY 4.0 International licenseIt is made available under a \n is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. (which was not certified by peer review)\nThe copyright holder for this preprint this version posted July 14, 2023. ; https://doi.org/10.1101/2023.07.13.23292613doi: medRxiv preprint \n \nFunding \nNICHD: 5R01HD103805-03    \nNIH OD: 5R24OD011883-06  \n3U24TR002306-04S1    \nDirector, Office of Science, Office of Basic Energy Sciences of the U.S. Department of Energy \nContract No. DE-AC02-05CH11231 \n \nReferences \n1. Kanjee Z, Crowe B, Rodman A. Accuracy of a G enerative Artificial Intelligence Model in a Complex \nDiagnostic Challenge. JAMA. Published online June 15, 2023. doi:10.1001/jama.2023.8288 \n2. Harry Caufield J, Hegde H, Emonet V, et al. Structured prompt interrogation and recursive extraction of \nsemantics (SPIRES): A method for populating knowledge bases using zero-shot learning. arXiv [csAI]. \nPublished online April 5, 2023. http://arxiv.org/abs/2304.02711 \n3. Köhler S, Gargano M, Matentzoglu N, et al. The Human Phenotype Ontology in 2021. Nucleic Acids Res. \n2021;49(D1):D1207-D1217. \n4. Willett LL, Bromberg GK, Chung R, Leaf RK, Goldman RH, Dickey AK. Case 38-2021: A 76-Year-Old \nWoman with Abdominal Pain, Weight Loss, and Memory Impairment. N Engl J Med. 2021;385(25):2378-\n2388. \n5. Bender EM, Gebru T, McMillan-Major A, Shmitchell S. On the Dangers of Stochastic Parrots: Can \nLanguage Models Be Too Big? /i1 . In: Proceedings of the 2021 ACM Conference on Fairness, \nAccountability, and Transparency. FAccT ’21. Association for Computing Machinery; 2021:610-623. \n6. Moor M, Banerjee O, Abad ZSH, et al. Foundation models for generalist medical artificial intelligence. \nNature. 2023;616(7956):259-265. \n \n . CC-BY 4.0 International licenseIt is made available under a \n is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity. (which was not certified by peer review)\nThe copyright holder for this preprint this version posted July 14, 2023. ; https://doi.org/10.1101/2023.07.13.23292613doi: medRxiv preprint "
+}

@@ -1,0 +1,100 @@
+{
+    "title": "Rethinking Vision Transformer and Masked Autoencoder in Multimodal Face Anti-Spoofing",
+    "url": "https://openalex.org/W4399352439",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2726404128",
+            "name": "Zitong Yu",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2979407879",
+            "name": "Rizhao Cai",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2548745861",
+            "name": "Yawen Cui",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2097339281",
+            "name": "Xin Liu",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2118992468",
+            "name": "Yongjian Hu",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2117310729",
+            "name": "Alex C. Kot",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W3154596443",
+        "https://openalex.org/W2787613668",
+        "https://openalex.org/W4312685069",
+        "https://openalex.org/W2965184975",
+        "https://openalex.org/W2174309130",
+        "https://openalex.org/W2551249768",
+        "https://openalex.org/W4390872941",
+        "https://openalex.org/W4313138626",
+        "https://openalex.org/W4295917908",
+        "https://openalex.org/W6683411478",
+        "https://openalex.org/W2778720069",
+        "https://openalex.org/W3005973417",
+        "https://openalex.org/W3183943918",
+        "https://openalex.org/W3175196926",
+        "https://openalex.org/W3044654932",
+        "https://openalex.org/W3099271666",
+        "https://openalex.org/W4313156423",
+        "https://openalex.org/W6759579507",
+        "https://openalex.org/W4312374582",
+        "https://openalex.org/W4312651322",
+        "https://openalex.org/W2095252718",
+        "https://openalex.org/W2755702751",
+        "https://openalex.org/W3206549629",
+        "https://openalex.org/W4285601702",
+        "https://openalex.org/W2963656031",
+        "https://openalex.org/W3138516171",
+        "https://openalex.org/W3121127014",
+        "https://openalex.org/W3139414251",
+        "https://openalex.org/W4376864768",
+        "https://openalex.org/W3135785775",
+        "https://openalex.org/W3156245112",
+        "https://openalex.org/W4312282534",
+        "https://openalex.org/W4221167490",
+        "https://openalex.org/W4214851077",
+        "https://openalex.org/W3006587358",
+        "https://openalex.org/W2163352848",
+        "https://openalex.org/W6717588342",
+        "https://openalex.org/W2990068819",
+        "https://openalex.org/W2969289739",
+        "https://openalex.org/W6739901393",
+        "https://openalex.org/W4285186923",
+        "https://openalex.org/W4225678970",
+        "https://openalex.org/W4285061161",
+        "https://openalex.org/W6797790494",
+        "https://openalex.org/W4312804044",
+        "https://openalex.org/W2956066883",
+        "https://openalex.org/W4385805084",
+        "https://openalex.org/W3108722472",
+        "https://openalex.org/W3036080349",
+        "https://openalex.org/W3188354902",
+        "https://openalex.org/W4312358294",
+        "https://openalex.org/W3035459165",
+        "https://openalex.org/W3154213653",
+        "https://openalex.org/W2964245886",
+        "https://openalex.org/W2968337163",
+        "https://openalex.org/W3006377070",
+        "https://openalex.org/W3101998545",
+        "https://openalex.org/W3198377975",
+        "https://openalex.org/W2998570087"
+    ],
+    "abstract": "Abstract Recently, vision transformer (ViT) based multimodal learning methods have been proposed to improve the robustness of face anti-spoofing (FAS) systems. However, there are still no works to explore the fundamental natures (e.g., modality-aware inputs, suitable multimodal pre-training, and efficient finetuning) in vanilla ViT for multimodal FAS. In this paper, we investigate three key factors (i.e., inputs, pre-training, and finetuning) in ViT for multimodal FAS with RGB, Infrared (IR), and Depth. First, in terms of the ViT inputs, we find that leveraging local feature descriptors (such as histograms of oriented gradients) benefits the ViT on IR modality but not RGB or Depth modalities. Second, in consideration of the task (FAS vs. generic object classification) and modality (multimodal vs. unimodal) gaps, ImageNet pre-trained models might be sub-optimal for the multimodal FAS task. Finally, in observation of the inefficiency on direct finetuning the whole or partial ViT, we design an adaptive multimodal adapter (AMA), which can efficiently aggregate local multimodal features while freezing majority of ViT parameters. To bridge these gaps, we propose the modality-asymmetric masked autoencoder (M $$^{2}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mrow/> <mml:mn>2</mml:mn> </mml:msup> </mml:math> A $$^{2}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mrow/> <mml:mn>2</mml:mn> </mml:msup> </mml:math> E) for multimodal FAS self-supervised pre-training without costly annotated labels. Compared with the previous modality-symmetric autoencoder, the proposed M $$^{2}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mrow/> <mml:mn>2</mml:mn> </mml:msup> </mml:math> A $$^{2}$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:msup> <mml:mrow/> <mml:mn>2</mml:mn> </mml:msup> </mml:math> E is able to learn more intrinsic task-aware representation and compatible with modality-agnostic (e.g., unimodal, bimodal, and trimodal) downstream settings. Extensive experiments with both unimodal (RGB, Depth, IR) and multimodal (RGB+Depth, RGB+IR, Depth+IR, RGB+Depth+IR) settings conducted on multimodal FAS benchmarks demonstrate the superior performance of the proposed methods. One highlight is that the proposed method is robust under various missing-modality cases where previous multimodal FAS models suffer serious performance drops. We hope these findings and solutions can facilitate the future research for ViT-based multimodal FAS.",
+    "full_text": null
+}

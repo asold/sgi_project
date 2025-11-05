@@ -1,0 +1,42 @@
+{
+    "title": "Distinguishing word identity and sequence context in DNA language models",
+    "url": "https://openalex.org/W4384206353",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A5021041939",
+            "name": "Melissa Sanabria",
+            "affiliations": [
+                "Technische Universität Dresden"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5057724103",
+            "name": "Jonas Hirsch",
+            "affiliations": [
+                "Technische Universität Dresden"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5029443962",
+            "name": "Anna R. Poetsch",
+            "affiliations": [
+                "Technische Universität Dresden"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W6739901393",
+        "https://openalex.org/W3203588026",
+        "https://openalex.org/W3030163527",
+        "https://openalex.org/W4316339774",
+        "https://openalex.org/W3127238141",
+        "https://openalex.org/W2896457183",
+        "https://openalex.org/W2012627860",
+        "https://openalex.org/W2971569798",
+        "https://openalex.org/W1614298861",
+        "https://openalex.org/W2786672974"
+    ],
+    "abstract": "Abstract Transformer-based large language models (LLMs) are very suited for biological sequence data, because the structure of protein and nucleic acid sequences show many analogies to natural language. Complex relationships in biological sequence can be learned, although there may not be a clear concept of words, because they can be generated through tokenization. Training is subsequently performed for masked token prediction. With this strategy, the models learn both the token sequence identity and a larger sequence context. We developed a framework to interrogate what a model learns, which is both relevant for the interpretability of the model and to evaluate its potential for specific tasks. We used a DNA language model, which is trained on the human reference genome with a Bidirectional Encoder Representations from Transformers (BERT) model. In this model, tokens are defined with overlapping k-mers. To gain insight into the model’s learning, we interrogated how the model performs predictions, extracted token embeddings, and defined a fine-tuning benchmarking task to predict the next tokens of different sizes without overlaps. This task is very suited to evaluate different pretrained DNA language models, also called foundation models, since it does not interrogate specific genome biology, does not depend on the tokenization strategy, the size of the vocabulary, the dictionary, or the number of parameters used to train the model. Lastly, the task performs without leakage of information from token identity into the prediction task, which makes it particularly useful to evaluate the learning of sequence context. Through this assessment we discovered that the model with overlapping k-mers struggles to learn larger sequence context. Instead, the learned embeddings largely represent token sequence. Still, good performance is achieved for genome biology inspired fine-tuning tasks. Models with overlapping tokens may be used for tasks where a larger sequence context is of less relevance, but the token sequence directly represents the desired learning feature. This emphasizes the need to interrogate knowledge representation in biological large language models. Transparency is particularly important for biomedical use cases and an understanding of what the models are learning can be used to match the model to the desired task.",
+    "full_text": null
+}

@@ -1,0 +1,132 @@
+{
+    "title": "FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design",
+    "url": "https://openalex.org/W4398160938",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2100915603",
+            "name": "Yangyang Yu",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2122542886",
+            "name": "Haohang Li",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2098444430",
+            "name": "Zhi Chen",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2905738675",
+            "name": "Yuechen Jiang",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2079581369",
+            "name": "Yang Li",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2120339633",
+            "name": "Denghui Zhang",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2096011295",
+            "name": "Rong Liu",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A59122276",
+            "name": "Jordan W. Suchow",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A722404796",
+            "name": "Khaldoun Khashanah",
+            "affiliations": [
+                "Stevens Institute of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2100915603",
+            "name": "Yangyang Yu",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2122542886",
+            "name": "Haohang Li",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2098444430",
+            "name": "Zhi Chen",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2905738675",
+            "name": "Yuechen Jiang",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2079581369",
+            "name": "Yang Li",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2120339633",
+            "name": "Denghui Zhang",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2096011295",
+            "name": "Rong Liu",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A59122276",
+            "name": "Jordan W. Suchow",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A722404796",
+            "name": "Khaldoun Khashanah",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4361866125",
+        "https://openalex.org/W4387835442",
+        "https://openalex.org/W4386184788",
+        "https://openalex.org/W2084611707",
+        "https://openalex.org/W3032912785",
+        "https://openalex.org/W4382998379",
+        "https://openalex.org/W3213586249",
+        "https://openalex.org/W4289744562",
+        "https://openalex.org/W2500296241",
+        "https://openalex.org/W4283786485",
+        "https://openalex.org/W1990451873",
+        "https://openalex.org/W4302583945",
+        "https://openalex.org/W2860018042"
+    ],
+    "abstract": "Recent advancements in Large Language Models (LLMs) have exhibited notable efficacy in question-answering (QA) tasks across diverse domains. Their prowess in integrating extensive web knowledge has fueled interest in developing LLM-based autonomous agents. While LLMs are efficient in decoding human instructions and deriving solutions by holistically processing historical inputs, transitioning to purpose-driven agents requires a supplementary rational architecture to process multi-source information, establish reasoning chains, and prioritize critical tasks. Addressing this, we introduce FinMem, a novel LLM-based agent framework devised for financial decision-making. It encompasses three core modules: Profiling, to customize the agent's characteristics; Memory, with layered message processing, to aid the agent in assimilating hierarchical financial data; and Decision-making, to convert insights gained from memories into investment decisions. Notably, FinMem's memory module aligns closely with the cognitive structure of human traders, offering robust interpretability and real-time tuning. Its adjustable cognitive span allows for the retention of critical information beyond human perceptual limits, thereby enhancing trading outcomes. This framework enables the agent to self-evolve its professional knowledge, react agilely to new investment cues, and continuously refine trading decisions in the volatile financial environment. We first compare FinMem with various algorithmic agents on a scalable real-world financial dataset, underscoring its leading trading performance in stocks. We then fine-tuned the agent's perceptual span and character setting to achieve a significantly enhanced trading performance. Collectively, FinMem presents a cutting-edge LLM agent framework for automated trading, boosting cumulative investment returns.",
+    "full_text": "FINMEM: A Performance-Enhanced LLM Trading Agent with Layered Memory\nand Character Design\nYangyang Yu1*, Haohang Li1*, Zhi Chen1*, Yuechen Jiang1*, Yang Li1*,\nDenghui Zhang1, Rong Liu1, Jordan W. Suchow1, Khaldoun Khashanah1†\n1Stevens Institute of Technology, Hoboken, NJ, United States\n{yyu44, hli113, zchen100, yjiang52, yli269, dzhang42, rliu20, jws, kkhashan}@stevens.edu\nAbstract\nAbstract Recent advancements in Large Language Mod-\nels (LLMs) have exhibited notable efficacy in question-\nanswering (QA) tasks across diverse domains. Their prowess\nin integrating extensive web knowledge has fueled interest in\ndeveloping LLM-based autonomous agents. While LLMs are\nefficient in decoding human instructions and deriving solu-\ntions by holistically processing historical inputs, transition-\ning to purpose-driven agents requires a supplementary ratio-\nnal architecture to process multi-source information, estab-\nlish reasoning chains, and prioritize critical tasks. Address-\ning this, we introduce F INMEM, a novel LLM-based agent\nframework devised for financial decision-making. It encom-\npasses three core modules: Profiling, to customize the agent’s\ncharacteristics; Memory, with layered message processing,\nto aid the agent in assimilating hierarchical financial data;\nand Decision-making, to convert insights gained from mem-\nories into investment decisions. Notably, FINMEM’s memory\nmodule aligns closely with the cognitive structure of human\ntraders, offering robust interpretability and real-time tuning.\nIts adjustable cognitive span allows for the retention of criti-\ncal information beyond human perceptual limits, thereby en-\nhancing trading outcomes. This framework enables the agent\nto self-evolve its professional knowledge, react agilely to new\ninvestment cues, and continuously refine trading decisions in\nthe volatile financial environment. We first compare FINMEM\nwith various algorithmic agents on a scalable real-world fi-\nnancial dataset, underscoring its leading trading performance\nin stocks. We then fine-tuned the agent’s perceptual span and\ncharacter setting to achieve a significantly enhanced trading\nperformance. Collectively, FINMEM presents a cutting-edge\nLLM agent framework for automated trading, boosting cu-\nmulative investment returns.\nIntroduction\nWith the influx of diverse financial data streams from the\nweb, traders face a deluge of information from various\nsources. This requires them rapidly to understand, mem-\norize, and filtrate crucial events for investment decisions.\nHowever, innate cognitive limitations restrict human traders\nfrom processing information within their perception and\n*Equal contribution\n†Corresponding Author\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nmemory capacity, a span much narrower than the actual vol-\nume of available information (Black 1986). Consequently,\ninsufficiently considering or even dismissing critical events\naffecting trading decisions becomes increasingly concerning\nas data availability expands. To overcome the physical limi-\ntations of human traders‘ memory systems, researchers have\nbeen consistently working on designing autonomous trading\nagent systems. These systems are expected to effectively in-\ntegrate available information and have a sophisticated back-\nbone algorithm for enhanced trading performance.\nThe development of autonomous trading systems has pro-\ngressed from initial rule-based strategies (Edwards, Magee,\nand Bassetti 2018) to advanced machine-learning algorithms\n(Huang et al. 2019). Recently, Reinforcement Learning (RL)\nagents, particularly those using Deep Reinforcement Learn-\ning (DRL) as their core algorithms (Millea 2021), have at-\ntracted attention in both academia and industry. Leverag-\ning both RL principles and deep learning, DRL agents ef-\nfectively handle and learn from scalable and diverse finan-\ncial data, including stock prices, key financial indicators,\nand market sentiments. Research suggests that DRLs can\nmeet the crucial needs of trading agents to process and\nmake informed decisions from large volumes of data. How-\never, certain inherent features of DRL algorithms exhibit\nnotable deficiencies in financial applications. Firstly, DRL\nagents lack interpretability in the rationale behind their\ndecision-making (Balhara et al. 2022). Secondly, integrat-\ning textual data with numerical features, crucial in fi-\nnance, poses a challenge for DRL agents on convergence\n(Gershman and ¨Olveczky 2020). Thus, a backbone algo-\nrithm that offers transparent reasoning and effectively cap-\ntures investment-related textual insights is essential.\nRecent advancements in Large Language Models\n(LLMs), like Generative Pre-trained Transformers (GPTs)\n(OpenAI 2023), have opened new avenues for developing\ntrading agents, addressing past limitations. These LLM-\nbased agents can articulate reasons and outcomes from their\nimmediate observations. Their extensive pre-trained knowl-\nedge and ability to integrate diverse data sources, includ-\ning textual and numerical information, allow them to tran-\nscend the constraints of isolated environments. This ap-\nproach, when reinforced with well-designed prompt tem-\nplates, markedly improves decision-making in various sec-\ntors (Wang et al. 2023). Notably, a growing body of research\nAAAI Spring Symposium Series (SSS-24)\n595\nhas focused on utilizing LLMs to make informed trading de-\ncisions for stocks (Yang, Liu, and Wang 2023; Wu et al.\n2023). However, in currently available approaches, LLMs\nprimarily serve as a question-answering (QA) role rather\nthan functioning as autonomous agents. The potential issue\nwith these approaches is the incapability of fully under-\nstanding the varying timeliness associated with differ-\nent types of financial data. While these LLM agents out-\nperform traditional trading benchmarks, their uniform pro-\ncessing in QA sequences leads to failure in remembering\nkey messages. Additionally, their recognition of financial\ndata timeliness depends heavily on the uncertain and labori-\nous fine-tuning of LLMs. These shortfalls affect their daily\nknowledge updating capability, due to a lack of a memory\ncomponent, thereby diminishing their effectiveness in prior-\nitizing critical events.\nFINMEM Framework\nTo bridge this gap, we introduce F INMEM, a novel LLM-\nbased autonomous trading agent. It excels in processing\nmulti-source financial data through a layered memory mod-\nule and adapts to market volatility by offering a self-adaptive\ncharacter setting.\nOur concept is initially inspired by the Generative Agents\nframework by Park et al., aimed at enhancing the efficient re-\ntrieval of key events for general-purpose LLM agents. This\nframework encompasses a unique character design and seed\nmemory, activating the agent upon specific query through\nprompts. It prioritizes events in a unified memory stream,\nranked by a linear combination of recency, relevancy, and\nimportance. The framework (Park et al. 2023) lays the\ngroundwork for LLM agent design, featuring a character\nprofiling module, a memory module for recording and re-\ntrieving memories, and an action module for informed ac-\ntions. This structure is instrumental in guiding the agent\ntoward goal fulfillment in general social contexts. How-\never, Park et al.’s framework struggles with compre-\nhending financial data with varying timeliness and im-\nportance, like daily news versus quarterly and annual re-\nports. Key challenges involve quantifying the distinct time-\nliness of data, optimizing information retrieval, and provid-\ning detailed reflections to improve the future decisions. To\ntackle these challenges, we further propose F INMEM with\nthe following improvements.\nFINMEM maintains a modular approach similar to Park\net al., but features novel design of profiling and mem-\nory modules. The profiling module of F INMEM provides a\ntrading-task-specific professional background and includes\na self-adaptive risk inclination feature, augmenting its ro-\nbustness against market fluctuations. F INMEM’s memory\nmodule innovatively incorporates working memory and lay-\nered long-term memory components, ideal for stratified in-\nformation processing. Its working memory acts as a dynamic\n“workspace,” enabling operations like summarization, ob-\nservation, and reflection on information to facilitate trad-\ning decisions. Its long-term memory, composed of shallow,\nintermediate, and deep layers (Craik and Lockhart 1972),\nmanages varied decay rates to retain different types of in-\nformation across various timescales, aligning with their dis-\ntinct timeliness. For instance, daily news, with its immedi-\nate effects on stock markets, is channeled into the shallow\nprocessing layer. Meanwhile, annual company reports, ex-\nerting a more prolonged impact, are processed in the deep\nlayer by FINMEM. Each layer in FINMEM prioritizes mem-\nory events based on the assemble of recency, relevancy, and\nimportance close to Park et al.’s method. However, it intro-\nduces new measurements for recency and importance, tai-\nlored to better allocate and prioritize data in the appropriate\nlong-term memory layer. F INMEM’s memory mechanism\ncan also transit significantly impactful investment memory\nevents to deeper processing layers, ensuring their retention\nfor extended periods. F INMEM’s memory module can mir-\nror the human cognitive system (Sweller 2012) and facili-\ntate agile, real-time decisions (Sun 2004). It enables con-\ntinuous evolution in professional knowledge through struc-\ntured summarizing, retrospecting experiences, and reacting\nto new trading scenarios. Additionally, FINMEM includes a\ndecision-making module that synergizes top memories with\ncurrent market conditions to derive investment decisions.\nOutcomes\nFINMEM provides three key contributions:\nFINMEM presents a state-of-the-art LLM-based trad-\ning agent with a human-aligned memory mechanism and\ncharacter design, particularly crafted to capture investment\ninsights from the financial market. In its agent memory mod-\nule design, F INMEM emulates human working and layered\nlong-term memory mechanisms. This approach effectively\nharnesses the time-sensitive aspects of financial data, cap-\nturing crucial investment insights and thereby boosting trad-\ning performance. F INMEM’s profiling module features dy-\nnamic character settings, enabling continuous updates in do-\nmain knowledge and risk preference to adapt to volatile\ntrading environments, thereby enhancing F INMEM’s capa-\nbilities. Experiments show that FINMEM evolves its knowl-\nedge base from past trades and ongoing market interactions,\nmaintaining robustness in complex environments.\nFINMEM can utilize its unique features to expand the\nagent’s perceptual range beyond the human limitation to\nmake well-informed trading decisions. Cognitive research\nsuggests that human working memory is limited to recalling\nfive to nine events at once (Miller 1956). While this avoids\ninformation overload, it may lead to insufficient insight for\naccurate decision-making. In contrast, F INMEM’s memory\nmodule transcends this constraint. Its cognitive load can be\nflexibly adjusted by tuning the number of retrieved events\nfrom each layer of long-term memory, allowing FINMEM to\ndeliver superior trading decisions in data-rich contexts.\nFINMEM achieves impressive trading performance\nusing training data that is limited in volume and spans\na short time period. Experiments show that training F IN-\nMEM with a timeframe much shorter than that required by\ncomparative models. This efficiency stems from optimally\nutilizing multi-source data and capturing critical trading sig-\nnals. Notably, FINMEM is effective even on smaller datasets\nand with general-purpose LLMs, with its performance ex-\npected to enhance further with larger, higher-quality finan-\ncial datasets and LLMs fine-tuned for financial applications.\n596\nReferences\nBalhara, S.; Gupta, N.; Alkhayyat, A.; Bharti, I.; Malik,\nR. Q.; Mahmood, S. N.; and Abedi, F. 2022. A survey on\ndeep reinforcement learning architectures, applications and\nemerging trends. IET Communications.\nBlack, F. 1986. Noise. The journal of finance, 41(3): 528–\n543.\nCraik, F. I.; and Lockhart, R. S. 1972. Levels of process-\ning: A framework for memory research. Journal of verbal\nlearning and verbal behavior, 11(6): 671–684.\nEdwards, R. D.; Magee, J.; and Bassetti, W. C. 2018. Tech-\nnical analysis of stock trends. CRC press.\nGershman, S. J.; and ¨Olveczky, B. P. 2020. The neuro-\nbiology of deep reinforcement learning. Current Biology,\n30(11): R629–R632.\nHuang, B.; Huan, Y .; Xu, L. D.; Zheng, L.; and Zou, Z. 2019.\nAutomated trading systems statistical and machine learning\nmethods and hardware implementation: a survey.Enterprise\nInformation Systems, 13(1): 132–144.\nMillea, A. 2021. Deep reinforcement learning for trad-\ning—A critical survey. Data, 6(11): 119.\nMiller, G. A. 1956. The magical number seven, plus or mi-\nnus two: Some limits on our capacity for processing infor-\nmation. Psychological review, 63(2): 81.\nOpenAI. 2023. GPT-4 Technical Report. arXiv:2303.08774.\nPark, J. S.; O’Brien, J.; Cai, C. J.; Morris, M. R.; Liang,\nP.; and Bernstein, M. S. 2023. Generative Agents: Interac-\ntive Simulacra of Human Behavior. In Proceedings of the\n36th Annual ACM Symposium on User Interface Software\nand Technology, UIST ’23. New York, NY , USA: Associa-\ntion for Computing Machinery. ISBN 9798400701320.\nSun, R. 2004. Desiderata for cognitive architectures. Philo-\nsophical psychology, 17(3): 341–373.\nSweller, J. 2012. Human cognitive architecture: Why some\ninstructional procedures work and others do not.\nWang, L.; Ma, C.; Feng, X.; Zhang, Z.; Yang, H.; Zhang, J.;\nChen, Z.; Tang, J.; Chen, X.; Lin, Y .; et al. 2023. A survey\non large language model-based autonomous agents. arXiv\npreprint arXiv:2308.11432.\nWu, S.; Irsoy, O.; Lu, S.; Dabravolski, V .; Dredze, M.;\nGehrmann, S.; Kambadur, P.; Rosenberg, D.; and Mann, G.\n2023. Bloomberggpt: A large language model for finance.\narXiv preprint arXiv:2303.17564.\nYang, H.; Liu, X.-Y .; and Wang, C. D. 2023. FinGPT: Open-\nSource Financial Large Language Models. arXiv preprint\narXiv:2306.06031.\n597"
+}

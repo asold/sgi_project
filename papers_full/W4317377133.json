@@ -1,0 +1,129 @@
+{
+    "title": "CMF-Net: craniomaxillofacial landmark localization on CBCT images using geometric constraint and transformer",
+    "url": "https://openalex.org/W4317377133",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A5047646563",
+            "name": "Gang Lu",
+            "affiliations": [
+                "Southeast University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5100687822",
+            "name": "Huazhong Shu",
+            "affiliations": [
+                "Southeast University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5103021832",
+            "name": "Han Bao",
+            "affiliations": [
+                "Nanjing Medical University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5008751186",
+            "name": "Youyong Kong",
+            "affiliations": [
+                "Southeast University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5100374091",
+            "name": "Chen Zhang",
+            "affiliations": [
+                "Southeast University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5101590151",
+            "name": "Bin Yan",
+            "affiliations": [
+                "Nanjing Medical University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5081163201",
+            "name": "Yuanxiu Zhang",
+            "affiliations": [
+                "Southeast University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5052775662",
+            "name": "Jean-Louis Coatrieux",
+            "affiliations": [
+                "Laboratoire Traitement du Signal et de l'Image"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2903819949",
+        "https://openalex.org/W2889412653",
+        "https://openalex.org/W3096609285",
+        "https://openalex.org/W2402907716",
+        "https://openalex.org/W6790275670",
+        "https://openalex.org/W3185919445",
+        "https://openalex.org/W3184059433",
+        "https://openalex.org/W2079851060",
+        "https://openalex.org/W2468415938",
+        "https://openalex.org/W2065698093",
+        "https://openalex.org/W1573412753",
+        "https://openalex.org/W1963524255",
+        "https://openalex.org/W2034102777",
+        "https://openalex.org/W3094502228",
+        "https://openalex.org/W2286202077",
+        "https://openalex.org/W2770121394",
+        "https://openalex.org/W2196685197",
+        "https://openalex.org/W2771590529",
+        "https://openalex.org/W6781912782",
+        "https://openalex.org/W1950915640",
+        "https://openalex.org/W1968129928",
+        "https://openalex.org/W2194775991",
+        "https://openalex.org/W3197867302",
+        "https://openalex.org/W2964121744",
+        "https://openalex.org/W4280586676",
+        "https://openalex.org/W3091349938",
+        "https://openalex.org/W2914249381",
+        "https://openalex.org/W3016851515",
+        "https://openalex.org/W2809133690",
+        "https://openalex.org/W3089381298",
+        "https://openalex.org/W2009621568",
+        "https://openalex.org/W2145339207",
+        "https://openalex.org/W3041267126",
+        "https://openalex.org/W3161883621",
+        "https://openalex.org/W2925288829",
+        "https://openalex.org/W2525974879",
+        "https://openalex.org/W2953106684",
+        "https://openalex.org/W1901129140",
+        "https://openalex.org/W2092369407",
+        "https://openalex.org/W2022377584",
+        "https://openalex.org/W2962835968",
+        "https://openalex.org/W2963598138",
+        "https://openalex.org/W2896145365",
+        "https://openalex.org/W4323318254",
+        "https://openalex.org/W2063647691",
+        "https://openalex.org/W2759567658",
+        "https://openalex.org/W4385245566",
+        "https://openalex.org/W4297733535",
+        "https://openalex.org/W2979784156",
+        "https://openalex.org/W3183116562",
+        "https://openalex.org/W2982772166",
+        "https://openalex.org/W3098592896",
+        "https://openalex.org/W3034750257",
+        "https://openalex.org/W2344837593",
+        "https://openalex.org/W2990306149",
+        "https://openalex.org/W2752415006",
+        "https://openalex.org/W2950754204",
+        "https://openalex.org/W3102651517",
+        "https://openalex.org/W3100711768",
+        "https://openalex.org/W3104334508",
+        "https://openalex.org/W3127751679",
+        "https://openalex.org/W4287690685"
+    ],
+    "abstract": "Abstract Accurate and robust anatomical landmark localization is a mandatory and crucial step in deformation diagnosis and treatment planning for patients with craniomaxillofacial (CMF) malformations. In this paper, we propose a trainable end-to-end cephalometric landmark localization framework on Cone-beam computed tomography (CBCT) scans, referred to as CMF-Net, which combines the appearance with transformers, geometric constraint, and adaptive wing (AWing) loss. More precisely: (1) we decompose the localization task into two branches: the appearance branch integrates transformers for identifying the exact positions of candidates, while the geometric constraint branch at low resolution allows the implicit spatial relationships to be effectively learned on the reduced training data. (2) We use the AWing loss to leverage the difference between the pixel values of the target heatmaps and the automatic prediction heatmaps. We verify our CMF-Net by identifying the 24 most relevant clinical landmarks on 150 dental CBCT scans with complicated scenarios collected from real-world clinics. Comprehensive experiments show that it performs better than the state-of-the-art deep learning methods, with an average localization error of 1.108 mm (the clinically acceptable precision range being 1.5 mm) and a correct landmark detection rate equal to 79.28%. Our CMF-Net is time-efficient and able to locate skull landmarks with high accuracy and significant robustness. This approach could be applied in 3D cephalometric measurement, analysis, and surgical planning.",
+    "full_text": null
+}

@@ -1,0 +1,96 @@
+{
+    "title": "LLMGuard: Guarding against Unsafe LLM Behavior",
+    "url": "https://openalex.org/W4393145569",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A5112934764",
+            "name": "Shubh Goyal",
+            "affiliations": [
+                "Indian Institute of Technology Jodhpur"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5094086346",
+            "name": "Medha Hira",
+            "affiliations": [
+                "Indraprastha Institute of Information Technology Delhi"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5101602687",
+            "name": "Shubham Kumar Mishra",
+            "affiliations": [
+                "Indian Institute of Technology Jodhpur"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5101901828",
+            "name": "Sukriti Goyal",
+            "affiliations": [
+                "Indian Institute of Technology Jodhpur"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5101587539",
+            "name": "Arnav Goel",
+            "affiliations": [
+                "Indraprastha Institute of Information Technology Delhi"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5094086347",
+            "name": "Niharika Dadu",
+            "affiliations": [
+                "Indian Institute of Technology Jodhpur"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5094086348",
+            "name": "Kirushikesh DB",
+            "affiliations": [
+                "IBM Research - India"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5046646390",
+            "name": "Sameep Mehta",
+            "affiliations": [
+                "IBM Research - India"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5040960396",
+            "name": "Nishtha Madaan",
+            "affiliations": [
+                null
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2896457183",
+        "https://openalex.org/W4318014888",
+        "https://openalex.org/W6666761814",
+        "https://openalex.org/W4318925155",
+        "https://openalex.org/W6926322744",
+        "https://openalex.org/W3097340282",
+        "https://openalex.org/W4386572529",
+        "https://openalex.org/W6763483474",
+        "https://openalex.org/W4307079201",
+        "https://openalex.org/W4384261739",
+        "https://openalex.org/W4287025617",
+        "https://openalex.org/W4362515116",
+        "https://openalex.org/W4384918448",
+        "https://openalex.org/W4292779060",
+        "https://openalex.org/W4320830123",
+        "https://openalex.org/W4224308101",
+        "https://openalex.org/W4327810158",
+        "https://openalex.org/W4366330500",
+        "https://openalex.org/W3158196282",
+        "https://openalex.org/W4384920109",
+        "https://openalex.org/W2949089361",
+        "https://openalex.org/W4385894687"
+    ],
+    "abstract": "Although the rise of Large Language Models (LLMs) in enterprise settings brings new opportunities and capabilities, it also brings challenges, such as the risk of generating inappropriate, biased, or misleading content that violates regulations and can have legal concerns. To alleviate this, we present \"LLMGuard\", a tool that monitors user interactions with an LLM application and flags content against specific behaviours or conversation topics. To do this robustly, LLMGuard employs an ensemble of detectors.",
+    "full_text": "LLMGuard: Guarding against Unsafe LLM Behavior\nShubh Goyal1*, Medha Hira2*, Shubham Mishra1*, Sukriti Goyal1*, Arnav Goel2*, Niharika\nDadu 1*, Kirushikesh DB3, Sameep Mehta3, Nishtha Madaan3\n1Indian Institute of Technology (IIT), Jodhpur, India\n2 Indraprastha Institute of Information Technology Delhi (IIIT-D)\n3 IBM Research, India\ngoyal.22@iitj.ac.in, medha21265@iiitd.ac.in, mishra.39@iitj.ac.in, goyal.23@iitj.ac.in, arnav21519@iiitd.ac.in,\ndadu.1@iitj.ac.in, kirushi@ibm.com, sameepmehta@in.ibm.com, nishthamadaan@in.ibm.com\nAbstract\nAlthough the rise of Large Language Models (LLMs) in en-\nterprise settings brings new opportunities and capabilities,\nit also brings challenges, such as the risk of generating in-\nappropriate, biased, or misleading content that violates reg-\nulations and can have legal concerns. To alleviate this, we\npresent ”LLMGuard”, a tool that monitors user interactions\nwith an LLM application and flags content against specific\nbehaviours or conversation topics. To do this robustly, LLM-\nGuard employs an ensemble of detectors.\nIntroduction and Related Work\nLarge Language Models (LLMs) have risen in importance\ndue to their remarkable performance across various NLP\ntasks, including text generation, translation, summarization,\nquestion-answering, and sentiment analysis (Muneer and\nFati 2020; Goel et al. 2023; Kalyan, Rajasekharan, and\nSangeetha 2021). LLMs serve as a general-purpose lan-\nguage task solver to some extent, and the research paradigm\nhas been shifting towards using them (Zhao et al. 2023).\nWith the advent of models such as PaLM (Chowdhery et al.\n2022), GPT-3 (Brown et al. 2020) and GPT-4 (OpenAI\n2023), LLMs have found increased use-cases in domains\nsuch as the medicine (Kitamura 2023), education (Peng\net al. 2021), finance and entertainment (Dowling and Lucey\n2023).\nDespite their phenomenal success, LLMs often exhibit\nbehaviours that make them unsafe in various enterprise set-\ntings. For instance, the text can contain confidential or per-\nsonal information, such as telephone numbers, leading to\nprivacy leaks (Kaddour 2023). Instances of bias have also\nbeen reported in LLM responses, raising ethical concerns\nwhen deploying them in various applications(Kaddour et al.\n2023). (Viswanath and Zhang 2023) presents a compre-\nhensive quantitative evaluation of different kinds of biases,\nsuch as race, gender, ethnicity, age, etc., exhibited by recent\nLLMs. Such risks raise concerns about the implications of\nthe growing use of LLMs in different areas, from education\nto heritage to healthcare (Urman and Makhortykh 2023).\nTo address them, various techniques have been proposed\nto align LLMs with human preferences, such as RLHF,\n*Equal Contribution\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nwhich finetune the model based on safety and helpfulness\nobjectives (Touvron et al. 2023). Another approach focuses\non red flagging and rectifying undesirable language be-\nhaviours (Perez et al. 2022). However, constant retraining\nis necessary in such techniques, making them prohibitive\nin many cases. A promising line of methods pursues post-\nprocessing to apply guardrails directly to the LLM outputs.\nThis ensures they stay within specific parameters by validat-\ning user and LLM responses.\nIn this work, we propose a tool LLMGuard, which em-\nploys a library of detectors to post-process user questions\nand LLM responses. These detectors help flag undesirable\ninputs and responses such as Personal Identifiable Infor-\nmation (PII), bias, toxicity, violence, and blacklisted top-\nics. Lastly, we provide a demo of how LLMGuard works\non two recent LLMs: FLAN-T5 and GPT-2 (Chung et al.\n2022; Radford et al. 2019), and show the effectiveness of our\nframework. A high-level architecture of our tool is shown in\nFigure 1.\nMethod: LLMGuard\nThis section describes our proposed tool called LLMGuard\nfor detecting and preventing undesirable LLM behaviour.\nBroadly, LLMGuard works by passing every user prompt\nand every LLM response via an ensemble of detectors. If\nany of the detectors detect unsafe text, an automated mes-\nsage is sent back to the user instead of the LLM-generated\nresponse. We now describe the detectors we employ in our\nensemble.\nLibrary of Detectors\nIn LLMGuard, the ensemble consists of a library of detec-\ntors. It provides a modular framework for easily adding,\nmodifying or removing the detectors within the ensemble.\nEach detector is an expert in detecting a specific unsafe be-\nhavior and operates independently of the other detectors. We\nnow describe each of our 5 detectors in detail.\nRacial Bias Detector This detector seeks to flag preju-\ndiced or discriminatory content towards a particular race\nor community. We implement the detector using an LSTM\n(Hochreiter and Schmidhuber 1997). The detector was\ntrained on the Twitter Texts Dataset (Go, Bhayani, and\nHuang 2009) comprising 27500 tweets. The detector obtains\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23790\nFigure 1: Architecture of LLMGuard. The user input and the LLM response are provided to an ensemble of 5 detectors. If any\ndetectors flag the text as unsafe, the transaction is blocked.\nan accuracy of 87.2% and an F1 score of 85.47% on the test\nset.\nViolence Detector This detector seeks to flag the presence\nof threats and violence in an LLM-generated response. To\nimplement this detector, we employ a simple count-based\nmapping to vectorise our text. An MLP is followed by a sig-\nmoid layer to predict the probability of the presence of vi-\nolence or threat in the text. The model was trained on the\nJigsaw Toxicity Dataset 2021 (Wulczyn, Thain, and Dixon\n2017) and achieved an accuracy of 86.4%.\nBlacklisted Topics This detector seeks to flag the pres-\nence of sensitive or blacklisted topics. What topics to black-\nlist is provided by the user in a plug-and-play manner. In our\ncurrent version, we consider Politics, Religion and Sports\nas blacklisted categories. To implement this detector, we\nfine-tune a BERT model (Devlin et al. 2019) on the 20-\nNewsGroup Dataset (Mitchell 1999) containing text about\npolitics, religion and sports and their topic labels. The clas-\nsifier for each blacklisted topic is independently trained such\nthat one may easily enable or disable a certain topic. Our de-\ntector achieves an average accuracy of ≈92% for the classi-\nfiers corresponding to these topics.\nPII Detector The detector seeks to flag Personal Identifi-\nable Information (PII). Users often provide sensitive infor-\nmation to LLM, such as names, addresses, emails, IP ad-\ndresses and phone numbers. We detect such content through\nregular expressions to identify specific PII and ensure that\nsuch information is not shared with the LLM. Our model\nachieves an NER F1-score of 85%.\nToxicity Detector This detector seeks to flag toxic con-\ntent in a text input or the generated LLM output. To imple-\nment this, we use Detoxify (Hanu and Unitary team 2020), a\nmodel that can detect different types of toxicity like threats,\nsevere toxicity, obscene text, identity-based hatred and in-\nsults. It generates a toxicity score using a BERT model. We\nconsider samples with toxicity scores greater than 0.5 as un-\ndesirable. The model is trained on the Wikipedia Comments\nDataset (Wulczyn, Thain, and Dixon 2017) and achieves a\nmean AUC score of 98.64% in the Toxic Comment Classifi-\ncation Challenge 2018 (cjadams 2017).\nA Demo of LLMGuard\nFigure 2: We demonstrate LLMGuard on two choices of\nLLMs: FLAN-T5 and GPT-2. In the demo, the user can\nchoose which detectors they need to activate. The user then\nprovides their input. Top. The interface shows the unfil-\ntered response from the LLM on the left and the response\nwith guardrails enabled on the right. Bottom. The inter-\nface shows unsafe terms flagged by the detectors in the\nprompt.\nConclusion and Future Work\nWe presented a set of guardrails that can be integrated with\nany LLM to flag interactions between the user and the LLM\nif any of the detectors detect an undesirable interaction.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23791\nReferences\nBrown, T. B.; Mann, B.; Ryder, N.; Subbiah, M.; Kaplan, J.;\nDhariwal, P.; Neelakantan, A.; Shyam, P.; Sastry, G.; Askell,\nA.; Agarwal, S.; Herbert-V oss, A.; Krueger, G.; Henighan,\nT.; Child, R.; Ramesh, A.; Ziegler, D. M.; Wu, J.; Winter,\nC.; Hesse, C.; Chen, M.; Sigler, E.; Litwin, M.; Gray, S.;\nChess, B.; Clark, J.; Berner, C.; McCandlish, S.; Radford,\nA.; Sutskever, I.; and Amodei, D. 2020. Language Models\nare Few-Shot Learners. arXiv:2005.14165.\nChowdhery, A.; Narang, S.; Devlin, J.; Bosma, M.; Mishra,\nG.; Roberts, A.; Barham, P.; Chung, H. W.; Sutton,\nC.; Gehrmann, S.; Schuh, P.; Shi, K.; Tsvyashchenko,\nS.; Maynez, J.; Rao, A.; Barnes, P.; Tay, Y .; Shazeer,\nN.; Prabhakaran, V .; Reif, E.; Du, N.; Hutchinson, B.;\nPope, R.; Bradbury, J.; Austin, J.; Isard, M.; Gur-Ari, G.;\nYin, P.; Duke, T.; Levskaya, A.; Ghemawat, S.; Dev, S.;\nMichalewski, H.; Garcia, X.; Misra, V .; Robinson, K.; Fe-\ndus, L.; Zhou, D.; Ippolito, D.; Luan, D.; Lim, H.; Zoph, B.;\nSpiridonov, A.; Sepassi, R.; Dohan, D.; Agrawal, S.; Omer-\nnick, M.; Dai, A. M.; Pillai, T. S.; Pellat, M.; Lewkowycz,\nA.; Moreira, E.; Child, R.; Polozov, O.; Lee, K.; Zhou, Z.;\nWang, X.; Saeta, B.; Diaz, M.; Firat, O.; Catasta, M.; Wei,\nJ.; Meier-Hellstern, K.; Eck, D.; Dean, J.; Petrov, S.; and\nFiedel, N. 2022. PaLM: Scaling Language Modeling with\nPathways. arXiv:2204.02311.\nChung, H. W.; Hou, L.; Longpre, S.; Zoph, B.; Tay, Y .; Fe-\ndus, W.; Li, Y .; Wang, X.; Dehghani, M.; Brahma, S.; Web-\nson, A.; Gu, S. S.; Dai, Z.; Suzgun, M.; Chen, X.; Chowd-\nhery, A.; Castro-Ros, A.; Pellat, M.; Robinson, K.; Val-\nter, D.; Narang, S.; Mishra, G.; Yu, A.; Zhao, V .; Huang,\nY .; Dai, A.; Yu, H.; Petrov, S.; Chi, E. H.; Dean, J.; De-\nvlin, J.; Roberts, A.; Zhou, D.; Le, Q. V .; and Wei, J.\n2022. Scaling Instruction-Finetuned Language Models.\narXiv:2210.11416.\ncjadams, J. E. L. D. M. M. n. W. C., Jeffrey Sorensen.\n2017. Toxic Comment Classification Challenge.\nhttps://kaggle.com/competitions/jigsaw-toxic-comment-\nclassification-challenge. Accessed: 2023-12-12.\nDevlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019.\nBERT: Pre-training of Deep Bidirectional Transformers for\nLanguage Understanding. In Proceedings of the 2019 Con-\nference of the North American Chapter of the Association\nfor Computational Linguistics: Human Language Technolo-\ngies, Volume 1 (Long and Short Papers), 4171–4186. Min-\nneapolis, Minnesota: Association for Computational Lin-\nguistics.\nDowling, M.; and Lucey, B. 2023. ChatGPT for (finance) re-\nsearch: The Bananarama conjecture. Finance Research Let-\nters, 53: 103662.\nGo, A.; Bhayani, R.; and Huang, L. 2009. Twitter sentiment\nclassification using distant supervision. CS224N project re-\nport, Stanford, 1(12): 2009.\nGoel, A.; Hira, M.; Anand, A.; Bangar, S.; and Shah, D.\nR. R. 2023. Advancements in Scientific Controllable Text\nGeneration Methods. arXiv:2307.05538.\nHanu, L.; and Unitary team. 2020. Detoxify. https://github.\ncom/unitaryai/detoxify. Accessed: 2023-12-12.\nHochreiter, S.; and Schmidhuber, J. 1997. Long short-term\nmemory. Neural computation, 9(8): 1735–1780.\nKaddour, J. 2023. The MiniPile Challenge for Data-Efficient\nLanguage Models. arXiv preprint arXiv:2304.08442.\nKaddour, J.; Harris, J.; Mozes, M.; Bradley, H.; Raileanu,\nR.; and McHardy, R. 2023. Challenges and applications of\nlarge language models. arXiv preprint arXiv:2307.10169.\nKalyan, K. S.; Rajasekharan, A.; and Sangeetha, S. 2021.\nAMMUS : A Survey of Transformer-based Pretrained Mod-\nels in Natural Language Processing. arXiv:2108.05542.\nKitamura, F. C. 2023. ChatGPT is shaping the future of\nmedical writing but still requires human judgment.\nMitchell, T. 1999. Twenty Newsgroups.\nUCI Machine Learning Repository. DOI:\nhttps://doi.org/10.24432/C5C323.\nMuneer, A.; and Fati, S. M. 2020. A comparative analysis\nof machine learning techniques for cyberbullying detection\non twitter. Future Internet, 12(11): 187.\nOpenAI. 2023. GPT-4 Technical Report. arXiv:2303.08774.\nPeng, S.; Yuan, K.; Gao, L.; and Tang, Z. 2021. Mathbert: A\npre-trained model for mathematical formula understanding.\narXiv preprint arXiv:2105.00377.\nPerez, E.; Huang, S.; Song, F.; Cai, T.; Ring, R.; Aslanides,\nJ.; Glaese, A.; McAleese, N.; and Irving, G. 2022. Red team-\ning language models with language models. arXiv preprint\narXiv:2202.03286.\nRadford, A.; Wu, J.; Child, R.; Luan, D.; Amodei, D.;\nSutskever, I.; et al. 2019. Language models are unsupervised\nmultitask learners. OpenAI blog, 1(8): 9.\nTouvron, H.; Martin, L.; Stone, K.; Albert, P.; Almahairi, A.;\nBabaei, Y .; Bashlykov, N.; Batra, S.; Bhargava, P.; Bhosale,\nS.; et al. 2023. Llama 2: Open foundation and fine-tuned\nchat models. arXiv preprint arXiv:2307.09288.\nUrman, A.; and Makhortykh, M. 2023. The Silence of the\nLLMs: Cross-Lingual Analysis of Political Bias and False\nInformation Prevalence in ChatGPT, Google Bard, and Bing\nChat.\nViswanath, H.; and Zhang, T. 2023. FairPy: A Toolkit for\nEvaluation of Social Biases and their Mitigation in Large\nLanguage Models. arXiv preprint arXiv:2302.05508.\nWulczyn, E.; Thain, N.; and Dixon, L. 2017. Ex Machina:\nPersonal Attacks Seen at Scale. In Proceedings of the 26th\nInternational Conference on World Wide Web, WWW ’17,\n1391–1399. Republic and Canton of Geneva, CHE: Interna-\ntional World Wide Web Conferences Steering Committee.\nISBN 9781450349130.\nZhao, W. X.; Zhou, K.; Li, J.; Tang, T.; Wang, X.;\nHou, Y .; Min, Y .; Zhang, B.; Zhang, J.; Dong, Z.; et al.\n2023. A survey of large language models. arXiv preprint\narXiv:2303.18223.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23792"
+}

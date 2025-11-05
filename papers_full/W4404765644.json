@@ -1,0 +1,174 @@
+{
+    "title": "Layered Query Retrieval: An Adaptive Framework for Retrieval-Augmented Generation in Complex Question Answering for Large Language Models",
+    "url": "https://openalex.org/W4404765644",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2104755790",
+            "name": "Jie Huang",
+            "affiliations": [
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2098141074",
+            "name": "Mo Wang",
+            "affiliations": [
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2114082614",
+            "name": "Yun-peng Cui",
+            "affiliations": [
+                "Agricultural Information Institute",
+                "Chinese Academy of Agricultural Sciences",
+                "Ministry of Agriculture and Rural Affairs"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2104828399",
+            "name": "Juan Liu",
+            "affiliations": [
+                "Chinese Academy of Agricultural Sciences",
+                "Ministry of Agriculture and Rural Affairs",
+                "Agricultural Information Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1971984624",
+            "name": "Li Chen",
+            "affiliations": [
+                "Agricultural Information Institute",
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A306707642",
+            "name": "Ting Wang",
+            "affiliations": [
+                "Agricultural Information Institute",
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2101595204",
+            "name": "Huan Li",
+            "affiliations": [
+                "Ministry of Agriculture and Rural Affairs",
+                "Agricultural Information Institute",
+                "Chinese Academy of Agricultural Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2145283443",
+            "name": "Jinming Wu",
+            "affiliations": [
+                "Agricultural Information Institute",
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2104755790",
+            "name": "Jie Huang",
+            "affiliations": [
+                "Chinese Academy of Agricultural Sciences",
+                "Ministry of Agriculture and Rural Affairs",
+                "Agricultural Information Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2098141074",
+            "name": "Mo Wang",
+            "affiliations": [
+                "Agricultural Information Institute",
+                "Chinese Academy of Agricultural Sciences",
+                "Ministry of Agriculture and Rural Affairs"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2114082614",
+            "name": "Yun-peng Cui",
+            "affiliations": [
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute",
+                "Ministry of Agriculture and Rural Affairs"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2104828399",
+            "name": "Juan Liu",
+            "affiliations": [
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute",
+                "Ministry of Agriculture and Rural Affairs"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1971984624",
+            "name": "Li Chen",
+            "affiliations": [
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A306707642",
+            "name": "Ting Wang",
+            "affiliations": [
+                "Agricultural Information Institute",
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2101595204",
+            "name": "Huan Li",
+            "affiliations": [
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2145283443",
+            "name": "Jinming Wu",
+            "affiliations": [
+                "Ministry of Agriculture and Rural Affairs",
+                "Chinese Academy of Agricultural Sciences",
+                "Agricultural Information Institute"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4309217888",
+        "https://openalex.org/W6777615688",
+        "https://openalex.org/W6845404407",
+        "https://openalex.org/W4388778348",
+        "https://openalex.org/W4389520103",
+        "https://openalex.org/W4385571271",
+        "https://openalex.org/W4402684046",
+        "https://openalex.org/W4402670862",
+        "https://openalex.org/W4389520468",
+        "https://openalex.org/W4401042753",
+        "https://openalex.org/W2963748441",
+        "https://openalex.org/W2912924812",
+        "https://openalex.org/W2612431505",
+        "https://openalex.org/W3190126809",
+        "https://openalex.org/W2889787757",
+        "https://openalex.org/W3115947671",
+        "https://openalex.org/W4385570777",
+        "https://openalex.org/W4301243929",
+        "https://openalex.org/W3027879771"
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) addresses the problem of knowledge cutoff and overcomes the inherent limitations of pre-trained language models by retrieving relevant information in real time. However, challenges related to efficiency and accuracy persist in current RAG strategies. A key issue is how to select appropriate methods for user queries of varying complexity dynamically. This study introduces a novel adaptive retrieval-augmented generation framework termed Layered Query Retrieval (LQR). The LQR framework focuses on query complexity classification, retrieval strategies, and relevance analysis, utilizing a custom-built training dataset to train smaller models that aid the large language model (LLM) in efficiently retrieving relevant information. A central technique in LQR is a semantic rule-based approach to distinguish between different levels of multi-hop queries. The process begins by parsing the user’s query for keywords, followed by a keyword-based document retrieval. Subsequently, we employ a natural language inference (NLI) model to assess whether the retrieved document is relevant to the query. We validated our approach on multiple single-hop and multi-hop datasets, demonstrating significant improvements in both accuracy and efficiency compared to existing single-step, multi-step, and adaptive methods. Our method exhibits high accuracy and efficiency, particularly on the HotpotQA dataset, where it outperforms the Adaptive-RAG method by improving accuracy by 9.4% and the F1 score by 16.14%. The proposed approach carefully balances retrieval efficiency with the accuracy of the LLM’s responses.",
+    "full_text": null
+}

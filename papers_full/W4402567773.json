@@ -1,0 +1,145 @@
+{
+    "title": "Biomedical knowledge graph-optimized prompt generation for large language models",
+    "url": "https://openalex.org/W4402567773",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A4224335828",
+            "name": "Soman, Karthik",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4298903301",
+            "name": "Rose, Peter W.",
+            "affiliations": [
+                "San Diego Supercomputer Center",
+                "University of California, San Diego"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Morris, John H",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Akbas, Rabia E",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3094436830",
+            "name": "Smith Brett",
+            "affiliations": [
+                "Institute for Systems Biology"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Peetoom, Braian",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Villouta-Reyes, Catalina",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Cerono, Gabriel",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2214357769",
+            "name": "Shi Yong-mei",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Rizk-Jackson, Angela",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Israni, Sharat",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Nelson, Charlotte A",
+            "affiliations": [
+                "Fisher Bioservices (United States)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2230550626",
+            "name": "Huang Sui",
+            "affiliations": [
+                "Institute for Systems Biology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4226871703",
+            "name": "Baranzini, Sergio E.",
+            "affiliations": [
+                "University of California, San Francisco"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W6810125524",
+        "https://openalex.org/W2990374909",
+        "https://openalex.org/W4281737056",
+        "https://openalex.org/W6781031682",
+        "https://openalex.org/W2187413858",
+        "https://openalex.org/W2949311246",
+        "https://openalex.org/W4309674289",
+        "https://openalex.org/W2117446654",
+        "https://openalex.org/W6838865847",
+        "https://openalex.org/W2911489562",
+        "https://openalex.org/W6777615688",
+        "https://openalex.org/W4297253404",
+        "https://openalex.org/W2998374885",
+        "https://openalex.org/W4319813194",
+        "https://openalex.org/W2558643140",
+        "https://openalex.org/W6788664974",
+        "https://openalex.org/W4200481829",
+        "https://openalex.org/W2961798429",
+        "https://openalex.org/W2537679995",
+        "https://openalex.org/W6847450257",
+        "https://openalex.org/W4378746334",
+        "https://openalex.org/W4392003803",
+        "https://openalex.org/W6810311434",
+        "https://openalex.org/W6809646742",
+        "https://openalex.org/W6845952779",
+        "https://openalex.org/W4281557260",
+        "https://openalex.org/W4309848029",
+        "https://openalex.org/W4229376653",
+        "https://openalex.org/W4221143046",
+        "https://openalex.org/W4307003748",
+        "https://openalex.org/W4224037213",
+        "https://openalex.org/W3118305256",
+        "https://openalex.org/W3046375318",
+        "https://openalex.org/W4223944906",
+        "https://openalex.org/W3027879771"
+    ],
+    "abstract": "Abstract Motivation Large language models (LLMs) are being adopted at an unprecedented rate, yet still face challenges in knowledge-intensive domains such as biomedicine. Solutions such as pretraining and domain-specific fine-tuning add substantial computational overhead, requiring further domain-expertise. Here, we introduce a token-optimized and robust Knowledge Graph-based Retrieval Augmented Generation (KG-RAG) framework by leveraging a massive biomedical KG (SPOKE) with LLMs such as Llama-2-13b, GPT-3.5-Turbo, and GPT-4, to generate meaningful biomedical text rooted in established knowledge. Results Compared to the existing RAG technique for Knowledge Graphs, the proposed method utilizes minimal graph schema for context extraction and uses embedding methods for context pruning. This optimization in context extraction results in more than 50% reduction in token consumption without compromising the accuracy, making a cost-effective and robust RAG implementation on proprietary LLMs. KG-RAG consistently enhanced the performance of LLMs across diverse biomedical prompts by generating responses rooted in established knowledge, accompanied by accurate provenance and statistical evidence (if available) to substantiate the claims. Further benchmarking on human curated datasets, such as biomedical true/false and multiple-choice questions (MCQ), showed a remarkable 71% boost in the performance of the Llama-2 model on the challenging MCQ dataset, demonstrating the framework’s capacity to empower open-source models with fewer parameters for domain-specific questions. Furthermore, KG-RAG enhanced the performance of proprietary GPT models, such as GPT-3.5 and GPT-4. In summary, the proposed framework combines explicit and implicit knowledge of KG and LLM in a token optimized fashion, thus enhancing the adaptability of general-purpose LLMs to tackle domain-specific questions in a cost-effective fashion. Availability and implementation SPOKE KG can be accessed at https://spoke.rbvi.ucsf.edu/neighborhood.html. It can also be accessed using REST-API (https://spoke.rbvi.ucsf.edu/swagger/). KG-RAG code is made available at https://github.com/BaranziniLab/KG_RAG. Biomedical benchmark datasets used in this study are made available to the research community in the same GitHub repository.",
+    "full_text": null
+}

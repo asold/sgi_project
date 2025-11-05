@@ -1,0 +1,119 @@
+{
+    "title": "LPST-Det: Local-Perception-Enhanced Swin Transformer for SAR Ship Detection",
+    "url": "https://openalex.org/W4391263289",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2101217726",
+            "name": "Zhigang Yang",
+            "affiliations": [
+                "Ministry of Industry and Information Technology",
+                "Harbin Engineering University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2135757285",
+            "name": "Xiangyu XIA",
+            "affiliations": [
+                "Ministry of Industry and Information Technology",
+                "Harbin Engineering University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2111450089",
+            "name": "Yiming Liu",
+            "affiliations": [
+                "Ministry of Industry and Information Technology",
+                "Harbin Engineering University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5111119176",
+            "name": "Guiwei Wen",
+            "affiliations": [
+                "Harbin Engineering University",
+                "Ministry of Industry and Information Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2104649335",
+            "name": "Wei Emma Zhang",
+            "affiliations": [
+                "University of Adelaide"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1992330349",
+            "name": "Li-Min Guo",
+            "affiliations": [
+                "Ministry of Industry and Information Technology",
+                "Harbin Engineering University"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2975079793",
+        "https://openalex.org/W2976569345",
+        "https://openalex.org/W2547578938",
+        "https://openalex.org/W4285095071",
+        "https://openalex.org/W2167220279",
+        "https://openalex.org/W2091224289",
+        "https://openalex.org/W4389104901",
+        "https://openalex.org/W6684191040",
+        "https://openalex.org/W6620707391",
+        "https://openalex.org/W2963150697",
+        "https://openalex.org/W2193145675",
+        "https://openalex.org/W2963351448",
+        "https://openalex.org/W2963037989",
+        "https://openalex.org/W2570343428",
+        "https://openalex.org/W2811507834",
+        "https://openalex.org/W3138516171",
+        "https://openalex.org/W3034971973",
+        "https://openalex.org/W2565639579",
+        "https://openalex.org/W3174873843",
+        "https://openalex.org/W2774244034",
+        "https://openalex.org/W2946589087",
+        "https://openalex.org/W2799646862",
+        "https://openalex.org/W4212781487",
+        "https://openalex.org/W4307263399",
+        "https://openalex.org/W4367626240",
+        "https://openalex.org/W4292567342",
+        "https://openalex.org/W3017373943",
+        "https://openalex.org/W2889346359",
+        "https://openalex.org/W2955454611",
+        "https://openalex.org/W3037440390",
+        "https://openalex.org/W4210958248",
+        "https://openalex.org/W3096609285",
+        "https://openalex.org/W3092462694",
+        "https://openalex.org/W3160694286",
+        "https://openalex.org/W4312950730",
+        "https://openalex.org/W4221044012",
+        "https://openalex.org/W4306964296",
+        "https://openalex.org/W4283809070",
+        "https://openalex.org/W3205482641",
+        "https://openalex.org/W3217153199",
+        "https://openalex.org/W2963857746",
+        "https://openalex.org/W2964444661",
+        "https://openalex.org/W2985418956",
+        "https://openalex.org/W3102399105",
+        "https://openalex.org/W3180954604",
+        "https://openalex.org/W4225923962",
+        "https://openalex.org/W4382119971",
+        "https://openalex.org/W2194775991",
+        "https://openalex.org/W3200733355",
+        "https://openalex.org/W4365448756",
+        "https://openalex.org/W2964241181",
+        "https://openalex.org/W2964979676",
+        "https://openalex.org/W2991363140",
+        "https://openalex.org/W3109055651",
+        "https://openalex.org/W3022917557",
+        "https://openalex.org/W6782137339",
+        "https://openalex.org/W4317810564",
+        "https://openalex.org/W2953106684",
+        "https://openalex.org/W3136761610",
+        "https://openalex.org/W2163605009",
+        "https://openalex.org/W3106250896"
+    ],
+    "abstract": "Convolutional neural networks (CNNs) and transformers have boosted the rapid growth of object detection in synthetic aperture radar (SAR) images. However, it is still a challenging task because SAR images usually have the characteristics of unclear contour, sidelobe interference, speckle noise, multiple scales, complex inshore background, etc. More effective feature extraction by the backbone and augmentation in the neck will bring a promising performance increment. In response, we make full use of the advantage of CNNs in extracting local features and the advantage of transformers in capturing long-range dependencies to propose a Swin Transformer-based detector for arbitrary-oriented SAR ship detection. Firstly, we incorporate a convolution-based local perception unit (CLPU) into the transformer structure to establish a powerful backbone. The local-perception-enhanced Swin Transformer (LP-Swin) backbone combines the local information perception ability of CNNs and the global feature extraction ability of transformers to enhance representation learning, which can extract object features more effectively and boost the detection performance. Then, we devise a cross-scale bidirectional feature pyramid network (CS-BiFPN) by strengthening the propagation and integration of both location and semantic information. It allows for more effective utilization of the feature extracted by the backbone and mitigates the problem of multi-scale ships. Moreover, we design a one-stage framework integrated with LP-Swin, CS-BiFPN, and the detection head of R3Det for arbitrary-oriented object detection, which can provide more precise locations for inclined objects and introduce less background information. On the SAR Ship Detection Dataset (SSDD), ablation studies are implemented to verify the effectiveness of each component, and competing experiments illustrate that our detector attains 93.31% in mean average precision (mAP), which is a comparable detection performance with other advanced detectors.",
+    "full_text": null
+}

@@ -1,0 +1,72 @@
+{
+    "title": "Incorporating large language models as clinical decision support in oncology: the Woollie model",
+    "url": "https://openalex.org/W4413288733",
+    "year": 2025,
+    "authors": [
+        {
+            "id": "https://openalex.org/A3096219323",
+            "name": "Kimia Heydari",
+            "affiliations": [
+                "Harvard University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5009375812",
+            "name": "Elizabeth J. Enichen",
+            "affiliations": [
+                "Harvard University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2107686570",
+            "name": "Ben Li",
+            "affiliations": [
+                "University of Toronto"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2080077413",
+            "name": "Joseph C. Kvedar",
+            "affiliations": [
+                "Massachusetts General Hospital",
+                "Harvard University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3096219323",
+            "name": "Kimia Heydari",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A5009375812",
+            "name": "Elizabeth J. Enichen",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2107686570",
+            "name": "Ben Li",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2080077413",
+            "name": "Joseph C. Kvedar",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W3174989095",
+        "https://openalex.org/W4411919356",
+        "https://openalex.org/W4386117070",
+        "https://openalex.org/W4407028552",
+        "https://openalex.org/W4386932783",
+        "https://openalex.org/W4396553888",
+        "https://openalex.org/W4406152279",
+        "https://openalex.org/W2037979274",
+        "https://openalex.org/W4213261164",
+        "https://openalex.org/W4412021130",
+        "https://openalex.org/W4225816390",
+        "https://openalex.org/W4228999245"
+    ],
+    "abstract": "Integrating large language models (LLMs) into oncology holds promise for clinical decision support. Woollie is an LLM recently developed by Zhu et al., fine-tuned using radiology impression notes from Memorial Sloan Kettering Cancer Center and externally validated on UCSF oncology datasets. This methodology prioritizes data accuracy, preempts catastrophic forgetting, and demonstrates unparalleled rigor in predicting the progression of various cancer types. This work establishes a foundation for reliable, scalable, and equitable applications of LLMs in oncology.",
+    "full_text": "npj |digital medicine Editorial\nPublished in partnership with Seoul National University Bundang Hospital\nhttps://doi.org/10.1038/s41746-025-01941-3\nIncorporating large language models as\nclinical decision support in oncology: the\nWoollie model\nCheck for updates\nIntegrating large language models\n(LLMs) into oncology holds promise\nfor clinical decision support. Woollie is\nan LLM recently developed by Zhu et\nal., ﬁne-tuned using radiology\nimpression notes from Memorial\nSloan Kettering Cancer Center and\nexternally validated on UCSF\noncology datasets. This methodology\nprioritizes data accuracy, preempts\ncatastrophic forgetting, and\ndemonstrates unparalleled rigor in\npredicting the progression of various\ncancer types. This work establishes a\nfoundation for reliable, scalable, and\nequitable applications of LLMs in\noncology.\nT\nhe effectiveness of oncology treat-\nments depends on how cancer\nresponds, as observed through radi-\nological or pathological assessments.\nTracking tumor regression in response to che-\nmotherapy via serial radiologic imaging is cri-\ntical for assessing treatment ef ﬁcacy and\nguiding ongoing clinical management\n1. How-\never, these important data points are frequently\ndocumented as real-world data in non-\nstandardized and unstructured formats, mak-\ning them difﬁcult to access and interpret—\nespecially when leveraging Large Language\nModels (LLMs) in oncology\n2. Besides non-\nstandardized and unstructured formats of\ndocumenting tumor progression, subspecialty\nknowledge barriers and privacy concerns rela-\nted to the deployment of closed-source LLMs in\nclinical settings complicate the integration of\nLLMs in oncology\n3.\nStill, the incorporation of LLMs in oncology\ncould serve as a helpful decision support tool for\nclinicians. Rapidly expanding medical literature\npresents a challenge to oncologists seeking opti-\nmized and targeted cancer therapies for their\npatients. Equally, in gathering large-scale data\nabout tumor progression, LLMs can facilitate\nlarge-scale, systematic analysis of tumor\nprogression data, potentially informing both\nindividualized care and public health strategies by\nidentifying patterns in metastasis and treatment\nefﬁcacy\n4. Developing and facilitating prompts for\nLLMs to derive clinical factors has been proven\nefﬁcient in extracting a nd collating crucial\ninformation from large medical records\n5.I n\nstreamlining data extraction from clinical reports\n(such as radiology interpretations or progress\nnotes) in a reproducible manner, LLMs reduce\nmanual labor and thereby alleviate time con-\nstraints on clinicians\n6.\nThe Woollie training model\nConsidering privacy concerns surrounding the\nimplementation of LLMs in clinical decision-\nmaking, the increasing need for specialized\noncology knowledge, and the complexity of\nextracting and collating real-world data, Menglei\nZhu et al. developed Woollie, a dedicated LLM\nthat is trained on real-world data from Memorial\nSloan Kettering Cancer Center and\nis thereby specialized for interpreting oncolo-\ngical radiology reports\n2. In their paper entitled\n“Large Language Model Trained on Clinical\nOncology Data Predicts Cancer Progression,”Zhu\net al. demonstrate that this model surpasses\nexisting LLMs in terms of medical knowledge\nbenchmarks, including PubMedQA, MedMCQA,\nand USMLE\n7. In addition, Zhu et al. extended\ntheir validation to include an independent dataset\nof 600 radiology impressions involving 600 unique\npatients from the University of California, San\nFrancisco medical center. Given the complexity\nand breadth of oncological knowledge, the authors\nenhanced Woollie’s analytical skills through a\nstacked alignment process. Through this process,\nthe LLM is trained on various and interdependent\nﬁelds of understanding cancer care and cancer\nprogression: the LLM isﬁrst trained on a foun-\ndational model and then ﬁne-tuned with\nincreasingly domain-speciﬁc databases and vali-\ndation tools, such as the most recent medical\nbenchmarks and external datasets. This approach\nis necessary given the complexity and depth of\noncological data and ensures that increased spe-\ncialization preserves foundational knowledge.\nResultingly, the model demonstrated excellent\nperformance for predicting the progression of\nvarious cancer types, including lung, breast, and\nprostate cancer (AUROC 0.97 and 0.88 on inter-\nnal and external validation data, respectively).\nA strategy against catastrophic\nforgetting\nCatastrophic forgetting occurs when an LLM\nloses previously learned knowledge while\nacquiring new knowledge for achieving a satis-\nfactory performance in downstream tasks, espe-\ncially in ﬁelds requiring complex subspecialty\nknowledge\n8. A core contribution of Zhu et al.’s\nwork is their meticulous training approach: by\nemploying the aforementioned stacked align-\nment process, they minimize catastrophic for-\ng e t t i n gw h i l ee x p a n d i n gt h em o d e l’ss p e c i a l i z e d\nknowledge base\n8. This training model ensures\nthat Woollie LLMs preserves general domain\ncompetencies of reasoning, conversation, and\ninformation extraction while building upon each\nsuccessive model iteration to enhance medical\ndomain proﬁciency. This capacity is critical in\nincorporating LLMs in oncology, where con-\nﬁdently delivered but incorrect information can\nhave severe consequences on patient care and\ntrust. When combined with persistent attainment\nof clinical performance benchmarks, this robust\ntraining strategy suggests the safe integration of\nAI models into clinical decision-making for\ncancer progression prediction.\nPotential for scalable cancer data\nGiven recent advances in training LLMs to retain\nbroad knowledge while gaining domain-speciﬁc\nexpertise in oncology, models like Woollie could\nbe utilized alongside other LLMs to scale and\nsystematize knowledge about cancer progression\nacross different cancer centers\n9. Veriﬁcation and\nvalidation of Woollie data across multiple cancer\nsites will strengthen the generalizability of this\nmodel. When aligned with established AI gov-\nernance frameworks for clinical care, operations,\nand research in oncology, the Woollie model can\nbe scaled responsibly and ethically across multi-\nple institutions, both nationally and globally\n10.B y\nthoroughly integrating a wide range of clinical\nprotocols and perspectives across cancer care\nnpj Digital Medicine|           (2025) 8:529 1\n1234567890():,;\n1234567890():,;\ninstitutions, scaled LLMs can limit non-evidence-\nbased variation in clinical recommendations and\ntherefore promote more equitable cancer care\nworldwide. From a public health standpoint,\naccess to such systematized data provides an\nopportunity to enhance population-level insights\ninto cancer progression.\nConclusion\nEfforts to support and systematize clinical\ndecision-making must preserve clinical accuracy,\nas sustaining patients’ trust and conﬁdence is\ncritical, especially in cancer care. Due to both\nrobust model training and external validation\nagainst UCSF datasets, Woollie is an LLM that\nprioritizes data accuracy and safeguards against\ncatastrophic forgetting in delivering clinical\ndecision support for predicting cancer progres-\nsion. This advancement paves the way for making\ncancer care more scalable and equitable.\nData availability\nNo datasets were generated or analysed during\nthe current study.\nKimia Heydari1 , Elizabeth J. Enichen1,\nBen Li2,3 & Joseph C. Kvedar1,4\n1Harvard Medical School, Boston, MA, USA.\n2Division of Vascular Surgery, University of\nToronto, Toronto, ON, Canada.3Temerty Centre\nfor Artiﬁcial Intelligence Research and Education\nin Medicine, University of Toronto, Toronto, ON,\nCanada.\n4Massachusetts General Hospital,\nHarvard University, Boston, MA, USA.\ne-mail: kimiaheydari@hms.harvard.edu\nReceived: 31 July 2025; Accepted: 8 August\n2025\nReferences\n1. Ko, CC., Yeh, LR. & Kuo, YT. et al. Imaging biomarkers for\nevaluating tumor response: RECIST and beyond.Biomark\nRes. 9, 52,https://doi.org/10.1186/s40364-021-00306-8\n(2021).\n2. Zhu, M. et al. Large language model trained on clinical\noncology data predicts cancer progression.Npj Digit. Med.\n8, 397 (2025).\n3. Chen, S. et al. Use of artiﬁcial intelligence Chatbots for\ncancer treatment information.JAMA Oncol. 9, 1459– 1462\n(2023).\n4. Fountzilas, E., Pearce, T., Baysal, M. A., Chakraborty, A. &\nTsimberidou, A. M. Convergence of evolving artiﬁcial\nintelligence and machine learning techniques in precision\noncology. NPJ Digit. Med.8, 75 (2025).\n5. Choi, H. S., Song, J. Y., Shin, K. H., Chang, J. H. & Jang, B. S.\nDeveloping prompts from large language model for\nextracting clinical information from pathology and\nultrasound reports in breast cancer.Radiat. Oncol. J.41,\n209– 216 (2023).\n6. Huang, J. et al. A critical assessment of using ChatGPT for\nextracting structured data from clinical notes.npj Digit. Med.\n7, 106 (2024).\n7. Singhal, K. et al. Toward expert-level medical question\nanswering with large language models.Nat. Med.31,\n943– 950 (2025).\n8. Mermillod, M., Aurélia, B. & Patrick, B. The stability-plasticity\ndilemma: Investigating the continuum from catastrophic\nforgetting to age-limited learning effects.Front. Psychol.4,\n504 (2013).\n9. Lavery, J. A. et al. A scalable quality assurance process for\ncurating oncology electronic health records: the project\nGENIE biopharma collaborative approach.JCO Clin. Cancer\nInform. 6, e2100105 (2022).\n10. Stetson, P. D. et al. Responsible artiﬁcial intelligence\ngovernance in oncology.npj Digit. Med.8, 407 (2025).\nAcknowledgements\nThis editorial did not receive any speciﬁc grant from funding\nagencies in the public, commercial, or not-for-proﬁt sectors.\nAuthor contributions\nK.H. wrote theﬁrst draft of the manuscript. E.J.E., B.L. and J.C.K.\nprovided time-sensitive, critical revisions. All authors have read\nand approved theﬁnal manuscript.\nCompeting interests\nJ.C.K. is the editor-in-chief of npj Digital Medicine. All other\nauthors declare no competing interests.\nOpen AccessThis article is licensed under a Creative Commons\nAttribution-NonCommercial-NoDerivatives 4.0 International\nLicense, which permits any non-commercial use, sharing,\ndistribution and reproduction in any medium or format, as long as\nyou give appropriate credit to the original author(s) and the\nsource, provide a link to the Creative Commons licence, and\nindicate if you modiﬁed the licensed material. You do not have\npermission under this licence to share adapted material derived\nfrom this article or parts of it. The images or other third party\nmaterial in this article are included in the article’s Creative\nCommons licence, unless indicated otherwise in a credit line to\nthe material. If material is not included in the article’s Creative\nCommons licence and your intended use is not permitted by\nstatutory regulation or exceeds the permitted use, you will need\nto obtain permission directly from the copyright holder. To view a\ncopy of this licence, visithttp://creativecommons.org/licenses/\nby-nc-nd/4.0/.\n© The Author(s) 2025\nnpj |digital medicine Editorial\nnpj Digital Medicine|           (2025) 8:529 2"
+}

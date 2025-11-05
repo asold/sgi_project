@@ -1,0 +1,53 @@
+{
+    "title": "Transformer-Capsule Model for Intent Detection (Student Abstract)",
+    "url": "https://openalex.org/W3037301272",
+    "year": 2020,
+    "authors": [
+        {
+            "id": "https://openalex.org/A3037709393",
+            "name": "Aleksander Obuchowski",
+            "affiliations": [
+                "Gdańsk University of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4296727068",
+            "name": "Michał Lew",
+            "affiliations": [
+                "SentiOne (Poland)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3037709393",
+            "name": "Aleksander Obuchowski",
+            "affiliations": [
+                "SentiOne (Poland)",
+                "Gdańsk University of Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4296727068",
+            "name": "Michał Lew",
+            "affiliations": [
+                "SentiOne (Poland)"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2786860129",
+        "https://openalex.org/W2964829511",
+        "https://openalex.org/W6677408996",
+        "https://openalex.org/W6691431627",
+        "https://openalex.org/W6743446608",
+        "https://openalex.org/W2133564696",
+        "https://openalex.org/W2136848157",
+        "https://openalex.org/W2963703618",
+        "https://openalex.org/W4385245566",
+        "https://openalex.org/W1522301498",
+        "https://openalex.org/W2250539671",
+        "https://openalex.org/W3099181607",
+        "https://openalex.org/W2963033987"
+    ],
+    "abstract": "Intent recognition is one of the most crucial tasks in NLU systems, which are nowadays especially important for designing intelligent conversation. We propose a novel approach to intent recognition which involves combining transformer architecture with capsule networks. Our results show that such architecture performs better than original capsule-NLU network implementations and achieves state-of-the-art results on datasets such as ATIS, AskUbuntu ,and WebApp.",
+    "full_text": "The Thirty-Fourth AAAI Conference on Artiﬁcial Intelligence (AAAI-20)\nTransformer-Capsule Model for Intent Detection (Student Abstract)\nAleksander Obuchowski,1,2 Michał Lew2\n1Faculty of Applied Physics and Mathematics, Gda´nsk University of Technology\n2SentiOne Research\ns174086@student.pg.edu.pl, michal.lew@sentione.com\nAbstract\nIntent recognition is one of the most crucial tasks in NLU\nsystems, which are nowadays especially important for design-\ning intelligent conversation. We propose a novel approach to\nintent recognition which involves combining transformer ar-\nchitecture with capsule networks. Our results show that such\narchitecture performs better than original capsule-NLU net-\nwork implementations and achieves state-of-the-art results on\ndatasets such as A TIS, AskUbuntu ,and WebApp.\nIntroduction\nGiven the increasing presence of chatbots and digital assis-\ntants in our daily lives, the demand for conversation systems\nis especially high. Natural Language Understanding (NLU)\nis a crucial component in designing those systems. Intent de-\ntection is a part of NLU that focuses on capturing intention\nof user queries. Given the input sentence, its goal is to assign\nit to a speciﬁc label, that can later be used by the conversa-\ntion system to return an adequate answer. Machine learning\nmodels designed for this task usually consist of an encoder\nand a classiﬁer. The encoders role is to create semantically\naccurate embedding of the input text that can further be used\nby the classiﬁer to assign a label to the query.\nThere are many approaches to producing embeddings\nfor the whole sentence from word-level embeddings. One\nof the basic approaches is to use LSTM networks (Gers,\nSchmidhuber, and Cummins 1999) which, through their re-\ncurrent structure, accurately capture the contextual relations\nof words in a sentence. Next, LSTM with attention (Bah-\ndanau, Cho, and Bengio 2014) was used, where attention\nmechanism enabled the encoder to focus on the important\nwords in the sentence. Recently one of the most popular ar-\nchitectures used in sentence encoding has been transformer\narchitecture (V aswani et al. 2017) that uses just the attention\nmechanism, without recurrent connections.\nCapsule neural networks, primary used in image recogni-\ntion (Sabour, Frosst, and Hinton 2017) are new types of neu-\nral networks that group neurons together into vectors that en-\ncode speciﬁc parameters of entities and use dynamic-routing\nbetween layers to pass on the parameters that are important\nonto the next layer. Capsule networks have also been used in\nCopyright c⃝ 2020, Association for the Advancement of Artiﬁcial\nIntelligence (www.aaai.org). All rights reserved.\nNLP (Zhang et al. 2018) achieving high accuracy on intent\nrecognition task.\nIn our solution we decided to combine both transformer\nand capsules architecture. This was motivated by the fact\nthat transformers, through their attention mechanism, do\nen excellent job in encoding short pieces of text focusing\non important words, while capsule networks, thought their\ndynamic routing, enable propagation of important features\nthrough other layers of the network.\nWe have tested our solution on AskUbuntu and WebApp\nwhere we achieved results of 89% and 92%, outperform-\ning current state-of-the-art solution (Shridhar et al. 2018),\nas well as on A TIS dataset where we achieved 98.89% with\ncurrent state-of-the-art (Chen and Y u 2019) at 98.61%.\nApproach\nIn our approach we used the encoder part of transformer\narchitecture combined with our implementation of capsule\nnetworks and their dynamic routing to construct an accurate\nembedding for the queried sentence. The whole architecture\nis shown in Figure1.\nAs a input we used GloV e (Pennington, Socher, and Man-\nning 2014) embeddings pre-trained on Common Craw cor-\npus. Those inputs were fed to a transformer module (Figure\n1). This module consisted of a single layer transformer en-\ncoder with 12-head attention and feed-forward layer with\nhidden dimension of 300.\nV ector produced by the transformer was then fed into cap-\nsule module (Figure 1) consisting of 100 capsules with 15\ndimensions each. Dynamic routing was performed 4 times.\nWe found this number to be optimal for the ensuring selec-\ntion of important features while still considering those that\nare less aligned with the output. Then, inline with the orig-\ninal capsules architecture, we used squash function of the\ncapsules output. Next, we used ﬂatten layer to reduce the\nnumber of dimensions to be analyzed by further layers.\nFinally, a sentence encoded by this model was fed into\na dense layer with softmax activation function that mapped\nthe embedded vector to the desired class in one-hot format.\nWe used cross-entropy as loss function and adam optimizer\n(Kingma and Ba 2014).\n13885\nFigure 1: Our architecture\nExperiments and Results\nFor our experiments, we used the following datasets:\nAskUbuntu, WebApp (Braun et al. 2017), and A TIS.\nOn AskUbuntu and WebApp we compared our solution\nwith popular architectures 1 as well as current state-of-the-\nart solution on those datasets - Subword Semantic Hashing\n(SSH) (Shridhar et al. 2018).\nAskUbuntu WebApp\nBotfuel 0.90 0.80\nLuis 0.90 0.81\nAPI (DialogFlow) 0.85 0.80\nWatson 0.92 0.83\nRASA 0.86 0.74\nSnips 0.83 0.78\nRecast 0.86 0.75\nSSH 0.94 0.85\nTransformer-Capsule 0.98 0.92\nTable 1: Comparison of different intent recognition services\n(micro f1 score)\nWe also compared our solution with the original capsule\nimplementation (Zhang et al. 2018) that was tested on the\nA TIS dataset as well as the current SOTA on this dataset\n(Chen and Y u 2019).\nA TIS\nCAPSULE-NLU 0.950\nW AIS 0.9861\nTranformer-Capsule 0.9889\nTable 2: Comparison of our model to capsule-nlu and SOTA\non A TIS dataset (accuracy score)\nThe results show that our solution is able to achieve state-\nof-the-art results on datasets with small number of examples,\nsuch as AskUbuntu and WebApp, as well as larger datasets\nlike A TIS.\nConclusion and Future Work\nUsing transformer encoder with the capsule architecture can\nlead to better results in intent recognition task. For our fu-\nture work we are planning to test this architecture on joint\n1https://github.com/Botfuel/benchmark-nlp-2018\nintent recognition and slot-ﬁling, as well as explore how pre-\ntraining of the encoder on larger corpora can improve the\nresults.\nReferences\nBahdanau, D.; Cho, K.; and Bengio, Y . 2014. Neural ma-\nchine translation by jointly learning to align and translate.\narXiv preprint arXiv:1409.0473.\nBraun, D.; Hernandez-Mendez, A.; Matthes, F.; and Langen,\nM. 2017. Evaluating natural language understanding ser-\nvices for conversational question answering systems. InPro-\nceedings of the 18th Annual SIGdial Meeting on Discourse\nand Dialogue, 174–185. Saarbr ¨ucken, Germany: Associa-\ntion for Computational Linguistics.\nChen, S., and Y u, S. 2019. Wais: Word attention for\njoint intent detection and slot ﬁlling. In Proceedings of\nthe AAAI Conference on Artiﬁcial Intelligence, volume 33,\n9927–9928.\nGers, F. A.; Schmidhuber, J.; and Cummins, F. 1999. Learn-\ning to forget: Continual prediction with lstm.\nKingma, D. P ., and Ba, J. 2014. Adam: A method for\nstochastic optimization. arXiv preprint arXiv:1412.6980.\nPennington, J.; Socher, R.; and Manning, C. 2014. Glove:\nGlobal vectors for word representation. In Proceedings of\nthe 2014 conference on empirical methods in natural lan-\nguage processing (EMNLP), 1532–1543.\nSabour, S.; Frosst, N.; and Hinton, G. E. 2017. Dynamic\nrouting between capsules. In Advances in neural informa-\ntion processing systems, 3856–3866.\nShridhar, K.; Sahu, A.; Dash, A.; Alonso, P .; Pihlgren, G.;\nPondeknath, V .; Simistira, F.; and Liwicki, M. 2018. Sub-\nword semantic hashing for intent classiﬁcation on small\ndatasets. arXiv preprint arXiv:1810.07150.\nV aswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones,\nL.; Gomez, A. N.; Kaiser, Ł.; and Polosukhin, I. 2017. At-\ntention is all you need. In Advances in neural information\nprocessing systems, 5998–6008.\nZhang, C.; Li, Y .; Du, N.; Fan, W.; and Y u, P . S. 2018. Joint\nslot ﬁlling and intent detection via capsule neural networks.\narXiv preprint arXiv:1812.09471.\n13886"
+}

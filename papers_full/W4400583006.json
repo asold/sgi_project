@@ -1,0 +1,101 @@
+{
+    "title": "CORE: Resolving Code Quality Issues using LLMs",
+    "url": "https://openalex.org/W4400583006",
+    "year": 2024,
+    "authors": [
+        {
+            "id": null,
+            "name": "Nalin Wadhwa",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5018542653",
+            "name": "Jui Pradhan",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3206909786",
+            "name": "Atharv Sonwane",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5079862927",
+            "name": "Surya Prakash Sahu",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2417153716",
+            "name": "Nagarajan Natarajan",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2033751581",
+            "name": "Aditya Kanade",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2248019242",
+            "name": "Suresh Parthasarathy",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2183217892",
+            "name": "Sriram Rajamani",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2086464170",
+        "https://openalex.org/W2979679630",
+        "https://openalex.org/W2968109196",
+        "https://openalex.org/W3189860654",
+        "https://openalex.org/W4384345745",
+        "https://openalex.org/W2998011150",
+        "https://openalex.org/W4308643015",
+        "https://openalex.org/W2974889942",
+        "https://openalex.org/W4284676027",
+        "https://openalex.org/W3134686229",
+        "https://openalex.org/W4382239980",
+        "https://openalex.org/W4377238789",
+        "https://openalex.org/W2964210007",
+        "https://openalex.org/W2904214673",
+        "https://openalex.org/W3185341429",
+        "https://openalex.org/W4366735548",
+        "https://openalex.org/W2060333670",
+        "https://openalex.org/W2996563961",
+        "https://openalex.org/W4288614128",
+        "https://openalex.org/W4226278401",
+        "https://openalex.org/W2099866050",
+        "https://openalex.org/W3138622308",
+        "https://openalex.org/W6782465632",
+        "https://openalex.org/W2972082064",
+        "https://openalex.org/W4284709233",
+        "https://openalex.org/W2795338679",
+        "https://openalex.org/W2990685757",
+        "https://openalex.org/W4384345708",
+        "https://openalex.org/W2646484260",
+        "https://openalex.org/W3193682477",
+        "https://openalex.org/W3161027892",
+        "https://openalex.org/W4287674181",
+        "https://openalex.org/W2911282308",
+        "https://openalex.org/W2787379525"
+    ],
+    "abstract": "As software projects progress, quality of code assumes paramount importance as it affects reliability, maintainability and security of software. For this reason, static analysis tools are used in developer workflows to flag code quality issues. However, developers need to spend extra efforts to revise their code to improve code quality based on the tool findings. In this work, we investigate the use of (instruction-following) large language models (LLMs) to assist developers in revising code to resolve code quality issues. We present a tool, CORE (short for COde REvisions), architected using a pair of LLMs organized as a duo comprised of a proposer and a ranker. Providers of static analysis tools recommend ways to mitigate the tool warnings and developers follow them to revise their code. The proposer LLM of CORE takes the same set of recommendations and applies them to generate candidate code revisions. The candidates which pass the static quality checks are retained. However, the LLM may introduce subtle, unintended functionality changes which may go un-detected by the static analysis. The ranker LLM evaluates the changes made by the proposer using a rubric that closely follows the acceptance criteria that a developer would enforce. CORE uses the scores assigned by the ranker LLM to rank the candidate revisions before presenting them to the developer. We conduct a variety of experiments on two public benchmarks to show the ability of CORE: (1) to generate code revisions acceptable to both static analysis tools and human reviewers (the latter evaluated with user study on a subset of the Python benchmark), (2) to reduce human review efforts by detecting and eliminating revisions with unintended changes, (3) to readily work across multiple languages (Python and Java), static analysis tools (CodeQL and SonarQube) and quality checks (52 and 10 checks, respectively), and (4) to achieve fix rate comparable to a rule-based automated program repair tool but with much smaller engineering efforts (on the Java benchmark). CORE could revise 59.2% Python files (across 52 quality checks) so that they pass scrutiny by both a tool and a human reviewer. The ranker LLM reduced false positives by 25.8% in these cases. CORE produced revisions that passed the static analysis tool in 76.8% Java files (across 10 quality checks) comparable to 78.3% of a specialized program repair tool, with significantly much less engineering efforts. We release code, data, and supplementary material publicly at http://aka.ms/COREMSRI.",
+    "full_text": null
+}

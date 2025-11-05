@@ -1,0 +1,98 @@
+{
+    "title": "TrojBits: A Hardware Aware Inference-Time Attack on Transformer-Based Language Models",
+    "url": "https://openalex.org/W4387185357",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2998685131",
+            "name": "Mansour Al Ghanim",
+            "affiliations": [
+                "University of Central Florida"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4375892529",
+            "name": "Muhammad Santriaji",
+            "affiliations": [
+                "University of Central Florida"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2096831337",
+            "name": "Qian Lou",
+            "affiliations": [
+                "University of Central Florida"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A271617281",
+            "name": "Yan Solihin",
+            "affiliations": [
+                "University of Central Florida"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2619479788",
+        "https://openalex.org/W3202359271",
+        "https://openalex.org/W3204619801",
+        "https://openalex.org/W2774423163",
+        "https://openalex.org/W4283211054",
+        "https://openalex.org/W2947517895",
+        "https://openalex.org/W2896457183",
+        "https://openalex.org/W3137585426",
+        "https://openalex.org/W1945616565",
+        "https://openalex.org/W2748789698",
+        "https://openalex.org/W3158360872",
+        "https://openalex.org/W2194775991",
+        "https://openalex.org/W3033187248",
+        "https://openalex.org/W4245276998",
+        "https://openalex.org/W2897105542",
+        "https://openalex.org/W3016622506",
+        "https://openalex.org/W4323555855",
+        "https://openalex.org/W2965373594",
+        "https://openalex.org/W2408141691",
+        "https://openalex.org/W2180612164",
+        "https://openalex.org/W1844261860",
+        "https://openalex.org/W2474699623",
+        "https://openalex.org/W3205696278",
+        "https://openalex.org/W3164361025",
+        "https://openalex.org/W2934837523",
+        "https://openalex.org/W2972646903",
+        "https://openalex.org/W2491829854",
+        "https://openalex.org/W2521757446",
+        "https://openalex.org/W2251939518",
+        "https://openalex.org/W2058189720",
+        "https://openalex.org/W2970290563",
+        "https://openalex.org/W3158635868",
+        "https://openalex.org/W3159803443",
+        "https://openalex.org/W3207360435",
+        "https://openalex.org/W2950813464",
+        "https://openalex.org/W3209492300",
+        "https://openalex.org/W2922580172",
+        "https://openalex.org/W2170240176",
+        "https://openalex.org/W4293790394",
+        "https://openalex.org/W1566289585",
+        "https://openalex.org/W3167002899",
+        "https://openalex.org/W4297740902",
+        "https://openalex.org/W3176270593",
+        "https://openalex.org/W2973217491",
+        "https://openalex.org/W3170572542",
+        "https://openalex.org/W3034579202",
+        "https://openalex.org/W2523246573",
+        "https://openalex.org/W4214737857",
+        "https://openalex.org/W2121879602",
+        "https://openalex.org/W4321005039",
+        "https://openalex.org/W3122890974",
+        "https://openalex.org/W4287210714",
+        "https://openalex.org/W2982756474",
+        "https://openalex.org/W3170037207",
+        "https://openalex.org/W4386075825",
+        "https://openalex.org/W2963979492",
+        "https://openalex.org/W2981860227",
+        "https://openalex.org/W3035367371",
+        "https://openalex.org/W2970597249"
+    ],
+    "abstract": "Transformer-based language models demonstrate exceptional performance in Natural Language Processing (NLP) tasks but remain susceptible to backdoor attacks involving hidden input triggers. Trojan injection via hardware bitflips presents a significant challenge for contemporary language models. However, previous research overlooks practical hardware considerations, such as DRAM and cache memory structures, resulting in unrealistic attacks that demand the manipulation of an excessive number of parameters and bits. In this paper, we present TrojBits, a novel approach requiring minimal bit-flips to effectively insert Trojans into real-world Transformer language model systems. This is achieved through a three-module framework designed to efficiently target Transformer-based language models, consisting of Vulnerable Parameters Ranking (VPR), Hardware-aware Attack Optimization (HAO), and Vulnerable Bits Pruning (VBP). Within the VPR module, we are the first to employ Gradient-guided Fisher information to identify the most susceptible Transformer parameters, specifically in the word embedding layer. The HAO module then redistributes these parameters across multiple triggers, conforming to hardware constraints by incorporating a regularization term in the trojan optimization methodology. Finally, the VBP module aims to reduce the number of bit-flips by discarding less significant bits. We evaluate TrojBits on two representative NLP models, BERT and XLNE, on three classification tasks (SST2, OffensEval, and AG’s News). Our results demonstrate that our TrojBits successfully achieves the inference-time attack with only 64 parameters out of 116 million and 90-bit flips while maintaining the model performance.",
+    "full_text": null
+}

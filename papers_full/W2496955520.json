@@ -1,0 +1,125 @@
+{
+    "title": "Efficient Training and Evaluation of Recurrent Neural Network Language Models for Automatic Speech Recognition",
+    "url": "https://openalex.org/W2496955520",
+    "year": 2016,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2985170485",
+            "name": "Chen, X.",
+            "affiliations": [
+                "University of Cambridge"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2988840627",
+            "name": "Liu X",
+            "affiliations": [
+                "Chinese University of Hong Kong"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2247379936",
+            "name": "Wang Y",
+            "affiliations": [
+                "Microsoft (United States)",
+                "University of Cambridge"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Gales, MJF",
+            "affiliations": [
+                "University of Cambridge"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Woodland, PC",
+            "affiliations": [
+                "University of Cambridge"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W2026383756",
+        "https://openalex.org/W2394932179",
+        "https://openalex.org/W6679436768",
+        "https://openalex.org/W6686045668",
+        "https://openalex.org/W6640090968",
+        "https://openalex.org/W2251682575",
+        "https://openalex.org/W2008398646",
+        "https://openalex.org/W2403274071",
+        "https://openalex.org/W6601546654",
+        "https://openalex.org/W6627792425",
+        "https://openalex.org/W6691642504",
+        "https://openalex.org/W6712249138",
+        "https://openalex.org/W6637698695",
+        "https://openalex.org/W1494108583",
+        "https://openalex.org/W1917432393",
+        "https://openalex.org/W1985258458",
+        "https://openalex.org/W2154137718",
+        "https://openalex.org/W6712868603",
+        "https://openalex.org/W1488980900",
+        "https://openalex.org/W6713001283",
+        "https://openalex.org/W6697336780",
+        "https://openalex.org/W6636811518",
+        "https://openalex.org/W2094971681",
+        "https://openalex.org/W6632248436",
+        "https://openalex.org/W2134950286",
+        "https://openalex.org/W2094233035",
+        "https://openalex.org/W2076094076",
+        "https://openalex.org/W2171928131",
+        "https://openalex.org/W6711802761",
+        "https://openalex.org/W2110415041",
+        "https://openalex.org/W1585876329",
+        "https://openalex.org/W2161199684",
+        "https://openalex.org/W2058695628",
+        "https://openalex.org/W2026149468",
+        "https://openalex.org/W2091981305",
+        "https://openalex.org/W2066378046",
+        "https://openalex.org/W6712986244",
+        "https://openalex.org/W1520465330",
+        "https://openalex.org/W1970689298",
+        "https://openalex.org/W2140679639",
+        "https://openalex.org/W6607333740",
+        "https://openalex.org/W6604085896",
+        "https://openalex.org/W6624558595",
+        "https://openalex.org/W6713098461",
+        "https://openalex.org/W2144790469",
+        "https://openalex.org/W6678040779",
+        "https://openalex.org/W1964742985",
+        "https://openalex.org/W1994536225",
+        "https://openalex.org/W6680106237",
+        "https://openalex.org/W1773599773",
+        "https://openalex.org/W1922655562",
+        "https://openalex.org/W1218987319",
+        "https://openalex.org/W2138204974",
+        "https://openalex.org/W932413789",
+        "https://openalex.org/W1498436455",
+        "https://openalex.org/W1631260214",
+        "https://openalex.org/W2401969231",
+        "https://openalex.org/W2120861206",
+        "https://openalex.org/W2072350286",
+        "https://openalex.org/W2181607856",
+        "https://openalex.org/W2611669587",
+        "https://openalex.org/W2271177914",
+        "https://openalex.org/W2400801499",
+        "https://openalex.org/W2399550240",
+        "https://openalex.org/W2402268235",
+        "https://openalex.org/W2130942839",
+        "https://openalex.org/W1753482797",
+        "https://openalex.org/W2250489405",
+        "https://openalex.org/W2951714314",
+        "https://openalex.org/W2296705629",
+        "https://openalex.org/W4285719527",
+        "https://openalex.org/W36903255",
+        "https://openalex.org/W179875071",
+        "https://openalex.org/W2399456070",
+        "https://openalex.org/W2396033037",
+        "https://openalex.org/W101286142",
+        "https://openalex.org/W2998704965",
+        "https://openalex.org/W2474824677"
+    ],
+    "abstract": "Recurrent neural network language models (RNNLMs) are becoming increasingly popular for a range of applications including automatic speech recognition. An important issue that limits their possible application areas is the computational cost incurred in training and evaluation. This paper describes a series of new efficiency improving approaches that allows RNNLMs to be more efficiently trained on graphics processing units (GPUs) and evaluated on CPUs. First, a modified RNNLM architecture with a nonclass-based, full output layer structure (F-RNNLM) is proposed. This modified architecture facilitates a novel spliced sentence bunch mode parallelization of F-RNNLM training using large quantities of data on a GPU. Second, two efficient RNNLM training criteria based on variance regularization and noise contrastive estimation are explored to specifically reduce the computation associated with the RNNLM output layer softmax normalisation term. Finally, a pipelined training algorithm utilizing multiple GPUs is also used to further improve the training speed. Initially, RNNLMs were trained on a moderate dataset with 20M words from a large vocabulary conversational telephone speech recognition task. The training time of RNNLM is reduced by up to a factor of 53 on a single GPU over the standard CPU-based RNNLM toolkit. A 56 times speed up in test time evaluation on a CPU was obtained over the baseline F-RNNLMs. Consistent improvements in both recognition accuracy and perplexity were also obtained over C-RNNLMs. Experiments on Google's one billion corpus also reveals that the training of RNNLM scales well.",
+    "full_text": null
+}

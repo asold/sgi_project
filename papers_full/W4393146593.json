@@ -1,0 +1,77 @@
+{
+    "title": "Large Language Models as Planning Domain Generators (Student Abstract)",
+    "url": "https://openalex.org/W4393146593",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A1964321420",
+            "name": "James Oswald",
+            "affiliations": [
+                "Rensselaer Polytechnic Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2238314490",
+            "name": "Kavitha Srinivas",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2998106543",
+            "name": "Harsha Kokel",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2118800098",
+            "name": "Junkyu Lee",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2098402621",
+            "name": "Michael Katz",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2132080712",
+            "name": "Shirin Sohrabi",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2238314490",
+            "name": "Kavitha Srinivas",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2998106543",
+            "name": "Harsha Kokel",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2118800098",
+            "name": "Junkyu Lee",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2098402621",
+            "name": "Michael Katz",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2132080712",
+            "name": "Shirin Sohrabi",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W6629245573",
+        "https://openalex.org/W2149361370",
+        "https://openalex.org/W6854708774",
+        "https://openalex.org/W2119709400",
+        "https://openalex.org/W4376167329",
+        "https://openalex.org/W1489183362",
+        "https://openalex.org/W4378510404",
+        "https://openalex.org/W4322718191",
+        "https://openalex.org/W4377145613"
+    ],
+    "abstract": "The creation of planning models, and in particular domain models, is among the last bastions of tasks that require exten- sive manual labor in AI planning; it is desirable to simplify this process for the sake of making planning more accessi- ble. To this end, we investigate whether large language mod- els (LLMs) can be used to generate planning domain models from textual descriptions. We propose a novel task for this as well as a means of automated evaluation for generated do- mains by comparing the sets of plans for domain instances. Finally, we perform an empirical analysis of 7 large language models, including coding and chat models across 9 different planning domains. Our results show that LLMs, particularly larger ones, exhibit some level of proficiency in generating correct planning domains from natural language descriptions",
+    "full_text": "Large Language Models as Planning Domain Generators\n(Student Abstract)\nJames Oswald1, Kavitha Srinivas2, Harsha Kokel2,\nJunkyu Lee2, Michael Katz2, Shirin Sohrabi2\n1Rensselaer Polytechnic Institute\n2IBM Research AI\noswalj@rpi.edu, {kavitha.srinivas,harsha.kokel,junkyu.lee,michael.katz1}@ibm.com, ssohrab@us.ibm.com\nAbstract\nThe creation of planning models, and in particular domain\nmodels, is among the last bastions of tasks that require exten-\nsive manual labor in AI planning; it is desirable to simplify\nthis process for the sake of making planning more accessi-\nble. To this end, we investigate whether large language mod-\nels (LLMs) can be used to generate planning domain models\nfrom textual descriptions. We propose a novel task for this\nas well as a means of automated evaluation for generated do-\nmains by comparing the sets of plans for domain instances.\nFinally, we perform an empirical analysis of 7 large language\nmodels, including coding and chat models across 9 different\nplanning domains. Our results show that LLMs, particularly\nlarger ones, exhibit some level of proficiency in generating\ncorrect planning domains from natural language descriptions.\nIntroduction\nLarge language models (LLMs) have demonstrated robust\nemergent abilities for open-ended tasks. If LLMs can bridge\nthe gap between natural language description of the prob-\nlem and symbolic representation, it would enable large-\nscale adoption of symbolic methods and reduce the depen-\ndency on technical experts. Motivated by this, we investigate\nLLMs for generating problem representations for automated\nplanning (Ghallab, Nau, and Traverso 2004). We explore\nwhether the commonsense knowledge, natural language ca-\npabilities, and emergent structured code generation ability\nof LLMs help constructing declarative planning domains.\nSpecifically, we leverage LLMs to automatically translate\nnatural language description of a domain to Planning Do-\nmain Description Language (PDDL) (Fox and Long 2003).\nApproach\nWe are interested in generating and evaluating domains on\nan action-by-action basis, where each prompt to the LLM\nis a request to generate one action in a domain using con-\ntext examples from other domains. This action-by-action\nprompting was inspired by Guan et al. (2023) and is pri-\nmarily a concern due to the size of the LLM’s context win-\ndow. In order to evaluate generated domains automatically,\na ground truth domain is needed to compare the generated\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\ndomains against. For this we use existing PDDL domains\nas a starting point in our approach. Given a starting domain\nD = ⟨F,A⟩, composed of a set of predicates describing\nthe world F and set of action schema A, we begin by con-\nverting all action schema in A to natural language descrip-\ntions of action schema, N(A). We assume that a list of the\npredicates in the domain F and natural language descrip-\ntions of these predicates N(F) are given to us as context\nfor the domain. The natural language action N(a) ∈ N(A),\nalong with a specification of domain predicates ⟨F, N(F)⟩,\nis used as the query for the in-context learning prompt. For\nthe prompt’s context examples, other actions are randomly\nsampled from action schema outside of the domainD of the\ncurrent action. A model then takes these prompts and trans-\nforms them into a sequence of tokensT(a) representing a as\na PDDL action. An attempt is made to parseT(a) as a PDDL\naction a′. This is the first location at which automated eval-\nuation is possible, as there are numerous reasons why T(a)\nmay fail to be a valid PDDL action, many of which can be\nextracted by just attempting to parse T(a). For all T(a) that\nwere successfully parsed into a reconstructed PDDL action\na′, we add them to the set of successfully reconstructed ac-\ntions A′. Next, for each a′ ∈ A′ we create a reconstructed\ndomain D′ from D by replacing A with (A/a) ∪ a′ where\na is the original action that generated a′. Our task then, is to\nevaluate the quality of each D′ with respect to D.\nEvaluation\nThe primary reason a planning domain is created is so that\nit can be used as the underlying representation for a set of\nproblems in the domain. The problems implicitly define a\nset of plans, and when reconstructing domains, we can mea-\nsure domain equivalence in terms of equivalence of the sets\nof plans for a collection of problems. While it is not practi-\ncal to check if the full set of plans is equivalent, it is possible\nto check for a number of plans on some problems we care\nabout in the domain. The domain equivalence heuristic is\ncomputed as follows: given an original planning domain D,\na reconstructed planning domain D′, and a set of solvable\nplanning problems for D, PD, each problem Π ∈ PD can\nbe transformed into a problem Π′ ∈ PD′ that uses D′ as its\nunderlying domain. For each such pair of problems Π and\nΠ′ and some corresponding subsets of their plans P ⊆ PΠ\nand P′ ⊆ PΠ′ , we can cross check whether P ⊆ PΠ′ and\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23604\nP′ ⊆ PΠ. For each individual plan, the test can be efficiently\nperformed using a plan validator. This heuristic, plan equiv-\nalence on P for a subset of plans, is a necessary condition\nfor true domain equivalence, and its negation is a sufficient\ncondition to show true domain inequality.\nResult Classes\nWe propose four result classes with their own subclasses\nfor classifying the action from an LLMs output: Syntax Er-\nror: The model produced syntactically invalid PDDL. This\nPDDL cannot be parsed to evaluate an action reconstruc-\ntion error with. Subclasses are (in precedence order): (1)\nNo PDDL (NoPDDL): Model did not output any PDDL, (2)\nParenthesis Mismatch (PError): issues regarding the match-\ning parenthesis in the PDDL (3) Unexpected Token (UTo-\nken): The PDDL parser failed after finding an unexpected\ntoken. Semantic Error: The model produced syntactically\nvalid PDDL, but the PDDL doesn’t integrate with the in-\ntended problems. Subclasses are (1) Type Error (TError):\nThe model produced an unexpected type (2) Predicate Argu-\nment Error (PAError): the wrong number of variables were\npassed to a predicate (3) Wrong Action Name (NError), The\nname of the action is wrong (4) Bad Precondition (BPEr-\nror): PDDL STRIPS does not allow negated preconditions,\nbut one is present. Different Domain: The model produced\nsyntactically valid PDDL that integrates with the original\ndomain, but the underlying domains are different by way\nof the domain equivalence heuristic. The behavior of the ac-\ntions is not as intended, plans from the original domain can-\nnot be applied in the new domain and vice versa. Subclasses\nare (1) No Plans Found (NoPlan): No plans were able to be\nfound on problems in the new domain (2) New Plan Applica-\ntion Error (NPApp): Could not apply a new plan to the orig-\ninal domain (3) Original Plan Application Error (OPApp):\nThe original plan could not be applied to the new domain.\n(Heuristically) Equivalent Domain: The model produced\nsyntactically valid PDDL that integrates with the desired do-\nmain under the domain equivalence heuristic, plans from the\noriginal domain can be applied in the new domain and vice\nversa.\nExperiments and Results\nFor evaluation, we evaluate over the LLaMA family of\nLLMs (Touvron, Lavril, and Izacard 2023), as well as the\n15 billion parameter StarCoder (SC) model (Li, Allal, and\nZi 2023). For LLaMA we evaluate over both the base pre-\ntrained models at 7b, 13b, 70b parameters (7b, 13b, 70b).\nWe also evaluate the 7b, 13b, 70b LLaMA models that have\nbeen fined tuned for chat using reinforcement learning with\nhuman feedback (7bC, 13bC, 70bC). For our domains, we\nuse 9 total, 5 from the international planning competition do-\nmains, and 4 from Silver et al. (2023). For heuristic domain\nequivalence we used KStar planner (Lee, Katz, and Sohrabi\n2023) to generate the plans, and V AL (Howey, Long, and\nFox 2004) for testing them.\nTable 1 displays the result class breakdown. For syntax\nerrors, there were no instances of the No PDDL subclass, all\nmodels evaluated output something minimally interpretative\nResult\nSC 7b 7bC 13b 13bC 70b 70bC\nSyntax 3.70 15.31 22.03 1.30 25.73 0.36 8.49\nNoPDDL 0.00 0.00 0.00 0.00 0.00 0.00 0.00\nPError 0.31 0.21 0.16 0.00 0.10 0.00 0.05\nUToken 3.39 15.10 21.82 1.30 25.62 0.36 8.07\nSemantics 18.02 22.29 36.15 14.64 22.97 7.08 11.72\nPAError 15.57 17.55 25.10 8.59 15.26 4.58 9.17\nNError 0.16 0.10 0.00 0.05 0.16 0.10 0.05\nTError 2.29 4.64 10.57 5.78 7.45 2.40 2.50\nBPError 0.00 0.21 0.47 0.21 0.10 0.00 0.00\nDiff 67.55 56.46 36.25 75.21 43.13 63.75 58.07\nNoPlan 51.72 44.64 23.07 59.43 26.72 42.50 41.77\nNPApp 7.76 8.85 8.80 8.96 11.67 12.34 11.20\nOPApp 8.07 2.97 21.72 6.82 4.74 8.91 5.10\nEquiv 10.73 5.94 5.57 8.85 8.18 28.80 21.72\nTable 1: Distribution of Result Classes and Subclasses.\nLower is better for all classes and subclasses except Equiv.\nas PDDL. For semantic errors, the primary breakdown was\ndominated by issues related to predicate argument counts\nwhere the model added or removed arguments to predicates\nin the action schema. The results on the different-domain\nsubclasses show that across the board, the majority of valid\ngenerated domains in the different-domain result class are\nnot able to be used for planning, with the planner failing\nto produce any valid plan using the reconstructed problems\nin domain PD′ . Overall, we observe that the trend that the\nlarger LLaMA modes perform better, with our best perfor-\nmance being on the largest LLaMA 70b base model.\nReferences\nFox, M.; and Long, D. 2003. PDDL2.1: An Extension to\nPDDL for Expressing Temporal Planning Domains. J. Artif.\nIntell. Res., 20: 61–124.\nGhallab, M.; Nau, D. S.; and Traverso, P. 2004. Automated\nplanning - theory and practice. Elsevier.\nGuan, L.; Valmeekam, K.; Sreedharan, S.; and Kambham-\npati, S. 2023. Leveraging Pre-trained Large Language Mod-\nels to Construct and Utilize World Models for Model-based\nTask Planning. arXiv:2305.14909.\nHowey, R.; Long, D.; and Fox, M. 2004. V AL: automatic\nplan validation, continuous effects and mixed initiative plan-\nning using PDDL. In 16th IEEE International Conference\non Tools with Artificial Intelligence, 294–301.\nLee, J.; Katz, M.; and Sohrabi, S. 2023. On K* Search for\nTop-k Planning. In Proceedings of the 16th Annual Sympo-\nsium on Combinatorial Search (SoCS 2023). AAAI Press.\nLi, R.; Allal, L. B.; and Zi, Y . 2023. StarCoder: may the\nsource be with you! arXiv:2305.06161.\nSilver, T.; Dan, S.; Srinivas, K.; Tenenbaum, J. B.; Kael-\nbling, L. P.; and Katz, M. 2023. Generalized Planning in\nPDDL Domains with Pretrained Large Language Models.\narXiv:2305.11014.\nTouvron, H.; Lavril, T.; and Izacard, G. 2023. LLaMA:\nOpen and Efficient Foundation Language Models.\narXiv:2302.13971.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23605"
+}

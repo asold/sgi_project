@@ -1,0 +1,108 @@
+{
+    "title": "FurChat: An Embodied Conversational Agent using LLMs, Combining Open and Closed-Domain Dialogue with Facial Expressions",
+    "url": "https://openalex.org/W4389010438",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A5092727559",
+            "name": "Neeraj Cherakara",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Finny Varghese",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": null,
+            "name": "Sheena Shabana",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5102751256",
+            "name": "Nivan Nelson",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5092727560",
+            "name": "Abhiram Karukayil",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5016542693",
+            "name": "Rohith Kulothungan",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5111080401",
+            "name": "Mohammed Afil Farhan",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3130048276",
+            "name": "Birthe Nesset",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4299392925",
+            "name": "Meriam Moujahid",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3015928153",
+            "name": "Tanvi Dinkar",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2192797973",
+            "name": "Verena Rieser",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A275989945",
+            "name": "Oliver Lemon",
+            "affiliations": [
+                "Heriot-Watt University Malaysia"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4312985860",
+        "https://openalex.org/W4362679208",
+        "https://openalex.org/W4297445807",
+        "https://openalex.org/W2095436958",
+        "https://openalex.org/W4298112270",
+        "https://openalex.org/W3019166713",
+        "https://openalex.org/W4312550024",
+        "https://openalex.org/W4312812318",
+        "https://openalex.org/W4321013654",
+        "https://openalex.org/W3048100966",
+        "https://openalex.org/W209874952",
+        "https://openalex.org/W4375959471",
+        "https://openalex.org/W4292779060"
+    ],
+    "abstract": "Neeraj Cherakara, Finny Varghese, Sheena Shabana, Nivan Nelson, Abhiram Karukayil, Rohith Kulothungan, Mohammed Afil Farhan, Birthe Nesset, Meriam Moujahid, Tanvi Dinkar, Verena Rieser, Oliver Lemon. Proceedings of the 24th Meeting of the Special Interest Group on Discourse and Dialogue. 2023.",
+    "full_text": "Proceedings of the 24th Meeting of the Special Interest Group on Discourse and Dialogue, pages 588–592\nSeptember 11–15, 2023. ©2023 Association for Computational Linguistics\n588\nFurChat: An Embodied Conversational Agent using LLMs, Combining\nOpen and Closed-Domain Dialogue with Facial Expressions\nNeeraj Cherakara, Finny Varghese, Sheena Shabana, Nivan Nelson\nAbhiram Karukayil, Rohith Kulothungan, Mohammed Afil Farhan,\nBirthe Nesset, Meriam Moujahid, Tanvi Dinkar, Verena Rieser, Oliver Lemon†\nInteraction Lab, Heriot-Watt University ; †Alana AI\n{nc2025, fv2002, ss2022, nn2023, ak2120, rk2065, mf2034, bn25\nmm470, t.dinkar, v.t.rieser, o.lemon}@hw.ac.uk\nAbstract\nWe demonstrate an embodied conversational\nagent that can function as a receptionist and\ngenerate a mixture of open and closed-domain\ndialogue along with facial expressions, by us-\ning a large language model (LLM) to develop\nan engaging conversation. We deployed the\nsystem onto a Furhat robot, which is highly\nexpressive and capable of using both verbal\nand nonverbal cues during interaction. The sys-\ntem was designed specifically for the National\nRobotarium to interact with visitors through\nnatural conversations, providing them with in-\nformation about the facilities, research, news,\nupcoming events, etc. The system utilises the\nstate-of-the-art GPT-3.5 model to generate such\ninformation along with domain-general conver-\nsations and facial expressions based on prompt\nengineering.\n1 Introduction\nThe progress in robotics and artificial intelligence\nin recent decades has led to the emergence of robots\nbeing utilized beyond their conventional industrial\napplications. Robot receptionists are designed to\ninteract with and assist visitors in various places\nlike offices, hotels, etc. by providing information\nabout the location, services, and facilities. The\nappropriate use of verbal and non-verbal cues is\nvery important for the robot’s interaction with hu-\nmans (Mavridis, 2015). Most research in the field\nhas been mainly focused on developing domain-\nspecific conversation systems, with little explo-\nration into open-domain dialogue for social robots.\nConventional agents are often rule-based, which\nmeans they rely on pre-written commands and key-\nwords that are pre-programmed. This limits the\nFigure 1: A user interacting with the FurChat System.\ninteraction with humans to little or no freedom of\nchoice in answers (Tudor Car et al., 2020). The ad-\nvancement of large language models (LLMs) in the\npast year has brought an exciting revolution in the\nfield of natural language processing. With the de-\nvelopment of models like GPT-3.51, we have seen\nunprecedented progress in tasks such as question-\nanswering and text summarization (Brown et al.,\n2020). However, a question remains about how to\nsuccessfully leverage the capabilities of LLMs to\ncreate systems that can go from closed domain to\nopen, while also considering the embodiment of\nthe system.\nIn this work, we present FurChat2, an embodied\nconversational agent that utilises the latest advances\nin LLMs to create a more natural conversational\nexperience. The system seamlessly combines open\nand closed-domain dialogues with emotive facial\nexpressions, resulting in an engaging and person-\nalised interaction for users. The system was ini-\ntially designed and developed to serve as a recep-\n1https://platform.openai.com/docs/\nmodels/gpt-3-5\n2A demonstration video of the system is available here.\n589\nFigure 2: System Architecture of the current FurChat system.\ntionist for the National Robotarium, in continuation\nof the multi-party interactive model developed by\nMoujahid et al. (2022b), and its deployment shows\npromise in other areas due to the LLMs versatile\ncapabilities. As a result, the system is not limited\nto the designated receptionist role, but can also\nengage in open-domain conversations, thereby en-\nhancing its potential as a multifunctional conversa-\ntional agent. We demonstrate the proposed conver-\nsational system on a Furhat robot (Al Moubayed\net al., 2013) which is developed by the Swedish\nfirm Furhat Robotics3. With FurChat, we demon-\nstrate the possibility of LLMs for creating a more\nnatural and intuitive conversation with robots.\n2 Furhat Robot\nFurhat is a social robot created by Furhat Robotics.\nTo interact with humans naturally and intuitively,\nthe robot employs advanced conversational AI and\nexpressive facial expressions. A three-dimensional\nmask that mimics a human face is projected\nwith an animated face using a microprojector\n(Al Moubayed et al., 2013). A motorised platform\nsupports the robot’s neck and head, allowing the\nplatform’s head to spin and node. To identify and\nreact to human speech, it has a microphone array\nand speakers. Due to the human-like appearance\nof Furhat, it is prone to the uncanny valley effect\n(Ågren and Silvervarg, 2022).\n3https://furhatrobotics.com/\n3 System Architecture\nAs shown in Figure 2, the system architecture repre-\nsents a conversational system that enables users to\ninteract with a robot through spoken language. The\nsystem involves multiple components, including\nautomatic speech recognition (ASR) for converting\nuser speech to text, natural language understanding\n(NLU) for processing and interpreting the text, a di-\nalogue manager (DM) for managing the interaction\nflow, and natural language generation (NLG) pow-\nered by GPT-3.5 for generating natural sounding\nresponses(Ross et al., 2023). The generated text is\nthen converted back to speech using text-to-speech\n(TTS) technology and played through the robot’s\nspeaker to complete the interaction loop. The sys-\ntem relies on a database to retrieve relevant data\nbased on the user’s intent.\n3.1 Speech Recognition\nThe current system uses the Google Cloud Speech-\nto-Text4 module for ASR. This module, which tran-\nscribes spoken words into text using machine learn-\ning algorithms, is integrated into the system by\ndefault through the Furhat SDK.\n3.2 Dialogue Management\nDialogue Management consists of three sub-\nmodules: NLU, DM and a database storage. The\nNLU component analyses the incoming text from\n4https://cloud.google.com/\nspeech-to-text\n590\nthe ASR module and, through machine learning\ntechniques, breaks it down into a structured set of\ndefinitions (Otter et al., 2021). The FurhatOS pro-\nvides an NLU model to classify the text into intents\nbased on a confidence score. We provide multi-\nple custom intents for identifying closed-domain\nintents using Furhat’s NLU capabilites.\nThe in-built dialogue manager in the Furhat SDK\nis responsible for maintaining the flow of conver-\nsation and managing the dialogue state based on\nthe intents identified by the NLU component. This\nmodule is responsible for sending the appropriate\nprompt to the LLM, receiving a candidate response\nfrom the model, and subsequent processing of the\nresponse to add in desired facial gestures (see §3.4).\nAn open challenge faced by present-day LLMs\nis the hallucination of nonfactual content, which\npotentially undermines user trust and raises con-\ncerns of safety. While we cannot fully mitigate\nhallucinated content in the generated responses, in\norder to tone-down this effect, we create a custom\ndatabase following suggestions from Kumar (2023).\nWe do so by manually web-scraping the website of\nthe National Robotarium5. The database consists\nof a dictionary of items with the intents as keys\nand scraped data as values. When an appropriate\nintent is triggered, the dialogue manager accesses\nthe database to retrieve the scraped data, which is\nthen sent with the prompt (further details in §3.3))\nto elicit a response from the LLM.\n3.3 Prompt engineering for NLG\nThe NLG module is responsible for generating a\nresponse based on the request from the dialogue\nmanager. Prompt engineering is done to elicit an ap-\npropriate sounding response from the LLM, which\ngenerates natural dialogue that results in engaging\nconversations with humans. The current system\nuses text-davinci-003, which is one of the\nmost powerful models in the GPT-3.5 series and it\nis priced at $0.0200 per 1000 tokens.\nProducing relevant responses was achieved us-\ning the combined technique of few-shot learning\nand prompt engineering, which enabled us to try\ndifferent variations in techniques and produce a\nvariety of output by the LLM.\nDuring prompt engineering, the personality of\nthe robot and the context of the application are de-\nscribed, along with the past few dialogue histories\nand scraped data from the database in a particular\n5https://thenationalrobotarium.com/\nresponse format. Moreover, the prompt engineer-\ning methodology involves using the LLM to gener-\nate an appropriate emoticon based on the conversa-\ntion. In the context of emotional expression during\nan interaction, selecting an appropriate emoticon\ndepends on understanding the underlying emotions\nbeing conveyed by the visitors and adhering to the\ndisplay rules of the specific social situation. If\nthe dialogue reflects joy or humor, a happy facial\ngesture might be fitting. On the other hand, if\nthe conversation conveys empathy or sadness, a\nsad face could be more suitable. These emoticons\nare then integrated with the robot’s facial gestures\nto generate facial expressions (see §3.4), thereby\nenabling a text-based LLM to integrate in the em-\nbodied Furhat robot. The explicit specification of\nthe personality and context in the prompt aids in\ncreating a natural conversation between the robot\nand the human that is coherent and relevant to the\ntopic. The sample format of the prompt used is as\nfollows:\nThis is a conversation with a robot receptionist,\n<Robot Personality>, <Data from the Database>,\n<Dialogue history>, <Response Format along with\nsample emoticons>.\n3.4 Gesture Parsing\nThe Furhat SDK offers a range of built-in facial\ngestures that can be enhanced by custom facial\ngestures that meet specific needs. The latest GPT\nmodels have the ability to recognise emotions and\nsentiments from text, which is used in the system\n(Leung et al., 2023). Rather than simply recognis-\ning sentiments in the text, the model is tasked with\ngenerating appropriate emotions for the conversa-\ntion from the text After receiving the response from\nthe model, the matched conditional clause in the\ndialogue manager will trigger an expression from\nthe pre-developed set of gestures, which will be\ntriggered along with the generated speech.\n3.5 Text-To-Speech Generation\nFor converting the text to speech, the Amazon\nPolly6 service is used. This service is available\nwithin FurhatOS by default.\n4 Example Dialogue\nAn example dialogue between a human and the\nrobot is illustrated in Table 1.\n6https://docs.aws.amazon.com/polly/\n591\nAt the outset, the robot remains in an idle state. Once\nthe user enters the vicinity of the robot, the conversation\nbegins.\nR: [robot] Hello, I am the Receptionist here at the Na-\ntional Robotarium. Would you like to know about this\nfacility? <Robot smiles>\nU: [user] Yes, tell me about this facility.\nR: [robot] Sure. <Robot smiles>\nR: [robot] The National Robotarium is a state-of-the art\nresearch facility located on the Heriot-Watt campus in\nEdinburgh. . . .\nU: [user] That’s great. Is there any ongoing healthcare\nresearches here\nR: [robot] Yes. <Robot smiles> The National Robotar-\nium is part of a multimillion-pound collaborative project\ncalled SPRING and is focused on developing socially as-\nsistive robots for healthcare settings. SPRING will focus\non supporting elderly patients and improving psycholog-\nical well-being and the relationship between patients and\nhospital professionals. <Robot nod>\nU: [user] That’s nice. Can you tell a joke?\nR: [robot] <Robot smiles> Sure, Why did the robot go\nto the bar? <Robot winks> To get a screwdriver!\nU: [user] Can you suggest me a movie about robots?\nR: [robot] Sure thing! <Robot smiles> How about \"I,\nRobot\"? It’s a classic that deals with the exploration of\nrobotics and AI. <Robot nod>\nTable 1: Sample Conversation between the user and the\nrobot. For a full system description, please refer to §3.\n5 Conclusions and Future Work\nWe demonstrate FurChat, an embodied conver-\nsational agent with open and closed domain di-\nalogue generation and facial expressions generated\nthrough LLMs, on a social robot in a receptionist\nenvironment. The system is developed by inte-\ngrating the state-of-the-art GPT-3.5 model on top\nof the Furhat SDK. The proposed system uses a\none-to-one interaction method of communication\nwith the visitors. We plan on extending the sys-\ntem to handle multi-party interaction (Moujahid\net al., 2022a; Addlesee et al., 2023; Lemon, 2022;\nGunson et al., 2022), which is an active research\ntopic in developing receptionist robots. It is also\ncrucial to address the issue of hallucination from\nthe large language model and this problem can be\nmitigated by fine-tuning the language model and\ndirectly generating conversations from it without\nrelying on any NLU components which we plan to\nimplement in the future.\nWe plan to showcase the system on the Furhat\nrobot during the SIGDIAL conference to all the\nattendees and show them the capabilities of using\nLLMs for dialogue and facial expression generation\nas described in this paper.\nAcknowledgements\nThis research has been funded by the EU H2020\nprogram under grant agreement no. 871245\n(http://spring-h2020.eu/) and the EP-\nSRC project ‘Gender Bias in Conversational AI’\n(EP/T023767/1).\nReferences\nAngus Addlesee, Weronika Sieinska, Nancie Gunson,\nDaniel Hernandez Garcia, Christian Dondrup, and\nOliver Lemon. 2023. Data collection for multi-party\ntask-based dialogue in social robotics. In IWSDS\n2023: International Workshop on Spoken Dialogue\nSystems Technology.\nIsabella Ågren and Annika Silvervarg. 2022. Exploring\nhumanlikeness and the uncanny valley with furhat.\nIn Proceedings of the 22nd ACM International Con-\nference on Intelligent Virtual Agents, pages 1–3.\nSamer Al Moubayed, Jonas Beskow, and Gabriel\nSkantze. 2013. The furhat social companion talk-\ning head. In INTERSPEECH, pages 747–749.\nTom Brown, Benjamin Mann, Nick Ryder, Melanie\nSubbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind\nNeelakantan, Pranav Shyam, Girish Sastry, Amanda\nAskell, et al. 2020. Language models are few-shot\nlearners. Advances in neural information processing\nsystems, 33:1877–1901.\nNancie Gunson, Daniel Hernández García, Weronika\nSiei´nska, Christian Dondrup, and Oliver Lemon.\n2022. Developing a social conversational robot for\nthe hospital waiting room. In 2022 31st IEEE Inter-\nnational Conference on Robot and Human Interac-\ntive Communication (RO-MAN), pages 1352–1357.\nIEEE.\nKrishna Kumar. 2023. Geotechnical Parrot Tales (GPT):\nOvercoming GPT hallucinations with prompt engi-\nneering for geotechnical applications. arXiv preprint\narXiv:2304.02138.\nOliver Lemon. 2022. Conversational AI for multi-agent\ncommunication in Natural Language. AI Communi-\ncations, 35(4):295–308.\nJohn Kalung Leung, Igor Griva, William G Kennedy,\nJason M Kinser, Sohyun Park, and Seo Young Lee.\n2023. The application of affective measures in text-\nbased emotion aware recommender systems. arXiv\npreprint arXiv:2305.04796.\nNikolaos Mavridis. 2015. A review of verbal and\nnon-verbal human–robot interactive communication.\nRobotics and Autonomous Systems, 63:22–35.\nMeriam Moujahid, Helen Hastie, and Oliver Lemon.\n2022a. Multi-party interaction with a robot recep-\ntionist. In Proceedings of the 2022 ACM/IEEE In-\nternational Conference on Human-Robot Interaction,\nHRI ’22, page 927–931. IEEE Press.\n592\nMeriam Moujahid, Bruce Wilson, Helen Hastie, and\nOliver Lemon. 2022b. Demonstration of a robot\nreceptionist with multi-party situated interaction.\nIn Proceedings of the 2022 17th ACM/IEEE Inter-\nnational Conference on Human-Robot Interaction\n(HRI), pages 1202–1203. IEEE.\nDaniel W. Otter, Julian R. Medina, and Jugal K. Kalita.\n2021. A Survey of the Usages of Deep Learning for\nNatural Language Processing. IEEE Transactions on\nNeural Networks and Learning Systems, 32(2):604–\n624.\nSteven I. Ross, Fernando Martinez, Stephanie Houde,\nMichael Muller, and Justin D. Weisz. 2023. The\nprogrammer’s assistant: Conversational interaction\nwith a large language model for software develop-\nment. IUI ’23, page 491–514, New York, NY , USA.\nAssociation for Computing Machinery.\nLorainne Tudor Car, Dhakshenya Ardhithy Dhinagaran,\nBhone Myint Kyaw, Tobias Kowatsch, Shafiq Joty,\nYin-Leng Theng, and Rifat Atun. 2020. Conversa-\ntional agents in health care: Scoping review and con-\nceptual analysis. J Med Internet Res, 22(8):e17158."
+}

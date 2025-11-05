@@ -1,0 +1,67 @@
+{
+    "title": "Large Language Model-Driven Evaluation of Medical Records Using MedCheckLLM",
+    "url": "https://openalex.org/W4388280190",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A4288951127",
+            "name": "Marc Cicero Schubert",
+            "affiliations": [
+                "University Hospital Heidelberg"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1992121173",
+            "name": "Wolfgang Wick",
+            "affiliations": [
+                "University Hospital Heidelberg",
+                "Heidelberg University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2117774879",
+            "name": "Varun Venkataramani",
+            "affiliations": [
+                "Heidelberg University",
+                "University Hospital Heidelberg"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4288951127",
+            "name": "Marc Cicero Schubert",
+            "affiliations": [
+                "National Center for Tumor Diseases",
+                "Heidelberg University",
+                "University Hospital Heidelberg"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1992121173",
+            "name": "Wolfgang Wick",
+            "affiliations": [
+                "University Hospital Heidelberg",
+                "Heidelberg University",
+                "National Center for Tumor Diseases"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2117774879",
+            "name": "Varun Venkataramani",
+            "affiliations": [
+                "Heidelberg University",
+                "University Hospital Heidelberg",
+                "National Center for Tumor Diseases"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4319662928",
+        "https://openalex.org/W1921009626",
+        "https://openalex.org/W2801085490",
+        "https://openalex.org/W3109650690",
+        "https://openalex.org/W4379769651",
+        "https://openalex.org/W4361000305"
+    ],
+    "abstract": "Abstract Large Language Models (LLMs) offer potential in healthcare, especially in the evaluation of medical documents. This research introduces MedCheckLLM, a multi-step framework designed for the systematic assessment of medical records against established evidence-based guidelines, a process termed ‘guideline-in-the-loop’. By keeping the guidelines separate from the LLM’s training data, this approach emphasizes validity, flexibility, and interpretability. Suggested evidence-based guidelines are externally accessed and fed back into the LLM for a evaluation. The method enables implementation of guideline updates and personalized protocols for specific patient groups without retraining. We applied MedCheckLLM to expert-validated simulated medical reports, focusing on headache diagnoses following International Headache Society guidelines. Findings revealed MedCheckLLM correctly extracted diagnoses, suggested appropriate guidelines, and accurately evaluated 87% of checklist items, with its evaluations aligning significantly with expert opinions. The system not only enhances healthcare quality assurance but also introduces a transparent and efficient means of applying LLMs in clinical settings. Future considerations must address privacy and ethical concerns in actual clinical scenarios.",
+    "full_text": "Large Language Model-Driven Evaluation of Medical Records Using MedCheckLLM \nMarc Cicero Schubert \nWolfgang Wick, MD \nVarun Venkataramani, MD, PhD \n \nAuthor Affiliations: Neurology Clinic and National Center for Tumor Diseases, University Hospital \nHeidelberg, Heidelberg, Germany \n \nCorresponding author:  \nVarun Venkataramani, MD, PhD \nvarun.venkataramani@med.uni-heidelberg.de \nIm Neuenheimer Feld 400 \n69120 Heidelberg, Germany \nTelephone Number: +49-6221548630 \n \nWord Count: 822 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nAbstract \nLarge Language Models (LLMs) offer potential in healthcare, especially in the evaluation of medical documents. \nThis research introduces MedCheckLLM, a multi -step framework designed for the systematic assessment of \nmedical records against established eviden ce-based guidelines, a process termed 'guideline -in-the-loop'. By \nkeeping the guidelines separate from the LLM's training data, this approach emphasizes validity, flexibility, and \ninterpretability. Suggested evidence-based guidelines are externally accesse d and fed back into the LLM for a \nevaluation. The method enables implementation of guideline updates and personalized protocols for specific \npatient groups without retraining.  We applied MedCheckLLM to expert -validated simulated medical reports, \nfocusing o n headache diagnoses following International Headache Society guidelines. Findings revealed \nMedCheckLLM correctly extracted diagnoses, suggested appropriate guidelines, and accurately evaluated 87% \nof checklist items, with its evaluations aligning significantly with expert opinions. The system not only enhances \nhealthcare quality assurance but also introduces a transparent and efficient means of applying LLMs in clinical \nsettings. Future considerations must address privacy and ethical concerns in actual clinical scenarios. \n \nLarge Language Model-Driven Evaluation of Medical Records Using MedCheckLLM \nLarge Language Models (LLMs) have been utilized across a multitude of applications, demonstrating enormous \npotential in processing and comprehending complex datasets in healthcare1. One area yet to be thoroughly \nexplored is the application of LLMs for the reliable and reproducible evaluatio n of medical documents. \nAutomatic evaluation of these documents, if achieved effectively, has the potential to improve healthcare, \nenhance patient safety, reduce the risk of cognitive and other biases, and refine the training process of LLMs. \nImportantly, it is essential that the system's reasoning process is a) transparent and comprehensible to human \nevaluators such as a checklist completion, and b) is guided by established medical guidelines proven to increase \npatient safety2 and the gold standard for implementing clinical care, thereby elevating the overall performance \nand applicability of AI-driven healthcare. \nIn this study, we introduce a framework which is based on a multi-step approach for medical record evaluation \nthat incorporates guidelines directly into the evaluation process, a concept we term 'guideline-in-the-loop'. Our \nproposed algorithm, named MedCheckLLM, is a n LLM-driven structured, layered reasoning mechanism \n(Figure 1) designed to automate the evaluation of medical records, with a particular emphasis on the evaluation \nagainst evidence-based guidelines. Crucially, the guidelines are deterministically accessed by the LLM as out-of-\ntraining data. This rigorous separation of LLM and guideline s is expected to lead to increased validity and \ninterpretability of the evaluations and offers flexibility for updatin g guidelines. The primary objective of this \nresearch is to introduce the conceptual framework and assess its feasibility. This approach is expected to have \nsignificant implications on healthcare quality and the transparent and efficient application of LLMs in clinical \nsettings.  \nMethods: In this study, we utilized expert-validated simulated medical reports, which included patients' medical \nhistory, examination outcomes, diagn osis, and treatment strategies. The MedCheckLLM algorithm begins by \nextracting a patient's diagnosis from the medical report . Based on the extracted diagnosis,  a suggestion for a \nguideline from appropriate medical societies is made. Guidelines are then accessed independently from the \nLLM’s mechanisms. Subsequently, guidelines are provided as input to the LLM and either identified as already \nformatted in a  usable checklist or are converted into a checklist. Finally, this diagnosis-specific checklist is \nemployed to assess the medical report. In this study, we evaluated whether the system is able to evaluate patient \nhistories with headaches as leading symptom  based on  the structured guidelines from the International \nHeadache Society. These checklists serve as benchmarks, used to assess the completeness, comp liance, and \npossible inaccuracies of the diagnosis. The validity of this method was further confirmed by an evaluation of \ncorrect and incorrect synthetic doctor’s notes. The LLM “gpt-4-0613” was accessed using the Open-AI API. \nThe study was conducted between July 24th and August 30th 2023.  \nResults: We evaluated the medical report analysis conducted by MedCheckLLM for the diagnosis of various \nheadache cases. MedCheckLLM extracted the specified diagnosis correctly in 100 % of cases, choosing from a \nlist of 61 possible diagnoses from the ICHD-33 (n=17 medical reports). The model suggested appropriate and \nexisting evidence-based guidelines in 70.59 % (n=12 of 17) of medical reports. It could convert the format of \nthe guidelines to checklists in 100 % of cases (n=17). MedCheckLLM accurately evaluated 8 7.0 % (67 of 77) \nof the checklist items. The explanations provided by MedCheckLLM for its evaluations  were mostly in high \nagreement with expert evaluations, affirming its effectiveness . MedCheckLLM was able to identify incorrect \ndiagnoses where the stated condition did not align with the rest of the content in 94.1% (16 of 17) doctor's \nletters, while it correctly recognized 100% of the correct letters (n=17).  \nDiscussion: The framework of MedCheckLLM represents a promising approach for comprehensive, \nguideline-anchored review of electronic health records.  \nIt holds the potential to advance healthcare by acting as a quality assurance tool, thereby improving individual \nprovider assessment and patient-specific care due to its several advantages of distinct partitioning of the LLM \nand the guidelines over training guidelines into an LLM: The flexibility of the approach allows for immediate \nimplementation of guideline updates as well as the option to implement specific and customized protocols for \nsubgroups of patients, without the necessity of retraining. The interpretability makes it easy to understand why \nthe algorithm made a particular decision, which is crucial in healthcare settings where explainability is required4. \nAdditionally, they do not show bias based on the data that is presented to the LLM, reducing the risk of \noverfitting. Further, this approach can be used to evaluate the quality of electronic healthcare records that were \npreviously used to train LLM s without extensive quality controls 5. Well-structured guideline s are key to \nleveraging this process effectively. The framework facilitates improved data mining practices in electronic health \nrecords5, promotes healthcare quality  assurance, and can contribute to a relevant leap forward in healthcare \nthrough AI-driven systems. As we move forward, it is crucial to address privacy and confidentiality concerns \nto ensure the ethical application of these powerful tools in real-world clinical settings6. \nFigure 1 \nWorkflow of MedCheckLLM. \nTable 1 \nPerformance of MedCheckLLM. \n \nElement of algorithmic structure \n \n% \nPerformance \nCorrect/N \nExtracting stated diagnosis 100 17/17 \nSuggestion of existing guidelines  70.59 12/17 \nDetection of checklist 100 17/17 \nAccurate evaluation of diagnostic criteria 87.0 67/77 \nEvaluation of letters with correct \ndiagnosis \n100 17/17 \nEvaluation of letters with false diagnosis 91.4 16/17 \n \n \n \nSupplement 1 \nChat Prompts Used in the Study \nSupplement 2 \nData Sharing Statement \nReferences \n1. Kung TH, Cheatham M, Medenilla A, et al. Performance of ChatGPT on USMLE: Potential for AI -\nassisted medical education using large language models. PLOS Digit Health. 2023;2(2):e0000198. \n2. Thomassen O, Storesund A, Softeland E, Brattebo G. The effects of safety checklists in medicine: a \nsystematic review. Acta Anaesth Scand. 2014;58(1):5-18. \n3. Headache Classification Committee of the Internationa l Headache Society (IHS) The International \nClassification of Headache Disorders, 3rd edition. Cephalalgia. 2018;38(1):1-211. \n4. Amann J, Blasimme A, Vayena E, Frey D, Madai VI, Precise Qc. Explainability for artificial intelligence \nin healthcare: a multidisciplinary perspective. BMC Med Inform Decis Mak. 2020;20(1):310. \n5. Jiang LY, Liu XC, Nejatian NP, et al. Health system-scale language models are all-purpose prediction \nengines. Nature. 2023;619(7969):357-+. \n6. Dorr DA, Adams L, Embi P. Harnessing the Promise of Artificial Intelligence Responsibly. Jama-J Am \nMed Assoc. 2023. \n "
+}

@@ -1,0 +1,105 @@
+{
+    "title": "WhiteFox: White-Box Compiler Fuzzing Empowered by Large Language Models",
+    "url": "https://openalex.org/W4403223258",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2164068433",
+            "name": "Chenyuan Yang",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4284905371",
+            "name": "Yinlin Deng",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3194737839",
+            "name": "Runyu Lu",
+            "affiliations": [
+                "Huazhong University of Science and Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2112993033",
+            "name": "Jiayi Yao",
+            "affiliations": [
+                "Chinese University of Hong Kong, Shenzhen"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2097765051",
+            "name": "Jiawei Liu",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2224171137",
+            "name": "Reyhaneh Jabbarvand",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2107392162",
+            "name": "Lingming Zhang",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W3007855180",
+        "https://openalex.org/W3136690412",
+        "https://openalex.org/W2984976544",
+        "https://openalex.org/W2954292831",
+        "https://openalex.org/W4394015350",
+        "https://openalex.org/W4378591002",
+        "https://openalex.org/W2759550170",
+        "https://openalex.org/W3173506450",
+        "https://openalex.org/W4384154578",
+        "https://openalex.org/W1971650562",
+        "https://openalex.org/W4237492309",
+        "https://openalex.org/W4284708930",
+        "https://openalex.org/W3123045479",
+        "https://openalex.org/W3015384571",
+        "https://openalex.org/W2106072155",
+        "https://openalex.org/W4384345714",
+        "https://openalex.org/W2101512909",
+        "https://openalex.org/W2964241064",
+        "https://openalex.org/W4246166885",
+        "https://openalex.org/W2997653900",
+        "https://openalex.org/W3008321987",
+        "https://openalex.org/W4384304865",
+        "https://openalex.org/W4388867344",
+        "https://openalex.org/W4313442384",
+        "https://openalex.org/W4389158362",
+        "https://openalex.org/W4221144766",
+        "https://openalex.org/W4388857209",
+        "https://openalex.org/W3107362213",
+        "https://openalex.org/W3039183210",
+        "https://openalex.org/W1994813019",
+        "https://openalex.org/W2616028256",
+        "https://openalex.org/W2954903132",
+        "https://openalex.org/W2296669295",
+        "https://openalex.org/W2009489720",
+        "https://openalex.org/W3195818176",
+        "https://openalex.org/W2461570336",
+        "https://openalex.org/W4393305539",
+        "https://openalex.org/W2039522160",
+        "https://openalex.org/W3104663419",
+        "https://openalex.org/W4284686707",
+        "https://openalex.org/W4285490440",
+        "https://openalex.org/W4384345721",
+        "https://openalex.org/W4238083723",
+        "https://openalex.org/W2530895108",
+        "https://openalex.org/W109452506"
+    ],
+    "abstract": "Compiler correctness is crucial, as miscompilation can falsify program behaviors, leading to serious consequences over the software supply chain. In the literature, fuzzing has been extensively studied to uncover compiler defects. However, compiler fuzzing remains challenging: Existing arts focus on black- and grey-box fuzzing, which generates test programs without sufficient understanding of internal compiler behaviors. As such, they often fail to construct test programs to exercise intricate optimizations. Meanwhile, traditional white-box techniques, such as symbolic execution, are computationally inapplicable to the giant codebase of compiler systems. Recent advances demonstrate that Large Language Models (LLMs) excel in code generation/understanding tasks and even have achieved state-of-the-art performance in black-box fuzzing. Nonetheless, guiding LLMs with compiler source-code information remains a missing piece of research in compiler testing. To this end, we propose WhiteFox, the first white-box compiler fuzzer using LLMs with source-code information to test compiler optimization, with a spotlight on detecting deep logic bugs in the emerging deep learning (DL) compilers. WhiteFox adopts a multi-agent framework: (i) an LLM-based analysis agent examines the low-level optimization source code and produces requirements on the high-level test programs that can trigger the optimization; (ii) an LLM-based generation agent produces test programs based on the summarized requirements. Additionally, optimization-triggering tests are also used as feedback to further enhance the test generation prompt on the fly. Our evaluation on the three most popular DL compilers (i.e., PyTorch Inductor, TensorFlow-XLA, and TensorFlow Lite) shows that WhiteFox can generate high-quality test programs to exercise deep optimizations requiring intricate conditions, practicing up to 8 times more optimizations than state-of-the-art fuzzers. To date, WhiteFox has found in total 101 bugs for the compilers under test, with 92 confirmed as previously unknown and 70 already fixed. Notably, WhiteFox has been recently acknowledged by the PyTorch team, and is in the process of being incorporated into its development workflow. Finally, beyond DL compilers, WhiteFox can also be adapted for compilers in different domains, such as LLVM, where WhiteFox has already found multiple bugs.",
+    "full_text": null
+}

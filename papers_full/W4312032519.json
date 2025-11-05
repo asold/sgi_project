@@ -1,0 +1,157 @@
+{
+    "title": "Identifying B-cell epitopes using AlphaFold2 predicted structures and pretrained language model",
+    "url": "https://openalex.org/W4312032519",
+    "year": 2022,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2124570094",
+            "name": "Yuansong Zeng",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3161119012",
+            "name": "Zhuoyi Wei",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3194661316",
+            "name": "Qianmu Yuan",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1549144106",
+            "name": "Sheng Chen",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2103381507",
+            "name": "Weijiang Yu",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2122795086",
+            "name": "Yutong Lu",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2143839909",
+            "name": "Jianzhao Gao",
+            "affiliations": [
+                "Nankai University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2130433203",
+            "name": "Yuedong Yang",
+            "affiliations": [
+                "Key Laboratory of Guangdong Province",
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2124570094",
+            "name": "Yuansong Zeng",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3161119012",
+            "name": "Zhuoyi Wei",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3194661316",
+            "name": "Qianmu Yuan",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A1549144106",
+            "name": "Sheng Chen",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2103381507",
+            "name": "Weijiang Yu",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2122795086",
+            "name": "Yutong Lu",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2143839909",
+            "name": "Jianzhao Gao",
+            "affiliations": [
+                "Sun Yat-sen University",
+                "Nankai University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2130433203",
+            "name": "Yuedong Yang",
+            "affiliations": [
+                "Sun Yat-sen University",
+                "Key Laboratory of Guangdong Province"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4210459809",
+        "https://openalex.org/W2158714788",
+        "https://openalex.org/W1976801077",
+        "https://openalex.org/W2130479394",
+        "https://openalex.org/W3086901785",
+        "https://openalex.org/W3207806256",
+        "https://openalex.org/W2344483747",
+        "https://openalex.org/W3040739508",
+        "https://openalex.org/W2091852797",
+        "https://openalex.org/W2950697450",
+        "https://openalex.org/W2149984099",
+        "https://openalex.org/W2064675550",
+        "https://openalex.org/W2611314002",
+        "https://openalex.org/W2146341019",
+        "https://openalex.org/W3177828909",
+        "https://openalex.org/W2008708467",
+        "https://openalex.org/W2161301244",
+        "https://openalex.org/W2100316154",
+        "https://openalex.org/W4286500588",
+        "https://openalex.org/W2061151008",
+        "https://openalex.org/W2557595285",
+        "https://openalex.org/W2057197272",
+        "https://openalex.org/W2051210555",
+        "https://openalex.org/W2118943119",
+        "https://openalex.org/W2949342052",
+        "https://openalex.org/W2950954328",
+        "https://openalex.org/W2076048958",
+        "https://openalex.org/W3196678948",
+        "https://openalex.org/W1978113501",
+        "https://openalex.org/W3197696221",
+        "https://openalex.org/W4281285627",
+        "https://openalex.org/W2110483430",
+        "https://openalex.org/W2945011426"
+    ],
+    "abstract": "Abstract Motivation Identifying the B-cell epitopes is an essential step for guiding rational vaccine development and immunotherapies. Due to experimental approaches being expensive and time-consuming, many computational methods have been designed to assist B-cell epitope prediction. However, existing sequence-based methods have limited performance since they only use contextual features of the sequential neighbors while neglecting structural information. Results Based on the recent breakthrough of AlphaFold2 in protein structure prediction, we propose GraphBepi, a novel graph-based model for accurate B-cell epitope prediction. GraphBepi first generates the effective information sequence representations and protein structures from antigen sequences through the pretrained language model and AlphaFold2, respectively. GraphBepi then applies the edge-enhanced deep graph neural network (EGNN) to capture the spatial information from predicted protein structures and leverages the bidirectional long short-term memory neural networks (BiLSTM) to capture long-range dependencies from sequences. The low-dimensional representation learned by EGNN and BiLSTM is then combined to predict B-cell epitopes through a multilayer perceptron. Through comprehensive tests on the curated epitope dataset, GraphBepi was shown to outperform the state-of-the-art methods by more than 5.5% and 44.0% in terms of AUC and AUPR, respectively. We also provide the GraphBepi web server that is freely available at https://biomed.nscc-gz.cn/apps/GraphBepi . Availability The datasets, pre-computed features, source codes, and the pretrained model of GraphBepi are available at https://github.com/biomed-AI/GraphBepi . Contact yangyd25@mail.sysu.edu.cn or gaojz@nankai.edu.cn",
+    "full_text": null
+}

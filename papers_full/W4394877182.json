@@ -1,0 +1,113 @@
+{
+    "title": "Remote Sensing Image Dehazing via a Local Context-Enriched Transformer",
+    "url": "https://openalex.org/W4394877182",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2055410055",
+            "name": "Jing Nie",
+            "affiliations": [
+                "Chongqing University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2100862001",
+            "name": "Jin Xie",
+            "affiliations": [
+                "Shanghai Artificial Intelligence Laboratory",
+                "Beijing Academy of Artificial Intelligence",
+                "Chongqing University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2460188771",
+            "name": "Hanqing Sun",
+            "affiliations": [
+                "Chinese Academy of Sciences",
+                "Changchun Institute of Optics, Fine Mechanics and Physics"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2055410055",
+            "name": "Jing Nie",
+            "affiliations": [
+                "Chongqing University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2100862001",
+            "name": "Jin Xie",
+            "affiliations": [
+                "Shanghai Artificial Intelligence Laboratory",
+                "Beijing Academy of Artificial Intelligence",
+                "Chongqing University"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4378229533",
+        "https://openalex.org/W4310179108",
+        "https://openalex.org/W4387976782",
+        "https://openalex.org/W4318586155",
+        "https://openalex.org/W4292793991",
+        "https://openalex.org/W3128592650",
+        "https://openalex.org/W4282934494",
+        "https://openalex.org/W4391956684",
+        "https://openalex.org/W4280626651",
+        "https://openalex.org/W4386737234",
+        "https://openalex.org/W2921442714",
+        "https://openalex.org/W6797162749",
+        "https://openalex.org/W4390175945",
+        "https://openalex.org/W4389104919",
+        "https://openalex.org/W4390876307",
+        "https://openalex.org/W4394596929",
+        "https://openalex.org/W2128254161",
+        "https://openalex.org/W2467473805",
+        "https://openalex.org/W2114867966",
+        "https://openalex.org/W2028763589",
+        "https://openalex.org/W2256362396",
+        "https://openalex.org/W2900429424",
+        "https://openalex.org/W2968878340",
+        "https://openalex.org/W3022619948",
+        "https://openalex.org/W2963306157",
+        "https://openalex.org/W2998249728",
+        "https://openalex.org/W3015582066",
+        "https://openalex.org/W3138516171",
+        "https://openalex.org/W4312812783",
+        "https://openalex.org/W4327808545",
+        "https://openalex.org/W4311529217",
+        "https://openalex.org/W4312617404",
+        "https://openalex.org/W6843467645",
+        "https://openalex.org/W4380303497",
+        "https://openalex.org/W1980038761",
+        "https://openalex.org/W2779176852",
+        "https://openalex.org/W3089141666",
+        "https://openalex.org/W4386919125",
+        "https://openalex.org/W4207042493",
+        "https://openalex.org/W2736566689",
+        "https://openalex.org/W4226181542",
+        "https://openalex.org/W3131500599",
+        "https://openalex.org/W6795463671",
+        "https://openalex.org/W4383375928",
+        "https://openalex.org/W4225672218",
+        "https://openalex.org/W2126926806",
+        "https://openalex.org/W3012965216",
+        "https://openalex.org/W6756040250",
+        "https://openalex.org/W2518108298",
+        "https://openalex.org/W3015557838",
+        "https://openalex.org/W3041172212",
+        "https://openalex.org/W3193565959",
+        "https://openalex.org/W3177127346",
+        "https://openalex.org/W3153239544",
+        "https://openalex.org/W2121058967",
+        "https://openalex.org/W1885185971",
+        "https://openalex.org/W2503339013",
+        "https://openalex.org/W2621121458",
+        "https://openalex.org/W2920074116",
+        "https://openalex.org/W3007236234",
+        "https://openalex.org/W3171427178",
+        "https://openalex.org/W4296339248"
+    ],
+    "abstract": "Remote sensing image dehazing is a well-known remote sensing image processing task focused on restoring clean images from hazy images. The Transformer network, based on the self-attention mechanism, has demonstrated remarkable advantages in various image restoration tasks, due to its capacity to capture long-range dependencies within images. However, it is weak at modeling local context. Conversely, convolutional neural networks (CNNs) are adept at capturing local contextual information. Local contextual information could provide more details, while long-range dependencies capture global structure information. The combination of long-range dependencies and local context modeling is beneficial for remote sensing image dehazing. Therefore, in this paper, we propose a CNN-based adaptive local context enrichment module (ALCEM) to extract contextual information within local regions. Subsequently, we integrate our proposed ALCEM into the multi-head self-attention and feed-forward network of the Transformer, constructing a novel locally enhanced attention (LEA) and a local continuous-enhancement feed-forward network (LCFN). The LEA utilizes the ALCEM to inject local context information that is complementary to the long-range relationship modeled by multi-head self-attention, which is beneficial to removing haze and restoring details. The LCFN extracts multi-scale spatial information and selectively fuses them by the the ALCEM, which supplements more informative information compared with existing regular feed-forward networks with only position-specific information flow. Powered by the LEA and LCFN, a novel Transformer-based dehazing network termed LCEFormer is proposed to restore clear images from hazy remote sensing images, which combines the advantages of CNN and Transformer. Experiments conducted on three distinct datasets, namely DHID, ERICE, and RSID, demonstrate that our proposed LCEFormer achieves the state-of-the-art performance in hazy scenes. Specifically, our LCEFormer outperforms DCIL by 0.78 dB and 0.018 for PSNR and SSIM on the DHID dataset.",
+    "full_text": null
+}

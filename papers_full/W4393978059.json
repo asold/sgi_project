@@ -1,0 +1,68 @@
+{
+    "title": "Large Language Model Inference Acceleration Based on Hybrid Model Branch Prediction",
+    "url": "https://openalex.org/W4393978059",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A4378368961",
+            "name": "Gaoxiang Duan",
+            "affiliations": [
+                "Shanghai Advanced Research Institute",
+                "University of Chinese Academy of Sciences",
+                "Chinese Academy of Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2099482733",
+            "name": "Jia-Jie Chen",
+            "affiliations": [
+                "Shanghai Advanced Research Institute",
+                "Chinese Academy of Sciences",
+                "University of Chinese Academy of Sciences"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2150959317",
+            "name": "Yueying Zhou",
+            "affiliations": [
+                "University of Chinese Academy of Sciences",
+                "Chinese Academy of Sciences",
+                "Shanghai Advanced Research Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2129949747",
+            "name": "Xiaoying Zheng",
+            "affiliations": [
+                "Chinese Academy of Sciences",
+                "University of Chinese Academy of Sciences",
+                "Shanghai Advanced Research Institute"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2147820062",
+            "name": "Yongxin Zhu",
+            "affiliations": [
+                "Chinese Academy of Sciences",
+                "University of Chinese Academy of Sciences",
+                "Shanghai Advanced Research Institute"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W6739901393",
+        "https://openalex.org/W2896457183",
+        "https://openalex.org/W4388895132",
+        "https://openalex.org/W4220731687",
+        "https://openalex.org/W4310561894",
+        "https://openalex.org/W4306955484",
+        "https://openalex.org/W3172942063",
+        "https://openalex.org/W3106298483",
+        "https://openalex.org/W3034292689",
+        "https://openalex.org/W3204647170",
+        "https://openalex.org/W3154922002",
+        "https://openalex.org/W2963216553"
+    ],
+    "abstract": "As the size of deep learning models continues to expand, the elongation of inference time has gradually evolved into a significant challenge to efficiency and practicality for autoregressive models. This work introduces a hybrid model acceleration strategy based on branch prediction, which accelerates autoregressive model inference without requiring retraining and ensures output consistency with the original model. Specifically, the algorithm employs two models with different parameter sizes aimed at the same task. The smaller model generates a series of potential tokens that are then parallelly validated by the larger model to determine their acceptability. By orchestrating the workflow of the large and small models through a branch-prediction strategy, the algorithm conceals the validation time of the larger model when predictions are successful, thereby accelerating inference. We propose a binomial distribution-based prediction function that blends theoretical principles with empirical evidence, specifically designed for the nuanced requirements of accelerating inference within a hybrid model framework. The entire algorithm was designed and implemented on the llama model for text generation and translation tasks. The experimental results indicate significant improvements. The proposed algorithm achieves a 1.2× to 3.4× increase in inference speed compared to the original model, consistently outperforming the speculative sampling inference acceleration algorithm.",
+    "full_text": null
+}

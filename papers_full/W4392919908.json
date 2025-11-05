@@ -1,0 +1,71 @@
+{
+    "title": "LeanContext: Cost-efficient domain-specific question answering using LLMs",
+    "url": "https://openalex.org/W4392919908",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2967033530",
+            "name": "Md Adnan Arefeen",
+            "affiliations": [
+                "University of Missouri–Kansas City",
+                "Princeton University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2125605224",
+            "name": "Biplob Debnath",
+            "affiliations": [
+                "Princeton University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A725555775",
+            "name": "Srimat Chakradhar",
+            "affiliations": [
+                "Princeton University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2967033530",
+            "name": "Md Adnan Arefeen",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A2125605224",
+            "name": "Biplob Debnath",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A725555775",
+            "name": "Srimat Chakradhar",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W6854944932",
+        "https://openalex.org/W6778883912",
+        "https://openalex.org/W6853281113",
+        "https://openalex.org/W2963963993",
+        "https://openalex.org/W6809646742",
+        "https://openalex.org/W4321276803",
+        "https://openalex.org/W4389520286",
+        "https://openalex.org/W4386701652",
+        "https://openalex.org/W4385407701",
+        "https://openalex.org/W2950130316",
+        "https://openalex.org/W4292779060",
+        "https://openalex.org/W4376122929",
+        "https://openalex.org/W4384918448",
+        "https://openalex.org/W4307079201",
+        "https://openalex.org/W4367000321",
+        "https://openalex.org/W4376122773",
+        "https://openalex.org/W4388720459",
+        "https://openalex.org/W4389519918",
+        "https://openalex.org/W4390493562",
+        "https://openalex.org/W2970641574",
+        "https://openalex.org/W4366330426",
+        "https://openalex.org/W4376167348",
+        "https://openalex.org/W4221143046"
+    ],
+    "abstract": "Question-answering (QA) is a significant application of Large Language Models (LLMs), shaping chatbot capabilities across healthcare, education, and customer service. However, widespread LLM integration presents a challenge for small businesses due to the high expenses of LLM API usage. Costs rise rapidly when domain-specific data (context) is used alongside queries for accurate domain-specific LLM responses. Extracting context from domain-specific data is implemented by a Retrieval Augmented Generation (RAG) approach. One option is to summarize the RAG context by using LLMs and reduce the context. However, this can also filter out useful information that is necessary to answer some domain-specific queries. In this paper, we shift from human-oriented summarizers to AI model-friendly summaries. Our approach, LeanContext, efficiently extracts k key sentences from the context that are closely aligned with the query. The choice of k is neither static nor random; we introduce a reinforcement learning technique that dynamically determines k based on the query and context. The rest of the less important sentences are either reduced using a free open-source text reduction method or eliminated. We evaluate LeanContext against several recent query-aware and query-unaware context reduction approaches on prominent datasets (arxiv papers and BBC news articles, NarrativeQA). Despite cost reductions of 37.29% to 67.81%, LeanContext's ROUGE-1 score decreases only by 1.41% to 2.65% compared to a baseline that retains the entire context (no summarization). LeanContext stands out for its ability to provide precise responses, outperforming competitors by leveraging open-source summarization techniques. Human evaluations of the responses further confirm and validate this superiority. Additionally, if open-source pre-trained LLM-based summarizers are used to reduce context (into human consumable summaries), LeanContext can further modify the reduced context to enhance the accuracy (ROUGE-1 score) by 13.22% to 24.61%.",
+    "full_text": null
+}

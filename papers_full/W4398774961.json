@@ -1,0 +1,53 @@
+{
+    "title": "Exploiting Intel Advanced Matrix Extensions (AMX) for Large Language Model Inference",
+    "url": "https://openalex.org/W4398774961",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2538931204",
+            "name": "Hyungyo Kim",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5106525939",
+            "name": "Gaohan Ye",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2625708732",
+            "name": "Nachuan Wang",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2166590324",
+            "name": "Amir Yazdanbakhsh",
+            "affiliations": [
+                "Google (United States)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2110497244",
+            "name": "Nam Sung Kim",
+            "affiliations": [
+                "University of Illinois Urbana-Champaign"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4385245566",
+        "https://openalex.org/W6772383348",
+        "https://openalex.org/W6774125022",
+        "https://openalex.org/W4321636575",
+        "https://openalex.org/W6850927664",
+        "https://openalex.org/W3001279689",
+        "https://openalex.org/W3006131567"
+    ],
+    "abstract": "The ever-increasing number of parameters in Large Language Models (LLMs) demands many expensive GPUs for both inference and training. This is because even such a high-end GPU such as NVIDIA A100 can store only a subset of parameters due to its limited memory capacity. To reduce the number of required GPUs, especially for inference, we may exploit the large memory capacity of the (host) CPU to store not only all the model parameters but also intermediate outputs which can also require a substantial memory capacity. However, this necessitates frequent data transfers between the CPU and the GPU over the slow PCIe interface, creating a bottleneck that hinders the accomplishment of both low latency and high throughput in inference. To address such a challenge, we first propose CPU-GPU cooperative computing that exploits the Advanced Matrix Extensions (AMX) capability of the latest Intel CPU, codenamed Sapphire Rapids (SPR). Second, we propose an adaptive model partitioning policy that determines the layers of a given LLM to be run on the CPU and the GPU, respectively, based on their memory capacity requirement and arithmetic intensity. As the CPU executes the layers with large memory capacity but low arithmetic intensity, the amount of data transferred through the PCIe interface is significantly reduced, thereby improving the LLM inference performance. Our evaluation demonstrates that CPU-GPU cooperative computing, based on this policy, delivers 12.1× lower latency and 5.4× higher throughput than GPU-only computing for OPT-30B inference when both CPU-GPU and GPU-only computing store the model in CPU memory.",
+    "full_text": null
+}

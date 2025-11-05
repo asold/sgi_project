@@ -1,0 +1,125 @@
+{
+    "title": "A Transformer-Based Framework for Scene Text Recognition",
+    "url": "https://openalex.org/W4296211656",
+    "year": 2022,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2165833867",
+            "name": "Prabu Selvam",
+            "affiliations": [
+                "SASTRA University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4291734431",
+            "name": "Joseph Abraham Sundar Koilraj",
+            "affiliations": [
+                "SASTRA University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3147340781",
+            "name": "Carlos Andrés Tavera Romero",
+            "affiliations": [
+                "Universidad Santiago de Cali",
+                "ORCID"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2885842536",
+            "name": "Meshal Alharbi",
+            "affiliations": [
+                "ORCID",
+                "Prince Sattam Bin Abdulaziz University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A1615812118",
+            "name": "Abolfazl Mehbodniya",
+            "affiliations": [
+                "Kuwait College of Science and Technology",
+                "ORCID"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A4202312307",
+            "name": "Julian L. Webber",
+            "affiliations": [
+                "ORCID",
+                "Kuwait College of Science and Technology"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2050962143",
+            "name": "Sudhakar Sengan",
+            "affiliations": [
+                "ORCID",
+                "Tirunelveli Medical College"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2165833867",
+            "name": "Prabu Selvam",
+            "affiliations": []
+        },
+        {
+            "id": "https://openalex.org/A4291734431",
+            "name": "Joseph Abraham Sundar Koilraj",
+            "affiliations": []
+        }
+    ],
+    "references": [
+        "https://openalex.org/W654550266",
+        "https://openalex.org/W2135231474",
+        "https://openalex.org/W3082397598",
+        "https://openalex.org/W2810983211",
+        "https://openalex.org/W2963517393",
+        "https://openalex.org/W2963327605",
+        "https://openalex.org/W2194187530",
+        "https://openalex.org/W2911295582",
+        "https://openalex.org/W4291734217",
+        "https://openalex.org/W3097932944",
+        "https://openalex.org/W4285791503",
+        "https://openalex.org/W2970910956",
+        "https://openalex.org/W6618372016",
+        "https://openalex.org/W3035449864",
+        "https://openalex.org/W2963526661",
+        "https://openalex.org/W6739901393",
+        "https://openalex.org/W1988461287",
+        "https://openalex.org/W4229440871",
+        "https://openalex.org/W6636382570",
+        "https://openalex.org/W1998042868",
+        "https://openalex.org/W367930861",
+        "https://openalex.org/W1978729128",
+        "https://openalex.org/W6629590909",
+        "https://openalex.org/W3092309237",
+        "https://openalex.org/W2963712589",
+        "https://openalex.org/W3013224334",
+        "https://openalex.org/W2788069964",
+        "https://openalex.org/W2795619303",
+        "https://openalex.org/W2750938222",
+        "https://openalex.org/W3025830232",
+        "https://openalex.org/W3188982915",
+        "https://openalex.org/W2892009249",
+        "https://openalex.org/W6751097180",
+        "https://openalex.org/W6753640285",
+        "https://openalex.org/W3159954715",
+        "https://openalex.org/W3043311956",
+        "https://openalex.org/W2194775991",
+        "https://openalex.org/W1981283549",
+        "https://openalex.org/W2008806374",
+        "https://openalex.org/W2144554289",
+        "https://openalex.org/W2146835493",
+        "https://openalex.org/W1971822075",
+        "https://openalex.org/W2343052201",
+        "https://openalex.org/W2965066169",
+        "https://openalex.org/W2978036638",
+        "https://openalex.org/W2963233387",
+        "https://openalex.org/W2980487166",
+        "https://openalex.org/W3196665767",
+        "https://openalex.org/W3106271744",
+        "https://openalex.org/W4385245566"
+    ],
+    "abstract": "Scene Text Recognition (STR) has become a popular and long-standing research problem in computer vision communities. Almost all the existing approaches mainly adopt the connectionist temporal classification (CTC) technique. However, these existing approaches are not much effective for irregular STR. In this research article, we introduced a new encoder-decoder framework to identify both regular and irregular natural scene text, which is developed based on the transformer framework. The proposed framework is divided into four main modules: Image Transformation, Visual Feature Extraction (VFE), Encoder and Decoder. Firstly, we employ a Thin Plate Spline (TPS) transformation in the image transformation module to normalize the original input image to reduce the burden of subsequent feature extraction. Secondly, in the VFE module, we use ResNet as the Convolutional Neural Network (CNN) backbone to retrieve text image features maps from the rectified word image. However, the VFE module generates one-dimensional feature maps that are not suitable for locating a multi-oriented text on two-dimensional word images. We proposed 2D Positional Encoding (2DPE) to preserve the sequential information. Thirdly, the feature aggregation and feature transformation are carried out simultaneously in the encoder module. We replace the original scaled dot-product attention model as in the standard transformer framework with an Optimal Adaptive Threshold-based Self-Attention (OATSA) model to filter noisy information effectively and focus on the most contributive text regions. Finally, we introduce a new architectural level bi-directional decoding approach in the decoder module to generate a more accurate character sequence. Eventually, We evaluate the effectiveness and robustness of the proposed framework in both horizontal and arbitrary text recognition through extensive experiments on seven public benchmarks including IIIT5K-Words, SVT, ICDAR 2003, ICDAR 2013, ICDAR 2015, SVT-P and CUTE80 datasets. We also demonstrate that our proposed framework outperforms most of the existing approaches by a substantial margin.",
+    "full_text": null
+}

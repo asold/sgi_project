@@ -1,0 +1,128 @@
+{
+    "title": "Towards Robust Neural Rankers with Large Language Model: A Contrastive Training Approach",
+    "url": "https://openalex.org/W4386602590",
+    "year": 2023,
+    "authors": [
+        {
+            "id": "https://openalex.org/A2512175724",
+            "name": "Ziyang Pan",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5102554444",
+            "name": "Kangjia Fan",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2588152296",
+            "name": "Rong-Yu Liu",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2480134347",
+            "name": "Daifeng Li",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2512175724",
+            "name": "Ziyang Pan",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5102554444",
+            "name": "Kangjia Fan",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2588152296",
+            "name": "Rong-Yu Liu",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2480134347",
+            "name": "Daifeng Li",
+            "affiliations": [
+                "Sun Yat-sen University"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W6778883912",
+        "https://openalex.org/W2896457183",
+        "https://openalex.org/W6769627184",
+        "https://openalex.org/W6810738896",
+        "https://openalex.org/W3216225167",
+        "https://openalex.org/W6799081744",
+        "https://openalex.org/W4229078373",
+        "https://openalex.org/W2640329709",
+        "https://openalex.org/W3198691721",
+        "https://openalex.org/W3197057826",
+        "https://openalex.org/W3005680577",
+        "https://openalex.org/W6761496550",
+        "https://openalex.org/W3105604018",
+        "https://openalex.org/W2905526464",
+        "https://openalex.org/W3147292006",
+        "https://openalex.org/W2999905431",
+        "https://openalex.org/W2143331230",
+        "https://openalex.org/W2990138404",
+        "https://openalex.org/W2047221353",
+        "https://openalex.org/W2108862644",
+        "https://openalex.org/W2142537246",
+        "https://openalex.org/W2162059449",
+        "https://openalex.org/W2904714568",
+        "https://openalex.org/W3153624757",
+        "https://openalex.org/W3035524453",
+        "https://openalex.org/W3100652389",
+        "https://openalex.org/W3131157458",
+        "https://openalex.org/W3092806700",
+        "https://openalex.org/W2970641574",
+        "https://openalex.org/W3174532536",
+        "https://openalex.org/W2982399380",
+        "https://openalex.org/W3214779765",
+        "https://openalex.org/W6784447870",
+        "https://openalex.org/W2251818205",
+        "https://openalex.org/W2945348990",
+        "https://openalex.org/W4386576685",
+        "https://openalex.org/W4385570594",
+        "https://openalex.org/W3099700870",
+        "https://openalex.org/W3088148579",
+        "https://openalex.org/W2140310134",
+        "https://openalex.org/W2157331557",
+        "https://openalex.org/W2963186170",
+        "https://openalex.org/W4206827664",
+        "https://openalex.org/W3191104470",
+        "https://openalex.org/W3177681238",
+        "https://openalex.org/W3001344098",
+        "https://openalex.org/W4251326898",
+        "https://openalex.org/W4246858749",
+        "https://openalex.org/W2536015822",
+        "https://openalex.org/W2648699835",
+        "https://openalex.org/W3045745713",
+        "https://openalex.org/W6757817989",
+        "https://openalex.org/W3093871477",
+        "https://openalex.org/W2940009958",
+        "https://openalex.org/W4292779060",
+        "https://openalex.org/W3017330897",
+        "https://openalex.org/W2963859254",
+        "https://openalex.org/W3189509741",
+        "https://openalex.org/W4226278401",
+        "https://openalex.org/W3104914963",
+        "https://openalex.org/W4288089799"
+    ],
+    "abstract": "Pre-trained language model-based neural rankers have been widely applied in information retrieval (IR). However, the robustness issue of current IR models has not received sufficient attention, which could significantly impact the user experience in practical applications. In this study, we focus on the defensive ability of IR models against query attacks while guaranteeing their retrieval performance. We discover that improving the robustness of IR models not only requires a focus on model architecture and training methods but is also closely related to the quality of data. Different from previous research, we use large language models (LLMs) to generate query variations with the same intent, which exhibit richer and more realistic expressions while maintaining consistent query intent. Based on LLM-generated query variations, we propose a novel contrastive training framework that substantially enhances the robustness of IR models to query perturbations. Specifically, we combine the contrastive loss in the representation space of query variations with the ranking loss in the retrieval training stage to improve the model’s ability to understand the underlying semantic information of queries. Experimental results on two public datasets, WikiQA and ANTIQUE, demonstrate that the proposed contrastive training approach effectively improves the robustness of models facing query attack scenarios while outperforming baselines in retrieval performance. Compared with the best baseline approach, the improvements in average robustness performance of Reranker IR models are 24.9%, 26.5%, 27.0%, and 75.0% on WikiQA and 8.7%, 1.9%, 6.3%, and 13.6% on ANTIQUE, in terms of the MAP (Mean Average Precision), MRR (Mean Reciprocal Rank), nDCG@10 (Normalized Discounted Cumulative Gain) and P@10 (Precision), respectively.",
+    "full_text": null
+}

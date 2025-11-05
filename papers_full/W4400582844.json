@@ -1,0 +1,116 @@
+{
+    "title": "CodePlan: Repository-Level Coding using LLMs and Planning",
+    "url": "https://openalex.org/W4400582844",
+    "year": 2024,
+    "authors": [
+        {
+            "id": "https://openalex.org/A1416699208",
+            "name": "Ramakrishna Bairi",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A3206909786",
+            "name": "Atharv Sonwane",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2033751581",
+            "name": "Aditya Kanade",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5098091878",
+            "name": "Vageesh D.C.",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2128888966",
+            "name": "Arun Iyer",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2248019242",
+            "name": "Suresh Parthasarathy",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2183217892",
+            "name": "Sriram Rajamani",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A2103130108",
+            "name": "B. ASHOK",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5092938657",
+            "name": "Shashank Shet",
+            "affiliations": [
+                "Microsoft Research (India)"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W3170092793",
+        "https://openalex.org/W4388483039",
+        "https://openalex.org/W2032414679",
+        "https://openalex.org/W2979679630",
+        "https://openalex.org/W4285225959",
+        "https://openalex.org/W2095558030",
+        "https://openalex.org/W3098913142",
+        "https://openalex.org/W6950379095",
+        "https://openalex.org/W4230015257",
+        "https://openalex.org/W3204538577",
+        "https://openalex.org/W2306644740",
+        "https://openalex.org/W2344444819",
+        "https://openalex.org/W4206078757",
+        "https://openalex.org/W2114938579",
+        "https://openalex.org/W4399601909",
+        "https://openalex.org/W2980400095",
+        "https://openalex.org/W2019528623",
+        "https://openalex.org/W4240087212",
+        "https://openalex.org/W3148779029",
+        "https://openalex.org/W4311887664",
+        "https://openalex.org/W2048954027",
+        "https://openalex.org/W4256028358",
+        "https://openalex.org/W2972934903",
+        "https://openalex.org/W2152565783",
+        "https://openalex.org/W4281685380",
+        "https://openalex.org/W2038899190",
+        "https://openalex.org/W2022043656",
+        "https://openalex.org/W4221143046",
+        "https://openalex.org/W4384345708",
+        "https://openalex.org/W4281763794",
+        "https://openalex.org/W2954401434",
+        "https://openalex.org/W4389519225",
+        "https://openalex.org/W4307731832",
+        "https://openalex.org/W1592791328",
+        "https://openalex.org/W2911851157",
+        "https://openalex.org/W653931707",
+        "https://openalex.org/W2911282308",
+        "https://openalex.org/W1982282238",
+        "https://openalex.org/W4301914518",
+        "https://openalex.org/W1593271688",
+        "https://openalex.org/W4256084472",
+        "https://openalex.org/W2913273467"
+    ],
+    "abstract": "Software engineering activities such as package migration, fixing error reports from static analysis or testing, and adding type annotations or other specifications to a codebase, involve pervasively editing the entire repository of code. We formulate these activities as repository-level coding tasks. Recent tools like GitHub Copilot, which are powered by Large Language Models (LLMs), have succeeded in offering high-quality solutions to localized coding problems. Repository-level coding tasks are more involved and cannot be solved directly using LLMs, since code within a repository is inter-dependent and the entire repository may be too large to fit into the prompt. We frame repository-level coding as a planning problem and present a task-agnostic, neuro-symbolic framework called CodePlan to solve it. CodePlan synthesizes a multi-step chain-of-edits (plan), where each step results in a call to an LLM on a code location with context derived from the entire repository, previous code changes and task-specific instructions. CodePlan is based on a novel combination of an incremental dependency analysis, a change may-impact analysis and an adaptive planning algorithm (symbolic components) with the neural LLMs. We evaluate the effectiveness of CodePlan on two repository-level tasks: package migration (C#) and temporal code edits (Python). Each task is evaluated on multiple code repositories, each of which requires inter-dependent changes to many files (between 2–97 files). Coding tasks of this level of complexity have not been automated using LLMs before. Our results show that CodePlan has better match with the ground truth compared to baselines. CodePlan is able to get 5/7 repositories to pass the validity checks (i.e., to build without errors and make correct code edits) whereas the baselines (without planning but with the same type of contextual information as CodePlan) cannot get any of the repositories to pass them. We provide our (non-proprietary) data, evaluation scripts and supplementary material at https://github.com/microsoft/codeplan.",
+    "full_text": null
+}

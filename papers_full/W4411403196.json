@@ -1,0 +1,94 @@
+{
+    "title": "Logical and Physical Optimizations for SQL Query Execution over Large Language Models",
+    "url": "https://openalex.org/W4411403196",
+    "year": 2025,
+    "authors": [
+        {
+            "id": "https://openalex.org/A5118330961",
+            "name": "Dario Satriani",
+            "affiliations": [
+                "University of Basilicata"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5059057476",
+            "name": "Enzo Veltri",
+            "affiliations": [
+                "University of Basilicata"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5042429991",
+            "name": "Donatello Santoro",
+            "affiliations": [
+                "University of Basilicata"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5118330962",
+            "name": "Sara Rosato",
+            "affiliations": [
+                "EURECOM"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5118503798",
+            "name": "Simone Varriale",
+            "affiliations": [
+                "EURECOM"
+            ]
+        },
+        {
+            "id": "https://openalex.org/A5011336242",
+            "name": "Paolo Papotti",
+            "affiliations": [
+                "EURECOM"
+            ]
+        }
+    ],
+    "references": [
+        "https://openalex.org/W4286432951",
+        "https://openalex.org/W2889140904",
+        "https://openalex.org/W4389539730",
+        "https://openalex.org/W4310390625",
+        "https://openalex.org/W3133702157",
+        "https://openalex.org/W4404698769",
+        "https://openalex.org/W6600459194",
+        "https://openalex.org/W4404609179",
+        "https://openalex.org/W4401857375",
+        "https://openalex.org/W3084095723",
+        "https://openalex.org/W2168144930",
+        "https://openalex.org/W4401042444",
+        "https://openalex.org/W6910977521",
+        "https://openalex.org/W4389518932",
+        "https://openalex.org/W3032112964",
+        "https://openalex.org/W4389519226",
+        "https://openalex.org/W4399174722",
+        "https://openalex.org/W3027879771",
+        "https://openalex.org/W3201174429",
+        "https://openalex.org/W4391876619",
+        "https://openalex.org/W4392736881",
+        "https://openalex.org/W4401176373",
+        "https://openalex.org/W4402811079",
+        "https://openalex.org/W2111643688",
+        "https://openalex.org/W4403754277",
+        "https://openalex.org/W4322718421",
+        "https://openalex.org/W4285227295",
+        "https://openalex.org/W2617941540",
+        "https://openalex.org/W6911006445",
+        "https://openalex.org/W4283312893",
+        "https://openalex.org/W3148437589",
+        "https://openalex.org/W4390268206",
+        "https://openalex.org/W4398234802",
+        "https://openalex.org/W4400025475",
+        "https://openalex.org/W4385284874",
+        "https://openalex.org/W2424452828",
+        "https://openalex.org/W3198523333",
+        "https://openalex.org/W4399115642",
+        "https://openalex.org/W2608353553",
+        "https://openalex.org/W2990138404",
+        "https://openalex.org/W3138971549"
+    ],
+    "abstract": "Interacting with Large Language Models (LLMs) via declarative queries is increasingly popular for tasks like question answering and data extraction, thanks to their ability to process vast unstructured data. However, LLMs often struggle with answering complex factual questions, exhibiting low precision and recall in the returned data. This challenge highlights that executing queries on LLMs remains a largely unexplored domain, where traditional data processing assumptions often fall short. Conventional query optimization, typically cost-driven, overlooks LLM-specific quality challenges such as contextual understanding. Just as new physical operators are designed to address the unique characteristics of LLMs, optimization must consider these quality challenges. Our results highlight that adhering strictly to conventional query optimization principles fails to generate the best plans in terms of result quality. To tackle this challenge, we present a novel approach to enhance SQL results by applying query optimization techniques specifically adapted for LLMs. We introduce a database system, GALOIS, that sits between the query and the LLM, effectively using the latter as a storage layer. We design alternative physical operators tailored for LLM-based query execution and adapt traditional optimization strategies to this novel context. For example, while pushing down operators in the query plan reduces execution cost (fewer calls to the model), it might complicate the call to the LLM and deteriorate result quality. Additionally, these models lack a traditional catalog for optimization, leading us to develop methods to dynamically gather such metadata during query execution. Our solution is compatible with any LLM and balances the trade-off between query result quality and execution cost. Experiments show up to 144% quality improvement over questions in Natural Language and 29% over direct SQL execution, highlighting the advantages of integrating database solutions with LLMs.",
+    "full_text": null
+}
