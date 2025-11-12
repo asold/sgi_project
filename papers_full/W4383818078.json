@@ -1,77 +1,140 @@
 {
-    "title": "Chromosome Cluster Type Identification Using a Swin Transformer",
-    "url": "https://openalex.org/W4383818078",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5028172381",
-            "name": "Indu Joshi",
-            "affiliations": [
-                "Technical University of Munich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5045635774",
-            "name": "Arnab Kumar Mondal",
-            "affiliations": [
-                "Indian Institute of Technology Delhi"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5046896448",
-            "name": "Nassir Navab",
-            "affiliations": [
-                "Technical University of Munich"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4311936462",
-        "https://openalex.org/W2126636743",
-        "https://openalex.org/W2895804883",
-        "https://openalex.org/W2206712969",
-        "https://openalex.org/W3196586301",
-        "https://openalex.org/W2991645190",
-        "https://openalex.org/W3204419140",
-        "https://openalex.org/W3199453359",
-        "https://openalex.org/W4210506859",
-        "https://openalex.org/W3113909365",
-        "https://openalex.org/W3128720244",
-        "https://openalex.org/W4213451870",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W6788556936",
-        "https://openalex.org/W4212875960",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3176196997",
-        "https://openalex.org/W1995672954",
-        "https://openalex.org/W2048303503",
-        "https://openalex.org/W3014486260",
-        "https://openalex.org/W4223945984",
-        "https://openalex.org/W2888639194",
-        "https://openalex.org/W2799861035",
-        "https://openalex.org/W2962682625",
-        "https://openalex.org/W2892380715",
-        "https://openalex.org/W6758944117",
-        "https://openalex.org/W2896988071",
-        "https://openalex.org/W2980846635",
-        "https://openalex.org/W3195547235",
-        "https://openalex.org/W7043094170",
-        "https://openalex.org/W2597206831",
-        "https://openalex.org/W2921160767",
-        "https://openalex.org/W4211256032",
-        "https://openalex.org/W1969733239",
-        "https://openalex.org/W2358876993",
-        "https://openalex.org/W2615981376",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W4320922132",
-        "https://openalex.org/W2963163009",
-        "https://openalex.org/W2963446712",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2549139847",
-        "https://openalex.org/W4366352791",
-        "https://openalex.org/W2914726756",
-        "https://openalex.org/W4206706211"
-    ],
-    "abstract": "The analysis of chromosome karyotypes is crucial for diagnosing genetic disorders such as Patau syndrome, Edward syndrome, and Down syndrome. Chromosome cluster type identification is a key step in the automated analysis of chromosome karyotypes. State-of-the-art chromosome cluster-type identification techniques are based on convolutional neural networks (CNNs) and fail to exploit the global context. To address this limitation of the state of the art, this paper proposes a transformer network, chromosome cluster transformer (CCT), that exploits a swin transformer backbone and successfully captures long-range dependencies in a chromosome image. Additionally, we find that the proposed CCT has a large number of model parameters, which makes it prone to overfitting on a (small) dataset of chromosome images. To alleviate the limited availability of training data, the proposed CCT also utilizes a transfer learning approach. Experiments demonstrate that the proposed CCT outperforms the state-of-the-art chromosome cluster type identification methods as well as the traditional vision transformer. Furthermore, to provide insights on the improved performance, we demonstrate the activation maps obtained using Gradient Attention Rollout.",
-    "full_text": null
+  "title": "Chromosome Cluster Type Identification Using a Swin Transformer",
+  "url": "https://openalex.org/W4383818078",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5028172381",
+      "name": "Indu Joshi",
+      "affiliations": [
+        "Technical University of Munich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5045635774",
+      "name": "Arnab Kumar Mondal",
+      "affiliations": [
+        "Indian Institute of Technology Delhi"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5046896448",
+      "name": "Nassir Navab",
+      "affiliations": [
+        "Technical University of Munich"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4311936462",
+    "https://openalex.org/W2126636743",
+    "https://openalex.org/W2895804883",
+    "https://openalex.org/W2206712969",
+    "https://openalex.org/W3196586301",
+    "https://openalex.org/W2991645190",
+    "https://openalex.org/W3204419140",
+    "https://openalex.org/W3199453359",
+    "https://openalex.org/W4210506859",
+    "https://openalex.org/W3113909365",
+    "https://openalex.org/W3128720244",
+    "https://openalex.org/W4213451870",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W6788556936",
+    "https://openalex.org/W4212875960",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3176196997",
+    "https://openalex.org/W1995672954",
+    "https://openalex.org/W2048303503",
+    "https://openalex.org/W3014486260",
+    "https://openalex.org/W4223945984",
+    "https://openalex.org/W2888639194",
+    "https://openalex.org/W2799861035",
+    "https://openalex.org/W2962682625",
+    "https://openalex.org/W2892380715",
+    "https://openalex.org/W6758944117",
+    "https://openalex.org/W2896988071",
+    "https://openalex.org/W2980846635",
+    "https://openalex.org/W3195547235",
+    "https://openalex.org/W7043094170",
+    "https://openalex.org/W2597206831",
+    "https://openalex.org/W2921160767",
+    "https://openalex.org/W4211256032",
+    "https://openalex.org/W1969733239",
+    "https://openalex.org/W2358876993",
+    "https://openalex.org/W2615981376",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W4320922132",
+    "https://openalex.org/W2963163009",
+    "https://openalex.org/W2963446712",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2549139847",
+    "https://openalex.org/W4366352791",
+    "https://openalex.org/W2914726756",
+    "https://openalex.org/W4206706211"
+  ],
+  "abstract": "The analysis of chromosome karyotypes is crucial for diagnosing genetic disorders such as Patau syndrome, Edward syndrome, and Down syndrome. Chromosome cluster type identification is a key step in the automated analysis of chromosome karyotypes. State-of-the-art chromosome cluster-type identification techniques are based on convolutional neural networks (CNNs) and fail to exploit the global context. To address this limitation of the state of the art, this paper proposes a transformer network, chromosome cluster transformer (CCT), that exploits a swin transformer backbone and successfully captures long-range dependencies in a chromosome image. Additionally, we find that the proposed CCT has a large number of model parameters, which makes it prone to overfitting on a (small) dataset of chromosome images. To alleviate the limited availability of training data, the proposed CCT also utilizes a transfer learning approach. Experiments demonstrate that the proposed CCT outperforms the state-of-the-art chromosome cluster type identification methods as well as the traditional vision transformer. Furthermore, to provide insights on the improved performance, we demonstrate the activation maps obtained using Gradient Attention Rollout.",
+  "full_text": null,
+  "topic": "Exploit",
+  "concepts": [
+    {
+      "name": "Exploit",
+      "score": 0.5660187602043152
+    },
+    {
+      "name": "Chromosome",
+      "score": 0.5570764541625977
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5520240068435669
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4620223939418793
+    },
+    {
+      "name": "Overfitting",
+      "score": 0.4551848769187927
+    },
+    {
+      "name": "Transformer",
+      "score": 0.41929659247398376
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3377910256385803
+    },
+    {
+      "name": "Genetics",
+      "score": 0.2744142413139343
+    },
+    {
+      "name": "Biology",
+      "score": 0.2709481120109558
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.24703288078308105
+    },
+    {
+      "name": "Engineering",
+      "score": 0.18766435980796814
+    },
+    {
+      "name": "Gene",
+      "score": 0.09116384387016296
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

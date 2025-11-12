@@ -1,76 +1,115 @@
 {
-    "title": "RODFormer: High-Precision Design for Rotating Object Detection with Transformers",
-    "url": "https://openalex.org/W4221071851",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5030798864",
-            "name": "Yaonan Dai",
-            "affiliations": [
-                "Wuhan Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5088780503",
-            "name": "Jiuyang Yu",
-            "affiliations": [
-                "Wuhan Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5074058834",
-            "name": "Dean Zhang",
-            "affiliations": [
-                "Wuhan Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5079783259",
-            "name": "Tianhao Hu",
-            "affiliations": [
-                "Wuhan Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5052865340",
-            "name": "Xiaotao Zheng",
-            "affiliations": [
-                "Wuhan Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3144925525",
-        "https://openalex.org/W3131043787",
-        "https://openalex.org/W2593539516",
-        "https://openalex.org/W2903141337",
-        "https://openalex.org/W2964979676",
-        "https://openalex.org/W2966307781",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3187369430",
-        "https://openalex.org/W3009552135",
-        "https://openalex.org/W3203974803",
-        "https://openalex.org/W3107331169",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W2886335102",
-        "https://openalex.org/W3008470387",
-        "https://openalex.org/W3093319256",
-        "https://openalex.org/W6782137339",
-        "https://openalex.org/W3012042051",
-        "https://openalex.org/W3180745686",
-        "https://openalex.org/W3002750555",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3132077035",
-        "https://openalex.org/W2967487473",
-        "https://openalex.org/W3034993937",
-        "https://openalex.org/W2855340099",
-        "https://openalex.org/W3003295287",
-        "https://openalex.org/W3193494519",
-        "https://openalex.org/W3136761610",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3106228955"
-    ],
-    "abstract": "Aiming at the problem of Transformers lack of local spatial receptive field and discontinuous boundary loss in rotating object detection, in this paper, we propose a Transformer-based high-precision rotating object detection model (RODFormer). Firstly, RODFormer uses a structured transformer architecture to collect feature information of different resolutions to improve the collection range of feature information. Secondly, a new feed-forward network (spatial-FFN) is constructed. Spatial-FFN fuses the local spatial features of 3 × 3 depthwise separable convolutions with the global channel features of multilayer perceptron (MLP) to solve the deficiencies of FFN in local spatial modeling. Finally, based on the space-FFN architecture, a detection head is built using the CIOU-smooth L1 loss function and only returns to the horizontal frame when the rotating frame is close to the horizontal, so as to alleviate the loss discontinuity of the rotating frame. Ablation experiments of RODFormer on the DOTA dataset show that the Transformer-structured module, the spatial-FFN module and the CIOU-smooth L1 loss function module are all effective in improving the detection accuracy of RODFormer. Compared with 12 rotating object detection models on the DOTA dataset, RODFormer has the highest average detection accuracy (up to 75.60%), that is, RODFormer is more competitive in rotating object detection accuracy.",
-    "full_text": null
+  "title": "RODFormer: High-Precision Design for Rotating Object Detection with Transformers",
+  "url": "https://openalex.org/W4221071851",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5030798864",
+      "name": "Yaonan Dai",
+      "affiliations": [
+        "Wuhan Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5088780503",
+      "name": "Jiuyang Yu",
+      "affiliations": [
+        "Wuhan Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5074058834",
+      "name": "Dean Zhang",
+      "affiliations": [
+        "Wuhan Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5079783259",
+      "name": "Tianhao Hu",
+      "affiliations": [
+        "Wuhan Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5052865340",
+      "name": "Xiaotao Zheng",
+      "affiliations": [
+        "Wuhan Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3144925525",
+    "https://openalex.org/W3131043787",
+    "https://openalex.org/W2593539516",
+    "https://openalex.org/W2903141337",
+    "https://openalex.org/W2964979676",
+    "https://openalex.org/W2966307781",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3187369430",
+    "https://openalex.org/W3009552135",
+    "https://openalex.org/W3203974803",
+    "https://openalex.org/W3107331169",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W2886335102",
+    "https://openalex.org/W3008470387",
+    "https://openalex.org/W3093319256",
+    "https://openalex.org/W6782137339",
+    "https://openalex.org/W3012042051",
+    "https://openalex.org/W3180745686",
+    "https://openalex.org/W3002750555",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3132077035",
+    "https://openalex.org/W2967487473",
+    "https://openalex.org/W3034993937",
+    "https://openalex.org/W2855340099",
+    "https://openalex.org/W3003295287",
+    "https://openalex.org/W3193494519",
+    "https://openalex.org/W3136761610",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3106228955"
+  ],
+  "abstract": "Aiming at the problem of Transformers lack of local spatial receptive field and discontinuous boundary loss in rotating object detection, in this paper, we propose a Transformer-based high-precision rotating object detection model (RODFormer). Firstly, RODFormer uses a structured transformer architecture to collect feature information of different resolutions to improve the collection range of feature information. Secondly, a new feed-forward network (spatial-FFN) is constructed. Spatial-FFN fuses the local spatial features of 3 × 3 depthwise separable convolutions with the global channel features of multilayer perceptron (MLP) to solve the deficiencies of FFN in local spatial modeling. Finally, based on the space-FFN architecture, a detection head is built using the CIOU-smooth L1 loss function and only returns to the horizontal frame when the rotating frame is close to the horizontal, so as to alleviate the loss discontinuity of the rotating frame. Ablation experiments of RODFormer on the DOTA dataset show that the Transformer-structured module, the spatial-FFN module and the CIOU-smooth L1 loss function module are all effective in improving the detection accuracy of RODFormer. Compared with 12 rotating object detection models on the DOTA dataset, RODFormer has the highest average detection accuracy (up to 75.60%), that is, RODFormer is more competitive in rotating object detection accuracy.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6340694427490234
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6181341409683228
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6030932068824768
+    },
+    {
+      "name": "Object detection",
+      "score": 0.5461243391036987
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.452449232339859
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4516710937023163
+    },
+    {
+      "name": "Engineering",
+      "score": 0.20951801538467407
+    },
+    {
+      "name": "Voltage",
+      "score": 0.13660317659378052
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

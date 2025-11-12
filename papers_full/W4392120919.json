@@ -1,111 +1,194 @@
 {
-    "title": "Scaling Up LLM Reviews for Google Ads Content Moderation",
-    "url": "https://openalex.org/W4392120919",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2099841966",
-            "name": "Qiao Wei",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Dogra, Tushar",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4302673463",
-            "name": "Stretcu, Otilia",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4305770655",
-            "name": "Lyu, Yu-Han",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2689960129",
-            "name": "Fang Tiantian",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2153079742",
-            "name": "Kwon, Dongjin",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4318743087",
-            "name": "LU Chun-ta",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4288976668",
-            "name": "Luo, Enming",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1973821393",
-            "name": "Wang Yuan",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Chia, Chih-Chun",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4304951633",
-            "name": "Fuxman, Ariel",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2353171509",
-            "name": "Wang Fang-Zhou",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3041825953",
-            "name": "Krishna, Ranjay",
-            "affiliations": [
-                "University of Washington",
-                "Seattle University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4289509884",
-            "name": "Tek, Mehmet",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3160638507"
-    ],
-    "abstract": "Large language models (LLMs) are powerful tools for content moderation, but\\ntheir inference costs and latency make them prohibitive for casual use on large\\ndatasets, such as the Google Ads repository. This study proposes a method for\\nscaling up LLM reviews for content moderation in Google Ads. First, we use\\nheuristics to select candidates via filtering and duplicate removal, and create\\nclusters of ads for which we select one representative ad per cluster. We then\\nuse LLMs to review only the representative ads. Finally, we propagate the LLM\\ndecisions for the representative ads back to their clusters. This method\\nreduces the number of reviews by more than 3 orders of magnitude while\\nachieving a 2x recall compared to a baseline non-LLM model. The success of this\\napproach is a strong function of the representations used in clustering and\\nlabel propagation; we found that cross-modal similarity representations yield\\nbetter results than uni-modal representations.\\n",
-    "full_text": "Scaling Up LLM Reviews for Google Ads Content Moderation\nWei Qiao\nGoogle Ads Safety\nTushar Dogra\nGoogle Ads Safety\nOtilia Stretcu\nGoogle Research\nYu-Han Lyu\nGoogle Ads Safety\nTiantian Fang\nGoogle Ads Safety\nDongjin Kwon\nGoogle Ads Safety\nChun-Ta Lu\nGoogle Research\nEnming Luo\nGoogle Research\nYuan Wang\nGoogle Ads Safety\nChih-Chun Chia\nGoogle Ads Safety\nAriel Fuxman\nGoogle Research\nFangzhou Wang\nGoogle Ads Safety\nRanjay Krishna\nUniv. of Washington\nMehmet Tek\nGoogle Ads Safety\nABSTRACT\nLarge language models (LLMs) are powerful tools for content mod-\neration, but their inference costs and latency make them prohibitive\nfor casual use on large datasets, such as the Google Ads repository.\nThis study proposes a method for scaling up LLM reviews for con-\ntent moderation in Google Ads. First, we use heuristics to select\ncandidates via filtering and duplicate removal, and create clusters\nof ads for which we select one representative ad per cluster. We\nthen use LLMs to review only the representative ads. Finally, we\npropagate the LLM decisions for the representative ads back to\ntheir clusters. This method reduces the number of reviews by more\nthan 3 orders of magnitude while achieving a 2x recall compared\nto a baseline non-LLM model. The success of this approach is a\nstrong function of the representations used in clustering and label\npropagation; we found that cross-modal similarity representations\nyield better results than uni-modal representations.\nACM Reference Format:\nWei Qiao, Tushar Dogra, Otilia Stretcu, Yu-Han Lyu, Tiantian Fang, Dongjin\nKwon, Chun-Ta Lu, Enming Luo, Yuan Wang, Chih-Chun Chia, Ariel Fux-\nman, Fangzhou Wang, Ranjay Krishna, and Mehmet Tek. 2024. Scaling Up\nLLM Reviews for Google Ads Content Moderation. In Proceedings of the\n17th ACM International Conference on Web Search and Data Mining (WSDM\n’24), March 4–8, 2024, Merida, Mexico. ACM, New York, NY, USA, 2 pages.\nhttps://doi.org/10.1145/3616855.3635736\n1 OUTLINE\nWe introduce an end-to-end solution for scaling up and leveraging\nLLMs [1, 3] for Google ads content moderation. We will first pro-\nvide the context for the LLM review problem and explain the scale\nof reviews in the context of compute resources. Then, we will intro-\nduce our approach to solving this problem. We will conclude with\nthe results of our deployment in Google Ads policy enforcement\nplatform. Finally, we discuss future improvements and extensions.\n2 PROBLEM AND MOTIVATION\nOur goal is to accurately detect Google Ads policy violations in all\nthe ads traffic before any ads are eligible to enter the auction for\nserving. We evaluated and used this technique on image ads only,\nPermission to make digital or hard copies of part or all of this work for personal or\nclassroom use is granted without fee provided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the owner/author(s).\nWSDM ’24, March 4–8, 2024, Merida, Mexico\n© 2024 Copyright held by the owner/author(s).\nACM ISBN 979-8-4007-0371-3/24/03.\nhttps://doi.org/10.1145/3616855.3635736\nFigure 1: A diagram of our end-to-end solution for scaling\nup LLMs for content moderation.\nbut the approach is generic and can be extended to any modality\nand ad format. In this paper, we use the term “LLMs” to include both\nlarge language models and large visual-language models. Using\nLLMs to moderate all image ads traffic requires significant compute\nresources, making it impractical. Collecting human annotated data\nfor fine-tuning or training a small model is also expensive because\nof limited human review bandwidth. Therefore, we took Google’s\nexisting LLMs, and used prompt engineering / tuning to achieve a\nhigh-quality LLM for Ads content moderation, and then scaled this\nmodel to achieve maximum recall with minimal compute resources.\nWe evaluated our approach on the \"Non-Family Safe\" ad content\npolicy, which restricts any Sexually Suggestive, Sexual Merchandise,\nNudity and so on, since this is one of the important policies to\nprotect users, advertisers and publishers.\n3 METHOD\nAt a high level, our approach combines funneling, LLM labeling,\nlabel propagation, and a feedback loop. Funneling, or the review\ncandidate selection, reduces the volume of content that needs to\nbe processed by the LLM by using heuristic (content similarity,\nactor similarity, non-LLM model scores) based selection, hash based\ndeduping, activity based filtering, and cluster-based sampling. Next,\nwe run inference using a prompt-engineered and tuned LLM. Then,\nthe label propagation uses a content similarity-based technique to\nboost the impact. Finally, a feedback loop from the final labeled\nimages (by the LLM directly and through propagation) to the initial\nfunneling step helps to select similar candidate images to the already\nlabeled images in the subsequent rounds of funneling, expanding\nthe LLM coverage across the entire image ads traffic.\n3.1 Review Candidate Selection Funneling\nWe use various heuristics and signals to select potential policy-\nviolating candidates, and then do filtering and diversified sampling\nto reduce the volume that needs to be processed by the LLMs.\narXiv:2402.14590v1  [cs.IR]  7 Feb 2024\nWSDM ’24, March 4–8, 2024, Merida, Mexico Wei Qiao, et al.\n3.1.1 Selecting Possible Policy Violating Candidates.We use\ncontent and actor similarity to select an initial, larger pool of can-\ndidates. For content similarity, we leverage a graph-based label\npropagation technique to propagate labels from known policy-\nviolating images as the source images (from past human or model\nlabeled images) to similar images based on pre-trained embeddings.\nTwo images whose distance in the embedding space is less than\na threshold are considered similar. We build a similarity graph to\ncollect the neighbors of known policy-violating content. For actor\nsimilarity, we collect candidate ad images from the accounts with\npolicy-violating activities.\nTo select candidate images with scores larger than the given\nthresholds, we use pre-trained non-LLM models in some cases. Us-\ning pre-trained models for candidate selection has lower precision\nrequirements than using them for labeling.\n3.1.2 Reducing the Pool by Deduping, Filtering, Sampling.\nGoogle ads contains a lot of duplicate or near-duplicate content,\nwhich wastes machine resources on processing similar content.\nTo avoid this, we first run cross-day deduping to remove images\nalready reviewed by LLMs in the past. Then we run intra-batch\ndeduping to only send unique images to LLMs. We also filter out\ninactive images and those already labeled. To perform diversified\nsampling, we use graph based maximal coverage sampling to sample\nimages with diversity.\n3.2 Large Language Model Tuning and Labeling\nTo adapt an LLM to a given task, one can use different strategies,\nsuch as prompt engineering [6] and parameter efficient tuning [4, 5].\nPrompt engineering involves carefully designing the questions that\nare asked of the LLM, while parameter efficient tuning involves\nfine-tuning an LLM with fewer parameters on a labeled dataset\nto adjust its parameters to the task at hand. In our work, we took\nadvantage of the ability of LLMs to do in-context learning [2], and\nused a combination of prompt engineering and parameter efficient\ntuning to prepare an LLM that performs well on our policy.\nTo validate the model’s performance on manually curated prompts,\npolicy experts first performed prompt engineering. For example,\nfor a Non-Family Safe policy, we might prompt the LLM with a\nquestion such as \"Does the image contain sexually suggestive con-\ntent?\". The LLM’s predictions are then parsed into a binary yes/no\npolicy label. Because the LLM’s accuracy varies depending on the\nprompt, our policy experts crafted and evaluated various prompts\non a small labeled dataset in order to select the best-performing\nprompt for our task, which was then used in combination with\nsoft-prompt tuning [5] to create the final prompt used by our pro-\nduction system. During soft-prompt tuning, a small uninterpretable\nprompt is trained to nudge the LLM towards the correct answers\non a labeled training set. This has been shown in the literature to\nsignificantly improve LLM performance [5], and we observed the\nsame in our experiments.\nNote that prompt engineering and tuning are one-time costs,\nperformed only once per policy . Once the prompt is constructed, it\ncan be used for all inference runs of our system. For each candidate\nwe want to classify with an LLM, we concatenate the prompt and\nthe image and pass them to the LLM for labeling.\n3.3 Label Propagation and Feedback Loop\nFrom LLM labeled candidates of the previous stage, we propagate\nthe label of each image to the similar images from stored images\nwe’ve seen in the past traffic. We store selected LLM labeled images\nas known images and label incoming images if they are similar\nenough to be considered as near duplicates.\nAll labeled images, whether directly by LLMs or indirectly la-\nbeled through label propagation, are then read in the review candi-\ndate selection stage, and used as input in the initial known images\nfor content similarity based expansion, to identify similar images\nas potential candidates for the next round of LLM review.\n4 RESULTS AND DISCUSSIONS\nWe ran our pipeline over 400 million ad images collected over the\nlast 30 days. Through funneling, we reduced the volume to less than\n0.1%, or 400k images, which are reviewed by an LLM. After label\npropagation, the number of ads with positive labels doubled. This\npipeline labeled roughly twice as many images as a multi-modal\nnon-LLM model, while also surpassing its precision on the “Non-\nFamily Safe” ad policy. Overall, this pipeline helped remove more\nthan 15% of the policy-violating impressions among image ads for\nthis policy.\nWe are expanding this technique to more ad policies and modali-\nties, such as videos, text, and landing pages. We are also improving\nthe quality of all pipeline stages, including funneling by explor-\ning better heuristics, tuning better LLM prompts, and propagating\nsimilarity through higher-quality embeddings.\n5 COMPANY PORTRAIT\nGoogle LLCis an AI-first multinational company focused on orga-\nnizing the world’s information and making it universally accessible\nand useful. Google operates businesses in online advertising, search\nengine technology, cloud computing, and consumer electronics.\n6 PRESENTER BIOGRAPHY\nWei Qiao: Wei is a technical lead in Google Ads Content and\nTargeting Safety team. He is leading efforts to build the systems\nand workflows for efficient ads content moderation. Contact email:\nweiqiao@google.com.\nREFERENCES\n[1] Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexan-\ndre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al.\n2023. Palm 2 technical report. arXiv preprint arXiv:2305.10403 (2023).\n[2] Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Pra-\nfulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,\net al. 2020. Language models are few-shot learners. Advances in neural information\nprocessing systems 33 (2020), 1877–1901.\n[3] Xi Chen, Josip Djolonga, Piotr Padlewski, Basil Mustafa, Soravit Changpinyo,\nJialin Wu, Carlos Riquelme Ruiz, Sebastian Goodman, Xiao Wang, Yi Tay, et al.\n2023. PaLI-X: On Scaling up a Multilingual Vision and Language Model. arXiv\npreprint arXiv:2305.18565 (2023).\n[4] Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean\nWang, Lu Wang, and Weizhu Chen. 2021. Lora: Low-rank adaptation of large\nlanguage models. arXiv preprint arXiv:2106.09685 (2021).\n[5] Brian Lester, Rami Al-Rfou, and Noah Constant. 2021. The Power of Scale for\nParameter-Efficient Prompt Tuning. InConference on Empirical Methods in Natural\nLanguage Processing . https://api.semanticscholar.org/CorpusID:233296808\n[6] Laria Reynolds and Kyle McDonell. 2021. Prompt programming for large language\nmodels: Beyond the few-shot paradigm. In Extended Abstracts of the 2021 CHI\nConference on Human Factors in Computing Systems . 1–7."
+  "title": "Scaling Up LLM Reviews for Google Ads Content Moderation",
+  "url": "https://openalex.org/W4392120919",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2099841966",
+      "name": "Qiao Wei",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Dogra, Tushar",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4302673463",
+      "name": "Stretcu, Otilia",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4305770655",
+      "name": "Lyu, Yu-Han",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2689960129",
+      "name": "Fang Tiantian",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2153079742",
+      "name": "Kwon, Dongjin",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4318743087",
+      "name": "LU Chun-ta",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4288976668",
+      "name": "Luo, Enming",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1973821393",
+      "name": "Wang Yuan",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Chia, Chih-Chun",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4304951633",
+      "name": "Fuxman, Ariel",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2353171509",
+      "name": "Wang Fang-Zhou",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3041825953",
+      "name": "Krishna, Ranjay",
+      "affiliations": [
+        "University of Washington",
+        "Seattle University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4289509884",
+      "name": "Tek, Mehmet",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3160638507"
+  ],
+  "abstract": "Large language models (LLMs) are powerful tools for content moderation, but\\ntheir inference costs and latency make them prohibitive for casual use on large\\ndatasets, such as the Google Ads repository. This study proposes a method for\\nscaling up LLM reviews for content moderation in Google Ads. First, we use\\nheuristics to select candidates via filtering and duplicate removal, and create\\nclusters of ads for which we select one representative ad per cluster. We then\\nuse LLMs to review only the representative ads. Finally, we propagate the LLM\\ndecisions for the representative ads back to their clusters. This method\\nreduces the number of reviews by more than 3 orders of magnitude while\\nachieving a 2x recall compared to a baseline non-LLM model. The success of this\\napproach is a strong function of the representations used in clustering and\\nlabel propagation; we found that cross-modal similarity representations yield\\nbetter results than uni-modal representations.\\n",
+  "full_text": "Scaling Up LLM Reviews for Google Ads Content Moderation\nWei Qiao\nGoogle Ads Safety\nTushar Dogra\nGoogle Ads Safety\nOtilia Stretcu\nGoogle Research\nYu-Han Lyu\nGoogle Ads Safety\nTiantian Fang\nGoogle Ads Safety\nDongjin Kwon\nGoogle Ads Safety\nChun-Ta Lu\nGoogle Research\nEnming Luo\nGoogle Research\nYuan Wang\nGoogle Ads Safety\nChih-Chun Chia\nGoogle Ads Safety\nAriel Fuxman\nGoogle Research\nFangzhou Wang\nGoogle Ads Safety\nRanjay Krishna\nUniv. of Washington\nMehmet Tek\nGoogle Ads Safety\nABSTRACT\nLarge language models (LLMs) are powerful tools for content mod-\neration, but their inference costs and latency make them prohibitive\nfor casual use on large datasets, such as the Google Ads repository.\nThis study proposes a method for scaling up LLM reviews for con-\ntent moderation in Google Ads. First, we use heuristics to select\ncandidates via filtering and duplicate removal, and create clusters\nof ads for which we select one representative ad per cluster. We\nthen use LLMs to review only the representative ads. Finally, we\npropagate the LLM decisions for the representative ads back to\ntheir clusters. This method reduces the number of reviews by more\nthan 3 orders of magnitude while achieving a 2x recall compared\nto a baseline non-LLM model. The success of this approach is a\nstrong function of the representations used in clustering and label\npropagation; we found that cross-modal similarity representations\nyield better results than uni-modal representations.\nACM Reference Format:\nWei Qiao, Tushar Dogra, Otilia Stretcu, Yu-Han Lyu, Tiantian Fang, Dongjin\nKwon, Chun-Ta Lu, Enming Luo, Yuan Wang, Chih-Chun Chia, Ariel Fux-\nman, Fangzhou Wang, Ranjay Krishna, and Mehmet Tek. 2024. Scaling Up\nLLM Reviews for Google Ads Content Moderation. In Proceedings of the\n17th ACM International Conference on Web Search and Data Mining (WSDM\n’24), March 4–8, 2024, Merida, Mexico. ACM, New York, NY, USA, 2 pages.\nhttps://doi.org/10.1145/3616855.3635736\n1 OUTLINE\nWe introduce an end-to-end solution for scaling up and leveraging\nLLMs [1, 3] for Google ads content moderation. We will first pro-\nvide the context for the LLM review problem and explain the scale\nof reviews in the context of compute resources. Then, we will intro-\nduce our approach to solving this problem. We will conclude with\nthe results of our deployment in Google Ads policy enforcement\nplatform. Finally, we discuss future improvements and extensions.\n2 PROBLEM AND MOTIVATION\nOur goal is to accurately detect Google Ads policy violations in all\nthe ads traffic before any ads are eligible to enter the auction for\nserving. We evaluated and used this technique on image ads only,\nPermission to make digital or hard copies of part or all of this work for personal or\nclassroom use is granted without fee provided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the owner/author(s).\nWSDM ’24, March 4–8, 2024, Merida, Mexico\n© 2024 Copyright held by the owner/author(s).\nACM ISBN 979-8-4007-0371-3/24/03.\nhttps://doi.org/10.1145/3616855.3635736\nFigure 1: A diagram of our end-to-end solution for scaling\nup LLMs for content moderation.\nbut the approach is generic and can be extended to any modality\nand ad format. In this paper, we use the term “LLMs” to include both\nlarge language models and large visual-language models. Using\nLLMs to moderate all image ads traffic requires significant compute\nresources, making it impractical. Collecting human annotated data\nfor fine-tuning or training a small model is also expensive because\nof limited human review bandwidth. Therefore, we took Google’s\nexisting LLMs, and used prompt engineering / tuning to achieve a\nhigh-quality LLM for Ads content moderation, and then scaled this\nmodel to achieve maximum recall with minimal compute resources.\nWe evaluated our approach on the \"Non-Family Safe\" ad content\npolicy, which restricts any Sexually Suggestive, Sexual Merchandise,\nNudity and so on, since this is one of the important policies to\nprotect users, advertisers and publishers.\n3 METHOD\nAt a high level, our approach combines funneling, LLM labeling,\nlabel propagation, and a feedback loop. Funneling, or the review\ncandidate selection, reduces the volume of content that needs to\nbe processed by the LLM by using heuristic (content similarity,\nactor similarity, non-LLM model scores) based selection, hash based\ndeduping, activity based filtering, and cluster-based sampling. Next,\nwe run inference using a prompt-engineered and tuned LLM. Then,\nthe label propagation uses a content similarity-based technique to\nboost the impact. Finally, a feedback loop from the final labeled\nimages (by the LLM directly and through propagation) to the initial\nfunneling step helps to select similar candidate images to the already\nlabeled images in the subsequent rounds of funneling, expanding\nthe LLM coverage across the entire image ads traffic.\n3.1 Review Candidate Selection Funneling\nWe use various heuristics and signals to select potential policy-\nviolating candidates, and then do filtering and diversified sampling\nto reduce the volume that needs to be processed by the LLMs.\narXiv:2402.14590v1  [cs.IR]  7 Feb 2024\nWSDM ’24, March 4–8, 2024, Merida, Mexico Wei Qiao, et al.\n3.1.1 Selecting Possible Policy Violating Candidates.We use\ncontent and actor similarity to select an initial, larger pool of can-\ndidates. For content similarity, we leverage a graph-based label\npropagation technique to propagate labels from known policy-\nviolating images as the source images (from past human or model\nlabeled images) to similar images based on pre-trained embeddings.\nTwo images whose distance in the embedding space is less than\na threshold are considered similar. We build a similarity graph to\ncollect the neighbors of known policy-violating content. For actor\nsimilarity, we collect candidate ad images from the accounts with\npolicy-violating activities.\nTo select candidate images with scores larger than the given\nthresholds, we use pre-trained non-LLM models in some cases. Us-\ning pre-trained models for candidate selection has lower precision\nrequirements than using them for labeling.\n3.1.2 Reducing the Pool by Deduping, Filtering, Sampling.\nGoogle ads contains a lot of duplicate or near-duplicate content,\nwhich wastes machine resources on processing similar content.\nTo avoid this, we first run cross-day deduping to remove images\nalready reviewed by LLMs in the past. Then we run intra-batch\ndeduping to only send unique images to LLMs. We also filter out\ninactive images and those already labeled. To perform diversified\nsampling, we use graph based maximal coverage sampling to sample\nimages with diversity.\n3.2 Large Language Model Tuning and Labeling\nTo adapt an LLM to a given task, one can use different strategies,\nsuch as prompt engineering [6] and parameter efficient tuning [4, 5].\nPrompt engineering involves carefully designing the questions that\nare asked of the LLM, while parameter efficient tuning involves\nfine-tuning an LLM with fewer parameters on a labeled dataset\nto adjust its parameters to the task at hand. In our work, we took\nadvantage of the ability of LLMs to do in-context learning [2], and\nused a combination of prompt engineering and parameter efficient\ntuning to prepare an LLM that performs well on our policy.\nTo validate the model’s performance on manually curated prompts,\npolicy experts first performed prompt engineering. For example,\nfor a Non-Family Safe policy, we might prompt the LLM with a\nquestion such as \"Does the image contain sexually suggestive con-\ntent?\". The LLM’s predictions are then parsed into a binary yes/no\npolicy label. Because the LLM’s accuracy varies depending on the\nprompt, our policy experts crafted and evaluated various prompts\non a small labeled dataset in order to select the best-performing\nprompt for our task, which was then used in combination with\nsoft-prompt tuning [5] to create the final prompt used by our pro-\nduction system. During soft-prompt tuning, a small uninterpretable\nprompt is trained to nudge the LLM towards the correct answers\non a labeled training set. This has been shown in the literature to\nsignificantly improve LLM performance [5], and we observed the\nsame in our experiments.\nNote that prompt engineering and tuning are one-time costs,\nperformed only once per policy . Once the prompt is constructed, it\ncan be used for all inference runs of our system. For each candidate\nwe want to classify with an LLM, we concatenate the prompt and\nthe image and pass them to the LLM for labeling.\n3.3 Label Propagation and Feedback Loop\nFrom LLM labeled candidates of the previous stage, we propagate\nthe label of each image to the similar images from stored images\nwe’ve seen in the past traffic. We store selected LLM labeled images\nas known images and label incoming images if they are similar\nenough to be considered as near duplicates.\nAll labeled images, whether directly by LLMs or indirectly la-\nbeled through label propagation, are then read in the review candi-\ndate selection stage, and used as input in the initial known images\nfor content similarity based expansion, to identify similar images\nas potential candidates for the next round of LLM review.\n4 RESULTS AND DISCUSSIONS\nWe ran our pipeline over 400 million ad images collected over the\nlast 30 days. Through funneling, we reduced the volume to less than\n0.1%, or 400k images, which are reviewed by an LLM. After label\npropagation, the number of ads with positive labels doubled. This\npipeline labeled roughly twice as many images as a multi-modal\nnon-LLM model, while also surpassing its precision on the “Non-\nFamily Safe” ad policy. Overall, this pipeline helped remove more\nthan 15% of the policy-violating impressions among image ads for\nthis policy.\nWe are expanding this technique to more ad policies and modali-\nties, such as videos, text, and landing pages. We are also improving\nthe quality of all pipeline stages, including funneling by explor-\ning better heuristics, tuning better LLM prompts, and propagating\nsimilarity through higher-quality embeddings.\n5 COMPANY PORTRAIT\nGoogle LLCis an AI-first multinational company focused on orga-\nnizing the world’s information and making it universally accessible\nand useful. Google operates businesses in online advertising, search\nengine technology, cloud computing, and consumer electronics.\n6 PRESENTER BIOGRAPHY\nWei Qiao: Wei is a technical lead in Google Ads Content and\nTargeting Safety team. He is leading efforts to build the systems\nand workflows for efficient ads content moderation. Contact email:\nweiqiao@google.com.\nREFERENCES\n[1] Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexan-\ndre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al.\n2023. Palm 2 technical report. arXiv preprint arXiv:2305.10403 (2023).\n[2] Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Pra-\nfulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,\net al. 2020. Language models are few-shot learners. Advances in neural information\nprocessing systems 33 (2020), 1877–1901.\n[3] Xi Chen, Josip Djolonga, Piotr Padlewski, Basil Mustafa, Soravit Changpinyo,\nJialin Wu, Carlos Riquelme Ruiz, Sebastian Goodman, Xiao Wang, Yi Tay, et al.\n2023. PaLI-X: On Scaling up a Multilingual Vision and Language Model. arXiv\npreprint arXiv:2305.18565 (2023).\n[4] Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean\nWang, Lu Wang, and Weizhu Chen. 2021. Lora: Low-rank adaptation of large\nlanguage models. arXiv preprint arXiv:2106.09685 (2021).\n[5] Brian Lester, Rami Al-Rfou, and Noah Constant. 2021. The Power of Scale for\nParameter-Efficient Prompt Tuning. InConference on Empirical Methods in Natural\nLanguage Processing . https://api.semanticscholar.org/CorpusID:233296808\n[6] Laria Reynolds and Kyle McDonell. 2021. Prompt programming for large language\nmodels: Beyond the few-shot paradigm. In Extended Abstracts of the 2021 CHI\nConference on Human Factors in Computing Systems . 1–7.",
+  "topic": "Moderation",
+  "concepts": [
+    {
+      "name": "Moderation",
+      "score": 0.7336562871932983
+    },
+    {
+      "name": "Heuristics",
+      "score": 0.677908718585968
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6617630124092102
+    },
+    {
+      "name": "Cluster analysis",
+      "score": 0.5828551054000854
+    },
+    {
+      "name": "Inference",
+      "score": 0.5434368848800659
+    },
+    {
+      "name": "Similarity (geometry)",
+      "score": 0.5050490498542786
+    },
+    {
+      "name": "Scaling",
+      "score": 0.44358018040657043
+    },
+    {
+      "name": "Recall",
+      "score": 0.4205370843410492
+    },
+    {
+      "name": "Casual",
+      "score": 0.4135241210460663
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3512113094329834
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2667189836502075
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.2304220199584961
+    },
+    {
+      "name": "Psychology",
+      "score": 0.15054994821548462
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.12136441469192505
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.08112576603889465
+    },
+    {
+      "name": "Composite material",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    },
+    {
+      "name": "Materials science",
+      "score": 0.0
+    }
+  ]
 }

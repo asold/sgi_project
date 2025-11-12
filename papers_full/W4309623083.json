@@ -1,63 +1,146 @@
 {
-    "title": "BERT-Log: Anomaly Detection for System Logs Based on Pre-trained Language Model",
-    "url": "https://openalex.org/W4309623083",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2001644466",
-            "name": "Song Chen",
-            "affiliations": [
-                "Qingdao University of Technology",
-                "Chengdu Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2168164613",
-            "name": "Hai Liao",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2900353077",
-        "https://openalex.org/W2524602947",
-        "https://openalex.org/W4221063276",
-        "https://openalex.org/W2054506507",
-        "https://openalex.org/W3041215671",
-        "https://openalex.org/W3163457243",
-        "https://openalex.org/W2583874385",
-        "https://openalex.org/W1689711448",
-        "https://openalex.org/W3199174176",
-        "https://openalex.org/W2762028850",
-        "https://openalex.org/W2560021099",
-        "https://openalex.org/W2754665629",
-        "https://openalex.org/W4210793970",
-        "https://openalex.org/W3095840026",
-        "https://openalex.org/W3215037706",
-        "https://openalex.org/W2884518987",
-        "https://openalex.org/W2957339558",
-        "https://openalex.org/W4205965165",
-        "https://openalex.org/W3102157815",
-        "https://openalex.org/W3199657116",
-        "https://openalex.org/W3087629783",
-        "https://openalex.org/W2115056012",
-        "https://openalex.org/W2011438544",
-        "https://openalex.org/W2063566496",
-        "https://openalex.org/W2107263349",
-        "https://openalex.org/W3194284871",
-        "https://openalex.org/W3095953894",
-        "https://openalex.org/W3099104041",
-        "https://openalex.org/W2153470728",
-        "https://openalex.org/W3186907865",
-        "https://openalex.org/W3212260481",
-        "https://openalex.org/W2039157918",
-        "https://openalex.org/W1990089904",
-        "https://openalex.org/W2143996186",
-        "https://openalex.org/W2966979768",
-        "https://openalex.org/W2947815220",
-        "https://openalex.org/W3214635173",
-        "https://openalex.org/W2893517270",
-        "https://openalex.org/W2963999143"
-    ],
-    "abstract": "Logs are primary information resource for fault diagnosis and anomaly detection in large-scale computer systems, but it is hard to classify anomalies from system logs. Recent studies focus on extracting semantic information from unstructured log messages and converting it into word vectors. Therefore, LSTM approach is more suitable for time series data. Word2Vec is the up-to-date encoding method, but the order of words in sequences is not taken into account. In this article, we propose BERT-Log, which regards the log sequence as a natural language sequence, use pre-trained language model to learn the semantic representation of normal and anomalous logs, and a fully connected neural network is utilized to fine-tune the BERT model to detect abnormal. It can capture all the semantic information from log sequence including context and position. It has achieved the highest performance among all the methods on HDFS dataset, with an F1-score of 99.3%. We propose a new log feature extractor on BGL dataset to obtain log sequence by sliding window including node ID, window size and step size. BERT-Log approach detects anomalies on BGL dataset with an F1-score of 99.4%. It gives 19% performance improvement compared to LogRobust and 7% performance improvement compared to HitAnomaly.",
-    "full_text": null
+  "title": "BERT-Log: Anomaly Detection for System Logs Based on Pre-trained Language Model",
+  "url": "https://openalex.org/W4309623083",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2001644466",
+      "name": "Song Chen",
+      "affiliations": [
+        "Qingdao University of Technology",
+        "Chengdu Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2168164613",
+      "name": "Hai Liao",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2900353077",
+    "https://openalex.org/W2524602947",
+    "https://openalex.org/W4221063276",
+    "https://openalex.org/W2054506507",
+    "https://openalex.org/W3041215671",
+    "https://openalex.org/W3163457243",
+    "https://openalex.org/W2583874385",
+    "https://openalex.org/W1689711448",
+    "https://openalex.org/W3199174176",
+    "https://openalex.org/W2762028850",
+    "https://openalex.org/W2560021099",
+    "https://openalex.org/W2754665629",
+    "https://openalex.org/W4210793970",
+    "https://openalex.org/W3095840026",
+    "https://openalex.org/W3215037706",
+    "https://openalex.org/W2884518987",
+    "https://openalex.org/W2957339558",
+    "https://openalex.org/W4205965165",
+    "https://openalex.org/W3102157815",
+    "https://openalex.org/W3199657116",
+    "https://openalex.org/W3087629783",
+    "https://openalex.org/W2115056012",
+    "https://openalex.org/W2011438544",
+    "https://openalex.org/W2063566496",
+    "https://openalex.org/W2107263349",
+    "https://openalex.org/W3194284871",
+    "https://openalex.org/W3095953894",
+    "https://openalex.org/W3099104041",
+    "https://openalex.org/W2153470728",
+    "https://openalex.org/W3186907865",
+    "https://openalex.org/W3212260481",
+    "https://openalex.org/W2039157918",
+    "https://openalex.org/W1990089904",
+    "https://openalex.org/W2143996186",
+    "https://openalex.org/W2966979768",
+    "https://openalex.org/W2947815220",
+    "https://openalex.org/W3214635173",
+    "https://openalex.org/W2893517270",
+    "https://openalex.org/W2963999143"
+  ],
+  "abstract": "Logs are primary information resource for fault diagnosis and anomaly detection in large-scale computer systems, but it is hard to classify anomalies from system logs. Recent studies focus on extracting semantic information from unstructured log messages and converting it into word vectors. Therefore, LSTM approach is more suitable for time series data. Word2Vec is the up-to-date encoding method, but the order of words in sequences is not taken into account. In this article, we propose BERT-Log, which regards the log sequence as a natural language sequence, use pre-trained language model to learn the semantic representation of normal and anomalous logs, and a fully connected neural network is utilized to fine-tune the BERT model to detect abnormal. It can capture all the semantic information from log sequence including context and position. It has achieved the highest performance among all the methods on HDFS dataset, with an F1-score of 99.3%. We propose a new log feature extractor on BGL dataset to obtain log sequence by sliding window including node ID, window size and step size. BERT-Log approach detects anomalies on BGL dataset with an F1-score of 99.4%. It gives 19% performance improvement compared to LogRobust and 7% performance improvement compared to HitAnomaly.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8806107044219971
+    },
+    {
+      "name": "Word2vec",
+      "score": 0.6654617190361023
+    },
+    {
+      "name": "Sliding window protocol",
+      "score": 0.5876630544662476
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.5327957272529602
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5141234993934631
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.5090400576591492
+    },
+    {
+      "name": "F1 score",
+      "score": 0.4894663095474243
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.47602301836013794
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.46939247846603394
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.4654427766799927
+    },
+    {
+      "name": "Language model",
+      "score": 0.4437880516052246
+    },
+    {
+      "name": "Window (computing)",
+      "score": 0.4262714385986328
+    },
+    {
+      "name": "Data mining",
+      "score": 0.41802462935447693
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Embedding",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,87 +1,134 @@
 {
-    "title": "Enhancing Clinical Relevance of Pretrained Language Models Through Integration of External Knowledge: Case Study on Cardiovascular Diagnosis From Electronic Health Records",
-    "url": "https://openalex.org/W4401364619",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2786691325",
-            "name": "Qiuhao Lu",
-            "affiliations": [
-                "University of Oregon",
-                "Mayo Clinic",
-                "WinnMed"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2315745432",
-            "name": "Andrew Wen",
-            "affiliations": [
-                "WinnMed",
-                "Mayo Clinic"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2134526459",
-            "name": "Thien Nguyen",
-            "affiliations": [
-                "University of Oregon"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2310998875",
-            "name": "Hongfang Liu",
-            "affiliations": [
-                "Mayo Clinic",
-                "WinnMed"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2786691325",
-            "name": "Qiuhao Lu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2315745432",
-            "name": "Andrew Wen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2134526459",
-            "name": "Thien Nguyen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2310998875",
-            "name": "Hongfang Liu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2147726942",
-        "https://openalex.org/W2404369708",
-        "https://openalex.org/W2987154291",
-        "https://openalex.org/W3169394946",
-        "https://openalex.org/W2963716420",
-        "https://openalex.org/W3211384762",
-        "https://openalex.org/W58804258",
-        "https://openalex.org/W3151929433",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W3119464161",
-        "https://openalex.org/W3083581557",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W3046375318",
-        "https://openalex.org/W4385573637",
-        "https://openalex.org/W2953356739",
-        "https://openalex.org/W3114916066",
-        "https://openalex.org/W3105892552",
-        "https://openalex.org/W4285807172",
-        "https://openalex.org/W2915623326",
-        "https://openalex.org/W4287889097",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2159583324",
-        "https://openalex.org/W3106811464",
-        "https://openalex.org/W3106224367"
-    ],
-    "abstract": "Background Despite their growing use in health care, pretrained language models (PLMs) often lack clinical relevance due to insufficient domain expertise and poor interpretability. A key strategy to overcome these challenges is integrating external knowledge into PLMs, enhancing their adaptability and clinical usefulness. Current biomedical knowledge graphs like UMLS (Unified Medical Language System), SNOMED CT (Systematized Medical Nomenclature for Medicine–Clinical Terminology), and HPO (Human Phenotype Ontology), while comprehensive, fail to effectively connect general biomedical knowledge with physician insights. There is an equally important need for a model that integrates diverse knowledge in a way that is both unified and compartmentalized. This approach not only addresses the heterogeneous nature of domain knowledge but also recognizes the unique data and knowledge repositories of individual health care institutions, necessitating careful and respectful management of proprietary information. Objective This study aimed to enhance the clinical relevance and interpretability of PLMs by integrating external knowledge in a manner that respects the diversity and proprietary nature of health care data. We hypothesize that domain knowledge, when captured and distributed as stand-alone modules, can be effectively reintegrated into PLMs to significantly improve their adaptability and utility in clinical settings. Methods We demonstrate that through adapters, small and lightweight neural networks that enable the integration of extra information without full model fine-tuning, we can inject diverse sources of external domain knowledge into language models and improve the overall performance with an increased level of interpretability. As a practical application of this methodology, we introduce a novel task, structured as a case study, that endeavors to capture physician knowledge in assigning cardiovascular diagnoses from clinical narratives, where we extract diagnosis-comment pairs from electronic health records (EHRs) and cast the problem as text classification. Results The study demonstrates that integrating domain knowledge into PLMs significantly improves their performance. While improvements with ClinicalBERT are more modest, likely due to its pretraining on clinical texts, BERT (bidirectional encoder representations from transformer) equipped with knowledge adapters surprisingly matches or exceeds ClinicalBERT in several metrics. This underscores the effectiveness of knowledge adapters and highlights their potential in settings with strict data privacy constraints. This approach also increases the level of interpretability of these models in a clinical context, which enhances our ability to precisely identify and apply the most relevant domain knowledge for specific tasks, thereby optimizing the model’s performance and tailoring it to meet specific clinical needs. Conclusions This research provides a basis for creating health knowledge graphs infused with physician knowledge, marking a significant step forward for PLMs in health care. Notably, the model balances integrating knowledge both comprehensively and selectively, addressing the heterogeneous nature of medical knowledge and the privacy needs of health care institutions.",
-    "full_text": null
+  "title": "Enhancing Clinical Relevance of Pretrained Language Models Through Integration of External Knowledge: Case Study on Cardiovascular Diagnosis From Electronic Health Records",
+  "url": "https://openalex.org/W4401364619",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2786691325",
+      "name": "Qiuhao Lu",
+      "affiliations": [
+        "University of Oregon",
+        "Mayo Clinic",
+        "WinnMed"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2315745432",
+      "name": "Andrew Wen",
+      "affiliations": [
+        "WinnMed",
+        "Mayo Clinic"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2134526459",
+      "name": "Thien Nguyen",
+      "affiliations": [
+        "University of Oregon"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2310998875",
+      "name": "Hongfang Liu",
+      "affiliations": [
+        "Mayo Clinic",
+        "WinnMed"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2786691325",
+      "name": "Qiuhao Lu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2315745432",
+      "name": "Andrew Wen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2134526459",
+      "name": "Thien Nguyen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2310998875",
+      "name": "Hongfang Liu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2147726942",
+    "https://openalex.org/W2404369708",
+    "https://openalex.org/W2987154291",
+    "https://openalex.org/W3169394946",
+    "https://openalex.org/W2963716420",
+    "https://openalex.org/W3211384762",
+    "https://openalex.org/W58804258",
+    "https://openalex.org/W3151929433",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W3119464161",
+    "https://openalex.org/W3083581557",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W3046375318",
+    "https://openalex.org/W4385573637",
+    "https://openalex.org/W2953356739",
+    "https://openalex.org/W3114916066",
+    "https://openalex.org/W3105892552",
+    "https://openalex.org/W4285807172",
+    "https://openalex.org/W2915623326",
+    "https://openalex.org/W4287889097",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2159583324",
+    "https://openalex.org/W3106811464",
+    "https://openalex.org/W3106224367"
+  ],
+  "abstract": "Background Despite their growing use in health care, pretrained language models (PLMs) often lack clinical relevance due to insufficient domain expertise and poor interpretability. A key strategy to overcome these challenges is integrating external knowledge into PLMs, enhancing their adaptability and clinical usefulness. Current biomedical knowledge graphs like UMLS (Unified Medical Language System), SNOMED CT (Systematized Medical Nomenclature for Medicine–Clinical Terminology), and HPO (Human Phenotype Ontology), while comprehensive, fail to effectively connect general biomedical knowledge with physician insights. There is an equally important need for a model that integrates diverse knowledge in a way that is both unified and compartmentalized. This approach not only addresses the heterogeneous nature of domain knowledge but also recognizes the unique data and knowledge repositories of individual health care institutions, necessitating careful and respectful management of proprietary information. Objective This study aimed to enhance the clinical relevance and interpretability of PLMs by integrating external knowledge in a manner that respects the diversity and proprietary nature of health care data. We hypothesize that domain knowledge, when captured and distributed as stand-alone modules, can be effectively reintegrated into PLMs to significantly improve their adaptability and utility in clinical settings. Methods We demonstrate that through adapters, small and lightweight neural networks that enable the integration of extra information without full model fine-tuning, we can inject diverse sources of external domain knowledge into language models and improve the overall performance with an increased level of interpretability. As a practical application of this methodology, we introduce a novel task, structured as a case study, that endeavors to capture physician knowledge in assigning cardiovascular diagnoses from clinical narratives, where we extract diagnosis-comment pairs from electronic health records (EHRs) and cast the problem as text classification. Results The study demonstrates that integrating domain knowledge into PLMs significantly improves their performance. While improvements with ClinicalBERT are more modest, likely due to its pretraining on clinical texts, BERT (bidirectional encoder representations from transformer) equipped with knowledge adapters surprisingly matches or exceeds ClinicalBERT in several metrics. This underscores the effectiveness of knowledge adapters and highlights their potential in settings with strict data privacy constraints. This approach also increases the level of interpretability of these models in a clinical context, which enhances our ability to precisely identify and apply the most relevant domain knowledge for specific tasks, thereby optimizing the model’s performance and tailoring it to meet specific clinical needs. Conclusions This research provides a basis for creating health knowledge graphs infused with physician knowledge, marking a significant step forward for PLMs in health care. Notably, the model balances integrating knowledge both comprehensively and selectively, addressing the heterogeneous nature of medical knowledge and the privacy needs of health care institutions.",
+  "full_text": null,
+  "topic": "Relevance (law)",
+  "concepts": [
+    {
+      "name": "Relevance (law)",
+      "score": 0.8557209968566895
+    },
+    {
+      "name": "Health records",
+      "score": 0.7923508286476135
+    },
+    {
+      "name": "Clinical significance",
+      "score": 0.6052033305168152
+    },
+    {
+      "name": "Electronic health record",
+      "score": 0.5854870080947876
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4603436291217804
+    },
+    {
+      "name": "Medicine",
+      "score": 0.40737348794937134
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.33309614658355713
+    },
+    {
+      "name": "Health care",
+      "score": 0.15845876932144165
+    },
+    {
+      "name": "Pathology",
+      "score": 0.11476749181747437
+    },
+    {
+      "name": "Political science",
+      "score": 0.09941035509109497
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    }
+  ]
 }

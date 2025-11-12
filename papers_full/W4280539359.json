@@ -1,87 +1,146 @@
 {
-    "title": "RT-ViT: Real-Time Monocular Depth Estimation Using Lightweight Vision Transformers",
-    "url": "https://openalex.org/W4280539359",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3013094810",
-            "name": "Hatem Ibrahem",
-            "affiliations": [
-                "Chungbuk National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099067057",
-            "name": "Ahmed Salem",
-            "affiliations": [
-                "Assiut University",
-                "Chungbuk National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2246411254",
-            "name": "Hyun-Soo Kang",
-            "affiliations": [
-                "Chungbuk National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3013094810",
-            "name": "Hatem Ibrahem",
-            "affiliations": [
-                "Chungbuk National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099067057",
-            "name": "Ahmed Salem",
-            "affiliations": [
-                "Chungbuk National University",
-                "Assiut University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2246411254",
-            "name": "Hyun-Soo Kang",
-            "affiliations": [
-                "Chungbuk National University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2171740948",
-        "https://openalex.org/W2962807621",
-        "https://openalex.org/W2125416623",
-        "https://openalex.org/W2895314356",
-        "https://openalex.org/W2605938684",
-        "https://openalex.org/W2593414960",
-        "https://openalex.org/W2963488291",
-        "https://openalex.org/W2962741876",
-        "https://openalex.org/W2962456457",
-        "https://openalex.org/W2985299701",
-        "https://openalex.org/W2997891449",
-        "https://openalex.org/W2956039874",
-        "https://openalex.org/W4214943624",
-        "https://openalex.org/W4205344651",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W2293634267",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W2962843773",
-        "https://openalex.org/W6786385858",
-        "https://openalex.org/W3188511781",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W4214520160",
-        "https://openalex.org/W2476548250",
-        "https://openalex.org/W125693051",
-        "https://openalex.org/W2340897893",
-        "https://openalex.org/W3035679448",
-        "https://openalex.org/W2963591054",
-        "https://openalex.org/W3009020965",
-        "https://openalex.org/W2962816904",
-        "https://openalex.org/W4206955301",
-        "https://openalex.org/W2962928205"
-    ],
-    "abstract": "The latest research in computer vision highlighted the effectiveness of the vision transformers (ViT) in performing several computer vision tasks; they can efficiently understand and process the image globally unlike the convolution which processes the image locally. ViTs outperform the convolutional neural networks in terms of accuracy in many computer vision tasks but the speed of ViTs is still an issue, due to the excessive use of the transformer layers that include many fully connected layers. Therefore, we propose a real-time ViT-based monocular depth estimation (depth estimation from single RGB image) method with encoder-decoder architectures for indoor and outdoor scenes. This main architecture of the proposed method consists of a vision transformer encoder and a convolutional neural network decoder. We started by training the base vision transformer (ViT-b16) with 12 transformer layers then we reduced the transformer layers to six layers, namely ViT-s16 (the Small ViT) and four layers, namely ViT-t16 (the Tiny ViT) to obtain real-time processing. We also try four different configurations of the CNN decoder network. The proposed architectures can learn the task of depth estimation efficiently and can produce more accurate depth predictions than the fully convolutional-based methods taking advantage of the multi-head self-attention module. We train the proposed encoder-decoder architecture end-to-end on the challenging NYU-depthV2 and CITYSCAPES benchmarks then we evaluate the trained models on the validation and test sets of the same benchmarks showing that it outperforms many state-of-the-art methods on depth estimation while performing the task in real-time (∼20 fps). We also present a fast 3D reconstruction (∼17 fps) experiment based on the depth estimated from our method which is considered a real-world application of our method.",
-    "full_text": null
+  "title": "RT-ViT: Real-Time Monocular Depth Estimation Using Lightweight Vision Transformers",
+  "url": "https://openalex.org/W4280539359",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3013094810",
+      "name": "Hatem Ibrahem",
+      "affiliations": [
+        "Chungbuk National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099067057",
+      "name": "Ahmed Salem",
+      "affiliations": [
+        "Assiut University",
+        "Chungbuk National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2246411254",
+      "name": "Hyun-Soo Kang",
+      "affiliations": [
+        "Chungbuk National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3013094810",
+      "name": "Hatem Ibrahem",
+      "affiliations": [
+        "Chungbuk National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099067057",
+      "name": "Ahmed Salem",
+      "affiliations": [
+        "Chungbuk National University",
+        "Assiut University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2246411254",
+      "name": "Hyun-Soo Kang",
+      "affiliations": [
+        "Chungbuk National University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2171740948",
+    "https://openalex.org/W2962807621",
+    "https://openalex.org/W2125416623",
+    "https://openalex.org/W2895314356",
+    "https://openalex.org/W2605938684",
+    "https://openalex.org/W2593414960",
+    "https://openalex.org/W2963488291",
+    "https://openalex.org/W2962741876",
+    "https://openalex.org/W2962456457",
+    "https://openalex.org/W2985299701",
+    "https://openalex.org/W2997891449",
+    "https://openalex.org/W2956039874",
+    "https://openalex.org/W4214943624",
+    "https://openalex.org/W4205344651",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W2293634267",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W2962843773",
+    "https://openalex.org/W6786385858",
+    "https://openalex.org/W3188511781",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W4214520160",
+    "https://openalex.org/W2476548250",
+    "https://openalex.org/W125693051",
+    "https://openalex.org/W2340897893",
+    "https://openalex.org/W3035679448",
+    "https://openalex.org/W2963591054",
+    "https://openalex.org/W3009020965",
+    "https://openalex.org/W2962816904",
+    "https://openalex.org/W4206955301",
+    "https://openalex.org/W2962928205"
+  ],
+  "abstract": "The latest research in computer vision highlighted the effectiveness of the vision transformers (ViT) in performing several computer vision tasks; they can efficiently understand and process the image globally unlike the convolution which processes the image locally. ViTs outperform the convolutional neural networks in terms of accuracy in many computer vision tasks but the speed of ViTs is still an issue, due to the excessive use of the transformer layers that include many fully connected layers. Therefore, we propose a real-time ViT-based monocular depth estimation (depth estimation from single RGB image) method with encoder-decoder architectures for indoor and outdoor scenes. This main architecture of the proposed method consists of a vision transformer encoder and a convolutional neural network decoder. We started by training the base vision transformer (ViT-b16) with 12 transformer layers then we reduced the transformer layers to six layers, namely ViT-s16 (the Small ViT) and four layers, namely ViT-t16 (the Tiny ViT) to obtain real-time processing. We also try four different configurations of the CNN decoder network. The proposed architectures can learn the task of depth estimation efficiently and can produce more accurate depth predictions than the fully convolutional-based methods taking advantage of the multi-head self-attention module. We train the proposed encoder-decoder architecture end-to-end on the challenging NYU-depthV2 and CITYSCAPES benchmarks then we evaluate the trained models on the validation and test sets of the same benchmarks showing that it outperforms many state-of-the-art methods on depth estimation while performing the task in real-time (∼20 fps). We also present a fast 3D reconstruction (∼17 fps) experiment based on the depth estimated from our method which is considered a real-world application of our method.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7560961246490479
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6820861101150513
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6577742099761963
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6576777696609497
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5871561765670776
+    },
+    {
+      "name": "Monocular",
+      "score": 0.5551342368125916
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.526934027671814
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.44225820899009705
+    },
+    {
+      "name": "Monocular vision",
+      "score": 0.4371609687805176
+    },
+    {
+      "name": "RGB color model",
+      "score": 0.41591694951057434
+    },
+    {
+      "name": "Engineering",
+      "score": 0.135525643825531
+    },
+    {
+      "name": "Voltage",
+      "score": 0.12722048163414001
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

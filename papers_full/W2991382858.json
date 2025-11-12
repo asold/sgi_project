@@ -1,91 +1,158 @@
 {
-    "title": "How Can We Know What Language Models Know?",
-    "url": "https://openalex.org/W2991382858",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2947056188",
-            "name": "Zhengbao Jiang",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2567362423",
-            "name": "Frank F. Xu",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108645404",
-            "name": "Jun Araki",
-            "affiliations": [
-                "Robert Bosch (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A277131583",
-            "name": "Graham Neubig",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2964022985",
-        "https://openalex.org/W2605717780",
-        "https://openalex.org/W2906152891",
-        "https://openalex.org/W2799194071",
-        "https://openalex.org/W2549835527",
-        "https://openalex.org/W1999965501",
-        "https://openalex.org/W2970986510",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W2962833140",
-        "https://openalex.org/W2982756474",
-        "https://openalex.org/W2507974895",
-        "https://openalex.org/W2963206148",
-        "https://openalex.org/W2554915555",
-        "https://openalex.org/W2809324505",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W2970295111",
-        "https://openalex.org/W2124059530",
-        "https://openalex.org/W2476140796",
-        "https://openalex.org/W2963101081",
-        "https://openalex.org/W2953369973",
-        "https://openalex.org/W3021191241",
-        "https://openalex.org/W2951048068",
-        "https://openalex.org/W2103931177",
-        "https://openalex.org/W1993692165",
-        "https://openalex.org/W2167187514",
-        "https://openalex.org/W2124732071",
-        "https://openalex.org/W2963290255",
-        "https://openalex.org/W2167435923",
-        "https://openalex.org/W2988975212",
-        "https://openalex.org/W2114584278",
-        "https://openalex.org/W2741049976",
-        "https://openalex.org/W2962832505",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2250635077",
-        "https://openalex.org/W2946359678",
-        "https://openalex.org/W2738371943",
-        "https://openalex.org/W2998557616",
-        "https://openalex.org/W2948947170",
-        "https://openalex.org/W2471366537",
-        "https://openalex.org/W2563574619",
-        "https://openalex.org/W2997012196",
-        "https://openalex.org/W2910243263",
-        "https://openalex.org/W1493490255",
-        "https://openalex.org/W2963216553",
-        "https://openalex.org/W2946417913",
-        "https://openalex.org/W2785611959",
-        "https://openalex.org/W2562979205",
-        "https://openalex.org/W2805206884",
-        "https://openalex.org/W137105571",
-        "https://openalex.org/W2953356739",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2963748792"
-    ],
-    "abstract": "Recent work has presented intriguing results examining the knowledge contained in language models (LMs) by having the LM fill in the blanks of prompts such as “ Obama is a __ by profession”. These prompts are usually manually created, and quite possibly sub-optimal; another prompt such as “ Obama worked as a __ ” may result in more accurately predicting the correct profession. Because of this, given an inappropriate prompt, we might fail to retrieve facts that the LM does know, and thus any given prompt only provides a lower bound estimate of the knowledge contained in an LM. In this paper, we attempt to more accurately estimate the knowledge contained in LMs by automatically discovering better prompts to use in this querying process. Specifically, we propose mining-based and paraphrasing-based methods to automatically generate high-quality and diverse prompts, as well as ensemble methods to combine answers from different prompts. Extensive experiments on the LAMA benchmark for extracting relational knowledge from LMs demonstrate that our methods can improve accuracy from 31.1% to 39.6%, providing a tighter lower bound on what LMs know. We have released the code and the resulting LM Prompt And Query Archive (LPAQA) at https://github.com/jzbjyb/LPAQA .",
-    "full_text": null
+  "title": "How Can We Know What Language Models Know?",
+  "url": "https://openalex.org/W2991382858",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2947056188",
+      "name": "Zhengbao Jiang",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2567362423",
+      "name": "Frank F. Xu",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108645404",
+      "name": "Jun Araki",
+      "affiliations": [
+        "Robert Bosch (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A277131583",
+      "name": "Graham Neubig",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2964022985",
+    "https://openalex.org/W2605717780",
+    "https://openalex.org/W2906152891",
+    "https://openalex.org/W2799194071",
+    "https://openalex.org/W2549835527",
+    "https://openalex.org/W1999965501",
+    "https://openalex.org/W2970986510",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W2962833140",
+    "https://openalex.org/W2982756474",
+    "https://openalex.org/W2507974895",
+    "https://openalex.org/W2963206148",
+    "https://openalex.org/W2554915555",
+    "https://openalex.org/W2809324505",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2970295111",
+    "https://openalex.org/W2124059530",
+    "https://openalex.org/W2476140796",
+    "https://openalex.org/W2963101081",
+    "https://openalex.org/W2953369973",
+    "https://openalex.org/W3021191241",
+    "https://openalex.org/W2951048068",
+    "https://openalex.org/W2103931177",
+    "https://openalex.org/W1993692165",
+    "https://openalex.org/W2167187514",
+    "https://openalex.org/W2124732071",
+    "https://openalex.org/W2963290255",
+    "https://openalex.org/W2167435923",
+    "https://openalex.org/W2988975212",
+    "https://openalex.org/W2114584278",
+    "https://openalex.org/W2741049976",
+    "https://openalex.org/W2962832505",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2250635077",
+    "https://openalex.org/W2946359678",
+    "https://openalex.org/W2738371943",
+    "https://openalex.org/W2998557616",
+    "https://openalex.org/W2948947170",
+    "https://openalex.org/W2471366537",
+    "https://openalex.org/W2563574619",
+    "https://openalex.org/W2997012196",
+    "https://openalex.org/W2910243263",
+    "https://openalex.org/W1493490255",
+    "https://openalex.org/W2963216553",
+    "https://openalex.org/W2946417913",
+    "https://openalex.org/W2785611959",
+    "https://openalex.org/W2562979205",
+    "https://openalex.org/W2805206884",
+    "https://openalex.org/W137105571",
+    "https://openalex.org/W2953356739",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2963748792"
+  ],
+  "abstract": "Recent work has presented intriguing results examining the knowledge contained in language models (LMs) by having the LM fill in the blanks of prompts such as “ Obama is a __ by profession”. These prompts are usually manually created, and quite possibly sub-optimal; another prompt such as “ Obama worked as a __ ” may result in more accurately predicting the correct profession. Because of this, given an inappropriate prompt, we might fail to retrieve facts that the LM does know, and thus any given prompt only provides a lower bound estimate of the knowledge contained in an LM. In this paper, we attempt to more accurately estimate the knowledge contained in LMs by automatically discovering better prompts to use in this querying process. Specifically, we propose mining-based and paraphrasing-based methods to automatically generate high-quality and diverse prompts, as well as ensemble methods to combine answers from different prompts. Extensive experiments on the LAMA benchmark for extracting relational knowledge from LMs demonstrate that our methods can improve accuracy from 31.1% to 39.6%, providing a tighter lower bound on what LMs know. We have released the code and the resulting LM Prompt And Query Archive (LPAQA) at https://github.com/jzbjyb/LPAQA .",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8299275040626526
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.7076302766799927
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.6929311752319336
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5747206807136536
+    },
+    {
+      "name": "Quality (philosophy)",
+      "score": 0.564014732837677
+    },
+    {
+      "name": "Need to know",
+      "score": 0.45607924461364746
+    },
+    {
+      "name": "Language model",
+      "score": 0.42196232080459595
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.34854379296302795
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.34415560960769653
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.1427360475063324
+    },
+    {
+      "name": "Programming language",
+      "score": 0.14272359013557434
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

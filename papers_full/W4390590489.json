@@ -1,90 +1,145 @@
 {
-    "title": "Embedding-based alignment: combining protein language models with dynamic programming alignment to detect structural similarities in the twilight-zone",
-    "url": "https://openalex.org/W4390590489",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2804692176",
-            "name": "Lorenzo Pantolini",
-            "affiliations": [
-                "University of Basel",
-                "SIB Swiss Institute of Bioinformatics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2016874237",
-            "name": "Gabriel Studer",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "University of Basel"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120154781",
-            "name": "Joana Carvalho Pereira",
-            "affiliations": [
-                "University of Basel",
-                "SIB Swiss Institute of Bioinformatics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2900403824",
-            "name": "Janani Durairaj",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "University of Basel"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2026147096",
-            "name": "Gerardo Tauriello",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "University of Basel"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1860503938",
-            "name": "Torsten Schwede",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "University of Basel"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2984761660",
-        "https://openalex.org/W2148311769",
-        "https://openalex.org/W3166142427",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W4309485183",
-        "https://openalex.org/W4386496033",
-        "https://openalex.org/W4282984452",
-        "https://openalex.org/W2143210482",
-        "https://openalex.org/W4210494137",
-        "https://openalex.org/W2022058405",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4386860638",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W2004178884",
-        "https://openalex.org/W2918063357",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2101220662",
-        "https://openalex.org/W4309609816",
-        "https://openalex.org/W3106745904",
-        "https://openalex.org/W2950954328",
-        "https://openalex.org/W2972411752",
-        "https://openalex.org/W2102461176",
-        "https://openalex.org/W4375858802",
-        "https://openalex.org/W3211795435",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2153153865",
-        "https://openalex.org/W2108361377",
-        "https://openalex.org/W2161151688",
-        "https://openalex.org/W2102245393",
-        "https://openalex.org/W4383313853",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Abstract Motivation Language models are routinely used for text classification and generative tasks. Recently, the same architectures were applied to protein sequences, unlocking powerful new approaches in the bioinformatics field. Protein language models (pLMs) generate high-dimensional embeddings on a per-residue level and encode a “semantic meaning” of each individual amino acid in the context of the full protein sequence. These representations have been used as a starting point for downstream learning tasks and, more recently, for identifying distant homologous relationships between proteins. Results In this work, we introduce a new method that generates embedding-based protein sequence alignments (EBA) and show how these capture structural similarities even in the twilight zone, outperforming both classical methods as well as other approaches based on pLMs. The method shows excellent accuracy despite the absence of training and parameter optimization. We demonstrate that the combination of pLMs with alignment methods is a valuable approach for the detection of relationships between proteins in the twilight-zone. Availability and implementation The code to run EBA and reproduce the analysis described in this article is available at: https://git.scicore.unibas.ch/schwede/EBA and https://git.scicore.unibas.ch/schwede/eba_benchmark.",
-    "full_text": null
+  "title": "Embedding-based alignment: combining protein language models with dynamic programming alignment to detect structural similarities in the twilight-zone",
+  "url": "https://openalex.org/W4390590489",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2804692176",
+      "name": "Lorenzo Pantolini",
+      "affiliations": [
+        "University of Basel",
+        "SIB Swiss Institute of Bioinformatics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2016874237",
+      "name": "Gabriel Studer",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "University of Basel"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120154781",
+      "name": "Joana Carvalho Pereira",
+      "affiliations": [
+        "University of Basel",
+        "SIB Swiss Institute of Bioinformatics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2900403824",
+      "name": "Janani Durairaj",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "University of Basel"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2026147096",
+      "name": "Gerardo Tauriello",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "University of Basel"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1860503938",
+      "name": "Torsten Schwede",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "University of Basel"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2984761660",
+    "https://openalex.org/W2148311769",
+    "https://openalex.org/W3166142427",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W4309485183",
+    "https://openalex.org/W4386496033",
+    "https://openalex.org/W4282984452",
+    "https://openalex.org/W2143210482",
+    "https://openalex.org/W4210494137",
+    "https://openalex.org/W2022058405",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4386860638",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W2004178884",
+    "https://openalex.org/W2918063357",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2101220662",
+    "https://openalex.org/W4309609816",
+    "https://openalex.org/W3106745904",
+    "https://openalex.org/W2950954328",
+    "https://openalex.org/W2972411752",
+    "https://openalex.org/W2102461176",
+    "https://openalex.org/W4375858802",
+    "https://openalex.org/W3211795435",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2153153865",
+    "https://openalex.org/W2108361377",
+    "https://openalex.org/W2161151688",
+    "https://openalex.org/W2102245393",
+    "https://openalex.org/W4383313853",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Abstract Motivation Language models are routinely used for text classification and generative tasks. Recently, the same architectures were applied to protein sequences, unlocking powerful new approaches in the bioinformatics field. Protein language models (pLMs) generate high-dimensional embeddings on a per-residue level and encode a “semantic meaning” of each individual amino acid in the context of the full protein sequence. These representations have been used as a starting point for downstream learning tasks and, more recently, for identifying distant homologous relationships between proteins. Results In this work, we introduce a new method that generates embedding-based protein sequence alignments (EBA) and show how these capture structural similarities even in the twilight zone, outperforming both classical methods as well as other approaches based on pLMs. The method shows excellent accuracy despite the absence of training and parameter optimization. We demonstrate that the combination of pLMs with alignment methods is a valuable approach for the detection of relationships between proteins in the twilight-zone. Availability and implementation The code to run EBA and reproduce the analysis described in this article is available at: https://git.scicore.unibas.ch/schwede/EBA and https://git.scicore.unibas.ch/schwede/eba_benchmark.",
+  "full_text": null,
+  "topic": "Embedding",
+  "concepts": [
+    {
+      "name": "Embedding",
+      "score": 0.7990362048149109
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7210502624511719
+    },
+    {
+      "name": "Dynamic programming",
+      "score": 0.6453449726104736
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.438036173582077
+    },
+    {
+      "name": "Structural alignment",
+      "score": 0.4198923110961914
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3753408193588257
+    },
+    {
+      "name": "Programming language",
+      "score": 0.36966145038604736
+    },
+    {
+      "name": "Sequence alignment",
+      "score": 0.35922694206237793
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.34679466485977173
+    },
+    {
+      "name": "Biology",
+      "score": 0.08116954565048218
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

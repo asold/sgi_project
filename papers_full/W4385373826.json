@@ -1,74 +1,141 @@
 {
-    "title": "CliniDigest: A Case Study in Large Language Model Based Large-Scale Summarization of Clinical Trial Descriptions",
-    "url": "https://openalex.org/W4385373826",
-    "year": 2023,
-    "authors": [
-        {
-            "id": null,
-            "name": "White, Renee D.",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Peng, Tristan",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Sripitak, Pann",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4289143909",
-            "name": "Johansen, Alexander Rosenberg",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2154653577",
-            "name": "Snyder Michael",
-            "affiliations": [
-                "Stanford University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1989335536",
-        "https://openalex.org/W4367310920",
-        "https://openalex.org/W2407300725",
-        "https://openalex.org/W4360887556",
-        "https://openalex.org/W2946833416",
-        "https://openalex.org/W3033544963",
-        "https://openalex.org/W4287208373",
-        "https://openalex.org/W4307123345",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W4353007316",
-        "https://openalex.org/W4366330426",
-        "https://openalex.org/W3014307806",
-        "https://openalex.org/W4287799740",
-        "https://openalex.org/W1481128830",
-        "https://openalex.org/W1964305103",
-        "https://openalex.org/W2062908157",
-        "https://openalex.org/W1995839006",
-        "https://openalex.org/W1970223153",
-        "https://openalex.org/W4300665782",
-        "https://openalex.org/W4361293442",
-        "https://openalex.org/W4367626167",
-        "https://openalex.org/W2070204206",
-        "https://openalex.org/W4321649710",
-        "https://openalex.org/W3032875465",
-        "https://openalex.org/W2909737760",
-        "https://openalex.org/W2154652894",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4327810158"
-    ],
-    "abstract": "A clinical trial is a study that evaluates new biomedical interventions. To\\ndesign new trials, researchers draw inspiration from those current and\\ncompleted. In 2022, there were on average more than 100 clinical trials\\nsubmitted to ClinicalTrials.gov every day, with each trial having a mean of\\napproximately 1500 words [1]. This makes it nearly impossible to keep up to\\ndate. To mitigate this issue, we have created a batch clinical trial summarizer\\ncalled CliniDigest using GPT-3.5. CliniDigest is, to our knowledge, the first\\ntool able to provide real-time, truthful, and comprehensive summaries of\\nclinical trials. CliniDigest can reduce up to 85 clinical trial descriptions\\n(approximately 10,500 words) into a concise 200-word summary with references\\nand limited hallucinations. We have tested CliniDigest on its ability to\\nsummarize 457 trials divided across 27 medical subdomains. For each field,\\nCliniDigest generates summaries of $\\\\mu=153,\\\\ \\\\sigma=69 $ words, each of which\\nutilizes $\\\\mu=54\\\\%,\\\\ \\\\sigma=30\\\\% $ of the sources. A more comprehensive\\nevaluation is planned and outlined in this paper.\\n",
-    "full_text": null
+  "title": "CliniDigest: A Case Study in Large Language Model Based Large-Scale Summarization of Clinical Trial Descriptions",
+  "url": "https://openalex.org/W4385373826",
+  "year": 2023,
+  "authors": [
+    {
+      "id": null,
+      "name": "White, Renee D.",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Peng, Tristan",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Sripitak, Pann",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4289143909",
+      "name": "Johansen, Alexander Rosenberg",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2154653577",
+      "name": "Snyder Michael",
+      "affiliations": [
+        "Stanford University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1989335536",
+    "https://openalex.org/W4367310920",
+    "https://openalex.org/W2407300725",
+    "https://openalex.org/W4360887556",
+    "https://openalex.org/W2946833416",
+    "https://openalex.org/W3033544963",
+    "https://openalex.org/W4287208373",
+    "https://openalex.org/W4307123345",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W4353007316",
+    "https://openalex.org/W4366330426",
+    "https://openalex.org/W3014307806",
+    "https://openalex.org/W4287799740",
+    "https://openalex.org/W1481128830",
+    "https://openalex.org/W1964305103",
+    "https://openalex.org/W2062908157",
+    "https://openalex.org/W1995839006",
+    "https://openalex.org/W1970223153",
+    "https://openalex.org/W4300665782",
+    "https://openalex.org/W4361293442",
+    "https://openalex.org/W4367626167",
+    "https://openalex.org/W2070204206",
+    "https://openalex.org/W4321649710",
+    "https://openalex.org/W3032875465",
+    "https://openalex.org/W2909737760",
+    "https://openalex.org/W2154652894",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4327810158"
+  ],
+  "abstract": "A clinical trial is a study that evaluates new biomedical interventions. To\\ndesign new trials, researchers draw inspiration from those current and\\ncompleted. In 2022, there were on average more than 100 clinical trials\\nsubmitted to ClinicalTrials.gov every day, with each trial having a mean of\\napproximately 1500 words [1]. This makes it nearly impossible to keep up to\\ndate. To mitigate this issue, we have created a batch clinical trial summarizer\\ncalled CliniDigest using GPT-3.5. CliniDigest is, to our knowledge, the first\\ntool able to provide real-time, truthful, and comprehensive summaries of\\nclinical trials. CliniDigest can reduce up to 85 clinical trial descriptions\\n(approximately 10,500 words) into a concise 200-word summary with references\\nand limited hallucinations. We have tested CliniDigest on its ability to\\nsummarize 457 trials divided across 27 medical subdomains. For each field,\\nCliniDigest generates summaries of $\\\\mu=153,\\\\ \\\\sigma=69 $ words, each of which\\nutilizes $\\\\mu=54\\\\%,\\\\ \\\\sigma=30\\\\% $ of the sources. A more comprehensive\\nevaluation is planned and outlined in this paper.\\n",
+  "full_text": null,
+  "topic": "Automatic summarization",
+  "concepts": [
+    {
+      "name": "Automatic summarization",
+      "score": 0.8239020109176636
+    },
+    {
+      "name": "Clinical trial",
+      "score": 0.7585605382919312
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6066791415214539
+    },
+    {
+      "name": "Field (mathematics)",
+      "score": 0.5087903141975403
+    },
+    {
+      "name": "Psychological intervention",
+      "score": 0.4599013328552246
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4535338878631592
+    },
+    {
+      "name": "Scale (ratio)",
+      "score": 0.43604597449302673
+    },
+    {
+      "name": "Medical physics",
+      "score": 0.38121217489242554
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3205520510673523
+    },
+    {
+      "name": "Medicine",
+      "score": 0.271536260843277
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.07740709185600281
+    },
+    {
+      "name": "Pathology",
+      "score": 0.07672032713890076
+    },
+    {
+      "name": "Psychiatry",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Pure mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

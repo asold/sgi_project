@@ -1,141 +1,224 @@
 {
-    "title": "Predicting the next sentence (not word) in large language models: What model-brain alignment tells us about discourse comprehension",
-    "url": "https://openalex.org/W4398250357",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2648799178",
-            "name": "Shaoyun Yu",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2956191036",
-            "name": "Chanyuan Gu",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097021629",
-            "name": "Kexin Huang",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103444047",
-            "name": "Ping Li",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2648799178",
-            "name": "Shaoyun Yu",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2956191036",
-            "name": "Chanyuan Gu",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097021629",
-            "name": "Kexin Huang",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103444047",
-            "name": "Ping Li",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2782213998",
-        "https://openalex.org/W2947012833",
-        "https://openalex.org/W3136656403",
-        "https://openalex.org/W4220949944",
-        "https://openalex.org/W4322006551",
-        "https://openalex.org/W4317439178",
-        "https://openalex.org/W2168217710",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W4386616609",
-        "https://openalex.org/W4212828284",
-        "https://openalex.org/W3210923133",
-        "https://openalex.org/W2884989790",
-        "https://openalex.org/W2158431045",
-        "https://openalex.org/W2795374680",
-        "https://openalex.org/W4322766928",
-        "https://openalex.org/W3176178685",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3035027743",
-        "https://openalex.org/W3017948344",
-        "https://openalex.org/W2974628346",
-        "https://openalex.org/W1629764617",
-        "https://openalex.org/W2893002232",
-        "https://openalex.org/W4313544880",
-        "https://openalex.org/W2141461056",
-        "https://openalex.org/W2970474271",
-        "https://openalex.org/W3167227435",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W4295750005",
-        "https://openalex.org/W2155034734",
-        "https://openalex.org/W2043553533",
-        "https://openalex.org/W2171282200",
-        "https://openalex.org/W3159391327",
-        "https://openalex.org/W3016615645",
-        "https://openalex.org/W1989092323",
-        "https://openalex.org/W3023653473",
-        "https://openalex.org/W2978950289",
-        "https://openalex.org/W2106417734",
-        "https://openalex.org/W4324360618",
-        "https://openalex.org/W3015808062",
-        "https://openalex.org/W2121097953",
-        "https://openalex.org/W2514941218",
-        "https://openalex.org/W2963636937",
-        "https://openalex.org/W4224256561",
-        "https://openalex.org/W2160654481",
-        "https://openalex.org/W2001896589",
-        "https://openalex.org/W2086827435",
-        "https://openalex.org/W2098782906",
-        "https://openalex.org/W2556590024",
-        "https://openalex.org/W4297995647",
-        "https://openalex.org/W2805003518",
-        "https://openalex.org/W2973047874",
-        "https://openalex.org/W4392935324",
-        "https://openalex.org/W2110124958",
-        "https://openalex.org/W4317892547",
-        "https://openalex.org/W3004619146",
-        "https://openalex.org/W2020046942",
-        "https://openalex.org/W3036786890",
-        "https://openalex.org/W2102768198",
-        "https://openalex.org/W2066147045",
-        "https://openalex.org/W2232431511",
-        "https://openalex.org/W3209615788",
-        "https://openalex.org/W2120861156",
-        "https://openalex.org/W2799313393",
-        "https://openalex.org/W2039107287",
-        "https://openalex.org/W2110485445",
-        "https://openalex.org/W1507893557",
-        "https://openalex.org/W4388520388",
-        "https://openalex.org/W4285251104",
-        "https://openalex.org/W2951583631",
-        "https://openalex.org/W1992265439",
-        "https://openalex.org/W2129651491",
-        "https://openalex.org/W4212782786",
-        "https://openalex.org/W4366262987",
-        "https://openalex.org/W2067456724"
-    ],
-    "abstract": "Current large language models (LLMs) rely on word prediction as their backbone pretraining task. Although word prediction is an important mechanism underlying language processing, human language comprehension occurs at multiple levels, involving the integration of words and sentences to achieve a full understanding of discourse. This study models language comprehension by using the next sentence prediction (NSP) task to investigate mechanisms of discourse-level comprehension. We show that NSP pretraining enhanced a model’s alignment with brain data especially in the right hemisphere and in the multiple demand network, highlighting the contributions of nonclassical language regions to high-level language understanding. Our results also suggest that NSP can enable the model to better capture human comprehension performance and to better encode contextual information. Our study demonstrates that the inclusion of diverse learning objectives in a model leads to more human-like representations, and investigating the neurocognitive plausibility of pretraining tasks in LLMs can shed light on outstanding questions in language neuroscience.",
-    "full_text": null
+  "title": "Predicting the next sentence (not word) in large language models: What model-brain alignment tells us about discourse comprehension",
+  "url": "https://openalex.org/W4398250357",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2648799178",
+      "name": "Shaoyun Yu",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2956191036",
+      "name": "Chanyuan Gu",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097021629",
+      "name": "Kexin Huang",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103444047",
+      "name": "Ping Li",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2648799178",
+      "name": "Shaoyun Yu",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2956191036",
+      "name": "Chanyuan Gu",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097021629",
+      "name": "Kexin Huang",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103444047",
+      "name": "Ping Li",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2782213998",
+    "https://openalex.org/W2947012833",
+    "https://openalex.org/W3136656403",
+    "https://openalex.org/W4220949944",
+    "https://openalex.org/W4322006551",
+    "https://openalex.org/W4317439178",
+    "https://openalex.org/W2168217710",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W4386616609",
+    "https://openalex.org/W4212828284",
+    "https://openalex.org/W3210923133",
+    "https://openalex.org/W2884989790",
+    "https://openalex.org/W2158431045",
+    "https://openalex.org/W2795374680",
+    "https://openalex.org/W4322766928",
+    "https://openalex.org/W3176178685",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3035027743",
+    "https://openalex.org/W3017948344",
+    "https://openalex.org/W2974628346",
+    "https://openalex.org/W1629764617",
+    "https://openalex.org/W2893002232",
+    "https://openalex.org/W4313544880",
+    "https://openalex.org/W2141461056",
+    "https://openalex.org/W2970474271",
+    "https://openalex.org/W3167227435",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W4295750005",
+    "https://openalex.org/W2155034734",
+    "https://openalex.org/W2043553533",
+    "https://openalex.org/W2171282200",
+    "https://openalex.org/W3159391327",
+    "https://openalex.org/W3016615645",
+    "https://openalex.org/W1989092323",
+    "https://openalex.org/W3023653473",
+    "https://openalex.org/W2978950289",
+    "https://openalex.org/W2106417734",
+    "https://openalex.org/W4324360618",
+    "https://openalex.org/W3015808062",
+    "https://openalex.org/W2121097953",
+    "https://openalex.org/W2514941218",
+    "https://openalex.org/W2963636937",
+    "https://openalex.org/W4224256561",
+    "https://openalex.org/W2160654481",
+    "https://openalex.org/W2001896589",
+    "https://openalex.org/W2086827435",
+    "https://openalex.org/W2098782906",
+    "https://openalex.org/W2556590024",
+    "https://openalex.org/W4297995647",
+    "https://openalex.org/W2805003518",
+    "https://openalex.org/W2973047874",
+    "https://openalex.org/W4392935324",
+    "https://openalex.org/W2110124958",
+    "https://openalex.org/W4317892547",
+    "https://openalex.org/W3004619146",
+    "https://openalex.org/W2020046942",
+    "https://openalex.org/W3036786890",
+    "https://openalex.org/W2102768198",
+    "https://openalex.org/W2066147045",
+    "https://openalex.org/W2232431511",
+    "https://openalex.org/W3209615788",
+    "https://openalex.org/W2120861156",
+    "https://openalex.org/W2799313393",
+    "https://openalex.org/W2039107287",
+    "https://openalex.org/W2110485445",
+    "https://openalex.org/W1507893557",
+    "https://openalex.org/W4388520388",
+    "https://openalex.org/W4285251104",
+    "https://openalex.org/W2951583631",
+    "https://openalex.org/W1992265439",
+    "https://openalex.org/W2129651491",
+    "https://openalex.org/W4212782786",
+    "https://openalex.org/W4366262987",
+    "https://openalex.org/W2067456724"
+  ],
+  "abstract": "Current large language models (LLMs) rely on word prediction as their backbone pretraining task. Although word prediction is an important mechanism underlying language processing, human language comprehension occurs at multiple levels, involving the integration of words and sentences to achieve a full understanding of discourse. This study models language comprehension by using the next sentence prediction (NSP) task to investigate mechanisms of discourse-level comprehension. We show that NSP pretraining enhanced a model’s alignment with brain data especially in the right hemisphere and in the multiple demand network, highlighting the contributions of nonclassical language regions to high-level language understanding. Our results also suggest that NSP can enable the model to better capture human comprehension performance and to better encode contextual information. Our study demonstrates that the inclusion of diverse learning objectives in a model leads to more human-like representations, and investigating the neurocognitive plausibility of pretraining tasks in LLMs can shed light on outstanding questions in language neuroscience.",
+  "full_text": null,
+  "topic": "Comprehension",
+  "concepts": [
+    {
+      "name": "Comprehension",
+      "score": 0.8229584693908691
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6593560576438904
+    },
+    {
+      "name": "Sentence",
+      "score": 0.6484320163726807
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5163037180900574
+    },
+    {
+      "name": "Language model",
+      "score": 0.515712559223175
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4474470913410187
+    },
+    {
+      "name": "Sentence processing",
+      "score": 0.4457969665527344
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.42506468296051025
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42311835289001465
+    },
+    {
+      "name": "ENCODE",
+      "score": 0.4211205244064331
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.4188441038131714
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.33934810757637024
+    },
+    {
+      "name": "Psychology",
+      "score": 0.2834477424621582
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    }
+  ]
 }

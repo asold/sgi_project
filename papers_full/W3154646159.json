@@ -1,87 +1,158 @@
 {
-    "title": "Development of a Convolutional Neural Network Based Skull Segmentation in MRI Using Standard Tesselation Language Models",
-    "url": "https://openalex.org/W3154646159",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5041137725",
-            "name": "Rodrigo Dalvit Carvalho da Silva",
-            "affiliations": [
-                "Western University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5029776786",
-            "name": "Thomas R. Jenkyn",
-            "affiliations": [
-                "Fowler Kennedy Sport Medicine Clinic",
-                "Western University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5014362798",
-            "name": "Victor Alexander Carranza",
-            "affiliations": [
-                "Western University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2883645764",
-        "https://openalex.org/W2592929672",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2914363005",
-        "https://openalex.org/W2944090748",
-        "https://openalex.org/W2920218276",
-        "https://openalex.org/W2914540786",
-        "https://openalex.org/W2803537647",
-        "https://openalex.org/W2752967760",
-        "https://openalex.org/W2609546627",
-        "https://openalex.org/W3009563704",
-        "https://openalex.org/W2804860796",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2060933076",
-        "https://openalex.org/W1987143153",
-        "https://openalex.org/W2071344093",
-        "https://openalex.org/W2790483576",
-        "https://openalex.org/W4230920194",
-        "https://openalex.org/W2791427514",
-        "https://openalex.org/W2006096283",
-        "https://openalex.org/W2809254203",
-        "https://openalex.org/W2897772195",
-        "https://openalex.org/W2762064069",
-        "https://openalex.org/W3089987280",
-        "https://openalex.org/W3036096560",
-        "https://openalex.org/W3015410676",
-        "https://openalex.org/W2083927153",
-        "https://openalex.org/W2890236360",
-        "https://openalex.org/W2724559516",
-        "https://openalex.org/W6754061131",
-        "https://openalex.org/W2403686457",
-        "https://openalex.org/W2808185485",
-        "https://openalex.org/W2154838123",
-        "https://openalex.org/W3135657842",
-        "https://openalex.org/W2464708700",
-        "https://openalex.org/W2734349601",
-        "https://openalex.org/W1987869189",
-        "https://openalex.org/W1488765683",
-        "https://openalex.org/W6772461537",
-        "https://openalex.org/W1997408577",
-        "https://openalex.org/W2962731543",
-        "https://openalex.org/W1993947467",
-        "https://openalex.org/W4289085709",
-        "https://openalex.org/W3015788359",
-        "https://openalex.org/W2990904213",
-        "https://openalex.org/W3101612813",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W2997181101",
-        "https://openalex.org/W2889138572",
-        "https://openalex.org/W2609077090",
-        "https://openalex.org/W2884436604",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W3106061934",
-        "https://openalex.org/W2163605009"
-    ],
-    "abstract": "Segmentation is crucial in medical imaging analysis to help extract regions of interest (ROI) from different imaging modalities. The aim of this study is to develop and train a 3D convolutional neural network (CNN) for skull segmentation in magnetic resonance imaging (MRI). 58 gold standard volumetric labels were created from computed tomography (CT) scans in standard tessellation language (STL) models. These STL models were converted into matrices and overlapped on the 58 corresponding MR images to create the MRI gold standards labels. The CNN was trained with these 58 MR images and a mean ± standard deviation (SD) Dice similarity coefficient (DSC) of 0.7300 ± 0.04 was achieved. A further investigation was carried out where the brain region was removed from the image with the help of a 3D CNN and manual corrections by using only MR images. This new dataset, without the brain, was presented to the previous CNN which reached a new mean ± SD DSC of 0.7826 ± 0.03. This paper aims to provide a framework for segmenting the skull using CNN and STL models, as the 3D CNN was able to segment the skull with a certain precision.",
-    "full_text": null
+  "title": "Development of a Convolutional Neural Network Based Skull Segmentation in MRI Using Standard Tesselation Language Models",
+  "url": "https://openalex.org/W3154646159",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5041137725",
+      "name": "Rodrigo Dalvit Carvalho da Silva",
+      "affiliations": [
+        "Western University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5029776786",
+      "name": "Thomas R. Jenkyn",
+      "affiliations": [
+        "Fowler Kennedy Sport Medicine Clinic",
+        "Western University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5014362798",
+      "name": "Victor Alexander Carranza",
+      "affiliations": [
+        "Western University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2883645764",
+    "https://openalex.org/W2592929672",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2914363005",
+    "https://openalex.org/W2944090748",
+    "https://openalex.org/W2920218276",
+    "https://openalex.org/W2914540786",
+    "https://openalex.org/W2803537647",
+    "https://openalex.org/W2752967760",
+    "https://openalex.org/W2609546627",
+    "https://openalex.org/W3009563704",
+    "https://openalex.org/W2804860796",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2060933076",
+    "https://openalex.org/W1987143153",
+    "https://openalex.org/W2071344093",
+    "https://openalex.org/W2790483576",
+    "https://openalex.org/W4230920194",
+    "https://openalex.org/W2791427514",
+    "https://openalex.org/W2006096283",
+    "https://openalex.org/W2809254203",
+    "https://openalex.org/W2897772195",
+    "https://openalex.org/W2762064069",
+    "https://openalex.org/W3089987280",
+    "https://openalex.org/W3036096560",
+    "https://openalex.org/W3015410676",
+    "https://openalex.org/W2083927153",
+    "https://openalex.org/W2890236360",
+    "https://openalex.org/W2724559516",
+    "https://openalex.org/W6754061131",
+    "https://openalex.org/W2403686457",
+    "https://openalex.org/W2808185485",
+    "https://openalex.org/W2154838123",
+    "https://openalex.org/W3135657842",
+    "https://openalex.org/W2464708700",
+    "https://openalex.org/W2734349601",
+    "https://openalex.org/W1987869189",
+    "https://openalex.org/W1488765683",
+    "https://openalex.org/W6772461537",
+    "https://openalex.org/W1997408577",
+    "https://openalex.org/W2962731543",
+    "https://openalex.org/W1993947467",
+    "https://openalex.org/W4289085709",
+    "https://openalex.org/W3015788359",
+    "https://openalex.org/W2990904213",
+    "https://openalex.org/W3101612813",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W2997181101",
+    "https://openalex.org/W2889138572",
+    "https://openalex.org/W2609077090",
+    "https://openalex.org/W2884436604",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W3106061934",
+    "https://openalex.org/W2163605009"
+  ],
+  "abstract": "Segmentation is crucial in medical imaging analysis to help extract regions of interest (ROI) from different imaging modalities. The aim of this study is to develop and train a 3D convolutional neural network (CNN) for skull segmentation in magnetic resonance imaging (MRI). 58 gold standard volumetric labels were created from computed tomography (CT) scans in standard tessellation language (STL) models. These STL models were converted into matrices and overlapped on the 58 corresponding MR images to create the MRI gold standards labels. The CNN was trained with these 58 MR images and a mean ± standard deviation (SD) Dice similarity coefficient (DSC) of 0.7300 ± 0.04 was achieved. A further investigation was carried out where the brain region was removed from the image with the help of a 3D CNN and manual corrections by using only MR images. This new dataset, without the brain, was presented to the previous CNN which reached a new mean ± SD DSC of 0.7826 ± 0.03. This paper aims to provide a framework for segmenting the skull using CNN and STL models, as the 3D CNN was able to segment the skull with a certain precision.",
+  "full_text": null,
+  "topic": "Convolutional neural network",
+  "concepts": [
+    {
+      "name": "Convolutional neural network",
+      "score": 0.8271878361701965
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7195708751678467
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6811949610710144
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.655386209487915
+    },
+    {
+      "name": "Gold standard (test)",
+      "score": 0.6331863403320312
+    },
+    {
+      "name": "Magnetic resonance imaging",
+      "score": 0.5729643106460571
+    },
+    {
+      "name": "Skull",
+      "score": 0.5552246570587158
+    },
+    {
+      "name": "Standard deviation",
+      "score": 0.49441075325012207
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.48345980048179626
+    },
+    {
+      "name": "Sørensen–Dice coefficient",
+      "score": 0.44710782170295715
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3499576449394226
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.32198071479797363
+    },
+    {
+      "name": "Radiology",
+      "score": 0.1898643970489502
+    },
+    {
+      "name": "Medicine",
+      "score": 0.16181761026382446
+    },
+    {
+      "name": "Anatomy",
+      "score": 0.14738261699676514
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.12922295928001404
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

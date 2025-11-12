@@ -1,146 +1,213 @@
 {
-    "title": "Swin-Transformer-Enabled YOLOv5 with Attention Mechanism for Small Object Detection on Satellite Images",
-    "url": "https://openalex.org/W4283029931",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2095633658",
-            "name": "Hang Gong",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2118113939",
-            "name": "Tingkui Mu",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097379091",
-            "name": "Qiuxia Li",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2277619314",
-            "name": "Haishan Dai",
-            "affiliations": [
-                "Shanghai Academy of Spaceflight Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101143301",
-            "name": "Chunlai Li",
-            "affiliations": [
-                "Shanghai Institute of Technical Physics",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2116845254",
-            "name": "Zhiping He",
-            "affiliations": [
-                "Shanghai Institute of Technical Physics",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103579235",
-            "name": "Wenjing Wang",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2037704425",
-            "name": "Feng Han",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A228381214",
-            "name": "Abudusalamu Tuniyazi",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104319677",
-            "name": "Haoyang Li",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4282874972",
-            "name": "Xuechan Lang",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106090563",
-            "name": "Zhiyuan Li",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1995576685",
-            "name": "Bin Wang",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2794377509",
-        "https://openalex.org/W4255437949",
-        "https://openalex.org/W2604086375",
-        "https://openalex.org/W6800493541",
-        "https://openalex.org/W2884561390",
-        "https://openalex.org/W4240508093",
-        "https://openalex.org/W3213053480",
-        "https://openalex.org/W2031489346",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W3181759169",
-        "https://openalex.org/W2577537809",
-        "https://openalex.org/W2992240579",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2570343428",
-        "https://openalex.org/W3210535920",
-        "https://openalex.org/W3042011474",
-        "https://openalex.org/W2963857746",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6683411478",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W2102605133",
-        "https://openalex.org/W2109255472",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2997747012",
-        "https://openalex.org/W3180134609",
-        "https://openalex.org/W2156163116",
-        "https://openalex.org/W4307823382",
-        "https://openalex.org/W2944223741",
-        "https://openalex.org/W6682137061",
-        "https://openalex.org/W6618372016",
-        "https://openalex.org/W2752782242",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W3210586215",
-        "https://openalex.org/W2005368619",
-        "https://openalex.org/W2962749812",
-        "https://openalex.org/W603908379",
-        "https://openalex.org/W3195858154",
-        "https://openalex.org/W2951527505"
-    ],
-    "abstract": "Object detection has made tremendous progress in natural images over the last decade. However, the results are hardly satisfactory when the natural image object detection algorithm is directly applied to satellite images. This is due to the intrinsic differences in the scale and orientation of objects generated by the bird’s-eye perspective of satellite photographs. Moreover, the background of satellite images is complex and the object area is small; as a result, small objects tend to be missing due to the challenge of feature extraction. Dense objects overlap and occlusion also affects the detection performance. Although the self-attention mechanism was introduced to detect small objects, the computational complexity increased with the image’s resolution. We modified the general one-stage detector YOLOv5 to adapt the satellite images to resolve the above problems. First, new feature fusion layers and a prediction head are added from the shallow layer for small object detection for the first time because it can maximally preserve the feature information. Second, the original convolutional prediction heads are replaced with Swin Transformer Prediction Heads (SPHs) for the first time. SPH represents an advanced self-attention mechanism whose shifted window design can reduce the computational complexity to linearity. Finally, Normalization-based Attention Modules (NAMs) are integrated into YOLOv5 to improve attention performance in a normalized way. The improved YOLOv5 is termed SPH-YOLOv5. It is evaluated on the NWPU-VHR10 dataset and DOTA dataset, which are widely used for satellite image object detection evaluations. Compared with the basal YOLOv5, SPH-YOLOv5 improves the mean Average Precision (mAP) by 0.071 on the DOTA dataset.",
-    "full_text": null
+  "title": "Swin-Transformer-Enabled YOLOv5 with Attention Mechanism for Small Object Detection on Satellite Images",
+  "url": "https://openalex.org/W4283029931",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2095633658",
+      "name": "Hang Gong",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2118113939",
+      "name": "Tingkui Mu",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097379091",
+      "name": "Qiuxia Li",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2277619314",
+      "name": "Haishan Dai",
+      "affiliations": [
+        "Shanghai Academy of Spaceflight Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101143301",
+      "name": "Chunlai Li",
+      "affiliations": [
+        "Shanghai Institute of Technical Physics",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2116845254",
+      "name": "Zhiping He",
+      "affiliations": [
+        "Shanghai Institute of Technical Physics",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103579235",
+      "name": "Wenjing Wang",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2037704425",
+      "name": "Feng Han",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A228381214",
+      "name": "Abudusalamu Tuniyazi",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104319677",
+      "name": "Haoyang Li",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4282874972",
+      "name": "Xuechan Lang",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106090563",
+      "name": "Zhiyuan Li",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1995576685",
+      "name": "Bin Wang",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2794377509",
+    "https://openalex.org/W4255437949",
+    "https://openalex.org/W2604086375",
+    "https://openalex.org/W6800493541",
+    "https://openalex.org/W2884561390",
+    "https://openalex.org/W4240508093",
+    "https://openalex.org/W3213053480",
+    "https://openalex.org/W2031489346",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W3181759169",
+    "https://openalex.org/W2577537809",
+    "https://openalex.org/W2992240579",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2570343428",
+    "https://openalex.org/W3210535920",
+    "https://openalex.org/W3042011474",
+    "https://openalex.org/W2963857746",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6683411478",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W2102605133",
+    "https://openalex.org/W2109255472",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2997747012",
+    "https://openalex.org/W3180134609",
+    "https://openalex.org/W2156163116",
+    "https://openalex.org/W4307823382",
+    "https://openalex.org/W2944223741",
+    "https://openalex.org/W6682137061",
+    "https://openalex.org/W6618372016",
+    "https://openalex.org/W2752782242",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W3210586215",
+    "https://openalex.org/W2005368619",
+    "https://openalex.org/W2962749812",
+    "https://openalex.org/W603908379",
+    "https://openalex.org/W3195858154",
+    "https://openalex.org/W2951527505"
+  ],
+  "abstract": "Object detection has made tremendous progress in natural images over the last decade. However, the results are hardly satisfactory when the natural image object detection algorithm is directly applied to satellite images. This is due to the intrinsic differences in the scale and orientation of objects generated by the bird’s-eye perspective of satellite photographs. Moreover, the background of satellite images is complex and the object area is small; as a result, small objects tend to be missing due to the challenge of feature extraction. Dense objects overlap and occlusion also affects the detection performance. Although the self-attention mechanism was introduced to detect small objects, the computational complexity increased with the image’s resolution. We modified the general one-stage detector YOLOv5 to adapt the satellite images to resolve the above problems. First, new feature fusion layers and a prediction head are added from the shallow layer for small object detection for the first time because it can maximally preserve the feature information. Second, the original convolutional prediction heads are replaced with Swin Transformer Prediction Heads (SPHs) for the first time. SPH represents an advanced self-attention mechanism whose shifted window design can reduce the computational complexity to linearity. Finally, Normalization-based Attention Modules (NAMs) are integrated into YOLOv5 to improve attention performance in a normalized way. The improved YOLOv5 is termed SPH-YOLOv5. It is evaluated on the NWPU-VHR10 dataset and DOTA dataset, which are widely used for satellite image object detection evaluations. Compared with the basal YOLOv5, SPH-YOLOv5 improves the mean Average Precision (mAP) by 0.071 on the DOTA dataset.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.797166645526886
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.6587440967559814
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.644439697265625
+    },
+    {
+      "name": "Object detection",
+      "score": 0.5955013036727905
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.5614383816719055
+    },
+    {
+      "name": "Satellite",
+      "score": 0.49294424057006836
+    },
+    {
+      "name": "Detector",
+      "score": 0.43169647455215454
+    },
+    {
+      "name": "Satellite image",
+      "score": 0.4243064522743225
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.3871399164199829
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3164249658584595
+    },
+    {
+      "name": "Geology",
+      "score": 0.10632064938545227
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Aerospace engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,74 +1,165 @@
 {
-    "title": "Sparse Binary Transformers for Multivariate Time Series Modeling",
-    "url": "https://openalex.org/W4385565515",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3006722088",
-            "name": "Matt Gorbett",
-            "affiliations": [
-                "Colorado State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132385391",
-            "name": "Hossein Shirazi",
-            "affiliations": [
-                "San Diego State University",
-                "Colorado State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1966110232",
-            "name": "Indrakshi Ray",
-            "affiliations": [
-                "Colorado State University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2555077524",
-        "https://openalex.org/W3195023262",
-        "https://openalex.org/W6774302960",
-        "https://openalex.org/W6959340700",
-        "https://openalex.org/W3004207920",
-        "https://openalex.org/W2982438846",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W3119866685",
-        "https://openalex.org/W3007007518",
-        "https://openalex.org/W4285048954",
-        "https://openalex.org/W4282581586",
-        "https://openalex.org/W1677182931",
-        "https://openalex.org/W2786827964",
-        "https://openalex.org/W6803845004",
-        "https://openalex.org/W3105966348",
-        "https://openalex.org/W3008515144",
-        "https://openalex.org/W3034234149",
-        "https://openalex.org/W2963163009",
-        "https://openalex.org/W3099971460",
-        "https://openalex.org/W2743617586",
-        "https://openalex.org/W2962835968",
-        "https://openalex.org/W2950361482",
-        "https://openalex.org/W3085139254",
-        "https://openalex.org/W4283318673",
-        "https://openalex.org/W3173539742",
-        "https://openalex.org/W3177265267",
-        "https://openalex.org/W3188872815",
-        "https://openalex.org/W3177318507",
-        "https://openalex.org/W3042807565",
-        "https://openalex.org/W4287828539",
-        "https://openalex.org/W1994530392",
-        "https://openalex.org/W4287391717",
-        "https://openalex.org/W4241886172",
-        "https://openalex.org/W2892181857",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W3212890323",
-        "https://openalex.org/W2604272474",
-        "https://openalex.org/W4286850694",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W3106543020"
-    ],
-    "abstract": "Compressed Neural Networks have the potential to enable deep learning across new applications and smaller computational environments. However, understanding the range of learning tasks in which such models can succeed is not well studied. In this work, we apply sparse and binary-weighted Transformers to multivariate time series problems, showing that the lightweight models achieve accuracy comparable to that of dense floating-point Transformers of the same structure. Our model achieves favorable results across three time series learning tasks: classification, anomaly detection, and single-step forecasting. Additionally, to reduce the computational complexity of the attention mechanism, we apply two modifications, which show little to no decline in model performance: 1) in the classification task, we apply a fixed mask to the query, key, and value activations, and 2) for forecasting and anomaly detection, which rely on predicting outputs at a single point in time, we propose an attention mask to allow computation only at the current time step. Together, each compression technique and attention modification substantially reduces the number of non-zero operations necessary in the Transformer. We measure the computational savings of our approach over a range of metrics including parameter count, bit size, and floating point operation (FLOPs) count, showing up to a 53× reduction in storage size and up to 10.5× reduction in FLOPs.",
-    "full_text": null
+  "title": "Sparse Binary Transformers for Multivariate Time Series Modeling",
+  "url": "https://openalex.org/W4385565515",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3006722088",
+      "name": "Matt Gorbett",
+      "affiliations": [
+        "Colorado State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132385391",
+      "name": "Hossein Shirazi",
+      "affiliations": [
+        "San Diego State University",
+        "Colorado State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1966110232",
+      "name": "Indrakshi Ray",
+      "affiliations": [
+        "Colorado State University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2555077524",
+    "https://openalex.org/W3195023262",
+    "https://openalex.org/W6774302960",
+    "https://openalex.org/W6959340700",
+    "https://openalex.org/W3004207920",
+    "https://openalex.org/W2982438846",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W3119866685",
+    "https://openalex.org/W3007007518",
+    "https://openalex.org/W4285048954",
+    "https://openalex.org/W4282581586",
+    "https://openalex.org/W1677182931",
+    "https://openalex.org/W2786827964",
+    "https://openalex.org/W6803845004",
+    "https://openalex.org/W3105966348",
+    "https://openalex.org/W3008515144",
+    "https://openalex.org/W3034234149",
+    "https://openalex.org/W2963163009",
+    "https://openalex.org/W3099971460",
+    "https://openalex.org/W2743617586",
+    "https://openalex.org/W2962835968",
+    "https://openalex.org/W2950361482",
+    "https://openalex.org/W3085139254",
+    "https://openalex.org/W4283318673",
+    "https://openalex.org/W3173539742",
+    "https://openalex.org/W3177265267",
+    "https://openalex.org/W3188872815",
+    "https://openalex.org/W3177318507",
+    "https://openalex.org/W3042807565",
+    "https://openalex.org/W4287828539",
+    "https://openalex.org/W1994530392",
+    "https://openalex.org/W4287391717",
+    "https://openalex.org/W4241886172",
+    "https://openalex.org/W2892181857",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W3212890323",
+    "https://openalex.org/W2604272474",
+    "https://openalex.org/W4286850694",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W3106543020"
+  ],
+  "abstract": "Compressed Neural Networks have the potential to enable deep learning across new applications and smaller computational environments. However, understanding the range of learning tasks in which such models can succeed is not well studied. In this work, we apply sparse and binary-weighted Transformers to multivariate time series problems, showing that the lightweight models achieve accuracy comparable to that of dense floating-point Transformers of the same structure. Our model achieves favorable results across three time series learning tasks: classification, anomaly detection, and single-step forecasting. Additionally, to reduce the computational complexity of the attention mechanism, we apply two modifications, which show little to no decline in model performance: 1) in the classification task, we apply a fixed mask to the query, key, and value activations, and 2) for forecasting and anomaly detection, which rely on predicting outputs at a single point in time, we propose an attention mask to allow computation only at the current time step. Together, each compression technique and attention modification substantially reduces the number of non-zero operations necessary in the Transformer. We measure the computational savings of our approach over a range of metrics including parameter count, bit size, and floating point operation (FLOPs) count, showing up to a 53× reduction in storage size and up to 10.5× reduction in FLOPs.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7487542033195496
+    },
+    {
+      "name": "FLOPS",
+      "score": 0.715306282043457
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5940759778022766
+    },
+    {
+      "name": "Binary number",
+      "score": 0.5621978640556335
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.5468884706497192
+    },
+    {
+      "name": "Floating point",
+      "score": 0.5153228640556335
+    },
+    {
+      "name": "Multivariate statistics",
+      "score": 0.4991931915283203
+    },
+    {
+      "name": "Computation",
+      "score": 0.4961853623390198
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4674901068210602
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4617270529270172
+    },
+    {
+      "name": "Computational complexity theory",
+      "score": 0.46027159690856934
+    },
+    {
+      "name": "Binary classification",
+      "score": 0.45341452956199646
+    },
+    {
+      "name": "Time series",
+      "score": 0.430941641330719
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4258425831794739
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.39881569147109985
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.151962548494339
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1300182044506073
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08829092979431152
+    },
+    {
+      "name": "Arithmetic",
+      "score": 0.08141809701919556
+    },
+    {
+      "name": "Support vector machine",
+      "score": 0.08048567175865173
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

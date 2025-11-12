@@ -1,76 +1,119 @@
 {
-    "title": "Promise: Prompt-Driven 3D Medical Image Segmentation Using Pretrained Image Foundation Models",
-    "url": "https://openalex.org/W4401749938",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097763185",
-            "name": "Hao Li",
-            "affiliations": [
-                "Vanderbilt University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2126168353",
-            "name": "Han Liu",
-            "affiliations": [
-                "Vanderbilt University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2549143642",
-            "name": "Dewei Hu",
-            "affiliations": [
-                "Vanderbilt University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2168971314",
-            "name": "Jiacheng Wang",
-            "affiliations": [
-                "Vanderbilt University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2619236905",
-            "name": "Ipek Oguz",
-            "affiliations": [
-                "Vanderbilt University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4390874575",
-        "https://openalex.org/W6851607685",
-        "https://openalex.org/W4312713789",
-        "https://openalex.org/W6851701011",
-        "https://openalex.org/W4391109864",
-        "https://openalex.org/W6846313647",
-        "https://openalex.org/W6838701581",
-        "https://openalex.org/W6853207815",
-        "https://openalex.org/W6849878650",
-        "https://openalex.org/W6851980744",
-        "https://openalex.org/W6796581206",
-        "https://openalex.org/W4390971106",
-        "https://openalex.org/W4224979365",
-        "https://openalex.org/W4401749153",
-        "https://openalex.org/W4385211211",
-        "https://openalex.org/W6766318054",
-        "https://openalex.org/W3014974815",
-        "https://openalex.org/W6845563047",
-        "https://openalex.org/W6801350836",
-        "https://openalex.org/W4312428231",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W3198035652",
-        "https://openalex.org/W4282005462",
-        "https://openalex.org/W4365606129",
-        "https://openalex.org/W3112701542",
-        "https://openalex.org/W4319453767",
-        "https://openalex.org/W4306294758",
-        "https://openalex.org/W4366552071",
-        "https://openalex.org/W4382131005",
-        "https://openalex.org/W4367189325"
-    ],
-    "abstract": "To address prevalent issues in medical imaging, such as data acquisition challenges and label availability, transfer learning from natural to medical image domains serves as a viable strategy to produce reliable segmentation results. However, several existing barriers between domains need to be broken down, including addressing contrast discrepancies, managing anatomical variability, and adapting 2D pretrained models for 3D segmentation tasks. In this paper, we propose ProMISe, a prompt-driven 3D medical image segmentation model using only a single point prompt to leverage knowledge from a pretrained 2D image foundation model. In particular, we use the pretrained vision transformer from the Segment Anything Model (SAM) and integrate lightweight adapters to extract depth-related (3D) spatial context without updating the pretrained weights. For robust results, a hybrid network with complementary encoders is designed, and a boundary-aware loss is proposed to achieve precise boundaries. We evaluate our model on two public datasets for colon and pancreas tumor segmentations, respectively. Compared to the state-of-the-art segmentation methods with and without prompt engineering, our proposed method achieves superior performance. The code is publicly available at https://github.com/MedICL-VU/ProMISe.",
-    "full_text": null
+  "title": "Promise: Prompt-Driven 3D Medical Image Segmentation Using Pretrained Image Foundation Models",
+  "url": "https://openalex.org/W4401749938",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097763185",
+      "name": "Hao Li",
+      "affiliations": [
+        "Vanderbilt University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2126168353",
+      "name": "Han Liu",
+      "affiliations": [
+        "Vanderbilt University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2549143642",
+      "name": "Dewei Hu",
+      "affiliations": [
+        "Vanderbilt University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2168971314",
+      "name": "Jiacheng Wang",
+      "affiliations": [
+        "Vanderbilt University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2619236905",
+      "name": "Ipek Oguz",
+      "affiliations": [
+        "Vanderbilt University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4390874575",
+    "https://openalex.org/W6851607685",
+    "https://openalex.org/W4312713789",
+    "https://openalex.org/W6851701011",
+    "https://openalex.org/W4391109864",
+    "https://openalex.org/W6846313647",
+    "https://openalex.org/W6838701581",
+    "https://openalex.org/W6853207815",
+    "https://openalex.org/W6849878650",
+    "https://openalex.org/W6851980744",
+    "https://openalex.org/W6796581206",
+    "https://openalex.org/W4390971106",
+    "https://openalex.org/W4224979365",
+    "https://openalex.org/W4401749153",
+    "https://openalex.org/W4385211211",
+    "https://openalex.org/W6766318054",
+    "https://openalex.org/W3014974815",
+    "https://openalex.org/W6845563047",
+    "https://openalex.org/W6801350836",
+    "https://openalex.org/W4312428231",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W3198035652",
+    "https://openalex.org/W4282005462",
+    "https://openalex.org/W4365606129",
+    "https://openalex.org/W3112701542",
+    "https://openalex.org/W4319453767",
+    "https://openalex.org/W4306294758",
+    "https://openalex.org/W4366552071",
+    "https://openalex.org/W4382131005",
+    "https://openalex.org/W4367189325"
+  ],
+  "abstract": "To address prevalent issues in medical imaging, such as data acquisition challenges and label availability, transfer learning from natural to medical image domains serves as a viable strategy to produce reliable segmentation results. However, several existing barriers between domains need to be broken down, including addressing contrast discrepancies, managing anatomical variability, and adapting 2D pretrained models for 3D segmentation tasks. In this paper, we propose ProMISe, a prompt-driven 3D medical image segmentation model using only a single point prompt to leverage knowledge from a pretrained 2D image foundation model. In particular, we use the pretrained vision transformer from the Segment Anything Model (SAM) and integrate lightweight adapters to extract depth-related (3D) spatial context without updating the pretrained weights. For robust results, a hybrid network with complementary encoders is designed, and a boundary-aware loss is proposed to achieve precise boundaries. We evaluate our model on two public datasets for colon and pancreas tumor segmentations, respectively. Compared to the state-of-the-art segmentation methods with and without prompt engineering, our proposed method achieves superior performance. The code is publicly available at https://github.com/MedICL-VU/ProMISe.",
+  "full_text": null,
+  "topic": "Image segmentation",
+  "concepts": [
+    {
+      "name": "Image segmentation",
+      "score": 0.6735807657241821
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6538619995117188
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6401126980781555
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.6127883791923523
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.6016420125961304
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5841349363327026
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5332975387573242
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.32051360607147217
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "History",
+      "score": 0.0
+    }
+  ]
 }

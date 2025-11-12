@@ -1,77 +1,144 @@
 {
-    "title": "Background Reconstruction via 3D-Transformer Network for Hyperspectral Anomaly Detection",
-    "url": "https://openalex.org/W4386849902",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5083230237",
-            "name": "Ziyu Wu",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5059575276",
-            "name": "Bin Wang",
-            "affiliations": [
-                "Fudan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2087263574",
-        "https://openalex.org/W2782517596",
-        "https://openalex.org/W2998951762",
-        "https://openalex.org/W3006462480",
-        "https://openalex.org/W3012548728",
-        "https://openalex.org/W2017014096",
-        "https://openalex.org/W4225850527",
-        "https://openalex.org/W3134490757",
-        "https://openalex.org/W3091030342",
-        "https://openalex.org/W2610484101",
-        "https://openalex.org/W2955002903",
-        "https://openalex.org/W2766174170",
-        "https://openalex.org/W2127495569",
-        "https://openalex.org/W2540033855",
-        "https://openalex.org/W1990953362",
-        "https://openalex.org/W4312309196",
-        "https://openalex.org/W2104877815",
-        "https://openalex.org/W2738225218",
-        "https://openalex.org/W2047870694",
-        "https://openalex.org/W2004491663",
-        "https://openalex.org/W282757658",
-        "https://openalex.org/W2766992066",
-        "https://openalex.org/W1997201895",
-        "https://openalex.org/W2295576075",
-        "https://openalex.org/W2972480129",
-        "https://openalex.org/W6800656473",
-        "https://openalex.org/W6675401909",
-        "https://openalex.org/W3003955104",
-        "https://openalex.org/W6798770969",
-        "https://openalex.org/W3007076381",
-        "https://openalex.org/W6842946068",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4313229413",
-        "https://openalex.org/W3134486524",
-        "https://openalex.org/W3128776197",
-        "https://openalex.org/W6842134305",
-        "https://openalex.org/W4313590927",
-        "https://openalex.org/W3176892444",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W4313032421",
-        "https://openalex.org/W3203003533",
-        "https://openalex.org/W4225582357",
-        "https://openalex.org/W4312846227",
-        "https://openalex.org/W3087883793",
-        "https://openalex.org/W2116793806",
-        "https://openalex.org/W4293812296",
-        "https://openalex.org/W3186256209",
-        "https://openalex.org/W2102409316",
-        "https://openalex.org/W3195044646",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2145962650",
-        "https://openalex.org/W4296210064"
-    ],
-    "abstract": "Recently, autoencoder (AE)-based anomaly detection approaches for hyperspectral images (HSIs) have been extensively proposed; however, the reconstruction accuracy is susceptible to the anomalies and noises. Moreover, these AE-based anomaly detectors simply compress each pixel into a hidden-layer with a lower dimension and then reconstruct it, which does not consider the spatial properties among pixels. To solve the above issues, this paper proposes a background reconstruction framework via a 3D-transformer (3DTR) network for anomaly detection in HSIs. The experimental results on both synthetic and real hyperspectral datasets demonstrate that the proposed 3DTR network is able to effectively detect most of the anomalies by comprehensively considering the spatial correlations among pixels and the spectral similarity among spectral bands of HSIs. In addition, the proposed method exhibits fewer false alarms than both traditional and state-of-the-art (including model-based and AE-based) anomaly detectors owing to the adopted pre-detection procedure and the proposed novel patch-generation method in this paper. Moreover, two ablation experiments adequately verified the effectiveness of each component in the proposed method.",
-    "full_text": null
+  "title": "Background Reconstruction via 3D-Transformer Network for Hyperspectral Anomaly Detection",
+  "url": "https://openalex.org/W4386849902",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5083230237",
+      "name": "Ziyu Wu",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5059575276",
+      "name": "Bin Wang",
+      "affiliations": [
+        "Fudan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2087263574",
+    "https://openalex.org/W2782517596",
+    "https://openalex.org/W2998951762",
+    "https://openalex.org/W3006462480",
+    "https://openalex.org/W3012548728",
+    "https://openalex.org/W2017014096",
+    "https://openalex.org/W4225850527",
+    "https://openalex.org/W3134490757",
+    "https://openalex.org/W3091030342",
+    "https://openalex.org/W2610484101",
+    "https://openalex.org/W2955002903",
+    "https://openalex.org/W2766174170",
+    "https://openalex.org/W2127495569",
+    "https://openalex.org/W2540033855",
+    "https://openalex.org/W1990953362",
+    "https://openalex.org/W4312309196",
+    "https://openalex.org/W2104877815",
+    "https://openalex.org/W2738225218",
+    "https://openalex.org/W2047870694",
+    "https://openalex.org/W2004491663",
+    "https://openalex.org/W282757658",
+    "https://openalex.org/W2766992066",
+    "https://openalex.org/W1997201895",
+    "https://openalex.org/W2295576075",
+    "https://openalex.org/W2972480129",
+    "https://openalex.org/W6800656473",
+    "https://openalex.org/W6675401909",
+    "https://openalex.org/W3003955104",
+    "https://openalex.org/W6798770969",
+    "https://openalex.org/W3007076381",
+    "https://openalex.org/W6842946068",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4313229413",
+    "https://openalex.org/W3134486524",
+    "https://openalex.org/W3128776197",
+    "https://openalex.org/W6842134305",
+    "https://openalex.org/W4313590927",
+    "https://openalex.org/W3176892444",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W4313032421",
+    "https://openalex.org/W3203003533",
+    "https://openalex.org/W4225582357",
+    "https://openalex.org/W4312846227",
+    "https://openalex.org/W3087883793",
+    "https://openalex.org/W2116793806",
+    "https://openalex.org/W4293812296",
+    "https://openalex.org/W3186256209",
+    "https://openalex.org/W2102409316",
+    "https://openalex.org/W3195044646",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2145962650",
+    "https://openalex.org/W4296210064"
+  ],
+  "abstract": "Recently, autoencoder (AE)-based anomaly detection approaches for hyperspectral images (HSIs) have been extensively proposed; however, the reconstruction accuracy is susceptible to the anomalies and noises. Moreover, these AE-based anomaly detectors simply compress each pixel into a hidden-layer with a lower dimension and then reconstruct it, which does not consider the spatial properties among pixels. To solve the above issues, this paper proposes a background reconstruction framework via a 3D-transformer (3DTR) network for anomaly detection in HSIs. The experimental results on both synthetic and real hyperspectral datasets demonstrate that the proposed 3DTR network is able to effectively detect most of the anomalies by comprehensively considering the spatial correlations among pixels and the spectral similarity among spectral bands of HSIs. In addition, the proposed method exhibits fewer false alarms than both traditional and state-of-the-art (including model-based and AE-based) anomaly detectors owing to the adopted pre-detection procedure and the proposed novel patch-generation method in this paper. Moreover, two ablation experiments adequately verified the effectiveness of each component in the proposed method.",
+  "full_text": null,
+  "topic": "Hyperspectral imaging",
+  "concepts": [
+    {
+      "name": "Hyperspectral imaging",
+      "score": 0.8564233183860779
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.7858337163925171
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.6346162557601929
+    },
+    {
+      "name": "Pixel",
+      "score": 0.6234691143035889
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6023110747337341
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5966050624847412
+    },
+    {
+      "name": "Autoencoder",
+      "score": 0.5442481637001038
+    },
+    {
+      "name": "Anomaly (physics)",
+      "score": 0.5203720927238464
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49000993371009827
+    },
+    {
+      "name": "Detector",
+      "score": 0.4339149594306946
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.2315804660320282
+    },
+    {
+      "name": "Physics",
+      "score": 0.14313259720802307
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.06307345628738403
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Condensed matter physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

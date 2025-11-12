@@ -1,162 +1,221 @@
 {
-    "title": "3D Molecular Pocket-based Generation with Token-only Large Language Model",
-    "url": "https://openalex.org/W4401684116",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101848725",
-            "name": "Jike Wang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100641957",
-            "name": "Hao Luo",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5035442855",
-            "name": "Rui Qin",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101919658",
-            "name": "Mingyang Wang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5104346083",
-            "name": "Meijing Fang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114060810",
-            "name": "Odin Zhang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100287262",
-            "name": "Qiaolin Gou",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5087576648",
-            "name": "Qun Su",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066323913",
-            "name": "Chao Shen",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5109765746",
-            "name": "Ziyi You",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5113282700",
-            "name": "Xiaozhe Wan",
-            "affiliations": [
-                "Huawei Technologies (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019425843",
-            "name": "Liwei Liu",
-            "affiliations": [
-                "Huawei Technologies (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5008663435",
-            "name": "Chang‐Yu Hsieh",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028525523",
-            "name": "Tingjun Hou",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100624617",
-            "name": "Yu Kang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2056716515",
-        "https://openalex.org/W4399453986",
-        "https://openalex.org/W4376618618",
-        "https://openalex.org/W2965344674",
-        "https://openalex.org/W2999242200",
-        "https://openalex.org/W2786722833",
-        "https://openalex.org/W2952497504",
-        "https://openalex.org/W4297837492",
-        "https://openalex.org/W2803526748",
-        "https://openalex.org/W3045928028",
-        "https://openalex.org/W3099696902",
-        "https://openalex.org/W4401684116",
-        "https://openalex.org/W3209764902",
-        "https://openalex.org/W2578240541",
-        "https://openalex.org/W3100751385",
-        "https://openalex.org/W2177317049",
-        "https://openalex.org/W2948684689",
-        "https://openalex.org/W3098269892",
-        "https://openalex.org/W3207373390",
-        "https://openalex.org/W2110791536",
-        "https://openalex.org/W4297821296",
-        "https://openalex.org/W4235295213",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4283075725",
-        "https://openalex.org/W4387451313",
-        "https://openalex.org/W4297951436",
-        "https://openalex.org/W4298857966",
-        "https://openalex.org/W4376166811",
-        "https://openalex.org/W4297796727",
-        "https://openalex.org/W4390880597",
-        "https://openalex.org/W4294740519",
-        "https://openalex.org/W4386498912",
-        "https://openalex.org/W4224311800",
-        "https://openalex.org/W4221138292",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W4243061208",
-        "https://openalex.org/W4362664882",
-        "https://openalex.org/W2155027007",
-        "https://openalex.org/W4226070784",
-        "https://openalex.org/W2904656109",
-        "https://openalex.org/W4367859989",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W3148871446",
-        "https://openalex.org/W4280535976",
-        "https://openalex.org/W4323650483",
-        "https://openalex.org/W2971690404"
-    ],
-    "abstract": "Designing innovative molecular structures tailored to specific protein targets represents a fundamental challenge in drug discovery. Most existing approaches based on graph neural networks for generating three-dimensional (3D) molecules within protein pockets often produce molecules with invalid configurations, suboptimal drug-like qualities and limited synthesizability, while also requiring extended generation times. To address these challenges, we present 3DSMILES-GPT, a fully language-model-driven framework for 3D molecular generation. Initially, leveraging the architecture of large language models, we treat both two-dimensional (2D) and 3D molecular representations as linguistic expressions and pre-train the model on an extensive dataset. This approach enables the model to comprehensively understand the 2D and 3D characteristics of large-scale molecules. Subsequently, we fine-tune the model on protein pocket and molecule pair data, followed by reinforcement learning to further optimize the biophysical and chemical properties of the generated molecules. Experimental results demonstrate that, compared to existing methods, 3DSMILES-GPT generates molecules with superior metrics, such as Vina docking score. Notably, it achieves a 33% enhancement in the quantitative estimation of drug-likeness (QED) compared to current models. Additionally, the generation speed is significantly improved, with a threefold increase over the fastest existing methods. This innovative approach highlights the potential of 3DSMILES-GPT to revolutionize the generation of drug-like molecules, offering both improved efficacy and efficiency in drug discovery process.",
-    "full_text": null
+  "title": "3D Molecular Pocket-based Generation with Token-only Large Language Model",
+  "url": "https://openalex.org/W4401684116",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101848725",
+      "name": "Jike Wang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100641957",
+      "name": "Hao Luo",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5035442855",
+      "name": "Rui Qin",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101919658",
+      "name": "Mingyang Wang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5104346083",
+      "name": "Meijing Fang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114060810",
+      "name": "Odin Zhang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100287262",
+      "name": "Qiaolin Gou",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5087576648",
+      "name": "Qun Su",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066323913",
+      "name": "Chao Shen",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5109765746",
+      "name": "Ziyi You",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5113282700",
+      "name": "Xiaozhe Wan",
+      "affiliations": [
+        "Huawei Technologies (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019425843",
+      "name": "Liwei Liu",
+      "affiliations": [
+        "Huawei Technologies (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5008663435",
+      "name": "Chang‐Yu Hsieh",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028525523",
+      "name": "Tingjun Hou",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100624617",
+      "name": "Yu Kang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2056716515",
+    "https://openalex.org/W4399453986",
+    "https://openalex.org/W4376618618",
+    "https://openalex.org/W2965344674",
+    "https://openalex.org/W2999242200",
+    "https://openalex.org/W2786722833",
+    "https://openalex.org/W2952497504",
+    "https://openalex.org/W4297837492",
+    "https://openalex.org/W2803526748",
+    "https://openalex.org/W3045928028",
+    "https://openalex.org/W3099696902",
+    "https://openalex.org/W4401684116",
+    "https://openalex.org/W3209764902",
+    "https://openalex.org/W2578240541",
+    "https://openalex.org/W3100751385",
+    "https://openalex.org/W2177317049",
+    "https://openalex.org/W2948684689",
+    "https://openalex.org/W3098269892",
+    "https://openalex.org/W3207373390",
+    "https://openalex.org/W2110791536",
+    "https://openalex.org/W4297821296",
+    "https://openalex.org/W4235295213",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4283075725",
+    "https://openalex.org/W4387451313",
+    "https://openalex.org/W4297951436",
+    "https://openalex.org/W4298857966",
+    "https://openalex.org/W4376166811",
+    "https://openalex.org/W4297796727",
+    "https://openalex.org/W4390880597",
+    "https://openalex.org/W4294740519",
+    "https://openalex.org/W4386498912",
+    "https://openalex.org/W4224311800",
+    "https://openalex.org/W4221138292",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W4243061208",
+    "https://openalex.org/W4362664882",
+    "https://openalex.org/W2155027007",
+    "https://openalex.org/W4226070784",
+    "https://openalex.org/W2904656109",
+    "https://openalex.org/W4367859989",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W3148871446",
+    "https://openalex.org/W4280535976",
+    "https://openalex.org/W4323650483",
+    "https://openalex.org/W2971690404"
+  ],
+  "abstract": "Designing innovative molecular structures tailored to specific protein targets represents a fundamental challenge in drug discovery. Most existing approaches based on graph neural networks for generating three-dimensional (3D) molecules within protein pockets often produce molecules with invalid configurations, suboptimal drug-like qualities and limited synthesizability, while also requiring extended generation times. To address these challenges, we present 3DSMILES-GPT, a fully language-model-driven framework for 3D molecular generation. Initially, leveraging the architecture of large language models, we treat both two-dimensional (2D) and 3D molecular representations as linguistic expressions and pre-train the model on an extensive dataset. This approach enables the model to comprehensively understand the 2D and 3D characteristics of large-scale molecules. Subsequently, we fine-tune the model on protein pocket and molecule pair data, followed by reinforcement learning to further optimize the biophysical and chemical properties of the generated molecules. Experimental results demonstrate that, compared to existing methods, 3DSMILES-GPT generates molecules with superior metrics, such as Vina docking score. Notably, it achieves a 33% enhancement in the quantitative estimation of drug-likeness (QED) compared to current models. Additionally, the generation speed is significantly improved, with a threefold increase over the fastest existing methods. This innovative approach highlights the potential of 3DSMILES-GPT to revolutionize the generation of drug-like molecules, offering both improved efficacy and efficiency in drug discovery process.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7201759219169617
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.6177342534065247
+    },
+    {
+      "name": "Security token",
+      "score": 0.6068486571311951
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.476842999458313
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.45013371109962463
+    },
+    {
+      "name": "Reinforcement learning",
+      "score": 0.4496699273586273
+    },
+    {
+      "name": "Graph",
+      "score": 0.44631466269493103
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3456956744194031
+    },
+    {
+      "name": "Biological system",
+      "score": 0.32645195722579956
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.27061593532562256
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.16083040833473206
+    },
+    {
+      "name": "Biology",
+      "score": 0.0955163836479187
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    }
+  ]
 }

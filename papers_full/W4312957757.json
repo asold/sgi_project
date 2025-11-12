@@ -1,142 +1,193 @@
 {
-    "title": "Towards Robust Vision Transformer",
-    "url": "https://openalex.org/W4312957757",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2170242036",
-            "name": "Xiao-Feng Mao",
-            "affiliations": [
-                "Alibaba Group (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3006645534",
-            "name": "Gege Qi",
-            "affiliations": [
-                "Alibaba Group (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2135878666",
-            "name": "Yuefeng Chen",
-            "affiliations": [
-                "Alibaba Group (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096283650",
-            "name": "Xiaodan Li",
-            "affiliations": [
-                "Alibaba Group (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3135421244",
-            "name": "Ranjie Duan",
-            "affiliations": [
-                "Swinburne University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2788542886",
-            "name": "Shaokai Ye",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102192046",
-            "name": "Yuan He",
-            "affiliations": [
-                "Alibaba Group (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097401155",
-            "name": "Hui Xue",
-            "affiliations": [
-                "Alibaba Group (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6762718338",
-        "https://openalex.org/W3116074996",
-        "https://openalex.org/W3025573667",
-        "https://openalex.org/W3034429256",
-        "https://openalex.org/W6686164453",
-        "https://openalex.org/W6754553897",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W6792762529",
-        "https://openalex.org/W6762945437",
-        "https://openalex.org/W3143373604",
-        "https://openalex.org/W6795276571",
-        "https://openalex.org/W6792881003",
-        "https://openalex.org/W6803813760",
-        "https://openalex.org/W4214636423",
-        "https://openalex.org/W6784515117",
-        "https://openalex.org/W6779902714",
-        "https://openalex.org/W6758508162",
-        "https://openalex.org/W6794906783",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W3136416617",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W6758857762",
-        "https://openalex.org/W6745136726",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W6640425456",
-        "https://openalex.org/W4214588794",
-        "https://openalex.org/W6770588701",
-        "https://openalex.org/W6790690058",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6779517208",
-        "https://openalex.org/W6757555829",
-        "https://openalex.org/W3177096435",
-        "https://openalex.org/W6713128830",
-        "https://openalex.org/W6790375769",
-        "https://openalex.org/W3137278571",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W3009751875",
-        "https://openalex.org/W6782781826",
-        "https://openalex.org/W6780302432",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W2549139847",
-        "https://openalex.org/W6763468762",
-        "https://openalex.org/W6786277304",
-        "https://openalex.org/W6788494687",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W2955425717",
-        "https://openalex.org/W2962716426",
-        "https://openalex.org/W2887603965",
-        "https://openalex.org/W3037742886",
-        "https://openalex.org/W3145185940",
-        "https://openalex.org/W3107291594",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4288347855",
-        "https://openalex.org/W3037492894",
-        "https://openalex.org/W3120460133",
-        "https://openalex.org/W2964014389",
-        "https://openalex.org/W3122515622",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3125135622",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4288404646",
-        "https://openalex.org/W2765407302",
-        "https://openalex.org/W3130071011",
-        "https://openalex.org/W2947707615",
-        "https://openalex.org/W3161120562",
-        "https://openalex.org/W3081624383",
-        "https://openalex.org/W3142085127",
-        "https://openalex.org/W3035467354",
-        "https://openalex.org/W2913314773",
-        "https://openalex.org/W3214243459",
-        "https://openalex.org/W3156811085",
-        "https://openalex.org/W1945616565",
-        "https://openalex.org/W3133696297"
-    ],
-    "abstract": "Recent advances on Vision Transformer (ViT) and its improved variants have shown that self-attention-based networks surpass traditional Convolutional Neural Networks (CNNs) in most vision tasks. However, existing ViTs focus on the standard accuracy and computation cost, lacking the investigation of the intrinsic influence on model robustness and generalization. In this work, we conduct systematic evaluation on components of ViTs in terms of their impact on robustness to adversarial examples, common corruptions and distribution shifts. We find some components can be harmful to robustness. By leveraging robust components as building blocks of ViTs, we propose Robust Vision Transformer (RVT), which is a new vision transformer and has superior performance with strong robustness. Inspired by the findings during the evaluation, we further propose two new plug-and-play techniques called position-aware attention scaling and patch-wise augmentation to augment our RVT, which we abbreviate as RVT*. The experimental results of RVT on ImageNet and six robustness benchmarks demonstrate its advanced robustness and generalization ability compared with previous ViTs and state-of-the-art CNNs. Furthermore, RVT-S* achieves Top-1 rank on multiple robustness leaderboards including ImageNet-C, ImageNet-Sketch and ImageNet-R.",
-    "full_text": null
+  "title": "Towards Robust Vision Transformer",
+  "url": "https://openalex.org/W4312957757",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2170242036",
+      "name": "Xiao-Feng Mao",
+      "affiliations": [
+        "Alibaba Group (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3006645534",
+      "name": "Gege Qi",
+      "affiliations": [
+        "Alibaba Group (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2135878666",
+      "name": "Yuefeng Chen",
+      "affiliations": [
+        "Alibaba Group (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096283650",
+      "name": "Xiaodan Li",
+      "affiliations": [
+        "Alibaba Group (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3135421244",
+      "name": "Ranjie Duan",
+      "affiliations": [
+        "Swinburne University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2788542886",
+      "name": "Shaokai Ye",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102192046",
+      "name": "Yuan He",
+      "affiliations": [
+        "Alibaba Group (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097401155",
+      "name": "Hui Xue",
+      "affiliations": [
+        "Alibaba Group (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6762718338",
+    "https://openalex.org/W3116074996",
+    "https://openalex.org/W3025573667",
+    "https://openalex.org/W3034429256",
+    "https://openalex.org/W6686164453",
+    "https://openalex.org/W6754553897",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W6792762529",
+    "https://openalex.org/W6762945437",
+    "https://openalex.org/W3143373604",
+    "https://openalex.org/W6795276571",
+    "https://openalex.org/W6792881003",
+    "https://openalex.org/W6803813760",
+    "https://openalex.org/W4214636423",
+    "https://openalex.org/W6784515117",
+    "https://openalex.org/W6779902714",
+    "https://openalex.org/W6758508162",
+    "https://openalex.org/W6794906783",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W3136416617",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W6758857762",
+    "https://openalex.org/W6745136726",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W6640425456",
+    "https://openalex.org/W4214588794",
+    "https://openalex.org/W6770588701",
+    "https://openalex.org/W6790690058",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6779517208",
+    "https://openalex.org/W6757555829",
+    "https://openalex.org/W3177096435",
+    "https://openalex.org/W6713128830",
+    "https://openalex.org/W6790375769",
+    "https://openalex.org/W3137278571",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W3009751875",
+    "https://openalex.org/W6782781826",
+    "https://openalex.org/W6780302432",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W2549139847",
+    "https://openalex.org/W6763468762",
+    "https://openalex.org/W6786277304",
+    "https://openalex.org/W6788494687",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W2955425717",
+    "https://openalex.org/W2962716426",
+    "https://openalex.org/W2887603965",
+    "https://openalex.org/W3037742886",
+    "https://openalex.org/W3145185940",
+    "https://openalex.org/W3107291594",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4288347855",
+    "https://openalex.org/W3037492894",
+    "https://openalex.org/W3120460133",
+    "https://openalex.org/W2964014389",
+    "https://openalex.org/W3122515622",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3125135622",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4288404646",
+    "https://openalex.org/W2765407302",
+    "https://openalex.org/W3130071011",
+    "https://openalex.org/W2947707615",
+    "https://openalex.org/W3161120562",
+    "https://openalex.org/W3081624383",
+    "https://openalex.org/W3142085127",
+    "https://openalex.org/W3035467354",
+    "https://openalex.org/W2913314773",
+    "https://openalex.org/W3214243459",
+    "https://openalex.org/W3156811085",
+    "https://openalex.org/W1945616565",
+    "https://openalex.org/W3133696297"
+  ],
+  "abstract": "Recent advances on Vision Transformer (ViT) and its improved variants have shown that self-attention-based networks surpass traditional Convolutional Neural Networks (CNNs) in most vision tasks. However, existing ViTs focus on the standard accuracy and computation cost, lacking the investigation of the intrinsic influence on model robustness and generalization. In this work, we conduct systematic evaluation on components of ViTs in terms of their impact on robustness to adversarial examples, common corruptions and distribution shifts. We find some components can be harmful to robustness. By leveraging robust components as building blocks of ViTs, we propose Robust Vision Transformer (RVT), which is a new vision transformer and has superior performance with strong robustness. Inspired by the findings during the evaluation, we further propose two new plug-and-play techniques called position-aware attention scaling and patch-wise augmentation to augment our RVT, which we abbreviate as RVT*. The experimental results of RVT on ImageNet and six robustness benchmarks demonstrate its advanced robustness and generalization ability compared with previous ViTs and state-of-the-art CNNs. Furthermore, RVT-S* achieves Top-1 rank on multiple robustness leaderboards including ImageNet-C, ImageNet-Sketch and ImageNet-R.",
+  "full_text": null,
+  "topic": "Robustness (evolution)",
+  "concepts": [
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.8111386299133301
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7089126706123352
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5978002548217773
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5398248434066772
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4861257076263428
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.4813052713871002
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11562833189964294
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

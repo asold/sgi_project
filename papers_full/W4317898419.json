@@ -1,113 +1,192 @@
 {
-    "title": "Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering",
-    "url": "https://openalex.org/W4317898419",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2891984599",
-            "name": "Shamane Siriwardhana",
-            "affiliations": [
-                "University of Auckland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2902099375",
-            "name": "Rivindu Weerasekera",
-            "affiliations": [
-                "University of Auckland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2886855019",
-            "name": "Elliott Wen",
-            "affiliations": [
-                "University of Auckland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3033031605",
-            "name": "Tharindu Kaluarachchi",
-            "affiliations": [
-                "University of Auckland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171057441",
-            "name": "Rajib Rana",
-            "affiliations": [
-                "University of Southern Queensland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2226950223",
-            "name": "Suranga Nanayakkara",
-            "affiliations": [
-                "National University of Singapore",
-                "University of Auckland"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2949849869",
-        "https://openalex.org/W1801866228",
-        "https://openalex.org/W6691476020",
-        "https://openalex.org/W6810730852",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4206850841",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6774222543",
-        "https://openalex.org/W6632455782",
-        "https://openalex.org/W6734897383",
-        "https://openalex.org/W2963339397",
-        "https://openalex.org/W3099700870",
-        "https://openalex.org/W6768028577",
-        "https://openalex.org/W3186138538",
-        "https://openalex.org/W3106234277",
-        "https://openalex.org/W2912924812",
-        "https://openalex.org/W6762832483",
-        "https://openalex.org/W6779791889",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W3153094109",
-        "https://openalex.org/W3207095490",
-        "https://openalex.org/W2143017621",
-        "https://openalex.org/W3156836409",
-        "https://openalex.org/W6787719664",
-        "https://openalex.org/W6781861156",
-        "https://openalex.org/W3204998121",
-        "https://openalex.org/W2953035981",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W4252076394",
-        "https://openalex.org/W6788120775",
-        "https://openalex.org/W3103420681",
-        "https://openalex.org/W3155807546",
-        "https://openalex.org/W6803991540",
-        "https://openalex.org/W2557764419",
-        "https://openalex.org/W6776225533",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W3167147997",
-        "https://openalex.org/W3163458033",
-        "https://openalex.org/W3186804217",
-        "https://openalex.org/W2251818205",
-        "https://openalex.org/W2951434086",
-        "https://openalex.org/W3175443153",
-        "https://openalex.org/W3174821868",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W2949615363",
-        "https://openalex.org/W4287122359",
-        "https://openalex.org/W2973049837",
-        "https://openalex.org/W1516184288",
-        "https://openalex.org/W4299585995",
-        "https://openalex.org/W3118423943",
-        "https://openalex.org/W3020786614",
-        "https://openalex.org/W3037854022",
-        "https://openalex.org/W3007672467",
-        "https://openalex.org/W4226082499"
-    ],
-    "abstract": "Abstract Retrieval Augment Generation (RAG) is a recent advancement in Open-Domain Question Answering (ODQA). RAG has only been trained and explored with a Wikipedia-based external knowledge base and is not optimized for use in other specialized domains such as healthcare and news. In this paper, we evaluate the impact of joint training of the retriever and generator components of RAG for the task of domain adaptation in ODQA. We propose RAG-end2end, an extension to RAG that can adapt to a domain-specific knowledge base by updating all components of the external knowledge base during training. In addition, we introduce an auxiliary training signal to inject more domain-specific knowledge. This auxiliary signal forces RAG-end2end to reconstruct a given sentence by accessing the relevant information from the external knowledge base. Our novel contribution is that, unlike RAG, RAG-end2end does joint training of the retriever and generator for the end QA task and domain adaptation. We evaluate our approach with datasets from three domains: COVID-19, News, and Conversations, and achieve significant performance improvements compared to the original RAG model. Our work has been open-sourced through the HuggingFace Transformers library, attesting to our work’s credibility and technical consistency.",
-    "full_text": null
+  "title": "Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering",
+  "url": "https://openalex.org/W4317898419",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2891984599",
+      "name": "Shamane Siriwardhana",
+      "affiliations": [
+        "University of Auckland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2902099375",
+      "name": "Rivindu Weerasekera",
+      "affiliations": [
+        "University of Auckland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2886855019",
+      "name": "Elliott Wen",
+      "affiliations": [
+        "University of Auckland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3033031605",
+      "name": "Tharindu Kaluarachchi",
+      "affiliations": [
+        "University of Auckland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171057441",
+      "name": "Rajib Rana",
+      "affiliations": [
+        "University of Southern Queensland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2226950223",
+      "name": "Suranga Nanayakkara",
+      "affiliations": [
+        "National University of Singapore",
+        "University of Auckland"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2949849869",
+    "https://openalex.org/W1801866228",
+    "https://openalex.org/W6691476020",
+    "https://openalex.org/W6810730852",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4206850841",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6774222543",
+    "https://openalex.org/W6632455782",
+    "https://openalex.org/W6734897383",
+    "https://openalex.org/W2963339397",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W6768028577",
+    "https://openalex.org/W3186138538",
+    "https://openalex.org/W3106234277",
+    "https://openalex.org/W2912924812",
+    "https://openalex.org/W6762832483",
+    "https://openalex.org/W6779791889",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W3153094109",
+    "https://openalex.org/W3207095490",
+    "https://openalex.org/W2143017621",
+    "https://openalex.org/W3156836409",
+    "https://openalex.org/W6787719664",
+    "https://openalex.org/W6781861156",
+    "https://openalex.org/W3204998121",
+    "https://openalex.org/W2953035981",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W4252076394",
+    "https://openalex.org/W6788120775",
+    "https://openalex.org/W3103420681",
+    "https://openalex.org/W3155807546",
+    "https://openalex.org/W6803991540",
+    "https://openalex.org/W2557764419",
+    "https://openalex.org/W6776225533",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W3167147997",
+    "https://openalex.org/W3163458033",
+    "https://openalex.org/W3186804217",
+    "https://openalex.org/W2251818205",
+    "https://openalex.org/W2951434086",
+    "https://openalex.org/W3175443153",
+    "https://openalex.org/W3174821868",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W2949615363",
+    "https://openalex.org/W4287122359",
+    "https://openalex.org/W2973049837",
+    "https://openalex.org/W1516184288",
+    "https://openalex.org/W4299585995",
+    "https://openalex.org/W3118423943",
+    "https://openalex.org/W3020786614",
+    "https://openalex.org/W3037854022",
+    "https://openalex.org/W3007672467",
+    "https://openalex.org/W4226082499"
+  ],
+  "abstract": "Abstract Retrieval Augment Generation (RAG) is a recent advancement in Open-Domain Question Answering (ODQA). RAG has only been trained and explored with a Wikipedia-based external knowledge base and is not optimized for use in other specialized domains such as healthcare and news. In this paper, we evaluate the impact of joint training of the retriever and generator components of RAG for the task of domain adaptation in ODQA. We propose RAG-end2end, an extension to RAG that can adapt to a domain-specific knowledge base by updating all components of the external knowledge base during training. In addition, we introduce an auxiliary training signal to inject more domain-specific knowledge. This auxiliary signal forces RAG-end2end to reconstruct a given sentence by accessing the relevant information from the external knowledge base. Our novel contribution is that, unlike RAG, RAG-end2end does joint training of the retriever and generator for the end QA task and domain adaptation. We evaluate our approach with datasets from three domains: COVID-19, News, and Conversations, and achieve significant performance improvements compared to the original RAG model. Our work has been open-sourced through the HuggingFace Transformers library, attesting to our work’s credibility and technical consistency.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8608691692352295
+    },
+    {
+      "name": "Domain adaptation",
+      "score": 0.6798602938652039
+    },
+    {
+      "name": "Knowledge base",
+      "score": 0.5950479507446289
+    },
+    {
+      "name": "Question answering",
+      "score": 0.459215372800827
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.4427906274795532
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44009488821029663
+    },
+    {
+      "name": "Consistency (knowledge bases)",
+      "score": 0.42990192770957947
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42476707696914673
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.41149306297302246
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.40587663650512695
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.37037816643714905
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.228973388671875
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

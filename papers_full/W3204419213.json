@@ -1,111 +1,134 @@
 {
-    "title": "VidTr: Video Transformer Without Convolutions",
-    "url": "https://openalex.org/W3204419213",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5102725752",
-            "name": "Yanyi Zhang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100406079",
-            "name": "Xinyu Li",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100761540",
-            "name": "Chunhui Liu",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5048015379",
-            "name": "Bing Shuai",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019191351",
-            "name": "Yi Zhu",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5074576698",
-            "name": "Biagio Brattoli",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100353668",
-            "name": "Hao Chen",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5068126329",
-            "name": "Ivan Marsic",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5002114219",
-            "name": "Joseph Tighe",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2996901793",
-        "https://openalex.org/W3035303837",
-        "https://openalex.org/W6781411052",
-        "https://openalex.org/W2526639894",
-        "https://openalex.org/W2990152177",
-        "https://openalex.org/W2465313502",
-        "https://openalex.org/W3035413240",
-        "https://openalex.org/W6640257725",
-        "https://openalex.org/W2016053056",
-        "https://openalex.org/W6746798562",
-        "https://openalex.org/W2981385151",
-        "https://openalex.org/W2963351113",
-        "https://openalex.org/W2126579184",
-        "https://openalex.org/W3035422918",
-        "https://openalex.org/W6780924892",
-        "https://openalex.org/W2608988379",
-        "https://openalex.org/W2963563276",
-        "https://openalex.org/W2962934715",
-        "https://openalex.org/W2625366777",
-        "https://openalex.org/W1983364832",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2963155035",
-        "https://openalex.org/W2769581371",
-        "https://openalex.org/W2549139847",
-        "https://openalex.org/W2955874753",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W6724944384",
-        "https://openalex.org/W3035619757",
-        "https://openalex.org/W2883534172",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3034572008",
-        "https://openalex.org/W2990503944",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W2963524571",
-        "https://openalex.org/W2984287396",
-        "https://openalex.org/W6631456553",
-        "https://openalex.org/W2996937600"
-    ],
-    "abstract": "We introduce Video Transformer (VidTr) with separable-attention for video classification. Comparing with commonly used 3D networks, VidTr is able to aggregate spatio-temporal information via stacked attentions and provide better performance with higher efficiency. We first introduce the vanilla video transformer and show that transformer module is able to perform spatio-temporal modeling from raw pixels, but with heavy memory usage. We then present VidTr which reduces the memory cost by 3.3× while keeping the same performance. To further optimize the model, we propose the standard deviation based topK pooling for attention (pool<sub>topK_std</sub>), which reduces the computation by dropping non-informative features along temporal dimension. VidTr achieves state-of-the-art performance on five commonly used datasets with lower computational requirement, showing both the efficiency and effectiveness of our design. Finally, error analysis and visualization show that VidTr is especially good at predicting actions that require long-term temporal reasoning.",
-    "full_text": null
+  "title": "VidTr: Video Transformer Without Convolutions",
+  "url": "https://openalex.org/W3204419213",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5102725752",
+      "name": "Yanyi Zhang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100406079",
+      "name": "Xinyu Li",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100761540",
+      "name": "Chunhui Liu",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5048015379",
+      "name": "Bing Shuai",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019191351",
+      "name": "Yi Zhu",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5074576698",
+      "name": "Biagio Brattoli",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100353668",
+      "name": "Hao Chen",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5068126329",
+      "name": "Ivan Marsic",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5002114219",
+      "name": "Joseph Tighe",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2996901793",
+    "https://openalex.org/W3035303837",
+    "https://openalex.org/W6781411052",
+    "https://openalex.org/W2526639894",
+    "https://openalex.org/W2990152177",
+    "https://openalex.org/W2465313502",
+    "https://openalex.org/W3035413240",
+    "https://openalex.org/W6640257725",
+    "https://openalex.org/W2016053056",
+    "https://openalex.org/W6746798562",
+    "https://openalex.org/W2981385151",
+    "https://openalex.org/W2963351113",
+    "https://openalex.org/W2126579184",
+    "https://openalex.org/W3035422918",
+    "https://openalex.org/W6780924892",
+    "https://openalex.org/W2608988379",
+    "https://openalex.org/W2963563276",
+    "https://openalex.org/W2962934715",
+    "https://openalex.org/W2625366777",
+    "https://openalex.org/W1983364832",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2963155035",
+    "https://openalex.org/W2769581371",
+    "https://openalex.org/W2549139847",
+    "https://openalex.org/W2955874753",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W6724944384",
+    "https://openalex.org/W3035619757",
+    "https://openalex.org/W2883534172",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3034572008",
+    "https://openalex.org/W2990503944",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W2963524571",
+    "https://openalex.org/W2984287396",
+    "https://openalex.org/W6631456553",
+    "https://openalex.org/W2996937600"
+  ],
+  "abstract": "We introduce Video Transformer (VidTr) with separable-attention for video classification. Comparing with commonly used 3D networks, VidTr is able to aggregate spatio-temporal information via stacked attentions and provide better performance with higher efficiency. We first introduce the vanilla video transformer and show that transformer module is able to perform spatio-temporal modeling from raw pixels, but with heavy memory usage. We then present VidTr which reduces the memory cost by 3.3× while keeping the same performance. To further optimize the model, we propose the standard deviation based topK pooling for attention (pool<sub>topK_std</sub>), which reduces the computation by dropping non-informative features along temporal dimension. VidTr achieves state-of-the-art performance on five commonly used datasets with lower computational requirement, showing both the efficiency and effectiveness of our design. Finally, error analysis and visualization show that VidTr is especially good at predicting actions that require long-term temporal reasoning.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5959810614585876
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5277149081230164
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.25450751185417175
+    },
+    {
+      "name": "Voltage",
+      "score": 0.13123124837875366
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09909188747406006
+    }
+  ]
 }

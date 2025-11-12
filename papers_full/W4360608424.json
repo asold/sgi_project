@@ -1,144 +1,203 @@
 {
-    "title": "Transformer Performance for Chemical Reactions: Analysis of Different Predictive and Evaluation Scenarios",
-    "url": "https://openalex.org/W4360608424",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2725953826",
-            "name": "Fernando Jaume-Santero",
-            "affiliations": [
-                "HES-SO University of Applied Sciences and Arts Western Switzerland",
-                "University of Geneva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2753436674",
-            "name": "Alban Bornet",
-            "affiliations": [
-                "HES-SO University of Applied Sciences and Arts Western Switzerland",
-                "University of Geneva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4321573047",
-            "name": "Alain Valery",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2107579764",
-            "name": "Nona Naderi",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "HES-SO University of Applied Sciences and Arts Western Switzerland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3129218921",
-            "name": "David Vicente Alvarez",
-            "affiliations": [
-                "HES-SO University of Applied Sciences and Arts Western Switzerland",
-                "University of Geneva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2775153052",
-            "name": "Dimitrios Proios",
-            "affiliations": [
-                "University of Geneva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4314030486",
-            "name": "Anthony Yazdani",
-            "affiliations": [
-                "University of Geneva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3042381579",
-            "name": "Colin Bournez",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2672055040",
-            "name": "Thomas Fessard",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2234087575",
-            "name": "Douglas Teodoro",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "HES-SO University of Applied Sciences and Arts Western Switzerland",
-                "University of Geneva"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2329592726",
-        "https://openalex.org/W4213250811",
-        "https://openalex.org/W2166478947",
-        "https://openalex.org/W2017254234",
-        "https://openalex.org/W2023818227",
-        "https://openalex.org/W4210318910",
-        "https://openalex.org/W2959938226",
-        "https://openalex.org/W3192643845",
-        "https://openalex.org/W2884430236",
-        "https://openalex.org/W2747592475",
-        "https://openalex.org/W2901942917",
-        "https://openalex.org/W3209173593",
-        "https://openalex.org/W2883583109",
-        "https://openalex.org/W3147983081",
-        "https://openalex.org/W3118349318",
-        "https://openalex.org/W3123901912",
-        "https://openalex.org/W4226145240",
-        "https://openalex.org/W2947423323",
-        "https://openalex.org/W2903262661",
-        "https://openalex.org/W3010895849",
-        "https://openalex.org/W2580919858",
-        "https://openalex.org/W2970764640",
-        "https://openalex.org/W3010145447",
-        "https://openalex.org/W3088265803",
-        "https://openalex.org/W3189262114",
-        "https://openalex.org/W3087570960",
-        "https://openalex.org/W2785942661",
-        "https://openalex.org/W3146384714",
-        "https://openalex.org/W3198168376",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W3009321976",
-        "https://openalex.org/W2895677720",
-        "https://openalex.org/W2170973067",
-        "https://openalex.org/W2087563523",
-        "https://openalex.org/W4306179830",
-        "https://openalex.org/W2948947170",
-        "https://openalex.org/W3102970018",
-        "https://openalex.org/W3086727830",
-        "https://openalex.org/W6977367121",
-        "https://openalex.org/W3215154581",
-        "https://openalex.org/W3128928362",
-        "https://openalex.org/W2999373911",
-        "https://openalex.org/W2972608805",
-        "https://openalex.org/W2994678679",
-        "https://openalex.org/W3027819927",
-        "https://openalex.org/W4286740883",
-        "https://openalex.org/W3015326851",
-        "https://openalex.org/W3036578548",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2121879602",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W3138781613",
-        "https://openalex.org/W2987091515",
-        "https://openalex.org/W2963212250",
-        "https://openalex.org/W2769423117",
-        "https://openalex.org/W2621742623",
-        "https://openalex.org/W2177317049",
-        "https://openalex.org/W2594183968",
-        "https://openalex.org/W3188589934",
-        "https://openalex.org/W3094771832",
-        "https://openalex.org/W3009202547",
-        "https://openalex.org/W3045928028",
-        "https://openalex.org/W3103092523"
-    ],
-    "abstract": "The prediction of chemical reaction pathways has been accelerated by the development of novel machine learning architectures based on the deep learning paradigm. In this context, deep neural networks initially designed for language translation have been used to accurately predict a wide range of chemical reactions. Among models suited for the task of language translation, the recently introduced molecular transformer reached impressive performance in terms of forward-synthesis and retrosynthesis predictions. In this study, we first present an analysis of the performance of transformer models for product, reactant, and reagent prediction tasks under different scenarios of data availability and data augmentation. We find that the impact of data augmentation depends on the prediction task and on the metric used to evaluate the model performance. Second, we probe the contribution of different combinations of input formats, tokenization schemes, and embedding strategies to model performance. We find that less stable input settings generally lead to better performance. Lastly, we validate the superiority of round-trip accuracy over simpler evaluation metrics, such as top-<i>k</i> accuracy, using a committee of human experts and show a strong agreement for predictions that pass the round-trip test. This demonstrates the usefulness of more elaborate metrics in complex predictive scenarios and highlights the limitations of direct comparisons to a predefined database, which may include a limited number of chemical reaction pathways.",
-    "full_text": null
+  "title": "Transformer Performance for Chemical Reactions: Analysis of Different Predictive and Evaluation Scenarios",
+  "url": "https://openalex.org/W4360608424",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2725953826",
+      "name": "Fernando Jaume-Santero",
+      "affiliations": [
+        "HES-SO University of Applied Sciences and Arts Western Switzerland",
+        "University of Geneva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2753436674",
+      "name": "Alban Bornet",
+      "affiliations": [
+        "HES-SO University of Applied Sciences and Arts Western Switzerland",
+        "University of Geneva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4321573047",
+      "name": "Alain Valery",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2107579764",
+      "name": "Nona Naderi",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "HES-SO University of Applied Sciences and Arts Western Switzerland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3129218921",
+      "name": "David Vicente Alvarez",
+      "affiliations": [
+        "HES-SO University of Applied Sciences and Arts Western Switzerland",
+        "University of Geneva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2775153052",
+      "name": "Dimitrios Proios",
+      "affiliations": [
+        "University of Geneva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4314030486",
+      "name": "Anthony Yazdani",
+      "affiliations": [
+        "University of Geneva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3042381579",
+      "name": "Colin Bournez",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2672055040",
+      "name": "Thomas Fessard",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2234087575",
+      "name": "Douglas Teodoro",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "HES-SO University of Applied Sciences and Arts Western Switzerland",
+        "University of Geneva"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2329592726",
+    "https://openalex.org/W4213250811",
+    "https://openalex.org/W2166478947",
+    "https://openalex.org/W2017254234",
+    "https://openalex.org/W2023818227",
+    "https://openalex.org/W4210318910",
+    "https://openalex.org/W2959938226",
+    "https://openalex.org/W3192643845",
+    "https://openalex.org/W2884430236",
+    "https://openalex.org/W2747592475",
+    "https://openalex.org/W2901942917",
+    "https://openalex.org/W3209173593",
+    "https://openalex.org/W2883583109",
+    "https://openalex.org/W3147983081",
+    "https://openalex.org/W3118349318",
+    "https://openalex.org/W3123901912",
+    "https://openalex.org/W4226145240",
+    "https://openalex.org/W2947423323",
+    "https://openalex.org/W2903262661",
+    "https://openalex.org/W3010895849",
+    "https://openalex.org/W2580919858",
+    "https://openalex.org/W2970764640",
+    "https://openalex.org/W3010145447",
+    "https://openalex.org/W3088265803",
+    "https://openalex.org/W3189262114",
+    "https://openalex.org/W3087570960",
+    "https://openalex.org/W2785942661",
+    "https://openalex.org/W3146384714",
+    "https://openalex.org/W3198168376",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W3009321976",
+    "https://openalex.org/W2895677720",
+    "https://openalex.org/W2170973067",
+    "https://openalex.org/W2087563523",
+    "https://openalex.org/W4306179830",
+    "https://openalex.org/W2948947170",
+    "https://openalex.org/W3102970018",
+    "https://openalex.org/W3086727830",
+    "https://openalex.org/W6977367121",
+    "https://openalex.org/W3215154581",
+    "https://openalex.org/W3128928362",
+    "https://openalex.org/W2999373911",
+    "https://openalex.org/W2972608805",
+    "https://openalex.org/W2994678679",
+    "https://openalex.org/W3027819927",
+    "https://openalex.org/W4286740883",
+    "https://openalex.org/W3015326851",
+    "https://openalex.org/W3036578548",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2121879602",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W3138781613",
+    "https://openalex.org/W2987091515",
+    "https://openalex.org/W2963212250",
+    "https://openalex.org/W2769423117",
+    "https://openalex.org/W2621742623",
+    "https://openalex.org/W2177317049",
+    "https://openalex.org/W2594183968",
+    "https://openalex.org/W3188589934",
+    "https://openalex.org/W3094771832",
+    "https://openalex.org/W3009202547",
+    "https://openalex.org/W3045928028",
+    "https://openalex.org/W3103092523"
+  ],
+  "abstract": "The prediction of chemical reaction pathways has been accelerated by the development of novel machine learning architectures based on the deep learning paradigm. In this context, deep neural networks initially designed for language translation have been used to accurately predict a wide range of chemical reactions. Among models suited for the task of language translation, the recently introduced molecular transformer reached impressive performance in terms of forward-synthesis and retrosynthesis predictions. In this study, we first present an analysis of the performance of transformer models for product, reactant, and reagent prediction tasks under different scenarios of data availability and data augmentation. We find that the impact of data augmentation depends on the prediction task and on the metric used to evaluate the model performance. Second, we probe the contribution of different combinations of input formats, tokenization schemes, and embedding strategies to model performance. We find that less stable input settings generally lead to better performance. Lastly, we validate the superiority of round-trip accuracy over simpler evaluation metrics, such as top-<i>k</i> accuracy, using a committee of human experts and show a strong agreement for predictions that pass the round-trip test. This demonstrates the usefulness of more elaborate metrics in complex predictive scenarios and highlights the limitations of direct comparisons to a predefined database, which may include a limited number of chemical reaction pathways.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8103530406951904
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6784217953681946
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.6221508979797363
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6182912588119507
+    },
+    {
+      "name": "Metric (unit)",
+      "score": 0.5339167714118958
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.49718502163887024
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.4561644196510315
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4329254925251007
+    },
+    {
+      "name": "Embedding",
+      "score": 0.4240632653236389
+    },
+    {
+      "name": "Data mining",
+      "score": 0.35054099559783936
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08086386322975159
+    },
+    {
+      "name": "Operations management",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

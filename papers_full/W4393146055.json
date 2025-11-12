@@ -1,73 +1,88 @@
 {
-    "title": "Biases Mitigation and Expressiveness Preservation in Language Models: A Comprehensive Pipeline (Student Abstract)",
-    "url": "https://openalex.org/W4393146055",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2038149722",
-            "name": "Liu Yu",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5108911410",
-            "name": "Ludie Guo",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2000146981",
-            "name": "Ping Kuang",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2114723932",
-            "name": "Fan Zhou",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2038149722",
-            "name": "Liu Yu",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5108911410",
-            "name": "Ludie Guo",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2000146981",
-            "name": "Ping Kuang",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2114723932",
-            "name": "Fan Zhou",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3131157458",
-        "https://openalex.org/W4285192297",
-        "https://openalex.org/W3123930738",
-        "https://openalex.org/W6779962350",
-        "https://openalex.org/W3035591180",
-        "https://openalex.org/W3155655882"
-    ],
-    "abstract": "Pre-trained language models (PLMs) have greatly transformed various downstream tasks, yet frequently display social biases from training data, raising fairness concerns. Recent efforts to debias PLMs come with limitations: they either fine-tune the entire parameters in PLMs, which is time-consuming and disregards the expressiveness of PLMs, or ignore the reintroducing biases from downstream tasks when applying debiased models to them. Hence, we propose a two-stage pipeline to mitigate biases from both internal and downstream contexts while preserving expressiveness in language models. Specifically, for the debiasing procedure, we resort to continuous prefix-tuning, not fully fine-tuning the PLM, in which we design a debiasing term for optimization and an alignment term to keep words’ relative distances and ensure the model's expressiveness. For downstream tasks, we perform causal intervention across different demographic groups for invariant predictions. Results on three GLUE tasks show our method alleviates biases from internal and downstream contexts, while keeping PLM expressiveness intact.",
-    "full_text": "Biases Mitigation and Expressiveness Preservation in Language Models: A\nComprehensive Pipeline (Student Abstract)\nLiu Yu, Ludie Guo, Ping Kuang\n*\n, Fan Zhou\nUniversity of Electronic Science and Technology of China, Chengdu, Sichuan 610054, China\nliu.yu@std.uestc.edu.cn, 202222090414@std.uestc.edu.cn, kuangping@uestc.edu.cn, fan.zhou@uestc.edu.cn\nAbstract\nPre-trained language models (PLMs) have greatly trans-\nformed various downstream tasks, yet frequently display so-\ncial biases from training data, raising fairness concerns. Re-\ncent efforts to debias PLMs come with limitations: they ei-\nther fine-tune the entire parameters in PLMs, which is time-\nconsuming and disregards the expressiveness of PLMs, or ig-\nnore the reintroducing biases from downstream tasks when\napplying debiased models to them. Hence, we propose a two-\nstage pipeline to mitigate biases from both internal and down-\nstream contexts while preserving expressiveness in language\nmodels. Specifically, for the debiasing procedure, we resort\nto continuous prefix-tuning, not fully fine-tuning the PLM,\nin which we design a debiasing term for optimization and an\nalignment term to keep words’ relative distances and ensure\nthe model’s expressiveness. For downstream tasks, we per-\nform causal intervention across different demographic groups\nfor invariant predictions. Results on three GLUE tasks show\nour method alleviates biases from internal and downstream\ncontexts, while keeping PLM expressiveness intact.\nIntroduction\nPre-trained Language Models (PLMs) excel in diverse nat-\nural language tasks due to their training on extensive data.\nHowever, prior studies have revealed that PLMs inadver-\ntently encode and propagate social biases from their un-\nfiltered pre-training data. Take gender bias as an example:\nthe PLM is more inclined towards associating male (fe-\nmale) attributes with programmers (nurses). Several solu-\ntions for mitigating the social biases have been proposed,\nincluding: (1) Post-hoc-based method add a post-training\nstep to these sentence representations before applied to\ndownstream tasks, including removing the estimated gender-\ndirection subspace from sentence representation (Liang et al.\n2020), or use pre-defined word tuples combine specific tech-\nniques to debias text encoder for a fair sentence represen-\ntation (Cheng et al. 2021). (2) Fine-tuning-based models\nuse specific loss terms to guide a PLM to remove biases,\nincluding distribution alignment loss for debiasing embed-\nding space (Guo, Yang, and Abbasi 2022); orthogonal loss\naims to promote irrelevance between stereotyped words and\ngender-specific words (Kaneko and Bollegala 2021), etc.\n*Corresponding author.\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nCoLA\n…\nSST-2\nCoLA\n…\nSST-2\nTrainable prefix 𝜃𝜃𝑝𝑝 Frozen parameters\nE[CLS] E[The] E[pilot] E[is] E[calm] E[SEP]E[.]\n[CLS] The pilot is calm [SEP].\nStage 1: Internal debiasing.\nTarget lists\n Attrribute lists\nIntervention\nCausal invariant learning\n…\nPrefix-tuned LM …\n…\n… …\nStage 2: Downstream debiasing.\nFigure 1: Our comprehensive debiasing pipeline.\nCurrent debiasing methods for PLMs have shown promise\nbut grapple with notable challenges: (1) demanding time-\nconsuming to fine-tune entire parameters in PLMs; (2) dis-\nregarding the expressiveness of PLMs, which could po-\ntentially disrupt PLM’s computational structure and under-\nmine the benefits of pre-training; (3) reintroducing biases\nfrom downstream tasks into PLMs when applying debiased\nmodels to those tasks. Hence, we present a new two-stage\npipeline that aims to simultaneously preserve the PLMs’\nexpressiveness and mitigate biases from both internal and\ndownstream contexts. As shown in Figure 1, in first stage,\nwe keep PLM’s parameter frozen, and only train the contin-\nuous prefix to reduce the magnitude of trainable parameters,\ntowards mitigating internal bias and meanwhile preserving\nexpressiveness. In second stage, we perform causal inter-\nventions on different demographic groups to eliminate the\nbiases from downstream contexts.\nMethod\nLet Wn and Wai denote the pre-defined neutral and at-\ntribute words tuples, where i = 1 , . . . , ddenotes the in-\ndex of attributes types (e.g., d = 2 in binary gender case);\nwe scrape natural sentences (i.e. Sn and Sai) from News-\nCommentary v15 corpora containing at least one word in\nWn or Wai for covering the diversity of demographic\ngroups that reflects better with the real world. A fair PLM\nshould offer equal attention to all groups without discrimi-\nnation. To assess a model’s perspective on various groups,\nwe first extract embeddings for neutral words en and each\nstereotypical group eai:\nen = MΘ (Sn) , eai = MΘ (Sai)\nwhere en = [ e1\nn, e2\nn, . . .], eai = [ e1\nai, e2\nai, . . .] denote\nthe neutral and attribute words embedding matrix extracted\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23701\nfrom the associated neutral and attribute sentences, respec-\ntively, and Θ denotes the original parameters from a PLM\nM. Then, we proceed with our two-stage debiasing pipeline.\n• Debiasing the PLM: We seek to mitigate internal bi-\nases by minimizing the Wasserstein distance between pair-\nwise attribute words and neutral words, i.e., effectively push-\ning pairwise attribute words closer to neutral word cluster:\nℓin bias =\nX\ni,j∈{1,...,d},i<j\n\b\nDwass\n\u0000\nPai∥Paj\n\u0001\t\nwhere Pai represents the distance from Eai = Aver (eai),\nwhich the average of attribute eai to all neutral words en.\nPrior studies have shown that debiasing can potentially\ndamage the model’s expressive ability. To mitigate this im-\npact on PLM and preserve its benefits obtained from pre-\ntraining, we devise a KL divergence term to keep PLM’s pa-\nrameters unchanged before & after the debiasing procedure:\nDKL(MΘ(S)∥M′\nΘ(S))\n=\n∥V ∥X\ni=1\n∥V ∥X\nj=1\nMΘ(S)ij log2\n\u0012MΘ(S)ij\nM′\nΘ(S)ij\n\u0013\nwhere V is the vocabulary size, and MΘ(S)ij is a proba-\nbility distribution matrix obtained from M that quantifies\nthe degree to which the word wi’s information can be re-\nstored from the word wj. M′\nΘ is short for Mθp∪Θ as the\ndebiased model. ℓre measures the differential between the\noriginal model’s and the debiased model’s hidden states.\nIn practice, instead of fine-tuning the entire PLM, we pro-\nvide a set of continuous trainable prefixes θp before the lan-\nguage model’s parameters as extra hints for optimization.\nThe whole prefix-tuning loss for debiasing is as follows:\nmin Lp = ℓin bias + DKL\n• Fine-tuning downstream tasks: When applied to\ndownstream tasks, existing methods ignore new bias reintro-\nduced into PLM, which neutralizes the impact of above de-\nbiasing. Hence, we propose a casual-inspired d-intervention\non original sentence Xo from downstream stereotype\ngroups, so the augmented datasets can be obtained:\nXa = Xo ∪ Xc,\nwhere Xc denotes counterfactual sentences via performing\nattribute word counterfactual augmentation. The risk under\nthe n-interventional distribution is:\nR(M(Xa), Y| do(N = n)) = EC=mC(x),N=nl(˜y, y),\nexcept for task prediction loss (i.e., Lt), the PLM is required\nto predict the same results onXo and Xc, which have equiv-\nalent semantics but different attribute words:\nmin L = Lt + En(R) + Varn(R),\nExperiment\nFor the gender bias evaluation, we report three stereo-\ntype scores on SEAT (6, 7, 8), Stereotype Score (SS), and\nCrowS-Pairs. For the expressiveness of PLM, we evaluate\nOrig. Context-Debias Ours\nC6 0.121 0.378 0.023\nC7 0.253 -0.091 0.166\nC8 -0.331 -0.038 0.007\nLMS 90.441 84.420 90.019\nSS 64.300 59.657 61.028\nCrowS-Pairs 60.34 43.57 53.32\nAcc. (SST-2) 0.924 0.927 0.933\nAcc. (RTE) 0.527 0.487 0.560\nMcc. (CoLA) 0.588 0 0.633\nTable 1: Evaluation results of debiasing.\n(a) Context-Debias\n (b) Ours\nFigure 2: Visualization of t-SNE plots.\nit by Language Modeling Score (LMS), and also visual-\nize t-SNE in Figure 1 to explore the PLM’s expressive-\nness on different methods. We evaluate our pipeline on three\nGLUE tasks, including SST-2, RTE and CoLA, based on\nBERT-LARGE-UNCASED (denoted as Orig.).\nAs shown in Table 1, our pipeline performs better in bias\nmitigation and downstream tasks than baselines. Moreover,\ncompared to Context-Debias (84.4), the LMS of our pipeline\n(90.0) remains merely unchanged to Orig. (90.4), and\nfrom Figure 1, it maintains words’ relative distances, while\nsimultaneously pulling pairwise attribute words closer, indi-\ncating its excellent expressiveness ability.\nAcknowledgments\nThis work was supported in part by Key R&D Projects\nof Sichuan Provincial Science and Technology Plan (Grant\nNo. 2023YFG0114 and 2023YFG0022), and Chengdu Key\nR&D Support Plan (Grant No. 2021YF0800019GX).\nReferences\nCheng, P.; Hao, W.; Yuan, S.; Si, S.; and Carin, L. 2021.\nFairFil: Contrastive Neural Debiasing Method for Pretrained\nText Encoders. In ICLR.\nGuo, Y .; Yang, Y .; and Abbasi, A. 2022. Auto-Debias: De-\nbiasing Masked Language Models with Automated Biased\nPrompts. In ACL, 1012–1023.\nKaneko, M.; and Bollegala, D. 2021. Debiasing pre-trained\ncontextualised embeddings. In EACL.\nLiang, P. P.; Li, I. M.; Zheng, E.; Lim, Y . C.; Salakhutdinov,\nR.; and Morency, L.-P. 2020. Towards Debiasing Sentence\nRepresentations. In ACL, 5502–5515.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23702"
+  "title": "Biases Mitigation and Expressiveness Preservation in Language Models: A Comprehensive Pipeline (Student Abstract)",
+  "url": "https://openalex.org/W4393146055",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2038149722",
+      "name": "Liu Yu",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5108911410",
+      "name": "Ludie Guo",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2000146981",
+      "name": "Ping Kuang",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2114723932",
+      "name": "Fan Zhou",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2038149722",
+      "name": "Liu Yu",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5108911410",
+      "name": "Ludie Guo",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2000146981",
+      "name": "Ping Kuang",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2114723932",
+      "name": "Fan Zhou",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3131157458",
+    "https://openalex.org/W4285192297",
+    "https://openalex.org/W3123930738",
+    "https://openalex.org/W6779962350",
+    "https://openalex.org/W3035591180",
+    "https://openalex.org/W3155655882"
+  ],
+  "abstract": "Pre-trained language models (PLMs) have greatly transformed various downstream tasks, yet frequently display social biases from training data, raising fairness concerns. Recent efforts to debias PLMs come with limitations: they either fine-tune the entire parameters in PLMs, which is time-consuming and disregards the expressiveness of PLMs, or ignore the reintroducing biases from downstream tasks when applying debiased models to them. Hence, we propose a two-stage pipeline to mitigate biases from both internal and downstream contexts while preserving expressiveness in language models. Specifically, for the debiasing procedure, we resort to continuous prefix-tuning, not fully fine-tuning the PLM, in which we design a debiasing term for optimization and an alignment term to keep words’ relative distances and ensure the model's expressiveness. For downstream tasks, we perform causal intervention across different demographic groups for invariant predictions. Results on three GLUE tasks show our method alleviates biases from internal and downstream contexts, while keeping PLM expressiveness intact.",
+  "full_text": "Biases Mitigation and Expressiveness Preservation in Language Models: A\nComprehensive Pipeline (Student Abstract)\nLiu Yu, Ludie Guo, Ping Kuang\n*\n, Fan Zhou\nUniversity of Electronic Science and Technology of China, Chengdu, Sichuan 610054, China\nliu.yu@std.uestc.edu.cn, 202222090414@std.uestc.edu.cn, kuangping@uestc.edu.cn, fan.zhou@uestc.edu.cn\nAbstract\nPre-trained language models (PLMs) have greatly trans-\nformed various downstream tasks, yet frequently display so-\ncial biases from training data, raising fairness concerns. Re-\ncent efforts to debias PLMs come with limitations: they ei-\nther fine-tune the entire parameters in PLMs, which is time-\nconsuming and disregards the expressiveness of PLMs, or ig-\nnore the reintroducing biases from downstream tasks when\napplying debiased models to them. Hence, we propose a two-\nstage pipeline to mitigate biases from both internal and down-\nstream contexts while preserving expressiveness in language\nmodels. Specifically, for the debiasing procedure, we resort\nto continuous prefix-tuning, not fully fine-tuning the PLM,\nin which we design a debiasing term for optimization and an\nalignment term to keep words’ relative distances and ensure\nthe model’s expressiveness. For downstream tasks, we per-\nform causal intervention across different demographic groups\nfor invariant predictions. Results on three GLUE tasks show\nour method alleviates biases from internal and downstream\ncontexts, while keeping PLM expressiveness intact.\nIntroduction\nPre-trained Language Models (PLMs) excel in diverse nat-\nural language tasks due to their training on extensive data.\nHowever, prior studies have revealed that PLMs inadver-\ntently encode and propagate social biases from their un-\nfiltered pre-training data. Take gender bias as an example:\nthe PLM is more inclined towards associating male (fe-\nmale) attributes with programmers (nurses). Several solu-\ntions for mitigating the social biases have been proposed,\nincluding: (1) Post-hoc-based method add a post-training\nstep to these sentence representations before applied to\ndownstream tasks, including removing the estimated gender-\ndirection subspace from sentence representation (Liang et al.\n2020), or use pre-defined word tuples combine specific tech-\nniques to debias text encoder for a fair sentence represen-\ntation (Cheng et al. 2021). (2) Fine-tuning-based models\nuse specific loss terms to guide a PLM to remove biases,\nincluding distribution alignment loss for debiasing embed-\nding space (Guo, Yang, and Abbasi 2022); orthogonal loss\naims to promote irrelevance between stereotyped words and\ngender-specific words (Kaneko and Bollegala 2021), etc.\n*Corresponding author.\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nCoLA\n…\nSST-2\nCoLA\n…\nSST-2\nTrainable prefix 𝜃𝜃𝑝𝑝 Frozen parameters\nE[CLS] E[The] E[pilot] E[is] E[calm] E[SEP]E[.]\n[CLS] The pilot is calm [SEP].\nStage 1: Internal debiasing.\nTarget lists\n Attrribute lists\nIntervention\nCausal invariant learning\n…\nPrefix-tuned LM …\n…\n… …\nStage 2: Downstream debiasing.\nFigure 1: Our comprehensive debiasing pipeline.\nCurrent debiasing methods for PLMs have shown promise\nbut grapple with notable challenges: (1) demanding time-\nconsuming to fine-tune entire parameters in PLMs; (2) dis-\nregarding the expressiveness of PLMs, which could po-\ntentially disrupt PLM’s computational structure and under-\nmine the benefits of pre-training; (3) reintroducing biases\nfrom downstream tasks into PLMs when applying debiased\nmodels to those tasks. Hence, we present a new two-stage\npipeline that aims to simultaneously preserve the PLMs’\nexpressiveness and mitigate biases from both internal and\ndownstream contexts. As shown in Figure 1, in first stage,\nwe keep PLM’s parameter frozen, and only train the contin-\nuous prefix to reduce the magnitude of trainable parameters,\ntowards mitigating internal bias and meanwhile preserving\nexpressiveness. In second stage, we perform causal inter-\nventions on different demographic groups to eliminate the\nbiases from downstream contexts.\nMethod\nLet Wn and Wai denote the pre-defined neutral and at-\ntribute words tuples, where i = 1 , . . . , ddenotes the in-\ndex of attributes types (e.g., d = 2 in binary gender case);\nwe scrape natural sentences (i.e. Sn and Sai) from News-\nCommentary v15 corpora containing at least one word in\nWn or Wai for covering the diversity of demographic\ngroups that reflects better with the real world. A fair PLM\nshould offer equal attention to all groups without discrimi-\nnation. To assess a model’s perspective on various groups,\nwe first extract embeddings for neutral words en and each\nstereotypical group eai:\nen = MΘ (Sn) , eai = MΘ (Sai)\nwhere en = [ e1\nn, e2\nn, . . .], eai = [ e1\nai, e2\nai, . . .] denote\nthe neutral and attribute words embedding matrix extracted\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23701\nfrom the associated neutral and attribute sentences, respec-\ntively, and Θ denotes the original parameters from a PLM\nM. Then, we proceed with our two-stage debiasing pipeline.\n• Debiasing the PLM: We seek to mitigate internal bi-\nases by minimizing the Wasserstein distance between pair-\nwise attribute words and neutral words, i.e., effectively push-\ning pairwise attribute words closer to neutral word cluster:\nℓin bias =\nX\ni,j∈{1,...,d},i<j\n\b\nDwass\n\u0000\nPai∥Paj\n\u0001\t\nwhere Pai represents the distance from Eai = Aver (eai),\nwhich the average of attribute eai to all neutral words en.\nPrior studies have shown that debiasing can potentially\ndamage the model’s expressive ability. To mitigate this im-\npact on PLM and preserve its benefits obtained from pre-\ntraining, we devise a KL divergence term to keep PLM’s pa-\nrameters unchanged before & after the debiasing procedure:\nDKL(MΘ(S)∥M′\nΘ(S))\n=\n∥V ∥X\ni=1\n∥V ∥X\nj=1\nMΘ(S)ij log2\n\u0012MΘ(S)ij\nM′\nΘ(S)ij\n\u0013\nwhere V is the vocabulary size, and MΘ(S)ij is a proba-\nbility distribution matrix obtained from M that quantifies\nthe degree to which the word wi’s information can be re-\nstored from the word wj. M′\nΘ is short for Mθp∪Θ as the\ndebiased model. ℓre measures the differential between the\noriginal model’s and the debiased model’s hidden states.\nIn practice, instead of fine-tuning the entire PLM, we pro-\nvide a set of continuous trainable prefixes θp before the lan-\nguage model’s parameters as extra hints for optimization.\nThe whole prefix-tuning loss for debiasing is as follows:\nmin Lp = ℓin bias + DKL\n• Fine-tuning downstream tasks: When applied to\ndownstream tasks, existing methods ignore new bias reintro-\nduced into PLM, which neutralizes the impact of above de-\nbiasing. Hence, we propose a casual-inspired d-intervention\non original sentence Xo from downstream stereotype\ngroups, so the augmented datasets can be obtained:\nXa = Xo ∪ Xc,\nwhere Xc denotes counterfactual sentences via performing\nattribute word counterfactual augmentation. The risk under\nthe n-interventional distribution is:\nR(M(Xa), Y| do(N = n)) = EC=mC(x),N=nl(˜y, y),\nexcept for task prediction loss (i.e., Lt), the PLM is required\nto predict the same results onXo and Xc, which have equiv-\nalent semantics but different attribute words:\nmin L = Lt + En(R) + Varn(R),\nExperiment\nFor the gender bias evaluation, we report three stereo-\ntype scores on SEAT (6, 7, 8), Stereotype Score (SS), and\nCrowS-Pairs. For the expressiveness of PLM, we evaluate\nOrig. Context-Debias Ours\nC6 0.121 0.378 0.023\nC7 0.253 -0.091 0.166\nC8 -0.331 -0.038 0.007\nLMS 90.441 84.420 90.019\nSS 64.300 59.657 61.028\nCrowS-Pairs 60.34 43.57 53.32\nAcc. (SST-2) 0.924 0.927 0.933\nAcc. (RTE) 0.527 0.487 0.560\nMcc. (CoLA) 0.588 0 0.633\nTable 1: Evaluation results of debiasing.\n(a) Context-Debias\n (b) Ours\nFigure 2: Visualization of t-SNE plots.\nit by Language Modeling Score (LMS), and also visual-\nize t-SNE in Figure 1 to explore the PLM’s expressive-\nness on different methods. We evaluate our pipeline on three\nGLUE tasks, including SST-2, RTE and CoLA, based on\nBERT-LARGE-UNCASED (denoted as Orig.).\nAs shown in Table 1, our pipeline performs better in bias\nmitigation and downstream tasks than baselines. Moreover,\ncompared to Context-Debias (84.4), the LMS of our pipeline\n(90.0) remains merely unchanged to Orig. (90.4), and\nfrom Figure 1, it maintains words’ relative distances, while\nsimultaneously pulling pairwise attribute words closer, indi-\ncating its excellent expressiveness ability.\nAcknowledgments\nThis work was supported in part by Key R&D Projects\nof Sichuan Provincial Science and Technology Plan (Grant\nNo. 2023YFG0114 and 2023YFG0022), and Chengdu Key\nR&D Support Plan (Grant No. 2021YF0800019GX).\nReferences\nCheng, P.; Hao, W.; Yuan, S.; Si, S.; and Carin, L. 2021.\nFairFil: Contrastive Neural Debiasing Method for Pretrained\nText Encoders. In ICLR.\nGuo, Y .; Yang, Y .; and Abbasi, A. 2022. Auto-Debias: De-\nbiasing Masked Language Models with Automated Biased\nPrompts. In ACL, 1012–1023.\nKaneko, M.; and Bollegala, D. 2021. Debiasing pre-trained\ncontextualised embeddings. In EACL.\nLiang, P. P.; Li, I. M.; Zheng, E.; Lim, Y . C.; Salakhutdinov,\nR.; and Morency, L.-P. 2020. Towards Debiasing Sentence\nRepresentations. In ACL, 5502–5515.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23702",
+  "topic": "Pipeline (software)",
+  "concepts": [
+    {
+      "name": "Pipeline (software)",
+      "score": 0.7321600317955017
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5916605591773987
+    },
+    {
+      "name": "Programming language",
+      "score": 0.3625192940235138
+    }
+  ]
 }

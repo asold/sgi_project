@@ -1,76 +1,135 @@
 {
-    "title": "Assessment of Word-Level Neural Language Models for Sentence Completion",
-    "url": "https://openalex.org/W3008764429",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100800741",
-            "name": "Heewoong Park",
-            "affiliations": [
-                "Seoul National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117683655",
-            "name": "Jonghun Park",
-            "affiliations": [
-                "Seoul National University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6632455782",
-        "https://openalex.org/W2962809918",
-        "https://openalex.org/W2546879793",
-        "https://openalex.org/W2510248383",
-        "https://openalex.org/W2507974895",
-        "https://openalex.org/W2963077125",
-        "https://openalex.org/W2907007161",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2983049545",
-        "https://openalex.org/W2516196286",
-        "https://openalex.org/W3002072934",
-        "https://openalex.org/W2970321743",
-        "https://openalex.org/W2739677784",
-        "https://openalex.org/W2889048825",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W6767737316",
-        "https://openalex.org/W2952638691",
-        "https://openalex.org/W2970854433",
-        "https://openalex.org/W3034469191",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W2064487597",
-        "https://openalex.org/W2962935015",
-        "https://openalex.org/W6635469476",
-        "https://openalex.org/W6996569244",
-        "https://openalex.org/W2611669587",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2012976256",
-        "https://openalex.org/W2971277088",
-        "https://openalex.org/W2970529259",
-        "https://openalex.org/W6759579507",
-        "https://openalex.org/W3035390927",
-        "https://openalex.org/W2805206884",
-        "https://openalex.org/W2512457506",
-        "https://openalex.org/W2949615363",
-        "https://openalex.org/W2980282514",
-        "https://openalex.org/W2982180741",
-        "https://openalex.org/W2767561350",
-        "https://openalex.org/W2525778437",
-        "https://openalex.org/W2963748792",
-        "https://openalex.org/W2964267515",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2259472270",
-        "https://openalex.org/W2965110896",
-        "https://openalex.org/W2964303773",
-        "https://openalex.org/W3104486441",
-        "https://openalex.org/W1599016936",
-        "https://openalex.org/W2914120296",
-        "https://openalex.org/W2184587602",
-        "https://openalex.org/W1591801644"
-    ],
-    "abstract": "The task of sentence completion, which aims to infer the missing text of a given sentence, was carried out to assess the reading comprehension level of machines as well as humans. In this work, we conducted a comprehensive study of various approaches for the sentence completion based on neural language models, which have been advanced in recent years. First, we revisited the recurrent neural network language model (RNN LM), achieving highly competitive results with an appropriate network structure and hyper-parameters. This paper presents a bidirectional version of RNN LM, which surpassed the previous best results on Microsoft Research (MSR) Sentence Completion Challenge and the Scholastic Aptitude Test (SAT) sentence completion questions. In parallel with directly applying RNN LM to sentence completion, we also employed a supervised learning framework that fine-tunes a large pre-trained transformer-based LM with a few sentence-completion examples. By fine-tuning a pre-trained BERT model, this work established state-of-the-art results on the MSR and SAT sets. Furthermore, we performed similar experimentation on newly collected cloze-style questions in the Korean language. The experimental results reveal that simply applying the multilingual BERT models for the Korean dataset was not satisfactory, which leaves room for further research.",
-    "full_text": null
+  "title": "Assessment of Word-Level Neural Language Models for Sentence Completion",
+  "url": "https://openalex.org/W3008764429",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100800741",
+      "name": "Heewoong Park",
+      "affiliations": [
+        "Seoul National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117683655",
+      "name": "Jonghun Park",
+      "affiliations": [
+        "Seoul National University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6632455782",
+    "https://openalex.org/W2962809918",
+    "https://openalex.org/W2546879793",
+    "https://openalex.org/W2510248383",
+    "https://openalex.org/W2507974895",
+    "https://openalex.org/W2963077125",
+    "https://openalex.org/W2907007161",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2983049545",
+    "https://openalex.org/W2516196286",
+    "https://openalex.org/W3002072934",
+    "https://openalex.org/W2970321743",
+    "https://openalex.org/W2739677784",
+    "https://openalex.org/W2889048825",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W6767737316",
+    "https://openalex.org/W2952638691",
+    "https://openalex.org/W2970854433",
+    "https://openalex.org/W3034469191",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W2064487597",
+    "https://openalex.org/W2962935015",
+    "https://openalex.org/W6635469476",
+    "https://openalex.org/W6996569244",
+    "https://openalex.org/W2611669587",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2012976256",
+    "https://openalex.org/W2971277088",
+    "https://openalex.org/W2970529259",
+    "https://openalex.org/W6759579507",
+    "https://openalex.org/W3035390927",
+    "https://openalex.org/W2805206884",
+    "https://openalex.org/W2512457506",
+    "https://openalex.org/W2949615363",
+    "https://openalex.org/W2980282514",
+    "https://openalex.org/W2982180741",
+    "https://openalex.org/W2767561350",
+    "https://openalex.org/W2525778437",
+    "https://openalex.org/W2963748792",
+    "https://openalex.org/W2964267515",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2259472270",
+    "https://openalex.org/W2965110896",
+    "https://openalex.org/W2964303773",
+    "https://openalex.org/W3104486441",
+    "https://openalex.org/W1599016936",
+    "https://openalex.org/W2914120296",
+    "https://openalex.org/W2184587602",
+    "https://openalex.org/W1591801644"
+  ],
+  "abstract": "The task of sentence completion, which aims to infer the missing text of a given sentence, was carried out to assess the reading comprehension level of machines as well as humans. In this work, we conducted a comprehensive study of various approaches for the sentence completion based on neural language models, which have been advanced in recent years. First, we revisited the recurrent neural network language model (RNN LM), achieving highly competitive results with an appropriate network structure and hyper-parameters. This paper presents a bidirectional version of RNN LM, which surpassed the previous best results on Microsoft Research (MSR) Sentence Completion Challenge and the Scholastic Aptitude Test (SAT) sentence completion questions. In parallel with directly applying RNN LM to sentence completion, we also employed a supervised learning framework that fine-tunes a large pre-trained transformer-based LM with a few sentence-completion examples. By fine-tuning a pre-trained BERT model, this work established state-of-the-art results on the MSR and SAT sets. Furthermore, we performed similar experimentation on newly collected cloze-style questions in the Korean language. The experimental results reveal that simply applying the multilingual BERT models for the Korean dataset was not satisfactory, which leaves room for further research.",
+  "full_text": null,
+  "topic": "Sentence",
+  "concepts": [
+    {
+      "name": "Sentence",
+      "score": 0.771569013595581
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7703468799591064
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.6535323262214661
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6165888905525208
+    },
+    {
+      "name": "Sentence completion tests",
+      "score": 0.6041699647903442
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6003391742706299
+    },
+    {
+      "name": "Language model",
+      "score": 0.5241541862487793
+    },
+    {
+      "name": "Transformer",
+      "score": 0.46451181173324585
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.42008328437805176
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.1630469560623169
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

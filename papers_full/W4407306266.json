@@ -1,103 +1,114 @@
 {
-    "title": "PH-LLM: Public Health Large Language Models for Infoveillance",
-    "url": "https://openalex.org/W4407306266",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2118442696",
-            "name": "Xinyu Zhou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100458012",
-            "name": "Jiaqi Zhou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2123206704",
-            "name": "Chiyu Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2126157100",
-            "name": "Qianqian Xie",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2533475035",
-            "name": "Kaize Ding",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2884061500",
-            "name": "Chengsheng Mao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2573605612",
-            "name": "Liu Yuntian",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2133897920",
-            "name": "Zhiyuan Cao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4201567695",
-            "name": "Huangrui Chu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1983188002",
-            "name": "Xi Chen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105258892",
-            "name": "Hua Xu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2050821709",
-            "name": "Heidi J. Larson",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100954885",
-            "name": "Yuan Luo",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1984926150",
-        "https://openalex.org/W3193988084",
-        "https://openalex.org/W4390350917",
-        "https://openalex.org/W4392182110",
-        "https://openalex.org/W3131454842",
-        "https://openalex.org/W3120829418",
-        "https://openalex.org/W4391558736",
-        "https://openalex.org/W4401489026",
-        "https://openalex.org/W4393134187",
-        "https://openalex.org/W4394934956",
-        "https://openalex.org/W4387075354",
-        "https://openalex.org/W4385571124",
-        "https://openalex.org/W3094217983",
-        "https://openalex.org/W6853251322",
-        "https://openalex.org/W4388406624",
-        "https://openalex.org/W4391988338",
-        "https://openalex.org/W4402667093",
-        "https://openalex.org/W3010571899",
-        "https://openalex.org/W4284711125",
-        "https://openalex.org/W4324148013",
-        "https://openalex.org/W4206500717",
-        "https://openalex.org/W4205216562",
-        "https://openalex.org/W3197357996",
-        "https://openalex.org/W3179199540",
-        "https://openalex.org/W2914507741",
-        "https://openalex.org/W3131631110",
-        "https://openalex.org/W3121430869"
-    ],
-    "abstract": "Summary Background The effectiveness of public health intervention, such as vaccination and social distancing, relies on public support and adherence. Social media has emerged as a critical platform for understanding and fostering public engagement with health interventions. However, the lack of real-time surveillance on public health issues leveraging social media data, particularly during public health emergencies, leads to delayed responses and suboptimal policy adjustments. Methods To address this gap, we developed PH-LLM (Public Health Large Language Models for Infoveillance)—a novel suite of large language models (LLMs) specifically designed for real-time public health monitoring. We curated a multilingual training corpus comprising 593,100 instruction-output pairs from 36 datasets, covering 96 public health infoveillance tasks and 6 question-answering datasets based on social media data. PH-LLM was trained using quantized low-rank adapters (QLoRA) and LoRA plus, leveraging Qwen 2.5, which supports 29 languages. The PH-LLM suite includes models of six different sizes: 0.5B, 1.5B, 3B, 7B, 14B, and 32B. To evaluate PH-LLM, we constructed a benchmark comprising 19 English and 20 multilingual public health tasks using 10 social media datasets (totaling 52,158 unseen instruction-output pairs). We compared PH-LLM’s performance against leading open-source models, including Llama-3.1-70B-Instruct, Mistral-Large-Instruct-2407, and Qwen2.5-72B-Instruct, as well as proprietary models such as GPT-4o. Findings Across 19 English and 20 multilingual evaluation tasks, PH-LLM consistently outperformed baseline models of similar and larger sizes, including instruction-tuned versions of Qwen2.5, Llama3.1/3.2, Mistral, and bloomz, with PH-LLM-32B achieving the state-of-the-art results. Notably, PH-LLM-14B and PH-LLM-32B surpassed Qwen2.5-72B-Instruct, Llama-3.1-70B-Instruct, Mistral-Large-Instruct-2407, and GPT-4o in both English tasks (&gt;=56.0% vs. &lt;= 52.3%) and multilingual tasks (&gt;=59.6% vs. &lt;= 59.1%). The only exception was PH-LLM-7B, with slightly suboptimal average performance (48.7%) in English tasks compared to Qwen2.5-7B-Instruct (50.7%), although it outperformed GPT-4o mini (46.9%), Mistral-Small-Instruct-2409 (45.8%), Llama-3.1-8B-Instruct (45.4%), and bloomz-7b1-mt (27.9%). Interpretation PH-LLM represents a significant advancement in real-time public health infoveillance, offering state-of-the-art multilingual capabilities and cost-effective solutions for monitoring public sentiment on health issues. By equipping global, national, and local public health agencies with timely insights from social media data, PH-LLM has the potential to enhance rapid response strategies, improve policy-making, and strengthen public health communication during crises and beyond. Funding This study is supported in part by NIH grants R01LM013337 (YL).",
-    "full_text": null
+  "title": "PH-LLM: Public Health Large Language Models for Infoveillance",
+  "url": "https://openalex.org/W4407306266",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2118442696",
+      "name": "Xinyu Zhou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100458012",
+      "name": "Jiaqi Zhou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2123206704",
+      "name": "Chiyu Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2126157100",
+      "name": "Qianqian Xie",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2533475035",
+      "name": "Kaize Ding",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2884061500",
+      "name": "Chengsheng Mao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2573605612",
+      "name": "Liu Yuntian",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2133897920",
+      "name": "Zhiyuan Cao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4201567695",
+      "name": "Huangrui Chu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1983188002",
+      "name": "Xi Chen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105258892",
+      "name": "Hua Xu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2050821709",
+      "name": "Heidi J. Larson",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100954885",
+      "name": "Yuan Luo",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1984926150",
+    "https://openalex.org/W3193988084",
+    "https://openalex.org/W4390350917",
+    "https://openalex.org/W4392182110",
+    "https://openalex.org/W3131454842",
+    "https://openalex.org/W3120829418",
+    "https://openalex.org/W4391558736",
+    "https://openalex.org/W4401489026",
+    "https://openalex.org/W4393134187",
+    "https://openalex.org/W4394934956",
+    "https://openalex.org/W4387075354",
+    "https://openalex.org/W4385571124",
+    "https://openalex.org/W3094217983",
+    "https://openalex.org/W6853251322",
+    "https://openalex.org/W4388406624",
+    "https://openalex.org/W4391988338",
+    "https://openalex.org/W4402667093",
+    "https://openalex.org/W3010571899",
+    "https://openalex.org/W4284711125",
+    "https://openalex.org/W4324148013",
+    "https://openalex.org/W4206500717",
+    "https://openalex.org/W4205216562",
+    "https://openalex.org/W3197357996",
+    "https://openalex.org/W3179199540",
+    "https://openalex.org/W2914507741",
+    "https://openalex.org/W3131631110",
+    "https://openalex.org/W3121430869"
+  ],
+  "abstract": "Summary Background The effectiveness of public health intervention, such as vaccination and social distancing, relies on public support and adherence. Social media has emerged as a critical platform for understanding and fostering public engagement with health interventions. However, the lack of real-time surveillance on public health issues leveraging social media data, particularly during public health emergencies, leads to delayed responses and suboptimal policy adjustments. Methods To address this gap, we developed PH-LLM (Public Health Large Language Models for Infoveillance)—a novel suite of large language models (LLMs) specifically designed for real-time public health monitoring. We curated a multilingual training corpus comprising 593,100 instruction-output pairs from 36 datasets, covering 96 public health infoveillance tasks and 6 question-answering datasets based on social media data. PH-LLM was trained using quantized low-rank adapters (QLoRA) and LoRA plus, leveraging Qwen 2.5, which supports 29 languages. The PH-LLM suite includes models of six different sizes: 0.5B, 1.5B, 3B, 7B, 14B, and 32B. To evaluate PH-LLM, we constructed a benchmark comprising 19 English and 20 multilingual public health tasks using 10 social media datasets (totaling 52,158 unseen instruction-output pairs). We compared PH-LLM’s performance against leading open-source models, including Llama-3.1-70B-Instruct, Mistral-Large-Instruct-2407, and Qwen2.5-72B-Instruct, as well as proprietary models such as GPT-4o. Findings Across 19 English and 20 multilingual evaluation tasks, PH-LLM consistently outperformed baseline models of similar and larger sizes, including instruction-tuned versions of Qwen2.5, Llama3.1/3.2, Mistral, and bloomz, with PH-LLM-32B achieving the state-of-the-art results. Notably, PH-LLM-14B and PH-LLM-32B surpassed Qwen2.5-72B-Instruct, Llama-3.1-70B-Instruct, Mistral-Large-Instruct-2407, and GPT-4o in both English tasks (&gt;=56.0% vs. &lt;= 52.3%) and multilingual tasks (&gt;=59.6% vs. &lt;= 59.1%). The only exception was PH-LLM-7B, with slightly suboptimal average performance (48.7%) in English tasks compared to Qwen2.5-7B-Instruct (50.7%), although it outperformed GPT-4o mini (46.9%), Mistral-Small-Instruct-2409 (45.8%), Llama-3.1-8B-Instruct (45.4%), and bloomz-7b1-mt (27.9%). Interpretation PH-LLM represents a significant advancement in real-time public health infoveillance, offering state-of-the-art multilingual capabilities and cost-effective solutions for monitoring public sentiment on health issues. By equipping global, national, and local public health agencies with timely insights from social media data, PH-LLM has the potential to enhance rapid response strategies, improve policy-making, and strengthen public health communication during crises and beyond. Funding This study is supported in part by NIH grants R01LM013337 (YL).",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.40416866540908813
+    },
+    {
+      "name": "Business",
+      "score": 0.39212584495544434
+    }
+  ]
 }

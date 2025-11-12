@@ -1,152 +1,179 @@
 {
-    "title": "Learning together: Towards foundation models for machine learning interatomic potentials with meta-learning",
-    "url": "https://openalex.org/W4400734331",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2769214524",
-            "name": "Alice E. A. Allen",
-            "affiliations": [
-                "Los Alamos National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2510408987",
-            "name": "Nicholas Lubbers",
-            "affiliations": [
-                "Los Alamos National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2806742036",
-            "name": "Sakib Matin",
-            "affiliations": [
-                "Los Alamos National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2017991742",
-            "name": "Justin Smith",
-            "affiliations": [
-                "Nvidia (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4208495328",
-            "name": "Richard Messerly",
-            "affiliations": [
-                "Los Alamos National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A673188851",
-            "name": "Sergei Tretiak",
-            "affiliations": [
-                "Center for Integrated Nanotechnologies",
-                "Los Alamos National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109894735",
-            "name": "Kipton Barros",
-            "affiliations": [
-                "Los Alamos National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2769214524",
-            "name": "Alice E. A. Allen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2510408987",
-            "name": "Nicholas Lubbers",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2806742036",
-            "name": "Sakib Matin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2017991742",
-            "name": "Justin Smith",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4208495328",
-            "name": "Richard Messerly",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A673188851",
-            "name": "Sergei Tretiak",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2109894735",
-            "name": "Kipton Barros",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2509907061",
-        "https://openalex.org/W2766856748",
-        "https://openalex.org/W2975965186",
-        "https://openalex.org/W3134756482",
-        "https://openalex.org/W2810294304",
-        "https://openalex.org/W2902452488",
-        "https://openalex.org/W3181257149",
-        "https://openalex.org/W3132956480",
-        "https://openalex.org/W2541404351",
-        "https://openalex.org/W1865667476",
-        "https://openalex.org/W3126613532",
-        "https://openalex.org/W4388500008",
-        "https://openalex.org/W3022256936",
-        "https://openalex.org/W3034806393",
-        "https://openalex.org/W3038008928",
-        "https://openalex.org/W4282053982",
-        "https://openalex.org/W4312119492",
-        "https://openalex.org/W2527189750",
-        "https://openalex.org/W2083415705",
-        "https://openalex.org/W1975997599",
-        "https://openalex.org/W3133931590",
-        "https://openalex.org/W3004981459",
-        "https://openalex.org/W2988055229",
-        "https://openalex.org/W1979046104",
-        "https://openalex.org/W2041189078",
-        "https://openalex.org/W2098614082",
-        "https://openalex.org/W4321085451",
-        "https://openalex.org/W2954088480",
-        "https://openalex.org/W4318958052",
-        "https://openalex.org/W2165698076",
-        "https://openalex.org/W4318613037",
-        "https://openalex.org/W3208707586",
-        "https://openalex.org/W1583837637",
-        "https://openalex.org/W3092053846",
-        "https://openalex.org/W6800751262",
-        "https://openalex.org/W3024939467",
-        "https://openalex.org/W3021480024",
-        "https://openalex.org/W3213998357",
-        "https://openalex.org/W4306313211",
-        "https://openalex.org/W3198659451",
-        "https://openalex.org/W6772452955",
-        "https://openalex.org/W3160793121",
-        "https://openalex.org/W3201025514",
-        "https://openalex.org/W3138705992",
-        "https://openalex.org/W2080635178",
-        "https://openalex.org/W4225405705",
-        "https://openalex.org/W2761704992",
-        "https://openalex.org/W3034310241",
-        "https://openalex.org/W2938625151",
-        "https://openalex.org/W2768213699",
-        "https://openalex.org/W2785813126",
-        "https://openalex.org/W3101643101",
-        "https://openalex.org/W3126732720",
-        "https://openalex.org/W3154934604",
-        "https://openalex.org/W3178108585",
-        "https://openalex.org/W3102400420"
-    ],
-    "abstract": "Abstract The development of machine learning models has led to an abundance of datasets containing quantum mechanical (QM) calculations for molecular and material systems. However, traditional training methods for machine learning models are unable to leverage the plethora of data available as they require that each dataset be generated using the same QM method. Taking machine learning interatomic potentials (MLIPs) as an example, we show that meta-learning techniques, a recent advancement from the machine learning community, can be used to fit multiple levels of QM theory in the same training process. Meta-learning changes the training procedure to learn a representation that can be easily re-trained to new tasks with small amounts of data. We then demonstrate that meta-learning enables simultaneously training to multiple large organic molecule datasets. As a proof of concept, we examine the performance of a MLIP refit to a small drug-like molecule and show that pre-training potentials to multiple levels of theory with meta-learning improves performance. This difference in performance can be seen both in the reduced error and in the improved smoothness of the potential energy surface produced. We therefore show that meta-learning can utilize existing datasets with inconsistent QM levels of theory to produce models that are better at specializing to new datasets. This opens new routes for creating pre-trained, foundation models for interatomic potentials.",
-    "full_text": null
+  "title": "Learning together: Towards foundation models for machine learning interatomic potentials with meta-learning",
+  "url": "https://openalex.org/W4400734331",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2769214524",
+      "name": "Alice E. A. Allen",
+      "affiliations": [
+        "Los Alamos National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2510408987",
+      "name": "Nicholas Lubbers",
+      "affiliations": [
+        "Los Alamos National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2806742036",
+      "name": "Sakib Matin",
+      "affiliations": [
+        "Los Alamos National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2017991742",
+      "name": "Justin Smith",
+      "affiliations": [
+        "Nvidia (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4208495328",
+      "name": "Richard Messerly",
+      "affiliations": [
+        "Los Alamos National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A673188851",
+      "name": "Sergei Tretiak",
+      "affiliations": [
+        "Center for Integrated Nanotechnologies",
+        "Los Alamos National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109894735",
+      "name": "Kipton Barros",
+      "affiliations": [
+        "Los Alamos National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2769214524",
+      "name": "Alice E. A. Allen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2510408987",
+      "name": "Nicholas Lubbers",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2806742036",
+      "name": "Sakib Matin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2017991742",
+      "name": "Justin Smith",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4208495328",
+      "name": "Richard Messerly",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A673188851",
+      "name": "Sergei Tretiak",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2109894735",
+      "name": "Kipton Barros",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2509907061",
+    "https://openalex.org/W2766856748",
+    "https://openalex.org/W2975965186",
+    "https://openalex.org/W3134756482",
+    "https://openalex.org/W2810294304",
+    "https://openalex.org/W2902452488",
+    "https://openalex.org/W3181257149",
+    "https://openalex.org/W3132956480",
+    "https://openalex.org/W2541404351",
+    "https://openalex.org/W1865667476",
+    "https://openalex.org/W3126613532",
+    "https://openalex.org/W4388500008",
+    "https://openalex.org/W3022256936",
+    "https://openalex.org/W3034806393",
+    "https://openalex.org/W3038008928",
+    "https://openalex.org/W4282053982",
+    "https://openalex.org/W4312119492",
+    "https://openalex.org/W2527189750",
+    "https://openalex.org/W2083415705",
+    "https://openalex.org/W1975997599",
+    "https://openalex.org/W3133931590",
+    "https://openalex.org/W3004981459",
+    "https://openalex.org/W2988055229",
+    "https://openalex.org/W1979046104",
+    "https://openalex.org/W2041189078",
+    "https://openalex.org/W2098614082",
+    "https://openalex.org/W4321085451",
+    "https://openalex.org/W2954088480",
+    "https://openalex.org/W4318958052",
+    "https://openalex.org/W2165698076",
+    "https://openalex.org/W4318613037",
+    "https://openalex.org/W3208707586",
+    "https://openalex.org/W1583837637",
+    "https://openalex.org/W3092053846",
+    "https://openalex.org/W6800751262",
+    "https://openalex.org/W3024939467",
+    "https://openalex.org/W3021480024",
+    "https://openalex.org/W3213998357",
+    "https://openalex.org/W4306313211",
+    "https://openalex.org/W3198659451",
+    "https://openalex.org/W6772452955",
+    "https://openalex.org/W3160793121",
+    "https://openalex.org/W3201025514",
+    "https://openalex.org/W3138705992",
+    "https://openalex.org/W2080635178",
+    "https://openalex.org/W4225405705",
+    "https://openalex.org/W2761704992",
+    "https://openalex.org/W3034310241",
+    "https://openalex.org/W2938625151",
+    "https://openalex.org/W2768213699",
+    "https://openalex.org/W2785813126",
+    "https://openalex.org/W3101643101",
+    "https://openalex.org/W3126732720",
+    "https://openalex.org/W3154934604",
+    "https://openalex.org/W3178108585",
+    "https://openalex.org/W3102400420"
+  ],
+  "abstract": "Abstract The development of machine learning models has led to an abundance of datasets containing quantum mechanical (QM) calculations for molecular and material systems. However, traditional training methods for machine learning models are unable to leverage the plethora of data available as they require that each dataset be generated using the same QM method. Taking machine learning interatomic potentials (MLIPs) as an example, we show that meta-learning techniques, a recent advancement from the machine learning community, can be used to fit multiple levels of QM theory in the same training process. Meta-learning changes the training procedure to learn a representation that can be easily re-trained to new tasks with small amounts of data. We then demonstrate that meta-learning enables simultaneously training to multiple large organic molecule datasets. As a proof of concept, we examine the performance of a MLIP refit to a small drug-like molecule and show that pre-training potentials to multiple levels of theory with meta-learning improves performance. This difference in performance can be seen both in the reduced error and in the improved smoothness of the potential energy surface produced. We therefore show that meta-learning can utilize existing datasets with inconsistent QM levels of theory to produce models that are better at specializing to new datasets. This opens new routes for creating pre-trained, foundation models for interatomic potentials.",
+  "full_text": null,
+  "topic": "Machine learning",
+  "concepts": [
+    {
+      "name": "Machine learning",
+      "score": 0.7797703742980957
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7259359359741211
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7013102769851685
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.6991320252418518
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.41229650378227234
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

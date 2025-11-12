@@ -1,85 +1,188 @@
 {
-    "title": "Combining Semantic Matching, Word Embeddings, Transformers, and LLMs for Enhanced Document Ranking: Application in Systematic Reviews",
-    "url": "https://openalex.org/W4402223428",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4207663570",
-            "name": "Goran Mitrov",
-            "affiliations": [
-                "Saints Cyril and Methodius University of Skopje"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5094299392",
-            "name": "Boris Stanoev",
-            "affiliations": [
-                "Saints Cyril and Methodius University of Skopje"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2061384250",
-            "name": "Sonja Gievska",
-            "affiliations": [
-                "Saints Cyril and Methodius University of Skopje"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2064799615",
-            "name": "Georgina Mirceva",
-            "affiliations": [
-                "Saints Cyril and Methodius University of Skopje"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A27817439",
-            "name": "Eftim Zdravevski",
-            "affiliations": [
-                "Saints Cyril and Methodius University of Skopje"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3203912530",
-        "https://openalex.org/W2969341057",
-        "https://openalex.org/W2212762088",
-        "https://openalex.org/W2904102154",
-        "https://openalex.org/W2911142796",
-        "https://openalex.org/W2049691306",
-        "https://openalex.org/W168362576",
-        "https://openalex.org/W4313371821",
-        "https://openalex.org/W3149778443",
-        "https://openalex.org/W4385243496",
-        "https://openalex.org/W4391546061",
-        "https://openalex.org/W4312018506",
-        "https://openalex.org/W4310496878",
-        "https://openalex.org/W2807522649",
-        "https://openalex.org/W2560438049",
-        "https://openalex.org/W2797780449",
-        "https://openalex.org/W2808847453",
-        "https://openalex.org/W3111278950",
-        "https://openalex.org/W3010940523",
-        "https://openalex.org/W3207456925",
-        "https://openalex.org/W4386194145",
-        "https://openalex.org/W6801627261",
-        "https://openalex.org/W2621485502",
-        "https://openalex.org/W2183168769",
-        "https://openalex.org/W3019959937",
-        "https://openalex.org/W4392791588",
-        "https://openalex.org/W4383722515",
-        "https://openalex.org/W4367368990",
-        "https://openalex.org/W2123442489",
-        "https://openalex.org/W2037450062",
-        "https://openalex.org/W2143017621",
-        "https://openalex.org/W1680797894",
-        "https://openalex.org/W3174544005",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W4402672004",
-        "https://openalex.org/W4296833458",
-        "https://openalex.org/W4378071479",
-        "https://openalex.org/W4393387390",
-        "https://openalex.org/W3198841491"
-    ],
-    "abstract": "The rapid increase in scientific publications has made it challenging to keep up with the latest advancements. Conducting systematic reviews using traditional methods is both time-consuming and difficult. To address this, new review formats like rapid and scoping reviews have been introduced, reflecting an urgent need for efficient information retrieval. This challenge extends beyond academia to many organizations where numerous documents must be reviewed in relation to specific user queries. This paper focuses on improving document ranking to enhance the retrieval of relevant articles, thereby reducing the time and effort required by researchers. By applying a range of natural language processing (NLP) techniques, including rule-based matching, statistical text analysis, word embeddings, and transformer- and LLM-based approaches like Mistral LLM, we assess the article’s similarities to user-specific inputs and prioritize them according to relevance. We propose a novel methodology, Weighted Semantic Matching (WSM) + MiniLM, combining the strengths of the different methodologies. For validation, we employ global metrics such as precision at K, recall at K, average rank, median rank, and pairwise comparison metrics, including higher rank count, average rank difference, and median rank difference. Our proposed algorithm achieves optimal performance, with an average recall at 1000 of 95% and an average median rank of 185 for selected articles across the five datasets evaluated. These findings give promising results in pinpointing the relevant articles and reducing the manual work.",
-    "full_text": null
+  "title": "Combining Semantic Matching, Word Embeddings, Transformers, and LLMs for Enhanced Document Ranking: Application in Systematic Reviews",
+  "url": "https://openalex.org/W4402223428",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4207663570",
+      "name": "Goran Mitrov",
+      "affiliations": [
+        "Saints Cyril and Methodius University of Skopje"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5094299392",
+      "name": "Boris Stanoev",
+      "affiliations": [
+        "Saints Cyril and Methodius University of Skopje"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2061384250",
+      "name": "Sonja Gievska",
+      "affiliations": [
+        "Saints Cyril and Methodius University of Skopje"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2064799615",
+      "name": "Georgina Mirceva",
+      "affiliations": [
+        "Saints Cyril and Methodius University of Skopje"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A27817439",
+      "name": "Eftim Zdravevski",
+      "affiliations": [
+        "Saints Cyril and Methodius University of Skopje"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3203912530",
+    "https://openalex.org/W2969341057",
+    "https://openalex.org/W2212762088",
+    "https://openalex.org/W2904102154",
+    "https://openalex.org/W2911142796",
+    "https://openalex.org/W2049691306",
+    "https://openalex.org/W168362576",
+    "https://openalex.org/W4313371821",
+    "https://openalex.org/W3149778443",
+    "https://openalex.org/W4385243496",
+    "https://openalex.org/W4391546061",
+    "https://openalex.org/W4312018506",
+    "https://openalex.org/W4310496878",
+    "https://openalex.org/W2807522649",
+    "https://openalex.org/W2560438049",
+    "https://openalex.org/W2797780449",
+    "https://openalex.org/W2808847453",
+    "https://openalex.org/W3111278950",
+    "https://openalex.org/W3010940523",
+    "https://openalex.org/W3207456925",
+    "https://openalex.org/W4386194145",
+    "https://openalex.org/W6801627261",
+    "https://openalex.org/W2621485502",
+    "https://openalex.org/W2183168769",
+    "https://openalex.org/W3019959937",
+    "https://openalex.org/W4392791588",
+    "https://openalex.org/W4383722515",
+    "https://openalex.org/W4367368990",
+    "https://openalex.org/W2123442489",
+    "https://openalex.org/W2037450062",
+    "https://openalex.org/W2143017621",
+    "https://openalex.org/W1680797894",
+    "https://openalex.org/W3174544005",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W4402672004",
+    "https://openalex.org/W4296833458",
+    "https://openalex.org/W4378071479",
+    "https://openalex.org/W4393387390",
+    "https://openalex.org/W3198841491"
+  ],
+  "abstract": "The rapid increase in scientific publications has made it challenging to keep up with the latest advancements. Conducting systematic reviews using traditional methods is both time-consuming and difficult. To address this, new review formats like rapid and scoping reviews have been introduced, reflecting an urgent need for efficient information retrieval. This challenge extends beyond academia to many organizations where numerous documents must be reviewed in relation to specific user queries. This paper focuses on improving document ranking to enhance the retrieval of relevant articles, thereby reducing the time and effort required by researchers. By applying a range of natural language processing (NLP) techniques, including rule-based matching, statistical text analysis, word embeddings, and transformer- and LLM-based approaches like Mistral LLM, we assess the article’s similarities to user-specific inputs and prioritize them according to relevance. We propose a novel methodology, Weighted Semantic Matching (WSM) + MiniLM, combining the strengths of the different methodologies. For validation, we employ global metrics such as precision at K, recall at K, average rank, median rank, and pairwise comparison metrics, including higher rank count, average rank difference, and median rank difference. Our proposed algorithm achieves optimal performance, with an average recall at 1000 of 95% and an average median rank of 185 for selected articles across the five datasets evaluated. These findings give promising results in pinpointing the relevant articles and reducing the manual work.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7390424013137817
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.6402133107185364
+    },
+    {
+      "name": "Pairwise comparison",
+      "score": 0.6345525979995728
+    },
+    {
+      "name": "Rank (graph theory)",
+      "score": 0.6243650913238525
+    },
+    {
+      "name": "Ranking (information retrieval)",
+      "score": 0.607830286026001
+    },
+    {
+      "name": "Matching (statistics)",
+      "score": 0.5419964790344238
+    },
+    {
+      "name": "Relevance (law)",
+      "score": 0.49279358983039856
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49147212505340576
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.46066537499427795
+    },
+    {
+      "name": "Precision and recall",
+      "score": 0.450857549905777
+    },
+    {
+      "name": "Learning to rank",
+      "score": 0.4401792585849762
+    },
+    {
+      "name": "Word embedding",
+      "score": 0.42219704389572144
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40549933910369873
+    },
+    {
+      "name": "Data mining",
+      "score": 0.38505619764328003
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3678327202796936
+    },
+    {
+      "name": "Statistics",
+      "score": 0.16806915402412415
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.10337668657302856
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    },
+    {
+      "name": "Embedding",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

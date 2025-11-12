@@ -1,120 +1,179 @@
 {
-    "title": "Genome-scale annotation of protein binding sites via language model and geometric deep learning",
-    "url": "https://openalex.org/W4390740875",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3194661316",
-            "name": "Qianmu Yuan",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2304021594",
-            "name": "Chong Tian",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2130433203",
-            "name": "Yuedong Yang",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4281557145",
-        "https://openalex.org/W1019830208",
-        "https://openalex.org/W2158714788",
-        "https://openalex.org/W2064186839",
-        "https://openalex.org/W2103017472",
-        "https://openalex.org/W2130479394",
-        "https://openalex.org/W4296032638",
-        "https://openalex.org/W1976526581",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W1829437510",
-        "https://openalex.org/W6736057607",
-        "https://openalex.org/W2170747616",
-        "https://openalex.org/W2992752586",
-        "https://openalex.org/W6843241131",
-        "https://openalex.org/W2472103865",
-        "https://openalex.org/W2016959837",
-        "https://openalex.org/W6765474767",
-        "https://openalex.org/W2617750324",
-        "https://openalex.org/W2094148990",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W2008708467",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W6852195337",
-        "https://openalex.org/W4366279959",
-        "https://openalex.org/W2770026599",
-        "https://openalex.org/W2048947602",
-        "https://openalex.org/W2104785011",
-        "https://openalex.org/W4366239108",
-        "https://openalex.org/W2558889343",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W1972978214",
-        "https://openalex.org/W4307843054",
-        "https://openalex.org/W2557595285",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W2141627824",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2051210555",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2081375228",
-        "https://openalex.org/W2104812418",
-        "https://openalex.org/W1966716734",
-        "https://openalex.org/W4308834638",
-        "https://openalex.org/W2963587345",
-        "https://openalex.org/W4221096048",
-        "https://openalex.org/W2949342052",
-        "https://openalex.org/W2892720054",
-        "https://openalex.org/W3207643490",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W2264362083",
-        "https://openalex.org/W2520998691",
-        "https://openalex.org/W4229031603",
-        "https://openalex.org/W6800904154",
-        "https://openalex.org/W3183475563",
-        "https://openalex.org/W4309506674",
-        "https://openalex.org/W4220991280",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2767670653",
-        "https://openalex.org/W4281294164",
-        "https://openalex.org/W2056169996",
-        "https://openalex.org/W2807540482",
-        "https://openalex.org/W3007077815",
-        "https://openalex.org/W3126876258",
-        "https://openalex.org/W2582176104",
-        "https://openalex.org/W2140538197",
-        "https://openalex.org/W1987134040",
-        "https://openalex.org/W2043638247",
-        "https://openalex.org/W3197696221",
-        "https://openalex.org/W4205989901",
-        "https://openalex.org/W4307180312",
-        "https://openalex.org/W4360938460",
-        "https://openalex.org/W2971405760",
-        "https://openalex.org/W2021703339",
-        "https://openalex.org/W3121281384",
-        "https://openalex.org/W4293475204",
-        "https://openalex.org/W6809747699",
-        "https://openalex.org/W4385407166",
-        "https://openalex.org/W2808043011",
-        "https://openalex.org/W6846351910",
-        "https://openalex.org/W2994678679",
-        "https://openalex.org/W2187089797",
-        "https://openalex.org/W4221147818",
-        "https://openalex.org/W4390740875",
-        "https://openalex.org/W2604763608",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2957874522",
-        "https://openalex.org/W4295312788"
-    ],
-    "abstract": "Revealing protein binding sites with other molecules, such as nucleic acids, peptides, or small ligands, sheds light on disease mechanism elucidation and novel drug design. With the explosive growth of proteins in sequence databases, how to accurately and efficiently identify these binding sites from sequences becomes essential. However, current methods mostly rely on expensive multiple sequence alignments or experimental protein structures, limiting their genome-scale applications. Besides, these methods haven’t fully explored the geometry of the protein structures. Here, we propose GPSite, a multi-task network for simultaneously predicting binding residues of DNA, RNA, peptide, protein, ATP, HEM, and metal ions on proteins. GPSite was trained on informative sequence embeddings and predicted structures from protein language models, while comprehensively extracting residual and relational geometric contexts in an end-to-end manner. Experiments demonstrate that GPSite substantially surpasses state-of-the-art sequence-based and structure-based approaches on various benchmark datasets, even when the structures are not well-predicted. The low computational cost of GPSite enables rapid genome-scale binding residue annotations for over 568,000 sequences, providing opportunities to unveil unexplored associations of binding sites with molecular functions, biological processes, and genetic variants. The GPSite webserver and annotation database can be freely accessed at https://bio-web1.nscc-gz.cn/app/GPSite .",
-    "full_text": null
+  "title": "Genome-scale annotation of protein binding sites via language model and geometric deep learning",
+  "url": "https://openalex.org/W4390740875",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3194661316",
+      "name": "Qianmu Yuan",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2304021594",
+      "name": "Chong Tian",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2130433203",
+      "name": "Yuedong Yang",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4281557145",
+    "https://openalex.org/W1019830208",
+    "https://openalex.org/W2158714788",
+    "https://openalex.org/W2064186839",
+    "https://openalex.org/W2103017472",
+    "https://openalex.org/W2130479394",
+    "https://openalex.org/W4296032638",
+    "https://openalex.org/W1976526581",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W1829437510",
+    "https://openalex.org/W6736057607",
+    "https://openalex.org/W2170747616",
+    "https://openalex.org/W2992752586",
+    "https://openalex.org/W6843241131",
+    "https://openalex.org/W2472103865",
+    "https://openalex.org/W2016959837",
+    "https://openalex.org/W6765474767",
+    "https://openalex.org/W2617750324",
+    "https://openalex.org/W2094148990",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W2008708467",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W6852195337",
+    "https://openalex.org/W4366279959",
+    "https://openalex.org/W2770026599",
+    "https://openalex.org/W2048947602",
+    "https://openalex.org/W2104785011",
+    "https://openalex.org/W4366239108",
+    "https://openalex.org/W2558889343",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W1972978214",
+    "https://openalex.org/W4307843054",
+    "https://openalex.org/W2557595285",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W2141627824",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2051210555",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2081375228",
+    "https://openalex.org/W2104812418",
+    "https://openalex.org/W1966716734",
+    "https://openalex.org/W4308834638",
+    "https://openalex.org/W2963587345",
+    "https://openalex.org/W4221096048",
+    "https://openalex.org/W2949342052",
+    "https://openalex.org/W2892720054",
+    "https://openalex.org/W3207643490",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W2264362083",
+    "https://openalex.org/W2520998691",
+    "https://openalex.org/W4229031603",
+    "https://openalex.org/W6800904154",
+    "https://openalex.org/W3183475563",
+    "https://openalex.org/W4309506674",
+    "https://openalex.org/W4220991280",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2767670653",
+    "https://openalex.org/W4281294164",
+    "https://openalex.org/W2056169996",
+    "https://openalex.org/W2807540482",
+    "https://openalex.org/W3007077815",
+    "https://openalex.org/W3126876258",
+    "https://openalex.org/W2582176104",
+    "https://openalex.org/W2140538197",
+    "https://openalex.org/W1987134040",
+    "https://openalex.org/W2043638247",
+    "https://openalex.org/W3197696221",
+    "https://openalex.org/W4205989901",
+    "https://openalex.org/W4307180312",
+    "https://openalex.org/W4360938460",
+    "https://openalex.org/W2971405760",
+    "https://openalex.org/W2021703339",
+    "https://openalex.org/W3121281384",
+    "https://openalex.org/W4293475204",
+    "https://openalex.org/W6809747699",
+    "https://openalex.org/W4385407166",
+    "https://openalex.org/W2808043011",
+    "https://openalex.org/W6846351910",
+    "https://openalex.org/W2994678679",
+    "https://openalex.org/W2187089797",
+    "https://openalex.org/W4221147818",
+    "https://openalex.org/W4390740875",
+    "https://openalex.org/W2604763608",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2957874522",
+    "https://openalex.org/W4295312788"
+  ],
+  "abstract": "Revealing protein binding sites with other molecules, such as nucleic acids, peptides, or small ligands, sheds light on disease mechanism elucidation and novel drug design. With the explosive growth of proteins in sequence databases, how to accurately and efficiently identify these binding sites from sequences becomes essential. However, current methods mostly rely on expensive multiple sequence alignments or experimental protein structures, limiting their genome-scale applications. Besides, these methods haven’t fully explored the geometry of the protein structures. Here, we propose GPSite, a multi-task network for simultaneously predicting binding residues of DNA, RNA, peptide, protein, ATP, HEM, and metal ions on proteins. GPSite was trained on informative sequence embeddings and predicted structures from protein language models, while comprehensively extracting residual and relational geometric contexts in an end-to-end manner. Experiments demonstrate that GPSite substantially surpasses state-of-the-art sequence-based and structure-based approaches on various benchmark datasets, even when the structures are not well-predicted. The low computational cost of GPSite enables rapid genome-scale binding residue annotations for over 568,000 sequences, providing opportunities to unveil unexplored associations of binding sites with molecular functions, biological processes, and genetic variants. The GPSite webserver and annotation database can be freely accessed at https://bio-web1.nscc-gz.cn/app/GPSite .",
+  "full_text": null,
+  "topic": "Computational biology",
+  "concepts": [
+    {
+      "name": "Computational biology",
+      "score": 0.6402846574783325
+    },
+    {
+      "name": "Genome",
+      "score": 0.47185277938842773
+    },
+    {
+      "name": "Annotation",
+      "score": 0.4480127990245819
+    },
+    {
+      "name": "Binding site",
+      "score": 0.44173768162727356
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.42631039023399353
+    },
+    {
+      "name": "Protein structure database",
+      "score": 0.42003193497657776
+    },
+    {
+      "name": "Computer science",
+      "score": 0.41974225640296936
+    },
+    {
+      "name": "Sequence alignment",
+      "score": 0.41273656487464905
+    },
+    {
+      "name": "Biology",
+      "score": 0.38760998845100403
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.29520732164382935
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.2749694287776947
+    },
+    {
+      "name": "Genetics",
+      "score": 0.2583780586719513
+    },
+    {
+      "name": "Gene",
+      "score": 0.2502993643283844
+    },
+    {
+      "name": "Sequence database",
+      "score": 0.18107163906097412
+    }
+  ]
 }

@@ -1,135 +1,198 @@
 {
-    "title": "Exploiting pretrained biochemical language models for targeted drug design",
-    "url": "https://openalex.org/W4296777335",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4296777878",
-            "name": "Gökçe Uludoğan",
-            "affiliations": [
-                "Boğaziçi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A289056625",
-            "name": "Elif Özkırımlı",
-            "affiliations": [
-                "Roche (Switzerland)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2146392340",
-            "name": "Kutlu O. Ulgen",
-            "affiliations": [
-                "Boğaziçi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107933439",
-            "name": "Nilgün Karalı",
-            "affiliations": [
-                "Istanbul University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2047496774",
-            "name": "Arzucan Özgür",
-            "affiliations": [
-                "Boğaziçi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4296777878",
-            "name": "Gökçe Uludoğan",
-            "affiliations": [
-                "Boğaziçi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A289056625",
-            "name": "Elif Özkırımlı",
-            "affiliations": [
-                "Roche (Switzerland)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2146392340",
-            "name": "Kutlu O. Ulgen",
-            "affiliations": [
-                "Boğaziçi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107933439",
-            "name": "Nilgün Karalı",
-            "affiliations": [
-                "Istanbul University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2047496774",
-            "name": "Arzucan Özgür",
-            "affiliations": [
-                "Boğaziçi University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2952209472",
-        "https://openalex.org/W6755054633",
-        "https://openalex.org/W2060531713",
-        "https://openalex.org/W3130227682",
-        "https://openalex.org/W2898210859",
-        "https://openalex.org/W6784526300",
-        "https://openalex.org/W2114850508",
-        "https://openalex.org/W2022476850",
-        "https://openalex.org/W6778171500",
-        "https://openalex.org/W6780145172",
-        "https://openalex.org/W6786619936",
-        "https://openalex.org/W6787297430",
-        "https://openalex.org/W6752083957",
-        "https://openalex.org/W2204695023",
-        "https://openalex.org/W3119872582",
-        "https://openalex.org/W3015945092",
-        "https://openalex.org/W2899070097",
-        "https://openalex.org/W6775582764",
-        "https://openalex.org/W2084845010",
-        "https://openalex.org/W3138781613",
-        "https://openalex.org/W6774882322",
-        "https://openalex.org/W3147983081",
-        "https://openalex.org/W3168430821",
-        "https://openalex.org/W3095583226",
-        "https://openalex.org/W3011286504",
-        "https://openalex.org/W3081571805",
-        "https://openalex.org/W2625487214",
-        "https://openalex.org/W2023818227",
-        "https://openalex.org/W3116865743",
-        "https://openalex.org/W2887447356",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W1996423252",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3036120435",
-        "https://openalex.org/W2969980075",
-        "https://openalex.org/W1757990252",
-        "https://openalex.org/W2900569176",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6643860709",
-        "https://openalex.org/W2807704635",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W3118026775",
-        "https://openalex.org/W4287556952",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2807792492",
-        "https://openalex.org/W2891063262",
-        "https://openalex.org/W3013701218",
-        "https://openalex.org/W4287724045",
-        "https://openalex.org/W3093934881",
-        "https://openalex.org/W3013310839",
-        "https://openalex.org/W3107618047",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3109892317"
-    ],
-    "abstract": "Abstract Motivation The development of novel compounds targeting proteins of interest is one of the most important tasks in the pharmaceutical industry. Deep generative models have been applied to targeted molecular design and have shown promising results. Recently, target-specific molecule generation has been viewed as a translation between the protein language and the chemical language. However, such a model is limited by the availability of interacting protein–ligand pairs. On the other hand, large amounts of unlabelled protein sequences and chemical compounds are available and have been used to train language models that learn useful representations. In this study, we propose exploiting pretrained biochemical language models to initialize (i.e. warm start) targeted molecule generation models. We investigate two warm start strategies: (i) a one-stage strategy where the initialized model is trained on targeted molecule generation and (ii) a two-stage strategy containing a pre-finetuning on molecular generation followed by target-specific training. We also compare two decoding strategies to generate compounds: beam search and sampling. Results The results show that the warm-started models perform better than a baseline model trained from scratch. The two proposed warm-start strategies achieve similar results to each other with respect to widely used metrics from benchmarks. However, docking evaluation of the generated compounds for a number of novel proteins suggests that the one-stage strategy generalizes better than the two-stage strategy. Additionally, we observe that beam search outperforms sampling in both docking evaluation and benchmark metrics for assessing compound quality. Availability and implementation The source code is available at https://github.com/boun-tabi/biochemical-lms-for-drug-design and the materials (i.e., data, models, and outputs) are archived in Zenodo at https://doi.org/10.5281/zenodo.6832145. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "Exploiting pretrained biochemical language models for targeted drug design",
+  "url": "https://openalex.org/W4296777335",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4296777878",
+      "name": "Gökçe Uludoğan",
+      "affiliations": [
+        "Boğaziçi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A289056625",
+      "name": "Elif Özkırımlı",
+      "affiliations": [
+        "Roche (Switzerland)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2146392340",
+      "name": "Kutlu O. Ulgen",
+      "affiliations": [
+        "Boğaziçi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107933439",
+      "name": "Nilgün Karalı",
+      "affiliations": [
+        "Istanbul University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2047496774",
+      "name": "Arzucan Özgür",
+      "affiliations": [
+        "Boğaziçi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4296777878",
+      "name": "Gökçe Uludoğan",
+      "affiliations": [
+        "Boğaziçi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A289056625",
+      "name": "Elif Özkırımlı",
+      "affiliations": [
+        "Roche (Switzerland)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2146392340",
+      "name": "Kutlu O. Ulgen",
+      "affiliations": [
+        "Boğaziçi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107933439",
+      "name": "Nilgün Karalı",
+      "affiliations": [
+        "Istanbul University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2047496774",
+      "name": "Arzucan Özgür",
+      "affiliations": [
+        "Boğaziçi University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2952209472",
+    "https://openalex.org/W6755054633",
+    "https://openalex.org/W2060531713",
+    "https://openalex.org/W3130227682",
+    "https://openalex.org/W2898210859",
+    "https://openalex.org/W6784526300",
+    "https://openalex.org/W2114850508",
+    "https://openalex.org/W2022476850",
+    "https://openalex.org/W6778171500",
+    "https://openalex.org/W6780145172",
+    "https://openalex.org/W6786619936",
+    "https://openalex.org/W6787297430",
+    "https://openalex.org/W6752083957",
+    "https://openalex.org/W2204695023",
+    "https://openalex.org/W3119872582",
+    "https://openalex.org/W3015945092",
+    "https://openalex.org/W2899070097",
+    "https://openalex.org/W6775582764",
+    "https://openalex.org/W2084845010",
+    "https://openalex.org/W3138781613",
+    "https://openalex.org/W6774882322",
+    "https://openalex.org/W3147983081",
+    "https://openalex.org/W3168430821",
+    "https://openalex.org/W3095583226",
+    "https://openalex.org/W3011286504",
+    "https://openalex.org/W3081571805",
+    "https://openalex.org/W2625487214",
+    "https://openalex.org/W2023818227",
+    "https://openalex.org/W3116865743",
+    "https://openalex.org/W2887447356",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W1996423252",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3036120435",
+    "https://openalex.org/W2969980075",
+    "https://openalex.org/W1757990252",
+    "https://openalex.org/W2900569176",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6643860709",
+    "https://openalex.org/W2807704635",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W3118026775",
+    "https://openalex.org/W4287556952",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2807792492",
+    "https://openalex.org/W2891063262",
+    "https://openalex.org/W3013701218",
+    "https://openalex.org/W4287724045",
+    "https://openalex.org/W3093934881",
+    "https://openalex.org/W3013310839",
+    "https://openalex.org/W3107618047",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3109892317"
+  ],
+  "abstract": "Abstract Motivation The development of novel compounds targeting proteins of interest is one of the most important tasks in the pharmaceutical industry. Deep generative models have been applied to targeted molecular design and have shown promising results. Recently, target-specific molecule generation has been viewed as a translation between the protein language and the chemical language. However, such a model is limited by the availability of interacting protein–ligand pairs. On the other hand, large amounts of unlabelled protein sequences and chemical compounds are available and have been used to train language models that learn useful representations. In this study, we propose exploiting pretrained biochemical language models to initialize (i.e. warm start) targeted molecule generation models. We investigate two warm start strategies: (i) a one-stage strategy where the initialized model is trained on targeted molecule generation and (ii) a two-stage strategy containing a pre-finetuning on molecular generation followed by target-specific training. We also compare two decoding strategies to generate compounds: beam search and sampling. Results The results show that the warm-started models perform better than a baseline model trained from scratch. The two proposed warm-start strategies achieve similar results to each other with respect to widely used metrics from benchmarks. However, docking evaluation of the generated compounds for a number of novel proteins suggests that the one-stage strategy generalizes better than the two-stage strategy. Additionally, we observe that beam search outperforms sampling in both docking evaluation and benchmark metrics for assessing compound quality. Availability and implementation The source code is available at https://github.com/boun-tabi/biochemical-lms-for-drug-design and the materials (i.e., data, models, and outputs) are archived in Zenodo at https://doi.org/10.5281/zenodo.6832145. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7734520435333252
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5706552267074585
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5055816173553467
+    },
+    {
+      "name": "Language model",
+      "score": 0.4860432744026184
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.47330036759376526
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.44508007168769836
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4450650215148926
+    },
+    {
+      "name": "Docking (animal)",
+      "score": 0.44308334589004517
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.42534926533699036
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.1866568624973297
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Nursing",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    }
+  ]
 }

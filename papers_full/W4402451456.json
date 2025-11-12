@@ -1,107 +1,174 @@
 {
-    "title": "Optimizing Foundation Model Inference on a Many-Tiny-Core Open-Source RISC-V Platform",
-    "url": "https://openalex.org/W4402451456",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5062172879",
-            "name": "Viviane Potocnik",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5094583316",
-            "name": "Luca Colagrande",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103019315",
-            "name": "Tim Fischer",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5062088050",
-            "name": "Luca Bertaccini",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5080843266",
-            "name": "Daniele Jahier Pagliari",
-            "affiliations": [
-                "Polytechnic University of Turin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5032095821",
-            "name": "Alessio Burrello",
-            "affiliations": [
-                "University of Bologna"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5043408422",
-            "name": "Luca Benini",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6851775633",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W6850462617",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W6800751262",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6859495724",
-        "https://openalex.org/W6779709467",
-        "https://openalex.org/W6854308872",
-        "https://openalex.org/W3130554079",
-        "https://openalex.org/W4324292875",
-        "https://openalex.org/W4362707004",
-        "https://openalex.org/W4281708879",
-        "https://openalex.org/W4388469806",
-        "https://openalex.org/W3013692244",
-        "https://openalex.org/W6763653508",
-        "https://openalex.org/W6843734122",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W4394597798",
-        "https://openalex.org/W4367595583",
-        "https://openalex.org/W3204538018",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W6846659131",
-        "https://openalex.org/W6861768399",
-        "https://openalex.org/W6796753453",
-        "https://openalex.org/W6779163297",
-        "https://openalex.org/W6852408377",
-        "https://openalex.org/W6853251322",
-        "https://openalex.org/W4376130831",
-        "https://openalex.org/W4297097382",
-        "https://openalex.org/W6851059687",
-        "https://openalex.org/W4313467238",
-        "https://openalex.org/W6860380251",
-        "https://openalex.org/W4396909834",
-        "https://openalex.org/W6851027815",
-        "https://openalex.org/W4312639064",
-        "https://openalex.org/W4401880104",
-        "https://openalex.org/W4391944268",
-        "https://openalex.org/W2981980078",
-        "https://openalex.org/W6753770798",
-        "https://openalex.org/W3112773671",
-        "https://openalex.org/W6788001715",
-        "https://openalex.org/W6839178539",
-        "https://openalex.org/W4376123125",
-        "https://openalex.org/W6857524558"
-    ],
-    "abstract": "Transformer-based foundation models have become crucial for various domains, most notably natural language processing (NLP) or computer vision (CV). These models are predominantly deployed on high-performance GPUs or hardwired accelerators with highly customized, proprietary instruction sets. Until now, limited attention has been given to RISC-V-based general-purpose platforms. In our work, we present the first inference results of transformer models on an open-source many-tiny-core RISC-V platform implementing distributed Softmax primitives and leveraging ISA extensions for SIMD floating-point operand streaming and instruction repetition, as well as specialized DMA engines to minimize costly main memory accesses and to tolerate their latency. We focus on two foundational transformer topologies, encoder-only and decoder-only models. For encoder-only models, we demonstrate a speedup of up to 12.8× between the most optimized implementation and the baseline version. We reach over 79% FPU utilization and 294 GFLOPS/W, outperforming State-of-the-Art (SoA) accelerators by more than 2× utilizing the HW platform while achieving comparable throughput per computational unit. For decoder-only topologies, we achieve 16.1× speedup in the Non-Autoregressive (NAR) mode and up to 35.6× speedup in the Autoregressive (AR) mode compared to the baseline implementation. Compared to the best SoA dedicated accelerator, we achieve 2.04× higher FPU utilization.",
-    "full_text": null
+  "title": "Optimizing Foundation Model Inference on a Many-Tiny-Core Open-Source RISC-V Platform",
+  "url": "https://openalex.org/W4402451456",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5062172879",
+      "name": "Viviane Potocnik",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5094583316",
+      "name": "Luca Colagrande",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103019315",
+      "name": "Tim Fischer",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5062088050",
+      "name": "Luca Bertaccini",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5080843266",
+      "name": "Daniele Jahier Pagliari",
+      "affiliations": [
+        "Polytechnic University of Turin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5032095821",
+      "name": "Alessio Burrello",
+      "affiliations": [
+        "University of Bologna"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5043408422",
+      "name": "Luca Benini",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6851775633",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W6850462617",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W6800751262",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6859495724",
+    "https://openalex.org/W6779709467",
+    "https://openalex.org/W6854308872",
+    "https://openalex.org/W3130554079",
+    "https://openalex.org/W4324292875",
+    "https://openalex.org/W4362707004",
+    "https://openalex.org/W4281708879",
+    "https://openalex.org/W4388469806",
+    "https://openalex.org/W3013692244",
+    "https://openalex.org/W6763653508",
+    "https://openalex.org/W6843734122",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W4394597798",
+    "https://openalex.org/W4367595583",
+    "https://openalex.org/W3204538018",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W6846659131",
+    "https://openalex.org/W6861768399",
+    "https://openalex.org/W6796753453",
+    "https://openalex.org/W6779163297",
+    "https://openalex.org/W6852408377",
+    "https://openalex.org/W6853251322",
+    "https://openalex.org/W4376130831",
+    "https://openalex.org/W4297097382",
+    "https://openalex.org/W6851059687",
+    "https://openalex.org/W4313467238",
+    "https://openalex.org/W6860380251",
+    "https://openalex.org/W4396909834",
+    "https://openalex.org/W6851027815",
+    "https://openalex.org/W4312639064",
+    "https://openalex.org/W4401880104",
+    "https://openalex.org/W4391944268",
+    "https://openalex.org/W2981980078",
+    "https://openalex.org/W6753770798",
+    "https://openalex.org/W3112773671",
+    "https://openalex.org/W6788001715",
+    "https://openalex.org/W6839178539",
+    "https://openalex.org/W4376123125",
+    "https://openalex.org/W6857524558"
+  ],
+  "abstract": "Transformer-based foundation models have become crucial for various domains, most notably natural language processing (NLP) or computer vision (CV). These models are predominantly deployed on high-performance GPUs or hardwired accelerators with highly customized, proprietary instruction sets. Until now, limited attention has been given to RISC-V-based general-purpose platforms. In our work, we present the first inference results of transformer models on an open-source many-tiny-core RISC-V platform implementing distributed Softmax primitives and leveraging ISA extensions for SIMD floating-point operand streaming and instruction repetition, as well as specialized DMA engines to minimize costly main memory accesses and to tolerate their latency. We focus on two foundational transformer topologies, encoder-only and decoder-only models. For encoder-only models, we demonstrate a speedup of up to 12.8× between the most optimized implementation and the baseline version. We reach over 79% FPU utilization and 294 GFLOPS/W, outperforming State-of-the-Art (SoA) accelerators by more than 2× utilizing the HW platform while achieving comparable throughput per computational unit. For decoder-only topologies, we achieve 16.1× speedup in the Non-Autoregressive (NAR) mode and up to 35.6× speedup in the Autoregressive (AR) mode compared to the baseline implementation. Compared to the best SoA dedicated accelerator, we achieve 2.04× higher FPU utilization.",
+  "full_text": null,
+  "topic": "Open source",
+  "concepts": [
+    {
+      "name": "Open source",
+      "score": 0.7188918590545654
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.6579675674438477
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6096251606941223
+    },
+    {
+      "name": "Core (optical fiber)",
+      "score": 0.5867245197296143
+    },
+    {
+      "name": "Inference",
+      "score": 0.5000603199005127
+    },
+    {
+      "name": "Open platform",
+      "score": 0.4911174476146698
+    },
+    {
+      "name": "Programming language",
+      "score": 0.46064406633377075
+    },
+    {
+      "name": "Core model",
+      "score": 0.41185128688812256
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.3640097975730896
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.21395015716552734
+    },
+    {
+      "name": "Software",
+      "score": 0.12525251507759094
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.11000418663024902
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.10940206050872803
+    },
+    {
+      "name": "History",
+      "score": 0.09964671730995178
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.07763656973838806
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

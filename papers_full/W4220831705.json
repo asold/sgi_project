@@ -1,92 +1,163 @@
 {
-    "title": "An Interpretable Double-Scale Attention Model for Enzyme Protein Class Prediction Based on Transformer Encoders and Multi-Scale Convolutions",
-    "url": "https://openalex.org/W4220831705",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5013130451",
-            "name": "Ken Lin",
-            "affiliations": [
-                "Nankai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5082071336",
-            "name": "Xiongwen Quan",
-            "affiliations": [
-                "Nankai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102005712",
-            "name": "Chen Jin",
-            "affiliations": [
-                "Nankai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5044396537",
-            "name": "Zhuangwei Shi",
-            "affiliations": [
-                "Nankai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5070816171",
-            "name": "Jinglong Yang",
-            "affiliations": [
-                "Nankai University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2154139219",
-        "https://openalex.org/W4213149192",
-        "https://openalex.org/W1982849248",
-        "https://openalex.org/W3034421924",
-        "https://openalex.org/W3151623506",
-        "https://openalex.org/W2048322438",
-        "https://openalex.org/W2892210937",
-        "https://openalex.org/W2091861424",
-        "https://openalex.org/W1532305329",
-        "https://openalex.org/W2900903885",
-        "https://openalex.org/W2951793362",
-        "https://openalex.org/W6737778391",
-        "https://openalex.org/W6779436764",
-        "https://openalex.org/W2518578398",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W3195801729",
-        "https://openalex.org/W2766352633",
-        "https://openalex.org/W6773339710",
-        "https://openalex.org/W2891463586",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3131922516",
-        "https://openalex.org/W2026666393",
-        "https://openalex.org/W2127648442",
-        "https://openalex.org/W2078810025",
-        "https://openalex.org/W2999481648",
-        "https://openalex.org/W2963870605",
-        "https://openalex.org/W2102461176",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W1864564002",
-        "https://openalex.org/W2971405760",
-        "https://openalex.org/W2799796486",
-        "https://openalex.org/W3037888463",
-        "https://openalex.org/W2003144438",
-        "https://openalex.org/W4287901267",
-        "https://openalex.org/W4302484271",
-        "https://openalex.org/W4323654151",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2613904329",
-        "https://openalex.org/W2768282280",
-        "https://openalex.org/W3004484424",
-        "https://openalex.org/W2206373005",
-        "https://openalex.org/W3033188311",
-        "https://openalex.org/W2963703618",
-        "https://openalex.org/W2345051977",
-        "https://openalex.org/W4299838440"
-    ],
-    "abstract": "Background Classification and annotation of enzyme proteins are fundamental for enzyme research on biological metabolism. Enzyme Commission (EC) numbers provide a standard for hierarchical enzyme class prediction, on which several computational methods have been proposed. However, most of these methods are dependent on prior distribution information and none explicitly quantifies amino-acid-level relations and possible contribution of sub-sequences. Methods In this study, we propose a double-scale attention enzyme class prediction model named DAttProt with high reusability and interpretability. DAttProt encodes sequence by self-supervised Transformer encoders in pre-training and gathers local features by multi-scale convolutions in fine-tuning. Specially, a probabilistic double-scale attention weight matrix is designed to aggregate multi-scale features and positional prediction scores. Finally, a full connection linear classifier conducts a final inference through the aggregated features and prediction scores. Results On DEEPre and ECPred datasets, DAttProt performs as competitive with the compared methods on level 0 and outperforms them on deeper task levels, reaching 0.788 accuracy on level 2 of DEEPre and 0.967 macro- F 1 on level 1 of ECPred. Moreover, through case study, we demonstrate that the double-scale attention matrix learns to discover and focus on the positions and scales of bio-functional sub-sequences in the protein. Conclusion Our DAttProt provides an effective and interpretable method for enzyme class prediction. It can predict enzyme protein classes accurately and furthermore discover enzymatic functional sub-sequences such as protein motifs from both positional and spatial scales.",
-    "full_text": null
+  "title": "An Interpretable Double-Scale Attention Model for Enzyme Protein Class Prediction Based on Transformer Encoders and Multi-Scale Convolutions",
+  "url": "https://openalex.org/W4220831705",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5013130451",
+      "name": "Ken Lin",
+      "affiliations": [
+        "Nankai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5082071336",
+      "name": "Xiongwen Quan",
+      "affiliations": [
+        "Nankai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102005712",
+      "name": "Chen Jin",
+      "affiliations": [
+        "Nankai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5044396537",
+      "name": "Zhuangwei Shi",
+      "affiliations": [
+        "Nankai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5070816171",
+      "name": "Jinglong Yang",
+      "affiliations": [
+        "Nankai University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2154139219",
+    "https://openalex.org/W4213149192",
+    "https://openalex.org/W1982849248",
+    "https://openalex.org/W3034421924",
+    "https://openalex.org/W3151623506",
+    "https://openalex.org/W2048322438",
+    "https://openalex.org/W2892210937",
+    "https://openalex.org/W2091861424",
+    "https://openalex.org/W1532305329",
+    "https://openalex.org/W2900903885",
+    "https://openalex.org/W2951793362",
+    "https://openalex.org/W6737778391",
+    "https://openalex.org/W6779436764",
+    "https://openalex.org/W2518578398",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W3195801729",
+    "https://openalex.org/W2766352633",
+    "https://openalex.org/W6773339710",
+    "https://openalex.org/W2891463586",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3131922516",
+    "https://openalex.org/W2026666393",
+    "https://openalex.org/W2127648442",
+    "https://openalex.org/W2078810025",
+    "https://openalex.org/W2999481648",
+    "https://openalex.org/W2963870605",
+    "https://openalex.org/W2102461176",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W1864564002",
+    "https://openalex.org/W2971405760",
+    "https://openalex.org/W2799796486",
+    "https://openalex.org/W3037888463",
+    "https://openalex.org/W2003144438",
+    "https://openalex.org/W4287901267",
+    "https://openalex.org/W4302484271",
+    "https://openalex.org/W4323654151",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2613904329",
+    "https://openalex.org/W2768282280",
+    "https://openalex.org/W3004484424",
+    "https://openalex.org/W2206373005",
+    "https://openalex.org/W3033188311",
+    "https://openalex.org/W2963703618",
+    "https://openalex.org/W2345051977",
+    "https://openalex.org/W4299838440"
+  ],
+  "abstract": "Background Classification and annotation of enzyme proteins are fundamental for enzyme research on biological metabolism. Enzyme Commission (EC) numbers provide a standard for hierarchical enzyme class prediction, on which several computational methods have been proposed. However, most of these methods are dependent on prior distribution information and none explicitly quantifies amino-acid-level relations and possible contribution of sub-sequences. Methods In this study, we propose a double-scale attention enzyme class prediction model named DAttProt with high reusability and interpretability. DAttProt encodes sequence by self-supervised Transformer encoders in pre-training and gathers local features by multi-scale convolutions in fine-tuning. Specially, a probabilistic double-scale attention weight matrix is designed to aggregate multi-scale features and positional prediction scores. Finally, a full connection linear classifier conducts a final inference through the aggregated features and prediction scores. Results On DEEPre and ECPred datasets, DAttProt performs as competitive with the compared methods on level 0 and outperforms them on deeper task levels, reaching 0.788 accuracy on level 2 of DEEPre and 0.967 macro- F 1 on level 1 of ECPred. Moreover, through case study, we demonstrate that the double-scale attention matrix learns to discover and focus on the positions and scales of bio-functional sub-sequences in the protein. Conclusion Our DAttProt provides an effective and interpretable method for enzyme class prediction. It can predict enzyme protein classes accurately and furthermore discover enzymatic functional sub-sequences such as protein motifs from both positional and spatial scales.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.694403886795044
+    },
+    {
+      "name": "Interpretability",
+      "score": 0.665041446685791
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.593347430229187
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5767845511436462
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.549505352973938
+    },
+    {
+      "name": "Inference",
+      "score": 0.5326131582260132
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4790050685405731
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4496137499809265
+    },
+    {
+      "name": "Equivalence (formal languages)",
+      "score": 0.449310302734375
+    },
+    {
+      "name": "Transformer",
+      "score": 0.43044567108154297
+    },
+    {
+      "name": "Data mining",
+      "score": 0.361868679523468
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.20069792866706848
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Discrete mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

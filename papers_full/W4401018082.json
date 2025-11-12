@@ -1,84 +1,127 @@
 {
-    "title": "Pretraining Billion-Scale Geospatial Foundational Models on Frontier",
-    "url": "https://openalex.org/W4401018082",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5006493183",
-            "name": "Aristeidis Tsaris",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5034044972",
-            "name": "Philipe Dias",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089748744",
-            "name": "Abhishek Potnis",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5051882926",
-            "name": "Junqi Yin",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101916963",
-            "name": "Feiyi Wang",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5083948807",
-            "name": "Dalton Lunga",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6800751262",
-        "https://openalex.org/W6840202747",
-        "https://openalex.org/W4288391486",
-        "https://openalex.org/W4312795296",
-        "https://openalex.org/W6803872405",
-        "https://openalex.org/W6791353385",
-        "https://openalex.org/W6790019176",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3172942063",
-        "https://openalex.org/W6849928207",
-        "https://openalex.org/W6774314701",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W4214644404",
-        "https://openalex.org/W2963785576",
-        "https://openalex.org/W3152083889",
-        "https://openalex.org/W6811928498",
-        "https://openalex.org/W4386768656",
-        "https://openalex.org/W6787953186",
-        "https://openalex.org/W3081168214",
-        "https://openalex.org/W1980038761",
-        "https://openalex.org/W2515866431",
-        "https://openalex.org/W2592962403",
-        "https://openalex.org/W2734941459",
-        "https://openalex.org/W3105577662",
-        "https://openalex.org/W2757910899",
-        "https://openalex.org/W4286233797",
-        "https://openalex.org/W3195577433",
-        "https://openalex.org/W4226479682",
-        "https://openalex.org/W3215626407"
-    ],
-    "abstract": "As AI workloads increase in scope, generalization capability becomes challenging for small task-specific models and their demand for large amounts of labeled training samples increases. On the contrary, Foundation Models (FMs) are trained with internet-scale unlabeled data via self-supervised learning and have been shown to adapt to various tasks with minimal fine-tuning. Although large FMs have demonstrated significant impact in natural language processing and computer vision, efforts toward FMs for geospatial applications have been restricted to smaller size models, as pretraining larger models requires very large computing resources equipped with state-of-the-art hardware accelerators. Current satellite constellations collect 100+TBs of data a day, resulting in images that are billions of pixels and multimodal in nature. Such geospatial data poses unique challenges opening up new opportunities to develop FMs. We investigate billion scale FMs and HPC training profiles for geospatial applications by pretraining on publicly available data. We studied from end-to-end the performance and impact in the solution by scaling the model size. Our larger 3B parameter size model achieves up to 30% improvement in top1 scene classification accuracy when comparing a 100M parameter model. Moreover, we detail performance experiments on the Frontier supercomputer, America's first exascale system, where we study different model and data parallel approaches using PyTorch's Fully Sharded Data Parallel library. Specifically, we study variants of the Vision Transformer architecture (ViT), conducting performance analysis for ViT models with size up to 15B parameters. By discussing throughput and performance bottlenecks under different parallelism configurations, we offer insights on how to leverage such leadership-class HPC resources when developing large models for geospatial imagery applications.",
-    "full_text": null
+  "title": "Pretraining Billion-Scale Geospatial Foundational Models on Frontier",
+  "url": "https://openalex.org/W4401018082",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5006493183",
+      "name": "Aristeidis Tsaris",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5034044972",
+      "name": "Philipe Dias",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089748744",
+      "name": "Abhishek Potnis",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5051882926",
+      "name": "Junqi Yin",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101916963",
+      "name": "Feiyi Wang",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5083948807",
+      "name": "Dalton Lunga",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6800751262",
+    "https://openalex.org/W6840202747",
+    "https://openalex.org/W4288391486",
+    "https://openalex.org/W4312795296",
+    "https://openalex.org/W6803872405",
+    "https://openalex.org/W6791353385",
+    "https://openalex.org/W6790019176",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3172942063",
+    "https://openalex.org/W6849928207",
+    "https://openalex.org/W6774314701",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W4214644404",
+    "https://openalex.org/W2963785576",
+    "https://openalex.org/W3152083889",
+    "https://openalex.org/W6811928498",
+    "https://openalex.org/W4386768656",
+    "https://openalex.org/W6787953186",
+    "https://openalex.org/W3081168214",
+    "https://openalex.org/W1980038761",
+    "https://openalex.org/W2515866431",
+    "https://openalex.org/W2592962403",
+    "https://openalex.org/W2734941459",
+    "https://openalex.org/W3105577662",
+    "https://openalex.org/W2757910899",
+    "https://openalex.org/W4286233797",
+    "https://openalex.org/W3195577433",
+    "https://openalex.org/W4226479682",
+    "https://openalex.org/W3215626407"
+  ],
+  "abstract": "As AI workloads increase in scope, generalization capability becomes challenging for small task-specific models and their demand for large amounts of labeled training samples increases. On the contrary, Foundation Models (FMs) are trained with internet-scale unlabeled data via self-supervised learning and have been shown to adapt to various tasks with minimal fine-tuning. Although large FMs have demonstrated significant impact in natural language processing and computer vision, efforts toward FMs for geospatial applications have been restricted to smaller size models, as pretraining larger models requires very large computing resources equipped with state-of-the-art hardware accelerators. Current satellite constellations collect 100+TBs of data a day, resulting in images that are billions of pixels and multimodal in nature. Such geospatial data poses unique challenges opening up new opportunities to develop FMs. We investigate billion scale FMs and HPC training profiles for geospatial applications by pretraining on publicly available data. We studied from end-to-end the performance and impact in the solution by scaling the model size. Our larger 3B parameter size model achieves up to 30% improvement in top1 scene classification accuracy when comparing a 100M parameter model. Moreover, we detail performance experiments on the Frontier supercomputer, America's first exascale system, where we study different model and data parallel approaches using PyTorch's Fully Sharded Data Parallel library. Specifically, we study variants of the Vision Transformer architecture (ViT), conducting performance analysis for ViT models with size up to 15B parameters. By discussing throughput and performance bottlenecks under different parallelism configurations, we offer insights on how to leverage such leadership-class HPC resources when developing large models for geospatial imagery applications.",
+  "full_text": null,
+  "topic": "Geospatial analysis",
+  "concepts": [
+    {
+      "name": "Geospatial analysis",
+      "score": 0.8845630884170532
+    },
+    {
+      "name": "Frontier",
+      "score": 0.8178044557571411
+    },
+    {
+      "name": "Scale (ratio)",
+      "score": 0.5820444822311401
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5684380531311035
+    },
+    {
+      "name": "Data science",
+      "score": 0.44661328196525574
+    },
+    {
+      "name": "Geology",
+      "score": 0.21620413661003113
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.2141832709312439
+    },
+    {
+      "name": "Geography",
+      "score": 0.20239421725273132
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.14333894848823547
+    },
+    {
+      "name": "Cartography",
+      "score": 0.13137760758399963
+    }
+  ]
 }

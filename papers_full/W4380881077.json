@@ -1,104 +1,159 @@
 {
-    "title": "FACT: FFN-Attention Co-optimized Transformer Architecture with Eager Correlation Prediction",
-    "url": "https://openalex.org/W4380881077",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2338090668",
-            "name": "Yubin Qin",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098081833",
-            "name": "Yang Wang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3175575878",
-            "name": "Dazheng Deng",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2789362862",
-            "name": "Zhiren Zhao",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105081868",
-            "name": "Xiaolong Yang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2152438523",
-            "name": "Leibo Liu",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2131854424",
-            "name": "Shaojun Wei",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101492596",
-            "name": "Yang Hu",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112819844",
-            "name": "Shouyi Yin",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3200664681",
-        "https://openalex.org/W4320722432",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W4291653336",
-        "https://openalex.org/W3017024317",
-        "https://openalex.org/W2980113464",
-        "https://openalex.org/W3157114665",
-        "https://openalex.org/W3109309915",
-        "https://openalex.org/W4224267386",
-        "https://openalex.org/W4312349930",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3185702163",
-        "https://openalex.org/W4214686755",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2984100107",
-        "https://openalex.org/W4206223617",
-        "https://openalex.org/W4313467238",
-        "https://openalex.org/W3105802176",
-        "https://openalex.org/W3172942063",
-        "https://openalex.org/W4233743233",
-        "https://openalex.org/W4239088979",
-        "https://openalex.org/W2560674852",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4287887264",
-        "https://openalex.org/W4280557024",
-        "https://openalex.org/W4245659846",
-        "https://openalex.org/W4313033857",
-        "https://openalex.org/W2747329762"
-    ],
-    "abstract": "Transformer model is becoming prevalent in various AI applications with its outstanding performance. However, the high cost of computation and memory footprint make its inference inefficient. We discover that among the three main computation modules in a Transformer model (QKV generation, attention computation, FFN), it is the QKV generation and FFN that contribute to the most power cost. While the attention computation, focused by most previous works, only has decent power share when dealing with extremely long inputs. Therefore, in this paper, we propose FACT, an efficient algorithm-hardware co-design optimizing all three modules of Transformer. We first propose an eager prediction algorithm which predicts the attention matrix before QKV generation. It further detects the unnecessary computation in QKV generation and assigns mixed-precision FFN with the predicted attention, which helps improve the throughput. Further, we propose FACT accelerator to efficiently support eager prediction with three designs. It avoids the large overhead of prediction by using log-based add-only operations for prediction. It eliminates the latency of prediction through an out-of-order scheduler that makes the eager prediction and computation work in full pipeline. It additionally avoids memory access conflict in the mixed-precision FFN with a novel diagonal storage pattern. Experiments on 22 benchmarks show that our FACT improves the throughput of the whole Transformer by 3.59× on the geomean average. It achieves an enviable 47.64× and 278.1× energy saving when computing attention, compared to previous attention-optimization-only SOTA works ELSA and Sanger. Further, FACT achieves an energy efficiency of 4388 GOPS/W performing the whole Transformer layer on average, which is 94.98× higher than Nvidia V100 GPU.",
-    "full_text": null
+  "title": "FACT: FFN-Attention Co-optimized Transformer Architecture with Eager Correlation Prediction",
+  "url": "https://openalex.org/W4380881077",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2338090668",
+      "name": "Yubin Qin",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098081833",
+      "name": "Yang Wang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3175575878",
+      "name": "Dazheng Deng",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2789362862",
+      "name": "Zhiren Zhao",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105081868",
+      "name": "Xiaolong Yang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2152438523",
+      "name": "Leibo Liu",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2131854424",
+      "name": "Shaojun Wei",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101492596",
+      "name": "Yang Hu",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112819844",
+      "name": "Shouyi Yin",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3200664681",
+    "https://openalex.org/W4320722432",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W4291653336",
+    "https://openalex.org/W3017024317",
+    "https://openalex.org/W2980113464",
+    "https://openalex.org/W3157114665",
+    "https://openalex.org/W3109309915",
+    "https://openalex.org/W4224267386",
+    "https://openalex.org/W4312349930",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3185702163",
+    "https://openalex.org/W4214686755",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2984100107",
+    "https://openalex.org/W4206223617",
+    "https://openalex.org/W4313467238",
+    "https://openalex.org/W3105802176",
+    "https://openalex.org/W3172942063",
+    "https://openalex.org/W4233743233",
+    "https://openalex.org/W4239088979",
+    "https://openalex.org/W2560674852",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4287887264",
+    "https://openalex.org/W4280557024",
+    "https://openalex.org/W4245659846",
+    "https://openalex.org/W4313033857",
+    "https://openalex.org/W2747329762"
+  ],
+  "abstract": "Transformer model is becoming prevalent in various AI applications with its outstanding performance. However, the high cost of computation and memory footprint make its inference inefficient. We discover that among the three main computation modules in a Transformer model (QKV generation, attention computation, FFN), it is the QKV generation and FFN that contribute to the most power cost. While the attention computation, focused by most previous works, only has decent power share when dealing with extremely long inputs. Therefore, in this paper, we propose FACT, an efficient algorithm-hardware co-design optimizing all three modules of Transformer. We first propose an eager prediction algorithm which predicts the attention matrix before QKV generation. It further detects the unnecessary computation in QKV generation and assigns mixed-precision FFN with the predicted attention, which helps improve the throughput. Further, we propose FACT accelerator to efficiently support eager prediction with three designs. It avoids the large overhead of prediction by using log-based add-only operations for prediction. It eliminates the latency of prediction through an out-of-order scheduler that makes the eager prediction and computation work in full pipeline. It additionally avoids memory access conflict in the mixed-precision FFN with a novel diagonal storage pattern. Experiments on 22 benchmarks show that our FACT improves the throughput of the whole Transformer by 3.59× on the geomean average. It achieves an enviable 47.64× and 278.1× energy saving when computing attention, compared to previous attention-optimization-only SOTA works ELSA and Sanger. Further, FACT achieves an energy efficiency of 4388 GOPS/W performing the whole Transformer layer on average, which is 94.98× higher than Nvidia V100 GPU.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7864419221878052
+    },
+    {
+      "name": "Computation",
+      "score": 0.7534060478210449
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5769495964050293
+    },
+    {
+      "name": "Inference",
+      "score": 0.5698620080947876
+    },
+    {
+      "name": "Memory footprint",
+      "score": 0.5448129773139954
+    },
+    {
+      "name": "Computer engineering",
+      "score": 0.446415513753891
+    },
+    {
+      "name": "Efficient energy use",
+      "score": 0.4280526638031006
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3223370313644409
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.3062666058540344
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08791995048522949
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,63 +1,98 @@
 {
-    "title": "SRDD: a lightweight end-to-end object detection with transformer",
-    "url": "https://openalex.org/W4297093526",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2104485066",
-            "name": "Yuan Zhu",
-            "affiliations": [
-                "Nanjing University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2438656562",
-            "name": "Qingyuan Xia",
-            "affiliations": [
-                "Nanjing University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2081511594",
-            "name": "Wen Jin",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3174422331",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3204801262",
-        "https://openalex.org/W2601564443",
-        "https://openalex.org/W2962777203",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W6682889407",
-        "https://openalex.org/W2963150697",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2222512263",
-        "https://openalex.org/W3012573144",
-        "https://openalex.org/W4226013992",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W4214627427",
-        "https://openalex.org/W4214633470",
-        "https://openalex.org/W3168124404",
-        "https://openalex.org/W3217139832",
-        "https://openalex.org/W3172752666",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W3041838758",
-        "https://openalex.org/W4200357302",
-        "https://openalex.org/W3203020760",
-        "https://openalex.org/W3199093552",
-        "https://openalex.org/W3150864706",
-        "https://openalex.org/W4313069943",
-        "https://openalex.org/W3101415077",
-        "https://openalex.org/W2972555443",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W2604272474",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W2612690371"
-    ],
-    "abstract": "Computer vision is now playing a vital role in modern UAV (Unmanned Aerial Vehicle) systems. However, the on-board real-time small object detection for UAVs remains challenging. This paper presents an end-to-end ViT (Vision Transformer) detector, named Sparse ROI-based Deformable DETR (SRDD), to make ViT model available to UAV on-board systems. We embed a scoring network in the transformer T-encoder to selectively prune the redundant tokens, at the same time, introduce ROI-based detection refinement module in the decoder to optimise detection performance while maintaining end-to-end detection pipeline. By using scoring networks, we compress the Transformer encoder/decoder to 1/3-layer structure, which is far slim compared with DETR. With the help of lightweight backbone ResT and dynamic anchor box, we relieve the memory insufficient of on-board SoC. Experiment on UAVDT dataset shows the proposed SRDD method achieved 50.2% mAP (outperforms Deformable DETR at least 7%). In addition, the lightweight version of SRDD achieved 51.08% mAP with 44% Params reduction.",
-    "full_text": null
+  "title": "SRDD: a lightweight end-to-end object detection with transformer",
+  "url": "https://openalex.org/W4297093526",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2104485066",
+      "name": "Yuan Zhu",
+      "affiliations": [
+        "Nanjing University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2438656562",
+      "name": "Qingyuan Xia",
+      "affiliations": [
+        "Nanjing University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2081511594",
+      "name": "Wen Jin",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3174422331",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3204801262",
+    "https://openalex.org/W2601564443",
+    "https://openalex.org/W2962777203",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W6682889407",
+    "https://openalex.org/W2963150697",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2222512263",
+    "https://openalex.org/W3012573144",
+    "https://openalex.org/W4226013992",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W4214627427",
+    "https://openalex.org/W4214633470",
+    "https://openalex.org/W3168124404",
+    "https://openalex.org/W3217139832",
+    "https://openalex.org/W3172752666",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W3041838758",
+    "https://openalex.org/W4200357302",
+    "https://openalex.org/W3203020760",
+    "https://openalex.org/W3199093552",
+    "https://openalex.org/W3150864706",
+    "https://openalex.org/W4313069943",
+    "https://openalex.org/W3101415077",
+    "https://openalex.org/W2972555443",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W2604272474",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W2612690371"
+  ],
+  "abstract": "Computer vision is now playing a vital role in modern UAV (Unmanned Aerial Vehicle) systems. However, the on-board real-time small object detection for UAVs remains challenging. This paper presents an end-to-end ViT (Vision Transformer) detector, named Sparse ROI-based Deformable DETR (SRDD), to make ViT model available to UAV on-board systems. We embed a scoring network in the transformer T-encoder to selectively prune the redundant tokens, at the same time, introduce ROI-based detection refinement module in the decoder to optimise detection performance while maintaining end-to-end detection pipeline. By using scoring networks, we compress the Transformer encoder/decoder to 1/3-layer structure, which is far slim compared with DETR. With the help of lightweight backbone ResT and dynamic anchor box, we relieve the memory insufficient of on-board SoC. Experiment on UAVDT dataset shows the proposed SRDD method achieved 50.2% mAP (outperforms Deformable DETR at least 7%). In addition, the lightweight version of SRDD achieved 51.08% mAP with 44% Params reduction.",
+  "full_text": null,
+  "topic": "End-to-end principle",
+  "concepts": [
+    {
+      "name": "End-to-end principle",
+      "score": 0.8355376720428467
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7298415899276733
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5743297338485718
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4269099235534668
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.38882583379745483
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.2226257026195526
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0795799195766449
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0701342225074768
+    }
+  ]
 }

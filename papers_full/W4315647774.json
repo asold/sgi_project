@@ -1,82 +1,173 @@
 {
-    "title": "Decompose Auto-Transformer Time Series Anomaly Detection for Network Management",
-    "url": "https://openalex.org/W4315647774",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5084693607",
-            "name": "Bo Wu",
-            "affiliations": [
-                "Nanchang Hangkong University",
-                "Purple Mountain Laboratories",
-                "Southeast University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5062252654",
-            "name": "Chao Fang",
-            "affiliations": [
-                "Beijing University of Technology",
-                "Purple Mountain Laboratories"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5084907331",
-            "name": "Zhenjie Yao",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Microelectronics",
-                "Purple Mountain Laboratories"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103829995",
-            "name": "Yanhui Tu",
-            "affiliations": [
-                null,
-                "Purple Mountain Laboratories"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100393445",
-            "name": "Yixin Chen",
-            "affiliations": [
-                "Purple Mountain Laboratories",
-                "Washington University in St. Louis"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963166639",
-        "https://openalex.org/W3173539742",
-        "https://openalex.org/W3156676741",
-        "https://openalex.org/W3198381997",
-        "https://openalex.org/W4224038053",
-        "https://openalex.org/W2029449924",
-        "https://openalex.org/W2575100999",
-        "https://openalex.org/W2093606067",
-        "https://openalex.org/W2950251004",
-        "https://openalex.org/W6763983347",
-        "https://openalex.org/W2963278046",
-        "https://openalex.org/W3128634608",
-        "https://openalex.org/W6797188994",
-        "https://openalex.org/W3080273007",
-        "https://openalex.org/W7053349295",
-        "https://openalex.org/W2785362611",
-        "https://openalex.org/W2944981198",
-        "https://openalex.org/W3188872815",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2786827964",
-        "https://openalex.org/W2407991977",
-        "https://openalex.org/W3170981104",
-        "https://openalex.org/W4283318673",
-        "https://openalex.org/W3212890323",
-        "https://openalex.org/W3169450514",
-        "https://openalex.org/W3120331202",
-        "https://openalex.org/W3106543020",
-        "https://openalex.org/W3098957257",
-        "https://openalex.org/W2950361482"
-    ],
-    "abstract": "Time series anomaly detection through unsupervised methods has been an active research area in recent years due to its enormous potential for networks management. The representation and reconstruction of time series have made extraordinary progress in existing works. However, time series is known to be complex in terms of their temporal dependency and stochasticity, which makes anomaly detection difficult. To this end, we propose a novel approach based on a decomposition auto-transformer networks(DATN) for time series anomaly detection. The time series is decomposed into seasonal and trend components, and renovated as a basic inner block deep model. With this design, transformers can decompose complex time series in a progressive manner. We also design an auto-transfomer block that determines dependencies and representation aggregation at the sub-series level based on series seasonal and trend components. Moreover, the complex transformer decoder is replaced by a simple linear decoder, which makes the model more efficient. Extensive experiments on various public benchmarks demonstrate that our method has achieved state-of-the-art performance.",
-    "full_text": null
+  "title": "Decompose Auto-Transformer Time Series Anomaly Detection for Network Management",
+  "url": "https://openalex.org/W4315647774",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5084693607",
+      "name": "Bo Wu",
+      "affiliations": [
+        "Nanchang Hangkong University",
+        "Purple Mountain Laboratories",
+        "Southeast University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5062252654",
+      "name": "Chao Fang",
+      "affiliations": [
+        "Beijing University of Technology",
+        "Purple Mountain Laboratories"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5084907331",
+      "name": "Zhenjie Yao",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Microelectronics",
+        "Purple Mountain Laboratories"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103829995",
+      "name": "Yanhui Tu",
+      "affiliations": [
+        null,
+        "Purple Mountain Laboratories"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100393445",
+      "name": "Yixin Chen",
+      "affiliations": [
+        "Purple Mountain Laboratories",
+        "Washington University in St. Louis"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963166639",
+    "https://openalex.org/W3173539742",
+    "https://openalex.org/W3156676741",
+    "https://openalex.org/W3198381997",
+    "https://openalex.org/W4224038053",
+    "https://openalex.org/W2029449924",
+    "https://openalex.org/W2575100999",
+    "https://openalex.org/W2093606067",
+    "https://openalex.org/W2950251004",
+    "https://openalex.org/W6763983347",
+    "https://openalex.org/W2963278046",
+    "https://openalex.org/W3128634608",
+    "https://openalex.org/W6797188994",
+    "https://openalex.org/W3080273007",
+    "https://openalex.org/W7053349295",
+    "https://openalex.org/W2785362611",
+    "https://openalex.org/W2944981198",
+    "https://openalex.org/W3188872815",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2786827964",
+    "https://openalex.org/W2407991977",
+    "https://openalex.org/W3170981104",
+    "https://openalex.org/W4283318673",
+    "https://openalex.org/W3212890323",
+    "https://openalex.org/W3169450514",
+    "https://openalex.org/W3120331202",
+    "https://openalex.org/W3106543020",
+    "https://openalex.org/W3098957257",
+    "https://openalex.org/W2950361482"
+  ],
+  "abstract": "Time series anomaly detection through unsupervised methods has been an active research area in recent years due to its enormous potential for networks management. The representation and reconstruction of time series have made extraordinary progress in existing works. However, time series is known to be complex in terms of their temporal dependency and stochasticity, which makes anomaly detection difficult. To this end, we propose a novel approach based on a decomposition auto-transformer networks(DATN) for time series anomaly detection. The time series is decomposed into seasonal and trend components, and renovated as a basic inner block deep model. With this design, transformers can decompose complex time series in a progressive manner. We also design an auto-transfomer block that determines dependencies and representation aggregation at the sub-series level based on series seasonal and trend components. Moreover, the complex transformer decoder is replaced by a simple linear decoder, which makes the model more efficient. Extensive experiments on various public benchmarks demonstrate that our method has achieved state-of-the-art performance.",
+  "full_text": null,
+  "topic": "Anomaly detection",
+  "concepts": [
+    {
+      "name": "Anomaly detection",
+      "score": 0.7483273148536682
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6971052885055542
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6287473440170288
+    },
+    {
+      "name": "Series (stratigraphy)",
+      "score": 0.6108964681625366
+    },
+    {
+      "name": "Time series",
+      "score": 0.553009569644928
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.48908692598342896
+    },
+    {
+      "name": "Dependency (UML)",
+      "score": 0.42084038257598877
+    },
+    {
+      "name": "Anomaly (physics)",
+      "score": 0.41230207681655884
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.35392701625823975
+    },
+    {
+      "name": "Data mining",
+      "score": 0.32995274662971497
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3155151605606079
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.17997178435325623
+    },
+    {
+      "name": "Engineering",
+      "score": 0.17808708548545837
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Condensed matter physics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

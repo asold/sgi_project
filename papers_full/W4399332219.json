@@ -1,122 +1,169 @@
 {
-    "title": "FusOn-pLM: A Fusion Oncoprotein-Specific Language Model via Focused Probabilistic Masking",
-    "url": "https://openalex.org/W4399332219",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4319346220",
-            "name": "Sophia Vincoff",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4317659579",
-            "name": "Shrey Goel",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5099014984",
-            "name": "Kseniia Kholina",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093115915",
-            "name": "Rishab Pulugurta",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4322667651",
-            "name": "Pranay Vure",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2622003133",
-            "name": "Pranam Chatterjee",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4319346220",
-            "name": "Sophia Vincoff",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4317659579",
-            "name": "Shrey Goel",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5099014984",
-            "name": "Kseniia Kholina",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5093115915",
-            "name": "Rishab Pulugurta",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4322667651",
-            "name": "Pranay Vure",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2622003133",
-            "name": "Pranam Chatterjee",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4396721167",
-        "https://openalex.org/W3195262538",
-        "https://openalex.org/W4388033886",
-        "https://openalex.org/W4382362079",
-        "https://openalex.org/W4387906121",
-        "https://openalex.org/W1728842521",
-        "https://openalex.org/W4387892965",
-        "https://openalex.org/W2069351898",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W2007438323",
-        "https://openalex.org/W4288066876",
-        "https://openalex.org/W3188940990",
-        "https://openalex.org/W3095138440",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4387865538",
-        "https://openalex.org/W2139995722",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W2048172259",
-        "https://openalex.org/W4391642138",
-        "https://openalex.org/W4318071656",
-        "https://openalex.org/W2806892701",
-        "https://openalex.org/W4285276032",
-        "https://openalex.org/W3156051371",
-        "https://openalex.org/W4223515782",
-        "https://openalex.org/W4392352687",
-        "https://openalex.org/W4303983095",
-        "https://openalex.org/W2055402151",
-        "https://openalex.org/W2950954328",
-        "https://openalex.org/W1968331107",
-        "https://openalex.org/W1964546356",
-        "https://openalex.org/W4387139698",
-        "https://openalex.org/W2786469974",
-        "https://openalex.org/W4318483337",
-        "https://openalex.org/W4393581315",
-        "https://openalex.org/W4383957026",
-        "https://openalex.org/W2158485828",
-        "https://openalex.org/W4313895057",
-        "https://openalex.org/W4391379655"
-    ],
-    "abstract": "Abstract Fusion oncoproteins, a class of chimeric proteins arising from chromosomal translocations, drive and sustain various cancers, particularly those impacting children. Unfortunately, due to their intrinsically disordered nature, large size, and lack of well-defined, druggable pockets, they have been historically challenging to target therapeutically: neither small molecule-based methods nor structure-based approaches for binder design are strong options for this class of molecules. Recently, protein language models (pLMs) have demonstrated success at representing protein sequences with information-rich embeddings, enabling downstream design applications from sequence alone. However, no current pLM has been trained on fusion oncoprotein sequences and thus may not produce optimal representations for these proteins. In this work, we introduce FusOn-pLM , a novel pLM that fine-tunes the state-of-the-art ESM-2 model on fusion oncoprotein sequences. We specifically introduce a novel masked language modeling (MLM) strategy, employing a binding-site probability predictor to focus masking on key amino acid residues, thereby generating more optimal fusion oncoprotein-aware embeddings. Our model improves performance on both fusion oncoprotein-specific benchmarks and disorder prediction tasks in comparison to baseline ESM-2 representations, as well as manually-constructed biophysical embeddings, motivating downstream usage of FusOn-pLM embeddings for therapeutic design tasks targeting these fusions. We have made our model publicly available to the community at https://huggingface.co/ChatterjeeLab/FusOn-pLM .",
-    "full_text": null
+  "title": "FusOn-pLM: A Fusion Oncoprotein-Specific Language Model via Focused Probabilistic Masking",
+  "url": "https://openalex.org/W4399332219",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4319346220",
+      "name": "Sophia Vincoff",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4317659579",
+      "name": "Shrey Goel",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5099014984",
+      "name": "Kseniia Kholina",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093115915",
+      "name": "Rishab Pulugurta",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4322667651",
+      "name": "Pranay Vure",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2622003133",
+      "name": "Pranam Chatterjee",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4319346220",
+      "name": "Sophia Vincoff",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4317659579",
+      "name": "Shrey Goel",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5099014984",
+      "name": "Kseniia Kholina",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5093115915",
+      "name": "Rishab Pulugurta",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4322667651",
+      "name": "Pranay Vure",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2622003133",
+      "name": "Pranam Chatterjee",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4396721167",
+    "https://openalex.org/W3195262538",
+    "https://openalex.org/W4388033886",
+    "https://openalex.org/W4382362079",
+    "https://openalex.org/W4387906121",
+    "https://openalex.org/W1728842521",
+    "https://openalex.org/W4387892965",
+    "https://openalex.org/W2069351898",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W2007438323",
+    "https://openalex.org/W4288066876",
+    "https://openalex.org/W3188940990",
+    "https://openalex.org/W3095138440",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4387865538",
+    "https://openalex.org/W2139995722",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W2048172259",
+    "https://openalex.org/W4391642138",
+    "https://openalex.org/W4318071656",
+    "https://openalex.org/W2806892701",
+    "https://openalex.org/W4285276032",
+    "https://openalex.org/W3156051371",
+    "https://openalex.org/W4223515782",
+    "https://openalex.org/W4392352687",
+    "https://openalex.org/W4303983095",
+    "https://openalex.org/W2055402151",
+    "https://openalex.org/W2950954328",
+    "https://openalex.org/W1968331107",
+    "https://openalex.org/W1964546356",
+    "https://openalex.org/W4387139698",
+    "https://openalex.org/W2786469974",
+    "https://openalex.org/W4318483337",
+    "https://openalex.org/W4393581315",
+    "https://openalex.org/W4383957026",
+    "https://openalex.org/W2158485828",
+    "https://openalex.org/W4313895057",
+    "https://openalex.org/W4391379655"
+  ],
+  "abstract": "Abstract Fusion oncoproteins, a class of chimeric proteins arising from chromosomal translocations, drive and sustain various cancers, particularly those impacting children. Unfortunately, due to their intrinsically disordered nature, large size, and lack of well-defined, druggable pockets, they have been historically challenging to target therapeutically: neither small molecule-based methods nor structure-based approaches for binder design are strong options for this class of molecules. Recently, protein language models (pLMs) have demonstrated success at representing protein sequences with information-rich embeddings, enabling downstream design applications from sequence alone. However, no current pLM has been trained on fusion oncoprotein sequences and thus may not produce optimal representations for these proteins. In this work, we introduce FusOn-pLM , a novel pLM that fine-tunes the state-of-the-art ESM-2 model on fusion oncoprotein sequences. We specifically introduce a novel masked language modeling (MLM) strategy, employing a binding-site probability predictor to focus masking on key amino acid residues, thereby generating more optimal fusion oncoprotein-aware embeddings. Our model improves performance on both fusion oncoprotein-specific benchmarks and disorder prediction tasks in comparison to baseline ESM-2 representations, as well as manually-constructed biophysical embeddings, motivating downstream usage of FusOn-pLM embeddings for therapeutic design tasks targeting these fusions. We have made our model publicly available to the community at https://huggingface.co/ChatterjeeLab/FusOn-pLM .",
+  "full_text": null,
+  "topic": "Masking (illustration)",
+  "concepts": [
+    {
+      "name": "Masking (illustration)",
+      "score": 0.7638058066368103
+    },
+    {
+      "name": "Probabilistic logic",
+      "score": 0.7233432531356812
+    },
+    {
+      "name": "Fusion",
+      "score": 0.5302091836929321
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4809783697128296
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40091246366500854
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.3891504406929016
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38003313541412354
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.17908164858818054
+    },
+    {
+      "name": "Art",
+      "score": 0.14374056458473206
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.07705244421958923
+    },
+    {
+      "name": "Literature",
+      "score": 0.05157649517059326
+    }
+  ]
 }

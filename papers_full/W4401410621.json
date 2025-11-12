@@ -1,100 +1,135 @@
 {
-    "title": "SqliGPT: Evaluating and Utilizing Large Language Models for Automated SQL Injection Black-Box Detection",
-    "url": "https://openalex.org/W4401410621",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5106355862",
-            "name": "Zhiwen Gui",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136989088",
-            "name": "Enze Wang",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2167823559",
-            "name": "Binbin Deng",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1979259463",
-            "name": "Mingyuan Zhang",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2129122825",
-            "name": "Yitao Chen",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3118345773",
-            "name": "Shengfei Wei",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1976144189",
-            "name": "Wei Xie",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097949178",
-            "name": "Bao-sheng Wang",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4362518865",
-        "https://openalex.org/W2080803678",
-        "https://openalex.org/W3197405456",
-        "https://openalex.org/W2065555413",
-        "https://openalex.org/W4283790901",
-        "https://openalex.org/W3124662913",
-        "https://openalex.org/W4390659426",
-        "https://openalex.org/W4388191909",
-        "https://openalex.org/W2971802583",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2132791332",
-        "https://openalex.org/W4249792249",
-        "https://openalex.org/W3184859223",
-        "https://openalex.org/W2765714642",
-        "https://openalex.org/W2946129952",
-        "https://openalex.org/W4206111141",
-        "https://openalex.org/W2903825319",
-        "https://openalex.org/W3042471545",
-        "https://openalex.org/W3118435563",
-        "https://openalex.org/W4385507608",
-        "https://openalex.org/W4384948751",
-        "https://openalex.org/W4401023556",
-        "https://openalex.org/W4393065402",
-        "https://openalex.org/W4319163914",
-        "https://openalex.org/W2963232127",
-        "https://openalex.org/W2981664222",
-        "https://openalex.org/W2915009417",
-        "https://openalex.org/W3204700857",
-        "https://openalex.org/W4396665924",
-        "https://openalex.org/W3188417193",
-        "https://openalex.org/W4248441875",
-        "https://openalex.org/W4288089799"
-    ],
-    "abstract": "SQL injection (SQLI) black-box detection, which simulates external attack scenarios, is crucial for assessing vulnerabilities in real-world web applications. However, existing black-box detection methods rely on predefined rules to cover the most common SQLI cases, lacking diversity in vulnerability detection scheduling and payload, suffering from limited efficiency and accuracy. Large Language Models (LLMs) have shown significant advancements in several domains, so we developed SqliGPT, an LLM-powered SQLI black-box scanner that leverages the advanced contextual understanding and reasoning abilities of LLMs. Our approach introduces the Strategy Selection Module to improve detection efficiency and the Defense Bypass Module to address insufficient defense mechanisms. We evaluated SqliGPT against six state-of-the-art scanners using our SqliMicroBenchmark. Our evaluation results indicate that SqliGPT successfully detected all 45 targets, outperforming other scanners, particularly on targets with insufficient defenses. Additionally, SqliGPT demonstrated excellent efficiency in executing detection tasks, slightly underperforming Arachni and SQIRL on 27 targets but besting them on the other 18 targets. This study highlights the potential of LLMs in SQLI black-box detection and demonstrates the feasibility and effectiveness of LLMs in enhancing detection efficiency and accuracy.",
-    "full_text": null
+  "title": "SqliGPT: Evaluating and Utilizing Large Language Models for Automated SQL Injection Black-Box Detection",
+  "url": "https://openalex.org/W4401410621",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5106355862",
+      "name": "Zhiwen Gui",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136989088",
+      "name": "Enze Wang",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2167823559",
+      "name": "Binbin Deng",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1979259463",
+      "name": "Mingyuan Zhang",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2129122825",
+      "name": "Yitao Chen",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3118345773",
+      "name": "Shengfei Wei",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1976144189",
+      "name": "Wei Xie",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097949178",
+      "name": "Bao-sheng Wang",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4362518865",
+    "https://openalex.org/W2080803678",
+    "https://openalex.org/W3197405456",
+    "https://openalex.org/W2065555413",
+    "https://openalex.org/W4283790901",
+    "https://openalex.org/W3124662913",
+    "https://openalex.org/W4390659426",
+    "https://openalex.org/W4388191909",
+    "https://openalex.org/W2971802583",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2132791332",
+    "https://openalex.org/W4249792249",
+    "https://openalex.org/W3184859223",
+    "https://openalex.org/W2765714642",
+    "https://openalex.org/W2946129952",
+    "https://openalex.org/W4206111141",
+    "https://openalex.org/W2903825319",
+    "https://openalex.org/W3042471545",
+    "https://openalex.org/W3118435563",
+    "https://openalex.org/W4385507608",
+    "https://openalex.org/W4384948751",
+    "https://openalex.org/W4401023556",
+    "https://openalex.org/W4393065402",
+    "https://openalex.org/W4319163914",
+    "https://openalex.org/W2963232127",
+    "https://openalex.org/W2981664222",
+    "https://openalex.org/W2915009417",
+    "https://openalex.org/W3204700857",
+    "https://openalex.org/W4396665924",
+    "https://openalex.org/W3188417193",
+    "https://openalex.org/W4248441875",
+    "https://openalex.org/W4288089799"
+  ],
+  "abstract": "SQL injection (SQLI) black-box detection, which simulates external attack scenarios, is crucial for assessing vulnerabilities in real-world web applications. However, existing black-box detection methods rely on predefined rules to cover the most common SQLI cases, lacking diversity in vulnerability detection scheduling and payload, suffering from limited efficiency and accuracy. Large Language Models (LLMs) have shown significant advancements in several domains, so we developed SqliGPT, an LLM-powered SQLI black-box scanner that leverages the advanced contextual understanding and reasoning abilities of LLMs. Our approach introduces the Strategy Selection Module to improve detection efficiency and the Defense Bypass Module to address insufficient defense mechanisms. We evaluated SqliGPT against six state-of-the-art scanners using our SqliMicroBenchmark. Our evaluation results indicate that SqliGPT successfully detected all 45 targets, outperforming other scanners, particularly on targets with insufficient defenses. Additionally, SqliGPT demonstrated excellent efficiency in executing detection tasks, slightly underperforming Arachni and SQIRL on 27 targets but besting them on the other 18 targets. This study highlights the potential of LLMs in SQLI black-box detection and demonstrates the feasibility and effectiveness of LLMs in enhancing detection efficiency and accuracy.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6147097945213318
+    },
+    {
+      "name": "SQL injection",
+      "score": 0.6066329479217529
+    },
+    {
+      "name": "Programming language",
+      "score": 0.3843512237071991
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3223353624343872
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.16413599252700806
+    },
+    {
+      "name": "Query by Example",
+      "score": 0.10451436042785645
+    },
+    {
+      "name": "Web search query",
+      "score": 0.0
+    },
+    {
+      "name": "Search engine",
+      "score": 0.0
+    }
+  ]
 }

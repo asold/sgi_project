@@ -1,86 +1,157 @@
 {
-    "title": "On the Usability of Transformers-based models for a French Question-Answering task",
-    "url": "https://openalex.org/W3198722157",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5034678120",
-            "name": "Oralie Cattan",
-            "affiliations": [
-                null,
-                "Centre National de la Recherche Scientifique",
-                "Université Paris-Saclay"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5054392060",
-            "name": "Christophe Servan",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5001616788",
-            "name": "Sophie Rosset",
-            "affiliations": [
-                "Centre National de la Recherche Scientifique",
-                "Université Paris-Saclay"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3105234097",
-        "https://openalex.org/W3103187652",
-        "https://openalex.org/W3099756172",
-        "https://openalex.org/W2885311373",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2974170798",
-        "https://openalex.org/W4287760320",
-        "https://openalex.org/W3098576111",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W3034199299",
-        "https://openalex.org/W3032816972",
-        "https://openalex.org/W2989539713",
-        "https://openalex.org/W2964303773",
-        "https://openalex.org/W4310492983",
-        "https://openalex.org/W2900356614",
-        "https://openalex.org/W2250342921",
-        "https://openalex.org/W3126074026",
-        "https://openalex.org/W2998183051",
-        "https://openalex.org/W3035390927",
-        "https://openalex.org/W2952638691",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W3038613107",
-        "https://openalex.org/W2970960342",
-        "https://openalex.org/W2552027021",
-        "https://openalex.org/W3029674355",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W3006185224",
-        "https://openalex.org/W2963809228",
-        "https://openalex.org/W2587528408",
-        "https://openalex.org/W2766371743",
-        "https://openalex.org/W3005957694",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2963212250",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W3179890742",
-        "https://openalex.org/W2962808855",
-        "https://openalex.org/W2970565456",
-        "https://openalex.org/W2923014074",
-        "https://openalex.org/W2952729433",
-        "https://openalex.org/W4394662461",
-        "https://openalex.org/W2995541765",
-        "https://openalex.org/W2963488798",
-        "https://openalex.org/W3032532958",
-        "https://openalex.org/W4295838474",
-        "https://openalex.org/W2890152674",
-        "https://openalex.org/W2551396370",
-        "https://openalex.org/W3101860695",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2770970123",
-        "https://openalex.org/W2963310665"
-    ],
-    "abstract": "For many tasks, state-of-the-art results have been achieved with Transformer-based architectures, resulting in a paradigmatic shift in practices from the use of task-specific architectures to the fine-tuning of pre-trained language models. The ongoing trend consists in training models with an ever-increasing amount of data and parameters, which requires considerable resources. It leads to a strong search to improve resource efficiency based on algorithmic and hardware improvements evaluated only for English. This raises questions about their usability when applied to small-scale learning problems, for which a limited amount of training data is available, especially for under-resourced languages tasks. The lack of appropriately sized corpora is a hindrance to applying data-driven and transfer learning-based approaches with strong instability cases. In this paper, we establish a state-of-the-art of the efforts dedicated to the usability of Transformer-based models and propose to evaluate these improvements on the question-answering performances of French language which have few resources. We address the instability relating to data scarcity by investigating various training strategies with data augmentation, hyperparameters optimization and cross-lingual transfer. We also introduce a new compact model for French FrALBERT which proves to be competitive in low-resource settings.",
-    "full_text": null
+  "title": "On the Usability of Transformers-based models for a French Question-Answering task",
+  "url": "https://openalex.org/W3198722157",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5034678120",
+      "name": "Oralie Cattan",
+      "affiliations": [
+        null,
+        "Centre National de la Recherche Scientifique",
+        "Université Paris-Saclay"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5054392060",
+      "name": "Christophe Servan",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5001616788",
+      "name": "Sophie Rosset",
+      "affiliations": [
+        "Centre National de la Recherche Scientifique",
+        "Université Paris-Saclay"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3105234097",
+    "https://openalex.org/W3103187652",
+    "https://openalex.org/W3099756172",
+    "https://openalex.org/W2885311373",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2974170798",
+    "https://openalex.org/W4287760320",
+    "https://openalex.org/W3098576111",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W3034199299",
+    "https://openalex.org/W3032816972",
+    "https://openalex.org/W2989539713",
+    "https://openalex.org/W2964303773",
+    "https://openalex.org/W4310492983",
+    "https://openalex.org/W2900356614",
+    "https://openalex.org/W2250342921",
+    "https://openalex.org/W3126074026",
+    "https://openalex.org/W2998183051",
+    "https://openalex.org/W3035390927",
+    "https://openalex.org/W2952638691",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W3038613107",
+    "https://openalex.org/W2970960342",
+    "https://openalex.org/W2552027021",
+    "https://openalex.org/W3029674355",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W3006185224",
+    "https://openalex.org/W2963809228",
+    "https://openalex.org/W2587528408",
+    "https://openalex.org/W2766371743",
+    "https://openalex.org/W3005957694",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2963212250",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W3179890742",
+    "https://openalex.org/W2962808855",
+    "https://openalex.org/W2970565456",
+    "https://openalex.org/W2923014074",
+    "https://openalex.org/W2952729433",
+    "https://openalex.org/W4394662461",
+    "https://openalex.org/W2995541765",
+    "https://openalex.org/W2963488798",
+    "https://openalex.org/W3032532958",
+    "https://openalex.org/W4295838474",
+    "https://openalex.org/W2890152674",
+    "https://openalex.org/W2551396370",
+    "https://openalex.org/W3101860695",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2770970123",
+    "https://openalex.org/W2963310665"
+  ],
+  "abstract": "For many tasks, state-of-the-art results have been achieved with Transformer-based architectures, resulting in a paradigmatic shift in practices from the use of task-specific architectures to the fine-tuning of pre-trained language models. The ongoing trend consists in training models with an ever-increasing amount of data and parameters, which requires considerable resources. It leads to a strong search to improve resource efficiency based on algorithmic and hardware improvements evaluated only for English. This raises questions about their usability when applied to small-scale learning problems, for which a limited amount of training data is available, especially for under-resourced languages tasks. The lack of appropriately sized corpora is a hindrance to applying data-driven and transfer learning-based approaches with strong instability cases. In this paper, we establish a state-of-the-art of the efforts dedicated to the usability of Transformer-based models and propose to evaluate these improvements on the question-answering performances of French language which have few resources. We address the instability relating to data scarcity by investigating various training strategies with data augmentation, hyperparameters optimization and cross-lingual transfer. We also introduce a new compact model for French FrALBERT which proves to be competitive in low-resource settings.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8044658899307251
+    },
+    {
+      "name": "Usability",
+      "score": 0.778266191482544
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6514027118682861
+    },
+    {
+      "name": "Scarcity",
+      "score": 0.5693812966346741
+    },
+    {
+      "name": "Hyperparameter",
+      "score": 0.5118981599807739
+    },
+    {
+      "name": "Transfer of learning",
+      "score": 0.5107758045196533
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4802180230617523
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4544643759727478
+    },
+    {
+      "name": "Language model",
+      "score": 0.4463717043399811
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.4228423237800598
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.33638596534729004
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.11089503765106201
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0893094539642334
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Microeconomics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    }
+  ]
 }

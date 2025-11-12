@@ -1,143 +1,194 @@
 {
-    "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
-    "url": "https://openalex.org/W4393578753",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2169785112",
-            "name": "Shulin Zeng",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097653880",
-            "name": "Jun Liu",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2057993641",
-            "name": "Guohao Dai",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106446732",
-            "name": "Xinhao Yang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2223361438",
-            "name": "Tianyu Fu",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097426698",
-            "name": "Hongyi Wang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2904182328",
-            "name": "Wenheng Ma",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2798735492",
-            "name": "Hanbo Sun",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2161828512",
-            "name": "ShiYao Li",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2159764157",
-            "name": "Zixiao Huang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2161661302",
-            "name": "Yadong Dai",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2132513620",
-            "name": "Jintao Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2576351062",
-            "name": "Zehao Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2111773010",
-            "name": "Ruoyu Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2198141040",
-            "name": "Kairui Wen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2443400196",
-            "name": "Xuefei Ning",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097172772",
-            "name": "Yu Wang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4321466385",
-        "https://openalex.org/W3130554079",
-        "https://openalex.org/W3012561096",
-        "https://openalex.org/W4308083526",
-        "https://openalex.org/W4382202798",
-        "https://openalex.org/W4211090839",
-        "https://openalex.org/W3189877953",
-        "https://openalex.org/W4297097408",
-        "https://openalex.org/W4318541578",
-        "https://openalex.org/W4224903119",
-        "https://openalex.org/W4387321091",
-        "https://openalex.org/W3206453033",
-        "https://openalex.org/W4380881077",
-        "https://openalex.org/W3103168911",
-        "https://openalex.org/W4211085526",
-        "https://openalex.org/W4200506235",
-        "https://openalex.org/W4360831803",
-        "https://openalex.org/W3034855459",
-        "https://openalex.org/W4386763770",
-        "https://openalex.org/W4281651027",
-        "https://openalex.org/W3130641740",
-        "https://openalex.org/W2904487346",
-        "https://openalex.org/W2616014673"
-    ],
-    "abstract": "Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0× higher energy efficiency and 1.8× better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2× higher throughput using the latest Versal VHK158 FPGA.",
-    "full_text": null
+  "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
+  "url": "https://openalex.org/W4393578753",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2169785112",
+      "name": "Shulin Zeng",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097653880",
+      "name": "Jun Liu",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2057993641",
+      "name": "Guohao Dai",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106446732",
+      "name": "Xinhao Yang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2223361438",
+      "name": "Tianyu Fu",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097426698",
+      "name": "Hongyi Wang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2904182328",
+      "name": "Wenheng Ma",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2798735492",
+      "name": "Hanbo Sun",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2161828512",
+      "name": "ShiYao Li",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2159764157",
+      "name": "Zixiao Huang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2161661302",
+      "name": "Yadong Dai",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2132513620",
+      "name": "Jintao Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2576351062",
+      "name": "Zehao Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2111773010",
+      "name": "Ruoyu Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2198141040",
+      "name": "Kairui Wen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2443400196",
+      "name": "Xuefei Ning",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097172772",
+      "name": "Yu Wang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4321466385",
+    "https://openalex.org/W3130554079",
+    "https://openalex.org/W3012561096",
+    "https://openalex.org/W4308083526",
+    "https://openalex.org/W4382202798",
+    "https://openalex.org/W4211090839",
+    "https://openalex.org/W3189877953",
+    "https://openalex.org/W4297097408",
+    "https://openalex.org/W4318541578",
+    "https://openalex.org/W4224903119",
+    "https://openalex.org/W4387321091",
+    "https://openalex.org/W3206453033",
+    "https://openalex.org/W4380881077",
+    "https://openalex.org/W3103168911",
+    "https://openalex.org/W4211085526",
+    "https://openalex.org/W4200506235",
+    "https://openalex.org/W4360831803",
+    "https://openalex.org/W3034855459",
+    "https://openalex.org/W4386763770",
+    "https://openalex.org/W4281651027",
+    "https://openalex.org/W3130641740",
+    "https://openalex.org/W2904487346",
+    "https://openalex.org/W2616014673"
+  ],
+  "abstract": "Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0× higher energy efficiency and 1.8× better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2× higher throughput using the latest Versal VHK158 FPGA.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7630889415740967
+    },
+    {
+      "name": "Inference",
+      "score": 0.7146406769752502
+    },
+    {
+      "name": "Field-programmable gate array",
+      "score": 0.676008403301239
+    },
+    {
+      "name": "Programming language",
+      "score": 0.4973466694355011
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.4436507821083069
+    },
+    {
+      "name": "Flow (mathematics)",
+      "score": 0.4218588173389435
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.37163245677948
+    },
+    {
+      "name": "Computer architecture",
+      "score": 0.37062951922416687
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.28015416860580444
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.22516795992851257
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09686490893363953
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

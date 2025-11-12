@@ -1,107 +1,158 @@
 {
-    "title": "Exploiting Future Word Contexts in Neural Network Language Models for Speech Recognition",
-    "url": "https://openalex.org/W2952613254",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2985170485",
-            "name": "Chen, X.",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2988840627",
-            "name": "Liu X",
-            "affiliations": [
-                "Chinese University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2247379936",
-            "name": "Wang Y",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Ragni, A",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Wong, JHM",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Gales, MJF",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2002342963",
-        "https://openalex.org/W6679429981",
-        "https://openalex.org/W6713507411",
-        "https://openalex.org/W2114016253",
-        "https://openalex.org/W1985258458",
-        "https://openalex.org/W6631362777",
-        "https://openalex.org/W2125336414",
-        "https://openalex.org/W6713149780",
-        "https://openalex.org/W2160451571",
-        "https://openalex.org/W2608339501",
-        "https://openalex.org/W2963540920",
-        "https://openalex.org/W2345190899",
-        "https://openalex.org/W6691642504",
-        "https://openalex.org/W6713561562",
-        "https://openalex.org/W2496955520",
-        "https://openalex.org/W6680106237",
-        "https://openalex.org/W6692563993",
-        "https://openalex.org/W6640212811",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W6604085896",
-        "https://openalex.org/W2130437494",
-        "https://openalex.org/W2158195707",
-        "https://openalex.org/W2289003027",
-        "https://openalex.org/W2401969231",
-        "https://openalex.org/W6607333740",
-        "https://openalex.org/W98731357",
-        "https://openalex.org/W6680532216",
-        "https://openalex.org/W6713654375",
-        "https://openalex.org/W2759071281",
-        "https://openalex.org/W2963451498",
-        "https://openalex.org/W2747917286",
-        "https://openalex.org/W2012115736",
-        "https://openalex.org/W2706749641",
-        "https://openalex.org/W2134659216",
-        "https://openalex.org/W2514741789",
-        "https://openalex.org/W1970689298",
-        "https://openalex.org/W2594610113",
-        "https://openalex.org/W2100506586",
-        "https://openalex.org/W2020073413",
-        "https://openalex.org/W1524333225",
-        "https://openalex.org/W2250489405",
-        "https://openalex.org/W1924770834",
-        "https://openalex.org/W2404974730",
-        "https://openalex.org/W2405722712",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W2138204974",
-        "https://openalex.org/W2998704965",
-        "https://openalex.org/W2533523411",
-        "https://openalex.org/W2404404182",
-        "https://openalex.org/W101286142",
-        "https://openalex.org/W2401430117",
-        "https://openalex.org/W2259472270",
-        "https://openalex.org/W2131342762",
-        "https://openalex.org/W4285719527"
-    ],
-    "abstract": "Language modeling is a crucial component in a wide range of applications including speech recognition. Language models (LMs) are usually constructed by splitting a sentence into words and computing the probability of a word based on its word history. This sentence probability calculation, making use of conditional probability distributions, assumes that there is little impact from approximations used in the LMs, including the word history representations and finite training data. This motivates examining models that make use of additional information from the sentence. In this paper, future word information, in addition to the history, is used to predict the probability of the current word. For recurrent neural network LMs (RNNLMs), this information can be encapsulated in a bi-directional model. However, if used directly, this form of model is computationally expensive when trained on large quantities of data, and can be problematic when used with word lattices. This paper proposes a novel neural network language model structure, the succeeding-word RNNLM, su-RNNLM, to address these issues. Instead of using a recurrent unit to capture the complete future word contexts, a feedforward unit is used to model a fixed finite number of succeeding words. This is more efficient in training than bi-directional models and can be applied to lattice rescoring. The generated lattices can be used for downstream applications, such as confusion network decoding and keyword search. Experimental results on speech recognition and keyword spotting tasks illustrate the empirical usefulness of future word information, and the flexibility of the proposed model to represent this information.",
-    "full_text": null
+  "title": "Exploiting Future Word Contexts in Neural Network Language Models for Speech Recognition",
+  "url": "https://openalex.org/W2952613254",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2985170485",
+      "name": "Chen, X.",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2988840627",
+      "name": "Liu X",
+      "affiliations": [
+        "Chinese University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2247379936",
+      "name": "Wang Y",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Ragni, A",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Wong, JHM",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Gales, MJF",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2002342963",
+    "https://openalex.org/W6679429981",
+    "https://openalex.org/W6713507411",
+    "https://openalex.org/W2114016253",
+    "https://openalex.org/W1985258458",
+    "https://openalex.org/W6631362777",
+    "https://openalex.org/W2125336414",
+    "https://openalex.org/W6713149780",
+    "https://openalex.org/W2160451571",
+    "https://openalex.org/W2608339501",
+    "https://openalex.org/W2963540920",
+    "https://openalex.org/W2345190899",
+    "https://openalex.org/W6691642504",
+    "https://openalex.org/W6713561562",
+    "https://openalex.org/W2496955520",
+    "https://openalex.org/W6680106237",
+    "https://openalex.org/W6692563993",
+    "https://openalex.org/W6640212811",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W6604085896",
+    "https://openalex.org/W2130437494",
+    "https://openalex.org/W2158195707",
+    "https://openalex.org/W2289003027",
+    "https://openalex.org/W2401969231",
+    "https://openalex.org/W6607333740",
+    "https://openalex.org/W98731357",
+    "https://openalex.org/W6680532216",
+    "https://openalex.org/W6713654375",
+    "https://openalex.org/W2759071281",
+    "https://openalex.org/W2963451498",
+    "https://openalex.org/W2747917286",
+    "https://openalex.org/W2012115736",
+    "https://openalex.org/W2706749641",
+    "https://openalex.org/W2134659216",
+    "https://openalex.org/W2514741789",
+    "https://openalex.org/W1970689298",
+    "https://openalex.org/W2594610113",
+    "https://openalex.org/W2100506586",
+    "https://openalex.org/W2020073413",
+    "https://openalex.org/W1524333225",
+    "https://openalex.org/W2250489405",
+    "https://openalex.org/W1924770834",
+    "https://openalex.org/W2404974730",
+    "https://openalex.org/W2405722712",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W2138204974",
+    "https://openalex.org/W2998704965",
+    "https://openalex.org/W2533523411",
+    "https://openalex.org/W2404404182",
+    "https://openalex.org/W101286142",
+    "https://openalex.org/W2401430117",
+    "https://openalex.org/W2259472270",
+    "https://openalex.org/W2131342762",
+    "https://openalex.org/W4285719527"
+  ],
+  "abstract": "Language modeling is a crucial component in a wide range of applications including speech recognition. Language models (LMs) are usually constructed by splitting a sentence into words and computing the probability of a word based on its word history. This sentence probability calculation, making use of conditional probability distributions, assumes that there is little impact from approximations used in the LMs, including the word history representations and finite training data. This motivates examining models that make use of additional information from the sentence. In this paper, future word information, in addition to the history, is used to predict the probability of the current word. For recurrent neural network LMs (RNNLMs), this information can be encapsulated in a bi-directional model. However, if used directly, this form of model is computationally expensive when trained on large quantities of data, and can be problematic when used with word lattices. This paper proposes a novel neural network language model structure, the succeeding-word RNNLM, su-RNNLM, to address these issues. Instead of using a recurrent unit to capture the complete future word contexts, a feedforward unit is used to model a fixed finite number of succeeding words. This is more efficient in training than bi-directional models and can be applied to lattice rescoring. The generated lattices can be used for downstream applications, such as confusion network decoding and keyword search. Experimental results on speech recognition and keyword spotting tasks illustrate the empirical usefulness of future word information, and the flexibility of the proposed model to represent this information.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8417214155197144
+    },
+    {
+      "name": "Language model",
+      "score": 0.7850512266159058
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.6509736180305481
+    },
+    {
+      "name": "Sentence",
+      "score": 0.5664169788360596
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5208073854446411
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.518038809299469
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5148558020591736
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.49398547410964966
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.46173155307769775
+    },
+    {
+      "name": "Perplexity",
+      "score": 0.41494840383529663
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.09203976392745972
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

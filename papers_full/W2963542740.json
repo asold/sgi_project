@@ -1,90 +1,153 @@
 {
-    "title": "Learning Deep Transformer Models for Machine Translation",
-    "url": "https://openalex.org/W2963542740",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2000259901",
-            "name": "Qiang Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2099334605",
-            "name": "Bei Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1983914940",
-            "name": "Tong Xiao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2496766346",
-            "name": "Jingbo Zhu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2104445069",
-            "name": "Changliang Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2277077263",
-            "name": "Derek F. Wong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2133931021",
-            "name": "Lidia S. Chao",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963807318",
-        "https://openalex.org/W2963636855",
-        "https://openalex.org/W2896060389",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2963755523",
-        "https://openalex.org/W4300831640",
-        "https://openalex.org/W2130942839",
-        "https://openalex.org/W2963088785",
-        "https://openalex.org/W2962931466",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2964308564",
-        "https://openalex.org/W1543750907",
-        "https://openalex.org/W2594990650",
-        "https://openalex.org/W2525778437",
-        "https://openalex.org/W2128892113",
-        "https://openalex.org/W2963418779",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W2964088127",
-        "https://openalex.org/W1815076433",
-        "https://openalex.org/W1597944220",
-        "https://openalex.org/W2902081112",
-        "https://openalex.org/W2302255633",
-        "https://openalex.org/W2767008699",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2963302407",
-        "https://openalex.org/W2964045208",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2113104171",
-        "https://openalex.org/W4297747548",
-        "https://openalex.org/W2890964657",
-        "https://openalex.org/W2798761464",
-        "https://openalex.org/W2963599677",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2888520903",
-        "https://openalex.org/W2963212250",
-        "https://openalex.org/W2963216553",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2963991316",
-        "https://openalex.org/W2817535134",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W1522301498"
-    ],
-    "abstract": "Transformer is the state-of-the-art model in recent machine translation evaluations. Two strands of research are promising to improve models of this kind: the first uses wide networks (a.k.a. Transformer-Big) and has been the de facto standard for development of the Transformer system, and the other uses deeper language representation but faces the difficulty arising from learning deep networks. Here, we continue the line of research on the latter. We claim that a truly deep Transformer model can surpass the Transformer-Big counterpart by 1) proper use of layer normalization and 2) a novel way of passing the combination of previous layers to the next. On WMT’16 English-German and NIST OpenMT’12 Chinese-English tasks, our deep system (30/25-layer encoder) outperforms the shallow Transformer-Big/Base baseline (6-layer encoder) by 0.4-2.4 BLEU points. As another bonus, the deep model is 1.6X smaller in size and 3X faster in training than Transformer-Big.",
-    "full_text": null
+  "title": "Learning Deep Transformer Models for Machine Translation",
+  "url": "https://openalex.org/W2963542740",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2000259901",
+      "name": "Qiang Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2099334605",
+      "name": "Bei Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1983914940",
+      "name": "Tong Xiao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2496766346",
+      "name": "Jingbo Zhu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2104445069",
+      "name": "Changliang Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2277077263",
+      "name": "Derek F. Wong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2133931021",
+      "name": "Lidia S. Chao",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963807318",
+    "https://openalex.org/W2963636855",
+    "https://openalex.org/W2896060389",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2963755523",
+    "https://openalex.org/W4300831640",
+    "https://openalex.org/W2130942839",
+    "https://openalex.org/W2963088785",
+    "https://openalex.org/W2962931466",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2964308564",
+    "https://openalex.org/W1543750907",
+    "https://openalex.org/W2594990650",
+    "https://openalex.org/W2525778437",
+    "https://openalex.org/W2128892113",
+    "https://openalex.org/W2963418779",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2964088127",
+    "https://openalex.org/W1815076433",
+    "https://openalex.org/W1597944220",
+    "https://openalex.org/W2902081112",
+    "https://openalex.org/W2302255633",
+    "https://openalex.org/W2767008699",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2963302407",
+    "https://openalex.org/W2964045208",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2113104171",
+    "https://openalex.org/W4297747548",
+    "https://openalex.org/W2890964657",
+    "https://openalex.org/W2798761464",
+    "https://openalex.org/W2963599677",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2888520903",
+    "https://openalex.org/W2963212250",
+    "https://openalex.org/W2963216553",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2963991316",
+    "https://openalex.org/W2817535134",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W1522301498"
+  ],
+  "abstract": "Transformer is the state-of-the-art model in recent machine translation evaluations. Two strands of research are promising to improve models of this kind: the first uses wide networks (a.k.a. Transformer-Big) and has been the de facto standard for development of the Transformer system, and the other uses deeper language representation but faces the difficulty arising from learning deep networks. Here, we continue the line of research on the latter. We claim that a truly deep Transformer model can surpass the Transformer-Big counterpart by 1) proper use of layer normalization and 2) a novel way of passing the combination of previous layers to the next. On WMT’16 English-German and NIST OpenMT’12 Chinese-English tasks, our deep system (30/25-layer encoder) outperforms the shallow Transformer-Big/Base baseline (6-layer encoder) by 0.4-2.4 BLEU points. As another bonus, the deep model is 1.6X smaller in size and 3X faster in training than Transformer-Big.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7635256052017212
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.7436230182647705
+    },
+    {
+      "name": "Computer science",
+      "score": 0.69034343957901
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.6740043759346008
+    },
+    {
+      "name": "NIST",
+      "score": 0.5645008087158203
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5364291071891785
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4620702862739563
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.43853676319122314
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3539128005504608
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.19158542156219482
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1639593541622162
+    },
+    {
+      "name": "Voltage",
+      "score": 0.1470191776752472
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    }
+  ]
 }

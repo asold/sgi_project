@@ -1,78 +1,133 @@
 {
-    "title": "MolTrans: Molecular Interaction Transformer for drug–target interaction prediction",
-    "url": "https://openalex.org/W3018980093",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097021629",
-            "name": "Kexin Huang",
-            "affiliations": [
-                "Harvard University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2232363908",
-            "name": "Cao Xiao",
-            "affiliations": [
-                "IQVIA (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2954848473",
-            "name": "Lucas M. Glass",
-            "affiliations": [
-                "IQVIA (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110385854",
-            "name": "Jimeng Sun",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W24553703",
-        "https://openalex.org/W2060139591",
-        "https://openalex.org/W2160257187",
-        "https://openalex.org/W2086286404",
-        "https://openalex.org/W2047672715",
-        "https://openalex.org/W2012389228",
-        "https://openalex.org/W6601894380",
-        "https://openalex.org/W2096541451",
-        "https://openalex.org/W2605952223",
-        "https://openalex.org/W1973445088",
-        "https://openalex.org/W6601785968",
-        "https://openalex.org/W1500036797",
-        "https://openalex.org/W2061136308",
-        "https://openalex.org/W1967434207",
-        "https://openalex.org/W2899788782",
-        "https://openalex.org/W345669585",
-        "https://openalex.org/W2096864392",
-        "https://openalex.org/W2806547269",
-        "https://openalex.org/W2785947426",
-        "https://openalex.org/W2109991441",
-        "https://openalex.org/W1988037271",
-        "https://openalex.org/W2038252445",
-        "https://openalex.org/W2860192827",
-        "https://openalex.org/W2127553917",
-        "https://openalex.org/W2592742128",
-        "https://openalex.org/W2009313526",
-        "https://openalex.org/W2786016794",
-        "https://openalex.org/W4210483668",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2756386045",
-        "https://openalex.org/W2807792492",
-        "https://openalex.org/W2911871527",
-        "https://openalex.org/W46679369",
-        "https://openalex.org/W2029348196",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W44815768",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W1597211359",
-        "https://openalex.org/W4256013174"
-    ],
-    "abstract": "Abstract Motivation Drug–target interaction (DTI) prediction is a foundational task for in-silico drug discovery, which is costly and time-consuming due to the need of experimental search over large drug compound space. Recent years have witnessed promising progress for deep learning in DTI predictions. However, the following challenges are still open: (i) existing molecular representation learning approaches ignore the sub-structural nature of DTI, thus produce results that are less accurate and difficult to explain and (ii) existing methods focus on limited labeled data while ignoring the value of massive unlabeled molecular data. Results We propose a Molecular Interaction Transformer (MolTrans) to address these limitations via: (i) knowledge inspired sub-structural pattern mining algorithm and interaction modeling module for more accurate and interpretable DTI prediction and (ii) an augmented transformer encoder to better extract and capture the semantic relations among sub-structures extracted from massive unlabeled biomedical data. We evaluate MolTrans on real-world data and show it improved DTI prediction performance compared to state-of-the-art baselines. Availability and implementation The model scripts are available at https://github.com/kexinhuang12345/moltrans. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "MolTrans: Molecular Interaction Transformer for drug–target interaction prediction",
+  "url": "https://openalex.org/W3018980093",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097021629",
+      "name": "Kexin Huang",
+      "affiliations": [
+        "Harvard University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2232363908",
+      "name": "Cao Xiao",
+      "affiliations": [
+        "IQVIA (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2954848473",
+      "name": "Lucas M. Glass",
+      "affiliations": [
+        "IQVIA (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110385854",
+      "name": "Jimeng Sun",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W24553703",
+    "https://openalex.org/W2060139591",
+    "https://openalex.org/W2160257187",
+    "https://openalex.org/W2086286404",
+    "https://openalex.org/W2047672715",
+    "https://openalex.org/W2012389228",
+    "https://openalex.org/W6601894380",
+    "https://openalex.org/W2096541451",
+    "https://openalex.org/W2605952223",
+    "https://openalex.org/W1973445088",
+    "https://openalex.org/W6601785968",
+    "https://openalex.org/W1500036797",
+    "https://openalex.org/W2061136308",
+    "https://openalex.org/W1967434207",
+    "https://openalex.org/W2899788782",
+    "https://openalex.org/W345669585",
+    "https://openalex.org/W2096864392",
+    "https://openalex.org/W2806547269",
+    "https://openalex.org/W2785947426",
+    "https://openalex.org/W2109991441",
+    "https://openalex.org/W1988037271",
+    "https://openalex.org/W2038252445",
+    "https://openalex.org/W2860192827",
+    "https://openalex.org/W2127553917",
+    "https://openalex.org/W2592742128",
+    "https://openalex.org/W2009313526",
+    "https://openalex.org/W2786016794",
+    "https://openalex.org/W4210483668",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2756386045",
+    "https://openalex.org/W2807792492",
+    "https://openalex.org/W2911871527",
+    "https://openalex.org/W46679369",
+    "https://openalex.org/W2029348196",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W44815768",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W1597211359",
+    "https://openalex.org/W4256013174"
+  ],
+  "abstract": "Abstract Motivation Drug–target interaction (DTI) prediction is a foundational task for in-silico drug discovery, which is costly and time-consuming due to the need of experimental search over large drug compound space. Recent years have witnessed promising progress for deep learning in DTI predictions. However, the following challenges are still open: (i) existing molecular representation learning approaches ignore the sub-structural nature of DTI, thus produce results that are less accurate and difficult to explain and (ii) existing methods focus on limited labeled data while ignoring the value of massive unlabeled molecular data. Results We propose a Molecular Interaction Transformer (MolTrans) to address these limitations via: (i) knowledge inspired sub-structural pattern mining algorithm and interaction modeling module for more accurate and interpretable DTI prediction and (ii) an augmented transformer encoder to better extract and capture the semantic relations among sub-structures extracted from massive unlabeled biomedical data. We evaluate MolTrans on real-world data and show it improved DTI prediction performance compared to state-of-the-art baselines. Availability and implementation The model scripts are available at https://github.com/kexinhuang12345/moltrans. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5891592502593994
+    },
+    {
+      "name": "Drug",
+      "score": 0.5352587699890137
+    },
+    {
+      "name": "Drug target",
+      "score": 0.5295501947402954
+    },
+    {
+      "name": "Transformer",
+      "score": 0.48969247937202454
+    },
+    {
+      "name": "Drug-drug interaction",
+      "score": 0.44697698950767517
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4062117636203766
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.32048141956329346
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.2695016860961914
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1584336757659912
+    },
+    {
+      "name": "Biology",
+      "score": 0.11894503235816956
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1078779399394989
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

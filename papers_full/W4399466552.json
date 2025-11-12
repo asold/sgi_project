@@ -1,185 +1,216 @@
 {
-    "title": "Evaluating LLMs on document-based QA: Exact answer selection and numerical extraction using CogTale dataset",
-    "url": "https://openalex.org/W4399466552",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3004906456",
-            "name": "Zafaryab Rasool",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3003850484",
-            "name": "Stefanus Kurniawan",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093278278",
-            "name": "Sherwin Balugo",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2382871024",
-            "name": "Scott Barnett",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2072106099",
-            "name": "Rajesh Vasa",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093278279",
-            "name": "Courtney Chesser",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2421585532",
-            "name": "Benjamin M. Hampstead",
-            "affiliations": [
-                "University of Michigan–Ann Arbor",
-                "VA Ann Arbor Healthcare System"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1926629412",
-            "name": "Sylvie Belleville",
-            "affiliations": [
-                "Université de Montréal",
-                "Institut Universitaire de Gériatrie de Montréal"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2066451090",
-            "name": "Kon Mouzakis",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4202400946",
-            "name": "Alex Bahar-Fuchs",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3004906456",
-            "name": "Zafaryab Rasool",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3003850484",
-            "name": "Stefanus Kurniawan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5093278278",
-            "name": "Sherwin Balugo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2382871024",
-            "name": "Scott Barnett",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2072106099",
-            "name": "Rajesh Vasa",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5093278279",
-            "name": "Courtney Chesser",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2421585532",
-            "name": "Benjamin M. Hampstead",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1926629412",
-            "name": "Sylvie Belleville",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2066451090",
-            "name": "Kon Mouzakis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4202400946",
-            "name": "Alex Bahar-Fuchs",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4386730038",
-        "https://openalex.org/W6842080761",
-        "https://openalex.org/W2007430276",
-        "https://openalex.org/W2168523424",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W2162158258",
-        "https://openalex.org/W2132883636",
-        "https://openalex.org/W2164601268",
-        "https://openalex.org/W6726771972",
-        "https://openalex.org/W6853281113",
-        "https://openalex.org/W2062741989",
-        "https://openalex.org/W3159959439",
-        "https://openalex.org/W4283835638",
-        "https://openalex.org/W6739091523",
-        "https://openalex.org/W6767102903",
-        "https://openalex.org/W2998702515",
-        "https://openalex.org/W6858218828",
-        "https://openalex.org/W6838865847",
-        "https://openalex.org/W4361001766",
-        "https://openalex.org/W2164517124",
-        "https://openalex.org/W3159394002",
-        "https://openalex.org/W6859621498",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W4389524439",
-        "https://openalex.org/W6847593320",
-        "https://openalex.org/W2164996214",
-        "https://openalex.org/W3113047186",
-        "https://openalex.org/W2055905607",
-        "https://openalex.org/W4392202731",
-        "https://openalex.org/W4362515116",
-        "https://openalex.org/W4377009978",
-        "https://openalex.org/W2517865767",
-        "https://openalex.org/W4399530612",
-        "https://openalex.org/W4390041933",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4392669753",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W2621954236",
-        "https://openalex.org/W3161820423",
-        "https://openalex.org/W4389523957",
-        "https://openalex.org/W4401042773",
-        "https://openalex.org/W4361806395",
-        "https://openalex.org/W4390962726",
-        "https://openalex.org/W4391136507",
-        "https://openalex.org/W4389977189",
-        "https://openalex.org/W4388778348",
-        "https://openalex.org/W3099524945",
-        "https://openalex.org/W4281557260",
-        "https://openalex.org/W4379933518",
-        "https://openalex.org/W4385569780",
-        "https://openalex.org/W4386701652"
-    ],
-    "abstract": "Document-based Question-Answering (QA) tasks are crucial for precise information retrieval. While some existing work focus on evaluating large language model’s (LLMs) performance on retrieving and answering questions from documents, assessing the LLMs performance on QA types that require exact answer selection from predefined options and numerical extraction is yet to be fully assessed. In this paper, we specifically focus on this underexplored context and conduct empirical analysis of LLMs (GPT-4 and GPT-3.5) on question types, including single-choice, yes–no, multiple-choice, and number extraction questions from documents. We use the CogTale dataset for evaluation, which provide human expert-tagged responses, offering a robust benchmark for precision and factual grounding. We found that LLMs, particularly GPT-4, can precisely answer many single-choice and yes–no questions given relevant context, demonstrating their efficacy in information retrieval tasks. However, their performance diminishes when confronted with multiple-choice and number extraction formats, lowering the overall performance of the models on this task, indicating that these models may not yet be sufficiently reliable for the task. This limits the applications of LLMs on applications demanding precise information extraction and inference from documents, such as meta-analysis tasks. Our work offers a framework for ongoing dataset evaluation, ensuring that LLM applications for information retrieval and document analysis continue to meet evolving standards.",
-    "full_text": null
+  "title": "Evaluating LLMs on document-based QA: Exact answer selection and numerical extraction using CogTale dataset",
+  "url": "https://openalex.org/W4399466552",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3004906456",
+      "name": "Zafaryab Rasool",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3003850484",
+      "name": "Stefanus Kurniawan",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093278278",
+      "name": "Sherwin Balugo",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2382871024",
+      "name": "Scott Barnett",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2072106099",
+      "name": "Rajesh Vasa",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093278279",
+      "name": "Courtney Chesser",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2421585532",
+      "name": "Benjamin M. Hampstead",
+      "affiliations": [
+        "University of Michigan–Ann Arbor",
+        "VA Ann Arbor Healthcare System"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1926629412",
+      "name": "Sylvie Belleville",
+      "affiliations": [
+        "Université de Montréal",
+        "Institut Universitaire de Gériatrie de Montréal"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2066451090",
+      "name": "Kon Mouzakis",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4202400946",
+      "name": "Alex Bahar-Fuchs",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3004906456",
+      "name": "Zafaryab Rasool",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3003850484",
+      "name": "Stefanus Kurniawan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5093278278",
+      "name": "Sherwin Balugo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2382871024",
+      "name": "Scott Barnett",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2072106099",
+      "name": "Rajesh Vasa",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5093278279",
+      "name": "Courtney Chesser",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2421585532",
+      "name": "Benjamin M. Hampstead",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1926629412",
+      "name": "Sylvie Belleville",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2066451090",
+      "name": "Kon Mouzakis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4202400946",
+      "name": "Alex Bahar-Fuchs",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4386730038",
+    "https://openalex.org/W6842080761",
+    "https://openalex.org/W2007430276",
+    "https://openalex.org/W2168523424",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W2162158258",
+    "https://openalex.org/W2132883636",
+    "https://openalex.org/W2164601268",
+    "https://openalex.org/W6726771972",
+    "https://openalex.org/W6853281113",
+    "https://openalex.org/W2062741989",
+    "https://openalex.org/W3159959439",
+    "https://openalex.org/W4283835638",
+    "https://openalex.org/W6739091523",
+    "https://openalex.org/W6767102903",
+    "https://openalex.org/W2998702515",
+    "https://openalex.org/W6858218828",
+    "https://openalex.org/W6838865847",
+    "https://openalex.org/W4361001766",
+    "https://openalex.org/W2164517124",
+    "https://openalex.org/W3159394002",
+    "https://openalex.org/W6859621498",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W4389524439",
+    "https://openalex.org/W6847593320",
+    "https://openalex.org/W2164996214",
+    "https://openalex.org/W3113047186",
+    "https://openalex.org/W2055905607",
+    "https://openalex.org/W4392202731",
+    "https://openalex.org/W4362515116",
+    "https://openalex.org/W4377009978",
+    "https://openalex.org/W2517865767",
+    "https://openalex.org/W4399530612",
+    "https://openalex.org/W4390041933",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4392669753",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W2621954236",
+    "https://openalex.org/W3161820423",
+    "https://openalex.org/W4389523957",
+    "https://openalex.org/W4401042773",
+    "https://openalex.org/W4361806395",
+    "https://openalex.org/W4390962726",
+    "https://openalex.org/W4391136507",
+    "https://openalex.org/W4389977189",
+    "https://openalex.org/W4388778348",
+    "https://openalex.org/W3099524945",
+    "https://openalex.org/W4281557260",
+    "https://openalex.org/W4379933518",
+    "https://openalex.org/W4385569780",
+    "https://openalex.org/W4386701652"
+  ],
+  "abstract": "Document-based Question-Answering (QA) tasks are crucial for precise information retrieval. While some existing work focus on evaluating large language model’s (LLMs) performance on retrieving and answering questions from documents, assessing the LLMs performance on QA types that require exact answer selection from predefined options and numerical extraction is yet to be fully assessed. In this paper, we specifically focus on this underexplored context and conduct empirical analysis of LLMs (GPT-4 and GPT-3.5) on question types, including single-choice, yes–no, multiple-choice, and number extraction questions from documents. We use the CogTale dataset for evaluation, which provide human expert-tagged responses, offering a robust benchmark for precision and factual grounding. We found that LLMs, particularly GPT-4, can precisely answer many single-choice and yes–no questions given relevant context, demonstrating their efficacy in information retrieval tasks. However, their performance diminishes when confronted with multiple-choice and number extraction formats, lowering the overall performance of the models on this task, indicating that these models may not yet be sufficiently reliable for the task. This limits the applications of LLMs on applications demanding precise information extraction and inference from documents, such as meta-analysis tasks. Our work offers a framework for ongoing dataset evaluation, ensuring that LLM applications for information retrieval and document analysis continue to meet evolving standards.",
+  "full_text": null,
+  "topic": "Selection (genetic algorithm)",
+  "concepts": [
+    {
+      "name": "Selection (genetic algorithm)",
+      "score": 0.7403141260147095
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5367106199264526
+    },
+    {
+      "name": "Extraction (chemistry)",
+      "score": 0.47591882944107056
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.457538366317749
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.21385666728019714
+    },
+    {
+      "name": "Chromatography",
+      "score": 0.09774094820022583
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.07336866855621338
+    }
+  ]
 }

@@ -1,85 +1,128 @@
 {
-    "title": "SPOT-Contact-LM: improving single-sequence-based prediction of protein contact map using a transformer language model",
-    "url": "https://openalex.org/W4210535996",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2028245247",
-            "name": "Jaspreet Singh",
-            "affiliations": [
-                "Griffith University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2562923419",
-            "name": "Thomas Litfin",
-            "affiliations": [
-                "Griffith University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2078269030",
-            "name": "Jaswinder Singh",
-            "affiliations": [
-                "Griffith University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2785361211",
-            "name": "Kuldip Paliwal -",
-            "affiliations": [
-                "Griffith University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102792226",
-            "name": "Yaoqi Zhou",
-            "affiliations": [
-                "Shenzhen Bay Laboratory",
-                "Griffith University",
-                "Peking University Shenzhen Hospital"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2913820882",
-        "https://openalex.org/W4210400672",
-        "https://openalex.org/W3017657949",
-        "https://openalex.org/W2953524386",
-        "https://openalex.org/W2999309192",
-        "https://openalex.org/W2048310584",
-        "https://openalex.org/W2006796203",
-        "https://openalex.org/W2791790018",
-        "https://openalex.org/W2808950571",
-        "https://openalex.org/W2905446269",
-        "https://openalex.org/W2965837840",
-        "https://openalex.org/W2898320067",
-        "https://openalex.org/W2995514860",
-        "https://openalex.org/W2801109052",
-        "https://openalex.org/W2136799255",
-        "https://openalex.org/W2119843684",
-        "https://openalex.org/W2968295962",
-        "https://openalex.org/W2557595285",
-        "https://openalex.org/W2107867854",
-        "https://openalex.org/W2574496196",
-        "https://openalex.org/W6763868836",
-        "https://openalex.org/W2114340287",
-        "https://openalex.org/W3135161193",
-        "https://openalex.org/W3160452636",
-        "https://openalex.org/W2950954328",
-        "https://openalex.org/W2953008890",
-        "https://openalex.org/W2972411752",
-        "https://openalex.org/W2949342052",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W6686288242",
-        "https://openalex.org/W2949867299",
-        "https://openalex.org/W2956081200",
-        "https://openalex.org/W2963457143",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W2971227267",
-        "https://openalex.org/W2141885858",
-        "https://openalex.org/W3186340132"
-    ],
-    "abstract": "Abstract Motivation Accurate prediction of protein contact-map is essential for accurate protein structure and function prediction. As a result, many methods have been developed for protein contact map prediction. However, most methods rely on protein-sequence-evolutionary information, which may not exist for many proteins due to lack of naturally occurring homologous sequences. Moreover, generating evolutionary profiles is computationally intensive. Here, we developed a contact-map predictor utilizing the output of a pre-trained language model ESM-1b as an input along with a large training set and an ensemble of residual neural networks. Results We showed that the proposed method makes a significant improvement over a single-sequence-based predictor SSCpred with 15% improvement in the F1-score for the independent CASP14-FM test set. It also outperforms evolutionary-profile-based methods trRosetta and SPOT-Contact with 48.7% and 48.5% respective improvement in the F1-score on the proteins without homologs (Neff = 1) in the independent SPOT-2018 set. The new method provides a much faster and reasonably accurate alternative to evolution-based methods, useful for large-scale prediction. Availability and implementation Stand-alone-version of SPOT-Contact-LM is available at https://github.com/jas-preet/SPOT-Contact-Single. Direct prediction can also be made at https://sparks-lab.org/server/spot-contact-single. The datasets used in this research can also be downloaded from the GitHub. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "SPOT-Contact-LM: improving single-sequence-based prediction of protein contact map using a transformer language model",
+  "url": "https://openalex.org/W4210535996",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2028245247",
+      "name": "Jaspreet Singh",
+      "affiliations": [
+        "Griffith University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2562923419",
+      "name": "Thomas Litfin",
+      "affiliations": [
+        "Griffith University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2078269030",
+      "name": "Jaswinder Singh",
+      "affiliations": [
+        "Griffith University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2785361211",
+      "name": "Kuldip Paliwal -",
+      "affiliations": [
+        "Griffith University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102792226",
+      "name": "Yaoqi Zhou",
+      "affiliations": [
+        "Shenzhen Bay Laboratory",
+        "Griffith University",
+        "Peking University Shenzhen Hospital"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2913820882",
+    "https://openalex.org/W4210400672",
+    "https://openalex.org/W3017657949",
+    "https://openalex.org/W2953524386",
+    "https://openalex.org/W2999309192",
+    "https://openalex.org/W2048310584",
+    "https://openalex.org/W2006796203",
+    "https://openalex.org/W2791790018",
+    "https://openalex.org/W2808950571",
+    "https://openalex.org/W2905446269",
+    "https://openalex.org/W2965837840",
+    "https://openalex.org/W2898320067",
+    "https://openalex.org/W2995514860",
+    "https://openalex.org/W2801109052",
+    "https://openalex.org/W2136799255",
+    "https://openalex.org/W2119843684",
+    "https://openalex.org/W2968295962",
+    "https://openalex.org/W2557595285",
+    "https://openalex.org/W2107867854",
+    "https://openalex.org/W2574496196",
+    "https://openalex.org/W6763868836",
+    "https://openalex.org/W2114340287",
+    "https://openalex.org/W3135161193",
+    "https://openalex.org/W3160452636",
+    "https://openalex.org/W2950954328",
+    "https://openalex.org/W2953008890",
+    "https://openalex.org/W2972411752",
+    "https://openalex.org/W2949342052",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W6686288242",
+    "https://openalex.org/W2949867299",
+    "https://openalex.org/W2956081200",
+    "https://openalex.org/W2963457143",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W2971227267",
+    "https://openalex.org/W2141885858",
+    "https://openalex.org/W3186340132"
+  ],
+  "abstract": "Abstract Motivation Accurate prediction of protein contact-map is essential for accurate protein structure and function prediction. As a result, many methods have been developed for protein contact map prediction. However, most methods rely on protein-sequence-evolutionary information, which may not exist for many proteins due to lack of naturally occurring homologous sequences. Moreover, generating evolutionary profiles is computationally intensive. Here, we developed a contact-map predictor utilizing the output of a pre-trained language model ESM-1b as an input along with a large training set and an ensemble of residual neural networks. Results We showed that the proposed method makes a significant improvement over a single-sequence-based predictor SSCpred with 15% improvement in the F1-score for the independent CASP14-FM test set. It also outperforms evolutionary-profile-based methods trRosetta and SPOT-Contact with 48.7% and 48.5% respective improvement in the F1-score on the proteins without homologs (Neff = 1) in the independent SPOT-2018 set. The new method provides a much faster and reasonably accurate alternative to evolution-based methods, useful for large-scale prediction. Availability and implementation Stand-alone-version of SPOT-Contact-LM is available at https://github.com/jas-preet/SPOT-Contact-Single. Direct prediction can also be made at https://sparks-lab.org/server/spot-contact-single. The datasets used in this research can also be downloaded from the GitHub. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.644080400466919
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5946880578994751
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.49498289823532104
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4335748553276062
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.35723966360092163
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1457509994506836
+    },
+    {
+      "name": "Biology",
+      "score": 0.12683415412902832
+    },
+    {
+      "name": "Voltage",
+      "score": 0.11211097240447998
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.10677951574325562
+    },
+    {
+      "name": "Genetics",
+      "score": 0.08306828141212463
+    }
+  ]
 }

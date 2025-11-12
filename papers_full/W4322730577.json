@@ -1,131 +1,194 @@
 {
-    "title": "A domain specific knowledge extraction transformer method for multisource satellite-borne SAR images ship detection",
-    "url": "https://openalex.org/W4322730577",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2151627468",
-            "name": "Siyuan Zhao",
-            "affiliations": [
-                "Air Force Engineering University",
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101528063",
-            "name": "Ying Luo",
-            "affiliations": [
-                "South China Institute of Collaborative Innovation",
-                "Air Force Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1973217115",
-            "name": "Tao Zhang",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096460825",
-            "name": "Weiwei Guo",
-            "affiliations": [
-                "Tongji University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108543423",
-            "name": "Zhang Zenghui",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2151627468",
-            "name": "Siyuan Zhao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2101528063",
-            "name": "Ying Luo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1973217115",
-            "name": "Tao Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096460825",
-            "name": "Weiwei Guo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2108543423",
-            "name": "Zhang Zenghui",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6748314208",
-        "https://openalex.org/W2912227282",
-        "https://openalex.org/W2104094955",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W4285820980",
-        "https://openalex.org/W2901946557",
-        "https://openalex.org/W6807103956",
-        "https://openalex.org/W4304091663",
-        "https://openalex.org/W4285157008",
-        "https://openalex.org/W4297829860",
-        "https://openalex.org/W3211012720",
-        "https://openalex.org/W2747165560",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W6746568730",
-        "https://openalex.org/W4281762445",
-        "https://openalex.org/W6839523444",
-        "https://openalex.org/W6805530695",
-        "https://openalex.org/W6803399440",
-        "https://openalex.org/W4205856156",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W6839251070",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3135497965",
-        "https://openalex.org/W3186269967",
-        "https://openalex.org/W2945368469",
-        "https://openalex.org/W6839628212",
-        "https://openalex.org/W2798991696",
-        "https://openalex.org/W6839473959",
-        "https://openalex.org/W4280626651",
-        "https://openalex.org/W3032972472",
-        "https://openalex.org/W6839980932",
-        "https://openalex.org/W2328148566",
-        "https://openalex.org/W6849009521",
-        "https://openalex.org/W4294186599",
-        "https://openalex.org/W3022794952",
-        "https://openalex.org/W4312513332",
-        "https://openalex.org/W4313160378",
-        "https://openalex.org/W6810861671",
-        "https://openalex.org/W6839642884",
-        "https://openalex.org/W4286377443",
-        "https://openalex.org/W4285212662",
-        "https://openalex.org/W4285129541",
-        "https://openalex.org/W3114896399",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4206522033",
-        "https://openalex.org/W2187089797",
-        "https://openalex.org/W4205294740",
-        "https://openalex.org/W4313026462",
-        "https://openalex.org/W4312446817",
-        "https://openalex.org/W3206713300",
-        "https://openalex.org/W3092527263",
-        "https://openalex.org/W4285190288",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W4285143550",
-        "https://openalex.org/W4226443111",
-        "https://openalex.org/W3212373233",
-        "https://openalex.org/W4255556797",
-        "https://openalex.org/W4285294301"
-    ],
-    "abstract": "Multisource satellite-borne synthetic aperture radar (SAR) images have different probability distributions. Traditional supervised learning, consequently, cannot achieve good test performance on one novel satellite-borne SAR dataset while training a good model on another existing satellite-borne SAR dataset. In this article, a domain adaptation (DA) Transformer object detection method is proposed to solve the unlabeled multisource satellite-borne SAR image object detection problem. Unlike existing DA methods based on convolutional neural network (CNN) that focus more on multi-level local feature extraction, we choose to use Vision Transformer (ViT) Faster region CNN (FRCNN) as the baseline network to cope with the extraction of global features of SAR images. Then, two classification tokens are used to learn the mapping of different domains and fully extract domain-specific knowledge, generating two different feature spaces that rely on the original label and pseudo-label to train the source and target domains feature spaces, respectively. Besides, the pseudo-label of target domain is also refined and reconstructed by feature clustering in order to improve the accuracy of target domain knowledge. Finally, the original detection head of FRCNN is employed to detect the target domain SAR image objects. Extensive experiments on image datasets from multisource satellite-borne SAR such as Gaofen-3, TerraSAR-X, Sentinel-1, and RadarSAT-2 show that compared to the other state of the art (SOTA) methods, the proposed method can achieve the greatest object detection accuracy. Especially, taking the recently proposed Transformer-based method as an example, our method has more than 5% improvement in accuracy and more than 16% reduction in training time.",
-    "full_text": null
+  "title": "A domain specific knowledge extraction transformer method for multisource satellite-borne SAR images ship detection",
+  "url": "https://openalex.org/W4322730577",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2151627468",
+      "name": "Siyuan Zhao",
+      "affiliations": [
+        "Air Force Engineering University",
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101528063",
+      "name": "Ying Luo",
+      "affiliations": [
+        "South China Institute of Collaborative Innovation",
+        "Air Force Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1973217115",
+      "name": "Tao Zhang",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096460825",
+      "name": "Weiwei Guo",
+      "affiliations": [
+        "Tongji University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108543423",
+      "name": "Zhang Zenghui",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2151627468",
+      "name": "Siyuan Zhao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2101528063",
+      "name": "Ying Luo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1973217115",
+      "name": "Tao Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096460825",
+      "name": "Weiwei Guo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2108543423",
+      "name": "Zhang Zenghui",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6748314208",
+    "https://openalex.org/W2912227282",
+    "https://openalex.org/W2104094955",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W4285820980",
+    "https://openalex.org/W2901946557",
+    "https://openalex.org/W6807103956",
+    "https://openalex.org/W4304091663",
+    "https://openalex.org/W4285157008",
+    "https://openalex.org/W4297829860",
+    "https://openalex.org/W3211012720",
+    "https://openalex.org/W2747165560",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W6746568730",
+    "https://openalex.org/W4281762445",
+    "https://openalex.org/W6839523444",
+    "https://openalex.org/W6805530695",
+    "https://openalex.org/W6803399440",
+    "https://openalex.org/W4205856156",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W6839251070",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3135497965",
+    "https://openalex.org/W3186269967",
+    "https://openalex.org/W2945368469",
+    "https://openalex.org/W6839628212",
+    "https://openalex.org/W2798991696",
+    "https://openalex.org/W6839473959",
+    "https://openalex.org/W4280626651",
+    "https://openalex.org/W3032972472",
+    "https://openalex.org/W6839980932",
+    "https://openalex.org/W2328148566",
+    "https://openalex.org/W6849009521",
+    "https://openalex.org/W4294186599",
+    "https://openalex.org/W3022794952",
+    "https://openalex.org/W4312513332",
+    "https://openalex.org/W4313160378",
+    "https://openalex.org/W6810861671",
+    "https://openalex.org/W6839642884",
+    "https://openalex.org/W4286377443",
+    "https://openalex.org/W4285212662",
+    "https://openalex.org/W4285129541",
+    "https://openalex.org/W3114896399",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4206522033",
+    "https://openalex.org/W2187089797",
+    "https://openalex.org/W4205294740",
+    "https://openalex.org/W4313026462",
+    "https://openalex.org/W4312446817",
+    "https://openalex.org/W3206713300",
+    "https://openalex.org/W3092527263",
+    "https://openalex.org/W4285190288",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W4285143550",
+    "https://openalex.org/W4226443111",
+    "https://openalex.org/W3212373233",
+    "https://openalex.org/W4255556797",
+    "https://openalex.org/W4285294301"
+  ],
+  "abstract": "Multisource satellite-borne synthetic aperture radar (SAR) images have different probability distributions. Traditional supervised learning, consequently, cannot achieve good test performance on one novel satellite-borne SAR dataset while training a good model on another existing satellite-borne SAR dataset. In this article, a domain adaptation (DA) Transformer object detection method is proposed to solve the unlabeled multisource satellite-borne SAR image object detection problem. Unlike existing DA methods based on convolutional neural network (CNN) that focus more on multi-level local feature extraction, we choose to use Vision Transformer (ViT) Faster region CNN (FRCNN) as the baseline network to cope with the extraction of global features of SAR images. Then, two classification tokens are used to learn the mapping of different domains and fully extract domain-specific knowledge, generating two different feature spaces that rely on the original label and pseudo-label to train the source and target domains feature spaces, respectively. Besides, the pseudo-label of target domain is also refined and reconstructed by feature clustering in order to improve the accuracy of target domain knowledge. Finally, the original detection head of FRCNN is employed to detect the target domain SAR image objects. Extensive experiments on image datasets from multisource satellite-borne SAR such as Gaofen-3, TerraSAR-X, Sentinel-1, and RadarSAT-2 show that compared to the other state of the art (SOTA) methods, the proposed method can achieve the greatest object detection accuracy. Especially, taking the recently proposed Transformer-based method as an example, our method has more than 5% improvement in accuracy and more than 16% reduction in training time.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.79705810546875
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6912694573402405
+    },
+    {
+      "name": "Synthetic aperture radar",
+      "score": 0.6635528802871704
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6144804954528809
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.5586061477661133
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.505573034286499
+    },
+    {
+      "name": "Object detection",
+      "score": 0.4659709930419922
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4473400413990021
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.44372472167015076
+    },
+    {
+      "name": "Satellite",
+      "score": 0.43303272128105164
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3801601231098175
+    },
+    {
+      "name": "Engineering",
+      "score": 0.06431999802589417
+    },
+    {
+      "name": "Aerospace engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

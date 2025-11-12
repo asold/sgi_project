@@ -1,128 +1,203 @@
 {
-    "title": "Transformer-based image generation from scene graphs",
-    "url": "https://openalex.org/W4376866204",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3206598599",
-            "name": "Renato Sortino",
-            "affiliations": [
-                "University of Catania"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105433694",
-            "name": "Simone Palazzo",
-            "affiliations": [
-                "University of Catania"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A15514392",
-            "name": "Francesco Rundo",
-            "affiliations": [
-                "STMicroelectronics (Italy)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2029602565",
-            "name": "Concetto Spampinato",
-            "affiliations": [
-                "University of Catania"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3206598599",
-            "name": "Renato Sortino",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105433694",
-            "name": "Simone Palazzo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A15514392",
-            "name": "Francesco Rundo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2029602565",
-            "name": "Concetto Spampinato",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3211927563",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W2561196672",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W6810630316",
-        "https://openalex.org/W6787995345",
-        "https://openalex.org/W3180355996",
-        "https://openalex.org/W6796814978",
-        "https://openalex.org/W4284692930",
-        "https://openalex.org/W6772275153",
-        "https://openalex.org/W6765779288",
-        "https://openalex.org/W6779823529",
-        "https://openalex.org/W6791447439",
-        "https://openalex.org/W2963073614",
-        "https://openalex.org/W6783161539",
-        "https://openalex.org/W6801530232",
-        "https://openalex.org/W6795892075",
-        "https://openalex.org/W2963184176",
-        "https://openalex.org/W3035574324",
-        "https://openalex.org/W6735204497",
-        "https://openalex.org/W2277195237",
-        "https://openalex.org/W6762525229",
-        "https://openalex.org/W6639102338",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4304092645",
-        "https://openalex.org/W6791353385",
-        "https://openalex.org/W6790978476",
-        "https://openalex.org/W6713645886",
-        "https://openalex.org/W4312933868",
-        "https://openalex.org/W6718379498",
-        "https://openalex.org/W6743178762",
-        "https://openalex.org/W4284708663",
-        "https://openalex.org/W2983248633",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W2752796333",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6766259710",
-        "https://openalex.org/W3212436340",
-        "https://openalex.org/W4312652102",
-        "https://openalex.org/W2997747012",
-        "https://openalex.org/W2962793481",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2943259397",
-        "https://openalex.org/W2950297087",
-        "https://openalex.org/W3166513219",
-        "https://openalex.org/W4320823199",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2620971809",
-        "https://openalex.org/W4382457527",
-        "https://openalex.org/W4286896389",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2125389028",
-        "https://openalex.org/W3036167779",
-        "https://openalex.org/W2944466895",
-        "https://openalex.org/W4287182033",
-        "https://openalex.org/W1583837637",
-        "https://openalex.org/W4301206121",
-        "https://openalex.org/W4281485151",
-        "https://openalex.org/W2963373786",
-        "https://openalex.org/W4307084265",
-        "https://openalex.org/W4224035735",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4297733535",
-        "https://openalex.org/W3170778815",
-        "https://openalex.org/W3139586422",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4320013936",
-        "https://openalex.org/W3211495814",
-        "https://openalex.org/W2963799213"
-    ],
-    "abstract": "Graph-structured scene descriptions can be efficiently used in generative models to control the composition of the generated image. Previous approaches are based on the combination of graph convolutional networks and adversarial methods for layout prediction and image generation, respectively. In this work, we show how employing multi-head attention to encode the graph information, as well as using a transformer-based model in the latent space for image generation can improve the quality of the sampled data, without the need to employ adversarial models with the subsequent advantage in terms of training stability. The proposed approach, specifically, is entirely based on transformer architectures both for encoding scene graphs into intermediate object layouts and for decoding these layouts into images, passing through a lower dimensional space learned by a vector-quantized variational autoencoder. Our approach shows an improved image quality with respect to state-of-the-art methods as well as a higher degree of diversity among multiple generations from the same scene graph. We evaluate our approach on three public datasets: Visual Genome, COCO, and CLEVR. We achieve an Inception Score of 13.7 and 12.8, and an FID of 52.3 and 60.3, on COCO and Visual Genome, respectively. We perform ablation studies on our contributions to assess the impact of each component. Code is available at https://github.com/perceivelab/trf-sg2im.",
-    "full_text": null
+  "title": "Transformer-based image generation from scene graphs",
+  "url": "https://openalex.org/W4376866204",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3206598599",
+      "name": "Renato Sortino",
+      "affiliations": [
+        "University of Catania"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105433694",
+      "name": "Simone Palazzo",
+      "affiliations": [
+        "University of Catania"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A15514392",
+      "name": "Francesco Rundo",
+      "affiliations": [
+        "STMicroelectronics (Italy)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2029602565",
+      "name": "Concetto Spampinato",
+      "affiliations": [
+        "University of Catania"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3206598599",
+      "name": "Renato Sortino",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105433694",
+      "name": "Simone Palazzo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A15514392",
+      "name": "Francesco Rundo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2029602565",
+      "name": "Concetto Spampinato",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3211927563",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W2561196672",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W6810630316",
+    "https://openalex.org/W6787995345",
+    "https://openalex.org/W3180355996",
+    "https://openalex.org/W6796814978",
+    "https://openalex.org/W4284692930",
+    "https://openalex.org/W6772275153",
+    "https://openalex.org/W6765779288",
+    "https://openalex.org/W6779823529",
+    "https://openalex.org/W6791447439",
+    "https://openalex.org/W2963073614",
+    "https://openalex.org/W6783161539",
+    "https://openalex.org/W6801530232",
+    "https://openalex.org/W6795892075",
+    "https://openalex.org/W2963184176",
+    "https://openalex.org/W3035574324",
+    "https://openalex.org/W6735204497",
+    "https://openalex.org/W2277195237",
+    "https://openalex.org/W6762525229",
+    "https://openalex.org/W6639102338",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4304092645",
+    "https://openalex.org/W6791353385",
+    "https://openalex.org/W6790978476",
+    "https://openalex.org/W6713645886",
+    "https://openalex.org/W4312933868",
+    "https://openalex.org/W6718379498",
+    "https://openalex.org/W6743178762",
+    "https://openalex.org/W4284708663",
+    "https://openalex.org/W2983248633",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W2752796333",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6766259710",
+    "https://openalex.org/W3212436340",
+    "https://openalex.org/W4312652102",
+    "https://openalex.org/W2997747012",
+    "https://openalex.org/W2962793481",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2943259397",
+    "https://openalex.org/W2950297087",
+    "https://openalex.org/W3166513219",
+    "https://openalex.org/W4320823199",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2620971809",
+    "https://openalex.org/W4382457527",
+    "https://openalex.org/W4286896389",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2125389028",
+    "https://openalex.org/W3036167779",
+    "https://openalex.org/W2944466895",
+    "https://openalex.org/W4287182033",
+    "https://openalex.org/W1583837637",
+    "https://openalex.org/W4301206121",
+    "https://openalex.org/W4281485151",
+    "https://openalex.org/W2963373786",
+    "https://openalex.org/W4307084265",
+    "https://openalex.org/W4224035735",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4297733535",
+    "https://openalex.org/W3170778815",
+    "https://openalex.org/W3139586422",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4320013936",
+    "https://openalex.org/W3211495814",
+    "https://openalex.org/W2963799213"
+  ],
+  "abstract": "Graph-structured scene descriptions can be efficiently used in generative models to control the composition of the generated image. Previous approaches are based on the combination of graph convolutional networks and adversarial methods for layout prediction and image generation, respectively. In this work, we show how employing multi-head attention to encode the graph information, as well as using a transformer-based model in the latent space for image generation can improve the quality of the sampled data, without the need to employ adversarial models with the subsequent advantage in terms of training stability. The proposed approach, specifically, is entirely based on transformer architectures both for encoding scene graphs into intermediate object layouts and for decoding these layouts into images, passing through a lower dimensional space learned by a vector-quantized variational autoencoder. Our approach shows an improved image quality with respect to state-of-the-art methods as well as a higher degree of diversity among multiple generations from the same scene graph. We evaluate our approach on three public datasets: Visual Genome, COCO, and CLEVR. We achieve an Inception Score of 13.7 and 12.8, and an FID of 52.3 and 60.3, on COCO and Visual Genome, respectively. We perform ablation studies on our contributions to assess the impact of each component. Code is available at https://github.com/perceivelab/trf-sg2im.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6723999977111816
+    },
+    {
+      "name": "ENCODE",
+      "score": 0.5360171794891357
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.530632495880127
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.5132369995117188
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5070090293884277
+    },
+    {
+      "name": "Autoencoder",
+      "score": 0.4593930244445801
+    },
+    {
+      "name": "Graph",
+      "score": 0.44351616501808167
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.42407912015914917
+    },
+    {
+      "name": "Visualization",
+      "score": 0.41968652606010437
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3448219299316406
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.2527958154678345
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.20348221063613892
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    }
+  ]
 }

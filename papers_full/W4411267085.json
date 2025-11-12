@@ -1,77 +1,128 @@
 {
-    "title": "Scalable, Validated Code Translation of Entire Projects using Large Language Models",
-    "url": "https://openalex.org/W4411267085",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2319887865",
-            "name": "Hanliang Zhang",
-            "affiliations": [
-                "University of Bristol"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117162933",
-            "name": "Cristina David",
-            "affiliations": [
-                "University of Bristol"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102035757",
-            "name": "Meng Wang",
-            "affiliations": [
-                "University of Bristol"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2285284706",
-            "name": "Brandon Paulsen",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132595810",
-            "name": "Daniel Kroening",
-            "affiliations": [
-                "Amazon (United States)",
-                "Seattle University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4385571480",
-        "https://openalex.org/W2125152082",
-        "https://openalex.org/W4411551908",
-        "https://openalex.org/W4399214196",
-        "https://openalex.org/W3205049031",
-        "https://openalex.org/W3000442391",
-        "https://openalex.org/W2888824816",
-        "https://openalex.org/W1994649009",
-        "https://openalex.org/W4388502443",
-        "https://openalex.org/W2140697469",
-        "https://openalex.org/W2122103021",
-        "https://openalex.org/W4408124887",
-        "https://openalex.org/W4245120671",
-        "https://openalex.org/W2040856861",
-        "https://openalex.org/W2963804422",
-        "https://openalex.org/W3091157996",
-        "https://openalex.org/W2279657578",
-        "https://openalex.org/W4394769102",
-        "https://openalex.org/W4281974386",
-        "https://openalex.org/W6893389937",
-        "https://openalex.org/W2152565783",
-        "https://openalex.org/W2701082322",
-        "https://openalex.org/W2911450990",
-        "https://openalex.org/W4389520032",
-        "https://openalex.org/W4389438938",
-        "https://openalex.org/W4384345708",
-        "https://openalex.org/W4389518960",
-        "https://openalex.org/W4400600893",
-        "https://openalex.org/W4384471416",
-        "https://openalex.org/W4389159862"
-    ],
-    "abstract": "Large language models (LLMs) show promise in code translation due to their ability to generate idiomatic code. However, a significant limitation when using LLMs for code translation is scalability: existing works have shown a drop in translation success rates for code exceeding around 100 lines. We overcome this limitation by developing a modular approach to translation, where we partition the code into small code fragments which can be translated independently and semantically validated (that is, by checking I/O equivalence). When this approach is applied naively, we discover that LLMs are unreliable when translating features of the source language that do not have a direct mapping to the target language, and that the LLM often gets stuck in repair loops when attempting to fix errors. To address these issues, we introduce two key concepts: (1) feature mapping , which integrates predefined translation rules with LLM-based translation to guide the LLM in navigating subtle language differences and producing semantically accurate code; and (2) type-compatibility , which facilitates localized checks at the function signature level to detect errors early, thereby narrowing the scope of potential repairs. We apply our approach to translating real-world Go codebases to Rust, demonstrating that we can consistently generate reliable Rust translations for projects up to 9,700 lines of code and 780 functions, with an average of 73% of functions successfully validated for I/O equivalence, considerably higher than any existing work.",
-    "full_text": null
+  "title": "Scalable, Validated Code Translation of Entire Projects using Large Language Models",
+  "url": "https://openalex.org/W4411267085",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2319887865",
+      "name": "Hanliang Zhang",
+      "affiliations": [
+        "University of Bristol"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117162933",
+      "name": "Cristina David",
+      "affiliations": [
+        "University of Bristol"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102035757",
+      "name": "Meng Wang",
+      "affiliations": [
+        "University of Bristol"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2285284706",
+      "name": "Brandon Paulsen",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132595810",
+      "name": "Daniel Kroening",
+      "affiliations": [
+        "Amazon (United States)",
+        "Seattle University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4385571480",
+    "https://openalex.org/W2125152082",
+    "https://openalex.org/W4411551908",
+    "https://openalex.org/W4399214196",
+    "https://openalex.org/W3205049031",
+    "https://openalex.org/W3000442391",
+    "https://openalex.org/W2888824816",
+    "https://openalex.org/W1994649009",
+    "https://openalex.org/W4388502443",
+    "https://openalex.org/W2140697469",
+    "https://openalex.org/W2122103021",
+    "https://openalex.org/W4408124887",
+    "https://openalex.org/W4245120671",
+    "https://openalex.org/W2040856861",
+    "https://openalex.org/W2963804422",
+    "https://openalex.org/W3091157996",
+    "https://openalex.org/W2279657578",
+    "https://openalex.org/W4394769102",
+    "https://openalex.org/W4281974386",
+    "https://openalex.org/W6893389937",
+    "https://openalex.org/W2152565783",
+    "https://openalex.org/W2701082322",
+    "https://openalex.org/W2911450990",
+    "https://openalex.org/W4389520032",
+    "https://openalex.org/W4389438938",
+    "https://openalex.org/W4384345708",
+    "https://openalex.org/W4389518960",
+    "https://openalex.org/W4400600893",
+    "https://openalex.org/W4384471416",
+    "https://openalex.org/W4389159862"
+  ],
+  "abstract": "Large language models (LLMs) show promise in code translation due to their ability to generate idiomatic code. However, a significant limitation when using LLMs for code translation is scalability: existing works have shown a drop in translation success rates for code exceeding around 100 lines. We overcome this limitation by developing a modular approach to translation, where we partition the code into small code fragments which can be translated independently and semantically validated (that is, by checking I/O equivalence). When this approach is applied naively, we discover that LLMs are unreliable when translating features of the source language that do not have a direct mapping to the target language, and that the LLM often gets stuck in repair loops when attempting to fix errors. To address these issues, we introduce two key concepts: (1) feature mapping , which integrates predefined translation rules with LLM-based translation to guide the LLM in navigating subtle language differences and producing semantically accurate code; and (2) type-compatibility , which facilitates localized checks at the function signature level to detect errors early, thereby narrowing the scope of potential repairs. We apply our approach to translating real-world Go codebases to Rust, demonstrating that we can consistently generate reliable Rust translations for projects up to 9,700 lines of code and 780 functions, with an average of 73% of functions successfully validated for I/O equivalence, considerably higher than any existing work.",
+  "full_text": null,
+  "topic": "Translation (biology)",
+  "concepts": [
+    {
+      "name": "Translation (biology)",
+      "score": 0.6911446452140808
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6823240518569946
+    },
+    {
+      "name": "Programming language",
+      "score": 0.6693075895309448
+    },
+    {
+      "name": "Scalability",
+      "score": 0.6453386545181274
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5628228187561035
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.43741557002067566
+    },
+    {
+      "name": "Database",
+      "score": 0.15400537848472595
+    },
+    {
+      "name": "Messenger RNA",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

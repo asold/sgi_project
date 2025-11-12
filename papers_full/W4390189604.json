@@ -1,113 +1,200 @@
 {
-    "title": "On the Effectiveness of LayerNorm Tuning for Continual Learning in Vision Transformers",
-    "url": "https://openalex.org/W4390189604",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5023771218",
-            "name": "Thomas De Min",
-            "affiliations": [
-                "University of Trento"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5017971549",
-            "name": "Massimiliano Mancini",
-            "affiliations": [
-                "University of Trento"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5049440980",
-            "name": "Karteek Alahari",
-            "affiliations": [
-                "Centre Inria de l'Université Grenoble Alpes",
-                "Centre National de la Recherche Scientifique",
-                "Institut polytechnique de Grenoble",
-                "Laboratoire Jean Kuntzmann",
-                "Université Grenoble Alpes"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066621495",
-            "name": "Xavier Alameda-Pineda",
-            "affiliations": [
-                "Centre Inria de l'Université Grenoble Alpes",
-                "Centre National de la Recherche Scientifique",
-                "Institut polytechnique de Grenoble",
-                "Laboratoire Jean Kuntzmann",
-                "Université Grenoble Alpes"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5065059558",
-            "name": "Elisa Ricci",
-            "affiliations": [
-                "Fondazione Bruno Kessler",
-                "University of Trento"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963588172",
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W6838865580",
-        "https://openalex.org/W6851423634",
-        "https://openalex.org/W2984612702",
-        "https://openalex.org/W6733346999",
-        "https://openalex.org/W2998290232",
-        "https://openalex.org/W6776188292",
-        "https://openalex.org/W2884282566",
-        "https://openalex.org/W3034435444",
-        "https://openalex.org/W4200260563",
-        "https://openalex.org/W4214662032",
-        "https://openalex.org/W2786446225",
-        "https://openalex.org/W6763462227",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W4225777901",
-        "https://openalex.org/W3107137534",
-        "https://openalex.org/W4386065403",
-        "https://openalex.org/W3037492894",
-        "https://openalex.org/W6759579507",
-        "https://openalex.org/W6796581206",
-        "https://openalex.org/W4312651322",
-        "https://openalex.org/W2743151379",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2560647685",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W3174770825",
-        "https://openalex.org/W2949052036",
-        "https://openalex.org/W2473930607",
-        "https://openalex.org/W3007041883",
-        "https://openalex.org/W4386075557",
-        "https://openalex.org/W2791091755",
-        "https://openalex.org/W2964248489",
-        "https://openalex.org/W3036831123",
-        "https://openalex.org/W1682403713",
-        "https://openalex.org/W4386076061",
-        "https://openalex.org/W3097784654",
-        "https://openalex.org/W6738045163",
-        "https://openalex.org/W2962945654",
-        "https://openalex.org/W2964189064",
-        "https://openalex.org/W4386076680",
-        "https://openalex.org/W4312351187",
-        "https://openalex.org/W4312238419",
-        "https://openalex.org/W2954929116",
-        "https://openalex.org/W3035501943",
-        "https://openalex.org/W6741217325",
-        "https://openalex.org/W6843630375",
-        "https://openalex.org/W3178686235",
-        "https://openalex.org/W2581955877",
-        "https://openalex.org/W2947461406",
-        "https://openalex.org/W3100156920",
-        "https://openalex.org/W4393147399",
-        "https://openalex.org/W3118608800",
-        "https://openalex.org/W3098511564",
-        "https://openalex.org/W4226437311",
-        "https://openalex.org/W4281838252",
-        "https://openalex.org/W3098840691"
-    ],
-    "abstract": "&lt;p&gt;State-of-the-art rehearsal-free continual learning methods exploit the peculiarities of Vision Transformers to learn task-specific prompts, drastically reducing catastrophic forgetting. However, there is a tradeoff between the number of learned parameters and the performance, making such models computationally expensive. In this work, we aim to reduce this cost while maintaining competitive performance. We achieve this by revisiting and extending a simple transfer learning idea: learning task-specific normalization layers. Specifically, we tune the scale and bias parameters of LayerNorm for each continual learning task, selecting them at inference time based on the similarity between task-specific keys and the output of the pre-trained model. To make the classifier robust to incorrect selection of parameters during inference, we introduce a two-stage training procedure, where we first optimize the task-specific parameters and then train the classifier with the same selection procedure of the inference time. Experiments on ImageNet-R and CIFAR-100 show that our method achieves results that are either superior or on par with the state of the art while being computationally cheaper.&lt;/p&gt;",
-    "full_text": null
+  "title": "On the Effectiveness of LayerNorm Tuning for Continual Learning in Vision Transformers",
+  "url": "https://openalex.org/W4390189604",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5023771218",
+      "name": "Thomas De Min",
+      "affiliations": [
+        "University of Trento"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5017971549",
+      "name": "Massimiliano Mancini",
+      "affiliations": [
+        "University of Trento"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5049440980",
+      "name": "Karteek Alahari",
+      "affiliations": [
+        "Centre Inria de l'Université Grenoble Alpes",
+        "Centre National de la Recherche Scientifique",
+        "Institut polytechnique de Grenoble",
+        "Laboratoire Jean Kuntzmann",
+        "Université Grenoble Alpes"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066621495",
+      "name": "Xavier Alameda-Pineda",
+      "affiliations": [
+        "Centre Inria de l'Université Grenoble Alpes",
+        "Centre National de la Recherche Scientifique",
+        "Institut polytechnique de Grenoble",
+        "Laboratoire Jean Kuntzmann",
+        "Université Grenoble Alpes"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5065059558",
+      "name": "Elisa Ricci",
+      "affiliations": [
+        "Fondazione Bruno Kessler",
+        "University of Trento"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963588172",
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W6838865580",
+    "https://openalex.org/W6851423634",
+    "https://openalex.org/W2984612702",
+    "https://openalex.org/W6733346999",
+    "https://openalex.org/W2998290232",
+    "https://openalex.org/W6776188292",
+    "https://openalex.org/W2884282566",
+    "https://openalex.org/W3034435444",
+    "https://openalex.org/W4200260563",
+    "https://openalex.org/W4214662032",
+    "https://openalex.org/W2786446225",
+    "https://openalex.org/W6763462227",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W4225777901",
+    "https://openalex.org/W3107137534",
+    "https://openalex.org/W4386065403",
+    "https://openalex.org/W3037492894",
+    "https://openalex.org/W6759579507",
+    "https://openalex.org/W6796581206",
+    "https://openalex.org/W4312651322",
+    "https://openalex.org/W2743151379",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2560647685",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W3174770825",
+    "https://openalex.org/W2949052036",
+    "https://openalex.org/W2473930607",
+    "https://openalex.org/W3007041883",
+    "https://openalex.org/W4386075557",
+    "https://openalex.org/W2791091755",
+    "https://openalex.org/W2964248489",
+    "https://openalex.org/W3036831123",
+    "https://openalex.org/W1682403713",
+    "https://openalex.org/W4386076061",
+    "https://openalex.org/W3097784654",
+    "https://openalex.org/W6738045163",
+    "https://openalex.org/W2962945654",
+    "https://openalex.org/W2964189064",
+    "https://openalex.org/W4386076680",
+    "https://openalex.org/W4312351187",
+    "https://openalex.org/W4312238419",
+    "https://openalex.org/W2954929116",
+    "https://openalex.org/W3035501943",
+    "https://openalex.org/W6741217325",
+    "https://openalex.org/W6843630375",
+    "https://openalex.org/W3178686235",
+    "https://openalex.org/W2581955877",
+    "https://openalex.org/W2947461406",
+    "https://openalex.org/W3100156920",
+    "https://openalex.org/W4393147399",
+    "https://openalex.org/W3118608800",
+    "https://openalex.org/W3098511564",
+    "https://openalex.org/W4226437311",
+    "https://openalex.org/W4281838252",
+    "https://openalex.org/W3098840691"
+  ],
+  "abstract": "&lt;p&gt;State-of-the-art rehearsal-free continual learning methods exploit the peculiarities of Vision Transformers to learn task-specific prompts, drastically reducing catastrophic forgetting. However, there is a tradeoff between the number of learned parameters and the performance, making such models computationally expensive. In this work, we aim to reduce this cost while maintaining competitive performance. We achieve this by revisiting and extending a simple transfer learning idea: learning task-specific normalization layers. Specifically, we tune the scale and bias parameters of LayerNorm for each continual learning task, selecting them at inference time based on the similarity between task-specific keys and the output of the pre-trained model. To make the classifier robust to incorrect selection of parameters during inference, we introduce a two-stage training procedure, where we first optimize the task-specific parameters and then train the classifier with the same selection procedure of the inference time. Experiments on ImageNet-R and CIFAR-100 show that our method achieves results that are either superior or on par with the state of the art while being computationally cheaper.&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7520682215690613
+    },
+    {
+      "name": "Inference",
+      "score": 0.6824491024017334
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6757278442382812
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.6473779082298279
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.5972459316253662
+    },
+    {
+      "name": "Exploit",
+      "score": 0.5309804081916809
+    },
+    {
+      "name": "Forgetting",
+      "score": 0.529707670211792
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49374517798423767
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.48019635677337646
+    },
+    {
+      "name": "Transfer of learning",
+      "score": 0.47974956035614014
+    },
+    {
+      "name": "Multi-task learning",
+      "score": 0.43189117312431335
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.3196139335632324
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11576667428016663
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

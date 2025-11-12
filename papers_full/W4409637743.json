@@ -1,101 +1,128 @@
 {
-    "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
-    "url": "https://openalex.org/W4409637743",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2141185274",
-            "name": "Jae-Woo Yang",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113878867",
-            "name": "Hayun Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5037061933",
-            "name": "Junyung Ji",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102151936",
-            "name": "Young-Hoon Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141185274",
-            "name": "Jae-Woo Yang",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113878867",
-            "name": "Hayun Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5037061933",
-            "name": "Junyung Ji",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102151936",
-            "name": "Young-Hoon Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4388979610",
-        "https://openalex.org/W4389518760",
-        "https://openalex.org/W3133264589",
-        "https://openalex.org/W2963122961",
-        "https://openalex.org/W3137147200",
-        "https://openalex.org/W4309591680",
-        "https://openalex.org/W6852905540",
-        "https://openalex.org/W4389524393",
-        "https://openalex.org/W6853667026",
-        "https://openalex.org/W6857799723",
-        "https://openalex.org/W6838633097",
-        "https://openalex.org/W3175752238",
-        "https://openalex.org/W3202028501",
-        "https://openalex.org/W3164771864",
-        "https://openalex.org/W3196813608",
-        "https://openalex.org/W4385574241",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6855007554",
-        "https://openalex.org/W4402683788",
-        "https://openalex.org/W4404782932",
-        "https://openalex.org/W6772381481",
-        "https://openalex.org/W2894175714",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6698183232",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6846659131",
-        "https://openalex.org/W2933138175",
-        "https://openalex.org/W4401044057",
-        "https://openalex.org/W2998617917",
-        "https://openalex.org/W2963015836",
-        "https://openalex.org/W2946609015",
-        "https://openalex.org/W2996908057",
-        "https://openalex.org/W6893640197",
-        "https://openalex.org/W4362655426"
-    ],
-    "abstract": "Modern large language models (LLMs) achieve state-of-the-art performance through architectural advancements but require high computational costs for inference. Post-training quantization is a widely adopted approach to reduce these costs by quantizing weights and activations to lower precision, such as INT8. However, we identify a critical challenge in activation quantization for GLU (Gated Linear Unit) variants, which are commonly used in the feed-forward networks of modern LLMs like the LLaMA family. Specifically, severe local quantization errors arise due to excessively large activation magnitudes, which we refer to as activation spikes, leading to significant degradation in model performance. Our analysis reveals a systematic pattern of these spikes: they predominantly occur in the FFN (feed-forward network) layers at the early and late layers of the model and are concentrated on a small subset of tokens rather than being uniformly distributed across a token sequence. To mitigate this issue, we propose two empirical methods: Quantization-free Module (QFeM) and Quantization-free Prefix (QFeP), which isolate activation spikes during quantization. Extensive experiments demonstrated that our methods effectively improve activation quantization, particularly in coarse-grained quantization schemes, enhancing the performance of LLMs with GLU variants and addressing the limitations of existing quantization techniques. The code for implementing our methods and reproducing the experiments is publicly available our GitHub repository.",
-    "full_text": null
+  "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
+  "url": "https://openalex.org/W4409637743",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2141185274",
+      "name": "Jae-Woo Yang",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113878867",
+      "name": "Hayun Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5037061933",
+      "name": "Junyung Ji",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102151936",
+      "name": "Young-Hoon Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141185274",
+      "name": "Jae-Woo Yang",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113878867",
+      "name": "Hayun Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5037061933",
+      "name": "Junyung Ji",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102151936",
+      "name": "Young-Hoon Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4388979610",
+    "https://openalex.org/W4389518760",
+    "https://openalex.org/W3133264589",
+    "https://openalex.org/W2963122961",
+    "https://openalex.org/W3137147200",
+    "https://openalex.org/W4309591680",
+    "https://openalex.org/W6852905540",
+    "https://openalex.org/W4389524393",
+    "https://openalex.org/W6853667026",
+    "https://openalex.org/W6857799723",
+    "https://openalex.org/W6838633097",
+    "https://openalex.org/W3175752238",
+    "https://openalex.org/W3202028501",
+    "https://openalex.org/W3164771864",
+    "https://openalex.org/W3196813608",
+    "https://openalex.org/W4385574241",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6855007554",
+    "https://openalex.org/W4402683788",
+    "https://openalex.org/W4404782932",
+    "https://openalex.org/W6772381481",
+    "https://openalex.org/W2894175714",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6698183232",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6846659131",
+    "https://openalex.org/W2933138175",
+    "https://openalex.org/W4401044057",
+    "https://openalex.org/W2998617917",
+    "https://openalex.org/W2963015836",
+    "https://openalex.org/W2946609015",
+    "https://openalex.org/W2996908057",
+    "https://openalex.org/W6893640197",
+    "https://openalex.org/W4362655426"
+  ],
+  "abstract": "Modern large language models (LLMs) achieve state-of-the-art performance through architectural advancements but require high computational costs for inference. Post-training quantization is a widely adopted approach to reduce these costs by quantizing weights and activations to lower precision, such as INT8. However, we identify a critical challenge in activation quantization for GLU (Gated Linear Unit) variants, which are commonly used in the feed-forward networks of modern LLMs like the LLaMA family. Specifically, severe local quantization errors arise due to excessively large activation magnitudes, which we refer to as activation spikes, leading to significant degradation in model performance. Our analysis reveals a systematic pattern of these spikes: they predominantly occur in the FFN (feed-forward network) layers at the early and late layers of the model and are concentrated on a small subset of tokens rather than being uniformly distributed across a token sequence. To mitigate this issue, we propose two empirical methods: Quantization-free Module (QFeM) and Quantization-free Prefix (QFeP), which isolate activation spikes during quantization. Extensive experiments demonstrated that our methods effectively improve activation quantization, particularly in coarse-grained quantization schemes, enhancing the performance of LLMs with GLU variants and addressing the limitations of existing quantization techniques. The code for implementing our methods and reproducing the experiments is publicly available our GitHub repository.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8791015148162842
+    },
+    {
+      "name": "Quantization (signal processing)",
+      "score": 0.6506805419921875
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.4626288115978241
+    },
+    {
+      "name": "Language model",
+      "score": 0.4532895088195801
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.40814638137817383
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.34072357416152954
+    }
+  ]
 }

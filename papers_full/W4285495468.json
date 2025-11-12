@@ -1,82 +1,157 @@
 {
-    "title": "Military Chain: Construction of Domain Knowledge Graph of Kill Chain Based on Natural Language Model",
-    "url": "https://openalex.org/W4285495468",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2098837876",
-            "name": "Yanfeng Wang",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1977132994",
-            "name": "Tao Wang",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105359893",
-            "name": "JunHui Wang",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097998719",
-            "name": "Xin Zhou",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2053925183",
-            "name": "Ming Gao",
-            "affiliations": [
-                "Shanghai Research Institute of Sports Science"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2907520274",
-            "name": "Runmin Liu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2136912908",
-        "https://openalex.org/W1984677441",
-        "https://openalex.org/W2147256114",
-        "https://openalex.org/W2164128966",
-        "https://openalex.org/W2941521434",
-        "https://openalex.org/W3109718344",
-        "https://openalex.org/W6622621606",
-        "https://openalex.org/W2556605533",
-        "https://openalex.org/W2950438065",
-        "https://openalex.org/W2429488962",
-        "https://openalex.org/W6744563477",
-        "https://openalex.org/W1976324983",
-        "https://openalex.org/W6638154518",
-        "https://openalex.org/W3007075806",
-        "https://openalex.org/W2118238128",
-        "https://openalex.org/W2580662672",
-        "https://openalex.org/W2963477629",
-        "https://openalex.org/W3046639199",
-        "https://openalex.org/W4200474686",
-        "https://openalex.org/W2168201918",
-        "https://openalex.org/W3015762991",
-        "https://openalex.org/W3157200701",
-        "https://openalex.org/W2985105610",
-        "https://openalex.org/W2737560561",
-        "https://openalex.org/W2963608065",
-        "https://openalex.org/W1788185260",
-        "https://openalex.org/W776871969",
-        "https://openalex.org/W2963502184",
-        "https://openalex.org/W174372729",
-        "https://openalex.org/W9330050",
-        "https://openalex.org/W2759336060"
-    ],
-    "abstract": "With the advent of the Big Data era, the specialized data in the kill chain domain has increased dramatically, and the engine-based method of retrieving information can hardly meet the users' need for more accurate answers. The kill chain domain includes four components: control equipment, sensor equipment, strike equipment (weapon and platform), and evaluator equipment, as well as related data which contain a large amount of valuable information such as the parameter information contained in each component. If these fragmented and confusing data are integrated and effective query methods are established, they can help professionals complete the military kill chain knowledge system. The knowledge system constructed in this paper is based on the Neo4j graph database and the US Command simulation system to establish a target-oriented knowledge map of kill chain, aiming to provide data support for the Q&amp;A system. Secondly, in order to facilitate the query, this paper establishes entity and relationship/attribute mining based on the continuous bag-of-words (CBOW) encoding model, bidirectional long short-term memory–conditional random field (BiLSTM-CRF) named entity model, and bidirectional gated recurrent neural network (BiGRU) intent recognition model for Chinese kill chain question and answer; returns the corresponding entity or attribute values in combination with the knowledge graph triad form; and finally constructs the answer return. The constructed knowledge map of the kill chain contains 2767 items (including sea, land, and air), and the number of parameters involved is 30124. The number of model parameters of the deep learning network is 27.9 M for the Q&amp;A system built this time, and the accuracy rate is 85.5% after 200 simulated queries.",
-    "full_text": null
+  "title": "Military Chain: Construction of Domain Knowledge Graph of Kill Chain Based on Natural Language Model",
+  "url": "https://openalex.org/W4285495468",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2098837876",
+      "name": "Yanfeng Wang",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1977132994",
+      "name": "Tao Wang",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105359893",
+      "name": "JunHui Wang",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097998719",
+      "name": "Xin Zhou",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2053925183",
+      "name": "Ming Gao",
+      "affiliations": [
+        "Shanghai Research Institute of Sports Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2907520274",
+      "name": "Runmin Liu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2136912908",
+    "https://openalex.org/W1984677441",
+    "https://openalex.org/W2147256114",
+    "https://openalex.org/W2164128966",
+    "https://openalex.org/W2941521434",
+    "https://openalex.org/W3109718344",
+    "https://openalex.org/W6622621606",
+    "https://openalex.org/W2556605533",
+    "https://openalex.org/W2950438065",
+    "https://openalex.org/W2429488962",
+    "https://openalex.org/W6744563477",
+    "https://openalex.org/W1976324983",
+    "https://openalex.org/W6638154518",
+    "https://openalex.org/W3007075806",
+    "https://openalex.org/W2118238128",
+    "https://openalex.org/W2580662672",
+    "https://openalex.org/W2963477629",
+    "https://openalex.org/W3046639199",
+    "https://openalex.org/W4200474686",
+    "https://openalex.org/W2168201918",
+    "https://openalex.org/W3015762991",
+    "https://openalex.org/W3157200701",
+    "https://openalex.org/W2985105610",
+    "https://openalex.org/W2737560561",
+    "https://openalex.org/W2963608065",
+    "https://openalex.org/W1788185260",
+    "https://openalex.org/W776871969",
+    "https://openalex.org/W2963502184",
+    "https://openalex.org/W174372729",
+    "https://openalex.org/W9330050",
+    "https://openalex.org/W2759336060"
+  ],
+  "abstract": "With the advent of the Big Data era, the specialized data in the kill chain domain has increased dramatically, and the engine-based method of retrieving information can hardly meet the users' need for more accurate answers. The kill chain domain includes four components: control equipment, sensor equipment, strike equipment (weapon and platform), and evaluator equipment, as well as related data which contain a large amount of valuable information such as the parameter information contained in each component. If these fragmented and confusing data are integrated and effective query methods are established, they can help professionals complete the military kill chain knowledge system. The knowledge system constructed in this paper is based on the Neo4j graph database and the US Command simulation system to establish a target-oriented knowledge map of kill chain, aiming to provide data support for the Q&amp;A system. Secondly, in order to facilitate the query, this paper establishes entity and relationship/attribute mining based on the continuous bag-of-words (CBOW) encoding model, bidirectional long short-term memory–conditional random field (BiLSTM-CRF) named entity model, and bidirectional gated recurrent neural network (BiGRU) intent recognition model for Chinese kill chain question and answer; returns the corresponding entity or attribute values in combination with the knowledge graph triad form; and finally constructs the answer return. The constructed knowledge map of the kill chain contains 2767 items (including sea, land, and air), and the number of parameters involved is 30124. The number of model parameters of the deep learning network is 27.9 M for the Q&amp;A system built this time, and the accuracy rate is 85.5% after 200 simulated queries.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8735863566398621
+    },
+    {
+      "name": "Conditional random field",
+      "score": 0.5099571943283081
+    },
+    {
+      "name": "Domain knowledge",
+      "score": 0.5047258138656616
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.49901628494262695
+    },
+    {
+      "name": "Chain (unit)",
+      "score": 0.48981401324272156
+    },
+    {
+      "name": "Graph",
+      "score": 0.47428447008132935
+    },
+    {
+      "name": "Knowledge graph",
+      "score": 0.4405675232410431
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.4204847812652588
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.39497190713882446
+    },
+    {
+      "name": "Data mining",
+      "score": 0.39024117588996887
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.18617594242095947
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Astronomy",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

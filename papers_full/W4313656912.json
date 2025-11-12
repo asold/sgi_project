@@ -1,88 +1,155 @@
 {
-    "title": "Robust transformer with locality inductive bias and feature normalization",
-    "url": "https://openalex.org/W4313656912",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5045952897",
-            "name": "Omid Nejati Manzari",
-            "affiliations": [
-                "Iran University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5001509911",
-            "name": "Hossein Kashiani",
-            "affiliations": [
-                "West Virginia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5034305128",
-            "name": "Hojat Asgarian Dehkordi",
-            "affiliations": [
-                "Iran University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5050563980",
-            "name": "Shahriar B. Shokouhi",
-            "affiliations": [
-                "Iran University of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3004860639",
-        "https://openalex.org/W6945244495",
-        "https://openalex.org/W6839934895",
-        "https://openalex.org/W4210734798",
-        "https://openalex.org/W4207024994",
-        "https://openalex.org/W3096570766",
-        "https://openalex.org/W3166838308",
-        "https://openalex.org/W3185743799",
-        "https://openalex.org/W2902335478",
-        "https://openalex.org/W4214627666",
-        "https://openalex.org/W2990278031",
-        "https://openalex.org/W2996699350",
-        "https://openalex.org/W4214893772",
-        "https://openalex.org/W2966367600",
-        "https://openalex.org/W6788494687",
-        "https://openalex.org/W3037492894",
-        "https://openalex.org/W2992308087",
-        "https://openalex.org/W4289443952",
-        "https://openalex.org/W3137573682",
-        "https://openalex.org/W2955364291",
-        "https://openalex.org/W6604472716",
-        "https://openalex.org/W6605475740",
-        "https://openalex.org/W6600662924",
-        "https://openalex.org/W6600175266",
-        "https://openalex.org/W4312812783",
-        "https://openalex.org/W6601439933",
-        "https://openalex.org/W2117876524",
-        "https://openalex.org/W3118608800",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2964110616",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6635487051",
-        "https://openalex.org/W3143373604",
-        "https://openalex.org/W3145185940",
-        "https://openalex.org/W4312957757",
-        "https://openalex.org/W3136416617",
-        "https://openalex.org/W3185864054",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W2295107390",
-        "https://openalex.org/W3159481202",
-        "https://openalex.org/W3120460133",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W3132890542",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W4312793142"
-    ],
-    "abstract": "Vision transformers have been demonstrated to yield state-of-the-art results on a variety of computer vision tasks using attention-based networks. However, research works in transformers mostly do not investigate robustness/accuracy trade-off, and they still struggle to handle adversarial perturbations. In this paper, we explore the robustness of vision transformers against adversarial perturbations and try to enhance their robustness/accuracy trade-off in white box attack settings. To this end, we propose Locality iN Locality (LNL) transformer model. We prove that the locality introduction to LNL contributes to the robustness performance since it aggregates local information such as lines, edges, shapes, and even objects. In addition, to further improve the robustness performance, we encourage LNL to extract training signal from the moments (a.k.a., mean and standard deviation) and the normalized features. We validate the effectiveness and generality of LNL by achieving state-of-the-art results in terms of accuracy and robustness metrics on German Traffic Sign Recognition Benchmark (GTSRB) and Canadian Institute for Advanced Research (CIFAR-10). More specifically, for traffic sign classification, the proposed LNL yields gains of 1.1% and 35% in terms of clean and robustness accuracy compared to the state-of-the-art studies.",
-    "full_text": null
+  "title": "Robust transformer with locality inductive bias and feature normalization",
+  "url": "https://openalex.org/W4313656912",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5045952897",
+      "name": "Omid Nejati Manzari",
+      "affiliations": [
+        "Iran University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5001509911",
+      "name": "Hossein Kashiani",
+      "affiliations": [
+        "West Virginia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5034305128",
+      "name": "Hojat Asgarian Dehkordi",
+      "affiliations": [
+        "Iran University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5050563980",
+      "name": "Shahriar B. Shokouhi",
+      "affiliations": [
+        "Iran University of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3004860639",
+    "https://openalex.org/W6945244495",
+    "https://openalex.org/W6839934895",
+    "https://openalex.org/W4210734798",
+    "https://openalex.org/W4207024994",
+    "https://openalex.org/W3096570766",
+    "https://openalex.org/W3166838308",
+    "https://openalex.org/W3185743799",
+    "https://openalex.org/W2902335478",
+    "https://openalex.org/W4214627666",
+    "https://openalex.org/W2990278031",
+    "https://openalex.org/W2996699350",
+    "https://openalex.org/W4214893772",
+    "https://openalex.org/W2966367600",
+    "https://openalex.org/W6788494687",
+    "https://openalex.org/W3037492894",
+    "https://openalex.org/W2992308087",
+    "https://openalex.org/W4289443952",
+    "https://openalex.org/W3137573682",
+    "https://openalex.org/W2955364291",
+    "https://openalex.org/W6604472716",
+    "https://openalex.org/W6605475740",
+    "https://openalex.org/W6600662924",
+    "https://openalex.org/W6600175266",
+    "https://openalex.org/W4312812783",
+    "https://openalex.org/W6601439933",
+    "https://openalex.org/W2117876524",
+    "https://openalex.org/W3118608800",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2964110616",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6635487051",
+    "https://openalex.org/W3143373604",
+    "https://openalex.org/W3145185940",
+    "https://openalex.org/W4312957757",
+    "https://openalex.org/W3136416617",
+    "https://openalex.org/W3185864054",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W2295107390",
+    "https://openalex.org/W3159481202",
+    "https://openalex.org/W3120460133",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W3132890542",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W4312793142"
+  ],
+  "abstract": "Vision transformers have been demonstrated to yield state-of-the-art results on a variety of computer vision tasks using attention-based networks. However, research works in transformers mostly do not investigate robustness/accuracy trade-off, and they still struggle to handle adversarial perturbations. In this paper, we explore the robustness of vision transformers against adversarial perturbations and try to enhance their robustness/accuracy trade-off in white box attack settings. To this end, we propose Locality iN Locality (LNL) transformer model. We prove that the locality introduction to LNL contributes to the robustness performance since it aggregates local information such as lines, edges, shapes, and even objects. In addition, to further improve the robustness performance, we encourage LNL to extract training signal from the moments (a.k.a., mean and standard deviation) and the normalized features. We validate the effectiveness and generality of LNL by achieving state-of-the-art results in terms of accuracy and robustness metrics on German Traffic Sign Recognition Benchmark (GTSRB) and Canadian Institute for Advanced Research (CIFAR-10). More specifically, for traffic sign classification, the proposed LNL yields gains of 1.1% and 35% in terms of clean and robustness accuracy compared to the state-of-the-art studies.",
+  "full_text": null,
+  "topic": "Robustness (evolution)",
+  "concepts": [
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.626643717288971
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6135877370834351
+    },
+    {
+      "name": "Locality",
+      "score": 0.4691929519176483
+    },
+    {
+      "name": "Transformer",
+      "score": 0.46312910318374634
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.45925161242485046
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.33876657485961914
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.338615357875824
+    },
+    {
+      "name": "Computer engineering",
+      "score": 0.3200521171092987
+    },
+    {
+      "name": "Engineering",
+      "score": 0.16825607419013977
+    },
+    {
+      "name": "Voltage",
+      "score": 0.14390745759010315
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    }
+  ]
 }

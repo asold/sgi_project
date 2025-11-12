@@ -1,75 +1,138 @@
 {
-    "title": "SpaDiT: diffusion transformer for spatial gene expression prediction using scRNA-seq",
-    "url": "https://openalex.org/W4404122385",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5109756352",
-            "name": "Xiaoyu Li",
-            "affiliations": [
-                "Yunnan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103650117",
-            "name": "Fangfang Zhu",
-            "affiliations": [
-                "Yunnan Open University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5083513047",
-            "name": "Wenwen Min",
-            "affiliations": [
-                "Yunnan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2171501288",
-        "https://openalex.org/W3171692328",
-        "https://openalex.org/W3190202966",
-        "https://openalex.org/W6863445405",
-        "https://openalex.org/W3120427588",
-        "https://openalex.org/W3112563877",
-        "https://openalex.org/W4229033508",
-        "https://openalex.org/W2806524706",
-        "https://openalex.org/W2899224111",
-        "https://openalex.org/W4300862018",
-        "https://openalex.org/W4307291223",
-        "https://openalex.org/W2995703197",
-        "https://openalex.org/W3007402690",
-        "https://openalex.org/W4306353205",
-        "https://openalex.org/W3208940117",
-        "https://openalex.org/W2901677030",
-        "https://openalex.org/W3087138957",
-        "https://openalex.org/W3182503854",
-        "https://openalex.org/W3022836409",
-        "https://openalex.org/W3190759848",
-        "https://openalex.org/W4389135772",
-        "https://openalex.org/W4394870153",
-        "https://openalex.org/W4400519842",
-        "https://openalex.org/W4387580076",
-        "https://openalex.org/W6679045638",
-        "https://openalex.org/W6849864990",
-        "https://openalex.org/W4394718179",
-        "https://openalex.org/W4400519876",
-        "https://openalex.org/W3122762933",
-        "https://openalex.org/W2894687190",
-        "https://openalex.org/W2809368942",
-        "https://openalex.org/W3214679604",
-        "https://openalex.org/W3198511950",
-        "https://openalex.org/W3161226217",
-        "https://openalex.org/W3110998212",
-        "https://openalex.org/W4220915786",
-        "https://openalex.org/W6847302828",
-        "https://openalex.org/W6779823529",
-        "https://openalex.org/W4400067375",
-        "https://openalex.org/W4221065117",
-        "https://openalex.org/W2953036966",
-        "https://openalex.org/W4393023418",
-        "https://openalex.org/W3036167779"
-    ],
-    "abstract": "Abstract The rapid development of spatially resolved transcriptomics (SRT) technologies has provided unprecedented opportunities for exploring the structure of specific organs or tissues. However, these techniques (such as image-based SRT) can achieve single-cell resolution, but can only capture the expression levels of tens to hundreds of genes. Such spatial transcriptomics (ST) data, carrying a large number of undetected genes, have limited its application value. To address the challenge, we develop SpaDiT, a deep learning framework for spatial reconstruction and gene expression prediction using scRNA-seq data. SpaDiT employs scRNA-seq data as an a priori condition and utilizes shared genes between ST and scRNA-seq data as latent representations to construct inputs, thereby facilitating the accurate prediction of gene expression in ST data. SpaDiT enhances the accuracy of spatial gene expression predictions over a variety of spatial transcriptomics datasets. We have demonstrated the effectiveness of SpaDiT by conducting extensive experiments on both seq-based and image-based ST data. We compared SpaDiT with eight highly effective baseline methods and found that our proposed method achieved an 8%–12% improvement in performance across multiple metrics. Source code and all datasets used in this paper are available at https://github.com/wenwenmin/SpaDiT and https://zenodo.org/records/12792074.",
-    "full_text": null
+  "title": "SpaDiT: diffusion transformer for spatial gene expression prediction using scRNA-seq",
+  "url": "https://openalex.org/W4404122385",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5109756352",
+      "name": "Xiaoyu Li",
+      "affiliations": [
+        "Yunnan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103650117",
+      "name": "Fangfang Zhu",
+      "affiliations": [
+        "Yunnan Open University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5083513047",
+      "name": "Wenwen Min",
+      "affiliations": [
+        "Yunnan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2171501288",
+    "https://openalex.org/W3171692328",
+    "https://openalex.org/W3190202966",
+    "https://openalex.org/W6863445405",
+    "https://openalex.org/W3120427588",
+    "https://openalex.org/W3112563877",
+    "https://openalex.org/W4229033508",
+    "https://openalex.org/W2806524706",
+    "https://openalex.org/W2899224111",
+    "https://openalex.org/W4300862018",
+    "https://openalex.org/W4307291223",
+    "https://openalex.org/W2995703197",
+    "https://openalex.org/W3007402690",
+    "https://openalex.org/W4306353205",
+    "https://openalex.org/W3208940117",
+    "https://openalex.org/W2901677030",
+    "https://openalex.org/W3087138957",
+    "https://openalex.org/W3182503854",
+    "https://openalex.org/W3022836409",
+    "https://openalex.org/W3190759848",
+    "https://openalex.org/W4389135772",
+    "https://openalex.org/W4394870153",
+    "https://openalex.org/W4400519842",
+    "https://openalex.org/W4387580076",
+    "https://openalex.org/W6679045638",
+    "https://openalex.org/W6849864990",
+    "https://openalex.org/W4394718179",
+    "https://openalex.org/W4400519876",
+    "https://openalex.org/W3122762933",
+    "https://openalex.org/W2894687190",
+    "https://openalex.org/W2809368942",
+    "https://openalex.org/W3214679604",
+    "https://openalex.org/W3198511950",
+    "https://openalex.org/W3161226217",
+    "https://openalex.org/W3110998212",
+    "https://openalex.org/W4220915786",
+    "https://openalex.org/W6847302828",
+    "https://openalex.org/W6779823529",
+    "https://openalex.org/W4400067375",
+    "https://openalex.org/W4221065117",
+    "https://openalex.org/W2953036966",
+    "https://openalex.org/W4393023418",
+    "https://openalex.org/W3036167779"
+  ],
+  "abstract": "Abstract The rapid development of spatially resolved transcriptomics (SRT) technologies has provided unprecedented opportunities for exploring the structure of specific organs or tissues. However, these techniques (such as image-based SRT) can achieve single-cell resolution, but can only capture the expression levels of tens to hundreds of genes. Such spatial transcriptomics (ST) data, carrying a large number of undetected genes, have limited its application value. To address the challenge, we develop SpaDiT, a deep learning framework for spatial reconstruction and gene expression prediction using scRNA-seq data. SpaDiT employs scRNA-seq data as an a priori condition and utilizes shared genes between ST and scRNA-seq data as latent representations to construct inputs, thereby facilitating the accurate prediction of gene expression in ST data. SpaDiT enhances the accuracy of spatial gene expression predictions over a variety of spatial transcriptomics datasets. We have demonstrated the effectiveness of SpaDiT by conducting extensive experiments on both seq-based and image-based ST data. We compared SpaDiT with eight highly effective baseline methods and found that our proposed method achieved an 8%–12% improvement in performance across multiple metrics. Source code and all datasets used in this paper are available at https://github.com/wenwenmin/SpaDiT and https://zenodo.org/records/12792074.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5116017460823059
+    },
+    {
+      "name": "Transformer",
+      "score": 0.47964149713516235
+    },
+    {
+      "name": "Diffusion",
+      "score": 0.47524070739746094
+    },
+    {
+      "name": "Expression (computer science)",
+      "score": 0.42613011598587036
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.41782814264297485
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.4106858968734741
+    },
+    {
+      "name": "Gene",
+      "score": 0.3696783185005188
+    },
+    {
+      "name": "Biology",
+      "score": 0.21629592776298523
+    },
+    {
+      "name": "Genetics",
+      "score": 0.13773873448371887
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1186462938785553
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0853787362575531
+    },
+    {
+      "name": "Programming language",
+      "score": 0.053957074880599976
+    },
+    {
+      "name": "Physics",
+      "score": 0.053149253129959106
+    },
+    {
+      "name": "Thermodynamics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,70 +1,113 @@
 {
-    "title": "GRILLBot In Practice: Lessons and Tradeoffs Deploying Large Language Models for Adaptable Conversational Task Assistants",
-    "url": "https://openalex.org/W4391799270",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2158857338",
-            "name": "Sophie Fischer",
-            "affiliations": [
-                "University of Edinburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3035122355",
-            "name": "Carlos Gemmell",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093925478",
-            "name": "Niklas Tecklenburg",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097000900",
-            "name": "Iain Mackie",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2901999841",
-            "name": "Federico Rossetto",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107736695",
-            "name": "Jeffrey Dalton",
-            "affiliations": [
-                "University of Edinburgh"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2964006684",
-        "https://openalex.org/W2938912017",
-        "https://openalex.org/W4293251388",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W3099655892",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W3129375512",
-        "https://openalex.org/W4367365649",
-        "https://openalex.org/W3129832691",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W4386110564",
-        "https://openalex.org/W4389520047",
-        "https://openalex.org/W4393065402",
-        "https://openalex.org/W4294833327",
-        "https://openalex.org/W4385794172",
-        "https://openalex.org/W4385572126"
-    ],
-    "abstract": "We tackle the challenge of building real-world multimodal assistants for\\ncomplex real-world tasks. We describe the practicalities and challenges of\\ndeveloping and deploying GRILLBot, a leading (first and second prize winning in\\n2022 and 2023) system deployed in the Alexa Prize TaskBot Challenge. Building\\non our Open Assistant Toolkit (OAT) framework, we propose a hybrid architecture\\nthat leverages Large Language Models (LLMs) and specialised models tuned for\\nspecific subtasks requiring very low latency. OAT allows us to define when, how\\nand which LLMs should be used in a structured and deployable manner. For\\nknowledge-grounded question answering and live task adaptations, we show that\\nLLM reasoning abilities over task context and world knowledge outweigh latency\\nconcerns. For dialogue state management, we implement a code generation\\napproach and show that specialised smaller models have 84% effectiveness with\\n100x lower latency. Overall, we provide insights and discuss tradeoffs for\\ndeploying both traditional models and LLMs to users in complex real-world\\nmultimodal environments in the Alexa TaskBot challenge. These experiences will\\ncontinue to evolve as LLMs become more capable and efficient -- fundamentally\\nreshaping OAT and future assistant architectures.\\n",
-    "full_text": null
+  "title": "GRILLBot In Practice: Lessons and Tradeoffs Deploying Large Language Models for Adaptable Conversational Task Assistants",
+  "url": "https://openalex.org/W4391799270",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2158857338",
+      "name": "Sophie Fischer",
+      "affiliations": [
+        "University of Edinburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3035122355",
+      "name": "Carlos Gemmell",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093925478",
+      "name": "Niklas Tecklenburg",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097000900",
+      "name": "Iain Mackie",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2901999841",
+      "name": "Federico Rossetto",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107736695",
+      "name": "Jeffrey Dalton",
+      "affiliations": [
+        "University of Edinburgh"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2964006684",
+    "https://openalex.org/W2938912017",
+    "https://openalex.org/W4293251388",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W3099655892",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W3129375512",
+    "https://openalex.org/W4367365649",
+    "https://openalex.org/W3129832691",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W4386110564",
+    "https://openalex.org/W4389520047",
+    "https://openalex.org/W4393065402",
+    "https://openalex.org/W4294833327",
+    "https://openalex.org/W4385794172",
+    "https://openalex.org/W4385572126"
+  ],
+  "abstract": "We tackle the challenge of building real-world multimodal assistants for\\ncomplex real-world tasks. We describe the practicalities and challenges of\\ndeveloping and deploying GRILLBot, a leading (first and second prize winning in\\n2022 and 2023) system deployed in the Alexa Prize TaskBot Challenge. Building\\non our Open Assistant Toolkit (OAT) framework, we propose a hybrid architecture\\nthat leverages Large Language Models (LLMs) and specialised models tuned for\\nspecific subtasks requiring very low latency. OAT allows us to define when, how\\nand which LLMs should be used in a structured and deployable manner. For\\nknowledge-grounded question answering and live task adaptations, we show that\\nLLM reasoning abilities over task context and world knowledge outweigh latency\\nconcerns. For dialogue state management, we implement a code generation\\napproach and show that specialised smaller models have 84% effectiveness with\\n100x lower latency. Overall, we provide insights and discuss tradeoffs for\\ndeploying both traditional models and LLMs to users in complex real-world\\nmultimodal environments in the Alexa TaskBot challenge. These experiences will\\ncontinue to evolve as LLMs become more capable and efficient -- fundamentally\\nreshaping OAT and future assistant architectures.\\n",
+  "full_text": null,
+  "topic": "Task (project management)",
+  "concepts": [
+    {
+      "name": "Task (project management)",
+      "score": 0.7453147172927856
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6318864822387695
+    },
+    {
+      "name": "Knowledge management",
+      "score": 0.37150508165359497
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.36102569103240967
+    },
+    {
+      "name": "Process management",
+      "score": 0.3603096902370453
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.32838326692581177
+    },
+    {
+      "name": "Business",
+      "score": 0.23764333128929138
+    },
+    {
+      "name": "Engineering",
+      "score": 0.16836005449295044
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.11705648899078369
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

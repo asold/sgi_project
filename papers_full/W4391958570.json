@@ -1,56 +1,147 @@
 {
-    "title": "InterpreTutor: Using Large Language Models for Interpreter Assessment",
-    "url": "https://openalex.org/W4391958570",
-    "year": 2023,
-    "authors": [
-        {
-            "id": null,
-            "name": "Istanbul Yeni Yüzyıl University, Istanbul, Turkiye",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2033906751",
-            "name": "Cihan Ünlü",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6606511648",
-        "https://openalex.org/W6837621903",
-        "https://openalex.org/W3010756671",
-        "https://openalex.org/W6828399348",
-        "https://openalex.org/W4293084121",
-        "https://openalex.org/W4313294616",
-        "https://openalex.org/W3152933419",
-        "https://openalex.org/W2033682176",
-        "https://openalex.org/W4297435087",
-        "https://openalex.org/W4330336443",
-        "https://openalex.org/W3214660453",
-        "https://openalex.org/W1999300449",
-        "https://openalex.org/W4323697401",
-        "https://openalex.org/W2506014875",
-        "https://openalex.org/W2759767872",
-        "https://openalex.org/W1978197407",
-        "https://openalex.org/W4321472057",
-        "https://openalex.org/W2962721879",
-        "https://openalex.org/W4389519239",
-        "https://openalex.org/W3127816901",
-        "https://openalex.org/W4322760121",
-        "https://openalex.org/W4361230777",
-        "https://openalex.org/W4389520222",
-        "https://openalex.org/W4292357949",
-        "https://openalex.org/W4385572225",
-        "https://openalex.org/W4311000453",
-        "https://openalex.org/W4320167623",
-        "https://openalex.org/W3153500911",
-        "https://openalex.org/W3192027287",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4389520065",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2521604020"
-    ],
-    "abstract": "The recent development of large language models (LLMs) has shown remarkable natural language processing capabilities and created new possibilities for applications in various fields.With their advanced NLP features, such as text comparison, semantic analysis, text summarization, text classification, and text completion, this study aims to investigate whether these models have the potential to be used as tools for evaluating translation/interpretation output in a textual representation.In this paper, we question the capabilities of an LLM and propose InterpreTutor 1 , an LLM-powered application with simple UI that utilizes Generative Pre-trained Transformer (GPT-3.5 turbo and GPT-4 models) and speech recognition (OpenAI Whisper) to offer detailed feedback on interpreters' performances based on automatic analysis of the transcriptions of their interpreting practice.The tool's primary focus is to act as an easy-to-use selftutoring tool, offering feedback based on four human evaluation criteria.While InterpreTutor may not cover all aspects of interpreting performance, such as prosodic features of the delivery, it still provides insights into aspects that can be assessed through textual representation.In this paper, we will discuss the potential of LLMs, the development of InterpreTutor, its underlying methodology, and provide examples of its application with a small-scale experiment.",
-    "full_text": null
+  "title": "InterpreTutor: Using Large Language Models for Interpreter Assessment",
+  "url": "https://openalex.org/W4391958570",
+  "year": 2023,
+  "authors": [
+    {
+      "id": null,
+      "name": "Istanbul Yeni Yüzyıl University, Istanbul, Turkiye",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2033906751",
+      "name": "Cihan Ünlü",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6606511648",
+    "https://openalex.org/W6837621903",
+    "https://openalex.org/W3010756671",
+    "https://openalex.org/W6828399348",
+    "https://openalex.org/W4293084121",
+    "https://openalex.org/W4313294616",
+    "https://openalex.org/W3152933419",
+    "https://openalex.org/W2033682176",
+    "https://openalex.org/W4297435087",
+    "https://openalex.org/W4330336443",
+    "https://openalex.org/W3214660453",
+    "https://openalex.org/W1999300449",
+    "https://openalex.org/W4323697401",
+    "https://openalex.org/W2506014875",
+    "https://openalex.org/W2759767872",
+    "https://openalex.org/W1978197407",
+    "https://openalex.org/W4321472057",
+    "https://openalex.org/W2962721879",
+    "https://openalex.org/W4389519239",
+    "https://openalex.org/W3127816901",
+    "https://openalex.org/W4322760121",
+    "https://openalex.org/W4361230777",
+    "https://openalex.org/W4389520222",
+    "https://openalex.org/W4292357949",
+    "https://openalex.org/W4385572225",
+    "https://openalex.org/W4311000453",
+    "https://openalex.org/W4320167623",
+    "https://openalex.org/W3153500911",
+    "https://openalex.org/W3192027287",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4389520065",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2521604020"
+  ],
+  "abstract": "The recent development of large language models (LLMs) has shown remarkable natural language processing capabilities and created new possibilities for applications in various fields.With their advanced NLP features, such as text comparison, semantic analysis, text summarization, text classification, and text completion, this study aims to investigate whether these models have the potential to be used as tools for evaluating translation/interpretation output in a textual representation.In this paper, we question the capabilities of an LLM and propose InterpreTutor 1 , an LLM-powered application with simple UI that utilizes Generative Pre-trained Transformer (GPT-3.5 turbo and GPT-4 models) and speech recognition (OpenAI Whisper) to offer detailed feedback on interpreters' performances based on automatic analysis of the transcriptions of their interpreting practice.The tool's primary focus is to act as an easy-to-use selftutoring tool, offering feedback based on four human evaluation criteria.While InterpreTutor may not cover all aspects of interpreting performance, such as prosodic features of the delivery, it still provides insights into aspects that can be assessed through textual representation.In this paper, we will discuss the potential of LLMs, the development of InterpreTutor, its underlying methodology, and provide examples of its application with a small-scale experiment.",
+  "full_text": null,
+  "topic": "Automatic summarization",
+  "concepts": [
+    {
+      "name": "Automatic summarization",
+      "score": 0.8280220031738281
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8233610391616821
+    },
+    {
+      "name": "Interpreter",
+      "score": 0.6872431039810181
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.64423668384552
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.6051201820373535
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5558505654335022
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5540049076080322
+    },
+    {
+      "name": "Language model",
+      "score": 0.4726982116699219
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.4549110233783722
+    },
+    {
+      "name": "Focus (optics)",
+      "score": 0.4292457103729248
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.42340216040611267
+    },
+    {
+      "name": "Natural language understanding",
+      "score": 0.41359418630599976
+    },
+    {
+      "name": "Natural language",
+      "score": 0.30336326360702515
+    },
+    {
+      "name": "Programming language",
+      "score": 0.10271745920181274
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0795932412147522
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

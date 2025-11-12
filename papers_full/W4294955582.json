@@ -1,80 +1,147 @@
 {
-    "title": "How to Dissect a Muppet: The Structure of Transformer Embedding Spaces",
-    "url": "https://openalex.org/W4294955582",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2903305881",
-            "name": "Timothee Mickus",
-            "affiliations": [
-                "University of Helsinki"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1671838522",
-            "name": "Denis Paperno",
-            "affiliations": [
-                "Utrecht University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2618617841",
-            "name": "Mathieu Constant",
-            "affiliations": [
-                "Université de Lorraine",
-                "Analyse et Traitement Informatique de la Langue Française",
-                "Centre National de la Recherche Scientifique"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W6679434410",
-        "https://openalex.org/W6721933647",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W2973827203",
-        "https://openalex.org/W2988217457",
-        "https://openalex.org/W4385572928",
-        "https://openalex.org/W4205460703",
-        "https://openalex.org/W6754676262",
-        "https://openalex.org/W6764072591",
-        "https://openalex.org/W2948947170",
-        "https://openalex.org/W3099143320",
-        "https://openalex.org/W6600880057",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W6680890276",
-        "https://openalex.org/W1984052055",
-        "https://openalex.org/W6675354045",
-        "https://openalex.org/W3099793224",
-        "https://openalex.org/W3035563045",
-        "https://openalex.org/W2912351236",
-        "https://openalex.org/W2963323070",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W2950768109",
-        "https://openalex.org/W6747753452",
-        "https://openalex.org/W6678911119",
-        "https://openalex.org/W6744639116",
-        "https://openalex.org/W3196813608",
-        "https://openalex.org/W2144578941",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3184386943",
-        "https://openalex.org/W2970820321",
-        "https://openalex.org/W3099178230",
-        "https://openalex.org/W6767913650",
-        "https://openalex.org/W2970726176",
-        "https://openalex.org/W3170470779",
-        "https://openalex.org/W3199814529",
-        "https://openalex.org/W2799448136",
-        "https://openalex.org/W2101234009",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W2604272474",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W2974273066",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W2799915114",
-        "https://openalex.org/W2891815651"
-    ],
-    "abstract": "Abstract Pretrained embeddings based on the Transformer architecture have taken the NLP community by storm. We show that they can mathematically be reframed as a sum of vector factors and showcase how to use this reframing to study the impact of each component. We provide evidence that multi-head attentions and feed-forwards are not equally useful in all downstream applications, as well as a quantitative overview of the effects of finetuning on the overall embedding space. This approach allows us to draw connections to a wide range of previous studies, from vector space anisotropy to attention weights.",
-    "full_text": null
+  "title": "How to Dissect a Muppet: The Structure of Transformer Embedding Spaces",
+  "url": "https://openalex.org/W4294955582",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2903305881",
+      "name": "Timothee Mickus",
+      "affiliations": [
+        "University of Helsinki"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1671838522",
+      "name": "Denis Paperno",
+      "affiliations": [
+        "Utrecht University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2618617841",
+      "name": "Mathieu Constant",
+      "affiliations": [
+        "Université de Lorraine",
+        "Analyse et Traitement Informatique de la Langue Française",
+        "Centre National de la Recherche Scientifique"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W6679434410",
+    "https://openalex.org/W6721933647",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W2973827203",
+    "https://openalex.org/W2988217457",
+    "https://openalex.org/W4385572928",
+    "https://openalex.org/W4205460703",
+    "https://openalex.org/W6754676262",
+    "https://openalex.org/W6764072591",
+    "https://openalex.org/W2948947170",
+    "https://openalex.org/W3099143320",
+    "https://openalex.org/W6600880057",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W6680890276",
+    "https://openalex.org/W1984052055",
+    "https://openalex.org/W6675354045",
+    "https://openalex.org/W3099793224",
+    "https://openalex.org/W3035563045",
+    "https://openalex.org/W2912351236",
+    "https://openalex.org/W2963323070",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W2950768109",
+    "https://openalex.org/W6747753452",
+    "https://openalex.org/W6678911119",
+    "https://openalex.org/W6744639116",
+    "https://openalex.org/W3196813608",
+    "https://openalex.org/W2144578941",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3184386943",
+    "https://openalex.org/W2970820321",
+    "https://openalex.org/W3099178230",
+    "https://openalex.org/W6767913650",
+    "https://openalex.org/W2970726176",
+    "https://openalex.org/W3170470779",
+    "https://openalex.org/W3199814529",
+    "https://openalex.org/W2799448136",
+    "https://openalex.org/W2101234009",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W2604272474",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W2974273066",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W2799915114",
+    "https://openalex.org/W2891815651"
+  ],
+  "abstract": "Abstract Pretrained embeddings based on the Transformer architecture have taken the NLP community by storm. We show that they can mathematically be reframed as a sum of vector factors and showcase how to use this reframing to study the impact of each component. We provide evidence that multi-head attentions and feed-forwards are not equally useful in all downstream applications, as well as a quantitative overview of the effects of finetuning on the overall embedding space. This approach allows us to draw connections to a wide range of previous studies, from vector space anisotropy to attention weights.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.780022382736206
+    },
+    {
+      "name": "Embedding",
+      "score": 0.7686651945114136
+    },
+    {
+      "name": "Cognitive reframing",
+      "score": 0.7600340843200684
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7393384575843811
+    },
+    {
+      "name": "Architecture",
+      "score": 0.541166365146637
+    },
+    {
+      "name": "Exploit",
+      "score": 0.4922138750553131
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4575277268886566
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.35065242648124695
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.12843000888824463
+    },
+    {
+      "name": "Computer security",
+      "score": 0.08348995447158813
+    },
+    {
+      "name": "History",
+      "score": 0.0706358551979065
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,70 +1,129 @@
 {
-    "title": "Self-Supervised Transformer Model Training for a Sleep-EEG Foundation Model",
-    "url": "https://openalex.org/W4391044918",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2653947882",
-            "name": "Mattson Ogg",
-            "affiliations": [
-                "Johns Hopkins University Applied Physics Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2468508532",
-            "name": "William G. Coon",
-            "affiliations": [
-                "Johns Hopkins University Applied Physics Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2653947882",
-            "name": "Mattson Ogg",
-            "affiliations": [
-                "Johns Hopkins University Applied Physics Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2468508532",
-            "name": "William G. Coon",
-            "affiliations": [
-                "Johns Hopkins University Applied Physics Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2059110708",
-        "https://openalex.org/W2616414475",
-        "https://openalex.org/W2125118901",
-        "https://openalex.org/W3178617810",
-        "https://openalex.org/W2323344600",
-        "https://openalex.org/W3012581557",
-        "https://openalex.org/W7692620",
-        "https://openalex.org/W2969159609",
-        "https://openalex.org/W4322760636",
-        "https://openalex.org/W3156463266",
-        "https://openalex.org/W2902751862",
-        "https://openalex.org/W3206812283",
-        "https://openalex.org/W1963756232",
-        "https://openalex.org/W2143159308",
-        "https://openalex.org/W4220693977",
-        "https://openalex.org/W4283213862",
-        "https://openalex.org/W2605277320",
-        "https://openalex.org/W2804449593",
-        "https://openalex.org/W2995516697",
-        "https://openalex.org/W3169320628",
-        "https://openalex.org/W4391044451",
-        "https://openalex.org/W2805075551",
-        "https://openalex.org/W1937674079",
-        "https://openalex.org/W1997139643",
-        "https://openalex.org/W160785014",
-        "https://openalex.org/W2176977339",
-        "https://openalex.org/W4286222405",
-        "https://openalex.org/W1481463481",
-        "https://openalex.org/W2004635300",
-        "https://openalex.org/W2961560364",
-        "https://openalex.org/W3198174135"
-    ],
-    "abstract": "Abstract The American Academy of Sleep Medicine (AASM) recognizes five sleep/wake states (Wake, N1, N2, N3, REM), yet this classification schema provides only a high-level summary of sleep and likely overlooks important neurological or health information. New, data-driven approaches are needed to more deeply probe the information content of sleep signals. Here we present a self-supervised approach that learns the structure embedded in large quantities of neurophysiological sleep data. This masked transformer training procedure is inspired by high performing self-supervised methods developed for speech transcription. We show that self-supervised pre-training matches or outperforms supervised sleep stage classification, especially when labeled data or compute-power is limited. Perhaps more importantly, we also show that our pre-trained model is flexible and can be fine-tuned to perform well on new EEG recording montages not seen in training, and for new tasks including distinguishing individuals or quantifying “brain age” (a potential health biomarker). This suggests that modern methods can automatically learn information that is potentially overlooked by the 5-class sleep staging schema, laying the groundwork for new sleep scoring schemas and further data-driven exploration of sleep.",
-    "full_text": null
+  "title": "Self-Supervised Transformer Model Training for a Sleep-EEG Foundation Model",
+  "url": "https://openalex.org/W4391044918",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2653947882",
+      "name": "Mattson Ogg",
+      "affiliations": [
+        "Johns Hopkins University Applied Physics Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2468508532",
+      "name": "William G. Coon",
+      "affiliations": [
+        "Johns Hopkins University Applied Physics Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2653947882",
+      "name": "Mattson Ogg",
+      "affiliations": [
+        "Johns Hopkins University Applied Physics Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2468508532",
+      "name": "William G. Coon",
+      "affiliations": [
+        "Johns Hopkins University Applied Physics Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2059110708",
+    "https://openalex.org/W2616414475",
+    "https://openalex.org/W2125118901",
+    "https://openalex.org/W3178617810",
+    "https://openalex.org/W2323344600",
+    "https://openalex.org/W3012581557",
+    "https://openalex.org/W7692620",
+    "https://openalex.org/W2969159609",
+    "https://openalex.org/W4322760636",
+    "https://openalex.org/W3156463266",
+    "https://openalex.org/W2902751862",
+    "https://openalex.org/W3206812283",
+    "https://openalex.org/W1963756232",
+    "https://openalex.org/W2143159308",
+    "https://openalex.org/W4220693977",
+    "https://openalex.org/W4283213862",
+    "https://openalex.org/W2605277320",
+    "https://openalex.org/W2804449593",
+    "https://openalex.org/W2995516697",
+    "https://openalex.org/W3169320628",
+    "https://openalex.org/W4391044451",
+    "https://openalex.org/W2805075551",
+    "https://openalex.org/W1937674079",
+    "https://openalex.org/W1997139643",
+    "https://openalex.org/W160785014",
+    "https://openalex.org/W2176977339",
+    "https://openalex.org/W4286222405",
+    "https://openalex.org/W1481463481",
+    "https://openalex.org/W2004635300",
+    "https://openalex.org/W2961560364",
+    "https://openalex.org/W3198174135"
+  ],
+  "abstract": "Abstract The American Academy of Sleep Medicine (AASM) recognizes five sleep/wake states (Wake, N1, N2, N3, REM), yet this classification schema provides only a high-level summary of sleep and likely overlooks important neurological or health information. New, data-driven approaches are needed to more deeply probe the information content of sleep signals. Here we present a self-supervised approach that learns the structure embedded in large quantities of neurophysiological sleep data. This masked transformer training procedure is inspired by high performing self-supervised methods developed for speech transcription. We show that self-supervised pre-training matches or outperforms supervised sleep stage classification, especially when labeled data or compute-power is limited. Perhaps more importantly, we also show that our pre-trained model is flexible and can be fine-tuned to perform well on new EEG recording montages not seen in training, and for new tasks including distinguishing individuals or quantifying “brain age” (a potential health biomarker). This suggests that modern methods can automatically learn information that is potentially overlooked by the 5-class sleep staging schema, laying the groundwork for new sleep scoring schemas and further data-driven exploration of sleep.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.6752806901931763
+    },
+    {
+      "name": "Electroencephalography",
+      "score": 0.5527163147926331
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5167521834373474
+    },
+    {
+      "name": "Sleep (system call)",
+      "score": 0.47097137570381165
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.42299360036849976
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.36054137349128723
+    },
+    {
+      "name": "Psychology",
+      "score": 0.2899658977985382
+    },
+    {
+      "name": "Engineering",
+      "score": 0.2494194209575653
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.1582033932209015
+    },
+    {
+      "name": "Voltage",
+      "score": 0.10331636667251587
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.0864747166633606
+    },
+    {
+      "name": "Political science",
+      "score": 0.06761088967323303
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

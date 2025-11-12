@@ -1,70 +1,141 @@
 {
-    "title": "MelAnalyze: Fact-Checking Melatonin claims using Large Language Models and Natural Language Inference",
-    "url": "https://openalex.org/W4393234777",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5111155252",
-            "name": "Nikitha Karkera",
-            "affiliations": [
-                "CSX (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101748369",
-            "name": "Samik Ghosh",
-            "affiliations": [
-                "Systems Biology Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007383535",
-            "name": "Germaine Escames",
-            "affiliations": [
-                "Universidad de Granada"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5070784871",
-            "name": "Sucheendra K. Palaniappan",
-            "affiliations": [
-                "Systems Biology Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W2171802889",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4236292827",
-        "https://openalex.org/W4385573702",
-        "https://openalex.org/W4285288079",
-        "https://openalex.org/W4378509449",
-        "https://openalex.org/W1840435438",
-        "https://openalex.org/W4293727927",
-        "https://openalex.org/W2085621660",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W2163302785",
-        "https://openalex.org/W3016994220",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W1995804066",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W2112856797",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3192478068",
-        "https://openalex.org/W2063986585",
-        "https://openalex.org/W3094202663",
-        "https://openalex.org/W2893502788",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W1973703381",
-        "https://openalex.org/W2760944227",
-        "https://openalex.org/W4248125493",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4367853965"
-    ],
-    "abstract": "With the explosion of health related information in mainstream discourse, distinguishing accurate health-related claims from misinformation is important. Using computational tools and algorithms to help is key. Our focus in this paper is on the hormone Melatonin which is claimed to have broad health benefits and largely sold as a supplement. This paper introduces 'MelAnalyze,' a framework for using generative and transformer-based deep learning models adapted as a natural language inference (NLI) task, to semi-automate the fact-checking of general melatonin claims. MelAnalyze is built upon a comprehensive collection of melatonin-related scientific abstracts from PubMed for validation. The framework incorporates components for precise extraction of information from scientific literature, semantic similarity and NLI. At its core, MelAnalyze leverages pre trained NLI models that are fine-tuned on melatonin-specific claims along with semantic search based on vectorized representation of the articles. The best models, fine-tuned on LLaMA1 and RoBERTa, attain good precision, recall, and F1-scores of approximately 0.92. We also introduce a user-friendly web-based tool for fact-checking algorithm evaluation and use. In summary, we show MelAnalyze's role in empowering users and researchers to assess melatonin-related claims using evidence-based decision-making.",
-    "full_text": null
+  "title": "MelAnalyze: Fact-Checking Melatonin claims using Large Language Models and Natural Language Inference",
+  "url": "https://openalex.org/W4393234777",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5111155252",
+      "name": "Nikitha Karkera",
+      "affiliations": [
+        "CSX (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101748369",
+      "name": "Samik Ghosh",
+      "affiliations": [
+        "Systems Biology Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007383535",
+      "name": "Germaine Escames",
+      "affiliations": [
+        "Universidad de Granada"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5070784871",
+      "name": "Sucheendra K. Palaniappan",
+      "affiliations": [
+        "Systems Biology Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W2171802889",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4236292827",
+    "https://openalex.org/W4385573702",
+    "https://openalex.org/W4285288079",
+    "https://openalex.org/W4378509449",
+    "https://openalex.org/W1840435438",
+    "https://openalex.org/W4293727927",
+    "https://openalex.org/W2085621660",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W2163302785",
+    "https://openalex.org/W3016994220",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W1995804066",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W2112856797",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3192478068",
+    "https://openalex.org/W2063986585",
+    "https://openalex.org/W3094202663",
+    "https://openalex.org/W2893502788",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W1973703381",
+    "https://openalex.org/W2760944227",
+    "https://openalex.org/W4248125493",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4367853965"
+  ],
+  "abstract": "With the explosion of health related information in mainstream discourse, distinguishing accurate health-related claims from misinformation is important. Using computational tools and algorithms to help is key. Our focus in this paper is on the hormone Melatonin which is claimed to have broad health benefits and largely sold as a supplement. This paper introduces 'MelAnalyze,' a framework for using generative and transformer-based deep learning models adapted as a natural language inference (NLI) task, to semi-automate the fact-checking of general melatonin claims. MelAnalyze is built upon a comprehensive collection of melatonin-related scientific abstracts from PubMed for validation. The framework incorporates components for precise extraction of information from scientific literature, semantic similarity and NLI. At its core, MelAnalyze leverages pre trained NLI models that are fine-tuned on melatonin-specific claims along with semantic search based on vectorized representation of the articles. The best models, fine-tuned on LLaMA1 and RoBERTa, attain good precision, recall, and F1-scores of approximately 0.92. We also introduce a user-friendly web-based tool for fact-checking algorithm evaluation and use. In summary, we show MelAnalyze's role in empowering users and researchers to assess melatonin-related claims using evidence-based decision-making.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7811667919158936
+    },
+    {
+      "name": "Misinformation",
+      "score": 0.611402153968811
+    },
+    {
+      "name": "Inference",
+      "score": 0.5976477861404419
+    },
+    {
+      "name": "Soar",
+      "score": 0.5681906938552856
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5257224440574646
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5144667625427246
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.4535664916038513
+    },
+    {
+      "name": "Melatonin",
+      "score": 0.4414510130882263
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4391356110572815
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3977499306201935
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3649411201477051
+    },
+    {
+      "name": "Psychology",
+      "score": 0.10664179921150208
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.0
+    }
+  ]
 }

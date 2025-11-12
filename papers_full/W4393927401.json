@@ -1,93 +1,192 @@
 {
-    "title": "FT2Ra: A Fine-Tuning-Inspired Approach to Retrieval-Augmented Code Completion",
-    "url": "https://openalex.org/W4393927401",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2095397056",
-            "name": "Guo Qi",
-            "affiliations": [
-                "Tianjin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1710829089",
-            "name": "Li Xiaohong",
-            "affiliations": [
-                "Tianjin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2364446491",
-            "name": "Xie, Xiaofei",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141851547",
-            "name": "Liu Shang-qing",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2359584067",
-            "name": "Tang Ze",
-            "affiliations": [
-                "Nanjing University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3042068434",
-            "name": "Feng, Ruitao",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1489005433",
-            "name": "Wang, Junjie",
-            "affiliations": [
-                "Tianjin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2224809472",
-            "name": "Ge Jidong",
-            "affiliations": [
-                "Nanjing University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113118757",
-            "name": "Bu Lei",
-            "affiliations": [
-                "Nanjing University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4394745253",
-        "https://openalex.org/W2148190602",
-        "https://openalex.org/W4281956169",
-        "https://openalex.org/W4385574174",
-        "https://openalex.org/W2344444819",
-        "https://openalex.org/W4384652670",
-        "https://openalex.org/W4389519118",
-        "https://openalex.org/W4382239980",
-        "https://openalex.org/W3099700870",
-        "https://openalex.org/W3162689995",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W3099130275",
-        "https://openalex.org/W4384302803",
-        "https://openalex.org/W4386187806",
-        "https://openalex.org/W4388778348",
-        "https://openalex.org/W3022049116",
-        "https://openalex.org/W4388483497",
-        "https://openalex.org/W3198685994"
-    ],
-    "abstract": "The rise of code pre-trained models has significantly enhanced various coding\\ntasks, such as code completion, and tools like GitHub Copilot. However, the\\nsubstantial size of these models, especially large models, poses a significant\\nchallenge when it comes to fine-tuning them for specific downstream tasks. As\\nan alternative approach, retrieval-based methods have emerged as a promising\\nsolution, augmenting model predictions without the need for fine-tuning.\\nDespite their potential, a significant challenge is that the designs of these\\nmethods often rely on heuristics, leaving critical questions about what\\ninformation should be stored or retrieved and how to interpolate such\\ninformation for augmenting predictions.\\n To tackle this challenge, we first perform a theoretical analysis of the\\nfine-tuning process, highlighting the importance of delta logits as a catalyst\\nfor improving model predictions. Building on this insight, we develop a novel\\nretrieval-based method, FT2Ra, which aims to mimic genuine fine-tuning. While\\nFT2Ra adopts a retrieval-based mechanism, it uniquely adopts a paradigm with a\\nlearning rate and multi-epoch retrievals, which is similar to fine-tuning.In\\ntoken-level completion, which represents a relatively easier task, FT2Ra\\nachieves a 4.29% improvement in accuracy compared to the best baseline method\\non UniXcoder. In the more challenging line-level completion task, we observe a\\nsubstantial more than twice increase in Exact Match (EM) performance,\\nindicating the significant advantages of our theoretical analysis. Notably,\\neven when operating without actual fine-tuning, FT2Ra exhibits competitive\\nperformance compared to the models with real fine-tuning.\\n",
-    "full_text": null
+  "title": "FT2Ra: A Fine-Tuning-Inspired Approach to Retrieval-Augmented Code Completion",
+  "url": "https://openalex.org/W4393927401",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2095397056",
+      "name": "Guo Qi",
+      "affiliations": [
+        "Tianjin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1710829089",
+      "name": "Li Xiaohong",
+      "affiliations": [
+        "Tianjin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2364446491",
+      "name": "Xie, Xiaofei",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141851547",
+      "name": "Liu Shang-qing",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2359584067",
+      "name": "Tang Ze",
+      "affiliations": [
+        "Nanjing University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3042068434",
+      "name": "Feng, Ruitao",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1489005433",
+      "name": "Wang, Junjie",
+      "affiliations": [
+        "Tianjin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2224809472",
+      "name": "Ge Jidong",
+      "affiliations": [
+        "Nanjing University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113118757",
+      "name": "Bu Lei",
+      "affiliations": [
+        "Nanjing University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4394745253",
+    "https://openalex.org/W2148190602",
+    "https://openalex.org/W4281956169",
+    "https://openalex.org/W4385574174",
+    "https://openalex.org/W2344444819",
+    "https://openalex.org/W4384652670",
+    "https://openalex.org/W4389519118",
+    "https://openalex.org/W4382239980",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W3162689995",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W3099130275",
+    "https://openalex.org/W4384302803",
+    "https://openalex.org/W4386187806",
+    "https://openalex.org/W4388778348",
+    "https://openalex.org/W3022049116",
+    "https://openalex.org/W4388483497",
+    "https://openalex.org/W3198685994"
+  ],
+  "abstract": "The rise of code pre-trained models has significantly enhanced various coding\\ntasks, such as code completion, and tools like GitHub Copilot. However, the\\nsubstantial size of these models, especially large models, poses a significant\\nchallenge when it comes to fine-tuning them for specific downstream tasks. As\\nan alternative approach, retrieval-based methods have emerged as a promising\\nsolution, augmenting model predictions without the need for fine-tuning.\\nDespite their potential, a significant challenge is that the designs of these\\nmethods often rely on heuristics, leaving critical questions about what\\ninformation should be stored or retrieved and how to interpolate such\\ninformation for augmenting predictions.\\n To tackle this challenge, we first perform a theoretical analysis of the\\nfine-tuning process, highlighting the importance of delta logits as a catalyst\\nfor improving model predictions. Building on this insight, we develop a novel\\nretrieval-based method, FT2Ra, which aims to mimic genuine fine-tuning. While\\nFT2Ra adopts a retrieval-based mechanism, it uniquely adopts a paradigm with a\\nlearning rate and multi-epoch retrievals, which is similar to fine-tuning.In\\ntoken-level completion, which represents a relatively easier task, FT2Ra\\nachieves a 4.29% improvement in accuracy compared to the best baseline method\\non UniXcoder. In the more challenging line-level completion task, we observe a\\nsubstantial more than twice increase in Exact Match (EM) performance,\\nindicating the significant advantages of our theoretical analysis. Notably,\\neven when operating without actual fine-tuning, FT2Ra exhibits competitive\\nperformance compared to the models with real fine-tuning.\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8408522605895996
+    },
+    {
+      "name": "Heuristics",
+      "score": 0.706722617149353
+    },
+    {
+      "name": "Fine-tuning",
+      "score": 0.6543735861778259
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5763035416603088
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5601605176925659
+    },
+    {
+      "name": "Coding (social sciences)",
+      "score": 0.5453336834907532
+    },
+    {
+      "name": "Security token",
+      "score": 0.5202794671058655
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.49443721771240234
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.4758738577365875
+    },
+    {
+      "name": "Source code",
+      "score": 0.4394931495189667
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4204446077346802
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4098762273788452
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    }
+  ]
 }

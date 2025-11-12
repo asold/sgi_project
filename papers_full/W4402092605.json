@@ -1,129 +1,180 @@
 {
-    "title": "Enhancing brain tumor segmentation in MRI images: A hybrid approach using UNet, attention mechanisms, and transformers",
-    "url": "https://openalex.org/W4402092605",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5032651435",
-            "name": "Thien B. Nguyen-Tat",
-            "affiliations": [
-                "Vietnam National University Ho Chi Minh City"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114218299",
-            "name": "Thien-Qua T. Nguyen",
-            "affiliations": [
-                "Vietnam National University Ho Chi Minh City"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101505529",
-            "name": "Hieu-Nghia Nguyen",
-            "affiliations": [
-                "Vietnam National University Ho Chi Minh City"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2007048598",
-            "name": "Vuong M. Ngo",
-            "affiliations": [
-                "Ho Chi Minh City Open University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5032651435",
-            "name": "Thien B. Nguyen-Tat",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5114218299",
-            "name": "Thien-Qua T. Nguyen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5101505529",
-            "name": "Hieu-Nghia Nguyen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2007048598",
-            "name": "Vuong M. Ngo",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3209456875",
-        "https://openalex.org/W4306734032",
-        "https://openalex.org/W3094156580",
-        "https://openalex.org/W3037521341",
-        "https://openalex.org/W4307726656",
-        "https://openalex.org/W3118579652",
-        "https://openalex.org/W4294969221",
-        "https://openalex.org/W6779616223",
-        "https://openalex.org/W6846955501",
-        "https://openalex.org/W2464708700",
-        "https://openalex.org/W3018201087",
-        "https://openalex.org/W4281721328",
-        "https://openalex.org/W4293079164",
-        "https://openalex.org/W3033436907",
-        "https://openalex.org/W2941862422",
-        "https://openalex.org/W3127167602",
-        "https://openalex.org/W3042445013",
-        "https://openalex.org/W4210786716",
-        "https://openalex.org/W3204426737",
-        "https://openalex.org/W3016120846",
-        "https://openalex.org/W4284973149",
-        "https://openalex.org/W2962291057",
-        "https://openalex.org/W2948097295",
-        "https://openalex.org/W4281683654",
-        "https://openalex.org/W3033035389",
-        "https://openalex.org/W3087478415",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6854459928",
-        "https://openalex.org/W6838782201",
-        "https://openalex.org/W4310854192",
-        "https://openalex.org/W6810465815",
-        "https://openalex.org/W4212875960",
-        "https://openalex.org/W3183430956",
-        "https://openalex.org/W6787480215",
-        "https://openalex.org/W6718240422",
-        "https://openalex.org/W3160412534",
-        "https://openalex.org/W1641498739",
-        "https://openalex.org/W2751069891",
-        "https://openalex.org/W1987869189",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W2538556778",
-        "https://openalex.org/W6791764970",
-        "https://openalex.org/W6795435739",
-        "https://openalex.org/W3090974769",
-        "https://openalex.org/W4293152672",
-        "https://openalex.org/W4220843769",
-        "https://openalex.org/W6851104794",
-        "https://openalex.org/W6793654395",
-        "https://openalex.org/W6783873113",
-        "https://openalex.org/W4368358283",
-        "https://openalex.org/W4298858017",
-        "https://openalex.org/W2798122215",
-        "https://openalex.org/W4295312788",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W4239662861",
-        "https://openalex.org/W4384486052",
-        "https://openalex.org/W3034920607",
-        "https://openalex.org/W2776185997",
-        "https://openalex.org/W4224941077",
-        "https://openalex.org/W4391709676",
-        "https://openalex.org/W4389359460",
-        "https://openalex.org/W3111837573",
-        "https://openalex.org/W3105078060",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W4283022110",
-        "https://openalex.org/W4308923888",
-        "https://openalex.org/W3103982318",
-        "https://openalex.org/W4361302749",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Accurate brain tumor segmentation in MRI images is crucial for effective treatment planning and monitoring. Traditional methods often encounter challenges due to the complexity and variability of tumor shapes and textures. Consequently, there is a growing need for automated solutions to assist healthcare professionals in segmentation tasks, improving efficiency and reducing workload. This study introduces an innovative method for accurately segmenting brain tumors in MRI images by employing a refined 3D UNet model integrated with a Transformer. The goal is to leverage self-attention mechanisms to enhance segmentation capabilities. The proposed model combines Contextual Transformer (CoT) and Double Attention (DA) architectures. CoT is extended to a 3D format and integrated with the baseline model to exploit intricate contextual details in MRI images. DA blocks in skip connections aggregate and distribute long-range features, emphasizing inter-dependencies within an expanded spatial scope. Experimental results demonstrate superior segmentation performance compared to current state-of-the-art methods. With its ability to accurately segment and delineate tumors in 3D, our segmentation model promises to be a powerful tool for medical image processing and performance optimization, saving time for healthcare professionals and healthcare systems.",
-    "full_text": null
+  "title": "Enhancing brain tumor segmentation in MRI images: A hybrid approach using UNet, attention mechanisms, and transformers",
+  "url": "https://openalex.org/W4402092605",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5032651435",
+      "name": "Thien B. Nguyen-Tat",
+      "affiliations": [
+        "Vietnam National University Ho Chi Minh City"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114218299",
+      "name": "Thien-Qua T. Nguyen",
+      "affiliations": [
+        "Vietnam National University Ho Chi Minh City"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101505529",
+      "name": "Hieu-Nghia Nguyen",
+      "affiliations": [
+        "Vietnam National University Ho Chi Minh City"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2007048598",
+      "name": "Vuong M. Ngo",
+      "affiliations": [
+        "Ho Chi Minh City Open University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5032651435",
+      "name": "Thien B. Nguyen-Tat",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5114218299",
+      "name": "Thien-Qua T. Nguyen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5101505529",
+      "name": "Hieu-Nghia Nguyen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2007048598",
+      "name": "Vuong M. Ngo",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3209456875",
+    "https://openalex.org/W4306734032",
+    "https://openalex.org/W3094156580",
+    "https://openalex.org/W3037521341",
+    "https://openalex.org/W4307726656",
+    "https://openalex.org/W3118579652",
+    "https://openalex.org/W4294969221",
+    "https://openalex.org/W6779616223",
+    "https://openalex.org/W6846955501",
+    "https://openalex.org/W2464708700",
+    "https://openalex.org/W3018201087",
+    "https://openalex.org/W4281721328",
+    "https://openalex.org/W4293079164",
+    "https://openalex.org/W3033436907",
+    "https://openalex.org/W2941862422",
+    "https://openalex.org/W3127167602",
+    "https://openalex.org/W3042445013",
+    "https://openalex.org/W4210786716",
+    "https://openalex.org/W3204426737",
+    "https://openalex.org/W3016120846",
+    "https://openalex.org/W4284973149",
+    "https://openalex.org/W2962291057",
+    "https://openalex.org/W2948097295",
+    "https://openalex.org/W4281683654",
+    "https://openalex.org/W3033035389",
+    "https://openalex.org/W3087478415",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6854459928",
+    "https://openalex.org/W6838782201",
+    "https://openalex.org/W4310854192",
+    "https://openalex.org/W6810465815",
+    "https://openalex.org/W4212875960",
+    "https://openalex.org/W3183430956",
+    "https://openalex.org/W6787480215",
+    "https://openalex.org/W6718240422",
+    "https://openalex.org/W3160412534",
+    "https://openalex.org/W1641498739",
+    "https://openalex.org/W2751069891",
+    "https://openalex.org/W1987869189",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W2538556778",
+    "https://openalex.org/W6791764970",
+    "https://openalex.org/W6795435739",
+    "https://openalex.org/W3090974769",
+    "https://openalex.org/W4293152672",
+    "https://openalex.org/W4220843769",
+    "https://openalex.org/W6851104794",
+    "https://openalex.org/W6793654395",
+    "https://openalex.org/W6783873113",
+    "https://openalex.org/W4368358283",
+    "https://openalex.org/W4298858017",
+    "https://openalex.org/W2798122215",
+    "https://openalex.org/W4295312788",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W4239662861",
+    "https://openalex.org/W4384486052",
+    "https://openalex.org/W3034920607",
+    "https://openalex.org/W2776185997",
+    "https://openalex.org/W4224941077",
+    "https://openalex.org/W4391709676",
+    "https://openalex.org/W4389359460",
+    "https://openalex.org/W3111837573",
+    "https://openalex.org/W3105078060",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W4283022110",
+    "https://openalex.org/W4308923888",
+    "https://openalex.org/W3103982318",
+    "https://openalex.org/W4361302749",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Accurate brain tumor segmentation in MRI images is crucial for effective treatment planning and monitoring. Traditional methods often encounter challenges due to the complexity and variability of tumor shapes and textures. Consequently, there is a growing need for automated solutions to assist healthcare professionals in segmentation tasks, improving efficiency and reducing workload. This study introduces an innovative method for accurately segmenting brain tumors in MRI images by employing a refined 3D UNet model integrated with a Transformer. The goal is to leverage self-attention mechanisms to enhance segmentation capabilities. The proposed model combines Contextual Transformer (CoT) and Double Attention (DA) architectures. CoT is extended to a 3D format and integrated with the baseline model to exploit intricate contextual details in MRI images. DA blocks in skip connections aggregate and distribute long-range features, emphasizing inter-dependencies within an expanded spatial scope. Experimental results demonstrate superior segmentation performance compared to current state-of-the-art methods. With its ability to accurately segment and delineate tumors in 3D, our segmentation model promises to be a powerful tool for medical image processing and performance optimization, saving time for healthcare professionals and healthcare systems.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8623520135879517
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6724317073822021
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5901923179626465
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5780776739120483
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4951867163181305
+    },
+    {
+      "name": "Brain tumor",
+      "score": 0.4684101939201355
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.34646809101104736
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1280306577682495
+    },
+    {
+      "name": "Pathology",
+      "score": 0.07454568147659302
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,97 +1,172 @@
 {
-    "title": "WuDaoCorpora: A super large-scale Chinese corpora for pre-training language models",
-    "url": "https://openalex.org/W3169113923",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2354483507",
-            "name": "Sha Yuan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2306586125",
-            "name": "Hanyu Zhao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2947436776",
-            "name": "Zhengxiao Du",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1993547713",
-            "name": "Ming Ding",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2097346119",
-            "name": "Xiao Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2967546094",
-            "name": "Yukuo Cen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096501847",
-            "name": "Xu Zou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2107505891",
-            "name": "Zhilin Yang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2098032575",
-            "name": "Jie Tang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6785555404",
-        "https://openalex.org/W6746490324",
-        "https://openalex.org/W6768021236",
-        "https://openalex.org/W6774571559",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W6773248631",
-        "https://openalex.org/W6774957663",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6766481131",
-        "https://openalex.org/W6781977640",
-        "https://openalex.org/W6774242638",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W6767905578",
-        "https://openalex.org/W6786329403",
-        "https://openalex.org/W6633714834",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W3082274269",
-        "https://openalex.org/W3107315802",
-        "https://openalex.org/W3119866685",
-        "https://openalex.org/W3011574394",
-        "https://openalex.org/W3187018546",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4287391717",
-        "https://openalex.org/W1566289585",
-        "https://openalex.org/W2963957489",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W3009308378",
-        "https://openalex.org/W3105134823",
-        "https://openalex.org/W3010108619",
-        "https://openalex.org/W3106031450",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3001555892",
-        "https://openalex.org/W2972167903",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W2964110616",
-        "https://openalex.org/W3093956460",
-        "https://openalex.org/W2997200074"
-    ],
-    "abstract": "Using large-scale training data to build a pre-trained language model (PLM) with a larger volume of parameters can significantly improve downstream tasks. For example, OpenAI trained the GPT3 model with 175 billion parameters on 570 GB English training data, enabling downstream applications building with only a small number of samples. However, there is a lack of Chinese corpus to support large-scale PLMs. This paper introduces a super large-scale Chinese corpora WuDaoCorpora, containing about 3 TB training data and 1.08 trillion Chinese characters. We also release the base version of WuDaoCorpora, containing about 200 GB training data and 72 billion Chinese characters. As a baseline, we train a model transformer-XL with 3 billion parameters on the base version to test the corpora's effect. The results show that the models trained on this corpora can achieve excellent performance in Chinese. The data and model are available at https://data.wudaoai.cn and https://github.com/THUDM/Chinese-Transformer-XL, respectively.",
-    "full_text": null
+  "title": "WuDaoCorpora: A super large-scale Chinese corpora for pre-training language models",
+  "url": "https://openalex.org/W3169113923",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2354483507",
+      "name": "Sha Yuan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2306586125",
+      "name": "Hanyu Zhao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2947436776",
+      "name": "Zhengxiao Du",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1993547713",
+      "name": "Ming Ding",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2097346119",
+      "name": "Xiao Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2967546094",
+      "name": "Yukuo Cen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096501847",
+      "name": "Xu Zou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2107505891",
+      "name": "Zhilin Yang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2098032575",
+      "name": "Jie Tang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6785555404",
+    "https://openalex.org/W6746490324",
+    "https://openalex.org/W6768021236",
+    "https://openalex.org/W6774571559",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W6773248631",
+    "https://openalex.org/W6774957663",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6766481131",
+    "https://openalex.org/W6781977640",
+    "https://openalex.org/W6774242638",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W6767905578",
+    "https://openalex.org/W6786329403",
+    "https://openalex.org/W6633714834",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W3082274269",
+    "https://openalex.org/W3107315802",
+    "https://openalex.org/W3119866685",
+    "https://openalex.org/W3011574394",
+    "https://openalex.org/W3187018546",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4287391717",
+    "https://openalex.org/W1566289585",
+    "https://openalex.org/W2963957489",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W3009308378",
+    "https://openalex.org/W3105134823",
+    "https://openalex.org/W3010108619",
+    "https://openalex.org/W3106031450",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3001555892",
+    "https://openalex.org/W2972167903",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W2964110616",
+    "https://openalex.org/W3093956460",
+    "https://openalex.org/W2997200074"
+  ],
+  "abstract": "Using large-scale training data to build a pre-trained language model (PLM) with a larger volume of parameters can significantly improve downstream tasks. For example, OpenAI trained the GPT3 model with 175 billion parameters on 570 GB English training data, enabling downstream applications building with only a small number of samples. However, there is a lack of Chinese corpus to support large-scale PLMs. This paper introduces a super large-scale Chinese corpora WuDaoCorpora, containing about 3 TB training data and 1.08 trillion Chinese characters. We also release the base version of WuDaoCorpora, containing about 200 GB training data and 72 billion Chinese characters. As a baseline, we train a model transformer-XL with 3 billion parameters on the base version to test the corpora's effect. The results show that the models trained on this corpora can achieve excellent performance in Chinese. The data and model are available at https://data.wudaoai.cn and https://github.com/THUDM/Chinese-Transformer-XL, respectively.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.785728931427002
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6911678910255432
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5454287528991699
+    },
+    {
+      "name": "Training set",
+      "score": 0.5413711667060852
+    },
+    {
+      "name": "Downstream (manufacturing)",
+      "score": 0.5325803756713867
+    },
+    {
+      "name": "Scale (ratio)",
+      "score": 0.5135433673858643
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.47567930817604065
+    },
+    {
+      "name": "Language model",
+      "score": 0.4709737300872803
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4532162547111511
+    },
+    {
+      "name": "Database",
+      "score": 0.3206021189689636
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13945084810256958
+    },
+    {
+      "name": "Cartography",
+      "score": 0.06882426142692566
+    },
+    {
+      "name": "Operations management",
+      "score": 0.0
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    }
+  ]
 }

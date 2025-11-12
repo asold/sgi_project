@@ -1,56 +1,151 @@
 {
-    "title": "Sentiment trading with large language models",
-    "url": "https://openalex.org/W4392859372",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Kirtac, Kemal",
-            "affiliations": [
-                "University College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4287301603",
-            "name": "Germano, Guido",
-            "affiliations": [
-                "London School of Economics and Political Science",
-                "Systemic Risk Centre",
-                "University College London"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4224990248",
-        "https://openalex.org/W3126081245",
-        "https://openalex.org/W3121467893",
-        "https://openalex.org/W6767559804",
-        "https://openalex.org/W2610692167",
-        "https://openalex.org/W3121368557",
-        "https://openalex.org/W2136120210",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W1995834279",
-        "https://openalex.org/W3211639606",
-        "https://openalex.org/W2554619162",
-        "https://openalex.org/W1582026748",
-        "https://openalex.org/W3123123374",
-        "https://openalex.org/W4298110867",
-        "https://openalex.org/W3121547932",
-        "https://openalex.org/W6762909767",
-        "https://openalex.org/W3125952890",
-        "https://openalex.org/W6679109501",
-        "https://openalex.org/W1546425147",
-        "https://openalex.org/W3122648113",
-        "https://openalex.org/W2595186334",
-        "https://openalex.org/W3122944446",
-        "https://openalex.org/W6769243733",
-        "https://openalex.org/W2130162792",
-        "https://openalex.org/W4301785137",
-        "https://openalex.org/W3123245559",
-        "https://openalex.org/W3125107775",
-        "https://openalex.org/W4229005866",
-        "https://openalex.org/W4205185581"
-    ],
-    "abstract": "We investigate the efficacy of large language models (LLMs) in sentiment\\nanalysis of U.S. financial news and their potential in predicting stock market\\nreturns. We analyze a dataset comprising 965,375 news articles that span from\\nJanuary 1, 2010, to June 30, 2023; we focus on the performance of various LLMs,\\nincluding BERT, OPT, FINBERT, and the traditional Loughran-McDonald dictionary\\nmodel, which has been a dominant methodology in the finance literature. The\\nstudy documents a significant association between LLM scores and subsequent\\ndaily stock returns. Specifically, OPT, which is a GPT-3 based LLM, shows the\\nhighest accuracy in sentiment prediction with an accuracy of 74.4%, slightly\\nahead of BERT (72.5%) and FINBERT (72.2%). In contrast, the Loughran-McDonald\\ndictionary model demonstrates considerably lower effectiveness with only 50.1%\\naccuracy. Regression analyses highlight a robust positive impact of OPT model\\nscores on next-day stock returns, with coefficients of 0.274 and 0.254 in\\ndifferent model specifications. BERT and FINBERT also exhibit predictive\\nrelevance, though to a lesser extent. Notably, we do not observe a significant\\nrelationship between the Loughran-McDonald dictionary model scores and stock\\nreturns, challenging the efficacy of this traditional method in the current\\nfinancial context. In portfolio performance, the long-short OPT strategy excels\\nwith a Sharpe ratio of 3.05, compared to 2.11 for BERT and 2.07 for FINBERT\\nlong-short strategies. Strategies based on the Loughran-McDonald dictionary\\nyield the lowest Sharpe ratio of 1.23. Our findings emphasize the superior\\nperformance of advanced LLMs, especially OPT, in financial market prediction\\nand portfolio management, marking a significant shift in the landscape of\\nfinancial analysis tools with implications to financial regulation and policy\\nanalysis.\\n",
-    "full_text": null
+  "title": "Sentiment trading with large language models",
+  "url": "https://openalex.org/W4392859372",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Kirtac, Kemal",
+      "affiliations": [
+        "University College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4287301603",
+      "name": "Germano, Guido",
+      "affiliations": [
+        "London School of Economics and Political Science",
+        "Systemic Risk Centre",
+        "University College London"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4224990248",
+    "https://openalex.org/W3126081245",
+    "https://openalex.org/W3121467893",
+    "https://openalex.org/W6767559804",
+    "https://openalex.org/W2610692167",
+    "https://openalex.org/W3121368557",
+    "https://openalex.org/W2136120210",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W1995834279",
+    "https://openalex.org/W3211639606",
+    "https://openalex.org/W2554619162",
+    "https://openalex.org/W1582026748",
+    "https://openalex.org/W3123123374",
+    "https://openalex.org/W4298110867",
+    "https://openalex.org/W3121547932",
+    "https://openalex.org/W6762909767",
+    "https://openalex.org/W3125952890",
+    "https://openalex.org/W6679109501",
+    "https://openalex.org/W1546425147",
+    "https://openalex.org/W3122648113",
+    "https://openalex.org/W2595186334",
+    "https://openalex.org/W3122944446",
+    "https://openalex.org/W6769243733",
+    "https://openalex.org/W2130162792",
+    "https://openalex.org/W4301785137",
+    "https://openalex.org/W3123245559",
+    "https://openalex.org/W3125107775",
+    "https://openalex.org/W4229005866",
+    "https://openalex.org/W4205185581"
+  ],
+  "abstract": "We investigate the efficacy of large language models (LLMs) in sentiment\\nanalysis of U.S. financial news and their potential in predicting stock market\\nreturns. We analyze a dataset comprising 965,375 news articles that span from\\nJanuary 1, 2010, to June 30, 2023; we focus on the performance of various LLMs,\\nincluding BERT, OPT, FINBERT, and the traditional Loughran-McDonald dictionary\\nmodel, which has been a dominant methodology in the finance literature. The\\nstudy documents a significant association between LLM scores and subsequent\\ndaily stock returns. Specifically, OPT, which is a GPT-3 based LLM, shows the\\nhighest accuracy in sentiment prediction with an accuracy of 74.4%, slightly\\nahead of BERT (72.5%) and FINBERT (72.2%). In contrast, the Loughran-McDonald\\ndictionary model demonstrates considerably lower effectiveness with only 50.1%\\naccuracy. Regression analyses highlight a robust positive impact of OPT model\\nscores on next-day stock returns, with coefficients of 0.274 and 0.254 in\\ndifferent model specifications. BERT and FINBERT also exhibit predictive\\nrelevance, though to a lesser extent. Notably, we do not observe a significant\\nrelationship between the Loughran-McDonald dictionary model scores and stock\\nreturns, challenging the efficacy of this traditional method in the current\\nfinancial context. In portfolio performance, the long-short OPT strategy excels\\nwith a Sharpe ratio of 3.05, compared to 2.11 for BERT and 2.07 for FINBERT\\nlong-short strategies. Strategies based on the Loughran-McDonald dictionary\\nyield the lowest Sharpe ratio of 1.23. Our findings emphasize the superior\\nperformance of advanced LLMs, especially OPT, in financial market prediction\\nand portfolio management, marking a significant shift in the landscape of\\nfinancial analysis tools with implications to financial regulation and policy\\nanalysis.\\n",
+  "full_text": null,
+  "topic": "Sharpe ratio",
+  "concepts": [
+    {
+      "name": "Sharpe ratio",
+      "score": 0.6449915170669556
+    },
+    {
+      "name": "Portfolio",
+      "score": 0.5858885049819946
+    },
+    {
+      "name": "Project portfolio management",
+      "score": 0.5753864645957947
+    },
+    {
+      "name": "Stock market",
+      "score": 0.5734663605690002
+    },
+    {
+      "name": "Investment strategy",
+      "score": 0.5506153702735901
+    },
+    {
+      "name": "Financial market",
+      "score": 0.5297231078147888
+    },
+    {
+      "name": "Trading strategy",
+      "score": 0.5104126334190369
+    },
+    {
+      "name": "Financial economics",
+      "score": 0.4779627025127411
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.44497808814048767
+    },
+    {
+      "name": "Stock (firearms)",
+      "score": 0.4386114180088043
+    },
+    {
+      "name": "Economics",
+      "score": 0.4102778732776642
+    },
+    {
+      "name": "Computer science",
+      "score": 0.39126715064048767
+    },
+    {
+      "name": "Econometrics",
+      "score": 0.3258858323097229
+    },
+    {
+      "name": "Finance",
+      "score": 0.3000138998031616
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2731917202472687
+    },
+    {
+      "name": "Management",
+      "score": 0.08023130893707275
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0718558132648468
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Project management",
+      "score": 0.0
+    },
+    {
+      "name": "Market liquidity",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Horse",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

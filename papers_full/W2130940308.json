@@ -1,73 +1,136 @@
 {
-    "title": "iPBA: a tool for protein structure comparison using sequence alignment strategies",
-    "url": "https://openalex.org/W2130940308",
-    "year": 2011,
-    "authors": [
-        {
-            "id": null,
-            "name": "Gelly, Jean-Christophe",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2638292380",
-            "name": "Joseph Agnel Praveen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2102885561",
-            "name": "Srinivasan Narayanaswamy",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "de Brevern, Alexandre G.",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1600613454",
-        "https://openalex.org/W2122464816",
-        "https://openalex.org/W2075451741",
-        "https://openalex.org/W2004178884",
-        "https://openalex.org/W1965910641",
-        "https://openalex.org/W2022058405",
-        "https://openalex.org/W2152326664",
-        "https://openalex.org/W2144998676",
-        "https://openalex.org/W1996945721",
-        "https://openalex.org/W2143695538",
-        "https://openalex.org/W2114317416",
-        "https://openalex.org/W2125898812",
-        "https://openalex.org/W2061827467",
-        "https://openalex.org/W2100126267",
-        "https://openalex.org/W2108361377",
-        "https://openalex.org/W2031326247",
-        "https://openalex.org/W2087151779",
-        "https://openalex.org/W2097642323",
-        "https://openalex.org/W2100981947",
-        "https://openalex.org/W1976499789",
-        "https://openalex.org/W2056366317",
-        "https://openalex.org/W2074231493",
-        "https://openalex.org/W2087064593",
-        "https://openalex.org/W2097617783",
-        "https://openalex.org/W2000912174",
-        "https://openalex.org/W2160299673",
-        "https://openalex.org/W2092162343",
-        "https://openalex.org/W2142749069",
-        "https://openalex.org/W2161534992",
-        "https://openalex.org/W2097311600",
-        "https://openalex.org/W2002419486",
-        "https://openalex.org/W2098125835",
-        "https://openalex.org/W1899703372",
-        "https://openalex.org/W2008841836",
-        "https://openalex.org/W2110483430",
-        "https://openalex.org/W2105321472",
-        "https://openalex.org/W2085277871",
-        "https://openalex.org/W2110397834",
-        "https://openalex.org/W2102245393",
-        "https://openalex.org/W2031901496",
-        "https://openalex.org/W2161899160",
-        "https://openalex.org/W2055302954"
-    ],
-    "abstract": "With the immense growth in the number of available protein structures, fast and accurate structure comparison has been essential. We propose an efficient method for structure comparison, based on a structural alphabet. Protein Blocks (PBs) is a widely used structural alphabet with 16 pentapeptide conformations that can fairly approximate a complete protein chain. Thus a 3D structure can be translated into a 1D sequence of PBs. With a simple Needleman-Wunsch approach and a raw PB substitution matrix, PB-based structural alignments were better than many popular methods. iPBA web server presents an improved alignment approach using (i) specialized PB Substitution Matrices (SM) and (ii) anchor-based alignment methodology. With these developments, the quality of ∼88% of alignments was improved. iPBA alignments were also better than DALI, MUSTANG and GANGSTA(+) in >80% of the cases. The webserver is designed to for both pairwise comparisons and database searches. Outputs are given as sequence alignment and superposed 3D structures displayed using PyMol and Jmol. A local alignment option for detecting subs-structural similarity is also embedded. As a fast and efficient 'sequence-based' structure comparison tool, we believe that it will be quite useful to the scientific community. iPBA can be accessed at http://www.dsimb.inserm.fr/dsimb_tools/ipba/.",
-    "full_text": null
+  "title": "iPBA: a tool for protein structure comparison using sequence alignment strategies",
+  "url": "https://openalex.org/W2130940308",
+  "year": 2011,
+  "authors": [
+    {
+      "id": null,
+      "name": "Gelly, Jean-Christophe",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2638292380",
+      "name": "Joseph Agnel Praveen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2102885561",
+      "name": "Srinivasan Narayanaswamy",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "de Brevern, Alexandre G.",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1600613454",
+    "https://openalex.org/W2122464816",
+    "https://openalex.org/W2075451741",
+    "https://openalex.org/W2004178884",
+    "https://openalex.org/W1965910641",
+    "https://openalex.org/W2022058405",
+    "https://openalex.org/W2152326664",
+    "https://openalex.org/W2144998676",
+    "https://openalex.org/W1996945721",
+    "https://openalex.org/W2143695538",
+    "https://openalex.org/W2114317416",
+    "https://openalex.org/W2125898812",
+    "https://openalex.org/W2061827467",
+    "https://openalex.org/W2100126267",
+    "https://openalex.org/W2108361377",
+    "https://openalex.org/W2031326247",
+    "https://openalex.org/W2087151779",
+    "https://openalex.org/W2097642323",
+    "https://openalex.org/W2100981947",
+    "https://openalex.org/W1976499789",
+    "https://openalex.org/W2056366317",
+    "https://openalex.org/W2074231493",
+    "https://openalex.org/W2087064593",
+    "https://openalex.org/W2097617783",
+    "https://openalex.org/W2000912174",
+    "https://openalex.org/W2160299673",
+    "https://openalex.org/W2092162343",
+    "https://openalex.org/W2142749069",
+    "https://openalex.org/W2161534992",
+    "https://openalex.org/W2097311600",
+    "https://openalex.org/W2002419486",
+    "https://openalex.org/W2098125835",
+    "https://openalex.org/W1899703372",
+    "https://openalex.org/W2008841836",
+    "https://openalex.org/W2110483430",
+    "https://openalex.org/W2105321472",
+    "https://openalex.org/W2085277871",
+    "https://openalex.org/W2110397834",
+    "https://openalex.org/W2102245393",
+    "https://openalex.org/W2031901496",
+    "https://openalex.org/W2161899160",
+    "https://openalex.org/W2055302954"
+  ],
+  "abstract": "With the immense growth in the number of available protein structures, fast and accurate structure comparison has been essential. We propose an efficient method for structure comparison, based on a structural alphabet. Protein Blocks (PBs) is a widely used structural alphabet with 16 pentapeptide conformations that can fairly approximate a complete protein chain. Thus a 3D structure can be translated into a 1D sequence of PBs. With a simple Needleman-Wunsch approach and a raw PB substitution matrix, PB-based structural alignments were better than many popular methods. iPBA web server presents an improved alignment approach using (i) specialized PB Substitution Matrices (SM) and (ii) anchor-based alignment methodology. With these developments, the quality of ∼88% of alignments was improved. iPBA alignments were also better than DALI, MUSTANG and GANGSTA(+) in >80% of the cases. The webserver is designed to for both pairwise comparisons and database searches. Outputs are given as sequence alignment and superposed 3D structures displayed using PyMol and Jmol. A local alignment option for detecting subs-structural similarity is also embedded. As a fast and efficient 'sequence-based' structure comparison tool, we believe that it will be quite useful to the scientific community. iPBA can be accessed at http://www.dsimb.inserm.fr/dsimb_tools/ipba/.",
+  "full_text": null,
+  "topic": "Biology",
+  "concepts": [
+    {
+      "name": "Biology",
+      "score": 0.9417341947555542
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.6471314430236816
+    },
+    {
+      "name": "Sequence alignment",
+      "score": 0.5794945359230042
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.5693034529685974
+    },
+    {
+      "name": "Structural alignment",
+      "score": 0.5026698112487793
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.47829705476760864
+    },
+    {
+      "name": "Multiple sequence alignment",
+      "score": 0.43794625997543335
+    },
+    {
+      "name": "Alignment-free sequence analysis",
+      "score": 0.4279616177082062
+    },
+    {
+      "name": "Base sequence",
+      "score": 0.4246785342693329
+    },
+    {
+      "name": "Protein structure",
+      "score": 0.4229966402053833
+    },
+    {
+      "name": "Genetics",
+      "score": 0.41346466541290283
+    },
+    {
+      "name": "Evolutionary biology",
+      "score": 0.34647154808044434
+    },
+    {
+      "name": "DNA",
+      "score": 0.17479759454727173
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.15877491235733032
+    },
+    {
+      "name": "Gene",
+      "score": 0.14458942413330078
+    }
+  ]
 }

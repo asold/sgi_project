@@ -1,119 +1,198 @@
 {
-    "title": "Improving large language models for clinical named entity recognition via prompt engineering",
-    "url": "https://openalex.org/W4391292768",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096506771",
-            "name": "Yan Hu",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115254388",
-            "name": "Qing-Yu Chen",
-            "affiliations": [
-                "National Institutes of Health",
-                "National Center for Biotechnology Information",
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2343127410",
-            "name": "Jingcheng Du",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2952239724",
-            "name": "Xue-Qing Peng",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2914537123",
-            "name": "Vipina Kuttichi Keloth",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1979853317",
-            "name": "Xu Zuo",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2123189166",
-            "name": "Yujia Zhou",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2418419880",
-            "name": "Zehan Li",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132814769",
-            "name": "Xiaoqian Jiang",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2150237561",
-            "name": "Zhiyong Lu",
-            "affiliations": [
-                "National Institutes of Health",
-                "National Center for Biotechnology Information"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2151895843",
-            "name": "Kirk Roberts",
-            "affiliations": [
-                "Museum of Fine Arts, Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105258892",
-            "name": "Hua Xu",
-            "affiliations": [
-                "Yale University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2004910511",
-        "https://openalex.org/W2169818249",
-        "https://openalex.org/W2805211535",
-        "https://openalex.org/W2768488789",
-        "https://openalex.org/W2146089916",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W6781031682",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4319460874",
-        "https://openalex.org/W4319662928",
-        "https://openalex.org/W2168041406",
-        "https://openalex.org/W3135084718",
-        "https://openalex.org/W2107435951",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W3046375318",
-        "https://openalex.org/W4368340908",
-        "https://openalex.org/W4381480701",
-        "https://openalex.org/W4403515058",
-        "https://openalex.org/W4366563389",
-        "https://openalex.org/W4387356888",
-        "https://openalex.org/W4381587418"
-    ],
-    "abstract": "Abstract Importance The study highlights the potential of large language models, specifically GPT-3.5 and GPT-4, in processing complex clinical data and extracting meaningful information with minimal training data. By developing and refining prompt-based strategies, we can significantly enhance the models’ performance, making them viable tools for clinical NER tasks and possibly reducing the reliance on extensive annotated datasets. Objectives This study quantifies the capabilities of GPT-3.5 and GPT-4 for clinical named entity recognition (NER) tasks and proposes task-specific prompts to improve their performance. Materials and Methods We evaluated these models on 2 clinical NER tasks: (1) to extract medical problems, treatments, and tests from clinical notes in the MTSamples corpus, following the 2010 i2b2 concept extraction shared task, and (2) to identify nervous system disorder-related adverse events from safety reports in the vaccine adverse event reporting system (VAERS). To improve the GPT models' performance, we developed a clinical task-specific prompt framework that includes (1) baseline prompts with task description and format specification, (2) annotation guideline-based prompts, (3) error analysis-based instructions, and (4) annotated samples for few-shot learning. We assessed each prompt's effectiveness and compared the models to BioClinicalBERT. Results Using baseline prompts, GPT-3.5 and GPT-4 achieved relaxed F1 scores of 0.634, 0.804 for MTSamples and 0.301, 0.593 for VAERS. Additional prompt components consistently improved model performance. When all 4 components were used, GPT-3.5 and GPT-4 achieved relaxed F1 socres of 0.794, 0.861 for MTSamples and 0.676, 0.736 for VAERS, demonstrating the effectiveness of our prompt framework. Although these results trail BioClinicalBERT (F1 of 0.901 for the MTSamples dataset and 0.802 for the VAERS), it is very promising considering few training samples are needed. Discussion The study’s findings suggest a promising direction in leveraging LLMs for clinical NER tasks. However, while the performance of GPT models improved with task-specific prompts, there's a need for further development and refinement. LLMs like GPT-4 show potential in achieving close performance to state-of-the-art models like BioClinicalBERT, but they still require careful prompt engineering and understanding of task-specific knowledge. The study also underscores the importance of evaluation schemas that accurately reflect the capabilities and performance of LLMs in clinical settings. Conclusion While direct application of GPT models to clinical NER tasks falls short of optimal performance, our task-specific prompt framework, incorporating medical knowledge and training samples, significantly enhances GPT models' feasibility for potential clinical applications.",
-    "full_text": null
+  "title": "Improving large language models for clinical named entity recognition via prompt engineering",
+  "url": "https://openalex.org/W4391292768",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096506771",
+      "name": "Yan Hu",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115254388",
+      "name": "Qing-Yu Chen",
+      "affiliations": [
+        "National Institutes of Health",
+        "National Center for Biotechnology Information",
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2343127410",
+      "name": "Jingcheng Du",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2952239724",
+      "name": "Xue-Qing Peng",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2914537123",
+      "name": "Vipina Kuttichi Keloth",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1979853317",
+      "name": "Xu Zuo",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2123189166",
+      "name": "Yujia Zhou",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2418419880",
+      "name": "Zehan Li",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132814769",
+      "name": "Xiaoqian Jiang",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2150237561",
+      "name": "Zhiyong Lu",
+      "affiliations": [
+        "National Institutes of Health",
+        "National Center for Biotechnology Information"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2151895843",
+      "name": "Kirk Roberts",
+      "affiliations": [
+        "Museum of Fine Arts, Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105258892",
+      "name": "Hua Xu",
+      "affiliations": [
+        "Yale University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2004910511",
+    "https://openalex.org/W2169818249",
+    "https://openalex.org/W2805211535",
+    "https://openalex.org/W2768488789",
+    "https://openalex.org/W2146089916",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W6781031682",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4319460874",
+    "https://openalex.org/W4319662928",
+    "https://openalex.org/W2168041406",
+    "https://openalex.org/W3135084718",
+    "https://openalex.org/W2107435951",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W3046375318",
+    "https://openalex.org/W4368340908",
+    "https://openalex.org/W4381480701",
+    "https://openalex.org/W4403515058",
+    "https://openalex.org/W4366563389",
+    "https://openalex.org/W4387356888",
+    "https://openalex.org/W4381587418"
+  ],
+  "abstract": "Abstract Importance The study highlights the potential of large language models, specifically GPT-3.5 and GPT-4, in processing complex clinical data and extracting meaningful information with minimal training data. By developing and refining prompt-based strategies, we can significantly enhance the models’ performance, making them viable tools for clinical NER tasks and possibly reducing the reliance on extensive annotated datasets. Objectives This study quantifies the capabilities of GPT-3.5 and GPT-4 for clinical named entity recognition (NER) tasks and proposes task-specific prompts to improve their performance. Materials and Methods We evaluated these models on 2 clinical NER tasks: (1) to extract medical problems, treatments, and tests from clinical notes in the MTSamples corpus, following the 2010 i2b2 concept extraction shared task, and (2) to identify nervous system disorder-related adverse events from safety reports in the vaccine adverse event reporting system (VAERS). To improve the GPT models' performance, we developed a clinical task-specific prompt framework that includes (1) baseline prompts with task description and format specification, (2) annotation guideline-based prompts, (3) error analysis-based instructions, and (4) annotated samples for few-shot learning. We assessed each prompt's effectiveness and compared the models to BioClinicalBERT. Results Using baseline prompts, GPT-3.5 and GPT-4 achieved relaxed F1 scores of 0.634, 0.804 for MTSamples and 0.301, 0.593 for VAERS. Additional prompt components consistently improved model performance. When all 4 components were used, GPT-3.5 and GPT-4 achieved relaxed F1 socres of 0.794, 0.861 for MTSamples and 0.676, 0.736 for VAERS, demonstrating the effectiveness of our prompt framework. Although these results trail BioClinicalBERT (F1 of 0.901 for the MTSamples dataset and 0.802 for the VAERS), it is very promising considering few training samples are needed. Discussion The study’s findings suggest a promising direction in leveraging LLMs for clinical NER tasks. However, while the performance of GPT models improved with task-specific prompts, there's a need for further development and refinement. LLMs like GPT-4 show potential in achieving close performance to state-of-the-art models like BioClinicalBERT, but they still require careful prompt engineering and understanding of task-specific knowledge. The study also underscores the importance of evaluation schemas that accurately reflect the capabilities and performance of LLMs in clinical settings. Conclusion While direct application of GPT models to clinical NER tasks falls short of optimal performance, our task-specific prompt framework, incorporating medical knowledge and training samples, significantly enhances GPT models' feasibility for potential clinical applications.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7695245742797852
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.7011972069740295
+    },
+    {
+      "name": "Annotation",
+      "score": 0.6479517817497253
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.596562385559082
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.5715410113334656
+    },
+    {
+      "name": "F1 score",
+      "score": 0.5471959114074707
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.5177571177482605
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.48898255825042725
+    },
+    {
+      "name": "Guideline",
+      "score": 0.4383111000061035
+    },
+    {
+      "name": "Adverse Event Reporting System",
+      "score": 0.4376063942909241
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.40087053179740906
+    },
+    {
+      "name": "Adverse effect",
+      "score": 0.26457375288009644
+    },
+    {
+      "name": "Medicine",
+      "score": 0.16640615463256836
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0857137143611908
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    }
+  ]
 }

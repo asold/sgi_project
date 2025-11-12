@@ -1,66 +1,109 @@
 {
-    "title": "Reinforcement Learning-based Recommender Systems with Large Language Models for State Reward and Action Modeling",
-    "url": "https://openalex.org/W4400528355",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2095685898",
-            "name": "Jie Wang",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A14841688",
-            "name": "Alexandros Karatzoglou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1902139230",
-            "name": "Ioannis Arapakis",
-            "affiliations": [
-                "Telefonica Research and Development"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2167481407",
-            "name": "Joemon M. Jose",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4400118952",
-        "https://openalex.org/W4378465281",
-        "https://openalex.org/W4296591867",
-        "https://openalex.org/W4386081001",
-        "https://openalex.org/W3034791416",
-        "https://openalex.org/W4290944002",
-        "https://openalex.org/W2964108915",
-        "https://openalex.org/W2069870183",
-        "https://openalex.org/W2963367478",
-        "https://openalex.org/W6601897980",
-        "https://openalex.org/W4387848745",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W4382246105",
-        "https://openalex.org/W1968563228",
-        "https://openalex.org/W2971196067",
-        "https://openalex.org/W4226278401",
-        "https://openalex.org/W4384652161",
-        "https://openalex.org/W2419128894",
-        "https://openalex.org/W4212961739",
-        "https://openalex.org/W2783272285",
-        "https://openalex.org/W3035170973",
-        "https://openalex.org/W3034853385",
-        "https://openalex.org/W3211540990",
-        "https://openalex.org/W4284702156",
-        "https://openalex.org/W2902040508",
-        "https://openalex.org/W4386729449",
-        "https://openalex.org/W2788295351",
-        "https://openalex.org/W2596585349",
-        "https://openalex.org/W3102778384"
-    ],
-    "abstract": "Reinforcement Learning (RL)-based recommender systems have demonstrated promising performance in session-based and sequential recommendation tasks. Existing offline RL-based sequential recommendation methods face the challenge of obtaining effective user feedback from the environment. Developing a model for the user state and shaping an appropriate reward for recommendation remains a challenge. In this paper, we leverage language understanding capabilities and adapt large language models (LLMs) as an environment (LE) to enhance RL-based recommenders. The LE is learned from a subset of user-item interaction data, thus reducing the need for large training data, and can synthesize user feedback for offline data by: (i) acting as a state model that produces high-quality states that enrich the user representation, and (ii) functioning as a reward model to accurately capture nuanced user preferences on actions. Moreover, the LE allows us to generate positive actions that augment the limited offline training data. We propose a LE Augmentation (LEA) method to further improve recommendation performance by optimising jointly the supervised component and the RL policy, using the augmented actions and historical user signals. We use LEA, the state, and reward models in conjunction with state-of-the-art RL recommenders and report experimental results on two publicly available datasets.",
-    "full_text": null
+  "title": "Reinforcement Learning-based Recommender Systems with Large Language Models for State Reward and Action Modeling",
+  "url": "https://openalex.org/W4400528355",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2095685898",
+      "name": "Jie Wang",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A14841688",
+      "name": "Alexandros Karatzoglou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1902139230",
+      "name": "Ioannis Arapakis",
+      "affiliations": [
+        "Telefonica Research and Development"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2167481407",
+      "name": "Joemon M. Jose",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4400118952",
+    "https://openalex.org/W4378465281",
+    "https://openalex.org/W4296591867",
+    "https://openalex.org/W4386081001",
+    "https://openalex.org/W3034791416",
+    "https://openalex.org/W4290944002",
+    "https://openalex.org/W2964108915",
+    "https://openalex.org/W2069870183",
+    "https://openalex.org/W2963367478",
+    "https://openalex.org/W6601897980",
+    "https://openalex.org/W4387848745",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W4382246105",
+    "https://openalex.org/W1968563228",
+    "https://openalex.org/W2971196067",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W4384652161",
+    "https://openalex.org/W2419128894",
+    "https://openalex.org/W4212961739",
+    "https://openalex.org/W2783272285",
+    "https://openalex.org/W3035170973",
+    "https://openalex.org/W3034853385",
+    "https://openalex.org/W3211540990",
+    "https://openalex.org/W4284702156",
+    "https://openalex.org/W2902040508",
+    "https://openalex.org/W4386729449",
+    "https://openalex.org/W2788295351",
+    "https://openalex.org/W2596585349",
+    "https://openalex.org/W3102778384"
+  ],
+  "abstract": "Reinforcement Learning (RL)-based recommender systems have demonstrated promising performance in session-based and sequential recommendation tasks. Existing offline RL-based sequential recommendation methods face the challenge of obtaining effective user feedback from the environment. Developing a model for the user state and shaping an appropriate reward for recommendation remains a challenge. In this paper, we leverage language understanding capabilities and adapt large language models (LLMs) as an environment (LE) to enhance RL-based recommenders. The LE is learned from a subset of user-item interaction data, thus reducing the need for large training data, and can synthesize user feedback for offline data by: (i) acting as a state model that produces high-quality states that enrich the user representation, and (ii) functioning as a reward model to accurately capture nuanced user preferences on actions. Moreover, the LE allows us to generate positive actions that augment the limited offline training data. We propose a LE Augmentation (LEA) method to further improve recommendation performance by optimising jointly the supervised component and the RL policy, using the augmented actions and historical user signals. We use LEA, the state, and reward models in conjunction with state-of-the-art RL recommenders and report experimental results on two publicly available datasets.",
+  "full_text": null,
+  "topic": "Reinforcement learning",
+  "concepts": [
+    {
+      "name": "Reinforcement learning",
+      "score": 0.8500077724456787
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8032598495483398
+    },
+    {
+      "name": "Recommender system",
+      "score": 0.7054861187934875
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6149108409881592
+    },
+    {
+      "name": "Action (physics)",
+      "score": 0.5762720704078674
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5110955834388733
+    },
+    {
+      "name": "State (computer science)",
+      "score": 0.47571617364883423
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09708064794540405
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,65 +1,172 @@
 {
-    "title": "Gene Set Summarization Using Large Language Models.",
-    "url": "https://openalex.org/W4379966467",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2282586772",
-            "name": "Marcin P Joachimiak",
-            "affiliations": [
-                "Lawrence Berkeley National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1819457079",
-            "name": "J. Harry Caufield",
-            "affiliations": [
-                "Lawrence Berkeley National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2149860172",
-            "name": "Nomi L. Harris",
-            "affiliations": [
-                "Lawrence Berkeley National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106285303",
-            "name": "Hyeongsik Kim",
-            "affiliations": [
-                "Robert Bosch (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A575195435",
-            "name": "Christopher J. Mungall",
-            "affiliations": [
-                "Lawrence Berkeley National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2469291886",
-        "https://openalex.org/W4212766367",
-        "https://openalex.org/W2173732482",
-        "https://openalex.org/W2950458545",
-        "https://openalex.org/W2517051411",
-        "https://openalex.org/W4233698560",
-        "https://openalex.org/W2976494531",
-        "https://openalex.org/W2099526830",
-        "https://openalex.org/W2900044275",
-        "https://openalex.org/W3029180354",
-        "https://openalex.org/W3112600195",
-        "https://openalex.org/W4224853194",
-        "https://openalex.org/W1989277387",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W3091866222",
-        "https://openalex.org/W2517963161",
-        "https://openalex.org/W3036458298",
-        "https://openalex.org/W2289067313",
-        "https://openalex.org/W3106811464"
-    ],
-    "abstract": "Molecular biologists frequently interpret gene lists derived from high-throughput experiments and computational analysis. This is typically done as a statistical enrichment analysis that measures the over- or under-representation of biological function terms associated with genes or their properties, based on curated assertions from a knowledge base (KB) such as the Gene Ontology (GO). Interpreting gene lists can also be framed as a textual summarization task, enabling Large Language Models (LLMs) to use scientific texts directly and avoid reliance on a KB. TALISMAN (Terminological ArtificiaL Intelligence SuMmarization of Annotation and Narratives) uses generative AI to perform gene set function summarization as a complement to standard enrichment analysis. This method can use different sources of gene functional information: (1) structured text derived from curated ontological KB annotations, (2) ontology-free narrative gene summaries, or (3) direct retrieval from the model. We demonstrate that these methods are able to generate plausible and biologically valid summary GO term lists for an input gene set. However, LLM-based approaches are unable to deliver reliable scores or p-values and often return terms that are not statistically significant. Crucially, in our experiments these methods were rarely able to recapitulate the most precise and informative term from standard enrichment analysis. We also observe minor differences depending on prompt input information, with GO term descriptions leading to higher recall but lower precision. However, newer LLM models perform statistically significantly better than the oldest model across all performance metrics, suggesting that future models may lead to further improvements. Overall, the results are nondeterministic, with minor variations in prompt resulting in radically different term lists, true to the stochastic nature of LLMs. Our results show that at this point, LLM-based methods are unsuitable as a replacement for standard term enrichment analysis, however they may provide summarization benefits for implicit knowledge integration across extant but unstandardized knowledge, for large sets of features, and where the amount of information is difficult for humans to process.",
-    "full_text": null
+  "title": "Gene Set Summarization Using Large Language Models.",
+  "url": "https://openalex.org/W4379966467",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2282586772",
+      "name": "Marcin P Joachimiak",
+      "affiliations": [
+        "Lawrence Berkeley National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1819457079",
+      "name": "J. Harry Caufield",
+      "affiliations": [
+        "Lawrence Berkeley National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2149860172",
+      "name": "Nomi L. Harris",
+      "affiliations": [
+        "Lawrence Berkeley National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106285303",
+      "name": "Hyeongsik Kim",
+      "affiliations": [
+        "Robert Bosch (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A575195435",
+      "name": "Christopher J. Mungall",
+      "affiliations": [
+        "Lawrence Berkeley National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2469291886",
+    "https://openalex.org/W4212766367",
+    "https://openalex.org/W2173732482",
+    "https://openalex.org/W2950458545",
+    "https://openalex.org/W2517051411",
+    "https://openalex.org/W4233698560",
+    "https://openalex.org/W2976494531",
+    "https://openalex.org/W2099526830",
+    "https://openalex.org/W2900044275",
+    "https://openalex.org/W3029180354",
+    "https://openalex.org/W3112600195",
+    "https://openalex.org/W4224853194",
+    "https://openalex.org/W1989277387",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W3091866222",
+    "https://openalex.org/W2517963161",
+    "https://openalex.org/W3036458298",
+    "https://openalex.org/W2289067313",
+    "https://openalex.org/W3106811464"
+  ],
+  "abstract": "Molecular biologists frequently interpret gene lists derived from high-throughput experiments and computational analysis. This is typically done as a statistical enrichment analysis that measures the over- or under-representation of biological function terms associated with genes or their properties, based on curated assertions from a knowledge base (KB) such as the Gene Ontology (GO). Interpreting gene lists can also be framed as a textual summarization task, enabling Large Language Models (LLMs) to use scientific texts directly and avoid reliance on a KB. TALISMAN (Terminological ArtificiaL Intelligence SuMmarization of Annotation and Narratives) uses generative AI to perform gene set function summarization as a complement to standard enrichment analysis. This method can use different sources of gene functional information: (1) structured text derived from curated ontological KB annotations, (2) ontology-free narrative gene summaries, or (3) direct retrieval from the model. We demonstrate that these methods are able to generate plausible and biologically valid summary GO term lists for an input gene set. However, LLM-based approaches are unable to deliver reliable scores or p-values and often return terms that are not statistically significant. Crucially, in our experiments these methods were rarely able to recapitulate the most precise and informative term from standard enrichment analysis. We also observe minor differences depending on prompt input information, with GO term descriptions leading to higher recall but lower precision. However, newer LLM models perform statistically significantly better than the oldest model across all performance metrics, suggesting that future models may lead to further improvements. Overall, the results are nondeterministic, with minor variations in prompt resulting in radically different term lists, true to the stochastic nature of LLMs. Our results show that at this point, LLM-based methods are unsuitable as a replacement for standard term enrichment analysis, however they may provide summarization benefits for implicit knowledge integration across extant but unstandardized knowledge, for large sets of features, and where the amount of information is difficult for humans to process.",
+  "full_text": null,
+  "topic": "Automatic summarization",
+  "concepts": [
+    {
+      "name": "Automatic summarization",
+      "score": 0.8066121935844421
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7326366901397705
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.6253681778907776
+    },
+    {
+      "name": "Ontology",
+      "score": 0.6183022260665894
+    },
+    {
+      "name": "Term (time)",
+      "score": 0.5446469783782959
+    },
+    {
+      "name": "Function (biology)",
+      "score": 0.5363830924034119
+    },
+    {
+      "name": "Gene ontology",
+      "score": 0.4780162572860718
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4676014482975006
+    },
+    {
+      "name": "Complement (music)",
+      "score": 0.4599304795265198
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4350675940513611
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.4267902374267578
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3462439775466919
+    },
+    {
+      "name": "Gene",
+      "score": 0.24106496572494507
+    },
+    {
+      "name": "Biology",
+      "score": 0.17373201251029968
+    },
+    {
+      "name": "Programming language",
+      "score": 0.11180505156517029
+    },
+    {
+      "name": "Genetics",
+      "score": 0.10684862732887268
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Complementation",
+      "score": 0.0
+    },
+    {
+      "name": "Phenotype",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.0
+    }
+  ]
 }

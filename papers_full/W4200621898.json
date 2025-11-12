@@ -1,70 +1,129 @@
 {
-    "title": "Part-of-Speech Tagging with Rule-Based Data Preprocessing and Transformer",
-    "url": "https://openalex.org/W4200621898",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096447395",
-            "name": "Hongwei Li",
-            "affiliations": [
-                "Shanghai Key Laboratory of Trustworthy Computing",
-                "East China Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099010334",
-            "name": "Hongyan Mao",
-            "affiliations": [
-                "Shanghai Key Laboratory of Trustworthy Computing",
-                "East China Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2137517140",
-            "name": "Jingzi Wang",
-            "affiliations": [
-                "East China Normal University",
-                "Shanghai Key Laboratory of Trustworthy Computing"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2142222368",
-        "https://openalex.org/W2970292446",
-        "https://openalex.org/W3097595090",
-        "https://openalex.org/W3037109418",
-        "https://openalex.org/W3094403051",
-        "https://openalex.org/W1515847863",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2131774270",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6636649193",
-        "https://openalex.org/W6671280235",
-        "https://openalex.org/W2170381724",
-        "https://openalex.org/W1481743338",
-        "https://openalex.org/W1819641058",
-        "https://openalex.org/W2758628071",
-        "https://openalex.org/W2962902328",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W2963626623",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W1899794420",
-        "https://openalex.org/W2964090065",
-        "https://openalex.org/W2899024931",
-        "https://openalex.org/W2739827909",
-        "https://openalex.org/W3166340149",
-        "https://openalex.org/W6781275133",
-        "https://openalex.org/W2772899235",
-        "https://openalex.org/W3006255689",
-        "https://openalex.org/W2756655895",
-        "https://openalex.org/W2758640791",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2625465398",
-        "https://openalex.org/W3106210592",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W3046730737",
-        "https://openalex.org/W1632114991"
-    ],
-    "abstract": "Part-of-Speech (POS) tagging is one of the most important tasks in the field of natural language processing (NLP). POS tagging for a word depends not only on the word itself but also on its position, its surrounding words, and their POS tags. POS tagging can be an upstream task for other NLP tasks, further improving their performance. Therefore, it is important to improve the accuracy of POS tagging. In POS tagging, bidirectional Long Short-Term Memory (Bi-LSTM) is commonly used and achieves good performance. However, Bi-LSTM is not as powerful as Transformer in leveraging contextual information, since Bi-LSTM simply concatenates the contextual information from left-to-right and right-to-left. In this study, we propose a novel approach for POS tagging to improve the accuracy. For each token, all possible POS tags are obtained without considering context, and then rules are applied to prune out these possible POS tags, which we call rule-based data preprocessing. In this way, the number of possible POS tags of most tokens can be reduced to one, and they are considered to be correctly tagged. Finally, POS tags of the remaining tokens are masked, and a model based on Transformer is used to only predict the masked POS tags, which enables it to leverage bidirectional contexts. Our experimental result shows that our approach leads to better performance than other methods using Bi-LSTM.",
-    "full_text": null
+  "title": "Part-of-Speech Tagging with Rule-Based Data Preprocessing and Transformer",
+  "url": "https://openalex.org/W4200621898",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096447395",
+      "name": "Hongwei Li",
+      "affiliations": [
+        "Shanghai Key Laboratory of Trustworthy Computing",
+        "East China Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099010334",
+      "name": "Hongyan Mao",
+      "affiliations": [
+        "Shanghai Key Laboratory of Trustworthy Computing",
+        "East China Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2137517140",
+      "name": "Jingzi Wang",
+      "affiliations": [
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2142222368",
+    "https://openalex.org/W2970292446",
+    "https://openalex.org/W3097595090",
+    "https://openalex.org/W3037109418",
+    "https://openalex.org/W3094403051",
+    "https://openalex.org/W1515847863",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2131774270",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6636649193",
+    "https://openalex.org/W6671280235",
+    "https://openalex.org/W2170381724",
+    "https://openalex.org/W1481743338",
+    "https://openalex.org/W1819641058",
+    "https://openalex.org/W2758628071",
+    "https://openalex.org/W2962902328",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2963626623",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W1899794420",
+    "https://openalex.org/W2964090065",
+    "https://openalex.org/W2899024931",
+    "https://openalex.org/W2739827909",
+    "https://openalex.org/W3166340149",
+    "https://openalex.org/W6781275133",
+    "https://openalex.org/W2772899235",
+    "https://openalex.org/W3006255689",
+    "https://openalex.org/W2756655895",
+    "https://openalex.org/W2758640791",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2625465398",
+    "https://openalex.org/W3106210592",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W3046730737",
+    "https://openalex.org/W1632114991"
+  ],
+  "abstract": "Part-of-Speech (POS) tagging is one of the most important tasks in the field of natural language processing (NLP). POS tagging for a word depends not only on the word itself but also on its position, its surrounding words, and their POS tags. POS tagging can be an upstream task for other NLP tasks, further improving their performance. Therefore, it is important to improve the accuracy of POS tagging. In POS tagging, bidirectional Long Short-Term Memory (Bi-LSTM) is commonly used and achieves good performance. However, Bi-LSTM is not as powerful as Transformer in leveraging contextual information, since Bi-LSTM simply concatenates the contextual information from left-to-right and right-to-left. In this study, we propose a novel approach for POS tagging to improve the accuracy. For each token, all possible POS tags are obtained without considering context, and then rules are applied to prune out these possible POS tags, which we call rule-based data preprocessing. In this way, the number of possible POS tags of most tokens can be reduced to one, and they are considered to be correctly tagged. Finally, POS tags of the remaining tokens are masked, and a model based on Transformer is used to only predict the masked POS tags, which enables it to leverage bidirectional contexts. Our experimental result shows that our approach leads to better performance than other methods using Bi-LSTM.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.882531464099884
+    },
+    {
+      "name": "Security token",
+      "score": 0.719271183013916
+    },
+    {
+      "name": "Preprocessor",
+      "score": 0.6902508735656738
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6709216833114624
+    },
+    {
+      "name": "Part-of-speech tagging",
+      "score": 0.594219446182251
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5890867710113525
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.5676548480987549
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.566245973110199
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.4899541437625885
+    },
+    {
+      "name": "Part of speech",
+      "score": 0.3711346387863159
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07846805453300476
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    }
+  ]
 }

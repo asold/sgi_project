@@ -1,78 +1,153 @@
 {
-    "title": "Interpretable transformer-based model for probabilistic short-term forecasting of residential net load",
-    "url": "https://openalex.org/W4387637902",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2120795539",
-            "name": "Chongchong Xu",
-            "affiliations": [
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096006303",
-            "name": "Guo Chen",
-            "affiliations": [
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120795539",
-            "name": "Chongchong Xu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096006303",
-            "name": "Guo Chen",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2562710973",
-        "https://openalex.org/W4226322096",
-        "https://openalex.org/W2994878836",
-        "https://openalex.org/W2569201729",
-        "https://openalex.org/W2277615321",
-        "https://openalex.org/W2601171548",
-        "https://openalex.org/W2953049129",
-        "https://openalex.org/W2275088575",
-        "https://openalex.org/W2015373256",
-        "https://openalex.org/W2800256551",
-        "https://openalex.org/W2890330768",
-        "https://openalex.org/W4283071116",
-        "https://openalex.org/W3113264736",
-        "https://openalex.org/W3008533347",
-        "https://openalex.org/W3142394151",
-        "https://openalex.org/W4206566225",
-        "https://openalex.org/W6784835917",
-        "https://openalex.org/W3177318507",
-        "https://openalex.org/W4284962670",
-        "https://openalex.org/W4226020959",
-        "https://openalex.org/W4306876858",
-        "https://openalex.org/W4285496630",
-        "https://openalex.org/W3157968023",
-        "https://openalex.org/W2913954081",
-        "https://openalex.org/W3011590044",
-        "https://openalex.org/W3174046068",
-        "https://openalex.org/W6802303385",
-        "https://openalex.org/W2950858167",
-        "https://openalex.org/W6691766336",
-        "https://openalex.org/W4205535139",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3204470331",
-        "https://openalex.org/W3171884590",
-        "https://openalex.org/W2903925216",
-        "https://openalex.org/W3176033047",
-        "https://openalex.org/W6728610325",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W2008709824",
-        "https://openalex.org/W3097294131",
-        "https://openalex.org/W4255562757",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4295312788",
-        "https://openalex.org/W4294149591"
-    ],
-    "abstract": "Short-term residential load forecasting is of great significance for the demand-side energy management of the grid and the home energy management of resident customers. The massive penetration of distributed renewable energy, especially small-scale solar photovoltaic (PV), in the residential sector urgently requires us to move from traditional load forecasting to net load forecasting. In recent years, deep learning techniques that can improve model forecasting performance have developed rapidly in the field of residential load forecasting. However, the opaque nature of deep learning makes its practical application very difficult. This paper proposes a Transformer-based probabilistic residential net load forecasting method that utilizes quantile regression to quantify uncertainty in future load demand. Meanwhile, to improve the interpretability of deep learning model, local variable selection network is developed to automatically select relevant features and provide feature-level explanations. Additionally, interpretable sparse self-attention mechanism is proposed to extract long-term temporal dependencies. Numerical experiments are carried out with data from real household smart meters. The results show that the proposed model outperforms other state-of-the-art forecasting models. In terms of point forecasting, compared with the most common deep time series forecasting model LSTM, the proposed model decreases by 21.3%, 27.3% and 20.9% On three point forecasting performance metrics. Compared with Vanilla Transformer, the proposed InterFormer decreases by 9.9%, 10.5% and 9.0% On three point forecasting performance metrics. In terms of probabilistic forecasting, compared with LSTM and Vanilla Transformer, the average pinball loss of the proposed model decreases by 26.2% and 17.0%, respectively. Additionally, and most importantly, our model provides users with explanations in terms of feature importance and temporal patterns.",
-    "full_text": null
+  "title": "Interpretable transformer-based model for probabilistic short-term forecasting of residential net load",
+  "url": "https://openalex.org/W4387637902",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2120795539",
+      "name": "Chongchong Xu",
+      "affiliations": [
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096006303",
+      "name": "Guo Chen",
+      "affiliations": [
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120795539",
+      "name": "Chongchong Xu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096006303",
+      "name": "Guo Chen",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2562710973",
+    "https://openalex.org/W4226322096",
+    "https://openalex.org/W2994878836",
+    "https://openalex.org/W2569201729",
+    "https://openalex.org/W2277615321",
+    "https://openalex.org/W2601171548",
+    "https://openalex.org/W2953049129",
+    "https://openalex.org/W2275088575",
+    "https://openalex.org/W2015373256",
+    "https://openalex.org/W2800256551",
+    "https://openalex.org/W2890330768",
+    "https://openalex.org/W4283071116",
+    "https://openalex.org/W3113264736",
+    "https://openalex.org/W3008533347",
+    "https://openalex.org/W3142394151",
+    "https://openalex.org/W4206566225",
+    "https://openalex.org/W6784835917",
+    "https://openalex.org/W3177318507",
+    "https://openalex.org/W4284962670",
+    "https://openalex.org/W4226020959",
+    "https://openalex.org/W4306876858",
+    "https://openalex.org/W4285496630",
+    "https://openalex.org/W3157968023",
+    "https://openalex.org/W2913954081",
+    "https://openalex.org/W3011590044",
+    "https://openalex.org/W3174046068",
+    "https://openalex.org/W6802303385",
+    "https://openalex.org/W2950858167",
+    "https://openalex.org/W6691766336",
+    "https://openalex.org/W4205535139",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3204470331",
+    "https://openalex.org/W3171884590",
+    "https://openalex.org/W2903925216",
+    "https://openalex.org/W3176033047",
+    "https://openalex.org/W6728610325",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W2008709824",
+    "https://openalex.org/W3097294131",
+    "https://openalex.org/W4255562757",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4295312788",
+    "https://openalex.org/W4294149591"
+  ],
+  "abstract": "Short-term residential load forecasting is of great significance for the demand-side energy management of the grid and the home energy management of resident customers. The massive penetration of distributed renewable energy, especially small-scale solar photovoltaic (PV), in the residential sector urgently requires us to move from traditional load forecasting to net load forecasting. In recent years, deep learning techniques that can improve model forecasting performance have developed rapidly in the field of residential load forecasting. However, the opaque nature of deep learning makes its practical application very difficult. This paper proposes a Transformer-based probabilistic residential net load forecasting method that utilizes quantile regression to quantify uncertainty in future load demand. Meanwhile, to improve the interpretability of deep learning model, local variable selection network is developed to automatically select relevant features and provide feature-level explanations. Additionally, interpretable sparse self-attention mechanism is proposed to extract long-term temporal dependencies. Numerical experiments are carried out with data from real household smart meters. The results show that the proposed model outperforms other state-of-the-art forecasting models. In terms of point forecasting, compared with the most common deep time series forecasting model LSTM, the proposed model decreases by 21.3%, 27.3% and 20.9% On three point forecasting performance metrics. Compared with Vanilla Transformer, the proposed InterFormer decreases by 9.9%, 10.5% and 9.0% On three point forecasting performance metrics. In terms of probabilistic forecasting, compared with LSTM and Vanilla Transformer, the average pinball loss of the proposed model decreases by 26.2% and 17.0%, respectively. Additionally, and most importantly, our model provides users with explanations in terms of feature importance and temporal patterns.",
+  "full_text": null,
+  "topic": "Probabilistic forecasting",
+  "concepts": [
+    {
+      "name": "Probabilistic forecasting",
+      "score": 0.7557294368743896
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6126856207847595
+    },
+    {
+      "name": "Probabilistic logic",
+      "score": 0.5827904343605042
+    },
+    {
+      "name": "Smart grid",
+      "score": 0.5585181713104248
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5092765092849731
+    },
+    {
+      "name": "Demand forecasting",
+      "score": 0.47370192408561707
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.43971070647239685
+    },
+    {
+      "name": "Quantile regression",
+      "score": 0.4349977374076843
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.43309828639030457
+    },
+    {
+      "name": "Demand response",
+      "score": 0.43259188532829285
+    },
+    {
+      "name": "Photovoltaic system",
+      "score": 0.4192640781402588
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.37369078397750854
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3600650727748871
+    },
+    {
+      "name": "Electricity",
+      "score": 0.25578439235687256
+    },
+    {
+      "name": "Engineering",
+      "score": 0.24329304695129395
+    },
+    {
+      "name": "Operations research",
+      "score": 0.2173253297805786
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

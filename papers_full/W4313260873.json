@@ -1,75 +1,130 @@
 {
-    "title": "Stock Price Prediction Using a Frequency Decomposition Based GRU Transformer Neural Network",
-    "url": "https://openalex.org/W4313260873",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2105849678",
-            "name": "Chengyu Li",
-            "affiliations": [
-                "University of Melbourne"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120743924",
-            "name": "Guoqi Qian",
-            "affiliations": [
-                "University of Melbourne"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3080733778",
-        "https://openalex.org/W2911494597",
-        "https://openalex.org/W2923002376",
-        "https://openalex.org/W2050654176",
-        "https://openalex.org/W2169533279",
-        "https://openalex.org/W3036929302",
-        "https://openalex.org/W3159925151",
-        "https://openalex.org/W3007854580",
-        "https://openalex.org/W4200482878",
-        "https://openalex.org/W2137983211",
-        "https://openalex.org/W6774120305",
-        "https://openalex.org/W2784186414",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2913159621",
-        "https://openalex.org/W2766736793",
-        "https://openalex.org/W2908285010",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2005708641",
-        "https://openalex.org/W6802189323",
-        "https://openalex.org/W2905410798",
-        "https://openalex.org/W3080113688",
-        "https://openalex.org/W2071063796",
-        "https://openalex.org/W2125056386",
-        "https://openalex.org/W4385763767",
-        "https://openalex.org/W3012629428",
-        "https://openalex.org/W2885054548",
-        "https://openalex.org/W4307216807",
-        "https://openalex.org/W2987147499",
-        "https://openalex.org/W2128728535",
-        "https://openalex.org/W2165698076",
-        "https://openalex.org/W2774513877",
-        "https://openalex.org/W2789364533",
-        "https://openalex.org/W3105750503",
-        "https://openalex.org/W2911608625",
-        "https://openalex.org/W2972689351",
-        "https://openalex.org/W3016053489",
-        "https://openalex.org/W2915043312",
-        "https://openalex.org/W4363650660",
-        "https://openalex.org/W3088934411",
-        "https://openalex.org/W3201179901",
-        "https://openalex.org/W2007221293",
-        "https://openalex.org/W3131002975",
-        "https://openalex.org/W3094568574",
-        "https://openalex.org/W3092557781",
-        "https://openalex.org/W4249736682",
-        "https://openalex.org/W2490603845",
-        "https://openalex.org/W2116988482",
-        "https://openalex.org/W3008152173",
-        "https://openalex.org/W3202315245"
-    ],
-    "abstract": "Stock price prediction is crucial but also challenging in any trading system in stock markets. Currently, family of recurrent neural networks (RNNs) have been widely used for stock prediction with many successes. However, difficulties still remain to make RNNs more successful in a cluttered stock market. Specifically, RNNs lack power to retrieve discerning features from a clutter of signals in stock information flow. Making it worse, by RNN a single long time cell from the market is often fused into a single feature, losing all the information about time which is essential for temporal stock prediction. To tackle these two issues, we develop in this paper a novel hybrid neural network for price prediction, which is named frequency decomposition induced gate recurrent unit (GRU) transformer, abbreviated to FDGRU-transformer or FDG-trans). Inspired by the success of frequency decomposition, in FDG-transformer we apply empirical model decomposition to decompose the complete ensemble of cluttered data into a trend component plus several informative and independent mode components. Equipped with the decomposition, FDG-transformer has the capacity to extract the discriminative insights from the cluttered signals. To retain the temporal information in the observed cluttered data, FDG-transformer utilizes hybrid neural network of GRU, long short term memory (LSTM) and multi-head attention (MHA) transformers. The integrated transformer network is capable of encoding the impact of different weights from each past time step to the current one, resulting in the establishment of a time series model from a deeper fine-grained level. We appy the developed FDG-transformer model to analyze Limit Order Book data and compare the results with that obtained from other state-of-the-art methods. The comparison shows that our model delivers effective price forecasting. Moreover, an ablation study is conducted to validate the importance and necessity of each component in the proposed model.",
-    "full_text": null
+  "title": "Stock Price Prediction Using a Frequency Decomposition Based GRU Transformer Neural Network",
+  "url": "https://openalex.org/W4313260873",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2105849678",
+      "name": "Chengyu Li",
+      "affiliations": [
+        "University of Melbourne"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120743924",
+      "name": "Guoqi Qian",
+      "affiliations": [
+        "University of Melbourne"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3080733778",
+    "https://openalex.org/W2911494597",
+    "https://openalex.org/W2923002376",
+    "https://openalex.org/W2050654176",
+    "https://openalex.org/W2169533279",
+    "https://openalex.org/W3036929302",
+    "https://openalex.org/W3159925151",
+    "https://openalex.org/W3007854580",
+    "https://openalex.org/W4200482878",
+    "https://openalex.org/W2137983211",
+    "https://openalex.org/W6774120305",
+    "https://openalex.org/W2784186414",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2913159621",
+    "https://openalex.org/W2766736793",
+    "https://openalex.org/W2908285010",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2005708641",
+    "https://openalex.org/W6802189323",
+    "https://openalex.org/W2905410798",
+    "https://openalex.org/W3080113688",
+    "https://openalex.org/W2071063796",
+    "https://openalex.org/W2125056386",
+    "https://openalex.org/W4385763767",
+    "https://openalex.org/W3012629428",
+    "https://openalex.org/W2885054548",
+    "https://openalex.org/W4307216807",
+    "https://openalex.org/W2987147499",
+    "https://openalex.org/W2128728535",
+    "https://openalex.org/W2165698076",
+    "https://openalex.org/W2774513877",
+    "https://openalex.org/W2789364533",
+    "https://openalex.org/W3105750503",
+    "https://openalex.org/W2911608625",
+    "https://openalex.org/W2972689351",
+    "https://openalex.org/W3016053489",
+    "https://openalex.org/W2915043312",
+    "https://openalex.org/W4363650660",
+    "https://openalex.org/W3088934411",
+    "https://openalex.org/W3201179901",
+    "https://openalex.org/W2007221293",
+    "https://openalex.org/W3131002975",
+    "https://openalex.org/W3094568574",
+    "https://openalex.org/W3092557781",
+    "https://openalex.org/W4249736682",
+    "https://openalex.org/W2490603845",
+    "https://openalex.org/W2116988482",
+    "https://openalex.org/W3008152173",
+    "https://openalex.org/W3202315245"
+  ],
+  "abstract": "Stock price prediction is crucial but also challenging in any trading system in stock markets. Currently, family of recurrent neural networks (RNNs) have been widely used for stock prediction with many successes. However, difficulties still remain to make RNNs more successful in a cluttered stock market. Specifically, RNNs lack power to retrieve discerning features from a clutter of signals in stock information flow. Making it worse, by RNN a single long time cell from the market is often fused into a single feature, losing all the information about time which is essential for temporal stock prediction. To tackle these two issues, we develop in this paper a novel hybrid neural network for price prediction, which is named frequency decomposition induced gate recurrent unit (GRU) transformer, abbreviated to FDGRU-transformer or FDG-trans). Inspired by the success of frequency decomposition, in FDG-transformer we apply empirical model decomposition to decompose the complete ensemble of cluttered data into a trend component plus several informative and independent mode components. Equipped with the decomposition, FDG-transformer has the capacity to extract the discriminative insights from the cluttered signals. To retain the temporal information in the observed cluttered data, FDG-transformer utilizes hybrid neural network of GRU, long short term memory (LSTM) and multi-head attention (MHA) transformers. The integrated transformer network is capable of encoding the impact of different weights from each past time step to the current one, resulting in the establishment of a time series model from a deeper fine-grained level. We appy the developed FDG-transformer model to analyze Limit Order Book data and compare the results with that obtained from other state-of-the-art methods. The comparison shows that our model delivers effective price forecasting. Moreover, an ablation study is conducted to validate the importance and necessity of each component in the proposed model.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6247975826263428
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.6115872263908386
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6009805798530579
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.49092796444892883
+    },
+    {
+      "name": "Long short term memory",
+      "score": 0.4651437997817993
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4375761151313782
+    },
+    {
+      "name": "Stock market",
+      "score": 0.41312333941459656
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1969728171825409
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07907330989837646
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Horse",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

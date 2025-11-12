@@ -1,94 +1,185 @@
 {
-    "title": "Deep learning framework with Local Sparse Transformer for construction worker detection in 3D with LiDAR",
-    "url": "https://openalex.org/W4399052822",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2109741836",
-            "name": "Mingyu Zhang",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A120759433",
-            "name": "Lei Wang",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2038325897",
-            "name": "Shuai Han",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113858496",
-            "name": "Shuyuan Wang",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099950579",
-            "name": "Heng Li",
-            "affiliations": [
-                "Hong Kong Polytechnic University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2583560550",
-        "https://openalex.org/W2963438049",
-        "https://openalex.org/W3035574168",
-        "https://openalex.org/W2560609797",
-        "https://openalex.org/W3109675406",
-        "https://openalex.org/W4386076253",
-        "https://openalex.org/W4313588220",
-        "https://openalex.org/W4283446143",
-        "https://openalex.org/W2803862859",
-        "https://openalex.org/W2963182550",
-        "https://openalex.org/W4312950730",
-        "https://openalex.org/W3039448353",
-        "https://openalex.org/W4312546175",
-        "https://openalex.org/W3033193681",
-        "https://openalex.org/W4313145913",
-        "https://openalex.org/W2968296999",
-        "https://openalex.org/W2902593794",
-        "https://openalex.org/W3118427100",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4214526701",
-        "https://openalex.org/W4214777292",
-        "https://openalex.org/W3103298250",
-        "https://openalex.org/W3118635606",
-        "https://openalex.org/W4214624153",
-        "https://openalex.org/W4365140359",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W2988715931",
-        "https://openalex.org/W2624503621",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W4384936490",
-        "https://openalex.org/W3189310703",
-        "https://openalex.org/W2795247881",
-        "https://openalex.org/W2905468702",
-        "https://openalex.org/W3138523568",
-        "https://openalex.org/W3003610113",
-        "https://openalex.org/W2897529137",
-        "https://openalex.org/W2798965597",
-        "https://openalex.org/W3167095230",
-        "https://openalex.org/W2963727135",
-        "https://openalex.org/W2639936844",
-        "https://openalex.org/W2104509690",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W2957165754",
-        "https://openalex.org/W2921440296",
-        "https://openalex.org/W3017147371",
-        "https://openalex.org/W4295312788"
-    ],
-    "abstract": "Abstract Autonomous equipment is playing an increasingly important role in construction tasks. It is essential to equip autonomous equipment with powerful 3D detection capability to avoid accidents and inefficiency. However, there is limited research within the construction field that has extended detection to 3D. To this end, this study develops a light detection and ranging (LiDAR)‐based deep‐learning model for the 3D detection of workers on construction sites. The proposed model adopts a voxel‐based anchor‐free 3D object detection paradigm. To enhance the feature extraction capability for tough detection tasks, a novel Transformer‐based block is proposed, where the multi‐head self‐attention is applied in local grid regions. The detection model integrates the Transformer blocks with 3D sparse convolution to extract wide and local features while pruning redundant features in modified downsampling layers. To train and test the proposed model, a LiDAR point cloud dataset was created, which includes workers in construction sites with 3D box annotations. The experiment results indicate that the proposed model outperforms the baseline models with higher mean average precision and smaller regression errors. The method in the study is promising to provide worker detection with rich and accurate 3D information required by construction automation.",
-    "full_text": null
+  "title": "Deep learning framework with Local Sparse Transformer for construction worker detection in 3D with LiDAR",
+  "url": "https://openalex.org/W4399052822",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2109741836",
+      "name": "Mingyu Zhang",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A120759433",
+      "name": "Lei Wang",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2038325897",
+      "name": "Shuai Han",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113858496",
+      "name": "Shuyuan Wang",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099950579",
+      "name": "Heng Li",
+      "affiliations": [
+        "Hong Kong Polytechnic University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2583560550",
+    "https://openalex.org/W2963438049",
+    "https://openalex.org/W3035574168",
+    "https://openalex.org/W2560609797",
+    "https://openalex.org/W3109675406",
+    "https://openalex.org/W4386076253",
+    "https://openalex.org/W4313588220",
+    "https://openalex.org/W4283446143",
+    "https://openalex.org/W2803862859",
+    "https://openalex.org/W2963182550",
+    "https://openalex.org/W4312950730",
+    "https://openalex.org/W3039448353",
+    "https://openalex.org/W4312546175",
+    "https://openalex.org/W3033193681",
+    "https://openalex.org/W4313145913",
+    "https://openalex.org/W2968296999",
+    "https://openalex.org/W2902593794",
+    "https://openalex.org/W3118427100",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4214526701",
+    "https://openalex.org/W4214777292",
+    "https://openalex.org/W3103298250",
+    "https://openalex.org/W3118635606",
+    "https://openalex.org/W4214624153",
+    "https://openalex.org/W4365140359",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W2988715931",
+    "https://openalex.org/W2624503621",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W4384936490",
+    "https://openalex.org/W3189310703",
+    "https://openalex.org/W2795247881",
+    "https://openalex.org/W2905468702",
+    "https://openalex.org/W3138523568",
+    "https://openalex.org/W3003610113",
+    "https://openalex.org/W2897529137",
+    "https://openalex.org/W2798965597",
+    "https://openalex.org/W3167095230",
+    "https://openalex.org/W2963727135",
+    "https://openalex.org/W2639936844",
+    "https://openalex.org/W2104509690",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W2957165754",
+    "https://openalex.org/W2921440296",
+    "https://openalex.org/W3017147371",
+    "https://openalex.org/W4295312788"
+  ],
+  "abstract": "Abstract Autonomous equipment is playing an increasingly important role in construction tasks. It is essential to equip autonomous equipment with powerful 3D detection capability to avoid accidents and inefficiency. However, there is limited research within the construction field that has extended detection to 3D. To this end, this study develops a light detection and ranging (LiDAR)‐based deep‐learning model for the 3D detection of workers on construction sites. The proposed model adopts a voxel‐based anchor‐free 3D object detection paradigm. To enhance the feature extraction capability for tough detection tasks, a novel Transformer‐based block is proposed, where the multi‐head self‐attention is applied in local grid regions. The detection model integrates the Transformer blocks with 3D sparse convolution to extract wide and local features while pruning redundant features in modified downsampling layers. To train and test the proposed model, a LiDAR point cloud dataset was created, which includes workers in construction sites with 3D box annotations. The experiment results indicate that the proposed model outperforms the baseline models with higher mean average precision and smaller regression errors. The method in the study is promising to provide worker detection with rich and accurate 3D information required by construction automation.",
+  "full_text": null,
+  "topic": "Lidar",
+  "concepts": [
+    {
+      "name": "Lidar",
+      "score": 0.7617900371551514
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7515368461608887
+    },
+    {
+      "name": "Point cloud",
+      "score": 0.7145545482635498
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6655513048171997
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5508846044540405
+    },
+    {
+      "name": "Object detection",
+      "score": 0.548315703868866
+    },
+    {
+      "name": "Upsampling",
+      "score": 0.44340530037879944
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.437921404838562
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.43384772539138794
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.424635648727417
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.41429150104522705
+    },
+    {
+      "name": "Data mining",
+      "score": 0.35598260164260864
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.34304916858673096
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.337104856967926
+    },
+    {
+      "name": "Engineering",
+      "score": 0.17691808938980103
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.10971924662590027
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

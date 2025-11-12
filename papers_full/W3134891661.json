@@ -1,98 +1,173 @@
 {
-    "title": "Augmenting Transformers with KNN-Based Composite Memory for Dialog",
-    "url": "https://openalex.org/W3134891661",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2171998422",
-            "name": "Angela Fan",
-            "affiliations": [
-                "Laboratoire Lorrain de Recherche en Informatique et ses Applications",
-                "Meta (Israel)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A331854518",
-            "name": "Claire Gardent",
-            "affiliations": [
-                "Laboratoire Lorrain de Recherche en Informatique et ses Applications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2798543329",
-            "name": "Chloé Braud",
-            "affiliations": [
-                "Institut de Recherche en Informatique de Toulouse"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2160652726",
-            "name": "Antoine Bordes",
-            "affiliations": [
-                "Meta (Israel)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2962985038",
-        "https://openalex.org/W2963932686",
-        "https://openalex.org/W2962974452",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W3035448310",
-        "https://openalex.org/W2250384498",
-        "https://openalex.org/W2885421725",
-        "https://openalex.org/W2963825865",
-        "https://openalex.org/W2976855657",
-        "https://openalex.org/W4233539159",
-        "https://openalex.org/W2599674900",
-        "https://openalex.org/W2131462252",
-        "https://openalex.org/W2962805889",
-        "https://openalex.org/W2902214435",
-        "https://openalex.org/W4236965008",
-        "https://openalex.org/W2531563875",
-        "https://openalex.org/W2799269579",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W2995154514",
-        "https://openalex.org/W3016829315",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W2995289474",
-        "https://openalex.org/W2597289420",
-        "https://openalex.org/W2971300525",
-        "https://openalex.org/W2955227499",
-        "https://openalex.org/W2898875342",
-        "https://openalex.org/W2970579055",
-        "https://openalex.org/W2571859396",
-        "https://openalex.org/W2964210218",
-        "https://openalex.org/W2971883198",
-        "https://openalex.org/W2951008357",
-        "https://openalex.org/W2550893117",
-        "https://openalex.org/W2949626814",
-        "https://openalex.org/W2982260276",
-        "https://openalex.org/W2519314406",
-        "https://openalex.org/W2963096510",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W2963756346",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2950527759",
-        "https://openalex.org/W2952556884",
-        "https://openalex.org/W2970401203",
-        "https://openalex.org/W2963614749",
-        "https://openalex.org/W2948519922",
-        "https://openalex.org/W4239019441",
-        "https://openalex.org/W2953010614",
-        "https://openalex.org/W2964458951",
-        "https://openalex.org/W2962883855",
-        "https://openalex.org/W2549139847",
-        "https://openalex.org/W2899575547",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2963034893",
-        "https://openalex.org/W2400680200",
-        "https://openalex.org/W3034671305",
-        "https://openalex.org/W2998702515",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W2539809671"
-    ],
-    "abstract": "Various machine learning tasks can benefit from access to external information of different modalities, such as text and images. Recent work has focused on learning architectures with large memories capable of storing this knowledge. We propose augmenting generative Transformer neural networks with KNN-based Information Fetching (KIF) modules. Each KIF module learns a read operation to access fixed external knowledge. We apply these modules to generative dialog modeling, a challenging task where information must be flexibly retrieved and incorporated to maintain the topic and flow of conversation. We demonstrate the effectiveness of our approach by identifying relevant knowledge required for knowledgeable but engaging dialog from Wikipedia, images, and human-written dialog utterances, and show that leveraging this retrieved information improves model performance, measured by automatic and human evaluation.",
-    "full_text": null
+  "title": "Augmenting Transformers with KNN-Based Composite Memory for Dialog",
+  "url": "https://openalex.org/W3134891661",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2171998422",
+      "name": "Angela Fan",
+      "affiliations": [
+        "Laboratoire Lorrain de Recherche en Informatique et ses Applications",
+        "Meta (Israel)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A331854518",
+      "name": "Claire Gardent",
+      "affiliations": [
+        "Laboratoire Lorrain de Recherche en Informatique et ses Applications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2798543329",
+      "name": "Chloé Braud",
+      "affiliations": [
+        "Institut de Recherche en Informatique de Toulouse"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2160652726",
+      "name": "Antoine Bordes",
+      "affiliations": [
+        "Meta (Israel)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2962985038",
+    "https://openalex.org/W2963932686",
+    "https://openalex.org/W2962974452",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W3035448310",
+    "https://openalex.org/W2250384498",
+    "https://openalex.org/W2885421725",
+    "https://openalex.org/W2963825865",
+    "https://openalex.org/W2976855657",
+    "https://openalex.org/W4233539159",
+    "https://openalex.org/W2599674900",
+    "https://openalex.org/W2131462252",
+    "https://openalex.org/W2962805889",
+    "https://openalex.org/W2902214435",
+    "https://openalex.org/W4236965008",
+    "https://openalex.org/W2531563875",
+    "https://openalex.org/W2799269579",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W2995154514",
+    "https://openalex.org/W3016829315",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W2995289474",
+    "https://openalex.org/W2597289420",
+    "https://openalex.org/W2971300525",
+    "https://openalex.org/W2955227499",
+    "https://openalex.org/W2898875342",
+    "https://openalex.org/W2970579055",
+    "https://openalex.org/W2571859396",
+    "https://openalex.org/W2964210218",
+    "https://openalex.org/W2971883198",
+    "https://openalex.org/W2951008357",
+    "https://openalex.org/W2550893117",
+    "https://openalex.org/W2949626814",
+    "https://openalex.org/W2982260276",
+    "https://openalex.org/W2519314406",
+    "https://openalex.org/W2963096510",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W2963756346",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2950527759",
+    "https://openalex.org/W2952556884",
+    "https://openalex.org/W2970401203",
+    "https://openalex.org/W2963614749",
+    "https://openalex.org/W2948519922",
+    "https://openalex.org/W4239019441",
+    "https://openalex.org/W2953010614",
+    "https://openalex.org/W2964458951",
+    "https://openalex.org/W2962883855",
+    "https://openalex.org/W2549139847",
+    "https://openalex.org/W2899575547",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2963034893",
+    "https://openalex.org/W2400680200",
+    "https://openalex.org/W3034671305",
+    "https://openalex.org/W2998702515",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W2539809671"
+  ],
+  "abstract": "Various machine learning tasks can benefit from access to external information of different modalities, such as text and images. Recent work has focused on learning architectures with large memories capable of storing this knowledge. We propose augmenting generative Transformer neural networks with KNN-based Information Fetching (KIF) modules. Each KIF module learns a read operation to access fixed external knowledge. We apply these modules to generative dialog modeling, a challenging task where information must be flexibly retrieved and incorporated to maintain the topic and flow of conversation. We demonstrate the effectiveness of our approach by identifying relevant knowledge required for knowledgeable but engaging dialog from Wikipedia, images, and human-written dialog utterances, and show that leveraging this retrieved information improves model performance, measured by automatic and human evaluation.",
+  "full_text": null,
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.9007015228271484
+    },
+    {
+      "name": "Dialog box",
+      "score": 0.8795784711837769
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7637607455253601
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.6487393379211426
+    },
+    {
+      "name": "Conversation",
+      "score": 0.6222524642944336
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5366586446762085
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4242528975009918
+    },
+    {
+      "name": "Modalities",
+      "score": 0.4193613827228546
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4062345325946808
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.39384734630584717
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.11939448118209839
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Social science",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    }
+  ],
+  "topic": "Computer science"
 }

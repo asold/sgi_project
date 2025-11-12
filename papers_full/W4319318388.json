@@ -1,96 +1,159 @@
 {
-    "title": "STrans-YOLOX: Fusing Swin Transformer and YOLOX for Automatic Pavement Crack Detection",
-    "url": "https://openalex.org/W4319318388",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1982977554",
-            "name": "Hui Luo",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2140154394",
-            "name": "Jiamin Li",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3032199101",
-            "name": "Lianming Cai",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128776079",
-            "name": "Mingquan Wu",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1982977554",
-            "name": "Hui Luo",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2140154394",
-            "name": "Jiamin Li",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3032199101",
-            "name": "Lianming Cai",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128776079",
-            "name": "Mingquan Wu",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2166893195",
-        "https://openalex.org/W2058988978",
-        "https://openalex.org/W2407692387",
-        "https://openalex.org/W2795220787",
-        "https://openalex.org/W3167930677",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2963857746",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W1483870316",
-        "https://openalex.org/W2570343428",
-        "https://openalex.org/W2511065100",
-        "https://openalex.org/W3004780263",
-        "https://openalex.org/W3124942917",
-        "https://openalex.org/W2913580266",
-        "https://openalex.org/W3001456352",
-        "https://openalex.org/W3214291416",
-        "https://openalex.org/W4292873919",
-        "https://openalex.org/W3210586215",
-        "https://openalex.org/W3106728613",
-        "https://openalex.org/W3172509117",
-        "https://openalex.org/W3042011474",
-        "https://openalex.org/W2982220924",
-        "https://openalex.org/W2990278031",
-        "https://openalex.org/W3161660388",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W6761108903",
-        "https://openalex.org/W2884561390",
-        "https://openalex.org/W3106250896"
-    ],
-    "abstract": "Automatic pavement crack detection is crucial for reducing road maintenance costs and ensuring transportation safety. Although convolutional neural networks (CNNs) have been widely used in automatic pavement crack detection, they cannot adequately model the long-range dependencies between pixels and easily lose edge detail information in complex scenes. Moreover, irregular crack shapes also make the detection task challenging. To address these issues, an automatic pavement crack detection architecture named STrans-YOLOX is proposed. Specifically, the architecture first exploits the CNN backbone to extract feature information, preserving the local modeling ability of the CNN. Then, Swin Transformer is introduced to enhance the long-range dependencies through a self-attention mechanism by supplying each pixel with global features. A new global attention guidance module (GAGM) is used to ensure effective information propagation in the feature pyramid network (FPN) by using high-level semantic information to guide the low-level spatial information, thereby enhancing the multi-class and multi-scale features of cracks. During the post-processing stage, we utilize α-IoU-NMS to achieve the accurate suppression of the detection boxes in the case of occlusion and overlapping objects by introducing an adjustable power parameter. The experiments demonstrate that the proposed STrans-YOLOX achieves 63.37% mAP and surpasses the state-of-the-art models on the challenging pavement crack dataset.",
-    "full_text": null
+  "title": "STrans-YOLOX: Fusing Swin Transformer and YOLOX for Automatic Pavement Crack Detection",
+  "url": "https://openalex.org/W4319318388",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1982977554",
+      "name": "Hui Luo",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2140154394",
+      "name": "Jiamin Li",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3032199101",
+      "name": "Lianming Cai",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128776079",
+      "name": "Mingquan Wu",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1982977554",
+      "name": "Hui Luo",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2140154394",
+      "name": "Jiamin Li",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3032199101",
+      "name": "Lianming Cai",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128776079",
+      "name": "Mingquan Wu",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2166893195",
+    "https://openalex.org/W2058988978",
+    "https://openalex.org/W2407692387",
+    "https://openalex.org/W2795220787",
+    "https://openalex.org/W3167930677",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2963857746",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W1483870316",
+    "https://openalex.org/W2570343428",
+    "https://openalex.org/W2511065100",
+    "https://openalex.org/W3004780263",
+    "https://openalex.org/W3124942917",
+    "https://openalex.org/W2913580266",
+    "https://openalex.org/W3001456352",
+    "https://openalex.org/W3214291416",
+    "https://openalex.org/W4292873919",
+    "https://openalex.org/W3210586215",
+    "https://openalex.org/W3106728613",
+    "https://openalex.org/W3172509117",
+    "https://openalex.org/W3042011474",
+    "https://openalex.org/W2982220924",
+    "https://openalex.org/W2990278031",
+    "https://openalex.org/W3161660388",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W6761108903",
+    "https://openalex.org/W2884561390",
+    "https://openalex.org/W3106250896"
+  ],
+  "abstract": "Automatic pavement crack detection is crucial for reducing road maintenance costs and ensuring transportation safety. Although convolutional neural networks (CNNs) have been widely used in automatic pavement crack detection, they cannot adequately model the long-range dependencies between pixels and easily lose edge detail information in complex scenes. Moreover, irregular crack shapes also make the detection task challenging. To address these issues, an automatic pavement crack detection architecture named STrans-YOLOX is proposed. Specifically, the architecture first exploits the CNN backbone to extract feature information, preserving the local modeling ability of the CNN. Then, Swin Transformer is introduced to enhance the long-range dependencies through a self-attention mechanism by supplying each pixel with global features. A new global attention guidance module (GAGM) is used to ensure effective information propagation in the feature pyramid network (FPN) by using high-level semantic information to guide the low-level spatial information, thereby enhancing the multi-class and multi-scale features of cracks. During the post-processing stage, we utilize α-IoU-NMS to achieve the accurate suppression of the detection boxes in the case of occlusion and overlapping objects by introducing an adjustable power parameter. The experiments demonstrate that the proposed STrans-YOLOX achieves 63.37% mAP and surpasses the state-of-the-art models on the challenging pavement crack dataset.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7161617875099182
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.637887716293335
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5329077839851379
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5280901789665222
+    },
+    {
+      "name": "Exploit",
+      "score": 0.50238037109375
+    },
+    {
+      "name": "Pixel",
+      "score": 0.46398022770881653
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.4107179641723633
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.36292845010757446
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.33289554715156555
+    },
+    {
+      "name": "Engineering",
+      "score": 0.18446186184883118
+    },
+    {
+      "name": "Computer security",
+      "score": 0.06743314862251282
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

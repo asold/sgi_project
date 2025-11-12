@@ -1,72 +1,139 @@
 {
-    "title": "The Bias that Lies Beneath: Qualitative Uncovering of Stereotypes in Large Language Models",
-    "url": "https://openalex.org/W4399676540",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2550392451",
-            "name": "William Babonnaud",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3015781177",
-            "name": "Estelle Delouche",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3174276797",
-            "name": "Mounir Lahlouh",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4360976361",
-        "https://openalex.org/W3130478189",
-        "https://openalex.org/W4377864547",
-        "https://openalex.org/W3093882308",
-        "https://openalex.org/W4387688022",
-        "https://openalex.org/W4285294416",
-        "https://openalex.org/W4377130677",
-        "https://openalex.org/W4399528455",
-        "https://openalex.org/W3100355250",
-        "https://openalex.org/W4389072548",
-        "https://openalex.org/W4381571703",
-        "https://openalex.org/W4389072555",
-        "https://openalex.org/W4388110106",
-        "https://openalex.org/W4287854462",
-        "https://openalex.org/W4387687112",
-        "https://openalex.org/W4391012755",
-        "https://openalex.org/W3171850892",
-        "https://openalex.org/W2962686197",
-        "https://openalex.org/W4387821331",
-        "https://openalex.org/W3207316473",
-        "https://openalex.org/W2962862931",
-        "https://openalex.org/W3123340107",
-        "https://openalex.org/W3203163443",
-        "https://openalex.org/W4294435850",
-        "https://openalex.org/W4382491840",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W1593045043",
-        "https://openalex.org/W3176477796",
-        "https://openalex.org/W4385573783",
-        "https://openalex.org/W4285210452",
-        "https://openalex.org/W3037831233",
-        "https://openalex.org/W3201522485",
-        "https://openalex.org/W4383175701",
-        "https://openalex.org/W4389520710",
-        "https://openalex.org/W2102614574",
-        "https://openalex.org/W4366850566",
-        "https://openalex.org/W2963667126",
-        "https://openalex.org/W4385468994",
-        "https://openalex.org/W4362521774",
-        "https://openalex.org/W2918821272",
-        "https://openalex.org/W3105882417",
-        "https://openalex.org/W4287887760",
-        "https://openalex.org/W4385374425",
-        "https://openalex.org/W2964222296",
-        "https://openalex.org/W3102914525",
-        "https://openalex.org/W2971307358"
-    ],
-    "abstract": "The rapid growth of Large Language Models (LLMs), such as ChatGPT and Mistral, has raised concerns about their ability to generate inappropriate, toxic and ethically problematic content. This problem is further amplified by LLMs' tendency to reproduce the prejudices and stereotypes present in their training datasets, which include misinformation, hate speech and other unethical content. Traditional methods of automatic bias detection rely on static datasets that are unable to keep up with society's constantly changing prejudices, and so fail to capture the large diversity of biases, especially implicit associations related to demographic characteristics like gender, ethnicity, nationality, and so on. In addition, these approaches frequently use adversarial techniques that force models to generate harmful language. In response, this study proposes a novel qualitative protocol based on prompting techniques to uncover implicit bias in LLM-generated texts without explicitly asking for prejudicial content. Our protocol focuses on biases associated with gender, sexual orientation, nationality, ethnicity and religion, with the aim of raising awareness of the stereotypes perpetuated by LLMs. We include the Tree of Thoughts technique (ToT) in our protocol, enabling a systematic and strategic examination of internal biases. Through extensive prompting experiments, we demonstrate the effectiveness of the protocol in detecting and assessing various types of stereotypes, thus providing a generic and reproducible methodology. Our results provide important insights for the ethical evaluation of LLMs, which is essential in the current climate of rapid advancement and implementation of generative AI technologies across various industries.Warning: This paper contains explicit statements of offensiveor upsetting contents.",
-    "full_text": null
+  "title": "The Bias that Lies Beneath: Qualitative Uncovering of Stereotypes in Large Language Models",
+  "url": "https://openalex.org/W4399676540",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2550392451",
+      "name": "William Babonnaud",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3015781177",
+      "name": "Estelle Delouche",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3174276797",
+      "name": "Mounir Lahlouh",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4360976361",
+    "https://openalex.org/W3130478189",
+    "https://openalex.org/W4377864547",
+    "https://openalex.org/W3093882308",
+    "https://openalex.org/W4387688022",
+    "https://openalex.org/W4285294416",
+    "https://openalex.org/W4377130677",
+    "https://openalex.org/W4399528455",
+    "https://openalex.org/W3100355250",
+    "https://openalex.org/W4389072548",
+    "https://openalex.org/W4381571703",
+    "https://openalex.org/W4389072555",
+    "https://openalex.org/W4388110106",
+    "https://openalex.org/W4287854462",
+    "https://openalex.org/W4387687112",
+    "https://openalex.org/W4391012755",
+    "https://openalex.org/W3171850892",
+    "https://openalex.org/W2962686197",
+    "https://openalex.org/W4387821331",
+    "https://openalex.org/W3207316473",
+    "https://openalex.org/W2962862931",
+    "https://openalex.org/W3123340107",
+    "https://openalex.org/W3203163443",
+    "https://openalex.org/W4294435850",
+    "https://openalex.org/W4382491840",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W1593045043",
+    "https://openalex.org/W3176477796",
+    "https://openalex.org/W4385573783",
+    "https://openalex.org/W4285210452",
+    "https://openalex.org/W3037831233",
+    "https://openalex.org/W3201522485",
+    "https://openalex.org/W4383175701",
+    "https://openalex.org/W4389520710",
+    "https://openalex.org/W2102614574",
+    "https://openalex.org/W4366850566",
+    "https://openalex.org/W2963667126",
+    "https://openalex.org/W4385468994",
+    "https://openalex.org/W4362521774",
+    "https://openalex.org/W2918821272",
+    "https://openalex.org/W3105882417",
+    "https://openalex.org/W4287887760",
+    "https://openalex.org/W4385374425",
+    "https://openalex.org/W2964222296",
+    "https://openalex.org/W3102914525",
+    "https://openalex.org/W2971307358"
+  ],
+  "abstract": "The rapid growth of Large Language Models (LLMs), such as ChatGPT and Mistral, has raised concerns about their ability to generate inappropriate, toxic and ethically problematic content. This problem is further amplified by LLMs' tendency to reproduce the prejudices and stereotypes present in their training datasets, which include misinformation, hate speech and other unethical content. Traditional methods of automatic bias detection rely on static datasets that are unable to keep up with society's constantly changing prejudices, and so fail to capture the large diversity of biases, especially implicit associations related to demographic characteristics like gender, ethnicity, nationality, and so on. In addition, these approaches frequently use adversarial techniques that force models to generate harmful language. In response, this study proposes a novel qualitative protocol based on prompting techniques to uncover implicit bias in LLM-generated texts without explicitly asking for prejudicial content. Our protocol focuses on biases associated with gender, sexual orientation, nationality, ethnicity and religion, with the aim of raising awareness of the stereotypes perpetuated by LLMs. We include the Tree of Thoughts technique (ToT) in our protocol, enabling a systematic and strategic examination of internal biases. Through extensive prompting experiments, we demonstrate the effectiveness of the protocol in detecting and assessing various types of stereotypes, thus providing a generic and reproducible methodology. Our results provide important insights for the ethical evaluation of LLMs, which is essential in the current climate of rapid advancement and implementation of generative AI technologies across various industries.Warning: This paper contains explicit statements of offensiveor upsetting contents.",
+  "full_text": null,
+  "topic": "Protocol (science)",
+  "concepts": [
+    {
+      "name": "Protocol (science)",
+      "score": 0.6640245914459229
+    },
+    {
+      "name": "Adversarial system",
+      "score": 0.5327147841453552
+    },
+    {
+      "name": "Ethnic group",
+      "score": 0.5262148380279541
+    },
+    {
+      "name": "Nationality",
+      "score": 0.5182706713676453
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.48278558254241943
+    },
+    {
+      "name": "Psychology",
+      "score": 0.4684063792228699
+    },
+    {
+      "name": "Sexual orientation",
+      "score": 0.4636567234992981
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4136159420013428
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.3539278507232666
+    },
+    {
+      "name": "Immigration",
+      "score": 0.23110917210578918
+    },
+    {
+      "name": "Political science",
+      "score": 0.22175168991088867
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.21554869413375854
+    },
+    {
+      "name": "Law",
+      "score": 0.15557155013084412
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Alternative medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,132 +1,175 @@
 {
-    "title": "Hybrid semantic segmentation for tunnel lining cracks based on Swin Transformer and convolutional neural network",
-    "url": "https://openalex.org/W4362551393",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096066542",
-            "name": "Zhong Zhou",
-            "affiliations": [
-                "China Nonferrous Metals Changsha Investigation Design Institute",
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102511180",
-            "name": "Junjie Zhang",
-            "affiliations": [
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2320233704",
-            "name": "Chenjie Gong",
-            "affiliations": [
-                "Central South University",
-                "China Nonferrous Metals Changsha Investigation Design Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096066542",
-            "name": "Zhong Zhou",
-            "affiliations": [
-                "Central South University",
-                "China Nonferrous Metals Changsha Investigation Design Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102511180",
-            "name": "Junjie Zhang",
-            "affiliations": [
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2320233704",
-            "name": "Chenjie Gong",
-            "affiliations": [
-                "China Nonferrous Metals Changsha Investigation Design Institute",
-                "Central South University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2966126335",
-        "https://openalex.org/W3082932313",
-        "https://openalex.org/W6674385629",
-        "https://openalex.org/W4321232185",
-        "https://openalex.org/W4223510716",
-        "https://openalex.org/W4213012943",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2531409750",
-        "https://openalex.org/W4283459038",
-        "https://openalex.org/W3137278571",
-        "https://openalex.org/W3134108147",
-        "https://openalex.org/W2973007446",
-        "https://openalex.org/W2562960701",
-        "https://openalex.org/W4283067291",
-        "https://openalex.org/W2905163589",
-        "https://openalex.org/W3209603352",
-        "https://openalex.org/W3202923600",
-        "https://openalex.org/W2619732805",
-        "https://openalex.org/W4319066919",
-        "https://openalex.org/W4295193358",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W4313032421",
-        "https://openalex.org/W2982083293",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W2998291112",
-        "https://openalex.org/W2808919226",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W3162013530",
-        "https://openalex.org/W4225400017",
-        "https://openalex.org/W2065289708",
-        "https://openalex.org/W3178744167",
-        "https://openalex.org/W3002978252",
-        "https://openalex.org/W2963857746",
-        "https://openalex.org/W4283331172",
-        "https://openalex.org/W3177143648",
-        "https://openalex.org/W2912350898",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W3103298250",
-        "https://openalex.org/W2962914239",
-        "https://openalex.org/W3022487121",
-        "https://openalex.org/W3146685014",
-        "https://openalex.org/W2921440296",
-        "https://openalex.org/W1944586112",
-        "https://openalex.org/W2732719441",
-        "https://openalex.org/W2736832651",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2110764733",
-        "https://openalex.org/W2995673861",
-        "https://openalex.org/W2964098128",
-        "https://openalex.org/W2962858109",
-        "https://openalex.org/W4280491056",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W3034971973",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3034552520",
-        "https://openalex.org/W4224244676",
-        "https://openalex.org/W4313136325",
-        "https://openalex.org/W3163568349",
-        "https://openalex.org/W4299995623",
-        "https://openalex.org/W4206007559",
-        "https://openalex.org/W4281254198",
-        "https://openalex.org/W3168130883",
-        "https://openalex.org/W2504335775",
-        "https://openalex.org/W3112798201",
-        "https://openalex.org/W3200763476",
-        "https://openalex.org/W3196589184",
-        "https://openalex.org/W4281874032",
-        "https://openalex.org/W4220801936",
-        "https://openalex.org/W4308151341",
-        "https://openalex.org/W2899242765",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4226159128",
-        "https://openalex.org/W2097998348"
-    ],
-    "abstract": "Abstract In the field of tunnel lining crack identification, the semantic segmentation algorithms based on convolution neural network (CNN) are extensively used. Owing to the inherent locality of CNN, these algorithms cannot make full use of context semantic information, resulting in difficulty in capturing the global features of crack. Transformer‐based networks can capture global semantic information, but this method also has the deficiencies of strong data dependence and easy loss of local features. In this paper, a hybrid semantic segmentation algorithm for tunnel lining crack, named SCDeepLab, is proposed by fusing Swin Transformer and CNN in the encoding and decoding framework of DeepLabv3+ to address the above issues. In SCDeepLab, a joint backbone network is introduced with CNN‐based Inverse Residual Block and Swin Transformer Block. The former is used to extract the local detailed information of the crack to generate the shallow feature layer, whereas the latter is used to extract the global semantic information to obtain the deep feature layer. In addition, Efficient Channel Attention enhanced Feature Fusion Module is proposed to fuse the shallow and deep features to combine the advantages of the two types of features. Furthermore, the strategy of transfer learning is adopted to solve the data dependency of Swin Transformer. The results show that the mean intersection over union ( mIoU ) and mean pixel accuracy ( mPA ) of SCDeepLab on the data sets constructed in this paper are 77.41% and 84.42%, respectively, which have higher segmentation accuracy than previous CNN‐based and transformer‐based semantic segmentation algorithms.",
-    "full_text": null
+  "title": "Hybrid semantic segmentation for tunnel lining cracks based on Swin Transformer and convolutional neural network",
+  "url": "https://openalex.org/W4362551393",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096066542",
+      "name": "Zhong Zhou",
+      "affiliations": [
+        "China Nonferrous Metals Changsha Investigation Design Institute",
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102511180",
+      "name": "Junjie Zhang",
+      "affiliations": [
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2320233704",
+      "name": "Chenjie Gong",
+      "affiliations": [
+        "Central South University",
+        "China Nonferrous Metals Changsha Investigation Design Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096066542",
+      "name": "Zhong Zhou",
+      "affiliations": [
+        "Central South University",
+        "China Nonferrous Metals Changsha Investigation Design Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102511180",
+      "name": "Junjie Zhang",
+      "affiliations": [
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2320233704",
+      "name": "Chenjie Gong",
+      "affiliations": [
+        "China Nonferrous Metals Changsha Investigation Design Institute",
+        "Central South University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2966126335",
+    "https://openalex.org/W3082932313",
+    "https://openalex.org/W6674385629",
+    "https://openalex.org/W4321232185",
+    "https://openalex.org/W4223510716",
+    "https://openalex.org/W4213012943",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2531409750",
+    "https://openalex.org/W4283459038",
+    "https://openalex.org/W3137278571",
+    "https://openalex.org/W3134108147",
+    "https://openalex.org/W2973007446",
+    "https://openalex.org/W2562960701",
+    "https://openalex.org/W4283067291",
+    "https://openalex.org/W2905163589",
+    "https://openalex.org/W3209603352",
+    "https://openalex.org/W3202923600",
+    "https://openalex.org/W2619732805",
+    "https://openalex.org/W4319066919",
+    "https://openalex.org/W4295193358",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W4313032421",
+    "https://openalex.org/W2982083293",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W2998291112",
+    "https://openalex.org/W2808919226",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W3162013530",
+    "https://openalex.org/W4225400017",
+    "https://openalex.org/W2065289708",
+    "https://openalex.org/W3178744167",
+    "https://openalex.org/W3002978252",
+    "https://openalex.org/W2963857746",
+    "https://openalex.org/W4283331172",
+    "https://openalex.org/W3177143648",
+    "https://openalex.org/W2912350898",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W3103298250",
+    "https://openalex.org/W2962914239",
+    "https://openalex.org/W3022487121",
+    "https://openalex.org/W3146685014",
+    "https://openalex.org/W2921440296",
+    "https://openalex.org/W1944586112",
+    "https://openalex.org/W2732719441",
+    "https://openalex.org/W2736832651",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2110764733",
+    "https://openalex.org/W2995673861",
+    "https://openalex.org/W2964098128",
+    "https://openalex.org/W2962858109",
+    "https://openalex.org/W4280491056",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W3034971973",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3034552520",
+    "https://openalex.org/W4224244676",
+    "https://openalex.org/W4313136325",
+    "https://openalex.org/W3163568349",
+    "https://openalex.org/W4299995623",
+    "https://openalex.org/W4206007559",
+    "https://openalex.org/W4281254198",
+    "https://openalex.org/W3168130883",
+    "https://openalex.org/W2504335775",
+    "https://openalex.org/W3112798201",
+    "https://openalex.org/W3200763476",
+    "https://openalex.org/W3196589184",
+    "https://openalex.org/W4281874032",
+    "https://openalex.org/W4220801936",
+    "https://openalex.org/W4308151341",
+    "https://openalex.org/W2899242765",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4226159128",
+    "https://openalex.org/W2097998348"
+  ],
+  "abstract": "Abstract In the field of tunnel lining crack identification, the semantic segmentation algorithms based on convolution neural network (CNN) are extensively used. Owing to the inherent locality of CNN, these algorithms cannot make full use of context semantic information, resulting in difficulty in capturing the global features of crack. Transformer‐based networks can capture global semantic information, but this method also has the deficiencies of strong data dependence and easy loss of local features. In this paper, a hybrid semantic segmentation algorithm for tunnel lining crack, named SCDeepLab, is proposed by fusing Swin Transformer and CNN in the encoding and decoding framework of DeepLabv3+ to address the above issues. In SCDeepLab, a joint backbone network is introduced with CNN‐based Inverse Residual Block and Swin Transformer Block. The former is used to extract the local detailed information of the crack to generate the shallow feature layer, whereas the latter is used to extract the global semantic information to obtain the deep feature layer. In addition, Efficient Channel Attention enhanced Feature Fusion Module is proposed to fuse the shallow and deep features to combine the advantages of the two types of features. Furthermore, the strategy of transfer learning is adopted to solve the data dependency of Swin Transformer. The results show that the mean intersection over union ( mIoU ) and mean pixel accuracy ( mPA ) of SCDeepLab on the data sets constructed in this paper are 77.41% and 84.42%, respectively, which have higher segmentation accuracy than previous CNN‐based and transformer‐based semantic segmentation algorithms.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7325772643089294
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.66603684425354
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6290369629859924
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5779387950897217
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4926789402961731
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.46467286348342896
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3209381103515625
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1466890275478363
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09782549738883972
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,85 +1,164 @@
 {
-    "title": "MFTransNet: A Multi-Modal Fusion with CNN-Transformer Network for Semantic Segmentation of HSR Remote Sensing Images",
-    "url": "https://openalex.org/W4318833867",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4260935023",
-            "name": "Shumeng He",
-            "affiliations": [
-                "Hainan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2231827616",
-            "name": "Houqun Yang",
-            "affiliations": [
-                "Hainan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096489618",
-            "name": "Xiaoying Zhang",
-            "affiliations": [
-                "Hainan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2155605159",
-            "name": "Xuanyu Li",
-            "affiliations": [
-                "Hainan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2774839435",
-        "https://openalex.org/W3027225766",
-        "https://openalex.org/W2782475589",
-        "https://openalex.org/W6796589177",
-        "https://openalex.org/W4312272867",
-        "https://openalex.org/W3209455776",
-        "https://openalex.org/W4297263351",
-        "https://openalex.org/W3202417356",
-        "https://openalex.org/W4285802118",
-        "https://openalex.org/W4283802599",
-        "https://openalex.org/W4213361588",
-        "https://openalex.org/W2972540077",
-        "https://openalex.org/W3207919963",
-        "https://openalex.org/W2895165409",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W2921781974",
-        "https://openalex.org/W2395611524",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W1745334888",
-        "https://openalex.org/W3034427230",
-        "https://openalex.org/W4309283827",
-        "https://openalex.org/W6772565011",
-        "https://openalex.org/W6799107526",
-        "https://openalex.org/W6795755827",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W3172509117",
-        "https://openalex.org/W4312950730",
-        "https://openalex.org/W3097777922",
-        "https://openalex.org/W3108601100",
-        "https://openalex.org/W4285394171",
-        "https://openalex.org/W6840564798",
-        "https://openalex.org/W3172863135",
-        "https://openalex.org/W3127930846",
-        "https://openalex.org/W4226412984",
-        "https://openalex.org/W2963163009",
-        "https://openalex.org/W3204166336",
-        "https://openalex.org/W2971014764",
-        "https://openalex.org/W3138136606",
-        "https://openalex.org/W4285167737",
-        "https://openalex.org/W3184761517",
-        "https://openalex.org/W3168972675",
-        "https://openalex.org/W3161825146",
-        "https://openalex.org/W3211490618"
-    ],
-    "abstract": "Due to the inherent inter-class similarity and class imbalance of remote sensing images, it is difficult to obtain effective results in single-source semantic segmentation. We consider applying multi-modal data to the task of the semantic segmentation of HSR (high spatial resolution) remote sensing images, and obtain richer semantic information by data fusion to improve the accuracy and efficiency of segmentation. However, it is still a great challenge to discover how to achieve efficient and useful information complementarity based on multi-modal remote sensing image semantic segmentation, so we have to seriously examine the numerous models. Transformer has made remarkable progress in decreasing model complexity and improving scalability and training efficiency in computer vision tasks. Therefore, we introduce Transformer into multi-modal semantic segmentation. In order to cope with the issue that the Transformer model requires a large amount of computing resources, we propose a model, MFTransNet, which combines a CNN (convolutional neural network) and Transformer to realize a lightweight multi-modal semantic segmentation structure. To do this, a small convolutional network is first used for performing preliminary feature extraction. Subsequently, these features are sent to the multi-head feature fusion module to achieve adaptive feature fusion. Finally, the features of different scales are integrated together through a multi-scale decoder. The experimental results demonstrate that MFTransNet achieves the best balance among segmentation accuracy, memory-usage efficiency and inference speed.",
-    "full_text": null
+  "title": "MFTransNet: A Multi-Modal Fusion with CNN-Transformer Network for Semantic Segmentation of HSR Remote Sensing Images",
+  "url": "https://openalex.org/W4318833867",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4260935023",
+      "name": "Shumeng He",
+      "affiliations": [
+        "Hainan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2231827616",
+      "name": "Houqun Yang",
+      "affiliations": [
+        "Hainan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096489618",
+      "name": "Xiaoying Zhang",
+      "affiliations": [
+        "Hainan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2155605159",
+      "name": "Xuanyu Li",
+      "affiliations": [
+        "Hainan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2774839435",
+    "https://openalex.org/W3027225766",
+    "https://openalex.org/W2782475589",
+    "https://openalex.org/W6796589177",
+    "https://openalex.org/W4312272867",
+    "https://openalex.org/W3209455776",
+    "https://openalex.org/W4297263351",
+    "https://openalex.org/W3202417356",
+    "https://openalex.org/W4285802118",
+    "https://openalex.org/W4283802599",
+    "https://openalex.org/W4213361588",
+    "https://openalex.org/W2972540077",
+    "https://openalex.org/W3207919963",
+    "https://openalex.org/W2895165409",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W2921781974",
+    "https://openalex.org/W2395611524",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W1745334888",
+    "https://openalex.org/W3034427230",
+    "https://openalex.org/W4309283827",
+    "https://openalex.org/W6772565011",
+    "https://openalex.org/W6799107526",
+    "https://openalex.org/W6795755827",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W3172509117",
+    "https://openalex.org/W4312950730",
+    "https://openalex.org/W3097777922",
+    "https://openalex.org/W3108601100",
+    "https://openalex.org/W4285394171",
+    "https://openalex.org/W6840564798",
+    "https://openalex.org/W3172863135",
+    "https://openalex.org/W3127930846",
+    "https://openalex.org/W4226412984",
+    "https://openalex.org/W2963163009",
+    "https://openalex.org/W3204166336",
+    "https://openalex.org/W2971014764",
+    "https://openalex.org/W3138136606",
+    "https://openalex.org/W4285167737",
+    "https://openalex.org/W3184761517",
+    "https://openalex.org/W3168972675",
+    "https://openalex.org/W3161825146",
+    "https://openalex.org/W3211490618"
+  ],
+  "abstract": "Due to the inherent inter-class similarity and class imbalance of remote sensing images, it is difficult to obtain effective results in single-source semantic segmentation. We consider applying multi-modal data to the task of the semantic segmentation of HSR (high spatial resolution) remote sensing images, and obtain richer semantic information by data fusion to improve the accuracy and efficiency of segmentation. However, it is still a great challenge to discover how to achieve efficient and useful information complementarity based on multi-modal remote sensing image semantic segmentation, so we have to seriously examine the numerous models. Transformer has made remarkable progress in decreasing model complexity and improving scalability and training efficiency in computer vision tasks. Therefore, we introduce Transformer into multi-modal semantic segmentation. In order to cope with the issue that the Transformer model requires a large amount of computing resources, we propose a model, MFTransNet, which combines a CNN (convolutional neural network) and Transformer to realize a lightweight multi-modal semantic segmentation structure. To do this, a small convolutional network is first used for performing preliminary feature extraction. Subsequently, these features are sent to the multi-head feature fusion module to achieve adaptive feature fusion. Finally, the features of different scales are integrated together through a multi-scale decoder. The experimental results demonstrate that MFTransNet achieves the best balance among segmentation accuracy, memory-usage efficiency and inference speed.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8362901210784912
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.7518234252929688
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5619494915008545
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5538806915283203
+    },
+    {
+      "name": "Scalability",
+      "score": 0.5342378616333008
+    },
+    {
+      "name": "Inference",
+      "score": 0.5286539196968079
+    },
+    {
+      "name": "Scale-space segmentation",
+      "score": 0.4643248915672302
+    },
+    {
+      "name": "Transformer",
+      "score": 0.46279358863830566
+    },
+    {
+      "name": "Modal",
+      "score": 0.4551628828048706
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.43817657232284546
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4014536142349243
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.3649534583091736
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3209441304206848
+    },
+    {
+      "name": "Database",
+      "score": 0.10522472858428955
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    }
+  ]
 }

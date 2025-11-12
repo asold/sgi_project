@@ -1,71 +1,146 @@
 {
-    "title": "Scaling hermeneutics: a guide to qualitative coding with LLMs for reflexive content analysis",
-    "url": "https://openalex.org/W4409166975",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4220488349",
-            "name": "Zackary Okun Dunivin",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2325370405",
-        "https://openalex.org/W4281564584",
-        "https://openalex.org/W2110553242",
-        "https://openalex.org/W2769563773",
-        "https://openalex.org/W3090612586",
-        "https://openalex.org/W4386542364",
-        "https://openalex.org/W4389727268",
-        "https://openalex.org/W4391134480",
-        "https://openalex.org/W4384662964",
-        "https://openalex.org/W2087411274",
-        "https://openalex.org/W4360978668",
-        "https://openalex.org/W4396832610",
-        "https://openalex.org/W2752000097",
-        "https://openalex.org/W2909182718",
-        "https://openalex.org/W2977360582",
-        "https://openalex.org/W4293222908",
-        "https://openalex.org/W4205523161",
-        "https://openalex.org/W4398221084",
-        "https://openalex.org/W2112136981",
-        "https://openalex.org/W4254309913",
-        "https://openalex.org/W4388483120",
-        "https://openalex.org/W4389518687",
-        "https://openalex.org/W337850331",
-        "https://openalex.org/W4378515183",
-        "https://openalex.org/W4387372743",
-        "https://openalex.org/W4399300622",
-        "https://openalex.org/W3151771619",
-        "https://openalex.org/W4407929901",
-        "https://openalex.org/W4294321774",
-        "https://openalex.org/W4249306455",
-        "https://openalex.org/W4235983906",
-        "https://openalex.org/W4200062464",
-        "https://openalex.org/W2846140123",
-        "https://openalex.org/W1981425990",
-        "https://openalex.org/W2929139003",
-        "https://openalex.org/W2769989726",
-        "https://openalex.org/W2105824687",
-        "https://openalex.org/W2607618454",
-        "https://openalex.org/W2799535207",
-        "https://openalex.org/W4395697889",
-        "https://openalex.org/W4404783577",
-        "https://openalex.org/W4376644341",
-        "https://openalex.org/W1496503460",
-        "https://openalex.org/W2804167811",
-        "https://openalex.org/W4385572243",
-        "https://openalex.org/W4402671980",
-        "https://openalex.org/W3044426907",
-        "https://openalex.org/W4388212667",
-        "https://openalex.org/W4406611712",
-        "https://openalex.org/W4389523793",
-        "https://openalex.org/W4390052109",
-        "https://openalex.org/W4214712307",
-        "https://openalex.org/W4385571219",
-        "https://openalex.org/W4389523767",
-        "https://openalex.org/W4402111418"
-    ],
-    "abstract": "Abstract Qualitative coding, or content analysis, is more than just labeling text: it is a reflexive interpretive practice that shapes research questions, refines theoretical insights, and illuminates subtle social dynamics. As large language models (LLMs) become increasingly adept at nuanced language tasks, questions arise about whether—and how—they can assist in large-scale coding without eroding the interpretive depth that distinguishes qualitative analysis from traditional machine learning and other quantitative approaches to natural language processing. In this paper, we present a hybrid approach that preserves hermeneutic value while incorporating LLMs to scale the application of codes to large data sets that are impractical for manual coding. Our workflow retains the traditional cycle of codebook development and refinement, adding an iterative step to adapt definitions for machine comprehension, before ultimately replacing manual with automated text categorization. We demonstrate how to rewrite code descriptions for LLM-interpretation, as well as how structured prompts and prompting the model to explain its coding decisions (chain-of-thought) can substantially improve fidelity. Empirically, our case study of socio-historical codes highlights the promise of frontier AI language models to reliably interpret paragraph-long passages representative of a humanistic study. Throughout, we emphasize ethical and practical considerations, preserving space for critical reflection, and the ongoing need for human researchers’ interpretive leadership. These strategies can guide both traditional and computational scholars aiming to harness automation effectively and responsibly—maintaining the creative, reflexive rigor of qualitative coding while capitalizing on the efficiency afforded by LLMs.",
-    "full_text": null
+  "title": "Scaling hermeneutics: a guide to qualitative coding with LLMs for reflexive content analysis",
+  "url": "https://openalex.org/W4409166975",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4220488349",
+      "name": "Zackary Okun Dunivin",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2325370405",
+    "https://openalex.org/W4281564584",
+    "https://openalex.org/W2110553242",
+    "https://openalex.org/W2769563773",
+    "https://openalex.org/W3090612586",
+    "https://openalex.org/W4386542364",
+    "https://openalex.org/W4389727268",
+    "https://openalex.org/W4391134480",
+    "https://openalex.org/W4384662964",
+    "https://openalex.org/W2087411274",
+    "https://openalex.org/W4360978668",
+    "https://openalex.org/W4396832610",
+    "https://openalex.org/W2752000097",
+    "https://openalex.org/W2909182718",
+    "https://openalex.org/W2977360582",
+    "https://openalex.org/W4293222908",
+    "https://openalex.org/W4205523161",
+    "https://openalex.org/W4398221084",
+    "https://openalex.org/W2112136981",
+    "https://openalex.org/W4254309913",
+    "https://openalex.org/W4388483120",
+    "https://openalex.org/W4389518687",
+    "https://openalex.org/W337850331",
+    "https://openalex.org/W4378515183",
+    "https://openalex.org/W4387372743",
+    "https://openalex.org/W4399300622",
+    "https://openalex.org/W3151771619",
+    "https://openalex.org/W4407929901",
+    "https://openalex.org/W4294321774",
+    "https://openalex.org/W4249306455",
+    "https://openalex.org/W4235983906",
+    "https://openalex.org/W4200062464",
+    "https://openalex.org/W2846140123",
+    "https://openalex.org/W1981425990",
+    "https://openalex.org/W2929139003",
+    "https://openalex.org/W2769989726",
+    "https://openalex.org/W2105824687",
+    "https://openalex.org/W2607618454",
+    "https://openalex.org/W2799535207",
+    "https://openalex.org/W4395697889",
+    "https://openalex.org/W4404783577",
+    "https://openalex.org/W4376644341",
+    "https://openalex.org/W1496503460",
+    "https://openalex.org/W2804167811",
+    "https://openalex.org/W4385572243",
+    "https://openalex.org/W4402671980",
+    "https://openalex.org/W3044426907",
+    "https://openalex.org/W4388212667",
+    "https://openalex.org/W4406611712",
+    "https://openalex.org/W4389523793",
+    "https://openalex.org/W4390052109",
+    "https://openalex.org/W4214712307",
+    "https://openalex.org/W4385571219",
+    "https://openalex.org/W4389523767",
+    "https://openalex.org/W4402111418"
+  ],
+  "abstract": "Abstract Qualitative coding, or content analysis, is more than just labeling text: it is a reflexive interpretive practice that shapes research questions, refines theoretical insights, and illuminates subtle social dynamics. As large language models (LLMs) become increasingly adept at nuanced language tasks, questions arise about whether—and how—they can assist in large-scale coding without eroding the interpretive depth that distinguishes qualitative analysis from traditional machine learning and other quantitative approaches to natural language processing. In this paper, we present a hybrid approach that preserves hermeneutic value while incorporating LLMs to scale the application of codes to large data sets that are impractical for manual coding. Our workflow retains the traditional cycle of codebook development and refinement, adding an iterative step to adapt definitions for machine comprehension, before ultimately replacing manual with automated text categorization. We demonstrate how to rewrite code descriptions for LLM-interpretation, as well as how structured prompts and prompting the model to explain its coding decisions (chain-of-thought) can substantially improve fidelity. Empirically, our case study of socio-historical codes highlights the promise of frontier AI language models to reliably interpret paragraph-long passages representative of a humanistic study. Throughout, we emphasize ethical and practical considerations, preserving space for critical reflection, and the ongoing need for human researchers’ interpretive leadership. These strategies can guide both traditional and computational scholars aiming to harness automation effectively and responsibly—maintaining the creative, reflexive rigor of qualitative coding while capitalizing on the efficiency afforded by LLMs.",
+  "full_text": null,
+  "topic": "Reflexivity",
+  "concepts": [
+    {
+      "name": "Reflexivity",
+      "score": 0.8216112852096558
+    },
+    {
+      "name": "Hermeneutics",
+      "score": 0.8018386960029602
+    },
+    {
+      "name": "Scaling",
+      "score": 0.6468214988708496
+    },
+    {
+      "name": "Content analysis",
+      "score": 0.5813369750976562
+    },
+    {
+      "name": "Coding (social sciences)",
+      "score": 0.5558990836143494
+    },
+    {
+      "name": "Qualitative analysis",
+      "score": 0.49249061942100525
+    },
+    {
+      "name": "Qualitative research",
+      "score": 0.47358638048171997
+    },
+    {
+      "name": "Computer science",
+      "score": 0.3940770924091339
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.3923757076263428
+    },
+    {
+      "name": "Theoretical physics",
+      "score": 0.3461132049560547
+    },
+    {
+      "name": "Sociology",
+      "score": 0.3335738182067871
+    },
+    {
+      "name": "Statistical physics",
+      "score": 0.3233869969844818
+    },
+    {
+      "name": "Psychology",
+      "score": 0.3212963342666626
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2728470265865326
+    },
+    {
+      "name": "Physics",
+      "score": 0.23476675152778625
+    },
+    {
+      "name": "Social science",
+      "score": 0.19062775373458862
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.17717960476875305
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

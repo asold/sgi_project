@@ -1,78 +1,145 @@
 {
-    "title": "scMatch: a single-cell gene expression profile annotation tool using reference datasets",
-    "url": "https://openalex.org/W2942380588",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2020114151",
-            "name": "Hou Rui",
-            "affiliations": [
-                "Queen Elizabeth II Medical Centre",
-                "University of Western Australia",
-                "Harry Perkins Institute of Medical Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3049737666",
-            "name": "Denisenko Elena",
-            "affiliations": [
-                "University of Western Australia",
-                "Harry Perkins Institute of Medical Research",
-                "Queen Elizabeth II Medical Centre"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Forrest, Alistair R R",
-            "affiliations": [
-                "Queen Elizabeth II Medical Centre",
-                "Harry Perkins Institute of Medical Research",
-                "University of Western Australia"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2907514116",
-        "https://openalex.org/W2094468530",
-        "https://openalex.org/W1993287310",
-        "https://openalex.org/W1950829641",
-        "https://openalex.org/W2793006183",
-        "https://openalex.org/W2462007197",
-        "https://openalex.org/W2549343567",
-        "https://openalex.org/W1986223165",
-        "https://openalex.org/W4251287806",
-        "https://openalex.org/W2509957998",
-        "https://openalex.org/W2788348358",
-        "https://openalex.org/W2139838862",
-        "https://openalex.org/W6754767292",
-        "https://openalex.org/W2135937351",
-        "https://openalex.org/W2600453489",
-        "https://openalex.org/W2545233410",
-        "https://openalex.org/W2151572058",
-        "https://openalex.org/W2102212449",
-        "https://openalex.org/W2019552331",
-        "https://openalex.org/W2051658465",
-        "https://openalex.org/W6841192771",
-        "https://openalex.org/W2794083495",
-        "https://openalex.org/W2344887288",
-        "https://openalex.org/W1874466506",
-        "https://openalex.org/W2556735267",
-        "https://openalex.org/W2231865019",
-        "https://openalex.org/W2591733518",
-        "https://openalex.org/W2894687190",
-        "https://openalex.org/W2149573463",
-        "https://openalex.org/W2411288489",
-        "https://openalex.org/W2049512094",
-        "https://openalex.org/W2332292689",
-        "https://openalex.org/W1984883254",
-        "https://openalex.org/W2068881679",
-        "https://openalex.org/W2114447844",
-        "https://openalex.org/W2951506174",
-        "https://openalex.org/W4289406437",
-        "https://openalex.org/W2888562574",
-        "https://openalex.org/W2885781875",
-        "https://openalex.org/W2896336686"
-    ],
-    "abstract": "Abstract Motivation Single-cell RNA sequencing (scRNA-seq) measures gene expression at the resolution of individual cells. Massively multiplexed single-cell profiling has enabled large-scale transcriptional analyses of thousands of cells in complex tissues. In most cases, the true identity of individual cells is unknown and needs to be inferred from the transcriptomic data. Existing methods typically cluster (group) cells based on similarities of their gene expression profiles and assign the same identity to all cells within each cluster using the averaged expression levels. However, scRNA-seq experiments typically produce low-coverage sequencing data for each cell, which hinders the clustering process. Results We introduce scMatch, which directly annotates single cells by identifying their closest match in large reference datasets. We used this strategy to annotate various single-cell datasets and evaluated the impacts of sequencing depth, similarity metric and reference datasets. We found that scMatch can rapidly and robustly annotate single cells with comparable accuracy to another recent cell annotation tool (SingleR), but that it is quicker and can handle larger reference datasets. We demonstrate how scMatch can handle large customized reference gene expression profiles that combine data from multiple sources, thus empowering researchers to identify cell populations in any complex tissue with the desired precision. Availability and implementation scMatch (Python code) and the FANTOM5 reference dataset are freely available to the research community here https://github.com/forrest-lab/scMatch. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "scMatch: a single-cell gene expression profile annotation tool using reference datasets",
+  "url": "https://openalex.org/W2942380588",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2020114151",
+      "name": "Hou Rui",
+      "affiliations": [
+        "Queen Elizabeth II Medical Centre",
+        "University of Western Australia",
+        "Harry Perkins Institute of Medical Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3049737666",
+      "name": "Denisenko Elena",
+      "affiliations": [
+        "University of Western Australia",
+        "Harry Perkins Institute of Medical Research",
+        "Queen Elizabeth II Medical Centre"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Forrest, Alistair R R",
+      "affiliations": [
+        "Queen Elizabeth II Medical Centre",
+        "Harry Perkins Institute of Medical Research",
+        "University of Western Australia"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2907514116",
+    "https://openalex.org/W2094468530",
+    "https://openalex.org/W1993287310",
+    "https://openalex.org/W1950829641",
+    "https://openalex.org/W2793006183",
+    "https://openalex.org/W2462007197",
+    "https://openalex.org/W2549343567",
+    "https://openalex.org/W1986223165",
+    "https://openalex.org/W4251287806",
+    "https://openalex.org/W2509957998",
+    "https://openalex.org/W2788348358",
+    "https://openalex.org/W2139838862",
+    "https://openalex.org/W6754767292",
+    "https://openalex.org/W2135937351",
+    "https://openalex.org/W2600453489",
+    "https://openalex.org/W2545233410",
+    "https://openalex.org/W2151572058",
+    "https://openalex.org/W2102212449",
+    "https://openalex.org/W2019552331",
+    "https://openalex.org/W2051658465",
+    "https://openalex.org/W6841192771",
+    "https://openalex.org/W2794083495",
+    "https://openalex.org/W2344887288",
+    "https://openalex.org/W1874466506",
+    "https://openalex.org/W2556735267",
+    "https://openalex.org/W2231865019",
+    "https://openalex.org/W2591733518",
+    "https://openalex.org/W2894687190",
+    "https://openalex.org/W2149573463",
+    "https://openalex.org/W2411288489",
+    "https://openalex.org/W2049512094",
+    "https://openalex.org/W2332292689",
+    "https://openalex.org/W1984883254",
+    "https://openalex.org/W2068881679",
+    "https://openalex.org/W2114447844",
+    "https://openalex.org/W2951506174",
+    "https://openalex.org/W4289406437",
+    "https://openalex.org/W2888562574",
+    "https://openalex.org/W2885781875",
+    "https://openalex.org/W2896336686"
+  ],
+  "abstract": "Abstract Motivation Single-cell RNA sequencing (scRNA-seq) measures gene expression at the resolution of individual cells. Massively multiplexed single-cell profiling has enabled large-scale transcriptional analyses of thousands of cells in complex tissues. In most cases, the true identity of individual cells is unknown and needs to be inferred from the transcriptomic data. Existing methods typically cluster (group) cells based on similarities of their gene expression profiles and assign the same identity to all cells within each cluster using the averaged expression levels. However, scRNA-seq experiments typically produce low-coverage sequencing data for each cell, which hinders the clustering process. Results We introduce scMatch, which directly annotates single cells by identifying their closest match in large reference datasets. We used this strategy to annotate various single-cell datasets and evaluated the impacts of sequencing depth, similarity metric and reference datasets. We found that scMatch can rapidly and robustly annotate single cells with comparable accuracy to another recent cell annotation tool (SingleR), but that it is quicker and can handle larger reference datasets. We demonstrate how scMatch can handle large customized reference gene expression profiles that combine data from multiple sources, thus empowering researchers to identify cell populations in any complex tissue with the desired precision. Availability and implementation scMatch (Python code) and the FANTOM5 reference dataset are freely available to the research community here https://github.com/forrest-lab/scMatch. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6922494173049927
+    },
+    {
+      "name": "Annotation",
+      "score": 0.6762562990188599
+    },
+    {
+      "name": "Cluster analysis",
+      "score": 0.6138009428977966
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.5910899639129639
+    },
+    {
+      "name": "Source code",
+      "score": 0.47805291414260864
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4755763113498688
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4709775447845459
+    },
+    {
+      "name": "Gene expression profiling",
+      "score": 0.4323006868362427
+    },
+    {
+      "name": "RNA-Seq",
+      "score": 0.43208587169647217
+    },
+    {
+      "name": "Transcriptome",
+      "score": 0.35542482137680054
+    },
+    {
+      "name": "Gene",
+      "score": 0.3255574107170105
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.32494503259658813
+    },
+    {
+      "name": "Biology",
+      "score": 0.265758216381073
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.24316087365150452
+    },
+    {
+      "name": "Genetics",
+      "score": 0.12490236759185791
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

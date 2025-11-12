@@ -1,109 +1,176 @@
 {
-    "title": "Multi-Task Transformer with Adaptive Cross-Entropy Loss for Multi-Dialect Speech Recognition",
-    "url": "https://openalex.org/W4303685288",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4296841126",
-            "name": "Zhengjia Dan",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1937654608",
-            "name": "Yue Zhao",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2279506386",
-            "name": "Xiaojun Bi",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109840681",
-            "name": "Licheng Wu",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141883181",
-            "name": "Qiang Ji",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4296841126",
-            "name": "Zhengjia Dan",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1937654608",
-            "name": "Yue Zhao",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2279506386",
-            "name": "Xiaojun Bi",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109840681",
-            "name": "Licheng Wu",
-            "affiliations": [
-                "Minzu University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141883181",
-            "name": "Qiang Ji",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3015974384",
-        "https://openalex.org/W3015537910",
-        "https://openalex.org/W6741263558",
-        "https://openalex.org/W2589857635",
-        "https://openalex.org/W2101066392",
-        "https://openalex.org/W2892009249",
-        "https://openalex.org/W143647774",
-        "https://openalex.org/W3016057683",
-        "https://openalex.org/W2292439652",
-        "https://openalex.org/W2291456664",
-        "https://openalex.org/W6656670161",
-        "https://openalex.org/W3084713055",
-        "https://openalex.org/W2984865357",
-        "https://openalex.org/W2963877604",
-        "https://openalex.org/W6783097568",
-        "https://openalex.org/W2767434619",
-        "https://openalex.org/W2618011341",
-        "https://openalex.org/W2963430933",
-        "https://openalex.org/W2895387432",
-        "https://openalex.org/W2060727197",
-        "https://openalex.org/W2603679025",
-        "https://openalex.org/W2889494795",
-        "https://openalex.org/W3163865502",
-        "https://openalex.org/W2964089273",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W2735006420",
-        "https://openalex.org/W2025401819",
-        "https://openalex.org/W3085046840"
-    ],
-    "abstract": "At present, most multi-dialect speech recognition models are based on a hard-parameter-sharing multi-task structure, which makes it difficult to reveal how one task contributes to others. In addition, in order to balance multi-task learning, the weights of the multi-task objective function need to be manually adjusted. This makes multi-task learning very difficult and costly because it requires constantly trying various combinations of weights to determine the optimal task weights. In this paper, we propose a multi-dialect acoustic model that combines soft-parameter-sharing multi-task learning with Transformer, and introduce several auxiliary cross-attentions to enable the auxiliary task (dialect ID recognition) to provide dialect information for the multi-dialect speech recognition task. Furthermore, we use the adaptive cross-entropy loss function as the multi-task objective function, which automatically balances the learning of the multi-task model according to the loss proportion of each task during the training process. Therefore, the optimal weight combination can be found without any manual intervention. Finally, for the two tasks of multi-dialect (including low-resource dialect) speech recognition and dialect ID recognition, the experimental results show that, compared with single-dialect Transformer, single-task multi-dialect Transformer, and multi-task Transformer with hard parameter sharing, our method significantly reduces the average syllable error rate of Tibetan multi-dialect speech recognition and the character error rate of Chinese multi-dialect speech recognition.",
-    "full_text": null
+  "title": "Multi-Task Transformer with Adaptive Cross-Entropy Loss for Multi-Dialect Speech Recognition",
+  "url": "https://openalex.org/W4303685288",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4296841126",
+      "name": "Zhengjia Dan",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1937654608",
+      "name": "Yue Zhao",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2279506386",
+      "name": "Xiaojun Bi",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109840681",
+      "name": "Licheng Wu",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141883181",
+      "name": "Qiang Ji",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4296841126",
+      "name": "Zhengjia Dan",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1937654608",
+      "name": "Yue Zhao",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2279506386",
+      "name": "Xiaojun Bi",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109840681",
+      "name": "Licheng Wu",
+      "affiliations": [
+        "Minzu University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141883181",
+      "name": "Qiang Ji",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3015974384",
+    "https://openalex.org/W3015537910",
+    "https://openalex.org/W6741263558",
+    "https://openalex.org/W2589857635",
+    "https://openalex.org/W2101066392",
+    "https://openalex.org/W2892009249",
+    "https://openalex.org/W143647774",
+    "https://openalex.org/W3016057683",
+    "https://openalex.org/W2292439652",
+    "https://openalex.org/W2291456664",
+    "https://openalex.org/W6656670161",
+    "https://openalex.org/W3084713055",
+    "https://openalex.org/W2984865357",
+    "https://openalex.org/W2963877604",
+    "https://openalex.org/W6783097568",
+    "https://openalex.org/W2767434619",
+    "https://openalex.org/W2618011341",
+    "https://openalex.org/W2963430933",
+    "https://openalex.org/W2895387432",
+    "https://openalex.org/W2060727197",
+    "https://openalex.org/W2603679025",
+    "https://openalex.org/W2889494795",
+    "https://openalex.org/W3163865502",
+    "https://openalex.org/W2964089273",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W2735006420",
+    "https://openalex.org/W2025401819",
+    "https://openalex.org/W3085046840"
+  ],
+  "abstract": "At present, most multi-dialect speech recognition models are based on a hard-parameter-sharing multi-task structure, which makes it difficult to reveal how one task contributes to others. In addition, in order to balance multi-task learning, the weights of the multi-task objective function need to be manually adjusted. This makes multi-task learning very difficult and costly because it requires constantly trying various combinations of weights to determine the optimal task weights. In this paper, we propose a multi-dialect acoustic model that combines soft-parameter-sharing multi-task learning with Transformer, and introduce several auxiliary cross-attentions to enable the auxiliary task (dialect ID recognition) to provide dialect information for the multi-dialect speech recognition task. Furthermore, we use the adaptive cross-entropy loss function as the multi-task objective function, which automatically balances the learning of the multi-task model according to the loss proportion of each task during the training process. Therefore, the optimal weight combination can be found without any manual intervention. Finally, for the two tasks of multi-dialect (including low-resource dialect) speech recognition and dialect ID recognition, the experimental results show that, compared with single-dialect Transformer, single-task multi-dialect Transformer, and multi-task Transformer with hard parameter sharing, our method significantly reduces the average syllable error rate of Tibetan multi-dialect speech recognition and the character error rate of Chinese multi-dialect speech recognition.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7633094787597656
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6941957473754883
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.631770670413971
+    },
+    {
+      "name": "Word error rate",
+      "score": 0.49606284499168396
+    },
+    {
+      "name": "Multi-task learning",
+      "score": 0.49087268114089966
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4380052089691162
+    },
+    {
+      "name": "Cross entropy",
+      "score": 0.42983368039131165
+    },
+    {
+      "name": "Entropy (arrow of time)",
+      "score": 0.4180905222892761
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.3923550248146057
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3767346143722534
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.2736286222934723
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07998844981193542
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    }
+  ]
 }

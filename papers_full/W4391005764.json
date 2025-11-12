@@ -1,142 +1,205 @@
 {
-    "title": "A granularity-level information fusion strategy on hypergraph transformer for predicting synergistic effects of anticancer drugs",
-    "url": "https://openalex.org/W4391005764",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2009336559",
-            "name": "Wei Wang",
-            "affiliations": [
-                "Beijing Academy of Artificial Intelligence",
-                "Henan Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2553783913",
-            "name": "Gao-lin Yuan",
-            "affiliations": [
-                "Henan Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5109675511",
-            "name": "Shitong Wan",
-            "affiliations": [
-                "Henan Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2146081120",
-            "name": "Ziwei Zheng",
-            "affiliations": [
-                "Henan Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117204268",
-            "name": "Dong Liu",
-            "affiliations": [
-                "Henan Normal University",
-                "Beijing Academy of Artificial Intelligence"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102227279",
-            "name": "Hongjun Zhang",
-            "affiliations": [
-                "Henan Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2126452540",
-            "name": "Juntao Li",
-            "affiliations": [
-                "Henan Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1998597206",
-            "name": "Yun Zhou",
-            "affiliations": [
-                "Henan Normal University",
-                "Beijing Academy of Artificial Intelligence"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2302734975",
-            "name": "Xianfang Wang",
-            "affiliations": [
-                "Henan Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2774112395",
-        "https://openalex.org/W4321452885",
-        "https://openalex.org/W3196304395",
-        "https://openalex.org/W4212966936",
-        "https://openalex.org/W2992010506",
-        "https://openalex.org/W6737152786",
-        "https://openalex.org/W2783897572",
-        "https://openalex.org/W3107514561",
-        "https://openalex.org/W3032005109",
-        "https://openalex.org/W3127930610",
-        "https://openalex.org/W3177840694",
-        "https://openalex.org/W2299417213",
-        "https://openalex.org/W2608863179",
-        "https://openalex.org/W2950860419",
-        "https://openalex.org/W6769655052",
-        "https://openalex.org/W2122825543",
-        "https://openalex.org/W2767147442",
-        "https://openalex.org/W2883248903",
-        "https://openalex.org/W2949524414",
-        "https://openalex.org/W3083074595",
-        "https://openalex.org/W2775061087",
-        "https://openalex.org/W4309842604",
-        "https://openalex.org/W3006386963",
-        "https://openalex.org/W4293214728",
-        "https://openalex.org/W2118151336",
-        "https://openalex.org/W6810465265",
-        "https://openalex.org/W6839815728",
-        "https://openalex.org/W4309009637",
-        "https://openalex.org/W3198971962",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2899070097",
-        "https://openalex.org/W6754929296",
-        "https://openalex.org/W6752110883",
-        "https://openalex.org/W6755340666",
-        "https://openalex.org/W3085990079",
-        "https://openalex.org/W4366986540",
-        "https://openalex.org/W6845534289",
-        "https://openalex.org/W6846422491",
-        "https://openalex.org/W6796768152",
-        "https://openalex.org/W6771626834",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4304128390",
-        "https://openalex.org/W6785665406",
-        "https://openalex.org/W6757262914",
-        "https://openalex.org/W6850689442",
-        "https://openalex.org/W2742007096",
-        "https://openalex.org/W6809985437",
-        "https://openalex.org/W3000469142",
-        "https://openalex.org/W6770576936",
-        "https://openalex.org/W1159765411",
-        "https://openalex.org/W1991641981",
-        "https://openalex.org/W3027142126",
-        "https://openalex.org/W2610846423",
-        "https://openalex.org/W2982291409",
-        "https://openalex.org/W2989977199",
-        "https://openalex.org/W569478347",
-        "https://openalex.org/W4304699816",
-        "https://openalex.org/W2990138404",
-        "https://openalex.org/W4221166060",
-        "https://openalex.org/W4306703462",
-        "https://openalex.org/W3164087725",
-        "https://openalex.org/W4401856724",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2747329762"
-    ],
-    "abstract": "Abstract Combination therapy has exhibited substantial potential compared to monotherapy. However, due to the explosive growth in the number of cancer drugs, the screening of synergistic drug combinations has become both expensive and time-consuming. Synergistic drug combinations refer to the concurrent use of two or more drugs to enhance treatment efficacy. Currently, numerous computational methods have been developed to predict the synergistic effects of anticancer drugs. However, there has been insufficient exploration of how to mine drug and cell line data at different granularity levels for predicting synergistic anticancer drug combinations. Therefore, this study proposes a granularity-level information fusion strategy based on the hypergraph transformer, named HypertranSynergy, to predict synergistic effects of anticancer drugs. HypertranSynergy introduces synergistic connections between cancer cell lines and drug combinations using hypergraph. Then, the Coarse-grained Information Extraction (CIE) module merges the hypergraph with a transformer for node embeddings. In the CIE module, Contranorm is a normalization layer that mitigates over-smoothing, while Gaussian noise addresses local information gaps. Additionally, the Fine-grained Information Extraction (FIE) module assesses fine-grained information’s impact on predictions by employing similarity-aware matrices from drug/cell line features. Both CIE and FIE modules are integrated into HypertranSynergy. In addition, HypertranSynergy achieved the AUC of 0.93${\\pm }$0.01 and the AUPR of 0.69${\\pm }$0.02 in 5-fold cross-validation of classification task, and the RMSE of 13.77${\\pm }$0.07 and the PCC of 0.81${\\pm }$0.02 in 5-fold cross-validation of regression task. These results are better than most of the state-of-the-art models.",
-    "full_text": null
+  "title": "A granularity-level information fusion strategy on hypergraph transformer for predicting synergistic effects of anticancer drugs",
+  "url": "https://openalex.org/W4391005764",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2009336559",
+      "name": "Wei Wang",
+      "affiliations": [
+        "Beijing Academy of Artificial Intelligence",
+        "Henan Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2553783913",
+      "name": "Gao-lin Yuan",
+      "affiliations": [
+        "Henan Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5109675511",
+      "name": "Shitong Wan",
+      "affiliations": [
+        "Henan Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2146081120",
+      "name": "Ziwei Zheng",
+      "affiliations": [
+        "Henan Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117204268",
+      "name": "Dong Liu",
+      "affiliations": [
+        "Henan Normal University",
+        "Beijing Academy of Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102227279",
+      "name": "Hongjun Zhang",
+      "affiliations": [
+        "Henan Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2126452540",
+      "name": "Juntao Li",
+      "affiliations": [
+        "Henan Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1998597206",
+      "name": "Yun Zhou",
+      "affiliations": [
+        "Henan Normal University",
+        "Beijing Academy of Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2302734975",
+      "name": "Xianfang Wang",
+      "affiliations": [
+        "Henan Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2774112395",
+    "https://openalex.org/W4321452885",
+    "https://openalex.org/W3196304395",
+    "https://openalex.org/W4212966936",
+    "https://openalex.org/W2992010506",
+    "https://openalex.org/W6737152786",
+    "https://openalex.org/W2783897572",
+    "https://openalex.org/W3107514561",
+    "https://openalex.org/W3032005109",
+    "https://openalex.org/W3127930610",
+    "https://openalex.org/W3177840694",
+    "https://openalex.org/W2299417213",
+    "https://openalex.org/W2608863179",
+    "https://openalex.org/W2950860419",
+    "https://openalex.org/W6769655052",
+    "https://openalex.org/W2122825543",
+    "https://openalex.org/W2767147442",
+    "https://openalex.org/W2883248903",
+    "https://openalex.org/W2949524414",
+    "https://openalex.org/W3083074595",
+    "https://openalex.org/W2775061087",
+    "https://openalex.org/W4309842604",
+    "https://openalex.org/W3006386963",
+    "https://openalex.org/W4293214728",
+    "https://openalex.org/W2118151336",
+    "https://openalex.org/W6810465265",
+    "https://openalex.org/W6839815728",
+    "https://openalex.org/W4309009637",
+    "https://openalex.org/W3198971962",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2899070097",
+    "https://openalex.org/W6754929296",
+    "https://openalex.org/W6752110883",
+    "https://openalex.org/W6755340666",
+    "https://openalex.org/W3085990079",
+    "https://openalex.org/W4366986540",
+    "https://openalex.org/W6845534289",
+    "https://openalex.org/W6846422491",
+    "https://openalex.org/W6796768152",
+    "https://openalex.org/W6771626834",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4304128390",
+    "https://openalex.org/W6785665406",
+    "https://openalex.org/W6757262914",
+    "https://openalex.org/W6850689442",
+    "https://openalex.org/W2742007096",
+    "https://openalex.org/W6809985437",
+    "https://openalex.org/W3000469142",
+    "https://openalex.org/W6770576936",
+    "https://openalex.org/W1159765411",
+    "https://openalex.org/W1991641981",
+    "https://openalex.org/W3027142126",
+    "https://openalex.org/W2610846423",
+    "https://openalex.org/W2982291409",
+    "https://openalex.org/W2989977199",
+    "https://openalex.org/W569478347",
+    "https://openalex.org/W4304699816",
+    "https://openalex.org/W2990138404",
+    "https://openalex.org/W4221166060",
+    "https://openalex.org/W4306703462",
+    "https://openalex.org/W3164087725",
+    "https://openalex.org/W4401856724",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2747329762"
+  ],
+  "abstract": "Abstract Combination therapy has exhibited substantial potential compared to monotherapy. However, due to the explosive growth in the number of cancer drugs, the screening of synergistic drug combinations has become both expensive and time-consuming. Synergistic drug combinations refer to the concurrent use of two or more drugs to enhance treatment efficacy. Currently, numerous computational methods have been developed to predict the synergistic effects of anticancer drugs. However, there has been insufficient exploration of how to mine drug and cell line data at different granularity levels for predicting synergistic anticancer drug combinations. Therefore, this study proposes a granularity-level information fusion strategy based on the hypergraph transformer, named HypertranSynergy, to predict synergistic effects of anticancer drugs. HypertranSynergy introduces synergistic connections between cancer cell lines and drug combinations using hypergraph. Then, the Coarse-grained Information Extraction (CIE) module merges the hypergraph with a transformer for node embeddings. In the CIE module, Contranorm is a normalization layer that mitigates over-smoothing, while Gaussian noise addresses local information gaps. Additionally, the Fine-grained Information Extraction (FIE) module assesses fine-grained information’s impact on predictions by employing similarity-aware matrices from drug/cell line features. Both CIE and FIE modules are integrated into HypertranSynergy. In addition, HypertranSynergy achieved the AUC of 0.93${\\pm }$0.01 and the AUPR of 0.69${\\pm }$0.02 in 5-fold cross-validation of classification task, and the RMSE of 13.77${\\pm }$0.07 and the PCC of 0.81${\\pm }$0.02 in 5-fold cross-validation of regression task. These results are better than most of the state-of-the-art models.",
+  "full_text": null,
+  "topic": "Granularity",
+  "concepts": [
+    {
+      "name": "Granularity",
+      "score": 0.7647213935852051
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6427664756774902
+    },
+    {
+      "name": "Hypergraph",
+      "score": 0.6234999895095825
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.52399742603302
+    },
+    {
+      "name": "Drug",
+      "score": 0.451998233795166
+    },
+    {
+      "name": "Information fusion",
+      "score": 0.4241350293159485
+    },
+    {
+      "name": "Data mining",
+      "score": 0.41349613666534424
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.37096816301345825
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.19136294722557068
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.1412164866924286
+    },
+    {
+      "name": "Medicine",
+      "score": 0.14043349027633667
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Discrete mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    }
+  ]
 }

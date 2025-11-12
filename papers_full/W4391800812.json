@@ -1,88 +1,147 @@
 {
-    "title": "Unprecedented Code Change Automation: The Fusion of LLMs and Transformation by Example",
-    "url": "https://openalex.org/W4391800812",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5062659210",
-            "name": "Malinda Dilhara",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093835357",
-            "name": "Abhiram Bellur",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5065316896",
-            "name": "Timofey Bryksin",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019404521",
-            "name": "Danny Dig",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2898514735",
-        "https://openalex.org/W2116272605",
-        "https://openalex.org/W2158389966",
-        "https://openalex.org/W2979679630",
-        "https://openalex.org/W2025791343",
-        "https://openalex.org/W2883626290",
-        "https://openalex.org/W1981425990",
-        "https://openalex.org/W3211801722",
-        "https://openalex.org/W2133363731",
-        "https://openalex.org/W4384304713",
-        "https://openalex.org/W3119696503",
-        "https://openalex.org/W4284709363",
-        "https://openalex.org/W2077337386",
-        "https://openalex.org/W4388483433",
-        "https://openalex.org/W2957919018",
-        "https://openalex.org/W3092295095",
-        "https://openalex.org/W2550471858",
-        "https://openalex.org/W3206376305",
-        "https://openalex.org/W3046537322",
-        "https://openalex.org/W3106307499",
-        "https://openalex.org/W3203461101",
-        "https://openalex.org/W2112847033",
-        "https://openalex.org/W2344444819",
-        "https://openalex.org/W2092952955",
-        "https://openalex.org/W4284670745",
-        "https://openalex.org/W2951985317",
-        "https://openalex.org/W3148779029",
-        "https://openalex.org/W2164777277",
-        "https://openalex.org/W2101723202",
-        "https://openalex.org/W4256028358",
-        "https://openalex.org/W2972934903",
-        "https://openalex.org/W2062973095",
-        "https://openalex.org/W2955767826",
-        "https://openalex.org/W3095569994",
-        "https://openalex.org/W4399317165",
-        "https://openalex.org/W2806718802",
-        "https://openalex.org/W4388483121",
-        "https://openalex.org/W2962809971",
-        "https://openalex.org/W4301168982",
-        "https://openalex.org/W2997237488",
-        "https://openalex.org/W2496170334",
-        "https://openalex.org/W3204538577",
-        "https://openalex.org/W3130276836",
-        "https://openalex.org/W2954990002",
-        "https://openalex.org/W4205239483",
-        "https://openalex.org/W2619306859",
-        "https://openalex.org/W2954401434",
-        "https://openalex.org/W4308641593",
-        "https://openalex.org/W4238239668"
-    ],
-    "abstract": "Software developers often repeat the same code changes within a project or across different projects. These repetitive changes are known as “code change patterns” (CPATs). Automating CPATs is crucial to expedite the software development process. While current Transformation by Example (TBE) techniques can automate CPATs, they are limited by the quality and quantity of the provided input examples. Thus, they miss transforming code variations that do not have the exact syntax, data-, or control-flow of the provided input examples, despite being semantically similar. Large Language Models (LLMs), pre-trained on extensive source code datasets, offer a potential solution. Harnessing the capability of LLMs to generate semantically equivalent, yet previously unseen variants of the original CPAT could significantly increase the effectiveness of TBE systems. In this paper, we first discover best practices for harnessing LLMs to generate code variants that meet three criteria: correctness (semantic equivalence to the original CPAT), usefulness (reflecting what developers typically write), and applicability (aligning with the primary intent of the original CPAT). We then implement these practices in our tool PyCraft, which synergistically combines static code analysis, dynamic analysis, and LLM capabilities. By employing chain-of-thought reasoning, PyCraft generates variations of input examples and comprehensive test cases that identify correct variations with an F-measure of 96.6%. Our algorithm uses feedback iteration to expand the original input examples by an average factor of 58x. Using these richly generated examples, we inferred transformation rules and then automated these changes, resulting in an increase of up to 39x, with an average increase of 14x in target codes compared to a previous state-of-the-art tool that relies solely on static analysis. We submitted patches generated by PyCraft to a range of projects, notably esteemed ones like microsoft/DeepSpeed and IBM/inFairness. Their developers accepted and merged 83% the 86 CPAT instances submitted through 44 pull requests. This confirms the usefulness of these changes.",
-    "full_text": null
+  "title": "Unprecedented Code Change Automation: The Fusion of LLMs and Transformation by Example",
+  "url": "https://openalex.org/W4391800812",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5062659210",
+      "name": "Malinda Dilhara",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093835357",
+      "name": "Abhiram Bellur",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5065316896",
+      "name": "Timofey Bryksin",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019404521",
+      "name": "Danny Dig",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2898514735",
+    "https://openalex.org/W2116272605",
+    "https://openalex.org/W2158389966",
+    "https://openalex.org/W2979679630",
+    "https://openalex.org/W2025791343",
+    "https://openalex.org/W2883626290",
+    "https://openalex.org/W1981425990",
+    "https://openalex.org/W3211801722",
+    "https://openalex.org/W2133363731",
+    "https://openalex.org/W4384304713",
+    "https://openalex.org/W3119696503",
+    "https://openalex.org/W4284709363",
+    "https://openalex.org/W2077337386",
+    "https://openalex.org/W4388483433",
+    "https://openalex.org/W2957919018",
+    "https://openalex.org/W3092295095",
+    "https://openalex.org/W2550471858",
+    "https://openalex.org/W3206376305",
+    "https://openalex.org/W3046537322",
+    "https://openalex.org/W3106307499",
+    "https://openalex.org/W3203461101",
+    "https://openalex.org/W2112847033",
+    "https://openalex.org/W2344444819",
+    "https://openalex.org/W2092952955",
+    "https://openalex.org/W4284670745",
+    "https://openalex.org/W2951985317",
+    "https://openalex.org/W3148779029",
+    "https://openalex.org/W2164777277",
+    "https://openalex.org/W2101723202",
+    "https://openalex.org/W4256028358",
+    "https://openalex.org/W2972934903",
+    "https://openalex.org/W2062973095",
+    "https://openalex.org/W2955767826",
+    "https://openalex.org/W3095569994",
+    "https://openalex.org/W4399317165",
+    "https://openalex.org/W2806718802",
+    "https://openalex.org/W4388483121",
+    "https://openalex.org/W2962809971",
+    "https://openalex.org/W4301168982",
+    "https://openalex.org/W2997237488",
+    "https://openalex.org/W2496170334",
+    "https://openalex.org/W3204538577",
+    "https://openalex.org/W3130276836",
+    "https://openalex.org/W2954990002",
+    "https://openalex.org/W4205239483",
+    "https://openalex.org/W2619306859",
+    "https://openalex.org/W2954401434",
+    "https://openalex.org/W4308641593",
+    "https://openalex.org/W4238239668"
+  ],
+  "abstract": "Software developers often repeat the same code changes within a project or across different projects. These repetitive changes are known as “code change patterns” (CPATs). Automating CPATs is crucial to expedite the software development process. While current Transformation by Example (TBE) techniques can automate CPATs, they are limited by the quality and quantity of the provided input examples. Thus, they miss transforming code variations that do not have the exact syntax, data-, or control-flow of the provided input examples, despite being semantically similar. Large Language Models (LLMs), pre-trained on extensive source code datasets, offer a potential solution. Harnessing the capability of LLMs to generate semantically equivalent, yet previously unseen variants of the original CPAT could significantly increase the effectiveness of TBE systems. In this paper, we first discover best practices for harnessing LLMs to generate code variants that meet three criteria: correctness (semantic equivalence to the original CPAT), usefulness (reflecting what developers typically write), and applicability (aligning with the primary intent of the original CPAT). We then implement these practices in our tool PyCraft, which synergistically combines static code analysis, dynamic analysis, and LLM capabilities. By employing chain-of-thought reasoning, PyCraft generates variations of input examples and comprehensive test cases that identify correct variations with an F-measure of 96.6%. Our algorithm uses feedback iteration to expand the original input examples by an average factor of 58x. Using these richly generated examples, we inferred transformation rules and then automated these changes, resulting in an increase of up to 39x, with an average increase of 14x in target codes compared to a previous state-of-the-art tool that relies solely on static analysis. We submitted patches generated by PyCraft to a range of projects, notably esteemed ones like microsoft/DeepSpeed and IBM/inFairness. Their developers accepted and merged 83% the 86 CPAT instances submitted through 44 pull requests. This confirms the usefulness of these changes.",
+  "full_text": null,
+  "topic": "Transformation (genetics)",
+  "concepts": [
+    {
+      "name": "Transformation (genetics)",
+      "score": 0.6192936301231384
+    },
+    {
+      "name": "Automation",
+      "score": 0.5453460216522217
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5413967370986938
+    },
+    {
+      "name": "Fusion",
+      "score": 0.5384592413902283
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4399576485157013
+    },
+    {
+      "name": "Programming language",
+      "score": 0.33116304874420166
+    },
+    {
+      "name": "Engineering",
+      "score": 0.23401102423667908
+    },
+    {
+      "name": "Biology",
+      "score": 0.13325628638267517
+    },
+    {
+      "name": "Genetics",
+      "score": 0.08385974168777466
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.07506746053695679
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.06077191233634949
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.05811944603919983
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

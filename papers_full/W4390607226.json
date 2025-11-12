@@ -1,130 +1,213 @@
 {
-    "title": "RanMerFormer: Randomized vision transformer with token merging for brain tumor classification",
-    "url": "https://openalex.org/W4390607226",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097159863",
-            "name": "Jian Wang",
-            "affiliations": [
-                "University of Leicester"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2242638387",
-            "name": "Si-Yuan Lu",
-            "affiliations": [
-                "Nanjing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4208595301",
-            "name": "Shui-Hua Wang",
-            "affiliations": [
-                "Xi’an Jiaotong-Liverpool University",
-                "University of Leicester"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2642395200",
-            "name": "Yu-Dong Zhang†",
-            "affiliations": [
-                "University of Leicester",
-                "Southeast University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097159863",
-            "name": "Jian Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2242638387",
-            "name": "Si-Yuan Lu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4208595301",
-            "name": "Shui-Hua Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2642395200",
-            "name": "Yu-Dong Zhang†",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3032660954",
-        "https://openalex.org/W3000396774",
-        "https://openalex.org/W3177722660",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4289109286",
-        "https://openalex.org/W3099704643",
-        "https://openalex.org/W3137784385",
-        "https://openalex.org/W4220675190",
-        "https://openalex.org/W2896613673",
-        "https://openalex.org/W2992991004",
-        "https://openalex.org/W2943931219",
-        "https://openalex.org/W6758925060",
-        "https://openalex.org/W3215385738",
-        "https://openalex.org/W2955805844",
-        "https://openalex.org/W2945839551",
-        "https://openalex.org/W4323021340",
-        "https://openalex.org/W3089472426",
-        "https://openalex.org/W3031839920",
-        "https://openalex.org/W3016120846",
-        "https://openalex.org/W4308885881",
-        "https://openalex.org/W6789785384",
-        "https://openalex.org/W4281572218",
-        "https://openalex.org/W4295517687",
-        "https://openalex.org/W4306179915",
-        "https://openalex.org/W4322720411",
-        "https://openalex.org/W4213173579",
-        "https://openalex.org/W6841461583",
-        "https://openalex.org/W4320917976",
-        "https://openalex.org/W2996632711",
-        "https://openalex.org/W3045522357",
-        "https://openalex.org/W2988141759",
-        "https://openalex.org/W3003254765",
-        "https://openalex.org/W2182098131",
-        "https://openalex.org/W4386813303",
-        "https://openalex.org/W4376505593",
-        "https://openalex.org/W6854401512",
-        "https://openalex.org/W4387125416",
-        "https://openalex.org/W4200206103",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W6789010468",
-        "https://openalex.org/W6810902964",
-        "https://openalex.org/W6854763531",
-        "https://openalex.org/W6846577953",
-        "https://openalex.org/W2514029627",
-        "https://openalex.org/W2138383519",
-        "https://openalex.org/W6683090604",
-        "https://openalex.org/W2111072639",
-        "https://openalex.org/W3040617750",
-        "https://openalex.org/W6794181161",
-        "https://openalex.org/W4310861931",
-        "https://openalex.org/W3087642760",
-        "https://openalex.org/W3044256341",
-        "https://openalex.org/W6838487282",
-        "https://openalex.org/W3130794141",
-        "https://openalex.org/W2155910151",
-        "https://openalex.org/W3157952885",
-        "https://openalex.org/W4225512839",
-        "https://openalex.org/W4291511624",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4306886919",
-        "https://openalex.org/W4281710060",
-        "https://openalex.org/W3127167602",
-        "https://openalex.org/W2911587705",
-        "https://openalex.org/W4385338567",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3122490299",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W4385063060"
-    ],
-    "abstract": "Brains are the control center of the nervous system in human bodies, and brain tumor is one of the most deadly diseases. Currently, magnetic resonance imaging (MRI) is the most effective way to brain tumors early detection in clinical diagnoses due to its superior imaging quality for soft tissues. Manual analysis of brain MRI is error-prone which depends on empirical experience and the fatigue state of the radiologists to a large extent. Computer-aided diagnosis (CAD) systems are becoming more and more impactful because they can provide accurate prediction results based on medical images with advanced techniques from computer vision. Therefore, a novel CAD method for brain tumor classification named RanMerFormer is presented in this paper. A pre-trained vision transformer is used as the backbone model. Then, a merging mechanism is proposed to remove the redundant tokens in the vision transformer, which improves computing efficiency substantially. Finally, a randomized vector functional-link serves as the head in the proposed RanMerFormer, which can be trained swiftly. All the simulation results are obtained from two public benchmark datasets, which reveal that the proposed RanMerFormer can achieve state-of-the-art performance for brain tumor classification. The trained RanMerFormer can be applied in real-world scenarios to assist in brain tumor diagnosis.",
-    "full_text": null
+  "title": "RanMerFormer: Randomized vision transformer with token merging for brain tumor classification",
+  "url": "https://openalex.org/W4390607226",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097159863",
+      "name": "Jian Wang",
+      "affiliations": [
+        "University of Leicester"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2242638387",
+      "name": "Si-Yuan Lu",
+      "affiliations": [
+        "Nanjing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4208595301",
+      "name": "Shui-Hua Wang",
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University",
+        "University of Leicester"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2642395200",
+      "name": "Yu-Dong Zhang†",
+      "affiliations": [
+        "University of Leicester",
+        "Southeast University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097159863",
+      "name": "Jian Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2242638387",
+      "name": "Si-Yuan Lu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4208595301",
+      "name": "Shui-Hua Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2642395200",
+      "name": "Yu-Dong Zhang†",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3032660954",
+    "https://openalex.org/W3000396774",
+    "https://openalex.org/W3177722660",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4289109286",
+    "https://openalex.org/W3099704643",
+    "https://openalex.org/W3137784385",
+    "https://openalex.org/W4220675190",
+    "https://openalex.org/W2896613673",
+    "https://openalex.org/W2992991004",
+    "https://openalex.org/W2943931219",
+    "https://openalex.org/W6758925060",
+    "https://openalex.org/W3215385738",
+    "https://openalex.org/W2955805844",
+    "https://openalex.org/W2945839551",
+    "https://openalex.org/W4323021340",
+    "https://openalex.org/W3089472426",
+    "https://openalex.org/W3031839920",
+    "https://openalex.org/W3016120846",
+    "https://openalex.org/W4308885881",
+    "https://openalex.org/W6789785384",
+    "https://openalex.org/W4281572218",
+    "https://openalex.org/W4295517687",
+    "https://openalex.org/W4306179915",
+    "https://openalex.org/W4322720411",
+    "https://openalex.org/W4213173579",
+    "https://openalex.org/W6841461583",
+    "https://openalex.org/W4320917976",
+    "https://openalex.org/W2996632711",
+    "https://openalex.org/W3045522357",
+    "https://openalex.org/W2988141759",
+    "https://openalex.org/W3003254765",
+    "https://openalex.org/W2182098131",
+    "https://openalex.org/W4386813303",
+    "https://openalex.org/W4376505593",
+    "https://openalex.org/W6854401512",
+    "https://openalex.org/W4387125416",
+    "https://openalex.org/W4200206103",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W6789010468",
+    "https://openalex.org/W6810902964",
+    "https://openalex.org/W6854763531",
+    "https://openalex.org/W6846577953",
+    "https://openalex.org/W2514029627",
+    "https://openalex.org/W2138383519",
+    "https://openalex.org/W6683090604",
+    "https://openalex.org/W2111072639",
+    "https://openalex.org/W3040617750",
+    "https://openalex.org/W6794181161",
+    "https://openalex.org/W4310861931",
+    "https://openalex.org/W3087642760",
+    "https://openalex.org/W3044256341",
+    "https://openalex.org/W6838487282",
+    "https://openalex.org/W3130794141",
+    "https://openalex.org/W2155910151",
+    "https://openalex.org/W3157952885",
+    "https://openalex.org/W4225512839",
+    "https://openalex.org/W4291511624",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4306886919",
+    "https://openalex.org/W4281710060",
+    "https://openalex.org/W3127167602",
+    "https://openalex.org/W2911587705",
+    "https://openalex.org/W4385338567",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3122490299",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W4385063060"
+  ],
+  "abstract": "Brains are the control center of the nervous system in human bodies, and brain tumor is one of the most deadly diseases. Currently, magnetic resonance imaging (MRI) is the most effective way to brain tumors early detection in clinical diagnoses due to its superior imaging quality for soft tissues. Manual analysis of brain MRI is error-prone which depends on empirical experience and the fatigue state of the radiologists to a large extent. Computer-aided diagnosis (CAD) systems are becoming more and more impactful because they can provide accurate prediction results based on medical images with advanced techniques from computer vision. Therefore, a novel CAD method for brain tumor classification named RanMerFormer is presented in this paper. A pre-trained vision transformer is used as the backbone model. Then, a merging mechanism is proposed to remove the redundant tokens in the vision transformer, which improves computing efficiency substantially. Finally, a randomized vector functional-link serves as the head in the proposed RanMerFormer, which can be trained swiftly. All the simulation results are obtained from two public benchmark datasets, which reveal that the proposed RanMerFormer can achieve state-of-the-art performance for brain tumor classification. The trained RanMerFormer can be applied in real-world scenarios to assist in brain tumor diagnosis.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8276830911636353
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6348865032196045
+    },
+    {
+      "name": "Security token",
+      "score": 0.5758169889450073
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5636336207389832
+    },
+    {
+      "name": "CAD",
+      "score": 0.5482960939407349
+    },
+    {
+      "name": "Brain tumor",
+      "score": 0.5333084464073181
+    },
+    {
+      "name": "Medical diagnosis",
+      "score": 0.47890010476112366
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.4226968586444855
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.357279509305954
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.32340413331985474
+    },
+    {
+      "name": "Medicine",
+      "score": 0.12833040952682495
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering drawing",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    }
+  ]
 }

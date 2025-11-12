@@ -1,55 +1,94 @@
 {
-    "title": "Are Neural Language Models Good Plagiarists? A Benchmark for Neural Paraphrase Detection",
-    "url": "https://openalex.org/W3139157128",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4224451961",
-            "name": "Wahle, Jan Philip",
-            "affiliations": [
-                "University of Wuppertal"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4223315846",
-            "name": "Ruas, Terry",
-            "affiliations": [
-                "University of Wuppertal"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3160266820",
-            "name": "Meuschke, Norman",
-            "affiliations": [
-                "University of Wuppertal"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3162852365",
-            "name": "Gipp, Bela",
-            "affiliations": [
-                "University of Wuppertal"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W131533222",
-        "https://openalex.org/W2579144703",
-        "https://openalex.org/W2947813521",
-        "https://openalex.org/W2996573939",
-        "https://openalex.org/W3015468748",
-        "https://openalex.org/W2963310665",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2980420460",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W1544505227",
-        "https://openalex.org/W3119997354",
-        "https://openalex.org/W2493916176",
-        "https://openalex.org/W3138008297",
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W3125358881"
-    ],
-    "abstract": "&lt;p&gt;Title: Are Neural Language Models Good Plagiarists? A Benchmark for Neural Paraphrase Detection&lt;br&gt;\\nAuthors: Jan Philip Wahle, Terry Ruas, Norman Meuschke, and Bela Gipp&lt;br&gt;\\ncontact email: wahle@uni-wuppertal.de; ruas@uni-wuppertal.de&lt;br&gt;\\nVenue: TBA.&lt;br&gt;\\nYear: 2021&lt;br&gt;\\n================================================================&lt;br&gt;\\n&lt;strong&gt;Dataset Description:&lt;/strong&gt;&lt;/p&gt;\\n\\n&lt;p&gt;&lt;em&gt;&lt;strong&gt;Training:&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;\\n1,474,230 aligned paragraphs (98,282 original, 1,375,948 paraphrased with 3 models and 5 hyperparameter configurations each 98,282) extracted from 4,012 (English) Wikipedia articles.&lt;/p&gt;\\n\\n&lt;p&gt;&lt;em&gt;&lt;strong&gt;Testing:&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;\\nBERT-large (cased): &lt;br&gt;\\n arXiv - Original - 20,966; Paraphrased - 20,966; &lt;br&gt;\\n Theses - Original - 5,226; Paraphrased - 5,226;&lt;br&gt;\\n Wikipedia - Original - 39,241; Paraphrased - 39,241;&lt;br&gt;\\n &lt;br&gt;\\nRoBERTa-large (cased): &lt;br&gt;\\n arXiv - Original - 20,966; Paraphrased - 20,966; &lt;br&gt;\\n Theses - Original - 5,226; Paraphrased - 5,226;&lt;br&gt;\\n Wikipedia - Original - 39,241; Paraphrased - 39,241;&lt;/p&gt;\\n\\n&lt;p&gt;Longformer-large (uncased): &lt;br&gt;\\n arXiv - Original - 20,966; Paraphrased - 20,966; &lt;br&gt;\\n Theses - Original - 5,226; Paraphrased - 5,226;&lt;br&gt;\\n Wikipedia - Original - 39,241; Paraphrased - 39,241;&lt;/p&gt;\\n\\n&lt;p&gt;================================================================&lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;Dataset Structure:&lt;/p&gt;\\n\\n&lt;p&gt;&lt;strong&gt;[og]&lt;/strong&gt; folder: original. The original documents are split by the data source with the following folders:&lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;li&gt;&lt;strong&gt;[arxiv]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[thesis]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia_train]&lt;/strong&gt;&lt;/li&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;&lt;strong&gt;[`model_name`_mlm_prob_`probability`] (e.g., bert-large-cased_mlm_prob_0.15): &lt;/strong&gt;contains all paraphrased examples using the model with name `model_name` and Masked Language Modeling probability `probability`.&lt;br&gt;\\nEach paraphrase model/probability folder contains the corresponding paraphrased documents according to&lt;strong&gt; [of]&lt;/strong&gt;: &lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;li&gt;&lt;strong&gt;[arxiv]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[thesis]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia_train]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;hparams.yml&lt;/li&gt;\\n&lt;li&gt;hparams.yml contains the hyperparameters to reconstruct the dataset using the official repository.&lt;/li&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;================================================================&lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;Files:&lt;br&gt;\\nOn the lowest folder level, each `.txt` file contains exactly one paragraph. The filename contains either \"ORIG\" for original, or \"SPUN\" for paraphrased.&lt;/p&gt;\\n\\n&lt;p&gt;================================================================&lt;/p&gt;\\n\\n&lt;p&gt;Code:&lt;br&gt;\\nTo avoid misuse of the code for constructing machine-paraphrased plagiarism, you must consent to our Terms and Conditions and send the signed version via mail to one of the contact addresses above to obtain access to our repository (see TermsAndConditions.pdf).&lt;/p&gt;\\n\\n&lt;p&gt; &lt;/p&gt;\\n\\n&lt;p&gt; &lt;/p&gt;",
-    "full_text": null
+  "title": "Are Neural Language Models Good Plagiarists? A Benchmark for Neural Paraphrase Detection",
+  "url": "https://openalex.org/W3139157128",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4224451961",
+      "name": "Wahle, Jan Philip",
+      "affiliations": [
+        "University of Wuppertal"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4223315846",
+      "name": "Ruas, Terry",
+      "affiliations": [
+        "University of Wuppertal"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3160266820",
+      "name": "Meuschke, Norman",
+      "affiliations": [
+        "University of Wuppertal"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3162852365",
+      "name": "Gipp, Bela",
+      "affiliations": [
+        "University of Wuppertal"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W131533222",
+    "https://openalex.org/W2579144703",
+    "https://openalex.org/W2947813521",
+    "https://openalex.org/W2996573939",
+    "https://openalex.org/W3015468748",
+    "https://openalex.org/W2963310665",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2980420460",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W1544505227",
+    "https://openalex.org/W3119997354",
+    "https://openalex.org/W2493916176",
+    "https://openalex.org/W3138008297",
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W3125358881"
+  ],
+  "abstract": "&lt;p&gt;Title: Are Neural Language Models Good Plagiarists? A Benchmark for Neural Paraphrase Detection&lt;br&gt;\\nAuthors: Jan Philip Wahle, Terry Ruas, Norman Meuschke, and Bela Gipp&lt;br&gt;\\ncontact email: wahle@uni-wuppertal.de; ruas@uni-wuppertal.de&lt;br&gt;\\nVenue: TBA.&lt;br&gt;\\nYear: 2021&lt;br&gt;\\n================================================================&lt;br&gt;\\n&lt;strong&gt;Dataset Description:&lt;/strong&gt;&lt;/p&gt;\\n\\n&lt;p&gt;&lt;em&gt;&lt;strong&gt;Training:&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;\\n1,474,230 aligned paragraphs (98,282 original, 1,375,948 paraphrased with 3 models and 5 hyperparameter configurations each 98,282) extracted from 4,012 (English) Wikipedia articles.&lt;/p&gt;\\n\\n&lt;p&gt;&lt;em&gt;&lt;strong&gt;Testing:&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;\\nBERT-large (cased): &lt;br&gt;\\n arXiv - Original - 20,966; Paraphrased - 20,966; &lt;br&gt;\\n Theses - Original - 5,226; Paraphrased - 5,226;&lt;br&gt;\\n Wikipedia - Original - 39,241; Paraphrased - 39,241;&lt;br&gt;\\n &lt;br&gt;\\nRoBERTa-large (cased): &lt;br&gt;\\n arXiv - Original - 20,966; Paraphrased - 20,966; &lt;br&gt;\\n Theses - Original - 5,226; Paraphrased - 5,226;&lt;br&gt;\\n Wikipedia - Original - 39,241; Paraphrased - 39,241;&lt;/p&gt;\\n\\n&lt;p&gt;Longformer-large (uncased): &lt;br&gt;\\n arXiv - Original - 20,966; Paraphrased - 20,966; &lt;br&gt;\\n Theses - Original - 5,226; Paraphrased - 5,226;&lt;br&gt;\\n Wikipedia - Original - 39,241; Paraphrased - 39,241;&lt;/p&gt;\\n\\n&lt;p&gt;================================================================&lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;Dataset Structure:&lt;/p&gt;\\n\\n&lt;p&gt;&lt;strong&gt;[og]&lt;/strong&gt; folder: original. The original documents are split by the data source with the following folders:&lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;li&gt;&lt;strong&gt;[arxiv]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[thesis]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia_train]&lt;/strong&gt;&lt;/li&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;&lt;strong&gt;[`model_name`_mlm_prob_`probability`] (e.g., bert-large-cased_mlm_prob_0.15): &lt;/strong&gt;contains all paraphrased examples using the model with name `model_name` and Masked Language Modeling probability `probability`.&lt;br&gt;\\nEach paraphrase model/probability folder contains the corresponding paraphrased documents according to&lt;strong&gt; [of]&lt;/strong&gt;: &lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;li&gt;&lt;strong&gt;[arxiv]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[thesis]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;&lt;strong&gt;[wikipedia_train]&lt;/strong&gt;&lt;/li&gt;\\n&lt;li&gt;hparams.yml&lt;/li&gt;\\n&lt;li&gt;hparams.yml contains the hyperparameters to reconstruct the dataset using the official repository.&lt;/li&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;================================================================&lt;/p&gt;\\n\\n&lt;ul&gt;\\n&lt;/ul&gt;\\n\\n&lt;p&gt;Files:&lt;br&gt;\\nOn the lowest folder level, each `.txt` file contains exactly one paragraph. The filename contains either \"ORIG\" for original, or \"SPUN\" for paraphrased.&lt;/p&gt;\\n\\n&lt;p&gt;================================================================&lt;/p&gt;\\n\\n&lt;p&gt;Code:&lt;br&gt;\\nTo avoid misuse of the code for constructing machine-paraphrased plagiarism, you must consent to our Terms and Conditions and send the signed version via mail to one of the contact addresses above to obtain access to our repository (see TermsAndConditions.pdf).&lt;/p&gt;\\n\\n&lt;p&gt; &lt;/p&gt;\\n\\n&lt;p&gt; &lt;/p&gt;",
+  "full_text": null,
+  "concepts": [
+    {
+      "name": "Paraphrase",
+      "score": 0.9514888525009155
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.6885747313499451
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5860421657562256
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5725141167640686
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5464311242103577
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4988269805908203
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3500533103942871
+    },
+    {
+      "name": "Geography",
+      "score": 0.09933379292488098
+    },
+    {
+      "name": "Cartography",
+      "score": 0.051764994859695435
+    }
+  ],
+  "topic": "Paraphrase"
 }

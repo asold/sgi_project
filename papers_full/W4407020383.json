@@ -1,72 +1,119 @@
 {
-    "title": "Using Synthetic Health Care Data to Leverage Large Language Models for Named Entity Recognition: Development and Validation Study",
-    "url": "https://openalex.org/W4407020383",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4321040574",
-            "name": "Hendrik Šuvalov",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5107103717",
-            "name": "Mihkel Lepson",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5113375882",
-            "name": "Veronika Kukk",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4321040570",
-            "name": "Maria Malk",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5116099315",
-            "name": "Neeme Ilves",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4314288627",
-            "name": "Hele-Andra Kuulmets",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1904977254",
-            "name": "Raivo Kolde",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3181361218",
-        "https://openalex.org/W4386566939",
-        "https://openalex.org/W2155701328",
-        "https://openalex.org/W3210475251",
-        "https://openalex.org/W2140663467",
-        "https://openalex.org/W3153562187",
-        "https://openalex.org/W3191402931",
-        "https://openalex.org/W4385714363",
-        "https://openalex.org/W4312304404",
-        "https://openalex.org/W3160596727",
-        "https://openalex.org/W4385571203",
-        "https://openalex.org/W4385571411",
-        "https://openalex.org/W4323709074",
-        "https://openalex.org/W3035390927",
-        "https://openalex.org/W2973049837",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4378469337",
-        "https://openalex.org/W4388157511",
-        "https://openalex.org/W3035625205",
-        "https://openalex.org/W4401043490",
-        "https://openalex.org/W79139011",
-        "https://openalex.org/W4243639737",
-        "https://openalex.org/W4402671762",
-        "https://openalex.org/W4392669753",
-        "https://openalex.org/W4398221084",
-        "https://openalex.org/W4312220150"
-    ],
-    "abstract": "Background Named entity recognition (NER) plays a vital role in extracting critical medical entities from health care records, facilitating applications such as clinical decision support and data mining. Developing robust NER models for low-resource languages, such as Estonian, remains a challenge due to the scarcity of annotated data and domain-specific pretrained models. Large language models (LLMs) have proven to be promising in understanding text from any language or domain. Objective This study addresses the development of medical NER models for low-resource languages, specifically Estonian. We propose a novel approach by generating synthetic health care data and using LLMs to annotate them. These synthetic data are then used to train a high-performing NER model, which is applied to real-world medical texts, preserving patient data privacy. Methods Our approach to overcoming the shortage of annotated Estonian health care texts involves a three-step pipeline: (1) synthetic health care data are generated using a locally trained GPT-2 model on Estonian medical records, (2) the synthetic data are annotated with LLMs, specifically GPT-3.5-Turbo and GPT-4, and (3) the annotated synthetic data are then used to fine-tune an NER model, which is later tested on real-world medical data. This paper compares the performance of different prompts; assesses the impact of GPT-3.5-Turbo, GPT-4, and a local LLM; and explores the relationship between the amount of annotated synthetic data and model performance. Results The proposed methodology demonstrates significant potential in extracting named entities from real-world medical texts. Our top-performing setup achieved an F1-score of 0.69 for drug extraction and 0.38 for procedure extraction. These results indicate a strong performance in recognizing certain entity types while highlighting the complexity of extracting procedures. Conclusions This paper demonstrates a successful approach to leveraging LLMs for training NER models using synthetic data, effectively preserving patient privacy. By avoiding reliance on human-annotated data, our method shows promise in developing models for low-resource languages, such as Estonian. Future work will focus on refining the synthetic data generation and expanding the method’s applicability to other domains and languages.",
-    "full_text": null
+  "title": "Using Synthetic Health Care Data to Leverage Large Language Models for Named Entity Recognition: Development and Validation Study",
+  "url": "https://openalex.org/W4407020383",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4321040574",
+      "name": "Hendrik Šuvalov",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5107103717",
+      "name": "Mihkel Lepson",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5113375882",
+      "name": "Veronika Kukk",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4321040570",
+      "name": "Maria Malk",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5116099315",
+      "name": "Neeme Ilves",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4314288627",
+      "name": "Hele-Andra Kuulmets",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1904977254",
+      "name": "Raivo Kolde",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3181361218",
+    "https://openalex.org/W4386566939",
+    "https://openalex.org/W2155701328",
+    "https://openalex.org/W3210475251",
+    "https://openalex.org/W2140663467",
+    "https://openalex.org/W3153562187",
+    "https://openalex.org/W3191402931",
+    "https://openalex.org/W4385714363",
+    "https://openalex.org/W4312304404",
+    "https://openalex.org/W3160596727",
+    "https://openalex.org/W4385571203",
+    "https://openalex.org/W4385571411",
+    "https://openalex.org/W4323709074",
+    "https://openalex.org/W3035390927",
+    "https://openalex.org/W2973049837",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4378469337",
+    "https://openalex.org/W4388157511",
+    "https://openalex.org/W3035625205",
+    "https://openalex.org/W4401043490",
+    "https://openalex.org/W79139011",
+    "https://openalex.org/W4243639737",
+    "https://openalex.org/W4402671762",
+    "https://openalex.org/W4392669753",
+    "https://openalex.org/W4398221084",
+    "https://openalex.org/W4312220150"
+  ],
+  "abstract": "Background Named entity recognition (NER) plays a vital role in extracting critical medical entities from health care records, facilitating applications such as clinical decision support and data mining. Developing robust NER models for low-resource languages, such as Estonian, remains a challenge due to the scarcity of annotated data and domain-specific pretrained models. Large language models (LLMs) have proven to be promising in understanding text from any language or domain. Objective This study addresses the development of medical NER models for low-resource languages, specifically Estonian. We propose a novel approach by generating synthetic health care data and using LLMs to annotate them. These synthetic data are then used to train a high-performing NER model, which is applied to real-world medical texts, preserving patient data privacy. Methods Our approach to overcoming the shortage of annotated Estonian health care texts involves a three-step pipeline: (1) synthetic health care data are generated using a locally trained GPT-2 model on Estonian medical records, (2) the synthetic data are annotated with LLMs, specifically GPT-3.5-Turbo and GPT-4, and (3) the annotated synthetic data are then used to fine-tune an NER model, which is later tested on real-world medical data. This paper compares the performance of different prompts; assesses the impact of GPT-3.5-Turbo, GPT-4, and a local LLM; and explores the relationship between the amount of annotated synthetic data and model performance. Results The proposed methodology demonstrates significant potential in extracting named entities from real-world medical texts. Our top-performing setup achieved an F1-score of 0.69 for drug extraction and 0.38 for procedure extraction. These results indicate a strong performance in recognizing certain entity types while highlighting the complexity of extracting procedures. Conclusions This paper demonstrates a successful approach to leveraging LLMs for training NER models using synthetic data, effectively preserving patient privacy. By avoiding reliance on human-annotated data, our method shows promise in developing models for low-resource languages, such as Estonian. Future work will focus on refining the synthetic data generation and expanding the method’s applicability to other domains and languages.",
+  "full_text": null,
+  "topic": "Preprint",
+  "concepts": [
+    {
+      "name": "Preprint",
+      "score": 0.7857799530029297
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.6190699338912964
+    },
+    {
+      "name": "Health care",
+      "score": 0.5320829749107361
+    },
+    {
+      "name": "Data science",
+      "score": 0.46753212809562683
+    },
+    {
+      "name": "Computer science",
+      "score": 0.44745346903800964
+    },
+    {
+      "name": "Health records",
+      "score": 0.42236223816871643
+    },
+    {
+      "name": "Internet privacy",
+      "score": 0.35502445697784424
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.30317726731300354
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.272761732339859
+    },
+    {
+      "name": "Economics",
+      "score": 0.11815941333770752
+    },
+    {
+      "name": "Economic growth",
+      "score": 0.10638800263404846
+    }
+  ]
 }

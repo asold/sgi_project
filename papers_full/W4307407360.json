@@ -1,56 +1,131 @@
 {
-    "title": "Texture transformer super-resolution for low-dose computed tomography",
-    "url": "https://openalex.org/W4307407360",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096973504",
-            "name": "ShiWei Zhou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2108776710",
-            "name": "Lifeng Yu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2159322120",
-            "name": "Mingwu Jin",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1985806826",
-        "https://openalex.org/W2128277155",
-        "https://openalex.org/W2098205592",
-        "https://openalex.org/W2232776966",
-        "https://openalex.org/W2121058967",
-        "https://openalex.org/W2117865218",
-        "https://openalex.org/W2138237382",
-        "https://openalex.org/W2789370848",
-        "https://openalex.org/W2809226111",
-        "https://openalex.org/W2995072672",
-        "https://openalex.org/W2963470893",
-        "https://openalex.org/W2963073614",
-        "https://openalex.org/W3035022492",
-        "https://openalex.org/W3040980702",
-        "https://openalex.org/W2469946482",
-        "https://openalex.org/W2114770744",
-        "https://openalex.org/W2133665775",
-        "https://openalex.org/W2064076387",
-        "https://openalex.org/W2141983208",
-        "https://openalex.org/W1983281817",
-        "https://openalex.org/W1930373509",
-        "https://openalex.org/W3181634973",
-        "https://openalex.org/W1973896010",
-        "https://openalex.org/W1992381536",
-        "https://openalex.org/W2003884262",
-        "https://openalex.org/W6765443569",
-        "https://openalex.org/W3106295246",
-        "https://openalex.org/W3104720471",
-        "https://openalex.org/W4320013936",
-        "https://openalex.org/W4288283361"
-    ],
-    "abstract": "Abstract Computed tomography (CT) is widely used to diagnose many diseases. Low-dose CT has been actively pursued to lower the ionizing radiation risk. A relatively smoother kernel is typically used in low-dose CT to suppress image noise, which may sacrifice spatial resolution. In this work, we propose a texture transformer network to simultaneously reduce image noise and improve spatial resolution in CT images. This network, referred to as Texture Transformer for Super Resolution (TTSR), is a reference-based deep-learning image super-resolution method built upon a generative adversarial network (GAN). The noisy low-resolution CT (LRCT) image and the routine-dose high-resolution (HRCT) image are severed as the query and key in a transformer, respectively. Image translation is optimized through deep neural network (DNN) texture extraction, correlation embedding, and attention-based texture transfer and synthesis to achieve joint feature learning between LRCT and HRCT images for super-resolution CT (SRCT) images. To evaluate SRCT performance, we use the data from both simulations of the XCAT phantom program and the real patient data. Peak signal-to-noise ratio (PSNR), structural similarity index measure (SSIM), and feature similarity (FSIM) index are used as quantitative metrics. For comparison of SRCT performance, the cubic spline interpolation, SRGAN (a GAN super-resolution with an additional content loss), and GAN-CIRCLE (a GAN super-resolution with cycle consistency) were used. Compared to the other two methods, TTSR can restore more details in SRCT images and achieve better PSNR, SSIM, and FSIM for both simulation and real-patient data. In addition, we show that TTSR can yield better image quality and demand much less computation time than high-resolution low-dose CT images denoised by block-matching and 3D filtering (BM3D) and GAN-CIRCLE. In summary, the proposed TTSR method based on texture transformer and attention mechanism provides an effective and efficient tool to improve spatial resolution and suppress noise of low-dose CT images.",
-    "full_text": null
+  "title": "Texture transformer super-resolution for low-dose computed tomography",
+  "url": "https://openalex.org/W4307407360",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096973504",
+      "name": "ShiWei Zhou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2108776710",
+      "name": "Lifeng Yu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2159322120",
+      "name": "Mingwu Jin",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1985806826",
+    "https://openalex.org/W2128277155",
+    "https://openalex.org/W2098205592",
+    "https://openalex.org/W2232776966",
+    "https://openalex.org/W2121058967",
+    "https://openalex.org/W2117865218",
+    "https://openalex.org/W2138237382",
+    "https://openalex.org/W2789370848",
+    "https://openalex.org/W2809226111",
+    "https://openalex.org/W2995072672",
+    "https://openalex.org/W2963470893",
+    "https://openalex.org/W2963073614",
+    "https://openalex.org/W3035022492",
+    "https://openalex.org/W3040980702",
+    "https://openalex.org/W2469946482",
+    "https://openalex.org/W2114770744",
+    "https://openalex.org/W2133665775",
+    "https://openalex.org/W2064076387",
+    "https://openalex.org/W2141983208",
+    "https://openalex.org/W1983281817",
+    "https://openalex.org/W1930373509",
+    "https://openalex.org/W3181634973",
+    "https://openalex.org/W1973896010",
+    "https://openalex.org/W1992381536",
+    "https://openalex.org/W2003884262",
+    "https://openalex.org/W6765443569",
+    "https://openalex.org/W3106295246",
+    "https://openalex.org/W3104720471",
+    "https://openalex.org/W4320013936",
+    "https://openalex.org/W4288283361"
+  ],
+  "abstract": "Abstract Computed tomography (CT) is widely used to diagnose many diseases. Low-dose CT has been actively pursued to lower the ionizing radiation risk. A relatively smoother kernel is typically used in low-dose CT to suppress image noise, which may sacrifice spatial resolution. In this work, we propose a texture transformer network to simultaneously reduce image noise and improve spatial resolution in CT images. This network, referred to as Texture Transformer for Super Resolution (TTSR), is a reference-based deep-learning image super-resolution method built upon a generative adversarial network (GAN). The noisy low-resolution CT (LRCT) image and the routine-dose high-resolution (HRCT) image are severed as the query and key in a transformer, respectively. Image translation is optimized through deep neural network (DNN) texture extraction, correlation embedding, and attention-based texture transfer and synthesis to achieve joint feature learning between LRCT and HRCT images for super-resolution CT (SRCT) images. To evaluate SRCT performance, we use the data from both simulations of the XCAT phantom program and the real patient data. Peak signal-to-noise ratio (PSNR), structural similarity index measure (SSIM), and feature similarity (FSIM) index are used as quantitative metrics. For comparison of SRCT performance, the cubic spline interpolation, SRGAN (a GAN super-resolution with an additional content loss), and GAN-CIRCLE (a GAN super-resolution with cycle consistency) were used. Compared to the other two methods, TTSR can restore more details in SRCT images and achieve better PSNR, SSIM, and FSIM for both simulation and real-patient data. In addition, we show that TTSR can yield better image quality and demand much less computation time than high-resolution low-dose CT images denoised by block-matching and 3D filtering (BM3D) and GAN-CIRCLE. In summary, the proposed TTSR method based on texture transformer and attention mechanism provides an effective and efficient tool to improve spatial resolution and suppress noise of low-dose CT images.",
+  "full_text": null,
+  "topic": "Computed tomography",
+  "concepts": [
+    {
+      "name": "Computed tomography",
+      "score": 0.605101466178894
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5858989357948303
+    },
+    {
+      "name": "Tomography",
+      "score": 0.5157945156097412
+    },
+    {
+      "name": "Low resolution",
+      "score": 0.434937983751297
+    },
+    {
+      "name": "Resolution (logic)",
+      "score": 0.42306646704673767
+    },
+    {
+      "name": "Materials science",
+      "score": 0.3861054480075836
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3784774839878082
+    },
+    {
+      "name": "Computer science",
+      "score": 0.3691743016242981
+    },
+    {
+      "name": "Biomedical engineering",
+      "score": 0.36347147822380066
+    },
+    {
+      "name": "Nuclear medicine",
+      "score": 0.34329208731651306
+    },
+    {
+      "name": "High resolution",
+      "score": 0.3113066554069519
+    },
+    {
+      "name": "Medicine",
+      "score": 0.24363821744918823
+    },
+    {
+      "name": "Radiology",
+      "score": 0.22804990410804749
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1760960817337036
+    },
+    {
+      "name": "Geology",
+      "score": 0.13226497173309326
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.09208947420120239
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08117938041687012
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.04900038242340088
+    }
+  ]
 }

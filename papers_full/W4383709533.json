@@ -1,95 +1,146 @@
 {
-    "title": "PLASMe: a tool to identify PLASMid contigs from short-read assemblies using transformer",
-    "url": "https://openalex.org/W4383709533",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2997018911",
-            "name": "Xubo Tang",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2769284849",
-            "name": "Jiayu Shang",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2335094319",
-            "name": "Yongxin Ji",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2169004818",
-            "name": "Yanni Sun",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1691012859",
-        "https://openalex.org/W2180695509",
-        "https://openalex.org/W1514409050",
-        "https://openalex.org/W1499944935",
-        "https://openalex.org/W2161956102",
-        "https://openalex.org/W926723875",
-        "https://openalex.org/W1526682930",
-        "https://openalex.org/W1973593256",
-        "https://openalex.org/W3027793519",
-        "https://openalex.org/W2782623083",
-        "https://openalex.org/W3215814963",
-        "https://openalex.org/W2616477171",
-        "https://openalex.org/W1557508370",
-        "https://openalex.org/W3024222188",
-        "https://openalex.org/W2006478187",
-        "https://openalex.org/W3215086467",
-        "https://openalex.org/W2951563276",
-        "https://openalex.org/W2951325968",
-        "https://openalex.org/W2942757983",
-        "https://openalex.org/W3015282831",
-        "https://openalex.org/W2978742879",
-        "https://openalex.org/W2883838322",
-        "https://openalex.org/W6776010411",
-        "https://openalex.org/W2119902463",
-        "https://openalex.org/W2949831026",
-        "https://openalex.org/W3014345701",
-        "https://openalex.org/W3173385890",
-        "https://openalex.org/W4225255896",
-        "https://openalex.org/W3095583226",
-        "https://openalex.org/W6682627296",
-        "https://openalex.org/W4225258284",
-        "https://openalex.org/W3043497582",
-        "https://openalex.org/W3101509328",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3018980093",
-        "https://openalex.org/W4213041764",
-        "https://openalex.org/W6601894380",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2143485490",
-        "https://openalex.org/W2045204781",
-        "https://openalex.org/W3214956918",
-        "https://openalex.org/W3036135788",
-        "https://openalex.org/W3036819578",
-        "https://openalex.org/W3135997498",
-        "https://openalex.org/W2096093282",
-        "https://openalex.org/W3094967361",
-        "https://openalex.org/W2980017907",
-        "https://openalex.org/W3164046276",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W6642452677",
-        "https://openalex.org/W2151831732",
-        "https://openalex.org/W3037415594",
-        "https://openalex.org/W46679369",
-        "https://openalex.org/W1968976175"
-    ],
-    "abstract": "Abstract Plasmids are mobile genetic elements that carry important accessory genes. Cataloging plasmids is a fundamental step to elucidate their roles in promoting horizontal gene transfer between bacteria. Next generation sequencing (NGS) is the main source for discovering new plasmids today. However, NGS assembly programs tend to return contigs, making plasmid detection difficult. This problem is particularly grave for metagenomic assemblies, which contain short contigs of heterogeneous origins. Available tools for plasmid contig detection still suffer from some limitations. In particular, alignment-based tools tend to miss diverged plasmids while learning-based tools often have lower precision. In this work, we develop a plasmid detection tool PLASMe that capitalizes on the strength of alignment and learning-based methods. Closely related plasmids can be easily identified using the alignment component in PLASMe while diverged plasmids can be predicted using order-specific Transformer models. By encoding plasmid sequences as a language defined on the protein cluster-based token set, Transformer can learn the importance of proteins and their correlation through positionally token embedding and the attention mechanism. We compared PLASMe and other tools on detecting complete plasmids, plasmid contigs, and contigs assembled from CAMI2 simulated data. PLASMe achieved the highest F1-score. After validating PLASMe on data with known labels, we also tested it on real metagenomic and plasmidome data. The examination of some commonly used marker genes shows that PLASMe exhibits more reliable performance than other tools.",
-    "full_text": null
+  "title": "PLASMe: a tool to identify PLASMid contigs from short-read assemblies using transformer",
+  "url": "https://openalex.org/W4383709533",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2997018911",
+      "name": "Xubo Tang",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2769284849",
+      "name": "Jiayu Shang",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2335094319",
+      "name": "Yongxin Ji",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2169004818",
+      "name": "Yanni Sun",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1691012859",
+    "https://openalex.org/W2180695509",
+    "https://openalex.org/W1514409050",
+    "https://openalex.org/W1499944935",
+    "https://openalex.org/W2161956102",
+    "https://openalex.org/W926723875",
+    "https://openalex.org/W1526682930",
+    "https://openalex.org/W1973593256",
+    "https://openalex.org/W3027793519",
+    "https://openalex.org/W2782623083",
+    "https://openalex.org/W3215814963",
+    "https://openalex.org/W2616477171",
+    "https://openalex.org/W1557508370",
+    "https://openalex.org/W3024222188",
+    "https://openalex.org/W2006478187",
+    "https://openalex.org/W3215086467",
+    "https://openalex.org/W2951563276",
+    "https://openalex.org/W2951325968",
+    "https://openalex.org/W2942757983",
+    "https://openalex.org/W3015282831",
+    "https://openalex.org/W2978742879",
+    "https://openalex.org/W2883838322",
+    "https://openalex.org/W6776010411",
+    "https://openalex.org/W2119902463",
+    "https://openalex.org/W2949831026",
+    "https://openalex.org/W3014345701",
+    "https://openalex.org/W3173385890",
+    "https://openalex.org/W4225255896",
+    "https://openalex.org/W3095583226",
+    "https://openalex.org/W6682627296",
+    "https://openalex.org/W4225258284",
+    "https://openalex.org/W3043497582",
+    "https://openalex.org/W3101509328",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3018980093",
+    "https://openalex.org/W4213041764",
+    "https://openalex.org/W6601894380",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2143485490",
+    "https://openalex.org/W2045204781",
+    "https://openalex.org/W3214956918",
+    "https://openalex.org/W3036135788",
+    "https://openalex.org/W3036819578",
+    "https://openalex.org/W3135997498",
+    "https://openalex.org/W2096093282",
+    "https://openalex.org/W3094967361",
+    "https://openalex.org/W2980017907",
+    "https://openalex.org/W3164046276",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W6642452677",
+    "https://openalex.org/W2151831732",
+    "https://openalex.org/W3037415594",
+    "https://openalex.org/W46679369",
+    "https://openalex.org/W1968976175"
+  ],
+  "abstract": "Abstract Plasmids are mobile genetic elements that carry important accessory genes. Cataloging plasmids is a fundamental step to elucidate their roles in promoting horizontal gene transfer between bacteria. Next generation sequencing (NGS) is the main source for discovering new plasmids today. However, NGS assembly programs tend to return contigs, making plasmid detection difficult. This problem is particularly grave for metagenomic assemblies, which contain short contigs of heterogeneous origins. Available tools for plasmid contig detection still suffer from some limitations. In particular, alignment-based tools tend to miss diverged plasmids while learning-based tools often have lower precision. In this work, we develop a plasmid detection tool PLASMe that capitalizes on the strength of alignment and learning-based methods. Closely related plasmids can be easily identified using the alignment component in PLASMe while diverged plasmids can be predicted using order-specific Transformer models. By encoding plasmid sequences as a language defined on the protein cluster-based token set, Transformer can learn the importance of proteins and their correlation through positionally token embedding and the attention mechanism. We compared PLASMe and other tools on detecting complete plasmids, plasmid contigs, and contigs assembled from CAMI2 simulated data. PLASMe achieved the highest F1-score. After validating PLASMe on data with known labels, we also tested it on real metagenomic and plasmidome data. The examination of some commonly used marker genes shows that PLASMe exhibits more reliable performance than other tools.",
+  "full_text": null,
+  "topic": "Biology",
+  "concepts": [
+    {
+      "name": "Biology",
+      "score": 0.9252680540084839
+    },
+    {
+      "name": "Plasmid",
+      "score": 0.7537542581558228
+    },
+    {
+      "name": "Contig",
+      "score": 0.6209859848022461
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.5217129588127136
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5061642527580261
+    },
+    {
+      "name": "Genetics",
+      "score": 0.4609997272491455
+    },
+    {
+      "name": "DNA",
+      "score": 0.2936236262321472
+    },
+    {
+      "name": "Genome",
+      "score": 0.16765910387039185
+    },
+    {
+      "name": "Gene",
+      "score": 0.14194649457931519
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10599860548973083
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07281941175460815
+    },
+    {
+      "name": "Voltage",
+      "score": 0.06961899995803833
+    }
+  ]
 }

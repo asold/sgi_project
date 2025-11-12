@@ -1,63 +1,122 @@
 {
-    "title": "Heterogeneous Graph Transformer",
-    "url": "https://openalex.org/W3012871709",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2408226291",
-            "name": "Ziniu Hu",
-            "affiliations": [
-                "University of California, Los Angeles"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2157080782",
-            "name": "Yuxiao Dong",
-            "affiliations": [
-                "Microsoft Research (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2127379895",
-            "name": "Kuansan Wang",
-            "affiliations": [
-                "Microsoft Research (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110119782",
-            "name": "Yizhou Sun",
-            "affiliations": [
-                "University of California, Los Angeles"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2743104969",
-        "https://openalex.org/W1932742904",
-        "https://openalex.org/W103340358",
-        "https://openalex.org/W2911286998",
-        "https://openalex.org/W2965857891",
-        "https://openalex.org/W2952205826",
-        "https://openalex.org/W2970066309",
-        "https://openalex.org/W1975563293",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2604314403",
-        "https://openalex.org/W2519887557",
-        "https://openalex.org/W1973435495",
-        "https://openalex.org/W2098711168",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2918342466",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2518108298",
-        "https://openalex.org/W2624431344",
-        "https://openalex.org/W4301480734",
-        "https://openalex.org/W2983466427",
-        "https://openalex.org/W2963858333",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W2786915849"
-    ],
-    "abstract": "Recent years have witnessed the emerging success of graph neural networks (GNNs) for modeling structured data. However, most GNNs are designed for homogeneous graphs, in which all nodes and edges belong to the same types, making it infeasible to represent heterogeneous structures. In this paper, we present the Heterogeneous Graph Transformer (HGT) architecture for modeling Web-scale heterogeneous graphs. To model heterogeneity, we design node- and edge-type dependent parameters to characterize the heterogeneous attention over each edge, empowering HGT to maintain dedicated representations for different types of nodes and edges. To handle Web-scale graph data, we design the heterogeneous mini-batch graph sampling algorithm—HGSampling—for efficient and scalable training. Extensive experiments on the Open Academic Graph of 179 million nodes and 2 billion edges show that the proposed HGT model consistently outperforms all the state-of-the-art GNN baselines by 9–21 on various downstream tasks. The dataset and source code of HGT are publicly available at https://github.com/acbull/pyHGT.",
-    "full_text": null
+  "title": "Heterogeneous Graph Transformer",
+  "url": "https://openalex.org/W3012871709",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2408226291",
+      "name": "Ziniu Hu",
+      "affiliations": [
+        "University of California, Los Angeles"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2157080782",
+      "name": "Yuxiao Dong",
+      "affiliations": [
+        "Microsoft Research (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2127379895",
+      "name": "Kuansan Wang",
+      "affiliations": [
+        "Microsoft Research (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110119782",
+      "name": "Yizhou Sun",
+      "affiliations": [
+        "University of California, Los Angeles"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2743104969",
+    "https://openalex.org/W1932742904",
+    "https://openalex.org/W103340358",
+    "https://openalex.org/W2911286998",
+    "https://openalex.org/W2965857891",
+    "https://openalex.org/W2952205826",
+    "https://openalex.org/W2970066309",
+    "https://openalex.org/W1975563293",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2604314403",
+    "https://openalex.org/W2519887557",
+    "https://openalex.org/W1973435495",
+    "https://openalex.org/W2098711168",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2918342466",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2518108298",
+    "https://openalex.org/W2624431344",
+    "https://openalex.org/W4301480734",
+    "https://openalex.org/W2983466427",
+    "https://openalex.org/W2963858333",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W2786915849"
+  ],
+  "abstract": "Recent years have witnessed the emerging success of graph neural networks (GNNs) for modeling structured data. However, most GNNs are designed for homogeneous graphs, in which all nodes and edges belong to the same types, making it infeasible to represent heterogeneous structures. In this paper, we present the Heterogeneous Graph Transformer (HGT) architecture for modeling Web-scale heterogeneous graphs. To model heterogeneity, we design node- and edge-type dependent parameters to characterize the heterogeneous attention over each edge, empowering HGT to maintain dedicated representations for different types of nodes and edges. To handle Web-scale graph data, we design the heterogeneous mini-batch graph sampling algorithm—HGSampling—for efficient and scalable training. Extensive experiments on the Open Academic Graph of 179 million nodes and 2 billion edges show that the proposed HGT model consistently outperforms all the state-of-the-art GNN baselines by 9–21 on various downstream tasks. The dataset and source code of HGT are publicly available at https://github.com/acbull/pyHGT.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7864136695861816
+    },
+    {
+      "name": "Scalability",
+      "score": 0.6733624339103699
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.5211524963378906
+    },
+    {
+      "name": "Graph",
+      "score": 0.5026726722717285
+    },
+    {
+      "name": "Homogeneous",
+      "score": 0.4678412675857544
+    },
+    {
+      "name": "Transformer",
+      "score": 0.41247260570526123
+    },
+    {
+      "name": "Distributed computing",
+      "score": 0.3530334234237671
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3357635736465454
+    },
+    {
+      "name": "Database",
+      "score": 0.09711292386054993
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08959808945655823
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

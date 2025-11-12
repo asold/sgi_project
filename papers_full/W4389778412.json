@@ -1,156 +1,215 @@
 {
-    "title": "HiTSKT: A hierarchical transformer model for session-aware knowledge tracing",
-    "url": "https://openalex.org/W4389778412",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5031212801",
-            "name": "Fucai Ke",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2143497027",
-            "name": "Weiqing Wang",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3207844789",
-            "name": "Weicong Tan",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2150389075",
-            "name": "Lan Du",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2095702329",
-            "name": "Yuan Jin",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2121438158",
-            "name": "Yujin Huang",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2145818752",
-            "name": "Hongzhi Yin",
-            "affiliations": [
-                "University of Queensland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5031212801",
-            "name": "Fucai Ke",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2143497027",
-            "name": "Weiqing Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3207844789",
-            "name": "Weicong Tan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2150389075",
-            "name": "Lan Du",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2095702329",
-            "name": "Yuan Jin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2121438158",
-            "name": "Yujin Huang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2145818752",
-            "name": "Hongzhi Yin",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2155215621",
-        "https://openalex.org/W2984542158",
-        "https://openalex.org/W4307295769",
-        "https://openalex.org/W6704546155",
-        "https://openalex.org/W2015040676",
-        "https://openalex.org/W1597703949",
-        "https://openalex.org/W6681833256",
-        "https://openalex.org/W6621483976",
-        "https://openalex.org/W2559094423",
-        "https://openalex.org/W3154349795",
-        "https://openalex.org/W3141866323",
-        "https://openalex.org/W3132748888",
-        "https://openalex.org/W3043869244",
-        "https://openalex.org/W6780315287",
-        "https://openalex.org/W4309628299",
-        "https://openalex.org/W2955931418",
-        "https://openalex.org/W4225394161",
-        "https://openalex.org/W6810592704",
-        "https://openalex.org/W6637529606",
-        "https://openalex.org/W1997433454",
-        "https://openalex.org/W1878893887",
-        "https://openalex.org/W2111804672",
-        "https://openalex.org/W2949036105",
-        "https://openalex.org/W2096707172",
-        "https://openalex.org/W4295788921",
-        "https://openalex.org/W4313134110",
-        "https://openalex.org/W6785417489",
-        "https://openalex.org/W2953577593",
-        "https://openalex.org/W3205662613",
-        "https://openalex.org/W3117062170",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3034854756",
-        "https://openalex.org/W2530887700",
-        "https://openalex.org/W4385568296",
-        "https://openalex.org/W4306316918",
-        "https://openalex.org/W2962785754",
-        "https://openalex.org/W2020967151",
-        "https://openalex.org/W2509186279",
-        "https://openalex.org/W2153422697",
-        "https://openalex.org/W2167404615",
-        "https://openalex.org/W2151347365",
-        "https://openalex.org/W2030007850",
-        "https://openalex.org/W1933687796",
-        "https://openalex.org/W2113699128",
-        "https://openalex.org/W6771523248",
-        "https://openalex.org/W3082341085",
-        "https://openalex.org/W2788574423",
-        "https://openalex.org/W6628007210",
-        "https://openalex.org/W2950670227",
-        "https://openalex.org/W2149194912",
-        "https://openalex.org/W4214633470",
-        "https://openalex.org/W2187089797",
-        "https://openalex.org/W3096180801",
-        "https://openalex.org/W2957747000",
-        "https://openalex.org/W1706578850",
-        "https://openalex.org/W3172373930",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W3102281445",
-        "https://openalex.org/W2957937874",
-        "https://openalex.org/W2964195932",
-        "https://openalex.org/W650350307"
-    ],
-    "abstract": "Knowledge tracing (KT) aims to leverage students' learning histories to estimate their mastery levels on a set of pre-defined skills, based on which the corresponding future performance can be accurately predicted. In practice, a student's learning history comprises answers to sets of massed questions, each known as a session, rather than merely being a sequence of independent answers. Theoretically, within and across these sessions, students' learning dynamics can be very different. Therefore, how to effectively model the dynamics of students' knowledge states within and across the sessions is crucial for handling the KT problem. Most existing KT models treat student's learning records as a single continuing sequence, without capturing the sessional shift of students' knowledge state. To address the above issue, we propose a novel hierarchical transformer model, named HiTSKT, comprises an interaction(-level) encoder to capture the knowledge a student acquires within a session, and a session(-level) encoder to summarise acquired knowledge across the past sessions. To predict an interaction in the current session, a knowledge retriever integrates the summarised past-session knowledge with the previous interactions' information into proper knowledge representations. These representations are then used to compute the student's current knowledge state. Additionally, to model the student's long-term forgetting behaviour across the sessions, a power-law-decay attention mechanism is designed and deployed in the session encoder, allowing it to emphasize more on the recent sessions. Extensive experiments on four public datasets demonstrate that HiTSKT achieves new state-of-the-art performance on all the datasets compared with seven state-of-the-art KT models.",
-    "full_text": null
+  "title": "HiTSKT: A hierarchical transformer model for session-aware knowledge tracing",
+  "url": "https://openalex.org/W4389778412",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5031212801",
+      "name": "Fucai Ke",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2143497027",
+      "name": "Weiqing Wang",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3207844789",
+      "name": "Weicong Tan",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2150389075",
+      "name": "Lan Du",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2095702329",
+      "name": "Yuan Jin",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2121438158",
+      "name": "Yujin Huang",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2145818752",
+      "name": "Hongzhi Yin",
+      "affiliations": [
+        "University of Queensland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5031212801",
+      "name": "Fucai Ke",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2143497027",
+      "name": "Weiqing Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3207844789",
+      "name": "Weicong Tan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2150389075",
+      "name": "Lan Du",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2095702329",
+      "name": "Yuan Jin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2121438158",
+      "name": "Yujin Huang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2145818752",
+      "name": "Hongzhi Yin",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2155215621",
+    "https://openalex.org/W2984542158",
+    "https://openalex.org/W4307295769",
+    "https://openalex.org/W6704546155",
+    "https://openalex.org/W2015040676",
+    "https://openalex.org/W1597703949",
+    "https://openalex.org/W6681833256",
+    "https://openalex.org/W6621483976",
+    "https://openalex.org/W2559094423",
+    "https://openalex.org/W3154349795",
+    "https://openalex.org/W3141866323",
+    "https://openalex.org/W3132748888",
+    "https://openalex.org/W3043869244",
+    "https://openalex.org/W6780315287",
+    "https://openalex.org/W4309628299",
+    "https://openalex.org/W2955931418",
+    "https://openalex.org/W4225394161",
+    "https://openalex.org/W6810592704",
+    "https://openalex.org/W6637529606",
+    "https://openalex.org/W1997433454",
+    "https://openalex.org/W1878893887",
+    "https://openalex.org/W2111804672",
+    "https://openalex.org/W2949036105",
+    "https://openalex.org/W2096707172",
+    "https://openalex.org/W4295788921",
+    "https://openalex.org/W4313134110",
+    "https://openalex.org/W6785417489",
+    "https://openalex.org/W2953577593",
+    "https://openalex.org/W3205662613",
+    "https://openalex.org/W3117062170",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3034854756",
+    "https://openalex.org/W2530887700",
+    "https://openalex.org/W4385568296",
+    "https://openalex.org/W4306316918",
+    "https://openalex.org/W2962785754",
+    "https://openalex.org/W2020967151",
+    "https://openalex.org/W2509186279",
+    "https://openalex.org/W2153422697",
+    "https://openalex.org/W2167404615",
+    "https://openalex.org/W2151347365",
+    "https://openalex.org/W2030007850",
+    "https://openalex.org/W1933687796",
+    "https://openalex.org/W2113699128",
+    "https://openalex.org/W6771523248",
+    "https://openalex.org/W3082341085",
+    "https://openalex.org/W2788574423",
+    "https://openalex.org/W6628007210",
+    "https://openalex.org/W2950670227",
+    "https://openalex.org/W2149194912",
+    "https://openalex.org/W4214633470",
+    "https://openalex.org/W2187089797",
+    "https://openalex.org/W3096180801",
+    "https://openalex.org/W2957747000",
+    "https://openalex.org/W1706578850",
+    "https://openalex.org/W3172373930",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W3102281445",
+    "https://openalex.org/W2957937874",
+    "https://openalex.org/W2964195932",
+    "https://openalex.org/W650350307"
+  ],
+  "abstract": "Knowledge tracing (KT) aims to leverage students' learning histories to estimate their mastery levels on a set of pre-defined skills, based on which the corresponding future performance can be accurately predicted. In practice, a student's learning history comprises answers to sets of massed questions, each known as a session, rather than merely being a sequence of independent answers. Theoretically, within and across these sessions, students' learning dynamics can be very different. Therefore, how to effectively model the dynamics of students' knowledge states within and across the sessions is crucial for handling the KT problem. Most existing KT models treat student's learning records as a single continuing sequence, without capturing the sessional shift of students' knowledge state. To address the above issue, we propose a novel hierarchical transformer model, named HiTSKT, comprises an interaction(-level) encoder to capture the knowledge a student acquires within a session, and a session(-level) encoder to summarise acquired knowledge across the past sessions. To predict an interaction in the current session, a knowledge retriever integrates the summarised past-session knowledge with the previous interactions' information into proper knowledge representations. These representations are then used to compute the student's current knowledge state. Additionally, to model the student's long-term forgetting behaviour across the sessions, a power-law-decay attention mechanism is designed and deployed in the session encoder, allowing it to emphasize more on the recent sessions. Extensive experiments on four public datasets demonstrate that HiTSKT achieves new state-of-the-art performance on all the datasets compared with seven state-of-the-art KT models.",
+  "full_text": null,
+  "topic": "Session (web analytics)",
+  "concepts": [
+    {
+      "name": "Session (web analytics)",
+      "score": 0.8030915260314941
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6932533383369446
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.6039603352546692
+    },
+    {
+      "name": "Forgetting",
+      "score": 0.5763824582099915
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49816441535949707
+    },
+    {
+      "name": "Tracing",
+      "score": 0.4405677318572998
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3231116235256195
+    },
+    {
+      "name": "Psychology",
+      "score": 0.1462138593196869
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.1058187186717987
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.10263842344284058
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08077302575111389
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,149 +1,212 @@
 {
-    "title": "Neural Data Transformer 2: Multi-context Pretraining for Neural Spiking Activity",
-    "url": "https://openalex.org/W4386948794",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3041439289",
-            "name": "Joel Ye",
-            "affiliations": [
-                "University of Pittsburgh",
-                "Center for the Neural Basis of Cognition",
-                "Neuroscience Institute",
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2074340277",
-            "name": "Jennifer L. Collinger",
-            "affiliations": [
-                "Center for the Neural Basis of Cognition",
-                "University of Pittsburgh",
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2061328669",
-            "name": "Leila Wehbe",
-            "affiliations": [
-                "Carnegie Mellon University",
-                "Neuroscience Institute",
-                "Center for the Neural Basis of Cognition"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1998451272",
-            "name": "Robert Gaunt",
-            "affiliations": [
-                "University of Pittsburgh",
-                "Center for the Neural Basis of Cognition",
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3041439289",
-            "name": "Joel Ye",
-            "affiliations": [
-                "Center for the Neural Basis of Cognition",
-                "Carnegie Mellon University",
-                "Neuroscience Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2074340277",
-            "name": "Jennifer L. Collinger",
-            "affiliations": [
-                "Carnegie Mellon University",
-                "Center for the Neural Basis of Cognition",
-                "University of Pittsburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2061328669",
-            "name": "Leila Wehbe",
-            "affiliations": [
-                "Neuroscience Institute",
-                "Center for the Neural Basis of Cognition",
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1998451272",
-            "name": "Robert Gaunt",
-            "affiliations": [
-                "Center for the Neural Basis of Cognition",
-                "Carnegie Mellon University",
-                "University of Pittsburgh"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3041725488",
-        "https://openalex.org/W3217655686",
-        "https://openalex.org/W4311704283",
-        "https://openalex.org/W1966537851",
-        "https://openalex.org/W2786396068",
-        "https://openalex.org/W2896846197",
-        "https://openalex.org/W2997421847",
-        "https://openalex.org/W4297341762",
-        "https://openalex.org/W4310155388",
-        "https://openalex.org/W2538079766",
-        "https://openalex.org/W4224214225",
-        "https://openalex.org/W4317678017",
-        "https://openalex.org/W2033144847",
-        "https://openalex.org/W3209750256",
-        "https://openalex.org/W3211983881",
-        "https://openalex.org/W3201531713",
-        "https://openalex.org/W3083554171",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4283071815",
-        "https://openalex.org/W4226090302",
-        "https://openalex.org/W4322759937",
-        "https://openalex.org/W4283455225",
-        "https://openalex.org/W3177342940",
-        "https://openalex.org/W2345279893",
-        "https://openalex.org/W2104979528",
-        "https://openalex.org/W2951777958",
-        "https://openalex.org/W3161343553",
-        "https://openalex.org/W4366725409",
-        "https://openalex.org/W3126124476",
-        "https://openalex.org/W4221161062",
-        "https://openalex.org/W2790078435",
-        "https://openalex.org/W4320016781",
-        "https://openalex.org/W4282826100",
-        "https://openalex.org/W2892541114",
-        "https://openalex.org/W4293529103",
-        "https://openalex.org/W4282813552",
-        "https://openalex.org/W4214612132",
-        "https://openalex.org/W2569707862",
-        "https://openalex.org/W2144910141",
-        "https://openalex.org/W4319231716",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W3014488508",
-        "https://openalex.org/W4393877320",
-        "https://openalex.org/W2771318405",
-        "https://openalex.org/W3184745908",
-        "https://openalex.org/W4385570763",
-        "https://openalex.org/W3097217077",
-        "https://openalex.org/W2966617434",
-        "https://openalex.org/W3199241049",
-        "https://openalex.org/W4309228072",
-        "https://openalex.org/W2146377664",
-        "https://openalex.org/W4378602301",
-        "https://openalex.org/W2594353973",
-        "https://openalex.org/W3001279689",
-        "https://openalex.org/W3120993011",
-        "https://openalex.org/W2770306141",
-        "https://openalex.org/W2109065101",
-        "https://openalex.org/W4319265541",
-        "https://openalex.org/W2247925470",
-        "https://openalex.org/W2949893327",
-        "https://openalex.org/W4280490805",
-        "https://openalex.org/W4386091044",
-        "https://openalex.org/W4388488592",
-        "https://openalex.org/W4387664435",
-        "https://openalex.org/W4386084258"
-    ],
-    "abstract": "Abstract The neural population spiking activity recorded by intracortical brain-computer interfaces (iBCIs) contain rich structure. Current models of such spiking activity are largely prepared for individual experimental contexts, restricting data volume to that collectable within a single session and limiting the effectiveness of deep neural networks (DNNs). The purported challenge in aggregating neural spiking data is the pervasiveness of context-dependent shifts in the neural data distributions. However, large scale unsupervised pretraining by nature spans heterogeneous data, and has proven to be a fundamental recipe for successful representation learning across deep learning. We thus develop Neural Data Transformer 2 (NDT2), a spatiotemporal Transformer for neural spiking activity, and demonstrate that pretraining can leverage motor BCI datasets that span sessions, subjects, and experimental tasks. NDT2 enables rapid adaptation to novel contexts in downstream decoding tasks and opens the path to deployment of pretrained DNNs for iBCI control. Code: https://github.com/joel99/context_general_bci",
-    "full_text": null
+  "title": "Neural Data Transformer 2: Multi-context Pretraining for Neural Spiking Activity",
+  "url": "https://openalex.org/W4386948794",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3041439289",
+      "name": "Joel Ye",
+      "affiliations": [
+        "University of Pittsburgh",
+        "Center for the Neural Basis of Cognition",
+        "Neuroscience Institute",
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2074340277",
+      "name": "Jennifer L. Collinger",
+      "affiliations": [
+        "Center for the Neural Basis of Cognition",
+        "University of Pittsburgh",
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2061328669",
+      "name": "Leila Wehbe",
+      "affiliations": [
+        "Carnegie Mellon University",
+        "Neuroscience Institute",
+        "Center for the Neural Basis of Cognition"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1998451272",
+      "name": "Robert Gaunt",
+      "affiliations": [
+        "University of Pittsburgh",
+        "Center for the Neural Basis of Cognition",
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3041439289",
+      "name": "Joel Ye",
+      "affiliations": [
+        "Center for the Neural Basis of Cognition",
+        "Carnegie Mellon University",
+        "Neuroscience Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2074340277",
+      "name": "Jennifer L. Collinger",
+      "affiliations": [
+        "Carnegie Mellon University",
+        "Center for the Neural Basis of Cognition",
+        "University of Pittsburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2061328669",
+      "name": "Leila Wehbe",
+      "affiliations": [
+        "Neuroscience Institute",
+        "Center for the Neural Basis of Cognition",
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1998451272",
+      "name": "Robert Gaunt",
+      "affiliations": [
+        "Center for the Neural Basis of Cognition",
+        "Carnegie Mellon University",
+        "University of Pittsburgh"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3041725488",
+    "https://openalex.org/W3217655686",
+    "https://openalex.org/W4311704283",
+    "https://openalex.org/W1966537851",
+    "https://openalex.org/W2786396068",
+    "https://openalex.org/W2896846197",
+    "https://openalex.org/W2997421847",
+    "https://openalex.org/W4297341762",
+    "https://openalex.org/W4310155388",
+    "https://openalex.org/W2538079766",
+    "https://openalex.org/W4224214225",
+    "https://openalex.org/W4317678017",
+    "https://openalex.org/W2033144847",
+    "https://openalex.org/W3209750256",
+    "https://openalex.org/W3211983881",
+    "https://openalex.org/W3201531713",
+    "https://openalex.org/W3083554171",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4283071815",
+    "https://openalex.org/W4226090302",
+    "https://openalex.org/W4322759937",
+    "https://openalex.org/W4283455225",
+    "https://openalex.org/W3177342940",
+    "https://openalex.org/W2345279893",
+    "https://openalex.org/W2104979528",
+    "https://openalex.org/W2951777958",
+    "https://openalex.org/W3161343553",
+    "https://openalex.org/W4366725409",
+    "https://openalex.org/W3126124476",
+    "https://openalex.org/W4221161062",
+    "https://openalex.org/W2790078435",
+    "https://openalex.org/W4320016781",
+    "https://openalex.org/W4282826100",
+    "https://openalex.org/W2892541114",
+    "https://openalex.org/W4293529103",
+    "https://openalex.org/W4282813552",
+    "https://openalex.org/W4214612132",
+    "https://openalex.org/W2569707862",
+    "https://openalex.org/W2144910141",
+    "https://openalex.org/W4319231716",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W3014488508",
+    "https://openalex.org/W4393877320",
+    "https://openalex.org/W2771318405",
+    "https://openalex.org/W3184745908",
+    "https://openalex.org/W4385570763",
+    "https://openalex.org/W3097217077",
+    "https://openalex.org/W2966617434",
+    "https://openalex.org/W3199241049",
+    "https://openalex.org/W4309228072",
+    "https://openalex.org/W2146377664",
+    "https://openalex.org/W4378602301",
+    "https://openalex.org/W2594353973",
+    "https://openalex.org/W3001279689",
+    "https://openalex.org/W3120993011",
+    "https://openalex.org/W2770306141",
+    "https://openalex.org/W2109065101",
+    "https://openalex.org/W4319265541",
+    "https://openalex.org/W2247925470",
+    "https://openalex.org/W2949893327",
+    "https://openalex.org/W4280490805",
+    "https://openalex.org/W4386091044",
+    "https://openalex.org/W4388488592",
+    "https://openalex.org/W4387664435",
+    "https://openalex.org/W4386084258"
+  ],
+  "abstract": "Abstract The neural population spiking activity recorded by intracortical brain-computer interfaces (iBCIs) contain rich structure. Current models of such spiking activity are largely prepared for individual experimental contexts, restricting data volume to that collectable within a single session and limiting the effectiveness of deep neural networks (DNNs). The purported challenge in aggregating neural spiking data is the pervasiveness of context-dependent shifts in the neural data distributions. However, large scale unsupervised pretraining by nature spans heterogeneous data, and has proven to be a fundamental recipe for successful representation learning across deep learning. We thus develop Neural Data Transformer 2 (NDT2), a spatiotemporal Transformer for neural spiking activity, and demonstrate that pretraining can leverage motor BCI datasets that span sessions, subjects, and experimental tasks. NDT2 enables rapid adaptation to novel contexts in downstream decoding tasks and opens the path to deployment of pretrained DNNs for iBCI control. Code: https://github.com/joel99/context_general_bci",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6704221963882446
+    },
+    {
+      "name": "Spiking neural network",
+      "score": 0.5941277146339417
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5636129975318909
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4881954789161682
+    },
+    {
+      "name": "Brain–computer interface",
+      "score": 0.4681796133518219
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.4522075355052948
+    },
+    {
+      "name": "Transformer",
+      "score": 0.45025479793548584
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3796611428260803
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.21443748474121094
+    },
+    {
+      "name": "Electroencephalography",
+      "score": 0.20228740572929382
+    },
+    {
+      "name": "Psychology",
+      "score": 0.08324927091598511
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07028037309646606
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    }
+  ]
 }

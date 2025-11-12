@@ -1,89 +1,156 @@
 {
-    "title": "Focal DETR: Target-Aware Token Design for Transformer-Based Object Detection",
-    "url": "https://openalex.org/W4308865890",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2115221099",
-            "name": "Tianming Xie",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110952874",
-            "name": "Zhonghao Zhang",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103195916",
-            "name": "Jing Tian",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108615803",
-            "name": "Lihong Ma",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115221099",
-            "name": "Tianming Xie",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110952874",
-            "name": "Zhonghao Zhang",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103195916",
-            "name": "Jing Tian",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108615803",
-            "name": "Lihong Ma",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2102605133",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W2613718673",
-        "https://openalex.org/W2407521645",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2570343428",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W4214627427",
-        "https://openalex.org/W4313039766",
-        "https://openalex.org/W3172752666",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6763509872",
-        "https://openalex.org/W6762205418",
-        "https://openalex.org/W2910628332",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W2925359305",
-        "https://openalex.org/W3107331169",
-        "https://openalex.org/W3165924482",
-        "https://openalex.org/W3106250896"
-    ],
-    "abstract": "In this paper, we propose a novel target-aware token design for transformer-based object detection. To tackle the target attribute diffusion challenge of transformer-based object detection, we propose two key components in the new target-aware token design mechanism. Firstly, we propose a target-aware sampling module, which forces the sampling patterns to converge inside the target region and obtain its representative encoded features. More specifically, a set of four sampling patterns are designed, including small and large patterns, which focus on the detailed and overall characteristics of a target, respectively, as well as the vertical and horizontal patterns, which handle the object’s directional structures. Secondly, we propose a target-aware key-value matrix. This is a unified, learnable, feature-embedding matrix which is directly weighted on the feature map to reduce the interference of non-target regions. With such a new design, we propose a new variant of the transformer-based object-detection model, called Focal DETR, which achieves superior performance over the state-of-the-art transformer-based object-detection models on the COCO object-detection benchmark dataset. Experimental results demonstrate that our Focal DETR achieves a 44.7 AP in the coco2017 test set, which is 2.7 AP and 0.9 AP higher than the DETR and deformable DETR using the same training strategy and the same feature-extraction network.",
-    "full_text": null
+  "title": "Focal DETR: Target-Aware Token Design for Transformer-Based Object Detection",
+  "url": "https://openalex.org/W4308865890",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2115221099",
+      "name": "Tianming Xie",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110952874",
+      "name": "Zhonghao Zhang",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103195916",
+      "name": "Jing Tian",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108615803",
+      "name": "Lihong Ma",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115221099",
+      "name": "Tianming Xie",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110952874",
+      "name": "Zhonghao Zhang",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103195916",
+      "name": "Jing Tian",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108615803",
+      "name": "Lihong Ma",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2102605133",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W2613718673",
+    "https://openalex.org/W2407521645",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2570343428",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W4214627427",
+    "https://openalex.org/W4313039766",
+    "https://openalex.org/W3172752666",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6763509872",
+    "https://openalex.org/W6762205418",
+    "https://openalex.org/W2910628332",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W2925359305",
+    "https://openalex.org/W3107331169",
+    "https://openalex.org/W3165924482",
+    "https://openalex.org/W3106250896"
+  ],
+  "abstract": "In this paper, we propose a novel target-aware token design for transformer-based object detection. To tackle the target attribute diffusion challenge of transformer-based object detection, we propose two key components in the new target-aware token design mechanism. Firstly, we propose a target-aware sampling module, which forces the sampling patterns to converge inside the target region and obtain its representative encoded features. More specifically, a set of four sampling patterns are designed, including small and large patterns, which focus on the detailed and overall characteristics of a target, respectively, as well as the vertical and horizontal patterns, which handle the object’s directional structures. Secondly, we propose a target-aware key-value matrix. This is a unified, learnable, feature-embedding matrix which is directly weighted on the feature map to reduce the interference of non-target regions. With such a new design, we propose a new variant of the transformer-based object-detection model, called Focal DETR, which achieves superior performance over the state-of-the-art transformer-based object-detection models on the COCO object-detection benchmark dataset. Experimental results demonstrate that our Focal DETR achieves a 44.7 AP in the coco2017 test set, which is 2.7 AP and 0.9 AP higher than the DETR and deformable DETR using the same training strategy and the same feature-extraction network.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7326607704162598
+    },
+    {
+      "name": "Object detection",
+      "score": 0.5905576348304749
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5646893382072449
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5344430804252625
+    },
+    {
+      "name": "Security token",
+      "score": 0.4822750389575958
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4682866930961609
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.4607272148132324
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4307248592376709
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3939932882785797
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3707621097564697
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13724932074546814
+    },
+    {
+      "name": "Computer network",
+      "score": 0.08253166079521179
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

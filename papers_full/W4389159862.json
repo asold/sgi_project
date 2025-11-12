@@ -1,65 +1,136 @@
 {
-    "title": "Multilingual Code Co-evolution using Large Language Models",
-    "url": "https://openalex.org/W4389159862",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2162082590",
-            "name": "Jiyang ZHANG",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2544187253",
-            "name": "Pengyu Nie",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2885523473",
-            "name": "Junyi Jessy Li",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1986514872",
-            "name": "Milos Gligoric",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4313547549",
-        "https://openalex.org/W3081159607",
-        "https://openalex.org/W4206756860",
-        "https://openalex.org/W4281758439",
-        "https://openalex.org/W4288077069",
-        "https://openalex.org/W3191096151",
-        "https://openalex.org/W2048960787",
-        "https://openalex.org/W2123402141",
-        "https://openalex.org/W4285149992",
-        "https://openalex.org/W4308643152",
-        "https://openalex.org/W3174589346",
-        "https://openalex.org/W4293211675",
-        "https://openalex.org/W6807488368",
-        "https://openalex.org/W4225113125",
-        "https://openalex.org/W3035657086",
-        "https://openalex.org/W2018951244",
-        "https://openalex.org/W2040943118",
-        "https://openalex.org/W3104681546",
-        "https://openalex.org/W88307446",
-        "https://openalex.org/W2954823997",
-        "https://openalex.org/W4284709233",
-        "https://openalex.org/W3198685994",
-        "https://openalex.org/W2534253848",
-        "https://openalex.org/W4383898351",
-        "https://openalex.org/W3193393431",
-        "https://openalex.org/W4206738852"
-    ],
-    "abstract": "Many software projects implement APIs and algorithms in multiple programming languages. Maintaining such projects is tiresome, as developers have to ensure that any change (e.g., a bug fix or a new feature) is being propagated, timely and without errors, to implementations in other programming languages. In the world of ever-changing software, using rule-based translation tools (i.e., transpilers) or machine learning models for translating code from one language to another provides limited value. Translating each time the entire codebase from one language to another is not the way developers work. In this paper, we target a novel task: translating code changes from one programming language to another using large language models (LLMs). We design and implement the first LLM, dubbed Codeditor, to tackle this task. Codeditor explicitly models code changes as edit sequences and learns to correlate changes across programming languages. To evaluate Codeditor, we collect a corpus of 6,613 aligned code changes from 8 pairs of open-source software projects implementing similar functionalities in two programming languages (Java and C#). Results show that Codeditor outperforms the state-of-the-art approaches by a large margin on all commonly used automatic metrics. Our work also reveals that Codeditor is complementary to the existing generation-based models, and their combination ensures even greater performance.",
-    "full_text": null
+  "title": "Multilingual Code Co-evolution using Large Language Models",
+  "url": "https://openalex.org/W4389159862",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2162082590",
+      "name": "Jiyang ZHANG",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2544187253",
+      "name": "Pengyu Nie",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2885523473",
+      "name": "Junyi Jessy Li",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1986514872",
+      "name": "Milos Gligoric",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4313547549",
+    "https://openalex.org/W3081159607",
+    "https://openalex.org/W4206756860",
+    "https://openalex.org/W4281758439",
+    "https://openalex.org/W4288077069",
+    "https://openalex.org/W3191096151",
+    "https://openalex.org/W2048960787",
+    "https://openalex.org/W2123402141",
+    "https://openalex.org/W4285149992",
+    "https://openalex.org/W4308643152",
+    "https://openalex.org/W3174589346",
+    "https://openalex.org/W4293211675",
+    "https://openalex.org/W6807488368",
+    "https://openalex.org/W4225113125",
+    "https://openalex.org/W3035657086",
+    "https://openalex.org/W2018951244",
+    "https://openalex.org/W2040943118",
+    "https://openalex.org/W3104681546",
+    "https://openalex.org/W88307446",
+    "https://openalex.org/W2954823997",
+    "https://openalex.org/W4284709233",
+    "https://openalex.org/W3198685994",
+    "https://openalex.org/W2534253848",
+    "https://openalex.org/W4383898351",
+    "https://openalex.org/W3193393431",
+    "https://openalex.org/W4206738852"
+  ],
+  "abstract": "Many software projects implement APIs and algorithms in multiple programming languages. Maintaining such projects is tiresome, as developers have to ensure that any change (e.g., a bug fix or a new feature) is being propagated, timely and without errors, to implementations in other programming languages. In the world of ever-changing software, using rule-based translation tools (i.e., transpilers) or machine learning models for translating code from one language to another provides limited value. Translating each time the entire codebase from one language to another is not the way developers work. In this paper, we target a novel task: translating code changes from one programming language to another using large language models (LLMs). We design and implement the first LLM, dubbed Codeditor, to tackle this task. Codeditor explicitly models code changes as edit sequences and learns to correlate changes across programming languages. To evaluate Codeditor, we collect a corpus of 6,613 aligned code changes from 8 pairs of open-source software projects implementing similar functionalities in two programming languages (Java and C#). Results show that Codeditor outperforms the state-of-the-art approaches by a large margin on all commonly used automatic metrics. Our work also reveals that Codeditor is complementary to the existing generation-based models, and their combination ensures even greater performance.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8799152374267578
+    },
+    {
+      "name": "Codebase",
+      "score": 0.8193435668945312
+    },
+    {
+      "name": "Programming language",
+      "score": 0.7215771079063416
+    },
+    {
+      "name": "Third-generation programming language",
+      "score": 0.48448726534843445
+    },
+    {
+      "name": "Java",
+      "score": 0.47971123456954956
+    },
+    {
+      "name": "Programming paradigm",
+      "score": 0.4622812569141388
+    },
+    {
+      "name": "Software development",
+      "score": 0.4270879626274109
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.42617231607437134
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.4183726906776428
+    },
+    {
+      "name": "Second-generation programming language",
+      "score": 0.40777137875556946
+    },
+    {
+      "name": "Software",
+      "score": 0.400208055973053
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.36590951681137085
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3413393497467041
+    },
+    {
+      "name": "Fifth-generation programming language",
+      "score": 0.3256964683532715
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    }
+  ]
 }

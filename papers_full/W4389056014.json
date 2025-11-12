@@ -1,100 +1,179 @@
 {
-    "title": "GraphGPT: A Graph Enhanced Generative Pretrained Transformer for Conditioned Molecular Generation",
-    "url": "https://openalex.org/W4389056014",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5103072612",
-            "name": "Hao Lu",
-            "affiliations": [
-                "Ocean University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5079932099",
-            "name": "Zhiqiang Wei",
-            "affiliations": [
-                "Ocean University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5113055779",
-            "name": "Xuze Wang",
-            "affiliations": [
-                "Ocean University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100342397",
-            "name": "Kun Zhang",
-            "affiliations": [
-                "Ocean University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100458827",
-            "name": "Hao Liu",
-            "affiliations": [
-                "Ocean University of China"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3195161349",
-        "https://openalex.org/W4297179162",
-        "https://openalex.org/W4220681836",
-        "https://openalex.org/W4386250908",
-        "https://openalex.org/W3095849807",
-        "https://openalex.org/W2578119541",
-        "https://openalex.org/W2922076381",
-        "https://openalex.org/W4386976834",
-        "https://openalex.org/W4381435404",
-        "https://openalex.org/W2023818227",
-        "https://openalex.org/W4317625850",
-        "https://openalex.org/W4319310661",
-        "https://openalex.org/W2803526748",
-        "https://openalex.org/W6640963894",
-        "https://openalex.org/W6637568146",
-        "https://openalex.org/W2962764565",
-        "https://openalex.org/W4220798957",
-        "https://openalex.org/W4381470101",
-        "https://openalex.org/W6805360056",
-        "https://openalex.org/W3217546525",
-        "https://openalex.org/W3042826782",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W4324026004",
-        "https://openalex.org/W4362589790",
-        "https://openalex.org/W6787995345",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3169622372",
-        "https://openalex.org/W4221163422",
-        "https://openalex.org/W2160592148",
-        "https://openalex.org/W2034549041",
-        "https://openalex.org/W1985418765",
-        "https://openalex.org/W2109349176",
-        "https://openalex.org/W3209056694",
-        "https://openalex.org/W2900694120",
-        "https://openalex.org/W2887447356",
-        "https://openalex.org/W1965555277",
-        "https://openalex.org/W3116865743",
-        "https://openalex.org/W3009321976",
-        "https://openalex.org/W4229040393",
-        "https://openalex.org/W6745537798",
-        "https://openalex.org/W2900090807",
-        "https://openalex.org/W1757990252",
-        "https://openalex.org/W2564843018",
-        "https://openalex.org/W2578240541",
-        "https://openalex.org/W2529996553",
-        "https://openalex.org/W2891868449",
-        "https://openalex.org/W2991736596",
-        "https://openalex.org/W2953128081",
-        "https://openalex.org/W3104956673",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4321377212",
-        "https://openalex.org/W3098269892",
-        "https://openalex.org/W3045928028"
-    ],
-    "abstract": "Condition-based molecular generation can generate a large number of molecules with particular properties, expanding the virtual drug screening library, and accelerating the process of drug discovery. In this study, we combined a molecular graph structure and sequential representations using a generative pretrained transformer (GPT) architecture for generating molecules conditionally. The incorporation of graph structure information facilitated a better comprehension of molecular topological features, and the augmentation of a sequential contextual understanding of GPT architecture facilitated molecular generation. The experiments indicate that our model efficiently produces molecules with the desired properties, with valid and unique metrics that are close to 100%. Faced with the typical task of generating molecules based on a scaffold in drug discovery, our model is able to preserve scaffold information and generate molecules with low similarity and specified properties.",
-    "full_text": null
+  "title": "GraphGPT: A Graph Enhanced Generative Pretrained Transformer for Conditioned Molecular Generation",
+  "url": "https://openalex.org/W4389056014",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5103072612",
+      "name": "Hao Lu",
+      "affiliations": [
+        "Ocean University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5079932099",
+      "name": "Zhiqiang Wei",
+      "affiliations": [
+        "Ocean University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5113055779",
+      "name": "Xuze Wang",
+      "affiliations": [
+        "Ocean University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100342397",
+      "name": "Kun Zhang",
+      "affiliations": [
+        "Ocean University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100458827",
+      "name": "Hao Liu",
+      "affiliations": [
+        "Ocean University of China"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3195161349",
+    "https://openalex.org/W4297179162",
+    "https://openalex.org/W4220681836",
+    "https://openalex.org/W4386250908",
+    "https://openalex.org/W3095849807",
+    "https://openalex.org/W2578119541",
+    "https://openalex.org/W2922076381",
+    "https://openalex.org/W4386976834",
+    "https://openalex.org/W4381435404",
+    "https://openalex.org/W2023818227",
+    "https://openalex.org/W4317625850",
+    "https://openalex.org/W4319310661",
+    "https://openalex.org/W2803526748",
+    "https://openalex.org/W6640963894",
+    "https://openalex.org/W6637568146",
+    "https://openalex.org/W2962764565",
+    "https://openalex.org/W4220798957",
+    "https://openalex.org/W4381470101",
+    "https://openalex.org/W6805360056",
+    "https://openalex.org/W3217546525",
+    "https://openalex.org/W3042826782",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W4324026004",
+    "https://openalex.org/W4362589790",
+    "https://openalex.org/W6787995345",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3169622372",
+    "https://openalex.org/W4221163422",
+    "https://openalex.org/W2160592148",
+    "https://openalex.org/W2034549041",
+    "https://openalex.org/W1985418765",
+    "https://openalex.org/W2109349176",
+    "https://openalex.org/W3209056694",
+    "https://openalex.org/W2900694120",
+    "https://openalex.org/W2887447356",
+    "https://openalex.org/W1965555277",
+    "https://openalex.org/W3116865743",
+    "https://openalex.org/W3009321976",
+    "https://openalex.org/W4229040393",
+    "https://openalex.org/W6745537798",
+    "https://openalex.org/W2900090807",
+    "https://openalex.org/W1757990252",
+    "https://openalex.org/W2564843018",
+    "https://openalex.org/W2578240541",
+    "https://openalex.org/W2529996553",
+    "https://openalex.org/W2891868449",
+    "https://openalex.org/W2991736596",
+    "https://openalex.org/W2953128081",
+    "https://openalex.org/W3104956673",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4321377212",
+    "https://openalex.org/W3098269892",
+    "https://openalex.org/W3045928028"
+  ],
+  "abstract": "Condition-based molecular generation can generate a large number of molecules with particular properties, expanding the virtual drug screening library, and accelerating the process of drug discovery. In this study, we combined a molecular graph structure and sequential representations using a generative pretrained transformer (GPT) architecture for generating molecules conditionally. The incorporation of graph structure information facilitated a better comprehension of molecular topological features, and the augmentation of a sequential contextual understanding of GPT architecture facilitated molecular generation. The experiments indicate that our model efficiently produces molecules with the desired properties, with valid and unique metrics that are close to 100%. Faced with the typical task of generating molecules based on a scaffold in drug discovery, our model is able to preserve scaffold information and generate molecules with low similarity and specified properties.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6593624949455261
+    },
+    {
+      "name": "Virtual screening",
+      "score": 0.6176716089248657
+    },
+    {
+      "name": "Molecular graph",
+      "score": 0.5962522029876709
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.5922009944915771
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5909080505371094
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.5564233660697937
+    },
+    {
+      "name": "Scaffold",
+      "score": 0.5357676148414612
+    },
+    {
+      "name": "Graph",
+      "score": 0.5200688242912292
+    },
+    {
+      "name": "Generative model",
+      "score": 0.4903538227081299
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.35886436700820923
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3586592674255371
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.35745319724082947
+    },
+    {
+      "name": "Biological system",
+      "score": 0.3219561278820038
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.20907044410705566
+    },
+    {
+      "name": "Biology",
+      "score": 0.17451438307762146
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1362297236919403
+    },
+    {
+      "name": "Programming language",
+      "score": 0.10304570198059082
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

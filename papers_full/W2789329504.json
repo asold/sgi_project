@@ -1,71 +1,142 @@
 {
-    "title": "Polyphonic Piano Transcription with a Note-Based Music Language Model",
-    "url": "https://openalex.org/W2789329504",
-    "year": 2018,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1981730961",
-            "name": "Qi Wang",
-            "affiliations": [
-                "Institute of Acoustics",
-                "University of Chinese Academy of Sciences",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110744283",
-            "name": "Ruohua Zhou",
-            "affiliations": [
-                "University of Chinese Academy of Sciences",
-                "Institute of Acoustics",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132722036",
-            "name": "Yonghong Yan",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Acoustics",
-                "University of Chinese Academy of Sciences",
-                "Xinjiang Technical Institute of Physics & Chemistry"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6607112371",
-        "https://openalex.org/W129413713",
-        "https://openalex.org/W2587310949",
-        "https://openalex.org/W2105143211",
-        "https://openalex.org/W2155208345",
-        "https://openalex.org/W2054770976",
-        "https://openalex.org/W2076608692",
-        "https://openalex.org/W2104298926",
-        "https://openalex.org/W2135151673",
-        "https://openalex.org/W2105343238",
-        "https://openalex.org/W2295460171",
-        "https://openalex.org/W2152937398",
-        "https://openalex.org/W2585024215",
-        "https://openalex.org/W2096354165",
-        "https://openalex.org/W1916044666",
-        "https://openalex.org/W2125722442",
-        "https://openalex.org/W1591581110",
-        "https://openalex.org/W2494437503",
-        "https://openalex.org/W6728773792",
-        "https://openalex.org/W2031153162",
-        "https://openalex.org/W2753779507",
-        "https://openalex.org/W6681236507",
-        "https://openalex.org/W1967442998",
-        "https://openalex.org/W1819710477",
-        "https://openalex.org/W2162911105",
-        "https://openalex.org/W2586678557",
-        "https://openalex.org/W2433636802",
-        "https://openalex.org/W2198584637",
-        "https://openalex.org/W2747464893",
-        "https://openalex.org/W2110007838",
-        "https://openalex.org/W2144414181",
-        "https://openalex.org/W173399573"
-    ],
-    "abstract": "This paper proposes a note-based music language model (MLM) for improving note-level polyphonic piano transcription. The MLM is based on the recurrent structure, which could model the temporal correlations between notes in music sequences. To combine the outputs of the note-based MLM and acoustic model directly, an integrated architecture is adopted in this paper. We also propose an inference algorithm, in which the note-based MLM is used to predict notes at the blank onsets in the thresholding transcription results. The experimental results show that the proposed inference algorithm improves the performance of note-level transcription. We also observe that the combination of the restricted Boltzmann machine (RBM) and recurrent structure outperforms a single recurrent neural network (RNN) or long short-term memory network (LSTM) in modeling the high-dimensional note sequences. Among all the MLMs, LSTM-RBM helps the system yield the best results on all evaluation metrics regardless of the performance of acoustic models.",
-    "full_text": null
+  "title": "Polyphonic Piano Transcription with a Note-Based Music Language Model",
+  "url": "https://openalex.org/W2789329504",
+  "year": 2018,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1981730961",
+      "name": "Qi Wang",
+      "affiliations": [
+        "Institute of Acoustics",
+        "University of Chinese Academy of Sciences",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110744283",
+      "name": "Ruohua Zhou",
+      "affiliations": [
+        "University of Chinese Academy of Sciences",
+        "Institute of Acoustics",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132722036",
+      "name": "Yonghong Yan",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Acoustics",
+        "University of Chinese Academy of Sciences",
+        "Xinjiang Technical Institute of Physics & Chemistry"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6607112371",
+    "https://openalex.org/W129413713",
+    "https://openalex.org/W2587310949",
+    "https://openalex.org/W2105143211",
+    "https://openalex.org/W2155208345",
+    "https://openalex.org/W2054770976",
+    "https://openalex.org/W2076608692",
+    "https://openalex.org/W2104298926",
+    "https://openalex.org/W2135151673",
+    "https://openalex.org/W2105343238",
+    "https://openalex.org/W2295460171",
+    "https://openalex.org/W2152937398",
+    "https://openalex.org/W2585024215",
+    "https://openalex.org/W2096354165",
+    "https://openalex.org/W1916044666",
+    "https://openalex.org/W2125722442",
+    "https://openalex.org/W1591581110",
+    "https://openalex.org/W2494437503",
+    "https://openalex.org/W6728773792",
+    "https://openalex.org/W2031153162",
+    "https://openalex.org/W2753779507",
+    "https://openalex.org/W6681236507",
+    "https://openalex.org/W1967442998",
+    "https://openalex.org/W1819710477",
+    "https://openalex.org/W2162911105",
+    "https://openalex.org/W2586678557",
+    "https://openalex.org/W2433636802",
+    "https://openalex.org/W2198584637",
+    "https://openalex.org/W2747464893",
+    "https://openalex.org/W2110007838",
+    "https://openalex.org/W2144414181",
+    "https://openalex.org/W173399573"
+  ],
+  "abstract": "This paper proposes a note-based music language model (MLM) for improving note-level polyphonic piano transcription. The MLM is based on the recurrent structure, which could model the temporal correlations between notes in music sequences. To combine the outputs of the note-based MLM and acoustic model directly, an integrated architecture is adopted in this paper. We also propose an inference algorithm, in which the note-based MLM is used to predict notes at the blank onsets in the thresholding transcription results. The experimental results show that the proposed inference algorithm improves the performance of note-level transcription. We also observe that the combination of the restricted Boltzmann machine (RBM) and recurrent structure outperforms a single recurrent neural network (RNN) or long short-term memory network (LSTM) in modeling the high-dimensional note sequences. Among all the MLMs, LSTM-RBM helps the system yield the best results on all evaluation metrics regardless of the performance of acoustic models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6918933391571045
+    },
+    {
+      "name": "Piano",
+      "score": 0.6822508573532104
+    },
+    {
+      "name": "Inference",
+      "score": 0.5861599445343018
+    },
+    {
+      "name": "Polyphony",
+      "score": 0.5744898915290833
+    },
+    {
+      "name": "Language model",
+      "score": 0.5737950205802917
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.5697974562644958
+    },
+    {
+      "name": "Transcription (linguistics)",
+      "score": 0.5652443766593933
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5294662714004517
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4737982153892517
+    },
+    {
+      "name": "Restricted Boltzmann machine",
+      "score": 0.4217257797718048
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.31570756435394287
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.2979893982410431
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.14714539051055908
+    },
+    {
+      "name": "Art",
+      "score": 0.08432969450950623
+    },
+    {
+      "name": "Literature",
+      "score": 0.0
+    },
+    {
+      "name": "Art history",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

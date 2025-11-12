@@ -1,88 +1,115 @@
 {
-    "title": "MFTCoder: Boosting Code LLMs with Multitask Fine-Tuning",
-    "url": "https://openalex.org/W4401863706",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2226403995",
-            "name": "Bingchang LIU",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105448785",
-            "name": "Chaoyu Chen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2316484355",
-            "name": "Zi Gong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2230719662",
-            "name": "Cong Liao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2095600284",
-            "name": "Huan Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2128553372",
-            "name": "Zhi-Chao Lei",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1967427520",
-            "name": "Ming Liang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2125671057",
-            "name": "Dajun Chen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2000672023",
-            "name": "Min Shen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2106731612",
-            "name": "Hailian Zhou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1983044200",
-            "name": "Wei Jiang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100757636",
-            "name": "Hang Yu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096366026",
-            "name": "Jianguo Li",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4285225959",
-        "https://openalex.org/W4285294723",
-        "https://openalex.org/W2251324968",
-        "https://openalex.org/W4311887664",
-        "https://openalex.org/W2963430933",
-        "https://openalex.org/W2965024236",
-        "https://openalex.org/W2963854351",
-        "https://openalex.org/W3036917029",
-        "https://openalex.org/W2991309414",
-        "https://openalex.org/W2884886306",
-        "https://openalex.org/W4385562549",
-        "https://openalex.org/W4236965008"
-    ],
-    "abstract": "Code LLMs have emerged as a specialized research field, with remarkable studies dedicated to enhancing model's coding capabilities through fine-tuning on pre-trained models. Previous fine-tuning approaches were typically tailored to specific downstream tasks or scenarios, which meant separate fine-tuning for each task, requiring extensive training resources and posing challenges in terms of deployment and maintenance. Furthermore, these approaches failed to leverage the inherent interconnectedness among different code-related tasks. To overcome these limitations, we present a multi-task fine-tuning framework, MFTCoder, that enables simultaneous and parallel fine-tuning on multiple tasks. By incorporating various loss functions, we effectively address common challenges in multi-task learning, such as data imbalance, varying difficulty levels, and inconsistent convergence speeds. Extensive experiments have conclusively demonstrated that our multi-task fine-tuning approach outperforms both individual fine-tuning on single tasks and fine-tuning on a mixed ensemble of tasks. Moreover, MFTCoder offers efficient training capabilities, including efficient data tokenization modes and parameter efficient fine-tuning (PEFT) techniques, resulting in significantly improved speed compared to traditional fine-tuning methods. MFTCoder seamlessly integrates with several mainstream open-source LLMs, such as CodeLLama and Qwen. Our MFTCoder fine-tuned CodeFuse-DeepSeek-33B claimed the top spot on the Big Code Models Leaderboard ranked by WinRate as of January 30, 2024. MFTCoder is open-sourced at https://github.com/codefuse-ai/MFTCOder",
-    "full_text": null
+  "title": "MFTCoder: Boosting Code LLMs with Multitask Fine-Tuning",
+  "url": "https://openalex.org/W4401863706",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2226403995",
+      "name": "Bingchang LIU",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105448785",
+      "name": "Chaoyu Chen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2316484355",
+      "name": "Zi Gong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2230719662",
+      "name": "Cong Liao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2095600284",
+      "name": "Huan Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2128553372",
+      "name": "Zhi-Chao Lei",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1967427520",
+      "name": "Ming Liang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2125671057",
+      "name": "Dajun Chen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2000672023",
+      "name": "Min Shen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2106731612",
+      "name": "Hailian Zhou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1983044200",
+      "name": "Wei Jiang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100757636",
+      "name": "Hang Yu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096366026",
+      "name": "Jianguo Li",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4285225959",
+    "https://openalex.org/W4285294723",
+    "https://openalex.org/W2251324968",
+    "https://openalex.org/W4311887664",
+    "https://openalex.org/W2963430933",
+    "https://openalex.org/W2965024236",
+    "https://openalex.org/W2963854351",
+    "https://openalex.org/W3036917029",
+    "https://openalex.org/W2991309414",
+    "https://openalex.org/W2884886306",
+    "https://openalex.org/W4385562549",
+    "https://openalex.org/W4236965008"
+  ],
+  "abstract": "Code LLMs have emerged as a specialized research field, with remarkable studies dedicated to enhancing model's coding capabilities through fine-tuning on pre-trained models. Previous fine-tuning approaches were typically tailored to specific downstream tasks or scenarios, which meant separate fine-tuning for each task, requiring extensive training resources and posing challenges in terms of deployment and maintenance. Furthermore, these approaches failed to leverage the inherent interconnectedness among different code-related tasks. To overcome these limitations, we present a multi-task fine-tuning framework, MFTCoder, that enables simultaneous and parallel fine-tuning on multiple tasks. By incorporating various loss functions, we effectively address common challenges in multi-task learning, such as data imbalance, varying difficulty levels, and inconsistent convergence speeds. Extensive experiments have conclusively demonstrated that our multi-task fine-tuning approach outperforms both individual fine-tuning on single tasks and fine-tuning on a mixed ensemble of tasks. Moreover, MFTCoder offers efficient training capabilities, including efficient data tokenization modes and parameter efficient fine-tuning (PEFT) techniques, resulting in significantly improved speed compared to traditional fine-tuning methods. MFTCoder seamlessly integrates with several mainstream open-source LLMs, such as CodeLLama and Qwen. Our MFTCoder fine-tuned CodeFuse-DeepSeek-33B claimed the top spot on the Big Code Models Leaderboard ranked by WinRate as of January 30, 2024. MFTCoder is open-sourced at https://github.com/codefuse-ai/MFTCOder",
+  "full_text": null,
+  "topic": "Boosting (machine learning)",
+  "concepts": [
+    {
+      "name": "Boosting (machine learning)",
+      "score": 0.9055114984512329
+    },
+    {
+      "name": "Computer science",
+      "score": 0.579552173614502
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.444505900144577
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.30027949810028076
+    },
+    {
+      "name": "Programming language",
+      "score": 0.2515277564525604
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

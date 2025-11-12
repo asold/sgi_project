@@ -1,65 +1,92 @@
 {
-    "title": "Path-BigBird: An AI-Driven Transformer Approach to Classification of Cancer Pathology Reports",
-    "url": "https://openalex.org/W4392204108",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5087960600",
-            "name": "Mayanka Chandrashekar",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5004692421",
-            "name": "Isaac Lyngaas",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5052259818",
-            "name": "Heidi A. Hanson",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5047655591",
-            "name": "Shang Gao",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5075691677",
-            "name": "Xiao‐Cheng Wu",
-            "affiliations": [
-                "Louisiana State University Health Sciences Center New Orleans"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5018744978",
-            "name": "John Gounley",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4315754639",
-        "https://openalex.org/W2981133974",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W3046375318",
-        "https://openalex.org/W4312220150",
-        "https://openalex.org/W3132259035",
-        "https://openalex.org/W2985301765",
-        "https://openalex.org/W4292318690",
-        "https://openalex.org/W4327946446",
-        "https://openalex.org/W3164718925",
-        "https://openalex.org/W2978988797",
-        "https://openalex.org/W2487037907"
-    ],
-    "abstract": "PURPOSE Surgical pathology reports are critical for cancer diagnosis and management. To accurately extract information about tumor characteristics from pathology reports in near real time, we explore the impact of using domain-specific transformer models that understand cancer pathology reports. METHODS We built a pathology transformer model, Path-BigBird, by using 2.7 million pathology reports from six SEER cancer registries. We then compare different variations of Path-BigBird with two less computationally intensive methods: Hierarchical Self-Attention Network (HiSAN) classification model and an off-the-shelf clinical transformer model (Clinical BigBird). We use five pathology information extraction tasks for evaluation: site, subsite, laterality, histology, and behavior. Model performance is evaluated by using macro and micro F 1 scores. RESULTS We found that Path-BigBird and Clinical BigBird outperformed the HiSAN in all tasks. Clinical BigBird performed better on the site and laterality tasks. Versions of the Path-BigBird model performed best on the two most difficult tasks: subsite (micro F 1 score of 72.53, macro F 1 score of 35.76) and histology (micro F 1 score of 80.96, macro F 1 score of 37.94). The largest performance gains over the HiSAN model were for histology, for which a Path-BigBird model increased the micro F 1 score by 1.44 points and the macro F 1 score by 3.55 points. Overall, the results suggest that a Path-BigBird model with a vocabulary derived from well-curated and deidentified data is the best-performing model. CONCLUSION The Path-BigBird pathology transformer model improves automated information extraction from pathology reports. Although Path-BigBird outperforms Clinical BigBird and HiSAN, these less computationally expensive models still have utility when resources are constrained.",
-    "full_text": null
+  "title": "Path-BigBird: An AI-Driven Transformer Approach to Classification of Cancer Pathology Reports",
+  "url": "https://openalex.org/W4392204108",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5087960600",
+      "name": "Mayanka Chandrashekar",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5004692421",
+      "name": "Isaac Lyngaas",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5052259818",
+      "name": "Heidi A. Hanson",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5047655591",
+      "name": "Shang Gao",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5075691677",
+      "name": "Xiao‐Cheng Wu",
+      "affiliations": [
+        "Louisiana State University Health Sciences Center New Orleans"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5018744978",
+      "name": "John Gounley",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4315754639",
+    "https://openalex.org/W2981133974",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W3046375318",
+    "https://openalex.org/W4312220150",
+    "https://openalex.org/W3132259035",
+    "https://openalex.org/W2985301765",
+    "https://openalex.org/W4292318690",
+    "https://openalex.org/W4327946446",
+    "https://openalex.org/W3164718925",
+    "https://openalex.org/W2978988797",
+    "https://openalex.org/W2487037907"
+  ],
+  "abstract": "PURPOSE Surgical pathology reports are critical for cancer diagnosis and management. To accurately extract information about tumor characteristics from pathology reports in near real time, we explore the impact of using domain-specific transformer models that understand cancer pathology reports. METHODS We built a pathology transformer model, Path-BigBird, by using 2.7 million pathology reports from six SEER cancer registries. We then compare different variations of Path-BigBird with two less computationally intensive methods: Hierarchical Self-Attention Network (HiSAN) classification model and an off-the-shelf clinical transformer model (Clinical BigBird). We use five pathology information extraction tasks for evaluation: site, subsite, laterality, histology, and behavior. Model performance is evaluated by using macro and micro F 1 scores. RESULTS We found that Path-BigBird and Clinical BigBird outperformed the HiSAN in all tasks. Clinical BigBird performed better on the site and laterality tasks. Versions of the Path-BigBird model performed best on the two most difficult tasks: subsite (micro F 1 score of 72.53, macro F 1 score of 35.76) and histology (micro F 1 score of 80.96, macro F 1 score of 37.94). The largest performance gains over the HiSAN model were for histology, for which a Path-BigBird model increased the micro F 1 score by 1.44 points and the macro F 1 score by 3.55 points. Overall, the results suggest that a Path-BigBird model with a vocabulary derived from well-curated and deidentified data is the best-performing model. CONCLUSION The Path-BigBird pathology transformer model improves automated information extraction from pathology reports. Although Path-BigBird outperforms Clinical BigBird and HiSAN, these less computationally expensive models still have utility when resources are constrained.",
+  "full_text": null,
+  "topic": "Macro",
+  "concepts": [
+    {
+      "name": "Macro",
+      "score": 0.5460529327392578
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4485781788825989
+    },
+    {
+      "name": "Medicine",
+      "score": 0.44325560331344604
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40345898270606995
+    },
+    {
+      "name": "Pathology",
+      "score": 0.3820788562297821
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

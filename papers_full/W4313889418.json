@@ -1,91 +1,170 @@
 {
-    "title": "Ensemble-NQG-T5: Ensemble Neural Question Generation Model Based on Text-to-Text Transfer Transformer",
-    "url": "https://openalex.org/W4313889418",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2997542202",
-            "name": "Myeong Ha Hwang",
-            "affiliations": [
-                "Korea Electric Power Corporation (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096051494",
-            "name": "Jikang Shin",
-            "affiliations": [
-                "Korea Electric Power Corporation (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2158135777",
-            "name": "Hojin Seo",
-            "affiliations": [
-                "Korea Electric Power Corporation (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4316686863",
-            "name": "Jeong-Seon Im",
-            "affiliations": [
-                "Korea Electric Power Corporation (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2155930646",
-            "name": "Hee Cho",
-            "affiliations": [
-                "Korea Electric Power Corporation (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2904136920",
-            "name": "Chun-Kwon Lee",
-            "affiliations": [
-                "Pukyong National University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6786072427",
-        "https://openalex.org/W2865970941",
-        "https://openalex.org/W2606333299",
-        "https://openalex.org/W3011574394",
-        "https://openalex.org/W2154137718",
-        "https://openalex.org/W2757978590",
-        "https://openalex.org/W2962717047",
-        "https://openalex.org/W2809326784",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6772188050",
-        "https://openalex.org/W3211339323",
-        "https://openalex.org/W3205871113",
-        "https://openalex.org/W4285232326",
-        "https://openalex.org/W3201266133",
-        "https://openalex.org/W2962808855",
-        "https://openalex.org/W2999791086",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W6682631176",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2944815030",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2963854351",
-        "https://openalex.org/W2799054028",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2988673764",
-        "https://openalex.org/W6600367688",
-        "https://openalex.org/W2963323070",
-        "https://openalex.org/W2888812214",
-        "https://openalex.org/W4307273670",
-        "https://openalex.org/W6761205521",
-        "https://openalex.org/W6728487949",
-        "https://openalex.org/W3088409176",
-        "https://openalex.org/W2534253848",
-        "https://openalex.org/W8870360",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W3103891289"
-    ],
-    "abstract": "Deep learning chatbot research and development is exploding recently to offer customers in numerous industries personalized services. However, human resources are used to create a learning dataset for a deep learning chatbot. In order to augment this, the idea of neural question generation (NQG) has evolved, although it has restrictions on how questions can be expressed in different ways and has a finite capacity for question generation. In this paper, we propose an ensemble-type NQG model based on the text-to-text transfer transformer (T5). Through the proposed model, the number of generated questions for each single NQG model can be greatly increased by considering the mutual similarity and the quality of the questions using the soft-voting method. For the training of the soft-voting algorithm, the evaluation score and mutual similarity score weights based on the context and the question–answer (QA) dataset are used as the threshold weight. Performance comparison results with existing T5-based NQG models using the SQuAD 2.0 dataset demonstrate the effectiveness of the proposed method for QG. The implementation of the proposed ensemble model is anticipated to span diverse industrial fields, including interactive chatbots, robotic process automation (RPA), and Internet of Things (IoT) services in the future.",
-    "full_text": null
+  "title": "Ensemble-NQG-T5: Ensemble Neural Question Generation Model Based on Text-to-Text Transfer Transformer",
+  "url": "https://openalex.org/W4313889418",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2997542202",
+      "name": "Myeong Ha Hwang",
+      "affiliations": [
+        "Korea Electric Power Corporation (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096051494",
+      "name": "Jikang Shin",
+      "affiliations": [
+        "Korea Electric Power Corporation (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2158135777",
+      "name": "Hojin Seo",
+      "affiliations": [
+        "Korea Electric Power Corporation (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4316686863",
+      "name": "Jeong-Seon Im",
+      "affiliations": [
+        "Korea Electric Power Corporation (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2155930646",
+      "name": "Hee Cho",
+      "affiliations": [
+        "Korea Electric Power Corporation (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2904136920",
+      "name": "Chun-Kwon Lee",
+      "affiliations": [
+        "Pukyong National University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6786072427",
+    "https://openalex.org/W2865970941",
+    "https://openalex.org/W2606333299",
+    "https://openalex.org/W3011574394",
+    "https://openalex.org/W2154137718",
+    "https://openalex.org/W2757978590",
+    "https://openalex.org/W2962717047",
+    "https://openalex.org/W2809326784",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6772188050",
+    "https://openalex.org/W3211339323",
+    "https://openalex.org/W3205871113",
+    "https://openalex.org/W4285232326",
+    "https://openalex.org/W3201266133",
+    "https://openalex.org/W2962808855",
+    "https://openalex.org/W2999791086",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W6682631176",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2944815030",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2963854351",
+    "https://openalex.org/W2799054028",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2988673764",
+    "https://openalex.org/W6600367688",
+    "https://openalex.org/W2963323070",
+    "https://openalex.org/W2888812214",
+    "https://openalex.org/W4307273670",
+    "https://openalex.org/W6761205521",
+    "https://openalex.org/W6728487949",
+    "https://openalex.org/W3088409176",
+    "https://openalex.org/W2534253848",
+    "https://openalex.org/W8870360",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W3103891289"
+  ],
+  "abstract": "Deep learning chatbot research and development is exploding recently to offer customers in numerous industries personalized services. However, human resources are used to create a learning dataset for a deep learning chatbot. In order to augment this, the idea of neural question generation (NQG) has evolved, although it has restrictions on how questions can be expressed in different ways and has a finite capacity for question generation. In this paper, we propose an ensemble-type NQG model based on the text-to-text transfer transformer (T5). Through the proposed model, the number of generated questions for each single NQG model can be greatly increased by considering the mutual similarity and the quality of the questions using the soft-voting method. For the training of the soft-voting algorithm, the evaluation score and mutual similarity score weights based on the context and the question–answer (QA) dataset are used as the threshold weight. Performance comparison results with existing T5-based NQG models using the SQuAD 2.0 dataset demonstrate the effectiveness of the proposed method for QG. The implementation of the proposed ensemble model is anticipated to span diverse industrial fields, including interactive chatbots, robotic process automation (RPA), and Internet of Things (IoT) services in the future.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7595096826553345
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6459318995475769
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5702570080757141
+    },
+    {
+      "name": "Ensemble forecasting",
+      "score": 0.5670309662818909
+    },
+    {
+      "name": "Ensemble learning",
+      "score": 0.5063604116439819
+    },
+    {
+      "name": "Chatbot",
+      "score": 0.5000839233398438
+    },
+    {
+      "name": "Majority rule",
+      "score": 0.46660611033439636
+    },
+    {
+      "name": "Voting",
+      "score": 0.45094844698905945
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.42950019240379333
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.42903637886047363
+    },
+    {
+      "name": "Transfer of learning",
+      "score": 0.4284232556819916
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.41624364256858826
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.32026174664497375
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1064218282699585
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,40 +1,111 @@
 {
-    "title": "An Exact Linearization Method for OLTC of Transformer in Branch Flow Model",
-    "url": "https://openalex.org/W2410513332",
-    "year": 2016,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2746491922",
-            "name": "Wu, Wenchuan",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2245862418",
-            "name": "Tian Zhuang",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A160108147",
-            "name": "Zhang Bo-ming",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4241079583",
-        "https://openalex.org/W2039523638",
-        "https://openalex.org/W2024956408",
-        "https://openalex.org/W2158020793",
-        "https://openalex.org/W2328368818",
-        "https://openalex.org/W2092517480",
-        "https://openalex.org/W2100197017",
-        "https://openalex.org/W2145761514"
-    ],
-    "abstract": "The branch flow based optimal power flow(OPF) problem in radianlly operated\\ndistribution networks can be exactly relazed to a second order cone programming\\n(SOCP) model without considering transformers. However, the introdution of\\nnonlinear transformer models will make the OPF model non-convex. This paper\\npresents an exact linearized transformer's OLTC model to keep the OPF model\\nconvex via binary expanstion scheme and big-M method. Validity of the proposed\\nmethod is verified using IEEE 33-bus test system.\\n",
-    "full_text": " 1\n \nAbstract--The branch flow based optimal power flow (OPF) \nproblem in radially operated distribution networks can be \nexactly relaxed to a second order cone programming (SOCP) \nmodel without considering transformers. However, the \nintroduction of nonlinear transformer models will make the OPF \nmodel non-convex. This letter presents an exact linearized \ntransformer’s OLTC (On-Load Tap-Changer) model to keep the \nOPF model convex via binary expansion scheme and big-M \nmethod.  Validity of the proposed method is verified using IEEE \n33-bus test network. \n1 Index Terms —distribution networks, optimal power flow, \nOLTC \nI.  INTRODUCTION \nPTIMAL power flow is an essential method to reduce \nnetwork losses and optimize voltage profile in \ndistribution networks. In [1], the relaxation and \nconvexification of branch flow based OPF model are well \ndiscussed, which is ultimately formulated as a second-order \ncone programming (SOCP) problem (SOCP-OPF). However, \nthe transformer has been ignored in this model, which is \ncritical to improve voltage profile. In published works, \ntransformer tap ratio is usually approximately modeled [2] or \nrelaxed to continuous variables [3], which may lead to \nsuboptimal or infeasible solutions [2]. In this letter, an exact \nlinearized transformer’s OLTC model is proposed and \nincorporated into the SOCP-OPF model. \nII.  L\nINEARIZATION OF TRANSFORMER’S OLTC MODEL \nFig. 1 shows a partial distribution feeder with a transformer. \nij k\n1ijt ：m\nij ijPQ，\nij ijR jX\njk jkPQ，\njjPQ，  \nFig. 1 One line diagram of a feeder with a transformer \n \nTransformer ij can be divided into branch im and branch mj, \nbranch mj only contains a tap-changer, and the impedance of \nbranch im is the same as branch ij. Similar with Distflow \nbranch equations for lines [4], the branch equations of \ntransformer ij can be described as \n \nij ij ij j jkPL R PP   (1) \n ij ij ij j jkQL XQQ   (2) \n                                                           \nW. Wu, Z. Tian, B. Zhang are with the State Key Laboratory of Power \nSystems, Department of Electrical E ngineering, Tsinghua University, Beijing \n100084, China (e-mail: wuwench@tsinghua.edu.cn). \n 222( ) ( )ij t i j i ji j i j i ji j i jUU R P X Q R X L    (3) \n 22() /ij ij ij iL PQU  (4) \n 2\njt ij jUt U  (5) \nwhere ijP  and ijQ  represent the sending-end active and \nreactive power from buses i to j; jkP  and jkQ  represent the \nsending-end active and reactive power from buses j to k; iU , \njU  and jtU  represent the square of voltage magnitude of \nbuses i, j and m; ijL  represent the square of current magnitude \nof branch ij; jP  and jQ  represent the active and reactive \npower injection at bus j; ijR  and ijX  represent the impedance \non branch ij; ijt  represents the turns ratio of the transformer in \nbranch  ij. \nThe branch flow model (1)-(5) is non-convex due to \nequations (4) and (5). Equation (4) can be relaxed to a convex \nconstraint by SOCP relaxation [1]. Equation (5) can be \ntransformed into mixed integer linear expressions by the \nmethod proposed in this letter. \nThe transformer’s tap-changer is formulated as follows: \n \nmin ,0ij ij ij ij ij ijtt T t TK    (6) \n max min() /ij ij ij ijtt t K   (7) \nwhere min\nijt  and max\nijt  represent the minimum and maximum \nturns ratios of the transformer; ijK  represents the total taps of \nthe tap-changer; ijt  represents the turns ratio change per tap; \nijT  is an integer variable which represents the actual tap \nposition of the tap-changer. \nijt  can be expressed by the binary expansion scheme [5] as: \n min\n,\n0\n2\nijN\nn\nij ij ij ij n\nn\ntt t \n\n    (8) \n ,\n0\n2\nijN\nn\nij n ij\nn\nK\n\n  (9) \nwhere ,ij n  is a binary variable and ijN  is the length of the \nbinary representation of ijK . \nMultiplying both sides of (8) by jU  and defining new \nvariables ij ij jmt U  and ,,ij n ij n jx U , we obtain \n min\n,\n0\n2\nijN\nn\nij ij j ij ij n\nn\nmt U t x\n\n    (10) \n,,ij n ij n jx U  can be equivalently replaced by equations (11)\nand (12) by introducing a positive large number M: \nWenchuan Wu, Senior Member, IEEE, Zhuang Tian, Boming Zhang, Fellow, IEEE  \nAn Exact Linearization Method for OLTC of \nTransformer in Branch Flow Model \nO\n 2\n ,,0( 1 ) ji j n i j nUx M     (11) \n ,,0 ij n ij nx M  (12) \nApplying the same procedure to jt ij ijUt m  and defining a \nnew variable ,,ij n ij n ijym  , we obtain \n min\n,\n0\n2\nijN\nn\njt ij ij ij ij n\nn\nUt m t y\n\n    (13) \n ,,0( 1 )ij ij n ij nmy M     (14) \n ,,0 ij n ij nyM   (15) \nWith the above transformations, the non-convex constraints \nof transformer (5)-(7) are transformed into mixed integer \nlinear constraints  (9), (10)-(15). \nIn [2], binary expansion scheme has been used to linearize \nan approximate transformer’s OLTC model as follows: \n \nmin 2() 2 jt ij j ij ij jUt U T t U  (16) \nEquation (16) is inaccurate and the optimized turns ratios \ndeviate from their exact values. This method will be compared \nwith our method in section III. \nThe linearized transformer model can be incorporated into \nthe SOCP-OPF [1]. The objective of OPF is to minimize \nactive power losses \n min\nall ii P  (17) \nsubject to \n1)  Active and reactive power balance constraints \n2)  Constraints for line branches  \n222( ) ( ) , \\i j ij ij ij ij ij ij ij l ltfUU R P X Q R X L i j        (18) \n3)  Constraints for transformer branches  \n (3), (7), (9), (10)–(15), ltfij   (19) \n4)  Second-order cone constraints \n 22() / ,ij ij ij i lLP Q U i j     (20) \n5)  Constrains for power generation and consumption \n6)  Constrains for voltage and current magnitudes \nwhere all  represents the set of all buses; ()Kj  represents \nthe set of buses connected to bus j; l  represents the set of all \nbranches; ltf  represents the set of transformer branches. \n The above model is a mixed integer SOCP problem and can \nbe solved using software packages such as CPLEX.  \nIII.  NUMERICAL EXAMPLE \nThe proposed OPF problem is tested on a modified IEEE \n33-bus system [4]. Transformers are installed on branch 1-2, \n2-19, 3-23 and 6-26. The turns ratio of each transformer varies \nbetween 0.95 to 1.05 with same change per tap, denoted by t . \nDGs are installed at buses 6, 14 and 29. The minimum and \nmaximum allowable bus voltages are 0.95 p.u. and 1.05 p.u., \nrespectively. \nThe program is implemented using YALMIP®  and \nCPLEX®. Numerical tests are performed on a computer with \nIntel® Core™ i5 (2.60 GHz) and 12 GB RAM. In order to \nillustrate the effectiveness of the transformer linearization \nmethod and extra computation time caused by the mixed \ninteger linear constraints, six scenarios are tested: 1) 0.02\nt  ;  \n2) 0.01t ;  3) 0.005t ; 4) 0.002t ; 5) 0.001t ; 6) \nturns ratios fixed to the results of  scenario 3. The power \nlosses and computation time of our method and the method in \n[6] for each scenario are listed in Table I. \nTable I Simulation results for 33-bus system \nScenario Taps Power Losses (kW) CPU Time (s) \nOur method Method in [6]\n1 5 41.2 1.03 1.40 \n2 10 41.0 1.60 2.01 \n3 20 41.0 1.62 2.17 \n4 50 40.9 2.37 5.17 \n5 100 40.9 2.72 14.60 \n6 200 40.9 2.84 39.19 \nFrom the results of scenarios 1, 2 and 3, we can see that \nmore power losses can be reduced by optimizing tap-changers \nwith more taps, while the computation times grow due to the \nincreasing of binary variables. However, the additional \ncomputation burden introduced by the transformer constraints \nis moderate (comparing scenario 3 with 6) because the binary \nexpansion scheme does not involve large number of binary \nvariables in transformer model. And the proposed method has \nhigher computational efficiency compared to [6] due to less \nbinary variables. \nThe approximate method in [2] and the proposed exact \nmethod in this paper are tested with \n0.005t . The turns \nratios and power losses are listed in Table II. \nTable II Results of our method and method in [2] \nMethod 21t  19 2t   23 3t   26 6t   Power Losses (kW)\nMethod in [2] 1.05 1.0012 1.0012 1.0062 41.1 \nOur method 1.05 1 1.005 1.01 41.0 \nFrom Table II, we can see that the turns ratios solved by the \napproximate method [2] are not accurate. The method \nproposed in this paper is exact and the solution is optimal. \nIV.  CONCLUSIONS \nThe nonlinear transformer model is exactly linearized by \nbinary expansion scheme and big-M method. This exact \nlinearized transformer model involves few binary variables \nand can be incorporated into the SOCP-OPF problem in \ndistribution networks. The proposed method has been \nsimulated on a IEEE 33-bus system under different scenarios \nto demonstrate its effectiveness. \nR\nEFERENCES \n[1]   M. Farivar and S. H. Low, \"Branch Flow Model: Relaxations and \nConvexification—Part I,\" IEEE Transactions on Power Systems , vol. 28, \nno. 3, pp. 2554-2564, Aug. 2013 \n[2]   J. López, J. Contreras and J. R. S. Mantovani, \"Reactive power planning \nunder conditional-value-at-risk assessment using chance-constrained \noptimisation,\" IET Generation, Transmission & Distribution, vol. 9, no. 3, \npp. 231-240, 2 19 2015. \n[3]  B.A. Robbins, H. Zhu, A.D. Domíng uez-García, \"Optimal Tap Setting of \nVoltage Regulation Transformers in Unbalanced Distribution Systems,\" \nIEEE Transactions on Power Systems , vol.31,no.1,pp.256-267, Jan. \n2016． \n[4]   M.E. Baran, F.F. Wu, \"Network re configuration in distribution systems \nfor loss reduction and load balancing,\" IEEE Transactions on Power \nDelivery, vol.4, no.2, pp.1401-1407, Apr. 1989. \n[5]   M. V. Pereira et al., \"Strategic bidding under uncertainty: a binary \nexpansion approach,\" IEEE Transactions on Power Systems, vol. 20, no.1, \npp. 180-188, Feb. 2005. \n[6]   L. H. Macedo et al., \"Optimal Operation of Distribution Networks \nConsidering Energy Storage Devices,\" IEEE Transactions on Smart Grid, \nvol. 6, no. 6, pp. 2825-2836, Nov. 2015. "
+  "title": "An Exact Linearization Method for OLTC of Transformer in Branch Flow Model",
+  "url": "https://openalex.org/W2410513332",
+  "year": 2016,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2746491922",
+      "name": "Wu, Wenchuan",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2245862418",
+      "name": "Tian Zhuang",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A160108147",
+      "name": "Zhang Bo-ming",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4241079583",
+    "https://openalex.org/W2039523638",
+    "https://openalex.org/W2024956408",
+    "https://openalex.org/W2158020793",
+    "https://openalex.org/W2328368818",
+    "https://openalex.org/W2092517480",
+    "https://openalex.org/W2100197017",
+    "https://openalex.org/W2145761514"
+  ],
+  "abstract": "The branch flow based optimal power flow(OPF) problem in radianlly operated\\ndistribution networks can be exactly relazed to a second order cone programming\\n(SOCP) model without considering transformers. However, the introdution of\\nnonlinear transformer models will make the OPF model non-convex. This paper\\npresents an exact linearized transformer's OLTC model to keep the OPF model\\nconvex via binary expanstion scheme and big-M method. Validity of the proposed\\nmethod is verified using IEEE 33-bus test system.\\n",
+  "full_text": " 1\n \nAbstract--The branch flow based optimal power flow (OPF) \nproblem in radially operated distribution networks can be \nexactly relaxed to a second order cone programming (SOCP) \nmodel without considering transformers. However, the \nintroduction of nonlinear transformer models will make the OPF \nmodel non-convex. This letter presents an exact linearized \ntransformer’s OLTC (On-Load Tap-Changer) model to keep the \nOPF model convex via binary expansion scheme and big-M \nmethod.  Validity of the proposed method is verified using IEEE \n33-bus test network. \n1 Index Terms —distribution networks, optimal power flow, \nOLTC \nI.  INTRODUCTION \nPTIMAL power flow is an essential method to reduce \nnetwork losses and optimize voltage profile in \ndistribution networks. In [1], the relaxation and \nconvexification of branch flow based OPF model are well \ndiscussed, which is ultimately formulated as a second-order \ncone programming (SOCP) problem (SOCP-OPF). However, \nthe transformer has been ignored in this model, which is \ncritical to improve voltage profile. In published works, \ntransformer tap ratio is usually approximately modeled [2] or \nrelaxed to continuous variables [3], which may lead to \nsuboptimal or infeasible solutions [2]. In this letter, an exact \nlinearized transformer’s OLTC model is proposed and \nincorporated into the SOCP-OPF model. \nII.  L\nINEARIZATION OF TRANSFORMER’S OLTC MODEL \nFig. 1 shows a partial distribution feeder with a transformer. \nij k\n1ijt ：m\nij ijPQ，\nij ijR jX\njk jkPQ，\njjPQ，  \nFig. 1 One line diagram of a feeder with a transformer \n \nTransformer ij can be divided into branch im and branch mj, \nbranch mj only contains a tap-changer, and the impedance of \nbranch im is the same as branch ij. Similar with Distflow \nbranch equations for lines [4], the branch equations of \ntransformer ij can be described as \n \nij ij ij j jkPL R PP   (1) \n ij ij ij j jkQL XQQ   (2) \n                                                           \nW. Wu, Z. Tian, B. Zhang are with the State Key Laboratory of Power \nSystems, Department of Electrical E ngineering, Tsinghua University, Beijing \n100084, China (e-mail: wuwench@tsinghua.edu.cn). \n 222( ) ( )ij t i j i ji j i j i ji j i jUU R P X Q R X L    (3) \n 22() /ij ij ij iL PQU  (4) \n 2\njt ij jUt U  (5) \nwhere ijP  and ijQ  represent the sending-end active and \nreactive power from buses i to j; jkP  and jkQ  represent the \nsending-end active and reactive power from buses j to k; iU , \njU  and jtU  represent the square of voltage magnitude of \nbuses i, j and m; ijL  represent the square of current magnitude \nof branch ij; jP  and jQ  represent the active and reactive \npower injection at bus j; ijR  and ijX  represent the impedance \non branch ij; ijt  represents the turns ratio of the transformer in \nbranch  ij. \nThe branch flow model (1)-(5) is non-convex due to \nequations (4) and (5). Equation (4) can be relaxed to a convex \nconstraint by SOCP relaxation [1]. Equation (5) can be \ntransformed into mixed integer linear expressions by the \nmethod proposed in this letter. \nThe transformer’s tap-changer is formulated as follows: \n \nmin ,0ij ij ij ij ij ijtt T t TK    (6) \n max min() /ij ij ij ijtt t K   (7) \nwhere min\nijt  and max\nijt  represent the minimum and maximum \nturns ratios of the transformer; ijK  represents the total taps of \nthe tap-changer; ijt  represents the turns ratio change per tap; \nijT  is an integer variable which represents the actual tap \nposition of the tap-changer. \nijt  can be expressed by the binary expansion scheme [5] as: \n min\n,\n0\n2\nijN\nn\nij ij ij ij n\nn\ntt t \n\n    (8) \n ,\n0\n2\nijN\nn\nij n ij\nn\nK\n\n  (9) \nwhere ,ij n  is a binary variable and ijN  is the length of the \nbinary representation of ijK . \nMultiplying both sides of (8) by jU  and defining new \nvariables ij ij jmt U  and ,,ij n ij n jx U , we obtain \n min\n,\n0\n2\nijN\nn\nij ij j ij ij n\nn\nmt U t x\n\n    (10) \n,,ij n ij n jx U  can be equivalently replaced by equations (11)\nand (12) by introducing a positive large number M: \nWenchuan Wu, Senior Member, IEEE, Zhuang Tian, Boming Zhang, Fellow, IEEE  \nAn Exact Linearization Method for OLTC of \nTransformer in Branch Flow Model \nO\n 2\n ,,0( 1 ) ji j n i j nUx M     (11) \n ,,0 ij n ij nx M  (12) \nApplying the same procedure to jt ij ijUt m  and defining a \nnew variable ,,ij n ij n ijym  , we obtain \n min\n,\n0\n2\nijN\nn\njt ij ij ij ij n\nn\nUt m t y\n\n    (13) \n ,,0( 1 )ij ij n ij nmy M     (14) \n ,,0 ij n ij nyM   (15) \nWith the above transformations, the non-convex constraints \nof transformer (5)-(7) are transformed into mixed integer \nlinear constraints  (9), (10)-(15). \nIn [2], binary expansion scheme has been used to linearize \nan approximate transformer’s OLTC model as follows: \n \nmin 2() 2 jt ij j ij ij jUt U T t U  (16) \nEquation (16) is inaccurate and the optimized turns ratios \ndeviate from their exact values. This method will be compared \nwith our method in section III. \nThe linearized transformer model can be incorporated into \nthe SOCP-OPF [1]. The objective of OPF is to minimize \nactive power losses \n min\nall ii P  (17) \nsubject to \n1)  Active and reactive power balance constraints \n2)  Constraints for line branches  \n222( ) ( ) , \\i j ij ij ij ij ij ij ij l ltfUU R P X Q R X L i j        (18) \n3)  Constraints for transformer branches  \n (3), (7), (9), (10)–(15), ltfij   (19) \n4)  Second-order cone constraints \n 22() / ,ij ij ij i lLP Q U i j     (20) \n5)  Constrains for power generation and consumption \n6)  Constrains for voltage and current magnitudes \nwhere all  represents the set of all buses; ()Kj  represents \nthe set of buses connected to bus j; l  represents the set of all \nbranches; ltf  represents the set of transformer branches. \n The above model is a mixed integer SOCP problem and can \nbe solved using software packages such as CPLEX.  \nIII.  NUMERICAL EXAMPLE \nThe proposed OPF problem is tested on a modified IEEE \n33-bus system [4]. Transformers are installed on branch 1-2, \n2-19, 3-23 and 6-26. The turns ratio of each transformer varies \nbetween 0.95 to 1.05 with same change per tap, denoted by t . \nDGs are installed at buses 6, 14 and 29. The minimum and \nmaximum allowable bus voltages are 0.95 p.u. and 1.05 p.u., \nrespectively. \nThe program is implemented using YALMIP®  and \nCPLEX®. Numerical tests are performed on a computer with \nIntel® Core™ i5 (2.60 GHz) and 12 GB RAM. In order to \nillustrate the effectiveness of the transformer linearization \nmethod and extra computation time caused by the mixed \ninteger linear constraints, six scenarios are tested: 1) 0.02\nt  ;  \n2) 0.01t ;  3) 0.005t ; 4) 0.002t ; 5) 0.001t ; 6) \nturns ratios fixed to the results of  scenario 3. The power \nlosses and computation time of our method and the method in \n[6] for each scenario are listed in Table I. \nTable I Simulation results for 33-bus system \nScenario Taps Power Losses (kW) CPU Time (s) \nOur method Method in [6]\n1 5 41.2 1.03 1.40 \n2 10 41.0 1.60 2.01 \n3 20 41.0 1.62 2.17 \n4 50 40.9 2.37 5.17 \n5 100 40.9 2.72 14.60 \n6 200 40.9 2.84 39.19 \nFrom the results of scenarios 1, 2 and 3, we can see that \nmore power losses can be reduced by optimizing tap-changers \nwith more taps, while the computation times grow due to the \nincreasing of binary variables. However, the additional \ncomputation burden introduced by the transformer constraints \nis moderate (comparing scenario 3 with 6) because the binary \nexpansion scheme does not involve large number of binary \nvariables in transformer model. And the proposed method has \nhigher computational efficiency compared to [6] due to less \nbinary variables. \nThe approximate method in [2] and the proposed exact \nmethod in this paper are tested with \n0.005t . The turns \nratios and power losses are listed in Table II. \nTable II Results of our method and method in [2] \nMethod 21t  19 2t   23 3t   26 6t   Power Losses (kW)\nMethod in [2] 1.05 1.0012 1.0012 1.0062 41.1 \nOur method 1.05 1 1.005 1.01 41.0 \nFrom Table II, we can see that the turns ratios solved by the \napproximate method [2] are not accurate. The method \nproposed in this paper is exact and the solution is optimal. \nIV.  CONCLUSIONS \nThe nonlinear transformer model is exactly linearized by \nbinary expansion scheme and big-M method. This exact \nlinearized transformer model involves few binary variables \nand can be incorporated into the SOCP-OPF problem in \ndistribution networks. The proposed method has been \nsimulated on a IEEE 33-bus system under different scenarios \nto demonstrate its effectiveness. \nR\nEFERENCES \n[1]   M. Farivar and S. H. Low, \"Branch Flow Model: Relaxations and \nConvexification—Part I,\" IEEE Transactions on Power Systems , vol. 28, \nno. 3, pp. 2554-2564, Aug. 2013 \n[2]   J. López, J. Contreras and J. R. S. Mantovani, \"Reactive power planning \nunder conditional-value-at-risk assessment using chance-constrained \noptimisation,\" IET Generation, Transmission & Distribution, vol. 9, no. 3, \npp. 231-240, 2 19 2015. \n[3]  B.A. Robbins, H. Zhu, A.D. Domíng uez-García, \"Optimal Tap Setting of \nVoltage Regulation Transformers in Unbalanced Distribution Systems,\" \nIEEE Transactions on Power Systems , vol.31,no.1,pp.256-267, Jan. \n2016． \n[4]   M.E. Baran, F.F. Wu, \"Network re configuration in distribution systems \nfor loss reduction and load balancing,\" IEEE Transactions on Power \nDelivery, vol.4, no.2, pp.1401-1407, Apr. 1989. \n[5]   M. V. Pereira et al., \"Strategic bidding under uncertainty: a binary \nexpansion approach,\" IEEE Transactions on Power Systems, vol. 20, no.1, \npp. 180-188, Feb. 2005. \n[6]   L. H. Macedo et al., \"Optimal Operation of Distribution Networks \nConsidering Energy Storage Devices,\" IEEE Transactions on Smart Grid, \nvol. 6, no. 6, pp. 2825-2836, Nov. 2015. ",
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.6600987911224365
+    },
+    {
+      "name": "Linearization",
+      "score": 0.6159017086029053
+    },
+    {
+      "name": "Control theory (sociology)",
+      "score": 0.6063777804374695
+    },
+    {
+      "name": "Power flow",
+      "score": 0.5477737784385681
+    },
+    {
+      "name": "Computer science",
+      "score": 0.39878273010253906
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.34521910548210144
+    },
+    {
+      "name": "Mathematical optimization",
+      "score": 0.33071476221084595
+    },
+    {
+      "name": "Nonlinear system",
+      "score": 0.3288339376449585
+    },
+    {
+      "name": "Voltage",
+      "score": 0.32590657472610474
+    },
+    {
+      "name": "Electric power system",
+      "score": 0.31573206186294556
+    },
+    {
+      "name": "Engineering",
+      "score": 0.2809540033340454
+    },
+    {
+      "name": "Physics",
+      "score": 0.19225838780403137
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.1774841547012329
+    },
+    {
+      "name": "Power (physics)",
+      "score": 0.1453557014465332
+    },
+    {
+      "name": "Control (management)",
+      "score": 0.10618704557418823
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.0
+    }
+  ]
 }

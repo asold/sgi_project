@@ -1,78 +1,165 @@
 {
-    "title": "DistilProtBert: a distilled protein language model used to distinguish between real proteins and their randomly shuffled counterparts",
-    "url": "https://openalex.org/W4296780589",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4293991397",
-            "name": "Yaron Geffen",
-            "affiliations": [
-                "Bar-Ilan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1386037399",
-            "name": "Yanay Ofran",
-            "affiliations": [
-                "Bar-Ilan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2564181531",
-            "name": "Ron Unger",
-            "affiliations": [
-                "Bar-Ilan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2980789587",
-        "https://openalex.org/W2730472814",
-        "https://openalex.org/W3186179742",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2104972430",
-        "https://openalex.org/W2001335546",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6780145172",
-        "https://openalex.org/W6638523607",
-        "https://openalex.org/W2058832897",
-        "https://openalex.org/W6768086466",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W2950374603",
-        "https://openalex.org/W6768021236",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W4206275111",
-        "https://openalex.org/W3198971594",
-        "https://openalex.org/W3144701084",
-        "https://openalex.org/W2013460486",
-        "https://openalex.org/W6763868836",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W6768851824",
-        "https://openalex.org/W6776322294",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W2767444993",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6780110802",
-        "https://openalex.org/W6797492301",
-        "https://openalex.org/W6797484841",
-        "https://openalex.org/W6768817161",
-        "https://openalex.org/W2997234557",
-        "https://openalex.org/W2567587907",
-        "https://openalex.org/W3037888463",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2980282514",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W3105966348",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W1821462560",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3034457371",
-        "https://openalex.org/W3175463116",
-        "https://openalex.org/W3175054838",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W4287724045"
-    ],
-    "abstract": "Abstract Summary Recently, deep learning models, initially developed in the field of natural language processing (NLP), were applied successfully to analyze protein sequences. A major drawback of these models is their size in terms of the number of parameters needed to be fitted and the amount of computational resources they require. Recently, ‘distilled’ models using the concept of student and teacher networks have been widely used in NLP. Here, we adapted this concept to the problem of protein sequence analysis, by developing DistilProtBert, a distilled version of the successful ProtBert model. Implementing this approach, we reduced the size of the network and the running time by 50%, and the computational resources needed for pretraining by 98% relative to ProtBert model. Using two published tasks, we showed that the performance of the distilled model approaches that of the full model. We next tested the ability of DistilProtBert to distinguish between real and random protein sequences. The task is highly challenging if the composition is maintained on the level of singlet, doublet and triplet amino acids. Indeed, traditional machine-learning algorithms have difficulties with this task. Here, we show that DistilProtBert preforms very well on singlet, doublet and even triplet-shuffled versions of the human proteome, with AUC of 0.92, 0.91 and 0.87, respectively. Finally, we suggest that by examining the small number of false-positive classifications (i.e. shuffled sequences classified as proteins by DistilProtBert), we may be able to identify de novo potential natural-like proteins based on random shuffling of amino acid sequences. Availability and implementation https://github.com/yarongef/DistilProtBert.",
-    "full_text": null
+  "title": "DistilProtBert: a distilled protein language model used to distinguish between real proteins and their randomly shuffled counterparts",
+  "url": "https://openalex.org/W4296780589",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4293991397",
+      "name": "Yaron Geffen",
+      "affiliations": [
+        "Bar-Ilan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1386037399",
+      "name": "Yanay Ofran",
+      "affiliations": [
+        "Bar-Ilan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2564181531",
+      "name": "Ron Unger",
+      "affiliations": [
+        "Bar-Ilan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2980789587",
+    "https://openalex.org/W2730472814",
+    "https://openalex.org/W3186179742",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2104972430",
+    "https://openalex.org/W2001335546",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6780145172",
+    "https://openalex.org/W6638523607",
+    "https://openalex.org/W2058832897",
+    "https://openalex.org/W6768086466",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W2950374603",
+    "https://openalex.org/W6768021236",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W4206275111",
+    "https://openalex.org/W3198971594",
+    "https://openalex.org/W3144701084",
+    "https://openalex.org/W2013460486",
+    "https://openalex.org/W6763868836",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W6768851824",
+    "https://openalex.org/W6776322294",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W2767444993",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6780110802",
+    "https://openalex.org/W6797492301",
+    "https://openalex.org/W6797484841",
+    "https://openalex.org/W6768817161",
+    "https://openalex.org/W2997234557",
+    "https://openalex.org/W2567587907",
+    "https://openalex.org/W3037888463",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2980282514",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W3105966348",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W1821462560",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3034457371",
+    "https://openalex.org/W3175463116",
+    "https://openalex.org/W3175054838",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W4287724045"
+  ],
+  "abstract": "Abstract Summary Recently, deep learning models, initially developed in the field of natural language processing (NLP), were applied successfully to analyze protein sequences. A major drawback of these models is their size in terms of the number of parameters needed to be fitted and the amount of computational resources they require. Recently, ‘distilled’ models using the concept of student and teacher networks have been widely used in NLP. Here, we adapted this concept to the problem of protein sequence analysis, by developing DistilProtBert, a distilled version of the successful ProtBert model. Implementing this approach, we reduced the size of the network and the running time by 50%, and the computational resources needed for pretraining by 98% relative to ProtBert model. Using two published tasks, we showed that the performance of the distilled model approaches that of the full model. We next tested the ability of DistilProtBert to distinguish between real and random protein sequences. The task is highly challenging if the composition is maintained on the level of singlet, doublet and triplet amino acids. Indeed, traditional machine-learning algorithms have difficulties with this task. Here, we show that DistilProtBert preforms very well on singlet, doublet and even triplet-shuffled versions of the human proteome, with AUC of 0.92, 0.91 and 0.87, respectively. Finally, we suggest that by examining the small number of false-positive classifications (i.e. shuffled sequences classified as proteins by DistilProtBert), we may be able to identify de novo potential natural-like proteins based on random shuffling of amino acid sequences. Availability and implementation https://github.com/yarongef/DistilProtBert.",
+  "full_text": null,
+  "topic": "Shuffling",
+  "concepts": [
+    {
+      "name": "Shuffling",
+      "score": 0.7337364554405212
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6363542079925537
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5821839570999146
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5217786431312561
+    },
+    {
+      "name": "Conditional random field",
+      "score": 0.5124645829200745
+    },
+    {
+      "name": "Proteome",
+      "score": 0.5044797658920288
+    },
+    {
+      "name": "Amino acid",
+      "score": 0.44919395446777344
+    },
+    {
+      "name": "Distilled water",
+      "score": 0.44617655873298645
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.43395617604255676
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3930933177471161
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.36208808422088623
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3280676007270813
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.3274851441383362
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.25183814764022827
+    },
+    {
+      "name": "Biology",
+      "score": 0.2272261083126068
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.22586724162101746
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.18377536535263062
+    },
+    {
+      "name": "Chromatography",
+      "score": 0.12080872058868408
+    },
+    {
+      "name": "Programming language",
+      "score": 0.10293340682983398
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,155 +1,246 @@
 {
-    "title": "Predicting the effects of mutations on protein solubility using graph convolution network and protein language model representation",
-    "url": "https://openalex.org/W4388455618",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096763361",
-            "name": "Jing Wang",
-            "affiliations": [
-                "Xidian University",
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1549144106",
-            "name": "Sheng Chen",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3194661316",
-            "name": "Qianmu Yuan",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099115485",
-            "name": "Jianwen Chen",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102243654",
-            "name": "Dan-Ping Li",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A120759433",
-            "name": "Lei Wang",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2130433203",
-            "name": "Yuedong Yang",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096763361",
-            "name": "Jing Wang",
-            "affiliations": [
-                "Sun Yat-sen University",
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1549144106",
-            "name": "Sheng Chen",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3194661316",
-            "name": "Qianmu Yuan",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099115485",
-            "name": "Jianwen Chen",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102243654",
-            "name": "Dan-Ping Li",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A120759433",
-            "name": "Lei Wang",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2130433203",
-            "name": "Yuedong Yang",
-            "affiliations": [
-                "Sun Yat-sen University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2044199954",
-        "https://openalex.org/W2081306620",
-        "https://openalex.org/W1997254933",
-        "https://openalex.org/W2025629542",
-        "https://openalex.org/W1974302168",
-        "https://openalex.org/W2614053601",
-        "https://openalex.org/W1985941856",
-        "https://openalex.org/W1970898345",
-        "https://openalex.org/W2980985875",
-        "https://openalex.org/W2104756056",
-        "https://openalex.org/W2084262300",
-        "https://openalex.org/W1983164158",
-        "https://openalex.org/W2017078809",
-        "https://openalex.org/W2114678438",
-        "https://openalex.org/W2133905406",
-        "https://openalex.org/W3005492459",
-        "https://openalex.org/W2665805494",
-        "https://openalex.org/W1912933662",
-        "https://openalex.org/W2139762959",
-        "https://openalex.org/W2103083136",
-        "https://openalex.org/W2411303265",
-        "https://openalex.org/W2092387745",
-        "https://openalex.org/W2027839322",
-        "https://openalex.org/W2765285487",
-        "https://openalex.org/W2613688952",
-        "https://openalex.org/W2288875731",
-        "https://openalex.org/W3183890486",
-        "https://openalex.org/W3042826782",
-        "https://openalex.org/W3040739508",
-        "https://openalex.org/W4281285627",
-        "https://openalex.org/W6603133369",
-        "https://openalex.org/W6600213211",
-        "https://openalex.org/W3012929814",
-        "https://openalex.org/W2991877021",
-        "https://openalex.org/W3197696221",
-        "https://openalex.org/W3005769002",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3209435229",
-        "https://openalex.org/W2770026599",
-        "https://openalex.org/W2794004073",
-        "https://openalex.org/W1978113501",
-        "https://openalex.org/W2133312664",
-        "https://openalex.org/W2288234278",
-        "https://openalex.org/W2998302976"
-    ],
-    "abstract": "Abstract Solubility is one of the most important properties of protein. Protein solubility can be greatly changed by single amino acid mutations and the reduced protein solubility could lead to diseases. Since experimental methods to determine solubility are time‐consuming and expensive, in‐silico methods have been developed to predict the protein solubility changes caused by mutations mostly through protein evolution information. However, these methods are slow since it takes long time to obtain evolution information through multiple sequence alignment. In addition, these methods are of low performance because they do not fully utilize protein 3D structures due to a lack of experimental structures for most proteins. Here, we proposed a sequence‐based method DeepMutSol to predict solubility change from residual mutations based on the Graph Convolutional Neural Network (GCN), where the protein graph was initiated according to predicted protein structure from Alphafold2, and the nodes (residues) were represented by protein language embeddings. To circumvent the small data of solubility changes, we further pretrained the model over absolute protein solubility. DeepMutSol was shown to outperform state‐of‐the‐art methods in benchmark tests. In addition, we applied the method to clinically relevant genes from the ClinVar database and the predicted solubility changes were shown able to separate pathogenic mutations. All of the data sets and the source code are available at https://github.com/biomed-AI/DeepMutSol .",
-    "full_text": null
+  "title": "Predicting the effects of mutations on protein solubility using graph convolution network and protein language model representation",
+  "url": "https://openalex.org/W4388455618",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096763361",
+      "name": "Jing Wang",
+      "affiliations": [
+        "Xidian University",
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1549144106",
+      "name": "Sheng Chen",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3194661316",
+      "name": "Qianmu Yuan",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099115485",
+      "name": "Jianwen Chen",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102243654",
+      "name": "Dan-Ping Li",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A120759433",
+      "name": "Lei Wang",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2130433203",
+      "name": "Yuedong Yang",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096763361",
+      "name": "Jing Wang",
+      "affiliations": [
+        "Sun Yat-sen University",
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1549144106",
+      "name": "Sheng Chen",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3194661316",
+      "name": "Qianmu Yuan",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099115485",
+      "name": "Jianwen Chen",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102243654",
+      "name": "Dan-Ping Li",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A120759433",
+      "name": "Lei Wang",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2130433203",
+      "name": "Yuedong Yang",
+      "affiliations": [
+        "Sun Yat-sen University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2044199954",
+    "https://openalex.org/W2081306620",
+    "https://openalex.org/W1997254933",
+    "https://openalex.org/W2025629542",
+    "https://openalex.org/W1974302168",
+    "https://openalex.org/W2614053601",
+    "https://openalex.org/W1985941856",
+    "https://openalex.org/W1970898345",
+    "https://openalex.org/W2980985875",
+    "https://openalex.org/W2104756056",
+    "https://openalex.org/W2084262300",
+    "https://openalex.org/W1983164158",
+    "https://openalex.org/W2017078809",
+    "https://openalex.org/W2114678438",
+    "https://openalex.org/W2133905406",
+    "https://openalex.org/W3005492459",
+    "https://openalex.org/W2665805494",
+    "https://openalex.org/W1912933662",
+    "https://openalex.org/W2139762959",
+    "https://openalex.org/W2103083136",
+    "https://openalex.org/W2411303265",
+    "https://openalex.org/W2092387745",
+    "https://openalex.org/W2027839322",
+    "https://openalex.org/W2765285487",
+    "https://openalex.org/W2613688952",
+    "https://openalex.org/W2288875731",
+    "https://openalex.org/W3183890486",
+    "https://openalex.org/W3042826782",
+    "https://openalex.org/W3040739508",
+    "https://openalex.org/W4281285627",
+    "https://openalex.org/W6603133369",
+    "https://openalex.org/W6600213211",
+    "https://openalex.org/W3012929814",
+    "https://openalex.org/W2991877021",
+    "https://openalex.org/W3197696221",
+    "https://openalex.org/W3005769002",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3209435229",
+    "https://openalex.org/W2770026599",
+    "https://openalex.org/W2794004073",
+    "https://openalex.org/W1978113501",
+    "https://openalex.org/W2133312664",
+    "https://openalex.org/W2288234278",
+    "https://openalex.org/W2998302976"
+  ],
+  "abstract": "Abstract Solubility is one of the most important properties of protein. Protein solubility can be greatly changed by single amino acid mutations and the reduced protein solubility could lead to diseases. Since experimental methods to determine solubility are time‐consuming and expensive, in‐silico methods have been developed to predict the protein solubility changes caused by mutations mostly through protein evolution information. However, these methods are slow since it takes long time to obtain evolution information through multiple sequence alignment. In addition, these methods are of low performance because they do not fully utilize protein 3D structures due to a lack of experimental structures for most proteins. Here, we proposed a sequence‐based method DeepMutSol to predict solubility change from residual mutations based on the Graph Convolutional Neural Network (GCN), where the protein graph was initiated according to predicted protein structure from Alphafold2, and the nodes (residues) were represented by protein language embeddings. To circumvent the small data of solubility changes, we further pretrained the model over absolute protein solubility. DeepMutSol was shown to outperform state‐of‐the‐art methods in benchmark tests. In addition, we applied the method to clinically relevant genes from the ClinVar database and the predicted solubility changes were shown able to separate pathogenic mutations. All of the data sets and the source code are available at https://github.com/biomed-AI/DeepMutSol .",
+  "full_text": null,
+  "topic": "Solubility",
+  "concepts": [
+    {
+      "name": "Solubility",
+      "score": 0.8507606983184814
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5681724548339844
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.550589919090271
+    },
+    {
+      "name": "Computer science",
+      "score": 0.542680561542511
+    },
+    {
+      "name": "In silico",
+      "score": 0.5237414836883545
+    },
+    {
+      "name": "Protein sequencing",
+      "score": 0.5229840278625488
+    },
+    {
+      "name": "Graph",
+      "score": 0.4970548450946808
+    },
+    {
+      "name": "Protein structure prediction",
+      "score": 0.4172283709049225
+    },
+    {
+      "name": "Protein structure",
+      "score": 0.40838414430618286
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.379770964384079
+    },
+    {
+      "name": "Biological system",
+      "score": 0.3758498728275299
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3701762557029724
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.3584956228733063
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.3409554064273834
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.32226431369781494
+    },
+    {
+      "name": "Gene",
+      "score": 0.25272464752197266
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.24493104219436646
+    },
+    {
+      "name": "Biology",
+      "score": 0.1717282235622406
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.14091074466705322
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

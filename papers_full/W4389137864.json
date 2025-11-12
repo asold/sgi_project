@@ -1,142 +1,181 @@
 {
-    "title": "Image fusion for the novelty rotating synthetic aperture system based on vision transformer",
-    "url": "https://openalex.org/W4389137864",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097179453",
-            "name": "Yu Sun",
-            "affiliations": [
-                "Heilongjiang Institute of Technology",
-                "Harbin Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2169085067",
-            "name": "Xiyang Zhi",
-            "affiliations": [
-                "Heilongjiang Institute of Technology",
-                "Harbin Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2756578754",
-            "name": "Shikai Jiang",
-            "affiliations": [
-                "Heilongjiang Institute of Technology",
-                "Harbin Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117206328",
-            "name": "Guanghua Fan",
-            "affiliations": [
-                "Harbin Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A760818427",
-            "name": "Xu Yan",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1506313323",
-            "name": "Wei Zhang",
-            "affiliations": [
-                "Harbin Institute of Technology",
-                "Heilongjiang Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097179453",
-            "name": "Yu Sun",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2169085067",
-            "name": "Xiyang Zhi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2756578754",
-            "name": "Shikai Jiang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2117206328",
-            "name": "Guanghua Fan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A760818427",
-            "name": "Xu Yan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1506313323",
-            "name": "Wei Zhang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2072895218",
-        "https://openalex.org/W2969415270",
-        "https://openalex.org/W6755544184",
-        "https://openalex.org/W3003155844",
-        "https://openalex.org/W4296483348",
-        "https://openalex.org/W2053960476",
-        "https://openalex.org/W2061165040",
-        "https://openalex.org/W6848887241",
-        "https://openalex.org/W6796175571",
-        "https://openalex.org/W2974057962",
-        "https://openalex.org/W2896683644",
-        "https://openalex.org/W3099925406",
-        "https://openalex.org/W3134203386",
-        "https://openalex.org/W4224028540",
-        "https://openalex.org/W2013475335",
-        "https://openalex.org/W3111600877",
-        "https://openalex.org/W6752873946",
-        "https://openalex.org/W2236726293",
-        "https://openalex.org/W2209172785",
-        "https://openalex.org/W2204470001",
-        "https://openalex.org/W3141147363",
-        "https://openalex.org/W6804337809",
-        "https://openalex.org/W3132552976",
-        "https://openalex.org/W6600263792",
-        "https://openalex.org/W4387046304",
-        "https://openalex.org/W4376464578",
-        "https://openalex.org/W4388103971",
-        "https://openalex.org/W4387746040",
-        "https://openalex.org/W4382812830",
-        "https://openalex.org/W4385222855",
-        "https://openalex.org/W4210888109",
-        "https://openalex.org/W3088623196",
-        "https://openalex.org/W6855427009",
-        "https://openalex.org/W4308979724",
-        "https://openalex.org/W6851828434",
-        "https://openalex.org/W4321794021",
-        "https://openalex.org/W4386954497",
-        "https://openalex.org/W6841517057",
-        "https://openalex.org/W6702166451",
-        "https://openalex.org/W6797737728",
-        "https://openalex.org/W4318043889",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W6770019492",
-        "https://openalex.org/W4387452585",
-        "https://openalex.org/W2133665775",
-        "https://openalex.org/W4385819777",
-        "https://openalex.org/W3099937702",
-        "https://openalex.org/W3104559731",
-        "https://openalex.org/W4290832506",
-        "https://openalex.org/W4366721350",
-        "https://openalex.org/W2848115562",
-        "https://openalex.org/W3215062537",
-        "https://openalex.org/W4316013172",
-        "https://openalex.org/W4248858070",
-        "https://openalex.org/W3169167146"
-    ],
-    "abstract": "Rotating synthetic aperture (RSA) technology offers a promising solution for achieving large-aperture and lightweight designs in optical remote-sensing systems. It employs a rectangular primary mirror, resulting in noncircular spatial symmetry in the point-spread function, which changes over time as the mirror rotates. Consequently, it is crucial to employ an appropriate image-fusion method to merge high-resolution information intermittently captured from different directions in the image sequence owing to the rotation of the mirror. However, existing image-fusion methods have struggled to address the unique imaging mechanism of this system and the characteristics of the geostationary orbit in which the system operates. To address this challenge, we model the imaging process of a noncircular rotating pupil and analyse its on-orbit imaging characteristics. Based on this analysis, we propose an image-fusion network based on a vision transformer. This network incorporates inter-frame mutual attention and intra-frame self-attention mechanisms, facilitating more effective extraction of temporal and spatial information from the image sequence. Specifically, mutual attention was used to model the correlation between pixels that were close to each other in the spatial and temporal dimensions, whereas long-range spatial dependencies were captured using intra-frame self-attention in the rotated variable-size attention block. We subsequently enhanced the fusion of spatiotemporal information using video swin transformer blocks. Extensive digital simulations and semi-physical imaging experiments on remote-sensing images obtained from the WorldView-3 satellite demonstrated that our method outperformed both image-fusion methods designed for the RSA system and state-of-the-art general deep learning-based methods.",
-    "full_text": null
+  "title": "Image fusion for the novelty rotating synthetic aperture system based on vision transformer",
+  "url": "https://openalex.org/W4389137864",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097179453",
+      "name": "Yu Sun",
+      "affiliations": [
+        "Heilongjiang Institute of Technology",
+        "Harbin Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2169085067",
+      "name": "Xiyang Zhi",
+      "affiliations": [
+        "Heilongjiang Institute of Technology",
+        "Harbin Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2756578754",
+      "name": "Shikai Jiang",
+      "affiliations": [
+        "Heilongjiang Institute of Technology",
+        "Harbin Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117206328",
+      "name": "Guanghua Fan",
+      "affiliations": [
+        "Harbin Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A760818427",
+      "name": "Xu Yan",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1506313323",
+      "name": "Wei Zhang",
+      "affiliations": [
+        "Harbin Institute of Technology",
+        "Heilongjiang Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097179453",
+      "name": "Yu Sun",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2169085067",
+      "name": "Xiyang Zhi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2756578754",
+      "name": "Shikai Jiang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2117206328",
+      "name": "Guanghua Fan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A760818427",
+      "name": "Xu Yan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1506313323",
+      "name": "Wei Zhang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2072895218",
+    "https://openalex.org/W2969415270",
+    "https://openalex.org/W6755544184",
+    "https://openalex.org/W3003155844",
+    "https://openalex.org/W4296483348",
+    "https://openalex.org/W2053960476",
+    "https://openalex.org/W2061165040",
+    "https://openalex.org/W6848887241",
+    "https://openalex.org/W6796175571",
+    "https://openalex.org/W2974057962",
+    "https://openalex.org/W2896683644",
+    "https://openalex.org/W3099925406",
+    "https://openalex.org/W3134203386",
+    "https://openalex.org/W4224028540",
+    "https://openalex.org/W2013475335",
+    "https://openalex.org/W3111600877",
+    "https://openalex.org/W6752873946",
+    "https://openalex.org/W2236726293",
+    "https://openalex.org/W2209172785",
+    "https://openalex.org/W2204470001",
+    "https://openalex.org/W3141147363",
+    "https://openalex.org/W6804337809",
+    "https://openalex.org/W3132552976",
+    "https://openalex.org/W6600263792",
+    "https://openalex.org/W4387046304",
+    "https://openalex.org/W4376464578",
+    "https://openalex.org/W4388103971",
+    "https://openalex.org/W4387746040",
+    "https://openalex.org/W4382812830",
+    "https://openalex.org/W4385222855",
+    "https://openalex.org/W4210888109",
+    "https://openalex.org/W3088623196",
+    "https://openalex.org/W6855427009",
+    "https://openalex.org/W4308979724",
+    "https://openalex.org/W6851828434",
+    "https://openalex.org/W4321794021",
+    "https://openalex.org/W4386954497",
+    "https://openalex.org/W6841517057",
+    "https://openalex.org/W6702166451",
+    "https://openalex.org/W6797737728",
+    "https://openalex.org/W4318043889",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W6770019492",
+    "https://openalex.org/W4387452585",
+    "https://openalex.org/W2133665775",
+    "https://openalex.org/W4385819777",
+    "https://openalex.org/W3099937702",
+    "https://openalex.org/W3104559731",
+    "https://openalex.org/W4290832506",
+    "https://openalex.org/W4366721350",
+    "https://openalex.org/W2848115562",
+    "https://openalex.org/W3215062537",
+    "https://openalex.org/W4316013172",
+    "https://openalex.org/W4248858070",
+    "https://openalex.org/W3169167146"
+  ],
+  "abstract": "Rotating synthetic aperture (RSA) technology offers a promising solution for achieving large-aperture and lightweight designs in optical remote-sensing systems. It employs a rectangular primary mirror, resulting in noncircular spatial symmetry in the point-spread function, which changes over time as the mirror rotates. Consequently, it is crucial to employ an appropriate image-fusion method to merge high-resolution information intermittently captured from different directions in the image sequence owing to the rotation of the mirror. However, existing image-fusion methods have struggled to address the unique imaging mechanism of this system and the characteristics of the geostationary orbit in which the system operates. To address this challenge, we model the imaging process of a noncircular rotating pupil and analyse its on-orbit imaging characteristics. Based on this analysis, we propose an image-fusion network based on a vision transformer. This network incorporates inter-frame mutual attention and intra-frame self-attention mechanisms, facilitating more effective extraction of temporal and spatial information from the image sequence. Specifically, mutual attention was used to model the correlation between pixels that were close to each other in the spatial and temporal dimensions, whereas long-range spatial dependencies were captured using intra-frame self-attention in the rotated variable-size attention block. We subsequently enhanced the fusion of spatiotemporal information using video swin transformer blocks. Extensive digital simulations and semi-physical imaging experiments on remote-sensing images obtained from the WorldView-3 satellite demonstrated that our method outperformed both image-fusion methods designed for the RSA system and state-of-the-art general deep learning-based methods.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7662016153335571
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6873669028282166
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.675843358039856
+    },
+    {
+      "name": "Synthetic aperture radar",
+      "score": 0.5791828632354736
+    },
+    {
+      "name": "Image fusion",
+      "score": 0.5787895321846008
+    },
+    {
+      "name": "Image resolution",
+      "score": 0.4889906644821167
+    },
+    {
+      "name": "Pixel",
+      "score": 0.47604966163635254
+    },
+    {
+      "name": "Mutual information",
+      "score": 0.4467768669128418
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.15359699726104736
+    }
+  ]
 }

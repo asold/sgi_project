@@ -1,85 +1,156 @@
 {
-    "title": "EM-Assist: Safe Automated ExtractMethod Refactoring with LLMs",
-    "url": "https://openalex.org/W4399317165",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Pomian, Dorin",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Bellur, Abhiram",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Dilhara, Malinda",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4226005805",
-            "name": "Kurbatova, Zarina",
-            "affiliations": [
-                "Institut Agama Islam Negeri Manado"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3212235401",
-            "name": "Bogomolov, Egor",
-            "affiliations": [
-                "Nahrain University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2335777159",
-            "name": "Sokolov Andrey",
-            "affiliations": [
-                "Nahrain University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3193282569",
-            "name": "Bryksin, Timofey",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2742639784",
-            "name": "Dig, Danny",
-            "affiliations": [
-                "University of Colorado Boulder"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2159118518",
-        "https://openalex.org/W2566214410",
-        "https://openalex.org/W3195113909",
-        "https://openalex.org/W4391800812",
-        "https://openalex.org/W4284709363",
-        "https://openalex.org/W4312761314",
-        "https://openalex.org/W3088281844",
-        "https://openalex.org/W2069737467",
-        "https://openalex.org/W2099194364",
-        "https://openalex.org/W3021091026",
-        "https://openalex.org/W2007504957",
-        "https://openalex.org/W2476494490",
-        "https://openalex.org/W4212909689",
-        "https://openalex.org/W2046276611",
-        "https://openalex.org/W3040728396",
-        "https://openalex.org/W2103015420",
-        "https://openalex.org/W4247572414",
-        "https://openalex.org/W2275949219",
-        "https://openalex.org/W2025902616",
-        "https://openalex.org/W2787379525"
-    ],
-    "abstract": "Excessively long methods, loaded with multiple responsibilities, are\\nchallenging to understand, debug, reuse, and maintain. The solution lies in the\\nwidely recognized Extract Method refactoring. While the application of this\\nrefactoring is supported in modern IDEs, recommending which code fragments to\\nextract has been the topic of many research tools. However, they often struggle\\nto replicate real-world developer practices, resulting in recommendations that\\ndo not align with what a human developer would do in real life. To address this\\nissue, we introduce EM-Assist, an IntelliJ IDEA plugin that uses LLMs to\\ngenerate refactoring suggestions and subsequently validates, enhances, and\\nranks them. Finally, EM-Assist uses the IntelliJ IDE to apply the user-selected\\nrecommendation. In our extensive evaluation of 1,752 real-world refactorings\\nthat actually took place in open-source projects, EM-Assist's recall rate was\\n53.4% among its top-5 recommendations, compared to 39.4% for the previous\\nbest-in-class tool that relies solely on static analysis. Moreover, we\\nconducted a usability survey with 18 industrial developers and 94.4% gave a\\npositive rating.\\n",
-    "full_text": null
+  "title": "EM-Assist: Safe Automated ExtractMethod Refactoring with LLMs",
+  "url": "https://openalex.org/W4399317165",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Pomian, Dorin",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Bellur, Abhiram",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Dilhara, Malinda",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4226005805",
+      "name": "Kurbatova, Zarina",
+      "affiliations": [
+        "Institut Agama Islam Negeri Manado"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3212235401",
+      "name": "Bogomolov, Egor",
+      "affiliations": [
+        "Nahrain University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2335777159",
+      "name": "Sokolov Andrey",
+      "affiliations": [
+        "Nahrain University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3193282569",
+      "name": "Bryksin, Timofey",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2742639784",
+      "name": "Dig, Danny",
+      "affiliations": [
+        "University of Colorado Boulder"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2159118518",
+    "https://openalex.org/W2566214410",
+    "https://openalex.org/W3195113909",
+    "https://openalex.org/W4391800812",
+    "https://openalex.org/W4284709363",
+    "https://openalex.org/W4312761314",
+    "https://openalex.org/W3088281844",
+    "https://openalex.org/W2069737467",
+    "https://openalex.org/W2099194364",
+    "https://openalex.org/W3021091026",
+    "https://openalex.org/W2007504957",
+    "https://openalex.org/W2476494490",
+    "https://openalex.org/W4212909689",
+    "https://openalex.org/W2046276611",
+    "https://openalex.org/W3040728396",
+    "https://openalex.org/W2103015420",
+    "https://openalex.org/W4247572414",
+    "https://openalex.org/W2275949219",
+    "https://openalex.org/W2025902616",
+    "https://openalex.org/W2787379525"
+  ],
+  "abstract": "Excessively long methods, loaded with multiple responsibilities, are\\nchallenging to understand, debug, reuse, and maintain. The solution lies in the\\nwidely recognized Extract Method refactoring. While the application of this\\nrefactoring is supported in modern IDEs, recommending which code fragments to\\nextract has been the topic of many research tools. However, they often struggle\\nto replicate real-world developer practices, resulting in recommendations that\\ndo not align with what a human developer would do in real life. To address this\\nissue, we introduce EM-Assist, an IntelliJ IDEA plugin that uses LLMs to\\ngenerate refactoring suggestions and subsequently validates, enhances, and\\nranks them. Finally, EM-Assist uses the IntelliJ IDE to apply the user-selected\\nrecommendation. In our extensive evaluation of 1,752 real-world refactorings\\nthat actually took place in open-source projects, EM-Assist's recall rate was\\n53.4% among its top-5 recommendations, compared to 39.4% for the previous\\nbest-in-class tool that relies solely on static analysis. Moreover, we\\nconducted a usability survey with 18 industrial developers and 94.4% gave a\\npositive rating.\\n",
+  "full_text": null,
+  "topic": "Code refactoring",
+  "concepts": [
+    {
+      "name": "Code refactoring",
+      "score": 0.9774760007858276
+    },
+    {
+      "name": "Debugging",
+      "score": 0.7845594882965088
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6729379296302795
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.657751202583313
+    },
+    {
+      "name": "Plug-in",
+      "score": 0.6348320841789246
+    },
+    {
+      "name": "Reuse",
+      "score": 0.6117929220199585
+    },
+    {
+      "name": "Usability",
+      "score": 0.588308572769165
+    },
+    {
+      "name": "Class (philosophy)",
+      "score": 0.44998738169670105
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.41539785265922546
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3573307394981384
+    },
+    {
+      "name": "Programming language",
+      "score": 0.3436148762702942
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.2422226071357727
+    },
+    {
+      "name": "Software",
+      "score": 0.23117628693580627
+    },
+    {
+      "name": "Engineering",
+      "score": 0.19297638535499573
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.18145081400871277
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.07888895273208618
+    },
+    {
+      "name": "Waste management",
+      "score": 0.0
+    }
+  ]
 }

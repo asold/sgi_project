@@ -1,91 +1,146 @@
 {
-    "title": "Cross-domain few-shot learning via adaptive transformer networks",
-    "url": "https://openalex.org/W4391560482",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5093800072",
-            "name": "Naeem Paeedeh",
-            "affiliations": [
-                "University of South Australia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5036928886",
-            "name": "Mahardhika Pratama",
-            "affiliations": [
-                "University of South Australia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5048298559",
-            "name": "M. Anwar Ma’sum",
-            "affiliations": [
-                "University of South Australia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5027682166",
-            "name": "Wolfgang Mayer",
-            "affiliations": [
-                "University of South Australia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007077356",
-            "name": "Zehong Cao",
-            "affiliations": [
-                "University of South Australia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5108144853",
-            "name": "Ryszard Kowlczyk",
-            "affiliations": [
-                "University of South Australia",
-                "Polish Academy of Sciences",
-                "Systems Research Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2165698076",
-        "https://openalex.org/W3189329097",
-        "https://openalex.org/W4367397007",
-        "https://openalex.org/W4367834670",
-        "https://openalex.org/W6849354402",
-        "https://openalex.org/W2131953535",
-        "https://openalex.org/W3083641663",
-        "https://openalex.org/W4312359569",
-        "https://openalex.org/W3159481202",
-        "https://openalex.org/W4312430245",
-        "https://openalex.org/W2964105864",
-        "https://openalex.org/W2963943197",
-        "https://openalex.org/W6637618735",
-        "https://openalex.org/W3177536250",
-        "https://openalex.org/W2473156356",
-        "https://openalex.org/W2964194231",
-        "https://openalex.org/W2611650229",
-        "https://openalex.org/W3159778524",
-        "https://openalex.org/W1821462560",
-        "https://openalex.org/W2601450892",
-        "https://openalex.org/W4226069804",
-        "https://openalex.org/W4300860215",
-        "https://openalex.org/W3036139671",
-        "https://openalex.org/W2995253937",
-        "https://openalex.org/W3005680577",
-        "https://openalex.org/W3193300915",
-        "https://openalex.org/W2604763608",
-        "https://openalex.org/W4287639816",
-        "https://openalex.org/W2994814245",
-        "https://openalex.org/W3101156210",
-        "https://openalex.org/W3001411605",
-        "https://openalex.org/W2932083555",
-        "https://openalex.org/W4255556797",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2787035179",
-        "https://openalex.org/W3201612248"
-    ],
-    "abstract": "Most few-shot learning works rely on the same domain assumption between the base and the target tasks, hindering their practical applications. This paper proposes an adaptive transformer network (ADAPTER), a simple but effective solution for cross-domain few-shot learning where there exist large domain shifts between the base task and the target task. ADAPTER is built upon the idea of bidirectional cross-attention to learn transferable features between the two domains. The proposed architecture is trained with DINO to produce diverse, and less biased features to avoid the supervision collapse problem. Furthermore, the label smoothing approach is proposed to improve the consistency and reliability of the predictions by also considering the predicted labels of the close samples in the embedding space. The performance of ADAPTER is rigorously evaluated in the BSCD-FSL benchmarks in which it outperforms prior arts with significant margins.",
-    "full_text": null
+  "title": "Cross-domain few-shot learning via adaptive transformer networks",
+  "url": "https://openalex.org/W4391560482",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5093800072",
+      "name": "Naeem Paeedeh",
+      "affiliations": [
+        "University of South Australia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5036928886",
+      "name": "Mahardhika Pratama",
+      "affiliations": [
+        "University of South Australia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5048298559",
+      "name": "M. Anwar Ma’sum",
+      "affiliations": [
+        "University of South Australia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5027682166",
+      "name": "Wolfgang Mayer",
+      "affiliations": [
+        "University of South Australia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007077356",
+      "name": "Zehong Cao",
+      "affiliations": [
+        "University of South Australia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5108144853",
+      "name": "Ryszard Kowlczyk",
+      "affiliations": [
+        "University of South Australia",
+        "Polish Academy of Sciences",
+        "Systems Research Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2165698076",
+    "https://openalex.org/W3189329097",
+    "https://openalex.org/W4367397007",
+    "https://openalex.org/W4367834670",
+    "https://openalex.org/W6849354402",
+    "https://openalex.org/W2131953535",
+    "https://openalex.org/W3083641663",
+    "https://openalex.org/W4312359569",
+    "https://openalex.org/W3159481202",
+    "https://openalex.org/W4312430245",
+    "https://openalex.org/W2964105864",
+    "https://openalex.org/W2963943197",
+    "https://openalex.org/W6637618735",
+    "https://openalex.org/W3177536250",
+    "https://openalex.org/W2473156356",
+    "https://openalex.org/W2964194231",
+    "https://openalex.org/W2611650229",
+    "https://openalex.org/W3159778524",
+    "https://openalex.org/W1821462560",
+    "https://openalex.org/W2601450892",
+    "https://openalex.org/W4226069804",
+    "https://openalex.org/W4300860215",
+    "https://openalex.org/W3036139671",
+    "https://openalex.org/W2995253937",
+    "https://openalex.org/W3005680577",
+    "https://openalex.org/W3193300915",
+    "https://openalex.org/W2604763608",
+    "https://openalex.org/W4287639816",
+    "https://openalex.org/W2994814245",
+    "https://openalex.org/W3101156210",
+    "https://openalex.org/W3001411605",
+    "https://openalex.org/W2932083555",
+    "https://openalex.org/W4255556797",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2787035179",
+    "https://openalex.org/W3201612248"
+  ],
+  "abstract": "Most few-shot learning works rely on the same domain assumption between the base and the target tasks, hindering their practical applications. This paper proposes an adaptive transformer network (ADAPTER), a simple but effective solution for cross-domain few-shot learning where there exist large domain shifts between the base task and the target task. ADAPTER is built upon the idea of bidirectional cross-attention to learn transferable features between the two domains. The proposed architecture is trained with DINO to produce diverse, and less biased features to avoid the supervision collapse problem. Furthermore, the label smoothing approach is proposed to improve the consistency and reliability of the predictions by also considering the predicted labels of the close samples in the embedding space. The performance of ADAPTER is rigorously evaluated in the BSCD-FSL benchmarks in which it outperforms prior arts with significant margins.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7295796275138855
+    },
+    {
+      "name": "Adapter (computing)",
+      "score": 0.6745242476463318
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6582671403884888
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.52846759557724
+    },
+    {
+      "name": "Embedding",
+      "score": 0.48256057500839233
+    },
+    {
+      "name": "Architecture",
+      "score": 0.45135602355003357
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.41996896266937256
+    },
+    {
+      "name": "Computer hardware",
+      "score": 0.13819414377212524
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13093754649162292
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.09385353326797485
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08597585558891296
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    }
+  ]
 }

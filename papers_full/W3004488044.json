@@ -1,107 +1,174 @@
 {
-    "title": "Molecular Graph Enhanced Transformer for Retrosynthesis Prediction",
-    "url": "https://openalex.org/W3004488044",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3034332558",
-            "name": "Kelong Mao",
-            "affiliations": [
-                "Tsinghua University",
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096910461",
-            "name": "Peilin Zhao",
-            "affiliations": [
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2744864297",
-            "name": "Tingyang Xu",
-            "affiliations": [
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099136533",
-            "name": "Yu Rong",
-            "affiliations": [
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2125904603",
-            "name": "Xi Xiao",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106662015",
-            "name": "Junzhou Huang",
-            "affiliations": [
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3034332558",
-            "name": "Kelong Mao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096910461",
-            "name": "Peilin Zhao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2744864297",
-            "name": "Tingyang Xu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2099136533",
-            "name": "Yu Rong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2125904603",
-            "name": "Xi Xiao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2106662015",
-            "name": "Junzhou Huang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2769756736",
-        "https://openalex.org/W1997974358",
-        "https://openalex.org/W2906666509",
-        "https://openalex.org/W2173027866",
-        "https://openalex.org/W2606780347",
-        "https://openalex.org/W2753921001",
-        "https://openalex.org/W2972608805",
-        "https://openalex.org/W2064535969",
-        "https://openalex.org/W2970764640",
-        "https://openalex.org/W2621742623",
-        "https://openalex.org/W2580919858",
-        "https://openalex.org/W2747592475",
-        "https://openalex.org/W2324964582",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2963858333",
-        "https://openalex.org/W2895744665",
-        "https://openalex.org/W2913342970",
-        "https://openalex.org/W2948804328",
-        "https://openalex.org/W2952254971",
-        "https://openalex.org/W2963212250",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W3215077721",
-        "https://openalex.org/W2519887557"
-    ],
-    "abstract": "Abstract With massive possible synthetic routes in chemistry, retrosynthesis prediction is still a challenge for researchers. Recently, retrosynthesis prediction is formulated as a Machine Translation (MT) task. Namely, since each molecule can be represented as a Simplified Molecular-Input Line-Entry System (SMILES) string, the process of retrosynthesis is analogized to a process of language translation from the product to reactants. However, the MT models that applied on SMILES data usually ignore the information of natural atomic connections and the topology of molecules. To make more chemically plausible constrains on the atom representation learning for better performance, in this paper, we propose a Graph Enhanced Transformer (GET) framework, which adopts both the sequential and graphical information of molecules. Four different GET designs are proposed, which fuse the SMILES representations with atom embeddings learned from our improved Graph Neural Network (GNN). Empirical results show that our model significantly outperforms the vanilla Transformer model in test accuracy.",
-    "full_text": null
+  "title": "Molecular Graph Enhanced Transformer for Retrosynthesis Prediction",
+  "url": "https://openalex.org/W3004488044",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3034332558",
+      "name": "Kelong Mao",
+      "affiliations": [
+        "Tsinghua University",
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096910461",
+      "name": "Peilin Zhao",
+      "affiliations": [
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2744864297",
+      "name": "Tingyang Xu",
+      "affiliations": [
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099136533",
+      "name": "Yu Rong",
+      "affiliations": [
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2125904603",
+      "name": "Xi Xiao",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106662015",
+      "name": "Junzhou Huang",
+      "affiliations": [
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3034332558",
+      "name": "Kelong Mao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096910461",
+      "name": "Peilin Zhao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2744864297",
+      "name": "Tingyang Xu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2099136533",
+      "name": "Yu Rong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2125904603",
+      "name": "Xi Xiao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2106662015",
+      "name": "Junzhou Huang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2769756736",
+    "https://openalex.org/W1997974358",
+    "https://openalex.org/W2906666509",
+    "https://openalex.org/W2173027866",
+    "https://openalex.org/W2606780347",
+    "https://openalex.org/W2753921001",
+    "https://openalex.org/W2972608805",
+    "https://openalex.org/W2064535969",
+    "https://openalex.org/W2970764640",
+    "https://openalex.org/W2621742623",
+    "https://openalex.org/W2580919858",
+    "https://openalex.org/W2747592475",
+    "https://openalex.org/W2324964582",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2963858333",
+    "https://openalex.org/W2895744665",
+    "https://openalex.org/W2913342970",
+    "https://openalex.org/W2948804328",
+    "https://openalex.org/W2952254971",
+    "https://openalex.org/W2963212250",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W3215077721",
+    "https://openalex.org/W2519887557"
+  ],
+  "abstract": "Abstract With massive possible synthetic routes in chemistry, retrosynthesis prediction is still a challenge for researchers. Recently, retrosynthesis prediction is formulated as a Machine Translation (MT) task. Namely, since each molecule can be represented as a Simplified Molecular-Input Line-Entry System (SMILES) string, the process of retrosynthesis is analogized to a process of language translation from the product to reactants. However, the MT models that applied on SMILES data usually ignore the information of natural atomic connections and the topology of molecules. To make more chemically plausible constrains on the atom representation learning for better performance, in this paper, we propose a Graph Enhanced Transformer (GET) framework, which adopts both the sequential and graphical information of molecules. Four different GET designs are proposed, which fuse the SMILES representations with atom embeddings learned from our improved Graph Neural Network (GNN). Empirical results show that our model significantly outperforms the vanilla Transformer model in test accuracy.",
+  "full_text": null,
+  "topic": "Retrosynthetic analysis",
+  "concepts": [
+    {
+      "name": "Retrosynthetic analysis",
+      "score": 0.872235894203186
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7561339139938354
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6521570086479187
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.5681261420249939
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5650662183761597
+    },
+    {
+      "name": "Graph",
+      "score": 0.522413969039917
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4844086766242981
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.4641149640083313
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.43801411986351013
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3327617049217224
+    },
+    {
+      "name": "Engineering",
+      "score": 0.2379378378391266
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.15608417987823486
+    },
+    {
+      "name": "Voltage",
+      "score": 0.13661906123161316
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Total synthesis",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

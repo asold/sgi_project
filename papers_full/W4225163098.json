@@ -1,61 +1,120 @@
 {
-    "title": "X-Transformer: A Machine Translation Model Enhanced by the Self-Attention Mechanism",
-    "url": "https://openalex.org/W4225163098",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4223004542",
-            "name": "Huey-Ing Liu",
-            "affiliations": [
-                "Fu Jen Catholic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2394633132",
-            "name": "Wei‐Lin Chen",
-            "affiliations": [
-                "Fu Jen Catholic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4223004542",
-            "name": "Huey-Ing Liu",
-            "affiliations": [
-                "Fu Jen Catholic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2394633132",
-            "name": "Wei‐Lin Chen",
-            "affiliations": [
-                "Fu Jen Catholic University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1498436455",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2257408573",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W6737778391",
-        "https://openalex.org/W2118434577",
-        "https://openalex.org/W2964165364",
-        "https://openalex.org/W2962944953",
-        "https://openalex.org/W2100664567",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2963807318",
-        "https://openalex.org/W3171088343",
-        "https://openalex.org/W3035691519",
-        "https://openalex.org/W2983669550",
-        "https://openalex.org/W2994928925",
-        "https://openalex.org/W2986562961",
-        "https://openalex.org/W2963736842",
-        "https://openalex.org/W2970454332",
-        "https://openalex.org/W6745545559",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W1566289585",
-        "https://openalex.org/W2766076595"
-    ],
-    "abstract": "Machine translation has received significant attention in the field of natural language processing not only because of its challenges but also due to the translation needs that arise in the daily life of modern people. In this study, we design a new machine translation model named X-Transformer, which refines the original Transformer model regarding three aspects. First, the model parameter of the encoder is compressed. Second, the encoder structure is modified by adopting two layers of the self-attention mechanism consecutively and reducing the point-wise feed forward layer to help the model understand the semantic structure of sentences precisely. Third, we streamline the decoder model size, while maintaining the accuracy. Through experiments, we demonstrate that having a large number of decoder layers not only affects the performance of the translation model but also increases the inference time. The X-Transformer reaches the state-of-the-art result of 46.63 and 55.63 points in the BiLingual Evaluation Understudy (BLEU) metric of the World Machine Translation (WMT), from 2014, using the English–German and English–French translation corpora, thus outperforming the Transformer model with 19 and 18 BLEU points, respectively. The X-Transformer significantly reduces the training time to only 1/3 times that of the Transformer. In addition, the heat maps of the X-Transformer reach token-level precision (i.e., token-to-token attention), while the Transformer model remains at the sentence level (i.e., token-to-sentence attention).",
-    "full_text": null
+  "title": "X-Transformer: A Machine Translation Model Enhanced by the Self-Attention Mechanism",
+  "url": "https://openalex.org/W4225163098",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4223004542",
+      "name": "Huey-Ing Liu",
+      "affiliations": [
+        "Fu Jen Catholic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2394633132",
+      "name": "Wei‐Lin Chen",
+      "affiliations": [
+        "Fu Jen Catholic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4223004542",
+      "name": "Huey-Ing Liu",
+      "affiliations": [
+        "Fu Jen Catholic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2394633132",
+      "name": "Wei‐Lin Chen",
+      "affiliations": [
+        "Fu Jen Catholic University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1498436455",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2257408573",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W6737778391",
+    "https://openalex.org/W2118434577",
+    "https://openalex.org/W2964165364",
+    "https://openalex.org/W2962944953",
+    "https://openalex.org/W2100664567",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2963807318",
+    "https://openalex.org/W3171088343",
+    "https://openalex.org/W3035691519",
+    "https://openalex.org/W2983669550",
+    "https://openalex.org/W2994928925",
+    "https://openalex.org/W2986562961",
+    "https://openalex.org/W2963736842",
+    "https://openalex.org/W2970454332",
+    "https://openalex.org/W6745545559",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W1566289585",
+    "https://openalex.org/W2766076595"
+  ],
+  "abstract": "Machine translation has received significant attention in the field of natural language processing not only because of its challenges but also due to the translation needs that arise in the daily life of modern people. In this study, we design a new machine translation model named X-Transformer, which refines the original Transformer model regarding three aspects. First, the model parameter of the encoder is compressed. Second, the encoder structure is modified by adopting two layers of the self-attention mechanism consecutively and reducing the point-wise feed forward layer to help the model understand the semantic structure of sentences precisely. Third, we streamline the decoder model size, while maintaining the accuracy. Through experiments, we demonstrate that having a large number of decoder layers not only affects the performance of the translation model but also increases the inference time. The X-Transformer reaches the state-of-the-art result of 46.63 and 55.63 points in the BiLingual Evaluation Understudy (BLEU) metric of the World Machine Translation (WMT), from 2014, using the English–German and English–French translation corpora, thus outperforming the Transformer model with 19 and 18 BLEU points, respectively. The X-Transformer significantly reduces the training time to only 1/3 times that of the Transformer. In addition, the heat maps of the X-Transformer reach token-level precision (i.e., token-to-token attention), while the Transformer model remains at the sentence level (i.e., token-to-sentence attention).",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7872558832168579
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.7777119874954224
+    },
+    {
+      "name": "Security token",
+      "score": 0.7384856939315796
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7342890501022339
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5603109002113342
+    },
+    {
+      "name": "Inference",
+      "score": 0.5279813408851624
+    },
+    {
+      "name": "Sentence",
+      "score": 0.521856427192688
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5145630240440369
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40946823358535767
+    },
+    {
+      "name": "Voltage",
+      "score": 0.21652555465698242
+    },
+    {
+      "name": "Engineering",
+      "score": 0.12406417727470398
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.1146569550037384
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    }
+  ]
 }

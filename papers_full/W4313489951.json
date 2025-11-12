@@ -1,113 +1,192 @@
 {
-    "title": "MuLan-Methyl - Multiple Transformer-based Language Models for Accurate DNA Methylation Prediction",
-    "url": "https://openalex.org/W4313489951",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2950102321",
-            "name": "Wenhuan Zeng",
-            "affiliations": [
-                "University of Tübingen"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2182817294",
-            "name": "Anupam Gautam",
-            "affiliations": [
-                "Max Planck Institute for Biology",
-                "University of Tübingen"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2067907639",
-            "name": "Daniel H. Huson",
-            "affiliations": [
-                "University of Tübingen",
-                "Max Planck Institute for Biology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2950102321",
-            "name": "Wenhuan Zeng",
-            "affiliations": [
-                "Institute of Bioinformatics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2182817294",
-            "name": "Anupam Gautam",
-            "affiliations": [
-                "Innovation Cluster (Canada)",
-                "Max Planck Institute for Biology",
-                "Institute of Bioinformatics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2067907639",
-            "name": "Daniel H. Huson",
-            "affiliations": [
-                "Max Planck Institute for Biology",
-                "Innovation Cluster (Canada)",
-                "Institute of Bioinformatics"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2091414779",
-        "https://openalex.org/W2152656267",
-        "https://openalex.org/W3151608695",
-        "https://openalex.org/W2949641231",
-        "https://openalex.org/W1997453048",
-        "https://openalex.org/W3009668945",
-        "https://openalex.org/W2995813047",
-        "https://openalex.org/W2537227711",
-        "https://openalex.org/W3037668068",
-        "https://openalex.org/W3160425403",
-        "https://openalex.org/W3034527519",
-        "https://openalex.org/W3015957975",
-        "https://openalex.org/W4210254200",
-        "https://openalex.org/W3190763963",
-        "https://openalex.org/W4213092805",
-        "https://openalex.org/W3162289531",
-        "https://openalex.org/W4200281017",
-        "https://openalex.org/W3130800274",
-        "https://openalex.org/W4283733459",
-        "https://openalex.org/W3194860244",
-        "https://openalex.org/W4212836002",
-        "https://openalex.org/W4210371902",
-        "https://openalex.org/W3083274374",
-        "https://openalex.org/W4200599415",
-        "https://openalex.org/W4224675622",
-        "https://openalex.org/W3084754935",
-        "https://openalex.org/W3202017248",
-        "https://openalex.org/W3197003753",
-        "https://openalex.org/W3150782338",
-        "https://openalex.org/W3011537067",
-        "https://openalex.org/W3204213738",
-        "https://openalex.org/W4225981439",
-        "https://openalex.org/W4309631408",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W4225512842",
-        "https://openalex.org/W3131630024",
-        "https://openalex.org/W4293363887",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2996035354",
-        "https://openalex.org/W2975059944",
-        "https://openalex.org/W3017961061",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2914120296",
-        "https://openalex.org/W4220701857",
-        "https://openalex.org/W4293150093",
-        "https://openalex.org/W4280594315",
-        "https://openalex.org/W3048090444",
-        "https://openalex.org/W3200103613",
-        "https://openalex.org/W2910591656",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W4225917625"
-    ],
-    "abstract": "Abstract Transformer-based language models are successfully used to address massive text-related tasks. DNA methylation is an important epigenetic mechanism and its analysis provides valuable insights into gene regulation and biomarker identification. Several deep learning-based methods have been proposed to identify DNA methylation and each seeks to strike a balance between computational effort and accuracy. Here, we introduce MuLan-Methyl, a deep-learning framework for predicting DNA methylation sites, which is based on five popular transformer-based language models. The framework identifies methylation sites for three different types of DNA methylation, namely N6-adenine, N4-cytosine, and 5-hydroxymethylcytosine. Each of the employed language models is adapted to the task using the “pre-train and fine-tune” paradigm. Pre-training is performed on a custom corpus of DNA fragments and taxonomy lineages using self-supervised learning. Fine-tuning aims at predicting the DNA-methylation status of each type. The five models are used to collectively predict the DNA methylation status. We report excellent performance of MuLan-Methyl on a benchmark dataset. Moreover, we argue that the model captures characteristic differences between different species that are relevant for methylation. This work demonstrates that language models can be successfully adapted to applications in biological sequence analysis and that joint utilization of different language models improves model performance. Mulan-Methyl is open source and we provide a web server that implements the approach. Key points MuLan-Methyl aims at identifying three types of DNA-methylation sites. It uses an ensemble of five transformer-based language models, which were pre-trained and fine-tuned on a custom corpus. The self-attention mechanism of transformers give rise to importance scores, which can be used to extract motifs. The method performs favorably in comparison to existing methods. The implementation can be applied to chromosomal sequences to predict methylation sites.",
-    "full_text": null
+  "title": "MuLan-Methyl - Multiple Transformer-based Language Models for Accurate DNA Methylation Prediction",
+  "url": "https://openalex.org/W4313489951",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2950102321",
+      "name": "Wenhuan Zeng",
+      "affiliations": [
+        "University of Tübingen"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2182817294",
+      "name": "Anupam Gautam",
+      "affiliations": [
+        "Max Planck Institute for Biology",
+        "University of Tübingen"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2067907639",
+      "name": "Daniel H. Huson",
+      "affiliations": [
+        "University of Tübingen",
+        "Max Planck Institute for Biology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2950102321",
+      "name": "Wenhuan Zeng",
+      "affiliations": [
+        "Institute of Bioinformatics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2182817294",
+      "name": "Anupam Gautam",
+      "affiliations": [
+        "Innovation Cluster (Canada)",
+        "Max Planck Institute for Biology",
+        "Institute of Bioinformatics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2067907639",
+      "name": "Daniel H. Huson",
+      "affiliations": [
+        "Max Planck Institute for Biology",
+        "Innovation Cluster (Canada)",
+        "Institute of Bioinformatics"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2091414779",
+    "https://openalex.org/W2152656267",
+    "https://openalex.org/W3151608695",
+    "https://openalex.org/W2949641231",
+    "https://openalex.org/W1997453048",
+    "https://openalex.org/W3009668945",
+    "https://openalex.org/W2995813047",
+    "https://openalex.org/W2537227711",
+    "https://openalex.org/W3037668068",
+    "https://openalex.org/W3160425403",
+    "https://openalex.org/W3034527519",
+    "https://openalex.org/W3015957975",
+    "https://openalex.org/W4210254200",
+    "https://openalex.org/W3190763963",
+    "https://openalex.org/W4213092805",
+    "https://openalex.org/W3162289531",
+    "https://openalex.org/W4200281017",
+    "https://openalex.org/W3130800274",
+    "https://openalex.org/W4283733459",
+    "https://openalex.org/W3194860244",
+    "https://openalex.org/W4212836002",
+    "https://openalex.org/W4210371902",
+    "https://openalex.org/W3083274374",
+    "https://openalex.org/W4200599415",
+    "https://openalex.org/W4224675622",
+    "https://openalex.org/W3084754935",
+    "https://openalex.org/W3202017248",
+    "https://openalex.org/W3197003753",
+    "https://openalex.org/W3150782338",
+    "https://openalex.org/W3011537067",
+    "https://openalex.org/W3204213738",
+    "https://openalex.org/W4225981439",
+    "https://openalex.org/W4309631408",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W4225512842",
+    "https://openalex.org/W3131630024",
+    "https://openalex.org/W4293363887",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2996035354",
+    "https://openalex.org/W2975059944",
+    "https://openalex.org/W3017961061",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2914120296",
+    "https://openalex.org/W4220701857",
+    "https://openalex.org/W4293150093",
+    "https://openalex.org/W4280594315",
+    "https://openalex.org/W3048090444",
+    "https://openalex.org/W3200103613",
+    "https://openalex.org/W2910591656",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W4225917625"
+  ],
+  "abstract": "Abstract Transformer-based language models are successfully used to address massive text-related tasks. DNA methylation is an important epigenetic mechanism and its analysis provides valuable insights into gene regulation and biomarker identification. Several deep learning-based methods have been proposed to identify DNA methylation and each seeks to strike a balance between computational effort and accuracy. Here, we introduce MuLan-Methyl, a deep-learning framework for predicting DNA methylation sites, which is based on five popular transformer-based language models. The framework identifies methylation sites for three different types of DNA methylation, namely N6-adenine, N4-cytosine, and 5-hydroxymethylcytosine. Each of the employed language models is adapted to the task using the “pre-train and fine-tune” paradigm. Pre-training is performed on a custom corpus of DNA fragments and taxonomy lineages using self-supervised learning. Fine-tuning aims at predicting the DNA-methylation status of each type. The five models are used to collectively predict the DNA methylation status. We report excellent performance of MuLan-Methyl on a benchmark dataset. Moreover, we argue that the model captures characteristic differences between different species that are relevant for methylation. This work demonstrates that language models can be successfully adapted to applications in biological sequence analysis and that joint utilization of different language models improves model performance. Mulan-Methyl is open source and we provide a web server that implements the approach. Key points MuLan-Methyl aims at identifying three types of DNA-methylation sites. It uses an ensemble of five transformer-based language models, which were pre-trained and fine-tuned on a custom corpus. The self-attention mechanism of transformers give rise to importance scores, which can be used to extract motifs. The method performs favorably in comparison to existing methods. The implementation can be applied to chromosomal sequences to predict methylation sites.",
+  "full_text": null,
+  "topic": "DNA methylation",
+  "concepts": [
+    {
+      "name": "DNA methylation",
+      "score": 0.8068970441818237
+    },
+    {
+      "name": "Methylation",
+      "score": 0.5995696187019348
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5581179261207581
+    },
+    {
+      "name": "Epigenetics",
+      "score": 0.5454907417297363
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5310065746307373
+    },
+    {
+      "name": "Language model",
+      "score": 0.5115874409675598
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4879915118217468
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.48661646246910095
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.43614423274993896
+    },
+    {
+      "name": "DNA",
+      "score": 0.38169166445732117
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.37354081869125366
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.35727664828300476
+    },
+    {
+      "name": "Biology",
+      "score": 0.3453242778778076
+    },
+    {
+      "name": "Gene",
+      "score": 0.2498856782913208
+    },
+    {
+      "name": "Genetics",
+      "score": 0.1899927854537964
+    },
+    {
+      "name": "Engineering",
+      "score": 0.16729557514190674
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.07357504963874817
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

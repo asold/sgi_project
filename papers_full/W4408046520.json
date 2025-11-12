@@ -1,70 +1,125 @@
 {
-    "title": "Use of Retrieval-Augmented Large Language Model for COVID-19 Fact-Checking: Development and Usability Study",
-    "url": "https://openalex.org/W4408046520",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097184588",
-            "name": "Hai Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2107143437",
-            "name": "jingyi huang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2541836607",
-            "name": "Meng-Meng Ji",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2342460508",
-            "name": "Yuyi Yang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2304554041",
-            "name": "Ruopeng An",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4205924832",
-        "https://openalex.org/W4294292920",
-        "https://openalex.org/W4309673624",
-        "https://openalex.org/W4320059515",
-        "https://openalex.org/W4385571803",
-        "https://openalex.org/W4377246016",
-        "https://openalex.org/W4293087034",
-        "https://openalex.org/W4401815218",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W4392193191",
-        "https://openalex.org/W4391506308",
-        "https://openalex.org/W4393300635",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4401706657",
-        "https://openalex.org/W4399911186",
-        "https://openalex.org/W4391876619",
-        "https://openalex.org/W4401978514",
-        "https://openalex.org/W4391418506",
-        "https://openalex.org/W4387800173",
-        "https://openalex.org/W4206592257",
-        "https://openalex.org/W4213271081",
-        "https://openalex.org/W4282963607",
-        "https://openalex.org/W3118824597",
-        "https://openalex.org/W4396843820",
-        "https://openalex.org/W4388524030",
-        "https://openalex.org/W4393407159",
-        "https://openalex.org/W4312065182",
-        "https://openalex.org/W4404782513",
-        "https://openalex.org/W3193988084",
-        "https://openalex.org/W4394947112",
-        "https://openalex.org/W4309702579",
-        "https://openalex.org/W4393870852",
-        "https://openalex.org/W4310131529",
-        "https://openalex.org/W4386459994"
-    ],
-    "abstract": "Background The COVID-19 pandemic has been accompanied by an “infodemic,” where the rapid spread of misinformation has exacerbated public health challenges. Traditional fact-checking methods, though effective, are time-consuming and resource-intensive, limiting their ability to combat misinformation at scale. Large language models (LLMs) such as GPT-4 offer a more scalable solution, but their susceptibility to generating hallucinations—plausible yet incorrect information—compromises their reliability. Objective This study aims to enhance the accuracy and reliability of COVID-19 fact-checking by integrating a retrieval-augmented generation (RAG) system with LLMs, specifically addressing the limitations of hallucination and context inaccuracy inherent in stand-alone LLMs. Methods We constructed a context dataset comprising approximately 130,000 peer-reviewed papers related to COVID-19 from PubMed and Scopus. This dataset was integrated with GPT-4 to develop multiple RAG-enhanced models: the naïve RAG, Lord of the Retrievers (LOTR)–RAG, corrective RAG (CRAG), and self-RAG (SRAG). The RAG systems were designed to retrieve relevant external information, which was then embedded and indexed in a vector store for similarity searches. One real-world dataset and one synthesized dataset, each containing 500 claims, were used to evaluate the performance of these models. Each model’s accuracy, F1-score, precision, and sensitivity were compared to assess their effectiveness in reducing hallucination and improving fact-checking accuracy. Results The baseline GPT-4 model achieved an accuracy of 0.856 on the real-world dataset. The naïve RAG model improved this to 0.946, while the LOTR-RAG model further increased accuracy to 0.951. The CRAG and SRAG models outperformed all others, achieving accuracies of 0.972 and 0.973, respectively. The baseline GPT-4 model reached an accuracy of 0.960 on the synthesized dataset. The naïve RAG model increased this to 0.972, and the LOTR-RAG, CRAG, and SRAG models achieved an accuracy of 0.978. These findings demonstrate that the RAG-enhanced models consistently maintained high accuracy levels, closely mirroring ground-truth labels and significantly reducing hallucinations. The CRAG and SRAG models also provided more detailed and contextually accurate explanations, further establishing the superiority of agentic RAG frameworks in delivering reliable and precise fact-checking outputs across diverse datasets. Conclusions The integration of RAG systems with LLMs substantially improves the accuracy and contextual relevance of automated fact-checking. By reducing hallucinations and enhancing transparency by citing retrieved sources, this method holds significant promise for rapid, reliable information verification to combat misinformation during public health crises.",
-    "full_text": null
+  "title": "Use of Retrieval-Augmented Large Language Model for COVID-19 Fact-Checking: Development and Usability Study",
+  "url": "https://openalex.org/W4408046520",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097184588",
+      "name": "Hai Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2107143437",
+      "name": "jingyi huang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2541836607",
+      "name": "Meng-Meng Ji",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2342460508",
+      "name": "Yuyi Yang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2304554041",
+      "name": "Ruopeng An",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4205924832",
+    "https://openalex.org/W4294292920",
+    "https://openalex.org/W4309673624",
+    "https://openalex.org/W4320059515",
+    "https://openalex.org/W4385571803",
+    "https://openalex.org/W4377246016",
+    "https://openalex.org/W4293087034",
+    "https://openalex.org/W4401815218",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W4392193191",
+    "https://openalex.org/W4391506308",
+    "https://openalex.org/W4393300635",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4401706657",
+    "https://openalex.org/W4399911186",
+    "https://openalex.org/W4391876619",
+    "https://openalex.org/W4401978514",
+    "https://openalex.org/W4391418506",
+    "https://openalex.org/W4387800173",
+    "https://openalex.org/W4206592257",
+    "https://openalex.org/W4213271081",
+    "https://openalex.org/W4282963607",
+    "https://openalex.org/W3118824597",
+    "https://openalex.org/W4396843820",
+    "https://openalex.org/W4388524030",
+    "https://openalex.org/W4393407159",
+    "https://openalex.org/W4312065182",
+    "https://openalex.org/W4404782513",
+    "https://openalex.org/W3193988084",
+    "https://openalex.org/W4394947112",
+    "https://openalex.org/W4309702579",
+    "https://openalex.org/W4393870852",
+    "https://openalex.org/W4310131529",
+    "https://openalex.org/W4386459994"
+  ],
+  "abstract": "Background The COVID-19 pandemic has been accompanied by an “infodemic,” where the rapid spread of misinformation has exacerbated public health challenges. Traditional fact-checking methods, though effective, are time-consuming and resource-intensive, limiting their ability to combat misinformation at scale. Large language models (LLMs) such as GPT-4 offer a more scalable solution, but their susceptibility to generating hallucinations—plausible yet incorrect information—compromises their reliability. Objective This study aims to enhance the accuracy and reliability of COVID-19 fact-checking by integrating a retrieval-augmented generation (RAG) system with LLMs, specifically addressing the limitations of hallucination and context inaccuracy inherent in stand-alone LLMs. Methods We constructed a context dataset comprising approximately 130,000 peer-reviewed papers related to COVID-19 from PubMed and Scopus. This dataset was integrated with GPT-4 to develop multiple RAG-enhanced models: the naïve RAG, Lord of the Retrievers (LOTR)–RAG, corrective RAG (CRAG), and self-RAG (SRAG). The RAG systems were designed to retrieve relevant external information, which was then embedded and indexed in a vector store for similarity searches. One real-world dataset and one synthesized dataset, each containing 500 claims, were used to evaluate the performance of these models. Each model’s accuracy, F1-score, precision, and sensitivity were compared to assess their effectiveness in reducing hallucination and improving fact-checking accuracy. Results The baseline GPT-4 model achieved an accuracy of 0.856 on the real-world dataset. The naïve RAG model improved this to 0.946, while the LOTR-RAG model further increased accuracy to 0.951. The CRAG and SRAG models outperformed all others, achieving accuracies of 0.972 and 0.973, respectively. The baseline GPT-4 model reached an accuracy of 0.960 on the synthesized dataset. The naïve RAG model increased this to 0.972, and the LOTR-RAG, CRAG, and SRAG models achieved an accuracy of 0.978. These findings demonstrate that the RAG-enhanced models consistently maintained high accuracy levels, closely mirroring ground-truth labels and significantly reducing hallucinations. The CRAG and SRAG models also provided more detailed and contextually accurate explanations, further establishing the superiority of agentic RAG frameworks in delivering reliable and precise fact-checking outputs across diverse datasets. Conclusions The integration of RAG systems with LLMs substantially improves the accuracy and contextual relevance of automated fact-checking. By reducing hallucinations and enhancing transparency by citing retrieved sources, this method holds significant promise for rapid, reliable information verification to combat misinformation during public health crises.",
+  "full_text": null,
+  "topic": "Preprint",
+  "concepts": [
+    {
+      "name": "Preprint",
+      "score": 0.9066609144210815
+    },
+    {
+      "name": "Coronavirus disease 2019 (COVID-19)",
+      "score": 0.7266037464141846
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5951506495475769
+    },
+    {
+      "name": "2019-20 coronavirus outbreak",
+      "score": 0.5220715403556824
+    },
+    {
+      "name": "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+      "score": 0.5066960453987122
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3652839958667755
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3137720227241516
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1389898657798767
+    },
+    {
+      "name": "Virology",
+      "score": 0.11414152383804321
+    },
+    {
+      "name": "Outbreak",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Disease",
+      "score": 0.0
+    },
+    {
+      "name": "Infectious disease (medical specialty)",
+      "score": 0.0
+    }
+  ]
 }

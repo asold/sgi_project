@@ -1,66 +1,149 @@
 {
-    "title": "Predicting Chemical Reaction Outcomes: A Grammar Ontology-based Transformer Framework",
-    "url": "https://openalex.org/W4246725120",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3000573652",
-            "name": "Vipul Mann",
-            "affiliations": [
-                "Columbia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128488729",
-            "name": "Venkat Venkatasubramanian",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3000573652",
-            "name": "Vipul Mann",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2571050567",
-        "https://openalex.org/W2133109597",
-        "https://openalex.org/W2945551948",
-        "https://openalex.org/W3010145447",
-        "https://openalex.org/W2799567665",
-        "https://openalex.org/W2760744264",
-        "https://openalex.org/W2052902770",
-        "https://openalex.org/W2124479173",
-        "https://openalex.org/W4242308659",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2172524660",
-        "https://openalex.org/W2947835681",
-        "https://openalex.org/W3102693939",
-        "https://openalex.org/W2066412916",
-        "https://openalex.org/W4231645939",
-        "https://openalex.org/W2901942917",
-        "https://openalex.org/W2561003326",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2830440988",
-        "https://openalex.org/W2890910436",
-        "https://openalex.org/W1980352552",
-        "https://openalex.org/W2337110853",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W4286740883",
-        "https://openalex.org/W2883583109",
-        "https://openalex.org/W2753921001",
-        "https://openalex.org/W2937307539",
-        "https://openalex.org/W3100545487",
-        "https://openalex.org/W2068110511",
-        "https://openalex.org/W1579838312",
-        "https://openalex.org/W2606363443",
-        "https://openalex.org/W2963676163",
-        "https://openalex.org/W2081846244",
-        "https://openalex.org/W1971680226",
-        "https://openalex.org/W2479958290",
-        "https://openalex.org/W2005712405",
-        "https://openalex.org/W2580919858"
-    ],
-    "abstract": "&lt;p&gt;Discovering and designing novel materials is a challenging problem as it often requires searching a combinatorially large space of potential candidates. Evaluation of all candidates experimentally is typically infeasible as it requires great amounts of effort, time, expertise, and money. The ability to predict reaction outcomes without performing extensive experiments is, therefore, important. Towards that goal, we report an approach that uses context-free grammar (CFG) based representations of molecules in a neural machine translation framework. We formulate the reaction-prediction task as a machine translation problem that involves discovering the transformations from the source sequence (comprising the reactants and agents) to the target sequence (comprising the major product) in the reaction. The grammar ontology-based representation of molecules hierarchically incorporates rich molecular structure information that, in principle, should be valuable for modeling chemical reactions. We achieve an accuracy of 80.1% on a standard reaction dataset using a model characterized by only a fraction of the number of training parameters in other sequence-to-sequence models based works in this area. Moreover, 99% of the predictions made on the same reaction dataset were found to be syntactically valid. We conclude that CFGs-based ontological representations could be an efficient way of incorporating structural information, ensuring chemically valid predictions, and overcoming overfitting in complex machine learning architectures employed in reaction prediction tasks.&lt;br&gt;&lt;/p&gt;",
-    "full_text": null
+  "title": "Predicting Chemical Reaction Outcomes: A Grammar Ontology-based Transformer Framework",
+  "url": "https://openalex.org/W4246725120",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3000573652",
+      "name": "Vipul Mann",
+      "affiliations": [
+        "Columbia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128488729",
+      "name": "Venkat Venkatasubramanian",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3000573652",
+      "name": "Vipul Mann",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2571050567",
+    "https://openalex.org/W2133109597",
+    "https://openalex.org/W2945551948",
+    "https://openalex.org/W3010145447",
+    "https://openalex.org/W2799567665",
+    "https://openalex.org/W2760744264",
+    "https://openalex.org/W2052902770",
+    "https://openalex.org/W2124479173",
+    "https://openalex.org/W4242308659",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2172524660",
+    "https://openalex.org/W2947835681",
+    "https://openalex.org/W3102693939",
+    "https://openalex.org/W2066412916",
+    "https://openalex.org/W4231645939",
+    "https://openalex.org/W2901942917",
+    "https://openalex.org/W2561003326",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2830440988",
+    "https://openalex.org/W2890910436",
+    "https://openalex.org/W1980352552",
+    "https://openalex.org/W2337110853",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W4286740883",
+    "https://openalex.org/W2883583109",
+    "https://openalex.org/W2753921001",
+    "https://openalex.org/W2937307539",
+    "https://openalex.org/W3100545487",
+    "https://openalex.org/W2068110511",
+    "https://openalex.org/W1579838312",
+    "https://openalex.org/W2606363443",
+    "https://openalex.org/W2963676163",
+    "https://openalex.org/W2081846244",
+    "https://openalex.org/W1971680226",
+    "https://openalex.org/W2479958290",
+    "https://openalex.org/W2005712405",
+    "https://openalex.org/W2580919858"
+  ],
+  "abstract": "&lt;p&gt;Discovering and designing novel materials is a challenging problem as it often requires searching a combinatorially large space of potential candidates. Evaluation of all candidates experimentally is typically infeasible as it requires great amounts of effort, time, expertise, and money. The ability to predict reaction outcomes without performing extensive experiments is, therefore, important. Towards that goal, we report an approach that uses context-free grammar (CFG) based representations of molecules in a neural machine translation framework. We formulate the reaction-prediction task as a machine translation problem that involves discovering the transformations from the source sequence (comprising the reactants and agents) to the target sequence (comprising the major product) in the reaction. The grammar ontology-based representation of molecules hierarchically incorporates rich molecular structure information that, in principle, should be valuable for modeling chemical reactions. We achieve an accuracy of 80.1% on a standard reaction dataset using a model characterized by only a fraction of the number of training parameters in other sequence-to-sequence models based works in this area. Moreover, 99% of the predictions made on the same reaction dataset were found to be syntactically valid. We conclude that CFGs-based ontological representations could be an efficient way of incorporating structural information, ensuring chemically valid predictions, and overcoming overfitting in complex machine learning architectures employed in reaction prediction tasks.&lt;br&gt;&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Overfitting",
+  "concepts": [
+    {
+      "name": "Overfitting",
+      "score": 0.7302057147026062
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7220062613487244
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5827391743659973
+    },
+    {
+      "name": "Grammar",
+      "score": 0.535322368144989
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5119853615760803
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.49698594212532043
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4888302683830261
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.44685983657836914
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.4321366548538208
+    },
+    {
+      "name": "Ontology",
+      "score": 0.4298229217529297
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.36517587304115295
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.17752882838249207
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.13469919562339783
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

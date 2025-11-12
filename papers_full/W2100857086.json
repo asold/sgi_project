@@ -1,80 +1,131 @@
 {
-    "title": "Reranking answers for definitional QA using language modeling",
-    "url": "https://openalex.org/W2100857086",
-    "year": 2006,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096833632",
-            "name": "Yi Chen",
-            "affiliations": [
-                "Chongqing University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096867225",
-            "name": "Ming Zhou",
-            "affiliations": [
-                "Microsoft Research Asia (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128579718",
-            "name": "Shilong Wang",
-            "affiliations": [
-                "Chongqing University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096833632",
-            "name": "Yi Chen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096867225",
-            "name": "Ming Zhou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2128579718",
-            "name": "Shilong Wang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2162673394",
-        "https://openalex.org/W2108312008",
-        "https://openalex.org/W2611071287",
-        "https://openalex.org/W2097927681",
-        "https://openalex.org/W2167435923",
-        "https://openalex.org/W2758584545",
-        "https://openalex.org/W2950186769",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W1972594981",
-        "https://openalex.org/W2136583886",
-        "https://openalex.org/W2093390569",
-        "https://openalex.org/W2160825952",
-        "https://openalex.org/W1506013151",
-        "https://openalex.org/W1975422446",
-        "https://openalex.org/W348133106",
-        "https://openalex.org/W2096623622",
-        "https://openalex.org/W2917019935",
-        "https://openalex.org/W2158890594",
-        "https://openalex.org/W2136542423",
-        "https://openalex.org/W4206765718",
-        "https://openalex.org/W2135666722",
-        "https://openalex.org/W4246382406",
-        "https://openalex.org/W2095368471",
-        "https://openalex.org/W2162586529",
-        "https://openalex.org/W4243333943",
-        "https://openalex.org/W2164870633",
-        "https://openalex.org/W2084334506",
-        "https://openalex.org/W2626151870",
-        "https://openalex.org/W1449118",
-        "https://openalex.org/W2068905009",
-        "https://openalex.org/W2082145945",
-        "https://openalex.org/W2099437808",
-        "https://openalex.org/W2116584611"
-    ],
-    "abstract": "Statistical ranking methods based on centroid vector (profile) extracted from external knowledge have become widely adopted in the top definitional QA systems in TREC 2003 and 2004. In these approaches, terms in the centroid vector are treated as a bag of words based on the independent assumption. To relax this assumption, this paper proposes a novel language model-based answer reranking method to improve the existing bag-of-words model approach by considering the dependence of the words in the centroid vector. Experiments have been conducted to evaluate the different dependence models. The results on the TREC 2003 test set show that the reranking approach with biterm language model, significantly outperforms the one with the bag-of-words model and unigram language model by 14.9% and 12.5% respectively in F-Measure(5).",
-    "full_text": null
+  "title": "Reranking answers for definitional QA using language modeling",
+  "url": "https://openalex.org/W2100857086",
+  "year": 2006,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096833632",
+      "name": "Yi Chen",
+      "affiliations": [
+        "Chongqing University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096867225",
+      "name": "Ming Zhou",
+      "affiliations": [
+        "Microsoft Research Asia (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128579718",
+      "name": "Shilong Wang",
+      "affiliations": [
+        "Chongqing University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096833632",
+      "name": "Yi Chen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096867225",
+      "name": "Ming Zhou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2128579718",
+      "name": "Shilong Wang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2162673394",
+    "https://openalex.org/W2108312008",
+    "https://openalex.org/W2611071287",
+    "https://openalex.org/W2097927681",
+    "https://openalex.org/W2167435923",
+    "https://openalex.org/W2758584545",
+    "https://openalex.org/W2950186769",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W1972594981",
+    "https://openalex.org/W2136583886",
+    "https://openalex.org/W2093390569",
+    "https://openalex.org/W2160825952",
+    "https://openalex.org/W1506013151",
+    "https://openalex.org/W1975422446",
+    "https://openalex.org/W348133106",
+    "https://openalex.org/W2096623622",
+    "https://openalex.org/W2917019935",
+    "https://openalex.org/W2158890594",
+    "https://openalex.org/W2136542423",
+    "https://openalex.org/W4206765718",
+    "https://openalex.org/W2135666722",
+    "https://openalex.org/W4246382406",
+    "https://openalex.org/W2095368471",
+    "https://openalex.org/W2162586529",
+    "https://openalex.org/W4243333943",
+    "https://openalex.org/W2164870633",
+    "https://openalex.org/W2084334506",
+    "https://openalex.org/W2626151870",
+    "https://openalex.org/W1449118",
+    "https://openalex.org/W2068905009",
+    "https://openalex.org/W2082145945",
+    "https://openalex.org/W2099437808",
+    "https://openalex.org/W2116584611"
+  ],
+  "abstract": "Statistical ranking methods based on centroid vector (profile) extracted from external knowledge have become widely adopted in the top definitional QA systems in TREC 2003 and 2004. In these approaches, terms in the centroid vector are treated as a bag of words based on the independent assumption. To relax this assumption, this paper proposes a novel language model-based answer reranking method to improve the existing bag-of-words model approach by considering the dependence of the words in the centroid vector. Experiments have been conducted to evaluate the different dependence models. The results on the TREC 2003 test set show that the reranking approach with biterm language model, significantly outperforms the one with the bag-of-words model and unigram language model by 14.9% and 12.5% respectively in F-Measure(5).",
+  "full_text": null,
+  "topic": "Centroid",
+  "concepts": [
+    {
+      "name": "Centroid",
+      "score": 0.8413426876068115
+    },
+    {
+      "name": "Ranking (information retrieval)",
+      "score": 0.764336109161377
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7467808127403259
+    },
+    {
+      "name": "Language model",
+      "score": 0.6775102615356445
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.639845073223114
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.6249129176139832
+    },
+    {
+      "name": "Measure (data warehouse)",
+      "score": 0.6139153242111206
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.545619785785675
+    },
+    {
+      "name": "Bag-of-words model",
+      "score": 0.4864909052848816
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3814571499824524
+    },
+    {
+      "name": "Data mining",
+      "score": 0.2643618583679199
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

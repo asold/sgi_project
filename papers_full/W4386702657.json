@@ -1,123 +1,158 @@
 {
-    "title": "ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer",
-    "url": "https://openalex.org/W4386702657",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2106679582",
-            "name": "Pengfei Guo",
-            "affiliations": [
-                "Johns Hopkins University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3022113524",
-            "name": "Yiqun Mei",
-            "affiliations": [
-                "Johns Hopkins University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2155017037",
-            "name": "Jinyuan Zhou",
-            "affiliations": [
-                "Johns Hopkins Medicine",
-                "Johns Hopkins University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109665144",
-            "name": "Shanshan Jiang",
-            "affiliations": [
-                "Johns Hopkins Medicine",
-                "Johns Hopkins University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2118029367",
-            "name": "Vishal M. Patel",
-            "affiliations": [
-                "Johns Hopkins University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2029816571",
-        "https://openalex.org/W2107906890",
-        "https://openalex.org/W1990828988",
-        "https://openalex.org/W2540784894",
-        "https://openalex.org/W2018443449",
-        "https://openalex.org/W2117700900",
-        "https://openalex.org/W3005996681",
-        "https://openalex.org/W2610522009",
-        "https://openalex.org/W2168668658",
-        "https://openalex.org/W2962734274",
-        "https://openalex.org/W3202833871",
-        "https://openalex.org/W3092324452",
-        "https://openalex.org/W6767156836",
-        "https://openalex.org/W2594014149",
-        "https://openalex.org/W2795380527",
-        "https://openalex.org/W6809134713",
-        "https://openalex.org/W4381332772",
-        "https://openalex.org/W4221166004",
-        "https://openalex.org/W6799926150",
-        "https://openalex.org/W3161947941",
-        "https://openalex.org/W3205399766",
-        "https://openalex.org/W3207918547",
-        "https://openalex.org/W6797235774",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W3171125843",
-        "https://openalex.org/W6839353788",
-        "https://openalex.org/W3202624106",
-        "https://openalex.org/W6811016352",
-        "https://openalex.org/W6752237900",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W4226133625",
-        "https://openalex.org/W6734524426",
-        "https://openalex.org/W2964308363",
-        "https://openalex.org/W3116656768",
-        "https://openalex.org/W54257720",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W6738909161",
-        "https://openalex.org/W4292363360",
-        "https://openalex.org/W3035596626",
-        "https://openalex.org/W2996927594",
-        "https://openalex.org/W4284896652",
-        "https://openalex.org/W4295308425",
-        "https://openalex.org/W4221148807",
-        "https://openalex.org/W2963682501",
-        "https://openalex.org/W3034546843",
-        "https://openalex.org/W6729983426",
-        "https://openalex.org/W3003650457",
-        "https://openalex.org/W6769373814",
-        "https://openalex.org/W3092530614",
-        "https://openalex.org/W3176466780",
-        "https://openalex.org/W4214614183",
-        "https://openalex.org/W3139633126",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W6797790494",
-        "https://openalex.org/W4223589960",
-        "https://openalex.org/W6810598171",
-        "https://openalex.org/W4318566866",
-        "https://openalex.org/W3092462072",
-        "https://openalex.org/W3205017033",
-        "https://openalex.org/W2898141270",
-        "https://openalex.org/W2994807789",
-        "https://openalex.org/W2986661129",
-        "https://openalex.org/W4226334005",
-        "https://openalex.org/W2101675075",
-        "https://openalex.org/W4321484481",
-        "https://openalex.org/W4319300853",
-        "https://openalex.org/W4226254078",
-        "https://openalex.org/W4226056833",
-        "https://openalex.org/W4282976788",
-        "https://openalex.org/W4288090808",
-        "https://openalex.org/W4297813639",
-        "https://openalex.org/W2617883747"
-    ],
-    "abstract": "The accelerating magnetic resonance imaging (MRI) reconstruction process is a challenging ill-posed inverse problem due to the excessive under-sampling operation in k -space. In this paper, we propose a recurrent Transformer model, namely ReconFormer, for MRI reconstruction, which can iteratively reconstruct high-fidelity magnetic resonance images from highly under-sampled k -space data (e.g., up to 8× acceleration). In particular, the proposed architecture is built upon Recurrent Pyramid Transformer Layers (RPTLs). The core design of the proposed method is Recurrent Scale-wise Attention (RSA), which jointly exploits intrinsic multi-scale information at every architecture unit as well as the dependencies of the deep feature correlation through recurrent states. Moreover, benefiting from its recurrent nature, ReconFormer is lightweight compared to other baselines and only contains 1.1 M trainable parameters. We validate the effectiveness of ReconFormer on multiple datasets with different magnetic resonance sequences and show that it achieves significant improvements over the state-of-the-art methods with better parameter efficiency. The implementation code and pre-trained weights are available at https://github.com/guopengf/ReconFormer.",
-    "full_text": null
+  "title": "ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer",
+  "url": "https://openalex.org/W4386702657",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2106679582",
+      "name": "Pengfei Guo",
+      "affiliations": [
+        "Johns Hopkins University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3022113524",
+      "name": "Yiqun Mei",
+      "affiliations": [
+        "Johns Hopkins University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2155017037",
+      "name": "Jinyuan Zhou",
+      "affiliations": [
+        "Johns Hopkins Medicine",
+        "Johns Hopkins University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109665144",
+      "name": "Shanshan Jiang",
+      "affiliations": [
+        "Johns Hopkins Medicine",
+        "Johns Hopkins University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2118029367",
+      "name": "Vishal M. Patel",
+      "affiliations": [
+        "Johns Hopkins University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2029816571",
+    "https://openalex.org/W2107906890",
+    "https://openalex.org/W1990828988",
+    "https://openalex.org/W2540784894",
+    "https://openalex.org/W2018443449",
+    "https://openalex.org/W2117700900",
+    "https://openalex.org/W3005996681",
+    "https://openalex.org/W2610522009",
+    "https://openalex.org/W2168668658",
+    "https://openalex.org/W2962734274",
+    "https://openalex.org/W3202833871",
+    "https://openalex.org/W3092324452",
+    "https://openalex.org/W6767156836",
+    "https://openalex.org/W2594014149",
+    "https://openalex.org/W2795380527",
+    "https://openalex.org/W6809134713",
+    "https://openalex.org/W4381332772",
+    "https://openalex.org/W4221166004",
+    "https://openalex.org/W6799926150",
+    "https://openalex.org/W3161947941",
+    "https://openalex.org/W3205399766",
+    "https://openalex.org/W3207918547",
+    "https://openalex.org/W6797235774",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W3171125843",
+    "https://openalex.org/W6839353788",
+    "https://openalex.org/W3202624106",
+    "https://openalex.org/W6811016352",
+    "https://openalex.org/W6752237900",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W4226133625",
+    "https://openalex.org/W6734524426",
+    "https://openalex.org/W2964308363",
+    "https://openalex.org/W3116656768",
+    "https://openalex.org/W54257720",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W6738909161",
+    "https://openalex.org/W4292363360",
+    "https://openalex.org/W3035596626",
+    "https://openalex.org/W2996927594",
+    "https://openalex.org/W4284896652",
+    "https://openalex.org/W4295308425",
+    "https://openalex.org/W4221148807",
+    "https://openalex.org/W2963682501",
+    "https://openalex.org/W3034546843",
+    "https://openalex.org/W6729983426",
+    "https://openalex.org/W3003650457",
+    "https://openalex.org/W6769373814",
+    "https://openalex.org/W3092530614",
+    "https://openalex.org/W3176466780",
+    "https://openalex.org/W4214614183",
+    "https://openalex.org/W3139633126",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W6797790494",
+    "https://openalex.org/W4223589960",
+    "https://openalex.org/W6810598171",
+    "https://openalex.org/W4318566866",
+    "https://openalex.org/W3092462072",
+    "https://openalex.org/W3205017033",
+    "https://openalex.org/W2898141270",
+    "https://openalex.org/W2994807789",
+    "https://openalex.org/W2986661129",
+    "https://openalex.org/W4226334005",
+    "https://openalex.org/W2101675075",
+    "https://openalex.org/W4321484481",
+    "https://openalex.org/W4319300853",
+    "https://openalex.org/W4226254078",
+    "https://openalex.org/W4226056833",
+    "https://openalex.org/W4282976788",
+    "https://openalex.org/W4288090808",
+    "https://openalex.org/W4297813639",
+    "https://openalex.org/W2617883747"
+  ],
+  "abstract": "The accelerating magnetic resonance imaging (MRI) reconstruction process is a challenging ill-posed inverse problem due to the excessive under-sampling operation in k -space. In this paper, we propose a recurrent Transformer model, namely ReconFormer, for MRI reconstruction, which can iteratively reconstruct high-fidelity magnetic resonance images from highly under-sampled k -space data (e.g., up to 8× acceleration). In particular, the proposed architecture is built upon Recurrent Pyramid Transformer Layers (RPTLs). The core design of the proposed method is Recurrent Scale-wise Attention (RSA), which jointly exploits intrinsic multi-scale information at every architecture unit as well as the dependencies of the deep feature correlation through recurrent states. Moreover, benefiting from its recurrent nature, ReconFormer is lightweight compared to other baselines and only contains 1.1 M trainable parameters. We validate the effectiveness of ReconFormer on multiple datasets with different magnetic resonance sequences and show that it achieves significant improvements over the state-of-the-art methods with better parameter efficiency. The implementation code and pre-trained weights are available at https://github.com/guopengf/ReconFormer.",
+  "full_text": null,
+  "topic": "Iterative reconstruction",
+  "concepts": [
+    {
+      "name": "Iterative reconstruction",
+      "score": 0.5585492253303528
+    },
+    {
+      "name": "Computer science",
+      "score": 0.509463369846344
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.43945062160491943
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4205208122730255
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4163922071456909
+    },
+    {
+      "name": "Engineering",
+      "score": 0.12676995992660522
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09689298272132874
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.08358576893806458
+    }
+  ]
 }

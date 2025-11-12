@@ -1,132 +1,191 @@
 {
-    "title": "Accurate identification of bacteriophages from metagenomic data using Transformer",
-    "url": "https://openalex.org/W4221138532",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2769284849",
-            "name": "Jiayu Shang",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2997018911",
-            "name": "Xubo Tang",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2288386125",
-            "name": "Ruocheng Guo",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2169004818",
-            "name": "Yanni Sun",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2769284849",
-            "name": "Jiayu Shang",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2997018911",
-            "name": "Xubo Tang",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2288386125",
-            "name": "Ruocheng Guo",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2169004818",
-            "name": "Yanni Sun",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3184005698",
-        "https://openalex.org/W2593449349",
-        "https://openalex.org/W2940459311",
-        "https://openalex.org/W2973579020",
-        "https://openalex.org/W2090817404",
-        "https://openalex.org/W4236763430",
-        "https://openalex.org/W2803143214",
-        "https://openalex.org/W3032191947",
-        "https://openalex.org/W3091917690",
-        "https://openalex.org/W2961387603",
-        "https://openalex.org/W3097008984",
-        "https://openalex.org/W2245444176",
-        "https://openalex.org/W3107997545",
-        "https://openalex.org/W2119859604",
-        "https://openalex.org/W2526038422",
-        "https://openalex.org/W2732139758",
-        "https://openalex.org/W3003110834",
-        "https://openalex.org/W3091956242",
-        "https://openalex.org/W2949831026",
-        "https://openalex.org/W4200505767",
-        "https://openalex.org/W3127656915",
-        "https://openalex.org/W2610784236",
-        "https://openalex.org/W3215755691",
-        "https://openalex.org/W2045204781",
-        "https://openalex.org/W3195881367",
-        "https://openalex.org/W4214943162",
-        "https://openalex.org/W1949003960",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W4200441850",
-        "https://openalex.org/W2124166542",
-        "https://openalex.org/W2962975498",
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W2952204926",
-        "https://openalex.org/W2599417231",
-        "https://openalex.org/W2175526948",
-        "https://openalex.org/W2950438666",
-        "https://openalex.org/W2992400060",
-        "https://openalex.org/W2036897871",
-        "https://openalex.org/W2944870141",
-        "https://openalex.org/W2158406706",
-        "https://openalex.org/W2782623083",
-        "https://openalex.org/W2942757983",
-        "https://openalex.org/W4225255896",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W4319324331",
-        "https://openalex.org/W2604272474",
-        "https://openalex.org/W2904213287",
-        "https://openalex.org/W3014332420",
-        "https://openalex.org/W2747329762",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3118981004",
-        "https://openalex.org/W3136918052",
-        "https://openalex.org/W2962958286",
-        "https://openalex.org/W4234552385",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2950784811",
-        "https://openalex.org/W4285788416",
-        "https://openalex.org/W4394666973",
-        "https://openalex.org/W226855855",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W3028145155",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2143485490",
-        "https://openalex.org/W4246460447",
-        "https://openalex.org/W4295838474"
-    ],
-    "abstract": "Abstract Motivation Bacteriophages are viruses infecting bacteria. Being key players in microbial communities, they can regulate the composition/function of microbiome by infecting their bacterial hosts and mediating gene transfer. Recently, metagenomic sequencing, which can sequence all genetic materials from various microbiome, has become a popular means for new phage discovery. However, accurate and comprehensive detection of phages from the metagenomic data remains difficult. High diversity/abundance, and limited reference genomes pose major challenges for recruiting phage fragments from metagenomic data. Existing alignment-based or learning-based models have either low recall or precision on metagenomic data. Results In this work, we adopt the state-of-the-art language model, Transformer, to conduct contextual embedding for phage contigs. By constructing a protein-cluster vocabulary, we can feed both the protein composition and the proteins’ positions from each contig into the Transformer. The Transformer can learn the protein organization and associations using the self-attention mechanism and predicts the label for test contigs. We rigorously tested our developed tool named PhaMer on multiple datasets with increasing difficulty, including quality RefSeq genomes, short contigs, simulated metagenomic data, mock metagenomic data and the public IMG/VR dataset. All the experimental results show that PhaMer outperforms the state-of-the-art tools. In the real metagenomic data experiment, PhaMer improves the F1-score of phage detection by 27%.",
-    "full_text": null
+  "title": "Accurate identification of bacteriophages from metagenomic data using Transformer",
+  "url": "https://openalex.org/W4221138532",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2769284849",
+      "name": "Jiayu Shang",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2997018911",
+      "name": "Xubo Tang",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2288386125",
+      "name": "Ruocheng Guo",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2169004818",
+      "name": "Yanni Sun",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2769284849",
+      "name": "Jiayu Shang",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2997018911",
+      "name": "Xubo Tang",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2288386125",
+      "name": "Ruocheng Guo",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2169004818",
+      "name": "Yanni Sun",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3184005698",
+    "https://openalex.org/W2593449349",
+    "https://openalex.org/W2940459311",
+    "https://openalex.org/W2973579020",
+    "https://openalex.org/W2090817404",
+    "https://openalex.org/W4236763430",
+    "https://openalex.org/W2803143214",
+    "https://openalex.org/W3032191947",
+    "https://openalex.org/W3091917690",
+    "https://openalex.org/W2961387603",
+    "https://openalex.org/W3097008984",
+    "https://openalex.org/W2245444176",
+    "https://openalex.org/W3107997545",
+    "https://openalex.org/W2119859604",
+    "https://openalex.org/W2526038422",
+    "https://openalex.org/W2732139758",
+    "https://openalex.org/W3003110834",
+    "https://openalex.org/W3091956242",
+    "https://openalex.org/W2949831026",
+    "https://openalex.org/W4200505767",
+    "https://openalex.org/W3127656915",
+    "https://openalex.org/W2610784236",
+    "https://openalex.org/W3215755691",
+    "https://openalex.org/W2045204781",
+    "https://openalex.org/W3195881367",
+    "https://openalex.org/W4214943162",
+    "https://openalex.org/W1949003960",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W4200441850",
+    "https://openalex.org/W2124166542",
+    "https://openalex.org/W2962975498",
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W2952204926",
+    "https://openalex.org/W2599417231",
+    "https://openalex.org/W2175526948",
+    "https://openalex.org/W2950438666",
+    "https://openalex.org/W2992400060",
+    "https://openalex.org/W2036897871",
+    "https://openalex.org/W2944870141",
+    "https://openalex.org/W2158406706",
+    "https://openalex.org/W2782623083",
+    "https://openalex.org/W2942757983",
+    "https://openalex.org/W4225255896",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W4319324331",
+    "https://openalex.org/W2604272474",
+    "https://openalex.org/W2904213287",
+    "https://openalex.org/W3014332420",
+    "https://openalex.org/W2747329762",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3118981004",
+    "https://openalex.org/W3136918052",
+    "https://openalex.org/W2962958286",
+    "https://openalex.org/W4234552385",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2950784811",
+    "https://openalex.org/W4285788416",
+    "https://openalex.org/W4394666973",
+    "https://openalex.org/W226855855",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W3028145155",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2143485490",
+    "https://openalex.org/W4246460447",
+    "https://openalex.org/W4295838474"
+  ],
+  "abstract": "Abstract Motivation Bacteriophages are viruses infecting bacteria. Being key players in microbial communities, they can regulate the composition/function of microbiome by infecting their bacterial hosts and mediating gene transfer. Recently, metagenomic sequencing, which can sequence all genetic materials from various microbiome, has become a popular means for new phage discovery. However, accurate and comprehensive detection of phages from the metagenomic data remains difficult. High diversity/abundance, and limited reference genomes pose major challenges for recruiting phage fragments from metagenomic data. Existing alignment-based or learning-based models have either low recall or precision on metagenomic data. Results In this work, we adopt the state-of-the-art language model, Transformer, to conduct contextual embedding for phage contigs. By constructing a protein-cluster vocabulary, we can feed both the protein composition and the proteins’ positions from each contig into the Transformer. The Transformer can learn the protein organization and associations using the self-attention mechanism and predicts the label for test contigs. We rigorously tested our developed tool named PhaMer on multiple datasets with increasing difficulty, including quality RefSeq genomes, short contigs, simulated metagenomic data, mock metagenomic data and the public IMG/VR dataset. All the experimental results show that PhaMer outperforms the state-of-the-art tools. In the real metagenomic data experiment, PhaMer improves the F1-score of phage detection by 27%.",
+  "full_text": null,
+  "topic": "Metagenomics",
+  "concepts": [
+    {
+      "name": "Metagenomics",
+      "score": 0.9273635149002075
+    },
+    {
+      "name": "Contig",
+      "score": 0.7952896356582642
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.645893931388855
+    },
+    {
+      "name": "RefSeq",
+      "score": 0.569123387336731
+    },
+    {
+      "name": "Genome",
+      "score": 0.5476176142692566
+    },
+    {
+      "name": "Replicate",
+      "score": 0.5476070046424866
+    },
+    {
+      "name": "Biology",
+      "score": 0.5200604796409607
+    },
+    {
+      "name": "Microbiome",
+      "score": 0.4461105763912201
+    },
+    {
+      "name": "Computer science",
+      "score": 0.42752906680107117
+    },
+    {
+      "name": "DNA sequencing",
+      "score": 0.4248031973838806
+    },
+    {
+      "name": "Genetics",
+      "score": 0.27595919370651245
+    },
+    {
+      "name": "Gene",
+      "score": 0.2443489134311676
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

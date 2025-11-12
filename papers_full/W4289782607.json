@@ -1,124 +1,183 @@
 {
-    "title": "AbBERT: Learning Antibody Humanness via Masked Language Modeling",
-    "url": "https://openalex.org/W4289782607",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4289807838",
-            "name": "Denis Vashchenko",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096064100",
-            "name": "Sam Nguyen",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2147372463",
-            "name": "André Gonçalves",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2269149676",
-            "name": "Felipe Leno da Silva",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4289807842",
-            "name": "Brenden Petersen",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2307209592",
-            "name": "Thomas Desautels",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2788100770",
-            "name": "Daniel Faissol",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4289807838",
-            "name": "Denis Vashchenko",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096064100",
-            "name": "Sam Nguyen",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2147372463",
-            "name": "André Gonçalves",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2269149676",
-            "name": "Felipe Leno da Silva",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4289807842",
-            "name": "Brenden Petersen",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2307209592",
-            "name": "Thomas Desautels",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2788100770",
-            "name": "Daniel Faissol",
-            "affiliations": [
-                "Lawrence Livermore National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W2102461176",
-        "https://openalex.org/W2885949257",
-        "https://openalex.org/W3191938286",
-        "https://openalex.org/W3213832129",
-        "https://openalex.org/W3206187363",
-        "https://openalex.org/W2150884352",
-        "https://openalex.org/W1978499958",
-        "https://openalex.org/W1948727994",
-        "https://openalex.org/W2344483747",
-        "https://openalex.org/W3169434891",
-        "https://openalex.org/W2893755931",
-        "https://openalex.org/W3006755302",
-        "https://openalex.org/W3042323010",
-        "https://openalex.org/W2102697248"
-    ],
-    "abstract": "Understanding the degree of humanness of antibody sequences is critical to the therapeutic antibody development process to reduce the risk of failure modes like immunogenicity or poor manufacturability. We introduce AbBERT, a transformer-based language model trained on up to 20 million unpaired heavy/light chain sequences from the Observed Antibody Space database. We first validate AbBERT using a novel “multi-mask” scoring procedure to demonstrate high accuracy in predicting complementary determining regions—including the challenging hypervariable H3 region. We then demonstrate several uses of AbBERT at various points along the antibody design process. AbBERT enhances in silico antibody optimization via deep reinforcement learning by utilizing its learned embeddings as additional observations during optimization. Within a larger computational antibody design platform, AbBERT has been successfully applied as an additional design objective, where it displays strong correlations with computational tools predicting antibody structural stability. Finally, mutant antibody sequences that have been scored as unfavorable by AbBERT have shown corresponding low yields when expressed in cells. These use cases demonstrate the power of language modeling within computational antibody design.",
-    "full_text": null
+  "title": "AbBERT: Learning Antibody Humanness via Masked Language Modeling",
+  "url": "https://openalex.org/W4289782607",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4289807838",
+      "name": "Denis Vashchenko",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096064100",
+      "name": "Sam Nguyen",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2147372463",
+      "name": "André Gonçalves",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2269149676",
+      "name": "Felipe Leno da Silva",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4289807842",
+      "name": "Brenden Petersen",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2307209592",
+      "name": "Thomas Desautels",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2788100770",
+      "name": "Daniel Faissol",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4289807838",
+      "name": "Denis Vashchenko",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096064100",
+      "name": "Sam Nguyen",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2147372463",
+      "name": "André Gonçalves",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2269149676",
+      "name": "Felipe Leno da Silva",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4289807842",
+      "name": "Brenden Petersen",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2307209592",
+      "name": "Thomas Desautels",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2788100770",
+      "name": "Daniel Faissol",
+      "affiliations": [
+        "Lawrence Livermore National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W2102461176",
+    "https://openalex.org/W2885949257",
+    "https://openalex.org/W3191938286",
+    "https://openalex.org/W3213832129",
+    "https://openalex.org/W3206187363",
+    "https://openalex.org/W2150884352",
+    "https://openalex.org/W1978499958",
+    "https://openalex.org/W1948727994",
+    "https://openalex.org/W2344483747",
+    "https://openalex.org/W3169434891",
+    "https://openalex.org/W2893755931",
+    "https://openalex.org/W3006755302",
+    "https://openalex.org/W3042323010",
+    "https://openalex.org/W2102697248"
+  ],
+  "abstract": "Understanding the degree of humanness of antibody sequences is critical to the therapeutic antibody development process to reduce the risk of failure modes like immunogenicity or poor manufacturability. We introduce AbBERT, a transformer-based language model trained on up to 20 million unpaired heavy/light chain sequences from the Observed Antibody Space database. We first validate AbBERT using a novel “multi-mask” scoring procedure to demonstrate high accuracy in predicting complementary determining regions—including the challenging hypervariable H3 region. We then demonstrate several uses of AbBERT at various points along the antibody design process. AbBERT enhances in silico antibody optimization via deep reinforcement learning by utilizing its learned embeddings as additional observations during optimization. Within a larger computational antibody design platform, AbBERT has been successfully applied as an additional design objective, where it displays strong correlations with computational tools predicting antibody structural stability. Finally, mutant antibody sequences that have been scored as unfavorable by AbBERT have shown corresponding low yields when expressed in cells. These use cases demonstrate the power of language modeling within computational antibody design.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6584352850914001
+    },
+    {
+      "name": "Design for manufacturability",
+      "score": 0.5074233412742615
+    },
+    {
+      "name": "Immunogenicity",
+      "score": 0.49530354142189026
+    },
+    {
+      "name": "Antibody",
+      "score": 0.47701597213745117
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4616841673851013
+    },
+    {
+      "name": "Reinforcement learning",
+      "score": 0.4383007884025574
+    },
+    {
+      "name": "In silico",
+      "score": 0.43722644448280334
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3317135274410248
+    },
+    {
+      "name": "Biology",
+      "score": 0.15598058700561523
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11209100484848022
+    },
+    {
+      "name": "Immunology",
+      "score": 0.09634906053543091
+    },
+    {
+      "name": "Genetics",
+      "score": 0.08018225431442261
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

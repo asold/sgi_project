@@ -1,72 +1,135 @@
 {
-    "title": "A Two-Stage Network Based on Transformer and Physical Model for Single Underwater Image Enhancement",
-    "url": "https://openalex.org/W4362609184",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5079026613",
-            "name": "Yuhao Zhang",
-            "affiliations": [
-                "Nanjing University of Information Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5071075909",
-            "name": "Dujing Chen",
-            "affiliations": [
-                "Nanjing University of Information Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100389093",
-            "name": "Yanyan Zhang",
-            "affiliations": [
-                "Nanjing University of Information Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5036742306",
-            "name": "Meiling Shen",
-            "affiliations": [
-                "Nanjing University of Information Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103008554",
-            "name": "Weiyu Zhao",
-            "affiliations": [
-                "Nanjing University of Information Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2058748989",
-        "https://openalex.org/W2997763120",
-        "https://openalex.org/W2990176100",
-        "https://openalex.org/W2094185466",
-        "https://openalex.org/W2081140338",
-        "https://openalex.org/W2055447163",
-        "https://openalex.org/W6623385050",
-        "https://openalex.org/W2644746580",
-        "https://openalex.org/W1976263166",
-        "https://openalex.org/W2293581118",
-        "https://openalex.org/W1973569872",
-        "https://openalex.org/W2971483169",
-        "https://openalex.org/W6785915141",
-        "https://openalex.org/W2948400274",
-        "https://openalex.org/W4321372508",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W2133665775",
-        "https://openalex.org/W2064076387",
-        "https://openalex.org/W6847277143",
-        "https://openalex.org/W2962793481",
-        "https://openalex.org/W2181646778",
-        "https://openalex.org/W2968177401",
-        "https://openalex.org/W3099025816",
-        "https://openalex.org/W4296356110",
-        "https://openalex.org/W838143937"
-    ],
-    "abstract": "The absorption and scattering properties of water can cause various distortions in underwater images, which limit the ability to investigate underwater resources. In this paper, we propose a two-stage network called WaterFormer to address this issue using deep learning and an underwater physical imaging model. The first stage of WaterFormer uses the Soft Reconstruction Network (SRN) to reconstruct underwater images based on the Jaffe–McGramery model, while the second stage uses the Hard Enhancement Network (HEN) to estimate the global residual between the original image and the reconstructed result to further enhance the images. To capture long dependencies between pixels, we designed the encoder and decoder of WaterFormer using the Transformer structure. Additionally, we propose the Locally Intended Multiple Layer Perceptron (LIMP) to help the network process local information more effectively, considering the significance of adjacent pixels in enhancing distorted underwater images. We also proposed the Channel-Wise Self-Attention module (CSA) to help the network learn more details of the distorted underwater images by considering the correlated and different distortions in RGB channels. To overcome the drawbacks of physical underwater image enhancement (UIE) methods, where extra errors are introduced when estimating multiple physical parameters separately, we proposed the Joint Parameter Estimation method (JPE). In this method, we integrated multiple parameters in the Jaffe–McGramery model into one joint parameter (JP) through a special mathematical transform, which allowed for physical reconstruction based on the joint parameter (JP). Our experimental results show that WaterFormer can effectively restore the color and texture details of underwater images in various underwater scenes with stable performance.",
-    "full_text": null
+  "title": "A Two-Stage Network Based on Transformer and Physical Model for Single Underwater Image Enhancement",
+  "url": "https://openalex.org/W4362609184",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5079026613",
+      "name": "Yuhao Zhang",
+      "affiliations": [
+        "Nanjing University of Information Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5071075909",
+      "name": "Dujing Chen",
+      "affiliations": [
+        "Nanjing University of Information Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100389093",
+      "name": "Yanyan Zhang",
+      "affiliations": [
+        "Nanjing University of Information Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5036742306",
+      "name": "Meiling Shen",
+      "affiliations": [
+        "Nanjing University of Information Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103008554",
+      "name": "Weiyu Zhao",
+      "affiliations": [
+        "Nanjing University of Information Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2058748989",
+    "https://openalex.org/W2997763120",
+    "https://openalex.org/W2990176100",
+    "https://openalex.org/W2094185466",
+    "https://openalex.org/W2081140338",
+    "https://openalex.org/W2055447163",
+    "https://openalex.org/W6623385050",
+    "https://openalex.org/W2644746580",
+    "https://openalex.org/W1976263166",
+    "https://openalex.org/W2293581118",
+    "https://openalex.org/W1973569872",
+    "https://openalex.org/W2971483169",
+    "https://openalex.org/W6785915141",
+    "https://openalex.org/W2948400274",
+    "https://openalex.org/W4321372508",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W2133665775",
+    "https://openalex.org/W2064076387",
+    "https://openalex.org/W6847277143",
+    "https://openalex.org/W2962793481",
+    "https://openalex.org/W2181646778",
+    "https://openalex.org/W2968177401",
+    "https://openalex.org/W3099025816",
+    "https://openalex.org/W4296356110",
+    "https://openalex.org/W838143937"
+  ],
+  "abstract": "The absorption and scattering properties of water can cause various distortions in underwater images, which limit the ability to investigate underwater resources. In this paper, we propose a two-stage network called WaterFormer to address this issue using deep learning and an underwater physical imaging model. The first stage of WaterFormer uses the Soft Reconstruction Network (SRN) to reconstruct underwater images based on the Jaffe–McGramery model, while the second stage uses the Hard Enhancement Network (HEN) to estimate the global residual between the original image and the reconstructed result to further enhance the images. To capture long dependencies between pixels, we designed the encoder and decoder of WaterFormer using the Transformer structure. Additionally, we propose the Locally Intended Multiple Layer Perceptron (LIMP) to help the network process local information more effectively, considering the significance of adjacent pixels in enhancing distorted underwater images. We also proposed the Channel-Wise Self-Attention module (CSA) to help the network learn more details of the distorted underwater images by considering the correlated and different distortions in RGB channels. To overcome the drawbacks of physical underwater image enhancement (UIE) methods, where extra errors are introduced when estimating multiple physical parameters separately, we proposed the Joint Parameter Estimation method (JPE). In this method, we integrated multiple parameters in the Jaffe–McGramery model into one joint parameter (JP) through a special mathematical transform, which allowed for physical reconstruction based on the joint parameter (JP). Our experimental results show that WaterFormer can effectively restore the color and texture details of underwater images in various underwater scenes with stable performance.",
+  "full_text": null,
+  "topic": "Underwater",
+  "concepts": [
+    {
+      "name": "Underwater",
+      "score": 0.883026123046875
+    },
+    {
+      "name": "Computer science",
+      "score": 0.727377712726593
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6334115862846375
+    },
+    {
+      "name": "RGB color model",
+      "score": 0.5297580361366272
+    },
+    {
+      "name": "Pixel",
+      "score": 0.513053297996521
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5050981640815735
+    },
+    {
+      "name": "Encoder",
+      "score": 0.48314589262008667
+    },
+    {
+      "name": "Channel (broadcasting)",
+      "score": 0.45787686109542847
+    },
+    {
+      "name": "Residual",
+      "score": 0.4328632056713104
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3626338839530945
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.2866547703742981
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.12108707427978516
+    },
+    {
+      "name": "Geology",
+      "score": 0.09068772196769714
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

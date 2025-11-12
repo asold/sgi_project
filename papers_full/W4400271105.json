@@ -1,99 +1,190 @@
 {
-    "title": "Fine-tuning 3D foundation models for geometric object retrieval",
-    "url": "https://openalex.org/W4400271105",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5092350410",
-            "name": "Jarne Van den Herrewegen",
-            "affiliations": [
-                null,
-                "Ghent University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089809673",
-            "name": "Tom Tourwé",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5072368950",
-            "name": "Maks Ovsjanikov",
-            "affiliations": [
-                "Inria Saclay - Île de France",
-                "Laboratoire d'Informatique de l'École Polytechnique",
-                "École Polytechnique"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089135657",
-            "name": "Francis wyffels",
-            "affiliations": [
-                "Ghent University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2023056405",
-        "https://openalex.org/W1644641054",
-        "https://openalex.org/W6780515965",
-        "https://openalex.org/W2991485494",
-        "https://openalex.org/W6851800889",
-        "https://openalex.org/W6853178439",
-        "https://openalex.org/W4386076644",
-        "https://openalex.org/W4312270234",
-        "https://openalex.org/W2046232185",
-        "https://openalex.org/W2062342108",
-        "https://openalex.org/W6682098494",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W6687932531",
-        "https://openalex.org/W6739778489",
-        "https://openalex.org/W2891396148",
-        "https://openalex.org/W2963627347",
-        "https://openalex.org/W2964342398",
-        "https://openalex.org/W3035541121",
-        "https://openalex.org/W3204568647",
-        "https://openalex.org/W6791353385",
-        "https://openalex.org/W6810837128",
-        "https://openalex.org/W6849177959",
-        "https://openalex.org/W4386075660",
-        "https://openalex.org/W6787146598",
-        "https://openalex.org/W2972931660",
-        "https://openalex.org/W4386076097",
-        "https://openalex.org/W4234552385",
-        "https://openalex.org/W2981440248",
-        "https://openalex.org/W4382395673",
-        "https://openalex.org/W4312317653",
-        "https://openalex.org/W3184000328",
-        "https://openalex.org/W4312818263",
-        "https://openalex.org/W2063971957",
-        "https://openalex.org/W6679208599",
-        "https://openalex.org/W6680272447",
-        "https://openalex.org/W6774314701",
-        "https://openalex.org/W6856166323",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3163282598",
-        "https://openalex.org/W4377130860",
-        "https://openalex.org/W4392972327",
-        "https://openalex.org/W4394671432",
-        "https://openalex.org/W4402727764",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W4366208220",
-        "https://openalex.org/W1571983296",
-        "https://openalex.org/W4286695273",
-        "https://openalex.org/W2963121255",
-        "https://openalex.org/W4365800070",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2171590421",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W3101228253",
-        "https://openalex.org/W4402727761",
-        "https://openalex.org/W2187250581",
-        "https://openalex.org/W4247092244"
-    ],
-    "abstract": "Foundation models, such as ULIP-2 (Xue et al., 2023) recently projected forward the field of 3D deep learning. These models are trained with significantly more data and show superior representation learning capacity in many downstream tasks like 3D shape classification and few-shot part segmentation.\\n\\nA particular characteristic of the recent 3D foundation models is that they are typically multi-modal, and involve image (2D) as well as caption (text) branches. This leads to an intricate interplay that benefits all modalities. At the same time, the nature of the 3D encoders alone, involved in these foundation models is not well-understood. Specifically, there is little analysis on the utility of both pre-trained 3D features provided by these models, or their capacity to adapt to new downstream 3D data. Furthermore, existing studies typically focus on label-oriented downstream tasks, such as shape classification, and ignore other critical applications, such as 3D content-based object retrieval.\\n\\nIn this paper, we fill this gap and show, for the first time, how 3D foundation models can be leveraged for strong 3D-to-3D retrieval performance on seven different datasets, on par with state-of-the-art view-based architectures. We evaluate both the pre-trained foundation models, as well as their fine-tuned versions using downstream data. We compare supervised fine-tuning using classification labels against two self-supervised label-free fine-tuning methods. Importantly, we introduce and describe a methodology for fine-tuning, as we found this to be crucial to make transfer learning from 3D foundation models work in a stable manner.",
-    "full_text": null
+  "title": "Fine-tuning 3D foundation models for geometric object retrieval",
+  "url": "https://openalex.org/W4400271105",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5092350410",
+      "name": "Jarne Van den Herrewegen",
+      "affiliations": [
+        null,
+        "Ghent University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089809673",
+      "name": "Tom Tourwé",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5072368950",
+      "name": "Maks Ovsjanikov",
+      "affiliations": [
+        "Inria Saclay - Île de France",
+        "Laboratoire d'Informatique de l'École Polytechnique",
+        "École Polytechnique"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089135657",
+      "name": "Francis wyffels",
+      "affiliations": [
+        "Ghent University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2023056405",
+    "https://openalex.org/W1644641054",
+    "https://openalex.org/W6780515965",
+    "https://openalex.org/W2991485494",
+    "https://openalex.org/W6851800889",
+    "https://openalex.org/W6853178439",
+    "https://openalex.org/W4386076644",
+    "https://openalex.org/W4312270234",
+    "https://openalex.org/W2046232185",
+    "https://openalex.org/W2062342108",
+    "https://openalex.org/W6682098494",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W6687932531",
+    "https://openalex.org/W6739778489",
+    "https://openalex.org/W2891396148",
+    "https://openalex.org/W2963627347",
+    "https://openalex.org/W2964342398",
+    "https://openalex.org/W3035541121",
+    "https://openalex.org/W3204568647",
+    "https://openalex.org/W6791353385",
+    "https://openalex.org/W6810837128",
+    "https://openalex.org/W6849177959",
+    "https://openalex.org/W4386075660",
+    "https://openalex.org/W6787146598",
+    "https://openalex.org/W2972931660",
+    "https://openalex.org/W4386076097",
+    "https://openalex.org/W4234552385",
+    "https://openalex.org/W2981440248",
+    "https://openalex.org/W4382395673",
+    "https://openalex.org/W4312317653",
+    "https://openalex.org/W3184000328",
+    "https://openalex.org/W4312818263",
+    "https://openalex.org/W2063971957",
+    "https://openalex.org/W6679208599",
+    "https://openalex.org/W6680272447",
+    "https://openalex.org/W6774314701",
+    "https://openalex.org/W6856166323",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3163282598",
+    "https://openalex.org/W4377130860",
+    "https://openalex.org/W4392972327",
+    "https://openalex.org/W4394671432",
+    "https://openalex.org/W4402727764",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W4366208220",
+    "https://openalex.org/W1571983296",
+    "https://openalex.org/W4286695273",
+    "https://openalex.org/W2963121255",
+    "https://openalex.org/W4365800070",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2171590421",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W3101228253",
+    "https://openalex.org/W4402727761",
+    "https://openalex.org/W2187250581",
+    "https://openalex.org/W4247092244"
+  ],
+  "abstract": "Foundation models, such as ULIP-2 (Xue et al., 2023) recently projected forward the field of 3D deep learning. These models are trained with significantly more data and show superior representation learning capacity in many downstream tasks like 3D shape classification and few-shot part segmentation.\\n\\nA particular characteristic of the recent 3D foundation models is that they are typically multi-modal, and involve image (2D) as well as caption (text) branches. This leads to an intricate interplay that benefits all modalities. At the same time, the nature of the 3D encoders alone, involved in these foundation models is not well-understood. Specifically, there is little analysis on the utility of both pre-trained 3D features provided by these models, or their capacity to adapt to new downstream 3D data. Furthermore, existing studies typically focus on label-oriented downstream tasks, such as shape classification, and ignore other critical applications, such as 3D content-based object retrieval.\\n\\nIn this paper, we fill this gap and show, for the first time, how 3D foundation models can be leveraged for strong 3D-to-3D retrieval performance on seven different datasets, on par with state-of-the-art view-based architectures. We evaluate both the pre-trained foundation models, as well as their fine-tuned versions using downstream data. We compare supervised fine-tuning using classification labels against two self-supervised label-free fine-tuning methods. Importantly, we introduce and describe a methodology for fine-tuning, as we found this to be crucial to make transfer learning from 3D foundation models work in a stable manner.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.801990807056427
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6368687152862549
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.6221692562103271
+    },
+    {
+      "name": "Downstream (manufacturing)",
+      "score": 0.557931125164032
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5446573495864868
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.5113980174064636
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5023279190063477
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.46801742911338806
+    },
+    {
+      "name": "Focus (optics)",
+      "score": 0.45222076773643494
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.45150670409202576
+    },
+    {
+      "name": "Object (grammar)",
+      "score": 0.4404497742652893
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3275529742240906
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Operations management",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "History",
+      "score": 0.0
+    }
+  ]
 }

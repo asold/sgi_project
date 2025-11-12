@@ -1,72 +1,123 @@
 {
-    "title": "PIM GPT a hybrid process in memory accelerator for autoregressive transformers",
-    "url": "https://openalex.org/W4400985603",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5102023760",
-            "name": "Yuting Wu",
-            "affiliations": [
-                "University of Michigan"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100420922",
-            "name": "Ziyu Wang",
-            "affiliations": [
-                "University of Michigan"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066881061",
-            "name": "Wei Lü",
-            "affiliations": [
-                "University of Michigan"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2980708516",
-        "https://openalex.org/W3037422790",
-        "https://openalex.org/W3104423855",
-        "https://openalex.org/W2963542740",
-        "https://openalex.org/W3034773362",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W4200398297",
-        "https://openalex.org/W4387002168",
-        "https://openalex.org/W4392367648",
-        "https://openalex.org/W3211354350",
-        "https://openalex.org/W3159727696",
-        "https://openalex.org/W4308083513",
-        "https://openalex.org/W4280496502",
-        "https://openalex.org/W3017024317",
-        "https://openalex.org/W3189877953",
-        "https://openalex.org/W2949591530",
-        "https://openalex.org/W3100985894",
-        "https://openalex.org/W4360831803",
-        "https://openalex.org/W4360832001",
-        "https://openalex.org/W4360831795",
-        "https://openalex.org/W2967324946",
-        "https://openalex.org/W2896090304",
-        "https://openalex.org/W3134274954",
-        "https://openalex.org/W3189166979",
-        "https://openalex.org/W4221001402",
-        "https://openalex.org/W4295036115",
-        "https://openalex.org/W2982008795",
-        "https://openalex.org/W4285121610",
-        "https://openalex.org/W2765234579",
-        "https://openalex.org/W2979874885",
-        "https://openalex.org/W6628189516",
-        "https://openalex.org/W2024122052",
-        "https://openalex.org/W2761132374",
-        "https://openalex.org/W3100710793",
-        "https://openalex.org/W4380875572",
-        "https://openalex.org/W4297097348",
-        "https://openalex.org/W2034861439",
-        "https://openalex.org/W4211178602"
-    ],
-    "abstract": "Abstract Decoder-only Transformer models such as Generative Pre-trained Transformers (GPT) have demonstrated exceptional performance in text generation by autoregressively predicting the next token. However, the efficiency of running GPT on current hardware systems is bounded by low compute-to-memory-ratio and high memory access. In this work, we propose a Process-in-memory (PIM) GPT accelerator, PIM-GPT, which achieves end-to-end acceleration of GPT inference with high performance and high energy efficiency. PIM-GPT leverages DRAM-based PIM designs for executing multiply-accumulate (MAC) operations directly in the DRAM chips, eliminating the need to move matrix data off-chip. Non-linear functions and data communication are supported by an application specific integrated chip (ASIC). At the software level, mapping schemes are designed to maximize data locality and computation parallelism. Overall, PIM-GPT achieves 41 − 137 × , 631 − 1074 × speedup and 123 − 383 × , 320 − 602 × energy efficiency over GPU and CPU baseline on 8 GPT models with up to 1.4 billion parameters.",
-    "full_text": null
+  "title": "PIM GPT a hybrid process in memory accelerator for autoregressive transformers",
+  "url": "https://openalex.org/W4400985603",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5102023760",
+      "name": "Yuting Wu",
+      "affiliations": [
+        "University of Michigan"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100420922",
+      "name": "Ziyu Wang",
+      "affiliations": [
+        "University of Michigan"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066881061",
+      "name": "Wei Lü",
+      "affiliations": [
+        "University of Michigan"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2980708516",
+    "https://openalex.org/W3037422790",
+    "https://openalex.org/W3104423855",
+    "https://openalex.org/W2963542740",
+    "https://openalex.org/W3034773362",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W4200398297",
+    "https://openalex.org/W4387002168",
+    "https://openalex.org/W4392367648",
+    "https://openalex.org/W3211354350",
+    "https://openalex.org/W3159727696",
+    "https://openalex.org/W4308083513",
+    "https://openalex.org/W4280496502",
+    "https://openalex.org/W3017024317",
+    "https://openalex.org/W3189877953",
+    "https://openalex.org/W2949591530",
+    "https://openalex.org/W3100985894",
+    "https://openalex.org/W4360831803",
+    "https://openalex.org/W4360832001",
+    "https://openalex.org/W4360831795",
+    "https://openalex.org/W2967324946",
+    "https://openalex.org/W2896090304",
+    "https://openalex.org/W3134274954",
+    "https://openalex.org/W3189166979",
+    "https://openalex.org/W4221001402",
+    "https://openalex.org/W4295036115",
+    "https://openalex.org/W2982008795",
+    "https://openalex.org/W4285121610",
+    "https://openalex.org/W2765234579",
+    "https://openalex.org/W2979874885",
+    "https://openalex.org/W6628189516",
+    "https://openalex.org/W2024122052",
+    "https://openalex.org/W2761132374",
+    "https://openalex.org/W3100710793",
+    "https://openalex.org/W4380875572",
+    "https://openalex.org/W4297097348",
+    "https://openalex.org/W2034861439",
+    "https://openalex.org/W4211178602"
+  ],
+  "abstract": "Abstract Decoder-only Transformer models such as Generative Pre-trained Transformers (GPT) have demonstrated exceptional performance in text generation by autoregressively predicting the next token. However, the efficiency of running GPT on current hardware systems is bounded by low compute-to-memory-ratio and high memory access. In this work, we propose a Process-in-memory (PIM) GPT accelerator, PIM-GPT, which achieves end-to-end acceleration of GPT inference with high performance and high energy efficiency. PIM-GPT leverages DRAM-based PIM designs for executing multiply-accumulate (MAC) operations directly in the DRAM chips, eliminating the need to move matrix data off-chip. Non-linear functions and data communication are supported by an application specific integrated chip (ASIC). At the software level, mapping schemes are designed to maximize data locality and computation parallelism. Overall, PIM-GPT achieves 41 − 137 × , 631 − 1074 × speedup and 123 − 383 × , 320 − 602 × energy efficiency over GPU and CPU baseline on 8 GPT models with up to 1.4 billion parameters.",
+  "full_text": null,
+  "topic": "Autoregressive model",
+  "concepts": [
+    {
+      "name": "Autoregressive model",
+      "score": 0.5943613648414612
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5674471855163574
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4950532019138336
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.44858455657958984
+    },
+    {
+      "name": "Reliability engineering",
+      "score": 0.37791478633880615
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.3354097604751587
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.25331515073776245
+    },
+    {
+      "name": "Engineering",
+      "score": 0.2252764105796814
+    },
+    {
+      "name": "Operating system",
+      "score": 0.20518529415130615
+    },
+    {
+      "name": "Econometrics",
+      "score": 0.13555067777633667
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.12386009097099304
+    },
+    {
+      "name": "Voltage",
+      "score": 0.05489817261695862
+    }
+  ]
 }

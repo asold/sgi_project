@@ -1,79 +1,166 @@
 {
-    "title": "IRepair: An Intent-Aware Approach to Repair Data-Driven Errors in Large Language Models",
-    "url": "https://openalex.org/W4411450184",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5059057746",
-            "name": "Sayem Mohammad Imtiaz",
-            "affiliations": [
-                "Iowa State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114189864",
-            "name": "Abhai Pratap Singh",
-            "affiliations": [
-                "Iowa State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5036480158",
-            "name": "Fraol Batole",
-            "affiliations": [
-                "Tulane University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5059626072",
-            "name": "Hridesh Rajan",
-            "affiliations": [
-                "Tulane University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2160709761",
-        "https://openalex.org/W4294808066",
-        "https://openalex.org/W4322766882",
-        "https://openalex.org/W4321162379",
-        "https://openalex.org/W2026117800",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W4404534210",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W3001279689",
-        "https://openalex.org/W2560647685",
-        "https://openalex.org/W3160250689",
-        "https://openalex.org/W4319453300",
-        "https://openalex.org/W2898868990",
-        "https://openalex.org/W4256377773",
-        "https://openalex.org/W6839328737",
-        "https://openalex.org/W4286897388",
-        "https://openalex.org/W4244452926",
-        "https://openalex.org/W4390961278",
-        "https://openalex.org/W4385681611",
-        "https://openalex.org/W4301899273",
-        "https://openalex.org/W3134354193",
-        "https://openalex.org/W2973727699",
-        "https://openalex.org/W4306808680",
-        "https://openalex.org/W3175060421",
-        "https://openalex.org/W4221148519",
-        "https://openalex.org/W4393119062",
-        "https://openalex.org/W4284681547",
-        "https://openalex.org/W2293624369",
-        "https://openalex.org/W2795030435",
-        "https://openalex.org/W4389617257",
-        "https://openalex.org/W4225929875",
-        "https://openalex.org/W4304731097",
-        "https://openalex.org/W2999691867",
-        "https://openalex.org/W3160369295",
-        "https://openalex.org/W3090119274",
-        "https://openalex.org/W4284678610",
-        "https://openalex.org/W4362515116",
-        "https://openalex.org/W3099610985",
-        "https://openalex.org/W4281657280",
-        "https://openalex.org/W4287116904"
-    ],
-    "abstract": "Not a day goes by without hearing about the impressive feats of large language models (LLMs), and equally, not a day passes without hearing about their challenges. LLMs are notoriously vulnerable to biases in their dataset, leading to issues such as toxicity, harmful responses, and factual inaccuracies. While domain-adaptive training has been employed to mitigate these issues, these techniques often address all model parameters indiscriminately during the repair process, resulting in poor repair quality and reduced model versatility. In this paper, drawing inspiration from fault localization via program slicing, we introduce a novel dynamic slicing-based intent-aware LLM repair strategy, IRepair. This approach selectively targets the most error-prone sections of the model for repair. Specifically, we propose dynamically slicing the model’s most sensitive layers that require immediate attention, concentrating repair efforts on those areas. This method enables more effective repairs with potentially less impact on the model’s overall versatility by altering a smaller portion of the model. Furthermore, dynamic selection allows for a more nuanced and precise model repair compared to a fixed selection strategy. We evaluated our technique on three models from the GPT2 and GPT-Neo families, with parameters ranging from 800M to 1.6B, in a toxicity mitigation setup. Our results show that IRepair repairs errors 43.6% more effectively while causing 46% less disruption to general performance compared to the closest baseline, direct preference optimization. Our empirical analysis also reveals that errors are more concentrated in a smaller section of the model, with the top 20% of layers exhibiting 773% more error density than the remaining 80%. This highlights the need for selective repair. Additionally, we demonstrate that a dynamic selection approach is essential for addressing errors dispersed throughout the model, ensuring a robust and efficient repair.",
-    "full_text": null
+  "title": "IRepair: An Intent-Aware Approach to Repair Data-Driven Errors in Large Language Models",
+  "url": "https://openalex.org/W4411450184",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5059057746",
+      "name": "Sayem Mohammad Imtiaz",
+      "affiliations": [
+        "Iowa State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114189864",
+      "name": "Abhai Pratap Singh",
+      "affiliations": [
+        "Iowa State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5036480158",
+      "name": "Fraol Batole",
+      "affiliations": [
+        "Tulane University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5059626072",
+      "name": "Hridesh Rajan",
+      "affiliations": [
+        "Tulane University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2160709761",
+    "https://openalex.org/W4294808066",
+    "https://openalex.org/W4322766882",
+    "https://openalex.org/W4321162379",
+    "https://openalex.org/W2026117800",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W4404534210",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W3001279689",
+    "https://openalex.org/W2560647685",
+    "https://openalex.org/W3160250689",
+    "https://openalex.org/W4319453300",
+    "https://openalex.org/W2898868990",
+    "https://openalex.org/W4256377773",
+    "https://openalex.org/W6839328737",
+    "https://openalex.org/W4286897388",
+    "https://openalex.org/W4244452926",
+    "https://openalex.org/W4390961278",
+    "https://openalex.org/W4385681611",
+    "https://openalex.org/W4301899273",
+    "https://openalex.org/W3134354193",
+    "https://openalex.org/W2973727699",
+    "https://openalex.org/W4306808680",
+    "https://openalex.org/W3175060421",
+    "https://openalex.org/W4221148519",
+    "https://openalex.org/W4393119062",
+    "https://openalex.org/W4284681547",
+    "https://openalex.org/W2293624369",
+    "https://openalex.org/W2795030435",
+    "https://openalex.org/W4389617257",
+    "https://openalex.org/W4225929875",
+    "https://openalex.org/W4304731097",
+    "https://openalex.org/W2999691867",
+    "https://openalex.org/W3160369295",
+    "https://openalex.org/W3090119274",
+    "https://openalex.org/W4284678610",
+    "https://openalex.org/W4362515116",
+    "https://openalex.org/W3099610985",
+    "https://openalex.org/W4281657280",
+    "https://openalex.org/W4287116904"
+  ],
+  "abstract": "Not a day goes by without hearing about the impressive feats of large language models (LLMs), and equally, not a day passes without hearing about their challenges. LLMs are notoriously vulnerable to biases in their dataset, leading to issues such as toxicity, harmful responses, and factual inaccuracies. While domain-adaptive training has been employed to mitigate these issues, these techniques often address all model parameters indiscriminately during the repair process, resulting in poor repair quality and reduced model versatility. In this paper, drawing inspiration from fault localization via program slicing, we introduce a novel dynamic slicing-based intent-aware LLM repair strategy, IRepair. This approach selectively targets the most error-prone sections of the model for repair. Specifically, we propose dynamically slicing the model’s most sensitive layers that require immediate attention, concentrating repair efforts on those areas. This method enables more effective repairs with potentially less impact on the model’s overall versatility by altering a smaller portion of the model. Furthermore, dynamic selection allows for a more nuanced and precise model repair compared to a fixed selection strategy. We evaluated our technique on three models from the GPT2 and GPT-Neo families, with parameters ranging from 800M to 1.6B, in a toxicity mitigation setup. Our results show that IRepair repairs errors 43.6% more effectively while causing 46% less disruption to general performance compared to the closest baseline, direct preference optimization. Our empirical analysis also reveals that errors are more concentrated in a smaller section of the model, with the top 20% of layers exhibiting 773% more error density than the remaining 80%. This highlights the need for selective repair. Additionally, we demonstrate that a dynamic selection approach is essential for addressing errors dispersed throughout the model, ensuring a robust and efficient repair.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7092734575271606
+    },
+    {
+      "name": "Slicing",
+      "score": 0.5600865483283997
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.513832151889801
+    },
+    {
+      "name": "Reliability (semiconductor)",
+      "score": 0.4638073444366455
+    },
+    {
+      "name": "Selection (genetic algorithm)",
+      "score": 0.4605691730976105
+    },
+    {
+      "name": "Program slicing",
+      "score": 0.44434648752212524
+    },
+    {
+      "name": "Quality (philosophy)",
+      "score": 0.4437355399131775
+    },
+    {
+      "name": "Language model",
+      "score": 0.4306495487689972
+    },
+    {
+      "name": "Reliability engineering",
+      "score": 0.40622854232788086
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3400433361530304
+    },
+    {
+      "name": "Risk analysis (engineering)",
+      "score": 0.32763952016830444
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.30487149953842163
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14256417751312256
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Power (physics)",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

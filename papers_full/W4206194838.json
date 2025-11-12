@@ -1,91 +1,150 @@
 {
-    "title": "Transformer for Tree Counting in Aerial Images",
-    "url": "https://openalex.org/W4206194838",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2056729872",
-            "name": "Guang Chen",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101685394",
-            "name": "Yi Shang",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2056729872",
-            "name": "Guang Chen",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101685394",
-            "name": "Yi Shang",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W6620707391",
-        "https://openalex.org/W4243685538",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W4236219683",
-        "https://openalex.org/W2914321566",
-        "https://openalex.org/W2565950292",
-        "https://openalex.org/W2945705174",
-        "https://openalex.org/W3090825734",
-        "https://openalex.org/W2912067133",
-        "https://openalex.org/W3006935317",
-        "https://openalex.org/W2985471643",
-        "https://openalex.org/W2463631526",
-        "https://openalex.org/W2741077351",
-        "https://openalex.org/W2964209782",
-        "https://openalex.org/W4239999461",
-        "https://openalex.org/W2967069910",
-        "https://openalex.org/W2901911579",
-        "https://openalex.org/W3137605476",
-        "https://openalex.org/W3003387640",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3169323098",
-        "https://openalex.org/W3128592650",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2164598857",
-        "https://openalex.org/W6683411478",
-        "https://openalex.org/W2168356304",
-        "https://openalex.org/W2534457893",
-        "https://openalex.org/W2124386111",
-        "https://openalex.org/W6998817079",
-        "https://openalex.org/W2012842821",
-        "https://openalex.org/W2468396844",
-        "https://openalex.org/W2891195071",
-        "https://openalex.org/W2775693072",
-        "https://openalex.org/W2906300491",
-        "https://openalex.org/W2963446712",
-        "https://openalex.org/W2911709005",
-        "https://openalex.org/W3016663000",
-        "https://openalex.org/W2986661129",
-        "https://openalex.org/W6763509872",
-        "https://openalex.org/W3035237998",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W6756040250",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W1533861849",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W639708223"
-    ],
-    "abstract": "The number of trees and their spatial distribution are key information for forest management. In recent years, deep learning-based approaches have been proposed and shown promising results in lowering the expensive labor cost of a forest inventory. In this paper, we propose a new efficient deep learning model called density transformer or DENT for automatic tree counting from aerial images. The architecture of DENT contains a multi-receptive field convolutional neural network to extract visual feature representation from local patches and their wide context, a transformer encoder to transfer contextual information across correlated positions, a density map generator to generate spatial distribution map of trees, and a fast tree counter to estimate the number of trees in each input image. We compare DENT with a variety of state-of-art methods, including one-stage and two-stage, anchor-based and anchor-free deep neural detectors, and different types of fully convolutional regressors for density estimation. The methods are evaluated on a new large dataset we built and an existing cross-site dataset. DENT achieves top accuracy on both datasets, significantly outperforming most of the other methods. We have released our new dataset, called Yosemite Tree Dataset, containing a 10 km2 rectangular study area with around 100k trees annotated, as a benchmark for public access.",
-    "full_text": null
+  "title": "Transformer for Tree Counting in Aerial Images",
+  "url": "https://openalex.org/W4206194838",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2056729872",
+      "name": "Guang Chen",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101685394",
+      "name": "Yi Shang",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2056729872",
+      "name": "Guang Chen",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101685394",
+      "name": "Yi Shang",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W6620707391",
+    "https://openalex.org/W4243685538",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W4236219683",
+    "https://openalex.org/W2914321566",
+    "https://openalex.org/W2565950292",
+    "https://openalex.org/W2945705174",
+    "https://openalex.org/W3090825734",
+    "https://openalex.org/W2912067133",
+    "https://openalex.org/W3006935317",
+    "https://openalex.org/W2985471643",
+    "https://openalex.org/W2463631526",
+    "https://openalex.org/W2741077351",
+    "https://openalex.org/W2964209782",
+    "https://openalex.org/W4239999461",
+    "https://openalex.org/W2967069910",
+    "https://openalex.org/W2901911579",
+    "https://openalex.org/W3137605476",
+    "https://openalex.org/W3003387640",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3169323098",
+    "https://openalex.org/W3128592650",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2164598857",
+    "https://openalex.org/W6683411478",
+    "https://openalex.org/W2168356304",
+    "https://openalex.org/W2534457893",
+    "https://openalex.org/W2124386111",
+    "https://openalex.org/W6998817079",
+    "https://openalex.org/W2012842821",
+    "https://openalex.org/W2468396844",
+    "https://openalex.org/W2891195071",
+    "https://openalex.org/W2775693072",
+    "https://openalex.org/W2906300491",
+    "https://openalex.org/W2963446712",
+    "https://openalex.org/W2911709005",
+    "https://openalex.org/W3016663000",
+    "https://openalex.org/W2986661129",
+    "https://openalex.org/W6763509872",
+    "https://openalex.org/W3035237998",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W6756040250",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W1533861849",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W639708223"
+  ],
+  "abstract": "The number of trees and their spatial distribution are key information for forest management. In recent years, deep learning-based approaches have been proposed and shown promising results in lowering the expensive labor cost of a forest inventory. In this paper, we propose a new efficient deep learning model called density transformer or DENT for automatic tree counting from aerial images. The architecture of DENT contains a multi-receptive field convolutional neural network to extract visual feature representation from local patches and their wide context, a transformer encoder to transfer contextual information across correlated positions, a density map generator to generate spatial distribution map of trees, and a fast tree counter to estimate the number of trees in each input image. We compare DENT with a variety of state-of-art methods, including one-stage and two-stage, anchor-based and anchor-free deep neural detectors, and different types of fully convolutional regressors for density estimation. The methods are evaluated on a new large dataset we built and an existing cross-site dataset. DENT achieves top accuracy on both datasets, significantly outperforming most of the other methods. We have released our new dataset, called Yosemite Tree Dataset, containing a 10 km2 rectangular study area with around 100k trees annotated, as a benchmark for public access.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8052483797073364
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6799092888832092
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.56351637840271
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5493277907371521
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.5180023312568665
+    },
+    {
+      "name": "Aerial imagery",
+      "score": 0.5024371147155762
+    },
+    {
+      "name": "Tree (set theory)",
+      "score": 0.4867801368236542
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4804810583591461
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.4283328652381897
+    },
+    {
+      "name": "Cartography",
+      "score": 0.15123286843299866
+    },
+    {
+      "name": "Geography",
+      "score": 0.1076536476612091
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09902924299240112
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

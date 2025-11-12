@@ -1,60 +1,131 @@
 {
-    "title": "Multi‐future Transformer: Learning diverse interaction modes for behaviour prediction in autonomous driving",
-    "url": "https://openalex.org/W4282003642",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5050361341",
-            "name": "Baotian He",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100680857",
-            "name": "Yibing Li",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2968008415",
-        "https://openalex.org/W2607296803",
-        "https://openalex.org/W2963001155",
-        "https://openalex.org/W2894978157",
-        "https://openalex.org/W3035671534",
-        "https://openalex.org/W3035054225",
-        "https://openalex.org/W3062588417",
-        "https://openalex.org/W2985871763",
-        "https://openalex.org/W2982745079",
-        "https://openalex.org/W3106944564",
-        "https://openalex.org/W2167052694",
-        "https://openalex.org/W2097545165",
-        "https://openalex.org/W3010072020",
-        "https://openalex.org/W2967177252",
-        "https://openalex.org/W2905173465",
-        "https://openalex.org/W3034722190",
-        "https://openalex.org/W3108486966",
-        "https://openalex.org/W3125605478",
-        "https://openalex.org/W3209837334",
-        "https://openalex.org/W3204875639",
-        "https://openalex.org/W3169575318",
-        "https://openalex.org/W2424778531",
-        "https://openalex.org/W3116651890",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2990973279",
-        "https://openalex.org/W2955189650",
-        "https://openalex.org/W2940129212",
-        "https://openalex.org/W2997347790",
-        "https://openalex.org/W3090166818",
-        "https://openalex.org/W3157528469",
-        "https://openalex.org/W3137750826",
-        "https://openalex.org/W2986406093",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4320013936"
-    ],
-    "abstract": "Abstract Predicting the future behaviour of neighbouring agents is crucial for autonomous driving. This task is challenging, largely because of the diverse unobservable intent of each agent which is further complicated by the complex interaction possibilities between them. The authors propose a multi‐future Transformer framework that implicitly models the multi‐modal joint distribution by capturing the diverse interaction modes of the scene. To this end, a parallel interaction module is constructed, whereby each interaction block learns the joint agent–agent and agent–map interactions for possible future evolution. The model can perform likelihood estimation from the perspective of both the joint distribution of the scene and marginal distribution of each agent. Combined with the proposed scene‐level winner‐take‐all loss strategy complementary to the model architecture, the best performance is achieved for both target agent prediction and scene prediction tasks in a single model. To better utilise the scene context, comprehensive control experiments were conducted highlighting the importance of fine‐grained scene representation with content‐adaptive aggregation and late fusion of semantic attributes. The method, evaluated on the popular Argoverse forecasting dataset, outperformed previous methods while maintaining low model complexity.",
-    "full_text": null
+  "title": "Multi‐future Transformer: Learning diverse interaction modes for behaviour prediction in autonomous driving",
+  "url": "https://openalex.org/W4282003642",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5050361341",
+      "name": "Baotian He",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100680857",
+      "name": "Yibing Li",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2968008415",
+    "https://openalex.org/W2607296803",
+    "https://openalex.org/W2963001155",
+    "https://openalex.org/W2894978157",
+    "https://openalex.org/W3035671534",
+    "https://openalex.org/W3035054225",
+    "https://openalex.org/W3062588417",
+    "https://openalex.org/W2985871763",
+    "https://openalex.org/W2982745079",
+    "https://openalex.org/W3106944564",
+    "https://openalex.org/W2167052694",
+    "https://openalex.org/W2097545165",
+    "https://openalex.org/W3010072020",
+    "https://openalex.org/W2967177252",
+    "https://openalex.org/W2905173465",
+    "https://openalex.org/W3034722190",
+    "https://openalex.org/W3108486966",
+    "https://openalex.org/W3125605478",
+    "https://openalex.org/W3209837334",
+    "https://openalex.org/W3204875639",
+    "https://openalex.org/W3169575318",
+    "https://openalex.org/W2424778531",
+    "https://openalex.org/W3116651890",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2990973279",
+    "https://openalex.org/W2955189650",
+    "https://openalex.org/W2940129212",
+    "https://openalex.org/W2997347790",
+    "https://openalex.org/W3090166818",
+    "https://openalex.org/W3157528469",
+    "https://openalex.org/W3137750826",
+    "https://openalex.org/W2986406093",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4320013936"
+  ],
+  "abstract": "Abstract Predicting the future behaviour of neighbouring agents is crucial for autonomous driving. This task is challenging, largely because of the diverse unobservable intent of each agent which is further complicated by the complex interaction possibilities between them. The authors propose a multi‐future Transformer framework that implicitly models the multi‐modal joint distribution by capturing the diverse interaction modes of the scene. To this end, a parallel interaction module is constructed, whereby each interaction block learns the joint agent–agent and agent–map interactions for possible future evolution. The model can perform likelihood estimation from the perspective of both the joint distribution of the scene and marginal distribution of each agent. Combined with the proposed scene‐level winner‐take‐all loss strategy complementary to the model architecture, the best performance is achieved for both target agent prediction and scene prediction tasks in a single model. To better utilise the scene context, comprehensive control experiments were conducted highlighting the importance of fine‐grained scene representation with content‐adaptive aggregation and late fusion of semantic attributes. The method, evaluated on the popular Argoverse forecasting dataset, outperformed previous methods while maintaining low model complexity.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7222172021865845
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5828641653060913
+    },
+    {
+      "name": "Unobservable",
+      "score": 0.552390456199646
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5039870142936707
+    },
+    {
+      "name": "Transformer",
+      "score": 0.47912856936454773
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.446941614151001
+    },
+    {
+      "name": "Modal",
+      "score": 0.42579710483551025
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1352970004081726
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    }
+  ]
 }

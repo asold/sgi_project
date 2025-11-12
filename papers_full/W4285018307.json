@@ -1,143 +1,214 @@
 {
-    "title": "TiM-Net: Transformer in M-Net for Retinal Vessel Segmentation",
-    "url": "https://openalex.org/W4285018307",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100584344",
-            "name": "Hongbin Zhang",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102458473",
-            "name": "Xiang Zhong",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117892468",
-            "name": "Zhijie Li",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105108768",
-            "name": "Yanan Chen",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2144027131",
-            "name": "Zhi-Liang Zhu",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2143026190",
-            "name": "Jingqin Lv",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2229634950",
-            "name": "Chuanxiu Li",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2012636634",
-            "name": "Ying Zhou",
-            "affiliations": [
-                "Nanchang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098675837",
-            "name": "Guangli Li",
-            "affiliations": [
-                "East China Jiaotong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3125419698",
-        "https://openalex.org/W2776985712",
-        "https://openalex.org/W4225266535",
-        "https://openalex.org/W2784956235",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2884436604",
-        "https://openalex.org/W2898910301",
-        "https://openalex.org/W2911558038",
-        "https://openalex.org/W3043116777",
-        "https://openalex.org/W2980269695",
-        "https://openalex.org/W2741891296",
-        "https://openalex.org/W2986785750",
-        "https://openalex.org/W4220754310",
-        "https://openalex.org/W4206521345",
-        "https://openalex.org/W2782364420",
-        "https://openalex.org/W6754852571",
-        "https://openalex.org/W2979865275",
-        "https://openalex.org/W3036827192",
-        "https://openalex.org/W2995454014",
-        "https://openalex.org/W6793418283",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W3204166336",
-        "https://openalex.org/W4207081122",
-        "https://openalex.org/W2902047864",
-        "https://openalex.org/W6755253131",
-        "https://openalex.org/W4213275219",
-        "https://openalex.org/W1514535095",
-        "https://openalex.org/W3024640380",
-        "https://openalex.org/W3010766832",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W6737137598",
-        "https://openalex.org/W4224303176",
-        "https://openalex.org/W3102446692",
-        "https://openalex.org/W3035251378",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2936707910",
-        "https://openalex.org/W3033492948",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6768774775",
-        "https://openalex.org/W2979430722",
-        "https://openalex.org/W3119589810",
-        "https://openalex.org/W3130221793",
-        "https://openalex.org/W4223899021",
-        "https://openalex.org/W3095462372",
-        "https://openalex.org/W3160284783",
-        "https://openalex.org/W2145305441",
-        "https://openalex.org/W2072130234",
-        "https://openalex.org/W2150769593",
-        "https://openalex.org/W2320230300",
-        "https://openalex.org/W2802388893",
-        "https://openalex.org/W2893691907",
-        "https://openalex.org/W3126191153",
-        "https://openalex.org/W2891656998",
-        "https://openalex.org/W6803870738",
-        "https://openalex.org/W3035022492",
-        "https://openalex.org/W3160609330",
-        "https://openalex.org/W3101507774",
-        "https://openalex.org/W2979605896",
-        "https://openalex.org/W2955058313",
-        "https://openalex.org/W2978255468",
-        "https://openalex.org/W2980088508",
-        "https://openalex.org/W3034580371",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W3013766724",
-        "https://openalex.org/W4308909683",
-        "https://openalex.org/W2963495494",
-        "https://openalex.org/W4324056437"
-    ],
-    "abstract": "retinal image is a crucial window for the clinical observation of cardiovascular, cerebrovascular, or other correlated diseases. Retinal vessel segmentation is of great benefit to the clinical diagnosis. Recently, the convolutional neural network (CNN) has become a dominant method in the retinal vessel segmentation field, especially the U-shaped CNN models. However, the conventional encoder in CNN is vulnerable to noisy interference, and the long-rang relationship in fundus images has not been fully utilized. In this paper, we propose a novel model called Transformer in M-Net (TiM-Net) based on M-Net, diverse attention mechanisms, and weighted side output layers to efficaciously perform retinal vessel segmentation. First, to alleviate the effects of noise, a dual-attention mechanism based on channel and spatial is designed. Then the self-attention mechanism in Transformer is introduced into skip connection to re-encode features and model the long-range relationship explicitly. Finally, a weighted SideOut layer is proposed for better utilization of the features from each side layer. Extensive experiments are conducted on three public data sets to show the effectiveness and robustness of our TiM-Net compared with the state-of-the-art baselines. Both quantitative and qualitative results prove its clinical practicality. Moreover, variants of TiM-Net also achieve competitive performance, demonstrating its scalability and generalization ability. The code of our model is available at https://github.com/ZX-ECJTU/TiM-Net.",
-    "full_text": null
+  "title": "TiM-Net: Transformer in M-Net for Retinal Vessel Segmentation",
+  "url": "https://openalex.org/W4285018307",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100584344",
+      "name": "Hongbin Zhang",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102458473",
+      "name": "Xiang Zhong",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117892468",
+      "name": "Zhijie Li",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105108768",
+      "name": "Yanan Chen",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2144027131",
+      "name": "Zhi-Liang Zhu",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2143026190",
+      "name": "Jingqin Lv",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2229634950",
+      "name": "Chuanxiu Li",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2012636634",
+      "name": "Ying Zhou",
+      "affiliations": [
+        "Nanchang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098675837",
+      "name": "Guangli Li",
+      "affiliations": [
+        "East China Jiaotong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3125419698",
+    "https://openalex.org/W2776985712",
+    "https://openalex.org/W4225266535",
+    "https://openalex.org/W2784956235",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2884436604",
+    "https://openalex.org/W2898910301",
+    "https://openalex.org/W2911558038",
+    "https://openalex.org/W3043116777",
+    "https://openalex.org/W2980269695",
+    "https://openalex.org/W2741891296",
+    "https://openalex.org/W2986785750",
+    "https://openalex.org/W4220754310",
+    "https://openalex.org/W4206521345",
+    "https://openalex.org/W2782364420",
+    "https://openalex.org/W6754852571",
+    "https://openalex.org/W2979865275",
+    "https://openalex.org/W3036827192",
+    "https://openalex.org/W2995454014",
+    "https://openalex.org/W6793418283",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W3204166336",
+    "https://openalex.org/W4207081122",
+    "https://openalex.org/W2902047864",
+    "https://openalex.org/W6755253131",
+    "https://openalex.org/W4213275219",
+    "https://openalex.org/W1514535095",
+    "https://openalex.org/W3024640380",
+    "https://openalex.org/W3010766832",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W6737137598",
+    "https://openalex.org/W4224303176",
+    "https://openalex.org/W3102446692",
+    "https://openalex.org/W3035251378",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2936707910",
+    "https://openalex.org/W3033492948",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6768774775",
+    "https://openalex.org/W2979430722",
+    "https://openalex.org/W3119589810",
+    "https://openalex.org/W3130221793",
+    "https://openalex.org/W4223899021",
+    "https://openalex.org/W3095462372",
+    "https://openalex.org/W3160284783",
+    "https://openalex.org/W2145305441",
+    "https://openalex.org/W2072130234",
+    "https://openalex.org/W2150769593",
+    "https://openalex.org/W2320230300",
+    "https://openalex.org/W2802388893",
+    "https://openalex.org/W2893691907",
+    "https://openalex.org/W3126191153",
+    "https://openalex.org/W2891656998",
+    "https://openalex.org/W6803870738",
+    "https://openalex.org/W3035022492",
+    "https://openalex.org/W3160609330",
+    "https://openalex.org/W3101507774",
+    "https://openalex.org/W2979605896",
+    "https://openalex.org/W2955058313",
+    "https://openalex.org/W2978255468",
+    "https://openalex.org/W2980088508",
+    "https://openalex.org/W3034580371",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W3013766724",
+    "https://openalex.org/W4308909683",
+    "https://openalex.org/W2963495494",
+    "https://openalex.org/W4324056437"
+  ],
+  "abstract": "retinal image is a crucial window for the clinical observation of cardiovascular, cerebrovascular, or other correlated diseases. Retinal vessel segmentation is of great benefit to the clinical diagnosis. Recently, the convolutional neural network (CNN) has become a dominant method in the retinal vessel segmentation field, especially the U-shaped CNN models. However, the conventional encoder in CNN is vulnerable to noisy interference, and the long-rang relationship in fundus images has not been fully utilized. In this paper, we propose a novel model called Transformer in M-Net (TiM-Net) based on M-Net, diverse attention mechanisms, and weighted side output layers to efficaciously perform retinal vessel segmentation. First, to alleviate the effects of noise, a dual-attention mechanism based on channel and spatial is designed. Then the self-attention mechanism in Transformer is introduced into skip connection to re-encode features and model the long-range relationship explicitly. Finally, a weighted SideOut layer is proposed for better utilization of the features from each side layer. Extensive experiments are conducted on three public data sets to show the effectiveness and robustness of our TiM-Net compared with the state-of-the-art baselines. Both quantitative and qualitative results prove its clinical practicality. Moreover, variants of TiM-Net also achieve competitive performance, demonstrating its scalability and generalization ability. The code of our model is available at https://github.com/ZX-ECJTU/TiM-Net.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7708907127380371
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.7405974268913269
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6082580089569092
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5477119088172913
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5355643630027771
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.5008289813995361
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5000007152557373
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4862119257450104
+    },
+    {
+      "name": "Scalability",
+      "score": 0.43678954243659973
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07788962125778198
+    },
+    {
+      "name": "Database",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

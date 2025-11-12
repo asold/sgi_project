@@ -1,116 +1,183 @@
 {
-    "title": "A Semantic Segmentation Method for Remote Sensing Images Based on the Swin Transformer Fusion Gabor Filter",
-    "url": "https://openalex.org/W4286377389",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5017137186",
-            "name": "Dongdong Feng",
-            "affiliations": [
-                "Lanzhou Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100393609",
-            "name": "Zhihua Zhang",
-            "affiliations": [
-                "Lanzhou Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5056356004",
-            "name": "Kun Yan",
-            "affiliations": [
-                "Lanzhou Jiaotong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W2598666589",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2985990156",
-        "https://openalex.org/W2950925862",
-        "https://openalex.org/W2155632266",
-        "https://openalex.org/W3166595606",
-        "https://openalex.org/W6696085341",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2965383240",
-        "https://openalex.org/W3129784683",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2974770574",
-        "https://openalex.org/W3007268491",
-        "https://openalex.org/W3093142463",
-        "https://openalex.org/W2291068538",
-        "https://openalex.org/W2888358068",
-        "https://openalex.org/W2890732922",
-        "https://openalex.org/W2974373385",
-        "https://openalex.org/W6676132248",
-        "https://openalex.org/W2169042894",
-        "https://openalex.org/W2062644002",
-        "https://openalex.org/W3175077653",
-        "https://openalex.org/W2752782242",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W2955058313",
-        "https://openalex.org/W2982220924",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6785727093",
-        "https://openalex.org/W3203535769",
-        "https://openalex.org/W3128592650",
-        "https://openalex.org/W3200870516",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W6795463671",
-        "https://openalex.org/W6795755827",
-        "https://openalex.org/W6781138733",
-        "https://openalex.org/W3034417718",
-        "https://openalex.org/W2963188742",
-        "https://openalex.org/W6743837088",
-        "https://openalex.org/W2892009249",
-        "https://openalex.org/W6757585730",
-        "https://openalex.org/W2884822772",
-        "https://openalex.org/W2948901959",
-        "https://openalex.org/W2805671481",
-        "https://openalex.org/W2614286896",
-        "https://openalex.org/W2895716339",
-        "https://openalex.org/W2970410620",
-        "https://openalex.org/W3046609679",
-        "https://openalex.org/W2054226525",
-        "https://openalex.org/W2885028107",
-        "https://openalex.org/W6719890437",
-        "https://openalex.org/W2320230300",
-        "https://openalex.org/W2745042876",
-        "https://openalex.org/W2433259561",
-        "https://openalex.org/W2118286367",
-        "https://openalex.org/W6640784493",
-        "https://openalex.org/W2056784354",
-        "https://openalex.org/W6753320199",
-        "https://openalex.org/W2807536200",
-        "https://openalex.org/W3045553371",
-        "https://openalex.org/W3108450508",
-        "https://openalex.org/W6776044926",
-        "https://openalex.org/W3077024029",
-        "https://openalex.org/W2997806675",
-        "https://openalex.org/W3196904463",
-        "https://openalex.org/W3168649818",
-        "https://openalex.org/W2752386593",
-        "https://openalex.org/W1949476142",
-        "https://openalex.org/W3211490618",
-        "https://openalex.org/W3161825146",
-        "https://openalex.org/W3164208409",
-        "https://openalex.org/W2952809536",
-        "https://openalex.org/W2963840672",
-        "https://openalex.org/W2884559812",
-        "https://openalex.org/W3100449589",
-        "https://openalex.org/W3101446407",
-        "https://openalex.org/W3045923047",
-        "https://openalex.org/W3099681648"
-    ],
-    "abstract": "Semantic segmentation of remote sensing images is increasingly important in urban planning, autonomous driving, disaster monitoring, and land cover classification. With the development of high-resolution remote sensing satellite technology, multilevel, large-scale, and high-precision segmentation has become the focus of current research. High-resolution remote sensing images have high intraclass diversity and low interclass separability, which pose challenges to the precision of the detailed representation of multiscale information. In this paper, a semantic segmentation method for remote sensing images based on Swin Transformer fusion with a Gabor filter is proposed. First, a Swin Transformer is used as the backbone network to extract image information at different levels. Then, the texture and edge features of the input image are extracted with a Gabor filter, and the multilevel features are merged by introducing a feature aggregation module (FAM) and an attentional embedding module (AEM). Finally, the segmentation result is optimized with the fully connected conditional random field (FC-CRF). Our proposed method, called Swin-S-GF, its mean Intersection over Union (mIoU) scored 80.14&amp;#x0025;, 66.50&amp;#x0025;, and 70.61&amp;#x0025; on the large-scale classification set, the fine land-cover classification set, and the &amp;#x201C;AI &amp;#x002B; Remote Sensing imaging dataset&amp;#x201D; (AI&amp;#x002B;RS dataset), respectively. Compared with DeepLabV3, mIoU increased by 0.67&amp;#x0025;, 3.43&amp;#x0025;, and 3.80&amp;#x0025;, respectively. Therefore, we believe that this model provides a good tool for the semantic segmentation of high-precision remote sensing images.",
-    "full_text": null
+  "title": "A Semantic Segmentation Method for Remote Sensing Images Based on the Swin Transformer Fusion Gabor Filter",
+  "url": "https://openalex.org/W4286377389",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5017137186",
+      "name": "Dongdong Feng",
+      "affiliations": [
+        "Lanzhou Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100393609",
+      "name": "Zhihua Zhang",
+      "affiliations": [
+        "Lanzhou Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5056356004",
+      "name": "Kun Yan",
+      "affiliations": [
+        "Lanzhou Jiaotong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W2598666589",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2985990156",
+    "https://openalex.org/W2950925862",
+    "https://openalex.org/W2155632266",
+    "https://openalex.org/W3166595606",
+    "https://openalex.org/W6696085341",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2965383240",
+    "https://openalex.org/W3129784683",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2974770574",
+    "https://openalex.org/W3007268491",
+    "https://openalex.org/W3093142463",
+    "https://openalex.org/W2291068538",
+    "https://openalex.org/W2888358068",
+    "https://openalex.org/W2890732922",
+    "https://openalex.org/W2974373385",
+    "https://openalex.org/W6676132248",
+    "https://openalex.org/W2169042894",
+    "https://openalex.org/W2062644002",
+    "https://openalex.org/W3175077653",
+    "https://openalex.org/W2752782242",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W2955058313",
+    "https://openalex.org/W2982220924",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6785727093",
+    "https://openalex.org/W3203535769",
+    "https://openalex.org/W3128592650",
+    "https://openalex.org/W3200870516",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W6795463671",
+    "https://openalex.org/W6795755827",
+    "https://openalex.org/W6781138733",
+    "https://openalex.org/W3034417718",
+    "https://openalex.org/W2963188742",
+    "https://openalex.org/W6743837088",
+    "https://openalex.org/W2892009249",
+    "https://openalex.org/W6757585730",
+    "https://openalex.org/W2884822772",
+    "https://openalex.org/W2948901959",
+    "https://openalex.org/W2805671481",
+    "https://openalex.org/W2614286896",
+    "https://openalex.org/W2895716339",
+    "https://openalex.org/W2970410620",
+    "https://openalex.org/W3046609679",
+    "https://openalex.org/W2054226525",
+    "https://openalex.org/W2885028107",
+    "https://openalex.org/W6719890437",
+    "https://openalex.org/W2320230300",
+    "https://openalex.org/W2745042876",
+    "https://openalex.org/W2433259561",
+    "https://openalex.org/W2118286367",
+    "https://openalex.org/W6640784493",
+    "https://openalex.org/W2056784354",
+    "https://openalex.org/W6753320199",
+    "https://openalex.org/W2807536200",
+    "https://openalex.org/W3045553371",
+    "https://openalex.org/W3108450508",
+    "https://openalex.org/W6776044926",
+    "https://openalex.org/W3077024029",
+    "https://openalex.org/W2997806675",
+    "https://openalex.org/W3196904463",
+    "https://openalex.org/W3168649818",
+    "https://openalex.org/W2752386593",
+    "https://openalex.org/W1949476142",
+    "https://openalex.org/W3211490618",
+    "https://openalex.org/W3161825146",
+    "https://openalex.org/W3164208409",
+    "https://openalex.org/W2952809536",
+    "https://openalex.org/W2963840672",
+    "https://openalex.org/W2884559812",
+    "https://openalex.org/W3100449589",
+    "https://openalex.org/W3101446407",
+    "https://openalex.org/W3045923047",
+    "https://openalex.org/W3099681648"
+  ],
+  "abstract": "Semantic segmentation of remote sensing images is increasingly important in urban planning, autonomous driving, disaster monitoring, and land cover classification. With the development of high-resolution remote sensing satellite technology, multilevel, large-scale, and high-precision segmentation has become the focus of current research. High-resolution remote sensing images have high intraclass diversity and low interclass separability, which pose challenges to the precision of the detailed representation of multiscale information. In this paper, a semantic segmentation method for remote sensing images based on Swin Transformer fusion with a Gabor filter is proposed. First, a Swin Transformer is used as the backbone network to extract image information at different levels. Then, the texture and edge features of the input image are extracted with a Gabor filter, and the multilevel features are merged by introducing a feature aggregation module (FAM) and an attentional embedding module (AEM). Finally, the segmentation result is optimized with the fully connected conditional random field (FC-CRF). Our proposed method, called Swin-S-GF, its mean Intersection over Union (mIoU) scored 80.14&amp;#x0025;, 66.50&amp;#x0025;, and 70.61&amp;#x0025; on the large-scale classification set, the fine land-cover classification set, and the &amp;#x201C;AI &amp;#x002B; Remote Sensing imaging dataset&amp;#x201D; (AI&amp;#x002B;RS dataset), respectively. Compared with DeepLabV3, mIoU increased by 0.67&amp;#x0025;, 3.43&amp;#x0025;, and 3.80&amp;#x0025;, respectively. Therefore, we believe that this model provides a good tool for the semantic segmentation of high-precision remote sensing images.",
+  "full_text": null,
+  "topic": "Computer vision",
+  "concepts": [
+    {
+      "name": "Computer vision",
+      "score": 0.6793791651725769
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6773281097412109
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6701107025146484
+    },
+    {
+      "name": "Gabor filter",
+      "score": 0.6082828044891357
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.557488203048706
+    },
+    {
+      "name": "Fusion",
+      "score": 0.5536377429962158
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4949337840080261
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.48654094338417053
+    },
+    {
+      "name": "Filter (signal processing)",
+      "score": 0.41283804178237915
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4009438157081604
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.23830360174179077
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0772964358329773
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

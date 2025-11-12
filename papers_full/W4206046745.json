@@ -1,80 +1,163 @@
 {
-    "title": "Describe Molecules by a Heterogeneous Graph Neural Network with Transformer-like Attention for Supervised Property Predictions",
-    "url": "https://openalex.org/W4206046745",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5005212992",
-            "name": "Daiguo Deng",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5071823340",
-            "name": "Zengrong Lei",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102963413",
-            "name": "Xiaobin Hong",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101412206",
-            "name": "Ruochi Zhang",
-            "affiliations": [
-                null,
-                "Jilin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5058786170",
-            "name": "Fengfeng Zhou",
-            "affiliations": [
-                "Jilin University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3038823641",
-        "https://openalex.org/W2049146370",
-        "https://openalex.org/W2007833519",
-        "https://openalex.org/W2011327487",
-        "https://openalex.org/W2094888156",
-        "https://openalex.org/W2565684601",
-        "https://openalex.org/W2735246657",
-        "https://openalex.org/W6765940776",
-        "https://openalex.org/W6602311867",
-        "https://openalex.org/W2290847742",
-        "https://openalex.org/W2963017945",
-        "https://openalex.org/W2527189750",
-        "https://openalex.org/W6628094813",
-        "https://openalex.org/W3000478925",
-        "https://openalex.org/W2966357564",
-        "https://openalex.org/W3202227570",
-        "https://openalex.org/W2594183968",
-        "https://openalex.org/W2743104969",
-        "https://openalex.org/W2884134047",
-        "https://openalex.org/W2559137209",
-        "https://openalex.org/W2911286998",
-        "https://openalex.org/W3004507689",
-        "https://openalex.org/W3012871709",
-        "https://openalex.org/W3166272013",
-        "https://openalex.org/W3134146005",
-        "https://openalex.org/W2117352205",
-        "https://openalex.org/W3127113723",
-        "https://openalex.org/W3034077950",
-        "https://openalex.org/W6600175266",
-        "https://openalex.org/W6828894009",
-        "https://openalex.org/W2964199361",
-        "https://openalex.org/W3100157108",
-        "https://openalex.org/W3103513278"
-    ],
-    "abstract": "Machine learning and deep learning have facilitated various successful studies of molecular property predictions. The rapid development of natural language processing and graph neural network (GNN) further pushed the state-of-the-art prediction performance of molecular property to a new level. A geometric graph could describe a molecular structure with atoms as the nodes and bonds as the edges. Therefore, a graph neural network may be trained to better represent a molecular structure. The existing GNNs assumed homogeneous types of atoms and bonds, which may miss important information between different types of atoms or bonds. This study represented a molecule using a heterogeneous graph neural network (MolHGT), in which there were different types of nodes and different types of edges. A transformer reading function of virtual nodes was proposed to aggregate all the nodes, and a molecule graph may be represented from the hidden states of the virtual nodes. This proof-of-principle study demonstrated that the proposed MolHGT network improved the existing studies of molecular property predictions. The source code and the training/validation/test splitting details are available at https://github.com/zhangruochi/Mol-HGT.",
-    "full_text": null
+  "title": "Describe Molecules by a Heterogeneous Graph Neural Network with Transformer-like Attention for Supervised Property Predictions",
+  "url": "https://openalex.org/W4206046745",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5005212992",
+      "name": "Daiguo Deng",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5071823340",
+      "name": "Zengrong Lei",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102963413",
+      "name": "Xiaobin Hong",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101412206",
+      "name": "Ruochi Zhang",
+      "affiliations": [
+        null,
+        "Jilin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5058786170",
+      "name": "Fengfeng Zhou",
+      "affiliations": [
+        "Jilin University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3038823641",
+    "https://openalex.org/W2049146370",
+    "https://openalex.org/W2007833519",
+    "https://openalex.org/W2011327487",
+    "https://openalex.org/W2094888156",
+    "https://openalex.org/W2565684601",
+    "https://openalex.org/W2735246657",
+    "https://openalex.org/W6765940776",
+    "https://openalex.org/W6602311867",
+    "https://openalex.org/W2290847742",
+    "https://openalex.org/W2963017945",
+    "https://openalex.org/W2527189750",
+    "https://openalex.org/W6628094813",
+    "https://openalex.org/W3000478925",
+    "https://openalex.org/W2966357564",
+    "https://openalex.org/W3202227570",
+    "https://openalex.org/W2594183968",
+    "https://openalex.org/W2743104969",
+    "https://openalex.org/W2884134047",
+    "https://openalex.org/W2559137209",
+    "https://openalex.org/W2911286998",
+    "https://openalex.org/W3004507689",
+    "https://openalex.org/W3012871709",
+    "https://openalex.org/W3166272013",
+    "https://openalex.org/W3134146005",
+    "https://openalex.org/W2117352205",
+    "https://openalex.org/W3127113723",
+    "https://openalex.org/W3034077950",
+    "https://openalex.org/W6600175266",
+    "https://openalex.org/W6828894009",
+    "https://openalex.org/W2964199361",
+    "https://openalex.org/W3100157108",
+    "https://openalex.org/W3103513278"
+  ],
+  "abstract": "Machine learning and deep learning have facilitated various successful studies of molecular property predictions. The rapid development of natural language processing and graph neural network (GNN) further pushed the state-of-the-art prediction performance of molecular property to a new level. A geometric graph could describe a molecular structure with atoms as the nodes and bonds as the edges. Therefore, a graph neural network may be trained to better represent a molecular structure. The existing GNNs assumed homogeneous types of atoms and bonds, which may miss important information between different types of atoms or bonds. This study represented a molecule using a heterogeneous graph neural network (MolHGT), in which there were different types of nodes and different types of edges. A transformer reading function of virtual nodes was proposed to aggregate all the nodes, and a molecule graph may be represented from the hidden states of the virtual nodes. This proof-of-principle study demonstrated that the proposed MolHGT network improved the existing studies of molecular property predictions. The source code and the training/validation/test splitting details are available at https://github.com/zhangruochi/Mol-HGT.",
+  "full_text": null,
+  "topic": "Molecular graph",
+  "concepts": [
+    {
+      "name": "Molecular graph",
+      "score": 0.8292086720466614
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7193021774291992
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.6321274042129517
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.591340959072113
+    },
+    {
+      "name": "Graph",
+      "score": 0.5285110473632812
+    },
+    {
+      "name": "Property (philosophy)",
+      "score": 0.5009803771972656
+    },
+    {
+      "name": "Homogeneous",
+      "score": 0.49265819787979126
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4268966317176819
+    },
+    {
+      "name": "Topology (electrical circuits)",
+      "score": 0.42683130502700806
+    },
+    {
+      "name": "Source code",
+      "score": 0.4189738631248474
+    },
+    {
+      "name": "Transformer",
+      "score": 0.41828590631484985
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3250778317451477
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.15455499291419983
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09448564052581787
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08964577317237854
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,98 +1,169 @@
 {
-    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
-    "url": "https://openalex.org/W4387321091",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2167674575",
-            "name": "Woosuk Kwon",
-            "affiliations": [
-                "Berkeley College",
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098880440",
-            "name": "ZhuoHan Li",
-            "affiliations": [
-                "Berkeley College",
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2179261364",
-            "name": "Siyuan Zhuang",
-            "affiliations": [
-                "Berkeley College",
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112075038",
-            "name": "Ying Sheng",
-            "affiliations": [
-                "Stanford University",
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2325197658",
-            "name": "Lianmin Zheng",
-            "affiliations": [
-                "University of California, Berkeley",
-                "Berkeley College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2223691866",
-            "name": "Cody Hao Yu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2165931820",
-            "name": "Joseph Gonzalez",
-            "affiliations": [
-                "Berkeley College",
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2095945326",
-            "name": "Hao Zhang",
-            "affiliations": [
-                "University of California, San Diego"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1978876446",
-            "name": "Ion Stoica",
-            "affiliations": [
-                "Berkeley College",
-                "University of California, Berkeley"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2512924740",
-        "https://openalex.org/W3095488153",
-        "https://openalex.org/W4281758439",
-        "https://openalex.org/W3130716829",
-        "https://openalex.org/W2798291715",
-        "https://openalex.org/W6862640317",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3012479151",
-        "https://openalex.org/W2979044977",
-        "https://openalex.org/W2164155474",
-        "https://openalex.org/W2982157693",
-        "https://openalex.org/W4307315283",
-        "https://openalex.org/W4301361180",
-        "https://openalex.org/W3172198372",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W4226479682",
-        "https://openalex.org/W2914209329",
-        "https://openalex.org/W2734941459",
-        "https://openalex.org/W3037639655"
-    ],
-    "abstract": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2--4× with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm.",
-    "full_text": null
+  "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+  "url": "https://openalex.org/W4387321091",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2167674575",
+      "name": "Woosuk Kwon",
+      "affiliations": [
+        "Berkeley College",
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098880440",
+      "name": "ZhuoHan Li",
+      "affiliations": [
+        "Berkeley College",
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2179261364",
+      "name": "Siyuan Zhuang",
+      "affiliations": [
+        "Berkeley College",
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112075038",
+      "name": "Ying Sheng",
+      "affiliations": [
+        "Stanford University",
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2325197658",
+      "name": "Lianmin Zheng",
+      "affiliations": [
+        "University of California, Berkeley",
+        "Berkeley College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2223691866",
+      "name": "Cody Hao Yu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2165931820",
+      "name": "Joseph Gonzalez",
+      "affiliations": [
+        "Berkeley College",
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2095945326",
+      "name": "Hao Zhang",
+      "affiliations": [
+        "University of California, San Diego"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1978876446",
+      "name": "Ion Stoica",
+      "affiliations": [
+        "Berkeley College",
+        "University of California, Berkeley"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2512924740",
+    "https://openalex.org/W3095488153",
+    "https://openalex.org/W4281758439",
+    "https://openalex.org/W3130716829",
+    "https://openalex.org/W2798291715",
+    "https://openalex.org/W6862640317",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3012479151",
+    "https://openalex.org/W2979044977",
+    "https://openalex.org/W2164155474",
+    "https://openalex.org/W2982157693",
+    "https://openalex.org/W4307315283",
+    "https://openalex.org/W4301361180",
+    "https://openalex.org/W3172198372",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W4226479682",
+    "https://openalex.org/W2914209329",
+    "https://openalex.org/W2734941459",
+    "https://openalex.org/W3037639655"
+  ],
+  "abstract": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2--4× with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8598029613494873
+    },
+    {
+      "name": "Paging",
+      "score": 0.7440685033798218
+    },
+    {
+      "name": "Cache",
+      "score": 0.6487390995025635
+    },
+    {
+      "name": "Demand paging",
+      "score": 0.6292343139648438
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.5352877378463745
+    },
+    {
+      "name": "Memory management",
+      "score": 0.4912266135215759
+    },
+    {
+      "name": "Virtual memory",
+      "score": 0.4682157039642334
+    },
+    {
+      "name": "Cache coloring",
+      "score": 0.45709553360939026
+    },
+    {
+      "name": "Cache pollution",
+      "score": 0.44173580408096313
+    },
+    {
+      "name": "Page cache",
+      "score": 0.4315970540046692
+    },
+    {
+      "name": "Latency (audio)",
+      "score": 0.42580246925354004
+    },
+    {
+      "name": "CPU cache",
+      "score": 0.4250311255455017
+    },
+    {
+      "name": "Cache algorithms",
+      "score": 0.406555712223053
+    },
+    {
+      "name": "Operating system",
+      "score": 0.3706657886505127
+    },
+    {
+      "name": "Computer network",
+      "score": 0.36251378059387207
+    },
+    {
+      "name": "Overlay",
+      "score": 0.17822396755218506
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    }
+  ]
 }

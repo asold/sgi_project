@@ -1,59 +1,134 @@
 {
-    "title": "PreCurious: How Innocent Pre-Trained Language Models Turn into Privacy Traps",
-    "url": "https://openalex.org/W4405181470",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101507733",
-            "name": "Ruixuan Liu",
-            "affiliations": [
-                "Emory University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100610986",
-            "name": "Tianhao Wang",
-            "affiliations": [
-                "University of Virginia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5082946615",
-            "name": "Yang Cao",
-            "affiliations": [
-                "Tokyo Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5078394535",
-            "name": "Li Xiong",
-            "affiliations": [
-                "Emory University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4288057780",
-        "https://openalex.org/W4308022392",
-        "https://openalex.org/W2963926728",
-        "https://openalex.org/W4386215192",
-        "https://openalex.org/W3189812816",
-        "https://openalex.org/W1603920809",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W3214437258",
-        "https://openalex.org/W3096692244",
-        "https://openalex.org/W3122816307",
-        "https://openalex.org/W2343954916",
-        "https://openalex.org/W2930926105",
-        "https://openalex.org/W2012628772",
-        "https://openalex.org/W4385679781",
-        "https://openalex.org/W2535690855",
-        "https://openalex.org/W4386075834",
-        "https://openalex.org/W4308643663",
-        "https://openalex.org/W4308410483",
-        "https://openalex.org/W3213508244",
-        "https://openalex.org/W3103245149"
-    ],
-    "abstract": "The pre-training and fine-tuning paradigm has demonstrated its effectiveness and has become the standard approach for tailoring language models to various tasks. Currently, community-based platforms offer easy access to various pre-trained models, as anyone can publish without strict validation processes. However, a released pre-trained model can be a privacy trap for fine-tuning datasets if it is carefully designed. In this work, we propose PreCurious framework to reveal the new attack surface where the attacker releases the pre-trained model and gets a black-box access to the final fine-tuned model. PreCurious aims to escalate the general privacy risk of both membership inference and data extraction on the fine-tuning dataset. The key intuition behind PreCurious is to manipulate the memorization stage of the pre-trained model and guide fine-tuning with a seemingly legitimate configuration. While empirical and theoretical evidence suggests that parameter-efficient and differentially private fine-tuning techniques can defend against privacy attacks on a fine-tuned model, PreCurious demonstrates the possibility of breaking up this invulnerability in a stealthy manner compared to fine-tuning on a benign pre-trained model. While DP provides some mitigation for membership inference attack, by further leveraging a sanitized dataset, PreCurious demonstrates potential vulnerabilities for targeted data extraction even under differentially private tuning with a strict privacy budget e.g. <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mi>ϵ</mml:mi> <mml:mo>=</mml:mo> <mml:mn>0.05</mml:mn></mml:math> . Thus, PreCurious raises warnings for users on the potential risks of downloading pre-trained models from unknown sources, relying solely on tutorials or common-sense defenses, and releasing sanitized datasets even after perfect scrubbing.",
-    "full_text": null
+  "title": "PreCurious: How Innocent Pre-Trained Language Models Turn into Privacy Traps",
+  "url": "https://openalex.org/W4405181470",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101507733",
+      "name": "Ruixuan Liu",
+      "affiliations": [
+        "Emory University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100610986",
+      "name": "Tianhao Wang",
+      "affiliations": [
+        "University of Virginia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5082946615",
+      "name": "Yang Cao",
+      "affiliations": [
+        "Tokyo Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5078394535",
+      "name": "Li Xiong",
+      "affiliations": [
+        "Emory University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4288057780",
+    "https://openalex.org/W4308022392",
+    "https://openalex.org/W2963926728",
+    "https://openalex.org/W4386215192",
+    "https://openalex.org/W3189812816",
+    "https://openalex.org/W1603920809",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W3214437258",
+    "https://openalex.org/W3096692244",
+    "https://openalex.org/W3122816307",
+    "https://openalex.org/W2343954916",
+    "https://openalex.org/W2930926105",
+    "https://openalex.org/W2012628772",
+    "https://openalex.org/W4385679781",
+    "https://openalex.org/W2535690855",
+    "https://openalex.org/W4386075834",
+    "https://openalex.org/W4308643663",
+    "https://openalex.org/W4308410483",
+    "https://openalex.org/W3213508244",
+    "https://openalex.org/W3103245149"
+  ],
+  "abstract": "The pre-training and fine-tuning paradigm has demonstrated its effectiveness and has become the standard approach for tailoring language models to various tasks. Currently, community-based platforms offer easy access to various pre-trained models, as anyone can publish without strict validation processes. However, a released pre-trained model can be a privacy trap for fine-tuning datasets if it is carefully designed. In this work, we propose PreCurious framework to reveal the new attack surface where the attacker releases the pre-trained model and gets a black-box access to the final fine-tuned model. PreCurious aims to escalate the general privacy risk of both membership inference and data extraction on the fine-tuning dataset. The key intuition behind PreCurious is to manipulate the memorization stage of the pre-trained model and guide fine-tuning with a seemingly legitimate configuration. While empirical and theoretical evidence suggests that parameter-efficient and differentially private fine-tuning techniques can defend against privacy attacks on a fine-tuned model, PreCurious demonstrates the possibility of breaking up this invulnerability in a stealthy manner compared to fine-tuning on a benign pre-trained model. While DP provides some mitigation for membership inference attack, by further leveraging a sanitized dataset, PreCurious demonstrates potential vulnerabilities for targeted data extraction even under differentially private tuning with a strict privacy budget e.g. <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mi>ϵ</mml:mi> <mml:mo>=</mml:mo> <mml:mn>0.05</mml:mn></mml:math> . Thus, PreCurious raises warnings for users on the potential risks of downloading pre-trained models from unknown sources, relying solely on tutorials or common-sense defenses, and releasing sanitized datasets even after perfect scrubbing.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8180787563323975
+    },
+    {
+      "name": "Publication",
+      "score": 0.6506489515304565
+    },
+    {
+      "name": "Inference",
+      "score": 0.6247557401657104
+    },
+    {
+      "name": "Language model",
+      "score": 0.6178587675094604
+    },
+    {
+      "name": "Upload",
+      "score": 0.5591955184936523
+    },
+    {
+      "name": "Private information retrieval",
+      "score": 0.4986917972564697
+    },
+    {
+      "name": "Fine-tuning",
+      "score": 0.4902227520942688
+    },
+    {
+      "name": "Intuition",
+      "score": 0.4619617164134979
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.43885353207588196
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42350226640701294
+    },
+    {
+      "name": "Computer security",
+      "score": 0.3962244391441345
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.1592094898223877
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Business",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Advertising",
+      "score": 0.0
+    }
+  ]
 }

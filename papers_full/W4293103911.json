@@ -1,71 +1,118 @@
 {
-    "title": "FEM-Based Power Transformer Model for Superconducting and Conventional Power Transformer Optimization",
-    "url": "https://openalex.org/W4293103911",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2070353217",
-            "name": "Tamás Orosz",
-            "affiliations": [
-                "Széchenyi István University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1893396961",
-        "https://openalex.org/W2911665297",
-        "https://openalex.org/W2143889206",
-        "https://openalex.org/W2909545506",
-        "https://openalex.org/W2310960707",
-        "https://openalex.org/W1900085664",
-        "https://openalex.org/W2502836959",
-        "https://openalex.org/W6728522302",
-        "https://openalex.org/W3034937808",
-        "https://openalex.org/W3014574086",
-        "https://openalex.org/W2140998157",
-        "https://openalex.org/W2082821831",
-        "https://openalex.org/W624896887",
-        "https://openalex.org/W2964863561",
-        "https://openalex.org/W2035384071",
-        "https://openalex.org/W2053299315",
-        "https://openalex.org/W6699047179",
-        "https://openalex.org/W2134454404",
-        "https://openalex.org/W2342542995",
-        "https://openalex.org/W2076730869",
-        "https://openalex.org/W2016807118",
-        "https://openalex.org/W6641901364",
-        "https://openalex.org/W2130342441",
-        "https://openalex.org/W2107557638",
-        "https://openalex.org/W4241177414",
-        "https://openalex.org/W2043086848",
-        "https://openalex.org/W1680177252",
-        "https://openalex.org/W3007600751",
-        "https://openalex.org/W3046878784",
-        "https://openalex.org/W3139115243",
-        "https://openalex.org/W1969291671",
-        "https://openalex.org/W2048137467",
-        "https://openalex.org/W2119263843",
-        "https://openalex.org/W2998236785",
-        "https://openalex.org/W3009874384",
-        "https://openalex.org/W3095225815",
-        "https://openalex.org/W2408283333",
-        "https://openalex.org/W2751632339",
-        "https://openalex.org/W2405387307",
-        "https://openalex.org/W2737633891",
-        "https://openalex.org/W4238164907",
-        "https://openalex.org/W2023150274",
-        "https://openalex.org/W1964123101",
-        "https://openalex.org/W2895467251",
-        "https://openalex.org/W2561508736",
-        "https://openalex.org/W1981262170",
-        "https://openalex.org/W3035363821",
-        "https://openalex.org/W2031997753",
-        "https://openalex.org/W2126105956",
-        "https://openalex.org/W2996840578",
-        "https://openalex.org/W2530883627",
-        "https://openalex.org/W2315565177",
-        "https://openalex.org/W1967408593"
-    ],
-    "abstract": "There were many promising superconducting materials discovered in the last decades that can significantly increase the efficiency of large power transformers. However, these large machines are generally custom-made and tailored to the given application. During the design process the most economical design should be selected from thousands of applicable solutions in a short design period. Due to the nonlinearity of the task, the cost-optimal transformer design, which has the smallest costs during the transformers’ planned lifetime, is usually not the design with the highest efficiency. Due to the topic’s importance, many simplified transformer models were published in the literature to resolve this problem. However, only a few papers considered this preliminary design optimization problem in the case of superconducting transformers and none of them made a comparison with a validated conventional transformer optimization model. This paper proposes a novel FEM-based two-winding transformer model, which can be used to calculate the main dimension of conventional and superconducting transformer designs. The models are stored in a unified JSON-file format, which can be easily integrated into an evolutionary or genetic algorithm-based optimization. The paper shows the used methods and their accuracy on conventional 10 MVA and superconducting 1.2 MVA transformer designs. Moreover, a simple cost optimization with the 10 MVA transformer was performed for two realistic economic scenarios. The results show that in some cases the cheaper, but less efficient, transformer can be the more economic.",
-    "full_text": null
+  "title": "FEM-Based Power Transformer Model for Superconducting and Conventional Power Transformer Optimization",
+  "url": "https://openalex.org/W4293103911",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2070353217",
+      "name": "Tamás Orosz",
+      "affiliations": [
+        "Széchenyi István University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1893396961",
+    "https://openalex.org/W2911665297",
+    "https://openalex.org/W2143889206",
+    "https://openalex.org/W2909545506",
+    "https://openalex.org/W2310960707",
+    "https://openalex.org/W1900085664",
+    "https://openalex.org/W2502836959",
+    "https://openalex.org/W6728522302",
+    "https://openalex.org/W3034937808",
+    "https://openalex.org/W3014574086",
+    "https://openalex.org/W2140998157",
+    "https://openalex.org/W2082821831",
+    "https://openalex.org/W624896887",
+    "https://openalex.org/W2964863561",
+    "https://openalex.org/W2035384071",
+    "https://openalex.org/W2053299315",
+    "https://openalex.org/W6699047179",
+    "https://openalex.org/W2134454404",
+    "https://openalex.org/W2342542995",
+    "https://openalex.org/W2076730869",
+    "https://openalex.org/W2016807118",
+    "https://openalex.org/W6641901364",
+    "https://openalex.org/W2130342441",
+    "https://openalex.org/W2107557638",
+    "https://openalex.org/W4241177414",
+    "https://openalex.org/W2043086848",
+    "https://openalex.org/W1680177252",
+    "https://openalex.org/W3007600751",
+    "https://openalex.org/W3046878784",
+    "https://openalex.org/W3139115243",
+    "https://openalex.org/W1969291671",
+    "https://openalex.org/W2048137467",
+    "https://openalex.org/W2119263843",
+    "https://openalex.org/W2998236785",
+    "https://openalex.org/W3009874384",
+    "https://openalex.org/W3095225815",
+    "https://openalex.org/W2408283333",
+    "https://openalex.org/W2751632339",
+    "https://openalex.org/W2405387307",
+    "https://openalex.org/W2737633891",
+    "https://openalex.org/W4238164907",
+    "https://openalex.org/W2023150274",
+    "https://openalex.org/W1964123101",
+    "https://openalex.org/W2895467251",
+    "https://openalex.org/W2561508736",
+    "https://openalex.org/W1981262170",
+    "https://openalex.org/W3035363821",
+    "https://openalex.org/W2031997753",
+    "https://openalex.org/W2126105956",
+    "https://openalex.org/W2996840578",
+    "https://openalex.org/W2530883627",
+    "https://openalex.org/W2315565177",
+    "https://openalex.org/W1967408593"
+  ],
+  "abstract": "There were many promising superconducting materials discovered in the last decades that can significantly increase the efficiency of large power transformers. However, these large machines are generally custom-made and tailored to the given application. During the design process the most economical design should be selected from thousands of applicable solutions in a short design period. Due to the nonlinearity of the task, the cost-optimal transformer design, which has the smallest costs during the transformers’ planned lifetime, is usually not the design with the highest efficiency. Due to the topic’s importance, many simplified transformer models were published in the literature to resolve this problem. However, only a few papers considered this preliminary design optimization problem in the case of superconducting transformers and none of them made a comparison with a validated conventional transformer optimization model. This paper proposes a novel FEM-based two-winding transformer model, which can be used to calculate the main dimension of conventional and superconducting transformer designs. The models are stored in a unified JSON-file format, which can be easily integrated into an evolutionary or genetic algorithm-based optimization. The paper shows the used methods and their accuracy on conventional 10 MVA and superconducting 1.2 MVA transformer designs. Moreover, a simple cost optimization with the 10 MVA transformer was performed for two realistic economic scenarios. The results show that in some cases the cheaper, but less efficient, transformer can be the more economic.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7369239330291748
+    },
+    {
+      "name": "Energy efficient transformer",
+      "score": 0.4409913420677185
+    },
+    {
+      "name": "Distribution transformer",
+      "score": 0.4368996024131775
+    },
+    {
+      "name": "Finite element method",
+      "score": 0.42559289932250977
+    },
+    {
+      "name": "Reliability engineering",
+      "score": 0.40740063786506653
+    },
+    {
+      "name": "Computer science",
+      "score": 0.39144638180732727
+    },
+    {
+      "name": "Engineering",
+      "score": 0.35705482959747314
+    },
+    {
+      "name": "Electronic engineering",
+      "score": 0.3450755476951599
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.308970183134079
+    },
+    {
+      "name": "Voltage",
+      "score": 0.17128416895866394
+    },
+    {
+      "name": "Structural engineering",
+      "score": 0.08291158080101013
+    }
+  ]
 }

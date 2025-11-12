@@ -1,94 +1,129 @@
 {
-    "title": "Lightweight transformer image feature extraction network",
-    "url": "https://openalex.org/W4391401593",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2490888232",
-            "name": "Wenfeng Zheng",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2133269411",
-            "name": "Siyu Lu",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3176219385",
-            "name": "Youshuai Yang",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2153253619",
-            "name": "Zhengtong Yin",
-            "affiliations": [
-                "Guizhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2002337148",
-            "name": "Lirong Yin",
-            "affiliations": [
-                "Louisiana State University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4323660312",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W3137278571",
-        "https://openalex.org/W4214614183",
-        "https://openalex.org/W4312599212",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W6790690058",
-        "https://openalex.org/W6791866641",
-        "https://openalex.org/W6796237581",
-        "https://openalex.org/W6779709467",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W4213200979",
-        "https://openalex.org/W4312769131",
-        "https://openalex.org/W3168997536",
-        "https://openalex.org/W3207918547",
-        "https://openalex.org/W6639102338",
-        "https://openalex.org/W4211129314",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4368232741",
-        "https://openalex.org/W6789317445",
-        "https://openalex.org/W6796494063",
-        "https://openalex.org/W4281674575",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W2983902802",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W6791943378",
-        "https://openalex.org/W6797235774",
-        "https://openalex.org/W6791426159",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W4225525539",
-        "https://openalex.org/W6746649447",
-        "https://openalex.org/W3120633509",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W3168124404",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3123615524",
-        "https://openalex.org/W3168101492",
-        "https://openalex.org/W4214636423",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W2773003563",
-        "https://openalex.org/W3037798801",
-        "https://openalex.org/W3175227919",
-        "https://openalex.org/W3133696297",
-        "https://openalex.org/W3135159465",
-        "https://openalex.org/W4309793872",
-        "https://openalex.org/W4214493665"
-    ],
-    "abstract": "In recent years, the image feature extraction method based on Transformer has become a research hotspot. However, when using Transformer for image feature extraction, the model’s complexity increases quadratically with the number of tokens entered. The quadratic complexity prevents vision transformer-based backbone networks from modelling high-resolution images and is computationally expensive. To address this issue, this study proposes two approaches to speed up Transformer models. Firstly, the self-attention mechanism’s quadratic complexity is reduced to linear, enhancing the model’s internal processing speed. Next, a parameter-less lightweight pruning method is introduced, which adaptively samples input images to filter out unimportant tokens, effectively reducing irrelevant input. Finally, these two methods are combined to create an efficient attention mechanism. Experimental results demonstrate that the combined methods can reduce the computation of the original Transformer model by 30%–50%, while the efficient attention mechanism achieves an impressive 60%–70% reduction in computation.",
-    "full_text": null
+  "title": "Lightweight transformer image feature extraction network",
+  "url": "https://openalex.org/W4391401593",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2490888232",
+      "name": "Wenfeng Zheng",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2133269411",
+      "name": "Siyu Lu",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3176219385",
+      "name": "Youshuai Yang",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2153253619",
+      "name": "Zhengtong Yin",
+      "affiliations": [
+        "Guizhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2002337148",
+      "name": "Lirong Yin",
+      "affiliations": [
+        "Louisiana State University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4323660312",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W3137278571",
+    "https://openalex.org/W4214614183",
+    "https://openalex.org/W4312599212",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W6790690058",
+    "https://openalex.org/W6791866641",
+    "https://openalex.org/W6796237581",
+    "https://openalex.org/W6779709467",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W4213200979",
+    "https://openalex.org/W4312769131",
+    "https://openalex.org/W3168997536",
+    "https://openalex.org/W3207918547",
+    "https://openalex.org/W6639102338",
+    "https://openalex.org/W4211129314",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4368232741",
+    "https://openalex.org/W6789317445",
+    "https://openalex.org/W6796494063",
+    "https://openalex.org/W4281674575",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W2983902802",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W6791943378",
+    "https://openalex.org/W6797235774",
+    "https://openalex.org/W6791426159",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W4225525539",
+    "https://openalex.org/W6746649447",
+    "https://openalex.org/W3120633509",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W3168124404",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3123615524",
+    "https://openalex.org/W3168101492",
+    "https://openalex.org/W4214636423",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W2773003563",
+    "https://openalex.org/W3037798801",
+    "https://openalex.org/W3175227919",
+    "https://openalex.org/W3133696297",
+    "https://openalex.org/W3135159465",
+    "https://openalex.org/W4309793872",
+    "https://openalex.org/W4214493665"
+  ],
+  "abstract": "In recent years, the image feature extraction method based on Transformer has become a research hotspot. However, when using Transformer for image feature extraction, the model’s complexity increases quadratically with the number of tokens entered. The quadratic complexity prevents vision transformer-based backbone networks from modelling high-resolution images and is computationally expensive. To address this issue, this study proposes two approaches to speed up Transformer models. Firstly, the self-attention mechanism’s quadratic complexity is reduced to linear, enhancing the model’s internal processing speed. Next, a parameter-less lightweight pruning method is introduced, which adaptively samples input images to filter out unimportant tokens, effectively reducing irrelevant input. Finally, these two methods are combined to create an efficient attention mechanism. Experimental results demonstrate that the combined methods can reduce the computation of the original Transformer model by 30%–50%, while the efficient attention mechanism achieves an impressive 60%–70% reduction in computation.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.5193116068840027
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4796238839626312
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.46382275223731995
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40821200609207153
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.34073343873023987
+    },
+    {
+      "name": "Engineering",
+      "score": 0.2061748504638672
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.16783258318901062
+    },
+    {
+      "name": "Voltage",
+      "score": 0.10101443529129028
+    }
+  ]
 }

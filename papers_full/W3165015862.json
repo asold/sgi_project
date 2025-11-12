@@ -1,104 +1,195 @@
 {
-    "title": "InferBERT: A Transformer-Based Causal Inference Framework for Enhancing Pharmacovigilance",
-    "url": "https://openalex.org/W3165015862",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2108084834",
-            "name": "Xingqiao Wang",
-            "affiliations": [
-                "University of Arkansas at Little Rock"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097932941",
-            "name": "Xu Xiaowei",
-            "affiliations": [
-                "University of Arkansas at Little Rock"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2267638323",
-            "name": "Weida Tong",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104343650",
-            "name": "Ruth Roberts",
-            "affiliations": [
-                "University of Birmingham",
-                "Alcon (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120112472",
-            "name": "Zhichao Liu",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108084834",
-            "name": "Xingqiao Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2097932941",
-            "name": "Xu Xiaowei",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2267638323",
-            "name": "Weida Tong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2104343650",
-            "name": "Ruth Roberts",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2120112472",
-            "name": "Zhichao Liu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2896252141",
-        "https://openalex.org/W2408641126",
-        "https://openalex.org/W2953326988",
-        "https://openalex.org/W4242966060",
-        "https://openalex.org/W1590115395",
-        "https://openalex.org/W2132384896",
-        "https://openalex.org/W1988100739",
-        "https://openalex.org/W3026235644",
-        "https://openalex.org/W2145429839",
-        "https://openalex.org/W2771906008",
-        "https://openalex.org/W2766447205",
-        "https://openalex.org/W1981809734",
-        "https://openalex.org/W2908201961",
-        "https://openalex.org/W2064716383",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6781965151",
-        "https://openalex.org/W2975956387",
-        "https://openalex.org/W6633714834",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3044873333",
-        "https://openalex.org/W4287867774",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W1566289585",
-        "https://openalex.org/W4298836548",
-        "https://openalex.org/W3144194608",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W3005700362",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2962681511",
-        "https://openalex.org/W4287704453",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2937845937"
-    ],
-    "abstract": "Background: T ransformer-based language models have delivered clear improvements in a wide range of natural language processing (NLP) tasks. However, those models have a significant limitation; specifically, they cannot infer causality, a prerequisite for deployment in pharmacovigilance, and health care. Therefore, these transformer-based language models should be developed to infer causality to address the key question of the cause of a clinical outcome. Results: In this study, we propose an innovative causal inference model–InferBERT, by integrating the A Lite Bidirectional Encoder Representations from Transformers (ALBERT) and Judea Pearl’s Do-calculus to establish potential causality in pharmacovigilance. Two FDA Adverse Event Reporting System case studies, including Analgesics-related acute liver failure and Tramadol-related mortalities, were employed to evaluate the proposed InferBERT model. The InferBERT model yielded accuracies of 0.78 and 0.95 for identifying Analgesics-related acute liver failure and Tramadol-related death cases, respectively. Meanwhile, the inferred causes of the two clinical outcomes, (i.e. acute liver failure and death) were highly consistent with clinical knowledge. Furthermore, inferred causes were organized into a causal tree using the proposed recursive do-calculus algorithm to improve the model’s understanding of causality. Moreover, the high reproducibility of the proposed InferBERT model was demonstrated by a robustness assessment. Conclusion: The empirical results demonstrated that the proposed InferBERT approach is able to both predict clinical events and to infer their causes. Overall, the proposed InferBERT model is a promising approach to establish causal effects behind text-based observational data to enhance our understanding of intrinsic causality. Availability and implementation: The InferBERT model and preprocessed FAERS data sets are available on GitHub at https://github.com/XingqiaoWang/DeepCausalPV-master .",
-    "full_text": null
+  "title": "InferBERT: A Transformer-Based Causal Inference Framework for Enhancing Pharmacovigilance",
+  "url": "https://openalex.org/W3165015862",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2108084834",
+      "name": "Xingqiao Wang",
+      "affiliations": [
+        "University of Arkansas at Little Rock"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097932941",
+      "name": "Xu Xiaowei",
+      "affiliations": [
+        "University of Arkansas at Little Rock"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2267638323",
+      "name": "Weida Tong",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104343650",
+      "name": "Ruth Roberts",
+      "affiliations": [
+        "University of Birmingham",
+        "Alcon (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120112472",
+      "name": "Zhichao Liu",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108084834",
+      "name": "Xingqiao Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2097932941",
+      "name": "Xu Xiaowei",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2267638323",
+      "name": "Weida Tong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2104343650",
+      "name": "Ruth Roberts",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2120112472",
+      "name": "Zhichao Liu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2896252141",
+    "https://openalex.org/W2408641126",
+    "https://openalex.org/W2953326988",
+    "https://openalex.org/W4242966060",
+    "https://openalex.org/W1590115395",
+    "https://openalex.org/W2132384896",
+    "https://openalex.org/W1988100739",
+    "https://openalex.org/W3026235644",
+    "https://openalex.org/W2145429839",
+    "https://openalex.org/W2771906008",
+    "https://openalex.org/W2766447205",
+    "https://openalex.org/W1981809734",
+    "https://openalex.org/W2908201961",
+    "https://openalex.org/W2064716383",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6781965151",
+    "https://openalex.org/W2975956387",
+    "https://openalex.org/W6633714834",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3044873333",
+    "https://openalex.org/W4287867774",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W1566289585",
+    "https://openalex.org/W4298836548",
+    "https://openalex.org/W3144194608",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W3005700362",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2962681511",
+    "https://openalex.org/W4287704453",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2937845937"
+  ],
+  "abstract": "Background: T ransformer-based language models have delivered clear improvements in a wide range of natural language processing (NLP) tasks. However, those models have a significant limitation; specifically, they cannot infer causality, a prerequisite for deployment in pharmacovigilance, and health care. Therefore, these transformer-based language models should be developed to infer causality to address the key question of the cause of a clinical outcome. Results: In this study, we propose an innovative causal inference model–InferBERT, by integrating the A Lite Bidirectional Encoder Representations from Transformers (ALBERT) and Judea Pearl’s Do-calculus to establish potential causality in pharmacovigilance. Two FDA Adverse Event Reporting System case studies, including Analgesics-related acute liver failure and Tramadol-related mortalities, were employed to evaluate the proposed InferBERT model. The InferBERT model yielded accuracies of 0.78 and 0.95 for identifying Analgesics-related acute liver failure and Tramadol-related death cases, respectively. Meanwhile, the inferred causes of the two clinical outcomes, (i.e. acute liver failure and death) were highly consistent with clinical knowledge. Furthermore, inferred causes were organized into a causal tree using the proposed recursive do-calculus algorithm to improve the model’s understanding of causality. Moreover, the high reproducibility of the proposed InferBERT model was demonstrated by a robustness assessment. Conclusion: The empirical results demonstrated that the proposed InferBERT approach is able to both predict clinical events and to infer their causes. Overall, the proposed InferBERT model is a promising approach to establish causal effects behind text-based observational data to enhance our understanding of intrinsic causality. Availability and implementation: The InferBERT model and preprocessed FAERS data sets are available on GitHub at https://github.com/XingqiaoWang/DeepCausalPV-master .",
+  "full_text": null,
+  "topic": "Pharmacovigilance",
+  "concepts": [
+    {
+      "name": "Pharmacovigilance",
+      "score": 0.8292423486709595
+    },
+    {
+      "name": "Observational study",
+      "score": 0.6126804351806641
+    },
+    {
+      "name": "Causality (physics)",
+      "score": 0.5512127876281738
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5398575067520142
+    },
+    {
+      "name": "Causal inference",
+      "score": 0.5027503967285156
+    },
+    {
+      "name": "Inference",
+      "score": 0.49595150351524353
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4693492352962494
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.44300544261932373
+    },
+    {
+      "name": "Medicine",
+      "score": 0.4283807575702667
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4108816385269165
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3855002522468567
+    },
+    {
+      "name": "Adverse effect",
+      "score": 0.332966685295105
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.1338973343372345
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11242914199829102
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,75 +1,146 @@
 {
-    "title": "GATSol, an enhanced predictor of protein solubility through the synergy of 3D structure graph and large language modeling",
-    "url": "https://openalex.org/W4399262081",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1996936749",
-            "name": "Bin Li",
-            "affiliations": [
-                "Nanjing Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2125968683",
-            "name": "Dengming Ming",
-            "affiliations": [
-                "Nanjing Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1996936749",
-            "name": "Bin Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2125968683",
-            "name": "Dengming Ming",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2070637554",
-        "https://openalex.org/W4289653737",
-        "https://openalex.org/W1583685756",
-        "https://openalex.org/W2098600151",
-        "https://openalex.org/W2014554040",
-        "https://openalex.org/W2075644998",
-        "https://openalex.org/W4319425375",
-        "https://openalex.org/W2067602907",
-        "https://openalex.org/W2957625277",
-        "https://openalex.org/W4239510810",
-        "https://openalex.org/W1678356000",
-        "https://openalex.org/W2053519393",
-        "https://openalex.org/W1588724272",
-        "https://openalex.org/W2001662797",
-        "https://openalex.org/W3119780302",
-        "https://openalex.org/W2794004073",
-        "https://openalex.org/W1536929369",
-        "https://openalex.org/W2077514957",
-        "https://openalex.org/W3129073614",
-        "https://openalex.org/W2773439908",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3201593137",
-        "https://openalex.org/W4292112379",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W3214891123",
-        "https://openalex.org/W4393159659",
-        "https://openalex.org/W2076498053",
-        "https://openalex.org/W2094535327",
-        "https://openalex.org/W3121116873",
-        "https://openalex.org/W2015292449",
-        "https://openalex.org/W2979986977",
-        "https://openalex.org/W2954284176",
-        "https://openalex.org/W2049349724",
-        "https://openalex.org/W3172051228",
-        "https://openalex.org/W4383957026",
-        "https://openalex.org/W4286377611",
-        "https://openalex.org/W3146796711",
-        "https://openalex.org/W4317853066",
-        "https://openalex.org/W2133458779"
-    ],
-    "abstract": "Abstract Background Protein solubility is a critically important physicochemical property closely related to protein expression. For example, it is one of the main factors to be considered in the design and production of antibody drugs and a prerequisite for realizing various protein functions. Although several solubility prediction models have emerged in recent years, many of these models are limited to capturing information embedded in one-dimensional amino acid sequences, resulting in unsatisfactory predictive performance. Results In this study, we introduce a novel Graph Attention network-based protein Solubility model, GATSol, which represents the 3D structure of proteins as a protein graph. In addition to the node features of amino acids extracted by the state-of-the-art protein large language model, GATSol utilizes amino acid distance maps generated using the latest AlphaFold technology. Rigorous testing on independent eSOL and the Saccharomyces cerevisiae test datasets has shown that GATSol outperforms most recently introduced models, especially with respect to the coefficient of determination R 2 , which reaches 0.517 and 0.424, respectively. It outperforms the current state-of-the-art GraphSol by 18.4% on the S . cerevisiae _test set. Conclusions GATSol captures 3D dimensional features of proteins by building protein graphs, which significantly improves the accuracy of protein solubility prediction. Recent advances in protein structure modeling allow our method to incorporate spatial structure features extracted from predicted structures into the model by relying only on the input of protein sequences, which simplifies the entire graph neural network prediction process, making it more user-friendly and efficient. As a result, GATSol may help prioritize highly soluble proteins, ultimately reducing the cost and effort of experimental work. The source code and data of the GATSol model are freely available at https://github.com/binbinbinv/GATSol .",
-    "full_text": null
+  "title": "GATSol, an enhanced predictor of protein solubility through the synergy of 3D structure graph and large language modeling",
+  "url": "https://openalex.org/W4399262081",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1996936749",
+      "name": "Bin Li",
+      "affiliations": [
+        "Nanjing Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2125968683",
+      "name": "Dengming Ming",
+      "affiliations": [
+        "Nanjing Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1996936749",
+      "name": "Bin Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2125968683",
+      "name": "Dengming Ming",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2070637554",
+    "https://openalex.org/W4289653737",
+    "https://openalex.org/W1583685756",
+    "https://openalex.org/W2098600151",
+    "https://openalex.org/W2014554040",
+    "https://openalex.org/W2075644998",
+    "https://openalex.org/W4319425375",
+    "https://openalex.org/W2067602907",
+    "https://openalex.org/W2957625277",
+    "https://openalex.org/W4239510810",
+    "https://openalex.org/W1678356000",
+    "https://openalex.org/W2053519393",
+    "https://openalex.org/W1588724272",
+    "https://openalex.org/W2001662797",
+    "https://openalex.org/W3119780302",
+    "https://openalex.org/W2794004073",
+    "https://openalex.org/W1536929369",
+    "https://openalex.org/W2077514957",
+    "https://openalex.org/W3129073614",
+    "https://openalex.org/W2773439908",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3201593137",
+    "https://openalex.org/W4292112379",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W3214891123",
+    "https://openalex.org/W4393159659",
+    "https://openalex.org/W2076498053",
+    "https://openalex.org/W2094535327",
+    "https://openalex.org/W3121116873",
+    "https://openalex.org/W2015292449",
+    "https://openalex.org/W2979986977",
+    "https://openalex.org/W2954284176",
+    "https://openalex.org/W2049349724",
+    "https://openalex.org/W3172051228",
+    "https://openalex.org/W4383957026",
+    "https://openalex.org/W4286377611",
+    "https://openalex.org/W3146796711",
+    "https://openalex.org/W4317853066",
+    "https://openalex.org/W2133458779"
+  ],
+  "abstract": "Abstract Background Protein solubility is a critically important physicochemical property closely related to protein expression. For example, it is one of the main factors to be considered in the design and production of antibody drugs and a prerequisite for realizing various protein functions. Although several solubility prediction models have emerged in recent years, many of these models are limited to capturing information embedded in one-dimensional amino acid sequences, resulting in unsatisfactory predictive performance. Results In this study, we introduce a novel Graph Attention network-based protein Solubility model, GATSol, which represents the 3D structure of proteins as a protein graph. In addition to the node features of amino acids extracted by the state-of-the-art protein large language model, GATSol utilizes amino acid distance maps generated using the latest AlphaFold technology. Rigorous testing on independent eSOL and the Saccharomyces cerevisiae test datasets has shown that GATSol outperforms most recently introduced models, especially with respect to the coefficient of determination R 2 , which reaches 0.517 and 0.424, respectively. It outperforms the current state-of-the-art GraphSol by 18.4% on the S . cerevisiae _test set. Conclusions GATSol captures 3D dimensional features of proteins by building protein graphs, which significantly improves the accuracy of protein solubility prediction. Recent advances in protein structure modeling allow our method to incorporate spatial structure features extracted from predicted structures into the model by relying only on the input of protein sequences, which simplifies the entire graph neural network prediction process, making it more user-friendly and efficient. As a result, GATSol may help prioritize highly soluble proteins, ultimately reducing the cost and effort of experimental work. The source code and data of the GATSol model are freely available at https://github.com/binbinbinv/GATSol .",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5418835282325745
+    },
+    {
+      "name": "Graph",
+      "score": 0.5309193730354309
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.5239396691322327
+    },
+    {
+      "name": "DNA microarray",
+      "score": 0.5214987397193909
+    },
+    {
+      "name": "Protein structure prediction",
+      "score": 0.5057611465454102
+    },
+    {
+      "name": "Solubility",
+      "score": 0.4911966025829315
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3817148506641388
+    },
+    {
+      "name": "Data science",
+      "score": 0.36093395948410034
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.33297136425971985
+    },
+    {
+      "name": "Protein structure",
+      "score": 0.2972352206707001
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.2783353328704834
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.25952476263046265
+    },
+    {
+      "name": "Biology",
+      "score": 0.2258925437927246
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.16439810395240784
+    },
+    {
+      "name": "Gene",
+      "score": 0.11437731981277466
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.0
+    }
+  ]
 }

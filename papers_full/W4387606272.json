@@ -1,150 +1,181 @@
 {
-    "title": "A Spine Segmentation Method under an Arbitrary Field of View Based on 3D Swin Transformer",
-    "url": "https://openalex.org/W4387606272",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100429045",
-            "name": "Yonghong Zhang",
-            "affiliations": [
-                null,
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5090986807",
-            "name": "Xuquan Ji",
-            "affiliations": [
-                null,
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5091784924",
-            "name": "Wenyong Liu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5086700962",
-            "name": "Zhuofu Li",
-            "affiliations": [
-                null,
-                "Ministry of Education of the People's Republic of China",
-                "Peking University",
-                "Peking University Third Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100410094",
-            "name": "Jian Zhang",
-            "affiliations": [
-                null,
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100417150",
-            "name": "Shanshan Liu",
-            "affiliations": [
-                null,
-                "Ministry of Education of the People's Republic of China",
-                "Peking University",
-                "Peking University Third Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5003360719",
-            "name": "Woquan Zhong",
-            "affiliations": [
-                null,
-                "Ministry of Education of the People's Republic of China",
-                "Peking University",
-                "Peking University Third Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101869954",
-            "name": "Lei Hu",
-            "affiliations": [
-                null,
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5001064995",
-            "name": "Weishi Li",
-            "affiliations": [
-                null,
-                "Ministry of Education of the People's Republic of China",
-                "Peking University",
-                "Peking University Third Hospital"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3118119968",
-        "https://openalex.org/W3188119922",
-        "https://openalex.org/W2769419071",
-        "https://openalex.org/W2119878957",
-        "https://openalex.org/W3096403485",
-        "https://openalex.org/W2910702499",
-        "https://openalex.org/W3128611424",
-        "https://openalex.org/W2901917322",
-        "https://openalex.org/W2911485492",
-        "https://openalex.org/W2559874490",
-        "https://openalex.org/W2038952578",
-        "https://openalex.org/W2008568249",
-        "https://openalex.org/W2075358081",
-        "https://openalex.org/W2286202077",
-        "https://openalex.org/W2009621568",
-        "https://openalex.org/W184565980",
-        "https://openalex.org/W2402907716",
-        "https://openalex.org/W2395197407",
-        "https://openalex.org/W2525974879",
-        "https://openalex.org/W2925288829",
-        "https://openalex.org/W2952939839",
-        "https://openalex.org/W4295024931",
-        "https://openalex.org/W2127731579",
-        "https://openalex.org/W2888938880",
-        "https://openalex.org/W2006104019",
-        "https://openalex.org/W1994865866",
-        "https://openalex.org/W1839029107",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2962914239",
-        "https://openalex.org/W2884436604",
-        "https://openalex.org/W2907750714",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2914363005",
-        "https://openalex.org/W3212062421",
-        "https://openalex.org/W3025706491",
-        "https://openalex.org/W2963251401",
-        "https://openalex.org/W2423381167",
-        "https://openalex.org/W2901559346",
-        "https://openalex.org/W3011677811",
-        "https://openalex.org/W3167967732",
-        "https://openalex.org/W3207601934",
-        "https://openalex.org/W2306541384",
-        "https://openalex.org/W2899181150",
-        "https://openalex.org/W2912564039",
-        "https://openalex.org/W3084350493",
-        "https://openalex.org/W3034815155",
-        "https://openalex.org/W3112346810",
-        "https://openalex.org/W2091695913",
-        "https://openalex.org/W3170019900",
-        "https://openalex.org/W2962731543",
-        "https://openalex.org/W3101088356",
-        "https://openalex.org/W3160284783",
-        "https://openalex.org/W1817277359",
-        "https://openalex.org/W2798122215",
-        "https://openalex.org/W2596517821",
-        "https://openalex.org/W3184439416",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W3093066554"
-    ],
-    "abstract": "High‐precision image segmentation of the spine in computed tomography (CT) images is important for the diagnosis of spinal diseases and surgical path planning. Manual segmentation is often tedious and time consuming. Thus, an automatic segmentation algorithm is expected to solve this problem. However, because different areas are scanned, the number of spines in the original CT image and the coverage area are often different, making it extremely difficult to directly conduct a fully autonomous spine segmentation. In this study, we propose a two‐stage automatic spine segmentation method based on 3D Swin Transformer. In the first stage, the 3D Swin‐YoloX algorithm is used to achieve an accurate positioning of each spine segment in the CT images. In the second stage, 3D Swin‐UNet is used to achieve a high‐precision segmentation of the spine. Using an open dataset, the average Dice of our approach can reach 0.942 and the average Hausdorff distance can reach 6.24, indicating a higher accuracy in comparison with other published methods. Our proposed method can effectively eliminate any adverse effects of the different scanning areas on a spinal image segmentation and has a high application value.",
-    "full_text": null
+  "title": "A Spine Segmentation Method under an Arbitrary Field of View Based on 3D Swin Transformer",
+  "url": "https://openalex.org/W4387606272",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100429045",
+      "name": "Yonghong Zhang",
+      "affiliations": [
+        null,
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5090986807",
+      "name": "Xuquan Ji",
+      "affiliations": [
+        null,
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5091784924",
+      "name": "Wenyong Liu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5086700962",
+      "name": "Zhuofu Li",
+      "affiliations": [
+        null,
+        "Ministry of Education of the People's Republic of China",
+        "Peking University",
+        "Peking University Third Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100410094",
+      "name": "Jian Zhang",
+      "affiliations": [
+        null,
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100417150",
+      "name": "Shanshan Liu",
+      "affiliations": [
+        null,
+        "Ministry of Education of the People's Republic of China",
+        "Peking University",
+        "Peking University Third Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5003360719",
+      "name": "Woquan Zhong",
+      "affiliations": [
+        null,
+        "Ministry of Education of the People's Republic of China",
+        "Peking University",
+        "Peking University Third Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101869954",
+      "name": "Lei Hu",
+      "affiliations": [
+        null,
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5001064995",
+      "name": "Weishi Li",
+      "affiliations": [
+        null,
+        "Ministry of Education of the People's Republic of China",
+        "Peking University",
+        "Peking University Third Hospital"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3118119968",
+    "https://openalex.org/W3188119922",
+    "https://openalex.org/W2769419071",
+    "https://openalex.org/W2119878957",
+    "https://openalex.org/W3096403485",
+    "https://openalex.org/W2910702499",
+    "https://openalex.org/W3128611424",
+    "https://openalex.org/W2901917322",
+    "https://openalex.org/W2911485492",
+    "https://openalex.org/W2559874490",
+    "https://openalex.org/W2038952578",
+    "https://openalex.org/W2008568249",
+    "https://openalex.org/W2075358081",
+    "https://openalex.org/W2286202077",
+    "https://openalex.org/W2009621568",
+    "https://openalex.org/W184565980",
+    "https://openalex.org/W2402907716",
+    "https://openalex.org/W2395197407",
+    "https://openalex.org/W2525974879",
+    "https://openalex.org/W2925288829",
+    "https://openalex.org/W2952939839",
+    "https://openalex.org/W4295024931",
+    "https://openalex.org/W2127731579",
+    "https://openalex.org/W2888938880",
+    "https://openalex.org/W2006104019",
+    "https://openalex.org/W1994865866",
+    "https://openalex.org/W1839029107",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2962914239",
+    "https://openalex.org/W2884436604",
+    "https://openalex.org/W2907750714",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2914363005",
+    "https://openalex.org/W3212062421",
+    "https://openalex.org/W3025706491",
+    "https://openalex.org/W2963251401",
+    "https://openalex.org/W2423381167",
+    "https://openalex.org/W2901559346",
+    "https://openalex.org/W3011677811",
+    "https://openalex.org/W3167967732",
+    "https://openalex.org/W3207601934",
+    "https://openalex.org/W2306541384",
+    "https://openalex.org/W2899181150",
+    "https://openalex.org/W2912564039",
+    "https://openalex.org/W3084350493",
+    "https://openalex.org/W3034815155",
+    "https://openalex.org/W3112346810",
+    "https://openalex.org/W2091695913",
+    "https://openalex.org/W3170019900",
+    "https://openalex.org/W2962731543",
+    "https://openalex.org/W3101088356",
+    "https://openalex.org/W3160284783",
+    "https://openalex.org/W1817277359",
+    "https://openalex.org/W2798122215",
+    "https://openalex.org/W2596517821",
+    "https://openalex.org/W3184439416",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W3093066554"
+  ],
+  "abstract": "High‐precision image segmentation of the spine in computed tomography (CT) images is important for the diagnosis of spinal diseases and surgical path planning. Manual segmentation is often tedious and time consuming. Thus, an automatic segmentation algorithm is expected to solve this problem. However, because different areas are scanned, the number of spines in the original CT image and the coverage area are often different, making it extremely difficult to directly conduct a fully autonomous spine segmentation. In this study, we propose a two‐stage automatic spine segmentation method based on 3D Swin Transformer. In the first stage, the 3D Swin‐YoloX algorithm is used to achieve an accurate positioning of each spine segment in the CT images. In the second stage, 3D Swin‐UNet is used to achieve a high‐precision segmentation of the spine. Using an open dataset, the average Dice of our approach can reach 0.942 and the average Hausdorff distance can reach 6.24, indicating a higher accuracy in comparison with other published methods. Our proposed method can effectively eliminate any adverse effects of the different scanning areas on a spinal image segmentation and has a high application value.",
+  "full_text": null,
+  "topic": "Segmentation",
+  "concepts": [
+    {
+      "name": "Segmentation",
+      "score": 0.7989047765731812
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7365891933441162
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7033911347389221
+    },
+    {
+      "name": "Hausdorff distance",
+      "score": 0.6596893072128296
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5720750093460083
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.4821838438510895
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.34130650758743286
+    }
+  ]
 }

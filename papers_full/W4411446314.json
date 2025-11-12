@@ -1,56 +1,135 @@
 {
-    "title": "Sentiment Analysis Using a Large Language Model–Based Approach to Detect Opioids Mixed With Other Substances Via Social Media: Method Development and Validation",
-    "url": "https://openalex.org/W4411446314",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2107864151",
-            "name": "Muhammad Ahmad",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2603489393",
-            "name": "Ildar Batyrshin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2067977781",
-            "name": "Grigori Sidorov",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2203074664",
-        "https://openalex.org/W2912654919",
-        "https://openalex.org/W4200168709",
-        "https://openalex.org/W2944592785",
-        "https://openalex.org/W2891660975",
-        "https://openalex.org/W3157008346",
-        "https://openalex.org/W3165837403",
-        "https://openalex.org/W2747543253",
-        "https://openalex.org/W2577598520",
-        "https://openalex.org/W2817530895",
-        "https://openalex.org/W2971804480",
-        "https://openalex.org/W4282916832",
-        "https://openalex.org/W2906978976",
-        "https://openalex.org/W2989502255",
-        "https://openalex.org/W2795781768",
-        "https://openalex.org/W4379093826",
-        "https://openalex.org/W4224024455",
-        "https://openalex.org/W2003834798",
-        "https://openalex.org/W2117239687",
-        "https://openalex.org/W3037755857",
-        "https://openalex.org/W2972353533",
-        "https://openalex.org/W4312959113",
-        "https://openalex.org/W3008864515",
-        "https://openalex.org/W3085890295",
-        "https://openalex.org/W4386460043",
-        "https://openalex.org/W4401517427",
-        "https://openalex.org/W3151188302",
-        "https://openalex.org/W4396238931",
-        "https://openalex.org/W4306793440",
-        "https://openalex.org/W4402693486"
-    ],
-    "abstract": "Abstract Background The opioid crisis poses a significant health challenge in the United States, with increasing overdoses and death rates due to opioids mixed with other illicit substances. Various strategies have been developed by federal and local governments and health organizations to address this crisis. One of the most significant objectives is to understand the epidemic through better health surveillance, and machine learning techniques can support this by identifying opioid users at risk of overdose through the analysis of social media data, as many individuals may avoid direct testing but still share their experiences online. Objective In this study, we take advantage of recent developments in machine learning that allow for insights into patterns of opioid use and potential risk factors in a less invasive manner using self-reported information available on social platforms. Methods This study used YouTube comments posted between December 2020 and March 2024, in which individuals shared their self-reported experiences of opioid drugs mixed with other substances. We manually annotated our dataset into multiclass categories, capturing both the positive effects of opioid use, such as pain relief, euphoria, and relaxation, and negative experiences, including nausea, sadness, and respiratory depression, to provide a comprehensive understanding of the multifaceted impact of opioids. By analyzing this sentiment, we used 4 state-of-the-art machine learning models, 2 deep learning models, 3 transformer models, and 1 large language model (GPT-3.5 Turbo) to predict overdose risks to improve health care response and intervention strategies. Results Our proposed methodology (GPT-3.5 Turbo) was highly precise and accurate, helping to automatically identify sentiment based on the adverse effects of opioid drug combinations and high-risk drug use in YouTube comments. Our proposed methodology demonstrated the highest achievable F 1 -score of 0.95 and a 3.26% performance improvement over traditional machine learning models such as extreme gradient boosting, which demonstrated an F 1 -score of 0.92. Conclusions This study demonstrates the potential of leveraging machine learning and large language models, such as GPT-3.5 Turbo, to analyze public sentiment surrounding opioid use and its associated risks. By using YouTube comments as a rich source of self-reported data, the study provides valuable insights into both the positive and negative effects of opioids, particularly when mixed with other substances. The proposed methodology significantly outperformed traditional models, contributing to more accurate predictions of overdose risks and enhancing health care responses to the opioid crisis.",
-    "full_text": null
+  "title": "Sentiment Analysis Using a Large Language Model–Based Approach to Detect Opioids Mixed With Other Substances Via Social Media: Method Development and Validation",
+  "url": "https://openalex.org/W4411446314",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2107864151",
+      "name": "Muhammad Ahmad",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2603489393",
+      "name": "Ildar Batyrshin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2067977781",
+      "name": "Grigori Sidorov",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2203074664",
+    "https://openalex.org/W2912654919",
+    "https://openalex.org/W4200168709",
+    "https://openalex.org/W2944592785",
+    "https://openalex.org/W2891660975",
+    "https://openalex.org/W3157008346",
+    "https://openalex.org/W3165837403",
+    "https://openalex.org/W2747543253",
+    "https://openalex.org/W2577598520",
+    "https://openalex.org/W2817530895",
+    "https://openalex.org/W2971804480",
+    "https://openalex.org/W4282916832",
+    "https://openalex.org/W2906978976",
+    "https://openalex.org/W2989502255",
+    "https://openalex.org/W2795781768",
+    "https://openalex.org/W4379093826",
+    "https://openalex.org/W4224024455",
+    "https://openalex.org/W2003834798",
+    "https://openalex.org/W2117239687",
+    "https://openalex.org/W3037755857",
+    "https://openalex.org/W2972353533",
+    "https://openalex.org/W4312959113",
+    "https://openalex.org/W3008864515",
+    "https://openalex.org/W3085890295",
+    "https://openalex.org/W4386460043",
+    "https://openalex.org/W4401517427",
+    "https://openalex.org/W3151188302",
+    "https://openalex.org/W4396238931",
+    "https://openalex.org/W4306793440",
+    "https://openalex.org/W4402693486"
+  ],
+  "abstract": "Abstract Background The opioid crisis poses a significant health challenge in the United States, with increasing overdoses and death rates due to opioids mixed with other illicit substances. Various strategies have been developed by federal and local governments and health organizations to address this crisis. One of the most significant objectives is to understand the epidemic through better health surveillance, and machine learning techniques can support this by identifying opioid users at risk of overdose through the analysis of social media data, as many individuals may avoid direct testing but still share their experiences online. Objective In this study, we take advantage of recent developments in machine learning that allow for insights into patterns of opioid use and potential risk factors in a less invasive manner using self-reported information available on social platforms. Methods This study used YouTube comments posted between December 2020 and March 2024, in which individuals shared their self-reported experiences of opioid drugs mixed with other substances. We manually annotated our dataset into multiclass categories, capturing both the positive effects of opioid use, such as pain relief, euphoria, and relaxation, and negative experiences, including nausea, sadness, and respiratory depression, to provide a comprehensive understanding of the multifaceted impact of opioids. By analyzing this sentiment, we used 4 state-of-the-art machine learning models, 2 deep learning models, 3 transformer models, and 1 large language model (GPT-3.5 Turbo) to predict overdose risks to improve health care response and intervention strategies. Results Our proposed methodology (GPT-3.5 Turbo) was highly precise and accurate, helping to automatically identify sentiment based on the adverse effects of opioid drug combinations and high-risk drug use in YouTube comments. Our proposed methodology demonstrated the highest achievable F 1 -score of 0.95 and a 3.26% performance improvement over traditional machine learning models such as extreme gradient boosting, which demonstrated an F 1 -score of 0.92. Conclusions This study demonstrates the potential of leveraging machine learning and large language models, such as GPT-3.5 Turbo, to analyze public sentiment surrounding opioid use and its associated risks. By using YouTube comments as a rich source of self-reported data, the study provides valuable insights into both the positive and negative effects of opioids, particularly when mixed with other substances. The proposed methodology significantly outperformed traditional models, contributing to more accurate predictions of overdose risks and enhancing health care responses to the opioid crisis.",
+  "full_text": null,
+  "topic": "Social media",
+  "concepts": [
+    {
+      "name": "Social media",
+      "score": 0.6452224850654602
+    },
+    {
+      "name": "Euphoriant",
+      "score": 0.6093034744262695
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.485493928194046
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.4813885986804962
+    },
+    {
+      "name": "Health care",
+      "score": 0.45757436752319336
+    },
+    {
+      "name": "Opioid overdose",
+      "score": 0.4197908043861389
+    },
+    {
+      "name": "Sadness",
+      "score": 0.41385024785995483
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4102347195148468
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.36947327852249146
+    },
+    {
+      "name": "Medicine",
+      "score": 0.3443988561630249
+    },
+    {
+      "name": "Opioid",
+      "score": 0.3262391686439514
+    },
+    {
+      "name": "Psychiatry",
+      "score": 0.22776493430137634
+    },
+    {
+      "name": "Political science",
+      "score": 0.16878682374954224
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.11746442317962646
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Receptor",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Anger",
+      "score": 0.0
+    },
+    {
+      "name": "(+)-Naloxone",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,115 +1,186 @@
 {
-    "title": "GestureGPT: Toward Zero-Shot Free-Form Hand Gesture Understanding with Large Language Model Agents",
-    "url": "https://openalex.org/W4403717124",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2021422979",
-            "name": "Xin Zeng",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Computing Technology",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2062469911",
-            "name": "Xiaoyu Wang",
-            "affiliations": [
-                "University of Hong Kong",
-                "Hong Kong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2625722338",
-            "name": "Tengxiang Zhang",
-            "affiliations": [
-                "GoerTek (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104196863",
-            "name": "Chun Yu",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2168325223",
-            "name": "Shengdong Zhao",
-            "affiliations": [
-                "City University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2143279356",
-            "name": "Yiqiang Chen",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences",
-                "Institute of Computing Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2399596426",
-        "https://openalex.org/W2079788562",
-        "https://openalex.org/W2293649818",
-        "https://openalex.org/W4387835481",
-        "https://openalex.org/W2984660088",
-        "https://openalex.org/W4377091068",
-        "https://openalex.org/W3005789917",
-        "https://openalex.org/W2394878726",
-        "https://openalex.org/W4309591663",
-        "https://openalex.org/W4285731637",
-        "https://openalex.org/W4312817377",
-        "https://openalex.org/W2795885990",
-        "https://openalex.org/W2535391349",
-        "https://openalex.org/W2766813539",
-        "https://openalex.org/W3035531123",
-        "https://openalex.org/W1496918241",
-        "https://openalex.org/W4225082377",
-        "https://openalex.org/W4294891905",
-        "https://openalex.org/W3015154553",
-        "https://openalex.org/W4387561549",
-        "https://openalex.org/W2944490436",
-        "https://openalex.org/W4394593134",
-        "https://openalex.org/W4392503799",
-        "https://openalex.org/W2906219823",
-        "https://openalex.org/W2034258500",
-        "https://openalex.org/W2120629103",
-        "https://openalex.org/W2113798388",
-        "https://openalex.org/W4386385424",
-        "https://openalex.org/W2961565096",
-        "https://openalex.org/W2902887961",
-        "https://openalex.org/W3160750879",
-        "https://openalex.org/W2113615789",
-        "https://openalex.org/W3123143971",
-        "https://openalex.org/W2162425553",
-        "https://openalex.org/W1480141383",
-        "https://openalex.org/W4387322930",
-        "https://openalex.org/W4387835442",
-        "https://openalex.org/W2126698653",
-        "https://openalex.org/W4390189088",
-        "https://openalex.org/W2138207021",
-        "https://openalex.org/W2796156077",
-        "https://openalex.org/W4296306273",
-        "https://openalex.org/W4213453073",
-        "https://openalex.org/W4246719144",
-        "https://openalex.org/W2073098112",
-        "https://openalex.org/W2015776973",
-        "https://openalex.org/W2120331170",
-        "https://openalex.org/W3207910091",
-        "https://openalex.org/W4384112348",
-        "https://openalex.org/W2036260418",
-        "https://openalex.org/W3158889682",
-        "https://openalex.org/W4229038857",
-        "https://openalex.org/W4220783478",
-        "https://openalex.org/W101345952",
-        "https://openalex.org/W4389574973",
-        "https://openalex.org/W2791526950",
-        "https://openalex.org/W2794495458"
-    ],
-    "abstract": "Existing gesture interfaces only work with a fixed set of gestures defined either by interface designers or by users themselves, which introduces learning or demonstration efforts that diminish their naturalness. Humans, on the other hand, understand free-form gestures by synthesizing the gesture, context, experience, and common sense. In this way, the user does not need to learn, demonstrate, or associate gestures. We introduce GestureGPT, a free-form hand gesture understanding framework that mimics human gesture understanding procedures to enable a natural free-form gestural interface. Our framework leverages multiple Large Language Model agents to manage and synthesize gesture and context information, then infers the interaction intent by associating the gesture with an interface function. More specifically, our triple-agent framework includes a Gesture Description Agent that automatically segments and formulates natural language descriptions of hand poses and movements based on hand landmark coordinates. The description is deciphered by a Gesture Inference Agent through self-reasoning and querying about the interaction context (e.g., interaction history, gaze data), which is managed by a Context Management Agent. Following iterative exchanges, the Gesture Inference Agent discerns the user’s intent by grounding it to an interactive function. We validated our framework offline under two real-world scenarios: smart home control and online video streaming. The average zero-shot Top-1/Top-5 grounding accuracies are 44.79%/83.59% for smart home tasks and 37.50%/73.44% for video streaming tasks. We also provide an extensive discussion that includes rationale for model selection, generalizability, and future research directions for a practical system etc.",
-    "full_text": null
+  "title": "GestureGPT: Toward Zero-Shot Free-Form Hand Gesture Understanding with Large Language Model Agents",
+  "url": "https://openalex.org/W4403717124",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2021422979",
+      "name": "Xin Zeng",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2062469911",
+      "name": "Xiaoyu Wang",
+      "affiliations": [
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2625722338",
+      "name": "Tengxiang Zhang",
+      "affiliations": [
+        "GoerTek (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104196863",
+      "name": "Chun Yu",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2168325223",
+      "name": "Shengdong Zhao",
+      "affiliations": [
+        "City University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2143279356",
+      "name": "Yiqiang Chen",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences",
+        "Institute of Computing Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2399596426",
+    "https://openalex.org/W2079788562",
+    "https://openalex.org/W2293649818",
+    "https://openalex.org/W4387835481",
+    "https://openalex.org/W2984660088",
+    "https://openalex.org/W4377091068",
+    "https://openalex.org/W3005789917",
+    "https://openalex.org/W2394878726",
+    "https://openalex.org/W4309591663",
+    "https://openalex.org/W4285731637",
+    "https://openalex.org/W4312817377",
+    "https://openalex.org/W2795885990",
+    "https://openalex.org/W2535391349",
+    "https://openalex.org/W2766813539",
+    "https://openalex.org/W3035531123",
+    "https://openalex.org/W1496918241",
+    "https://openalex.org/W4225082377",
+    "https://openalex.org/W4294891905",
+    "https://openalex.org/W3015154553",
+    "https://openalex.org/W4387561549",
+    "https://openalex.org/W2944490436",
+    "https://openalex.org/W4394593134",
+    "https://openalex.org/W4392503799",
+    "https://openalex.org/W2906219823",
+    "https://openalex.org/W2034258500",
+    "https://openalex.org/W2120629103",
+    "https://openalex.org/W2113798388",
+    "https://openalex.org/W4386385424",
+    "https://openalex.org/W2961565096",
+    "https://openalex.org/W2902887961",
+    "https://openalex.org/W3160750879",
+    "https://openalex.org/W2113615789",
+    "https://openalex.org/W3123143971",
+    "https://openalex.org/W2162425553",
+    "https://openalex.org/W1480141383",
+    "https://openalex.org/W4387322930",
+    "https://openalex.org/W4387835442",
+    "https://openalex.org/W2126698653",
+    "https://openalex.org/W4390189088",
+    "https://openalex.org/W2138207021",
+    "https://openalex.org/W2796156077",
+    "https://openalex.org/W4296306273",
+    "https://openalex.org/W4213453073",
+    "https://openalex.org/W4246719144",
+    "https://openalex.org/W2073098112",
+    "https://openalex.org/W2015776973",
+    "https://openalex.org/W2120331170",
+    "https://openalex.org/W3207910091",
+    "https://openalex.org/W4384112348",
+    "https://openalex.org/W2036260418",
+    "https://openalex.org/W3158889682",
+    "https://openalex.org/W4229038857",
+    "https://openalex.org/W4220783478",
+    "https://openalex.org/W101345952",
+    "https://openalex.org/W4389574973",
+    "https://openalex.org/W2791526950",
+    "https://openalex.org/W2794495458"
+  ],
+  "abstract": "Existing gesture interfaces only work with a fixed set of gestures defined either by interface designers or by users themselves, which introduces learning or demonstration efforts that diminish their naturalness. Humans, on the other hand, understand free-form gestures by synthesizing the gesture, context, experience, and common sense. In this way, the user does not need to learn, demonstrate, or associate gestures. We introduce GestureGPT, a free-form hand gesture understanding framework that mimics human gesture understanding procedures to enable a natural free-form gestural interface. Our framework leverages multiple Large Language Model agents to manage and synthesize gesture and context information, then infers the interaction intent by associating the gesture with an interface function. More specifically, our triple-agent framework includes a Gesture Description Agent that automatically segments and formulates natural language descriptions of hand poses and movements based on hand landmark coordinates. The description is deciphered by a Gesture Inference Agent through self-reasoning and querying about the interaction context (e.g., interaction history, gaze data), which is managed by a Context Management Agent. Following iterative exchanges, the Gesture Inference Agent discerns the user’s intent by grounding it to an interactive function. We validated our framework offline under two real-world scenarios: smart home control and online video streaming. The average zero-shot Top-1/Top-5 grounding accuracies are 44.79%/83.59% for smart home tasks and 37.50%/73.44% for video streaming tasks. We also provide an extensive discussion that includes rationale for model selection, generalizability, and future research directions for a practical system etc.",
+  "full_text": null,
+  "topic": "Gesture",
+  "concepts": [
+    {
+      "name": "Gesture",
+      "score": 0.9286888837814331
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7752467393875122
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.6397006511688232
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.5968944430351257
+    },
+    {
+      "name": "Interface (matter)",
+      "score": 0.4670834541320801
+    },
+    {
+      "name": "Gesture recognition",
+      "score": 0.4457830488681793
+    },
+    {
+      "name": "Function (biology)",
+      "score": 0.41971278190612793
+    },
+    {
+      "name": "Naturalness",
+      "score": 0.4163488447666168
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.37376198172569275
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Evolutionary biology",
+      "score": 0.0
+    },
+    {
+      "name": "Bubble",
+      "score": 0.0
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Maximum bubble pressure method",
+      "score": 0.0
+    }
+  ]
 }

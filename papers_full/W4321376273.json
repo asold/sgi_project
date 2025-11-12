@@ -1,106 +1,169 @@
 {
-    "title": "TMTNet: A Transformer-Based Multimodality Information Transfer Network for Hyperspectral Object Tracking",
-    "url": "https://openalex.org/W4321376273",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5061456453",
-            "name": "Kai Zhao",
-            "affiliations": [
-                "Harbin Engineering University",
-                "Ministry of Industry and Information Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5047166842",
-            "name": "Hongjiao Liu",
-            "affiliations": [
-                "Harbin Engineering University",
-                "Ministry of Industry and Information Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5035351198",
-            "name": "Nan Su",
-            "affiliations": [
-                "Harbin Engineering University",
-                "Ministry of Industry and Information Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5076375500",
-            "name": "Congan Xu",
-            "affiliations": [
-                "Beijing Institute of Technology",
-                "Jinan Institute of Quantum Technology",
-                "Naval Aeronautical and Astronautical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5041395379",
-            "name": "Yiming Yan",
-            "affiliations": [
-                "Harbin Engineering University",
-                "Ministry of Industry and Information Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5072245508",
-            "name": "Shou Feng",
-            "affiliations": [
-                "Harbin Engineering University",
-                "Ministry of Industry and Information Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2999482976",
-        "https://openalex.org/W3089799197",
-        "https://openalex.org/W3184813465",
-        "https://openalex.org/W6803275500",
-        "https://openalex.org/W2122527397",
-        "https://openalex.org/W2955747520",
-        "https://openalex.org/W2611008809",
-        "https://openalex.org/W2898567522",
-        "https://openalex.org/W2135364872",
-        "https://openalex.org/W2484071357",
-        "https://openalex.org/W4317038477",
-        "https://openalex.org/W6842413092",
-        "https://openalex.org/W4307772628",
-        "https://openalex.org/W4224930757",
-        "https://openalex.org/W3185972840",
-        "https://openalex.org/W2894400023",
-        "https://openalex.org/W3011060674",
-        "https://openalex.org/W3005080107",
-        "https://openalex.org/W3195284414",
-        "https://openalex.org/W2971325593",
-        "https://openalex.org/W3196047368",
-        "https://openalex.org/W4312894560",
-        "https://openalex.org/W3035511673",
-        "https://openalex.org/W3035571898",
-        "https://openalex.org/W3168663926",
-        "https://openalex.org/W3214053950",
-        "https://openalex.org/W2793941577",
-        "https://openalex.org/W2963534981",
-        "https://openalex.org/W3214586131",
-        "https://openalex.org/W3167456680",
-        "https://openalex.org/W4205399869",
-        "https://openalex.org/W3171169846",
-        "https://openalex.org/W3167762749",
-        "https://openalex.org/W2799058067",
-        "https://openalex.org/W2963227409",
-        "https://openalex.org/W2967622921",
-        "https://openalex.org/W2886335102",
-        "https://openalex.org/W3034297219",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2557641257",
-        "https://openalex.org/W2963188742",
-        "https://openalex.org/W3002567850",
-        "https://openalex.org/W3209777666",
-        "https://openalex.org/W4292337114",
-        "https://openalex.org/W3102457447",
-        "https://openalex.org/W3099681648"
-    ],
-    "abstract": "Hyperspectral video with spatial and spectral information has great potential to improve object tracking performance. However, the limited hyperspectral training samples hinder the development of hyperspectral object tracking. Since hyperspectral data has multiple bands, from which any three bands can be extracted to form pseudocolor images, we propose a Transformer-based multimodality information transfer network (TMTNet), aiming to improve the tracking performance by efficiently transferring the information of multimodality data composed of RGB and hyperspectral in the hyperspectral tracking process. The multimodality information needed to be transferred mainly includes the RGB and hyperspectral multimodality fusion information and the RGB modality information. Specifically, we construct two subnetworks to transfer the multimodality fusion information and the robust RGB visual information, respectively. Among them, the multimodality fusion information transfer subnetwork is designed based on the dual Siamese branch structure. The subnetwork employs the pretrained RGB tracking model as the RGB branch to guide the training of the hyperspectral branch with little training samples. The RGB modality information transfer subnetwork is designed based on a pretrained RGB tracking model with good performance to improve the tracking network’s generalization and accuracy in unknown complex scenes. In addition, we design an information interaction module based on Transformer in the multimodality fusion information transfer subnetwork. The module can fuse multimodality information by capturing the potential interaction between different modalities. We also add a spatial optimization module to TMTNet, which further optimizes the object position predicted by the subject network by fully retaining and utilizing detailed spatial information. Experimental results on the only available hyperspectral tracking benchmark dataset show that the proposed TMTNet tracker outperforms the advanced trackers, demonstrating the effectiveness of this method.",
-    "full_text": null
+  "title": "TMTNet: A Transformer-Based Multimodality Information Transfer Network for Hyperspectral Object Tracking",
+  "url": "https://openalex.org/W4321376273",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5061456453",
+      "name": "Kai Zhao",
+      "affiliations": [
+        "Harbin Engineering University",
+        "Ministry of Industry and Information Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5047166842",
+      "name": "Hongjiao Liu",
+      "affiliations": [
+        "Harbin Engineering University",
+        "Ministry of Industry and Information Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5035351198",
+      "name": "Nan Su",
+      "affiliations": [
+        "Harbin Engineering University",
+        "Ministry of Industry and Information Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5076375500",
+      "name": "Congan Xu",
+      "affiliations": [
+        "Beijing Institute of Technology",
+        "Jinan Institute of Quantum Technology",
+        "Naval Aeronautical and Astronautical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5041395379",
+      "name": "Yiming Yan",
+      "affiliations": [
+        "Harbin Engineering University",
+        "Ministry of Industry and Information Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5072245508",
+      "name": "Shou Feng",
+      "affiliations": [
+        "Harbin Engineering University",
+        "Ministry of Industry and Information Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2999482976",
+    "https://openalex.org/W3089799197",
+    "https://openalex.org/W3184813465",
+    "https://openalex.org/W6803275500",
+    "https://openalex.org/W2122527397",
+    "https://openalex.org/W2955747520",
+    "https://openalex.org/W2611008809",
+    "https://openalex.org/W2898567522",
+    "https://openalex.org/W2135364872",
+    "https://openalex.org/W2484071357",
+    "https://openalex.org/W4317038477",
+    "https://openalex.org/W6842413092",
+    "https://openalex.org/W4307772628",
+    "https://openalex.org/W4224930757",
+    "https://openalex.org/W3185972840",
+    "https://openalex.org/W2894400023",
+    "https://openalex.org/W3011060674",
+    "https://openalex.org/W3005080107",
+    "https://openalex.org/W3195284414",
+    "https://openalex.org/W2971325593",
+    "https://openalex.org/W3196047368",
+    "https://openalex.org/W4312894560",
+    "https://openalex.org/W3035511673",
+    "https://openalex.org/W3035571898",
+    "https://openalex.org/W3168663926",
+    "https://openalex.org/W3214053950",
+    "https://openalex.org/W2793941577",
+    "https://openalex.org/W2963534981",
+    "https://openalex.org/W3214586131",
+    "https://openalex.org/W3167456680",
+    "https://openalex.org/W4205399869",
+    "https://openalex.org/W3171169846",
+    "https://openalex.org/W3167762749",
+    "https://openalex.org/W2799058067",
+    "https://openalex.org/W2963227409",
+    "https://openalex.org/W2967622921",
+    "https://openalex.org/W2886335102",
+    "https://openalex.org/W3034297219",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2557641257",
+    "https://openalex.org/W2963188742",
+    "https://openalex.org/W3002567850",
+    "https://openalex.org/W3209777666",
+    "https://openalex.org/W4292337114",
+    "https://openalex.org/W3102457447",
+    "https://openalex.org/W3099681648"
+  ],
+  "abstract": "Hyperspectral video with spatial and spectral information has great potential to improve object tracking performance. However, the limited hyperspectral training samples hinder the development of hyperspectral object tracking. Since hyperspectral data has multiple bands, from which any three bands can be extracted to form pseudocolor images, we propose a Transformer-based multimodality information transfer network (TMTNet), aiming to improve the tracking performance by efficiently transferring the information of multimodality data composed of RGB and hyperspectral in the hyperspectral tracking process. The multimodality information needed to be transferred mainly includes the RGB and hyperspectral multimodality fusion information and the RGB modality information. Specifically, we construct two subnetworks to transfer the multimodality fusion information and the robust RGB visual information, respectively. Among them, the multimodality fusion information transfer subnetwork is designed based on the dual Siamese branch structure. The subnetwork employs the pretrained RGB tracking model as the RGB branch to guide the training of the hyperspectral branch with little training samples. The RGB modality information transfer subnetwork is designed based on a pretrained RGB tracking model with good performance to improve the tracking network’s generalization and accuracy in unknown complex scenes. In addition, we design an information interaction module based on Transformer in the multimodality fusion information transfer subnetwork. The module can fuse multimodality information by capturing the potential interaction between different modalities. We also add a spatial optimization module to TMTNet, which further optimizes the object position predicted by the subject network by fully retaining and utilizing detailed spatial information. Experimental results on the only available hyperspectral tracking benchmark dataset show that the proposed TMTNet tracker outperforms the advanced trackers, demonstrating the effectiveness of this method.",
+  "full_text": null,
+  "topic": "Multimodality",
+  "concepts": [
+    {
+      "name": "Multimodality",
+      "score": 0.7823593020439148
+    },
+    {
+      "name": "Hyperspectral imaging",
+      "score": 0.7823006510734558
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7536451816558838
+    },
+    {
+      "name": "RGB color model",
+      "score": 0.7214608192443848
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6952008008956909
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5593772530555725
+    },
+    {
+      "name": "Spatial analysis",
+      "score": 0.5071284770965576
+    },
+    {
+      "name": "Subnetwork",
+      "score": 0.5048738121986389
+    },
+    {
+      "name": "Video tracking",
+      "score": 0.4197564125061035
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3870009779930115
+    },
+    {
+      "name": "Object (grammar)",
+      "score": 0.23757299780845642
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.1578279435634613
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.0
+    }
+  ]
 }

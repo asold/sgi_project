@@ -1,76 +1,119 @@
 {
-    "title": "Protein-Protein Interaction Prediction is Achievable with Large Language Models",
-    "url": "https://openalex.org/W4380153748",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4202182774",
-            "name": "Logan Hallee",
-            "affiliations": [
-                "University of Delaware"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2123256871",
-            "name": "Jason P. Gleghorn",
-            "affiliations": [
-                "University of Delaware"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4202182774",
-            "name": "Logan Hallee",
-            "affiliations": [
-                "University of Delaware"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2123256871",
-            "name": "Jason P. Gleghorn",
-            "affiliations": [
-                "University of Delaware"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4283586679",
-        "https://openalex.org/W4200310257",
-        "https://openalex.org/W4322490174",
-        "https://openalex.org/W4283788620",
-        "https://openalex.org/W2899189869",
-        "https://openalex.org/W4200025610",
-        "https://openalex.org/W1990315216",
-        "https://openalex.org/W4288066876",
-        "https://openalex.org/W4318071656",
-        "https://openalex.org/W2411580022",
-        "https://openalex.org/W4280617006",
-        "https://openalex.org/W1979762151",
-        "https://openalex.org/W2801965704",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3186179742",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W4286669150",
-        "https://openalex.org/W4281291878",
-        "https://openalex.org/W3039124487",
-        "https://openalex.org/W2903983817",
-        "https://openalex.org/W2901613208",
-        "https://openalex.org/W4220933909",
-        "https://openalex.org/W2952654989",
-        "https://openalex.org/W2117407746",
-        "https://openalex.org/W4242765109",
-        "https://openalex.org/W4319298372",
-        "https://openalex.org/W3093053585",
-        "https://openalex.org/W2131562240",
-        "https://openalex.org/W2049349724",
-        "https://openalex.org/W2188290066",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W3191896067",
-        "https://openalex.org/W4200552574",
-        "https://openalex.org/W4225868104",
-        "https://openalex.org/W4225438928",
-        "https://openalex.org/W2896457183"
-    ],
-    "abstract": "Abstract Predicting protein-protein interactions (PPIs) is vital for elucidating fundamental biology, designing peptide therapeutics, and for high-throughput protein annotation. This is particularly relevant in the current biotechnology landscape characterized by the proliferation of protein generative models, which necessitate a high-throughput and generalized PPI predictor for proteins regardless of conventional motifs or known biological functions. Our work addresses this need and provides strong evidence of the utility and reliability of protein language models (pLMs) in learning the PPI objective. We demonstrated that with the use of a sizable balanced dataset, pLMs achieve state-of-the-art performance metrics in PPI prediction on diverse proteins. To generate a dataset that allows for the approximation of these conditions, we implemented a novel synthetic data generation scheme to augment BIOGRID and Negatome datasets. The enhancement of these datasets was then used to fine-tune ProtBERT for PPI prediction to develop a model that we call SYNTERACT (SYNThetic data-driven protein-protein intERACtion Transformer). Our results are compelling, demonstrating 92% accuracy on validated positive and negative interacting pairs derived from 50 different organisms, all of which were excluded from the training phase. In addition to the high metrics, secondary analysis revealed that our synthetic negative data was able to successfully mimic actual negative samples, further reinforcing the integrity of synthetic data additions to PPI datasets. Another notable discovery was the ease in which previously existing PPI datasets could be predicted with simplistic features, calling into question if they can actually inform PPI prediction. We find that the subcellular compartment bias inherent to the compilation of these datasets is learnable with deep learning methods and demonstrate that our approach is not burdened by this disadvantage.",
-    "full_text": null
+  "title": "Protein-Protein Interaction Prediction is Achievable with Large Language Models",
+  "url": "https://openalex.org/W4380153748",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4202182774",
+      "name": "Logan Hallee",
+      "affiliations": [
+        "University of Delaware"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2123256871",
+      "name": "Jason P. Gleghorn",
+      "affiliations": [
+        "University of Delaware"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4202182774",
+      "name": "Logan Hallee",
+      "affiliations": [
+        "University of Delaware"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2123256871",
+      "name": "Jason P. Gleghorn",
+      "affiliations": [
+        "University of Delaware"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4283586679",
+    "https://openalex.org/W4200310257",
+    "https://openalex.org/W4322490174",
+    "https://openalex.org/W4283788620",
+    "https://openalex.org/W2899189869",
+    "https://openalex.org/W4200025610",
+    "https://openalex.org/W1990315216",
+    "https://openalex.org/W4288066876",
+    "https://openalex.org/W4318071656",
+    "https://openalex.org/W2411580022",
+    "https://openalex.org/W4280617006",
+    "https://openalex.org/W1979762151",
+    "https://openalex.org/W2801965704",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3186179742",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W4286669150",
+    "https://openalex.org/W4281291878",
+    "https://openalex.org/W3039124487",
+    "https://openalex.org/W2903983817",
+    "https://openalex.org/W2901613208",
+    "https://openalex.org/W4220933909",
+    "https://openalex.org/W2952654989",
+    "https://openalex.org/W2117407746",
+    "https://openalex.org/W4242765109",
+    "https://openalex.org/W4319298372",
+    "https://openalex.org/W3093053585",
+    "https://openalex.org/W2131562240",
+    "https://openalex.org/W2049349724",
+    "https://openalex.org/W2188290066",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W3191896067",
+    "https://openalex.org/W4200552574",
+    "https://openalex.org/W4225868104",
+    "https://openalex.org/W4225438928",
+    "https://openalex.org/W2896457183"
+  ],
+  "abstract": "Abstract Predicting protein-protein interactions (PPIs) is vital for elucidating fundamental biology, designing peptide therapeutics, and for high-throughput protein annotation. This is particularly relevant in the current biotechnology landscape characterized by the proliferation of protein generative models, which necessitate a high-throughput and generalized PPI predictor for proteins regardless of conventional motifs or known biological functions. Our work addresses this need and provides strong evidence of the utility and reliability of protein language models (pLMs) in learning the PPI objective. We demonstrated that with the use of a sizable balanced dataset, pLMs achieve state-of-the-art performance metrics in PPI prediction on diverse proteins. To generate a dataset that allows for the approximation of these conditions, we implemented a novel synthetic data generation scheme to augment BIOGRID and Negatome datasets. The enhancement of these datasets was then used to fine-tune ProtBERT for PPI prediction to develop a model that we call SYNTERACT (SYNThetic data-driven protein-protein intERACtion Transformer). Our results are compelling, demonstrating 92% accuracy on validated positive and negative interacting pairs derived from 50 different organisms, all of which were excluded from the training phase. In addition to the high metrics, secondary analysis revealed that our synthetic negative data was able to successfully mimic actual negative samples, further reinforcing the integrity of synthetic data additions to PPI datasets. Another notable discovery was the ease in which previously existing PPI datasets could be predicted with simplistic features, calling into question if they can actually inform PPI prediction. We find that the subcellular compartment bias inherent to the compilation of these datasets is learnable with deep learning methods and demonstrate that our approach is not burdened by this disadvantage.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6532720923423767
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5131476521492004
+    },
+    {
+      "name": "Annotation",
+      "score": 0.5049508213996887
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.4507179856300354
+    },
+    {
+      "name": "Protein–protein interaction",
+      "score": 0.43800705671310425
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4370861053466797
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3858826160430908
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3614426851272583
+    },
+    {
+      "name": "Biology",
+      "score": 0.2322501242160797
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    }
+  ]
 }

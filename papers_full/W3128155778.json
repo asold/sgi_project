@@ -1,72 +1,135 @@
 {
-    "title": "NAST: Non-Autoregressive Spatial-Temporal Transformer for Time Series Forecasting",
-    "url": "https://openalex.org/W3128155778",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1809448432",
-            "name": "Chen Kai",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1740008168",
-            "name": "Chen Guang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2059485497",
-            "name": "Xu Dan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1985481223",
-            "name": "Zhang Lijun",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2380019224",
-            "name": "Huang Yuyao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2204094391",
-            "name": "Knoll, Alois",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2964110616",
-        "https://openalex.org/W3054488230",
-        "https://openalex.org/W3049455300",
-        "https://openalex.org/W2754051771",
-        "https://openalex.org/W3016386342",
-        "https://openalex.org/W2970631142",
-        "https://openalex.org/W3033143467",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W2990004017",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W3000386982",
-        "https://openalex.org/W3036644940",
-        "https://openalex.org/W3113067059",
-        "https://openalex.org/W3097237405",
-        "https://openalex.org/W2903871660",
-        "https://openalex.org/W3002709689",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2970832665",
-        "https://openalex.org/W2894821558",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W2964089333",
-        "https://openalex.org/W3093963693",
-        "https://openalex.org/W3035574168",
-        "https://openalex.org/W3101467051",
-        "https://openalex.org/W2968393007",
-        "https://openalex.org/W2769735038",
-        "https://openalex.org/W3109635183",
-        "https://openalex.org/W3003987610",
-        "https://openalex.org/W2963818059",
-        "https://openalex.org/W2919624000"
-    ],
-    "abstract": "Although Transformer has made breakthrough success in widespread domains especially in Natural Language Processing (NLP), applying it to time series forecasting is still a great challenge. In time series forecasting, the autoregressive decoding of canonical Transformer models could introduce huge accumulative errors inevitably. Besides, utilizing Transformer to deal with spatial-temporal dependencies in the problem still faces tough difficulties.~To tackle these limitations, this work is the first attempt to propose a Non-Autoregressive Transformer architecture for time series forecasting, aiming at overcoming the time delay and accumulative error issues in the canonical Transformer. Moreover, we present a novel spatial-temporal attention mechanism, building a bridge by a learned temporal influence map to fill the gaps between the spatial and temporal attention, so that spatial and temporal dependencies can be processed integrally. Empirically, we evaluate our model on diversified ego-centric future localization datasets and demonstrate state-of-the-art performance on both real-time and accuracy.",
-    "full_text": null
+  "title": "NAST: Non-Autoregressive Spatial-Temporal Transformer for Time Series Forecasting",
+  "url": "https://openalex.org/W3128155778",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1809448432",
+      "name": "Chen Kai",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1740008168",
+      "name": "Chen Guang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2059485497",
+      "name": "Xu Dan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1985481223",
+      "name": "Zhang Lijun",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2380019224",
+      "name": "Huang Yuyao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2204094391",
+      "name": "Knoll, Alois",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2964110616",
+    "https://openalex.org/W3054488230",
+    "https://openalex.org/W3049455300",
+    "https://openalex.org/W2754051771",
+    "https://openalex.org/W3016386342",
+    "https://openalex.org/W2970631142",
+    "https://openalex.org/W3033143467",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W2990004017",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W3000386982",
+    "https://openalex.org/W3036644940",
+    "https://openalex.org/W3113067059",
+    "https://openalex.org/W3097237405",
+    "https://openalex.org/W2903871660",
+    "https://openalex.org/W3002709689",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2970832665",
+    "https://openalex.org/W2894821558",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W2964089333",
+    "https://openalex.org/W3093963693",
+    "https://openalex.org/W3035574168",
+    "https://openalex.org/W3101467051",
+    "https://openalex.org/W2968393007",
+    "https://openalex.org/W2769735038",
+    "https://openalex.org/W3109635183",
+    "https://openalex.org/W3003987610",
+    "https://openalex.org/W2963818059",
+    "https://openalex.org/W2919624000"
+  ],
+  "abstract": "Although Transformer has made breakthrough success in widespread domains especially in Natural Language Processing (NLP), applying it to time series forecasting is still a great challenge. In time series forecasting, the autoregressive decoding of canonical Transformer models could introduce huge accumulative errors inevitably. Besides, utilizing Transformer to deal with spatial-temporal dependencies in the problem still faces tough difficulties.~To tackle these limitations, this work is the first attempt to propose a Non-Autoregressive Transformer architecture for time series forecasting, aiming at overcoming the time delay and accumulative error issues in the canonical Transformer. Moreover, we present a novel spatial-temporal attention mechanism, building a bridge by a learned temporal influence map to fill the gaps between the spatial and temporal attention, so that spatial and temporal dependencies can be processed integrally. Empirically, we evaluate our model on diversified ego-centric future localization datasets and demonstrate state-of-the-art performance on both real-time and accuracy.",
+  "full_text": null,
+  "topic": "Autoregressive model",
+  "concepts": [
+    {
+      "name": "Autoregressive model",
+      "score": 0.845557451248169
+    },
+    {
+      "name": "Series (stratigraphy)",
+      "score": 0.5638751983642578
+    },
+    {
+      "name": "Time series",
+      "score": 0.5585553050041199
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49761250615119934
+    },
+    {
+      "name": "STAR model",
+      "score": 0.45722073316574097
+    },
+    {
+      "name": "Econometrics",
+      "score": 0.44878649711608887
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4430016875267029
+    },
+    {
+      "name": "Autoregressive integrated moving average",
+      "score": 0.31025588512420654
+    },
+    {
+      "name": "Economics",
+      "score": 0.22827744483947754
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.13364195823669434
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1307910978794098
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.09592285752296448
+    },
+    {
+      "name": "Geology",
+      "score": 0.07511648535728455
+    },
+    {
+      "name": "Voltage",
+      "score": 0.04722386598587036
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

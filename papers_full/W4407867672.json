@@ -1,69 +1,148 @@
 {
-    "title": "Do protein language models learn phylogeny?",
-    "url": "https://openalex.org/W4407867672",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3156663219",
-            "name": "Sanjana Tule",
-            "affiliations": [
-                "University of Queensland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4211885633",
-            "name": "Gabriel Foley",
-            "affiliations": [
-                "University of Queensland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117652427",
-            "name": "Mikael Bodén",
-            "affiliations": [
-                "University of Queensland"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3005235420",
-        "https://openalex.org/W2031611770",
-        "https://openalex.org/W2163627198",
-        "https://openalex.org/W1888761835",
-        "https://openalex.org/W2078802219",
-        "https://openalex.org/W2055033601",
-        "https://openalex.org/W2100652878",
-        "https://openalex.org/W3115284089",
-        "https://openalex.org/W4307171449",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W4386860638",
-        "https://openalex.org/W3121000782",
-        "https://openalex.org/W4210494137",
-        "https://openalex.org/W4392235646",
-        "https://openalex.org/W4390590489",
-        "https://openalex.org/W3179485843",
-        "https://openalex.org/W4200222161",
-        "https://openalex.org/W3194729882",
-        "https://openalex.org/W4307068738",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W4400231442",
-        "https://openalex.org/W4404447386",
-        "https://openalex.org/W3095583226",
-        "https://openalex.org/W2160654481",
-        "https://openalex.org/W2973047874",
-        "https://openalex.org/W2277953252",
-        "https://openalex.org/W4307684269",
-        "https://openalex.org/W2046689939",
-        "https://openalex.org/W2963400886",
-        "https://openalex.org/W6843138171",
-        "https://openalex.org/W2097270746",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4392686654",
-        "https://openalex.org/W3211728297",
-        "https://openalex.org/W1583837637",
-        "https://openalex.org/W4296932880"
-    ],
-    "abstract": "Abstract Deep machine learning demonstrates a capacity to uncover evolutionary relationships directly from protein sequences, in effect internalising notions inherent to classical phylogenetic tree inference. We connect these two paradigms by assessing the capacity of protein-based language models (pLMs) to discern phylogenetic relationships without being explicitly trained to do so. We evaluate ESM2, ProtTrans, and MSA-Transformer relative to classical phylogenetic methods, while also considering sequence insertions and deletions (indels) across 114 Pfam datasets. The largest ESM2 model tends to outperform other pLMs (including the multimodal ESM3) by recovering phylogenetic relationships among homologous protein sequences in both low- and high-gap settings. pLMs agree with conventional phylogenetic methods in general, but more so for protein families with fewer implied indels, highlighting indels as a key factor differentiating classical phylogenetics from pLMs. We find that pLMs preferentially capture broader as opposed to finer evolutionary relationships within a specific protein family, where ESM2 has a sweet spot for highly divergent sequences, at remote distance. Less than 10% of neurons are sufficient to broadly recapitulate classical phylogenetic distances; when used in isolation, the difference between the paradigms is further diminished. We show these neurons are polysemantic, shared among different homologous families but never fully overlapping. We highlight the potential of ESM2 as a complementary tool for phylogenetic analysis, especially when extending to remote homologs that are difficult to align and imply complex histories of insertions and deletions. Implementations of analyses are available at https://github.com/santule/pLMEvo.",
-    "full_text": null
+  "title": "Do protein language models learn phylogeny?",
+  "url": "https://openalex.org/W4407867672",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3156663219",
+      "name": "Sanjana Tule",
+      "affiliations": [
+        "University of Queensland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4211885633",
+      "name": "Gabriel Foley",
+      "affiliations": [
+        "University of Queensland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117652427",
+      "name": "Mikael Bodén",
+      "affiliations": [
+        "University of Queensland"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3005235420",
+    "https://openalex.org/W2031611770",
+    "https://openalex.org/W2163627198",
+    "https://openalex.org/W1888761835",
+    "https://openalex.org/W2078802219",
+    "https://openalex.org/W2055033601",
+    "https://openalex.org/W2100652878",
+    "https://openalex.org/W3115284089",
+    "https://openalex.org/W4307171449",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W4386860638",
+    "https://openalex.org/W3121000782",
+    "https://openalex.org/W4210494137",
+    "https://openalex.org/W4392235646",
+    "https://openalex.org/W4390590489",
+    "https://openalex.org/W3179485843",
+    "https://openalex.org/W4200222161",
+    "https://openalex.org/W3194729882",
+    "https://openalex.org/W4307068738",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W4400231442",
+    "https://openalex.org/W4404447386",
+    "https://openalex.org/W3095583226",
+    "https://openalex.org/W2160654481",
+    "https://openalex.org/W2973047874",
+    "https://openalex.org/W2277953252",
+    "https://openalex.org/W4307684269",
+    "https://openalex.org/W2046689939",
+    "https://openalex.org/W2963400886",
+    "https://openalex.org/W6843138171",
+    "https://openalex.org/W2097270746",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4392686654",
+    "https://openalex.org/W3211728297",
+    "https://openalex.org/W1583837637",
+    "https://openalex.org/W4296932880"
+  ],
+  "abstract": "Abstract Deep machine learning demonstrates a capacity to uncover evolutionary relationships directly from protein sequences, in effect internalising notions inherent to classical phylogenetic tree inference. We connect these two paradigms by assessing the capacity of protein-based language models (pLMs) to discern phylogenetic relationships without being explicitly trained to do so. We evaluate ESM2, ProtTrans, and MSA-Transformer relative to classical phylogenetic methods, while also considering sequence insertions and deletions (indels) across 114 Pfam datasets. The largest ESM2 model tends to outperform other pLMs (including the multimodal ESM3) by recovering phylogenetic relationships among homologous protein sequences in both low- and high-gap settings. pLMs agree with conventional phylogenetic methods in general, but more so for protein families with fewer implied indels, highlighting indels as a key factor differentiating classical phylogenetics from pLMs. We find that pLMs preferentially capture broader as opposed to finer evolutionary relationships within a specific protein family, where ESM2 has a sweet spot for highly divergent sequences, at remote distance. Less than 10% of neurons are sufficient to broadly recapitulate classical phylogenetic distances; when used in isolation, the difference between the paradigms is further diminished. We show these neurons are polysemantic, shared among different homologous families but never fully overlapping. We highlight the potential of ESM2 as a complementary tool for phylogenetic analysis, especially when extending to remote homologs that are difficult to align and imply complex histories of insertions and deletions. Implementations of analyses are available at https://github.com/santule/pLMEvo.",
+  "full_text": null,
+  "topic": "Phylogenetic tree",
+  "concepts": [
+    {
+      "name": "Phylogenetic tree",
+      "score": 0.8761427998542786
+    },
+    {
+      "name": "Indel",
+      "score": 0.762312114238739
+    },
+    {
+      "name": "Phylogenetics",
+      "score": 0.654175341129303
+    },
+    {
+      "name": "Biology",
+      "score": 0.5568476915359497
+    },
+    {
+      "name": "Inference",
+      "score": 0.448426753282547
+    },
+    {
+      "name": "Multiple sequence alignment",
+      "score": 0.43043118715286255
+    },
+    {
+      "name": "Evolutionary biology",
+      "score": 0.4289167821407318
+    },
+    {
+      "name": "Protein superfamily",
+      "score": 0.42141252756118774
+    },
+    {
+      "name": "Sequence alignment",
+      "score": 0.4193764626979828
+    },
+    {
+      "name": "Protein family",
+      "score": 0.41227686405181885
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3883364200592041
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.33707761764526367
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3352913558483124
+    },
+    {
+      "name": "Genetics",
+      "score": 0.3204066753387451
+    },
+    {
+      "name": "Computer science",
+      "score": 0.2754408121109009
+    },
+    {
+      "name": "Gene",
+      "score": 0.16202712059020996
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.1363946795463562
+    },
+    {
+      "name": "Single-nucleotide polymorphism",
+      "score": 0.0
+    },
+    {
+      "name": "Genotype",
+      "score": 0.0
+    }
+  ]
 }

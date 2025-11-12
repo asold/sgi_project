@@ -1,58 +1,149 @@
 {
-    "title": "Authorship Attribution Using a Neural Network Language Model",
-    "url": "https://openalex.org/W2281063384",
-    "year": 2016,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2169184002",
-            "name": "Zhenhao Ge",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105495633",
-            "name": "Yufang Sun",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1936026391",
-            "name": "Mark Smith",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2169184002",
-            "name": "Zhenhao Ge",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105495633",
-            "name": "Yufang Sun",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1936026391",
-            "name": "Mark Smith",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6680532216",
-        "https://openalex.org/W1602390003",
-        "https://openalex.org/W2180101149",
-        "https://openalex.org/W6607333740",
-        "https://openalex.org/W6629804754",
-        "https://openalex.org/W2108557656",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W2998704965",
-        "https://openalex.org/W1746819321",
-        "https://openalex.org/W4211049957",
-        "https://openalex.org/W179875071"
-    ],
-    "abstract": "In practice, training language models for individual authors is often expensive because of limited data resources. In such cases, Neural Network Language Models (NNLMs), generally outperform the traditional non-parametric N-gram models. Here we investigate the performance of a feed-forward NNLM on an authorship attribution problem, with moderate author set size and relatively limited data. We also consider how the text topics impact performance. Compared with a well-constructed N-gram baseline method with Kneser-Ney smoothing, the proposed method achieves nearly 2.5% reduction in perplexity and increases author classification accuracy by 3.43% on average, given as few as 5 test sentences. The performance is very competitive with the state of the art in terms of accuracy and demand on test data.",
-    "full_text": "Authorship Attribution Using a\nNeural Network Language Model\nZhenhao Ge, Y ufang Sun and Mark J.T . Smith\nSchool of Electrical and Computer Engineering, Purdue University\n465 Northwestern Ave, West Lafayette, Indiana, USA, 47907-2035\nEmails: {zge, sun361, mjts}@purdue.edu, Phone: +1 (317) 457-9348\nAbstract\nIn practice, training language models for individual authors\nis often expensive because of limited data resources. In\nsuch cases, Neural Network Language Models (NNLMs),\ngenerally outperform the traditional non-parametric N-gram\nmodels. Here we investigate the performance of a feed-\nforward NNLM on an authorship attribution problem, with\nmoderate author set size and relatively limited data. We\nalso consider how the text topics impact performance. Com-\npared with a well-constructed N-gram baseline method with\nKneser-Ney smoothing, the proposed method achieves nearly\n2.5% reduction in perplexity and increases author classiﬁca-\ntion accuracy by 3.43% on average, given as few as 5 test\nsentences. The performance is very competitive with the\nstate of the art in terms of accuracy and demand on test\ndata. The source code, preprocessed datasets, a detailed\ndescription of the methodology and results are available at\nhttps://github.com/zge/authorship-attribution.\nIntroduction\nAuthorship attribution refers to identifying authors from\ntexts by their unique textual features. It is challenging\nsince the author’s style may vary by topics, mood and\nenvironment. Many methods have been explored to ad-\ndress this problem, such as Latent Dirichlet Allocation for\ntopic modeling (Seroussi, Zukerman, and Bohnert 2011)\nand Naive Bayes for text classiﬁcation (Coyotl-Morales et\nal. 2006). Regarding language modeling methods, there\nis mixed advocacy for the conventional N-gram methods\n(Keˇselj et al. 2003) and methods using more compact and\ndistributed representations, like Neural Network Language\nModels (NNLMs), which was claimed to capture semantics\nbetter with limited training data (Bengio et al. 2003).\nMost NNLM toolkits (Mikolov et al. 2010) are designed\nfor recurrent NNLMs which are better for capturing com-\nplex and longer text patterns and require more training data.\nIn contrast, the feed-forward NNLM framework we pro-\nposed is less computationally expensive and more suitable\nfor language modeling with limited data. The database is\ncomposed of transcripts of 16 courses from Coursera, col-\nlected one sentence per line into a text ﬁle for each course.\nTo reduce the inﬂuence from text topics, courses were all\nCopyright c⃝ 2016, Association for the Advancement of Artiﬁcial\nIntelligence (www.aaai.org). All rights reserved.\nselected from science and engineering ﬁelds, such as Al-\ngorithm, DSP, Data Mining, Machine Learning, etc. There\nare 8000+ sentences/course and about 20 words/sentence on\naverage. The author vocabulary sizes varies from 3000 to\n9000. After stemming with Porter’s algorithm and pruning\nwords with frequency less than 1/10\n5, they are reduced to\na range from 1800 to 2700, with average size around 2000.\nFig. 1 shows the vocabulary size for each course, under var-\nious conditions and the database coverage with the most fre-\nquent 500, 1000, 2000 words after stemming and pruning.\n0 2 4 6 8 10 12 14 16\n0\n5000\n10000\nDataset index (C)\nVocabulary size (V)\nVocabulary size for each dataset\n \n \nVoriginal Vstemmed Vstemmed−pruned\n0 2 4 6 8 10 12 14 16\n0.8\n0.85\n0.9\n0.95\n1\nDataset index (C)\nDatabase Coverage (DC)\nDatabase coverage from most frequent k words for each dataset\nstemmed & pruned datasets, k = 500, 1000, 2000\n \n \nDC2000 DC1000 DC500\nFigure 1: Data vocabulary sizes and word coverages\nNeural Network Language Model (NNLM)\nSimilar to N-gram methods, the NNLM is also used to an-\nswer one of the fundamental questions in language model-\ning: predicting the best target word W\n∗, given a context of\nN − 1 words. The target word is typically the last word\nwithin context size N. Fig. 2 shows the structure of the\nproposed NNLM with multinomial classiﬁcation cost func-\ntion C = −∑\nV tj log yj ,j ∈ V , where V is the vocabulary\nsize, yj and tj are the ﬁnal output and the target label. This\nNNLM setup contains 4 types of layers. The word layer\ncontains N − 1 input words represented by V -dimensional\nindex vectors with V − 1 “0”s and one “1” positioned in\na different location to differentiate it from all other words.\nWords are then transformed to their distributed representa-\ntion and concatenated in the embedding layer. Outputs from\nthis layer forward propagate to the hidden sigmoid layer,\nthen softmax layer to predict the probabilities of the possi-\nble target words. Weights/biases between layers are initiated\nrandomly and with zeros respectively, and their error deriva-\ntives are computed through backward propagation. The net-\nwork is iteratively updated with model training parameters.\nProceedings of the Thirtieth AAAI Conference on Artificial Intelligence (AAAI-16)\n4212\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13௜ሻ\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13ேሻ\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13ଵሻ\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13ڮڮ\ng3/g17/g13/g13/g14/g19\u0003/g5/g11/g27/g14/g22\u0003/g28/g23/g17/g16/g18/g20/g17/g13/g29\n୵୭୰ୢିୣ୫ୠ୵୭୰ୢିୣ୫ୠ\nୣ୫ୠି୦୧ୢ୦୧ୢୢୣ୬\n/g6/g25/g24/g21/g25/g24\u0003/g5/g11/g27/g14/g22\u0003/g28/g8/g20/g15/g24/g18/g11/g26/g29\n୦୧ୢି୭୳୲୭୳୲୮୳୲\n/g2/g18/g12/g14/g13/g13/g17/g19/g16\u0003/g5/g11/g27/g14/g22\n/g7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13݅\ng7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13ܰ\ng7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13\u0003ͳ\n/g7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13ڮڮ\ng4/g19/g13/g14/g26\u0003/g20/g15\u0003/g9/g11/g22/g16/g14/g24\u0003/g10/g20/g22/g13ݐ\nܫאݐ݅\nFigure 2: A feed-forward NNLM setup (I: index, W: word,\nN: number of context words, W : weight, b: bias)\nIn implementation, the processed text data for each course\nare randomly split into training, validation, and test sets\nwith ratio 8:1:1. This segmentation is performed 10 times\nwith different randomization seeds, so the mean/variance of\nNNLM performance can then be measured. We optimized\na 4-gram NNLM with mini-batch training through 10 to 20\nepochs for each course. The model parameters, such as num-\nber of nodes in each layer, learning rate, and momentum are\ncustomized for obtaining the best individual models.\nClassiﬁcation with Perplexity Measurement\nDenote Wn\n1 as a word sequence (W1, W2,..., WN ) and\nP (Wn\n1 ) as the probability of Wn\n1 given a LM, perplexity\nis an intrinsic measurement of the LM ﬁtness deﬁned by:\nPP( Wn\n1 )= P (Wn\n1 )−1\nn (1)\nUsing Markov chain theory, P (Wn\n1 ) can be approximated\nby the probability of the closest N words P (Wn\nn−N+1),s o\nPP( Wn\n1 ) can be approximated by\nPP( Wn\nn−N+1)=(\nn∏\nk=1\nP (Wk|Wk−1\nk−N+1))−1/n (2)\nThe mean perplexity of applying 4-gram NNLMs to the\ntest sets are 67.3 ±2.4. This is lower (better) than the tradi-\ntional N-gram method (69.0±2.4 with 4-gram SRILM). The\nclassiﬁcation is performed by ﬁnding the author with his/her\nNNLM that maximizes the accumulative perplexity of the\ntest sentences. By randomly selecting 1 to 20 test sentences\nfrom the test set, Fig. 3 shows the 16-way classiﬁcation ac-\ncuracy using 3 methods, for one particular course and for all\ncourses on average. There are 2 courses from the same in-\nstructor, intentionally added to investigate the topic impact\non accuracy. They are excluded when computing the aver-\nage accuracy in Fig. 3. Similarly, the accuracies for courses\nusing two methods with differing text lengths are compared\nin Fig. 4. Both ﬁgures show the NNLM method is slightly\nbetter than the SRI baselines at the 4-gram level. A classi-\nﬁcation confusion matrix (not included due to space limits)\nwas also computed to show the similarity between authors.\nThe results show higher confusion on similar courses, which\nindicates the topic does impact accuracy. The NNLM has\nhigher confusion values than the SRI baseline on the two\ndifferent courses from the same instructor, so it is more bi-\nased toward the author rather than the topic in that sense.\n2 4 6 8 10 12 14 16 18 200.4\n0.6\n0.8\n1\nNo. of sentences\nAvgerage Accuracy\n1−of−16 Classfication Accuracy vs. Text Length, Course ID: 3\n \n \nunigram (SRI)\n4gram (SRI)\n4gram (NNLM)\n2 4 6 8 10 12 14 16 18 200.6\n0.7\n0.8\n0.9\n1\nNo. of sentences\nCourse Avgerage Accuracy\n1−of−16 Course Average Classfication Accuracy vs. Text Length\n \n \n4gram (SRI)\n4gram (NNLM)\nFigure 3: Individual and mean accuracies vs. text length in\nterms of the number of sentences\n0 5 10 15\n0.6\n0.8\n1\nDataset index (C)\nAccuracy\nSRI 4−gram\n \n \n10 sentences 5 sentences 1 sentence\n0 5 10 15\n0.6\n0.8\n1\nDataset index (C)\nAccuracy\nNNLM 4−gram\n \n \nFigure 4: Accuracies at 3 stages differed by text length for\n14 courses (2 courses from the same instructor are excluded)\n.\nConclusion and Future Work\nThe NNLM-based work achieves promising results com-\npared with the N-gram baseline. The nearly perfect accura-\ncies given 10+ test sentences are competitive with the state-\nof-the-art, which achieved accuracy 95%+ on a similar au-\nthor size (Coyotl-Morales et al. 2006), or80%+ with tens of\nauthors and small datasets (Seroussi, Zukerman, and Bohn-\nert 2011). However, it may also indicate the task is not chal-\nlenging enough, probably due to the training/test data con-\nsistency and the topic distinction. In the future, datasets with\nmore authors taken from book collections or transcribed\nspeeches can be explored. We can also use a nonlinear\nfunction optimization scheme with conjugate gradient (Ras-\nmussen 2006), to automatically selects the best training pa-\nrameters and improve training efﬁciency. To compensate for\nthe small training set, LMs may also be trained with multiple\nauthors and then adapted to the individuals.\nReferences\nBengio, Y .; Ducharme, R.; Vincent, P.; and Janvin, C. 2003. A neu-\nral probabilistic language model.The Journal of Machine Learning\nResearch 3:1137–1155.\nCoyotl-Morales, R. M.; Villase ˜nor-Pineda, L.; Montes-y G ´omez,\nM.; and Rosso, P. 2006. Authorship attribution using word se-\nquences. In Progress in Pattern Recognition, Image Analysis and\nApplications. Springer.\nKeˇselj, V .; Peng, F.; Cercone, N.; and Thomas, C. 2003. N-gram-\nbased author proﬁles for authorship attribution. In P ACLING.\nMikolov, T.; Karaﬁ´at, M.; Burget, L.; Cernock `y, J.; and Khudan-\npur, S. 2010. Recurrent neural network based language model. In\nINTERSPEECH 2010.\nRasmussen, C. E. 2006. Gaussian processes for machine learning.\nSeroussi, Y .; Zukerman, I.; and Bohnert, F. 2011. Authorship\nattribution with latent dirichlet allocation. In CoNLL.\n4213"
+  "title": "Authorship Attribution Using a Neural Network Language Model",
+  "url": "https://openalex.org/W2281063384",
+  "year": 2016,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2169184002",
+      "name": "Zhenhao Ge",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105495633",
+      "name": "Yufang Sun",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1936026391",
+      "name": "Mark Smith",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2169184002",
+      "name": "Zhenhao Ge",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105495633",
+      "name": "Yufang Sun",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1936026391",
+      "name": "Mark Smith",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6680532216",
+    "https://openalex.org/W1602390003",
+    "https://openalex.org/W2180101149",
+    "https://openalex.org/W6607333740",
+    "https://openalex.org/W6629804754",
+    "https://openalex.org/W2108557656",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W2998704965",
+    "https://openalex.org/W1746819321",
+    "https://openalex.org/W4211049957",
+    "https://openalex.org/W179875071"
+  ],
+  "abstract": "In practice, training language models for individual authors is often expensive because of limited data resources. In such cases, Neural Network Language Models (NNLMs), generally outperform the traditional non-parametric N-gram models. Here we investigate the performance of a feed-forward NNLM on an authorship attribution problem, with moderate author set size and relatively limited data. We also consider how the text topics impact performance. Compared with a well-constructed N-gram baseline method with Kneser-Ney smoothing, the proposed method achieves nearly 2.5% reduction in perplexity and increases author classification accuracy by 3.43% on average, given as few as 5 test sentences. The performance is very competitive with the state of the art in terms of accuracy and demand on test data.",
+  "full_text": "Authorship Attribution Using a\nNeural Network Language Model\nZhenhao Ge, Y ufang Sun and Mark J.T . Smith\nSchool of Electrical and Computer Engineering, Purdue University\n465 Northwestern Ave, West Lafayette, Indiana, USA, 47907-2035\nEmails: {zge, sun361, mjts}@purdue.edu, Phone: +1 (317) 457-9348\nAbstract\nIn practice, training language models for individual authors\nis often expensive because of limited data resources. In\nsuch cases, Neural Network Language Models (NNLMs),\ngenerally outperform the traditional non-parametric N-gram\nmodels. Here we investigate the performance of a feed-\nforward NNLM on an authorship attribution problem, with\nmoderate author set size and relatively limited data. We\nalso consider how the text topics impact performance. Com-\npared with a well-constructed N-gram baseline method with\nKneser-Ney smoothing, the proposed method achieves nearly\n2.5% reduction in perplexity and increases author classiﬁca-\ntion accuracy by 3.43% on average, given as few as 5 test\nsentences. The performance is very competitive with the\nstate of the art in terms of accuracy and demand on test\ndata. The source code, preprocessed datasets, a detailed\ndescription of the methodology and results are available at\nhttps://github.com/zge/authorship-attribution.\nIntroduction\nAuthorship attribution refers to identifying authors from\ntexts by their unique textual features. It is challenging\nsince the author’s style may vary by topics, mood and\nenvironment. Many methods have been explored to ad-\ndress this problem, such as Latent Dirichlet Allocation for\ntopic modeling (Seroussi, Zukerman, and Bohnert 2011)\nand Naive Bayes for text classiﬁcation (Coyotl-Morales et\nal. 2006). Regarding language modeling methods, there\nis mixed advocacy for the conventional N-gram methods\n(Keˇselj et al. 2003) and methods using more compact and\ndistributed representations, like Neural Network Language\nModels (NNLMs), which was claimed to capture semantics\nbetter with limited training data (Bengio et al. 2003).\nMost NNLM toolkits (Mikolov et al. 2010) are designed\nfor recurrent NNLMs which are better for capturing com-\nplex and longer text patterns and require more training data.\nIn contrast, the feed-forward NNLM framework we pro-\nposed is less computationally expensive and more suitable\nfor language modeling with limited data. The database is\ncomposed of transcripts of 16 courses from Coursera, col-\nlected one sentence per line into a text ﬁle for each course.\nTo reduce the inﬂuence from text topics, courses were all\nCopyright c⃝ 2016, Association for the Advancement of Artiﬁcial\nIntelligence (www.aaai.org). All rights reserved.\nselected from science and engineering ﬁelds, such as Al-\ngorithm, DSP, Data Mining, Machine Learning, etc. There\nare 8000+ sentences/course and about 20 words/sentence on\naverage. The author vocabulary sizes varies from 3000 to\n9000. After stemming with Porter’s algorithm and pruning\nwords with frequency less than 1/10\n5, they are reduced to\na range from 1800 to 2700, with average size around 2000.\nFig. 1 shows the vocabulary size for each course, under var-\nious conditions and the database coverage with the most fre-\nquent 500, 1000, 2000 words after stemming and pruning.\n0 2 4 6 8 10 12 14 16\n0\n5000\n10000\nDataset index (C)\nVocabulary size (V)\nVocabulary size for each dataset\n \n \nVoriginal Vstemmed Vstemmed−pruned\n0 2 4 6 8 10 12 14 16\n0.8\n0.85\n0.9\n0.95\n1\nDataset index (C)\nDatabase Coverage (DC)\nDatabase coverage from most frequent k words for each dataset\nstemmed & pruned datasets, k = 500, 1000, 2000\n \n \nDC2000 DC1000 DC500\nFigure 1: Data vocabulary sizes and word coverages\nNeural Network Language Model (NNLM)\nSimilar to N-gram methods, the NNLM is also used to an-\nswer one of the fundamental questions in language model-\ning: predicting the best target word W\n∗, given a context of\nN − 1 words. The target word is typically the last word\nwithin context size N. Fig. 2 shows the structure of the\nproposed NNLM with multinomial classiﬁcation cost func-\ntion C = −∑\nV tj log yj ,j ∈ V , where V is the vocabulary\nsize, yj and tj are the ﬁnal output and the target label. This\nNNLM setup contains 4 types of layers. The word layer\ncontains N − 1 input words represented by V -dimensional\nindex vectors with V − 1 “0”s and one “1” positioned in\na different location to differentiate it from all other words.\nWords are then transformed to their distributed representa-\ntion and concatenated in the embedding layer. Outputs from\nthis layer forward propagate to the hidden sigmoid layer,\nthen softmax layer to predict the probabilities of the possi-\nble target words. Weights/biases between layers are initiated\nrandomly and with zeros respectively, and their error deriva-\ntives are computed through backward propagation. The net-\nwork is iteratively updated with model training parameters.\nProceedings of the Thirtieth AAAI Conference on Artificial Intelligence (AAAI-16)\n4212\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13௜ሻ\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13ேሻ\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13ଵሻ\n/g4/g19/g13/g14/g26\u0003/g20/g15\u0003/g1/g20/g19/g24/g14/g26/g24\u0003\n/g10/g20/g22/g13ڮڮ\ng3/g17/g13/g13/g14/g19\u0003/g5/g11/g27/g14/g22\u0003/g28/g23/g17/g16/g18/g20/g17/g13/g29\n୵୭୰ୢିୣ୫ୠ୵୭୰ୢିୣ୫ୠ\nୣ୫ୠି୦୧ୢ୦୧ୢୢୣ୬\n/g6/g25/g24/g21/g25/g24\u0003/g5/g11/g27/g14/g22\u0003/g28/g8/g20/g15/g24/g18/g11/g26/g29\n୦୧ୢି୭୳୲୭୳୲୮୳୲\n/g2/g18/g12/g14/g13/g13/g17/g19/g16\u0003/g5/g11/g27/g14/g22\n/g7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13݅\ng7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13ܰ\ng7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13\u0003ͳ\n/g7/g14/g21/g22/g14/g23/g14/g19/g24/g11/g24/g17/g20/g19\u0003\n/g20/g15\u0003/g10/g20/g22/g13ڮڮ\ng4/g19/g13/g14/g26\u0003/g20/g15\u0003/g9/g11/g22/g16/g14/g24\u0003/g10/g20/g22/g13ݐ\nܫאݐ݅\nFigure 2: A feed-forward NNLM setup (I: index, W: word,\nN: number of context words, W : weight, b: bias)\nIn implementation, the processed text data for each course\nare randomly split into training, validation, and test sets\nwith ratio 8:1:1. This segmentation is performed 10 times\nwith different randomization seeds, so the mean/variance of\nNNLM performance can then be measured. We optimized\na 4-gram NNLM with mini-batch training through 10 to 20\nepochs for each course. The model parameters, such as num-\nber of nodes in each layer, learning rate, and momentum are\ncustomized for obtaining the best individual models.\nClassiﬁcation with Perplexity Measurement\nDenote Wn\n1 as a word sequence (W1, W2,..., WN ) and\nP (Wn\n1 ) as the probability of Wn\n1 given a LM, perplexity\nis an intrinsic measurement of the LM ﬁtness deﬁned by:\nPP( Wn\n1 )= P (Wn\n1 )−1\nn (1)\nUsing Markov chain theory, P (Wn\n1 ) can be approximated\nby the probability of the closest N words P (Wn\nn−N+1),s o\nPP( Wn\n1 ) can be approximated by\nPP( Wn\nn−N+1)=(\nn∏\nk=1\nP (Wk|Wk−1\nk−N+1))−1/n (2)\nThe mean perplexity of applying 4-gram NNLMs to the\ntest sets are 67.3 ±2.4. This is lower (better) than the tradi-\ntional N-gram method (69.0±2.4 with 4-gram SRILM). The\nclassiﬁcation is performed by ﬁnding the author with his/her\nNNLM that maximizes the accumulative perplexity of the\ntest sentences. By randomly selecting 1 to 20 test sentences\nfrom the test set, Fig. 3 shows the 16-way classiﬁcation ac-\ncuracy using 3 methods, for one particular course and for all\ncourses on average. There are 2 courses from the same in-\nstructor, intentionally added to investigate the topic impact\non accuracy. They are excluded when computing the aver-\nage accuracy in Fig. 3. Similarly, the accuracies for courses\nusing two methods with differing text lengths are compared\nin Fig. 4. Both ﬁgures show the NNLM method is slightly\nbetter than the SRI baselines at the 4-gram level. A classi-\nﬁcation confusion matrix (not included due to space limits)\nwas also computed to show the similarity between authors.\nThe results show higher confusion on similar courses, which\nindicates the topic does impact accuracy. The NNLM has\nhigher confusion values than the SRI baseline on the two\ndifferent courses from the same instructor, so it is more bi-\nased toward the author rather than the topic in that sense.\n2 4 6 8 10 12 14 16 18 200.4\n0.6\n0.8\n1\nNo. of sentences\nAvgerage Accuracy\n1−of−16 Classfication Accuracy vs. Text Length, Course ID: 3\n \n \nunigram (SRI)\n4gram (SRI)\n4gram (NNLM)\n2 4 6 8 10 12 14 16 18 200.6\n0.7\n0.8\n0.9\n1\nNo. of sentences\nCourse Avgerage Accuracy\n1−of−16 Course Average Classfication Accuracy vs. Text Length\n \n \n4gram (SRI)\n4gram (NNLM)\nFigure 3: Individual and mean accuracies vs. text length in\nterms of the number of sentences\n0 5 10 15\n0.6\n0.8\n1\nDataset index (C)\nAccuracy\nSRI 4−gram\n \n \n10 sentences 5 sentences 1 sentence\n0 5 10 15\n0.6\n0.8\n1\nDataset index (C)\nAccuracy\nNNLM 4−gram\n \n \nFigure 4: Accuracies at 3 stages differed by text length for\n14 courses (2 courses from the same instructor are excluded)\n.\nConclusion and Future Work\nThe NNLM-based work achieves promising results com-\npared with the N-gram baseline. The nearly perfect accura-\ncies given 10+ test sentences are competitive with the state-\nof-the-art, which achieved accuracy 95%+ on a similar au-\nthor size (Coyotl-Morales et al. 2006), or80%+ with tens of\nauthors and small datasets (Seroussi, Zukerman, and Bohn-\nert 2011). However, it may also indicate the task is not chal-\nlenging enough, probably due to the training/test data con-\nsistency and the topic distinction. In the future, datasets with\nmore authors taken from book collections or transcribed\nspeeches can be explored. We can also use a nonlinear\nfunction optimization scheme with conjugate gradient (Ras-\nmussen 2006), to automatically selects the best training pa-\nrameters and improve training efﬁciency. To compensate for\nthe small training set, LMs may also be trained with multiple\nauthors and then adapted to the individuals.\nReferences\nBengio, Y .; Ducharme, R.; Vincent, P.; and Janvin, C. 2003. A neu-\nral probabilistic language model.The Journal of Machine Learning\nResearch 3:1137–1155.\nCoyotl-Morales, R. M.; Villase ˜nor-Pineda, L.; Montes-y G ´omez,\nM.; and Rosso, P. 2006. Authorship attribution using word se-\nquences. In Progress in Pattern Recognition, Image Analysis and\nApplications. Springer.\nKeˇselj, V .; Peng, F.; Cercone, N.; and Thomas, C. 2003. N-gram-\nbased author proﬁles for authorship attribution. In P ACLING.\nMikolov, T.; Karaﬁ´at, M.; Burget, L.; Cernock `y, J.; and Khudan-\npur, S. 2010. Recurrent neural network based language model. In\nINTERSPEECH 2010.\nRasmussen, C. E. 2006. Gaussian processes for machine learning.\nSeroussi, Y .; Zukerman, I.; and Bohnert, F. 2011. Authorship\nattribution with latent dirichlet allocation. In CoNLL.\n4213",
+  "topic": "Perplexity",
+  "concepts": [
+    {
+      "name": "Perplexity",
+      "score": 0.963899552822113
+    },
+    {
+      "name": "Language model",
+      "score": 0.7433547377586365
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7235565185546875
+    },
+    {
+      "name": "Smoothing",
+      "score": 0.6277000904083252
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.5806983113288879
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5584892630577087
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5443857908248901
+    },
+    {
+      "name": "Test set",
+      "score": 0.5173284411430359
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.5065950155258179
+    },
+    {
+      "name": "Data set",
+      "score": 0.47421956062316895
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4478519558906555
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4416050612926483
+    },
+    {
+      "name": "Parametric statistics",
+      "score": 0.4286717474460602
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.42037928104400635
+    },
+    {
+      "name": "Statistics",
+      "score": 0.18346157670021057
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08437979221343994
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    }
+  ]
 }

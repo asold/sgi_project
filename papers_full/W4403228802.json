@@ -1,75 +1,122 @@
 {
-    "title": "Enhancing Large Language Model Comprehension of Material Phase Diagrams through Prompt Engineering and Benchmark Datasets",
-    "url": "https://openalex.org/W4403228802",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5013957492",
-            "name": "Yang Zha",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100704240",
-            "name": "Ying Li",
-            "affiliations": [
-                "Shanghai University of Engineering Science"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5109128292",
-            "name": "Xiao-Gang Lu",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4391136507",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W2963854351",
-        "https://openalex.org/W3034623328",
-        "https://openalex.org/W6811099185",
-        "https://openalex.org/W2604799547",
-        "https://openalex.org/W4392240262",
-        "https://openalex.org/W4395703766",
-        "https://openalex.org/W6853667637",
-        "https://openalex.org/W6809646742",
-        "https://openalex.org/W2244425009",
-        "https://openalex.org/W2104196136",
-        "https://openalex.org/W2164844441",
-        "https://openalex.org/W649527020",
-        "https://openalex.org/W2057185085",
-        "https://openalex.org/W2045138895",
-        "https://openalex.org/W4294699981",
-        "https://openalex.org/W1992123589",
-        "https://openalex.org/W3172653889",
-        "https://openalex.org/W4399022529",
-        "https://openalex.org/W4400181815",
-        "https://openalex.org/W4393372217",
-        "https://openalex.org/W3037831233",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W6837789219",
-        "https://openalex.org/W4385571076",
-        "https://openalex.org/W3122241445",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W4287891464",
-        "https://openalex.org/W4385570045",
-        "https://openalex.org/W2889056773",
-        "https://openalex.org/W2092506974",
-        "https://openalex.org/W2772324263",
-        "https://openalex.org/W2929465105",
-        "https://openalex.org/W4391451468",
-        "https://openalex.org/W7073782271",
-        "https://openalex.org/W4379089507",
-        "https://openalex.org/W4226031686",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W2179425537",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4280534475"
-    ],
-    "abstract": "Large Language Models (LLMs) excel in fields such as natural language understanding, generation, complex reasoning, and biomedicine. With advancements in materials science, traditional manual annotation methods for phase diagrams have become inadequate due to their time-consuming nature and limitations in updating thermodynamic databases. To overcome these challenges, we propose a framework based on instruction tuning, utilizing LLMs for automated end-to-end annotation of phase diagrams. High-quality phase diagram images and expert descriptions are collected from handbooks and then preprocessed to correct errors, remove redundancies, and enhance information. These preprocessed data form a golden dataset, from which a subset are used to train LLMs through hierarchical sampling. The fine-tuned LLM is then tested for automated phase diagram annotation. Results show that the fine-tuned model achieves a cosine similarity of 0.8737, improving phase diagram comprehension accuracy by 7% compared to untuned LLMs. To the best of our knowledge, this is the first paper to propose using LLMs for the automated annotation of phase diagrams, replacing traditional manual annotation methods and significantly enhancing efficiency and accuracy.",
-    "full_text": null
+  "title": "Enhancing Large Language Model Comprehension of Material Phase Diagrams through Prompt Engineering and Benchmark Datasets",
+  "url": "https://openalex.org/W4403228802",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5013957492",
+      "name": "Yang Zha",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100704240",
+      "name": "Ying Li",
+      "affiliations": [
+        "Shanghai University of Engineering Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5109128292",
+      "name": "Xiao-Gang Lu",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4391136507",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W2963854351",
+    "https://openalex.org/W3034623328",
+    "https://openalex.org/W6811099185",
+    "https://openalex.org/W2604799547",
+    "https://openalex.org/W4392240262",
+    "https://openalex.org/W4395703766",
+    "https://openalex.org/W6853667637",
+    "https://openalex.org/W6809646742",
+    "https://openalex.org/W2244425009",
+    "https://openalex.org/W2104196136",
+    "https://openalex.org/W2164844441",
+    "https://openalex.org/W649527020",
+    "https://openalex.org/W2057185085",
+    "https://openalex.org/W2045138895",
+    "https://openalex.org/W4294699981",
+    "https://openalex.org/W1992123589",
+    "https://openalex.org/W3172653889",
+    "https://openalex.org/W4399022529",
+    "https://openalex.org/W4400181815",
+    "https://openalex.org/W4393372217",
+    "https://openalex.org/W3037831233",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W6837789219",
+    "https://openalex.org/W4385571076",
+    "https://openalex.org/W3122241445",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W4287891464",
+    "https://openalex.org/W4385570045",
+    "https://openalex.org/W2889056773",
+    "https://openalex.org/W2092506974",
+    "https://openalex.org/W2772324263",
+    "https://openalex.org/W2929465105",
+    "https://openalex.org/W4391451468",
+    "https://openalex.org/W7073782271",
+    "https://openalex.org/W4379089507",
+    "https://openalex.org/W4226031686",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W2179425537",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4280534475"
+  ],
+  "abstract": "Large Language Models (LLMs) excel in fields such as natural language understanding, generation, complex reasoning, and biomedicine. With advancements in materials science, traditional manual annotation methods for phase diagrams have become inadequate due to their time-consuming nature and limitations in updating thermodynamic databases. To overcome these challenges, we propose a framework based on instruction tuning, utilizing LLMs for automated end-to-end annotation of phase diagrams. High-quality phase diagram images and expert descriptions are collected from handbooks and then preprocessed to correct errors, remove redundancies, and enhance information. These preprocessed data form a golden dataset, from which a subset are used to train LLMs through hierarchical sampling. The fine-tuned LLM is then tested for automated phase diagram annotation. Results show that the fine-tuned model achieves a cosine similarity of 0.8737, improving phase diagram comprehension accuracy by 7% compared to untuned LLMs. To the best of our knowledge, this is the first paper to propose using LLMs for the automated annotation of phase diagrams, replacing traditional manual annotation methods and significantly enhancing efficiency and accuracy.",
+  "full_text": null,
+  "topic": "Benchmark (surveying)",
+  "concepts": [
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.8100685477256775
+    },
+    {
+      "name": "Comprehension",
+      "score": 0.7139480113983154
+    },
+    {
+      "name": "Computer science",
+      "score": 0.570052981376648
+    },
+    {
+      "name": "Phase (matter)",
+      "score": 0.4823857843875885
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3307322859764099
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.32312560081481934
+    },
+    {
+      "name": "Programming language",
+      "score": 0.25780487060546875
+    },
+    {
+      "name": "Geography",
+      "score": 0.13997331261634827
+    },
+    {
+      "name": "Cartography",
+      "score": 0.10886195302009583
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.08602145314216614
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

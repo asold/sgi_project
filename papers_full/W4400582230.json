@@ -1,106 +1,149 @@
 {
-    "title": "ClarifyGPT: A Framework for Enhancing LLM-Based Code Generation via Requirements Clarification",
-    "url": "https://openalex.org/W4400582230",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5028315053",
-            "name": "Fangwen Mu",
-            "affiliations": [
-                "Institute of Software",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5014381743",
-            "name": "Lin Shi",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100326214",
-            "name": "Song Wang",
-            "affiliations": [
-                "York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010912592",
-            "name": "Zhuohao Yu",
-            "affiliations": [
-                "Institute of Software",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5052719394",
-            "name": "Binquan Zhang",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5055834767",
-            "name": "ChenXue Wang",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Harbin Institute of Technology",
-                "Institute of Software"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5014555533",
-            "name": "Shichao Liu",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100434820",
-            "name": "Qing Wang",
-            "affiliations": [
-                "Institute of Software",
-                "University of Chinese Academy of Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2955157382",
-        "https://openalex.org/W4224051134",
-        "https://openalex.org/W4360836968",
-        "https://openalex.org/W4286750487",
-        "https://openalex.org/W4317940234",
-        "https://openalex.org/W4366342667",
-        "https://openalex.org/W4286530331",
-        "https://openalex.org/W4224060952",
-        "https://openalex.org/W4366342672",
-        "https://openalex.org/W2084437982",
-        "https://openalex.org/W4324325724",
-        "https://openalex.org/W4281482237",
-        "https://openalex.org/W4281557260",
-        "https://openalex.org/W4291238279",
-        "https://openalex.org/W4384304865",
-        "https://openalex.org/W4376312043",
-        "https://openalex.org/W4226287673",
-        "https://openalex.org/W4376653844",
-        "https://openalex.org/W4367860052",
-        "https://openalex.org/W4384302749",
-        "https://openalex.org/W4310829078",
-        "https://openalex.org/W4320854935",
-        "https://openalex.org/W4212975704",
-        "https://openalex.org/W4283702402",
-        "https://openalex.org/W2908685617",
-        "https://openalex.org/W4383988989",
-        "https://openalex.org/W3208518372",
-        "https://openalex.org/W4312091822",
-        "https://openalex.org/W4281763794",
-        "https://openalex.org/W4391558462",
-        "https://openalex.org/W2097808034",
-        "https://openalex.org/W4310514998",
-        "https://openalex.org/W3101380159",
-        "https://openalex.org/W4311726857"
-    ],
-    "abstract": "Large Language Models (LLMs), such as ChatGPT, have demonstrated impressive capabilities in automatically generating code from provided natural language requirements. However, in real-world practice, it is inevitable that the requirements written by users might be ambiguous or insufficient. Current LLMs will directly generate programs according to those unclear requirements, regardless of interactive clarification, which will likely deviate from the original user intents. To bridge that gap, we introduce a novel framework named ClarifyGPT, which aims to enhance code generation by empowering LLMs with the ability to identify ambiguous requirements and ask targeted clarifying questions. Specifically, ClarifyGPT first detects whether a given requirement is ambiguous by performing a code consistency check. If it is ambiguous, ClarifyGPT prompts an LLM to generate targeted clarifying questions. After receiving question responses, ClarifyGPT refines the ambiguous requirement and inputs it into the same LLM to generate a final code solution. To evaluate our ClarifyGPT, we invite ten participants to use ClarifyGPT for code generation on two benchmarks: MBPP-sanitized and MBPP-ET. The results show that ClarifyGPT elevates the performance (Pass@1) of GPT-4 from 70.96% to 80.80% on MBPP-sanitized. Furthermore, to conduct large-scale automated evaluations of ClarifyGPT across different LLMs and benchmarks without requiring user participation, we introduce a high-fidelity simulation method to simulate user responses. The results demonstrate that ClarifyGPT can significantly enhance code generation performance compared to the baselines. In particular, ClarifyGPT improves the average performance of GPT-4 and ChatGPT across five benchmarks from 62.43% to 69.60% and from 54.32% to 62.37%, respectively. A human evaluation also confirms the effectiveness of ClarifyGPT in detecting ambiguous requirements and generating high-quality clarifying questions. We believe that ClarifyGPT can effectively facilitate the practical application of LLMs in real-world development environments.",
-    "full_text": null
+  "title": "ClarifyGPT: A Framework for Enhancing LLM-Based Code Generation via Requirements Clarification",
+  "url": "https://openalex.org/W4400582230",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5028315053",
+      "name": "Fangwen Mu",
+      "affiliations": [
+        "Institute of Software",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5014381743",
+      "name": "Lin Shi",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100326214",
+      "name": "Song Wang",
+      "affiliations": [
+        "York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010912592",
+      "name": "Zhuohao Yu",
+      "affiliations": [
+        "Institute of Software",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5052719394",
+      "name": "Binquan Zhang",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5055834767",
+      "name": "ChenXue Wang",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Harbin Institute of Technology",
+        "Institute of Software"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5014555533",
+      "name": "Shichao Liu",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100434820",
+      "name": "Qing Wang",
+      "affiliations": [
+        "Institute of Software",
+        "University of Chinese Academy of Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2955157382",
+    "https://openalex.org/W4224051134",
+    "https://openalex.org/W4360836968",
+    "https://openalex.org/W4286750487",
+    "https://openalex.org/W4317940234",
+    "https://openalex.org/W4366342667",
+    "https://openalex.org/W4286530331",
+    "https://openalex.org/W4224060952",
+    "https://openalex.org/W4366342672",
+    "https://openalex.org/W2084437982",
+    "https://openalex.org/W4324325724",
+    "https://openalex.org/W4281482237",
+    "https://openalex.org/W4281557260",
+    "https://openalex.org/W4291238279",
+    "https://openalex.org/W4384304865",
+    "https://openalex.org/W4376312043",
+    "https://openalex.org/W4226287673",
+    "https://openalex.org/W4376653844",
+    "https://openalex.org/W4367860052",
+    "https://openalex.org/W4384302749",
+    "https://openalex.org/W4310829078",
+    "https://openalex.org/W4320854935",
+    "https://openalex.org/W4212975704",
+    "https://openalex.org/W4283702402",
+    "https://openalex.org/W2908685617",
+    "https://openalex.org/W4383988989",
+    "https://openalex.org/W3208518372",
+    "https://openalex.org/W4312091822",
+    "https://openalex.org/W4281763794",
+    "https://openalex.org/W4391558462",
+    "https://openalex.org/W2097808034",
+    "https://openalex.org/W4310514998",
+    "https://openalex.org/W3101380159",
+    "https://openalex.org/W4311726857"
+  ],
+  "abstract": "Large Language Models (LLMs), such as ChatGPT, have demonstrated impressive capabilities in automatically generating code from provided natural language requirements. However, in real-world practice, it is inevitable that the requirements written by users might be ambiguous or insufficient. Current LLMs will directly generate programs according to those unclear requirements, regardless of interactive clarification, which will likely deviate from the original user intents. To bridge that gap, we introduce a novel framework named ClarifyGPT, which aims to enhance code generation by empowering LLMs with the ability to identify ambiguous requirements and ask targeted clarifying questions. Specifically, ClarifyGPT first detects whether a given requirement is ambiguous by performing a code consistency check. If it is ambiguous, ClarifyGPT prompts an LLM to generate targeted clarifying questions. After receiving question responses, ClarifyGPT refines the ambiguous requirement and inputs it into the same LLM to generate a final code solution. To evaluate our ClarifyGPT, we invite ten participants to use ClarifyGPT for code generation on two benchmarks: MBPP-sanitized and MBPP-ET. The results show that ClarifyGPT elevates the performance (Pass@1) of GPT-4 from 70.96% to 80.80% on MBPP-sanitized. Furthermore, to conduct large-scale automated evaluations of ClarifyGPT across different LLMs and benchmarks without requiring user participation, we introduce a high-fidelity simulation method to simulate user responses. The results demonstrate that ClarifyGPT can significantly enhance code generation performance compared to the baselines. In particular, ClarifyGPT improves the average performance of GPT-4 and ChatGPT across five benchmarks from 62.43% to 69.60% and from 54.32% to 62.37%, respectively. A human evaluation also confirms the effectiveness of ClarifyGPT in detecting ambiguous requirements and generating high-quality clarifying questions. We believe that ClarifyGPT can effectively facilitate the practical application of LLMs in real-world development environments.",
+  "full_text": null,
+  "topic": "Consistency (knowledge bases)",
+  "concepts": [
+    {
+      "name": "Consistency (knowledge bases)",
+      "score": 0.6971299052238464
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6825658679008484
+    },
+    {
+      "name": "Fidelity",
+      "score": 0.6544650197029114
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.6230835318565369
+    },
+    {
+      "name": "Natural language generation",
+      "score": 0.4731273055076599
+    },
+    {
+      "name": "Natural language",
+      "score": 0.2874559760093689
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.22119015455245972
+    },
+    {
+      "name": "Programming language",
+      "score": 0.21471118927001953
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

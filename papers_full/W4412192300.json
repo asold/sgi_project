@@ -1,54 +1,85 @@
 {
-    "title": "Unseen Attack Detection in Software-Defined Networking Using a BERT-Based Large Language Model",
-    "url": "https://openalex.org/W4412192300",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5115087250",
-            "name": "Mohammed N. Swileh",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100413418",
-            "name": "Shengli Zhang",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2040340473",
-        "https://openalex.org/W4307647942",
-        "https://openalex.org/W4365790450",
-        "https://openalex.org/W2109566332",
-        "https://openalex.org/W2067453331",
-        "https://openalex.org/W4391250190",
-        "https://openalex.org/W3036012999",
-        "https://openalex.org/W2587508615",
-        "https://openalex.org/W3084346886",
-        "https://openalex.org/W2884204879",
-        "https://openalex.org/W4389720782",
-        "https://openalex.org/W4367624273",
-        "https://openalex.org/W4322770678",
-        "https://openalex.org/W4391068874",
-        "https://openalex.org/W4389914878",
-        "https://openalex.org/W4388573166",
-        "https://openalex.org/W4282003105",
-        "https://openalex.org/W4290717392",
-        "https://openalex.org/W3117819143",
-        "https://openalex.org/W3081430061",
-        "https://openalex.org/W2994866269",
-        "https://openalex.org/W3109037541",
-        "https://openalex.org/W4322502180",
-        "https://openalex.org/W4383346073",
-        "https://openalex.org/W4311392129",
-        "https://openalex.org/W4389246563",
-        "https://openalex.org/W4206709449",
-        "https://openalex.org/W6799862310",
-        "https://openalex.org/W3193514658"
-    ],
-    "abstract": "Software-defined networking (SDN) represents a transformative shift in network architecture by decoupling the control plane from the data plane, enabling centralized and flexible management of network resources. However, this architectural shift introduces significant security challenges, as SDN’s centralized control becomes an attractive target for various types of attacks. While the body of current research on attack detection in SDN has yielded important results, several critical gaps remain that require further exploration. Addressing challenges in feature selection, broadening the scope beyond Distributed Denial of Service (DDoS) attacks, strengthening attack decisions based on multi-flow analysis, and building models capable of detecting unseen attacks that they have not been explicitly trained on are essential steps toward advancing security measures in SDN environments. In this paper, we introduce a novel approach that leverages Natural Language Processing (NLP) and the pre-trained Bidirectional Encoder Representations from Transformers (BERT)-base-uncased model to enhance the detection of attacks in SDN environments. Our approach transforms network flow data into a format interpretable by language models, allowing BERT-base-uncased to capture intricate patterns and relationships within network traffic. By utilizing Random Forest for feature selection, we optimize model performance and reduce computational overhead, ensuring efficient and accurate detection. Attack decisions are made based on several flows, providing stronger and more reliable detection of malicious traffic. Furthermore, our proposed method is specifically designed to detect previously unseen attacks, offering a solution for identifying threats that the model was not explicitly trained on. To rigorously evaluate our approach, we conducted experiments in two scenarios: one focused on detecting known attacks, achieving an accuracy, precision, recall, and F1-score of 99.96%, and another on detecting previously unseen attacks, where our model achieved 99.96% in all metrics, demonstrating the robustness and precision of our framework in detecting evolving threats, and reinforcing its potential to improve the security and resilience of SDN networks.",
-    "full_text": null
+  "title": "Unseen Attack Detection in Software-Defined Networking Using a BERT-Based Large Language Model",
+  "url": "https://openalex.org/W4412192300",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5115087250",
+      "name": "Mohammed N. Swileh",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100413418",
+      "name": "Shengli Zhang",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2040340473",
+    "https://openalex.org/W4307647942",
+    "https://openalex.org/W4365790450",
+    "https://openalex.org/W2109566332",
+    "https://openalex.org/W2067453331",
+    "https://openalex.org/W4391250190",
+    "https://openalex.org/W3036012999",
+    "https://openalex.org/W2587508615",
+    "https://openalex.org/W3084346886",
+    "https://openalex.org/W2884204879",
+    "https://openalex.org/W4389720782",
+    "https://openalex.org/W4367624273",
+    "https://openalex.org/W4322770678",
+    "https://openalex.org/W4391068874",
+    "https://openalex.org/W4389914878",
+    "https://openalex.org/W4388573166",
+    "https://openalex.org/W4282003105",
+    "https://openalex.org/W4290717392",
+    "https://openalex.org/W3117819143",
+    "https://openalex.org/W3081430061",
+    "https://openalex.org/W2994866269",
+    "https://openalex.org/W3109037541",
+    "https://openalex.org/W4322502180",
+    "https://openalex.org/W4383346073",
+    "https://openalex.org/W4311392129",
+    "https://openalex.org/W4389246563",
+    "https://openalex.org/W4206709449",
+    "https://openalex.org/W6799862310",
+    "https://openalex.org/W3193514658"
+  ],
+  "abstract": "Software-defined networking (SDN) represents a transformative shift in network architecture by decoupling the control plane from the data plane, enabling centralized and flexible management of network resources. However, this architectural shift introduces significant security challenges, as SDN’s centralized control becomes an attractive target for various types of attacks. While the body of current research on attack detection in SDN has yielded important results, several critical gaps remain that require further exploration. Addressing challenges in feature selection, broadening the scope beyond Distributed Denial of Service (DDoS) attacks, strengthening attack decisions based on multi-flow analysis, and building models capable of detecting unseen attacks that they have not been explicitly trained on are essential steps toward advancing security measures in SDN environments. In this paper, we introduce a novel approach that leverages Natural Language Processing (NLP) and the pre-trained Bidirectional Encoder Representations from Transformers (BERT)-base-uncased model to enhance the detection of attacks in SDN environments. Our approach transforms network flow data into a format interpretable by language models, allowing BERT-base-uncased to capture intricate patterns and relationships within network traffic. By utilizing Random Forest for feature selection, we optimize model performance and reduce computational overhead, ensuring efficient and accurate detection. Attack decisions are made based on several flows, providing stronger and more reliable detection of malicious traffic. Furthermore, our proposed method is specifically designed to detect previously unseen attacks, offering a solution for identifying threats that the model was not explicitly trained on. To rigorously evaluate our approach, we conducted experiments in two scenarios: one focused on detecting known attacks, achieving an accuracy, precision, recall, and F1-score of 99.96%, and another on detecting previously unseen attacks, where our model achieved 99.96% in all metrics, demonstrating the robustness and precision of our framework in detecting evolving threats, and reinforcing its potential to improve the security and resilience of SDN networks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6872328519821167
+    },
+    {
+      "name": "Software",
+      "score": 0.5526267290115356
+    },
+    {
+      "name": "Language model",
+      "score": 0.4472160339355469
+    },
+    {
+      "name": "Software-defined networking",
+      "score": 0.4321513772010803
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.309146523475647
+    },
+    {
+      "name": "Computer network",
+      "score": 0.27558261156082153
+    },
+    {
+      "name": "Programming language",
+      "score": 0.23516571521759033
+    }
+  ]
 }

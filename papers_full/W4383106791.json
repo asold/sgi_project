@@ -1,104 +1,199 @@
 {
-    "title": "GBT: Two-stage transformer framework for non-stationary time series forecasting",
-    "url": "https://openalex.org/W4383106791",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1898662817",
-            "name": "Li Shen",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102828176",
-            "name": "Yuning Wei",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097563278",
-            "name": "Yangzhu Wang",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1898662817",
-            "name": "Li Shen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2102828176",
-            "name": "Yuning Wei",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2097563278",
-            "name": "Yangzhu Wang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6785090213",
-        "https://openalex.org/W3209594828",
-        "https://openalex.org/W6750513420",
-        "https://openalex.org/W6838306524",
-        "https://openalex.org/W6840710358",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W4225000920",
-        "https://openalex.org/W6687483927",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W6771626834",
-        "https://openalex.org/W6783654006",
-        "https://openalex.org/W6736282669",
-        "https://openalex.org/W6764679822",
-        "https://openalex.org/W4382318973",
-        "https://openalex.org/W6846376059",
-        "https://openalex.org/W6889955440",
-        "https://openalex.org/W6797297377",
-        "https://openalex.org/W6763309814",
-        "https://openalex.org/W2905967367",
-        "https://openalex.org/W6695676441",
-        "https://openalex.org/W2980994438",
-        "https://openalex.org/W6791338864",
-        "https://openalex.org/W2414423339",
-        "https://openalex.org/W2017377889",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6794174157",
-        "https://openalex.org/W3133618741",
-        "https://openalex.org/W4224983774",
-        "https://openalex.org/W6811289536",
-        "https://openalex.org/W6775292778",
-        "https://openalex.org/W6797155008",
-        "https://openalex.org/W6802061597",
-        "https://openalex.org/W6803680838",
-        "https://openalex.org/W3199148273",
-        "https://openalex.org/W6801940976",
-        "https://openalex.org/W6838200255",
-        "https://openalex.org/W6810637551",
-        "https://openalex.org/W6786852218",
-        "https://openalex.org/W4246999471",
-        "https://openalex.org/W4285605356",
-        "https://openalex.org/W2913668833",
-        "https://openalex.org/W4283823780",
-        "https://openalex.org/W4221148002",
-        "https://openalex.org/W4303438998",
-        "https://openalex.org/W4382203079",
-        "https://openalex.org/W2462831000",
-        "https://openalex.org/W4249254020",
-        "https://openalex.org/W2519091744",
-        "https://openalex.org/W4230230267",
-        "https://openalex.org/W4234761883",
-        "https://openalex.org/W4244851570",
-        "https://openalex.org/W4288043080",
-        "https://openalex.org/W4213069590",
-        "https://openalex.org/W2592023122",
-        "https://openalex.org/W4382239356",
-        "https://openalex.org/W4231057675",
-        "https://openalex.org/W4212774754"
-    ],
-    "abstract": "This paper shows that time series forecasting Transformer (TSFT) suffers from severe over-fitting problem caused by improper initialization method of unknown decoder inputs, especially when handling non-stationary time series. Based on this observation, we propose GBT, a novel two-stage Transformer framework with Good Beginning. It decouples the prediction process of TSFT into two stages, including Auto-Regression stage and Self-Regression stage to tackle the problem of different statistical properties between input and prediction sequences. Prediction results of Auto-Regression stage serve as a 'Good Beginning', i.e., a better initialization for inputs of Self-Regression stage. We also propose the Error Score Modification module to further enhance the forecasting capability of the Self-Regression stage in GBT. Extensive experiments on seven benchmark datasets demonstrate that GBT outperforms SOTA TSFTs (FEDformer, Pyraformer, ETSformer, etc.) and many other forecasting models (SCINet, N-HiTS, etc.) with only canonical attention and convolution while owning less time and space complexity. It is also general enough to couple with these models to strengthen their forecasting capability. The source code is available at: https://github.com/OrigamiSL/GBT.",
-    "full_text": null
+  "title": "GBT: Two-stage transformer framework for non-stationary time series forecasting",
+  "url": "https://openalex.org/W4383106791",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1898662817",
+      "name": "Li Shen",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102828176",
+      "name": "Yuning Wei",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097563278",
+      "name": "Yangzhu Wang",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1898662817",
+      "name": "Li Shen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2102828176",
+      "name": "Yuning Wei",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2097563278",
+      "name": "Yangzhu Wang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6785090213",
+    "https://openalex.org/W3209594828",
+    "https://openalex.org/W6750513420",
+    "https://openalex.org/W6838306524",
+    "https://openalex.org/W6840710358",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W4225000920",
+    "https://openalex.org/W6687483927",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W6771626834",
+    "https://openalex.org/W6783654006",
+    "https://openalex.org/W6736282669",
+    "https://openalex.org/W6764679822",
+    "https://openalex.org/W4382318973",
+    "https://openalex.org/W6846376059",
+    "https://openalex.org/W6889955440",
+    "https://openalex.org/W6797297377",
+    "https://openalex.org/W6763309814",
+    "https://openalex.org/W2905967367",
+    "https://openalex.org/W6695676441",
+    "https://openalex.org/W2980994438",
+    "https://openalex.org/W6791338864",
+    "https://openalex.org/W2414423339",
+    "https://openalex.org/W2017377889",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6794174157",
+    "https://openalex.org/W3133618741",
+    "https://openalex.org/W4224983774",
+    "https://openalex.org/W6811289536",
+    "https://openalex.org/W6775292778",
+    "https://openalex.org/W6797155008",
+    "https://openalex.org/W6802061597",
+    "https://openalex.org/W6803680838",
+    "https://openalex.org/W3199148273",
+    "https://openalex.org/W6801940976",
+    "https://openalex.org/W6838200255",
+    "https://openalex.org/W6810637551",
+    "https://openalex.org/W6786852218",
+    "https://openalex.org/W4246999471",
+    "https://openalex.org/W4285605356",
+    "https://openalex.org/W2913668833",
+    "https://openalex.org/W4283823780",
+    "https://openalex.org/W4221148002",
+    "https://openalex.org/W4303438998",
+    "https://openalex.org/W4382203079",
+    "https://openalex.org/W2462831000",
+    "https://openalex.org/W4249254020",
+    "https://openalex.org/W2519091744",
+    "https://openalex.org/W4230230267",
+    "https://openalex.org/W4234761883",
+    "https://openalex.org/W4244851570",
+    "https://openalex.org/W4288043080",
+    "https://openalex.org/W4213069590",
+    "https://openalex.org/W2592023122",
+    "https://openalex.org/W4382239356",
+    "https://openalex.org/W4231057675",
+    "https://openalex.org/W4212774754"
+  ],
+  "abstract": "This paper shows that time series forecasting Transformer (TSFT) suffers from severe over-fitting problem caused by improper initialization method of unknown decoder inputs, especially when handling non-stationary time series. Based on this observation, we propose GBT, a novel two-stage Transformer framework with Good Beginning. It decouples the prediction process of TSFT into two stages, including Auto-Regression stage and Self-Regression stage to tackle the problem of different statistical properties between input and prediction sequences. Prediction results of Auto-Regression stage serve as a 'Good Beginning', i.e., a better initialization for inputs of Self-Regression stage. We also propose the Error Score Modification module to further enhance the forecasting capability of the Self-Regression stage in GBT. Extensive experiments on seven benchmark datasets demonstrate that GBT outperforms SOTA TSFTs (FEDformer, Pyraformer, ETSformer, etc.) and many other forecasting models (SCINet, N-HiTS, etc.) with only canonical attention and convolution while owning less time and space complexity. It is also general enough to couple with these models to strengthen their forecasting capability. The source code is available at: https://github.com/OrigamiSL/GBT.",
+  "full_text": null,
+  "topic": "Initialization",
+  "concepts": [
+    {
+      "name": "Initialization",
+      "score": 0.8485045433044434
+    },
+    {
+      "name": "Computer science",
+      "score": 0.722710132598877
+    },
+    {
+      "name": "Regression",
+      "score": 0.5912084579467773
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5107464790344238
+    },
+    {
+      "name": "Time series",
+      "score": 0.5072588324546814
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4920644164085388
+    },
+    {
+      "name": "Series (stratigraphy)",
+      "score": 0.48615357279777527
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.483296662569046
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.43510720133781433
+    },
+    {
+      "name": "Source code",
+      "score": 0.4282665550708771
+    },
+    {
+      "name": "Regression analysis",
+      "score": 0.4269244074821472
+    },
+    {
+      "name": "Data mining",
+      "score": 0.42367807030677795
+    },
+    {
+      "name": "Statistics",
+      "score": 0.18605709075927734
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.16970020532608032
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08769425749778748
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07472574710845947
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,87 +1,130 @@
 {
-    "title": "A Siamese Transformer Network for Zero-Shot Ancient Coin Classification",
-    "url": "https://openalex.org/W4378226426",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5038495575",
-            "name": "Zhongliang Guo",
-            "affiliations": [
-                "University of St Andrews"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5020799762",
-            "name": "Ognjen Arandjelović",
-            "affiliations": [
-                "University of St Andrews"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5111670745",
-            "name": "David M. Reid",
-            "affiliations": [
-                "University of St Andrews"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5050943691",
-            "name": "Yaxiong Lei",
-            "affiliations": [
-                "University of St Andrews"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5039434499",
-            "name": "Jochen Büttner",
-            "affiliations": [
-                "Max Planck Institute for the History of Science"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4254317927",
-        "https://openalex.org/W1520759993",
-        "https://openalex.org/W3129797591",
-        "https://openalex.org/W4250194222",
-        "https://openalex.org/W1542931642",
-        "https://openalex.org/W62952443",
-        "https://openalex.org/W2922098202",
-        "https://openalex.org/W2767369807",
-        "https://openalex.org/W2991811869",
-        "https://openalex.org/W4256016087",
-        "https://openalex.org/W1567150374",
-        "https://openalex.org/W1966635493",
-        "https://openalex.org/W65663648",
-        "https://openalex.org/W1999352753",
-        "https://openalex.org/W134383315",
-        "https://openalex.org/W3011242897",
-        "https://openalex.org/W1509901792",
-        "https://openalex.org/W2736194238",
-        "https://openalex.org/W1971281193",
-        "https://openalex.org/W6631020767",
-        "https://openalex.org/W945164901",
-        "https://openalex.org/W4254824820",
-        "https://openalex.org/W2604218735",
-        "https://openalex.org/W3100060628",
-        "https://openalex.org/W6679208599",
-        "https://openalex.org/W4405188194",
-        "https://openalex.org/W3080427797",
-        "https://openalex.org/W2407362091",
-        "https://openalex.org/W2985937374",
-        "https://openalex.org/W2898077673",
-        "https://openalex.org/W3000083652",
-        "https://openalex.org/W2098789322",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6747381837",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2809432408",
-        "https://openalex.org/W2290944879",
-        "https://openalex.org/W2127589108",
-        "https://openalex.org/W2777662428",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W2108687318"
-    ],
-    "abstract": "Ancient numismatics, the study of ancient coins, has in recent years become an attractive domain for the application of computer vision and machine learning. Though rich in research problems, the predominant focus in this area to date has been on the task of attributing a coin from an image, that is of identifying its issue. This may be considered the cardinal problem in the field and it continues to challenge automatic methods. In the present paper, we address a number of limitations of previous work. Firstly, the existing methods approach the problem as a classification task. As such, they are unable to deal with classes with no or few exemplars (which would be most, given over 50,000 issues of Roman Imperial coins alone), and require retraining when exemplars of a new class become available. Hence, rather than seeking to learn a representation that distinguishes a particular class from all the others, herein we seek a representation that is overall best at distinguishing classes from one another, thus relinquishing the demand for exemplars of any specific class. This leads to our adoption of the paradigm of pairwise coin matching by issue, rather than the usual classification paradigm, and the specific solution we propose in the form of a Siamese neural network. Furthermore, while adopting deep learning, motivated by its successes in the field and its unchallenged superiority over classical computer vision approaches, we also seek to leverage the advantages that transformers have over the previously employed convolutional neural networks, and in particular their non-local attention mechanisms, which ought to be particularly useful in ancient coin analysis by associating semantically but not visually related distal elements of a coin’s design. Evaluated on a large data corpus of 14,820 images and 7605 issues, using transfer learning and only a small training set of 542 images of 24 issues, our Double Siamese ViT model is shown to surpass the state of the art by a large margin, achieving an overall accuracy of 81%. Moreover, our further investigation of the results shows that the majority of the method’s errors are unrelated to the intrinsic aspects of the algorithm itself, but are rather a consequence of unclean data, which is a problem that can be easily addressed in practice by simple pre-processing and quality checking.",
-    "full_text": null
+  "title": "A Siamese Transformer Network for Zero-Shot Ancient Coin Classification",
+  "url": "https://openalex.org/W4378226426",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5038495575",
+      "name": "Zhongliang Guo",
+      "affiliations": [
+        "University of St Andrews"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5020799762",
+      "name": "Ognjen Arandjelović",
+      "affiliations": [
+        "University of St Andrews"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5111670745",
+      "name": "David M. Reid",
+      "affiliations": [
+        "University of St Andrews"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5050943691",
+      "name": "Yaxiong Lei",
+      "affiliations": [
+        "University of St Andrews"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5039434499",
+      "name": "Jochen Büttner",
+      "affiliations": [
+        "Max Planck Institute for the History of Science"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4254317927",
+    "https://openalex.org/W1520759993",
+    "https://openalex.org/W3129797591",
+    "https://openalex.org/W4250194222",
+    "https://openalex.org/W1542931642",
+    "https://openalex.org/W62952443",
+    "https://openalex.org/W2922098202",
+    "https://openalex.org/W2767369807",
+    "https://openalex.org/W2991811869",
+    "https://openalex.org/W4256016087",
+    "https://openalex.org/W1567150374",
+    "https://openalex.org/W1966635493",
+    "https://openalex.org/W65663648",
+    "https://openalex.org/W1999352753",
+    "https://openalex.org/W134383315",
+    "https://openalex.org/W3011242897",
+    "https://openalex.org/W1509901792",
+    "https://openalex.org/W2736194238",
+    "https://openalex.org/W1971281193",
+    "https://openalex.org/W6631020767",
+    "https://openalex.org/W945164901",
+    "https://openalex.org/W4254824820",
+    "https://openalex.org/W2604218735",
+    "https://openalex.org/W3100060628",
+    "https://openalex.org/W6679208599",
+    "https://openalex.org/W4405188194",
+    "https://openalex.org/W3080427797",
+    "https://openalex.org/W2407362091",
+    "https://openalex.org/W2985937374",
+    "https://openalex.org/W2898077673",
+    "https://openalex.org/W3000083652",
+    "https://openalex.org/W2098789322",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6747381837",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2809432408",
+    "https://openalex.org/W2290944879",
+    "https://openalex.org/W2127589108",
+    "https://openalex.org/W2777662428",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W2108687318"
+  ],
+  "abstract": "Ancient numismatics, the study of ancient coins, has in recent years become an attractive domain for the application of computer vision and machine learning. Though rich in research problems, the predominant focus in this area to date has been on the task of attributing a coin from an image, that is of identifying its issue. This may be considered the cardinal problem in the field and it continues to challenge automatic methods. In the present paper, we address a number of limitations of previous work. Firstly, the existing methods approach the problem as a classification task. As such, they are unable to deal with classes with no or few exemplars (which would be most, given over 50,000 issues of Roman Imperial coins alone), and require retraining when exemplars of a new class become available. Hence, rather than seeking to learn a representation that distinguishes a particular class from all the others, herein we seek a representation that is overall best at distinguishing classes from one another, thus relinquishing the demand for exemplars of any specific class. This leads to our adoption of the paradigm of pairwise coin matching by issue, rather than the usual classification paradigm, and the specific solution we propose in the form of a Siamese neural network. Furthermore, while adopting deep learning, motivated by its successes in the field and its unchallenged superiority over classical computer vision approaches, we also seek to leverage the advantages that transformers have over the previously employed convolutional neural networks, and in particular their non-local attention mechanisms, which ought to be particularly useful in ancient coin analysis by associating semantically but not visually related distal elements of a coin’s design. Evaluated on a large data corpus of 14,820 images and 7605 issues, using transfer learning and only a small training set of 542 images of 24 issues, our Double Siamese ViT model is shown to surpass the state of the art by a large margin, achieving an overall accuracy of 81%. Moreover, our further investigation of the results shows that the majority of the method’s errors are unrelated to the intrinsic aspects of the algorithm itself, but are rather a consequence of unclean data, which is a problem that can be easily addressed in practice by simple pre-processing and quality checking.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6023859977722168
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5497472882270813
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4984462261199951
+    },
+    {
+      "name": "Shot (pellet)",
+      "score": 0.46614423394203186
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4102497398853302
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.11821877956390381
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0818026065826416
+    },
+    {
+      "name": "Materials science",
+      "score": 0.07461601495742798
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07018736004829407
+    },
+    {
+      "name": "Metallurgy",
+      "score": 0.0
+    }
+  ]
 }

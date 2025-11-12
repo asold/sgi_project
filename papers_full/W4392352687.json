@@ -1,78 +1,113 @@
 {
-    "title": "PTM-Mamba: A PTM-Aware Protein Language Model with Bidirectional Gated Mamba Blocks",
-    "url": "https://openalex.org/W4392352687",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5089560981",
-            "name": "Zhangzhi Peng",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5094043159",
-            "name": "Benjamin Schussheim",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2622003133",
-            "name": "Pranam Chatterjee",
-            "affiliations": [
-                "Duke University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089560981",
-            "name": "Zhangzhi Peng",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5094043159",
-            "name": "Benjamin Schussheim",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2622003133",
-            "name": "Pranam Chatterjee",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2635415917",
-        "https://openalex.org/W4211082869",
-        "https://openalex.org/W2936686072",
-        "https://openalex.org/W4382362079",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W4387906121",
-        "https://openalex.org/W4386034797",
-        "https://openalex.org/W3213545574",
-        "https://openalex.org/W2057616220",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W4288066876",
-        "https://openalex.org/W2157658519",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4315865958",
-        "https://openalex.org/W3213184710",
-        "https://openalex.org/W3109741298",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W4318071656",
-        "https://openalex.org/W4387340554",
-        "https://openalex.org/W2901164269",
-        "https://openalex.org/W4389472984",
-        "https://openalex.org/W4281480540",
-        "https://openalex.org/W2124052876",
-        "https://openalex.org/W2948591144",
-        "https://openalex.org/W2508160565",
-        "https://openalex.org/W3152110994",
-        "https://openalex.org/W1993794768",
-        "https://openalex.org/W3112376646",
-        "https://openalex.org/W2891085660",
-        "https://openalex.org/W4391097114",
-        "https://openalex.org/W4367676419"
-    ],
-    "abstract": "A bstract Proteins serve as the workhorses of living organisms, orchestrating a wide array of vital functions. Post-translational modifications (PTMs) of their amino acids greatly influence the structural and functional diversity of different protein types and uphold proteostasis, allowing cells to swiftly respond to environmental changes and intricately regulate complex biological processes. To this point, efforts to model the complex features of proteins have involved the training of large and expressive protein language models (pLMs) such as ESM-2 and ProtT5, which accurately encode structural, functional, and physicochemical properties of input protein sequences. However, the over 200 million sequences that these pLMs were trained on merely scratch the surface of proteomic diversity, as they neither input nor account for the effects of PTMs. In this work, we fill this major gap in protein sequence modeling by introducing PTM tokens into the pLM training regime. We then leverage recent advancements in structured state space models (SSMs), specifically Mamba, which utilizes efficient hardware-aware primitives to overcome the quadratic time complexities of Transformers. After adding a comprehensive set of PTM tokens to the model vocabulary, we train bidirectional Mamba blocks whose outputs are fused with state-of-the-art ESM-2 embeddings via a novel gating mechanism. We demonstrate that our resultant PTM-aware pLM, PTM-Mamba , improves upon ESM-2’s performance on various PTM-specific tasks. PTM-Mamba is the first and only pLM that can uniquely input and represent both wild-type and PTM sequences, motivating downstream modeling and design applications specific to post-translationally modified proteins. To facilitate PTM-aware protein language modeling applications, we have made our model available at: https://huggingface.co/ChatterjeeLab/PTM-Mamba .",
-    "full_text": null
+  "title": "PTM-Mamba: A PTM-Aware Protein Language Model with Bidirectional Gated Mamba Blocks",
+  "url": "https://openalex.org/W4392352687",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5089560981",
+      "name": "Zhangzhi Peng",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5094043159",
+      "name": "Benjamin Schussheim",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2622003133",
+      "name": "Pranam Chatterjee",
+      "affiliations": [
+        "Duke University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089560981",
+      "name": "Zhangzhi Peng",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5094043159",
+      "name": "Benjamin Schussheim",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2622003133",
+      "name": "Pranam Chatterjee",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2635415917",
+    "https://openalex.org/W4211082869",
+    "https://openalex.org/W2936686072",
+    "https://openalex.org/W4382362079",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W4387906121",
+    "https://openalex.org/W4386034797",
+    "https://openalex.org/W3213545574",
+    "https://openalex.org/W2057616220",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W4288066876",
+    "https://openalex.org/W2157658519",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4315865958",
+    "https://openalex.org/W3213184710",
+    "https://openalex.org/W3109741298",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W4318071656",
+    "https://openalex.org/W4387340554",
+    "https://openalex.org/W2901164269",
+    "https://openalex.org/W4389472984",
+    "https://openalex.org/W4281480540",
+    "https://openalex.org/W2124052876",
+    "https://openalex.org/W2948591144",
+    "https://openalex.org/W2508160565",
+    "https://openalex.org/W3152110994",
+    "https://openalex.org/W1993794768",
+    "https://openalex.org/W3112376646",
+    "https://openalex.org/W2891085660",
+    "https://openalex.org/W4391097114",
+    "https://openalex.org/W4367676419"
+  ],
+  "abstract": "A bstract Proteins serve as the workhorses of living organisms, orchestrating a wide array of vital functions. Post-translational modifications (PTMs) of their amino acids greatly influence the structural and functional diversity of different protein types and uphold proteostasis, allowing cells to swiftly respond to environmental changes and intricately regulate complex biological processes. To this point, efforts to model the complex features of proteins have involved the training of large and expressive protein language models (pLMs) such as ESM-2 and ProtT5, which accurately encode structural, functional, and physicochemical properties of input protein sequences. However, the over 200 million sequences that these pLMs were trained on merely scratch the surface of proteomic diversity, as they neither input nor account for the effects of PTMs. In this work, we fill this major gap in protein sequence modeling by introducing PTM tokens into the pLM training regime. We then leverage recent advancements in structured state space models (SSMs), specifically Mamba, which utilizes efficient hardware-aware primitives to overcome the quadratic time complexities of Transformers. After adding a comprehensive set of PTM tokens to the model vocabulary, we train bidirectional Mamba blocks whose outputs are fused with state-of-the-art ESM-2 embeddings via a novel gating mechanism. We demonstrate that our resultant PTM-aware pLM, PTM-Mamba , improves upon ESM-2’s performance on various PTM-specific tasks. PTM-Mamba is the first and only pLM that can uniquely input and represent both wild-type and PTM sequences, motivating downstream modeling and design applications specific to post-translationally modified proteins. To facilitate PTM-aware protein language modeling applications, we have made our model available at: https://huggingface.co/ChatterjeeLab/PTM-Mamba .",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6678025722503662
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.5122179388999939
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.4515116810798645
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3485671877861023
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.29061996936798096
+    },
+    {
+      "name": "Biology",
+      "score": 0.23025378584861755
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    }
+  ]
 }

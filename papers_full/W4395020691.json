@@ -1,80 +1,135 @@
 {
-    "title": "ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference",
-    "url": "https://openalex.org/W4395020691",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2159047034",
-            "name": "Hyungjun Oh",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102040225",
-            "name": "Ki-Hong Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101399362",
-            "name": "Jaemin Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112571259",
-            "name": "Sung-Kyun Kim",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2230349855",
-            "name": "Jun-Yeol Lee",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3211733105",
-            "name": "Du-Seong Chang",
-            "affiliations": [
-                "Korea Telecom (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096032214",
-            "name": "Ji-Won Seo",
-            "affiliations": [
-                "Hanyang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4321636575",
-        "https://openalex.org/W6725857009",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4281758439",
-        "https://openalex.org/W1544827683",
-        "https://openalex.org/W2901299405",
-        "https://openalex.org/W3206832494",
-        "https://openalex.org/W3130395060",
-        "https://openalex.org/W2969388332",
-        "https://openalex.org/W3204998121",
-        "https://openalex.org/W6815833287",
-        "https://openalex.org/W2964223283",
-        "https://openalex.org/W2606974598",
-        "https://openalex.org/W2066409766",
-        "https://openalex.org/W2029066552",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3177265267",
-        "https://openalex.org/W4283700140",
-        "https://openalex.org/W2775774141",
-        "https://openalex.org/W1587656977"
-    ],
-    "abstract": "This paper presents ExeGPT, a distributed system designed for constraint-aware LLM inference. ExeGPT finds and runs with an optimal execution schedule to maximize inference throughput while satisfying a given latency constraint. By leveraging the distribution of input and output sequences, it effectively allocates resources and determines optimal execution configurations, including batch sizes and partial tensor parallelism. We also introduce two scheduling strategies based on Round-Robin Allocation and Workload-Aware Allocation policies, suitable for different NLP workloads.",
-    "full_text": null
+  "title": "ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference",
+  "url": "https://openalex.org/W4395020691",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2159047034",
+      "name": "Hyungjun Oh",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102040225",
+      "name": "Ki-Hong Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101399362",
+      "name": "Jaemin Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112571259",
+      "name": "Sung-Kyun Kim",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2230349855",
+      "name": "Jun-Yeol Lee",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3211733105",
+      "name": "Du-Seong Chang",
+      "affiliations": [
+        "Korea Telecom (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096032214",
+      "name": "Ji-Won Seo",
+      "affiliations": [
+        "Hanyang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4321636575",
+    "https://openalex.org/W6725857009",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4281758439",
+    "https://openalex.org/W1544827683",
+    "https://openalex.org/W2901299405",
+    "https://openalex.org/W3206832494",
+    "https://openalex.org/W3130395060",
+    "https://openalex.org/W2969388332",
+    "https://openalex.org/W3204998121",
+    "https://openalex.org/W6815833287",
+    "https://openalex.org/W2964223283",
+    "https://openalex.org/W2606974598",
+    "https://openalex.org/W2066409766",
+    "https://openalex.org/W2029066552",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3177265267",
+    "https://openalex.org/W4283700140",
+    "https://openalex.org/W2775774141",
+    "https://openalex.org/W1587656977"
+  ],
+  "abstract": "This paper presents ExeGPT, a distributed system designed for constraint-aware LLM inference. ExeGPT finds and runs with an optimal execution schedule to maximize inference throughput while satisfying a given latency constraint. By leveraging the distribution of input and output sequences, it effectively allocates resources and determines optimal execution configurations, including batch sizes and partial tensor parallelism. We also introduce two scheduling strategies based on Round-Robin Allocation and Workload-Aware Allocation policies, suitable for different NLP workloads.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7903544902801514
+    },
+    {
+      "name": "Inference",
+      "score": 0.6656941771507263
+    },
+    {
+      "name": "Scheduling (production processes)",
+      "score": 0.5454233288764954
+    },
+    {
+      "name": "Resource constraints",
+      "score": 0.4807698130607605
+    },
+    {
+      "name": "Constraint (computer-aided design)",
+      "score": 0.47850146889686584
+    },
+    {
+      "name": "Processor scheduling",
+      "score": 0.47462546825408936
+    },
+    {
+      "name": "Distributed computing",
+      "score": 0.3647400140762329
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.36300450563430786
+    },
+    {
+      "name": "Resource (disambiguation)",
+      "score": 0.3603125214576721
+    },
+    {
+      "name": "Mathematical optimization",
+      "score": 0.27644097805023193
+    },
+    {
+      "name": "Computer network",
+      "score": 0.10749736428260803
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08824071288108826
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

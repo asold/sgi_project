@@ -1,68 +1,119 @@
 {
-    "title": "DLO Perceiver: Grounding Large Language Model for Deformable Linear Objects Perception",
-    "url": "https://openalex.org/W4404035319",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2591887400",
-            "name": "Alessio Caporali",
-            "affiliations": [
-                "University of Bologna"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3179366384",
-            "name": "Kevin Galassi",
-            "affiliations": [
-                "University of Bologna"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2162576486",
-            "name": "Gianluca Palli",
-            "affiliations": [
-                "University of Bologna"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4392172801",
-        "https://openalex.org/W4313598874",
-        "https://openalex.org/W4375928277",
-        "https://openalex.org/W4285506896",
-        "https://openalex.org/W4321021718",
-        "https://openalex.org/W4382365541",
-        "https://openalex.org/W6791353385",
-        "https://openalex.org/W4312420092",
-        "https://openalex.org/W6843759960",
-        "https://openalex.org/W6790830454",
-        "https://openalex.org/W4392908015",
-        "https://openalex.org/W4200166436",
-        "https://openalex.org/W4383108807",
-        "https://openalex.org/W4385489615",
-        "https://openalex.org/W4391128579",
-        "https://openalex.org/W2892289384",
-        "https://openalex.org/W3192021195",
-        "https://openalex.org/W3178912571",
-        "https://openalex.org/W4226465778",
-        "https://openalex.org/W3199140136",
-        "https://openalex.org/W3131169046",
-        "https://openalex.org/W4319993371",
-        "https://openalex.org/W4324092554",
-        "https://openalex.org/W4210521355",
-        "https://openalex.org/W2963953778",
-        "https://openalex.org/W4383097461",
-        "https://openalex.org/W4389164282",
-        "https://openalex.org/W4390874575",
-        "https://openalex.org/W6861627779",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6798369812",
-        "https://openalex.org/W2096733369",
-        "https://openalex.org/W4214611271",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6850787431"
-    ],
-    "abstract": "The perception of Deformable Linear Objects (DLOs) is a challenging task due to their complex and ambiguous appearance, lack of discernible features, typically small sizes, and deformability. Despite these challenges, achieving a robust and effective segmentation of DLOs is crucial to introduce robots into environments where they are currently underrepresented, such as domestic and complex industrial settings. In this context, the integration of language-based inputs can simplify the perception task while also enabling the possibility of introducing robots as human companions. Therefore, this letter proposes a novel architecture for the perception of DLOs, wherein the input image is augmented with a text-based prompt guiding the segmentation of the target DLO. After encoding the image and text separately, a Perceiver-inspired structure is exploited to compress the concatenated data into transformer layers and generate the output mask from a latent vector representation. The method is experimentally evaluated on real-world images of DLOs like electrical cables and ropes, validating its efficacy and efficiency in real practical scenarios.",
-    "full_text": null
+  "title": "DLO Perceiver: Grounding Large Language Model for Deformable Linear Objects Perception",
+  "url": "https://openalex.org/W4404035319",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2591887400",
+      "name": "Alessio Caporali",
+      "affiliations": [
+        "University of Bologna"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3179366384",
+      "name": "Kevin Galassi",
+      "affiliations": [
+        "University of Bologna"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2162576486",
+      "name": "Gianluca Palli",
+      "affiliations": [
+        "University of Bologna"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4392172801",
+    "https://openalex.org/W4313598874",
+    "https://openalex.org/W4375928277",
+    "https://openalex.org/W4285506896",
+    "https://openalex.org/W4321021718",
+    "https://openalex.org/W4382365541",
+    "https://openalex.org/W6791353385",
+    "https://openalex.org/W4312420092",
+    "https://openalex.org/W6843759960",
+    "https://openalex.org/W6790830454",
+    "https://openalex.org/W4392908015",
+    "https://openalex.org/W4200166436",
+    "https://openalex.org/W4383108807",
+    "https://openalex.org/W4385489615",
+    "https://openalex.org/W4391128579",
+    "https://openalex.org/W2892289384",
+    "https://openalex.org/W3192021195",
+    "https://openalex.org/W3178912571",
+    "https://openalex.org/W4226465778",
+    "https://openalex.org/W3199140136",
+    "https://openalex.org/W3131169046",
+    "https://openalex.org/W4319993371",
+    "https://openalex.org/W4324092554",
+    "https://openalex.org/W4210521355",
+    "https://openalex.org/W2963953778",
+    "https://openalex.org/W4383097461",
+    "https://openalex.org/W4389164282",
+    "https://openalex.org/W4390874575",
+    "https://openalex.org/W6861627779",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6798369812",
+    "https://openalex.org/W2096733369",
+    "https://openalex.org/W4214611271",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6850787431"
+  ],
+  "abstract": "The perception of Deformable Linear Objects (DLOs) is a challenging task due to their complex and ambiguous appearance, lack of discernible features, typically small sizes, and deformability. Despite these challenges, achieving a robust and effective segmentation of DLOs is crucial to introduce robots into environments where they are currently underrepresented, such as domestic and complex industrial settings. In this context, the integration of language-based inputs can simplify the perception task while also enabling the possibility of introducing robots as human companions. Therefore, this letter proposes a novel architecture for the perception of DLOs, wherein the input image is augmented with a text-based prompt guiding the segmentation of the target DLO. After encoding the image and text separately, a Perceiver-inspired structure is exploited to compress the concatenated data into transformer layers and generate the output mask from a latent vector representation. The method is experimentally evaluated on real-world images of DLOs like electrical cables and ropes, validating its efficacy and efficiency in real practical scenarios.",
+  "full_text": null,
+  "topic": "Perception",
+  "concepts": [
+    {
+      "name": "Perception",
+      "score": 0.7220784425735474
+    },
+    {
+      "name": "Ground",
+      "score": 0.5125672817230225
+    },
+    {
+      "name": "Psychology",
+      "score": 0.4705812335014343
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4173542857170105
+    },
+    {
+      "name": "Communication",
+      "score": 0.41392892599105835
+    },
+    {
+      "name": "Cognitive science",
+      "score": 0.3795001208782196
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.3423672914505005
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3316029906272888
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.33149075508117676
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13551875948905945
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.09879034757614136
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07235661149024963
+    }
+  ]
 }

@@ -1,139 +1,182 @@
 {
-    "title": "Fret: Functional Reinforced Transformer With BERT for Code Summarization",
-    "url": "https://openalex.org/W3044696186",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2171602491",
-            "name": "Ruyun Wang",
-            "affiliations": [
-                "Shandong Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102565213",
-            "name": "Hanwen Zhang",
-            "affiliations": [
-                "Shandong Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102200859",
-            "name": "Guoliang Lu",
-            "affiliations": [
-                "Shandong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2511106244",
-            "name": "Lei Lyu",
-            "affiliations": [
-                "Shandong Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2307388913",
-            "name": "Chen Lyu",
-            "affiliations": [
-                "Shandong Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171602491",
-            "name": "Ruyun Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2102565213",
-            "name": "Hanwen Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2102200859",
-            "name": "Guoliang Lu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2511106244",
-            "name": "Lei Lyu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2307388913",
-            "name": "Chen Lyu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2133333349",
-        "https://openalex.org/W6633145936",
-        "https://openalex.org/W2247374552",
-        "https://openalex.org/W2794601162",
-        "https://openalex.org/W2999343753",
-        "https://openalex.org/W2136296681",
-        "https://openalex.org/W2034209539",
-        "https://openalex.org/W1970407057",
-        "https://openalex.org/W6639050008",
-        "https://openalex.org/W6679261715",
-        "https://openalex.org/W2402619042",
-        "https://openalex.org/W6695202613",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W1498436455",
-        "https://openalex.org/W6767047860",
-        "https://openalex.org/W3006271038",
-        "https://openalex.org/W2998919732",
-        "https://openalex.org/W2048390999",
-        "https://openalex.org/W2990288623",
-        "https://openalex.org/W1994573369",
-        "https://openalex.org/W6652311901",
-        "https://openalex.org/W2170021941",
-        "https://openalex.org/W2034688095",
-        "https://openalex.org/W2750023899",
-        "https://openalex.org/W2050339458",
-        "https://openalex.org/W2927392967",
-        "https://openalex.org/W2963355447",
-        "https://openalex.org/W2884001105",
-        "https://openalex.org/W2511833051",
-        "https://openalex.org/W1996037968",
-        "https://openalex.org/W2979271470",
-        "https://openalex.org/W2992764982",
-        "https://openalex.org/W2807964941",
-        "https://openalex.org/W2884276923",
-        "https://openalex.org/W2949297108",
-        "https://openalex.org/W2888557792",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W2516621648",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W2977848217",
-        "https://openalex.org/W2963958373",
-        "https://openalex.org/W6682508316",
-        "https://openalex.org/W6692071231",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2082512208",
-        "https://openalex.org/W6678262379",
-        "https://openalex.org/W2963661253",
-        "https://openalex.org/W2728773317",
-        "https://openalex.org/W2808064329",
-        "https://openalex.org/W2904097689",
-        "https://openalex.org/W2129740354",
-        "https://openalex.org/W2979486033",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2963392741",
-        "https://openalex.org/W2123301721",
-        "https://openalex.org/W1551431154",
-        "https://openalex.org/W2963371736",
-        "https://openalex.org/W2153508793",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2130942839",
-        "https://openalex.org/W1860267373",
-        "https://openalex.org/W2006969979",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2962995178",
-        "https://openalex.org/W2282866165"
-    ],
-    "abstract": "Code summarization has long been viewed as a challenge in software engineering because of the difficulties of understanding source code and generating natural language. Some mainstream methods combine abstract syntax trees with language models to capture the structural information of the source code and generate relatively satisfactory comments. However, these methods are still deficient in code understanding and limited by the long dependency problem. In this paper, we propose a novel model called Fret, which stands for Functional REinforced Transformer with BERT. The model provides a new way to generate code comments by learning code functionalities and deepening code understanding while alleviating the problem of long dependency. For this purpose, a novel reinforcer is proposed for learning the functional contents of code so that more accurate summaries to describe the code functionalities can be generated. In addition, a more efficient algorithm is newly designed to capture the source code structure. The experimental results show that the effectiveness of our model is remarkable. Fret significantly outperforms all the state-of-the-art methods we examine. It pushes the BLEU-4 score to 24.32 for Java code summarization (14.23% absolute improvement) and the ROUGE-L score to 40.12 for Python. An ablation test is also conducted to further explore the impact of each component of our method.",
-    "full_text": null
+  "title": "Fret: Functional Reinforced Transformer With BERT for Code Summarization",
+  "url": "https://openalex.org/W3044696186",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2171602491",
+      "name": "Ruyun Wang",
+      "affiliations": [
+        "Shandong Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102565213",
+      "name": "Hanwen Zhang",
+      "affiliations": [
+        "Shandong Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102200859",
+      "name": "Guoliang Lu",
+      "affiliations": [
+        "Shandong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2511106244",
+      "name": "Lei Lyu",
+      "affiliations": [
+        "Shandong Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2307388913",
+      "name": "Chen Lyu",
+      "affiliations": [
+        "Shandong Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171602491",
+      "name": "Ruyun Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2102565213",
+      "name": "Hanwen Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2102200859",
+      "name": "Guoliang Lu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2511106244",
+      "name": "Lei Lyu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2307388913",
+      "name": "Chen Lyu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2133333349",
+    "https://openalex.org/W6633145936",
+    "https://openalex.org/W2247374552",
+    "https://openalex.org/W2794601162",
+    "https://openalex.org/W2999343753",
+    "https://openalex.org/W2136296681",
+    "https://openalex.org/W2034209539",
+    "https://openalex.org/W1970407057",
+    "https://openalex.org/W6639050008",
+    "https://openalex.org/W6679261715",
+    "https://openalex.org/W2402619042",
+    "https://openalex.org/W6695202613",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W1498436455",
+    "https://openalex.org/W6767047860",
+    "https://openalex.org/W3006271038",
+    "https://openalex.org/W2998919732",
+    "https://openalex.org/W2048390999",
+    "https://openalex.org/W2990288623",
+    "https://openalex.org/W1994573369",
+    "https://openalex.org/W6652311901",
+    "https://openalex.org/W2170021941",
+    "https://openalex.org/W2034688095",
+    "https://openalex.org/W2750023899",
+    "https://openalex.org/W2050339458",
+    "https://openalex.org/W2927392967",
+    "https://openalex.org/W2963355447",
+    "https://openalex.org/W2884001105",
+    "https://openalex.org/W2511833051",
+    "https://openalex.org/W1996037968",
+    "https://openalex.org/W2979271470",
+    "https://openalex.org/W2992764982",
+    "https://openalex.org/W2807964941",
+    "https://openalex.org/W2884276923",
+    "https://openalex.org/W2949297108",
+    "https://openalex.org/W2888557792",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W2516621648",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W2977848217",
+    "https://openalex.org/W2963958373",
+    "https://openalex.org/W6682508316",
+    "https://openalex.org/W6692071231",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2082512208",
+    "https://openalex.org/W6678262379",
+    "https://openalex.org/W2963661253",
+    "https://openalex.org/W2728773317",
+    "https://openalex.org/W2808064329",
+    "https://openalex.org/W2904097689",
+    "https://openalex.org/W2129740354",
+    "https://openalex.org/W2979486033",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2963392741",
+    "https://openalex.org/W2123301721",
+    "https://openalex.org/W1551431154",
+    "https://openalex.org/W2963371736",
+    "https://openalex.org/W2153508793",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2130942839",
+    "https://openalex.org/W1860267373",
+    "https://openalex.org/W2006969979",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2962995178",
+    "https://openalex.org/W2282866165"
+  ],
+  "abstract": "Code summarization has long been viewed as a challenge in software engineering because of the difficulties of understanding source code and generating natural language. Some mainstream methods combine abstract syntax trees with language models to capture the structural information of the source code and generate relatively satisfactory comments. However, these methods are still deficient in code understanding and limited by the long dependency problem. In this paper, we propose a novel model called Fret, which stands for Functional REinforced Transformer with BERT. The model provides a new way to generate code comments by learning code functionalities and deepening code understanding while alleviating the problem of long dependency. For this purpose, a novel reinforcer is proposed for learning the functional contents of code so that more accurate summaries to describe the code functionalities can be generated. In addition, a more efficient algorithm is newly designed to capture the source code structure. The experimental results show that the effectiveness of our model is remarkable. Fret significantly outperforms all the state-of-the-art methods we examine. It pushes the BLEU-4 score to 24.32 for Java code summarization (14.23% absolute improvement) and the ROUGE-L score to 40.12 for Python. An ablation test is also conducted to further explore the impact of each component of our method.",
+  "full_text": null,
+  "topic": "Automatic summarization",
+  "concepts": [
+    {
+      "name": "Automatic summarization",
+      "score": 0.8211546540260315
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7626066207885742
+    },
+    {
+      "name": "Source code",
+      "score": 0.696984052658081
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5690087676048279
+    },
+    {
+      "name": "Programming language",
+      "score": 0.5158135294914246
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4943428039550781
+    },
+    {
+      "name": "Dependency (UML)",
+      "score": 0.4368979334831238
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.36887603998184204
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.36733677983283997
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

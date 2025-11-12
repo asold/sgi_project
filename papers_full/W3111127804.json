@@ -1,101 +1,172 @@
 {
-    "title": "Channel Transformer Network",
-    "url": "https://openalex.org/W3111127804",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5041256730",
-            "name": "Fuping Zhang",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101578987",
-            "name": "Pengcheng Zhao",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute",
-                "Shanghai University of Engineering Science"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5056113267",
-            "name": "Jianming Wei",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2752782242",
-        "https://openalex.org/W2981899103",
-        "https://openalex.org/W2986451890",
-        "https://openalex.org/W6762897076",
-        "https://openalex.org/W2963972681",
-        "https://openalex.org/W2799185441",
-        "https://openalex.org/W2109255472",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W2127589108",
-        "https://openalex.org/W2971612271",
-        "https://openalex.org/W6750984223",
-        "https://openalex.org/W2798329462",
-        "https://openalex.org/W2963736028",
-        "https://openalex.org/W197865394",
-        "https://openalex.org/W2116360511",
-        "https://openalex.org/W3080858728",
-        "https://openalex.org/W2425566277",
-        "https://openalex.org/W3016193692",
-        "https://openalex.org/W2519803806",
-        "https://openalex.org/W2463071499",
-        "https://openalex.org/W2622829582",
-        "https://openalex.org/W6735531217",
-        "https://openalex.org/W2982119297",
-        "https://openalex.org/W6755350556",
-        "https://openalex.org/W6750214674",
-        "https://openalex.org/W6736696968",
-        "https://openalex.org/W6746255304",
-        "https://openalex.org/W2963575739",
-        "https://openalex.org/W2963330186",
-        "https://openalex.org/W2963805953",
-        "https://openalex.org/W2888872060",
-        "https://openalex.org/W2963322158",
-        "https://openalex.org/W2971086219",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W2549139847",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6766507936",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W2584637367",
-        "https://openalex.org/W6753412334",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2955084925",
-        "https://openalex.org/W2520433280",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2954275231",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2962784289",
-        "https://openalex.org/W2997788879",
-        "https://openalex.org/W2896011443",
-        "https://openalex.org/W2604463754",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W3021892279",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W3089800122",
-        "https://openalex.org/W2598634450",
-        "https://openalex.org/W2769346661",
-        "https://openalex.org/W2966545243",
-        "https://openalex.org/W2946839488",
-        "https://openalex.org/W3036967712",
-        "https://openalex.org/W2800289127",
-        "https://openalex.org/W2963420686",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W2964283970"
-    ],
-    "abstract": "Current attention or transform modules in Convolutional Neural Networks (CNNs) are designed pursuing lightweight and in-place. Generally, we need to decrease the channel dimension of input feature maps for reducing computation cost firstly. And then we do some transformation for extracting weight maps or converting to other feature space etc. Finally, we increase the channel dimension back for outputting feature maps with the same size as input. When we change the channel dimension, commonly we choose 1 &#x00D7; 1 convolutional layers or fully connected layers. They are simple and effective, but need learning parameters and consuming more memory with other computation resources. We propose a novel parameter free method named Channel Transformer Network (CTN) to decrease or increase channels for these modules whilst keeping most information with lower computation complexity. We also introduce a Video Co-segment Attentive Network (VCAN) for person re-identification (ReID) to improve pedestrian's noticeable representation across multiple video frames. We embed CTN in Non-local, CBAM, COSAM and VCAN blocks to replace 1 &#x00D7; 1 convolutional or fully connected layers. Experiments of VCAN and CTN embedding models on Mars dataset for person ReID show significant performance in computation efficiency and accuracy, especially VCAN reaches 90.05% in Rank-1. We believe CTN can also be used in other vision tasks like image classification and object detection etc.",
-    "full_text": null
+  "title": "Channel Transformer Network",
+  "url": "https://openalex.org/W3111127804",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5041256730",
+      "name": "Fuping Zhang",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101578987",
+      "name": "Pengcheng Zhao",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute",
+        "Shanghai University of Engineering Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5056113267",
+      "name": "Jianming Wei",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2752782242",
+    "https://openalex.org/W2981899103",
+    "https://openalex.org/W2986451890",
+    "https://openalex.org/W6762897076",
+    "https://openalex.org/W2963972681",
+    "https://openalex.org/W2799185441",
+    "https://openalex.org/W2109255472",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W2127589108",
+    "https://openalex.org/W2971612271",
+    "https://openalex.org/W6750984223",
+    "https://openalex.org/W2798329462",
+    "https://openalex.org/W2963736028",
+    "https://openalex.org/W197865394",
+    "https://openalex.org/W2116360511",
+    "https://openalex.org/W3080858728",
+    "https://openalex.org/W2425566277",
+    "https://openalex.org/W3016193692",
+    "https://openalex.org/W2519803806",
+    "https://openalex.org/W2463071499",
+    "https://openalex.org/W2622829582",
+    "https://openalex.org/W6735531217",
+    "https://openalex.org/W2982119297",
+    "https://openalex.org/W6755350556",
+    "https://openalex.org/W6750214674",
+    "https://openalex.org/W6736696968",
+    "https://openalex.org/W6746255304",
+    "https://openalex.org/W2963575739",
+    "https://openalex.org/W2963330186",
+    "https://openalex.org/W2963805953",
+    "https://openalex.org/W2888872060",
+    "https://openalex.org/W2963322158",
+    "https://openalex.org/W2971086219",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W2549139847",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6766507936",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W2584637367",
+    "https://openalex.org/W6753412334",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2955084925",
+    "https://openalex.org/W2520433280",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2954275231",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2962784289",
+    "https://openalex.org/W2997788879",
+    "https://openalex.org/W2896011443",
+    "https://openalex.org/W2604463754",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W3021892279",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W3089800122",
+    "https://openalex.org/W2598634450",
+    "https://openalex.org/W2769346661",
+    "https://openalex.org/W2966545243",
+    "https://openalex.org/W2946839488",
+    "https://openalex.org/W3036967712",
+    "https://openalex.org/W2800289127",
+    "https://openalex.org/W2963420686",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W2964283970"
+  ],
+  "abstract": "Current attention or transform modules in Convolutional Neural Networks (CNNs) are designed pursuing lightweight and in-place. Generally, we need to decrease the channel dimension of input feature maps for reducing computation cost firstly. And then we do some transformation for extracting weight maps or converting to other feature space etc. Finally, we increase the channel dimension back for outputting feature maps with the same size as input. When we change the channel dimension, commonly we choose 1 &#x00D7; 1 convolutional layers or fully connected layers. They are simple and effective, but need learning parameters and consuming more memory with other computation resources. We propose a novel parameter free method named Channel Transformer Network (CTN) to decrease or increase channels for these modules whilst keeping most information with lower computation complexity. We also introduce a Video Co-segment Attentive Network (VCAN) for person re-identification (ReID) to improve pedestrian's noticeable representation across multiple video frames. We embed CTN in Non-local, CBAM, COSAM and VCAN blocks to replace 1 &#x00D7; 1 convolutional or fully connected layers. Experiments of VCAN and CTN embedding models on Mars dataset for person ReID show significant performance in computation efficiency and accuracy, especially VCAN reaches 90.05% in Rank-1. We believe CTN can also be used in other vision tasks like image classification and object detection etc.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7711289525032043
+    },
+    {
+      "name": "Computation",
+      "score": 0.7396577000617981
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6069783568382263
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5356402397155762
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5328740477561951
+    },
+    {
+      "name": "Channel (broadcasting)",
+      "score": 0.49871277809143066
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49726417660713196
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.48864299058914185
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.44432106614112854
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.36967432498931885
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.2631274461746216
+    },
+    {
+      "name": "Computer network",
+      "score": 0.06915360689163208
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

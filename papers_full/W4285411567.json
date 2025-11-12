@@ -1,83 +1,150 @@
 {
-    "title": "SWCGAN: Generative Adversarial Network Combining Swin Transformer and CNN for Remote Sensing Image Super-Resolution",
-    "url": "https://openalex.org/W4285411567",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2606763953",
-            "name": "Jingzhi Tu",
-            "affiliations": [
-                "China University of Geosciences (Beijing)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2094620546",
-            "name": "Gang Mei",
-            "affiliations": [
-                "China University of Geosciences (Beijing)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2543237019",
-            "name": "Zhengjing Ma",
-            "affiliations": [
-                "China University of Geosciences (Beijing)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1768297600",
-            "name": "Francesco Piccialli",
-            "affiliations": [
-                "University of Naples Federico II"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2096919863",
-        "https://openalex.org/W2744690378",
-        "https://openalex.org/W3203828160",
-        "https://openalex.org/W3204157259",
-        "https://openalex.org/W2121058967",
-        "https://openalex.org/W2058523468",
-        "https://openalex.org/W2157190232",
-        "https://openalex.org/W1885185971",
-        "https://openalex.org/W2963446712",
-        "https://openalex.org/W2780544323",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2242218935",
-        "https://openalex.org/W2747898905",
-        "https://openalex.org/W2099471712",
-        "https://openalex.org/W3183600011",
-        "https://openalex.org/W2963470893",
-        "https://openalex.org/W2997019934",
-        "https://openalex.org/W2927933146",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2105482032",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3181327235",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W3206529494",
-        "https://openalex.org/W3202923600",
-        "https://openalex.org/W3184785988",
-        "https://openalex.org/W2799876272",
-        "https://openalex.org/W2476548250",
-        "https://openalex.org/W3200851318",
-        "https://openalex.org/W1980038761",
-        "https://openalex.org/W2779812541",
-        "https://openalex.org/W3011024422",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2051671904",
-        "https://openalex.org/W4212794101",
-        "https://openalex.org/W2962785568",
-        "https://openalex.org/W2866634454",
-        "https://openalex.org/W2963372104",
-        "https://openalex.org/W2621121458",
-        "https://openalex.org/W3153239544",
-        "https://openalex.org/W2102166818",
-        "https://openalex.org/W3114632476",
-        "https://openalex.org/W2965770986",
-        "https://openalex.org/W3212755948"
-    ],
-    "abstract": "Easy and efficient acquisition of high-resolution remote sensing images is of importance in geographic information systems. Previously, deep neural networks composed of convolutional layers have achieved impressive progress in super-resolution reconstruction. However, the inherent problems of the convolutional layer, including the difficulty of modeling the long-range dependency, limit the performance of these networks on super-resolution reconstruction. To address the abovementioned problems, we propose a generative adversarial network (GAN) by combining the advantages of the swin transformer and convolutional layers, called SWCGAN. It is different from the previous super-resolution models, which are composed of pure convolutional blocks. The essential idea behind the proposed method is to generate high-resolution images by a generator network with a hybrid of convolutional and swin transformer layers and then to use a pure swin transformer discriminator network for adversarial training. In the proposed method, first, we employ a convolutional layer for shallow feature extraction that can be adapted to flexible input sizes; second, we further propose the residual dense swin transformer block to extract deep features for upsampling to generate high-resolution images; and third, we use a simplified swin transformer as the discriminator for adversarial training. To evaluate the performance of the proposed method, we compare the proposed method with other state-of-the-art methods by utilizing the UCMerced benchmark dataset, and we apply the proposed method to real-world remote sensing images. The results demonstrate that the reconstruction performance of the proposed method outperforms other state-of-the-art methods in most metrics.",
-    "full_text": null
+  "title": "SWCGAN: Generative Adversarial Network Combining Swin Transformer and CNN for Remote Sensing Image Super-Resolution",
+  "url": "https://openalex.org/W4285411567",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2606763953",
+      "name": "Jingzhi Tu",
+      "affiliations": [
+        "China University of Geosciences (Beijing)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2094620546",
+      "name": "Gang Mei",
+      "affiliations": [
+        "China University of Geosciences (Beijing)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2543237019",
+      "name": "Zhengjing Ma",
+      "affiliations": [
+        "China University of Geosciences (Beijing)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1768297600",
+      "name": "Francesco Piccialli",
+      "affiliations": [
+        "University of Naples Federico II"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2096919863",
+    "https://openalex.org/W2744690378",
+    "https://openalex.org/W3203828160",
+    "https://openalex.org/W3204157259",
+    "https://openalex.org/W2121058967",
+    "https://openalex.org/W2058523468",
+    "https://openalex.org/W2157190232",
+    "https://openalex.org/W1885185971",
+    "https://openalex.org/W2963446712",
+    "https://openalex.org/W2780544323",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2242218935",
+    "https://openalex.org/W2747898905",
+    "https://openalex.org/W2099471712",
+    "https://openalex.org/W3183600011",
+    "https://openalex.org/W2963470893",
+    "https://openalex.org/W2997019934",
+    "https://openalex.org/W2927933146",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2105482032",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3181327235",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W3206529494",
+    "https://openalex.org/W3202923600",
+    "https://openalex.org/W3184785988",
+    "https://openalex.org/W2799876272",
+    "https://openalex.org/W2476548250",
+    "https://openalex.org/W3200851318",
+    "https://openalex.org/W1980038761",
+    "https://openalex.org/W2779812541",
+    "https://openalex.org/W3011024422",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2051671904",
+    "https://openalex.org/W4212794101",
+    "https://openalex.org/W2962785568",
+    "https://openalex.org/W2866634454",
+    "https://openalex.org/W2963372104",
+    "https://openalex.org/W2621121458",
+    "https://openalex.org/W3153239544",
+    "https://openalex.org/W2102166818",
+    "https://openalex.org/W3114632476",
+    "https://openalex.org/W2965770986",
+    "https://openalex.org/W3212755948"
+  ],
+  "abstract": "Easy and efficient acquisition of high-resolution remote sensing images is of importance in geographic information systems. Previously, deep neural networks composed of convolutional layers have achieved impressive progress in super-resolution reconstruction. However, the inherent problems of the convolutional layer, including the difficulty of modeling the long-range dependency, limit the performance of these networks on super-resolution reconstruction. To address the abovementioned problems, we propose a generative adversarial network (GAN) by combining the advantages of the swin transformer and convolutional layers, called SWCGAN. It is different from the previous super-resolution models, which are composed of pure convolutional blocks. The essential idea behind the proposed method is to generate high-resolution images by a generator network with a hybrid of convolutional and swin transformer layers and then to use a pure swin transformer discriminator network for adversarial training. In the proposed method, first, we employ a convolutional layer for shallow feature extraction that can be adapted to flexible input sizes; second, we further propose the residual dense swin transformer block to extract deep features for upsampling to generate high-resolution images; and third, we use a simplified swin transformer as the discriminator for adversarial training. To evaluate the performance of the proposed method, we compare the proposed method with other state-of-the-art methods by utilizing the UCMerced benchmark dataset, and we apply the proposed method to real-world remote sensing images. The results demonstrate that the reconstruction performance of the proposed method outperforms other state-of-the-art methods in most metrics.",
+  "full_text": null,
+  "topic": "Discriminator",
+  "concepts": [
+    {
+      "name": "Discriminator",
+      "score": 0.8208701610565186
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8163809776306152
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6748417615890503
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6187723278999329
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6116175651550293
+    },
+    {
+      "name": "Upsampling",
+      "score": 0.5952754616737366
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.5074643492698669
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.48843541741371155
+    },
+    {
+      "name": "Generative adversarial network",
+      "score": 0.45170605182647705
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4154522716999054
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.19856923818588257
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.07673856616020203
+    },
+    {
+      "name": "Engineering",
+      "score": 0.06798124313354492
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Detector",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

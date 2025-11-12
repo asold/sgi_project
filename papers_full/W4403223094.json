@@ -1,106 +1,133 @@
 {
-    "title": "Knowledge Transfer from High-Resource to Low-Resource Programming Languages for Code LLMs",
-    "url": "https://openalex.org/W4403223094",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4366204919",
-            "name": "Federico Cassano",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2987447475",
-            "name": "John Gouwar",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2799532173",
-            "name": "Francesca Lucchetti",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102684503",
-            "name": "Claire Schlesinger",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5108591760",
-            "name": "Anders Freeman",
-            "affiliations": [
-                "Wellesley College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2586217196",
-            "name": "Carolyn Jane Anderson",
-            "affiliations": [
-                "Wellesley College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2785363959",
-            "name": "Molly Q. Feldman",
-            "affiliations": [
-                "Oberlin College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1989628151",
-            "name": "Michael Greenberg",
-            "affiliations": [
-                "Stevens Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2657942816",
-            "name": "Abhinav Jangda",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2163638586",
-            "name": "Arjun Guha",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4284688961",
-        "https://openalex.org/W2440056063",
-        "https://openalex.org/W4366204357",
-        "https://openalex.org/W4312282218",
-        "https://openalex.org/W4388556611",
-        "https://openalex.org/W4391272793",
-        "https://openalex.org/W2036676782",
-        "https://openalex.org/W4382239980",
-        "https://openalex.org/W4389988840",
-        "https://openalex.org/W4384304865",
-        "https://openalex.org/W6852746770",
-        "https://openalex.org/W2108325777",
-        "https://openalex.org/W3045595218",
-        "https://openalex.org/W4394745423",
-        "https://openalex.org/W4394769102",
-        "https://openalex.org/W3129831491",
-        "https://openalex.org/W4321013654",
-        "https://openalex.org/W4389104713",
-        "https://openalex.org/W4394769544",
-        "https://openalex.org/W4385562549",
-        "https://openalex.org/W4281669078",
-        "https://openalex.org/W398859631",
-        "https://openalex.org/W3104449953",
-        "https://openalex.org/W4376167329",
-        "https://openalex.org/W3102273185"
-    ],
-    "abstract": "Over the past few years, Large Language Models of Code (Code LLMs) have started to have a significant impact on programming practice. Code LLMs are also emerging as building blocks for research in programming languages and software engineering. However, the quality of code produced by a Code LLM varies significantly by programming language. Code LLMs produce impressive results on high-resource programming languages that are well represented in their training data (e.g., Java, Python, or JavaScript), but struggle with low-resource languages that have limited training data available (e.g., OCaml, Racket, and several others). This paper presents an effective approach for boosting the performance of Code LLMs on low-resource languages using semi-synthetic data. Our approach, called MultiPL-T, generates high-quality datasets for low-resource languages, which can then be used to fine-tune any pretrained Code LLM. MultiPL-T translates training data from high-resource languages into training data for low-resource languages in the following way. 1) We use a Code LLM to synthesize unit tests for commented code from a high-resource source language, filtering out faulty tests and code with low test coverage. 2) We use a Code LLM to translate the code from the high-resource source language to a target low-resource language. This gives us a corpus of candidate training data in the target language, but many of these translations are wrong. 3) We use a lightweight compiler to compile the test cases generated in (1) from the source language to the target language, which allows us to filter our obviously wrong translations. The result is a training corpus in the target low-resource language where all items have been validated with test cases. We apply this approach to generate tens of thousands of new, validated training items for five low-resource languages: Julia, Lua, OCaml, R, and Racket, using Python as the source high-resource language. Furthermore, we use an open Code LLM (StarCoderBase) with open training data (The Stack), which allows us to decontaminate benchmarks, train models without violating licenses, and run experiments that could not otherwise be done. Using datasets generated with MultiPL-T, we present fine-tuned versions of StarCoderBase and Code Llama for Julia, Lua, OCaml, R, and Racket that outperform other fine-tunes of these base models on the natural language to code task. We also present Racket fine-tunes for two very recent models, DeepSeek Coder and StarCoder2, to show that MultiPL-T continues to outperform other fine-tuning approaches for low-resource languages. The MultiPL-T approach is easy to apply to new languages, and is significantly more efficient and effective than alternatives such as training longer.",
-    "full_text": null
+  "title": "Knowledge Transfer from High-Resource to Low-Resource Programming Languages for Code LLMs",
+  "url": "https://openalex.org/W4403223094",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4366204919",
+      "name": "Federico Cassano",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2987447475",
+      "name": "John Gouwar",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2799532173",
+      "name": "Francesca Lucchetti",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102684503",
+      "name": "Claire Schlesinger",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5108591760",
+      "name": "Anders Freeman",
+      "affiliations": [
+        "Wellesley College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2586217196",
+      "name": "Carolyn Jane Anderson",
+      "affiliations": [
+        "Wellesley College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2785363959",
+      "name": "Molly Q. Feldman",
+      "affiliations": [
+        "Oberlin College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1989628151",
+      "name": "Michael Greenberg",
+      "affiliations": [
+        "Stevens Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2657942816",
+      "name": "Abhinav Jangda",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2163638586",
+      "name": "Arjun Guha",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4284688961",
+    "https://openalex.org/W2440056063",
+    "https://openalex.org/W4366204357",
+    "https://openalex.org/W4312282218",
+    "https://openalex.org/W4388556611",
+    "https://openalex.org/W4391272793",
+    "https://openalex.org/W2036676782",
+    "https://openalex.org/W4382239980",
+    "https://openalex.org/W4389988840",
+    "https://openalex.org/W4384304865",
+    "https://openalex.org/W6852746770",
+    "https://openalex.org/W2108325777",
+    "https://openalex.org/W3045595218",
+    "https://openalex.org/W4394745423",
+    "https://openalex.org/W4394769102",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W4321013654",
+    "https://openalex.org/W4389104713",
+    "https://openalex.org/W4394769544",
+    "https://openalex.org/W4385562549",
+    "https://openalex.org/W4281669078",
+    "https://openalex.org/W398859631",
+    "https://openalex.org/W3104449953",
+    "https://openalex.org/W4376167329",
+    "https://openalex.org/W3102273185"
+  ],
+  "abstract": "Over the past few years, Large Language Models of Code (Code LLMs) have started to have a significant impact on programming practice. Code LLMs are also emerging as building blocks for research in programming languages and software engineering. However, the quality of code produced by a Code LLM varies significantly by programming language. Code LLMs produce impressive results on high-resource programming languages that are well represented in their training data (e.g., Java, Python, or JavaScript), but struggle with low-resource languages that have limited training data available (e.g., OCaml, Racket, and several others). This paper presents an effective approach for boosting the performance of Code LLMs on low-resource languages using semi-synthetic data. Our approach, called MultiPL-T, generates high-quality datasets for low-resource languages, which can then be used to fine-tune any pretrained Code LLM. MultiPL-T translates training data from high-resource languages into training data for low-resource languages in the following way. 1) We use a Code LLM to synthesize unit tests for commented code from a high-resource source language, filtering out faulty tests and code with low test coverage. 2) We use a Code LLM to translate the code from the high-resource source language to a target low-resource language. This gives us a corpus of candidate training data in the target language, but many of these translations are wrong. 3) We use a lightweight compiler to compile the test cases generated in (1) from the source language to the target language, which allows us to filter our obviously wrong translations. The result is a training corpus in the target low-resource language where all items have been validated with test cases. We apply this approach to generate tens of thousands of new, validated training items for five low-resource languages: Julia, Lua, OCaml, R, and Racket, using Python as the source high-resource language. Furthermore, we use an open Code LLM (StarCoderBase) with open training data (The Stack), which allows us to decontaminate benchmarks, train models without violating licenses, and run experiments that could not otherwise be done. Using datasets generated with MultiPL-T, we present fine-tuned versions of StarCoderBase and Code Llama for Julia, Lua, OCaml, R, and Racket that outperform other fine-tunes of these base models on the natural language to code task. We also present Racket fine-tunes for two very recent models, DeepSeek Coder and StarCoder2, to show that MultiPL-T continues to outperform other fine-tuning approaches for low-resource languages. The MultiPL-T approach is easy to apply to new languages, and is significantly more efficient and effective than alternatives such as training longer.",
+  "full_text": null,
+  "topic": "Resource (disambiguation)",
+  "concepts": [
+    {
+      "name": "Resource (disambiguation)",
+      "score": 0.632860004901886
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5726326704025269
+    },
+    {
+      "name": "Computer science",
+      "score": 0.49653154611587524
+    },
+    {
+      "name": "Programming language",
+      "score": 0.35239070653915405
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Computer network",
+      "score": 0.0
+    }
+  ]
 }

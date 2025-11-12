@@ -1,90 +1,165 @@
 {
-    "title": "PSCAT: a lightweight transformer for simultaneous denoising and super-resolution of OCT images",
-    "url": "https://openalex.org/W4393390127",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100628590",
-            "name": "Bin Yao",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5091146998",
-            "name": "Lujia Jin",
-            "affiliations": [
-                "Peking University",
-                "Peking University Shenzhen Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5041000515",
-            "name": "Jiakui Hu",
-            "affiliations": [
-                "Peking University Shenzhen Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5026830952",
-            "name": "Yuzhao Liu",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101346744",
-            "name": "Yuepeng Yan",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100404130",
-            "name": "Qing Li",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5082320568",
-            "name": "Yanye Lu",
-            "affiliations": [
-                "Peking University Shenzhen Hospital"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2418802570",
-        "https://openalex.org/W2045026119",
-        "https://openalex.org/W2061240737",
-        "https://openalex.org/W2027606067",
-        "https://openalex.org/W2067108728",
-        "https://openalex.org/W1993421475",
-        "https://openalex.org/W2791702886",
-        "https://openalex.org/W3097005192",
-        "https://openalex.org/W3000499123",
-        "https://openalex.org/W3188436466",
-        "https://openalex.org/W3201393040",
-        "https://openalex.org/W4283276172",
-        "https://openalex.org/W2937484554",
-        "https://openalex.org/W3091889996",
-        "https://openalex.org/W3014231739",
-        "https://openalex.org/W2021229920",
-        "https://openalex.org/W2052239345",
-        "https://openalex.org/W2133047176",
-        "https://openalex.org/W2081640157",
-        "https://openalex.org/W2079390326",
-        "https://openalex.org/W2001080026",
-        "https://openalex.org/W2944774584",
-        "https://openalex.org/W4225890200",
-        "https://openalex.org/W3082078635",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Optical coherence tomography (OCT), owing to its non-invasive nature, has demonstrated tremendous potential in clinical practice and has become a prevalent diagnostic method. Nevertheless, the inherent speckle noise and low sampling rate in OCT imaging often limit the quality of OCT images. In this paper, we propose a lightweight Transformer to efficiently reconstruct high-quality images from noisy and low-resolution OCT images acquired by short scans. Our method, PSCAT, parallelly employs spatial window self-attention and channel attention in the Transformer block to aggregate features from both spatial and channel dimensions. It explores the potential of the Transformer in denoising and super-resolution for OCT, reducing computational costs and enhancing the speed of image processing. To effectively assist in restoring high-frequency details, we introduce a hybrid loss function in both spatial and frequency domains. Extensive experiments demonstrate that our PSCAT has fewer network parameters and lower computational costs compared to state-of-the-art methods while delivering a competitive performance both qualitatively and quantitatively.",
-    "full_text": null
+  "title": "PSCAT: a lightweight transformer for simultaneous denoising and super-resolution of OCT images",
+  "url": "https://openalex.org/W4393390127",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100628590",
+      "name": "Bin Yao",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5091146998",
+      "name": "Lujia Jin",
+      "affiliations": [
+        "Peking University",
+        "Peking University Shenzhen Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5041000515",
+      "name": "Jiakui Hu",
+      "affiliations": [
+        "Peking University Shenzhen Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5026830952",
+      "name": "Yuzhao Liu",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101346744",
+      "name": "Yuepeng Yan",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100404130",
+      "name": "Qing Li",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5082320568",
+      "name": "Yanye Lu",
+      "affiliations": [
+        "Peking University Shenzhen Hospital"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2418802570",
+    "https://openalex.org/W2045026119",
+    "https://openalex.org/W2061240737",
+    "https://openalex.org/W2027606067",
+    "https://openalex.org/W2067108728",
+    "https://openalex.org/W1993421475",
+    "https://openalex.org/W2791702886",
+    "https://openalex.org/W3097005192",
+    "https://openalex.org/W3000499123",
+    "https://openalex.org/W3188436466",
+    "https://openalex.org/W3201393040",
+    "https://openalex.org/W4283276172",
+    "https://openalex.org/W2937484554",
+    "https://openalex.org/W3091889996",
+    "https://openalex.org/W3014231739",
+    "https://openalex.org/W2021229920",
+    "https://openalex.org/W2052239345",
+    "https://openalex.org/W2133047176",
+    "https://openalex.org/W2081640157",
+    "https://openalex.org/W2079390326",
+    "https://openalex.org/W2001080026",
+    "https://openalex.org/W2944774584",
+    "https://openalex.org/W4225890200",
+    "https://openalex.org/W3082078635",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Optical coherence tomography (OCT), owing to its non-invasive nature, has demonstrated tremendous potential in clinical practice and has become a prevalent diagnostic method. Nevertheless, the inherent speckle noise and low sampling rate in OCT imaging often limit the quality of OCT images. In this paper, we propose a lightweight Transformer to efficiently reconstruct high-quality images from noisy and low-resolution OCT images acquired by short scans. Our method, PSCAT, parallelly employs spatial window self-attention and channel attention in the Transformer block to aggregate features from both spatial and channel dimensions. It explores the potential of the Transformer in denoising and super-resolution for OCT, reducing computational costs and enhancing the speed of image processing. To effectively assist in restoring high-frequency details, we introduce a hybrid loss function in both spatial and frequency domains. Extensive experiments demonstrate that our PSCAT has fewer network parameters and lower computational costs compared to state-of-the-art methods while delivering a competitive performance both qualitatively and quantitatively.",
+  "full_text": null,
+  "topic": "Optical coherence tomography",
+  "concepts": [
+    {
+      "name": "Optical coherence tomography",
+      "score": 0.7726612091064453
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7444858551025391
+    },
+    {
+      "name": "Image quality",
+      "score": 0.6255661249160767
+    },
+    {
+      "name": "Speckle noise",
+      "score": 0.6162892580032349
+    },
+    {
+      "name": "Image resolution",
+      "score": 0.5693132877349854
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5659772753715515
+    },
+    {
+      "name": "Noise reduction",
+      "score": 0.5100935101509094
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4931461215019226
+    },
+    {
+      "name": "Speckle pattern",
+      "score": 0.48824813961982727
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.48784732818603516
+    },
+    {
+      "name": "Spatial frequency",
+      "score": 0.48270297050476074
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3382442593574524
+    },
+    {
+      "name": "Optics",
+      "score": 0.2469298541545868
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.19214361906051636
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09730944037437439
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08562818169593811
+    },
+    {
+      "name": "Physics",
+      "score": 0.08342859148979187
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,128 +1,191 @@
 {
-    "title": "DCAT: Dual Cross-Attention-Based Transformer for Change Detection",
-    "url": "https://openalex.org/W4381789302",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100638171",
-            "name": "Yuan Zhou",
-            "affiliations": [
-                "Beijing Academy of Artificial Intelligence",
-                "Chinese Academy of Sciences",
-                "Institute of Automation",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5047574411",
-            "name": "Chunlei Huo",
-            "affiliations": [
-                "Beijing Academy of Artificial Intelligence",
-                "Chinese Academy of Sciences",
-                "Institute of Automation",
-                "University of Chinese Academy of Sciences",
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5079985122",
-            "name": "Jiahang Zhu",
-            "affiliations": [
-                "Beijing Academy of Artificial Intelligence",
-                "Chinese Academy of Sciences",
-                "Institute of Automation",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5071380059",
-            "name": "Leigang Huo",
-            "affiliations": [
-                "Nanning Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100435212",
-            "name": "Chunhong Pan",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Automation"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3027201985",
-        "https://openalex.org/W3114429882",
-        "https://openalex.org/W2896365540",
-        "https://openalex.org/W2967626412",
-        "https://openalex.org/W2739310573",
-        "https://openalex.org/W4317740036",
-        "https://openalex.org/W3134394267",
-        "https://openalex.org/W3004839151",
-        "https://openalex.org/W2547416268",
-        "https://openalex.org/W3037640242",
-        "https://openalex.org/W4317437071",
-        "https://openalex.org/W4309309869",
-        "https://openalex.org/W4308548133",
-        "https://openalex.org/W4307939003",
-        "https://openalex.org/W2891248708",
-        "https://openalex.org/W6800650900",
-        "https://openalex.org/W3027225766",
-        "https://openalex.org/W2127589108",
-        "https://openalex.org/W2896092083",
-        "https://openalex.org/W3120467244",
-        "https://openalex.org/W3036453075",
-        "https://openalex.org/W3099503507",
-        "https://openalex.org/W3004423752",
-        "https://openalex.org/W6790731625",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W6810653034",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W3106728613",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6799693294",
-        "https://openalex.org/W6810987806",
-        "https://openalex.org/W6811007873",
-        "https://openalex.org/W2067554686",
-        "https://openalex.org/W2160426968",
-        "https://openalex.org/W2074097040",
-        "https://openalex.org/W4308325132",
-        "https://openalex.org/W2951991161",
-        "https://openalex.org/W2996290406",
-        "https://openalex.org/W6791926410",
-        "https://openalex.org/W6804157828",
-        "https://openalex.org/W6803420298",
-        "https://openalex.org/W3193414609",
-        "https://openalex.org/W6797500923",
-        "https://openalex.org/W3009942016",
-        "https://openalex.org/W3194968429",
-        "https://openalex.org/W2751993439",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W3170544306",
-        "https://openalex.org/W3035022492",
-        "https://openalex.org/W3180355996",
-        "https://openalex.org/W4226359564",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2964350391",
-        "https://openalex.org/W3184566187",
-        "https://openalex.org/W2908320224",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W6800217721",
-        "https://openalex.org/W2805152403",
-        "https://openalex.org/W3152083889",
-        "https://openalex.org/W2023889744",
-        "https://openalex.org/W4226361741",
-        "https://openalex.org/W4287022992",
-        "https://openalex.org/W3196294958",
-        "https://openalex.org/W3139912591",
-        "https://openalex.org/W3209695792",
-        "https://openalex.org/W4226228401",
-        "https://openalex.org/W3186032668",
-        "https://openalex.org/W3176330035",
-        "https://openalex.org/W3210281071",
-        "https://openalex.org/W3130754787"
-    ],
-    "abstract": "Several transformer-based methods for change detection (CD) in remote sensing images have been proposed, with Siamese-based methods showing promising results due to their two-stream feature extraction structure. However, these methods ignore the potential of the cross-attention mechanism to improve change feature discrimination and thus, may limit the final performance. Additionally, using either high-frequency-like fast change or low-frequency-like slow change alone may not effectively represent complex bi-temporal features. Given these limitations, we have developed a new approach that utilizes the dual cross-attention-transformer (DCAT) method. This method mimics the visual change observation procedure of human beings and interacts with and merges bi-temporal features. Unlike traditional Siamese-based CD frameworks, the proposed method extracts multi-scale features and models patch-wise change relationships by connecting a series of hierarchically structured dual cross-attention blocks (DCAB). DCAB is based on a hybrid dual branch mixer that combines convolution and transformer to extract and fuse local and global features. It calculates two types of cross-attention features to effectively learn comprehensive cues with both low- and high-frequency information input from paired CD images. This helps enhance discrimination between the changed and unchanged regions during feature extraction. The feature pyramid fusion network is more lightweight than the encoder and produces powerful multi-scale change representations by aggregating features from different layers. Experiments on four CD datasets demonstrate the advantages of DCAT architecture over other state-of-the-art methods.",
-    "full_text": null
+  "title": "DCAT: Dual Cross-Attention-Based Transformer for Change Detection",
+  "url": "https://openalex.org/W4381789302",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100638171",
+      "name": "Yuan Zhou",
+      "affiliations": [
+        "Beijing Academy of Artificial Intelligence",
+        "Chinese Academy of Sciences",
+        "Institute of Automation",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5047574411",
+      "name": "Chunlei Huo",
+      "affiliations": [
+        "Beijing Academy of Artificial Intelligence",
+        "Chinese Academy of Sciences",
+        "Institute of Automation",
+        "University of Chinese Academy of Sciences",
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5079985122",
+      "name": "Jiahang Zhu",
+      "affiliations": [
+        "Beijing Academy of Artificial Intelligence",
+        "Chinese Academy of Sciences",
+        "Institute of Automation",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5071380059",
+      "name": "Leigang Huo",
+      "affiliations": [
+        "Nanning Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100435212",
+      "name": "Chunhong Pan",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Automation"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3027201985",
+    "https://openalex.org/W3114429882",
+    "https://openalex.org/W2896365540",
+    "https://openalex.org/W2967626412",
+    "https://openalex.org/W2739310573",
+    "https://openalex.org/W4317740036",
+    "https://openalex.org/W3134394267",
+    "https://openalex.org/W3004839151",
+    "https://openalex.org/W2547416268",
+    "https://openalex.org/W3037640242",
+    "https://openalex.org/W4317437071",
+    "https://openalex.org/W4309309869",
+    "https://openalex.org/W4308548133",
+    "https://openalex.org/W4307939003",
+    "https://openalex.org/W2891248708",
+    "https://openalex.org/W6800650900",
+    "https://openalex.org/W3027225766",
+    "https://openalex.org/W2127589108",
+    "https://openalex.org/W2896092083",
+    "https://openalex.org/W3120467244",
+    "https://openalex.org/W3036453075",
+    "https://openalex.org/W3099503507",
+    "https://openalex.org/W3004423752",
+    "https://openalex.org/W6790731625",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W6810653034",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W3106728613",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6799693294",
+    "https://openalex.org/W6810987806",
+    "https://openalex.org/W6811007873",
+    "https://openalex.org/W2067554686",
+    "https://openalex.org/W2160426968",
+    "https://openalex.org/W2074097040",
+    "https://openalex.org/W4308325132",
+    "https://openalex.org/W2951991161",
+    "https://openalex.org/W2996290406",
+    "https://openalex.org/W6791926410",
+    "https://openalex.org/W6804157828",
+    "https://openalex.org/W6803420298",
+    "https://openalex.org/W3193414609",
+    "https://openalex.org/W6797500923",
+    "https://openalex.org/W3009942016",
+    "https://openalex.org/W3194968429",
+    "https://openalex.org/W2751993439",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W3170544306",
+    "https://openalex.org/W3035022492",
+    "https://openalex.org/W3180355996",
+    "https://openalex.org/W4226359564",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2964350391",
+    "https://openalex.org/W3184566187",
+    "https://openalex.org/W2908320224",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W6800217721",
+    "https://openalex.org/W2805152403",
+    "https://openalex.org/W3152083889",
+    "https://openalex.org/W2023889744",
+    "https://openalex.org/W4226361741",
+    "https://openalex.org/W4287022992",
+    "https://openalex.org/W3196294958",
+    "https://openalex.org/W3139912591",
+    "https://openalex.org/W3209695792",
+    "https://openalex.org/W4226228401",
+    "https://openalex.org/W3186032668",
+    "https://openalex.org/W3176330035",
+    "https://openalex.org/W3210281071",
+    "https://openalex.org/W3130754787"
+  ],
+  "abstract": "Several transformer-based methods for change detection (CD) in remote sensing images have been proposed, with Siamese-based methods showing promising results due to their two-stream feature extraction structure. However, these methods ignore the potential of the cross-attention mechanism to improve change feature discrimination and thus, may limit the final performance. Additionally, using either high-frequency-like fast change or low-frequency-like slow change alone may not effectively represent complex bi-temporal features. Given these limitations, we have developed a new approach that utilizes the dual cross-attention-transformer (DCAT) method. This method mimics the visual change observation procedure of human beings and interacts with and merges bi-temporal features. Unlike traditional Siamese-based CD frameworks, the proposed method extracts multi-scale features and models patch-wise change relationships by connecting a series of hierarchically structured dual cross-attention blocks (DCAB). DCAB is based on a hybrid dual branch mixer that combines convolution and transformer to extract and fuse local and global features. It calculates two types of cross-attention features to effectively learn comprehensive cues with both low- and high-frequency information input from paired CD images. This helps enhance discrimination between the changed and unchanged regions during feature extraction. The feature pyramid fusion network is more lightweight than the encoder and produces powerful multi-scale change representations by aggregating features from different layers. Experiments on four CD datasets demonstrate the advantages of DCAT architecture over other state-of-the-art methods.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7784421443939209
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6039049029350281
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5710670948028564
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5616478323936462
+    },
+    {
+      "name": "Change detection",
+      "score": 0.5552550554275513
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5088479518890381
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4907134771347046
+    },
+    {
+      "name": "Pyramid (geometry)",
+      "score": 0.4824253022670746
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3349301218986511
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.07589596509933472
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

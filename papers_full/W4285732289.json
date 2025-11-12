@@ -1,92 +1,151 @@
 {
-    "title": "Boosting the Transformer with the BERT Supervision in Low-Resource Machine Translation",
-    "url": "https://openalex.org/W4285732289",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100329491",
-            "name": "Rong Yan",
-            "affiliations": [
-                "Inner Mongolia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100392382",
-            "name": "Jiang Li",
-            "affiliations": [
-                "Inner Mongolia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010464164",
-            "name": "Xiangdong Su",
-            "affiliations": [
-                "Inner Mongolia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100377910",
-            "name": "Xiaoming Wang",
-            "affiliations": [
-                "Inner Mongolia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5076174513",
-            "name": "Guanglai Gao",
-            "affiliations": [
-                "Inner Mongolia University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W2950428495",
-        "https://openalex.org/W2594990650",
-        "https://openalex.org/W6737778391",
-        "https://openalex.org/W2805790316",
-        "https://openalex.org/W2970069811",
-        "https://openalex.org/W2752630748",
-        "https://openalex.org/W2945534329",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3173190788",
-        "https://openalex.org/W2963216553",
-        "https://openalex.org/W2962715412",
-        "https://openalex.org/W2994928925",
-        "https://openalex.org/W2944815030",
-        "https://openalex.org/W6767737316",
-        "https://openalex.org/W2986562961",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W2996766022",
-        "https://openalex.org/W2888520903",
-        "https://openalex.org/W2948798935",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W2967985939",
-        "https://openalex.org/W2963088995",
-        "https://openalex.org/W2772421198",
-        "https://openalex.org/W6729383884",
-        "https://openalex.org/W2980852478",
-        "https://openalex.org/W6780786519",
-        "https://openalex.org/W3167844886",
-        "https://openalex.org/W2964085268",
-        "https://openalex.org/W3105038888",
-        "https://openalex.org/W3174724858",
-        "https://openalex.org/W3156665996",
-        "https://openalex.org/W3036120435",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2962931466",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W2914120296",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3044485699",
-        "https://openalex.org/W2130942839",
-        "https://openalex.org/W2970597249"
-    ],
-    "abstract": "Previous works trained the Transformer and its variants end-to-end and achieved remarkable translation performance when there are huge parallel sentences available. However, these models suffer from the data scarcity problem in low-resource machine translation tasks. To deal with the mismatch problem between the big model capacity of the Transformer and the small parallel training data set, this paper adds the BERT supervision on the latent representation between the encoder and the decoder of the Transformer and designs a multi-step training algorithm to boost the Transformer on such a basis. The algorithm includes three stages: (1) encoder training, (2) decoder training, and (3) joint optimization. We introduce the BERT of the target language in the encoder and the decoder training and alleviate the data starvation problem of the Transformer. After the training stage, the BERT will not further attend the inference section explicitly. Another merit of our training algorithm is that it can further enhance the Transformer in the task where there are limited parallel sentence pairs but large amounts of monolingual corpus of the target language. The evaluation results on six low-resource translation tasks suggest that the Transformer trained by our algorithm significantly outperforms the baselines which were trained end-to-end in previous works.",
-    "full_text": null
+  "title": "Boosting the Transformer with the BERT Supervision in Low-Resource Machine Translation",
+  "url": "https://openalex.org/W4285732289",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100329491",
+      "name": "Rong Yan",
+      "affiliations": [
+        "Inner Mongolia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100392382",
+      "name": "Jiang Li",
+      "affiliations": [
+        "Inner Mongolia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010464164",
+      "name": "Xiangdong Su",
+      "affiliations": [
+        "Inner Mongolia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100377910",
+      "name": "Xiaoming Wang",
+      "affiliations": [
+        "Inner Mongolia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5076174513",
+      "name": "Guanglai Gao",
+      "affiliations": [
+        "Inner Mongolia University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W2950428495",
+    "https://openalex.org/W2594990650",
+    "https://openalex.org/W6737778391",
+    "https://openalex.org/W2805790316",
+    "https://openalex.org/W2970069811",
+    "https://openalex.org/W2752630748",
+    "https://openalex.org/W2945534329",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3173190788",
+    "https://openalex.org/W2963216553",
+    "https://openalex.org/W2962715412",
+    "https://openalex.org/W2994928925",
+    "https://openalex.org/W2944815030",
+    "https://openalex.org/W6767737316",
+    "https://openalex.org/W2986562961",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W2996766022",
+    "https://openalex.org/W2888520903",
+    "https://openalex.org/W2948798935",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W2967985939",
+    "https://openalex.org/W2963088995",
+    "https://openalex.org/W2772421198",
+    "https://openalex.org/W6729383884",
+    "https://openalex.org/W2980852478",
+    "https://openalex.org/W6780786519",
+    "https://openalex.org/W3167844886",
+    "https://openalex.org/W2964085268",
+    "https://openalex.org/W3105038888",
+    "https://openalex.org/W3174724858",
+    "https://openalex.org/W3156665996",
+    "https://openalex.org/W3036120435",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2962931466",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W2914120296",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3044485699",
+    "https://openalex.org/W2130942839",
+    "https://openalex.org/W2970597249"
+  ],
+  "abstract": "Previous works trained the Transformer and its variants end-to-end and achieved remarkable translation performance when there are huge parallel sentences available. However, these models suffer from the data scarcity problem in low-resource machine translation tasks. To deal with the mismatch problem between the big model capacity of the Transformer and the small parallel training data set, this paper adds the BERT supervision on the latent representation between the encoder and the decoder of the Transformer and designs a multi-step training algorithm to boost the Transformer on such a basis. The algorithm includes three stages: (1) encoder training, (2) decoder training, and (3) joint optimization. We introduce the BERT of the target language in the encoder and the decoder training and alleviate the data starvation problem of the Transformer. After the training stage, the BERT will not further attend the inference section explicitly. Another merit of our training algorithm is that it can further enhance the Transformer in the task where there are limited parallel sentence pairs but large amounts of monolingual corpus of the target language. The evaluation results on six low-resource translation tasks suggest that the Transformer trained by our algorithm significantly outperforms the baselines which were trained end-to-end in previous works.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7845457792282104
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.7553544044494629
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7217299938201904
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5605620741844177
+    },
+    {
+      "name": "Inference",
+      "score": 0.5390142798423767
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.49924707412719727
+    },
+    {
+      "name": "Sentence",
+      "score": 0.49479740858078003
+    },
+    {
+      "name": "Language model",
+      "score": 0.41664668917655945
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.39534687995910645
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3793795108795166
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11294755339622498
+    },
+    {
+      "name": "Voltage",
+      "score": 0.10741302371025085
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

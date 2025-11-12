@@ -1,74 +1,133 @@
 {
-    "title": "USPNet: unbiased organism-agnostic signal peptide predictor with deep protein language model",
-    "url": "https://openalex.org/W3213241464",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5017603767",
-            "name": "Shenyang Chen",
-            "affiliations": [
-                "University of Hong Kong",
-                "Georgia Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101846980",
-            "name": "Qingxiong Tan",
-            "affiliations": [
-                "University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101650532",
-            "name": "Jingchen Li",
-            "affiliations": [
-                "University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100345753",
-            "name": "Yu Li",
-            "affiliations": [
-                "University of Hong Kong"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2038605297",
-        "https://openalex.org/W2776525063",
-        "https://openalex.org/W2042096080",
-        "https://openalex.org/W2171709077",
-        "https://openalex.org/W2119452210",
-        "https://openalex.org/W1971147414",
-        "https://openalex.org/W2161746138",
-        "https://openalex.org/W2164025376",
-        "https://openalex.org/W2149407349",
-        "https://openalex.org/W2164751980",
-        "https://openalex.org/W2149241518",
-        "https://openalex.org/W2094201044",
-        "https://openalex.org/W2912990441",
-        "https://openalex.org/W2952120674",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W4233120011",
-        "https://openalex.org/W1972340877",
-        "https://openalex.org/W3034021988",
-        "https://openalex.org/W2608787653",
-        "https://openalex.org/W2609575245",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W2963691377",
-        "https://openalex.org/W2766352633",
-        "https://openalex.org/W2908663744",
-        "https://openalex.org/W2964330526",
-        "https://openalex.org/W3184615727",
-        "https://openalex.org/W2908351833",
-        "https://openalex.org/W3138273830",
-        "https://openalex.org/W3005909538",
-        "https://openalex.org/W2982552606",
-        "https://openalex.org/W3128120098",
-        "https://openalex.org/W2154139219",
-        "https://openalex.org/W3101227480"
-    ],
-    "abstract": "Abstract Signal peptide is a short peptide located in the N-terminus of proteins. It plays an important role in targeting and transferring transmembrane proteins and secreted proteins to correct positions. Compared with traditional experimental methods to identify and discover signal peptides, the computational methods are faster and more efficient, which are more practical for the analysis of thousands or even millions of protein sequences in reality, especially for the metagenomic data. Therefore, computational tools are recently proposed to classify signal peptides and predict cleavage site positions, but most of them disregard the extreme data imbalance problem in these tasks. In addition, almost all these methods rely on additional group information of proteins to boost their performances, which, however, may not always be available. To deal with these issues, in this paper, we present Unbiased Organism-agnostic Signal Peptide Network (USPNet), a signal peptide prediction and cleavage site prediction model based on deep protein language model. We propose to use label distribution-aware margin (LDAM) loss and evolutionary scale modeling (ESM) embedding to handle data imbalance and object-dependence problems. Extensive experimental results demonstrate that the proposed method significantly outperforms all the previous methods on the classification performance. Additional study on the simulated metagenomic data further indicates that our model is a more universal and robust tool without dependency on additional group information of proteins, with the Matthews correlation coefficient improved by up to 17.5%. The proposed method will be potentially useful to discover new signal peptides from the abundant metagenomic data.",
-    "full_text": null
+  "title": "USPNet: unbiased organism-agnostic signal peptide predictor with deep protein language model",
+  "url": "https://openalex.org/W3213241464",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5017603767",
+      "name": "Shenyang Chen",
+      "affiliations": [
+        "University of Hong Kong",
+        "Georgia Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101846980",
+      "name": "Qingxiong Tan",
+      "affiliations": [
+        "University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101650532",
+      "name": "Jingchen Li",
+      "affiliations": [
+        "University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100345753",
+      "name": "Yu Li",
+      "affiliations": [
+        "University of Hong Kong"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2038605297",
+    "https://openalex.org/W2776525063",
+    "https://openalex.org/W2042096080",
+    "https://openalex.org/W2171709077",
+    "https://openalex.org/W2119452210",
+    "https://openalex.org/W1971147414",
+    "https://openalex.org/W2161746138",
+    "https://openalex.org/W2164025376",
+    "https://openalex.org/W2149407349",
+    "https://openalex.org/W2164751980",
+    "https://openalex.org/W2149241518",
+    "https://openalex.org/W2094201044",
+    "https://openalex.org/W2912990441",
+    "https://openalex.org/W2952120674",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W4233120011",
+    "https://openalex.org/W1972340877",
+    "https://openalex.org/W3034021988",
+    "https://openalex.org/W2608787653",
+    "https://openalex.org/W2609575245",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W2963691377",
+    "https://openalex.org/W2766352633",
+    "https://openalex.org/W2908663744",
+    "https://openalex.org/W2964330526",
+    "https://openalex.org/W3184615727",
+    "https://openalex.org/W2908351833",
+    "https://openalex.org/W3138273830",
+    "https://openalex.org/W3005909538",
+    "https://openalex.org/W2982552606",
+    "https://openalex.org/W3128120098",
+    "https://openalex.org/W2154139219",
+    "https://openalex.org/W3101227480"
+  ],
+  "abstract": "Abstract Signal peptide is a short peptide located in the N-terminus of proteins. It plays an important role in targeting and transferring transmembrane proteins and secreted proteins to correct positions. Compared with traditional experimental methods to identify and discover signal peptides, the computational methods are faster and more efficient, which are more practical for the analysis of thousands or even millions of protein sequences in reality, especially for the metagenomic data. Therefore, computational tools are recently proposed to classify signal peptides and predict cleavage site positions, but most of them disregard the extreme data imbalance problem in these tasks. In addition, almost all these methods rely on additional group information of proteins to boost their performances, which, however, may not always be available. To deal with these issues, in this paper, we present Unbiased Organism-agnostic Signal Peptide Network (USPNet), a signal peptide prediction and cleavage site prediction model based on deep protein language model. We propose to use label distribution-aware margin (LDAM) loss and evolutionary scale modeling (ESM) embedding to handle data imbalance and object-dependence problems. Extensive experimental results demonstrate that the proposed method significantly outperforms all the previous methods on the classification performance. Additional study on the simulated metagenomic data further indicates that our model is a more universal and robust tool without dependency on additional group information of proteins, with the Matthews correlation coefficient improved by up to 17.5%. The proposed method will be potentially useful to discover new signal peptides from the abundant metagenomic data.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6689279675483704
+    },
+    {
+      "name": "Signal peptide",
+      "score": 0.5779325366020203
+    },
+    {
+      "name": "SIGNAL (programming language)",
+      "score": 0.48753616213798523
+    },
+    {
+      "name": "Embedding",
+      "score": 0.48104384541511536
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42440035939216614
+    },
+    {
+      "name": "Data mining",
+      "score": 0.38868170976638794
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3762786388397217
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.33246153593063354
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3225457966327667
+    },
+    {
+      "name": "Biology",
+      "score": 0.20185130834579468
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.15300902724266052
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.08111491799354553
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

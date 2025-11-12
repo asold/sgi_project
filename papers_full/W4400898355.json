@@ -1,156 +1,179 @@
 {
-    "title": "Systematic benchmarking demonstrates large language models have not reached the diagnostic accuracy of traditional rare-disease decision support tools",
-    "url": "https://openalex.org/W4400898355",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2129670558",
-            "name": "Justin T. Reese",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2981167225",
-            "name": "Leonardo Chimirri",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4321075463",
-            "name": "Yasemin Bridges",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2008470690",
-            "name": "Daniel Danis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1819457079",
-            "name": "J. Harry Caufield",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4284551807",
-            "name": "Michael A Gargano",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5111084849",
-            "name": "Carlo Kroll",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A131319532",
-            "name": "Andrew Schmeder",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2119312387",
-            "name": "Fengchen Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5098950718",
-            "name": "Kyran Wissink",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2113775459",
-            "name": "Julie A McMurry",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Adam SL Graefe",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5094347337",
-            "name": "Enock Niyonkuru",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4227338340",
-            "name": "Daniel R. Korn",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2119862246",
-            "name": "Elena Casiraghi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1977709779",
-            "name": "Giorgio Valentini",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Julius OB Jacobsen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2735616079",
-            "name": "Melissa Haendel",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2247189593",
-            "name": "Damian Smedley",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A575195435",
-            "name": "Christopher J. Mungall",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2340305778",
-            "name": "Peter N. Robinson",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2947718371",
-        "https://openalex.org/W2988630324",
-        "https://openalex.org/W1723383946",
-        "https://openalex.org/W2012361142",
-        "https://openalex.org/W2130011177",
-        "https://openalex.org/W4206627019",
-        "https://openalex.org/W4403289338",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W4365143687",
-        "https://openalex.org/W4380730209",
-        "https://openalex.org/W4389559041",
-        "https://openalex.org/W4399868262",
-        "https://openalex.org/W4396856309",
-        "https://openalex.org/W4384626331",
-        "https://openalex.org/W4391878439",
-        "https://openalex.org/W3125807565",
-        "https://openalex.org/W4384337834",
-        "https://openalex.org/W3164529000",
-        "https://openalex.org/W4402358523",
-        "https://openalex.org/W4401583490",
-        "https://openalex.org/W4402626956",
-        "https://openalex.org/W4282918066",
-        "https://openalex.org/W2162151166",
-        "https://openalex.org/W4399190259",
-        "https://openalex.org/W4397023135",
-        "https://openalex.org/W4406152280",
-        "https://openalex.org/W3212464243",
-        "https://openalex.org/W4212919921",
-        "https://openalex.org/W4399755362",
-        "https://openalex.org/W4403024753",
-        "https://openalex.org/W4395037579",
-        "https://openalex.org/W4390041933",
-        "https://openalex.org/W4389116614",
-        "https://openalex.org/W4224997429",
-        "https://openalex.org/W4391246451",
-        "https://openalex.org/W4386305978",
-        "https://openalex.org/W4403287043",
-        "https://openalex.org/W4226322299",
-        "https://openalex.org/W4400324908",
-        "https://openalex.org/W2558643140"
-    ],
-    "abstract": "Abstract Large language models (LLMs) show promise in supporting differential diagnosis, but their performance is challenging to evaluate due to the unstructured nature of their responses and their accuracy compared to existing diagnostic tools is not well characterized. To assess the current capabilities of LLMs to diagnose genetic diseases, we benchmarked these models on 5,213 case reports using the Phenopacket Schema, the Human Phenotype Ontology and Mondo disease ontology. Prompts generated from each phenopacket were sent to seven LLMs, including four generalist models and three LLMs specialized for medical applications. The same phenopackets were used as input to a widely used diagnostic tool, Exomiser, in phenotype-only mode. The best LLM ranked the correct diagnosis first in 23.6% of cases, whereas Exomiser did so in 35.5% of cases. While the performance of LLMs for supporting differential diagnosis has been improving, it has not reached the level of commonly used traditional bioinformatics tools. Future research is needed to determine the best approach to incorporate LLMs into diagnostic pipelines.",
-    "full_text": null
+  "title": "Systematic benchmarking demonstrates large language models have not reached the diagnostic accuracy of traditional rare-disease decision support tools",
+  "url": "https://openalex.org/W4400898355",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2129670558",
+      "name": "Justin T. Reese",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2981167225",
+      "name": "Leonardo Chimirri",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4321075463",
+      "name": "Yasemin Bridges",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2008470690",
+      "name": "Daniel Danis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1819457079",
+      "name": "J. Harry Caufield",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4284551807",
+      "name": "Michael A Gargano",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5111084849",
+      "name": "Carlo Kroll",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A131319532",
+      "name": "Andrew Schmeder",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2119312387",
+      "name": "Fengchen Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5098950718",
+      "name": "Kyran Wissink",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2113775459",
+      "name": "Julie A McMurry",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Adam SL Graefe",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5094347337",
+      "name": "Enock Niyonkuru",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4227338340",
+      "name": "Daniel R. Korn",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2119862246",
+      "name": "Elena Casiraghi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1977709779",
+      "name": "Giorgio Valentini",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Julius OB Jacobsen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2735616079",
+      "name": "Melissa Haendel",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2247189593",
+      "name": "Damian Smedley",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A575195435",
+      "name": "Christopher J. Mungall",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2340305778",
+      "name": "Peter N. Robinson",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2947718371",
+    "https://openalex.org/W2988630324",
+    "https://openalex.org/W1723383946",
+    "https://openalex.org/W2012361142",
+    "https://openalex.org/W2130011177",
+    "https://openalex.org/W4206627019",
+    "https://openalex.org/W4403289338",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W4365143687",
+    "https://openalex.org/W4380730209",
+    "https://openalex.org/W4389559041",
+    "https://openalex.org/W4399868262",
+    "https://openalex.org/W4396856309",
+    "https://openalex.org/W4384626331",
+    "https://openalex.org/W4391878439",
+    "https://openalex.org/W3125807565",
+    "https://openalex.org/W4384337834",
+    "https://openalex.org/W3164529000",
+    "https://openalex.org/W4402358523",
+    "https://openalex.org/W4401583490",
+    "https://openalex.org/W4402626956",
+    "https://openalex.org/W4282918066",
+    "https://openalex.org/W2162151166",
+    "https://openalex.org/W4399190259",
+    "https://openalex.org/W4397023135",
+    "https://openalex.org/W4406152280",
+    "https://openalex.org/W3212464243",
+    "https://openalex.org/W4212919921",
+    "https://openalex.org/W4399755362",
+    "https://openalex.org/W4403024753",
+    "https://openalex.org/W4395037579",
+    "https://openalex.org/W4390041933",
+    "https://openalex.org/W4389116614",
+    "https://openalex.org/W4224997429",
+    "https://openalex.org/W4391246451",
+    "https://openalex.org/W4386305978",
+    "https://openalex.org/W4403287043",
+    "https://openalex.org/W4226322299",
+    "https://openalex.org/W4400324908",
+    "https://openalex.org/W2558643140"
+  ],
+  "abstract": "Abstract Large language models (LLMs) show promise in supporting differential diagnosis, but their performance is challenging to evaluate due to the unstructured nature of their responses and their accuracy compared to existing diagnostic tools is not well characterized. To assess the current capabilities of LLMs to diagnose genetic diseases, we benchmarked these models on 5,213 case reports using the Phenopacket Schema, the Human Phenotype Ontology and Mondo disease ontology. Prompts generated from each phenopacket were sent to seven LLMs, including four generalist models and three LLMs specialized for medical applications. The same phenopackets were used as input to a widely used diagnostic tool, Exomiser, in phenotype-only mode. The best LLM ranked the correct diagnosis first in 23.6% of cases, whereas Exomiser did so in 35.5% of cases. While the performance of LLMs for supporting differential diagnosis has been improving, it has not reached the level of commonly used traditional bioinformatics tools. Future research is needed to determine the best approach to incorporate LLMs into diagnostic pipelines.",
+  "full_text": null,
+  "topic": "Disease",
+  "concepts": [
+    {
+      "name": "Disease",
+      "score": 0.5224032402038574
+    },
+    {
+      "name": "Diagnostic accuracy",
+      "score": 0.48740914463996887
+    },
+    {
+      "name": "Medicine",
+      "score": 0.35239481925964355
+    },
+    {
+      "name": "Radiology",
+      "score": 0.2013397216796875
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.1979028880596161
+    }
+  ]
 }

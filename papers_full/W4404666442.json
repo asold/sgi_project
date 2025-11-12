@@ -1,62 +1,109 @@
 {
-    "title": "Manner implicatures in large language models",
-    "url": "https://openalex.org/W4404666442",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100964018",
-            "name": "Yan Cong",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100964018",
-            "name": "Yan Cong",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3006579807",
-        "https://openalex.org/W3035599593",
-        "https://openalex.org/W4285234908",
-        "https://openalex.org/W4287887965",
-        "https://openalex.org/W3210694367",
-        "https://openalex.org/W4285158129",
-        "https://openalex.org/W4287890938",
-        "https://openalex.org/W4402670074",
-        "https://openalex.org/W4404781158",
-        "https://openalex.org/W6600360367",
-        "https://openalex.org/W4402683412",
-        "https://openalex.org/W4404822908",
-        "https://openalex.org/W4385571325",
-        "https://openalex.org/W3035407756",
-        "https://openalex.org/W6812095419",
-        "https://openalex.org/W2906970945",
-        "https://openalex.org/W2264742718",
-        "https://openalex.org/W4235158469",
-        "https://openalex.org/W3092215113",
-        "https://openalex.org/W2054125330",
-        "https://openalex.org/W2164418233",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W4401009121",
-        "https://openalex.org/W2763088512",
-        "https://openalex.org/W3196813608",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W6600961993",
-        "https://openalex.org/W3037109418",
-        "https://openalex.org/W2143017621",
-        "https://openalex.org/W4230097545",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W1840435438",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W4285225959",
-        "https://openalex.org/W2945830544",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W3194782062",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3103816537"
-    ],
-    "abstract": "Abstract In human speakers’ daily conversations, what we do not say matters. We not only compute the literal semantics but also go beyond and draw inferences from what we could have said but chose not to. How well is this pragmatic reasoning process represented in pre-trained large language models (LLM)? In this study, we attempt to address this question through the lens of manner implicature, a pragmatic inference triggered by a violation of the Grice manner maxim. Manner implicature is a central member of the class of context-sensitive phenomena. The current work investigates to what extent pre-trained LLMs are able to identify and tease apart different shades of meaning in manner implicature. We constructed three metrics to explain LLMs’ behavior, including LLMs-surprisals, embedding vectors’ similarities, and natural language prompting. Results showed no striking evidence that LLMs have explainable representations of meaning. First, the LLMs-surprisal findings suggest that some LLMs showed above chance accuracy in capturing different dimensions of meaning, and they were able to differentiate neutral relations from entailment or implications, but they did not show consistent and robust sensitivities to more nuanced comparisons, such as entailment versus implications and equivalence versus entailment. Second, the similarity findings suggest that the perceived advantage of contextual over static embeddings was minimal, and contextual LLMs did not notably outperform static GloVe embeddings. LLMs and GloVe showed no significant difference, though distinctions between entailment and implication were slightly more observable in LLMs. Third, the prompting findings suggest no further supportive evidence indicating LLM’s competence in fully representing different shades of meaning. Overall, our study suggests that current dominant pre-training paradigms do not seem to lead to significant competence in manner implicature within our models. Our investigation sheds light on the design of datasets and benchmark metrics driven by formal and distributional linguistic theories.",
-    "full_text": null
+  "title": "Manner implicatures in large language models",
+  "url": "https://openalex.org/W4404666442",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100964018",
+      "name": "Yan Cong",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100964018",
+      "name": "Yan Cong",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3006579807",
+    "https://openalex.org/W3035599593",
+    "https://openalex.org/W4285234908",
+    "https://openalex.org/W4287887965",
+    "https://openalex.org/W3210694367",
+    "https://openalex.org/W4285158129",
+    "https://openalex.org/W4287890938",
+    "https://openalex.org/W4402670074",
+    "https://openalex.org/W4404781158",
+    "https://openalex.org/W6600360367",
+    "https://openalex.org/W4402683412",
+    "https://openalex.org/W4404822908",
+    "https://openalex.org/W4385571325",
+    "https://openalex.org/W3035407756",
+    "https://openalex.org/W6812095419",
+    "https://openalex.org/W2906970945",
+    "https://openalex.org/W2264742718",
+    "https://openalex.org/W4235158469",
+    "https://openalex.org/W3092215113",
+    "https://openalex.org/W2054125330",
+    "https://openalex.org/W2164418233",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W4401009121",
+    "https://openalex.org/W2763088512",
+    "https://openalex.org/W3196813608",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W6600961993",
+    "https://openalex.org/W3037109418",
+    "https://openalex.org/W2143017621",
+    "https://openalex.org/W4230097545",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W1840435438",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W4285225959",
+    "https://openalex.org/W2945830544",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W3194782062",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3103816537"
+  ],
+  "abstract": "Abstract In human speakers’ daily conversations, what we do not say matters. We not only compute the literal semantics but also go beyond and draw inferences from what we could have said but chose not to. How well is this pragmatic reasoning process represented in pre-trained large language models (LLM)? In this study, we attempt to address this question through the lens of manner implicature, a pragmatic inference triggered by a violation of the Grice manner maxim. Manner implicature is a central member of the class of context-sensitive phenomena. The current work investigates to what extent pre-trained LLMs are able to identify and tease apart different shades of meaning in manner implicature. We constructed three metrics to explain LLMs’ behavior, including LLMs-surprisals, embedding vectors’ similarities, and natural language prompting. Results showed no striking evidence that LLMs have explainable representations of meaning. First, the LLMs-surprisal findings suggest that some LLMs showed above chance accuracy in capturing different dimensions of meaning, and they were able to differentiate neutral relations from entailment or implications, but they did not show consistent and robust sensitivities to more nuanced comparisons, such as entailment versus implications and equivalence versus entailment. Second, the similarity findings suggest that the perceived advantage of contextual over static embeddings was minimal, and contextual LLMs did not notably outperform static GloVe embeddings. LLMs and GloVe showed no significant difference, though distinctions between entailment and implication were slightly more observable in LLMs. Third, the prompting findings suggest no further supportive evidence indicating LLM’s competence in fully representing different shades of meaning. Overall, our study suggests that current dominant pre-training paradigms do not seem to lead to significant competence in manner implicature within our models. Our investigation sheds light on the design of datasets and benchmark metrics driven by formal and distributional linguistic theories.",
+  "full_text": null,
+  "topic": "Implicature",
+  "concepts": [
+    {
+      "name": "Implicature",
+      "score": 0.6085461378097534
+    },
+    {
+      "name": "Logical consequence",
+      "score": 0.5728219747543335
+    },
+    {
+      "name": "Meaning (existential)",
+      "score": 0.5371957421302795
+    },
+    {
+      "name": "Psychology",
+      "score": 0.47917237877845764
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.47376731038093567
+    },
+    {
+      "name": "Inference",
+      "score": 0.4421866834163666
+    },
+    {
+      "name": "Pragmatics",
+      "score": 0.30789631605148315
+    },
+    {
+      "name": "Computer science",
+      "score": 0.2768644690513611
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.21857553720474243
+    },
+    {
+      "name": "Psychotherapist",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

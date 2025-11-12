@@ -1,65 +1,136 @@
 {
-    "title": "Deidentification of free-text medical records using pre-trained bidirectional transformers",
-    "url": "https://openalex.org/W3012137864",
-    "year": 2020,
-    "authors": [
-        {
-            "id": null,
-            "name": "Johnson, Alistair E. W.",
-            "affiliations": [
-                "Massachusetts Institute of Technology"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Bulgarelli, Lucas",
-            "affiliations": [
-                "Massachusetts Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4297855723",
-            "name": "Pollard, Tom J.",
-            "affiliations": [
-                "Massachusetts Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2161880183",
-        "https://openalex.org/W2970771982",
-        "https://openalex.org/W2963738950",
-        "https://openalex.org/W2963956191",
-        "https://openalex.org/W2605961855",
-        "https://openalex.org/W3010607409",
-        "https://openalex.org/W2622474949",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2183114698",
-        "https://openalex.org/W2621075239",
-        "https://openalex.org/W1995228216",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W2484962737",
-        "https://openalex.org/W1034374084",
-        "https://openalex.org/W3119509555",
-        "https://openalex.org/W2190333735",
-        "https://openalex.org/W2160987310",
-        "https://openalex.org/W2986266667",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2783186845",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W2807251972",
-        "https://openalex.org/W3012137864",
-        "https://openalex.org/W2980282514",
-        "https://openalex.org/W2624380710",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2525778437",
-        "https://openalex.org/W4256295604",
-        "https://openalex.org/W2919101625"
-    ],
-    "abstract": "The ability of caregivers and investigators to share patient data is fundamental to many areas of clinical practice and biomedical research. Prior to sharing, it is often necessary to remove identifiers such as names, contact details, and dates in order to protect patient privacy. Deidentification, the process of removing identifiers, is challenging, however. High-quality annotated data for developing models is scarce; many target identifiers are highly heterogenous (for example, there are uncountable variations of patient names); and in practice anything less than perfect sensitivity may be considered a failure. As a result, patient data is often withheld when sharing would be beneficial, and identifiable patient data is often divulged when a deidentified version would suffice. In recent years, advances in machine learning methods have led to rapid performance improvements in natural language processing tasks, in particular with the advent of large-scale pretrained language models. In this paper we develop and evaluate an approach for deidentification of clinical notes based on a bidirectional transformer model. We propose human interpretable evaluation measures and demonstrate state of the art performance against modern baseline models. Finally, we highlight current challenges in deidentification, including the absence of clear annotation guidelines, lack of portability of models, and paucity of training data. Code to develop our model is open source, allowing for broad reuse.",
-    "full_text": null
+  "title": "Deidentification of free-text medical records using pre-trained bidirectional transformers",
+  "url": "https://openalex.org/W3012137864",
+  "year": 2020,
+  "authors": [
+    {
+      "id": null,
+      "name": "Johnson, Alistair E. W.",
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Bulgarelli, Lucas",
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4297855723",
+      "name": "Pollard, Tom J.",
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2161880183",
+    "https://openalex.org/W2970771982",
+    "https://openalex.org/W2963738950",
+    "https://openalex.org/W2963956191",
+    "https://openalex.org/W2605961855",
+    "https://openalex.org/W3010607409",
+    "https://openalex.org/W2622474949",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2183114698",
+    "https://openalex.org/W2621075239",
+    "https://openalex.org/W1995228216",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W2484962737",
+    "https://openalex.org/W1034374084",
+    "https://openalex.org/W3119509555",
+    "https://openalex.org/W2190333735",
+    "https://openalex.org/W2160987310",
+    "https://openalex.org/W2986266667",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2783186845",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W2807251972",
+    "https://openalex.org/W3012137864",
+    "https://openalex.org/W2980282514",
+    "https://openalex.org/W2624380710",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2525778437",
+    "https://openalex.org/W4256295604",
+    "https://openalex.org/W2919101625"
+  ],
+  "abstract": "The ability of caregivers and investigators to share patient data is fundamental to many areas of clinical practice and biomedical research. Prior to sharing, it is often necessary to remove identifiers such as names, contact details, and dates in order to protect patient privacy. Deidentification, the process of removing identifiers, is challenging, however. High-quality annotated data for developing models is scarce; many target identifiers are highly heterogenous (for example, there are uncountable variations of patient names); and in practice anything less than perfect sensitivity may be considered a failure. As a result, patient data is often withheld when sharing would be beneficial, and identifiable patient data is often divulged when a deidentified version would suffice. In recent years, advances in machine learning methods have led to rapid performance improvements in natural language processing tasks, in particular with the advent of large-scale pretrained language models. In this paper we develop and evaluate an approach for deidentification of clinical notes based on a bidirectional transformer model. We propose human interpretable evaluation measures and demonstrate state of the art performance against modern baseline models. Finally, we highlight current challenges in deidentification, including the absence of clear annotation guidelines, lack of portability of models, and paucity of training data. Code to develop our model is open source, allowing for broad reuse.",
+  "full_text": null,
+  "topic": "Identifier",
+  "concepts": [
+    {
+      "name": "Identifier",
+      "score": 0.8114957809448242
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7190361618995667
+    },
+    {
+      "name": "Data sharing",
+      "score": 0.4770047962665558
+    },
+    {
+      "name": "Unique identifier",
+      "score": 0.45748817920684814
+    },
+    {
+      "name": "Patient data",
+      "score": 0.4364742636680603
+    },
+    {
+      "name": "Data quality",
+      "score": 0.4333048164844513
+    },
+    {
+      "name": "Clinical Practice",
+      "score": 0.42362940311431885
+    },
+    {
+      "name": "Data science",
+      "score": 0.3583541512489319
+    },
+    {
+      "name": "Medicine",
+      "score": 0.23058104515075684
+    },
+    {
+      "name": "Internet privacy",
+      "score": 0.1592797040939331
+    },
+    {
+      "name": "Family medicine",
+      "score": 0.11404773592948914
+    },
+    {
+      "name": "Alternative medicine",
+      "score": 0.09799322485923767
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Metric (unit)",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Operations management",
+      "score": 0.0
+    }
+  ]
 }

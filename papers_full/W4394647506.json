@@ -1,80 +1,111 @@
 {
-    "title": "Scope Ambiguities in Large Language Models",
-    "url": "https://openalex.org/W4394647506",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Kamath, Gaurav",
-            "affiliations": [
-                "McGill University",
-                "Mila - Quebec Artificial Intelligence Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4222228105",
-            "name": "Schuster, Sebastian",
-            "affiliations": [
-                "University College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4222842568",
-            "name": "Vajjala, Sowmya",
-            "affiliations": [
-                "National Research Council Canada"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4221612558",
-            "name": "Reddy, Siva",
-            "affiliations": [
-                "McGill University",
-                "Mila - Quebec Artificial Intelligence Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6810270109",
-        "https://openalex.org/W6685703627",
-        "https://openalex.org/W6686821047",
-        "https://openalex.org/W4309419389",
-        "https://openalex.org/W2906152891",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6810558903",
-        "https://openalex.org/W3004346089",
-        "https://openalex.org/W6752777090",
-        "https://openalex.org/W3176751053",
-        "https://openalex.org/W2921890305",
-        "https://openalex.org/W6804901526",
-        "https://openalex.org/W3146844750",
-        "https://openalex.org/W2127325222",
-        "https://openalex.org/W6850428223",
-        "https://openalex.org/W2948947170",
-        "https://openalex.org/W2941666437",
-        "https://openalex.org/W1980936870",
-        "https://openalex.org/W3018827121",
-        "https://openalex.org/W2549835527",
-        "https://openalex.org/W4389524313",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W6639676003",
-        "https://openalex.org/W6809845343",
-        "https://openalex.org/W6810738896",
-        "https://openalex.org/W3215599159",
-        "https://openalex.org/W2997789497",
-        "https://openalex.org/W3102659883",
-        "https://openalex.org/W1592170291",
-        "https://openalex.org/W4287887107",
-        "https://openalex.org/W2966176804",
-        "https://openalex.org/W6853084875",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W6785887628",
-        "https://openalex.org/W4386566513",
-        "https://openalex.org/W3035097102",
-        "https://openalex.org/W3175508917",
-        "https://openalex.org/W3100475986",
-        "https://openalex.org/W3169229441"
-    ],
-    "abstract": "Abstract Sentences containing multiple semantic operators with overlapping scope often create ambiguities in interpretation, known as scope ambiguities. These ambiguities offer rich insights into the interaction between semantic structure and world knowledge in language processing. Despite this, there has been little research into how modern large language models treat them. In this paper, we investigate how different versions of certain autoregressive language models—GPT-2, GPT-3/3.5, Llama 2, and GPT-4—treat scope ambiguous sentences, and compare this with human judgments. We introduce novel datasets that contain a joint total of almost 1,000 unique scope-ambiguous sentences, containing interactions between a range of semantic operators, and annotated for human judgments. Using these datasets, we find evidence that several models (i) are sensitive to the meaning ambiguity in these sentences, in a way that patterns well with human judgments, and (ii) can successfully identify human-preferred readings at a high level of accuracy (over 90% in some cases).1",
-    "full_text": null
+  "title": "Scope Ambiguities in Large Language Models",
+  "url": "https://openalex.org/W4394647506",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Kamath, Gaurav",
+      "affiliations": [
+        "McGill University",
+        "Mila - Quebec Artificial Intelligence Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4222228105",
+      "name": "Schuster, Sebastian",
+      "affiliations": [
+        "University College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4222842568",
+      "name": "Vajjala, Sowmya",
+      "affiliations": [
+        "National Research Council Canada"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4221612558",
+      "name": "Reddy, Siva",
+      "affiliations": [
+        "McGill University",
+        "Mila - Quebec Artificial Intelligence Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6810270109",
+    "https://openalex.org/W6685703627",
+    "https://openalex.org/W6686821047",
+    "https://openalex.org/W4309419389",
+    "https://openalex.org/W2906152891",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6810558903",
+    "https://openalex.org/W3004346089",
+    "https://openalex.org/W6752777090",
+    "https://openalex.org/W3176751053",
+    "https://openalex.org/W2921890305",
+    "https://openalex.org/W6804901526",
+    "https://openalex.org/W3146844750",
+    "https://openalex.org/W2127325222",
+    "https://openalex.org/W6850428223",
+    "https://openalex.org/W2948947170",
+    "https://openalex.org/W2941666437",
+    "https://openalex.org/W1980936870",
+    "https://openalex.org/W3018827121",
+    "https://openalex.org/W2549835527",
+    "https://openalex.org/W4389524313",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W6639676003",
+    "https://openalex.org/W6809845343",
+    "https://openalex.org/W6810738896",
+    "https://openalex.org/W3215599159",
+    "https://openalex.org/W2997789497",
+    "https://openalex.org/W3102659883",
+    "https://openalex.org/W1592170291",
+    "https://openalex.org/W4287887107",
+    "https://openalex.org/W2966176804",
+    "https://openalex.org/W6853084875",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W6785887628",
+    "https://openalex.org/W4386566513",
+    "https://openalex.org/W3035097102",
+    "https://openalex.org/W3175508917",
+    "https://openalex.org/W3100475986",
+    "https://openalex.org/W3169229441"
+  ],
+  "abstract": "Abstract Sentences containing multiple semantic operators with overlapping scope often create ambiguities in interpretation, known as scope ambiguities. These ambiguities offer rich insights into the interaction between semantic structure and world knowledge in language processing. Despite this, there has been little research into how modern large language models treat them. In this paper, we investigate how different versions of certain autoregressive language models—GPT-2, GPT-3/3.5, Llama 2, and GPT-4—treat scope ambiguous sentences, and compare this with human judgments. We introduce novel datasets that contain a joint total of almost 1,000 unique scope-ambiguous sentences, containing interactions between a range of semantic operators, and annotated for human judgments. Using these datasets, we find evidence that several models (i) are sensitive to the meaning ambiguity in these sentences, in a way that patterns well with human judgments, and (ii) can successfully identify human-preferred readings at a high level of accuracy (over 90% in some cases).1",
+  "full_text": null,
+  "topic": "Scope (computer science)",
+  "concepts": [
+    {
+      "name": "Scope (computer science)",
+      "score": 0.8161797523498535
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5397452116012573
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.44735607504844666
+    },
+    {
+      "name": "Cognitive science",
+      "score": 0.3263871669769287
+    },
+    {
+      "name": "Psychology",
+      "score": 0.24974983930587769
+    },
+    {
+      "name": "Programming language",
+      "score": 0.18100449442863464
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.17763736844062805
+    }
+  ]
 }

@@ -1,55 +1,138 @@
 {
-    "title": "Transformer-based Architecture for Empathy Prediction and Emotion Classification",
-    "url": "https://openalex.org/W4285133108",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5042910275",
-            "name": "Himil Vasava",
-            "affiliations": [
-                "Indian Institute of Technology Roorkee"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5005751392",
-            "name": "Pramegh Uikey",
-            "affiliations": [
-                "Indian Institute of Technology Roorkee"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5052267617",
-            "name": "Gaurav Wasnik",
-            "affiliations": [
-                "Indian Institute of Technology Roorkee"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102868405",
-            "name": "Raksha Sharma",
-            "affiliations": [
-                "Indian Institute of Technology Roorkee"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2984500026",
-        "https://openalex.org/W2471991522",
-        "https://openalex.org/W2889287254",
-        "https://openalex.org/W2037450062",
-        "https://openalex.org/W2889326796",
-        "https://openalex.org/W2263338482",
-        "https://openalex.org/W2986846745",
-        "https://openalex.org/W2936503027",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4206688402",
-        "https://openalex.org/W1968012964",
-        "https://openalex.org/W2003238582",
-        "https://openalex.org/W4295312788",
-        "https://openalex.org/W2126669672",
-        "https://openalex.org/W1522301498"
-    ],
-    "abstract": "This paper describes the contribution of team PHG to the WASSA 2022 shared task on Empathy Prediction and Emotion Classification. The broad goal of this task was to model an empathy score, a distress score and the type of emotion associated with the person who had reacted to the essay written in response to a newspaper article. We have used the RoBERTa model for training and top of which few layers are added to finetune the transformer. We also use few machine learning techniques to augment as well as upsample the data. Our system achieves a Pearson Correlation Coefficient of 0.488 on Task 1 (Empathy - 0.470 and Distress - 0.506) and Macro F1-score of 0.531 on Task 2.",
-    "full_text": "Proceedings of the 12th Workshop on Computational Approaches to\nSubjectivity, Sentiment & Social Media Analysis, pages 261 - 264\nMay 26, 2022c⃝2022 Association for Computational Linguistics\nTransformer-based Architecture for Empathy Prediction and\nEmotion Classification\nHimil Vasava Pramegh Uikey Gaurav Wasnik Raksha Sharma\nIndian Institute of Technology Roorkee (IIT Roorkee)\n{vasava_h, uikey_p, wasnik_g, raksha.sharma}@cs.iitr.ac.in\nAbstract\nThis paper describes the contribution of team\nPHG to the WASSA 2022 shared task on Em-\npathy Prediction and Emotion Classification.\nThe broad goal of this task was to model an\nempathy score, a distress score, and the type\nof emotion associated with the person who had\nreacted to the essay written in response to a\nnewspaper article. We have used the RoBERTa\nmodel for training, and on top of it, five lay-\ners are added to finetune the transformer. We\nalso use a few machine learning techniques to\naugment and upsample the data. Our system\nachieves a Pearson Correlation Coefficient of\n0.488 on Task 1 (Average of Empathy - 0.470\nand Distress - 0.506) and Macro F1-score of\n0.531 on Task 2.\n1 Introduction\nEmpathy and Distress are quite important regard-\ning human health. Emotion classification in natural\nlanguages has been studied for over two decades,\nand many applications successfully used emotion\nas their principal component. Empathy utterances\ncan be emotional. Therefore, examining emotion\nin text-based empathy has a significant impact on\npredicting empathy. Empathic concern and per-\nsonal distress are empathic responses that may re-\nsult when observing someone in discomfort (Fabi\net al., 2019). Some news stories are also displayed\nin this task, and people have reacted to them. The\nnews is disturbing or discomforting to some peo-\nple. And hence, regarding that, their empathy and\ndistress are noted. This paper presents the W ASSA\n2022 Shared Task: Predicting Empathy and Emo-\ntion in Reaction to News Stories. This shared task\nincluded four individual tasks where teams devel-\noped models to predict Emotions, empathy, and\npersonality in essays in which people expressed\ntheir empathy and distress in reaction to news ar-\nticles in which an individual or a group of people\nwere harmed. Additionally, the dataset also in-\ncluded the demographic information of the authors\nof the essays, such as age, gender, ethnicity, in-\ncome, education level, and personality information.\nThe shared task consisted of four tracks (optional):\nTrack 1: Empathy Prediction (EMP) task consists\nof predicting both the empathy concern and the\npersonal distress. (Evaluation based on an average\nof Pearson correlation (Benesty et al., 2009) of em-\npathy and distress).\nTrack 2: Emotion Classification (EMO) consists\nof predicting the emotion (sadness, joy, disgust,\nsurprise, anger, or fear, taken from the six basic\nemotions (Ekman and Friesen, 1971) also includ-\ning neutral) at the essay-level (Evaluation based on\nthe macro F1-score).\nTrack 3 : Personality Prediction (PER), which\nconsists in predicting the personality of the essay\nwriter, knowing all their essays and the news arti-\ncle from which they reacted (Evaluation based on\nthe average of Pearson correlation over Personality\nvalues (Komarraju et al., 2011) - conscientiousness,\nOpenness, Extraversion, Agreeableness, and Sta-\nbility).\nTrack 4: Interpersonal Reactivity Index Predic-\ntion (IRI) consists of predicting the personality of\nthe essay writer. (Evaluation based on an average\nof Pearson correlation over IRI values - fantasy,\nperspective taking, empathetic concern, personal\ndistress).\nWe participated in only the first two tasks.\n2 Related Work\nOver the last few years, earnest endeavors have\nbeen made in the NLP community to analyze empa-\nthy and distress. For text-based empathy prediction,\n(Buechel et al., 2018) laid a firm foundation for\npredicting Batson’s (Batson et al., 1987) empathic\nconcern and personal distress scores in reaction to\nnews articles. They present the first publicly avail-\nable gold-standard dataset for text-based empathy\nand distress prediction. To annotate emotions in\ntext, classical studies in NLP suggest categorical\n261\nEssay \n(300-800 char)\nRoBERTa\nLinear\nReLU + Dropout\nLinear\nLinear\nAge Race EducationIncome Gender\nstack\nReLU\nLinear\nPearson Correlation\nCoefficient\n(scalar)\nFigure 1: System Architecture\nSet Examples\nTrain 1860\nDev 270\nTest 525\nTable 1: Train-dev-test split\ntagsets, and most studies are focussed on basic\nemotion models that psychological emotion mod-\nels offer. The most popular one is the Ekman 6\nbasic emotions (Ekman and Friesen, 1971). The\nemotions presented in this dataset are the same six\nemotions by Ekman plus one extra emotion (neu-\ntral).\n3 Dataset\nThe dataset is an extension to the one provided by\n(Buechel et al., 2018). For all the tasks, a train-\ndev-test split was provided. The dataset consists\nof essays collected from participants who had read\nnews articles about a person, a group of people,\nor disturbing situations. The dataset had an es-\nsay (300-800 characters), empathy score, a distress\nscore, emotion label, and other demographic in-\nformation (age, gender, race, education, income)\nas well as personality information (conscientious-\nness, openness, extraversion, agreeableness, stabil-\nity) and interpersonal reactivity index (IRI) scores\n(fantasy, perspective taking, empathetic concern,\npersonal distress).\n3.1 Data Augmentation\nA single sentence does not always convey the infor-\nmation required to translate it into other languages;\nwe sometimes need to specialize words that are\nambiguous in the source languages (Sugiyama and\nYoshinaga, 2019). So, we used back translation\n(Edunov et al., 2018) for text augmentation. The\nidea here was to have different sentences having\nthe same meaning for training. Step 1: Select the\nessay (English).\nStep 2: Select a random language and convert the\nessay to that language.\nStep 3: Now translate that converted essay back to\nEnglish.\nWe used Google translate API for translating es-\nsays back and forth. Every example was translated\nto one other language, and hence after back trans-\nlation, the total number of samples was doubled\n(3720). Data augmentation improved the perfor-\nmance, as shown in the Table 2.\n4 System Description\n4.1 Empathy Prediction\nTransformers (Vaswani et al., 2017) have outper-\nformed recurrent neural networks (RNNs) in nat-\nural language generation (Kasai et al., 2021). For\nthis task, we had to predict empathy and distress\nscores which had been done by training the same\nmodel by keeping the targets different (empathy for\nmodel 1 and distress for model 2). The approach\nused is based on fine-tuning RoBERta model (Liu\net al., 2019) separately for empathy and distress.\nTo take the essay as input to the RoBERTa model,\ninitially, tokenization (Webster and Kit, 1992) was\nrequired. The input tokens were made using the\nRoberta Tokenizer imported from the transformer\nlibrary. The loss function used was Mean Squared\nError (MSE). No parameters were frozen (all of\nthem were trainable), and on top of it, five layers\nwere trained (to make the network deeper). Four\nlayers were linear, while one was a dropout layer\n(to prevent overfitting). In the pre-final layer, five\nadditional demographic features were taken as in-\nput.\nThe model was trained on both the augmented\n262\nMetric Original Augmented\nMacro F1-Score 0.5174 0.5311\nMicro Recall 0.6152 0.6114\nMicro Precision 0.6152 0.6114\nMicro F1-Score 0.6152 0.6114\nMacro Recall 0.5054 0.5288\nMacro Precision 0.5461 0.557\nAccuracy 0.6152 0.6114\nTable 2: Original vs Augmented on Test set\ndata and original data. Still, the final submission\nwas made using the model trained on the aug-\nmented data as it resulted in a higher Pearson Cor-\nrelation Coefficient.\n4.2 Emotion Classification\nThis was a multi-classification task, i.e., to clas-\nsify the emotions into seven labels. Here also, we\nfine-tuned RoBERTa model (Liu et al., 2019) with\nthe same five layers, just changing the output neu-\nrons to 7 instead of 1. We had used Cross-Entropy\nLoss as the loss function (which already has a soft-\nmax layer). We also upsampled the dataset as it\nwas imbalanced. Highly imbalanced data poses\nadded difficulty, as most learners will exhibit bias\ntowards the majority class and, in extreme cases,\nmay ignore the minority class altogether (Johnson\nand Khoshgoftaar, 2019). Random over-sampling\n(Moreo et al., 2016) was performed using the im-\nblearn library. The imbalanced dataset can be seen\nin figure 2, the minority class being the emotion\nlabeled \"joy\".\nFigure 2: Imbalanced Dataset\n4.3 Hyperparameters and other settings\nFor all the tasks, the learning rate was set to 10−5,\nand the models were trained using Adam (Kingma\nand Ba, 2014) as optimizer. The parameters of\nAdam were Beta(0.9, 0.999) and weight decay as\n0. The batch size was set to 8. The dataset was\nshuffled using Pytorch (Paszke et al., 2019) data\nloader. All the models were trained on the GPUs\nprovided by Google Colab.\n0 2 4 6 8\nepochs\n0.3\n0.4\n0.5\n0.6\n0.7\naccuracy\nmacrorecall\nmacroprecision\nmacroF1\nFigure 3: Metrics used for EMO task\n5 Results\nOur system achieved a Pearson Correlation Coef-\nficient (Benesty et al., 2009) of 0.488 on Task 1.\nEmpathy Pearson Correlation was 0.470, and Dis-\ntress Pearson Correlation was 0.506. Hence, the\naverage of both was taken as the final score. In\nthe development set, the empathy score was 0.4583\n(after the 8th epoch), and the distress score was\n0.4415 (after the 4th epoch, as after the score was\ndecreased due to overfitting). Although the empa-\nthy score was slightly high, it yielded less score in\nthe test set due to overfitting. While due to early\nstopping, distress yielded a better score.\n0 1 2 3 4 5 6 7\nepochs\n0.0\n0.1\n0.2\n0.3\n0.4\nEmpathy\nDistress\nFigure 4: Empathy and Distress scores (Augmented)\nWe had two different submissions for the emo-\ntion classification, one with augmentation and up-\nsampling and one without altering the data. The\ntest scores of both submissions are mentioned in\n263\nTable 2. Also, the results of the development set\nare plotted in figure 4. We tested until ten epochs\nbut decided to submit the model, trained only up\nto eight epochs as it was overfitting. Hence, the\nmacro F1-score decreased on the development set\ndespite accuracy increasing on the training set.\n6 Conclusion\nThis paper describes our submission to the W ASSA\n2022 shared task, where we have used the already\ntrained RoBERTa model on a large dataset and\nthen used its power by just finetuning on the given\ndataset. By the approach we have used, it can also\nbe deduced that text augmentation and upsampling\nhelped in emotion classification and predicting the\nempathy and distress scores as most of the time, the\nlarger amount of data helps improve the training\nprocess of a model.\nReferences\nC Daniel Batson, Jim Fultz, and Patricia A Schoenrade.\n1987. Distress and empathy: Two qualitatively dis-\ntinct vicarious emotions with different motivational\nconsequences. Journal of personality, 55(1):19–39.\nJacob Benesty, Jingdong Chen, Yiteng Huang, and Is-\nrael Cohen. 2009. Pearson correlation coefficient.\nIn Noise reduction in speech processing, pages 1–4.\nSpringer.\nSven Buechel, Anneke Buffone, Barry Slaff, Lyle Ungar,\nand João Sedoc. 2018. Modeling empathy and dis-\ntress in reaction to news stories. InProceedings of the\n2018 Conference on Empirical Methods in Natural\nLanguage Processing, pages 4758–4765, Brussels,\nBelgium. Association for Computational Linguistics.\nSergey Edunov, Myle Ott, Michael Auli, and David\nGrangier. 2018. Understanding back-translation at\nscale. arXiv preprint arXiv:1808.09381.\nPaul Ekman and Wallace V Friesen. 1971. Constants\nacross cultures in the face and emotion. Journal of\npersonality and social psychology, 17(2):124.\nSarah Fabi, Lydia Anna Weber, and Hartmut Leuthold.\n2019. Empathic concern and personal distress de-\npend on situational but not dispositional factors.PloS\none, 14(11):e0225102.\nJustin M Johnson and Taghi M Khoshgoftaar. 2019. Sur-\nvey on deep learning with class imbalance. Journal\nof Big Data, 6(1):1–54.\nJungo Kasai, Hao Peng, Yizhe Zhang, Dani Yogatama,\nGabriel Ilharco, Nikolaos Pappas, Yi Mao, Weizhu\nChen, and Noah A Smith. 2021. Finetuning pre-\ntrained transformers into rnns. arXiv preprint\narXiv:2103.13076.\nDiederik P Kingma and Jimmy Ba. 2014. Adam: A\nmethod for stochastic optimization. arXiv preprint\narXiv:1412.6980.\nMeera Komarraju, Steven J Karau, Ronald R Schmeck,\nand Alen Avdic. 2011. The big five personality traits,\nlearning styles, and academic achievement. Person-\nality and individual differences, 51(4):472–477.\nYinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Man-\ndar Joshi, Danqi Chen, Omer Levy, Mike Lewis,\nLuke Zettlemoyer, and Veselin Stoyanov. 2019.\nRoberta: A robustly optimized bert pretraining ap-\nproach. arXiv preprint arXiv:1907.11692.\nAlejandro Moreo, Andrea Esuli, and Fabrizio Sebas-\ntiani. 2016. Distributional random oversampling for\nimbalanced text classification. In Proceedings of the\n39th International ACM SIGIR conference on Re-\nsearch and Development in Information Retrieval,\npages 805–808.\nAdam Paszke, Sam Gross, Francisco Massa, Adam\nLerer, James Bradbury, Gregory Chanan, Trevor\nKilleen, Zeming Lin, Natalia Gimelshein, Luca\nAntiga, et al. 2019. Pytorch: An imperative style,\nhigh-performance deep learning library. Advances in\nneural information processing systems, 32.\nAmane Sugiyama and Naoki Yoshinaga. 2019. Data\naugmentation using back-translation for context-\naware neural machine translation. In Proceedings\nof the Fourth Workshop on Discourse in Machine\nTranslation (DiscoMT 2019), pages 35–44.\nAshish Vaswani, Noam Shazeer, Niki Parmar, Jakob\nUszkoreit, Llion Jones, Aidan N Gomez, Łukasz\nKaiser, and Illia Polosukhin. 2017. Attention is all\nyou need. Advances in neural information processing\nsystems, 30.\nJonathan J Webster and Chunyu Kit. 1992. Tokenization\nas the initial phase in nlp. InCOLING 1992 Volume 4:\nThe 14th International Conference on Computational\nLinguistics.\n264"
+  "title": "Transformer-based Architecture for Empathy Prediction and Emotion Classification",
+  "url": "https://openalex.org/W4285133108",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5042910275",
+      "name": "Himil Vasava",
+      "affiliations": [
+        "Indian Institute of Technology Roorkee"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5005751392",
+      "name": "Pramegh Uikey",
+      "affiliations": [
+        "Indian Institute of Technology Roorkee"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5052267617",
+      "name": "Gaurav Wasnik",
+      "affiliations": [
+        "Indian Institute of Technology Roorkee"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102868405",
+      "name": "Raksha Sharma",
+      "affiliations": [
+        "Indian Institute of Technology Roorkee"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2984500026",
+    "https://openalex.org/W2471991522",
+    "https://openalex.org/W2889287254",
+    "https://openalex.org/W2037450062",
+    "https://openalex.org/W2889326796",
+    "https://openalex.org/W2263338482",
+    "https://openalex.org/W2986846745",
+    "https://openalex.org/W2936503027",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4206688402",
+    "https://openalex.org/W1968012964",
+    "https://openalex.org/W2003238582",
+    "https://openalex.org/W4295312788",
+    "https://openalex.org/W2126669672",
+    "https://openalex.org/W1522301498"
+  ],
+  "abstract": "This paper describes the contribution of team PHG to the WASSA 2022 shared task on Empathy Prediction and Emotion Classification. The broad goal of this task was to model an empathy score, a distress score and the type of emotion associated with the person who had reacted to the essay written in response to a newspaper article. We have used the RoBERTa model for training and top of which few layers are added to finetune the transformer. We also use few machine learning techniques to augment as well as upsample the data. Our system achieves a Pearson Correlation Coefficient of 0.488 on Task 1 (Empathy - 0.470 and Distress - 0.506) and Macro F1-score of 0.531 on Task 2.",
+  "full_text": "Proceedings of the 12th Workshop on Computational Approaches to\nSubjectivity, Sentiment & Social Media Analysis, pages 261 - 264\nMay 26, 2022c⃝2022 Association for Computational Linguistics\nTransformer-based Architecture for Empathy Prediction and\nEmotion Classification\nHimil Vasava Pramegh Uikey Gaurav Wasnik Raksha Sharma\nIndian Institute of Technology Roorkee (IIT Roorkee)\n{vasava_h, uikey_p, wasnik_g, raksha.sharma}@cs.iitr.ac.in\nAbstract\nThis paper describes the contribution of team\nPHG to the WASSA 2022 shared task on Em-\npathy Prediction and Emotion Classification.\nThe broad goal of this task was to model an\nempathy score, a distress score, and the type\nof emotion associated with the person who had\nreacted to the essay written in response to a\nnewspaper article. We have used the RoBERTa\nmodel for training, and on top of it, five lay-\ners are added to finetune the transformer. We\nalso use a few machine learning techniques to\naugment and upsample the data. Our system\nachieves a Pearson Correlation Coefficient of\n0.488 on Task 1 (Average of Empathy - 0.470\nand Distress - 0.506) and Macro F1-score of\n0.531 on Task 2.\n1 Introduction\nEmpathy and Distress are quite important regard-\ning human health. Emotion classification in natural\nlanguages has been studied for over two decades,\nand many applications successfully used emotion\nas their principal component. Empathy utterances\ncan be emotional. Therefore, examining emotion\nin text-based empathy has a significant impact on\npredicting empathy. Empathic concern and per-\nsonal distress are empathic responses that may re-\nsult when observing someone in discomfort (Fabi\net al., 2019). Some news stories are also displayed\nin this task, and people have reacted to them. The\nnews is disturbing or discomforting to some peo-\nple. And hence, regarding that, their empathy and\ndistress are noted. This paper presents the W ASSA\n2022 Shared Task: Predicting Empathy and Emo-\ntion in Reaction to News Stories. This shared task\nincluded four individual tasks where teams devel-\noped models to predict Emotions, empathy, and\npersonality in essays in which people expressed\ntheir empathy and distress in reaction to news ar-\nticles in which an individual or a group of people\nwere harmed. Additionally, the dataset also in-\ncluded the demographic information of the authors\nof the essays, such as age, gender, ethnicity, in-\ncome, education level, and personality information.\nThe shared task consisted of four tracks (optional):\nTrack 1: Empathy Prediction (EMP) task consists\nof predicting both the empathy concern and the\npersonal distress. (Evaluation based on an average\nof Pearson correlation (Benesty et al., 2009) of em-\npathy and distress).\nTrack 2: Emotion Classification (EMO) consists\nof predicting the emotion (sadness, joy, disgust,\nsurprise, anger, or fear, taken from the six basic\nemotions (Ekman and Friesen, 1971) also includ-\ning neutral) at the essay-level (Evaluation based on\nthe macro F1-score).\nTrack 3 : Personality Prediction (PER), which\nconsists in predicting the personality of the essay\nwriter, knowing all their essays and the news arti-\ncle from which they reacted (Evaluation based on\nthe average of Pearson correlation over Personality\nvalues (Komarraju et al., 2011) - conscientiousness,\nOpenness, Extraversion, Agreeableness, and Sta-\nbility).\nTrack 4: Interpersonal Reactivity Index Predic-\ntion (IRI) consists of predicting the personality of\nthe essay writer. (Evaluation based on an average\nof Pearson correlation over IRI values - fantasy,\nperspective taking, empathetic concern, personal\ndistress).\nWe participated in only the first two tasks.\n2 Related Work\nOver the last few years, earnest endeavors have\nbeen made in the NLP community to analyze empa-\nthy and distress. For text-based empathy prediction,\n(Buechel et al., 2018) laid a firm foundation for\npredicting Batson’s (Batson et al., 1987) empathic\nconcern and personal distress scores in reaction to\nnews articles. They present the first publicly avail-\nable gold-standard dataset for text-based empathy\nand distress prediction. To annotate emotions in\ntext, classical studies in NLP suggest categorical\n261\nEssay \n(300-800 char)\nRoBERTa\nLinear\nReLU + Dropout\nLinear\nLinear\nAge Race EducationIncome Gender\nstack\nReLU\nLinear\nPearson Correlation\nCoefficient\n(scalar)\nFigure 1: System Architecture\nSet Examples\nTrain 1860\nDev 270\nTest 525\nTable 1: Train-dev-test split\ntagsets, and most studies are focussed on basic\nemotion models that psychological emotion mod-\nels offer. The most popular one is the Ekman 6\nbasic emotions (Ekman and Friesen, 1971). The\nemotions presented in this dataset are the same six\nemotions by Ekman plus one extra emotion (neu-\ntral).\n3 Dataset\nThe dataset is an extension to the one provided by\n(Buechel et al., 2018). For all the tasks, a train-\ndev-test split was provided. The dataset consists\nof essays collected from participants who had read\nnews articles about a person, a group of people,\nor disturbing situations. The dataset had an es-\nsay (300-800 characters), empathy score, a distress\nscore, emotion label, and other demographic in-\nformation (age, gender, race, education, income)\nas well as personality information (conscientious-\nness, openness, extraversion, agreeableness, stabil-\nity) and interpersonal reactivity index (IRI) scores\n(fantasy, perspective taking, empathetic concern,\npersonal distress).\n3.1 Data Augmentation\nA single sentence does not always convey the infor-\nmation required to translate it into other languages;\nwe sometimes need to specialize words that are\nambiguous in the source languages (Sugiyama and\nYoshinaga, 2019). So, we used back translation\n(Edunov et al., 2018) for text augmentation. The\nidea here was to have different sentences having\nthe same meaning for training. Step 1: Select the\nessay (English).\nStep 2: Select a random language and convert the\nessay to that language.\nStep 3: Now translate that converted essay back to\nEnglish.\nWe used Google translate API for translating es-\nsays back and forth. Every example was translated\nto one other language, and hence after back trans-\nlation, the total number of samples was doubled\n(3720). Data augmentation improved the perfor-\nmance, as shown in the Table 2.\n4 System Description\n4.1 Empathy Prediction\nTransformers (Vaswani et al., 2017) have outper-\nformed recurrent neural networks (RNNs) in nat-\nural language generation (Kasai et al., 2021). For\nthis task, we had to predict empathy and distress\nscores which had been done by training the same\nmodel by keeping the targets different (empathy for\nmodel 1 and distress for model 2). The approach\nused is based on fine-tuning RoBERta model (Liu\net al., 2019) separately for empathy and distress.\nTo take the essay as input to the RoBERTa model,\ninitially, tokenization (Webster and Kit, 1992) was\nrequired. The input tokens were made using the\nRoberta Tokenizer imported from the transformer\nlibrary. The loss function used was Mean Squared\nError (MSE). No parameters were frozen (all of\nthem were trainable), and on top of it, five layers\nwere trained (to make the network deeper). Four\nlayers were linear, while one was a dropout layer\n(to prevent overfitting). In the pre-final layer, five\nadditional demographic features were taken as in-\nput.\nThe model was trained on both the augmented\n262\nMetric Original Augmented\nMacro F1-Score 0.5174 0.5311\nMicro Recall 0.6152 0.6114\nMicro Precision 0.6152 0.6114\nMicro F1-Score 0.6152 0.6114\nMacro Recall 0.5054 0.5288\nMacro Precision 0.5461 0.557\nAccuracy 0.6152 0.6114\nTable 2: Original vs Augmented on Test set\ndata and original data. Still, the final submission\nwas made using the model trained on the aug-\nmented data as it resulted in a higher Pearson Cor-\nrelation Coefficient.\n4.2 Emotion Classification\nThis was a multi-classification task, i.e., to clas-\nsify the emotions into seven labels. Here also, we\nfine-tuned RoBERTa model (Liu et al., 2019) with\nthe same five layers, just changing the output neu-\nrons to 7 instead of 1. We had used Cross-Entropy\nLoss as the loss function (which already has a soft-\nmax layer). We also upsampled the dataset as it\nwas imbalanced. Highly imbalanced data poses\nadded difficulty, as most learners will exhibit bias\ntowards the majority class and, in extreme cases,\nmay ignore the minority class altogether (Johnson\nand Khoshgoftaar, 2019). Random over-sampling\n(Moreo et al., 2016) was performed using the im-\nblearn library. The imbalanced dataset can be seen\nin figure 2, the minority class being the emotion\nlabeled \"joy\".\nFigure 2: Imbalanced Dataset\n4.3 Hyperparameters and other settings\nFor all the tasks, the learning rate was set to 10−5,\nand the models were trained using Adam (Kingma\nand Ba, 2014) as optimizer. The parameters of\nAdam were Beta(0.9, 0.999) and weight decay as\n0. The batch size was set to 8. The dataset was\nshuffled using Pytorch (Paszke et al., 2019) data\nloader. All the models were trained on the GPUs\nprovided by Google Colab.\n0 2 4 6 8\nepochs\n0.3\n0.4\n0.5\n0.6\n0.7\naccuracy\nmacrorecall\nmacroprecision\nmacroF1\nFigure 3: Metrics used for EMO task\n5 Results\nOur system achieved a Pearson Correlation Coef-\nficient (Benesty et al., 2009) of 0.488 on Task 1.\nEmpathy Pearson Correlation was 0.470, and Dis-\ntress Pearson Correlation was 0.506. Hence, the\naverage of both was taken as the final score. In\nthe development set, the empathy score was 0.4583\n(after the 8th epoch), and the distress score was\n0.4415 (after the 4th epoch, as after the score was\ndecreased due to overfitting). Although the empa-\nthy score was slightly high, it yielded less score in\nthe test set due to overfitting. While due to early\nstopping, distress yielded a better score.\n0 1 2 3 4 5 6 7\nepochs\n0.0\n0.1\n0.2\n0.3\n0.4\nEmpathy\nDistress\nFigure 4: Empathy and Distress scores (Augmented)\nWe had two different submissions for the emo-\ntion classification, one with augmentation and up-\nsampling and one without altering the data. The\ntest scores of both submissions are mentioned in\n263\nTable 2. Also, the results of the development set\nare plotted in figure 4. We tested until ten epochs\nbut decided to submit the model, trained only up\nto eight epochs as it was overfitting. Hence, the\nmacro F1-score decreased on the development set\ndespite accuracy increasing on the training set.\n6 Conclusion\nThis paper describes our submission to the W ASSA\n2022 shared task, where we have used the already\ntrained RoBERTa model on a large dataset and\nthen used its power by just finetuning on the given\ndataset. By the approach we have used, it can also\nbe deduced that text augmentation and upsampling\nhelped in emotion classification and predicting the\nempathy and distress scores as most of the time, the\nlarger amount of data helps improve the training\nprocess of a model.\nReferences\nC Daniel Batson, Jim Fultz, and Patricia A Schoenrade.\n1987. Distress and empathy: Two qualitatively dis-\ntinct vicarious emotions with different motivational\nconsequences. Journal of personality, 55(1):19–39.\nJacob Benesty, Jingdong Chen, Yiteng Huang, and Is-\nrael Cohen. 2009. Pearson correlation coefficient.\nIn Noise reduction in speech processing, pages 1–4.\nSpringer.\nSven Buechel, Anneke Buffone, Barry Slaff, Lyle Ungar,\nand João Sedoc. 2018. Modeling empathy and dis-\ntress in reaction to news stories. InProceedings of the\n2018 Conference on Empirical Methods in Natural\nLanguage Processing, pages 4758–4765, Brussels,\nBelgium. Association for Computational Linguistics.\nSergey Edunov, Myle Ott, Michael Auli, and David\nGrangier. 2018. Understanding back-translation at\nscale. arXiv preprint arXiv:1808.09381.\nPaul Ekman and Wallace V Friesen. 1971. Constants\nacross cultures in the face and emotion. Journal of\npersonality and social psychology, 17(2):124.\nSarah Fabi, Lydia Anna Weber, and Hartmut Leuthold.\n2019. Empathic concern and personal distress de-\npend on situational but not dispositional factors.PloS\none, 14(11):e0225102.\nJustin M Johnson and Taghi M Khoshgoftaar. 2019. Sur-\nvey on deep learning with class imbalance. Journal\nof Big Data, 6(1):1–54.\nJungo Kasai, Hao Peng, Yizhe Zhang, Dani Yogatama,\nGabriel Ilharco, Nikolaos Pappas, Yi Mao, Weizhu\nChen, and Noah A Smith. 2021. Finetuning pre-\ntrained transformers into rnns. arXiv preprint\narXiv:2103.13076.\nDiederik P Kingma and Jimmy Ba. 2014. Adam: A\nmethod for stochastic optimization. arXiv preprint\narXiv:1412.6980.\nMeera Komarraju, Steven J Karau, Ronald R Schmeck,\nand Alen Avdic. 2011. The big five personality traits,\nlearning styles, and academic achievement. Person-\nality and individual differences, 51(4):472–477.\nYinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Man-\ndar Joshi, Danqi Chen, Omer Levy, Mike Lewis,\nLuke Zettlemoyer, and Veselin Stoyanov. 2019.\nRoberta: A robustly optimized bert pretraining ap-\nproach. arXiv preprint arXiv:1907.11692.\nAlejandro Moreo, Andrea Esuli, and Fabrizio Sebas-\ntiani. 2016. Distributional random oversampling for\nimbalanced text classification. In Proceedings of the\n39th International ACM SIGIR conference on Re-\nsearch and Development in Information Retrieval,\npages 805–808.\nAdam Paszke, Sam Gross, Francisco Massa, Adam\nLerer, James Bradbury, Gregory Chanan, Trevor\nKilleen, Zeming Lin, Natalia Gimelshein, Luca\nAntiga, et al. 2019. Pytorch: An imperative style,\nhigh-performance deep learning library. Advances in\nneural information processing systems, 32.\nAmane Sugiyama and Naoki Yoshinaga. 2019. Data\naugmentation using back-translation for context-\naware neural machine translation. In Proceedings\nof the Fourth Workshop on Discourse in Machine\nTranslation (DiscoMT 2019), pages 35–44.\nAshish Vaswani, Noam Shazeer, Niki Parmar, Jakob\nUszkoreit, Llion Jones, Aidan N Gomez, Łukasz\nKaiser, and Illia Polosukhin. 2017. Attention is all\nyou need. Advances in neural information processing\nsystems, 30.\nJonathan J Webster and Chunyu Kit. 1992. Tokenization\nas the initial phase in nlp. InCOLING 1992 Volume 4:\nThe 14th International Conference on Computational\nLinguistics.\n264",
+  "topic": "Empathy",
+  "concepts": [
+    {
+      "name": "Empathy",
+      "score": 0.8680047392845154
+    },
+    {
+      "name": "Computer science",
+      "score": 0.557280421257019
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5325201153755188
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4966593384742737
+    },
+    {
+      "name": "Correlation",
+      "score": 0.48594868183135986
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.46616867184638977
+    },
+    {
+      "name": "Task analysis",
+      "score": 0.44146043062210083
+    },
+    {
+      "name": "Distress",
+      "score": 0.4300655424594879
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40400952100753784
+    },
+    {
+      "name": "Psychology",
+      "score": 0.37072718143463135
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.36254042387008667
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.33135277032852173
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.17937549948692322
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14014661312103271
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.12003061175346375
+    },
+    {
+      "name": "Psychotherapist",
+      "score": 0.11492905020713806
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,129 +1,192 @@
 {
-    "title": "Few-shot adaptation of multi-modal foundation models: a survey",
-    "url": "https://openalex.org/W4401929513",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2088752217",
-            "name": "Liu Fan",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A208448388",
-            "name": "Zhang Tian-shu",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2349422618",
-            "name": "Dai Wen-wen",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1413672365",
-            "name": "Zhang Chuan-yi",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2363035308",
-            "name": "Cai Wen-wen",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2362037530",
-            "name": "Zhou Xiao-cong",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2188323026",
-            "name": "Chen Delong",
-            "affiliations": [
-                "Hong Kong University of Science and Technology",
-                "University of Hong Kong"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W12634471",
-        "https://openalex.org/W4386072228",
-        "https://openalex.org/W4283378900",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W2047643928",
-        "https://openalex.org/W2148440006",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W4294808066",
-        "https://openalex.org/W4293824280",
-        "https://openalex.org/W2166049352",
-        "https://openalex.org/W4382458283",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W3035524453",
-        "https://openalex.org/W2964194231",
-        "https://openalex.org/W3037492894",
-        "https://openalex.org/W3177096435",
-        "https://openalex.org/W4224545477",
-        "https://openalex.org/W4309396952",
-        "https://openalex.org/W4312651322",
-        "https://openalex.org/W4285595687",
-        "https://openalex.org/W4382463911",
-        "https://openalex.org/W4319319893",
-        "https://openalex.org/W4303648967",
-        "https://openalex.org/W2138011018",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W3174770825",
-        "https://openalex.org/W4324321325",
-        "https://openalex.org/W4386076681",
-        "https://openalex.org/W6603139312",
-        "https://openalex.org/W4327810635",
-        "https://openalex.org/W2998385486",
-        "https://openalex.org/W4320855021",
-        "https://openalex.org/W4229453513",
-        "https://openalex.org/W4321021726",
-        "https://openalex.org/W4312629998",
-        "https://openalex.org/W2533598788",
-        "https://openalex.org/W4327810158",
-        "https://openalex.org/W1977295328",
-        "https://openalex.org/W4310513152",
-        "https://openalex.org/W4297677947",
-        "https://openalex.org/W3160638507",
-        "https://openalex.org/W4312933868",
-        "https://openalex.org/W4300979858",
-        "https://openalex.org/W4309864938",
-        "https://openalex.org/W3098267758",
-        "https://openalex.org/W4361194507",
-        "https://openalex.org/W4310513153",
-        "https://openalex.org/W4402727234",
-        "https://openalex.org/W4292945941",
-        "https://openalex.org/W3198675127",
-        "https://openalex.org/W4312091889",
-        "https://openalex.org/W2017814585",
-        "https://openalex.org/W4386076665",
-        "https://openalex.org/W3173233571",
-        "https://openalex.org/W4300989019",
-        "https://openalex.org/W4309801531",
-        "https://openalex.org/W4308241978",
-        "https://openalex.org/W4386065763",
-        "https://openalex.org/W3173909648",
-        "https://openalex.org/W4306313147",
-        "https://openalex.org/W2953356739",
-        "https://openalex.org/W4362598512",
-        "https://openalex.org/W4317669196",
-        "https://openalex.org/W3198377975",
-        "https://openalex.org/W4312960937",
-        "https://openalex.org/W4312310776",
-        "https://openalex.org/W4281987380"
-    ],
-    "abstract": "Multi-modal (vision-language) models, such as CLIP, are replacing traditional supervised pre-training models (e.g., ImageNet-based pre-training) as the new generation of visual foundation models. These models with robust and aligned semantic representations learned from billions of internet image-text pairs and can be applied to various downstream tasks in a zero-shot manner. However, in some fine-grained domains like medical imaging and remote sensing, the performance of multi-modal foundation models often leaves much to be desired. Consequently, many researchers have begun to explore few-shot adaptation methods for these models, gradually deriving three main technical approaches: (1) prompt-based methods, (2) adapter-based methods, and (3) external knowledge-based methods. Nevertheless, this rapidly developing field has produced numerous results without a comprehensive survey to systematically organize the research progress. Therefore, in this survey, we introduce and analyze the research advancements in few-shot adaptation methods for multi-modal models, summarizing commonly used datasets and experimental setups, and comparing the results of different methods. In addition, due to the lack of reliable theoretical support for existing methods, we derive the few-shot adaptation generalization error bound for multi-modal models. The theorem reveals that the generalization error of multi-modal foundation models is constrained by three factors: domain gap, model capacity, and sample size. Based on this, we propose three possible solutions from the following aspects: (1) adaptive domain generalization, (2) adaptive model selection, and (3) adaptive knowledge utilization.Kindly check and confirm the edit made in the title.The title is correct. © The Author(s) 2024.",
-    "full_text": null
+  "title": "Few-shot adaptation of multi-modal foundation models: a survey",
+  "url": "https://openalex.org/W4401929513",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2088752217",
+      "name": "Liu Fan",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A208448388",
+      "name": "Zhang Tian-shu",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2349422618",
+      "name": "Dai Wen-wen",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1413672365",
+      "name": "Zhang Chuan-yi",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2363035308",
+      "name": "Cai Wen-wen",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2362037530",
+      "name": "Zhou Xiao-cong",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2188323026",
+      "name": "Chen Delong",
+      "affiliations": [
+        "Hong Kong University of Science and Technology",
+        "University of Hong Kong"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W12634471",
+    "https://openalex.org/W4386072228",
+    "https://openalex.org/W4283378900",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W2047643928",
+    "https://openalex.org/W2148440006",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W4294808066",
+    "https://openalex.org/W4293824280",
+    "https://openalex.org/W2166049352",
+    "https://openalex.org/W4382458283",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W3035524453",
+    "https://openalex.org/W2964194231",
+    "https://openalex.org/W3037492894",
+    "https://openalex.org/W3177096435",
+    "https://openalex.org/W4224545477",
+    "https://openalex.org/W4309396952",
+    "https://openalex.org/W4312651322",
+    "https://openalex.org/W4285595687",
+    "https://openalex.org/W4382463911",
+    "https://openalex.org/W4319319893",
+    "https://openalex.org/W4303648967",
+    "https://openalex.org/W2138011018",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W3174770825",
+    "https://openalex.org/W4324321325",
+    "https://openalex.org/W4386076681",
+    "https://openalex.org/W6603139312",
+    "https://openalex.org/W4327810635",
+    "https://openalex.org/W2998385486",
+    "https://openalex.org/W4320855021",
+    "https://openalex.org/W4229453513",
+    "https://openalex.org/W4321021726",
+    "https://openalex.org/W4312629998",
+    "https://openalex.org/W2533598788",
+    "https://openalex.org/W4327810158",
+    "https://openalex.org/W1977295328",
+    "https://openalex.org/W4310513152",
+    "https://openalex.org/W4297677947",
+    "https://openalex.org/W3160638507",
+    "https://openalex.org/W4312933868",
+    "https://openalex.org/W4300979858",
+    "https://openalex.org/W4309864938",
+    "https://openalex.org/W3098267758",
+    "https://openalex.org/W4361194507",
+    "https://openalex.org/W4310513153",
+    "https://openalex.org/W4402727234",
+    "https://openalex.org/W4292945941",
+    "https://openalex.org/W3198675127",
+    "https://openalex.org/W4312091889",
+    "https://openalex.org/W2017814585",
+    "https://openalex.org/W4386076665",
+    "https://openalex.org/W3173233571",
+    "https://openalex.org/W4300989019",
+    "https://openalex.org/W4309801531",
+    "https://openalex.org/W4308241978",
+    "https://openalex.org/W4386065763",
+    "https://openalex.org/W3173909648",
+    "https://openalex.org/W4306313147",
+    "https://openalex.org/W2953356739",
+    "https://openalex.org/W4362598512",
+    "https://openalex.org/W4317669196",
+    "https://openalex.org/W3198377975",
+    "https://openalex.org/W4312960937",
+    "https://openalex.org/W4312310776",
+    "https://openalex.org/W4281987380"
+  ],
+  "abstract": "Multi-modal (vision-language) models, such as CLIP, are replacing traditional supervised pre-training models (e.g., ImageNet-based pre-training) as the new generation of visual foundation models. These models with robust and aligned semantic representations learned from billions of internet image-text pairs and can be applied to various downstream tasks in a zero-shot manner. However, in some fine-grained domains like medical imaging and remote sensing, the performance of multi-modal foundation models often leaves much to be desired. Consequently, many researchers have begun to explore few-shot adaptation methods for these models, gradually deriving three main technical approaches: (1) prompt-based methods, (2) adapter-based methods, and (3) external knowledge-based methods. Nevertheless, this rapidly developing field has produced numerous results without a comprehensive survey to systematically organize the research progress. Therefore, in this survey, we introduce and analyze the research advancements in few-shot adaptation methods for multi-modal models, summarizing commonly used datasets and experimental setups, and comparing the results of different methods. In addition, due to the lack of reliable theoretical support for existing methods, we derive the few-shot adaptation generalization error bound for multi-modal models. The theorem reveals that the generalization error of multi-modal foundation models is constrained by three factors: domain gap, model capacity, and sample size. Based on this, we propose three possible solutions from the following aspects: (1) adaptive domain generalization, (2) adaptive model selection, and (3) adaptive knowledge utilization.Kindly check and confirm the edit made in the title.The title is correct. © The Author(s) 2024.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8259173631668091
+    },
+    {
+      "name": "Generalization",
+      "score": 0.6141558289527893
+    },
+    {
+      "name": "Adaptation (eye)",
+      "score": 0.5698234438896179
+    },
+    {
+      "name": "Modal",
+      "score": 0.5613606572151184
+    },
+    {
+      "name": "Domain adaptation",
+      "score": 0.5097891688346863
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5013320446014404
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4613720178604126
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3471927046775818
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.13187125325202942
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    }
+  ]
 }

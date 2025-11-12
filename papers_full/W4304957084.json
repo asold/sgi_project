@@ -1,72 +1,123 @@
 {
-    "title": "The natural language processing of radiology requests and reports of chest imaging: Comparing five transformer models’ multilabel classification and a proof-of-concept study",
-    "url": "https://openalex.org/W4304957084",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5029413223",
-            "name": "A Olthof",
-            "affiliations": [
-                "Ziekenhuis Groep Twente"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5024082845",
-            "name": "Peter M. A. van Ooijen",
-            "affiliations": [
-                "University Medical Center Groningen"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010501907",
-            "name": "L. J. Cornelissen",
-            "affiliations": [
-                null,
-                "University Medical Center Groningen"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2897828100",
-        "https://openalex.org/W2964555593",
-        "https://openalex.org/W2793682084",
-        "https://openalex.org/W2293755673",
-        "https://openalex.org/W2595709928",
-        "https://openalex.org/W2990109549",
-        "https://openalex.org/W2909619379",
-        "https://openalex.org/W3083090368",
-        "https://openalex.org/W3038414938",
-        "https://openalex.org/W3022601868",
-        "https://openalex.org/W3084395264",
-        "https://openalex.org/W3121226172",
-        "https://openalex.org/W2947419516",
-        "https://openalex.org/W2149527488",
-        "https://openalex.org/W3004088204",
-        "https://openalex.org/W2944913321",
-        "https://openalex.org/W1560862568",
-        "https://openalex.org/W2784843328",
-        "https://openalex.org/W2768567289",
-        "https://openalex.org/W2977683229",
-        "https://openalex.org/W2978511610",
-        "https://openalex.org/W4229451765",
-        "https://openalex.org/W3102103075",
-        "https://openalex.org/W3200849552",
-        "https://openalex.org/W3148118841",
-        "https://openalex.org/W3151410070",
-        "https://openalex.org/W3198380000",
-        "https://openalex.org/W3105220303",
-        "https://openalex.org/W2952638691",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W3207052280",
-        "https://openalex.org/W3183988814",
-        "https://openalex.org/W3045332379",
-        "https://openalex.org/W3124738338",
-        "https://openalex.org/W2942353815",
-        "https://openalex.org/W2908720688",
-        "https://openalex.org/W2911410812",
-        "https://openalex.org/W2896155826",
-        "https://openalex.org/W4283785590"
-    ],
-    "abstract": "Background Radiology requests and reports contain valuable information about diagnostic findings and indications, and transformer-based language models are promising for more accurate text classification. Methods In a retrospective study, 2256 radiologist-annotated radiology requests (8 classes) and reports (10 classes) were divided into training and testing datasets (90% and 10%, respectively) and used to train 32 models. Performance metrics were compared by model type (LSTM, Bertje, RobBERT, BERT-clinical, BERT-multilingual, BERT-base), text length, data prevalence, and training strategy. The best models were used to predict the remaining 40,873 cases’ categories of the datasets of requests and reports. Results The RobBERT model performed the best after 4000 training iterations, resulting in AUC values ranging from 0.808 [95% CI (0.757–0.859)] to 0.976 [95% CI (0.956–0.996)] for the requests and 0.746 [95% CI (0.689–0.802)] to 1.0 [95% CI (1.0–1.0)] for the reports. The AUC for the classification of normal reports was 0.95 [95% CI (0.922–0.979)]. The predicted data demonstrated variability of both diagnostic yield for various request classes and request patterns related to COVID-19 hospital admission data. Conclusion Transformer-based natural language processing is feasible for the multilabel classification of chest imaging request and report items. Diagnostic yield varies with the information in the requests.",
-    "full_text": null
+  "title": "The natural language processing of radiology requests and reports of chest imaging: Comparing five transformer models’ multilabel classification and a proof-of-concept study",
+  "url": "https://openalex.org/W4304957084",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5029413223",
+      "name": "A Olthof",
+      "affiliations": [
+        "Ziekenhuis Groep Twente"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5024082845",
+      "name": "Peter M. A. van Ooijen",
+      "affiliations": [
+        "University Medical Center Groningen"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010501907",
+      "name": "L. J. Cornelissen",
+      "affiliations": [
+        null,
+        "University Medical Center Groningen"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2897828100",
+    "https://openalex.org/W2964555593",
+    "https://openalex.org/W2793682084",
+    "https://openalex.org/W2293755673",
+    "https://openalex.org/W2595709928",
+    "https://openalex.org/W2990109549",
+    "https://openalex.org/W2909619379",
+    "https://openalex.org/W3083090368",
+    "https://openalex.org/W3038414938",
+    "https://openalex.org/W3022601868",
+    "https://openalex.org/W3084395264",
+    "https://openalex.org/W3121226172",
+    "https://openalex.org/W2947419516",
+    "https://openalex.org/W2149527488",
+    "https://openalex.org/W3004088204",
+    "https://openalex.org/W2944913321",
+    "https://openalex.org/W1560862568",
+    "https://openalex.org/W2784843328",
+    "https://openalex.org/W2768567289",
+    "https://openalex.org/W2977683229",
+    "https://openalex.org/W2978511610",
+    "https://openalex.org/W4229451765",
+    "https://openalex.org/W3102103075",
+    "https://openalex.org/W3200849552",
+    "https://openalex.org/W3148118841",
+    "https://openalex.org/W3151410070",
+    "https://openalex.org/W3198380000",
+    "https://openalex.org/W3105220303",
+    "https://openalex.org/W2952638691",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W3207052280",
+    "https://openalex.org/W3183988814",
+    "https://openalex.org/W3045332379",
+    "https://openalex.org/W3124738338",
+    "https://openalex.org/W2942353815",
+    "https://openalex.org/W2908720688",
+    "https://openalex.org/W2911410812",
+    "https://openalex.org/W2896155826",
+    "https://openalex.org/W4283785590"
+  ],
+  "abstract": "Background Radiology requests and reports contain valuable information about diagnostic findings and indications, and transformer-based language models are promising for more accurate text classification. Methods In a retrospective study, 2256 radiologist-annotated radiology requests (8 classes) and reports (10 classes) were divided into training and testing datasets (90% and 10%, respectively) and used to train 32 models. Performance metrics were compared by model type (LSTM, Bertje, RobBERT, BERT-clinical, BERT-multilingual, BERT-base), text length, data prevalence, and training strategy. The best models were used to predict the remaining 40,873 cases’ categories of the datasets of requests and reports. Results The RobBERT model performed the best after 4000 training iterations, resulting in AUC values ranging from 0.808 [95% CI (0.757–0.859)] to 0.976 [95% CI (0.956–0.996)] for the requests and 0.746 [95% CI (0.689–0.802)] to 1.0 [95% CI (1.0–1.0)] for the reports. The AUC for the classification of normal reports was 0.95 [95% CI (0.922–0.979)]. The predicted data demonstrated variability of both diagnostic yield for various request classes and request patterns related to COVID-19 hospital admission data. Conclusion Transformer-based natural language processing is feasible for the multilabel classification of chest imaging request and report items. Diagnostic yield varies with the information in the requests.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6311776638031006
+    },
+    {
+      "name": "Proof of concept",
+      "score": 0.6215637922286987
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5390834808349609
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4665491282939911
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42670369148254395
+    },
+    {
+      "name": "Radiology",
+      "score": 0.3598499596118927
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3490907549858093
+    },
+    {
+      "name": "Medicine",
+      "score": 0.34491822123527527
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09443756937980652
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,69 +1,104 @@
 {
-    "title": "Using large language models for extracting and pre-annotating texts on mental health from noisy data in a low-resource language",
-    "url": "https://openalex.org/W4404826821",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1516315565",
-            "name": "Sergei Koltcov",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5102065264",
-            "name": "Anton Surkov",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2123302476",
-            "name": "Olessia Koltsova",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2955607484",
-            "name": "Vera Ignatenko",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4399837746",
-        "https://openalex.org/W6966808286",
-        "https://openalex.org/W6684149856",
-        "https://openalex.org/W4312877454",
-        "https://openalex.org/W4379382656",
-        "https://openalex.org/W4389072250",
-        "https://openalex.org/W4387617694",
-        "https://openalex.org/W6826460934",
-        "https://openalex.org/W2783837693",
-        "https://openalex.org/W4386302642",
-        "https://openalex.org/W6891971393",
-        "https://openalex.org/W4366703942",
-        "https://openalex.org/W4323900694",
-        "https://openalex.org/W6863466558",
-        "https://openalex.org/W4403753188",
-        "https://openalex.org/W6861095244",
-        "https://openalex.org/W4389934892",
-        "https://openalex.org/W4296520346",
-        "https://openalex.org/W4398150831",
-        "https://openalex.org/W4398766485",
-        "https://openalex.org/W4383426667",
-        "https://openalex.org/W4225523462",
-        "https://openalex.org/W4285787895",
-        "https://openalex.org/W3046368065",
-        "https://openalex.org/W4399560926",
-        "https://openalex.org/W4396831993",
-        "https://openalex.org/W3008374555",
-        "https://openalex.org/W2910453440",
-        "https://openalex.org/W6851297875",
-        "https://openalex.org/W2971874326",
-        "https://openalex.org/W6729840497",
-        "https://openalex.org/W2552383788",
-        "https://openalex.org/W4392903699",
-        "https://openalex.org/W2531326634",
-        "https://openalex.org/W4402101192",
-        "https://openalex.org/W4389523980",
-        "https://openalex.org/W2163302275",
-        "https://openalex.org/W1521626219"
-    ],
-    "abstract": "Recent advancements in large language models (LLMs) have opened new possibilities for developing conversational agents (CAs) in various subfields of mental healthcare. However, this progress is hindered by limited access to high-quality training data, often due to privacy concerns and high annotation costs for low-resource languages. A potential solution is to create human-AI annotation systems that utilize extensive public domain user-to-user and user-to-professional discussions on social media. These discussions, however, are extremely noisy, necessitating the adaptation of LLMs for fully automatic cleaning and pre-classification to reduce human annotation effort. To date, research on LLM-based annotation in the mental health domain is extremely scarce. In this article, we explore the potential of zero-shot classification using four LLMs to select and pre-classify texts into topics representing psychiatric disorders, in order to facilitate the future development of CAs for disorder-specific counseling. We use 64,404 Russian-language texts from online discussion threads labeled with seven most commonly discussed disorders: depression, neurosis, paranoia, anxiety disorder, bipolar disorder, obsessive-compulsive disorder, and borderline personality disorder. Our research shows that while preliminary data filtering using zero-shot technology slightly improves classification, LLM fine-tuning makes a far larger contribution to its quality. Both standard and natural language inference (NLI) modes of fine-tuning increase classification accuracy by more than three times compared to non-fine-tuned training with preliminarily filtered data. Although NLI fine-tuning achieves slightly higher accuracy (0.64) than the standard approach, it is six times slower, indicating a need for further experimentation with NLI hypothesis engineering. Additionally, we demonstrate that lemmatization does not affect classification quality and that multilingual models using texts in their original language perform slightly better than English-only models using automatically translated texts. Finally, we introduce our dataset and model as the first openly available Russian-language resource for developing conversational agents in the domain of mental health counseling.",
-    "full_text": null
+  "title": "Using large language models for extracting and pre-annotating texts on mental health from noisy data in a low-resource language",
+  "url": "https://openalex.org/W4404826821",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1516315565",
+      "name": "Sergei Koltcov",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5102065264",
+      "name": "Anton Surkov",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2123302476",
+      "name": "Olessia Koltsova",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2955607484",
+      "name": "Vera Ignatenko",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4399837746",
+    "https://openalex.org/W6966808286",
+    "https://openalex.org/W6684149856",
+    "https://openalex.org/W4312877454",
+    "https://openalex.org/W4379382656",
+    "https://openalex.org/W4389072250",
+    "https://openalex.org/W4387617694",
+    "https://openalex.org/W6826460934",
+    "https://openalex.org/W2783837693",
+    "https://openalex.org/W4386302642",
+    "https://openalex.org/W6891971393",
+    "https://openalex.org/W4366703942",
+    "https://openalex.org/W4323900694",
+    "https://openalex.org/W6863466558",
+    "https://openalex.org/W4403753188",
+    "https://openalex.org/W6861095244",
+    "https://openalex.org/W4389934892",
+    "https://openalex.org/W4296520346",
+    "https://openalex.org/W4398150831",
+    "https://openalex.org/W4398766485",
+    "https://openalex.org/W4383426667",
+    "https://openalex.org/W4225523462",
+    "https://openalex.org/W4285787895",
+    "https://openalex.org/W3046368065",
+    "https://openalex.org/W4399560926",
+    "https://openalex.org/W4396831993",
+    "https://openalex.org/W3008374555",
+    "https://openalex.org/W2910453440",
+    "https://openalex.org/W6851297875",
+    "https://openalex.org/W2971874326",
+    "https://openalex.org/W6729840497",
+    "https://openalex.org/W2552383788",
+    "https://openalex.org/W4392903699",
+    "https://openalex.org/W2531326634",
+    "https://openalex.org/W4402101192",
+    "https://openalex.org/W4389523980",
+    "https://openalex.org/W2163302275",
+    "https://openalex.org/W1521626219"
+  ],
+  "abstract": "Recent advancements in large language models (LLMs) have opened new possibilities for developing conversational agents (CAs) in various subfields of mental healthcare. However, this progress is hindered by limited access to high-quality training data, often due to privacy concerns and high annotation costs for low-resource languages. A potential solution is to create human-AI annotation systems that utilize extensive public domain user-to-user and user-to-professional discussions on social media. These discussions, however, are extremely noisy, necessitating the adaptation of LLMs for fully automatic cleaning and pre-classification to reduce human annotation effort. To date, research on LLM-based annotation in the mental health domain is extremely scarce. In this article, we explore the potential of zero-shot classification using four LLMs to select and pre-classify texts into topics representing psychiatric disorders, in order to facilitate the future development of CAs for disorder-specific counseling. We use 64,404 Russian-language texts from online discussion threads labeled with seven most commonly discussed disorders: depression, neurosis, paranoia, anxiety disorder, bipolar disorder, obsessive-compulsive disorder, and borderline personality disorder. Our research shows that while preliminary data filtering using zero-shot technology slightly improves classification, LLM fine-tuning makes a far larger contribution to its quality. Both standard and natural language inference (NLI) modes of fine-tuning increase classification accuracy by more than three times compared to non-fine-tuned training with preliminarily filtered data. Although NLI fine-tuning achieves slightly higher accuracy (0.64) than the standard approach, it is six times slower, indicating a need for further experimentation with NLI hypothesis engineering. Additionally, we demonstrate that lemmatization does not affect classification quality and that multilingual models using texts in their original language perform slightly better than English-only models using automatically translated texts. Finally, we introduce our dataset and model as the first openly available Russian-language resource for developing conversational agents in the domain of mental health counseling.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6105391979217529
+    },
+    {
+      "name": "Annotation",
+      "score": 0.564021110534668
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.45789700746536255
+    },
+    {
+      "name": "Mental health",
+      "score": 0.4573880732059479
+    },
+    {
+      "name": "Inference",
+      "score": 0.4368090033531189
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4062354564666748
+    },
+    {
+      "name": "Psychology",
+      "score": 0.2798842489719391
+    },
+    {
+      "name": "Psychiatry",
+      "score": 0.1822553277015686
+    }
+  ]
 }

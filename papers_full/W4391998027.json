@@ -1,120 +1,171 @@
 {
-    "title": "PReFormer: A memory-efficient transformer for point cloud semantic segmentation",
-    "url": "https://openalex.org/W4391998027",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2907318557",
-            "name": "Perpetual Hope Akwensi",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105038625",
-            "name": "Ruisheng Wang",
-            "affiliations": [
-                "Shenzhen University",
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2149542424",
-            "name": "Bo Guo",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2907318557",
-            "name": "Perpetual Hope Akwensi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105038625",
-            "name": "Ruisheng Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2149542424",
-            "name": "Bo Guo",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4312988612",
-        "https://openalex.org/W3007809903",
-        "https://openalex.org/W2775216572",
-        "https://openalex.org/W2979824959",
-        "https://openalex.org/W2963359731",
-        "https://openalex.org/W3125648170",
-        "https://openalex.org/W6842244520",
-        "https://openalex.org/W4308234147",
-        "https://openalex.org/W4281758439",
-        "https://openalex.org/W1583912456",
-        "https://openalex.org/W6714644935",
-        "https://openalex.org/W3094546693",
-        "https://openalex.org/W4312307873",
-        "https://openalex.org/W4296642565",
-        "https://openalex.org/W3130556533",
-        "https://openalex.org/W2737740651",
-        "https://openalex.org/W3111535274",
-        "https://openalex.org/W2963706542",
-        "https://openalex.org/W3138458448",
-        "https://openalex.org/W6793939007",
-        "https://openalex.org/W3012494314",
-        "https://openalex.org/W2609719703",
-        "https://openalex.org/W3015788359",
-        "https://openalex.org/W6846228410",
-        "https://openalex.org/W6771626834",
-        "https://openalex.org/W4313145913",
-        "https://openalex.org/W2963281829",
-        "https://openalex.org/W2894384847",
-        "https://openalex.org/W2997890711",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4386113258",
-        "https://openalex.org/W2998083489",
-        "https://openalex.org/W2211722331",
-        "https://openalex.org/W4312616477",
-        "https://openalex.org/W2624503621",
-        "https://openalex.org/W3189820959",
-        "https://openalex.org/W6791002663",
-        "https://openalex.org/W4212972547",
-        "https://openalex.org/W1644641054",
-        "https://openalex.org/W4312916565",
-        "https://openalex.org/W3011788244",
-        "https://openalex.org/W6783267081",
-        "https://openalex.org/W2990613095",
-        "https://openalex.org/W3020939490",
-        "https://openalex.org/W6785415759",
-        "https://openalex.org/W3036406207",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4293013131",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W2981199548",
-        "https://openalex.org/W6747904511",
-        "https://openalex.org/W4223646432",
-        "https://openalex.org/W3205209643",
-        "https://openalex.org/W3035541121",
-        "https://openalex.org/W3035002114",
-        "https://openalex.org/W4312414163",
-        "https://openalex.org/W2963057320",
-        "https://openalex.org/W4313169553",
-        "https://openalex.org/W4292554355",
-        "https://openalex.org/W6851695999",
-        "https://openalex.org/W2981983525",
-        "https://openalex.org/W3034670324",
-        "https://openalex.org/W4214755140",
-        "https://openalex.org/W2996290406",
-        "https://openalex.org/W3177330511",
-        "https://openalex.org/W3200344780",
-        "https://openalex.org/W4321482463",
-        "https://openalex.org/W3101071538",
-        "https://openalex.org/W3153465022",
-        "https://openalex.org/W4327967895",
-        "https://openalex.org/W2979750740",
-        "https://openalex.org/W4292656711"
-    ],
-    "abstract": "The success of transformer networks in the natural language processing and 2D vision domains has encouraged the adaptation of transformers to 3D computer vision tasks. However, most of the existing approaches employ standard backpropagation (SBP). SBP requires the storage of model activations on a forward pass for use during the backward pass, making their memory complexity linearly proportional to model depth, hence, inefficient. Furthermore, most 3D point transformers use the classic QKV matrix multiplication design which comes with a memory bottleneck. To address these issues, we propose a memory-efficient point transformer that makes use of reversible functions and linearized self-attention to minimize SBP and transformer memory complexities, respectively. Additionally, rather than the usual UNet architectural design for segmentation, we adopt a ∇-shaped design to capture multi-size/resolution feature representations towards a finely detailed segmentation. Experimental results on benchmark datasets (Toronto3D, DALES, and CSPC) from different sensor platforms (vehicle, aerial, and backpack) show that our approach uses less than half the number of model parameters compared to its SBP counterpart. It also takes more than twice the input sequence and uses less than half the memory compared to most of the traditional approaches. Additionally, our use of a ∇-shaped architectural design yielded about a 5% increment in model performance over the U-shaped approach. Overall, the proposed PReFormer attained competitive performance compared to the state-of-the-art.",
-    "full_text": null
+  "title": "PReFormer: A memory-efficient transformer for point cloud semantic segmentation",
+  "url": "https://openalex.org/W4391998027",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2907318557",
+      "name": "Perpetual Hope Akwensi",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105038625",
+      "name": "Ruisheng Wang",
+      "affiliations": [
+        "Shenzhen University",
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2149542424",
+      "name": "Bo Guo",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2907318557",
+      "name": "Perpetual Hope Akwensi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105038625",
+      "name": "Ruisheng Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2149542424",
+      "name": "Bo Guo",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4312988612",
+    "https://openalex.org/W3007809903",
+    "https://openalex.org/W2775216572",
+    "https://openalex.org/W2979824959",
+    "https://openalex.org/W2963359731",
+    "https://openalex.org/W3125648170",
+    "https://openalex.org/W6842244520",
+    "https://openalex.org/W4308234147",
+    "https://openalex.org/W4281758439",
+    "https://openalex.org/W1583912456",
+    "https://openalex.org/W6714644935",
+    "https://openalex.org/W3094546693",
+    "https://openalex.org/W4312307873",
+    "https://openalex.org/W4296642565",
+    "https://openalex.org/W3130556533",
+    "https://openalex.org/W2737740651",
+    "https://openalex.org/W3111535274",
+    "https://openalex.org/W2963706542",
+    "https://openalex.org/W3138458448",
+    "https://openalex.org/W6793939007",
+    "https://openalex.org/W3012494314",
+    "https://openalex.org/W2609719703",
+    "https://openalex.org/W3015788359",
+    "https://openalex.org/W6846228410",
+    "https://openalex.org/W6771626834",
+    "https://openalex.org/W4313145913",
+    "https://openalex.org/W2963281829",
+    "https://openalex.org/W2894384847",
+    "https://openalex.org/W2997890711",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4386113258",
+    "https://openalex.org/W2998083489",
+    "https://openalex.org/W2211722331",
+    "https://openalex.org/W4312616477",
+    "https://openalex.org/W2624503621",
+    "https://openalex.org/W3189820959",
+    "https://openalex.org/W6791002663",
+    "https://openalex.org/W4212972547",
+    "https://openalex.org/W1644641054",
+    "https://openalex.org/W4312916565",
+    "https://openalex.org/W3011788244",
+    "https://openalex.org/W6783267081",
+    "https://openalex.org/W2990613095",
+    "https://openalex.org/W3020939490",
+    "https://openalex.org/W6785415759",
+    "https://openalex.org/W3036406207",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4293013131",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W2981199548",
+    "https://openalex.org/W6747904511",
+    "https://openalex.org/W4223646432",
+    "https://openalex.org/W3205209643",
+    "https://openalex.org/W3035541121",
+    "https://openalex.org/W3035002114",
+    "https://openalex.org/W4312414163",
+    "https://openalex.org/W2963057320",
+    "https://openalex.org/W4313169553",
+    "https://openalex.org/W4292554355",
+    "https://openalex.org/W6851695999",
+    "https://openalex.org/W2981983525",
+    "https://openalex.org/W3034670324",
+    "https://openalex.org/W4214755140",
+    "https://openalex.org/W2996290406",
+    "https://openalex.org/W3177330511",
+    "https://openalex.org/W3200344780",
+    "https://openalex.org/W4321482463",
+    "https://openalex.org/W3101071538",
+    "https://openalex.org/W3153465022",
+    "https://openalex.org/W4327967895",
+    "https://openalex.org/W2979750740",
+    "https://openalex.org/W4292656711"
+  ],
+  "abstract": "The success of transformer networks in the natural language processing and 2D vision domains has encouraged the adaptation of transformers to 3D computer vision tasks. However, most of the existing approaches employ standard backpropagation (SBP). SBP requires the storage of model activations on a forward pass for use during the backward pass, making their memory complexity linearly proportional to model depth, hence, inefficient. Furthermore, most 3D point transformers use the classic QKV matrix multiplication design which comes with a memory bottleneck. To address these issues, we propose a memory-efficient point transformer that makes use of reversible functions and linearized self-attention to minimize SBP and transformer memory complexities, respectively. Additionally, rather than the usual UNet architectural design for segmentation, we adopt a ∇-shaped design to capture multi-size/resolution feature representations towards a finely detailed segmentation. Experimental results on benchmark datasets (Toronto3D, DALES, and CSPC) from different sensor platforms (vehicle, aerial, and backpack) show that our approach uses less than half the number of model parameters compared to its SBP counterpart. It also takes more than twice the input sequence and uses less than half the memory compared to most of the traditional approaches. Additionally, our use of a ∇-shaped architectural design yielded about a 5% increment in model performance over the U-shaped approach. Overall, the proposed PReFormer attained competitive performance compared to the state-of-the-art.",
+  "full_text": null,
+  "topic": "Point cloud",
+  "concepts": [
+    {
+      "name": "Point cloud",
+      "score": 0.6265652179718018
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6143808960914612
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5027346611022949
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4932641386985779
+    },
+    {
+      "name": "Cloud computing",
+      "score": 0.48510587215423584
+    },
+    {
+      "name": "Cartography",
+      "score": 0.4070276916027069
+    },
+    {
+      "name": "Geography",
+      "score": 0.38416892290115356
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2767485976219177
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1667259931564331
+    },
+    {
+      "name": "Operating system",
+      "score": 0.12832346558570862
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.11959195137023926
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

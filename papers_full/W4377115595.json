@@ -1,65 +1,144 @@
 {
-    "title": "A Survey on Sparsity Exploration in Transformer-Based Accelerators",
-    "url": "https://openalex.org/W4377115595",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5062137170",
-            "name": "Kazi Ahmed Asif Fuad",
-            "affiliations": [
-                "Oregon State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5015263562",
-            "name": "Lizhong Chen",
-            "affiliations": [
-                "Oregon State University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3206453033",
-        "https://openalex.org/W3189877953",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3017024317",
-        "https://openalex.org/W2963809228",
-        "https://openalex.org/W6758657797",
-        "https://openalex.org/W2604319603",
-        "https://openalex.org/W3207622241",
-        "https://openalex.org/W4249179470",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3040646053",
-        "https://openalex.org/W6780125659",
-        "https://openalex.org/W3047848469",
-        "https://openalex.org/W6842286698",
-        "https://openalex.org/W4214686755",
-        "https://openalex.org/W4283756380",
-        "https://openalex.org/W4291653336",
-        "https://openalex.org/W4312569226",
-        "https://openalex.org/W3024171804",
-        "https://openalex.org/W3196923642",
-        "https://openalex.org/W4312847929",
-        "https://openalex.org/W4375928954",
-        "https://openalex.org/W6790503700",
-        "https://openalex.org/W3034573343",
-        "https://openalex.org/W3085139254",
-        "https://openalex.org/W2626991402",
-        "https://openalex.org/W2963358710",
-        "https://openalex.org/W2899915146",
-        "https://openalex.org/W4242577057",
-        "https://openalex.org/W4244024631",
-        "https://openalex.org/W6769062451",
-        "https://openalex.org/W2971624117",
-        "https://openalex.org/W6774302960",
-        "https://openalex.org/W4287363917",
-        "https://openalex.org/W4296473245",
-        "https://openalex.org/W3037132819",
-        "https://openalex.org/W4287828539",
-        "https://openalex.org/W2979245724",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4287777801"
-    ],
-    "abstract": "Transformer models have emerged as the state-of-the-art in many natural language processing and computer vision applications due to their capability of attending to longer sequences of tokens and supporting parallel processing more efficiently. Nevertheless, the training and inference of transformer models are computationally expensive and memory intensive. Meanwhile, utilizing the sparsity in deep learning models has proven to be an effective approach to alleviate the computation challenge as well as help to fit large models in edge devices. As high-performance CPUs and GPUs are generally not flexible enough to explore low-level sparsity, a number of specialized hardware accelerators have been proposed for transformer models. This paper provides a comprehensive review of hardware transformer accelerators that have been proposed to explore sparsity for computation and memory optimizations. We classify existing works based on the strategies of utilizing sparsity and identify their pros and cons in those strategies. Based on our analysis, we point out promising directions and recommendations for future works on improving the effective sparse execution of transformer hardware accelerators.",
-    "full_text": null
+  "title": "A Survey on Sparsity Exploration in Transformer-Based Accelerators",
+  "url": "https://openalex.org/W4377115595",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5062137170",
+      "name": "Kazi Ahmed Asif Fuad",
+      "affiliations": [
+        "Oregon State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5015263562",
+      "name": "Lizhong Chen",
+      "affiliations": [
+        "Oregon State University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3206453033",
+    "https://openalex.org/W3189877953",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3017024317",
+    "https://openalex.org/W2963809228",
+    "https://openalex.org/W6758657797",
+    "https://openalex.org/W2604319603",
+    "https://openalex.org/W3207622241",
+    "https://openalex.org/W4249179470",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3040646053",
+    "https://openalex.org/W6780125659",
+    "https://openalex.org/W3047848469",
+    "https://openalex.org/W6842286698",
+    "https://openalex.org/W4214686755",
+    "https://openalex.org/W4283756380",
+    "https://openalex.org/W4291653336",
+    "https://openalex.org/W4312569226",
+    "https://openalex.org/W3024171804",
+    "https://openalex.org/W3196923642",
+    "https://openalex.org/W4312847929",
+    "https://openalex.org/W4375928954",
+    "https://openalex.org/W6790503700",
+    "https://openalex.org/W3034573343",
+    "https://openalex.org/W3085139254",
+    "https://openalex.org/W2626991402",
+    "https://openalex.org/W2963358710",
+    "https://openalex.org/W2899915146",
+    "https://openalex.org/W4242577057",
+    "https://openalex.org/W4244024631",
+    "https://openalex.org/W6769062451",
+    "https://openalex.org/W2971624117",
+    "https://openalex.org/W6774302960",
+    "https://openalex.org/W4287363917",
+    "https://openalex.org/W4296473245",
+    "https://openalex.org/W3037132819",
+    "https://openalex.org/W4287828539",
+    "https://openalex.org/W2979245724",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4287777801"
+  ],
+  "abstract": "Transformer models have emerged as the state-of-the-art in many natural language processing and computer vision applications due to their capability of attending to longer sequences of tokens and supporting parallel processing more efficiently. Nevertheless, the training and inference of transformer models are computationally expensive and memory intensive. Meanwhile, utilizing the sparsity in deep learning models has proven to be an effective approach to alleviate the computation challenge as well as help to fit large models in edge devices. As high-performance CPUs and GPUs are generally not flexible enough to explore low-level sparsity, a number of specialized hardware accelerators have been proposed for transformer models. This paper provides a comprehensive review of hardware transformer accelerators that have been proposed to explore sparsity for computation and memory optimizations. We classify existing works based on the strategies of utilizing sparsity and identify their pros and cons in those strategies. Based on our analysis, we point out promising directions and recommendations for future works on improving the effective sparse execution of transformer hardware accelerators.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7883954048156738
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7540431618690491
+    },
+    {
+      "name": "Inference",
+      "score": 0.7221457958221436
+    },
+    {
+      "name": "Computation",
+      "score": 0.6663801670074463
+    },
+    {
+      "name": "Computer engineering",
+      "score": 0.5863824486732483
+    },
+    {
+      "name": "Edge device",
+      "score": 0.5261452198028564
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.4617476761341095
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4435276985168457
+    },
+    {
+      "name": "Computer architecture",
+      "score": 0.4262502193450928
+    },
+    {
+      "name": "Supercomputer",
+      "score": 0.4113997519016266
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.393765389919281
+    },
+    {
+      "name": "Computer hardware",
+      "score": 0.3233279585838318
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.2707413136959076
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.1514190137386322
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11533987522125244
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.09608203172683716
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Cloud computing",
+      "score": 0.0
+    }
+  ]
 }

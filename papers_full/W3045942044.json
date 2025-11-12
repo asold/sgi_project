@@ -1,92 +1,135 @@
 {
-    "title": "Unified Medical Language System resources improve sieve-based generation and Bidirectional Encoder Representations from Transformers (BERT)–based ranking for concept normalization",
-    "url": "https://openalex.org/W3045942044",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2207890953",
-            "name": "Dongfang Xu",
-            "affiliations": [
-                "University of Arizona"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3045573337",
-            "name": "Manoj Gopale",
-            "affiliations": [
-                "University of Arizona"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2168028311",
-            "name": "Jiacheng Zhang",
-            "affiliations": [
-                "University of Arizona"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112944357",
-            "name": "Kris Brown",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A276216388",
-            "name": "Edmon Begoli",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2133231644",
-            "name": "Steven Bethard",
-            "affiliations": [
-                "University of Arizona"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1968761064",
-        "https://openalex.org/W2212494754",
-        "https://openalex.org/W2910326837",
-        "https://openalex.org/W2995723181",
-        "https://openalex.org/W2537052583",
-        "https://openalex.org/W2159583324",
-        "https://openalex.org/W1530032857",
-        "https://openalex.org/W6748162558",
-        "https://openalex.org/W2917968119",
-        "https://openalex.org/W1550258693",
-        "https://openalex.org/W2412122516",
-        "https://openalex.org/W2259159222",
-        "https://openalex.org/W6632766574",
-        "https://openalex.org/W2146089916",
-        "https://openalex.org/W997324903",
-        "https://openalex.org/W2096252540",
-        "https://openalex.org/W3030645549",
-        "https://openalex.org/W2515403501",
-        "https://openalex.org/W2061478295",
-        "https://openalex.org/W1993068388",
-        "https://openalex.org/W2963587816",
-        "https://openalex.org/W3027260829",
-        "https://openalex.org/W6753963410",
-        "https://openalex.org/W2808598571",
-        "https://openalex.org/W2808838104",
-        "https://openalex.org/W6771424112",
-        "https://openalex.org/W2782318039",
-        "https://openalex.org/W2142016317",
-        "https://openalex.org/W2763990719",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2955483668",
-        "https://openalex.org/W2972483465",
-        "https://openalex.org/W6777507432",
-        "https://openalex.org/W2168041406",
-        "https://openalex.org/W2915128229",
-        "https://openalex.org/W2889167733",
-        "https://openalex.org/W2786015986",
-        "https://openalex.org/W2583842374",
-        "https://openalex.org/W2108862644"
-    ],
-    "abstract": "Abstract Objective Concept normalization, the task of linking phrases in text to concepts in an ontology, is useful for many downstream tasks including relation extraction, information retrieval, etc. We present a generate-and-rank concept normalization system based on our participation in the 2019 National NLP Clinical Challenges Shared Task Track 3 Concept Normalization. Materials and Methods The shared task provided 13 609 concept mentions drawn from 100 discharge summaries. We first design a sieve-based system that uses Lucene indices over the training data, Unified Medical Language System (UMLS) preferred terms, and UMLS synonyms to generate a list of possible concepts for each mention. We then design a listwise classifier based on the BERT (Bidirectional Encoder Representations from Transformers) neural network to rank the candidate concepts, integrating UMLS semantic types through a regularizer. Results Our generate-and-rank system was third of 33 in the competition, outperforming the candidate generator alone (81.66% vs 79.44%) and the previous state of the art (76.35%). During postevaluation, the model’s accuracy was increased to 83.56% via improvements to how training data are generated from UMLS and incorporation of our UMLS semantic type regularizer. Discussion Analysis of the model shows that prioritizing UMLS preferred terms yields better performance, that the UMLS semantic type regularizer results in qualitatively better concept predictions, and that the model performs well even on concepts not seen during training. Conclusions Our generate-and-rank framework for UMLS concept normalization integrates key UMLS features like preferred terms and semantic types with a neural network–based ranking model to accurately link phrases in text to UMLS concepts.",
-    "full_text": null
+  "title": "Unified Medical Language System resources improve sieve-based generation and Bidirectional Encoder Representations from Transformers (BERT)–based ranking for concept normalization",
+  "url": "https://openalex.org/W3045942044",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2207890953",
+      "name": "Dongfang Xu",
+      "affiliations": [
+        "University of Arizona"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3045573337",
+      "name": "Manoj Gopale",
+      "affiliations": [
+        "University of Arizona"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2168028311",
+      "name": "Jiacheng Zhang",
+      "affiliations": [
+        "University of Arizona"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112944357",
+      "name": "Kris Brown",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A276216388",
+      "name": "Edmon Begoli",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2133231644",
+      "name": "Steven Bethard",
+      "affiliations": [
+        "University of Arizona"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1968761064",
+    "https://openalex.org/W2212494754",
+    "https://openalex.org/W2910326837",
+    "https://openalex.org/W2995723181",
+    "https://openalex.org/W2537052583",
+    "https://openalex.org/W2159583324",
+    "https://openalex.org/W1530032857",
+    "https://openalex.org/W6748162558",
+    "https://openalex.org/W2917968119",
+    "https://openalex.org/W1550258693",
+    "https://openalex.org/W2412122516",
+    "https://openalex.org/W2259159222",
+    "https://openalex.org/W6632766574",
+    "https://openalex.org/W2146089916",
+    "https://openalex.org/W997324903",
+    "https://openalex.org/W2096252540",
+    "https://openalex.org/W3030645549",
+    "https://openalex.org/W2515403501",
+    "https://openalex.org/W2061478295",
+    "https://openalex.org/W1993068388",
+    "https://openalex.org/W2963587816",
+    "https://openalex.org/W3027260829",
+    "https://openalex.org/W6753963410",
+    "https://openalex.org/W2808598571",
+    "https://openalex.org/W2808838104",
+    "https://openalex.org/W6771424112",
+    "https://openalex.org/W2782318039",
+    "https://openalex.org/W2142016317",
+    "https://openalex.org/W2763990719",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2955483668",
+    "https://openalex.org/W2972483465",
+    "https://openalex.org/W6777507432",
+    "https://openalex.org/W2168041406",
+    "https://openalex.org/W2915128229",
+    "https://openalex.org/W2889167733",
+    "https://openalex.org/W2786015986",
+    "https://openalex.org/W2583842374",
+    "https://openalex.org/W2108862644"
+  ],
+  "abstract": "Abstract Objective Concept normalization, the task of linking phrases in text to concepts in an ontology, is useful for many downstream tasks including relation extraction, information retrieval, etc. We present a generate-and-rank concept normalization system based on our participation in the 2019 National NLP Clinical Challenges Shared Task Track 3 Concept Normalization. Materials and Methods The shared task provided 13 609 concept mentions drawn from 100 discharge summaries. We first design a sieve-based system that uses Lucene indices over the training data, Unified Medical Language System (UMLS) preferred terms, and UMLS synonyms to generate a list of possible concepts for each mention. We then design a listwise classifier based on the BERT (Bidirectional Encoder Representations from Transformers) neural network to rank the candidate concepts, integrating UMLS semantic types through a regularizer. Results Our generate-and-rank system was third of 33 in the competition, outperforming the candidate generator alone (81.66% vs 79.44%) and the previous state of the art (76.35%). During postevaluation, the model’s accuracy was increased to 83.56% via improvements to how training data are generated from UMLS and incorporation of our UMLS semantic type regularizer. Discussion Analysis of the model shows that prioritizing UMLS preferred terms yields better performance, that the UMLS semantic type regularizer results in qualitatively better concept predictions, and that the model performs well even on concepts not seen during training. Conclusions Our generate-and-rank framework for UMLS concept normalization integrates key UMLS features like preferred terms and semantic types with a neural network–based ranking model to accurately link phrases in text to UMLS concepts.",
+  "full_text": null,
+  "topic": "Unified Medical Language System",
+  "concepts": [
+    {
+      "name": "Unified Medical Language System",
+      "score": 0.9447294473648071
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8335315585136414
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.6419834494590759
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6096787452697754
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5810867547988892
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4898523986339569
+    },
+    {
+      "name": "Encoder",
+      "score": 0.43836793303489685
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    }
+  ]
 }

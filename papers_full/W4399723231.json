@@ -1,73 +1,132 @@
 {
-    "title": "Evaluation of Code Generation for Simulating Participant Behavior in Experience Sampling Method by Iterative In-Context Learning of a Large Language Model",
-    "url": "https://openalex.org/W4399723231",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3013735260",
-            "name": "Alireza Khanshan",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2065759435",
-            "name": "Pieter Van Gorp",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A370013140",
-            "name": "Panos Markopoulos",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3175003714",
-        "https://openalex.org/W2015622399",
-        "https://openalex.org/W2108901589",
-        "https://openalex.org/W4381193452",
-        "https://openalex.org/W2067805538",
-        "https://openalex.org/W4366389138",
-        "https://openalex.org/W2102570173",
-        "https://openalex.org/W4389282280",
-        "https://openalex.org/W4238408621",
-        "https://openalex.org/W4366342667",
-        "https://openalex.org/W3085273257",
-        "https://openalex.org/W4211263275",
-        "https://openalex.org/W2143024297",
-        "https://openalex.org/W4366549000",
-        "https://openalex.org/W4300877439",
-        "https://openalex.org/W2075177804",
-        "https://openalex.org/W4380985699",
-        "https://openalex.org/W3000555520",
-        "https://openalex.org/W4366562575",
-        "https://openalex.org/W4225112959",
-        "https://openalex.org/W1741920700",
-        "https://openalex.org/W4387993539",
-        "https://openalex.org/W3011199275",
-        "https://openalex.org/W2087634802",
-        "https://openalex.org/W4367860052",
-        "https://openalex.org/W2523153599",
-        "https://openalex.org/W4307475457",
-        "https://openalex.org/W4322718421",
-        "https://openalex.org/W4321013654",
-        "https://openalex.org/W4225603598",
-        "https://openalex.org/W1982754574",
-        "https://openalex.org/W2728794304",
-        "https://openalex.org/W2902009635",
-        "https://openalex.org/W3166823380",
-        "https://openalex.org/W3206269012",
-        "https://openalex.org/W4321649710",
-        "https://openalex.org/W4379539348",
-        "https://openalex.org/W3134645385",
-        "https://openalex.org/W4362515116",
-        "https://openalex.org/W2742599483",
-        "https://openalex.org/W2102360367"
-    ],
-    "abstract": "The Experience Sampling Method (ESM) is commonly used to understand behaviors, thoughts, and feelings in the wild by collecting self-reports. Sustaining sufficient response rates, especially in long-running studies remains challenging. To avoid low response rates and dropouts, experimenters rely on their experience, proposed methodologies from earlier studies, trial and error, or the scarcely available participant behavior data from previous ESM protocols. This approach often fails in finding the acceptable study parameters, resulting in redesigning the protocol and repeating the experiment. Research has shown the potential of machine learning to personalize ESM protocols such that ESM prompts are delivered at opportune moments, leading to higher response rates. The corresponding training process is hindered due to the scarcity of open data in the ESM domain, causing a cold start, which could be mitigated by simulating participant behavior. Such simulations provide training data and insights for the experimenters to update their study design choices. Creating this simulation requires behavioral science, psychology, and programming expertise. Large language models (LLMs) have emerged as facilitators for information inquiry and programming, albeit random and occasionally unreliable. We aspire to assess the readiness of LLMs in an ESM use case. We conducted research using GPT-3.5 turbo-16k to tackle an ESM simulation problem. We explored several prompt design alternatives to generate ESM simulation programs, evaluated the output code in terms of semantics and syntax, and interviewed ESM practitioners. We found that engineering LLM-enabled ESM simulations have the potential to facilitate data generation, but they perpetuate trust and reliability challenges.",
-    "full_text": null
+  "title": "Evaluation of Code Generation for Simulating Participant Behavior in Experience Sampling Method by Iterative In-Context Learning of a Large Language Model",
+  "url": "https://openalex.org/W4399723231",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3013735260",
+      "name": "Alireza Khanshan",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2065759435",
+      "name": "Pieter Van Gorp",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A370013140",
+      "name": "Panos Markopoulos",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3175003714",
+    "https://openalex.org/W2015622399",
+    "https://openalex.org/W2108901589",
+    "https://openalex.org/W4381193452",
+    "https://openalex.org/W2067805538",
+    "https://openalex.org/W4366389138",
+    "https://openalex.org/W2102570173",
+    "https://openalex.org/W4389282280",
+    "https://openalex.org/W4238408621",
+    "https://openalex.org/W4366342667",
+    "https://openalex.org/W3085273257",
+    "https://openalex.org/W4211263275",
+    "https://openalex.org/W2143024297",
+    "https://openalex.org/W4366549000",
+    "https://openalex.org/W4300877439",
+    "https://openalex.org/W2075177804",
+    "https://openalex.org/W4380985699",
+    "https://openalex.org/W3000555520",
+    "https://openalex.org/W4366562575",
+    "https://openalex.org/W4225112959",
+    "https://openalex.org/W1741920700",
+    "https://openalex.org/W4387993539",
+    "https://openalex.org/W3011199275",
+    "https://openalex.org/W2087634802",
+    "https://openalex.org/W4367860052",
+    "https://openalex.org/W2523153599",
+    "https://openalex.org/W4307475457",
+    "https://openalex.org/W4322718421",
+    "https://openalex.org/W4321013654",
+    "https://openalex.org/W4225603598",
+    "https://openalex.org/W1982754574",
+    "https://openalex.org/W2728794304",
+    "https://openalex.org/W2902009635",
+    "https://openalex.org/W3166823380",
+    "https://openalex.org/W3206269012",
+    "https://openalex.org/W4321649710",
+    "https://openalex.org/W4379539348",
+    "https://openalex.org/W3134645385",
+    "https://openalex.org/W4362515116",
+    "https://openalex.org/W2742599483",
+    "https://openalex.org/W2102360367"
+  ],
+  "abstract": "The Experience Sampling Method (ESM) is commonly used to understand behaviors, thoughts, and feelings in the wild by collecting self-reports. Sustaining sufficient response rates, especially in long-running studies remains challenging. To avoid low response rates and dropouts, experimenters rely on their experience, proposed methodologies from earlier studies, trial and error, or the scarcely available participant behavior data from previous ESM protocols. This approach often fails in finding the acceptable study parameters, resulting in redesigning the protocol and repeating the experiment. Research has shown the potential of machine learning to personalize ESM protocols such that ESM prompts are delivered at opportune moments, leading to higher response rates. The corresponding training process is hindered due to the scarcity of open data in the ESM domain, causing a cold start, which could be mitigated by simulating participant behavior. Such simulations provide training data and insights for the experimenters to update their study design choices. Creating this simulation requires behavioral science, psychology, and programming expertise. Large language models (LLMs) have emerged as facilitators for information inquiry and programming, albeit random and occasionally unreliable. We aspire to assess the readiness of LLMs in an ESM use case. We conducted research using GPT-3.5 turbo-16k to tackle an ESM simulation problem. We explored several prompt design alternatives to generate ESM simulation programs, evaluated the output code in terms of semantics and syntax, and interviewed ESM practitioners. We found that engineering LLM-enabled ESM simulations have the potential to facilitate data generation, but they perpetuate trust and reliability challenges.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6829169988632202
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.6761756539344788
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.6229031682014465
+    },
+    {
+      "name": "Sampling (signal processing)",
+      "score": 0.5390308499336243
+    },
+    {
+      "name": "Experience sampling method",
+      "score": 0.4217613637447357
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40238797664642334
+    },
+    {
+      "name": "Psychology",
+      "score": 0.25350672006607056
+    },
+    {
+      "name": "Programming language",
+      "score": 0.17584356665611267
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.10639521479606628
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.06771016120910645
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.060263991355895996
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Filter (signal processing)",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,56 +1,91 @@
 {
-    "title": "Fine-tuning a large language model for automating computational fluid dynamics simulations",
-    "url": "https://openalex.org/W4409725706",
-    "year": 2025,
-    "authors": [
-        {
-            "id": null,
-            "name": "Dong, Zhehao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1992476875",
-            "name": "Lu Zhen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2104814340",
-            "name": "Yang Yue",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4317500757",
-        "https://openalex.org/W1978352939",
-        "https://openalex.org/W4399561786",
-        "https://openalex.org/W4387625295",
-        "https://openalex.org/W4392761780",
-        "https://openalex.org/W4381999114",
-        "https://openalex.org/W6694756022",
-        "https://openalex.org/W4367188881",
-        "https://openalex.org/W6857044596",
-        "https://openalex.org/W4391561379",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W4401440766",
-        "https://openalex.org/W4408150519",
-        "https://openalex.org/W4317898419",
-        "https://openalex.org/W6862500282",
-        "https://openalex.org/W6600210674",
-        "https://openalex.org/W4403560390",
-        "https://openalex.org/W6600560973",
-        "https://openalex.org/W6810738896",
-        "https://openalex.org/W6800875267",
-        "https://openalex.org/W6796581206",
-        "https://openalex.org/W6809646742",
-        "https://openalex.org/W6856809017",
-        "https://openalex.org/W6798182279",
-        "https://openalex.org/W6862430634",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W2610930722",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4226278401"
-    ],
-    "abstract": "Configuring computational fluid dynamics (CFD) simulations typically demands extensive domain expertise, limiting broader access. Although large language models (LLMs) have advanced scientific computing, their use in automating CFD workflows is underdeveloped. We introduce a novel approach centered on domain-specific LLM adaptation. By fine-tuning Qwen2.5-7B-Instruct on NL2FOAM, our custom dataset of 28716 natural language-to-OpenFOAM configuration pairs with chain-of-thought (CoT) annotations, we enable direct translation from natural language descriptions to executable CFD setups. A multi-agent framework orchestrates the process, autonomously verifying inputs, generating configurations, running simulations, and correcting errors. Evaluation on a benchmark of 21 diverse flow cases demonstrates state-of-the-art performance, achieving 88.7% solution accuracy and 82.6% first-attempt success rate. This significantly outperforms larger general-purpose models like Qwen2.5-72B-Instruct, DeepSeek-R1, and Llama3.3-70B-Instruct, while also requiring fewer correction iterations and maintaining high computational efficiency. The results highlight the critical role of domain-specific adaptation in deploying LLM assistants for complex engineering workflows. Our code and fine-tuned model have been deposited at https://github.com/YYgroup/AutoCFD.",
-    "full_text": null
+  "title": "Fine-tuning a large language model for automating computational fluid dynamics simulations",
+  "url": "https://openalex.org/W4409725706",
+  "year": 2025,
+  "authors": [
+    {
+      "id": null,
+      "name": "Dong, Zhehao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1992476875",
+      "name": "Lu Zhen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2104814340",
+      "name": "Yang Yue",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4317500757",
+    "https://openalex.org/W1978352939",
+    "https://openalex.org/W4399561786",
+    "https://openalex.org/W4387625295",
+    "https://openalex.org/W4392761780",
+    "https://openalex.org/W4381999114",
+    "https://openalex.org/W6694756022",
+    "https://openalex.org/W4367188881",
+    "https://openalex.org/W6857044596",
+    "https://openalex.org/W4391561379",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W4401440766",
+    "https://openalex.org/W4408150519",
+    "https://openalex.org/W4317898419",
+    "https://openalex.org/W6862500282",
+    "https://openalex.org/W6600210674",
+    "https://openalex.org/W4403560390",
+    "https://openalex.org/W6600560973",
+    "https://openalex.org/W6810738896",
+    "https://openalex.org/W6800875267",
+    "https://openalex.org/W6796581206",
+    "https://openalex.org/W6809646742",
+    "https://openalex.org/W6856809017",
+    "https://openalex.org/W6798182279",
+    "https://openalex.org/W6862430634",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W2610930722",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4226278401"
+  ],
+  "abstract": "Configuring computational fluid dynamics (CFD) simulations typically demands extensive domain expertise, limiting broader access. Although large language models (LLMs) have advanced scientific computing, their use in automating CFD workflows is underdeveloped. We introduce a novel approach centered on domain-specific LLM adaptation. By fine-tuning Qwen2.5-7B-Instruct on NL2FOAM, our custom dataset of 28716 natural language-to-OpenFOAM configuration pairs with chain-of-thought (CoT) annotations, we enable direct translation from natural language descriptions to executable CFD setups. A multi-agent framework orchestrates the process, autonomously verifying inputs, generating configurations, running simulations, and correcting errors. Evaluation on a benchmark of 21 diverse flow cases demonstrates state-of-the-art performance, achieving 88.7% solution accuracy and 82.6% first-attempt success rate. This significantly outperforms larger general-purpose models like Qwen2.5-72B-Instruct, DeepSeek-R1, and Llama3.3-70B-Instruct, while also requiring fewer correction iterations and maintaining high computational efficiency. The results highlight the critical role of domain-specific adaptation in deploying LLM assistants for complex engineering workflows. Our code and fine-tuned model have been deposited at https://github.com/YYgroup/AutoCFD.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6606234312057495
+    },
+    {
+      "name": "Dynamics (music)",
+      "score": 0.5870183706283569
+    },
+    {
+      "name": "Computational fluid dynamics",
+      "score": 0.5585296750068665
+    },
+    {
+      "name": "Computational science",
+      "score": 0.4102455675601959
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.32766976952552795
+    },
+    {
+      "name": "Mechanics",
+      "score": 0.22503873705863953
+    },
+    {
+      "name": "Physics",
+      "score": 0.14854514598846436
+    },
+    {
+      "name": "Acoustics",
+      "score": 0.0
+    }
+  ]
 }

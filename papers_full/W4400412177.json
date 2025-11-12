@@ -1,109 +1,144 @@
 {
-    "title": "Large Language Model-based Test Case Generation for GP Agents",
-    "url": "https://openalex.org/W4400412177",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2151290332",
-            "name": "Steven Jorgensen",
-            "affiliations": [
-                "MIT Lincoln Laboratory",
-                "IIT@MIT"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3182034051",
-            "name": "Giorgia Nadizar",
-            "affiliations": [
-                "University of Trieste"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2911753767",
-            "name": "Gloria Pietropolli",
-            "affiliations": [
-                "University of Trieste"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2040447644",
-            "name": "Luca Manzoni",
-            "affiliations": [
-                "University of Trieste"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1054743262",
-            "name": "Eric Medvet",
-            "affiliations": [
-                "University of Trieste"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4207782098",
-            "name": "Una-May O'Reilly",
-            "affiliations": [
-                "IIT@MIT"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1986871896",
-            "name": "Erik Hemberg",
-            "affiliations": [
-                "IIT@MIT"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3133702157",
-        "https://openalex.org/W2296073425",
-        "https://openalex.org/W2967131053",
-        "https://openalex.org/W4221152145",
-        "https://openalex.org/W3193783858",
-        "https://openalex.org/W2897077308",
-        "https://openalex.org/W1496574894",
-        "https://openalex.org/W2151834591",
-        "https://openalex.org/W2887842788",
-        "https://openalex.org/W4402480400",
-        "https://openalex.org/W1995137594",
-        "https://openalex.org/W1535865934",
-        "https://openalex.org/W2115668428",
-        "https://openalex.org/W2604908377",
-        "https://openalex.org/W2724228633",
-        "https://openalex.org/W3207569066",
-        "https://openalex.org/W4388139328",
-        "https://openalex.org/W3005431655",
-        "https://openalex.org/W4382246105",
-        "https://openalex.org/W2962976158",
-        "https://openalex.org/W4395093927",
-        "https://openalex.org/W4385725393",
-        "https://openalex.org/W2741594138",
-        "https://openalex.org/W4281485151",
-        "https://openalex.org/W3042382406",
-        "https://openalex.org/W2125362012",
-        "https://openalex.org/W2963890729",
-        "https://openalex.org/W1481541785",
-        "https://openalex.org/W4390874280",
-        "https://openalex.org/W3123742938",
-        "https://openalex.org/W2142377488",
-        "https://openalex.org/W4363651325",
-        "https://openalex.org/W2086661052",
-        "https://openalex.org/W1572584819",
-        "https://openalex.org/W4226043654",
-        "https://openalex.org/W2954700257",
-        "https://openalex.org/W6792244340",
-        "https://openalex.org/W2963773324",
-        "https://openalex.org/W3091212712",
-        "https://openalex.org/W2563424741",
-        "https://openalex.org/W2593280677",
-        "https://openalex.org/W4301102534",
-        "https://openalex.org/W4403406779",
-        "https://openalex.org/W3142849873",
-        "https://openalex.org/W3101587977",
-        "https://openalex.org/W2792317186",
-        "https://openalex.org/W3089353688",
-        "https://openalex.org/W4400412639"
-    ],
-    "abstract": "Genetic programming (GP) is a popular problem-solving and optimization technique. However, generating effective test cases for training and evaluating GP programs requires strong domain knowledge. Furthermore, GP programs often prematurely converge on local optima when given excessively difficult problems early in their training. Curriculum learning (CL) has been effective in addressing similar issues across different reinforcement learning (RL) domains, but it requires the manual generation of progressively difficult test cases as well as their careful scheduling. In this work, we leverage the domain knowledge and the strong generative abilities of large language models (LLMs) to generate effective test cases of increasing difficulties and schedule them according to various curricula. We show that by integrating a curriculum scheduler with LLM-generated test cases we can effectively train a GP agent player with environments-based curricula for a single-player game and opponent-based curricula for a multi-player game. Finally, we discuss the benefits and challenges of implementing this method for other problem domains.",
-    "full_text": null
+  "title": "Large Language Model-based Test Case Generation for GP Agents",
+  "url": "https://openalex.org/W4400412177",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2151290332",
+      "name": "Steven Jorgensen",
+      "affiliations": [
+        "MIT Lincoln Laboratory",
+        "IIT@MIT"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3182034051",
+      "name": "Giorgia Nadizar",
+      "affiliations": [
+        "University of Trieste"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2911753767",
+      "name": "Gloria Pietropolli",
+      "affiliations": [
+        "University of Trieste"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2040447644",
+      "name": "Luca Manzoni",
+      "affiliations": [
+        "University of Trieste"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1054743262",
+      "name": "Eric Medvet",
+      "affiliations": [
+        "University of Trieste"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4207782098",
+      "name": "Una-May O'Reilly",
+      "affiliations": [
+        "IIT@MIT"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1986871896",
+      "name": "Erik Hemberg",
+      "affiliations": [
+        "IIT@MIT"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3133702157",
+    "https://openalex.org/W2296073425",
+    "https://openalex.org/W2967131053",
+    "https://openalex.org/W4221152145",
+    "https://openalex.org/W3193783858",
+    "https://openalex.org/W2897077308",
+    "https://openalex.org/W1496574894",
+    "https://openalex.org/W2151834591",
+    "https://openalex.org/W2887842788",
+    "https://openalex.org/W4402480400",
+    "https://openalex.org/W1995137594",
+    "https://openalex.org/W1535865934",
+    "https://openalex.org/W2115668428",
+    "https://openalex.org/W2604908377",
+    "https://openalex.org/W2724228633",
+    "https://openalex.org/W3207569066",
+    "https://openalex.org/W4388139328",
+    "https://openalex.org/W3005431655",
+    "https://openalex.org/W4382246105",
+    "https://openalex.org/W2962976158",
+    "https://openalex.org/W4395093927",
+    "https://openalex.org/W4385725393",
+    "https://openalex.org/W2741594138",
+    "https://openalex.org/W4281485151",
+    "https://openalex.org/W3042382406",
+    "https://openalex.org/W2125362012",
+    "https://openalex.org/W2963890729",
+    "https://openalex.org/W1481541785",
+    "https://openalex.org/W4390874280",
+    "https://openalex.org/W3123742938",
+    "https://openalex.org/W2142377488",
+    "https://openalex.org/W4363651325",
+    "https://openalex.org/W2086661052",
+    "https://openalex.org/W1572584819",
+    "https://openalex.org/W4226043654",
+    "https://openalex.org/W2954700257",
+    "https://openalex.org/W6792244340",
+    "https://openalex.org/W2963773324",
+    "https://openalex.org/W3091212712",
+    "https://openalex.org/W2563424741",
+    "https://openalex.org/W2593280677",
+    "https://openalex.org/W4301102534",
+    "https://openalex.org/W4403406779",
+    "https://openalex.org/W3142849873",
+    "https://openalex.org/W3101587977",
+    "https://openalex.org/W2792317186",
+    "https://openalex.org/W3089353688",
+    "https://openalex.org/W4400412639"
+  ],
+  "abstract": "Genetic programming (GP) is a popular problem-solving and optimization technique. However, generating effective test cases for training and evaluating GP programs requires strong domain knowledge. Furthermore, GP programs often prematurely converge on local optima when given excessively difficult problems early in their training. Curriculum learning (CL) has been effective in addressing similar issues across different reinforcement learning (RL) domains, but it requires the manual generation of progressively difficult test cases as well as their careful scheduling. In this work, we leverage the domain knowledge and the strong generative abilities of large language models (LLMs) to generate effective test cases of increasing difficulties and schedule them according to various curricula. We show that by integrating a curriculum scheduler with LLM-generated test cases we can effectively train a GP agent player with environments-based curricula for a single-player game and opponent-based curricula for a multi-player game. Finally, we discuss the benefits and challenges of implementing this method for other problem domains.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7052145600318909
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.6058217883110046
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5345890522003174
+    },
+    {
+      "name": "Language model",
+      "score": 0.49571025371551514
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.44471219182014465
+    },
+    {
+      "name": "Programming language",
+      "score": 0.4242326021194458
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

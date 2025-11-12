@@ -1,74 +1,141 @@
 {
-    "title": "Twins transformer: rolling bearing fault diagnosis based on cross-attention fusion of time and frequency domain features",
-    "url": "https://openalex.org/W4399332706",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5106892421",
-            "name": "Zhikang Gao",
-            "affiliations": [
-                "Beijing University of Civil Engineering and Architecture"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5088853488",
-            "name": "Yanxue Wang",
-            "affiliations": [
-                "Beijing University of Civil Engineering and Architecture"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019165784",
-            "name": "Xinming Li",
-            "affiliations": [
-                "Beijing University of Civil Engineering and Architecture"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5017828266",
-            "name": "Jiachi Yao",
-            "affiliations": [
-                "Beijing University of Civil Engineering and Architecture"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4390085552",
-        "https://openalex.org/W4296219852",
-        "https://openalex.org/W4392349400",
-        "https://openalex.org/W4288767597",
-        "https://openalex.org/W4385296955",
-        "https://openalex.org/W3210256617",
-        "https://openalex.org/W3206855590",
-        "https://openalex.org/W3126242280",
-        "https://openalex.org/W4384500136",
-        "https://openalex.org/W4385346257",
-        "https://openalex.org/W4395026341",
-        "https://openalex.org/W3157094069",
-        "https://openalex.org/W2956566815",
-        "https://openalex.org/W3083531094",
-        "https://openalex.org/W3006342871",
-        "https://openalex.org/W3033236487",
-        "https://openalex.org/W3109842401",
-        "https://openalex.org/W4210741351",
-        "https://openalex.org/W4380740125",
-        "https://openalex.org/W3133696297",
-        "https://openalex.org/W4200049650",
-        "https://openalex.org/W4387917726",
-        "https://openalex.org/W4303856886",
-        "https://openalex.org/W4390245799",
-        "https://openalex.org/W3042800516",
-        "https://openalex.org/W4387611015",
-        "https://openalex.org/W3008361547",
-        "https://openalex.org/W2768753204",
-        "https://openalex.org/W1978938623",
-        "https://openalex.org/W3041995356",
-        "https://openalex.org/W6762050411",
-        "https://openalex.org/W3212386989",
-        "https://openalex.org/W4296617823",
-        "https://openalex.org/W4388706355",
-        "https://openalex.org/W2987761193"
-    ],
-    "abstract": "Abstract Current self-attention based Transformer models in the field of fault diagnosis are limited to identifying correlation information within a single sequence and are unable to capture both time and frequency domain fault characteristics of the original signal. To address these limitations, this research introduces a two-channel Transformer fault diagnosis model that integrates time and frequency domain features through a cross-attention mechanism. Initially, the original time-domain fault signal is converted to the frequency domain using the Fast Fourier Transform, followed by global and local feature extraction via a Convolutional Neural Network. Next, through the self-attention mechanism on the two-channel Transformer, separate fault features associated with long distances within each sequence are modeled and then fed into the feature fusion module of the cross-attention mechanism. During the fusion process, frequency domain features serve as the query sequence Q and time domain features as the key-value pairs K. By calculating the attention weights between Q and K, the model excavates deeper fault features of the original signal. Besides preserving the intrinsic associative information within sequences learned via the self-attention mechanism, the Twins Transformer also models the degree of association between different sequence features using the cross-attention mechanism. Finally, the proposed model’s performance was validated using four different experiments on four bearing datasets, achieving average accuracy rates of 99.67%, 98.76%, 98.47% and 99.41%. These results confirm the model’s effective extraction of time and frequency domain correlation features, demonstrating fast convergence, superior performance and high accuracy.",
-    "full_text": null
+  "title": "Twins transformer: rolling bearing fault diagnosis based on cross-attention fusion of time and frequency domain features",
+  "url": "https://openalex.org/W4399332706",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5106892421",
+      "name": "Zhikang Gao",
+      "affiliations": [
+        "Beijing University of Civil Engineering and Architecture"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5088853488",
+      "name": "Yanxue Wang",
+      "affiliations": [
+        "Beijing University of Civil Engineering and Architecture"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019165784",
+      "name": "Xinming Li",
+      "affiliations": [
+        "Beijing University of Civil Engineering and Architecture"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5017828266",
+      "name": "Jiachi Yao",
+      "affiliations": [
+        "Beijing University of Civil Engineering and Architecture"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4390085552",
+    "https://openalex.org/W4296219852",
+    "https://openalex.org/W4392349400",
+    "https://openalex.org/W4288767597",
+    "https://openalex.org/W4385296955",
+    "https://openalex.org/W3210256617",
+    "https://openalex.org/W3206855590",
+    "https://openalex.org/W3126242280",
+    "https://openalex.org/W4384500136",
+    "https://openalex.org/W4385346257",
+    "https://openalex.org/W4395026341",
+    "https://openalex.org/W3157094069",
+    "https://openalex.org/W2956566815",
+    "https://openalex.org/W3083531094",
+    "https://openalex.org/W3006342871",
+    "https://openalex.org/W3033236487",
+    "https://openalex.org/W3109842401",
+    "https://openalex.org/W4210741351",
+    "https://openalex.org/W4380740125",
+    "https://openalex.org/W3133696297",
+    "https://openalex.org/W4200049650",
+    "https://openalex.org/W4387917726",
+    "https://openalex.org/W4303856886",
+    "https://openalex.org/W4390245799",
+    "https://openalex.org/W3042800516",
+    "https://openalex.org/W4387611015",
+    "https://openalex.org/W3008361547",
+    "https://openalex.org/W2768753204",
+    "https://openalex.org/W1978938623",
+    "https://openalex.org/W3041995356",
+    "https://openalex.org/W6762050411",
+    "https://openalex.org/W3212386989",
+    "https://openalex.org/W4296617823",
+    "https://openalex.org/W4388706355",
+    "https://openalex.org/W2987761193"
+  ],
+  "abstract": "Abstract Current self-attention based Transformer models in the field of fault diagnosis are limited to identifying correlation information within a single sequence and are unable to capture both time and frequency domain fault characteristics of the original signal. To address these limitations, this research introduces a two-channel Transformer fault diagnosis model that integrates time and frequency domain features through a cross-attention mechanism. Initially, the original time-domain fault signal is converted to the frequency domain using the Fast Fourier Transform, followed by global and local feature extraction via a Convolutional Neural Network. Next, through the self-attention mechanism on the two-channel Transformer, separate fault features associated with long distances within each sequence are modeled and then fed into the feature fusion module of the cross-attention mechanism. During the fusion process, frequency domain features serve as the query sequence Q and time domain features as the key-value pairs K. By calculating the attention weights between Q and K, the model excavates deeper fault features of the original signal. Besides preserving the intrinsic associative information within sequences learned via the self-attention mechanism, the Twins Transformer also models the degree of association between different sequence features using the cross-attention mechanism. Finally, the proposed model’s performance was validated using four different experiments on four bearing datasets, achieving average accuracy rates of 99.67%, 98.76%, 98.47% and 99.41%. These results confirm the model’s effective extraction of time and frequency domain correlation features, demonstrating fast convergence, superior performance and high accuracy.",
+  "full_text": null,
+  "topic": "Fusion",
+  "concepts": [
+    {
+      "name": "Fusion",
+      "score": 0.6907347440719604
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6213896870613098
+    },
+    {
+      "name": "Frequency domain",
+      "score": 0.532860517501831
+    },
+    {
+      "name": "Bearing (navigation)",
+      "score": 0.524330198764801
+    },
+    {
+      "name": "Fault (geology)",
+      "score": 0.47858309745788574
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4223299026489258
+    },
+    {
+      "name": "Time domain",
+      "score": 0.410664439201355
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.30356383323669434
+    },
+    {
+      "name": "Engineering",
+      "score": 0.29152911901474
+    },
+    {
+      "name": "Geology",
+      "score": 0.22929009795188904
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.2208627462387085
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.1690073311328888
+    },
+    {
+      "name": "Voltage",
+      "score": 0.1546926200389862
+    },
+    {
+      "name": "Seismology",
+      "score": 0.14796745777130127
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,76 +1,143 @@
 {
-    "title": "MeltPondNet: A Swin Transformer U-Net for Detection of Melt Ponds on Arctic Sea Ice",
-    "url": "https://openalex.org/W4312634764",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3197574189",
-            "name": "Ivan Sudakow",
-            "affiliations": [
-                "The Open University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A665745551",
-            "name": "Vijayan K. Asari",
-            "affiliations": [
-                "University of Dayton"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2407911316",
-            "name": "Ruixu Liu",
-            "affiliations": [
-                "University of Dayton"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2646170122",
-            "name": "Denis Demchev",
-            "affiliations": [
-                "Chalmers University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2159841501",
-        "https://openalex.org/W2984514134",
-        "https://openalex.org/W1941516420",
-        "https://openalex.org/W1613849817",
-        "https://openalex.org/W2238801324",
-        "https://openalex.org/W2234023020",
-        "https://openalex.org/W2095418318",
-        "https://openalex.org/W2124987461",
-        "https://openalex.org/W3033120841",
-        "https://openalex.org/W2011806334",
-        "https://openalex.org/W2797823863",
-        "https://openalex.org/W1971328373",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2996290406",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W4321232185",
-        "https://openalex.org/W2118446465",
-        "https://openalex.org/W6736502011",
-        "https://openalex.org/W2727746694",
-        "https://openalex.org/W3163786145",
-        "https://openalex.org/W2978571623",
-        "https://openalex.org/W3177075935",
-        "https://openalex.org/W2946058240",
-        "https://openalex.org/W3153436924",
-        "https://openalex.org/W4281641501",
-        "https://openalex.org/W6790275670",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2754558739",
-        "https://openalex.org/W2752715803",
-        "https://openalex.org/W2569450013",
-        "https://openalex.org/W2186874369",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3099375548"
-    ],
-    "abstract": "High-resolution aerial photographs of Arctic region are a great source for different sea ice feature recognition, which are crucial to validate, tune and improve climate models. Melt ponds on the surface of melting Arctic sea ice are of particular interest as they are sensitive and valuable indicators and are proxy to the processes in the Arctic climate system. Manual analysis of this remote sensing data is extremely difficult and time-consuming due to the complex shapes and unpredictable boundaries of the melt ponds, and that leads to the necessity for automatizing the processes. In this study, we propose a robust and efficient automatic method for melt pond region segmentation and boundary extraction from high-resolution aerial photographs. The proposed algorithm is based on a swin transformer U-Net in which we introduce novel cross-channel attention mechanisms into the decoder design. The framework operates with optical data and allows for classifying imagery into four classes: sea ice/snow, open water, melt pond, and submerged ice. We use aerial photographs collected during the Healy–Oden Trans Arctic Expedition (HO-TRAX) expedition over Arctic sea ice in the summer season of 2005 as test data. The experimental results show that the proposed method is suitable for precise automatic extraction of melt pond geometry and it can also be extended for other optical data sources that involve melt ponds. The approach has a promising potential to be used to analyze melt ponds’ corresponding changes between years.",
-    "full_text": null
+  "title": "MeltPondNet: A Swin Transformer U-Net for Detection of Melt Ponds on Arctic Sea Ice",
+  "url": "https://openalex.org/W4312634764",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3197574189",
+      "name": "Ivan Sudakow",
+      "affiliations": [
+        "The Open University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A665745551",
+      "name": "Vijayan K. Asari",
+      "affiliations": [
+        "University of Dayton"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2407911316",
+      "name": "Ruixu Liu",
+      "affiliations": [
+        "University of Dayton"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2646170122",
+      "name": "Denis Demchev",
+      "affiliations": [
+        "Chalmers University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2159841501",
+    "https://openalex.org/W2984514134",
+    "https://openalex.org/W1941516420",
+    "https://openalex.org/W1613849817",
+    "https://openalex.org/W2238801324",
+    "https://openalex.org/W2234023020",
+    "https://openalex.org/W2095418318",
+    "https://openalex.org/W2124987461",
+    "https://openalex.org/W3033120841",
+    "https://openalex.org/W2011806334",
+    "https://openalex.org/W2797823863",
+    "https://openalex.org/W1971328373",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2996290406",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W4321232185",
+    "https://openalex.org/W2118446465",
+    "https://openalex.org/W6736502011",
+    "https://openalex.org/W2727746694",
+    "https://openalex.org/W3163786145",
+    "https://openalex.org/W2978571623",
+    "https://openalex.org/W3177075935",
+    "https://openalex.org/W2946058240",
+    "https://openalex.org/W3153436924",
+    "https://openalex.org/W4281641501",
+    "https://openalex.org/W6790275670",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2754558739",
+    "https://openalex.org/W2752715803",
+    "https://openalex.org/W2569450013",
+    "https://openalex.org/W2186874369",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3099375548"
+  ],
+  "abstract": "High-resolution aerial photographs of Arctic region are a great source for different sea ice feature recognition, which are crucial to validate, tune and improve climate models. Melt ponds on the surface of melting Arctic sea ice are of particular interest as they are sensitive and valuable indicators and are proxy to the processes in the Arctic climate system. Manual analysis of this remote sensing data is extremely difficult and time-consuming due to the complex shapes and unpredictable boundaries of the melt ponds, and that leads to the necessity for automatizing the processes. In this study, we propose a robust and efficient automatic method for melt pond region segmentation and boundary extraction from high-resolution aerial photographs. The proposed algorithm is based on a swin transformer U-Net in which we introduce novel cross-channel attention mechanisms into the decoder design. The framework operates with optical data and allows for classifying imagery into four classes: sea ice/snow, open water, melt pond, and submerged ice. We use aerial photographs collected during the Healy–Oden Trans Arctic Expedition (HO-TRAX) expedition over Arctic sea ice in the summer season of 2005 as test data. The experimental results show that the proposed method is suitable for precise automatic extraction of melt pond geometry and it can also be extended for other optical data sources that involve melt ponds. The approach has a promising potential to be used to analyze melt ponds’ corresponding changes between years.",
+  "full_text": null,
+  "topic": "Sea ice",
+  "concepts": [
+    {
+      "name": "Sea ice",
+      "score": 0.7325830459594727
+    },
+    {
+      "name": "Arctic",
+      "score": 0.6994130611419678
+    },
+    {
+      "name": "Thermokarst",
+      "score": 0.6127901673316956
+    },
+    {
+      "name": "Beaufort sea",
+      "score": 0.6099916100502014
+    },
+    {
+      "name": "Melt pond",
+      "score": 0.569115161895752
+    },
+    {
+      "name": "Arctic ice pack",
+      "score": 0.563111424446106
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.5395781993865967
+    },
+    {
+      "name": "Geology",
+      "score": 0.46395888924598694
+    },
+    {
+      "name": "Snow",
+      "score": 0.45257729291915894
+    },
+    {
+      "name": "The arctic",
+      "score": 0.4277622699737549
+    },
+    {
+      "name": "Sea surface temperature",
+      "score": 0.4149467647075653
+    },
+    {
+      "name": "Climatology",
+      "score": 0.3971250653266907
+    },
+    {
+      "name": "Environmental science",
+      "score": 0.3543069660663605
+    },
+    {
+      "name": "Sea ice thickness",
+      "score": 0.34797385334968567
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.33421120047569275
+    },
+    {
+      "name": "Geomorphology",
+      "score": 0.17468369007110596
+    }
+  ]
 }

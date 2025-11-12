@@ -1,58 +1,97 @@
 {
-    "title": "Linearly Interpolated Hierarchical N-gram Language Models for Speech Recognition Engines",
-    "url": "https://openalex.org/W2101564109",
-    "year": 2007,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5108365460",
-            "name": "Imed Zitouni",
-            "affiliations": [
-                "IBM (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5030949056",
-            "name": "Qiru Zhou",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6605755289",
-        "https://openalex.org/W207474773",
-        "https://openalex.org/W1577263324",
-        "https://openalex.org/W1975573722",
-        "https://openalex.org/W1495086638",
-        "https://openalex.org/W1594031697",
-        "https://openalex.org/W1700330385",
-        "https://openalex.org/W4234159136",
-        "https://openalex.org/W2121227244",
-        "https://openalex.org/W2134237567",
-        "https://openalex.org/W3148140880",
-        "https://openalex.org/W2127218421",
-        "https://openalex.org/W1597533204",
-        "https://openalex.org/W2101920689",
-        "https://openalex.org/W1561264958",
-        "https://openalex.org/W2118792877",
-        "https://openalex.org/W2122111042",
-        "https://openalex.org/W2165112885",
-        "https://openalex.org/W285471286",
-        "https://openalex.org/W2081295016",
-        "https://openalex.org/W2100506586",
-        "https://openalex.org/W4298280447",
-        "https://openalex.org/W2113641473",
-        "https://openalex.org/W1966812932",
-        "https://openalex.org/W2441154163",
-        "https://openalex.org/W2056250865",
-        "https://openalex.org/W2111305191",
-        "https://openalex.org/W3085162807",
-        "https://openalex.org/W214989851",
-        "https://openalex.org/W2118714763",
-        "https://openalex.org/W41924313",
-        "https://openalex.org/W2538726133",
-        "https://openalex.org/W2103040786"
-    ],
-    "abstract": "We have investigated a new language modeling approach called linearly interpolated ngram language models. We showed in this chapter the effectiveness of this approach to estimate the likelihood of n-gram events: the linearly interpolated n-gram language models outperform the performance of both linearly interpolated n-gram language models and backoff n-gram language models in terms of perplexity and also in terms word error rate when intergrated into a speech recognizer engine. Compared to traditional backoff and linearly interpolated LMs, the originality of this approach is in the use of a class hierarchy that leads to a better estimation of the likelihood of n-gram events. Experiments on the WSJ database show that the linearly interpolated n-gram language models improve the test perplexity over the standard language modeling approaches: 7% improvement when estimating the likelihood of bigram events, and 10% improvement when estimating the likelihood of trigram events. Speech recognition results show to be sensitive to the number of unseen events: up to 12% reduction of the WER is obtained when using the linearly interpolated hierarchical approach, due to the large number of unseen events in the ASR test set. The magnitude of the WER reduction is larger than what we would have expected given the observed reduction of the language model perplexity; this leads us to an interesting assumption that the reduction of unseen event perplexity is more effective for improving ASR accuracy than the perplexity associated with seen events. The probability model for frequently seen events may already be appropriate for the ASR system so that improving the likelihood of such events does not correct any additional ASR errors (although the total perplexity may decrease.) Thus, it may be that similar reductions of the perplexity are not equivalent in terms of WER improvement. The improvement in word accuracy also depends on the errors the recognizer makes: if the acoustic model alone is able to discriminate words under unseen linguistic contexts, then improving the LM probability for those events may not improve the overall WER. Compared to hierarchical class n-gram LMs, we observed that the new hierarchical approach is not sensitive to the depth of the hierarchy. As future work, we may explore this approach with a more accurate technique in building the class word hierarchy.",
-    "full_text": null
+  "title": "Linearly Interpolated Hierarchical N-gram Language Models for Speech Recognition Engines",
+  "url": "https://openalex.org/W2101564109",
+  "year": 2007,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5108365460",
+      "name": "Imed Zitouni",
+      "affiliations": [
+        "IBM (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5030949056",
+      "name": "Qiru Zhou",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6605755289",
+    "https://openalex.org/W207474773",
+    "https://openalex.org/W1577263324",
+    "https://openalex.org/W1975573722",
+    "https://openalex.org/W1495086638",
+    "https://openalex.org/W1594031697",
+    "https://openalex.org/W1700330385",
+    "https://openalex.org/W4234159136",
+    "https://openalex.org/W2121227244",
+    "https://openalex.org/W2134237567",
+    "https://openalex.org/W3148140880",
+    "https://openalex.org/W2127218421",
+    "https://openalex.org/W1597533204",
+    "https://openalex.org/W2101920689",
+    "https://openalex.org/W1561264958",
+    "https://openalex.org/W2118792877",
+    "https://openalex.org/W2122111042",
+    "https://openalex.org/W2165112885",
+    "https://openalex.org/W285471286",
+    "https://openalex.org/W2081295016",
+    "https://openalex.org/W2100506586",
+    "https://openalex.org/W4298280447",
+    "https://openalex.org/W2113641473",
+    "https://openalex.org/W1966812932",
+    "https://openalex.org/W2441154163",
+    "https://openalex.org/W2056250865",
+    "https://openalex.org/W2111305191",
+    "https://openalex.org/W3085162807",
+    "https://openalex.org/W214989851",
+    "https://openalex.org/W2118714763",
+    "https://openalex.org/W41924313",
+    "https://openalex.org/W2538726133",
+    "https://openalex.org/W2103040786"
+  ],
+  "abstract": "We have investigated a new language modeling approach called linearly interpolated ngram language models. We showed in this chapter the effectiveness of this approach to estimate the likelihood of n-gram events: the linearly interpolated n-gram language models outperform the performance of both linearly interpolated n-gram language models and backoff n-gram language models in terms of perplexity and also in terms word error rate when intergrated into a speech recognizer engine. Compared to traditional backoff and linearly interpolated LMs, the originality of this approach is in the use of a class hierarchy that leads to a better estimation of the likelihood of n-gram events. Experiments on the WSJ database show that the linearly interpolated n-gram language models improve the test perplexity over the standard language modeling approaches: 7% improvement when estimating the likelihood of bigram events, and 10% improvement when estimating the likelihood of trigram events. Speech recognition results show to be sensitive to the number of unseen events: up to 12% reduction of the WER is obtained when using the linearly interpolated hierarchical approach, due to the large number of unseen events in the ASR test set. The magnitude of the WER reduction is larger than what we would have expected given the observed reduction of the language model perplexity; this leads us to an interesting assumption that the reduction of unseen event perplexity is more effective for improving ASR accuracy than the perplexity associated with seen events. The probability model for frequently seen events may already be appropriate for the ASR system so that improving the likelihood of such events does not correct any additional ASR errors (although the total perplexity may decrease.) Thus, it may be that similar reductions of the perplexity are not equivalent in terms of WER improvement. The improvement in word accuracy also depends on the errors the recognizer makes: if the acoustic model alone is able to discriminate words under unseen linguistic contexts, then improving the LM probability for those events may not improve the overall WER. Compared to hierarchical class n-gram LMs, we observed that the new hierarchical approach is not sensitive to the depth of the hierarchy. As future work, we may explore this approach with a more accurate technique in building the class word hierarchy.",
+  "full_text": null,
+  "topic": "n-gram",
+  "concepts": [
+    {
+      "name": "n-gram",
+      "score": 0.7489799857139587
+    },
+    {
+      "name": "Gram",
+      "score": 0.5948059558868408
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5698138475418091
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5426159501075745
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.48767197132110596
+    },
+    {
+      "name": "Language model",
+      "score": 0.37219318747520447
+    },
+    {
+      "name": "Biology",
+      "score": 0.08789718151092529
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Bacteria",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,69 +1,124 @@
 {
-    "title": "Evaluation of open and closed-source LLMs for low-resource language with zero-shot, few-shot, and chain-of-thought prompting",
-    "url": "https://openalex.org/W4406071956",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5086324563",
-            "name": "Zabir Al Nazi",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019816606",
-            "name": "Md. Rajib Hossain",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5115771665",
-            "name": "Faisal Al Mamun",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3182181433",
-        "https://openalex.org/W3092038637",
-        "https://openalex.org/W4319662676",
-        "https://openalex.org/W6870937837",
-        "https://openalex.org/W4401837965",
-        "https://openalex.org/W6853068251",
-        "https://openalex.org/W6797205239",
-        "https://openalex.org/W4404033128",
-        "https://openalex.org/W6856933413",
-        "https://openalex.org/W6858218828",
-        "https://openalex.org/W4306955484",
-        "https://openalex.org/W4377864352",
-        "https://openalex.org/W6787865819",
-        "https://openalex.org/W6858728654",
-        "https://openalex.org/W4309480839",
-        "https://openalex.org/W6874493265",
-        "https://openalex.org/W6809646742",
-        "https://openalex.org/W4303648904",
-        "https://openalex.org/W4401845159",
-        "https://openalex.org/W4399466552",
-        "https://openalex.org/W4393727555",
-        "https://openalex.org/W4386701652",
-        "https://openalex.org/W4394662652",
-        "https://openalex.org/W3183859557",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W2914304175",
-        "https://openalex.org/W4330337479",
-        "https://openalex.org/W4400267460",
-        "https://openalex.org/W4238846128",
-        "https://openalex.org/W2936695845",
-        "https://openalex.org/W2759181158",
-        "https://openalex.org/W4311642023",
-        "https://openalex.org/W4402671223",
-        "https://openalex.org/W4393023489",
-        "https://openalex.org/W4205807230",
-        "https://openalex.org/W4389977189"
-    ],
-    "abstract": "As the global deployment of Large Language Models (LLMs) increases, the demand for multilingual capabilities becomes more crucial. While many LLMs excel in real-time applications for high-resource languages, few are tailored specifically for low-resource languages. The limited availability of text corpora for low-resource languages, coupled with their minimal utilization during LLM training, hampers the models’ ability to perform effectively in real-time applications. Additionally, evaluations of LLMs are significantly less extensive for low-resource languages. This study offers a comprehensive evaluation of both open-source and closed-source multilingual LLMs focused on low-resource language like Bengali, a language that remains notably underrepresented in computational linguistics. Despite the limited number of pre-trained models exclusively on Bengali, we assess the performance of six prominent LLMs, i.e., three closed-source (GPT-3.5, GPT-4o, Gemini) and three open-source (Aya 101, BLOOM, LLaMA) across key natural language processing (NLP) tasks, including text classification, sentiment analysis, summarization, and question answering. These tasks were evaluated using three prompting techniques: Zero-Shot, Few-Shot, and Chain-of-Thought (CoT). This study found that the default hyperparameters of these pre-trained models, such as temperature, maximum token limit, and the number of few-shot examples, did not yield optimal outcomes and led to hallucination issues in many instances. To address these challenges, ablation studies were conducted on key hyperparameters, particularly temperature and the number of shots, to optimize Few-Shot learning and enhance model performance. The focus of this research is on understanding how these LLMs adapt to low-resource downstream tasks, emphasizing their linguistic flexibility and contextual understanding. Experimental results demonstrated that the closed-source GPT-4o model, utilizing Few-Shot learning and Chain-of-Thought prompting, achieved the highest performance across multiple tasks: an F1 score of 84.54% for text classification, 99.00% for sentiment analysis, a F1bertscore of 72.87% for summarization, and 58.22% for question answering. For transparency and reproducibility, all methodologies and code from this study are available on our GitHub repository: https://github.com/zabir-nabil/bangla-multilingual-llm-eval.",
-    "full_text": null
+  "title": "Evaluation of open and closed-source LLMs for low-resource language with zero-shot, few-shot, and chain-of-thought prompting",
+  "url": "https://openalex.org/W4406071956",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5086324563",
+      "name": "Zabir Al Nazi",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019816606",
+      "name": "Md. Rajib Hossain",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5115771665",
+      "name": "Faisal Al Mamun",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3182181433",
+    "https://openalex.org/W3092038637",
+    "https://openalex.org/W4319662676",
+    "https://openalex.org/W6870937837",
+    "https://openalex.org/W4401837965",
+    "https://openalex.org/W6853068251",
+    "https://openalex.org/W6797205239",
+    "https://openalex.org/W4404033128",
+    "https://openalex.org/W6856933413",
+    "https://openalex.org/W6858218828",
+    "https://openalex.org/W4306955484",
+    "https://openalex.org/W4377864352",
+    "https://openalex.org/W6787865819",
+    "https://openalex.org/W6858728654",
+    "https://openalex.org/W4309480839",
+    "https://openalex.org/W6874493265",
+    "https://openalex.org/W6809646742",
+    "https://openalex.org/W4303648904",
+    "https://openalex.org/W4401845159",
+    "https://openalex.org/W4399466552",
+    "https://openalex.org/W4393727555",
+    "https://openalex.org/W4386701652",
+    "https://openalex.org/W4394662652",
+    "https://openalex.org/W3183859557",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W2914304175",
+    "https://openalex.org/W4330337479",
+    "https://openalex.org/W4400267460",
+    "https://openalex.org/W4238846128",
+    "https://openalex.org/W2936695845",
+    "https://openalex.org/W2759181158",
+    "https://openalex.org/W4311642023",
+    "https://openalex.org/W4402671223",
+    "https://openalex.org/W4393023489",
+    "https://openalex.org/W4205807230",
+    "https://openalex.org/W4389977189"
+  ],
+  "abstract": "As the global deployment of Large Language Models (LLMs) increases, the demand for multilingual capabilities becomes more crucial. While many LLMs excel in real-time applications for high-resource languages, few are tailored specifically for low-resource languages. The limited availability of text corpora for low-resource languages, coupled with their minimal utilization during LLM training, hampers the models’ ability to perform effectively in real-time applications. Additionally, evaluations of LLMs are significantly less extensive for low-resource languages. This study offers a comprehensive evaluation of both open-source and closed-source multilingual LLMs focused on low-resource language like Bengali, a language that remains notably underrepresented in computational linguistics. Despite the limited number of pre-trained models exclusively on Bengali, we assess the performance of six prominent LLMs, i.e., three closed-source (GPT-3.5, GPT-4o, Gemini) and three open-source (Aya 101, BLOOM, LLaMA) across key natural language processing (NLP) tasks, including text classification, sentiment analysis, summarization, and question answering. These tasks were evaluated using three prompting techniques: Zero-Shot, Few-Shot, and Chain-of-Thought (CoT). This study found that the default hyperparameters of these pre-trained models, such as temperature, maximum token limit, and the number of few-shot examples, did not yield optimal outcomes and led to hallucination issues in many instances. To address these challenges, ablation studies were conducted on key hyperparameters, particularly temperature and the number of shots, to optimize Few-Shot learning and enhance model performance. The focus of this research is on understanding how these LLMs adapt to low-resource downstream tasks, emphasizing their linguistic flexibility and contextual understanding. Experimental results demonstrated that the closed-source GPT-4o model, utilizing Few-Shot learning and Chain-of-Thought prompting, achieved the highest performance across multiple tasks: an F1 score of 84.54% for text classification, 99.00% for sentiment analysis, a F1bertscore of 72.87% for summarization, and 58.22% for question answering. For transparency and reproducibility, all methodologies and code from this study are available on our GitHub repository: https://github.com/zabir-nabil/bangla-multilingual-llm-eval.",
+  "full_text": null,
+  "topic": "Shot (pellet)",
+  "concepts": [
+    {
+      "name": "Shot (pellet)",
+      "score": 0.8803713917732239
+    },
+    {
+      "name": "Zero (linguistics)",
+      "score": 0.6422898769378662
+    },
+    {
+      "name": "Chain (unit)",
+      "score": 0.52582848072052
+    },
+    {
+      "name": "Resource (disambiguation)",
+      "score": 0.488267183303833
+    },
+    {
+      "name": "Psychology",
+      "score": 0.34282076358795166
+    },
+    {
+      "name": "Computer science",
+      "score": 0.3206750154495239
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.2019316852092743
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.14696213603019714
+    },
+    {
+      "name": "Physics",
+      "score": 0.14055338501930237
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.07563534379005432
+    },
+    {
+      "name": "Computer network",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

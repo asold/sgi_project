@@ -1,70 +1,121 @@
 {
-    "title": "Directionality and representativeness are differentiable components of stereotypes in large language models",
-    "url": "https://openalex.org/W4404048205",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2646209388",
-            "name": "Gandalf Nicolas",
-            "affiliations": [
-                "Rutgers, The State University of New Jersey"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2408201350",
-            "name": "Aylin Caliskan",
-            "affiliations": [
-                "University of Washington"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4229005495",
-        "https://openalex.org/W2501992178",
-        "https://openalex.org/W2109453861",
-        "https://openalex.org/W2124275893",
-        "https://openalex.org/W4220762274",
-        "https://openalex.org/W4311910789",
-        "https://openalex.org/W2676416267",
-        "https://openalex.org/W1913389741",
-        "https://openalex.org/W2013510306",
-        "https://openalex.org/W2893425640",
-        "https://openalex.org/W6810860352",
-        "https://openalex.org/W4283830198",
-        "https://openalex.org/W4386249236",
-        "https://openalex.org/W2138024343",
-        "https://openalex.org/W4224266765",
-        "https://openalex.org/W4386116396",
-        "https://openalex.org/W3087250496",
-        "https://openalex.org/W4220816919",
-        "https://openalex.org/W3010471475",
-        "https://openalex.org/W6871020880",
-        "https://openalex.org/W3167843502",
-        "https://openalex.org/W2162068690",
-        "https://openalex.org/W2387324665",
-        "https://openalex.org/W3026070553",
-        "https://openalex.org/W4367175441",
-        "https://openalex.org/W2769358515",
-        "https://openalex.org/W6739585900",
-        "https://openalex.org/W2139095040",
-        "https://openalex.org/W4401126925",
-        "https://openalex.org/W3092124192",
-        "https://openalex.org/W6636510571",
-        "https://openalex.org/W2130663341",
-        "https://openalex.org/W2158196600",
-        "https://openalex.org/W2200917453",
-        "https://openalex.org/W4321392130",
-        "https://openalex.org/W4214907476",
-        "https://openalex.org/W4401307019",
-        "https://openalex.org/W4283793718",
-        "https://openalex.org/W3014590323",
-        "https://openalex.org/W4376862038",
-        "https://openalex.org/W3100718630",
-        "https://openalex.org/W4213235949",
-        "https://openalex.org/W4238634189",
-        "https://openalex.org/W1614298861",
-        "https://openalex.org/W2559655401"
-    ],
-    "abstract": "Abstract Representativeness is a relevant but unexamined property of stereotypes in language models. Existing auditing and debiasing approaches address the direction of stereotypes, such as whether a social category (e.g. men, women) is associated more with incompetence vs. competence content. On the other hand, representativeness is the extent to which a social category's stereotypes are about a specific content dimension, such as Competence, regardless of direction (e.g. as indicated by how often dimension-related words appear in stereotypes about the social category). As such, two social categories may be associated with competence (vs. incompetence), yet one category's stereotypes are mostly about competence, whereas the other's are mostly about alternative content (e.g. Warmth). Such differentiability would suggest that direction-based auditing may fail to identify biases in content representativeness. Here, we use a large sample of social categories that are salient in American society (based on gender, race, occupation, and others) to examine whether representativeness is an independent feature of stereotypes in the ChatGPT chatbot and SBERT language model. We focus on the Warmth and Competence stereotype dimensions, given their well-established centrality in human stereotype content. Our results provide evidence for the construct differentiability of direction and representativeness for Warmth and Competence stereotypes across models and target stimuli (social category terms, racialized name exemplars). Additionally, both direction and representativeness uniquely predicted the models' internal general valence (positivity vs. negativity) and human stereotypes. We discuss implications for the use of AI in the study of human cognition and the field of fairness in AI.",
-    "full_text": null
+  "title": "Directionality and representativeness are differentiable components of stereotypes in large language models",
+  "url": "https://openalex.org/W4404048205",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2646209388",
+      "name": "Gandalf Nicolas",
+      "affiliations": [
+        "Rutgers, The State University of New Jersey"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2408201350",
+      "name": "Aylin Caliskan",
+      "affiliations": [
+        "University of Washington"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4229005495",
+    "https://openalex.org/W2501992178",
+    "https://openalex.org/W2109453861",
+    "https://openalex.org/W2124275893",
+    "https://openalex.org/W4220762274",
+    "https://openalex.org/W4311910789",
+    "https://openalex.org/W2676416267",
+    "https://openalex.org/W1913389741",
+    "https://openalex.org/W2013510306",
+    "https://openalex.org/W2893425640",
+    "https://openalex.org/W6810860352",
+    "https://openalex.org/W4283830198",
+    "https://openalex.org/W4386249236",
+    "https://openalex.org/W2138024343",
+    "https://openalex.org/W4224266765",
+    "https://openalex.org/W4386116396",
+    "https://openalex.org/W3087250496",
+    "https://openalex.org/W4220816919",
+    "https://openalex.org/W3010471475",
+    "https://openalex.org/W6871020880",
+    "https://openalex.org/W3167843502",
+    "https://openalex.org/W2162068690",
+    "https://openalex.org/W2387324665",
+    "https://openalex.org/W3026070553",
+    "https://openalex.org/W4367175441",
+    "https://openalex.org/W2769358515",
+    "https://openalex.org/W6739585900",
+    "https://openalex.org/W2139095040",
+    "https://openalex.org/W4401126925",
+    "https://openalex.org/W3092124192",
+    "https://openalex.org/W6636510571",
+    "https://openalex.org/W2130663341",
+    "https://openalex.org/W2158196600",
+    "https://openalex.org/W2200917453",
+    "https://openalex.org/W4321392130",
+    "https://openalex.org/W4214907476",
+    "https://openalex.org/W4401307019",
+    "https://openalex.org/W4283793718",
+    "https://openalex.org/W3014590323",
+    "https://openalex.org/W4376862038",
+    "https://openalex.org/W3100718630",
+    "https://openalex.org/W4213235949",
+    "https://openalex.org/W4238634189",
+    "https://openalex.org/W1614298861",
+    "https://openalex.org/W2559655401"
+  ],
+  "abstract": "Abstract Representativeness is a relevant but unexamined property of stereotypes in language models. Existing auditing and debiasing approaches address the direction of stereotypes, such as whether a social category (e.g. men, women) is associated more with incompetence vs. competence content. On the other hand, representativeness is the extent to which a social category's stereotypes are about a specific content dimension, such as Competence, regardless of direction (e.g. as indicated by how often dimension-related words appear in stereotypes about the social category). As such, two social categories may be associated with competence (vs. incompetence), yet one category's stereotypes are mostly about competence, whereas the other's are mostly about alternative content (e.g. Warmth). Such differentiability would suggest that direction-based auditing may fail to identify biases in content representativeness. Here, we use a large sample of social categories that are salient in American society (based on gender, race, occupation, and others) to examine whether representativeness is an independent feature of stereotypes in the ChatGPT chatbot and SBERT language model. We focus on the Warmth and Competence stereotype dimensions, given their well-established centrality in human stereotype content. Our results provide evidence for the construct differentiability of direction and representativeness for Warmth and Competence stereotypes across models and target stimuli (social category terms, racialized name exemplars). Additionally, both direction and representativeness uniquely predicted the models' internal general valence (positivity vs. negativity) and human stereotypes. We discuss implications for the use of AI in the study of human cognition and the field of fairness in AI.",
+  "full_text": null,
+  "topic": "Representativeness heuristic",
+  "concepts": [
+    {
+      "name": "Representativeness heuristic",
+      "score": 0.9201796054840088
+    },
+    {
+      "name": "Differentiable function",
+      "score": 0.7043460607528687
+    },
+    {
+      "name": "Directionality",
+      "score": 0.6116631031036377
+    },
+    {
+      "name": "Computer science",
+      "score": 0.43805402517318726
+    },
+    {
+      "name": "Econometrics",
+      "score": 0.3441915512084961
+    },
+    {
+      "name": "Psychology",
+      "score": 0.32699573040008545
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3246745765209198
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2702964246273041
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.17476966977119446
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.14529141783714294
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

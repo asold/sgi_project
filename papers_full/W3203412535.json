@@ -1,84 +1,183 @@
 {
-    "title": "A Transformer-Based Hierarchical Variational AutoEncoder Combined Hidden Markov Model for Long Text Generation",
-    "url": "https://openalex.org/W3203412535",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100675365",
-            "name": "Kun Zhao",
-            "affiliations": [
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5080389312",
-            "name": "Hongwei Ding",
-            "affiliations": [
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100420879",
-            "name": "Kai Ye",
-            "affiliations": [
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5041280931",
-            "name": "Xiaohui Cui",
-            "affiliations": [
-                "Wuhan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2423124209",
-        "https://openalex.org/W2759474451",
-        "https://openalex.org/W6910387809",
-        "https://openalex.org/W2265846598",
-        "https://openalex.org/W3021150969",
-        "https://openalex.org/W3099872554",
-        "https://openalex.org/W3003446182",
-        "https://openalex.org/W2954922414",
-        "https://openalex.org/W2626561952",
-        "https://openalex.org/W2931913794",
-        "https://openalex.org/W2094244309",
-        "https://openalex.org/W2466376234",
-        "https://openalex.org/W2885141472",
-        "https://openalex.org/W2949448715",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W6640963894",
-        "https://openalex.org/W1909320841",
-        "https://openalex.org/W2963223306",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2962821399",
-        "https://openalex.org/W2944931850",
-        "https://openalex.org/W2962951611",
-        "https://openalex.org/W2978613765",
-        "https://openalex.org/W3098708719",
-        "https://openalex.org/W2964669873",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W6638116569",
-        "https://openalex.org/W2586756136",
-        "https://openalex.org/W3022187094",
-        "https://openalex.org/W6747888389",
-        "https://openalex.org/W2890397703",
-        "https://openalex.org/W2962717182",
-        "https://openalex.org/W2970134931",
-        "https://openalex.org/W2924334974",
-        "https://openalex.org/W2970682219",
-        "https://openalex.org/W6747262243",
-        "https://openalex.org/W6898505805",
-        "https://openalex.org/W2963456134",
-        "https://openalex.org/W3035543325",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2980888783"
-    ],
-    "abstract": "The Variational AutoEncoder (VAE) has made significant progress in text generation, but it focused on short text (always a sentence). Long texts consist of multiple sentences. There is a particular relationship between each sentence, especially between the latent variables that control the generation of the sentences. The relationships between these latent variables help in generating continuous and logically connected long texts. There exist very few studies on the relationships between these latent variables. We proposed a method for combining the Transformer-Based Hierarchical Variational AutoEncoder and Hidden Markov Model (HT-HVAE) to learn multiple hierarchical latent variables and their relationships. This application improves long text generation. We use a hierarchical Transformer encoder to encode the long texts in order to obtain better hierarchical information of the long text. HT-HVAE’s generation network uses HMM to learn the relationship between latent variables. We also proposed a method for calculating the perplexity for the multiple hierarchical latent variable structure. The experimental results show that our model is more effective in the dataset with strong logic, alleviates the notorious posterior collapse problem, and generates more continuous and logically connected long text.",
-    "full_text": null
+  "title": "A Transformer-Based Hierarchical Variational AutoEncoder Combined Hidden Markov Model for Long Text Generation",
+  "url": "https://openalex.org/W3203412535",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100675365",
+      "name": "Kun Zhao",
+      "affiliations": [
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5080389312",
+      "name": "Hongwei Ding",
+      "affiliations": [
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100420879",
+      "name": "Kai Ye",
+      "affiliations": [
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5041280931",
+      "name": "Xiaohui Cui",
+      "affiliations": [
+        "Wuhan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2423124209",
+    "https://openalex.org/W2759474451",
+    "https://openalex.org/W6910387809",
+    "https://openalex.org/W2265846598",
+    "https://openalex.org/W3021150969",
+    "https://openalex.org/W3099872554",
+    "https://openalex.org/W3003446182",
+    "https://openalex.org/W2954922414",
+    "https://openalex.org/W2626561952",
+    "https://openalex.org/W2931913794",
+    "https://openalex.org/W2094244309",
+    "https://openalex.org/W2466376234",
+    "https://openalex.org/W2885141472",
+    "https://openalex.org/W2949448715",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W6640963894",
+    "https://openalex.org/W1909320841",
+    "https://openalex.org/W2963223306",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2962821399",
+    "https://openalex.org/W2944931850",
+    "https://openalex.org/W2962951611",
+    "https://openalex.org/W2978613765",
+    "https://openalex.org/W3098708719",
+    "https://openalex.org/W2964669873",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W6638116569",
+    "https://openalex.org/W2586756136",
+    "https://openalex.org/W3022187094",
+    "https://openalex.org/W6747888389",
+    "https://openalex.org/W2890397703",
+    "https://openalex.org/W2962717182",
+    "https://openalex.org/W2970134931",
+    "https://openalex.org/W2924334974",
+    "https://openalex.org/W2970682219",
+    "https://openalex.org/W6747262243",
+    "https://openalex.org/W6898505805",
+    "https://openalex.org/W2963456134",
+    "https://openalex.org/W3035543325",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2980888783"
+  ],
+  "abstract": "The Variational AutoEncoder (VAE) has made significant progress in text generation, but it focused on short text (always a sentence). Long texts consist of multiple sentences. There is a particular relationship between each sentence, especially between the latent variables that control the generation of the sentences. The relationships between these latent variables help in generating continuous and logically connected long texts. There exist very few studies on the relationships between these latent variables. We proposed a method for combining the Transformer-Based Hierarchical Variational AutoEncoder and Hidden Markov Model (HT-HVAE) to learn multiple hierarchical latent variables and their relationships. This application improves long text generation. We use a hierarchical Transformer encoder to encode the long texts in order to obtain better hierarchical information of the long text. HT-HVAE’s generation network uses HMM to learn the relationship between latent variables. We also proposed a method for calculating the perplexity for the multiple hierarchical latent variable structure. The experimental results show that our model is more effective in the dataset with strong logic, alleviates the notorious posterior collapse problem, and generates more continuous and logically connected long text.",
+  "full_text": null,
+  "topic": "Perplexity",
+  "concepts": [
+    {
+      "name": "Perplexity",
+      "score": 0.8519395589828491
+    },
+    {
+      "name": "Latent variable",
+      "score": 0.7609857320785522
+    },
+    {
+      "name": "Autoencoder",
+      "score": 0.7046476602554321
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6633104085922241
+    },
+    {
+      "name": "Hidden Markov model",
+      "score": 0.6438632607460022
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.601157546043396
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5537129044532776
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5254418253898621
+    },
+    {
+      "name": "Latent variable model",
+      "score": 0.48023539781570435
+    },
+    {
+      "name": "Sentence",
+      "score": 0.4796357750892639
+    },
+    {
+      "name": "Markov chain",
+      "score": 0.45032089948654175
+    },
+    {
+      "name": "Hidden semi-Markov model",
+      "score": 0.4189608693122864
+    },
+    {
+      "name": "Hierarchical database model",
+      "score": 0.4167467951774597
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.3981470465660095
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.371582567691803
+    },
+    {
+      "name": "Markov model",
+      "score": 0.36493468284606934
+    },
+    {
+      "name": "Language model",
+      "score": 0.3029732406139374
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.2662754952907562
+    },
+    {
+      "name": "Variable-order Markov model",
+      "score": 0.2618841528892517
+    },
+    {
+      "name": "Data mining",
+      "score": 0.18061378598213196
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

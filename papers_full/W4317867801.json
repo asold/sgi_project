@@ -1,75 +1,150 @@
 {
-    "title": "AFTGAN: prediction of multi-type PPI based on attention free transformer and graph attention network",
-    "url": "https://openalex.org/W4317867801",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5063153302",
-            "name": "Yanlei Kang",
-            "affiliations": [
-                "Huzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5072903725",
-            "name": "Arne Elofsson",
-            "affiliations": [
-                "Science for Life Laboratory",
-                "Stockholm University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066982002",
-            "name": "Yunliang Jiang",
-            "affiliations": [
-                "Zhejiang Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101600215",
-            "name": "Weihong Huang",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5039265796",
-            "name": "Minzhe Yu",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100664776",
-            "name": "Zhong Li",
-            "affiliations": [
-                "Huzhou University",
-                "Zhejiang Sci-Tech University",
-                "Science for Life Laboratory",
-                "Stockholm University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1554521867",
-        "https://openalex.org/W2957436444",
-        "https://openalex.org/W2616246685",
-        "https://openalex.org/W1977186059",
-        "https://openalex.org/W2962949934",
-        "https://openalex.org/W2152705149",
-        "https://openalex.org/W2890911678",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2885583144",
-        "https://openalex.org/W1976937534",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2150757437",
-        "https://openalex.org/W1982267716",
-        "https://openalex.org/W2029476889",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W2900569176",
-        "https://openalex.org/W4211208250",
-        "https://openalex.org/W3045012301"
-    ],
-    "abstract": "Abstract Motivation Protein–protein interaction (PPI) networks and transcriptional regulatory networks are critical in regulating cells and their signaling. A thorough understanding of PPIs can provide more insights into cellular physiology at normal and disease states. Although numerous methods have been proposed to predict PPIs, it is still challenging for interaction prediction between unknown proteins. In this study, a novel neural network named AFTGAN was constructed to predict multi-type PPIs. Regarding feature input, ESM-1b embedding containing much biological information for proteins was added as a protein sequence feature besides amino acid co-occurrence similarity and one-hot coding. An ensemble network was also constructed based on a transformer encoder containing an AFT module (performing the weight operation on vital protein sequence feature information) and graph attention network (extracting the relational features of protein pairs) for the part of the network framework. Results The experimental results showed that the Micro-F1 of the AFTGAN based on three partitioning schemes (BFS, DFS and the random mode) on the SHS27K and SHS148K datasets was 0.685, 0.711 and 0.867, as well as 0.745, 0.819 and 0.920, respectively, all higher than that of other popular methods. In addition, the experimental comparisons confirmed the performance superiority of the proposed model for predicting PPIs of unknown proteins on the STRING dataset. Availability and implementation The source code is publicly available at https://github.com/1075793472/AFTGAN. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "AFTGAN: prediction of multi-type PPI based on attention free transformer and graph attention network",
+  "url": "https://openalex.org/W4317867801",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5063153302",
+      "name": "Yanlei Kang",
+      "affiliations": [
+        "Huzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5072903725",
+      "name": "Arne Elofsson",
+      "affiliations": [
+        "Science for Life Laboratory",
+        "Stockholm University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066982002",
+      "name": "Yunliang Jiang",
+      "affiliations": [
+        "Zhejiang Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101600215",
+      "name": "Weihong Huang",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5039265796",
+      "name": "Minzhe Yu",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100664776",
+      "name": "Zhong Li",
+      "affiliations": [
+        "Huzhou University",
+        "Zhejiang Sci-Tech University",
+        "Science for Life Laboratory",
+        "Stockholm University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1554521867",
+    "https://openalex.org/W2957436444",
+    "https://openalex.org/W2616246685",
+    "https://openalex.org/W1977186059",
+    "https://openalex.org/W2962949934",
+    "https://openalex.org/W2152705149",
+    "https://openalex.org/W2890911678",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2885583144",
+    "https://openalex.org/W1976937534",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2150757437",
+    "https://openalex.org/W1982267716",
+    "https://openalex.org/W2029476889",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W2900569176",
+    "https://openalex.org/W4211208250",
+    "https://openalex.org/W3045012301"
+  ],
+  "abstract": "Abstract Motivation Protein–protein interaction (PPI) networks and transcriptional regulatory networks are critical in regulating cells and their signaling. A thorough understanding of PPIs can provide more insights into cellular physiology at normal and disease states. Although numerous methods have been proposed to predict PPIs, it is still challenging for interaction prediction between unknown proteins. In this study, a novel neural network named AFTGAN was constructed to predict multi-type PPIs. Regarding feature input, ESM-1b embedding containing much biological information for proteins was added as a protein sequence feature besides amino acid co-occurrence similarity and one-hot coding. An ensemble network was also constructed based on a transformer encoder containing an AFT module (performing the weight operation on vital protein sequence feature information) and graph attention network (extracting the relational features of protein pairs) for the part of the network framework. Results The experimental results showed that the Micro-F1 of the AFTGAN based on three partitioning schemes (BFS, DFS and the random mode) on the SHS27K and SHS148K datasets was 0.685, 0.711 and 0.867, as well as 0.745, 0.819 and 0.920, respectively, all higher than that of other popular methods. In addition, the experimental comparisons confirmed the performance superiority of the proposed model for predicting PPIs of unknown proteins on the STRING dataset. Availability and implementation The source code is publicly available at https://github.com/1075793472/AFTGAN. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7251362800598145
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6119226813316345
+    },
+    {
+      "name": "Source code",
+      "score": 0.6045042276382446
+    },
+    {
+      "name": "Data mining",
+      "score": 0.5074962973594666
+    },
+    {
+      "name": "Graph",
+      "score": 0.48545604944229126
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.4798664450645447
+    },
+    {
+      "name": "Embedding",
+      "score": 0.474250465631485
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44041919708251953
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.39280393719673157
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.39055347442626953
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3669286370277405
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.25285959243774414
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

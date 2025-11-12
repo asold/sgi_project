@@ -1,77 +1,112 @@
 {
-    "title": "Medical Image Classification with a Hybrid SSM Model Based on CNN and Transformer",
-    "url": "https://openalex.org/W4401331702",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2534032538",
-            "name": "Can Hu",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1996626606",
-            "name": "Ning Cao",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103679216",
-            "name": "Han Zhou",
-            "affiliations": [
-                "Nanjing University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1968708009",
-            "name": "Bin Guo",
-            "affiliations": [
-                "Xinjiang Agricultural University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2986507176",
-        "https://openalex.org/W3159019058",
-        "https://openalex.org/W3168404669",
-        "https://openalex.org/W3087642760",
-        "https://openalex.org/W3044256341",
-        "https://openalex.org/W2990607318",
-        "https://openalex.org/W3048774813",
-        "https://openalex.org/W2041277244",
-        "https://openalex.org/W1975020933",
-        "https://openalex.org/W1986643265",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W2163352848",
-        "https://openalex.org/W2089575713",
-        "https://openalex.org/W3164581645",
-        "https://openalex.org/W3194441438",
-        "https://openalex.org/W4282982312",
-        "https://openalex.org/W3202280620",
-        "https://openalex.org/W4220904204",
-        "https://openalex.org/W4361275400",
-        "https://openalex.org/W4324144441",
-        "https://openalex.org/W4387212994",
-        "https://openalex.org/W6802912272",
-        "https://openalex.org/W2963125010",
-        "https://openalex.org/W4238732474",
-        "https://openalex.org/W2963172626",
-        "https://openalex.org/W4386076493",
-        "https://openalex.org/W4385413436",
-        "https://openalex.org/W6790690058",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6782420349",
-        "https://openalex.org/W4391341360",
-        "https://openalex.org/W2623808523",
-        "https://openalex.org/W2968171911",
-        "https://openalex.org/W3133696297",
-        "https://openalex.org/W3212492847",
-        "https://openalex.org/W3064840847"
-    ],
-    "abstract": "Medical image classification, a pivotal task for diagnostic accuracy, poses unique challenges due to the intricate and variable nature of medical images compared to their natural counterparts. While Convolutional Neural Networks (CNNs) and Transformers are prevalent in this domain, each architecture has its drawbacks. CNNs, despite their strength in local feature extraction, fall short in capturing global context, whereas Transformers excel at global information but can overlook fine-grained details. The integration of CNNs and Transformers in a hybrid model aims to bridge this gap by enabling simultaneous local and global feature extraction. However, this approach remains constrained in its capacity to model long-range dependencies, thereby hindering the efficient extraction of distant features. To address these issues, we introduce the MambaConvT model, which employs a state-space approach. It begins by locally processing input features through multi-core convolution, enhancing the extraction of deep, discriminative local details. Next, depth-separable convolution with a 2D selective scanning module (SS2D) is employed to maintain a global receptive field and establish long-distance connections, capturing the fine-grained features. The model then combines hybrid features for comprehensive feature extraction, followed by global feature modeling to emphasize on global detail information and optimize feature representation. This paper conducts thorough performance experiments on different algorithms across four publicly available datasets and two private datasets. The results demonstrate that MambaConvT outperforms the latest classification algorithms in terms of accuracy, precision, recall, F1 score, and AUC value ratings, achieving superior performance in the precise classification of medical images.",
-    "full_text": null
+  "title": "Medical Image Classification with a Hybrid SSM Model Based on CNN and Transformer",
+  "url": "https://openalex.org/W4401331702",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2534032538",
+      "name": "Can Hu",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1996626606",
+      "name": "Ning Cao",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103679216",
+      "name": "Han Zhou",
+      "affiliations": [
+        "Nanjing University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1968708009",
+      "name": "Bin Guo",
+      "affiliations": [
+        "Xinjiang Agricultural University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2986507176",
+    "https://openalex.org/W3159019058",
+    "https://openalex.org/W3168404669",
+    "https://openalex.org/W3087642760",
+    "https://openalex.org/W3044256341",
+    "https://openalex.org/W2990607318",
+    "https://openalex.org/W3048774813",
+    "https://openalex.org/W2041277244",
+    "https://openalex.org/W1975020933",
+    "https://openalex.org/W1986643265",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W2163352848",
+    "https://openalex.org/W2089575713",
+    "https://openalex.org/W3164581645",
+    "https://openalex.org/W3194441438",
+    "https://openalex.org/W4282982312",
+    "https://openalex.org/W3202280620",
+    "https://openalex.org/W4220904204",
+    "https://openalex.org/W4361275400",
+    "https://openalex.org/W4324144441",
+    "https://openalex.org/W4387212994",
+    "https://openalex.org/W6802912272",
+    "https://openalex.org/W2963125010",
+    "https://openalex.org/W4238732474",
+    "https://openalex.org/W2963172626",
+    "https://openalex.org/W4386076493",
+    "https://openalex.org/W4385413436",
+    "https://openalex.org/W6790690058",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6782420349",
+    "https://openalex.org/W4391341360",
+    "https://openalex.org/W2623808523",
+    "https://openalex.org/W2968171911",
+    "https://openalex.org/W3133696297",
+    "https://openalex.org/W3212492847",
+    "https://openalex.org/W3064840847"
+  ],
+  "abstract": "Medical image classification, a pivotal task for diagnostic accuracy, poses unique challenges due to the intricate and variable nature of medical images compared to their natural counterparts. While Convolutional Neural Networks (CNNs) and Transformers are prevalent in this domain, each architecture has its drawbacks. CNNs, despite their strength in local feature extraction, fall short in capturing global context, whereas Transformers excel at global information but can overlook fine-grained details. The integration of CNNs and Transformers in a hybrid model aims to bridge this gap by enabling simultaneous local and global feature extraction. However, this approach remains constrained in its capacity to model long-range dependencies, thereby hindering the efficient extraction of distant features. To address these issues, we introduce the MambaConvT model, which employs a state-space approach. It begins by locally processing input features through multi-core convolution, enhancing the extraction of deep, discriminative local details. Next, depth-separable convolution with a 2D selective scanning module (SS2D) is employed to maintain a global receptive field and establish long-distance connections, capturing the fine-grained features. The model then combines hybrid features for comprehensive feature extraction, followed by global feature modeling to emphasize on global detail information and optimize feature representation. This paper conducts thorough performance experiments on different algorithms across four publicly available datasets and two private datasets. The results demonstrate that MambaConvT outperforms the latest classification algorithms in terms of accuracy, precision, recall, F1 score, and AUC value ratings, achieving superior performance in the precise classification of medical images.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.6046146154403687
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5334891080856323
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5301675796508789
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4627969264984131
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.32515403628349304
+    },
+    {
+      "name": "Engineering",
+      "score": 0.23714002966880798
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.17188608646392822
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08561676740646362
+    }
+  ]
 }

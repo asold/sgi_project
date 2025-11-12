@@ -1,72 +1,123 @@
 {
-    "title": "Multi-Scale Features for Transformer Model to Improve the Performance of Sound Event Detection",
-    "url": "https://openalex.org/W4214835877",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2556635514",
-            "name": "Soo‐Jong Kim",
-            "affiliations": [
-                "Keimyung University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2139962797",
-            "name": "Yong Joo Chung",
-            "affiliations": [
-                "Keimyung University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2556635514",
-            "name": "Soo‐Jong Kim",
-            "affiliations": [
-                "Keimyung University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2139962797",
-            "name": "Yong Joo Chung",
-            "affiliations": [
-                "Keimyung University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2959539607",
-        "https://openalex.org/W1538203218",
-        "https://openalex.org/W1844944916",
-        "https://openalex.org/W2196961052",
-        "https://openalex.org/W2160335114",
-        "https://openalex.org/W2407005679",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2143612262",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2591013610",
-        "https://openalex.org/W1650531274",
-        "https://openalex.org/W1970578576",
-        "https://openalex.org/W3184184191",
-        "https://openalex.org/W2973152780",
-        "https://openalex.org/W2915298068",
-        "https://openalex.org/W2566935005",
-        "https://openalex.org/W2890685186",
-        "https://openalex.org/W2592168896",
-        "https://openalex.org/W2403076886",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W3160339728",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3097777922",
-        "https://openalex.org/W3016195076",
-        "https://openalex.org/W6733814495",
-        "https://openalex.org/W2593116425",
-        "https://openalex.org/W2770119437",
-        "https://openalex.org/W3036237438",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2408239454",
-        "https://openalex.org/W3105202226",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W2953070460"
-    ],
-    "abstract": "To alleviate the problem of performance degradation due to the varied sound durations of competing classes in sound event detection, we propose a method that utilizes multi-scale features for sound event detection. We employed a feature-pyramid component in a deep neural network architecture based on the Transformer encoder that is used to efficiently model the time correlation of sound signals because of its superiority over conventional recurrent neural networks, as demonstrated in recent studies. We used layers of convolutional neural networks to produce two-dimensional acoustic features that are input into the Transformer encoders. The outputs of the Transformer encoders at different levels of the network are combined to obtain the multi-scale features to feed the fully connected feed-forward neural network, which acts as the final classification layer. The proposed method is motivated by the idea that multi-scale features make the network more robust against the dynamic duration of the sound signals depending on their classes. We also applied the proposed method to a mean-teacher model, based on the Transformer encoder, to demonstrate its effectiveness on a large set of unlabeled data. We conducted experiments using the DCASE 2019 Task 4 dataset to evaluate the performance of the proposed method. The experimental results show that the proposed architecture outperforms the baseline network without multi-scale features.",
-    "full_text": null
+  "title": "Multi-Scale Features for Transformer Model to Improve the Performance of Sound Event Detection",
+  "url": "https://openalex.org/W4214835877",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2556635514",
+      "name": "Soo‐Jong Kim",
+      "affiliations": [
+        "Keimyung University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2139962797",
+      "name": "Yong Joo Chung",
+      "affiliations": [
+        "Keimyung University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2556635514",
+      "name": "Soo‐Jong Kim",
+      "affiliations": [
+        "Keimyung University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2139962797",
+      "name": "Yong Joo Chung",
+      "affiliations": [
+        "Keimyung University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2959539607",
+    "https://openalex.org/W1538203218",
+    "https://openalex.org/W1844944916",
+    "https://openalex.org/W2196961052",
+    "https://openalex.org/W2160335114",
+    "https://openalex.org/W2407005679",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2143612262",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2591013610",
+    "https://openalex.org/W1650531274",
+    "https://openalex.org/W1970578576",
+    "https://openalex.org/W3184184191",
+    "https://openalex.org/W2973152780",
+    "https://openalex.org/W2915298068",
+    "https://openalex.org/W2566935005",
+    "https://openalex.org/W2890685186",
+    "https://openalex.org/W2592168896",
+    "https://openalex.org/W2403076886",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W3160339728",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3097777922",
+    "https://openalex.org/W3016195076",
+    "https://openalex.org/W6733814495",
+    "https://openalex.org/W2593116425",
+    "https://openalex.org/W2770119437",
+    "https://openalex.org/W3036237438",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2408239454",
+    "https://openalex.org/W3105202226",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W2953070460"
+  ],
+  "abstract": "To alleviate the problem of performance degradation due to the varied sound durations of competing classes in sound event detection, we propose a method that utilizes multi-scale features for sound event detection. We employed a feature-pyramid component in a deep neural network architecture based on the Transformer encoder that is used to efficiently model the time correlation of sound signals because of its superiority over conventional recurrent neural networks, as demonstrated in recent studies. We used layers of convolutional neural networks to produce two-dimensional acoustic features that are input into the Transformer encoders. The outputs of the Transformer encoders at different levels of the network are combined to obtain the multi-scale features to feed the fully connected feed-forward neural network, which acts as the final classification layer. The proposed method is motivated by the idea that multi-scale features make the network more robust against the dynamic duration of the sound signals depending on their classes. We also applied the proposed method to a mean-teacher model, based on the Transformer encoder, to demonstrate its effectiveness on a large set of unlabeled data. We conducted experiments using the DCASE 2019 Task 4 dataset to evaluate the performance of the proposed method. The experimental results show that the proposed architecture outperforms the baseline network without multi-scale features.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7066043615341187
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6532971262931824
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5533075332641602
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5164780616760254
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5087109208106995
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.4734867513179779
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.45262712240219116
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.3296312987804413
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1648692488670349
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09399604797363281
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

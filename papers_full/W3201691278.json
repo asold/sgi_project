@@ -1,89 +1,124 @@
 {
-    "title": "Fast Multi-Resolution Transformer Fine-tuning for Extreme Multi-label Text Classification",
-    "url": "https://openalex.org/W3201691278",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101969233",
-            "name": "Jiong Zhang",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5006559148",
-            "name": "Wei-Cheng Chang",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5023183059",
-            "name": "Hsiang‐Fu Yu",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5063459703",
-            "name": "Inderjit S. Dhillon",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2921113176",
-        "https://openalex.org/W2970873794",
-        "https://openalex.org/W3102124616",
-        "https://openalex.org/W2906963924",
-        "https://openalex.org/W3088109833",
-        "https://openalex.org/W2788125153",
-        "https://openalex.org/W3104435240",
-        "https://openalex.org/W2951434086",
-        "https://openalex.org/W2739996966",
-        "https://openalex.org/W2950352656",
-        "https://openalex.org/W2962760235",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2120264885",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W3114079967",
-        "https://openalex.org/W3157795849",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2996064239",
-        "https://openalex.org/W3117196003",
-        "https://openalex.org/W3093858897",
-        "https://openalex.org/W3189721578",
-        "https://openalex.org/W2963034893",
-        "https://openalex.org/W2106854428",
-        "https://openalex.org/W2520348554",
-        "https://openalex.org/W2362855512",
-        "https://openalex.org/W3034989857",
-        "https://openalex.org/W3034696692",
-        "https://openalex.org/W2118585731",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W2970574105",
-        "https://openalex.org/W3172352177",
-        "https://openalex.org/W2962770929",
-        "https://openalex.org/W2970449868",
-        "https://openalex.org/W2990176236",
-        "https://openalex.org/W2607041014",
-        "https://openalex.org/W2068074736",
-        "https://openalex.org/W2744136723",
-        "https://openalex.org/W3080802002",
-        "https://openalex.org/W3120689745",
-        "https://openalex.org/W3152616003",
-        "https://openalex.org/W1978491093",
-        "https://openalex.org/W2966073115",
-        "https://openalex.org/W2743021690",
-        "https://openalex.org/W2461743311",
-        "https://openalex.org/W3037422790",
-        "https://openalex.org/W2963469388",
-        "https://openalex.org/W2970893544",
-        "https://openalex.org/W167016754",
-        "https://openalex.org/W2296073425",
-        "https://openalex.org/W2963203067"
-    ],
-    "abstract": "Extreme multi-label text classification (XMC) seeks to find relevant labels from an extreme large label collection for a given text input. Many real-world applications can be formulated as XMC problems, such as recommendation systems, document tagging and semantic search. Recently, transformer based XMC methods, such as X-Transformer and LightXML, have shown significant improvement over other XMC methods. Despite leveraging pre-trained transformer models for text representation, the fine-tuning procedure of transformer models on large label space still has lengthy computational time even with powerful GPUs. In this paper, we propose a novel recursive approach, XR-Transformer to accelerate the procedure through recursively fine-tuning transformer models on a series of multi-resolution objectives related to the original XMC objective function. Empirical results show that XR-Transformer takes significantly less training time compared to other transformer-based XMC models while yielding better state-of-the-art results. In particular, on the public Amazon-3M dataset with 3 million labels, XR-Transformer is not only 20x faster than X-Transformer but also improves the Precision@1 from 51% to 54%.",
-    "full_text": null
+  "title": "Fast Multi-Resolution Transformer Fine-tuning for Extreme Multi-label Text Classification",
+  "url": "https://openalex.org/W3201691278",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101969233",
+      "name": "Jiong Zhang",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5006559148",
+      "name": "Wei-Cheng Chang",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5023183059",
+      "name": "Hsiang‐Fu Yu",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5063459703",
+      "name": "Inderjit S. Dhillon",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2921113176",
+    "https://openalex.org/W2970873794",
+    "https://openalex.org/W3102124616",
+    "https://openalex.org/W2906963924",
+    "https://openalex.org/W3088109833",
+    "https://openalex.org/W2788125153",
+    "https://openalex.org/W3104435240",
+    "https://openalex.org/W2951434086",
+    "https://openalex.org/W2739996966",
+    "https://openalex.org/W2950352656",
+    "https://openalex.org/W2962760235",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2120264885",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W3114079967",
+    "https://openalex.org/W3157795849",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2996064239",
+    "https://openalex.org/W3117196003",
+    "https://openalex.org/W3093858897",
+    "https://openalex.org/W3189721578",
+    "https://openalex.org/W2963034893",
+    "https://openalex.org/W2106854428",
+    "https://openalex.org/W2520348554",
+    "https://openalex.org/W2362855512",
+    "https://openalex.org/W3034989857",
+    "https://openalex.org/W3034696692",
+    "https://openalex.org/W2118585731",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2970574105",
+    "https://openalex.org/W3172352177",
+    "https://openalex.org/W2962770929",
+    "https://openalex.org/W2970449868",
+    "https://openalex.org/W2990176236",
+    "https://openalex.org/W2607041014",
+    "https://openalex.org/W2068074736",
+    "https://openalex.org/W2744136723",
+    "https://openalex.org/W3080802002",
+    "https://openalex.org/W3120689745",
+    "https://openalex.org/W3152616003",
+    "https://openalex.org/W1978491093",
+    "https://openalex.org/W2966073115",
+    "https://openalex.org/W2743021690",
+    "https://openalex.org/W2461743311",
+    "https://openalex.org/W3037422790",
+    "https://openalex.org/W2963469388",
+    "https://openalex.org/W2970893544",
+    "https://openalex.org/W167016754",
+    "https://openalex.org/W2296073425",
+    "https://openalex.org/W2963203067"
+  ],
+  "abstract": "Extreme multi-label text classification (XMC) seeks to find relevant labels from an extreme large label collection for a given text input. Many real-world applications can be formulated as XMC problems, such as recommendation systems, document tagging and semantic search. Recently, transformer based XMC methods, such as X-Transformer and LightXML, have shown significant improvement over other XMC methods. Despite leveraging pre-trained transformer models for text representation, the fine-tuning procedure of transformer models on large label space still has lengthy computational time even with powerful GPUs. In this paper, we propose a novel recursive approach, XR-Transformer to accelerate the procedure through recursively fine-tuning transformer models on a series of multi-resolution objectives related to the original XMC objective function. Empirical results show that XR-Transformer takes significantly less training time compared to other transformer-based XMC models while yielding better state-of-the-art results. In particular, on the public Amazon-3M dataset with 3 million labels, XR-Transformer is not only 20x faster than X-Transformer but also improves the Precision@1 from 51% to 54%.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7453098297119141
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6721745133399963
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.43535101413726807
+    },
+    {
+      "name": "Language model",
+      "score": 0.43304443359375
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.35601386427879333
+    },
+    {
+      "name": "Voltage",
+      "score": 0.15111669898033142
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14802515506744385
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.13029423356056213
+    }
+  ]
 }

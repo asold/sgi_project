@@ -1,93 +1,148 @@
 {
-    "title": "Large Language Models Enable Few-Shot Clustering",
-    "url": "https://openalex.org/W4394773672",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2186852932",
-            "name": "Vijay Viswanathan",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2481521804",
-            "name": "Kiril Gashteovski",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2577615699",
-            "name": "Carolin Lawrence",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2789722361",
-            "name": "Tongshuang Wu",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A277131583",
-            "name": "Graham Neubig",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W40976687",
-        "https://openalex.org/W6668990524",
-        "https://openalex.org/W6683098704",
-        "https://openalex.org/W3005339103",
-        "https://openalex.org/W6629638141",
-        "https://openalex.org/W6675528751",
-        "https://openalex.org/W2153839362",
-        "https://openalex.org/W6678830454",
-        "https://openalex.org/W6632852411",
-        "https://openalex.org/W2112573744",
-        "https://openalex.org/W3045492832",
-        "https://openalex.org/W2622944721",
-        "https://openalex.org/W1559721351",
-        "https://openalex.org/W4230692400",
-        "https://openalex.org/W2035890032",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6684350123",
-        "https://openalex.org/W2083935441",
-        "https://openalex.org/W2757101400",
-        "https://openalex.org/W6762244633",
-        "https://openalex.org/W2777647957",
-        "https://openalex.org/W4363624465",
-        "https://openalex.org/W6689029123",
-        "https://openalex.org/W2986193249",
-        "https://openalex.org/W2150593711",
-        "https://openalex.org/W2100341149",
-        "https://openalex.org/W6851430148",
-        "https://openalex.org/W4385734175",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W6768851824",
-        "https://openalex.org/W4283367106",
-        "https://openalex.org/W4312089343",
-        "https://openalex.org/W2788996745",
-        "https://openalex.org/W6633328910",
-        "https://openalex.org/W2442340835",
-        "https://openalex.org/W3171153522",
-        "https://openalex.org/W3030583876",
-        "https://openalex.org/W4389519604",
-        "https://openalex.org/W4281786578",
-        "https://openalex.org/W2914933231",
-        "https://openalex.org/W2562755098",
-        "https://openalex.org/W4387835442",
-        "https://openalex.org/W2222512263",
-        "https://openalex.org/W2915480215",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W4401043863",
-        "https://openalex.org/W2949889616"
-    ],
-    "abstract": "Abstract Unlike traditional unsupervised clustering, semi-supervised clustering allows users to provide meaningful structure to the data, which helps the clustering algorithm to match the user’s intent. Existing approaches to semi-supervised clustering require a significant amount of feedback from an expert to improve the clusters. In this paper, we ask whether a large language model (LLM) can amplify an expert’s guidance to enable query-efficient, few-shot semi-supervised text clustering. We show that LLMs are surprisingly effective at improving clustering. We explore three stages where LLMs can be incorporated into clustering: before clustering (improving input features), during clustering (by providing constraints to the clusterer), and after clustering (using LLMs post-correction). We find that incorporating LLMs in the first two stages routinely provides significant improvements in cluster quality, and that LLMs enable a user to make trade-offs between cost and accuracy to produce desired clusters. We release our code and LLM prompts for the public to use.1",
-    "full_text": null
+  "title": "Large Language Models Enable Few-Shot Clustering",
+  "url": "https://openalex.org/W4394773672",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2186852932",
+      "name": "Vijay Viswanathan",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2481521804",
+      "name": "Kiril Gashteovski",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2577615699",
+      "name": "Carolin Lawrence",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2789722361",
+      "name": "Tongshuang Wu",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A277131583",
+      "name": "Graham Neubig",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W40976687",
+    "https://openalex.org/W6668990524",
+    "https://openalex.org/W6683098704",
+    "https://openalex.org/W3005339103",
+    "https://openalex.org/W6629638141",
+    "https://openalex.org/W6675528751",
+    "https://openalex.org/W2153839362",
+    "https://openalex.org/W6678830454",
+    "https://openalex.org/W6632852411",
+    "https://openalex.org/W2112573744",
+    "https://openalex.org/W3045492832",
+    "https://openalex.org/W2622944721",
+    "https://openalex.org/W1559721351",
+    "https://openalex.org/W4230692400",
+    "https://openalex.org/W2035890032",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6684350123",
+    "https://openalex.org/W2083935441",
+    "https://openalex.org/W2757101400",
+    "https://openalex.org/W6762244633",
+    "https://openalex.org/W2777647957",
+    "https://openalex.org/W4363624465",
+    "https://openalex.org/W6689029123",
+    "https://openalex.org/W2986193249",
+    "https://openalex.org/W2150593711",
+    "https://openalex.org/W2100341149",
+    "https://openalex.org/W6851430148",
+    "https://openalex.org/W4385734175",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W6768851824",
+    "https://openalex.org/W4283367106",
+    "https://openalex.org/W4312089343",
+    "https://openalex.org/W2788996745",
+    "https://openalex.org/W6633328910",
+    "https://openalex.org/W2442340835",
+    "https://openalex.org/W3171153522",
+    "https://openalex.org/W3030583876",
+    "https://openalex.org/W4389519604",
+    "https://openalex.org/W4281786578",
+    "https://openalex.org/W2914933231",
+    "https://openalex.org/W2562755098",
+    "https://openalex.org/W4387835442",
+    "https://openalex.org/W2222512263",
+    "https://openalex.org/W2915480215",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W4401043863",
+    "https://openalex.org/W2949889616"
+  ],
+  "abstract": "Abstract Unlike traditional unsupervised clustering, semi-supervised clustering allows users to provide meaningful structure to the data, which helps the clustering algorithm to match the user’s intent. Existing approaches to semi-supervised clustering require a significant amount of feedback from an expert to improve the clusters. In this paper, we ask whether a large language model (LLM) can amplify an expert’s guidance to enable query-efficient, few-shot semi-supervised text clustering. We show that LLMs are surprisingly effective at improving clustering. We explore three stages where LLMs can be incorporated into clustering: before clustering (improving input features), during clustering (by providing constraints to the clusterer), and after clustering (using LLMs post-correction). We find that incorporating LLMs in the first two stages routinely provides significant improvements in cluster quality, and that LLMs enable a user to make trade-offs between cost and accuracy to produce desired clusters. We release our code and LLM prompts for the public to use.1",
+  "full_text": null,
+  "topic": "Cluster analysis",
+  "concepts": [
+    {
+      "name": "Cluster analysis",
+      "score": 0.9404884576797485
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7873609662055969
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5008141994476318
+    },
+    {
+      "name": "Correlation clustering",
+      "score": 0.494335412979126
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.49261313676834106
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4905368685722351
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4904143512248993
+    },
+    {
+      "name": "Constrained clustering",
+      "score": 0.47028517723083496
+    },
+    {
+      "name": "Fuzzy clustering",
+      "score": 0.4628203809261322
+    },
+    {
+      "name": "Brown clustering",
+      "score": 0.45285773277282715
+    },
+    {
+      "name": "CURE data clustering algorithm",
+      "score": 0.3918997049331665
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

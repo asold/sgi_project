@@ -1,116 +1,215 @@
 {
-    "title": "Collaborative Sequential Recommendations via Multi-view GNN-transformers",
-    "url": "https://openalex.org/W4392864387",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5074207483",
-            "name": "Tianze Luo",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5072988055",
-            "name": "Yong Liu",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5082984558",
-            "name": "Sinno Jialin Pan",
-            "affiliations": [
-                "Chinese University of Hong Kong"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3123348991",
-        "https://openalex.org/W3154921101",
-        "https://openalex.org/W3178835722",
-        "https://openalex.org/W3156833186",
-        "https://openalex.org/W2786915849",
-        "https://openalex.org/W2945827377",
-        "https://openalex.org/W2172140247",
-        "https://openalex.org/W3203589076",
-        "https://openalex.org/W4224315226",
-        "https://openalex.org/W3105472188",
-        "https://openalex.org/W2624431344",
-        "https://openalex.org/W3045200674",
-        "https://openalex.org/W2605350416",
-        "https://openalex.org/W2626454364",
-        "https://openalex.org/W1926826635",
-        "https://openalex.org/W2907607062",
-        "https://openalex.org/W3178564468",
-        "https://openalex.org/W2746011824",
-        "https://openalex.org/W2997477628",
-        "https://openalex.org/W2963367478",
-        "https://openalex.org/W2519887557",
-        "https://openalex.org/W3081170586",
-        "https://openalex.org/W2965866655",
-        "https://openalex.org/W2996931760",
-        "https://openalex.org/W4320165462",
-        "https://openalex.org/W3018719408",
-        "https://openalex.org/W3207267733",
-        "https://openalex.org/W3165548017",
-        "https://openalex.org/W2951645301",
-        "https://openalex.org/W3177158382",
-        "https://openalex.org/W4297808394",
-        "https://openalex.org/W3093800735",
-        "https://openalex.org/W3034427927",
-        "https://openalex.org/W4212975546",
-        "https://openalex.org/W3031331881",
-        "https://openalex.org/W2986515219",
-        "https://openalex.org/W3038719422",
-        "https://openalex.org/W3100917752",
-        "https://openalex.org/W2171279286",
-        "https://openalex.org/W2108630796",
-        "https://openalex.org/W2984100107",
-        "https://openalex.org/W2783272285",
-        "https://openalex.org/W3012772192",
-        "https://openalex.org/W6763442200",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3035170973",
-        "https://openalex.org/W1985854669",
-        "https://openalex.org/W2788997749",
-        "https://openalex.org/W3012705926",
-        "https://openalex.org/W2945827670",
-        "https://openalex.org/W4224316956",
-        "https://openalex.org/W3034329572",
-        "https://openalex.org/W2583674722",
-        "https://openalex.org/W4210334834",
-        "https://openalex.org/W3005071803",
-        "https://openalex.org/W2899457523",
-        "https://openalex.org/W3173365306",
-        "https://openalex.org/W3133849783",
-        "https://openalex.org/W2913189099",
-        "https://openalex.org/W3033844654",
-        "https://openalex.org/W4309698070",
-        "https://openalex.org/W3021402147",
-        "https://openalex.org/W2965898633",
-        "https://openalex.org/W2043670592",
-        "https://openalex.org/W3204210724",
-        "https://openalex.org/W4212836229",
-        "https://openalex.org/W3035658380",
-        "https://openalex.org/W2962745591",
-        "https://openalex.org/W2723293840",
-        "https://openalex.org/W4318617464",
-        "https://openalex.org/W2997864604",
-        "https://openalex.org/W3155097957",
-        "https://openalex.org/W3108655343",
-        "https://openalex.org/W3101707147",
-        "https://openalex.org/W3102619277",
-        "https://openalex.org/W3101553402",
-        "https://openalex.org/W3100278010",
-        "https://openalex.org/W3106433415",
-        "https://openalex.org/W4294558607",
-        "https://openalex.org/W2964199361",
-        "https://openalex.org/W2963695795",
-        "https://openalex.org/W2964015378",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4297733535"
-    ],
-    "abstract": "Sequential recommendation systems aim to exploit users’ sequential behavior patterns to capture their interaction intentions and improve recommendation accuracy. Existing sequential recommendation methods mainly focus on modeling the items’ chronological relationships in each individual user behavior sequence, which may not be effective in making accurate and robust recommendations. On the one hand, the performance of existing sequential recommendation methods is usually sensitive to the length of a user’s behavior sequence (i.e., the list of a user’s historically interacted items). On the other hand, besides the context information in each individual user behavior sequence, the collaborative information among different users’ behavior sequences is also crucial to make accurate recommendations. However, this kind of information is usually ignored by existing sequential recommendation methods. In this work, we propose a new sequential recommendation framework, which encodes the context information in each individual user behavior sequence as well as the collaborative information among the behavior sequences of different users, through building a local dependency graph for each item. We conduct extensive experiments to compare the proposed model with state-of-the-art sequential recommendation methods on five benchmark datasets. The experimental results demonstrate that the proposed model is able to achieve better recommendation performance than existing methods, by incorporating collaborative information.",
-    "full_text": null
+  "title": "Collaborative Sequential Recommendations via Multi-view GNN-transformers",
+  "url": "https://openalex.org/W4392864387",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5074207483",
+      "name": "Tianze Luo",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5072988055",
+      "name": "Yong Liu",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5082984558",
+      "name": "Sinno Jialin Pan",
+      "affiliations": [
+        "Chinese University of Hong Kong"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3123348991",
+    "https://openalex.org/W3154921101",
+    "https://openalex.org/W3178835722",
+    "https://openalex.org/W3156833186",
+    "https://openalex.org/W2786915849",
+    "https://openalex.org/W2945827377",
+    "https://openalex.org/W2172140247",
+    "https://openalex.org/W3203589076",
+    "https://openalex.org/W4224315226",
+    "https://openalex.org/W3105472188",
+    "https://openalex.org/W2624431344",
+    "https://openalex.org/W3045200674",
+    "https://openalex.org/W2605350416",
+    "https://openalex.org/W2626454364",
+    "https://openalex.org/W1926826635",
+    "https://openalex.org/W2907607062",
+    "https://openalex.org/W3178564468",
+    "https://openalex.org/W2746011824",
+    "https://openalex.org/W2997477628",
+    "https://openalex.org/W2963367478",
+    "https://openalex.org/W2519887557",
+    "https://openalex.org/W3081170586",
+    "https://openalex.org/W2965866655",
+    "https://openalex.org/W2996931760",
+    "https://openalex.org/W4320165462",
+    "https://openalex.org/W3018719408",
+    "https://openalex.org/W3207267733",
+    "https://openalex.org/W3165548017",
+    "https://openalex.org/W2951645301",
+    "https://openalex.org/W3177158382",
+    "https://openalex.org/W4297808394",
+    "https://openalex.org/W3093800735",
+    "https://openalex.org/W3034427927",
+    "https://openalex.org/W4212975546",
+    "https://openalex.org/W3031331881",
+    "https://openalex.org/W2986515219",
+    "https://openalex.org/W3038719422",
+    "https://openalex.org/W3100917752",
+    "https://openalex.org/W2171279286",
+    "https://openalex.org/W2108630796",
+    "https://openalex.org/W2984100107",
+    "https://openalex.org/W2783272285",
+    "https://openalex.org/W3012772192",
+    "https://openalex.org/W6763442200",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3035170973",
+    "https://openalex.org/W1985854669",
+    "https://openalex.org/W2788997749",
+    "https://openalex.org/W3012705926",
+    "https://openalex.org/W2945827670",
+    "https://openalex.org/W4224316956",
+    "https://openalex.org/W3034329572",
+    "https://openalex.org/W2583674722",
+    "https://openalex.org/W4210334834",
+    "https://openalex.org/W3005071803",
+    "https://openalex.org/W2899457523",
+    "https://openalex.org/W3173365306",
+    "https://openalex.org/W3133849783",
+    "https://openalex.org/W2913189099",
+    "https://openalex.org/W3033844654",
+    "https://openalex.org/W4309698070",
+    "https://openalex.org/W3021402147",
+    "https://openalex.org/W2965898633",
+    "https://openalex.org/W2043670592",
+    "https://openalex.org/W3204210724",
+    "https://openalex.org/W4212836229",
+    "https://openalex.org/W3035658380",
+    "https://openalex.org/W2962745591",
+    "https://openalex.org/W2723293840",
+    "https://openalex.org/W4318617464",
+    "https://openalex.org/W2997864604",
+    "https://openalex.org/W3155097957",
+    "https://openalex.org/W3108655343",
+    "https://openalex.org/W3101707147",
+    "https://openalex.org/W3102619277",
+    "https://openalex.org/W3101553402",
+    "https://openalex.org/W3100278010",
+    "https://openalex.org/W3106433415",
+    "https://openalex.org/W4294558607",
+    "https://openalex.org/W2964199361",
+    "https://openalex.org/W2963695795",
+    "https://openalex.org/W2964015378",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4297733535"
+  ],
+  "abstract": "Sequential recommendation systems aim to exploit users’ sequential behavior patterns to capture their interaction intentions and improve recommendation accuracy. Existing sequential recommendation methods mainly focus on modeling the items’ chronological relationships in each individual user behavior sequence, which may not be effective in making accurate and robust recommendations. On the one hand, the performance of existing sequential recommendation methods is usually sensitive to the length of a user’s behavior sequence (i.e., the list of a user’s historically interacted items). On the other hand, besides the context information in each individual user behavior sequence, the collaborative information among different users’ behavior sequences is also crucial to make accurate recommendations. However, this kind of information is usually ignored by existing sequential recommendation methods. In this work, we propose a new sequential recommendation framework, which encodes the context information in each individual user behavior sequence as well as the collaborative information among the behavior sequences of different users, through building a local dependency graph for each item. We conduct extensive experiments to compare the proposed model with state-of-the-art sequential recommendation methods on five benchmark datasets. The experimental results demonstrate that the proposed model is able to achieve better recommendation performance than existing methods, by incorporating collaborative information.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8354464769363403
+    },
+    {
+      "name": "Exploit",
+      "score": 0.6470617651939392
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5986329913139343
+    },
+    {
+      "name": "Recommender system",
+      "score": 0.5772386789321899
+    },
+    {
+      "name": "Dependency (UML)",
+      "score": 0.5634804964065552
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.5243033170700073
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4886687099933624
+    },
+    {
+      "name": "Collaborative filtering",
+      "score": 0.4871103763580322
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.4795479476451874
+    },
+    {
+      "name": "Dependency graph",
+      "score": 0.4688647389411926
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4599548578262329
+    },
+    {
+      "name": "Focus (optics)",
+      "score": 0.4204806089401245
+    },
+    {
+      "name": "Graph",
+      "score": 0.4119783639907837
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3965505361557007
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.34234070777893066
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.16897249221801758
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

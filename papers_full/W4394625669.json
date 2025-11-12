@@ -1,104 +1,155 @@
 {
-    "title": "SimA: Simple Softmax-free Attention for Vision Transformers",
-    "url": "https://openalex.org/W4394625669",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3097945487",
-            "name": "Soroush Abbasi Koohpayegani",
-            "affiliations": [
-                "University of California, Davis"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A262901918",
-            "name": "Hamed Pirsiavash",
-            "affiliations": [
-                "University of California, Davis"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6784934235",
-        "https://openalex.org/W6803916128",
-        "https://openalex.org/W3184241125",
-        "https://openalex.org/W3159481202",
-        "https://openalex.org/W2531409750",
-        "https://openalex.org/W4244502008",
-        "https://openalex.org/W6794345597",
-        "https://openalex.org/W3035682985",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2946480111",
-        "https://openalex.org/W4312872526",
-        "https://openalex.org/W3090555870",
-        "https://openalex.org/W4214588794",
-        "https://openalex.org/W4313056180",
-        "https://openalex.org/W4302275239",
-        "https://openalex.org/W3017024317",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W3035524453",
-        "https://openalex.org/W2963150697",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2331143823",
-        "https://openalex.org/W6780069040",
-        "https://openalex.org/W6779709467",
-        "https://openalex.org/W4214642259",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2952122856",
-        "https://openalex.org/W3035083896",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4312443924",
-        "https://openalex.org/W6803508786",
-        "https://openalex.org/W3094444847",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W3098873988",
-        "https://openalex.org/W3034429256",
-        "https://openalex.org/W6796494063",
-        "https://openalex.org/W3120633509",
-        "https://openalex.org/W3211525823",
-        "https://openalex.org/W3112889778",
-        "https://openalex.org/W6795140394",
-        "https://openalex.org/W3163465952",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W4214634256",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3173365702",
-        "https://openalex.org/W4312820606",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W2992308087",
-        "https://openalex.org/W3177265267",
-        "https://openalex.org/W4307823382",
-        "https://openalex.org/W3139633126",
-        "https://openalex.org/W3036061420",
-        "https://openalex.org/W3160566314",
-        "https://openalex.org/W3171206729",
-        "https://openalex.org/W3210646981",
-        "https://openalex.org/W3216726218",
-        "https://openalex.org/W4295689449",
-        "https://openalex.org/W4296565034",
-        "https://openalex.org/W2899663614",
-        "https://openalex.org/W3168124404",
-        "https://openalex.org/W4286910290",
-        "https://openalex.org/W4302011648",
-        "https://openalex.org/W3035060554",
-        "https://openalex.org/W4287630250",
-        "https://openalex.org/W2998108143",
-        "https://openalex.org/W4322716158",
-        "https://openalex.org/W3123615524",
-        "https://openalex.org/W4297775537",
-        "https://openalex.org/W4221154952",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W4288325606",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4225525539",
-        "https://openalex.org/W3157506437",
-        "https://openalex.org/W3033529678",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W4295312788"
-    ],
-    "abstract": "Recently, vision transformers have become very popular. However, deploying them in many applications is computationally expensive partly due to the Softmax layer in the attention block. We introduce a simple but effective, Softmax-free attention block, SimA, which normalizes query and key matrices with simple `1-norm instead of using Softmax layer. Then, the attention block in SimA is a simple multiplication of three matrices, so SimA can dynamically change the ordering of the computation at the test time to achieve linear computation on the number of tokens or the number of channels. We empirically show that SimA applied to three SOTA variations of transformers, DeiT, XCiT, and CvT, results in on-par accuracy compared to the SOTA models, without any need for Softmax layer. Interestingly, changing SimA from multi-head to single-head has only a small effect on the accuracy, which simplifies the attention block further. The code is available here: https://github.com/UCDvision/sima",
-    "full_text": null
+  "title": "SimA: Simple Softmax-free Attention for Vision Transformers",
+  "url": "https://openalex.org/W4394625669",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3097945487",
+      "name": "Soroush Abbasi Koohpayegani",
+      "affiliations": [
+        "University of California, Davis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A262901918",
+      "name": "Hamed Pirsiavash",
+      "affiliations": [
+        "University of California, Davis"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6784934235",
+    "https://openalex.org/W6803916128",
+    "https://openalex.org/W3184241125",
+    "https://openalex.org/W3159481202",
+    "https://openalex.org/W2531409750",
+    "https://openalex.org/W4244502008",
+    "https://openalex.org/W6794345597",
+    "https://openalex.org/W3035682985",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2946480111",
+    "https://openalex.org/W4312872526",
+    "https://openalex.org/W3090555870",
+    "https://openalex.org/W4214588794",
+    "https://openalex.org/W4313056180",
+    "https://openalex.org/W4302275239",
+    "https://openalex.org/W3017024317",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W3035524453",
+    "https://openalex.org/W2963150697",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2331143823",
+    "https://openalex.org/W6780069040",
+    "https://openalex.org/W6779709467",
+    "https://openalex.org/W4214642259",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2952122856",
+    "https://openalex.org/W3035083896",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4312443924",
+    "https://openalex.org/W6803508786",
+    "https://openalex.org/W3094444847",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W3098873988",
+    "https://openalex.org/W3034429256",
+    "https://openalex.org/W6796494063",
+    "https://openalex.org/W3120633509",
+    "https://openalex.org/W3211525823",
+    "https://openalex.org/W3112889778",
+    "https://openalex.org/W6795140394",
+    "https://openalex.org/W3163465952",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W4214634256",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3173365702",
+    "https://openalex.org/W4312820606",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W2992308087",
+    "https://openalex.org/W3177265267",
+    "https://openalex.org/W4307823382",
+    "https://openalex.org/W3139633126",
+    "https://openalex.org/W3036061420",
+    "https://openalex.org/W3160566314",
+    "https://openalex.org/W3171206729",
+    "https://openalex.org/W3210646981",
+    "https://openalex.org/W3216726218",
+    "https://openalex.org/W4295689449",
+    "https://openalex.org/W4296565034",
+    "https://openalex.org/W2899663614",
+    "https://openalex.org/W3168124404",
+    "https://openalex.org/W4286910290",
+    "https://openalex.org/W4302011648",
+    "https://openalex.org/W3035060554",
+    "https://openalex.org/W4287630250",
+    "https://openalex.org/W2998108143",
+    "https://openalex.org/W4322716158",
+    "https://openalex.org/W3123615524",
+    "https://openalex.org/W4297775537",
+    "https://openalex.org/W4221154952",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W4288325606",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4225525539",
+    "https://openalex.org/W3157506437",
+    "https://openalex.org/W3033529678",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W4295312788"
+  ],
+  "abstract": "Recently, vision transformers have become very popular. However, deploying them in many applications is computationally expensive partly due to the Softmax layer in the attention block. We introduce a simple but effective, Softmax-free attention block, SimA, which normalizes query and key matrices with simple `1-norm instead of using Softmax layer. Then, the attention block in SimA is a simple multiplication of three matrices, so SimA can dynamically change the ordering of the computation at the test time to achieve linear computation on the number of tokens or the number of channels. We empirically show that SimA applied to three SOTA variations of transformers, DeiT, XCiT, and CvT, results in on-par accuracy compared to the SOTA models, without any need for Softmax layer. Interestingly, changing SimA from multi-head to single-head has only a small effect on the accuracy, which simplifies the attention block further. The code is available here: https://github.com/UCDvision/sima",
+  "full_text": null,
+  "topic": "Softmax function",
+  "concepts": [
+    {
+      "name": "Softmax function",
+      "score": 0.8585467338562012
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6350732445716858
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4530971348285675
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4466910660266876
+    },
+    {
+      "name": "Simple (philosophy)",
+      "score": 0.4403359889984131
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4138838052749634
+    },
+    {
+      "name": "Engineering",
+      "score": 0.18723049759864807
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.16531327366828918
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.1202687919139862
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.07701811194419861
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,90 +1,149 @@
 {
-    "title": "Retrieval-Augmented Transformer for Image Captioning",
-    "url": "https://openalex.org/W4303444943",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4288729905",
-            "name": "Sarto, Sara",
-            "affiliations": [
-                "University of Modena and Reggio Emilia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3162061486",
-            "name": "Cornia, Marcella",
-            "affiliations": [
-                "University of Modena and Reggio Emilia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2754682117",
-            "name": "Baraldi Lorenzo",
-            "affiliations": [
-                "University of Modena and Reggio Emilia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2748964679",
-            "name": "Cucchiara, Rita",
-            "affiliations": [
-                "University of Modena and Reggio Emilia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4303446960",
-            "name": "Sara Sarto",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2508732373",
-            "name": "Marcella Cornia",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2135711272",
-            "name": "Lorenzo Baraldi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096646689",
-            "name": "Rita Cucchiara",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2745461083",
-        "https://openalex.org/W2963686907",
-        "https://openalex.org/W4312712450",
-        "https://openalex.org/W3043343140",
-        "https://openalex.org/W3174380564",
-        "https://openalex.org/W3112689365",
-        "https://openalex.org/W3088493063",
-        "https://openalex.org/W3034655362",
-        "https://openalex.org/W1947481528",
-        "https://openalex.org/W3203778378",
-        "https://openalex.org/W2986670728",
-        "https://openalex.org/W3156789018",
-        "https://openalex.org/W2998702515",
-        "https://openalex.org/W1905882502",
-        "https://openalex.org/W3198206641",
-        "https://openalex.org/W3016923549",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W3129831491",
-        "https://openalex.org/W2963084599",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W3034733309",
-        "https://openalex.org/W1956340063",
-        "https://openalex.org/W1895577753",
-        "https://openalex.org/W2963101956",
-        "https://openalex.org/W2990069284",
-        "https://openalex.org/W2890531016",
-        "https://openalex.org/W3157700644",
-        "https://openalex.org/W3167939936",
-        "https://openalex.org/W2997591391",
-        "https://openalex.org/W4299301436",
-        "https://openalex.org/W3043501111"
-    ],
-    "abstract": "Image captioning models aim at connecting Vision and Language by providing natural language descriptions of input images. In the past few years, the task has been tackled by learning parametric models and proposing visual feature extraction advancements or by modeling better multi-modal connections. In this paper, we investigate the development of an image captioning approach with a kNN memory, with which knowledge can be retrieved from an external corpus to aid the generation process. Our architecture combines a knowledge retriever based on visual similarities, a differentiable encoder, and a kNN-augmented attention layer to predict tokens based on the past context and on text retrieved from the external memory. Experimental results, conducted on the COCO dataset, demonstrate that employing an explicit external memory can aid the generation process and increase caption quality. Our work opens up new avenues for improving image captioning models at larger scale.",
-    "full_text": null
+  "title": "Retrieval-Augmented Transformer for Image Captioning",
+  "url": "https://openalex.org/W4303444943",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4288729905",
+      "name": "Sarto, Sara",
+      "affiliations": [
+        "University of Modena and Reggio Emilia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3162061486",
+      "name": "Cornia, Marcella",
+      "affiliations": [
+        "University of Modena and Reggio Emilia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2754682117",
+      "name": "Baraldi Lorenzo",
+      "affiliations": [
+        "University of Modena and Reggio Emilia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2748964679",
+      "name": "Cucchiara, Rita",
+      "affiliations": [
+        "University of Modena and Reggio Emilia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4303446960",
+      "name": "Sara Sarto",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2508732373",
+      "name": "Marcella Cornia",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2135711272",
+      "name": "Lorenzo Baraldi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096646689",
+      "name": "Rita Cucchiara",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2745461083",
+    "https://openalex.org/W2963686907",
+    "https://openalex.org/W4312712450",
+    "https://openalex.org/W3043343140",
+    "https://openalex.org/W3174380564",
+    "https://openalex.org/W3112689365",
+    "https://openalex.org/W3088493063",
+    "https://openalex.org/W3034655362",
+    "https://openalex.org/W1947481528",
+    "https://openalex.org/W3203778378",
+    "https://openalex.org/W2986670728",
+    "https://openalex.org/W3156789018",
+    "https://openalex.org/W2998702515",
+    "https://openalex.org/W1905882502",
+    "https://openalex.org/W3198206641",
+    "https://openalex.org/W3016923549",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W2963084599",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W3034733309",
+    "https://openalex.org/W1956340063",
+    "https://openalex.org/W1895577753",
+    "https://openalex.org/W2963101956",
+    "https://openalex.org/W2990069284",
+    "https://openalex.org/W2890531016",
+    "https://openalex.org/W3157700644",
+    "https://openalex.org/W3167939936",
+    "https://openalex.org/W2997591391",
+    "https://openalex.org/W4299301436",
+    "https://openalex.org/W3043501111"
+  ],
+  "abstract": "Image captioning models aim at connecting Vision and Language by providing natural language descriptions of input images. In the past few years, the task has been tackled by learning parametric models and proposing visual feature extraction advancements or by modeling better multi-modal connections. In this paper, we investigate the development of an image captioning approach with a kNN memory, with which knowledge can be retrieved from an external corpus to aid the generation process. Our architecture combines a knowledge retriever based on visual similarities, a differentiable encoder, and a kNN-augmented attention layer to predict tokens based on the past context and on text retrieved from the external memory. Experimental results, conducted on the COCO dataset, demonstrate that employing an explicit external memory can aid the generation process and increase caption quality. Our work opens up new avenues for improving image captioning models at larger scale.",
+  "full_text": null,
+  "topic": "Closed captioning",
+  "concepts": [
+    {
+      "name": "Closed captioning",
+      "score": 0.9536938667297363
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8546568751335144
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5974257588386536
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5956471562385559
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.5373818278312683
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5067885518074036
+    },
+    {
+      "name": "Natural language",
+      "score": 0.496615469455719
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.41148820519447327
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.32430773973464966
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

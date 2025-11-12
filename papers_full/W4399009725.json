@@ -1,82 +1,121 @@
 {
-    "title": "Reducing LLM Hallucination Using Knowledge Distillation: A Case Study with Mistral Large and MMLU Benchmark",
-    "url": "https://openalex.org/W4399009725",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2085557910",
-            "name": "Daniel McDonald",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5098829387",
-            "name": "Rachael Papadopoulos",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5098829388",
-            "name": "Leslie Benningfield",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4378942311",
-        "https://openalex.org/W4379087432",
-        "https://openalex.org/W4320200145",
-        "https://openalex.org/W4380479878",
-        "https://openalex.org/W4382246105",
-        "https://openalex.org/W4389984066",
-        "https://openalex.org/W4392936081",
-        "https://openalex.org/W4386409617",
-        "https://openalex.org/W4395089718",
-        "https://openalex.org/W4383605161",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W4362508231",
-        "https://openalex.org/W4396531244",
-        "https://openalex.org/W4287120901",
-        "https://openalex.org/W4390306161",
-        "https://openalex.org/W4388460984",
-        "https://openalex.org/W4372283945",
-        "https://openalex.org/W4391901128",
-        "https://openalex.org/W4392903948",
-        "https://openalex.org/W4393318216",
-        "https://openalex.org/W4391937163",
-        "https://openalex.org/W4390298466",
-        "https://openalex.org/W4392404520",
-        "https://openalex.org/W4386794666",
-        "https://openalex.org/W4390833320",
-        "https://openalex.org/W4392366668",
-        "https://openalex.org/W4390058985",
-        "https://openalex.org/W4393867173",
-        "https://openalex.org/W4366341216",
-        "https://openalex.org/W4392593764",
-        "https://openalex.org/W4389520047",
-        "https://openalex.org/W4384816574",
-        "https://openalex.org/W4392756413",
-        "https://openalex.org/W4391143839",
-        "https://openalex.org/W3162296828",
-        "https://openalex.org/W4392873995",
-        "https://openalex.org/W4396762959",
-        "https://openalex.org/W4390736801",
-        "https://openalex.org/W4393160204",
-        "https://openalex.org/W4393319504",
-        "https://openalex.org/W4383982659",
-        "https://openalex.org/W4377163995",
-        "https://openalex.org/W4311642023",
-        "https://openalex.org/W4396213476",
-        "https://openalex.org/W4389636360",
-        "https://openalex.org/W4391836235",
-        "https://openalex.org/W3121904249",
-        "https://openalex.org/W4378945634",
-        "https://openalex.org/W4388691793",
-        "https://openalex.org/W4386973901",
-        "https://openalex.org/W4392502007",
-        "https://openalex.org/W4390660070",
-        "https://openalex.org/W4386978369",
-        "https://openalex.org/W4386501849",
-        "https://openalex.org/W4381435827",
-        "https://openalex.org/W4303447594"
-    ],
-    "abstract": "The application of knowledge distillation to reduce hallucination in large language models represents a novel and significant advancement in enhancing the reliability and accuracy of AI-generated content. The research presented demonstrates the efficacy of transferring knowledge from a high-capacity teacher model to a more compact student model, leading to substantial improvements in exact match accuracy and notable reductions in hallucination rates. The methodology involved the use of temperature scaling, intermediate layer matching, and a comprehensive evaluation using the MMLU benchmark, which assessed the model’s performance across a diverse set of tasks. Experimental results indicated that the distilled model outperformed the baseline in generating accurate and contextually appropriate responses while maintaining computational efficiency. The findings underscore the potential of knowledge distillation as a scalable solution for improving the robustness of large language models, making them more applicable to real-world scenarios that demand high factual accuracy. Future research directions include exploring multilingual and multi-modal distillation, integrating reinforcement learning, and developing more refined evaluation metrics to further enhance model performance.",
-    "full_text": null
+  "title": "Reducing LLM Hallucination Using Knowledge Distillation: A Case Study with Mistral Large and MMLU Benchmark",
+  "url": "https://openalex.org/W4399009725",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2085557910",
+      "name": "Daniel McDonald",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5098829387",
+      "name": "Rachael Papadopoulos",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5098829388",
+      "name": "Leslie Benningfield",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4378942311",
+    "https://openalex.org/W4379087432",
+    "https://openalex.org/W4320200145",
+    "https://openalex.org/W4380479878",
+    "https://openalex.org/W4382246105",
+    "https://openalex.org/W4389984066",
+    "https://openalex.org/W4392936081",
+    "https://openalex.org/W4386409617",
+    "https://openalex.org/W4395089718",
+    "https://openalex.org/W4383605161",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W4362508231",
+    "https://openalex.org/W4396531244",
+    "https://openalex.org/W4287120901",
+    "https://openalex.org/W4390306161",
+    "https://openalex.org/W4388460984",
+    "https://openalex.org/W4372283945",
+    "https://openalex.org/W4391901128",
+    "https://openalex.org/W4392903948",
+    "https://openalex.org/W4393318216",
+    "https://openalex.org/W4391937163",
+    "https://openalex.org/W4390298466",
+    "https://openalex.org/W4392404520",
+    "https://openalex.org/W4386794666",
+    "https://openalex.org/W4390833320",
+    "https://openalex.org/W4392366668",
+    "https://openalex.org/W4390058985",
+    "https://openalex.org/W4393867173",
+    "https://openalex.org/W4366341216",
+    "https://openalex.org/W4392593764",
+    "https://openalex.org/W4389520047",
+    "https://openalex.org/W4384816574",
+    "https://openalex.org/W4392756413",
+    "https://openalex.org/W4391143839",
+    "https://openalex.org/W3162296828",
+    "https://openalex.org/W4392873995",
+    "https://openalex.org/W4396762959",
+    "https://openalex.org/W4390736801",
+    "https://openalex.org/W4393160204",
+    "https://openalex.org/W4393319504",
+    "https://openalex.org/W4383982659",
+    "https://openalex.org/W4377163995",
+    "https://openalex.org/W4311642023",
+    "https://openalex.org/W4396213476",
+    "https://openalex.org/W4389636360",
+    "https://openalex.org/W4391836235",
+    "https://openalex.org/W3121904249",
+    "https://openalex.org/W4378945634",
+    "https://openalex.org/W4388691793",
+    "https://openalex.org/W4386973901",
+    "https://openalex.org/W4392502007",
+    "https://openalex.org/W4390660070",
+    "https://openalex.org/W4386978369",
+    "https://openalex.org/W4386501849",
+    "https://openalex.org/W4381435827",
+    "https://openalex.org/W4303447594"
+  ],
+  "abstract": "The application of knowledge distillation to reduce hallucination in large language models represents a novel and significant advancement in enhancing the reliability and accuracy of AI-generated content. The research presented demonstrates the efficacy of transferring knowledge from a high-capacity teacher model to a more compact student model, leading to substantial improvements in exact match accuracy and notable reductions in hallucination rates. The methodology involved the use of temperature scaling, intermediate layer matching, and a comprehensive evaluation using the MMLU benchmark, which assessed the model’s performance across a diverse set of tasks. Experimental results indicated that the distilled model outperformed the baseline in generating accurate and contextually appropriate responses while maintaining computational efficiency. The findings underscore the potential of knowledge distillation as a scalable solution for improving the robustness of large language models, making them more applicable to real-world scenarios that demand high factual accuracy. Future research directions include exploring multilingual and multi-modal distillation, integrating reinforcement learning, and developing more refined evaluation metrics to further enhance model performance.",
+  "full_text": null,
+  "topic": "Benchmark (surveying)",
+  "concepts": [
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.8582028150558472
+    },
+    {
+      "name": "Distillation",
+      "score": 0.4707625210285187
+    },
+    {
+      "name": "Computer science",
+      "score": 0.41379499435424805
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3766016364097595
+    },
+    {
+      "name": "Environmental science",
+      "score": 0.32922446727752686
+    },
+    {
+      "name": "Cartography",
+      "score": 0.1345384120941162
+    },
+    {
+      "name": "Geography",
+      "score": 0.13424897193908691
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.12752705812454224
+    },
+    {
+      "name": "Chromatography",
+      "score": 0.1031579077243805
+    }
+  ]
 }

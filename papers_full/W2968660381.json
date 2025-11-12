@@ -1,103 +1,174 @@
 {
-    "title": "Boosted Transformer for Image Captioning",
-    "url": "https://openalex.org/W2968660381",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2119045575",
-            "name": "Jiangyun Li",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2039693022",
-            "name": "Peng Yao",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2767092598",
-            "name": "Longteng Guo",
-            "affiliations": [
-                "Institute of Automation",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100507903",
-            "name": "Weicun Zhang",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2119045575",
-            "name": "Jiangyun Li",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2039693022",
-            "name": "Peng Yao",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2767092598",
-            "name": "Longteng Guo",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Automation"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100507903",
-            "name": "Weicun Zhang",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2800782462",
-        "https://openalex.org/W2806588667",
-        "https://openalex.org/W6729046916",
-        "https://openalex.org/W2149557440",
-        "https://openalex.org/W2896731359",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2963101956",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W2463955103",
-        "https://openalex.org/W1514535095",
-        "https://openalex.org/W2575842049",
-        "https://openalex.org/W1931639407",
-        "https://openalex.org/W2302086703",
-        "https://openalex.org/W2795151422",
-        "https://openalex.org/W2552161745",
-        "https://openalex.org/W2890531016",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2613718673",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W1905882502",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2154652894",
-        "https://openalex.org/W1956340063",
-        "https://openalex.org/W2133512280",
-        "https://openalex.org/W6725318829",
-        "https://openalex.org/W2745461083",
-        "https://openalex.org/W2963084599",
-        "https://openalex.org/W2950304420",
-        "https://openalex.org/W2754927243",
-        "https://openalex.org/W6766745631",
-        "https://openalex.org/W2887585070",
-        "https://openalex.org/W3105136412",
-        "https://openalex.org/W2506483933"
-    ],
-    "abstract": "Image captioning attempts to generate a description given an image, usually taking Convolutional Neural Network as the encoder to extract the visual features and a sequence model, among which the self-attention mechanism has achieved advanced progress recently, as the decoder to generate descriptions. However, this predominant encoder-decoder architecture has some problems to be solved. On the encoder side, without the semantic concepts, the extracted visual features do not make full use of the image information. On the decoder side, the sequence self-attention only relies on word representations, lacking the guidance of visual information and easily influenced by the language prior. In this paper, we propose a novel boosted transformer model with two attention modules for the above-mentioned problems, i.e., “Concept-Guided Attention” (CGA) and “Vision-Guided Attention” (VGA). Our model utilizes CGA in the encoder, to obtain the boosted visual features by integrating the instance-level concepts into the visual features. In the decoder, we stack VGA, which uses the visual information as a bridge to model internal relationships among the sequences and can be an auxiliary module of sequence self-attention. Quantitative and qualitative results on the Microsoft COCO dataset demonstrate the better performance of our model than the state-of-the-art approaches.",
-    "full_text": null
+  "title": "Boosted Transformer for Image Captioning",
+  "url": "https://openalex.org/W2968660381",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2119045575",
+      "name": "Jiangyun Li",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2039693022",
+      "name": "Peng Yao",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2767092598",
+      "name": "Longteng Guo",
+      "affiliations": [
+        "Institute of Automation",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100507903",
+      "name": "Weicun Zhang",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2119045575",
+      "name": "Jiangyun Li",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2039693022",
+      "name": "Peng Yao",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2767092598",
+      "name": "Longteng Guo",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Automation"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100507903",
+      "name": "Weicun Zhang",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2800782462",
+    "https://openalex.org/W2806588667",
+    "https://openalex.org/W6729046916",
+    "https://openalex.org/W2149557440",
+    "https://openalex.org/W2896731359",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2963101956",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W2463955103",
+    "https://openalex.org/W1514535095",
+    "https://openalex.org/W2575842049",
+    "https://openalex.org/W1931639407",
+    "https://openalex.org/W2302086703",
+    "https://openalex.org/W2795151422",
+    "https://openalex.org/W2552161745",
+    "https://openalex.org/W2890531016",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2613718673",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W1905882502",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2154652894",
+    "https://openalex.org/W1956340063",
+    "https://openalex.org/W2133512280",
+    "https://openalex.org/W6725318829",
+    "https://openalex.org/W2745461083",
+    "https://openalex.org/W2963084599",
+    "https://openalex.org/W2950304420",
+    "https://openalex.org/W2754927243",
+    "https://openalex.org/W6766745631",
+    "https://openalex.org/W2887585070",
+    "https://openalex.org/W3105136412",
+    "https://openalex.org/W2506483933"
+  ],
+  "abstract": "Image captioning attempts to generate a description given an image, usually taking Convolutional Neural Network as the encoder to extract the visual features and a sequence model, among which the self-attention mechanism has achieved advanced progress recently, as the decoder to generate descriptions. However, this predominant encoder-decoder architecture has some problems to be solved. On the encoder side, without the semantic concepts, the extracted visual features do not make full use of the image information. On the decoder side, the sequence self-attention only relies on word representations, lacking the guidance of visual information and easily influenced by the language prior. In this paper, we propose a novel boosted transformer model with two attention modules for the above-mentioned problems, i.e., “Concept-Guided Attention” (CGA) and “Vision-Guided Attention” (VGA). Our model utilizes CGA in the encoder, to obtain the boosted visual features by integrating the instance-level concepts into the visual features. In the decoder, we stack VGA, which uses the visual information as a bridge to model internal relationships among the sequences and can be an auxiliary module of sequence self-attention. Quantitative and qualitative results on the Microsoft COCO dataset demonstrate the better performance of our model than the state-of-the-art approaches.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.799608588218689
+    },
+    {
+      "name": "Closed captioning",
+      "score": 0.7817503213882446
+    },
+    {
+      "name": "Encoder",
+      "score": 0.7608755826950073
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6431005597114563
+    },
+    {
+      "name": "Video Graphics Array",
+      "score": 0.6349680423736572
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5387877225875854
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.41404321789741516
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3416447043418884
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.33462873101234436
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.3304286003112793
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.3243599534034729
+    },
+    {
+      "name": "Programming language",
+      "score": 0.1492663323879242
+    },
+    {
+      "name": "Software",
+      "score": 0.07551488280296326
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

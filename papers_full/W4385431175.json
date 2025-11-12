@@ -1,127 +1,178 @@
 {
-    "title": "FSM-DDTR: End-to-end feedback strategy for multi-objective De Novo drug design using transformers",
-    "url": "https://openalex.org/W4385431175",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2973043896",
-            "name": "Nelson R. C. Monteiro",
-            "affiliations": [
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4317773386",
-            "name": "Tiago O. Pereira",
-            "affiliations": [
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103075961",
-            "name": "Ana Catarina D. Machado",
-            "affiliations": [
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2915882617",
-            "name": "José L. Oliveira",
-            "affiliations": [
-                "University of Aveiro"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120186094",
-            "name": "Maryam Abbasi",
-            "affiliations": [
-                "Polytechnic Institute of Coimbra",
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2079177351",
-            "name": "Joel P. Arrais",
-            "affiliations": [
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2973043896",
-            "name": "Nelson R. C. Monteiro",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4317773386",
-            "name": "Tiago O. Pereira",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5103075961",
-            "name": "Ana Catarina D. Machado",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2915882617",
-            "name": "José L. Oliveira",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2120186094",
-            "name": "Maryam Abbasi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2079177351",
-            "name": "Joel P. Arrais",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2992586577",
-        "https://openalex.org/W6769243733",
-        "https://openalex.org/W2964118901",
-        "https://openalex.org/W2901411193",
-        "https://openalex.org/W2578240541",
-        "https://openalex.org/W2991736596",
-        "https://openalex.org/W2773987374",
-        "https://openalex.org/W2610148085",
-        "https://openalex.org/W2146185088",
-        "https://openalex.org/W4319869596",
-        "https://openalex.org/W2963551522",
-        "https://openalex.org/W2104936679",
-        "https://openalex.org/W3080671367",
-        "https://openalex.org/W2918813360",
-        "https://openalex.org/W2805002767",
-        "https://openalex.org/W2529996553",
-        "https://openalex.org/W2945551948",
-        "https://openalex.org/W6777731474",
-        "https://openalex.org/W3119872582",
-        "https://openalex.org/W3209056694",
-        "https://openalex.org/W3116865743",
-        "https://openalex.org/W6684212943",
-        "https://openalex.org/W2558999090",
-        "https://openalex.org/W2622206241",
-        "https://openalex.org/W2034549041",
-        "https://openalex.org/W2135732933",
-        "https://openalex.org/W4287605869",
-        "https://openalex.org/W4297951436",
-        "https://openalex.org/W4298289240",
-        "https://openalex.org/W2994689640",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2786722833",
-        "https://openalex.org/W2488434336",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W3100751385",
-        "https://openalex.org/W4206495260",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4205185581",
-        "https://openalex.org/W3194210660",
-        "https://openalex.org/W3093934881",
-        "https://openalex.org/W4391602018",
-        "https://openalex.org/W4297796727",
-        "https://openalex.org/W2618625858"
-    ],
-    "abstract": "The design of compounds that target specific biological functions with relevant selectivity is critical in the context of drug discovery, especially due to the polypharmacological nature of most existing drug molecules. In recent years, in silico-based methods combined with deep learning have shown promising results in the de novo drug design challenge, leading to potential leads for biologically interesting targets. However, several of these methods overlook the importance of certain properties, such as validity rate and target selectivity, or simplify the generative process by neglecting the multi-objective nature of the pharmacological space. In this study, we propose a multi-objective Transformer-based architecture to generate drug candidates with desired molecular properties and increased selectivity toward a specific biological target. The framework consists of a Transformer-Decoder Generator that generates novel and valid compounds in the SMILES format notation, a Transformer-Encoder Predictor that estimates the binding affinity toward the biological target, and a feedback loop combined with a multi-objective optimization strategy to rank the generated molecules and condition the generating distribution around the targeted properties. The results demonstrate that the proposed architecture can generate novel and synthesizable small compounds with desired pharmacological properties toward a biologically relevant target. The unbiased Transformer-based Generator achieved superior performance in the novelty rate (97.38%) and comparable performance in terms of internal diversity, uniqueness, and validity against state-of-the-art baselines. The optimization of the unbiased Transformer-based Generator resulted in the generation of molecules exhibiting high binding affinity toward the Adenosine A2A Receptor (AA2AR) and possessing desirable physicochemical properties, where 99.36% of the generated molecules follow Lipinski's rule of five. Furthermore, the implementation of a feedback strategy, in conjunction with a multi-objective algorithm, effectively shifted the distribution of the generated molecules toward optimal values of molecular weight, molecular lipophilicity, topological polar surface area, synthetic accessibility score, and quantitative estimate of drug-likeness, without the necessity of prior training sets comprising molecules endowed with pharmacological properties of interest. Overall, this research study validates the applicability of a Transformer-based architecture in the context of drug design, capable of exploring the vast chemical representation space to generate novel molecules with improved pharmacological properties and target selectivity. The data and source code used in this study are available at: https://github.com/larngroup/FSM-DDTR.",
-    "full_text": null
+  "title": "FSM-DDTR: End-to-end feedback strategy for multi-objective De Novo drug design using transformers",
+  "url": "https://openalex.org/W4385431175",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2973043896",
+      "name": "Nelson R. C. Monteiro",
+      "affiliations": [
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4317773386",
+      "name": "Tiago O. Pereira",
+      "affiliations": [
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103075961",
+      "name": "Ana Catarina D. Machado",
+      "affiliations": [
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2915882617",
+      "name": "José L. Oliveira",
+      "affiliations": [
+        "University of Aveiro"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120186094",
+      "name": "Maryam Abbasi",
+      "affiliations": [
+        "Polytechnic Institute of Coimbra",
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2079177351",
+      "name": "Joel P. Arrais",
+      "affiliations": [
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2973043896",
+      "name": "Nelson R. C. Monteiro",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4317773386",
+      "name": "Tiago O. Pereira",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5103075961",
+      "name": "Ana Catarina D. Machado",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2915882617",
+      "name": "José L. Oliveira",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2120186094",
+      "name": "Maryam Abbasi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2079177351",
+      "name": "Joel P. Arrais",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2992586577",
+    "https://openalex.org/W6769243733",
+    "https://openalex.org/W2964118901",
+    "https://openalex.org/W2901411193",
+    "https://openalex.org/W2578240541",
+    "https://openalex.org/W2991736596",
+    "https://openalex.org/W2773987374",
+    "https://openalex.org/W2610148085",
+    "https://openalex.org/W2146185088",
+    "https://openalex.org/W4319869596",
+    "https://openalex.org/W2963551522",
+    "https://openalex.org/W2104936679",
+    "https://openalex.org/W3080671367",
+    "https://openalex.org/W2918813360",
+    "https://openalex.org/W2805002767",
+    "https://openalex.org/W2529996553",
+    "https://openalex.org/W2945551948",
+    "https://openalex.org/W6777731474",
+    "https://openalex.org/W3119872582",
+    "https://openalex.org/W3209056694",
+    "https://openalex.org/W3116865743",
+    "https://openalex.org/W6684212943",
+    "https://openalex.org/W2558999090",
+    "https://openalex.org/W2622206241",
+    "https://openalex.org/W2034549041",
+    "https://openalex.org/W2135732933",
+    "https://openalex.org/W4287605869",
+    "https://openalex.org/W4297951436",
+    "https://openalex.org/W4298289240",
+    "https://openalex.org/W2994689640",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2786722833",
+    "https://openalex.org/W2488434336",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W3100751385",
+    "https://openalex.org/W4206495260",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4205185581",
+    "https://openalex.org/W3194210660",
+    "https://openalex.org/W3093934881",
+    "https://openalex.org/W4391602018",
+    "https://openalex.org/W4297796727",
+    "https://openalex.org/W2618625858"
+  ],
+  "abstract": "The design of compounds that target specific biological functions with relevant selectivity is critical in the context of drug discovery, especially due to the polypharmacological nature of most existing drug molecules. In recent years, in silico-based methods combined with deep learning have shown promising results in the de novo drug design challenge, leading to potential leads for biologically interesting targets. However, several of these methods overlook the importance of certain properties, such as validity rate and target selectivity, or simplify the generative process by neglecting the multi-objective nature of the pharmacological space. In this study, we propose a multi-objective Transformer-based architecture to generate drug candidates with desired molecular properties and increased selectivity toward a specific biological target. The framework consists of a Transformer-Decoder Generator that generates novel and valid compounds in the SMILES format notation, a Transformer-Encoder Predictor that estimates the binding affinity toward the biological target, and a feedback loop combined with a multi-objective optimization strategy to rank the generated molecules and condition the generating distribution around the targeted properties. The results demonstrate that the proposed architecture can generate novel and synthesizable small compounds with desired pharmacological properties toward a biologically relevant target. The unbiased Transformer-based Generator achieved superior performance in the novelty rate (97.38%) and comparable performance in terms of internal diversity, uniqueness, and validity against state-of-the-art baselines. The optimization of the unbiased Transformer-based Generator resulted in the generation of molecules exhibiting high binding affinity toward the Adenosine A2A Receptor (AA2AR) and possessing desirable physicochemical properties, where 99.36% of the generated molecules follow Lipinski's rule of five. Furthermore, the implementation of a feedback strategy, in conjunction with a multi-objective algorithm, effectively shifted the distribution of the generated molecules toward optimal values of molecular weight, molecular lipophilicity, topological polar surface area, synthetic accessibility score, and quantitative estimate of drug-likeness, without the necessity of prior training sets comprising molecules endowed with pharmacological properties of interest. Overall, this research study validates the applicability of a Transformer-based architecture in the context of drug design, capable of exploring the vast chemical representation space to generate novel molecules with improved pharmacological properties and target selectivity. The data and source code used in this study are available at: https://github.com/larngroup/FSM-DDTR.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6781997680664062
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5225000977516174
+    },
+    {
+      "name": "Synthetic biology",
+      "score": 0.4246673583984375
+    },
+    {
+      "name": "Novelty",
+      "score": 0.4125722348690033
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.37430524826049805
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.28064584732055664
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11538484692573547
+    },
+    {
+      "name": "Biology",
+      "score": 0.11150375008583069
+    },
+    {
+      "name": "Theology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

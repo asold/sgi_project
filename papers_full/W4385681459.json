@@ -1,50 +1,153 @@
 {
-    "title": "SAPIEN: Affective Virtual Agents Powered by Large Language Models",
-    "url": "https://openalex.org/W4385681459",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2908989527",
-            "name": "Hasan Masum",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2182086280",
-            "name": "Özel Cengiz",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Potter, Sammy",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4202073166",
-            "name": "Hoque, Ehsan",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2145421863",
-        "https://openalex.org/W4366341216",
-        "https://openalex.org/W3160523328",
-        "https://openalex.org/W3127277838",
-        "https://openalex.org/W3160919572",
-        "https://openalex.org/W4288079512",
-        "https://openalex.org/W2960124774",
-        "https://openalex.org/W4226278401",
-        "https://openalex.org/W2150262620",
-        "https://openalex.org/W4287212350",
-        "https://openalex.org/W4288072840",
-        "https://openalex.org/W1878289447",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4330336443",
-        "https://openalex.org/W2916979304",
-        "https://openalex.org/W3172617364",
-        "https://openalex.org/W2532431875",
-        "https://openalex.org/W2185604715",
-        "https://openalex.org/W2608207374"
-    ],
-    "abstract": "In this demo paper, we introduce SAPIEN, a platform for high-fidelity virtual agents driven by large language models that can hold open domain conversations with users in 13 different languages, and display emotions through facial expressions and voice. The platform allows users to customize their virtual agent's personality, background, and conversation premise, thus providing a rich, immersive interaction experience. Furthermore, after the virtual meeting, the user can choose to get the conversation analyzed and receive actionable feedback on their communication skills. This paper illustrates an overview of the platform and discusses the various application domains of this technology, ranging from entertainment to mental health, communication training, language learning, education, healthcare, and beyond. Additionally, we consider the ethical implications of such realistic virtual agent representations and the potential challenges in ensuring responsible use.",
-    "full_text": "2023 11th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW)\nSAPIEN: Affective Virtual Agents Powered by\nLarge Language Models*\nMasum Hasan∗, Cengiz Ozel †, Sammy Potter ‡ and Ehsan Hoque §\nDepartment of Computer Science, University of Rochester\nRochester, NY , United States\nEmail: {∗m.hasan@, †cozel@cs., ‡spotter14@u., §mehoque@cs.} rochester.edu\nAbstract—In this demo paper, we introduce SAPIEN, a plat-\nform for high-fidelity virtual agents driven by large language\nmodels that can hold open domain conversations with users\nin 13 different languages, and display emotions through facial\nexpressions and voice. The platform allows users to customize\ntheir virtual agent’s personality, background, and conversation\npremise, thus providing a rich, immersive interaction experience.\nFurthermore, after the virtual meeting, the user can choose to\nget the conversation analyzed and receive actionable feedback on\ntheir communication skills. This paper illustrates an overview of\nthe platform and discusses the various application domains of this\ntechnology, ranging from entertainment to mental health, com-\nmunication training, language learning, education, healthcare,\nand beyond. Additionally, we consider the ethical implications\nof such realistic virtual agent representations and the potential\nchallenges in ensuring responsible use.\nIndex Terms—Virtual Avatars, Virtual Agents, Affective AI,\nLarge Language Models\nI. I NTRODUCTION\nAllowing a user to define the traits and characteristics of a\nvirtual agent, carrying a dynamic conversation, and receiving\nautomated feedback has been an open-ended research problem\nfor many years [1]. The rapid advancement of Large Language\nModels (LLMs) in recent years has enabled possibilities in\ndesigning user experiences that didn’t exist before [2]–[4]. In\nthis demo, we present Synthetic Anthropomorphic Personal\nInteraction ENgine (SAPIEN), a platform for LLM-powered\nhigh-fidelity virtual agents that can engage in real-time open-\ndomain conversations, while also expressing emotions through\nvoice and facial expressions.\nOne of the notable features of SAPIEN is its extensive\nrange of customization options, allowing users to engage in\nimmersive and meaningful interactions. Users can choose from\na wide range of virtual agent avatars that reflect a diverse\narray of ages, gender, and ethnicities. Going further, users can\nselect the desired personality, background, and conversational\ncontext of a virtual agent, creating an experience tailored to\ntheir specific needs or preferences.\nOnce a virtual agent is selected and its traits are defined,\nusers can begin a real-time video call interaction with it.\nWith the help of the large language model, the virtual agents\ndynamically adjust their emotional state, vocal, and facial\nexpressions, showcasing a spectrum of seven basic emotions.\nNSF and NSF REU IIS-1750380, Seedling from Goergen Institute for Data\nScience (GIDS), and Gordon and Moore Foundation.\nFig. 1. Face-to-face video call interaction with SAPIEN TM Virtual Agent\nSAPIEN leverages state-of-the-art models in Speech-to-Text\n[5], [6], Text-to-Speech [7]–[9], and large language modeling\n[2], [4], [10]–[14]. The virtual agents fluently speak thirteen\ndifferent languages and counting, making it accessible across\na global user base.\nUpon finishing a video call with the virtual agents, a user\ncan choose to get their conversation analyzed for personalized\nfeedback. The system provides AI-generated feedback to the\nuser based on the user’s goal. The user can decide the topic of\nthe feedback to suit their learning goal and repeat the conver-\nsation until the learning goal is met. The inherent flexibility\nof the virtual agent persona and the feedback could make it\npotentially applicable to a myriad of applications, including\ncommunication training, language learning, and professional\napplications like healthcare, sales, and leadership training.\nWith the rising technical capabilities of LLMs, there is\nexpected to be a drastic shift in the labor market in the coming\nyears [15]. According to recent studies [15], the importance\nof the job market is going to shift from hard technical skills to\nsoft “human” skills. In this changing landscape, SAPIEN can\nhelp people adapt and cope, by helping them cultivate human\nskills with the help of AI.\nII. S YSTEM DESCRIPTION\nThe overall working of SAPIEN Virtual Agents, referred to\nas ‘Bot’ for simplicity, is represented in Figure 2. The SAPIEN\nsystem is initialized when a user’s speech utterance is captured\nand transmitted to our back-end server for processing. This\nutterance is transcribed into text by a high-precision Speech\n979-8-3503-2745-8/23/$31.00 ©2023 IEEE\narXiv:2308.03022v1  [cs.HC]  6 Aug 2023\nPrevious\nHistory\nUser\nFacial Expression\nMotion Capture\nDatabase\nSystem\nGuardrails\nBlendshapes\nFront End\n(Client Side)\nBack End\n(Server Side)\nWeb Browser\n User Utterance \nAudio\nStart\nUser defined\nparameters\n User Utterance \nText\n Bot Response \nText\n Bot Response \nAudio\n3D Game Engine\nSpeech to Text\nText to Speech\nLarge Language\nModel\n Bot Emotion \nAutoregressive\nLLM\nBot Response\nAudio\nFig. 2. A single turn conversation flow in SAPIEN. User utterance is transcribed and sent to LLM. The LLM response is spoken out by the virtual agent.\nto Text (STT) model [5], [6], [16], [17] and subsequently\nprocessed by an autoregressive Large Language Model (LLM)\nfine-tuned for instruction following [3], [4], [10]–[14], [18].\nThe LLM is conditioned on user-defined parameters like\npersonality traits, conversation premise, user information, and\nprevious conversation history. To prevent inappropriate or of-\nfensive behavior, the LLM also adheres to system guardrails. A\nnotable aspect of the LLM is also predicting the virtual agent’s\nemotional state. Conditioning on the user-defined parameters,\nsystem guardrails, and previous conversation history, the LLM\nis instructed to generate the bot’s response, alongside the\nappropriate emotional state of the bot from the following list:\nNeutral, Happy, Sad, Angry, Surprised, Afraid, and Disgusted.\nThis emotional state, along with the text response, is used\nto generate an audio file of the bot’s response using a Text\nto Speech (TTS) model. Concurrently, the emotional state\ntriggers the selection of a corresponding facial expression\nfrom our pre-recorded motion capture database. This facial\nexpression data, in the form of blendshapes, is passed to a 3D\ngame engine to animate the virtual agent.\nThe resultant animation and generated audio are synchro-\nnized, forming a coherent, visually expressive response from\nthe virtual agent. This combined output is streamed to the\nuser’s web browser in near real-time, allowing for an immer-\nsive experience close to an actual video call.\nOnce the conversation is over, the user can opt-in to receive\nfeedback on their conversation. An LLM is instructed to\nanalyze the conversation transcript based on the user’s goal,\nidentify strengths and weaknesses on the user’s communica-\ntion skill, and generate actionable feedback for the user.\nIII. A PPLICATIONS\nThe customizability of the conversation scenario, dynamic\ndialogues, and the feedback system combined make SAPIEN\nuniquely suitable for a variety of communication training\npurposes. For example, the system can be used as a com-\nmunication practice tool for people with social anxiety or\nneurodiversity [19], [20], public speaking [21], job interviews\n[22], helping elderly with social skills [23], and even speed\ndating [24]. It also has an excellent potential for professional\napplications. Such as training doctors in bedside manners or\ndelivering difficult news to their patients [25], personalized\ntraining for leadership, business negotiation, sales, marketing,\netc. The multilingual ability makes the platform a powerful\ntool for language learners. Furthermore, the non-judgemental,\nlow stake, repeatable conversations with virtual agents make\nthe platform a helpful tool for anyone to roleplay any difficult\ninterpersonal scenario in a personal or professional setup.\nIV. T HE DEMO\nOur platform is hosted in the cloud and accessible from\nany part of the world. During the conference demo, we wish\nto have the visitors live interact with SAPIEN virtual agents\nin a variety of interesting scenarios and receive immediate\nfeedback on their communication skills. We will also prepare\nsome pre-recorded user interaction videos to demonstrate any\nrare or difficult cases or as a backup for technical failures.\nETHICAL IMPACT STATEMENT\nSAPIEN is designed to augment and enrich our capacity for\ncommunication, empathy, and understanding, but not substi-\ntute human connections. To safeguard against potential emo-\ntional dependencies on the system, SAPIEN does not retain\nthe memory of previous interactions, and the conversations\nare limited to a 10 minutes window with a warning at the 8-\nminute mark. To prevent the practice of bullying or abusive\nbehaviors using our system, we enabled our virtual agents to\nend the video call if the user repeatedly displays aggressive\nor offensive behavior. We are continuously investigating more\nsafety and ethical issues regarding the use of the system.\nREFERENCES\n[1] M. E. Hoque and R. W. Picard, “Rich nonverbal sensing technology for\nautomated social skills training,” Computer, vol. 47, no. 4, pp. 28–35,\n2014.\n[2] OpenAI, “Introducing chatgpt,” https://openai.com/blog/chatgpt, (Ac-\ncessed on 06/22/2023).\n[3] “Anthropic — introducing claude,” https://www.anthropic.com/index/\nintroducing-claude, (Accessed on 06/22/2023).\n[4] G. AI, “An important next step on our ai journey,” 2023. [Online]. Avail-\nable: https://blog.google/technology/ai/bard-google-ai-search-updates/\n[5] J. Li, “Recent advances in end-to-end automatic\nspeech recognition,” APSIPA Transactions on Sig-\nnal and Information Processing , April 2022. [On-\nline]. Available: https://www.microsoft.com/en-us/research/publication/\nrecent-advances-in-end-to-end-automatic-speech-recognition/\n[6] W. Xiong, L. Wu, F. Alleva, J. Droppo, X. Huang, and A. Stolcke, “The\nmicrosoft 2017 conversational speech recognition system,” in2018 IEEE\ninternational conference on acoustics, speech and signal processing\n(ICASSP). IEEE, 2018, pp. 5934–5938.\n[7] Y . Wang, R. Skerry-Ryan, D. Stanton, Y . Wu, R. J. Weiss, N. Jaitly,\nZ. Yang, Y . Xiao, Z. Chen, S. Bengio et al., “Tacotron: Towards end-\nto-end speech synthesis,” arXiv preprint arXiv:1703.10135, 2017.\n[8] R. Luo, X. Tan, R. Wang, T. Qin, J. Li, S. Zhao, E. Chen, and T.-Y . Liu,\n“Lightspeech: Lightweight and fast text to speech with neural architec-\nture search,” in ICASSP 2021-2021 IEEE International Conference on\nAcoustics, Speech and Signal Processing (ICASSP). IEEE, 2021, pp.\n5699–5703.\n[9] S.-g. Lee, H. Kim, C. Shin, X. Tan, C. Liu, Q. Meng, T. Qin, W. Chen,\nS. Yoon, and T.-Y . Liu, “Priorgrad: Improving conditional denoising\ndiffusion models with data-driven adaptive prior,” ICLR, 2022.\n[10] R. Taori, I. Gulrajani, T. Zhang, Y . Dubois, X. Li, C. Guestrin, P. Liang,\nand T. B. Hashimoto, “Stanford alpaca: An instruction-following llama\nmodel,” https://github.com/tatsu-lab/stanford alpaca, 2023.\n[11] T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal,\nA. Neelakantan, P. Shyam, G. Sastry, A. Askell et al., “Language mod-\nels are few-shot learners,” Advances in neural information processing\nsystems, vol. 33, pp. 1877–1901, 2020.\n[12] OpenAI, “Gpt-4 technical report,” 2023.\n[13] L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin,\nC. Zhang, S. Agarwal, K. Slama, A. Ray et al., “Training language\nmodels to follow instructions with human feedback,”Advances in Neural\nInformation Processing Systems, vol. 35, pp. 27 730–27 744, 2022.\n[14] A. K ¨opf, Y . Kilcher, D. von R ¨utte, S. Anagnostidis, Z.-R. Tam,\nK. Stevens, A. Barhoum, N. M. Duc, O. Stanley, R. Nagyfi et al., “Ope-\nnassistant conversations–democratizing large language model align-\nment,” arXiv preprint arXiv:2304.07327, 2023.\n[15] T. Eloundou, S. Manning, P. Mishkin, and D. Rock, “Gpts are gpts:\nAn early look at the labor market impact potential of large language\nmodels,” arXiv preprint arXiv:2303.10130, 2023.\n[16] Y . Leng, X. Tan, L. Zhu, J. Xu, R. Luo, L. Liu, T. Qin, X. Li, E. Lin,\nand T.-Y . Liu, “Fastcorrect: Fast error correction with edit alignment\nfor automatic speech recognition,” Advances in Neural Information\nProcessing Systems, vol. 34, pp. 21 708–21 719, 2021.\n[17] W. Hou, J. Wang, X. Tan, T. Qin, and T. Shinozaki, “Cross-domain\nspeech recognition with unsupervised character-level distribution match-\ning,” INTERSPEECH, 2021.\n[18] W.-L. Chiang, Z. Li, Z. Lin, Y . Sheng, Z. Wu, H. Zhang,\nL. Zheng, S. Zhuang, Y . Zhuang, J. E. Gonzalez, I. Stoica,\nand E. P. Xing, “Vicuna: An open-source chatbot impressing gpt-\n4 with 90%* chatgpt quality,” March 2023. [Online]. Available:\nhttps://lmsys.org/blog/2023-03-30-vicuna/\n[19] M. R. Ali, S. Z. Razavi, R. Langevin, A. Al Mamun, B. Kane,\nR. Rawassizadeh, L. K. Schubert, and E. Hoque, “A virtual\nconversational agent for teens with autism spectrum disorder:\nExperimental results and design lessons,” in Proceedings of the 20th\nACM International Conference on Intelligent Virtual Agents, ser. IV A\n’20. New York, NY , USA: Association for Computing Machinery,\n2020. [Online]. Available: https://doi.org/10.1145/3383652.3423900\n[20] S. Z. Razavi, M. R. Ali, T. H. Smith, L. K. Schubert, and M. E.\nHoque, “The lissa virtual human and asd teens: An overview of initial\nexperiments,” in Intelligent Virtual Agents, D. Traum, W. Swartout,\nP. Khooshabeh, S. Kopp, S. Scherer, and A. Leuski, Eds. Cham:\nSpringer International Publishing, 2016, pp. 460–463.\n[21] M. Fung, Y . Jin, R. Zhao, and M. E. Hoque, “Roc speak: Semi-\nautomated personalized feedback on nonverbal behavior from recorded\nvideos,” in Proceedings of the 2015 ACM International Joint Conference\non Pervasive and Ubiquitous Computing, ser. UbiComp ’15. New York,\nNY , USA: Association for Computing Machinery, 2015, p. 1167–1178.\n[Online]. Available: https://doi.org/10.1145/2750858.2804265\n[22] M. E. Hoque, M. Courgeon, J.-C. Martin, B. Mutlu, and R. W. Picard,\n“Mach: My automated conversation coach,” in Proceedings of the\n2013 ACM International Joint Conference on Pervasive and Ubiquitous\nComputing, ser. UbiComp ’13. New York, NY , USA: Association\nfor Computing Machinery, 2013, p. 697–706. [Online]. Available:\nhttps://doi.org/10.1145/2493432.2493502\n[23] S. Z. Razavi, L. K. Schubert, K. van Orden, M. R. Ali, B. Kane,\nand E. Hoque, “Discourse behavior of older adults interacting\nwith a dialogue agent competent in multiple topics,” ACM Trans.\nInteract. Intell. Syst., vol. 12, no. 2, jul 2022. [Online]. Available:\nhttps://doi.org/10.1145/3484510\n[24] M. R. Ali, D. Crasta, L. Jin, A. Baretto, J. Pachter, R. D. Rogge,\nand M. E. Hoque, “Lissa — live interactive social skill assistance,” in\n2015 International Conference on Affective Computing and Intelligent\nInteraction (ACII), 2015, pp. 173–179.\n[25] M. R. Ali, T. Sen, B. Kane, S. Bose, T. M. Carroll, R. Epstein,\nL. Schubert, and E. Hoque, “Novel computational linguistic measures,\ndialogue system and the development of sophie: Standardized online\npatient for healthcare interaction education,” IEEE Trans. Affect.\nComput., vol. 14, no. 1, p. 223–235, jan 2023. [Online]. Available:\nhttps://doi.org/10.1109/TAFFC.2021.3054717"
+  "title": "SAPIEN: Affective Virtual Agents Powered by Large Language Models",
+  "url": "https://openalex.org/W4385681459",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2908989527",
+      "name": "Hasan Masum",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2182086280",
+      "name": "Özel Cengiz",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Potter, Sammy",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4202073166",
+      "name": "Hoque, Ehsan",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2145421863",
+    "https://openalex.org/W4366341216",
+    "https://openalex.org/W3160523328",
+    "https://openalex.org/W3127277838",
+    "https://openalex.org/W3160919572",
+    "https://openalex.org/W4288079512",
+    "https://openalex.org/W2960124774",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W2150262620",
+    "https://openalex.org/W4287212350",
+    "https://openalex.org/W4288072840",
+    "https://openalex.org/W1878289447",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4330336443",
+    "https://openalex.org/W2916979304",
+    "https://openalex.org/W3172617364",
+    "https://openalex.org/W2532431875",
+    "https://openalex.org/W2185604715",
+    "https://openalex.org/W2608207374"
+  ],
+  "abstract": "In this demo paper, we introduce SAPIEN, a platform for high-fidelity virtual agents driven by large language models that can hold open domain conversations with users in 13 different languages, and display emotions through facial expressions and voice. The platform allows users to customize their virtual agent's personality, background, and conversation premise, thus providing a rich, immersive interaction experience. Furthermore, after the virtual meeting, the user can choose to get the conversation analyzed and receive actionable feedback on their communication skills. This paper illustrates an overview of the platform and discusses the various application domains of this technology, ranging from entertainment to mental health, communication training, language learning, education, healthcare, and beyond. Additionally, we consider the ethical implications of such realistic virtual agent representations and the potential challenges in ensuring responsible use.",
+  "full_text": "2023 11th International Conference on Affective Computing and Intelligent Interaction Workshops and Demos (ACIIW)\nSAPIEN: Affective Virtual Agents Powered by\nLarge Language Models*\nMasum Hasan∗, Cengiz Ozel †, Sammy Potter ‡ and Ehsan Hoque §\nDepartment of Computer Science, University of Rochester\nRochester, NY , United States\nEmail: {∗m.hasan@, †cozel@cs., ‡spotter14@u., §mehoque@cs.} rochester.edu\nAbstract—In this demo paper, we introduce SAPIEN, a plat-\nform for high-fidelity virtual agents driven by large language\nmodels that can hold open domain conversations with users\nin 13 different languages, and display emotions through facial\nexpressions and voice. The platform allows users to customize\ntheir virtual agent’s personality, background, and conversation\npremise, thus providing a rich, immersive interaction experience.\nFurthermore, after the virtual meeting, the user can choose to\nget the conversation analyzed and receive actionable feedback on\ntheir communication skills. This paper illustrates an overview of\nthe platform and discusses the various application domains of this\ntechnology, ranging from entertainment to mental health, com-\nmunication training, language learning, education, healthcare,\nand beyond. Additionally, we consider the ethical implications\nof such realistic virtual agent representations and the potential\nchallenges in ensuring responsible use.\nIndex Terms—Virtual Avatars, Virtual Agents, Affective AI,\nLarge Language Models\nI. I NTRODUCTION\nAllowing a user to define the traits and characteristics of a\nvirtual agent, carrying a dynamic conversation, and receiving\nautomated feedback has been an open-ended research problem\nfor many years [1]. The rapid advancement of Large Language\nModels (LLMs) in recent years has enabled possibilities in\ndesigning user experiences that didn’t exist before [2]–[4]. In\nthis demo, we present Synthetic Anthropomorphic Personal\nInteraction ENgine (SAPIEN), a platform for LLM-powered\nhigh-fidelity virtual agents that can engage in real-time open-\ndomain conversations, while also expressing emotions through\nvoice and facial expressions.\nOne of the notable features of SAPIEN is its extensive\nrange of customization options, allowing users to engage in\nimmersive and meaningful interactions. Users can choose from\na wide range of virtual agent avatars that reflect a diverse\narray of ages, gender, and ethnicities. Going further, users can\nselect the desired personality, background, and conversational\ncontext of a virtual agent, creating an experience tailored to\ntheir specific needs or preferences.\nOnce a virtual agent is selected and its traits are defined,\nusers can begin a real-time video call interaction with it.\nWith the help of the large language model, the virtual agents\ndynamically adjust their emotional state, vocal, and facial\nexpressions, showcasing a spectrum of seven basic emotions.\nNSF and NSF REU IIS-1750380, Seedling from Goergen Institute for Data\nScience (GIDS), and Gordon and Moore Foundation.\nFig. 1. Face-to-face video call interaction with SAPIEN TM Virtual Agent\nSAPIEN leverages state-of-the-art models in Speech-to-Text\n[5], [6], Text-to-Speech [7]–[9], and large language modeling\n[2], [4], [10]–[14]. The virtual agents fluently speak thirteen\ndifferent languages and counting, making it accessible across\na global user base.\nUpon finishing a video call with the virtual agents, a user\ncan choose to get their conversation analyzed for personalized\nfeedback. The system provides AI-generated feedback to the\nuser based on the user’s goal. The user can decide the topic of\nthe feedback to suit their learning goal and repeat the conver-\nsation until the learning goal is met. The inherent flexibility\nof the virtual agent persona and the feedback could make it\npotentially applicable to a myriad of applications, including\ncommunication training, language learning, and professional\napplications like healthcare, sales, and leadership training.\nWith the rising technical capabilities of LLMs, there is\nexpected to be a drastic shift in the labor market in the coming\nyears [15]. According to recent studies [15], the importance\nof the job market is going to shift from hard technical skills to\nsoft “human” skills. In this changing landscape, SAPIEN can\nhelp people adapt and cope, by helping them cultivate human\nskills with the help of AI.\nII. S YSTEM DESCRIPTION\nThe overall working of SAPIEN Virtual Agents, referred to\nas ‘Bot’ for simplicity, is represented in Figure 2. The SAPIEN\nsystem is initialized when a user’s speech utterance is captured\nand transmitted to our back-end server for processing. This\nutterance is transcribed into text by a high-precision Speech\n979-8-3503-2745-8/23/$31.00 ©2023 IEEE\narXiv:2308.03022v1  [cs.HC]  6 Aug 2023\nPrevious\nHistory\nUser\nFacial Expression\nMotion Capture\nDatabase\nSystem\nGuardrails\nBlendshapes\nFront End\n(Client Side)\nBack End\n(Server Side)\nWeb Browser\n User Utterance \nAudio\nStart\nUser defined\nparameters\n User Utterance \nText\n Bot Response \nText\n Bot Response \nAudio\n3D Game Engine\nSpeech to Text\nText to Speech\nLarge Language\nModel\n Bot Emotion \nAutoregressive\nLLM\nBot Response\nAudio\nFig. 2. A single turn conversation flow in SAPIEN. User utterance is transcribed and sent to LLM. The LLM response is spoken out by the virtual agent.\nto Text (STT) model [5], [6], [16], [17] and subsequently\nprocessed by an autoregressive Large Language Model (LLM)\nfine-tuned for instruction following [3], [4], [10]–[14], [18].\nThe LLM is conditioned on user-defined parameters like\npersonality traits, conversation premise, user information, and\nprevious conversation history. To prevent inappropriate or of-\nfensive behavior, the LLM also adheres to system guardrails. A\nnotable aspect of the LLM is also predicting the virtual agent’s\nemotional state. Conditioning on the user-defined parameters,\nsystem guardrails, and previous conversation history, the LLM\nis instructed to generate the bot’s response, alongside the\nappropriate emotional state of the bot from the following list:\nNeutral, Happy, Sad, Angry, Surprised, Afraid, and Disgusted.\nThis emotional state, along with the text response, is used\nto generate an audio file of the bot’s response using a Text\nto Speech (TTS) model. Concurrently, the emotional state\ntriggers the selection of a corresponding facial expression\nfrom our pre-recorded motion capture database. This facial\nexpression data, in the form of blendshapes, is passed to a 3D\ngame engine to animate the virtual agent.\nThe resultant animation and generated audio are synchro-\nnized, forming a coherent, visually expressive response from\nthe virtual agent. This combined output is streamed to the\nuser’s web browser in near real-time, allowing for an immer-\nsive experience close to an actual video call.\nOnce the conversation is over, the user can opt-in to receive\nfeedback on their conversation. An LLM is instructed to\nanalyze the conversation transcript based on the user’s goal,\nidentify strengths and weaknesses on the user’s communica-\ntion skill, and generate actionable feedback for the user.\nIII. A PPLICATIONS\nThe customizability of the conversation scenario, dynamic\ndialogues, and the feedback system combined make SAPIEN\nuniquely suitable for a variety of communication training\npurposes. For example, the system can be used as a com-\nmunication practice tool for people with social anxiety or\nneurodiversity [19], [20], public speaking [21], job interviews\n[22], helping elderly with social skills [23], and even speed\ndating [24]. It also has an excellent potential for professional\napplications. Such as training doctors in bedside manners or\ndelivering difficult news to their patients [25], personalized\ntraining for leadership, business negotiation, sales, marketing,\netc. The multilingual ability makes the platform a powerful\ntool for language learners. Furthermore, the non-judgemental,\nlow stake, repeatable conversations with virtual agents make\nthe platform a helpful tool for anyone to roleplay any difficult\ninterpersonal scenario in a personal or professional setup.\nIV. T HE DEMO\nOur platform is hosted in the cloud and accessible from\nany part of the world. During the conference demo, we wish\nto have the visitors live interact with SAPIEN virtual agents\nin a variety of interesting scenarios and receive immediate\nfeedback on their communication skills. We will also prepare\nsome pre-recorded user interaction videos to demonstrate any\nrare or difficult cases or as a backup for technical failures.\nETHICAL IMPACT STATEMENT\nSAPIEN is designed to augment and enrich our capacity for\ncommunication, empathy, and understanding, but not substi-\ntute human connections. To safeguard against potential emo-\ntional dependencies on the system, SAPIEN does not retain\nthe memory of previous interactions, and the conversations\nare limited to a 10 minutes window with a warning at the 8-\nminute mark. To prevent the practice of bullying or abusive\nbehaviors using our system, we enabled our virtual agents to\nend the video call if the user repeatedly displays aggressive\nor offensive behavior. We are continuously investigating more\nsafety and ethical issues regarding the use of the system.\nREFERENCES\n[1] M. E. Hoque and R. W. Picard, “Rich nonverbal sensing technology for\nautomated social skills training,” Computer, vol. 47, no. 4, pp. 28–35,\n2014.\n[2] OpenAI, “Introducing chatgpt,” https://openai.com/blog/chatgpt, (Ac-\ncessed on 06/22/2023).\n[3] “Anthropic — introducing claude,” https://www.anthropic.com/index/\nintroducing-claude, (Accessed on 06/22/2023).\n[4] G. AI, “An important next step on our ai journey,” 2023. [Online]. Avail-\nable: https://blog.google/technology/ai/bard-google-ai-search-updates/\n[5] J. Li, “Recent advances in end-to-end automatic\nspeech recognition,” APSIPA Transactions on Sig-\nnal and Information Processing , April 2022. [On-\nline]. Available: https://www.microsoft.com/en-us/research/publication/\nrecent-advances-in-end-to-end-automatic-speech-recognition/\n[6] W. Xiong, L. Wu, F. Alleva, J. Droppo, X. Huang, and A. Stolcke, “The\nmicrosoft 2017 conversational speech recognition system,” in2018 IEEE\ninternational conference on acoustics, speech and signal processing\n(ICASSP). IEEE, 2018, pp. 5934–5938.\n[7] Y . Wang, R. Skerry-Ryan, D. Stanton, Y . Wu, R. J. Weiss, N. Jaitly,\nZ. Yang, Y . Xiao, Z. Chen, S. Bengio et al., “Tacotron: Towards end-\nto-end speech synthesis,” arXiv preprint arXiv:1703.10135, 2017.\n[8] R. Luo, X. Tan, R. Wang, T. Qin, J. Li, S. Zhao, E. Chen, and T.-Y . Liu,\n“Lightspeech: Lightweight and fast text to speech with neural architec-\nture search,” in ICASSP 2021-2021 IEEE International Conference on\nAcoustics, Speech and Signal Processing (ICASSP). IEEE, 2021, pp.\n5699–5703.\n[9] S.-g. Lee, H. Kim, C. Shin, X. Tan, C. Liu, Q. Meng, T. Qin, W. Chen,\nS. Yoon, and T.-Y . Liu, “Priorgrad: Improving conditional denoising\ndiffusion models with data-driven adaptive prior,” ICLR, 2022.\n[10] R. Taori, I. Gulrajani, T. Zhang, Y . Dubois, X. Li, C. Guestrin, P. Liang,\nand T. B. Hashimoto, “Stanford alpaca: An instruction-following llama\nmodel,” https://github.com/tatsu-lab/stanford alpaca, 2023.\n[11] T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal,\nA. Neelakantan, P. Shyam, G. Sastry, A. Askell et al., “Language mod-\nels are few-shot learners,” Advances in neural information processing\nsystems, vol. 33, pp. 1877–1901, 2020.\n[12] OpenAI, “Gpt-4 technical report,” 2023.\n[13] L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin,\nC. Zhang, S. Agarwal, K. Slama, A. Ray et al., “Training language\nmodels to follow instructions with human feedback,”Advances in Neural\nInformation Processing Systems, vol. 35, pp. 27 730–27 744, 2022.\n[14] A. K ¨opf, Y . Kilcher, D. von R ¨utte, S. Anagnostidis, Z.-R. Tam,\nK. Stevens, A. Barhoum, N. M. Duc, O. Stanley, R. Nagyfi et al., “Ope-\nnassistant conversations–democratizing large language model align-\nment,” arXiv preprint arXiv:2304.07327, 2023.\n[15] T. Eloundou, S. Manning, P. Mishkin, and D. Rock, “Gpts are gpts:\nAn early look at the labor market impact potential of large language\nmodels,” arXiv preprint arXiv:2303.10130, 2023.\n[16] Y . Leng, X. Tan, L. Zhu, J. Xu, R. Luo, L. Liu, T. Qin, X. Li, E. Lin,\nand T.-Y . Liu, “Fastcorrect: Fast error correction with edit alignment\nfor automatic speech recognition,” Advances in Neural Information\nProcessing Systems, vol. 34, pp. 21 708–21 719, 2021.\n[17] W. Hou, J. Wang, X. Tan, T. Qin, and T. Shinozaki, “Cross-domain\nspeech recognition with unsupervised character-level distribution match-\ning,” INTERSPEECH, 2021.\n[18] W.-L. Chiang, Z. Li, Z. Lin, Y . Sheng, Z. Wu, H. Zhang,\nL. Zheng, S. Zhuang, Y . Zhuang, J. E. Gonzalez, I. Stoica,\nand E. P. Xing, “Vicuna: An open-source chatbot impressing gpt-\n4 with 90%* chatgpt quality,” March 2023. [Online]. Available:\nhttps://lmsys.org/blog/2023-03-30-vicuna/\n[19] M. R. Ali, S. Z. Razavi, R. Langevin, A. Al Mamun, B. Kane,\nR. Rawassizadeh, L. K. Schubert, and E. Hoque, “A virtual\nconversational agent for teens with autism spectrum disorder:\nExperimental results and design lessons,” in Proceedings of the 20th\nACM International Conference on Intelligent Virtual Agents, ser. IV A\n’20. New York, NY , USA: Association for Computing Machinery,\n2020. [Online]. Available: https://doi.org/10.1145/3383652.3423900\n[20] S. Z. Razavi, M. R. Ali, T. H. Smith, L. K. Schubert, and M. E.\nHoque, “The lissa virtual human and asd teens: An overview of initial\nexperiments,” in Intelligent Virtual Agents, D. Traum, W. Swartout,\nP. Khooshabeh, S. Kopp, S. Scherer, and A. Leuski, Eds. Cham:\nSpringer International Publishing, 2016, pp. 460–463.\n[21] M. Fung, Y . Jin, R. Zhao, and M. E. Hoque, “Roc speak: Semi-\nautomated personalized feedback on nonverbal behavior from recorded\nvideos,” in Proceedings of the 2015 ACM International Joint Conference\non Pervasive and Ubiquitous Computing, ser. UbiComp ’15. New York,\nNY , USA: Association for Computing Machinery, 2015, p. 1167–1178.\n[Online]. Available: https://doi.org/10.1145/2750858.2804265\n[22] M. E. Hoque, M. Courgeon, J.-C. Martin, B. Mutlu, and R. W. Picard,\n“Mach: My automated conversation coach,” in Proceedings of the\n2013 ACM International Joint Conference on Pervasive and Ubiquitous\nComputing, ser. UbiComp ’13. New York, NY , USA: Association\nfor Computing Machinery, 2013, p. 697–706. [Online]. Available:\nhttps://doi.org/10.1145/2493432.2493502\n[23] S. Z. Razavi, L. K. Schubert, K. van Orden, M. R. Ali, B. Kane,\nand E. Hoque, “Discourse behavior of older adults interacting\nwith a dialogue agent competent in multiple topics,” ACM Trans.\nInteract. Intell. Syst., vol. 12, no. 2, jul 2022. [Online]. Available:\nhttps://doi.org/10.1145/3484510\n[24] M. R. Ali, D. Crasta, L. Jin, A. Baretto, J. Pachter, R. D. Rogge,\nand M. E. Hoque, “Lissa — live interactive social skill assistance,” in\n2015 International Conference on Affective Computing and Intelligent\nInteraction (ACII), 2015, pp. 173–179.\n[25] M. R. Ali, T. Sen, B. Kane, S. Bose, T. M. Carroll, R. Epstein,\nL. Schubert, and E. Hoque, “Novel computational linguistic measures,\ndialogue system and the development of sophie: Standardized online\npatient for healthcare interaction education,” IEEE Trans. Affect.\nComput., vol. 14, no. 1, p. 223–235, jan 2023. [Online]. Available:\nhttps://doi.org/10.1109/TAFFC.2021.3054717",
+  "topic": "Conversation",
+  "concepts": [
+    {
+      "name": "Conversation",
+      "score": 0.6865804195404053
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6540027260780334
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.641555666923523
+    },
+    {
+      "name": "Premise",
+      "score": 0.6318680644035339
+    },
+    {
+      "name": "Entertainment",
+      "score": 0.5686565637588501
+    },
+    {
+      "name": "Fidelity",
+      "score": 0.5352225303649902
+    },
+    {
+      "name": "Persuasion",
+      "score": 0.5108394026756287
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.49664169549942017
+    },
+    {
+      "name": "Virtual reality",
+      "score": 0.4658072590827942
+    },
+    {
+      "name": "Multimedia",
+      "score": 0.4481010138988495
+    },
+    {
+      "name": "Dialog system",
+      "score": 0.43072134256362915
+    },
+    {
+      "name": "Virtual machine",
+      "score": 0.4159364104270935
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.1852048933506012
+    },
+    {
+      "name": "Psychology",
+      "score": 0.1836664080619812
+    },
+    {
+      "name": "Communication",
+      "score": 0.09790176153182983
+    },
+    {
+      "name": "Dialog box",
+      "score": 0.09578666090965271
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0806596577167511
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

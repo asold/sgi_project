@@ -1,125 +1,160 @@
 {
-    "title": "Faster and Better: A Lightweight Transformer Network for Remote Sensing Scene Classification",
-    "url": "https://openalex.org/W4385226200",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5080760430",
-            "name": "Xinyan Huang",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100453075",
-            "name": "Fang Liu",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5042623798",
-            "name": "Yuanhao Cui",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5039562483",
-            "name": "Puhua Chen",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100443350",
-            "name": "Lingling Li",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5034429268",
-            "name": "Pengfang Li",
-            "affiliations": [
-                "Xidian University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2110471980",
-        "https://openalex.org/W2122282653",
-        "https://openalex.org/W2081620141",
-        "https://openalex.org/W2024106491",
-        "https://openalex.org/W2991488782",
-        "https://openalex.org/W2515440612",
-        "https://openalex.org/W2417427351",
-        "https://openalex.org/W2554820184",
-        "https://openalex.org/W2765758918",
-        "https://openalex.org/W2996553655",
-        "https://openalex.org/W3139281747",
-        "https://openalex.org/W3196898869",
-        "https://openalex.org/W6794584281",
-        "https://openalex.org/W2253590344",
-        "https://openalex.org/W2592962403",
-        "https://openalex.org/W2992382424",
-        "https://openalex.org/W3023931079",
-        "https://openalex.org/W2948329096",
-        "https://openalex.org/W2974770574",
-        "https://openalex.org/W2829067510",
-        "https://openalex.org/W2780334404",
-        "https://openalex.org/W3001133572",
-        "https://openalex.org/W3120080208",
-        "https://openalex.org/W2890732922",
-        "https://openalex.org/W3119125170",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3107331169",
-        "https://openalex.org/W3171125843",
-        "https://openalex.org/W3171516518",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W4283811196",
-        "https://openalex.org/W3128592650",
-        "https://openalex.org/W4214910799",
-        "https://openalex.org/W3172509117",
-        "https://openalex.org/W2963163009",
-        "https://openalex.org/W6762585180",
-        "https://openalex.org/W2963125010",
-        "https://openalex.org/W2883780447",
-        "https://openalex.org/W3035414587",
-        "https://openalex.org/W4214588794",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W1980038761",
-        "https://openalex.org/W2515866431",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W3165924482",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W3203105104",
-        "https://openalex.org/W3196307935",
-        "https://openalex.org/W3195338688",
-        "https://openalex.org/W3122026349",
-        "https://openalex.org/W3157384669",
-        "https://openalex.org/W2400429454",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W2946948417",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W6846863797",
-        "https://openalex.org/W2964233199",
-        "https://openalex.org/W2889609569",
-        "https://openalex.org/W1923697677",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W4309955902",
-        "https://openalex.org/W3159220375",
-        "https://openalex.org/W2963504571",
-        "https://openalex.org/W3105577662"
-    ],
-    "abstract": "Remote sensing (RS) scene classification has received considerable attention due to its wide applications in the RS community. Many methods based on convolutional neural networks (CNNs) have been proposed to classify complex RS scenes, but they cannot fully capture the context in RS images because of the lack of long-range dependencies (the dependency relationship between two distant elements). Recently, some researchers fine-tuned the large pretrained vision transformer (ViT) on small RS datasets to extract long-range dependencies effectively in RS scenes. However, it usually takes more time to fine-tune the ViT on account of high computational complexity. The lack of good local feature representation in the ViT limits classification performance improvement. To this end, we propose a lightweight transformer network (LTNet) for RS scene classification. First, a multi-level group convolution (MLGC) module is presented. It enriches the diversity of local features and requires a lower computational cost by co-representing multi-level and multi-group features in a single module. Then, based on the MLGC module, a lightweight transformer block, LightFormer, was designed to capture global dependencies with fewer computing resources. Finally, the LTNet was built using the MLGC and LightFormer. The experiments of fine-tuning the LTNet on four RS scene classification datasets demonstrate that the proposed network achieves a competitive classification performance under less training time.",
-    "full_text": null
+  "title": "Faster and Better: A Lightweight Transformer Network for Remote Sensing Scene Classification",
+  "url": "https://openalex.org/W4385226200",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5080760430",
+      "name": "Xinyan Huang",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100453075",
+      "name": "Fang Liu",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5042623798",
+      "name": "Yuanhao Cui",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5039562483",
+      "name": "Puhua Chen",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100443350",
+      "name": "Lingling Li",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5034429268",
+      "name": "Pengfang Li",
+      "affiliations": [
+        "Xidian University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2110471980",
+    "https://openalex.org/W2122282653",
+    "https://openalex.org/W2081620141",
+    "https://openalex.org/W2024106491",
+    "https://openalex.org/W2991488782",
+    "https://openalex.org/W2515440612",
+    "https://openalex.org/W2417427351",
+    "https://openalex.org/W2554820184",
+    "https://openalex.org/W2765758918",
+    "https://openalex.org/W2996553655",
+    "https://openalex.org/W3139281747",
+    "https://openalex.org/W3196898869",
+    "https://openalex.org/W6794584281",
+    "https://openalex.org/W2253590344",
+    "https://openalex.org/W2592962403",
+    "https://openalex.org/W2992382424",
+    "https://openalex.org/W3023931079",
+    "https://openalex.org/W2948329096",
+    "https://openalex.org/W2974770574",
+    "https://openalex.org/W2829067510",
+    "https://openalex.org/W2780334404",
+    "https://openalex.org/W3001133572",
+    "https://openalex.org/W3120080208",
+    "https://openalex.org/W2890732922",
+    "https://openalex.org/W3119125170",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3107331169",
+    "https://openalex.org/W3171125843",
+    "https://openalex.org/W3171516518",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W4283811196",
+    "https://openalex.org/W3128592650",
+    "https://openalex.org/W4214910799",
+    "https://openalex.org/W3172509117",
+    "https://openalex.org/W2963163009",
+    "https://openalex.org/W6762585180",
+    "https://openalex.org/W2963125010",
+    "https://openalex.org/W2883780447",
+    "https://openalex.org/W3035414587",
+    "https://openalex.org/W4214588794",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W1980038761",
+    "https://openalex.org/W2515866431",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W3165924482",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W3203105104",
+    "https://openalex.org/W3196307935",
+    "https://openalex.org/W3195338688",
+    "https://openalex.org/W3122026349",
+    "https://openalex.org/W3157384669",
+    "https://openalex.org/W2400429454",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W2946948417",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W6846863797",
+    "https://openalex.org/W2964233199",
+    "https://openalex.org/W2889609569",
+    "https://openalex.org/W1923697677",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W4309955902",
+    "https://openalex.org/W3159220375",
+    "https://openalex.org/W2963504571",
+    "https://openalex.org/W3105577662"
+  ],
+  "abstract": "Remote sensing (RS) scene classification has received considerable attention due to its wide applications in the RS community. Many methods based on convolutional neural networks (CNNs) have been proposed to classify complex RS scenes, but they cannot fully capture the context in RS images because of the lack of long-range dependencies (the dependency relationship between two distant elements). Recently, some researchers fine-tuned the large pretrained vision transformer (ViT) on small RS datasets to extract long-range dependencies effectively in RS scenes. However, it usually takes more time to fine-tune the ViT on account of high computational complexity. The lack of good local feature representation in the ViT limits classification performance improvement. To this end, we propose a lightweight transformer network (LTNet) for RS scene classification. First, a multi-level group convolution (MLGC) module is presented. It enriches the diversity of local features and requires a lower computational cost by co-representing multi-level and multi-group features in a single module. Then, based on the MLGC module, a lightweight transformer block, LightFormer, was designed to capture global dependencies with fewer computing resources. Finally, the LTNet was built using the MLGC and LightFormer. The experiments of fine-tuning the LTNet on four RS scene classification datasets demonstrate that the proposed network achieves a competitive classification performance under less training time.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8478087186813354
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5941523313522339
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5787909030914307
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5437080264091492
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.45397236943244934
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

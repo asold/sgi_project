@@ -1,93 +1,160 @@
 {
-    "title": "Compatible Transformer for Irregularly Sampled Multivariate Time Series",
-    "url": "https://openalex.org/W4391528841",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5114152486",
-            "name": "Yuxi Wei",
-            "affiliations": [
-                "Shandong Jiaotong University",
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5104171287",
-            "name": "Juntong Peng",
-            "affiliations": [
-                "Shandong Jiaotong University",
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100604494",
-            "name": "Tong He",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101486518",
-            "name": "Chenxin Xu",
-            "affiliations": [
-                "Shandong Jiaotong University",
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100680433",
-            "name": "Jian Zhang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5008056593",
-            "name": "Shirui Pan",
-            "affiliations": [
-                "University of Technology Sydney"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066373402",
-            "name": "Siheng Chen",
-            "affiliations": [
-                "Shandong Jiaotong University",
-                "Shanghai Jiao Tong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W138826380",
-        "https://openalex.org/W4313041951",
-        "https://openalex.org/W6838974724",
-        "https://openalex.org/W4390872223",
-        "https://openalex.org/W6802566335",
-        "https://openalex.org/W4312750092",
-        "https://openalex.org/W3034589393",
-        "https://openalex.org/W4386071549",
-        "https://openalex.org/W4383220221",
-        "https://openalex.org/W4386076060",
-        "https://openalex.org/W6780817209",
-        "https://openalex.org/W6759258263",
-        "https://openalex.org/W3176196442",
-        "https://openalex.org/W6768707575",
-        "https://openalex.org/W6679775712",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3080253043",
-        "https://openalex.org/W2964010366",
-        "https://openalex.org/W4292956162",
-        "https://openalex.org/W3046153892",
-        "https://openalex.org/W2026297770",
-        "https://openalex.org/W2424778531",
-        "https://openalex.org/W3205978767",
-        "https://openalex.org/W2973432116",
-        "https://openalex.org/W3129938072",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4388452210"
-    ],
-    "abstract": "To analyze multivariate time series, most previous methods assume regular subsampling of time series, where the interval between adjacent measurements and the number of samples remain unchanged. Practically, data collection systems could produce irregularly sampled time series due to sensor failures and interventions. However, existing methods designed for regularly sampled multivariate time series cannot directly handle irregularity owing to misalignment along both temporal and variate dimensions. To fill this gap, we propose Compatible Transformer (CoFormer), a transformer-based encoder to achieve comprehensive temporal-interaction feature learning for each individual sample in irregular multivariate time series. In CoFormer, we view each sample as a unique variate-time point and leverage intra-variate/inter-variate attentions to learn sample-wise temporal/interaction features based on intra-variate/inter-variate neighbors. With CoFormer as the core, we can analyze irregularly sampled multivariate time series for many downstream tasks, including classification and prediction. We conduct extensive experiments on 3 real-world datasets and validate that the proposed CoFormer significantly and consistently outperforms existing methods. Code will be avilable at https://github.com/MediaBrain-SJTU/CoFormer.",
-    "full_text": null
+  "title": "Compatible Transformer for Irregularly Sampled Multivariate Time Series",
+  "url": "https://openalex.org/W4391528841",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5114152486",
+      "name": "Yuxi Wei",
+      "affiliations": [
+        "Shandong Jiaotong University",
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5104171287",
+      "name": "Juntong Peng",
+      "affiliations": [
+        "Shandong Jiaotong University",
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100604494",
+      "name": "Tong He",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101486518",
+      "name": "Chenxin Xu",
+      "affiliations": [
+        "Shandong Jiaotong University",
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100680433",
+      "name": "Jian Zhang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5008056593",
+      "name": "Shirui Pan",
+      "affiliations": [
+        "University of Technology Sydney"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066373402",
+      "name": "Siheng Chen",
+      "affiliations": [
+        "Shandong Jiaotong University",
+        "Shanghai Jiao Tong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W138826380",
+    "https://openalex.org/W4313041951",
+    "https://openalex.org/W6838974724",
+    "https://openalex.org/W4390872223",
+    "https://openalex.org/W6802566335",
+    "https://openalex.org/W4312750092",
+    "https://openalex.org/W3034589393",
+    "https://openalex.org/W4386071549",
+    "https://openalex.org/W4383220221",
+    "https://openalex.org/W4386076060",
+    "https://openalex.org/W6780817209",
+    "https://openalex.org/W6759258263",
+    "https://openalex.org/W3176196442",
+    "https://openalex.org/W6768707575",
+    "https://openalex.org/W6679775712",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3080253043",
+    "https://openalex.org/W2964010366",
+    "https://openalex.org/W4292956162",
+    "https://openalex.org/W3046153892",
+    "https://openalex.org/W2026297770",
+    "https://openalex.org/W2424778531",
+    "https://openalex.org/W3205978767",
+    "https://openalex.org/W2973432116",
+    "https://openalex.org/W3129938072",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4388452210"
+  ],
+  "abstract": "To analyze multivariate time series, most previous methods assume regular subsampling of time series, where the interval between adjacent measurements and the number of samples remain unchanged. Practically, data collection systems could produce irregularly sampled time series due to sensor failures and interventions. However, existing methods designed for regularly sampled multivariate time series cannot directly handle irregularity owing to misalignment along both temporal and variate dimensions. To fill this gap, we propose Compatible Transformer (CoFormer), a transformer-based encoder to achieve comprehensive temporal-interaction feature learning for each individual sample in irregular multivariate time series. In CoFormer, we view each sample as a unique variate-time point and leverage intra-variate/inter-variate attentions to learn sample-wise temporal/interaction features based on intra-variate/inter-variate neighbors. With CoFormer as the core, we can analyze irregularly sampled multivariate time series for many downstream tasks, including classification and prediction. We conduct extensive experiments on 3 real-world datasets and validate that the proposed CoFormer significantly and consistently outperforms existing methods. Code will be avilable at https://github.com/MediaBrain-SJTU/CoFormer.",
+  "full_text": null,
+  "topic": "Multivariate statistics",
+  "concepts": [
+    {
+      "name": "Multivariate statistics",
+      "score": 0.8257336020469666
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7020676136016846
+    },
+    {
+      "name": "Random variate",
+      "score": 0.6872144341468811
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.5335832834243774
+    },
+    {
+      "name": "Time series",
+      "score": 0.5042349100112915
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4708119332790375
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4440387487411499
+    },
+    {
+      "name": "Series (stratigraphy)",
+      "score": 0.4326789677143097
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3656911551952362
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.2801884412765503
+    },
+    {
+      "name": "Statistics",
+      "score": 0.1897643804550171
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.14033293724060059
+    },
+    {
+      "name": "Random variable",
+      "score": 0.11381980776786804
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

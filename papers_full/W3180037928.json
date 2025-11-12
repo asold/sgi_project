@@ -1,126 +1,189 @@
 {
-    "title": "Learned Token Pruning for Transformers",
-    "url": "https://openalex.org/W3180037928",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2109745369",
-            "name": "Sehoon kim",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111184121",
-            "name": "Sheng Shen",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1184569004",
-            "name": "David Thorsley",
-            "affiliations": [
-                "Samsung (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2187394809",
-            "name": "Amir Gholami",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2167674575",
-            "name": "Woosuk Kwon",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2398972734",
-            "name": "Joseph Hassoun",
-            "affiliations": [
-                "Samsung (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2003317548",
-            "name": "Kurt Keutzer",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3174657338",
-        "https://openalex.org/W3131922516",
-        "https://openalex.org/W2998183051",
-        "https://openalex.org/W3100985894",
-        "https://openalex.org/W3005692288",
-        "https://openalex.org/W3034573343",
-        "https://openalex.org/W2427527485",
-        "https://openalex.org/W3045733172",
-        "https://openalex.org/W3020268419",
-        "https://openalex.org/W2975059944",
-        "https://openalex.org/W3196318247",
-        "https://openalex.org/W3033529678",
-        "https://openalex.org/W3015233032",
-        "https://openalex.org/W1516184288",
-        "https://openalex.org/W2924902521",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W3098576111",
-        "https://openalex.org/W1821462560",
-        "https://openalex.org/W2969515962",
-        "https://openalex.org/W2963145730",
-        "https://openalex.org/W2805003733",
-        "https://openalex.org/W2975381464",
-        "https://openalex.org/W2947946877",
-        "https://openalex.org/W3034742519",
-        "https://openalex.org/W2242818861",
-        "https://openalex.org/W3017022649",
-        "https://openalex.org/W2949941638",
-        "https://openalex.org/W131533222",
-        "https://openalex.org/W3174708387",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2948130861",
-        "https://openalex.org/W2618305643",
-        "https://openalex.org/W2964266063",
-        "https://openalex.org/W2963382930",
-        "https://openalex.org/W2130158090",
-        "https://openalex.org/W2754526845",
-        "https://openalex.org/W3104216863",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W2940744433",
-        "https://openalex.org/W2915106038",
-        "https://openalex.org/W3111747337",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W3034609440",
-        "https://openalex.org/W3125953778",
-        "https://openalex.org/W3137147200",
-        "https://openalex.org/W3022969335",
-        "https://openalex.org/W3000514857",
-        "https://openalex.org/W2251939518",
-        "https://openalex.org/W3024171804",
-        "https://openalex.org/W2916954108",
-        "https://openalex.org/W3171750540",
-        "https://openalex.org/W2767785892",
-        "https://openalex.org/W3104033643",
-        "https://openalex.org/W2945767825",
-        "https://openalex.org/W3105966348",
-        "https://openalex.org/W2979314664",
-        "https://openalex.org/W2894740066",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W3104263050",
-        "https://openalex.org/W3114304470",
-        "https://openalex.org/W3102403234",
-        "https://openalex.org/W2607892599",
-        "https://openalex.org/W3102129360",
-        "https://openalex.org/W3036463250",
-        "https://openalex.org/W2963310665",
-        "https://openalex.org/W3015298864"
-    ],
-    "abstract": "Efficient deployment of transformer models in practice is challenging due to their inference cost including memory footprint, latency, and power consumption, which scales quadratically with input sequence length. To address this, we present a novel token reduction method dubbed Learned Token Pruning (LTP) which adaptively removes unimportant tokens as an input sequence passes through transformer layers. In particular, LTP prunes tokens with an attention score below a threshold, whose value is learned for each layer during training. Our threshold-based method allows the length of the pruned sequence to vary adaptively based on the input sequence, and avoids algorithmically expensive operations such as top-k token selection. We extensively test the performance of LTP on GLUE and SQuAD tasks and show that our method outperforms the prior state-of-the-art token pruning methods by up to ∽2.5% higher accuracy with the same amount of FLOPs. In particular, LTP achieves up to 2.1× FLOPs reduction with less than 1% accuracy drop, which results in up to 1.9× and 2.0× throughput improvement on Intel Haswell CPUs and NVIDIA V100 GPUs. Furthermore, we demonstrate that LTP is more robust than prior methods to variations in input sequence lengths. Our code has been developed in PyTorch and open-sourced",
-    "full_text": null
+  "title": "Learned Token Pruning for Transformers",
+  "url": "https://openalex.org/W3180037928",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2109745369",
+      "name": "Sehoon kim",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111184121",
+      "name": "Sheng Shen",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1184569004",
+      "name": "David Thorsley",
+      "affiliations": [
+        "Samsung (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2187394809",
+      "name": "Amir Gholami",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2167674575",
+      "name": "Woosuk Kwon",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2398972734",
+      "name": "Joseph Hassoun",
+      "affiliations": [
+        "Samsung (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2003317548",
+      "name": "Kurt Keutzer",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3174657338",
+    "https://openalex.org/W3131922516",
+    "https://openalex.org/W2998183051",
+    "https://openalex.org/W3100985894",
+    "https://openalex.org/W3005692288",
+    "https://openalex.org/W3034573343",
+    "https://openalex.org/W2427527485",
+    "https://openalex.org/W3045733172",
+    "https://openalex.org/W3020268419",
+    "https://openalex.org/W2975059944",
+    "https://openalex.org/W3196318247",
+    "https://openalex.org/W3033529678",
+    "https://openalex.org/W3015233032",
+    "https://openalex.org/W1516184288",
+    "https://openalex.org/W2924902521",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W3098576111",
+    "https://openalex.org/W1821462560",
+    "https://openalex.org/W2969515962",
+    "https://openalex.org/W2963145730",
+    "https://openalex.org/W2805003733",
+    "https://openalex.org/W2975381464",
+    "https://openalex.org/W2947946877",
+    "https://openalex.org/W3034742519",
+    "https://openalex.org/W2242818861",
+    "https://openalex.org/W3017022649",
+    "https://openalex.org/W2949941638",
+    "https://openalex.org/W131533222",
+    "https://openalex.org/W3174708387",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2948130861",
+    "https://openalex.org/W2618305643",
+    "https://openalex.org/W2964266063",
+    "https://openalex.org/W2963382930",
+    "https://openalex.org/W2130158090",
+    "https://openalex.org/W2754526845",
+    "https://openalex.org/W3104216863",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2940744433",
+    "https://openalex.org/W2915106038",
+    "https://openalex.org/W3111747337",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W3034609440",
+    "https://openalex.org/W3125953778",
+    "https://openalex.org/W3137147200",
+    "https://openalex.org/W3022969335",
+    "https://openalex.org/W3000514857",
+    "https://openalex.org/W2251939518",
+    "https://openalex.org/W3024171804",
+    "https://openalex.org/W2916954108",
+    "https://openalex.org/W3171750540",
+    "https://openalex.org/W2767785892",
+    "https://openalex.org/W3104033643",
+    "https://openalex.org/W2945767825",
+    "https://openalex.org/W3105966348",
+    "https://openalex.org/W2979314664",
+    "https://openalex.org/W2894740066",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W3104263050",
+    "https://openalex.org/W3114304470",
+    "https://openalex.org/W3102403234",
+    "https://openalex.org/W2607892599",
+    "https://openalex.org/W3102129360",
+    "https://openalex.org/W3036463250",
+    "https://openalex.org/W2963310665",
+    "https://openalex.org/W3015298864"
+  ],
+  "abstract": "Efficient deployment of transformer models in practice is challenging due to their inference cost including memory footprint, latency, and power consumption, which scales quadratically with input sequence length. To address this, we present a novel token reduction method dubbed Learned Token Pruning (LTP) which adaptively removes unimportant tokens as an input sequence passes through transformer layers. In particular, LTP prunes tokens with an attention score below a threshold, whose value is learned for each layer during training. Our threshold-based method allows the length of the pruned sequence to vary adaptively based on the input sequence, and avoids algorithmically expensive operations such as top-k token selection. We extensively test the performance of LTP on GLUE and SQuAD tasks and show that our method outperforms the prior state-of-the-art token pruning methods by up to ∽2.5% higher accuracy with the same amount of FLOPs. In particular, LTP achieves up to 2.1× FLOPs reduction with less than 1% accuracy drop, which results in up to 1.9× and 2.0× throughput improvement on Intel Haswell CPUs and NVIDIA V100 GPUs. Furthermore, we demonstrate that LTP is more robust than prior methods to variations in input sequence lengths. Our code has been developed in PyTorch and open-sourced",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7838432788848877
+    },
+    {
+      "name": "Security token",
+      "score": 0.7771205306053162
+    },
+    {
+      "name": "FLOPS",
+      "score": 0.5668375492095947
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5226352214813232
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.4299900531768799
+    },
+    {
+      "name": "Latency (audio)",
+      "score": 0.4172274172306061
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.41084861755371094
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.35800230503082275
+    },
+    {
+      "name": "Computer network",
+      "score": 0.13603147864341736
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08521613478660583
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.07920053601264954
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

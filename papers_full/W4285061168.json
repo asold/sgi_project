@@ -1,91 +1,166 @@
 {
-    "title": "Learning 3D Skeletal Representation From Transformer for Action Recognition",
-    "url": "https://openalex.org/W4285061168",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5053683603",
-            "name": "Junuk Cha",
-            "affiliations": [
-                "Ulsan National Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5057307965",
-            "name": "Muhammad Saqlain",
-            "affiliations": [
-                "Ulsan National Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5048985541",
-            "name": "Donguk Kim",
-            "affiliations": [
-                "Ulsan National Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5063204521",
-            "name": "Seung‐Eun Lee",
-            "affiliations": [
-                "Ulsan National Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5041919088",
-            "name": "Seongyeong Lee",
-            "affiliations": [
-                "Ulsan National Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101907863",
-            "name": "Seungryul Baek",
-            "affiliations": [
-                "Ulsan National Institute of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3118589616",
-        "https://openalex.org/W3034972874",
-        "https://openalex.org/W3019492986",
-        "https://openalex.org/W3034697730",
-        "https://openalex.org/W3016234935",
-        "https://openalex.org/W1950788856",
-        "https://openalex.org/W2963076818",
-        "https://openalex.org/W2950568498",
-        "https://openalex.org/W2788865504",
-        "https://openalex.org/W2172156083",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2612706635",
-        "https://openalex.org/W3173811519",
-        "https://openalex.org/W2963995996",
-        "https://openalex.org/W2978956737",
-        "https://openalex.org/W3110095664",
-        "https://openalex.org/W1967554269",
-        "https://openalex.org/W4230005465",
-        "https://openalex.org/W2296311849",
-        "https://openalex.org/W2981637078",
-        "https://openalex.org/W3035551320",
-        "https://openalex.org/W3175199633",
-        "https://openalex.org/W3034999503",
-        "https://openalex.org/W3109392981",
-        "https://openalex.org/W2603861860",
-        "https://openalex.org/W2963282966",
-        "https://openalex.org/W2971710819",
-        "https://openalex.org/W3133191957",
-        "https://openalex.org/W2799211965",
-        "https://openalex.org/W3215084804",
-        "https://openalex.org/W2971486392",
-        "https://openalex.org/W2965616447",
-        "https://openalex.org/W2948122216",
-        "https://openalex.org/W3168292721",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2963094037",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2963855133"
-    ],
-    "abstract": "Skeleton-based human action recognition has attracted significant interest due to its simplicity and good accuracy. Diverse end-to-end trainable frameworks based on skeletal representation have been proposed so far to map the representation to human action classes better. Most skeleton-based human action recognition approaches are based on the skeletons, which are heuristically pre-defined by the commercial sensors. Nevertheless, it is not confirmed whether the sensor-captured skeletons are the best representation of human bodies for the action recognition task, while in general, the dedicated representation is required for achieving the successful performance on subsequent tasks such as action recognition. In this paper, we try to deal with the issue by explicitly learning the skeletal representation in the context of the human action recognition task. We start our investigation by reconstructing 3D meshes of the human bodies from RGB videos. Then we involve the transformer architecture to sample the most informative skeletal representation from reconstructed 3D meshes, considering the inner and inter structural relationship of 3D meshes and sensor-captured skeletons. Experimental results on challenging human action recognition benchmarks (i.e., SYSU and UTD-MHAD datasets) have shown the superiority of our skeletal representation compared to the sensor-captured skeletons for the action recognition task.",
-    "full_text": null
+  "title": "Learning 3D Skeletal Representation From Transformer for Action Recognition",
+  "url": "https://openalex.org/W4285061168",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5053683603",
+      "name": "Junuk Cha",
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5057307965",
+      "name": "Muhammad Saqlain",
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5048985541",
+      "name": "Donguk Kim",
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5063204521",
+      "name": "Seung‐Eun Lee",
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5041919088",
+      "name": "Seongyeong Lee",
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101907863",
+      "name": "Seungryul Baek",
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3118589616",
+    "https://openalex.org/W3034972874",
+    "https://openalex.org/W3019492986",
+    "https://openalex.org/W3034697730",
+    "https://openalex.org/W3016234935",
+    "https://openalex.org/W1950788856",
+    "https://openalex.org/W2963076818",
+    "https://openalex.org/W2950568498",
+    "https://openalex.org/W2788865504",
+    "https://openalex.org/W2172156083",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2612706635",
+    "https://openalex.org/W3173811519",
+    "https://openalex.org/W2963995996",
+    "https://openalex.org/W2978956737",
+    "https://openalex.org/W3110095664",
+    "https://openalex.org/W1967554269",
+    "https://openalex.org/W4230005465",
+    "https://openalex.org/W2296311849",
+    "https://openalex.org/W2981637078",
+    "https://openalex.org/W3035551320",
+    "https://openalex.org/W3175199633",
+    "https://openalex.org/W3034999503",
+    "https://openalex.org/W3109392981",
+    "https://openalex.org/W2603861860",
+    "https://openalex.org/W2963282966",
+    "https://openalex.org/W2971710819",
+    "https://openalex.org/W3133191957",
+    "https://openalex.org/W2799211965",
+    "https://openalex.org/W3215084804",
+    "https://openalex.org/W2971486392",
+    "https://openalex.org/W2965616447",
+    "https://openalex.org/W2948122216",
+    "https://openalex.org/W3168292721",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2963094037",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2963855133"
+  ],
+  "abstract": "Skeleton-based human action recognition has attracted significant interest due to its simplicity and good accuracy. Diverse end-to-end trainable frameworks based on skeletal representation have been proposed so far to map the representation to human action classes better. Most skeleton-based human action recognition approaches are based on the skeletons, which are heuristically pre-defined by the commercial sensors. Nevertheless, it is not confirmed whether the sensor-captured skeletons are the best representation of human bodies for the action recognition task, while in general, the dedicated representation is required for achieving the successful performance on subsequent tasks such as action recognition. In this paper, we try to deal with the issue by explicitly learning the skeletal representation in the context of the human action recognition task. We start our investigation by reconstructing 3D meshes of the human bodies from RGB videos. Then we involve the transformer architecture to sample the most informative skeletal representation from reconstructed 3D meshes, considering the inner and inter structural relationship of 3D meshes and sensor-captured skeletons. Experimental results on challenging human action recognition benchmarks (i.e., SYSU and UTD-MHAD datasets) have shown the superiority of our skeletal representation compared to the sensor-captured skeletons for the action recognition task.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7815853357315063
+    },
+    {
+      "name": "Polygon mesh",
+      "score": 0.6906507611274719
+    },
+    {
+      "name": "Action recognition",
+      "score": 0.6795598864555359
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6563754677772522
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.5611673593521118
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.46601206064224243
+    },
+    {
+      "name": "Transformer",
+      "score": 0.41455695033073425
+    },
+    {
+      "name": "Human skeleton",
+      "score": 0.4117544889450073
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.33607590198516846
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3268094062805176
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07355764508247375
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Class (philosophy)",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Computer graphics (images)",
+      "score": 0.0
+    }
+  ]
 }

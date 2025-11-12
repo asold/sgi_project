@@ -1,146 +1,177 @@
 {
-    "title": "Knowledge graph construction for heart failure using large language models with prompt engineering",
-    "url": "https://openalex.org/W4400262563",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2577507334",
-            "name": "Tianhan Xu",
-            "affiliations": [
-                "Yangzhou Polytechnic Institute",
-                "Yangzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3143892156",
-            "name": "Yixun Gu",
-            "affiliations": [
-                "Xian Yang Central Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099183166",
-            "name": "Mantian Xue",
-            "affiliations": [
-                "Yangzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2200441327",
-            "name": "Renjie Gu",
-            "affiliations": [
-                "Northern Jiangsu People's Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1996936749",
-            "name": "Bin Li",
-            "affiliations": [
-                "Yangzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105910430",
-            "name": "Xiang Gu",
-            "affiliations": [
-                "Northern Jiangsu People's Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2577507334",
-            "name": "Tianhan Xu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3143892156",
-            "name": "Yixun Gu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2099183166",
-            "name": "Mantian Xue",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2200441327",
-            "name": "Renjie Gu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1996936749",
-            "name": "Bin Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105910430",
-            "name": "Xiang Gu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4378594033",
-        "https://openalex.org/W4327810158",
-        "https://openalex.org/W4385573087",
-        "https://openalex.org/W6810334672",
-        "https://openalex.org/W2963716420",
-        "https://openalex.org/W3209420330",
-        "https://openalex.org/W4224237294",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4318983406",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W2053154970",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6762122294",
-        "https://openalex.org/W4323572061",
-        "https://openalex.org/W2971668428",
-        "https://openalex.org/W3046375318",
-        "https://openalex.org/W4384924051",
-        "https://openalex.org/W6838865847",
-        "https://openalex.org/W3120223152",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W4283318325",
-        "https://openalex.org/W3004541293",
-        "https://openalex.org/W4382246105",
-        "https://openalex.org/W4384389802",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W4384561707",
-        "https://openalex.org/W4226399820",
-        "https://openalex.org/W2132724073",
-        "https://openalex.org/W4288826254",
-        "https://openalex.org/W4387665600",
-        "https://openalex.org/W4283828387",
-        "https://openalex.org/W4321524373",
-        "https://openalex.org/W6809646742",
-        "https://openalex.org/W4385381606",
-        "https://openalex.org/W4391670936",
-        "https://openalex.org/W6855588418",
-        "https://openalex.org/W4320525813",
-        "https://openalex.org/W4385572986",
-        "https://openalex.org/W6845477779",
-        "https://openalex.org/W4362598952",
-        "https://openalex.org/W4211060471",
-        "https://openalex.org/W4311860615",
-        "https://openalex.org/W4211112851",
-        "https://openalex.org/W4386755313",
-        "https://openalex.org/W2606363764",
-        "https://openalex.org/W4376503165",
-        "https://openalex.org/W6811284106",
-        "https://openalex.org/W4385565387",
-        "https://openalex.org/W4387561375",
-        "https://openalex.org/W4362515116",
-        "https://openalex.org/W3085275657",
-        "https://openalex.org/W4281483047",
-        "https://openalex.org/W4385681676",
-        "https://openalex.org/W4377865170",
-        "https://openalex.org/W4309744061",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4226369848",
-        "https://openalex.org/W4225323055",
-        "https://openalex.org/W4281557260",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W4388144126",
-        "https://openalex.org/W4392669883"
-    ],
-    "abstract": "Introduction Constructing an accurate and comprehensive knowledge graph of specific diseases is critical for practical clinical disease diagnosis and treatment, reasoning and decision support, rehabilitation, and health management. For knowledge graph construction tasks (such as named entity recognition, relation extraction), classical BERT-based methods require a large amount of training data to ensure model performance. However, real-world medical annotation data, especially disease-specific annotation samples, are very limited. In addition, existing models do not perform well in recognizing out-of-distribution entities and relations that are not seen in the training phase. Method In this study, we present a novel and practical pipeline for constructing a heart failure knowledge graph using large language models and medical expert refinement. We apply prompt engineering to the three phases of schema design: schema design, information extraction, and knowledge completion. The best performance is achieved by designing task-specific prompt templates combined with the TwoStepChat approach. Results Experiments on two datasets show that the TwoStepChat method outperforms the Vanillia prompt and outperforms the fine-tuned BERT-based baselines. Moreover, our method saves 65% of the time compared to manual annotation and is better suited to extract the out-of-distribution information in the real world.",
-    "full_text": null
+  "title": "Knowledge graph construction for heart failure using large language models with prompt engineering",
+  "url": "https://openalex.org/W4400262563",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2577507334",
+      "name": "Tianhan Xu",
+      "affiliations": [
+        "Yangzhou Polytechnic Institute",
+        "Yangzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3143892156",
+      "name": "Yixun Gu",
+      "affiliations": [
+        "Xian Yang Central Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099183166",
+      "name": "Mantian Xue",
+      "affiliations": [
+        "Yangzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2200441327",
+      "name": "Renjie Gu",
+      "affiliations": [
+        "Northern Jiangsu People's Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1996936749",
+      "name": "Bin Li",
+      "affiliations": [
+        "Yangzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105910430",
+      "name": "Xiang Gu",
+      "affiliations": [
+        "Northern Jiangsu People's Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2577507334",
+      "name": "Tianhan Xu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3143892156",
+      "name": "Yixun Gu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2099183166",
+      "name": "Mantian Xue",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2200441327",
+      "name": "Renjie Gu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1996936749",
+      "name": "Bin Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105910430",
+      "name": "Xiang Gu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4378594033",
+    "https://openalex.org/W4327810158",
+    "https://openalex.org/W4385573087",
+    "https://openalex.org/W6810334672",
+    "https://openalex.org/W2963716420",
+    "https://openalex.org/W3209420330",
+    "https://openalex.org/W4224237294",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4318983406",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W2053154970",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6762122294",
+    "https://openalex.org/W4323572061",
+    "https://openalex.org/W2971668428",
+    "https://openalex.org/W3046375318",
+    "https://openalex.org/W4384924051",
+    "https://openalex.org/W6838865847",
+    "https://openalex.org/W3120223152",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W4283318325",
+    "https://openalex.org/W3004541293",
+    "https://openalex.org/W4382246105",
+    "https://openalex.org/W4384389802",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W4384561707",
+    "https://openalex.org/W4226399820",
+    "https://openalex.org/W2132724073",
+    "https://openalex.org/W4288826254",
+    "https://openalex.org/W4387665600",
+    "https://openalex.org/W4283828387",
+    "https://openalex.org/W4321524373",
+    "https://openalex.org/W6809646742",
+    "https://openalex.org/W4385381606",
+    "https://openalex.org/W4391670936",
+    "https://openalex.org/W6855588418",
+    "https://openalex.org/W4320525813",
+    "https://openalex.org/W4385572986",
+    "https://openalex.org/W6845477779",
+    "https://openalex.org/W4362598952",
+    "https://openalex.org/W4211060471",
+    "https://openalex.org/W4311860615",
+    "https://openalex.org/W4211112851",
+    "https://openalex.org/W4386755313",
+    "https://openalex.org/W2606363764",
+    "https://openalex.org/W4376503165",
+    "https://openalex.org/W6811284106",
+    "https://openalex.org/W4385565387",
+    "https://openalex.org/W4387561375",
+    "https://openalex.org/W4362515116",
+    "https://openalex.org/W3085275657",
+    "https://openalex.org/W4281483047",
+    "https://openalex.org/W4385681676",
+    "https://openalex.org/W4377865170",
+    "https://openalex.org/W4309744061",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4226369848",
+    "https://openalex.org/W4225323055",
+    "https://openalex.org/W4281557260",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W4388144126",
+    "https://openalex.org/W4392669883"
+  ],
+  "abstract": "Introduction Constructing an accurate and comprehensive knowledge graph of specific diseases is critical for practical clinical disease diagnosis and treatment, reasoning and decision support, rehabilitation, and health management. For knowledge graph construction tasks (such as named entity recognition, relation extraction), classical BERT-based methods require a large amount of training data to ensure model performance. However, real-world medical annotation data, especially disease-specific annotation samples, are very limited. In addition, existing models do not perform well in recognizing out-of-distribution entities and relations that are not seen in the training phase. Method In this study, we present a novel and practical pipeline for constructing a heart failure knowledge graph using large language models and medical expert refinement. We apply prompt engineering to the three phases of schema design: schema design, information extraction, and knowledge completion. The best performance is achieved by designing task-specific prompt templates combined with the TwoStepChat approach. Results Experiments on two datasets show that the TwoStepChat method outperforms the Vanillia prompt and outperforms the fine-tuned BERT-based baselines. Moreover, our method saves 65% of the time compared to manual annotation and is better suited to extract the out-of-distribution information in the real world.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6107940673828125
+    },
+    {
+      "name": "Graph",
+      "score": 0.5128281712532043
+    },
+    {
+      "name": "Knowledge graph",
+      "score": 0.49808502197265625
+    },
+    {
+      "name": "Programming language",
+      "score": 0.3644072711467743
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3400658071041107
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3277393579483032
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.24272677302360535
+    }
+  ]
 }

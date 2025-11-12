@@ -1,94 +1,137 @@
 {
-    "title": "Transformer Based Multi-Grained Attention Network for Aspect-Based Sentiment Analysis",
-    "url": "https://openalex.org/W3110350694",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101934462",
-            "name": "Jiahui Sun",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5030967835",
-            "name": "Ping Han",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5031685111",
-            "name": "Zheng Cheng",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5039397793",
-            "name": "Enming Wu",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100367792",
-            "name": "Wenqing Wang",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2160660844",
-        "https://openalex.org/W2996320962",
-        "https://openalex.org/W3035269559",
-        "https://openalex.org/W3005328069",
-        "https://openalex.org/W2960680116",
-        "https://openalex.org/W3080996308",
-        "https://openalex.org/W6602989467",
-        "https://openalex.org/W2251124635",
-        "https://openalex.org/W2251792193",
-        "https://openalex.org/W3021126976",
-        "https://openalex.org/W2120615054",
-        "https://openalex.org/W1832693441",
-        "https://openalex.org/W2964046515",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W6640212811",
-        "https://openalex.org/W2963240575",
-        "https://openalex.org/W2513378248",
-        "https://openalex.org/W6727807531",
-        "https://openalex.org/W2757541972",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2971351900",
-        "https://openalex.org/W2306941105",
-        "https://openalex.org/W4205184193",
-        "https://openalex.org/W4211186029",
-        "https://openalex.org/W3034336785",
-        "https://openalex.org/W2802301063",
-        "https://openalex.org/W1964613733",
-        "https://openalex.org/W2252057809",
-        "https://openalex.org/W6682691769",
-        "https://openalex.org/W2962808042",
-        "https://openalex.org/W2963168371",
-        "https://openalex.org/W2964288660",
-        "https://openalex.org/W6697121895",
-        "https://openalex.org/W2969743835",
-        "https://openalex.org/W2562607067",
-        "https://openalex.org/W2964164368",
-        "https://openalex.org/W2804000041",
-        "https://openalex.org/W2991675023",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2891778157",
-        "https://openalex.org/W2097726431",
-        "https://openalex.org/W2296071000",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W1924770834",
-        "https://openalex.org/W71795751",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2963428430",
-        "https://openalex.org/W2108646579"
-    ],
-    "abstract": "Aspect-based sentiment analysis aims to predict sentiment polarity for every aspect in a sentence review. Most existing approaches are based on the sequence models, which may superimpose the emotional semantics of different tendencies and lack syntactic structure information. And most models adopt coarse-grained attention mechanism which still face the issues of weakness interaction between aspect and context. In this paper, we propose a transformer based multi-grained attention network (T-MGAN), which utilizes the Transformer module to learn the word-level representations of aspects and context respectively, and further utilizes the Tree Transformer module to obtain the phrase-level representations of contexts. It is capable of extracting the syntactic structure features and syntax information of aspect and context. In addition, we adopt dual-pooling method and multi-grained attention network to extract high quality aspect-context interactive representations. We evaluate the proposed model on three datasets and prove the effectiveness of the proposed model.",
-    "full_text": null
+  "title": "Transformer Based Multi-Grained Attention Network for Aspect-Based Sentiment Analysis",
+  "url": "https://openalex.org/W3110350694",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101934462",
+      "name": "Jiahui Sun",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5030967835",
+      "name": "Ping Han",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5031685111",
+      "name": "Zheng Cheng",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5039397793",
+      "name": "Enming Wu",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100367792",
+      "name": "Wenqing Wang",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2160660844",
+    "https://openalex.org/W2996320962",
+    "https://openalex.org/W3035269559",
+    "https://openalex.org/W3005328069",
+    "https://openalex.org/W2960680116",
+    "https://openalex.org/W3080996308",
+    "https://openalex.org/W6602989467",
+    "https://openalex.org/W2251124635",
+    "https://openalex.org/W2251792193",
+    "https://openalex.org/W3021126976",
+    "https://openalex.org/W2120615054",
+    "https://openalex.org/W1832693441",
+    "https://openalex.org/W2964046515",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W6640212811",
+    "https://openalex.org/W2963240575",
+    "https://openalex.org/W2513378248",
+    "https://openalex.org/W6727807531",
+    "https://openalex.org/W2757541972",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2971351900",
+    "https://openalex.org/W2306941105",
+    "https://openalex.org/W4205184193",
+    "https://openalex.org/W4211186029",
+    "https://openalex.org/W3034336785",
+    "https://openalex.org/W2802301063",
+    "https://openalex.org/W1964613733",
+    "https://openalex.org/W2252057809",
+    "https://openalex.org/W6682691769",
+    "https://openalex.org/W2962808042",
+    "https://openalex.org/W2963168371",
+    "https://openalex.org/W2964288660",
+    "https://openalex.org/W6697121895",
+    "https://openalex.org/W2969743835",
+    "https://openalex.org/W2562607067",
+    "https://openalex.org/W2964164368",
+    "https://openalex.org/W2804000041",
+    "https://openalex.org/W2991675023",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2891778157",
+    "https://openalex.org/W2097726431",
+    "https://openalex.org/W2296071000",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W1924770834",
+    "https://openalex.org/W71795751",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2963428430",
+    "https://openalex.org/W2108646579"
+  ],
+  "abstract": "Aspect-based sentiment analysis aims to predict sentiment polarity for every aspect in a sentence review. Most existing approaches are based on the sequence models, which may superimpose the emotional semantics of different tendencies and lack syntactic structure information. And most models adopt coarse-grained attention mechanism which still face the issues of weakness interaction between aspect and context. In this paper, we propose a transformer based multi-grained attention network (T-MGAN), which utilizes the Transformer module to learn the word-level representations of aspects and context respectively, and further utilizes the Tree Transformer module to obtain the phrase-level representations of contexts. It is capable of extracting the syntactic structure features and syntax information of aspect and context. In addition, we adopt dual-pooling method and multi-grained attention network to extract high quality aspect-context interactive representations. We evaluate the proposed model on three datasets and prove the effectiveness of the proposed model.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8765029907226562
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6655597686767578
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.6015366315841675
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5952650904655457
+    },
+    {
+      "name": "Sentence",
+      "score": 0.5757303237915039
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.518242359161377
+    },
+    {
+      "name": "Phrase",
+      "score": 0.43472304940223694
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

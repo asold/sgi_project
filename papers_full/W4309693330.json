@@ -1,94 +1,141 @@
 {
-    "title": "scFormer: A Universal Representation Learning Approach for Single-Cell Data Using Transformers",
-    "url": "https://openalex.org/W4309693330",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5081166809",
-            "name": "Haotian Cui",
-            "affiliations": [
-                "University Health Network",
-                "University of Toronto",
-                "Vector Institute",
-                "Health Net"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5027560622",
-            "name": "Xiaoming Wang",
-            "affiliations": [
-                "University Health Network",
-                "University of Toronto",
-                "Vector Institute",
-                "Health Net"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010534603",
-            "name": "Hassaan Maan",
-            "affiliations": [
-                "University Health Network",
-                "University of Toronto",
-                "Vector Institute",
-                "Health Net"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5042018181",
-            "name": "Nan Duan",
-            "affiliations": [
-                "Microsoft Research (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100408160",
-            "name": "Bo Wang",
-            "affiliations": [
-                "University Health Network",
-                "University of Toronto",
-                "Vector Institute",
-                "Health Net"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2562947047",
-        "https://openalex.org/W3186179742",
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W4225380763",
-        "https://openalex.org/W2949813473",
-        "https://openalex.org/W3010280657",
-        "https://openalex.org/W1882958252",
-        "https://openalex.org/W3129866267",
-        "https://openalex.org/W4210587306",
-        "https://openalex.org/W2026641296",
-        "https://openalex.org/W3211983881",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3034573343",
-        "https://openalex.org/W2984472267",
-        "https://openalex.org/W2970885858",
-        "https://openalex.org/W3092493138",
-        "https://openalex.org/W2901677030",
-        "https://openalex.org/W2965552103",
-        "https://openalex.org/W3153727370",
-        "https://openalex.org/W3196650609",
-        "https://openalex.org/W2949237386",
-        "https://openalex.org/W4225598893",
-        "https://openalex.org/W2889326414",
-        "https://openalex.org/W2969093152",
-        "https://openalex.org/W2612519453",
-        "https://openalex.org/W4285596404",
-        "https://openalex.org/W3164156820",
-        "https://openalex.org/W2069089843",
-        "https://openalex.org/W3204708585",
-        "https://openalex.org/W2107680358",
-        "https://openalex.org/W4212891644",
-        "https://openalex.org/W2949177718",
-        "https://openalex.org/W3007172120",
-        "https://openalex.org/W4225981439",
-        "https://openalex.org/W2765284830",
-        "https://openalex.org/W2973034691"
-    ],
-    "abstract": "A bstract Single-cell sequencing has emerged as a promising technique to decode cellular heterogeneity and analyze gene functions. With the high throughput of modern techniques and resulting large-scale sequencing data, deep learning has been used extensively to learn representations of individual cells for downstream tasks. However, most existing methods rely on fully connected networks and are unable to model complex relationships between both cell and gene representations. We hereby propose scFormer, a novel transformer-based deep learning framework to jointly optimize cell and gene embeddings for single-cell biology in an unsupervised manner. By drawing parallels between natural language processing and genomics, scFormer applies self-attention to learn salient gene and cell embeddings through masked gene modelling. scFormer provides a unified framework to readily address a variety of downstream tasks such as data integration, analysis of gene function, and perturbation response prediction. Extensive experiments using scFormer show state-of-the-art performance on seven datasets across the relevant tasks. The scFormer model implementation is available at https://github.com/bowang-lab/scFormer .",
-    "full_text": null
+  "title": "scFormer: A Universal Representation Learning Approach for Single-Cell Data Using Transformers",
+  "url": "https://openalex.org/W4309693330",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5081166809",
+      "name": "Haotian Cui",
+      "affiliations": [
+        "University Health Network",
+        "University of Toronto",
+        "Vector Institute",
+        "Health Net"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5027560622",
+      "name": "Xiaoming Wang",
+      "affiliations": [
+        "University Health Network",
+        "University of Toronto",
+        "Vector Institute",
+        "Health Net"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010534603",
+      "name": "Hassaan Maan",
+      "affiliations": [
+        "University Health Network",
+        "University of Toronto",
+        "Vector Institute",
+        "Health Net"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5042018181",
+      "name": "Nan Duan",
+      "affiliations": [
+        "Microsoft Research (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100408160",
+      "name": "Bo Wang",
+      "affiliations": [
+        "University Health Network",
+        "University of Toronto",
+        "Vector Institute",
+        "Health Net"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2562947047",
+    "https://openalex.org/W3186179742",
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W4225380763",
+    "https://openalex.org/W2949813473",
+    "https://openalex.org/W3010280657",
+    "https://openalex.org/W1882958252",
+    "https://openalex.org/W3129866267",
+    "https://openalex.org/W4210587306",
+    "https://openalex.org/W2026641296",
+    "https://openalex.org/W3211983881",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3034573343",
+    "https://openalex.org/W2984472267",
+    "https://openalex.org/W2970885858",
+    "https://openalex.org/W3092493138",
+    "https://openalex.org/W2901677030",
+    "https://openalex.org/W2965552103",
+    "https://openalex.org/W3153727370",
+    "https://openalex.org/W3196650609",
+    "https://openalex.org/W2949237386",
+    "https://openalex.org/W4225598893",
+    "https://openalex.org/W2889326414",
+    "https://openalex.org/W2969093152",
+    "https://openalex.org/W2612519453",
+    "https://openalex.org/W4285596404",
+    "https://openalex.org/W3164156820",
+    "https://openalex.org/W2069089843",
+    "https://openalex.org/W3204708585",
+    "https://openalex.org/W2107680358",
+    "https://openalex.org/W4212891644",
+    "https://openalex.org/W2949177718",
+    "https://openalex.org/W3007172120",
+    "https://openalex.org/W4225981439",
+    "https://openalex.org/W2765284830",
+    "https://openalex.org/W2973034691"
+  ],
+  "abstract": "A bstract Single-cell sequencing has emerged as a promising technique to decode cellular heterogeneity and analyze gene functions. With the high throughput of modern techniques and resulting large-scale sequencing data, deep learning has been used extensively to learn representations of individual cells for downstream tasks. However, most existing methods rely on fully connected networks and are unable to model complex relationships between both cell and gene representations. We hereby propose scFormer, a novel transformer-based deep learning framework to jointly optimize cell and gene embeddings for single-cell biology in an unsupervised manner. By drawing parallels between natural language processing and genomics, scFormer applies self-attention to learn salient gene and cell embeddings through masked gene modelling. scFormer provides a unified framework to readily address a variety of downstream tasks such as data integration, analysis of gene function, and perturbation response prediction. Extensive experiments using scFormer show state-of-the-art performance on seven datasets across the relevant tasks. The scFormer model implementation is available at https://github.com/bowang-lab/scFormer .",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6850386261940002
+    },
+    {
+      "name": "Salient",
+      "score": 0.6254867911338806
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6065027713775635
+    },
+    {
+      "name": "Parallels",
+      "score": 0.5324177742004395
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.520599365234375
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.4475491940975189
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4119279980659485
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08380690217018127
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

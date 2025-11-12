@@ -1,66 +1,73 @@
 {
-    "title": "Prompt Optimization in Large Language Models",
-    "url": "https://openalex.org/W4393034763",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5093418587",
-            "name": "Antonio Sabbatella",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3010374977",
-            "name": "Andrea Ponti",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1910284647",
-            "name": "Ilaria Giordani",
-            "affiliations": [
-                "Oaks Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2582574761",
-            "name": "Antonio Candelieri",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2001359040",
-            "name": "Francesco Archetti",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2976818350",
-        "https://openalex.org/W4317889697",
-        "https://openalex.org/W6786190416",
-        "https://openalex.org/W6809646742",
-        "https://openalex.org/W4385573069",
-        "https://openalex.org/W6810313920",
-        "https://openalex.org/W4385573411",
-        "https://openalex.org/W3174770825",
-        "https://openalex.org/W3166986030",
-        "https://openalex.org/W4386566526",
-        "https://openalex.org/W4389520756",
-        "https://openalex.org/W3098267758",
-        "https://openalex.org/W4389518888",
-        "https://openalex.org/W4385573003",
-        "https://openalex.org/W4386566614",
-        "https://openalex.org/W4382136016",
-        "https://openalex.org/W2095363067",
-        "https://openalex.org/W2923014074",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W3113331478"
-    ],
-    "abstract": "Prompt optimization is a crucial task for improving the performance of large language models for downstream tasks. In this paper, a prompt is a sequence of n-grams selected from a vocabulary. Consequently, the aim is to select the optimal prompt concerning a certain performance metric. Prompt optimization can be considered as a combinatorial optimization problem, with the number of possible prompts (i.e., the combinatorial search space) given by the size of the vocabulary (i.e., all the possible n-grams) raised to the power of the length of the prompt. Exhaustive search is impractical; thus, an efficient search strategy is needed. We propose a Bayesian Optimization method performed over a continuous relaxation of the combinatorial search space. Bayesian Optimization is the dominant approach in black-box optimization for its sample efficiency, along with its modular structure and versatility. We use BoTorch, a library for Bayesian Optimization research built on top of PyTorch. Specifically, we focus on Hard Prompt Tuning, which directly searches for an optimal prompt to be added to the text input without requiring access to the Large Language Model, using it as a black-box (such as for GPT-4 which is available as a Model as a Service). Albeit preliminary and based on “vanilla” Bayesian Optimization algorithms, our experiments with RoBERTa as a large language model, on six benchmark datasets, show good performances when compared against other state-of-the-art black-box prompt optimization methods and enable an analysis of the trade-off between the size of the search space, accuracy, and wall-clock time.",
-    "full_text": null
+  "title": "Prompt Optimization in Large Language Models",
+  "url": "https://openalex.org/W4393034763",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5093418587",
+      "name": "Antonio Sabbatella",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3010374977",
+      "name": "Andrea Ponti",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1910284647",
+      "name": "Ilaria Giordani",
+      "affiliations": [
+        "Oaks Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2582574761",
+      "name": "Antonio Candelieri",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2001359040",
+      "name": "Francesco Archetti",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2976818350",
+    "https://openalex.org/W4317889697",
+    "https://openalex.org/W6786190416",
+    "https://openalex.org/W6809646742",
+    "https://openalex.org/W4385573069",
+    "https://openalex.org/W6810313920",
+    "https://openalex.org/W4385573411",
+    "https://openalex.org/W3174770825",
+    "https://openalex.org/W3166986030",
+    "https://openalex.org/W4386566526",
+    "https://openalex.org/W4389520756",
+    "https://openalex.org/W3098267758",
+    "https://openalex.org/W4389518888",
+    "https://openalex.org/W4385573003",
+    "https://openalex.org/W4386566614",
+    "https://openalex.org/W4382136016",
+    "https://openalex.org/W2095363067",
+    "https://openalex.org/W2923014074",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W3113331478"
+  ],
+  "abstract": "Prompt optimization is a crucial task for improving the performance of large language models for downstream tasks. In this paper, a prompt is a sequence of n-grams selected from a vocabulary. Consequently, the aim is to select the optimal prompt concerning a certain performance metric. Prompt optimization can be considered as a combinatorial optimization problem, with the number of possible prompts (i.e., the combinatorial search space) given by the size of the vocabulary (i.e., all the possible n-grams) raised to the power of the length of the prompt. Exhaustive search is impractical; thus, an efficient search strategy is needed. We propose a Bayesian Optimization method performed over a continuous relaxation of the combinatorial search space. Bayesian Optimization is the dominant approach in black-box optimization for its sample efficiency, along with its modular structure and versatility. We use BoTorch, a library for Bayesian Optimization research built on top of PyTorch. Specifically, we focus on Hard Prompt Tuning, which directly searches for an optimal prompt to be added to the text input without requiring access to the Large Language Model, using it as a black-box (such as for GPT-4 which is available as a Model as a Service). Albeit preliminary and based on “vanilla” Bayesian Optimization algorithms, our experiments with RoBERTa as a large language model, on six benchmark datasets, show good performances when compared against other state-of-the-art black-box prompt optimization methods and enable an analysis of the trade-off between the size of the search space, accuracy, and wall-clock time.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5235112309455872
+    }
+  ]
 }

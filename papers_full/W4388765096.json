@@ -1,65 +1,120 @@
 {
-    "title": "HUT: Hybrid UNet transformer for brain lesion and tumour segmentation",
-    "url": "https://openalex.org/W4388765096",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5038945345",
-            "name": "Wei Kwek Soh",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007995911",
-            "name": "H. Yuen",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5026076885",
-            "name": "Jagath C. Rajapakse",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4210242902",
-        "https://openalex.org/W6639824700",
-        "https://openalex.org/W3014974815",
-        "https://openalex.org/W6801555468",
-        "https://openalex.org/W6791241316",
-        "https://openalex.org/W6791469159",
-        "https://openalex.org/W3137561054",
-        "https://openalex.org/W4205281574",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W6791764970",
-        "https://openalex.org/W1641498739",
-        "https://openalex.org/W2751069891",
-        "https://openalex.org/W6794166682",
-        "https://openalex.org/W2791723176",
-        "https://openalex.org/W6775673379",
-        "https://openalex.org/W6777751218",
-        "https://openalex.org/W6766121741",
-        "https://openalex.org/W6783852691",
-        "https://openalex.org/W2898910301",
-        "https://openalex.org/W6765842094",
-        "https://openalex.org/W6718240422",
-        "https://openalex.org/W6742348326",
-        "https://openalex.org/W6676297131",
-        "https://openalex.org/W4301409532",
-        "https://openalex.org/W4220867432",
-        "https://openalex.org/W4389977645",
-        "https://openalex.org/W2747489727",
-        "https://openalex.org/W4210381240",
-        "https://openalex.org/W4253570578",
-        "https://openalex.org/W4249142012",
-        "https://openalex.org/W4294975187",
-        "https://openalex.org/W3112701542",
-        "https://openalex.org/W4226147091"
-    ],
-    "abstract": "A supervised deep learning network like the UNet has performed well in segmenting brain anomalies such as lesions and tumours. However, such methods were proposed to perform on single-modality or multi-modality images. We use the Hybrid UNet Transformer (HUT) to improve performance in single-modality lesion segmentation and multi-modality brain tumour segmentation. The HUT consists of two pipelines running in parallel, one of which is UNet-based and the other is Transformer-based. The Transformer-based pipeline relies on feature maps in the intermediate layers of the UNet decoder during training. The HUT network takes in the available modalities of 3D brain volumes and embeds the brain volumes into voxel patches. The transformers in the system improve global attention and long-range correlation between the voxel patches. In addition, we introduce a self-supervised training approach in the HUT framework to enhance the overall segmentation performance. We demonstrate that HUT performs better than the state-of-the-art network SPiN in the single-modality segmentation on Anatomical Tracings of Lesions After Stroke (ATLAS) dataset by 4.84% of Dice score and a significant 41% in the Hausdorff Distance score. HUT also performed well on brain scans in the Brain Tumour Segmentation (BraTS20) dataset and demonstrated an improvement over the state-of-the-art network nnUnet by 0.96% in the Dice score and 4.1% in the Hausdorff Distance score.",
-    "full_text": null
+  "title": "HUT: Hybrid UNet transformer for brain lesion and tumour segmentation",
+  "url": "https://openalex.org/W4388765096",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5038945345",
+      "name": "Wei Kwek Soh",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007995911",
+      "name": "H. Yuen",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5026076885",
+      "name": "Jagath C. Rajapakse",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4210242902",
+    "https://openalex.org/W6639824700",
+    "https://openalex.org/W3014974815",
+    "https://openalex.org/W6801555468",
+    "https://openalex.org/W6791241316",
+    "https://openalex.org/W6791469159",
+    "https://openalex.org/W3137561054",
+    "https://openalex.org/W4205281574",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W6791764970",
+    "https://openalex.org/W1641498739",
+    "https://openalex.org/W2751069891",
+    "https://openalex.org/W6794166682",
+    "https://openalex.org/W2791723176",
+    "https://openalex.org/W6775673379",
+    "https://openalex.org/W6777751218",
+    "https://openalex.org/W6766121741",
+    "https://openalex.org/W6783852691",
+    "https://openalex.org/W2898910301",
+    "https://openalex.org/W6765842094",
+    "https://openalex.org/W6718240422",
+    "https://openalex.org/W6742348326",
+    "https://openalex.org/W6676297131",
+    "https://openalex.org/W4301409532",
+    "https://openalex.org/W4220867432",
+    "https://openalex.org/W4389977645",
+    "https://openalex.org/W2747489727",
+    "https://openalex.org/W4210381240",
+    "https://openalex.org/W4253570578",
+    "https://openalex.org/W4249142012",
+    "https://openalex.org/W4294975187",
+    "https://openalex.org/W3112701542",
+    "https://openalex.org/W4226147091"
+  ],
+  "abstract": "A supervised deep learning network like the UNet has performed well in segmenting brain anomalies such as lesions and tumours. However, such methods were proposed to perform on single-modality or multi-modality images. We use the Hybrid UNet Transformer (HUT) to improve performance in single-modality lesion segmentation and multi-modality brain tumour segmentation. The HUT consists of two pipelines running in parallel, one of which is UNet-based and the other is Transformer-based. The Transformer-based pipeline relies on feature maps in the intermediate layers of the UNet decoder during training. The HUT network takes in the available modalities of 3D brain volumes and embeds the brain volumes into voxel patches. The transformers in the system improve global attention and long-range correlation between the voxel patches. In addition, we introduce a self-supervised training approach in the HUT framework to enhance the overall segmentation performance. We demonstrate that HUT performs better than the state-of-the-art network SPiN in the single-modality segmentation on Anatomical Tracings of Lesions After Stroke (ATLAS) dataset by 4.84% of Dice score and a significant 41% in the Hausdorff Distance score. HUT also performed well on brain scans in the Brain Tumour Segmentation (BraTS20) dataset and demonstrated an improvement over the state-of-the-art network nnUnet by 0.96% in the Dice score and 4.1% in the Hausdorff Distance score.",
+  "full_text": null,
+  "topic": "Segmentation",
+  "concepts": [
+    {
+      "name": "Segmentation",
+      "score": 0.7902317047119141
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6390402913093567
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6100145578384399
+    },
+    {
+      "name": "Hausdorff distance",
+      "score": 0.5752800107002258
+    },
+    {
+      "name": "Voxel",
+      "score": 0.5509350895881653
+    },
+    {
+      "name": "Dice",
+      "score": 0.5200488567352295
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.48116335272789
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.47832298278808594
+    },
+    {
+      "name": "Sørensen–Dice coefficient",
+      "score": 0.4171733856201172
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.38530033826828003
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3372159004211426
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1486721932888031
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

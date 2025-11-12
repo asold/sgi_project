@@ -1,55 +1,138 @@
 {
-    "title": "DxFormer: a decoupled automatic diagnostic system based on decoder–encoder transformer with dense symptom representations",
-    "url": "https://openalex.org/W4309509386",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100344360",
-            "name": "Wei Chen",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5052579222",
-            "name": "Cheng Zhong",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5084343474",
-            "name": "Jiajie Peng",
-            "affiliations": [
-                "Fudan University",
-                "Northwestern Polytechnical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5011504177",
-            "name": "Zhongyu Wei",
-            "affiliations": [
-                "Fudan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4293068910",
-        "https://openalex.org/W6680532216",
-        "https://openalex.org/W4239510810",
-        "https://openalex.org/W2971364334",
-        "https://openalex.org/W6793477640",
-        "https://openalex.org/W2991075363",
-        "https://openalex.org/W6757324869",
-        "https://openalex.org/W2257979135",
-        "https://openalex.org/W2119717200",
-        "https://openalex.org/W4283753811",
-        "https://openalex.org/W2998704965",
-        "https://openalex.org/W3102138742",
-        "https://openalex.org/W2906902945",
-        "https://openalex.org/W2145339207",
-        "https://openalex.org/W3152249452"
-    ],
-    "abstract": "Abstract Motivation Symptom-based automatic diagnostic system queries the patient’s potential symptoms through continuous interaction with the patient and makes predictions about possible diseases. A few studies use reinforcement learning (RL) to learn the optimal policy from the joint action space of symptoms and diseases. However, existing RL (or Non-RL) methods focus on disease diagnosis while ignoring the importance of symptom inquiry. Although these systems have achieved considerable diagnostic accuracy, they are still far below its performance upper bound due to few turns of interaction with patients and insufficient performance of symptom inquiry. To address this problem, we propose a new automatic diagnostic framework called DxFormer, which decouples symptom inquiry and disease diagnosis, so that these two modules can be independently optimized. The transition from symptom inquiry to disease diagnosis is parametrically determined by the stopping criteria. In DxFormer, we treat each symptom as a token, and formalize the symptom inquiry and disease diagnosis to a language generation model and a sequence classification model, respectively. We use the inverted version of Transformer, i.e. the decoder–encoder structure, to learn the representation of symptoms by jointly optimizing the reinforce reward and cross-entropy loss. Results We conduct experiments on three real-world medical dialogue datasets, and the experimental results verify the feasibility of increasing diagnostic accuracy by improving symptom recall. Our model overcomes the shortcomings of previous RL-based methods. By decoupling symptom query from the process of diagnosis, DxFormer greatly improves the symptom recall and achieves the state-of-the-art diagnostic accuracy. Availability and implementation Both code and data are available at https://github.com/lemuria-wchen/DxFormer. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "DxFormer: a decoupled automatic diagnostic system based on decoder–encoder transformer with dense symptom representations",
+  "url": "https://openalex.org/W4309509386",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100344360",
+      "name": "Wei Chen",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5052579222",
+      "name": "Cheng Zhong",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5084343474",
+      "name": "Jiajie Peng",
+      "affiliations": [
+        "Fudan University",
+        "Northwestern Polytechnical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5011504177",
+      "name": "Zhongyu Wei",
+      "affiliations": [
+        "Fudan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4293068910",
+    "https://openalex.org/W6680532216",
+    "https://openalex.org/W4239510810",
+    "https://openalex.org/W2971364334",
+    "https://openalex.org/W6793477640",
+    "https://openalex.org/W2991075363",
+    "https://openalex.org/W6757324869",
+    "https://openalex.org/W2257979135",
+    "https://openalex.org/W2119717200",
+    "https://openalex.org/W4283753811",
+    "https://openalex.org/W2998704965",
+    "https://openalex.org/W3102138742",
+    "https://openalex.org/W2906902945",
+    "https://openalex.org/W2145339207",
+    "https://openalex.org/W3152249452"
+  ],
+  "abstract": "Abstract Motivation Symptom-based automatic diagnostic system queries the patient’s potential symptoms through continuous interaction with the patient and makes predictions about possible diseases. A few studies use reinforcement learning (RL) to learn the optimal policy from the joint action space of symptoms and diseases. However, existing RL (or Non-RL) methods focus on disease diagnosis while ignoring the importance of symptom inquiry. Although these systems have achieved considerable diagnostic accuracy, they are still far below its performance upper bound due to few turns of interaction with patients and insufficient performance of symptom inquiry. To address this problem, we propose a new automatic diagnostic framework called DxFormer, which decouples symptom inquiry and disease diagnosis, so that these two modules can be independently optimized. The transition from symptom inquiry to disease diagnosis is parametrically determined by the stopping criteria. In DxFormer, we treat each symptom as a token, and formalize the symptom inquiry and disease diagnosis to a language generation model and a sequence classification model, respectively. We use the inverted version of Transformer, i.e. the decoder–encoder structure, to learn the representation of symptoms by jointly optimizing the reinforce reward and cross-entropy loss. Results We conduct experiments on three real-world medical dialogue datasets, and the experimental results verify the feasibility of increasing diagnostic accuracy by improving symptom recall. Our model overcomes the shortcomings of previous RL-based methods. By decoupling symptom query from the process of diagnosis, DxFormer greatly improves the symptom recall and achieves the state-of-the-art diagnostic accuracy. Availability and implementation Both code and data are available at https://github.com/lemuria-wchen/DxFormer. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7195243835449219
+    },
+    {
+      "name": "Recall",
+      "score": 0.6939458847045898
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6391291618347168
+    },
+    {
+      "name": "Reinforcement learning",
+      "score": 0.5832858681678772
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5745096802711487
+    },
+    {
+      "name": "Diagnostic accuracy",
+      "score": 0.5137642621994019
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4968858063220978
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4765603840351105
+    },
+    {
+      "name": "Decoupling (probability)",
+      "score": 0.45315927267074585
+    },
+    {
+      "name": "Precision and recall",
+      "score": 0.4198233187198639
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.1472121775150299
+    },
+    {
+      "name": "Medicine",
+      "score": 0.13455075025558472
+    },
+    {
+      "name": "Psychology",
+      "score": 0.10815903544425964
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09914985299110413
+    },
+    {
+      "name": "Radiology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Control engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

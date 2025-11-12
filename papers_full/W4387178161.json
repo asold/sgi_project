@@ -1,58 +1,85 @@
 {
-    "title": "A New Approach to Web Application Security: Utilizing GPT Language Models for Source Code Inspection",
-    "url": "https://openalex.org/W4387178161",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1793348007",
-            "name": "Zoltan Szabo",
-            "affiliations": [
-                "University of Szeged"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A17831824",
-            "name": "Vilmos Bilicki",
-            "affiliations": [
-                "University of Szeged"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4327545654",
-        "https://openalex.org/W4315797044",
-        "https://openalex.org/W4385611558",
-        "https://openalex.org/W2946001416",
-        "https://openalex.org/W2106667508",
-        "https://openalex.org/W2026787072",
-        "https://openalex.org/W4206132286",
-        "https://openalex.org/W3046510830",
-        "https://openalex.org/W4285814067",
-        "https://openalex.org/W4220887515",
-        "https://openalex.org/W3010654572",
-        "https://openalex.org/W3196769678",
-        "https://openalex.org/W2773180079",
-        "https://openalex.org/W3080815763",
-        "https://openalex.org/W2999760805",
-        "https://openalex.org/W3000032641",
-        "https://openalex.org/W3112073754",
-        "https://openalex.org/W3007249573",
-        "https://openalex.org/W3000425587",
-        "https://openalex.org/W3134686229",
-        "https://openalex.org/W4385988359",
-        "https://openalex.org/W6850135255",
-        "https://openalex.org/W4381855196",
-        "https://openalex.org/W4311165836",
-        "https://openalex.org/W4386214355",
-        "https://openalex.org/W2070199221",
-        "https://openalex.org/W4376611407",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3208981664",
-        "https://openalex.org/W3161027892",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4322631505"
-    ],
-    "abstract": "Due to the proliferation of large language models (LLMs) and their widespread use in applications such as ChatGPT, there has been a significant increase in interest in AI over the past year. Multiple researchers have raised the question: how will AI be applied and in what areas? Programming, including the generation, interpretation, analysis, and documentation of static program code based on promptsis one of the most promising fields. With the GPT API, we have explored a new aspect of this: static analysis of the source code of front-end applications at the endpoints of the data path. Our focus was the detection of the CWE-653 vulnerability—inadequately isolated sensitive code segments that could lead to unauthorized access or data leakage. This type of vulnerability detection consists of the detection of code segments dealing with sensitive data and the categorization of the isolation and protection levels of those segments that were previously not feasible without human intervention. However, we believed that the interpretive capabilities of GPT models could be explored to create a set of prompts to detect these cases on a file-by-file basis for the applications under study, and the efficiency of the method could pave the way for additional analysis tasks that were previously unavailable for automation. In the introduction to our paper, we characterize in detail the problem space of vulnerability and weakness detection, the challenges of the domain, and the advances that have been achieved in similarly complex areas using GPT or other LLMs. Then, we present our methodology, which includes our classification of sensitive data and protection levels. This is followed by the process of preprocessing, analyzing, and evaluating static code. This was achieved through a series of GPT prompts containing parts of static source code, utilizing few-shot examples and chain-of-thought techniques that detected sensitive code segments and mapped the complex code base into manageable JSON structures.Finally, we present our findings and evaluation of the open source project analysis, comparing the results of the GPT-based pipelines with manual evaluations, highlighting that the field yields a high research value. The results show a vulnerability detection rate for this particular type of model of 88.76%, among others.",
-    "full_text": null
+  "title": "A New Approach to Web Application Security: Utilizing GPT Language Models for Source Code Inspection",
+  "url": "https://openalex.org/W4387178161",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1793348007",
+      "name": "Zoltan Szabo",
+      "affiliations": [
+        "University of Szeged"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A17831824",
+      "name": "Vilmos Bilicki",
+      "affiliations": [
+        "University of Szeged"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4327545654",
+    "https://openalex.org/W4315797044",
+    "https://openalex.org/W4385611558",
+    "https://openalex.org/W2946001416",
+    "https://openalex.org/W2106667508",
+    "https://openalex.org/W2026787072",
+    "https://openalex.org/W4206132286",
+    "https://openalex.org/W3046510830",
+    "https://openalex.org/W4285814067",
+    "https://openalex.org/W4220887515",
+    "https://openalex.org/W3010654572",
+    "https://openalex.org/W3196769678",
+    "https://openalex.org/W2773180079",
+    "https://openalex.org/W3080815763",
+    "https://openalex.org/W2999760805",
+    "https://openalex.org/W3000032641",
+    "https://openalex.org/W3112073754",
+    "https://openalex.org/W3007249573",
+    "https://openalex.org/W3000425587",
+    "https://openalex.org/W3134686229",
+    "https://openalex.org/W4385988359",
+    "https://openalex.org/W6850135255",
+    "https://openalex.org/W4381855196",
+    "https://openalex.org/W4311165836",
+    "https://openalex.org/W4386214355",
+    "https://openalex.org/W2070199221",
+    "https://openalex.org/W4376611407",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3208981664",
+    "https://openalex.org/W3161027892",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4322631505"
+  ],
+  "abstract": "Due to the proliferation of large language models (LLMs) and their widespread use in applications such as ChatGPT, there has been a significant increase in interest in AI over the past year. Multiple researchers have raised the question: how will AI be applied and in what areas? Programming, including the generation, interpretation, analysis, and documentation of static program code based on promptsis one of the most promising fields. With the GPT API, we have explored a new aspect of this: static analysis of the source code of front-end applications at the endpoints of the data path. Our focus was the detection of the CWE-653 vulnerability—inadequately isolated sensitive code segments that could lead to unauthorized access or data leakage. This type of vulnerability detection consists of the detection of code segments dealing with sensitive data and the categorization of the isolation and protection levels of those segments that were previously not feasible without human intervention. However, we believed that the interpretive capabilities of GPT models could be explored to create a set of prompts to detect these cases on a file-by-file basis for the applications under study, and the efficiency of the method could pave the way for additional analysis tasks that were previously unavailable for automation. In the introduction to our paper, we characterize in detail the problem space of vulnerability and weakness detection, the challenges of the domain, and the advances that have been achieved in similarly complex areas using GPT or other LLMs. Then, we present our methodology, which includes our classification of sensitive data and protection levels. This is followed by the process of preprocessing, analyzing, and evaluating static code. This was achieved through a series of GPT prompts containing parts of static source code, utilizing few-shot examples and chain-of-thought techniques that detected sensitive code segments and mapped the complex code base into manageable JSON structures.Finally, we present our findings and evaluation of the open source project analysis, comparing the results of the GPT-based pipelines with manual evaluations, highlighting that the field yields a high research value. The results show a vulnerability detection rate for this particular type of model of 88.76%, among others.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8773365020751953
+    },
+    {
+      "name": "Source code",
+      "score": 0.48778945207595825
+    },
+    {
+      "name": "Vulnerability (computing)",
+      "score": 0.4825679361820221
+    },
+    {
+      "name": "Static analysis",
+      "score": 0.477927029132843
+    },
+    {
+      "name": "Computer security",
+      "score": 0.38977786898612976
+    },
+    {
+      "name": "Programming language",
+      "score": 0.24636831879615784
+    }
+  ]
 }

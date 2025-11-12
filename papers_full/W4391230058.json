@@ -1,68 +1,111 @@
 {
-    "title": "Beyond Lexical Boundaries: LLM-Generated Text Detection for Romanian Digital Libraries",
-    "url": "https://openalex.org/W4391230058",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5028694560",
-            "name": "Melania Nițu",
-            "affiliations": [
-                "Universitatea Națională de Știință și Tehnologie Politehnica București"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5072192995",
-            "name": "Mihai Dascălu",
-            "affiliations": [
-                "Academy of Romanian Scientists",
-                "Universitatea Națională de Știință și Tehnologie Politehnica București"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2962965405",
-        "https://openalex.org/W2962883855",
-        "https://openalex.org/W3099700870",
-        "https://openalex.org/W4200313831",
-        "https://openalex.org/W4385690827",
-        "https://openalex.org/W4224299209",
-        "https://openalex.org/W3174519801",
-        "https://openalex.org/W3034723486",
-        "https://openalex.org/W4386098991",
-        "https://openalex.org/W4388333366",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2963846996",
-        "https://openalex.org/W2888482885",
-        "https://openalex.org/W4200259318",
-        "https://openalex.org/W3198848114",
-        "https://openalex.org/W6761205521",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W4313209533",
-        "https://openalex.org/W3001434439",
-        "https://openalex.org/W2512924740",
-        "https://openalex.org/W3169483174",
-        "https://openalex.org/W3082928416",
-        "https://openalex.org/W2964343359",
-        "https://openalex.org/W204891295",
-        "https://openalex.org/W2949028947",
-        "https://openalex.org/W1678356000",
-        "https://openalex.org/W2155653793",
-        "https://openalex.org/W3169920290",
-        "https://openalex.org/W2026302857",
-        "https://openalex.org/W4386790871",
-        "https://openalex.org/W2133958774",
-        "https://openalex.org/W3114757058",
-        "https://openalex.org/W6807408924",
-        "https://openalex.org/W3041669245",
-        "https://openalex.org/W4297460924",
-        "https://openalex.org/W6600367688",
-        "https://openalex.org/W4206558526",
-        "https://openalex.org/W8870360",
-        "https://openalex.org/W4288089799"
-    ],
-    "abstract": "Machine-generated content reshapes the landscape of digital information; hence, ensuring the authenticity of texts within digital libraries has become a paramount concern. This work introduces a corpus of approximately 60 k Romanian documents, including human-written samples as well as generated texts using six distinct Large Language Models (LLMs) and three different generation methods. Our robust experimental dataset covers five domains, namely books, news, legal, medical, and scientific publications. The exploratory text analysis revealed differences between human-authored and artificially generated texts, exposing the intricacies of lexical diversity and textual complexity. Since Romanian is a less-resourced language requiring dedicated detectors on which out-of-the-box solutions do not work, this paper introduces two techniques for discerning machine-generated texts. The first method leverages a Transformer-based model to categorize texts as human or machine-generated, while the second method extracts and examines linguistic features, such as identifying the top textual complexity indices via Kruskal–Wallis mean rank and computes burstiness, which are further fed into a machine-learning model leveraging an extreme gradient-boosting decision tree. The methods show competitive performance, with the first technique’s results outperforming the second one in two out of five domains, reaching an F1 score of 0.96. Our study also includes a text similarity analysis between human-authored and artificially generated texts, coupled with a SHAP analysis to understand which linguistic features contribute more to the classifier’s decision.",
-    "full_text": null
+  "title": "Beyond Lexical Boundaries: LLM-Generated Text Detection for Romanian Digital Libraries",
+  "url": "https://openalex.org/W4391230058",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5028694560",
+      "name": "Melania Nițu",
+      "affiliations": [
+        "Universitatea Națională de Știință și Tehnologie Politehnica București"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5072192995",
+      "name": "Mihai Dascălu",
+      "affiliations": [
+        "Academy of Romanian Scientists",
+        "Universitatea Națională de Știință și Tehnologie Politehnica București"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2962965405",
+    "https://openalex.org/W2962883855",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W4200313831",
+    "https://openalex.org/W4385690827",
+    "https://openalex.org/W4224299209",
+    "https://openalex.org/W3174519801",
+    "https://openalex.org/W3034723486",
+    "https://openalex.org/W4386098991",
+    "https://openalex.org/W4388333366",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2963846996",
+    "https://openalex.org/W2888482885",
+    "https://openalex.org/W4200259318",
+    "https://openalex.org/W3198848114",
+    "https://openalex.org/W6761205521",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W4313209533",
+    "https://openalex.org/W3001434439",
+    "https://openalex.org/W2512924740",
+    "https://openalex.org/W3169483174",
+    "https://openalex.org/W3082928416",
+    "https://openalex.org/W2964343359",
+    "https://openalex.org/W204891295",
+    "https://openalex.org/W2949028947",
+    "https://openalex.org/W1678356000",
+    "https://openalex.org/W2155653793",
+    "https://openalex.org/W3169920290",
+    "https://openalex.org/W2026302857",
+    "https://openalex.org/W4386790871",
+    "https://openalex.org/W2133958774",
+    "https://openalex.org/W3114757058",
+    "https://openalex.org/W6807408924",
+    "https://openalex.org/W3041669245",
+    "https://openalex.org/W4297460924",
+    "https://openalex.org/W6600367688",
+    "https://openalex.org/W4206558526",
+    "https://openalex.org/W8870360",
+    "https://openalex.org/W4288089799"
+  ],
+  "abstract": "Machine-generated content reshapes the landscape of digital information; hence, ensuring the authenticity of texts within digital libraries has become a paramount concern. This work introduces a corpus of approximately 60 k Romanian documents, including human-written samples as well as generated texts using six distinct Large Language Models (LLMs) and three different generation methods. Our robust experimental dataset covers five domains, namely books, news, legal, medical, and scientific publications. The exploratory text analysis revealed differences between human-authored and artificially generated texts, exposing the intricacies of lexical diversity and textual complexity. Since Romanian is a less-resourced language requiring dedicated detectors on which out-of-the-box solutions do not work, this paper introduces two techniques for discerning machine-generated texts. The first method leverages a Transformer-based model to categorize texts as human or machine-generated, while the second method extracts and examines linguistic features, such as identifying the top textual complexity indices via Kruskal–Wallis mean rank and computes burstiness, which are further fed into a machine-learning model leveraging an extreme gradient-boosting decision tree. The methods show competitive performance, with the first technique’s results outperforming the second one in two out of five domains, reaching an F1 score of 0.96. Our study also includes a text similarity analysis between human-authored and artificially generated texts, coupled with a SHAP analysis to understand which linguistic features contribute more to the classifier’s decision.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8909660577774048
+    },
+    {
+      "name": "Romanian",
+      "score": 0.7360448241233826
+    },
+    {
+      "name": "Digital library",
+      "score": 0.4291468858718872
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40558093786239624
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.39855319261550903
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3686591386795044
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.3233882784843445
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.2026357352733612
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Poetry",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,82 +1,121 @@
 {
-    "title": "PEDL: extracting protein–protein associations using deep language models and distant supervision",
-    "url": "https://openalex.org/W3040936192",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5041680406",
-            "name": "Leon Weber",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Max Delbrück Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5029061032",
-            "name": "Kirsten Thobe",
-            "affiliations": [
-                "Max Delbrück Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5056914404",
-            "name": "Oscar Arturo Migueles Lozano",
-            "affiliations": [
-                "Max Delbrück Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5011931952",
-            "name": "Jana Wolf",
-            "affiliations": [
-                "Max Delbrück Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5055236937",
-            "name": "Ulf Leser",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2080973051",
-        "https://openalex.org/W2163480486",
-        "https://openalex.org/W2164298117",
-        "https://openalex.org/W2115732428",
-        "https://openalex.org/W2915895751",
-        "https://openalex.org/W2158505321",
-        "https://openalex.org/W2734608416",
-        "https://openalex.org/W2291974241",
-        "https://openalex.org/W6813094581",
-        "https://openalex.org/W6755912153",
-        "https://openalex.org/W2058747197",
-        "https://openalex.org/W2527715458",
-        "https://openalex.org/W2015788325",
-        "https://openalex.org/W6758293299",
-        "https://openalex.org/W2108706252",
-        "https://openalex.org/W1990215850",
-        "https://openalex.org/W2121844933",
-        "https://openalex.org/W2012920679",
-        "https://openalex.org/W1604644367",
-        "https://openalex.org/W2096766502",
-        "https://openalex.org/W6643798115",
-        "https://openalex.org/W2124562185",
-        "https://openalex.org/W2031966872",
-        "https://openalex.org/W2954075147",
-        "https://openalex.org/W2946690328",
-        "https://openalex.org/W2347037915",
-        "https://openalex.org/W1976142725",
-        "https://openalex.org/W1989277387",
-        "https://openalex.org/W4231254854",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2010604520",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W3099452997",
-        "https://openalex.org/W2950342274",
-        "https://openalex.org/W1973352244"
-    ],
-    "abstract": "Abstract Motivation A significant portion of molecular biology investigates signalling pathways and thus depends on an up-to-date and complete resource of functional protein–protein associations (PPAs) that constitute such pathways. Despite extensive curation efforts, major pathway databases are still notoriously incomplete. Relation extraction can help to gather such pathway information from biomedical publications. Current methods for extracting PPAs typically rely exclusively on rare manually labelled data which severely limits their performance. Results We propose PPA Extraction with Deep Language (PEDL), a method for predicting PPAs from text that combines deep language models and distant supervision. Due to the reliance on distant supervision, PEDL has access to an order of magnitude more training data than methods solely relying on manually labelled annotations. We introduce three different datasets for PPA prediction and evaluate PEDL for the two subtasks of predicting PPAs between two proteins, as well as identifying the text spans stating the PPA. We compared PEDL with a recently published state-of-the-art model and found that on average PEDL performs better in both tasks on all three datasets. An expert evaluation demonstrates that PEDL can be used to predict PPAs that are missing from major pathway databases and that it correctly identifies the text spans supporting the PPA. Availability and implementation PEDL is freely available at https://github.com/leonweber/pedl. The repository also includes scripts to generate the used datasets and to reproduce the experiments from this article. Supplementary information Supplementary data are available at Bioinformatics online.",
-    "full_text": null
+  "title": "PEDL: extracting protein–protein associations using deep language models and distant supervision",
+  "url": "https://openalex.org/W3040936192",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5041680406",
+      "name": "Leon Weber",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Max Delbrück Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5029061032",
+      "name": "Kirsten Thobe",
+      "affiliations": [
+        "Max Delbrück Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5056914404",
+      "name": "Oscar Arturo Migueles Lozano",
+      "affiliations": [
+        "Max Delbrück Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5011931952",
+      "name": "Jana Wolf",
+      "affiliations": [
+        "Max Delbrück Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5055236937",
+      "name": "Ulf Leser",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2080973051",
+    "https://openalex.org/W2163480486",
+    "https://openalex.org/W2164298117",
+    "https://openalex.org/W2115732428",
+    "https://openalex.org/W2915895751",
+    "https://openalex.org/W2158505321",
+    "https://openalex.org/W2734608416",
+    "https://openalex.org/W2291974241",
+    "https://openalex.org/W6813094581",
+    "https://openalex.org/W6755912153",
+    "https://openalex.org/W2058747197",
+    "https://openalex.org/W2527715458",
+    "https://openalex.org/W2015788325",
+    "https://openalex.org/W6758293299",
+    "https://openalex.org/W2108706252",
+    "https://openalex.org/W1990215850",
+    "https://openalex.org/W2121844933",
+    "https://openalex.org/W2012920679",
+    "https://openalex.org/W1604644367",
+    "https://openalex.org/W2096766502",
+    "https://openalex.org/W6643798115",
+    "https://openalex.org/W2124562185",
+    "https://openalex.org/W2031966872",
+    "https://openalex.org/W2954075147",
+    "https://openalex.org/W2946690328",
+    "https://openalex.org/W2347037915",
+    "https://openalex.org/W1976142725",
+    "https://openalex.org/W1989277387",
+    "https://openalex.org/W4231254854",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2010604520",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W3099452997",
+    "https://openalex.org/W2950342274",
+    "https://openalex.org/W1973352244"
+  ],
+  "abstract": "Abstract Motivation A significant portion of molecular biology investigates signalling pathways and thus depends on an up-to-date and complete resource of functional protein–protein associations (PPAs) that constitute such pathways. Despite extensive curation efforts, major pathway databases are still notoriously incomplete. Relation extraction can help to gather such pathway information from biomedical publications. Current methods for extracting PPAs typically rely exclusively on rare manually labelled data which severely limits their performance. Results We propose PPA Extraction with Deep Language (PEDL), a method for predicting PPAs from text that combines deep language models and distant supervision. Due to the reliance on distant supervision, PEDL has access to an order of magnitude more training data than methods solely relying on manually labelled annotations. We introduce three different datasets for PPA prediction and evaluate PEDL for the two subtasks of predicting PPAs between two proteins, as well as identifying the text spans stating the PPA. We compared PEDL with a recently published state-of-the-art model and found that on average PEDL performs better in both tasks on all three datasets. An expert evaluation demonstrates that PEDL can be used to predict PPAs that are missing from major pathway databases and that it correctly identifies the text spans supporting the PPA. Availability and implementation PEDL is freely available at https://github.com/leonweber/pedl. The repository also includes scripts to generate the used datasets and to reproduce the experiments from this article. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7981033325195312
+    },
+    {
+      "name": "Scripting language",
+      "score": 0.7604589462280273
+    },
+    {
+      "name": "Information extraction",
+      "score": 0.4979531764984131
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4222305417060852
+    },
+    {
+      "name": "Data mining",
+      "score": 0.38474103808403015
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3830193281173706
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.33634424209594727
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.32811009883880615
+    },
+    {
+      "name": "Programming language",
+      "score": 0.17229804396629333
+    }
+  ]
 }

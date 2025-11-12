@@ -1,64 +1,131 @@
 {
-    "title": "Evaluating language models for the retrieval and categorization of lexical collocations",
-    "url": "https://openalex.org/W3153626078",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2319266098",
-            "name": "Luis Espinosa Anke",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3015520180",
-            "name": "Joan Codina-Filbà",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1828080704",
-            "name": "Leo Wanner",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2962669974",
-        "https://openalex.org/W2517053141",
-        "https://openalex.org/W2963201227",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W103446013",
-        "https://openalex.org/W2891677128",
-        "https://openalex.org/W3015766957",
-        "https://openalex.org/W2965058444",
-        "https://openalex.org/W2963159690",
-        "https://openalex.org/W566493870",
-        "https://openalex.org/W2905266130",
-        "https://openalex.org/W2966176804",
-        "https://openalex.org/W2574585943",
-        "https://openalex.org/W2990704537",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W1794039122",
-        "https://openalex.org/W2963958374",
-        "https://openalex.org/W3018732874",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W1984052055",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2951652751",
-        "https://openalex.org/W2250962466",
-        "https://openalex.org/W2246442610",
-        "https://openalex.org/W2107378682",
-        "https://openalex.org/W1608322251",
-        "https://openalex.org/W2114867204",
-        "https://openalex.org/W1241017059",
-        "https://openalex.org/W2975059944",
-        "https://openalex.org/W2296076036",
-        "https://openalex.org/W3007029686",
-        "https://openalex.org/W2963310665",
-        "https://openalex.org/W2951676659",
-        "https://openalex.org/W2946359678",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W2159637323",
-        "https://openalex.org/W2294542797"
-    ],
-    "abstract": "Lexical collocations are idiosyncratic combinations of two syntactically bound lexical items (e.g., \"heavy rain\" or \"take a step\"). Understanding their degree of compositionality and idiosyncrasy, as well their underlying semantics, is crucial for language learners, lexicographers and downstream NLP applications. In this paper, we perform an exhaustive analysis of current language models for collocation understanding. We first construct a dataset of apparitions of lexical collocations in context, categorized into 17 representative semantic categories. Then, we perform two experiments: (1) unsupervised collocate retrieval using BERT, and (2) supervised collocation classification in context. We find that most models perform well in distinguishing light verb constructions, especially if the collocation's first argument acts as subject, but often fail to distinguish, first, different syntactic structures within the same semantic category, and second, fine-grained semantic categories which restrict the use of small sets of valid collocates for a given base.",
-    "full_text": null
+  "title": "Evaluating language models for the retrieval and categorization of lexical collocations",
+  "url": "https://openalex.org/W3153626078",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2319266098",
+      "name": "Luis Espinosa Anke",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3015520180",
+      "name": "Joan Codina-Filbà",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1828080704",
+      "name": "Leo Wanner",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2962669974",
+    "https://openalex.org/W2517053141",
+    "https://openalex.org/W2963201227",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W103446013",
+    "https://openalex.org/W2891677128",
+    "https://openalex.org/W3015766957",
+    "https://openalex.org/W2965058444",
+    "https://openalex.org/W2963159690",
+    "https://openalex.org/W566493870",
+    "https://openalex.org/W2905266130",
+    "https://openalex.org/W2966176804",
+    "https://openalex.org/W2574585943",
+    "https://openalex.org/W2990704537",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W1794039122",
+    "https://openalex.org/W2963958374",
+    "https://openalex.org/W3018732874",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W1984052055",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2951652751",
+    "https://openalex.org/W2250962466",
+    "https://openalex.org/W2246442610",
+    "https://openalex.org/W2107378682",
+    "https://openalex.org/W1608322251",
+    "https://openalex.org/W2114867204",
+    "https://openalex.org/W1241017059",
+    "https://openalex.org/W2975059944",
+    "https://openalex.org/W2296076036",
+    "https://openalex.org/W3007029686",
+    "https://openalex.org/W2963310665",
+    "https://openalex.org/W2951676659",
+    "https://openalex.org/W2946359678",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W2159637323",
+    "https://openalex.org/W2294542797"
+  ],
+  "abstract": "Lexical collocations are idiosyncratic combinations of two syntactically bound lexical items (e.g., \"heavy rain\" or \"take a step\"). Understanding their degree of compositionality and idiosyncrasy, as well their underlying semantics, is crucial for language learners, lexicographers and downstream NLP applications. In this paper, we perform an exhaustive analysis of current language models for collocation understanding. We first construct a dataset of apparitions of lexical collocations in context, categorized into 17 representative semantic categories. Then, we perform two experiments: (1) unsupervised collocate retrieval using BERT, and (2) supervised collocation classification in context. We find that most models perform well in distinguishing light verb constructions, especially if the collocation's first argument acts as subject, but often fail to distinguish, first, different syntactic structures within the same semantic category, and second, fine-grained semantic categories which restrict the use of small sets of valid collocates for a given base.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8323935866355896
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.7804259657859802
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7051868438720703
+    },
+    {
+      "name": "Principle of compositionality",
+      "score": 0.6006550788879395
+    },
+    {
+      "name": "Collocation (remote sensing)",
+      "score": 0.5964402556419373
+    },
+    {
+      "name": "Distributional semantics",
+      "score": 0.5907268524169922
+    },
+    {
+      "name": "Semantics (computer science)",
+      "score": 0.537070095539093
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.5266328454017639
+    },
+    {
+      "name": "Lexical semantics",
+      "score": 0.49121326208114624
+    },
+    {
+      "name": "Lexical item",
+      "score": 0.4544253349304199
+    },
+    {
+      "name": "Categorization",
+      "score": 0.44566383957862854
+    },
+    {
+      "name": "Semantic similarity",
+      "score": 0.2913820147514343
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09546506404876709
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.0812976062297821
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

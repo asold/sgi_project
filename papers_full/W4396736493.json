@@ -1,73 +1,152 @@
 {
-    "title": "Knowledge-Augmented Large Language Models for Personalized Contextual Query Suggestion",
-    "url": "https://openalex.org/W4396736493",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3121372713",
-            "name": "Jinheon Baek",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2183531964",
-            "name": "Nirupama Chandrasekaran",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A686107167",
-            "name": "Silviu Cucerzan",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141882221",
-            "name": "Allen Herring",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2016218020",
-            "name": "Sujay Kumar Jauhar",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2962770891",
-        "https://openalex.org/W2740481926",
-        "https://openalex.org/W2053154970",
-        "https://openalex.org/W4368755500",
-        "https://openalex.org/W2745673470",
-        "https://openalex.org/W2741835546",
-        "https://openalex.org/W4296591867",
-        "https://openalex.org/W3174863418",
-        "https://openalex.org/W2897055093",
-        "https://openalex.org/W4224863259",
-        "https://openalex.org/W1997983566",
-        "https://openalex.org/W3186138538",
-        "https://openalex.org/W4385574286",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2153190022",
-        "https://openalex.org/W3207707577",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W3102659883",
-        "https://openalex.org/W1993378086",
-        "https://openalex.org/W2578506968",
-        "https://openalex.org/W2963825865",
-        "https://openalex.org/W3035085156",
-        "https://openalex.org/W4306317028",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4205450747",
-        "https://openalex.org/W3105107854",
-        "https://openalex.org/W2747329762"
-    ],
-    "abstract": "Large Language Models (LLMs) excel at tackling various natural language tasks. However, due to the significant costs involved in re-training or fine-tuning them, they remain largely static and difficult to personalize. Nevertheless, a variety of applications could benefit from generations that are tailored to users' preferences, goals, and knowledge. Among them is web search, where knowing what a user is trying to accomplish, what they care about, and what they know can lead to improved search experiences. In this work, we propose a novel and general approach that augments an LLM with relevant context from users' interaction histories with a search engine in order to personalize its outputs. Specifically, we construct an entity-centric knowledge store for each user based on their search and browsing activities on the web, which is then leveraged to provide contextually relevant LLM prompt augmentations. This knowledge store is light-weight, since it only produces user-specific aggregate projections of interests and knowledge onto public knowledge graphs, and leverages existing search log infrastructure, thereby mitigating the privacy, compliance, and scalability concerns associated with building deep user profiles for personalization. We validate our approach on the task of contextual query suggestion, which requires understanding not only the user's current search context but also what they historically know and care about. Through a number of experiments based on human evaluation, we show that our approach is significantly better than several other LLM-powered baselines, generating query suggestions that are contextually more relevant, personalized, and useful.",
-    "full_text": null
+  "title": "Knowledge-Augmented Large Language Models for Personalized Contextual Query Suggestion",
+  "url": "https://openalex.org/W4396736493",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3121372713",
+      "name": "Jinheon Baek",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2183531964",
+      "name": "Nirupama Chandrasekaran",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A686107167",
+      "name": "Silviu Cucerzan",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141882221",
+      "name": "Allen Herring",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2016218020",
+      "name": "Sujay Kumar Jauhar",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2962770891",
+    "https://openalex.org/W2740481926",
+    "https://openalex.org/W2053154970",
+    "https://openalex.org/W4368755500",
+    "https://openalex.org/W2745673470",
+    "https://openalex.org/W2741835546",
+    "https://openalex.org/W4296591867",
+    "https://openalex.org/W3174863418",
+    "https://openalex.org/W2897055093",
+    "https://openalex.org/W4224863259",
+    "https://openalex.org/W1997983566",
+    "https://openalex.org/W3186138538",
+    "https://openalex.org/W4385574286",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2153190022",
+    "https://openalex.org/W3207707577",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W3102659883",
+    "https://openalex.org/W1993378086",
+    "https://openalex.org/W2578506968",
+    "https://openalex.org/W2963825865",
+    "https://openalex.org/W3035085156",
+    "https://openalex.org/W4306317028",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4205450747",
+    "https://openalex.org/W3105107854",
+    "https://openalex.org/W2747329762"
+  ],
+  "abstract": "Large Language Models (LLMs) excel at tackling various natural language tasks. However, due to the significant costs involved in re-training or fine-tuning them, they remain largely static and difficult to personalize. Nevertheless, a variety of applications could benefit from generations that are tailored to users' preferences, goals, and knowledge. Among them is web search, where knowing what a user is trying to accomplish, what they care about, and what they know can lead to improved search experiences. In this work, we propose a novel and general approach that augments an LLM with relevant context from users' interaction histories with a search engine in order to personalize its outputs. Specifically, we construct an entity-centric knowledge store for each user based on their search and browsing activities on the web, which is then leveraged to provide contextually relevant LLM prompt augmentations. This knowledge store is light-weight, since it only produces user-specific aggregate projections of interests and knowledge onto public knowledge graphs, and leverages existing search log infrastructure, thereby mitigating the privacy, compliance, and scalability concerns associated with building deep user profiles for personalization. We validate our approach on the task of contextual query suggestion, which requires understanding not only the user's current search context but also what they historically know and care about. Through a number of experiments based on human evaluation, we show that our approach is significantly better than several other LLM-powered baselines, generating query suggestions that are contextually more relevant, personalized, and useful.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8511824011802673
+    },
+    {
+      "name": "Personalization",
+      "score": 0.7692313194274902
+    },
+    {
+      "name": "Personalized search",
+      "score": 0.6334540843963623
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.5426552295684814
+    },
+    {
+      "name": "Scalability",
+      "score": 0.5287344455718994
+    },
+    {
+      "name": "Web search query",
+      "score": 0.5152878761291504
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.48792359232902527
+    },
+    {
+      "name": "Language model",
+      "score": 0.4788224995136261
+    },
+    {
+      "name": "Query language",
+      "score": 0.46972644329071045
+    },
+    {
+      "name": "Aggregate (composite)",
+      "score": 0.418000727891922
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4117579460144043
+    },
+    {
+      "name": "Data science",
+      "score": 0.3541080355644226
+    },
+    {
+      "name": "Search engine",
+      "score": 0.2777954638004303
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.1915172040462494
+    },
+    {
+      "name": "Database",
+      "score": 0.13750949501991272
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Composite material",
+      "score": 0.0
+    },
+    {
+      "name": "Materials science",
+      "score": 0.0
+    }
+  ]
 }

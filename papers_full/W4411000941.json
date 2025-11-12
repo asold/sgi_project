@@ -1,69 +1,136 @@
 {
-    "title": "Improving Narrative Coherence in Dense Video Captioning through Transformer and Large Language Models",
-    "url": "https://openalex.org/W4411000941",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2883484065",
-            "name": "Dvijesh Bhatt",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2108646550",
-            "name": "Priyank Thakkar",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2885138528",
-        "https://openalex.org/W2139009685",
-        "https://openalex.org/W4402904107",
-        "https://openalex.org/W2026205307",
-        "https://openalex.org/W2963017553",
-        "https://openalex.org/W3035112208",
-        "https://openalex.org/W2588822708",
-        "https://openalex.org/W4409995875",
-        "https://openalex.org/W2951098185",
-        "https://openalex.org/W2963971014",
-        "https://openalex.org/W2997296614",
-        "https://openalex.org/W2519328139",
-        "https://openalex.org/W2755876276",
-        "https://openalex.org/W2962799512",
-        "https://openalex.org/W2968104955",
-        "https://openalex.org/W2963916161",
-        "https://openalex.org/W4210668396",
-        "https://openalex.org/W2963753226",
-        "https://openalex.org/W3106697459",
-        "https://openalex.org/W2963813458",
-        "https://openalex.org/W2788713610",
-        "https://openalex.org/W3036900224",
-        "https://openalex.org/W2560609797",
-        "https://openalex.org/W2963351113",
-        "https://openalex.org/W2526050071",
-        "https://openalex.org/W3034815696",
-        "https://openalex.org/W3136875705",
-        "https://openalex.org/W4214663214",
-        "https://openalex.org/W4312968125",
-        "https://openalex.org/W2985144848",
-        "https://openalex.org/W3174257385",
-        "https://openalex.org/W4378070299",
-        "https://openalex.org/W4386066385",
-        "https://openalex.org/W4383315514",
-        "https://openalex.org/W4386072300",
-        "https://openalex.org/W4402702962",
-        "https://openalex.org/W4402753824",
-        "https://openalex.org/W2891955747",
-        "https://openalex.org/W2544224704",
-        "https://openalex.org/W4405894231",
-        "https://openalex.org/W1983364832",
-        "https://openalex.org/W3034874847",
-        "https://openalex.org/W3047922786",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2133512280",
-        "https://openalex.org/W1956340063",
-        "https://openalex.org/W2154652894",
-        "https://openalex.org/W3097607319"
-    ],
-    "abstract": "Dense video captioning aims to identify events within a video and generate natural language descriptions for each event. Most existing approaches adhere to a two-stage framework consisting of an event proposal module and a caption generation module. Previous methodologies have predominantly employed convolutional neural networks and sequential models to describe individual events in isolation. However, these methods limit the influence of neighboring events when generating captions for a specific segment, often resulting in descriptions that lack coherence with the broader storyline of the video. To address this limitation, we propose a captioning module that leverages both Transformer architecture and a Large Language Model (LLM). A convolutional and LSTM-based proposal module is used to detect and localize events within the video. An encoder-decoder-based Transformer model generates an initial caption for each proposed event. Additionally, we introduce a Large Language Model (LLM) that takes the set of individually generated event captions as input and produces a coherent, multi-sentence summary. This summary captures cross-event dependencies and provides a contextually unified and narratively rich description of the entire video. Extensive experiments on the ActivityNet dataset demonstrate that the proposed model, Transformer-LLM based Dense Video Captioning (TL-DVC), achieves a 9.22% improvement over state-of-the-art models, increasing the Meteor score from 11.28 to 12.32.",
-    "full_text": null
+  "title": "Improving Narrative Coherence in Dense Video Captioning through Transformer and Large Language Models",
+  "url": "https://openalex.org/W4411000941",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2883484065",
+      "name": "Dvijesh Bhatt",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2108646550",
+      "name": "Priyank Thakkar",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2885138528",
+    "https://openalex.org/W2139009685",
+    "https://openalex.org/W4402904107",
+    "https://openalex.org/W2026205307",
+    "https://openalex.org/W2963017553",
+    "https://openalex.org/W3035112208",
+    "https://openalex.org/W2588822708",
+    "https://openalex.org/W4409995875",
+    "https://openalex.org/W2951098185",
+    "https://openalex.org/W2963971014",
+    "https://openalex.org/W2997296614",
+    "https://openalex.org/W2519328139",
+    "https://openalex.org/W2755876276",
+    "https://openalex.org/W2962799512",
+    "https://openalex.org/W2968104955",
+    "https://openalex.org/W2963916161",
+    "https://openalex.org/W4210668396",
+    "https://openalex.org/W2963753226",
+    "https://openalex.org/W3106697459",
+    "https://openalex.org/W2963813458",
+    "https://openalex.org/W2788713610",
+    "https://openalex.org/W3036900224",
+    "https://openalex.org/W2560609797",
+    "https://openalex.org/W2963351113",
+    "https://openalex.org/W2526050071",
+    "https://openalex.org/W3034815696",
+    "https://openalex.org/W3136875705",
+    "https://openalex.org/W4214663214",
+    "https://openalex.org/W4312968125",
+    "https://openalex.org/W2985144848",
+    "https://openalex.org/W3174257385",
+    "https://openalex.org/W4378070299",
+    "https://openalex.org/W4386066385",
+    "https://openalex.org/W4383315514",
+    "https://openalex.org/W4386072300",
+    "https://openalex.org/W4402702962",
+    "https://openalex.org/W4402753824",
+    "https://openalex.org/W2891955747",
+    "https://openalex.org/W2544224704",
+    "https://openalex.org/W4405894231",
+    "https://openalex.org/W1983364832",
+    "https://openalex.org/W3034874847",
+    "https://openalex.org/W3047922786",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2133512280",
+    "https://openalex.org/W1956340063",
+    "https://openalex.org/W2154652894",
+    "https://openalex.org/W3097607319"
+  ],
+  "abstract": "Dense video captioning aims to identify events within a video and generate natural language descriptions for each event. Most existing approaches adhere to a two-stage framework consisting of an event proposal module and a caption generation module. Previous methodologies have predominantly employed convolutional neural networks and sequential models to describe individual events in isolation. However, these methods limit the influence of neighboring events when generating captions for a specific segment, often resulting in descriptions that lack coherence with the broader storyline of the video. To address this limitation, we propose a captioning module that leverages both Transformer architecture and a Large Language Model (LLM). A convolutional and LSTM-based proposal module is used to detect and localize events within the video. An encoder-decoder-based Transformer model generates an initial caption for each proposed event. Additionally, we introduce a Large Language Model (LLM) that takes the set of individually generated event captions as input and produces a coherent, multi-sentence summary. This summary captures cross-event dependencies and provides a contextually unified and narratively rich description of the entire video. Extensive experiments on the ActivityNet dataset demonstrate that the proposed model, Transformer-LLM based Dense Video Captioning (TL-DVC), achieves a 9.22% improvement over state-of-the-art models, increasing the Meteor score from 11.28 to 12.32.",
+  "full_text": null,
+  "topic": "Closed captioning",
+  "concepts": [
+    {
+      "name": "Closed captioning",
+      "score": 0.8621726036071777
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7606250047683716
+    },
+    {
+      "name": "Narrative",
+      "score": 0.7190974354743958
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6375435590744019
+    },
+    {
+      "name": "Coherence (philosophical gambling strategy)",
+      "score": 0.4635094702243805
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.4024352431297302
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.36034154891967773
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.34360605478286743
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.22109109163284302
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11298185586929321
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0970374345779419
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0663885772228241
+    },
+    {
+      "name": "Voltage",
+      "score": 0.06403979659080505
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

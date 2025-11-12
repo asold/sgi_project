@@ -1,93 +1,148 @@
 {
-    "title": "ProtTrans-Glutar: Incorporating Features From Pre-trained Transformer-Based Models for Predicting Glutarylation Sites",
-    "url": "https://openalex.org/W4281665783",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096599840",
-            "name": "Fatma Indriani",
-            "affiliations": [
-                "Kanazawa University",
-                "Lambung Mangkurat University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A696106430",
-            "name": "Kunti Robiatul Mahmudah",
-            "affiliations": [
-                "Universitas Ahmad Dahlan"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2156808808",
-            "name": "Bedy Purnama",
-            "affiliations": [
-                "Telkom University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2071515856",
-            "name": "Kenji Satou",
-            "affiliations": [
-                "Kanazawa University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096599840",
-            "name": "Fatma Indriani",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A696106430",
-            "name": "Kunti Robiatul Mahmudah",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2156808808",
-            "name": "Bedy Purnama",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2071515856",
-            "name": "Kenji Satou",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2938901647",
-        "https://openalex.org/W2114358087",
-        "https://openalex.org/W1984794455",
-        "https://openalex.org/W2793563787",
-        "https://openalex.org/W6910681941",
-        "https://openalex.org/W2793168264",
-        "https://openalex.org/W3084256198",
-        "https://openalex.org/W2145957695",
-        "https://openalex.org/W2132292391",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W3094312164",
-        "https://openalex.org/W2047672715",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W1678356000",
-        "https://openalex.org/W2789195722",
-        "https://openalex.org/W2118978333",
-        "https://openalex.org/W571200655",
-        "https://openalex.org/W3129155125",
-        "https://openalex.org/W2914454976",
-        "https://openalex.org/W2797330243",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W2022222857",
-        "https://openalex.org/W4212994316",
-        "https://openalex.org/W2940724395",
-        "https://openalex.org/W2346656239",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W3126639583",
-        "https://openalex.org/W2088511656",
-        "https://openalex.org/W2610582292",
-        "https://openalex.org/W2808746931",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W3014830014",
-        "https://openalex.org/W2295598076"
-    ],
-    "abstract": "Lysine glutarylation is a post-translational modification (PTM) that plays a regulatory role in various physiological and biological processes. Identifying glutarylated peptides using proteomic techniques is expensive and time-consuming. Therefore, developing computational models and predictors can prove useful for rapid identification of glutarylation. In this study, we propose a model called ProtTrans-Glutar to classify a protein sequence into positive or negative glutarylation site by combining traditional sequence-based features with features derived from a pre-trained transformer-based protein model. The features of the model were constructed by combining several feature sets, namely the distribution feature (from composition/transition/distribution encoding), enhanced amino acid composition (EAAC), and features derived from the ProtT5-XL-UniRef50 model. Combined with random under-sampling and XGBoost classification method, our model obtained recall, specificity, and AUC scores of 0.7864, 0.6286, and 0.7075 respectively on an independent test set. The recall and AUC scores were notably higher than those of the previous glutarylation prediction models using the same dataset. This high recall score suggests that our method has the potential to identify new glutarylation sites and facilitate further research on the glutarylation process.",
-    "full_text": null
+  "title": "ProtTrans-Glutar: Incorporating Features From Pre-trained Transformer-Based Models for Predicting Glutarylation Sites",
+  "url": "https://openalex.org/W4281665783",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096599840",
+      "name": "Fatma Indriani",
+      "affiliations": [
+        "Kanazawa University",
+        "Lambung Mangkurat University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A696106430",
+      "name": "Kunti Robiatul Mahmudah",
+      "affiliations": [
+        "Universitas Ahmad Dahlan"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2156808808",
+      "name": "Bedy Purnama",
+      "affiliations": [
+        "Telkom University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2071515856",
+      "name": "Kenji Satou",
+      "affiliations": [
+        "Kanazawa University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096599840",
+      "name": "Fatma Indriani",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A696106430",
+      "name": "Kunti Robiatul Mahmudah",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2156808808",
+      "name": "Bedy Purnama",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2071515856",
+      "name": "Kenji Satou",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2938901647",
+    "https://openalex.org/W2114358087",
+    "https://openalex.org/W1984794455",
+    "https://openalex.org/W2793563787",
+    "https://openalex.org/W6910681941",
+    "https://openalex.org/W2793168264",
+    "https://openalex.org/W3084256198",
+    "https://openalex.org/W2145957695",
+    "https://openalex.org/W2132292391",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W3094312164",
+    "https://openalex.org/W2047672715",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W1678356000",
+    "https://openalex.org/W2789195722",
+    "https://openalex.org/W2118978333",
+    "https://openalex.org/W571200655",
+    "https://openalex.org/W3129155125",
+    "https://openalex.org/W2914454976",
+    "https://openalex.org/W2797330243",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W2022222857",
+    "https://openalex.org/W4212994316",
+    "https://openalex.org/W2940724395",
+    "https://openalex.org/W2346656239",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W3126639583",
+    "https://openalex.org/W2088511656",
+    "https://openalex.org/W2610582292",
+    "https://openalex.org/W2808746931",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W3014830014",
+    "https://openalex.org/W2295598076"
+  ],
+  "abstract": "Lysine glutarylation is a post-translational modification (PTM) that plays a regulatory role in various physiological and biological processes. Identifying glutarylated peptides using proteomic techniques is expensive and time-consuming. Therefore, developing computational models and predictors can prove useful for rapid identification of glutarylation. In this study, we propose a model called ProtTrans-Glutar to classify a protein sequence into positive or negative glutarylation site by combining traditional sequence-based features with features derived from a pre-trained transformer-based protein model. The features of the model were constructed by combining several feature sets, namely the distribution feature (from composition/transition/distribution encoding), enhanced amino acid composition (EAAC), and features derived from the ProtT5-XL-UniRef50 model. Combined with random under-sampling and XGBoost classification method, our model obtained recall, specificity, and AUC scores of 0.7864, 0.6286, and 0.7075 respectively on an independent test set. The recall and AUC scores were notably higher than those of the previous glutarylation prediction models using the same dataset. This high recall score suggests that our method has the potential to identify new glutarylation sites and facilitate further research on the glutarylation process.",
+  "full_text": null,
+  "topic": "Recall",
+  "concepts": [
+    {
+      "name": "Recall",
+      "score": 0.6355999708175659
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6342252492904663
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6102887988090515
+    },
+    {
+      "name": "Transformer",
+      "score": 0.47659772634506226
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4433504641056061
+    },
+    {
+      "name": "Random forest",
+      "score": 0.44138187170028687
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4230632185935974
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.41922253370285034
+    },
+    {
+      "name": "Engineering",
+      "score": 0.06283164024353027
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

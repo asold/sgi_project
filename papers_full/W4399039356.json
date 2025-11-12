@@ -1,68 +1,119 @@
 {
-    "title": "Three-Branch Temporal-Spatial Convolutional Transformer for Motor Imagery EEG Classification",
-    "url": "https://openalex.org/W4399039356",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5010330809",
-            "name": "Weiming Chen",
-            "affiliations": [
-                "Jilin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101075112",
-            "name": "Yiqing Luo",
-            "affiliations": [
-                "Jilin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102998469",
-            "name": "Jie Wang",
-            "affiliations": [
-                "Jilin University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3167195439",
-        "https://openalex.org/W3170753307",
-        "https://openalex.org/W4309164566",
-        "https://openalex.org/W4304481492",
-        "https://openalex.org/W3128594480",
-        "https://openalex.org/W4322740268",
-        "https://openalex.org/W2907080401",
-        "https://openalex.org/W4283697851",
-        "https://openalex.org/W4312083856",
-        "https://openalex.org/W3135511716",
-        "https://openalex.org/W4296703458",
-        "https://openalex.org/W4229068725",
-        "https://openalex.org/W3112626072",
-        "https://openalex.org/W4292324313",
-        "https://openalex.org/W2913201307",
-        "https://openalex.org/W3137322316",
-        "https://openalex.org/W3019382044",
-        "https://openalex.org/W2559463885",
-        "https://openalex.org/W2792724009",
-        "https://openalex.org/W2790517324",
-        "https://openalex.org/W2979373189",
-        "https://openalex.org/W4223895421",
-        "https://openalex.org/W4220759551",
-        "https://openalex.org/W3087480840",
-        "https://openalex.org/W1947251450",
-        "https://openalex.org/W1610928686",
-        "https://openalex.org/W2741907166",
-        "https://openalex.org/W6638667902",
-        "https://openalex.org/W6685562342",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W1969878365",
-        "https://openalex.org/W1996167318",
-        "https://openalex.org/W2760834907",
-        "https://openalex.org/W3102455230",
-        "https://openalex.org/W1836465849"
-    ],
-    "abstract": "In the classification of motor imagery Electroencephalogram (MI-EEG) signals through deep learning models, challenges such as the insufficiency of feature extraction due to the limited receptive field of single-scale convolutions, and overfitting due to small training sets, can hinder the perception of global dependencies in EEG signals. In this paper, we introduce a network called EEG TBTSCTnet, which represents Three-Branch Temporal-Spatial Convolutional Transformer. This approach expands the size of the training set through Data Augmentation, and then combines local and global features for classification. Specifically, Data Augmentation aims to mitigate the overfitting issue, whereas the Three-Branch Temporal-Spatial Convolution module captures a broader range of multi-scale, low-level local information in EEG signals more effectively than conventional CNNs. The Transformer Encoder module is directly connected to extract global correlations within local temporal-spatial features, utilizing the multi-head attention mechanism to effectively enhance the network&#x2019;s ability to represent relevant EEG signal features. Subsequently, a classifier module based on fully connected layers is used to predict the categories of EEG signals. Finally, extensive experiments were conducted on two public MI-EEG datasets to evaluate the proposed method. The study also allowed for an optimal selection of channels to balance accuracy and cost through weight visualization.",
-    "full_text": null
+  "title": "Three-Branch Temporal-Spatial Convolutional Transformer for Motor Imagery EEG Classification",
+  "url": "https://openalex.org/W4399039356",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5010330809",
+      "name": "Weiming Chen",
+      "affiliations": [
+        "Jilin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101075112",
+      "name": "Yiqing Luo",
+      "affiliations": [
+        "Jilin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102998469",
+      "name": "Jie Wang",
+      "affiliations": [
+        "Jilin University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3167195439",
+    "https://openalex.org/W3170753307",
+    "https://openalex.org/W4309164566",
+    "https://openalex.org/W4304481492",
+    "https://openalex.org/W3128594480",
+    "https://openalex.org/W4322740268",
+    "https://openalex.org/W2907080401",
+    "https://openalex.org/W4283697851",
+    "https://openalex.org/W4312083856",
+    "https://openalex.org/W3135511716",
+    "https://openalex.org/W4296703458",
+    "https://openalex.org/W4229068725",
+    "https://openalex.org/W3112626072",
+    "https://openalex.org/W4292324313",
+    "https://openalex.org/W2913201307",
+    "https://openalex.org/W3137322316",
+    "https://openalex.org/W3019382044",
+    "https://openalex.org/W2559463885",
+    "https://openalex.org/W2792724009",
+    "https://openalex.org/W2790517324",
+    "https://openalex.org/W2979373189",
+    "https://openalex.org/W4223895421",
+    "https://openalex.org/W4220759551",
+    "https://openalex.org/W3087480840",
+    "https://openalex.org/W1947251450",
+    "https://openalex.org/W1610928686",
+    "https://openalex.org/W2741907166",
+    "https://openalex.org/W6638667902",
+    "https://openalex.org/W6685562342",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W1969878365",
+    "https://openalex.org/W1996167318",
+    "https://openalex.org/W2760834907",
+    "https://openalex.org/W3102455230",
+    "https://openalex.org/W1836465849"
+  ],
+  "abstract": "In the classification of motor imagery Electroencephalogram (MI-EEG) signals through deep learning models, challenges such as the insufficiency of feature extraction due to the limited receptive field of single-scale convolutions, and overfitting due to small training sets, can hinder the perception of global dependencies in EEG signals. In this paper, we introduce a network called EEG TBTSCTnet, which represents Three-Branch Temporal-Spatial Convolutional Transformer. This approach expands the size of the training set through Data Augmentation, and then combines local and global features for classification. Specifically, Data Augmentation aims to mitigate the overfitting issue, whereas the Three-Branch Temporal-Spatial Convolution module captures a broader range of multi-scale, low-level local information in EEG signals more effectively than conventional CNNs. The Transformer Encoder module is directly connected to extract global correlations within local temporal-spatial features, utilizing the multi-head attention mechanism to effectively enhance the network&#x2019;s ability to represent relevant EEG signal features. Subsequently, a classifier module based on fully connected layers is used to predict the categories of EEG signals. Finally, extensive experiments were conducted on two public MI-EEG datasets to evaluate the proposed method. The study also allowed for an optimal selection of channels to balance accuracy and cost through weight visualization.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6879924535751343
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5510866045951843
+    },
+    {
+      "name": "Electroencephalography",
+      "score": 0.5396547317504883
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.48496294021606445
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.46409621834754944
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4564724862575531
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.40698763728141785
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11829352378845215
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.10297536849975586
+    },
+    {
+      "name": "Psychology",
+      "score": 0.09025734663009644
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.06191033124923706
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,77 +1,152 @@
 {
-    "title": "DFS-DETR: Detailed-Feature-Sensitive Detector for Small Object Detection in Aerial Images Using Transformer",
-    "url": "https://openalex.org/W4401914576",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5053593227",
-            "name": "Xinyu Cao",
-            "affiliations": [
-                "Yunnan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101630569",
-            "name": "Hanwei Wang",
-            "affiliations": [
-                "University of Liverpool"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5115596416",
-            "name": "Xiong Wang",
-            "affiliations": [
-                "Yunnan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101730645",
-            "name": "Bin Hu",
-            "affiliations": [
-                "Kean University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2963857746",
-        "https://openalex.org/W4212809080",
-        "https://openalex.org/W6803421043",
-        "https://openalex.org/W6800421375",
-        "https://openalex.org/W6791980023",
-        "https://openalex.org/W6803629540",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W2964241181",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W4386076325",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3177257155",
-        "https://openalex.org/W3119129845",
-        "https://openalex.org/W2005368619",
-        "https://openalex.org/W6855560852",
-        "https://openalex.org/W4385453234",
-        "https://openalex.org/W4309627406",
-        "https://openalex.org/W4384080779",
-        "https://openalex.org/W3170778815",
-        "https://openalex.org/W4385413365",
-        "https://openalex.org/W6810987806",
-        "https://openalex.org/W4387801831",
-        "https://openalex.org/W3034552520",
-        "https://openalex.org/W2962766617",
-        "https://openalex.org/W2997747012",
-        "https://openalex.org/W3012573144",
-        "https://openalex.org/W4392683059",
-        "https://openalex.org/W6761108903",
-        "https://openalex.org/W3139555693",
-        "https://openalex.org/W4385413432",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W3213833596",
-        "https://openalex.org/W3213677878",
-        "https://openalex.org/W3194607948",
-        "https://openalex.org/W4226361741"
-    ],
-    "abstract": "Object detection in aerial images plays a crucial role across diverse domains such as agriculture, environmental monitoring, and security. Aerial images present several challenges, including dense small objects, intricate backgrounds, and occlusions, necessitating robust detection algorithms. This paper addresses the critical need for accurate and efficient object detection in aerial images using a Transformer-based approach enhanced with specialized methodologies, termed DFS-DETR. The core framework leverages RT-DETR-R18, integrating the Cross Stage Partial Reparam Dilation-wise Residual Module (CSP-RDRM) to optimize feature extraction. Additionally, the introduction of the Detail-Sensitive Pyramid Network (DSPN) enhances sensitivity to local features, complemented by the Dynamic Scale Sequence Feature-Fusion Module (DSSFFM) for comprehensive multi-scale information integration. Moreover, Multi-Attention Add (MAA) is utilized to refine feature processing, which enhances the model’s capacity for understanding and representation by integrating various attention mechanisms. To improve bounding box regression, the model employs MPDIoU with normalized Wasserstein distance, which accelerates convergence. Evaluation across the VisDrone2019, AI-TOD, and NWPU VHR-10 datasets demonstrates significant improvements in the mean average precision (mAP) values: 24.1%, 24.0%, and 65.0%, respectively, surpassing RT-DETR-R18 by 2.3%, 4.8%, and 7.0%, respectively. Furthermore, the proposed method achieves real-time inference speeds. This approach can be deployed on drones to perform real-time ground detection.",
-    "full_text": null
+  "title": "DFS-DETR: Detailed-Feature-Sensitive Detector for Small Object Detection in Aerial Images Using Transformer",
+  "url": "https://openalex.org/W4401914576",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5053593227",
+      "name": "Xinyu Cao",
+      "affiliations": [
+        "Yunnan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101630569",
+      "name": "Hanwei Wang",
+      "affiliations": [
+        "University of Liverpool"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5115596416",
+      "name": "Xiong Wang",
+      "affiliations": [
+        "Yunnan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101730645",
+      "name": "Bin Hu",
+      "affiliations": [
+        "Kean University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2963857746",
+    "https://openalex.org/W4212809080",
+    "https://openalex.org/W6803421043",
+    "https://openalex.org/W6800421375",
+    "https://openalex.org/W6791980023",
+    "https://openalex.org/W6803629540",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W2964241181",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W4386076325",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3177257155",
+    "https://openalex.org/W3119129845",
+    "https://openalex.org/W2005368619",
+    "https://openalex.org/W6855560852",
+    "https://openalex.org/W4385453234",
+    "https://openalex.org/W4309627406",
+    "https://openalex.org/W4384080779",
+    "https://openalex.org/W3170778815",
+    "https://openalex.org/W4385413365",
+    "https://openalex.org/W6810987806",
+    "https://openalex.org/W4387801831",
+    "https://openalex.org/W3034552520",
+    "https://openalex.org/W2962766617",
+    "https://openalex.org/W2997747012",
+    "https://openalex.org/W3012573144",
+    "https://openalex.org/W4392683059",
+    "https://openalex.org/W6761108903",
+    "https://openalex.org/W3139555693",
+    "https://openalex.org/W4385413432",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W3213833596",
+    "https://openalex.org/W3213677878",
+    "https://openalex.org/W3194607948",
+    "https://openalex.org/W4226361741"
+  ],
+  "abstract": "Object detection in aerial images plays a crucial role across diverse domains such as agriculture, environmental monitoring, and security. Aerial images present several challenges, including dense small objects, intricate backgrounds, and occlusions, necessitating robust detection algorithms. This paper addresses the critical need for accurate and efficient object detection in aerial images using a Transformer-based approach enhanced with specialized methodologies, termed DFS-DETR. The core framework leverages RT-DETR-R18, integrating the Cross Stage Partial Reparam Dilation-wise Residual Module (CSP-RDRM) to optimize feature extraction. Additionally, the introduction of the Detail-Sensitive Pyramid Network (DSPN) enhances sensitivity to local features, complemented by the Dynamic Scale Sequence Feature-Fusion Module (DSSFFM) for comprehensive multi-scale information integration. Moreover, Multi-Attention Add (MAA) is utilized to refine feature processing, which enhances the model’s capacity for understanding and representation by integrating various attention mechanisms. To improve bounding box regression, the model employs MPDIoU with normalized Wasserstein distance, which accelerates convergence. Evaluation across the VisDrone2019, AI-TOD, and NWPU VHR-10 datasets demonstrates significant improvements in the mean average precision (mAP) values: 24.1%, 24.0%, and 65.0%, respectively, surpassing RT-DETR-R18 by 2.3%, 4.8%, and 7.0%, respectively. Furthermore, the proposed method achieves real-time inference speeds. This approach can be deployed on drones to perform real-time ground detection.",
+  "full_text": null,
+  "topic": "Detector",
+  "concepts": [
+    {
+      "name": "Detector",
+      "score": 0.6312072277069092
+    },
+    {
+      "name": "Aerial image",
+      "score": 0.5860914587974548
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5407367944717407
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5227572917938232
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.49615463614463806
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.4898192584514618
+    },
+    {
+      "name": "Object detection",
+      "score": 0.47693389654159546
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4549805521965027
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44748741388320923
+    },
+    {
+      "name": "Object based",
+      "score": 0.41142308712005615
+    },
+    {
+      "name": "Object (grammar)",
+      "score": 0.32245934009552
+    },
+    {
+      "name": "Engineering",
+      "score": 0.24048513174057007
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.16981443762779236
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07849684357643127
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0666661262512207
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0572548508644104
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,84 +1,139 @@
 {
-    "title": "Lightweight Scene Text Recognition Based on Transformer",
-    "url": "https://openalex.org/W4376630167",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2102049244",
-            "name": "Xin Luan",
-            "affiliations": [
-                "Xinjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096138649",
-            "name": "Jinwei Zhang",
-            "affiliations": [
-                "Xinjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2095770370",
-            "name": "Miaomiao Xu",
-            "affiliations": [
-                "Xinjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1865918890",
-            "name": "Wushouer Silamu",
-            "affiliations": [
-                "Xinjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097721260",
-            "name": "Yanbing Li",
-            "affiliations": [
-                "Xinjiang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2141756865",
-        "https://openalex.org/W6682804188",
-        "https://openalex.org/W4213339374",
-        "https://openalex.org/W3003478049",
-        "https://openalex.org/W2595620450",
-        "https://openalex.org/W1922126009",
-        "https://openalex.org/W2809273748",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W2294053032",
-        "https://openalex.org/W2750938222",
-        "https://openalex.org/W3110267192",
-        "https://openalex.org/W3204479434",
-        "https://openalex.org/W2061802763",
-        "https://openalex.org/W1978729128",
-        "https://openalex.org/W2740767790",
-        "https://openalex.org/W2043075591",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2963327605",
-        "https://openalex.org/W3035106683",
-        "https://openalex.org/W2891939579",
-        "https://openalex.org/W2997749585",
-        "https://openalex.org/W2593572697",
-        "https://openalex.org/W2194187530",
-        "https://openalex.org/W2899368669",
-        "https://openalex.org/W6772198947",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W2343052201",
-        "https://openalex.org/W4312879041",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W2751169665",
-        "https://openalex.org/W3176387555",
-        "https://openalex.org/W1981283549",
-        "https://openalex.org/W2049951199",
-        "https://openalex.org/W6649973027",
-        "https://openalex.org/W2078997308",
-        "https://openalex.org/W2144554289",
-        "https://openalex.org/W3106271744",
-        "https://openalex.org/W2151815580"
-    ],
-    "abstract": "Scene text recognition (STR) has been a hot research field in computer vision, aiming to recognize text in natural scenes using computers. Currently, attention-based encoder–decoder frameworks struggle to precisely align feature regions with the target object when dealing with complex and low-quality images, a phenomenon known as attention drift. Additionally, with the rise of Transformer, the increasing size of parameters results in higher computational costs. In order to solve the above problems, based on the latest research results of Vision Transformer (ViT), we utilize an additional position-enhancement branch to alleviate attention drift and dynamically fused position information with visual information to achieve better recognition accuracy. The experimental results demonstrate that our model achieves a 3% higher average recognition accuracy on the test set compared to the baseline. Meanwhile, our model maintains the advantage of a small number of parameters and fast inference speed, achieving a good balance between accuracy, speed, and computational load.",
-    "full_text": null
+  "title": "Lightweight Scene Text Recognition Based on Transformer",
+  "url": "https://openalex.org/W4376630167",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2102049244",
+      "name": "Xin Luan",
+      "affiliations": [
+        "Xinjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096138649",
+      "name": "Jinwei Zhang",
+      "affiliations": [
+        "Xinjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2095770370",
+      "name": "Miaomiao Xu",
+      "affiliations": [
+        "Xinjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1865918890",
+      "name": "Wushouer Silamu",
+      "affiliations": [
+        "Xinjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097721260",
+      "name": "Yanbing Li",
+      "affiliations": [
+        "Xinjiang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2141756865",
+    "https://openalex.org/W6682804188",
+    "https://openalex.org/W4213339374",
+    "https://openalex.org/W3003478049",
+    "https://openalex.org/W2595620450",
+    "https://openalex.org/W1922126009",
+    "https://openalex.org/W2809273748",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W2294053032",
+    "https://openalex.org/W2750938222",
+    "https://openalex.org/W3110267192",
+    "https://openalex.org/W3204479434",
+    "https://openalex.org/W2061802763",
+    "https://openalex.org/W1978729128",
+    "https://openalex.org/W2740767790",
+    "https://openalex.org/W2043075591",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2963327605",
+    "https://openalex.org/W3035106683",
+    "https://openalex.org/W2891939579",
+    "https://openalex.org/W2997749585",
+    "https://openalex.org/W2593572697",
+    "https://openalex.org/W2194187530",
+    "https://openalex.org/W2899368669",
+    "https://openalex.org/W6772198947",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W2343052201",
+    "https://openalex.org/W4312879041",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W2751169665",
+    "https://openalex.org/W3176387555",
+    "https://openalex.org/W1981283549",
+    "https://openalex.org/W2049951199",
+    "https://openalex.org/W6649973027",
+    "https://openalex.org/W2078997308",
+    "https://openalex.org/W2144554289",
+    "https://openalex.org/W3106271744",
+    "https://openalex.org/W2151815580"
+  ],
+  "abstract": "Scene text recognition (STR) has been a hot research field in computer vision, aiming to recognize text in natural scenes using computers. Currently, attention-based encoder–decoder frameworks struggle to precisely align feature regions with the target object when dealing with complex and low-quality images, a phenomenon known as attention drift. Additionally, with the rise of Transformer, the increasing size of parameters results in higher computational costs. In order to solve the above problems, based on the latest research results of Vision Transformer (ViT), we utilize an additional position-enhancement branch to alleviate attention drift and dynamically fused position information with visual information to achieve better recognition accuracy. The experimental results demonstrate that our model achieves a 3% higher average recognition accuracy on the test set compared to the baseline. Meanwhile, our model maintains the advantage of a small number of parameters and fast inference speed, achieving a good balance between accuracy, speed, and computational load.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7507940530776978
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6521371603012085
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6304854154586792
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5904167294502258
+    },
+    {
+      "name": "Inference",
+      "score": 0.5591483116149902
+    },
+    {
+      "name": "Cognitive neuroscience of visual object recognition",
+      "score": 0.4906217157840729
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4690112769603729
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.40005379915237427
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.35285288095474243
+    },
+    {
+      "name": "Voltage",
+      "score": 0.16065478324890137
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15618720650672913
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

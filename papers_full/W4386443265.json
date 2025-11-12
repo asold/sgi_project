@@ -1,87 +1,170 @@
 {
-    "title": "Cloth Interactive Transformer for Virtual Try-On",
-    "url": "https://openalex.org/W4386443265",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2125634674",
-            "name": "Ren, Bin",
-            "affiliations": [
-                "University of Trento",
-                "University of Pisa"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101529693",
-            "name": "Tang, Hao",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2376826189",
-            "name": "Meng Fanyang",
-            "affiliations": [
-                "Peng Cheng Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2630014316",
-            "name": "Runwei Ding",
-            "affiliations": [
-                "Peng Cheng Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4221998561",
-            "name": "Torr, Philip H. S.",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2744565219",
-            "name": "Sebe, Nicu",
-            "affiliations": [
-                "University of Trento"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2057175746",
-        "https://openalex.org/W2128409098",
-        "https://openalex.org/W6657241833",
-        "https://openalex.org/W3173998882",
-        "https://openalex.org/W4213141551",
-        "https://openalex.org/W3196515900",
-        "https://openalex.org/W3176825610",
-        "https://openalex.org/W3043515420",
-        "https://openalex.org/W1978216348",
-        "https://openalex.org/W3110156989",
-        "https://openalex.org/W2123402141",
-        "https://openalex.org/W2331128040",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W2913186260",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W4312462476",
-        "https://openalex.org/W6761164592",
-        "https://openalex.org/W2737762407",
-        "https://openalex.org/W3204992349",
-        "https://openalex.org/W2888358068",
-        "https://openalex.org/W2124087378",
-        "https://openalex.org/W2566568033",
-        "https://openalex.org/W3106811106",
-        "https://openalex.org/W2883309205",
-        "https://openalex.org/W2133665775",
-        "https://openalex.org/W3148178367",
-        "https://openalex.org/W2057478067",
-        "https://openalex.org/W1631063262",
-        "https://openalex.org/W2596164567",
-        "https://openalex.org/W2607303097",
-        "https://openalex.org/W4302866247",
-        "https://openalex.org/W2186222003",
-        "https://openalex.org/W4238772563"
-    ],
-    "abstract": "The 2D image-based virtual try-on has aroused increased interest from the multimedia and computer vision fields due to its enormous commercial value. Nevertheless, most existing image-based virtual try-on approaches directly combine the person-identity representation and the in-shop clothing items without taking their mutual correlations into consideration. Moreover, these methods are commonly established on pure convolutional neural networks (CNNs) architectures which are not simple to capture the long-range correlations among the input pixels. As a result, it generally results in inconsistent results. To alleviate these issues, in this article, we propose a novel two-stage cloth interactive transformer (CIT) method for the virtual try-on task. During the first stage, we design a CIT matching block, aiming at precisely capturing the long-range correlations between the cloth-agnostic person information and the in-shop cloth information. Consequently, it makes the warped in-shop clothing items look more natural in appearance. In the second stage, we put forth a CIT reasoning block for establishing global mutual interactive dependencies among person representation, the warped clothing item, and the corresponding warped cloth mask. The empirical results, based on mutual dependencies, demonstrate that the final try-on results are more realistic. Substantial empirical results on a public fashion dataset illustrate that the suggested CIT attains competitive virtual try-on performance.",
-    "full_text": null
+  "title": "Cloth Interactive Transformer for Virtual Try-On",
+  "url": "https://openalex.org/W4386443265",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2125634674",
+      "name": "Ren, Bin",
+      "affiliations": [
+        "University of Trento",
+        "University of Pisa"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101529693",
+      "name": "Tang, Hao",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2376826189",
+      "name": "Meng Fanyang",
+      "affiliations": [
+        "Peng Cheng Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2630014316",
+      "name": "Runwei Ding",
+      "affiliations": [
+        "Peng Cheng Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4221998561",
+      "name": "Torr, Philip H. S.",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2744565219",
+      "name": "Sebe, Nicu",
+      "affiliations": [
+        "University of Trento"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2057175746",
+    "https://openalex.org/W2128409098",
+    "https://openalex.org/W6657241833",
+    "https://openalex.org/W3173998882",
+    "https://openalex.org/W4213141551",
+    "https://openalex.org/W3196515900",
+    "https://openalex.org/W3176825610",
+    "https://openalex.org/W3043515420",
+    "https://openalex.org/W1978216348",
+    "https://openalex.org/W3110156989",
+    "https://openalex.org/W2123402141",
+    "https://openalex.org/W2331128040",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W2913186260",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W4312462476",
+    "https://openalex.org/W6761164592",
+    "https://openalex.org/W2737762407",
+    "https://openalex.org/W3204992349",
+    "https://openalex.org/W2888358068",
+    "https://openalex.org/W2124087378",
+    "https://openalex.org/W2566568033",
+    "https://openalex.org/W3106811106",
+    "https://openalex.org/W2883309205",
+    "https://openalex.org/W2133665775",
+    "https://openalex.org/W3148178367",
+    "https://openalex.org/W2057478067",
+    "https://openalex.org/W1631063262",
+    "https://openalex.org/W2596164567",
+    "https://openalex.org/W2607303097",
+    "https://openalex.org/W4302866247",
+    "https://openalex.org/W2186222003",
+    "https://openalex.org/W4238772563"
+  ],
+  "abstract": "The 2D image-based virtual try-on has aroused increased interest from the multimedia and computer vision fields due to its enormous commercial value. Nevertheless, most existing image-based virtual try-on approaches directly combine the person-identity representation and the in-shop clothing items without taking their mutual correlations into consideration. Moreover, these methods are commonly established on pure convolutional neural networks (CNNs) architectures which are not simple to capture the long-range correlations among the input pixels. As a result, it generally results in inconsistent results. To alleviate these issues, in this article, we propose a novel two-stage cloth interactive transformer (CIT) method for the virtual try-on task. During the first stage, we design a CIT matching block, aiming at precisely capturing the long-range correlations between the cloth-agnostic person information and the in-shop cloth information. Consequently, it makes the warped in-shop clothing items look more natural in appearance. In the second stage, we put forth a CIT reasoning block for establishing global mutual interactive dependencies among person representation, the warped clothing item, and the corresponding warped cloth mask. The empirical results, based on mutual dependencies, demonstrate that the final try-on results are more realistic. Substantial empirical results on a public fashion dataset illustrate that the suggested CIT attains competitive virtual try-on performance.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7684168219566345
+    },
+    {
+      "name": "Clothing",
+      "score": 0.6850135326385498
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6267421245574951
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.505504846572876
+    },
+    {
+      "name": "Mutual information",
+      "score": 0.4867572784423828
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.47464853525161743
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.4610670208930969
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.3690108060836792
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.34877854585647583
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.33401918411254883
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.11917644739151001
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "History",
+      "score": 0.0
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,92 +1,175 @@
 {
-    "title": "A General Method for Transferring Explicit Knowledge into Language Model Pretraining",
-    "url": "https://openalex.org/W3205223424",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2313845682",
-            "name": "Ruiqing Yan",
-            "affiliations": [
-                "Beijing Institute of Petrochemical Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3155716529",
-            "name": "Lanchang Sun",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2076714287",
-            "name": "Fang Wang",
-            "affiliations": [
-                "Beijing Institute of Petrochemical Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115348887",
-            "name": "Xiaoming Zhang",
-            "affiliations": [
-                "Beijing Institute of Petrochemical Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W6685158001",
-        "https://openalex.org/W6712635486",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2972324944",
-        "https://openalex.org/W6767278183",
-        "https://openalex.org/W2994811754",
-        "https://openalex.org/W3137333118",
-        "https://openalex.org/W2066018628",
-        "https://openalex.org/W3042542433",
-        "https://openalex.org/W2144550395",
-        "https://openalex.org/W1552847225",
-        "https://openalex.org/W3114211574",
-        "https://openalex.org/W3126974869",
-        "https://openalex.org/W2946345909",
-        "https://openalex.org/W2973840669",
-        "https://openalex.org/W6780022207",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W2886424491",
-        "https://openalex.org/W2923014074",
-        "https://openalex.org/W2952357537",
-        "https://openalex.org/W3117339789",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W6772383348",
-        "https://openalex.org/W2561529111",
-        "https://openalex.org/W2983102021",
-        "https://openalex.org/W2968908603",
-        "https://openalex.org/W1964189668",
-        "https://openalex.org/W3012572520",
-        "https://openalex.org/W2912351236",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2620787630",
-        "https://openalex.org/W6676984168",
-        "https://openalex.org/W2891555348",
-        "https://openalex.org/W2891328459",
-        "https://openalex.org/W2252066972",
-        "https://openalex.org/W3001279689",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3040558716",
-        "https://openalex.org/W4287366208",
-        "https://openalex.org/W2998385486",
-        "https://openalex.org/W2994915912",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W2953356739",
-        "https://openalex.org/W2113459411",
-        "https://openalex.org/W2963159690",
-        "https://openalex.org/W2038721957",
-        "https://openalex.org/W2952729433",
-        "https://openalex.org/W3151929433",
-        "https://openalex.org/W2397299141"
-    ],
-    "abstract": "Recently, pretrained language models, such as Bert and XLNet, have rapidly advanced the state of the art on many NLP tasks. They can model implicit semantic information between words in the text. However, it is solely at the token level without considering the background knowledge. Intuitively, background knowledge influences the efficacy of text understanding. Inspired by this, we focus on improving model pretraining by leveraging external knowledge. Different from recent research that optimizes pretraining models by knowledge masking strategies, we propose a simple but general method to transfer explicit knowledge with pretraining. To be specific, we first match knowledge facts from a knowledge base (KB) and then add a knowledge injunction layer to a transformer directly without changing its architecture. This study seeks to find the direct impact of explicit knowledge on model pretraining. We conduct experiments on 7 datasets using 5 knowledge bases in different downstream tasks. Our investigation reveals promising results in all the tasks. The experiment also verifies that domain-specific knowledge is superior to open-domain knowledge in domain-specific task, and different knowledge bases have different performances in different tasks.",
-    "full_text": null
+  "title": "A General Method for Transferring Explicit Knowledge into Language Model Pretraining",
+  "url": "https://openalex.org/W3205223424",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2313845682",
+      "name": "Ruiqing Yan",
+      "affiliations": [
+        "Beijing Institute of Petrochemical Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3155716529",
+      "name": "Lanchang Sun",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2076714287",
+      "name": "Fang Wang",
+      "affiliations": [
+        "Beijing Institute of Petrochemical Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115348887",
+      "name": "Xiaoming Zhang",
+      "affiliations": [
+        "Beijing Institute of Petrochemical Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W6685158001",
+    "https://openalex.org/W6712635486",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2972324944",
+    "https://openalex.org/W6767278183",
+    "https://openalex.org/W2994811754",
+    "https://openalex.org/W3137333118",
+    "https://openalex.org/W2066018628",
+    "https://openalex.org/W3042542433",
+    "https://openalex.org/W2144550395",
+    "https://openalex.org/W1552847225",
+    "https://openalex.org/W3114211574",
+    "https://openalex.org/W3126974869",
+    "https://openalex.org/W2946345909",
+    "https://openalex.org/W2973840669",
+    "https://openalex.org/W6780022207",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2886424491",
+    "https://openalex.org/W2923014074",
+    "https://openalex.org/W2952357537",
+    "https://openalex.org/W3117339789",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W6772383348",
+    "https://openalex.org/W2561529111",
+    "https://openalex.org/W2983102021",
+    "https://openalex.org/W2968908603",
+    "https://openalex.org/W1964189668",
+    "https://openalex.org/W3012572520",
+    "https://openalex.org/W2912351236",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2620787630",
+    "https://openalex.org/W6676984168",
+    "https://openalex.org/W2891555348",
+    "https://openalex.org/W2891328459",
+    "https://openalex.org/W2252066972",
+    "https://openalex.org/W3001279689",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3040558716",
+    "https://openalex.org/W4287366208",
+    "https://openalex.org/W2998385486",
+    "https://openalex.org/W2994915912",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W2953356739",
+    "https://openalex.org/W2113459411",
+    "https://openalex.org/W2963159690",
+    "https://openalex.org/W2038721957",
+    "https://openalex.org/W2952729433",
+    "https://openalex.org/W3151929433",
+    "https://openalex.org/W2397299141"
+  ],
+  "abstract": "Recently, pretrained language models, such as Bert and XLNet, have rapidly advanced the state of the art on many NLP tasks. They can model implicit semantic information between words in the text. However, it is solely at the token level without considering the background knowledge. Intuitively, background knowledge influences the efficacy of text understanding. Inspired by this, we focus on improving model pretraining by leveraging external knowledge. Different from recent research that optimizes pretraining models by knowledge masking strategies, we propose a simple but general method to transfer explicit knowledge with pretraining. To be specific, we first match knowledge facts from a knowledge base (KB) and then add a knowledge injunction layer to a transformer directly without changing its architecture. This study seeks to find the direct impact of explicit knowledge on model pretraining. We conduct experiments on 7 datasets using 5 knowledge bases in different downstream tasks. Our investigation reveals promising results in all the tasks. The experiment also verifies that domain-specific knowledge is superior to open-domain knowledge in domain-specific task, and different knowledge bases have different performances in different tasks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8846077919006348
+    },
+    {
+      "name": "Knowledge base",
+      "score": 0.6322688460350037
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6020529270172119
+    },
+    {
+      "name": "Domain knowledge",
+      "score": 0.5951906442642212
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5544671416282654
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.48836657404899597
+    },
+    {
+      "name": "General knowledge",
+      "score": 0.46835723519325256
+    },
+    {
+      "name": "Knowledge transfer",
+      "score": 0.43061283230781555
+    },
+    {
+      "name": "Focus (optics)",
+      "score": 0.4174423813819885
+    },
+    {
+      "name": "Semantic memory",
+      "score": 0.4136025309562683
+    },
+    {
+      "name": "Cognition",
+      "score": 0.24714025855064392
+    },
+    {
+      "name": "Knowledge management",
+      "score": 0.1714070737361908
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

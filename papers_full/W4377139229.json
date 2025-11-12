@@ -1,80 +1,123 @@
 {
-    "title": "TCU-Net: Transformer Embedded in Convolutional U-Shaped Network for Retinal Vessel Segmentation",
-    "url": "https://openalex.org/W4377139229",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5103266189",
-            "name": "Zidi Shi",
-            "affiliations": [
-                "Wuhan Textile University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101563566",
-            "name": "Yu Li",
-            "affiliations": [
-                "Wuhan Textile University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5043300518",
-            "name": "Hua Zou",
-            "affiliations": [
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100646175",
-            "name": "Xuedong Zhang",
-            "affiliations": [
-                "Tarim University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3033737596",
-        "https://openalex.org/W2926971814",
-        "https://openalex.org/W2790345215",
-        "https://openalex.org/W4206986224",
-        "https://openalex.org/W2920985963",
-        "https://openalex.org/W1977349774",
-        "https://openalex.org/W3111741353",
-        "https://openalex.org/W3202794642",
-        "https://openalex.org/W4297476735",
-        "https://openalex.org/W4289844305",
-        "https://openalex.org/W3149694583",
-        "https://openalex.org/W1966976587",
-        "https://openalex.org/W3096947210",
-        "https://openalex.org/W3197957534",
-        "https://openalex.org/W3008082060",
-        "https://openalex.org/W2955058313",
-        "https://openalex.org/W3017153481",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2907750714",
-        "https://openalex.org/W2774320778",
-        "https://openalex.org/W3161081823",
-        "https://openalex.org/W3160609330",
-        "https://openalex.org/W4312609195",
-        "https://openalex.org/W6846103615",
-        "https://openalex.org/W4225709022",
-        "https://openalex.org/W3130695101",
-        "https://openalex.org/W4323275538",
-        "https://openalex.org/W3181946646",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2295107390",
-        "https://openalex.org/W2155653793",
-        "https://openalex.org/W4292671038",
-        "https://openalex.org/W4294214983",
-        "https://openalex.org/W2110065044",
-        "https://openalex.org/W3009032697",
-        "https://openalex.org/W1987869189",
-        "https://openalex.org/W2921406441",
-        "https://openalex.org/W2980185997",
-        "https://openalex.org/W3103010481",
-        "https://openalex.org/W4306168131",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Optical coherence tomography angiography (OCTA) provides a detailed visualization of the vascular system to aid in the detection and diagnosis of ophthalmic disease. However, accurately extracting microvascular details from OCTA images remains a challenging task due to the limitations of pure convolutional networks. We propose a novel end-to-end transformer-based network architecture called TCU-Net for OCTA retinal vessel segmentation tasks. To address the loss of vascular features of convolutional operations, an efficient cross-fusion transformer module is introduced to replace the original skip connection of U-Net. The transformer module interacts with the encoder’s multiscale vascular features to enrich vascular information and achieve linear computational complexity. Additionally, we design an efficient channel-wise cross attention module to fuse the multiscale features and fine-grained details from the decoding stages, resolving the semantic bias between them and enhancing effective vascular information. This model has been evaluated on the dedicated Retinal OCTA Segmentation (ROSE) dataset. The accuracy values of TCU-Net tested on the ROSE-1 dataset with SVC, DVC, and SVC+DVC are 0.9230, 0.9912, and 0.9042, respectively, and the corresponding AUC values are 0.9512, 0.9823, and 0.9170. For the ROSE-2 dataset, the accuracy and AUC are 0.9454 and 0.8623, respectively. The experiments demonstrate that TCU-Net outperforms state-of-the-art approaches regarding vessel segmentation performance and robustness.",
-    "full_text": null
+  "title": "TCU-Net: Transformer Embedded in Convolutional U-Shaped Network for Retinal Vessel Segmentation",
+  "url": "https://openalex.org/W4377139229",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5103266189",
+      "name": "Zidi Shi",
+      "affiliations": [
+        "Wuhan Textile University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101563566",
+      "name": "Yu Li",
+      "affiliations": [
+        "Wuhan Textile University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5043300518",
+      "name": "Hua Zou",
+      "affiliations": [
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100646175",
+      "name": "Xuedong Zhang",
+      "affiliations": [
+        "Tarim University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3033737596",
+    "https://openalex.org/W2926971814",
+    "https://openalex.org/W2790345215",
+    "https://openalex.org/W4206986224",
+    "https://openalex.org/W2920985963",
+    "https://openalex.org/W1977349774",
+    "https://openalex.org/W3111741353",
+    "https://openalex.org/W3202794642",
+    "https://openalex.org/W4297476735",
+    "https://openalex.org/W4289844305",
+    "https://openalex.org/W3149694583",
+    "https://openalex.org/W1966976587",
+    "https://openalex.org/W3096947210",
+    "https://openalex.org/W3197957534",
+    "https://openalex.org/W3008082060",
+    "https://openalex.org/W2955058313",
+    "https://openalex.org/W3017153481",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2907750714",
+    "https://openalex.org/W2774320778",
+    "https://openalex.org/W3161081823",
+    "https://openalex.org/W3160609330",
+    "https://openalex.org/W4312609195",
+    "https://openalex.org/W6846103615",
+    "https://openalex.org/W4225709022",
+    "https://openalex.org/W3130695101",
+    "https://openalex.org/W4323275538",
+    "https://openalex.org/W3181946646",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2295107390",
+    "https://openalex.org/W2155653793",
+    "https://openalex.org/W4292671038",
+    "https://openalex.org/W4294214983",
+    "https://openalex.org/W2110065044",
+    "https://openalex.org/W3009032697",
+    "https://openalex.org/W1987869189",
+    "https://openalex.org/W2921406441",
+    "https://openalex.org/W2980185997",
+    "https://openalex.org/W3103010481",
+    "https://openalex.org/W4306168131",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Optical coherence tomography angiography (OCTA) provides a detailed visualization of the vascular system to aid in the detection and diagnosis of ophthalmic disease. However, accurately extracting microvascular details from OCTA images remains a challenging task due to the limitations of pure convolutional networks. We propose a novel end-to-end transformer-based network architecture called TCU-Net for OCTA retinal vessel segmentation tasks. To address the loss of vascular features of convolutional operations, an efficient cross-fusion transformer module is introduced to replace the original skip connection of U-Net. The transformer module interacts with the encoder’s multiscale vascular features to enrich vascular information and achieve linear computational complexity. Additionally, we design an efficient channel-wise cross attention module to fuse the multiscale features and fine-grained details from the decoding stages, resolving the semantic bias between them and enhancing effective vascular information. This model has been evaluated on the dedicated Retinal OCTA Segmentation (ROSE) dataset. The accuracy values of TCU-Net tested on the ROSE-1 dataset with SVC, DVC, and SVC+DVC are 0.9230, 0.9912, and 0.9042, respectively, and the corresponding AUC values are 0.9512, 0.9823, and 0.9170. For the ROSE-2 dataset, the accuracy and AUC are 0.9454 and 0.8623, respectively. The experiments demonstrate that TCU-Net outperforms state-of-the-art approaches regarding vessel segmentation performance and robustness.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.5786188840866089
+    },
+    {
+      "name": "Computer science",
+      "score": 0.544420599937439
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5011899471282959
+    },
+    {
+      "name": "Retinal",
+      "score": 0.47282230854034424
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3418053984642029
+    },
+    {
+      "name": "Medicine",
+      "score": 0.2455979585647583
+    },
+    {
+      "name": "Engineering",
+      "score": 0.23310622572898865
+    },
+    {
+      "name": "Ophthalmology",
+      "score": 0.22387278079986572
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.17356598377227783
+    },
+    {
+      "name": "Voltage",
+      "score": 0.061988621950149536
+    }
+  ]
 }

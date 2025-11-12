@@ -1,80 +1,115 @@
 {
-    "title": "Advancing Retrieval-Augmented Generation with Inverted Question Matching for Enhanced QA Performance",
-    "url": "https://openalex.org/W4405205161",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Saha, Binita",
-            "affiliations": [
-                "North Dakota State University"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Saha, Utsha",
-            "affiliations": [
-                "North Dakota State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4224919264",
-            "name": "Malik, Muhammad Zubair",
-            "affiliations": [
-                "North Dakota State University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4389519321",
-        "https://openalex.org/W6846966473",
-        "https://openalex.org/W6859094872",
-        "https://openalex.org/W2560647685",
-        "https://openalex.org/W6677258307",
-        "https://openalex.org/W3104215796",
-        "https://openalex.org/W4402263827",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W6811227958",
-        "https://openalex.org/W6859201984",
-        "https://openalex.org/W3133702157",
-        "https://openalex.org/W6810081322",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W6854422757",
-        "https://openalex.org/W6853637240",
-        "https://openalex.org/W4396870811",
-        "https://openalex.org/W4284689799",
-        "https://openalex.org/W4296557505",
-        "https://openalex.org/W6803952171",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W6849898756",
-        "https://openalex.org/W6810152653",
-        "https://openalex.org/W3207095490",
-        "https://openalex.org/W6860182434",
-        "https://openalex.org/W6860962984",
-        "https://openalex.org/W4389519805",
-        "https://openalex.org/W6849760658",
-        "https://openalex.org/W6761205521",
-        "https://openalex.org/W6857079699",
-        "https://openalex.org/W4399437809",
-        "https://openalex.org/W6678262379",
-        "https://openalex.org/W4285294631",
-        "https://openalex.org/W4387156782",
-        "https://openalex.org/W4404782930",
-        "https://openalex.org/W4386576685",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4394912813",
-        "https://openalex.org/W4390961148",
-        "https://openalex.org/W2936695845",
-        "https://openalex.org/W4225576545",
-        "https://openalex.org/W4321177655",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W4221152111",
-        "https://openalex.org/W4382319416",
-        "https://openalex.org/W4389984066",
-        "https://openalex.org/W2964067969"
-    ],
-    "abstract": "This work presents a novel architecture for building Retrieval-Augmented\\nGeneration (RAG) systems to improve Question Answering (QA) tasks from a target\\ncorpus. Large Language Models (LLMs) have revolutionized the analyzing and\\ngeneration of human-like text. These models rely on pre-trained data and lack\\nreal-time updates unless integrated with live data tools. RAG enhances LLMs by\\nintegrating online resources and databases to generate contextually appropriate\\nresponses. However, traditional RAG still encounters challenges like\\ninformation dilution and hallucinations when handling vast amounts of data. Our\\napproach addresses these challenges by converting corpora into a\\ndomain-specific dataset and RAG architecture is constructed to generate\\nresponses from the target document. We introduce QuIM-RAG (Question-to-question\\nInverted Index Matching), a novel approach for the retrieval mechanism in our\\nsystem. This strategy generates potential questions from document chunks and\\nmatches these with user queries to identify the most relevant text chunks for\\ngenerating accurate answers. We have implemented our RAG system on top of the\\nopen-source Meta-LLaMA3-8B-instruct model by Meta Inc. that is available on\\nHugging Face. We constructed a custom corpus of 500+ pages from a high-traffic\\nwebsite accessed thousands of times daily for answering complex questions,\\nalong with manually prepared ground truth QA for evaluation. We compared our\\napproach with traditional RAG models using BERT-Score and RAGAS,\\nstate-of-the-art metrics for evaluating LLM applications. Our evaluation\\ndemonstrates that our approach outperforms traditional RAG architectures on\\nboth metrics.\\n",
-    "full_text": null
+  "title": "Advancing Retrieval-Augmented Generation with Inverted Question Matching for Enhanced QA Performance",
+  "url": "https://openalex.org/W4405205161",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Saha, Binita",
+      "affiliations": [
+        "North Dakota State University"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Saha, Utsha",
+      "affiliations": [
+        "North Dakota State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4224919264",
+      "name": "Malik, Muhammad Zubair",
+      "affiliations": [
+        "North Dakota State University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4389519321",
+    "https://openalex.org/W6846966473",
+    "https://openalex.org/W6859094872",
+    "https://openalex.org/W2560647685",
+    "https://openalex.org/W6677258307",
+    "https://openalex.org/W3104215796",
+    "https://openalex.org/W4402263827",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W6811227958",
+    "https://openalex.org/W6859201984",
+    "https://openalex.org/W3133702157",
+    "https://openalex.org/W6810081322",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W6854422757",
+    "https://openalex.org/W6853637240",
+    "https://openalex.org/W4396870811",
+    "https://openalex.org/W4284689799",
+    "https://openalex.org/W4296557505",
+    "https://openalex.org/W6803952171",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W6849898756",
+    "https://openalex.org/W6810152653",
+    "https://openalex.org/W3207095490",
+    "https://openalex.org/W6860182434",
+    "https://openalex.org/W6860962984",
+    "https://openalex.org/W4389519805",
+    "https://openalex.org/W6849760658",
+    "https://openalex.org/W6761205521",
+    "https://openalex.org/W6857079699",
+    "https://openalex.org/W4399437809",
+    "https://openalex.org/W6678262379",
+    "https://openalex.org/W4285294631",
+    "https://openalex.org/W4387156782",
+    "https://openalex.org/W4404782930",
+    "https://openalex.org/W4386576685",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4394912813",
+    "https://openalex.org/W4390961148",
+    "https://openalex.org/W2936695845",
+    "https://openalex.org/W4225576545",
+    "https://openalex.org/W4321177655",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W4221152111",
+    "https://openalex.org/W4382319416",
+    "https://openalex.org/W4389984066",
+    "https://openalex.org/W2964067969"
+  ],
+  "abstract": "This work presents a novel architecture for building Retrieval-Augmented\\nGeneration (RAG) systems to improve Question Answering (QA) tasks from a target\\ncorpus. Large Language Models (LLMs) have revolutionized the analyzing and\\ngeneration of human-like text. These models rely on pre-trained data and lack\\nreal-time updates unless integrated with live data tools. RAG enhances LLMs by\\nintegrating online resources and databases to generate contextually appropriate\\nresponses. However, traditional RAG still encounters challenges like\\ninformation dilution and hallucinations when handling vast amounts of data. Our\\napproach addresses these challenges by converting corpora into a\\ndomain-specific dataset and RAG architecture is constructed to generate\\nresponses from the target document. We introduce QuIM-RAG (Question-to-question\\nInverted Index Matching), a novel approach for the retrieval mechanism in our\\nsystem. This strategy generates potential questions from document chunks and\\nmatches these with user queries to identify the most relevant text chunks for\\ngenerating accurate answers. We have implemented our RAG system on top of the\\nopen-source Meta-LLaMA3-8B-instruct model by Meta Inc. that is available on\\nHugging Face. We constructed a custom corpus of 500+ pages from a high-traffic\\nwebsite accessed thousands of times daily for answering complex questions,\\nalong with manually prepared ground truth QA for evaluation. We compared our\\napproach with traditional RAG models using BERT-Score and RAGAS,\\nstate-of-the-art metrics for evaluating LLM applications. Our evaluation\\ndemonstrates that our approach outperforms traditional RAG architectures on\\nboth metrics.\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.746804416179657
+    },
+    {
+      "name": "Matching (statistics)",
+      "score": 0.5511929988861084
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.508913516998291
+    },
+    {
+      "name": "Inverted index",
+      "score": 0.483291894197464
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3890298306941986
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.07903143763542175
+    },
+    {
+      "name": "Search engine indexing",
+      "score": 0.07853937149047852
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

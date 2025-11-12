@@ -1,86 +1,121 @@
 {
-    "title": "Toward an Effective Bug Triage System Using Transformers to Add New Developers",
-    "url": "https://openalex.org/W4226334468",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2719786864",
-            "name": "Syed Farhan Alam Zaidi",
-            "affiliations": [
-                "Chung-Ang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2235683446",
-            "name": "Honguk Woo",
-            "affiliations": [
-                "Sungkyunkwan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4211860667",
-            "name": "Chan-Gun Lee",
-            "affiliations": [
-                "Chung-Ang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2890987031",
-        "https://openalex.org/W2740861372",
-        "https://openalex.org/W2963035373",
-        "https://openalex.org/W3009354849",
-        "https://openalex.org/W3107702072",
-        "https://openalex.org/W3126633312",
-        "https://openalex.org/W2605307020",
-        "https://openalex.org/W2132178369",
-        "https://openalex.org/W2539046673",
-        "https://openalex.org/W2139060038",
-        "https://openalex.org/W2021460457",
-        "https://openalex.org/W2019985699",
-        "https://openalex.org/W2044225531",
-        "https://openalex.org/W1997944787",
-        "https://openalex.org/W2006073595",
-        "https://openalex.org/W2417608402",
-        "https://openalex.org/W2607570565",
-        "https://openalex.org/W2927005263",
-        "https://openalex.org/W3035575539",
-        "https://openalex.org/W2100597598",
-        "https://openalex.org/W2540782328",
-        "https://openalex.org/W1998617086",
-        "https://openalex.org/W2012888557",
-        "https://openalex.org/W2910254996",
-        "https://openalex.org/W3154456839",
-        "https://openalex.org/W3121027264",
-        "https://openalex.org/W3158412293",
-        "https://openalex.org/W2045530509",
-        "https://openalex.org/W2126677159",
-        "https://openalex.org/W2113351233",
-        "https://openalex.org/W4206588522",
-        "https://openalex.org/W2075230649",
-        "https://openalex.org/W2099821052",
-        "https://openalex.org/W2058591750",
-        "https://openalex.org/W1912151884",
-        "https://openalex.org/W2620156714",
-        "https://openalex.org/W2795935179",
-        "https://openalex.org/W2994598966",
-        "https://openalex.org/W2941491413",
-        "https://openalex.org/W3183814650",
-        "https://openalex.org/W2532117349",
-        "https://openalex.org/W2949898709",
-        "https://openalex.org/W2742652544",
-        "https://openalex.org/W3128657661",
-        "https://openalex.org/W2979450652",
-        "https://openalex.org/W3208790591",
-        "https://openalex.org/W4212780753",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2901645117",
-        "https://openalex.org/W2554863749",
-        "https://openalex.org/W3177064276",
-        "https://openalex.org/W2964189064",
-        "https://openalex.org/W36543993",
-        "https://openalex.org/W2963460174"
-    ],
-    "abstract": "As defects become more widespread in software development and advancement, bug triaging has become imperative for software testing and maintenance. The bug triage process assigns an appropriate developer to a bug report. Many automated and semiautomated systems have been proposed in the last decade, and some recent techniques have provided direction for developing an effective triage system. However, these techniques still require improvement. Another open challenge related to this problem is adding new developers to the existing triage system, which is challenging because the developers have no listed triage history. This paper proposes a transformer-based bug triage system that uses bidirectional encoder representation from transformers (BERT) for word representation. The proposed model can add a new developer to the existing system without building a training model from scratch. To add new developers, we assumed that new developers had a triage history created by a manual triager or human triage manager after learning their skills from the existing developer history. Then, the existing model was fine-tuned to add new developers using the manual triage history. Experiments were conducted using datasets from well-known large-scale open-source projects, such as Eclipse and Mozilla, and top-k accuracy was used as a criterion for assessment. The experimental outcome suggests that the proposed triage system is better than other word-embedding-based triage methods for the bug triage problem. Additionally, the proposed method performs the best for adding new developers to an existing bug triage system without requiring retraining using a whole dataset.",
-    "full_text": null
+  "title": "Toward an Effective Bug Triage System Using Transformers to Add New Developers",
+  "url": "https://openalex.org/W4226334468",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2719786864",
+      "name": "Syed Farhan Alam Zaidi",
+      "affiliations": [
+        "Chung-Ang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2235683446",
+      "name": "Honguk Woo",
+      "affiliations": [
+        "Sungkyunkwan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4211860667",
+      "name": "Chan-Gun Lee",
+      "affiliations": [
+        "Chung-Ang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2890987031",
+    "https://openalex.org/W2740861372",
+    "https://openalex.org/W2963035373",
+    "https://openalex.org/W3009354849",
+    "https://openalex.org/W3107702072",
+    "https://openalex.org/W3126633312",
+    "https://openalex.org/W2605307020",
+    "https://openalex.org/W2132178369",
+    "https://openalex.org/W2539046673",
+    "https://openalex.org/W2139060038",
+    "https://openalex.org/W2021460457",
+    "https://openalex.org/W2019985699",
+    "https://openalex.org/W2044225531",
+    "https://openalex.org/W1997944787",
+    "https://openalex.org/W2006073595",
+    "https://openalex.org/W2417608402",
+    "https://openalex.org/W2607570565",
+    "https://openalex.org/W2927005263",
+    "https://openalex.org/W3035575539",
+    "https://openalex.org/W2100597598",
+    "https://openalex.org/W2540782328",
+    "https://openalex.org/W1998617086",
+    "https://openalex.org/W2012888557",
+    "https://openalex.org/W2910254996",
+    "https://openalex.org/W3154456839",
+    "https://openalex.org/W3121027264",
+    "https://openalex.org/W3158412293",
+    "https://openalex.org/W2045530509",
+    "https://openalex.org/W2126677159",
+    "https://openalex.org/W2113351233",
+    "https://openalex.org/W4206588522",
+    "https://openalex.org/W2075230649",
+    "https://openalex.org/W2099821052",
+    "https://openalex.org/W2058591750",
+    "https://openalex.org/W1912151884",
+    "https://openalex.org/W2620156714",
+    "https://openalex.org/W2795935179",
+    "https://openalex.org/W2994598966",
+    "https://openalex.org/W2941491413",
+    "https://openalex.org/W3183814650",
+    "https://openalex.org/W2532117349",
+    "https://openalex.org/W2949898709",
+    "https://openalex.org/W2742652544",
+    "https://openalex.org/W3128657661",
+    "https://openalex.org/W2979450652",
+    "https://openalex.org/W3208790591",
+    "https://openalex.org/W4212780753",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2901645117",
+    "https://openalex.org/W2554863749",
+    "https://openalex.org/W3177064276",
+    "https://openalex.org/W2964189064",
+    "https://openalex.org/W36543993",
+    "https://openalex.org/W2963460174"
+  ],
+  "abstract": "As defects become more widespread in software development and advancement, bug triaging has become imperative for software testing and maintenance. The bug triage process assigns an appropriate developer to a bug report. Many automated and semiautomated systems have been proposed in the last decade, and some recent techniques have provided direction for developing an effective triage system. However, these techniques still require improvement. Another open challenge related to this problem is adding new developers to the existing triage system, which is challenging because the developers have no listed triage history. This paper proposes a transformer-based bug triage system that uses bidirectional encoder representation from transformers (BERT) for word representation. The proposed model can add a new developer to the existing system without building a training model from scratch. To add new developers, we assumed that new developers had a triage history created by a manual triager or human triage manager after learning their skills from the existing developer history. Then, the existing model was fine-tuned to add new developers using the manual triage history. Experiments were conducted using datasets from well-known large-scale open-source projects, such as Eclipse and Mozilla, and top-k accuracy was used as a criterion for assessment. The experimental outcome suggests that the proposed triage system is better than other word-embedding-based triage methods for the bug triage problem. Additionally, the proposed method performs the best for adding new developers to an existing bug triage system without requiring retraining using a whole dataset.",
+  "full_text": null,
+  "topic": "Triage",
+  "concepts": [
+    {
+      "name": "Triage",
+      "score": 0.9496380686759949
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6661974191665649
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.4952954351902008
+    },
+    {
+      "name": "Software",
+      "score": 0.4819450378417969
+    },
+    {
+      "name": "Computer security",
+      "score": 0.343767374753952
+    },
+    {
+      "name": "Operating system",
+      "score": 0.16789677739143372
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Emergency medicine",
+      "score": 0.0
+    }
+  ]
 }

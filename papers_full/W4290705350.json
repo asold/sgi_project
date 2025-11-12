@@ -1,67 +1,146 @@
 {
-    "title": "Satellite and instrument entity recognition using a pre-trained language model with distant supervision",
-    "url": "https://openalex.org/W4290705350",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101565467",
-            "name": "Ming Lin",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5061882704",
-            "name": "Meng Jin",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5030538805",
-            "name": "Yufu Liu",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5034161454",
-            "name": "Yuqi Bai",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4220796795",
-        "https://openalex.org/W2772843492",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2889941078",
-        "https://openalex.org/W2962987552",
-        "https://openalex.org/W3008052881",
-        "https://openalex.org/W3194112386",
-        "https://openalex.org/W3013702075",
-        "https://openalex.org/W3198659451",
-        "https://openalex.org/W3102584189",
-        "https://openalex.org/W3034380799",
-        "https://openalex.org/W2296283641",
-        "https://openalex.org/W3038098779",
-        "https://openalex.org/W2757931374",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W2898444472",
-        "https://openalex.org/W2940245298",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W2891383691",
-        "https://openalex.org/W2963140597",
-        "https://openalex.org/W2922388164",
-        "https://openalex.org/W2974334446",
-        "https://openalex.org/W3120832703",
-        "https://openalex.org/W2567289819",
-        "https://openalex.org/W3203197399",
-        "https://openalex.org/W2972221905",
-        "https://openalex.org/W2798839675",
-        "https://openalex.org/W3103981637"
-    ],
-    "abstract": "Earth observations, especially satellite data, have produced a wealth of methods and results in meeting global challenges, often presented in unstructured texts such as papers or reports. Accurate extraction of satellite and instrument entities from these unstructured texts can help to link and reuse Earth observation resources. The direct use of an existing dictionary to extract satellite and instrument entities suffers from the problem of poor matching, which leads to low recall. In this study, we present a named entity recognition model to automatically extract satellite and instrument entities from unstructured texts. Due to the lack of manually labeled data, we apply distant supervision to automatically generate labeled training data. Accordingly, we fine-tune the pre-trained language model with early stopping and a weighted cross-entropy loss function. We propose the dictionary-based self-training method to correct the incomplete annotations caused by the distant supervision method. Experiments demonstrate that our method achieves significant improvements in both precision and recall compared to dictionary matching or standard adaptation of pre-trained language models.",
-    "full_text": null
+  "title": "Satellite and instrument entity recognition using a pre-trained language model with distant supervision",
+  "url": "https://openalex.org/W4290705350",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101565467",
+      "name": "Ming Lin",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5061882704",
+      "name": "Meng Jin",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5030538805",
+      "name": "Yufu Liu",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5034161454",
+      "name": "Yuqi Bai",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4220796795",
+    "https://openalex.org/W2772843492",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2889941078",
+    "https://openalex.org/W2962987552",
+    "https://openalex.org/W3008052881",
+    "https://openalex.org/W3194112386",
+    "https://openalex.org/W3013702075",
+    "https://openalex.org/W3198659451",
+    "https://openalex.org/W3102584189",
+    "https://openalex.org/W3034380799",
+    "https://openalex.org/W2296283641",
+    "https://openalex.org/W3038098779",
+    "https://openalex.org/W2757931374",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2898444472",
+    "https://openalex.org/W2940245298",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W2891383691",
+    "https://openalex.org/W2963140597",
+    "https://openalex.org/W2922388164",
+    "https://openalex.org/W2974334446",
+    "https://openalex.org/W3120832703",
+    "https://openalex.org/W2567289819",
+    "https://openalex.org/W3203197399",
+    "https://openalex.org/W2972221905",
+    "https://openalex.org/W2798839675",
+    "https://openalex.org/W3103981637"
+  ],
+  "abstract": "Earth observations, especially satellite data, have produced a wealth of methods and results in meeting global challenges, often presented in unstructured texts such as papers or reports. Accurate extraction of satellite and instrument entities from these unstructured texts can help to link and reuse Earth observation resources. The direct use of an existing dictionary to extract satellite and instrument entities suffers from the problem of poor matching, which leads to low recall. In this study, we present a named entity recognition model to automatically extract satellite and instrument entities from unstructured texts. Due to the lack of manually labeled data, we apply distant supervision to automatically generate labeled training data. Accordingly, we fine-tune the pre-trained language model with early stopping and a weighted cross-entropy loss function. We propose the dictionary-based self-training method to correct the incomplete annotations caused by the distant supervision method. Experiments demonstrate that our method achieves significant improvements in both precision and recall compared to dictionary matching or standard adaptation of pre-trained language models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7850333452224731
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.589017927646637
+    },
+    {
+      "name": "Matching (statistics)",
+      "score": 0.5685868263244629
+    },
+    {
+      "name": "Precision and recall",
+      "score": 0.5447916984558105
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5305293798446655
+    },
+    {
+      "name": "Language model",
+      "score": 0.5044845342636108
+    },
+    {
+      "name": "Satellite",
+      "score": 0.4778668284416199
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.43514400720596313
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.42061007022857666
+    },
+    {
+      "name": "Information extraction",
+      "score": 0.41179677844047546
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3559034466743469
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.33977627754211426
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Aerospace engineering",
+      "score": 0.0
+    }
+  ]
 }

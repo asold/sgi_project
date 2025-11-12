@@ -1,69 +1,140 @@
 {
-    "title": "TransU<sup>2</sup>-Net: A Hybrid Transformer Architecture for Image Splicing Forgery Detection",
-    "url": "https://openalex.org/W4362496357",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5040374526",
-            "name": "Caiping Yan",
-            "affiliations": [
-                "Hangzhou Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100647304",
-            "name": "Shuyuan Li",
-            "affiliations": [
-                "Hangzhou Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100728929",
-            "name": "Hong Li",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2515389788",
-        "https://openalex.org/W4255023712",
-        "https://openalex.org/W2124695272",
-        "https://openalex.org/W2096754397",
-        "https://openalex.org/W1972186641",
-        "https://openalex.org/W2560026874",
-        "https://openalex.org/W6679792166",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6750227808",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W2964146055",
-        "https://openalex.org/W2777769595",
-        "https://openalex.org/W3158119314",
-        "https://openalex.org/W2965545961",
-        "https://openalex.org/W2948407537",
-        "https://openalex.org/W3108745172",
-        "https://openalex.org/W3168992075",
-        "https://openalex.org/W3118971208",
-        "https://openalex.org/W3129315061",
-        "https://openalex.org/W3136675246",
-        "https://openalex.org/W2911605501",
-        "https://openalex.org/W3082623289",
-        "https://openalex.org/W3025800305",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2071794886",
-        "https://openalex.org/W7014454353",
-        "https://openalex.org/W2097506049",
-        "https://openalex.org/W1985729543",
-        "https://openalex.org/W1994743750",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2169439181",
-        "https://openalex.org/W2104116677",
-        "https://openalex.org/W2909929587",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W3106990721",
-        "https://openalex.org/W4293584584",
-        "https://openalex.org/W1522301498"
-    ],
-    "abstract": "In recent years, various convolutional neural network (CNN) based frameworks have been presented to detect forged regions in images. However, most of the existing models can not obtain satisfactory performance due to tampered areas with various sizes, especially for objects with large-scale. In order to obtain an accurate object-level forgery localization result, we propose a novel hybrid transformer architecture, which exhibits both advantages of spatial dependencies and contextual information from different scales, namely, TransU2-Net. Specifically, long-range semantic dependencies are captured by the last block of encoder to locate large-scale tampered areas more completely. Meanwhile, non-semantic features are filtered out by enhancing low-level features under the guidance of high-level semantic information in the skip connections to achieve more refined spatial recovery. Therefore, our hybrid model can locate spliced forgeries with various sizes without requiring large data set pre-training. Experimental results on the Casia2.0 and Columbia datasets show that our framework achieves better performance over state-of-the-art methods. On the Casia 2.0 dataset, F-measure improve by 8.4&#x0025; compared to the previous method.",
-    "full_text": null
+  "title": "TransU<sup>2</sup>-Net: A Hybrid Transformer Architecture for Image Splicing Forgery Detection",
+  "url": "https://openalex.org/W4362496357",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5040374526",
+      "name": "Caiping Yan",
+      "affiliations": [
+        "Hangzhou Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100647304",
+      "name": "Shuyuan Li",
+      "affiliations": [
+        "Hangzhou Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100728929",
+      "name": "Hong Li",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2515389788",
+    "https://openalex.org/W4255023712",
+    "https://openalex.org/W2124695272",
+    "https://openalex.org/W2096754397",
+    "https://openalex.org/W1972186641",
+    "https://openalex.org/W2560026874",
+    "https://openalex.org/W6679792166",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6750227808",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W2964146055",
+    "https://openalex.org/W2777769595",
+    "https://openalex.org/W3158119314",
+    "https://openalex.org/W2965545961",
+    "https://openalex.org/W2948407537",
+    "https://openalex.org/W3108745172",
+    "https://openalex.org/W3168992075",
+    "https://openalex.org/W3118971208",
+    "https://openalex.org/W3129315061",
+    "https://openalex.org/W3136675246",
+    "https://openalex.org/W2911605501",
+    "https://openalex.org/W3082623289",
+    "https://openalex.org/W3025800305",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2071794886",
+    "https://openalex.org/W7014454353",
+    "https://openalex.org/W2097506049",
+    "https://openalex.org/W1985729543",
+    "https://openalex.org/W1994743750",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2169439181",
+    "https://openalex.org/W2104116677",
+    "https://openalex.org/W2909929587",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W3106990721",
+    "https://openalex.org/W4293584584",
+    "https://openalex.org/W1522301498"
+  ],
+  "abstract": "In recent years, various convolutional neural network (CNN) based frameworks have been presented to detect forged regions in images. However, most of the existing models can not obtain satisfactory performance due to tampered areas with various sizes, especially for objects with large-scale. In order to obtain an accurate object-level forgery localization result, we propose a novel hybrid transformer architecture, which exhibits both advantages of spatial dependencies and contextual information from different scales, namely, TransU2-Net. Specifically, long-range semantic dependencies are captured by the last block of encoder to locate large-scale tampered areas more completely. Meanwhile, non-semantic features are filtered out by enhancing low-level features under the guidance of high-level semantic information in the skip connections to achieve more refined spatial recovery. Therefore, our hybrid model can locate spliced forgeries with various sizes without requiring large data set pre-training. Experimental results on the Casia2.0 and Columbia datasets show that our framework achieves better performance over state-of-the-art methods. On the Casia 2.0 dataset, F-measure improve by 8.4&#x0025; compared to the previous method.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8084162473678589
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6693694591522217
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6132930517196655
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.575373649597168
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5453658699989319
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4767609238624573
+    },
+    {
+      "name": "Architecture",
+      "score": 0.4703288972377777
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.438963919878006
+    },
+    {
+      "name": "Data mining",
+      "score": 0.38030731678009033
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08944222331047058
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

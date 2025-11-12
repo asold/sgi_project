@@ -1,74 +1,161 @@
 {
-    "title": "Transformer-based anti-noise models for CRISPR-Cas9 off-target activities prediction",
-    "url": "https://openalex.org/W4366085048",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4366102429",
-            "name": "Zengrui Guan",
-            "affiliations": [
-                "East China Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2138149101",
-            "name": "Zhenran Jiang",
-            "affiliations": [
-                "East China Normal University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2064815984",
-        "https://openalex.org/W4206892629",
-        "https://openalex.org/W2905281580",
-        "https://openalex.org/W2740810575",
-        "https://openalex.org/W1996788258",
-        "https://openalex.org/W2003171404",
-        "https://openalex.org/W2167380395",
-        "https://openalex.org/W2149751339",
-        "https://openalex.org/W2131527797",
-        "https://openalex.org/W4310075481",
-        "https://openalex.org/W6736559948",
-        "https://openalex.org/W2736476343",
-        "https://openalex.org/W3088092039",
-        "https://openalex.org/W3112179900",
-        "https://openalex.org/W2252568502",
-        "https://openalex.org/W2782551527",
-        "https://openalex.org/W4307725211",
-        "https://openalex.org/W2085993152",
-        "https://openalex.org/W2003797386",
-        "https://openalex.org/W2611134270",
-        "https://openalex.org/W2611661371",
-        "https://openalex.org/W1997281938",
-        "https://openalex.org/W2613056759",
-        "https://openalex.org/W3035751258",
-        "https://openalex.org/W2139314409",
-        "https://openalex.org/W2036176224",
-        "https://openalex.org/W1990149668",
-        "https://openalex.org/W2765610460",
-        "https://openalex.org/W2810756255",
-        "https://openalex.org/W2982510384",
-        "https://openalex.org/W2891210592",
-        "https://openalex.org/W3026606344",
-        "https://openalex.org/W3007485829",
-        "https://openalex.org/W3134782704",
-        "https://openalex.org/W3133006703",
-        "https://openalex.org/W4205143015",
-        "https://openalex.org/W2461013690",
-        "https://openalex.org/W2224398381",
-        "https://openalex.org/W2051255304",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2798761464",
-        "https://openalex.org/W2115603949",
-        "https://openalex.org/W2170551349",
-        "https://openalex.org/W2803187616",
-        "https://openalex.org/W3035429562",
-        "https://openalex.org/W3020116629",
-        "https://openalex.org/W4226172825",
-        "https://openalex.org/W4292230674",
-        "https://openalex.org/W2605113678"
-    ],
-    "abstract": "Abstract The off-target effect occurring in the CRISPR-Cas9 system has been a challenging problem for the practical application of this gene editing technology. In recent years, various prediction models have been proposed to predict potential off-target activities. However, most of the existing prediction methods do not fully exploit guide RNA (gRNA) and DNA sequence pair information effectively. In addition, available prediction methods usually ignore the noise effect in original off-target datasets. To address these issues, we design a novel coding scheme, which considers the key features of mismatch type, mismatch location and the gRNA-DNA sequence pair information. Furthermore, a transformer-based anti-noise model called CrisprDNT is developed to solve the noise problem that exists in the off-target data. Experimental results of eight existing datasets demonstrate that the method with the inclusion of the anti-noise loss functions is superior to available state-of-the-art prediction methods. CrisprDNT is available at https://github.com/gzrgzx/CrisprDNT.",
-    "full_text": null
+  "title": "Transformer-based anti-noise models for CRISPR-Cas9 off-target activities prediction",
+  "url": "https://openalex.org/W4366085048",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4366102429",
+      "name": "Zengrui Guan",
+      "affiliations": [
+        "East China Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2138149101",
+      "name": "Zhenran Jiang",
+      "affiliations": [
+        "East China Normal University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2064815984",
+    "https://openalex.org/W4206892629",
+    "https://openalex.org/W2905281580",
+    "https://openalex.org/W2740810575",
+    "https://openalex.org/W1996788258",
+    "https://openalex.org/W2003171404",
+    "https://openalex.org/W2167380395",
+    "https://openalex.org/W2149751339",
+    "https://openalex.org/W2131527797",
+    "https://openalex.org/W4310075481",
+    "https://openalex.org/W6736559948",
+    "https://openalex.org/W2736476343",
+    "https://openalex.org/W3088092039",
+    "https://openalex.org/W3112179900",
+    "https://openalex.org/W2252568502",
+    "https://openalex.org/W2782551527",
+    "https://openalex.org/W4307725211",
+    "https://openalex.org/W2085993152",
+    "https://openalex.org/W2003797386",
+    "https://openalex.org/W2611134270",
+    "https://openalex.org/W2611661371",
+    "https://openalex.org/W1997281938",
+    "https://openalex.org/W2613056759",
+    "https://openalex.org/W3035751258",
+    "https://openalex.org/W2139314409",
+    "https://openalex.org/W2036176224",
+    "https://openalex.org/W1990149668",
+    "https://openalex.org/W2765610460",
+    "https://openalex.org/W2810756255",
+    "https://openalex.org/W2982510384",
+    "https://openalex.org/W2891210592",
+    "https://openalex.org/W3026606344",
+    "https://openalex.org/W3007485829",
+    "https://openalex.org/W3134782704",
+    "https://openalex.org/W3133006703",
+    "https://openalex.org/W4205143015",
+    "https://openalex.org/W2461013690",
+    "https://openalex.org/W2224398381",
+    "https://openalex.org/W2051255304",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2798761464",
+    "https://openalex.org/W2115603949",
+    "https://openalex.org/W2170551349",
+    "https://openalex.org/W2803187616",
+    "https://openalex.org/W3035429562",
+    "https://openalex.org/W3020116629",
+    "https://openalex.org/W4226172825",
+    "https://openalex.org/W4292230674",
+    "https://openalex.org/W2605113678"
+  ],
+  "abstract": "Abstract The off-target effect occurring in the CRISPR-Cas9 system has been a challenging problem for the practical application of this gene editing technology. In recent years, various prediction models have been proposed to predict potential off-target activities. However, most of the existing prediction methods do not fully exploit guide RNA (gRNA) and DNA sequence pair information effectively. In addition, available prediction methods usually ignore the noise effect in original off-target datasets. To address these issues, we design a novel coding scheme, which considers the key features of mismatch type, mismatch location and the gRNA-DNA sequence pair information. Furthermore, a transformer-based anti-noise model called CrisprDNT is developed to solve the noise problem that exists in the off-target data. Experimental results of eight existing datasets demonstrate that the method with the inclusion of the anti-noise loss functions is superior to available state-of-the-art prediction methods. CrisprDNT is available at https://github.com/gzrgzx/CrisprDNT.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7994929552078247
+    },
+    {
+      "name": "CRISPR",
+      "score": 0.7178642749786377
+    },
+    {
+      "name": "Exploit",
+      "score": 0.647267758846283
+    },
+    {
+      "name": "Noise (video)",
+      "score": 0.5549243688583374
+    },
+    {
+      "name": "Guide RNA",
+      "score": 0.5433521866798401
+    },
+    {
+      "name": "Transformer",
+      "score": 0.523627758026123
+    },
+    {
+      "name": "Coding (social sciences)",
+      "score": 0.48374414443969727
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4456669092178345
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4290887117385864
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4157804846763611
+    },
+    {
+      "name": "Cas9",
+      "score": 0.39779677987098694
+    },
+    {
+      "name": "Gene",
+      "score": 0.10657283663749695
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

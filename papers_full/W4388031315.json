@@ -1,67 +1,142 @@
 {
-    "title": "Calculon: a methodology and tool for high-level co-design of systems and large language models",
-    "url": "https://openalex.org/W4388031315",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2054292754",
-            "name": "Mikhail Isaev",
-            "affiliations": [
-                "Georgia Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2552709914",
-            "name": "Nic McDonald",
-            "affiliations": [
-                "Nvidia (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2483193468",
-            "name": "Larry Dennison",
-            "affiliations": [
-                "Nvidia (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A211035554",
-            "name": "Richard Vuduc",
-            "affiliations": [
-                "Georgia Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4321636575",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W2338908902",
-        "https://openalex.org/W3132107458",
-        "https://openalex.org/W1967134278",
-        "https://openalex.org/W3012479151",
-        "https://openalex.org/W4316252379",
-        "https://openalex.org/W3036878841",
-        "https://openalex.org/W2953212265",
-        "https://openalex.org/W4280611847",
-        "https://openalex.org/W2787299084",
-        "https://openalex.org/W2612076670",
-        "https://openalex.org/W2807615772",
-        "https://openalex.org/W2969388332",
-        "https://openalex.org/W3204998121",
-        "https://openalex.org/W4287204036",
-        "https://openalex.org/W3205803342",
-        "https://openalex.org/W4224035735",
-        "https://openalex.org/W3081168214",
-        "https://openalex.org/W2973727699",
-        "https://openalex.org/W4221167110",
-        "https://openalex.org/W3157055696",
-        "https://openalex.org/W4312060029",
-        "https://openalex.org/W3163465001",
-        "https://openalex.org/W1493774699",
-        "https://openalex.org/W4290753950",
-        "https://openalex.org/W4226064176",
-        "https://openalex.org/W2914304175"
-    ],
-    "abstract": "This paper presents a parameterized analytical performance model of transformer-based Large Language Models (LLMs) for guiding high-level algorithm-architecture codesign studies. This model derives from an extensive survey of performance optimizations that have been proposed for the training and inference of LLMs; the model's parameters capture application characteristics, the hardware system, and the space of implementation strategies. With such a model, we can systematically explore a joint space of hardware and software configurations to identify optimal system designs under given constraints, like the total amount of system memory. We implemented this model and methodology in a Python-based open-source tool called Calculon. Using it, we identified novel system designs that look significantly different from current inference and training systems, showing quantitatively the estimated potential to achieve higher efficiency, lower cost, and better scalability.",
-    "full_text": null
+  "title": "Calculon: a methodology and tool for high-level co-design of systems and large language models",
+  "url": "https://openalex.org/W4388031315",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2054292754",
+      "name": "Mikhail Isaev",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2552709914",
+      "name": "Nic McDonald",
+      "affiliations": [
+        "Nvidia (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2483193468",
+      "name": "Larry Dennison",
+      "affiliations": [
+        "Nvidia (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A211035554",
+      "name": "Richard Vuduc",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4321636575",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W2338908902",
+    "https://openalex.org/W3132107458",
+    "https://openalex.org/W1967134278",
+    "https://openalex.org/W3012479151",
+    "https://openalex.org/W4316252379",
+    "https://openalex.org/W3036878841",
+    "https://openalex.org/W2953212265",
+    "https://openalex.org/W4280611847",
+    "https://openalex.org/W2787299084",
+    "https://openalex.org/W2612076670",
+    "https://openalex.org/W2807615772",
+    "https://openalex.org/W2969388332",
+    "https://openalex.org/W3204998121",
+    "https://openalex.org/W4287204036",
+    "https://openalex.org/W3205803342",
+    "https://openalex.org/W4224035735",
+    "https://openalex.org/W3081168214",
+    "https://openalex.org/W2973727699",
+    "https://openalex.org/W4221167110",
+    "https://openalex.org/W3157055696",
+    "https://openalex.org/W4312060029",
+    "https://openalex.org/W3163465001",
+    "https://openalex.org/W1493774699",
+    "https://openalex.org/W4290753950",
+    "https://openalex.org/W4226064176",
+    "https://openalex.org/W2914304175"
+  ],
+  "abstract": "This paper presents a parameterized analytical performance model of transformer-based Large Language Models (LLMs) for guiding high-level algorithm-architecture codesign studies. This model derives from an extensive survey of performance optimizations that have been proposed for the training and inference of LLMs; the model's parameters capture application characteristics, the hardware system, and the space of implementation strategies. With such a model, we can systematically explore a joint space of hardware and software configurations to identify optimal system designs under given constraints, like the total amount of system memory. We implemented this model and methodology in a Python-based open-source tool called Calculon. Using it, we identified novel system designs that look significantly different from current inference and training systems, showing quantitatively the estimated potential to achieve higher efficiency, lower cost, and better scalability.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7519556283950806
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.711780846118927
+    },
+    {
+      "name": "Scalability",
+      "score": 0.6724787354469299
+    },
+    {
+      "name": "Parameterized complexity",
+      "score": 0.6281851530075073
+    },
+    {
+      "name": "Design space exploration",
+      "score": 0.5699957013130188
+    },
+    {
+      "name": "Inference",
+      "score": 0.5578203797340393
+    },
+    {
+      "name": "Electronic system-level design and verification",
+      "score": 0.4474918842315674
+    },
+    {
+      "name": "Software",
+      "score": 0.43476617336273193
+    },
+    {
+      "name": "Computer architecture",
+      "score": 0.42125046253204346
+    },
+    {
+      "name": "Architecture",
+      "score": 0.41614237427711487
+    },
+    {
+      "name": "Programming language",
+      "score": 0.37909597158432007
+    },
+    {
+      "name": "Computer engineering",
+      "score": 0.3201814293861389
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.23958471417427063
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2214236855506897
+    },
+    {
+      "name": "Operating system",
+      "score": 0.13322708010673523
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.12705102562904358
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    }
+  ]
 }

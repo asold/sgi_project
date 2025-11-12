@@ -1,55 +1,86 @@
 {
-    "title": "Rethinking Attention: Exploring Shallow Feed-Forward Neural Networks as an Alternative to Attention Layers in Transformers (Student Abstract)",
-    "url": "https://openalex.org/W4393152562",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101581324",
-            "name": "Danilo Dordevic",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093299981",
-            "name": "Vukasin Bozic",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093299982",
-            "name": "Joseph Thommes",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5054153175",
-            "name": "Daniele Coppola",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5020425968",
-            "name": "Sidak Pal Singh",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6774062504",
-        "https://openalex.org/W6638523607",
-        "https://openalex.org/W6898505805",
-        "https://openalex.org/W4297797729",
-        "https://openalex.org/W1821462560",
-        "https://openalex.org/W2131241448",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3005389111",
-        "https://openalex.org/W2134797427"
-    ],
-    "abstract": "This work presents an analysis of the effectiveness of using standard shallow feed-forward networks to mimic the behavior of the attention mechanism in the original Transformer model, a state-of-the-art architecture for sequence-to-sequence tasks. We substitute key elements of the attention mechanism in the Transformer with simple feed-forward networks, trained using the original components via knowledge distillation. Our experiments, conducted on the IWSLT2017 dataset, reveal the capacity of these ”attentionless Transformers” to rival the performance of the original architecture. Through rigorous ablation studies, and experimenting with various replacement network types and sizes, we offer insights that support the viability of our approach. This not only sheds light on the adaptability of shallow feed-forward networks in emulating attention mechanisms but also underscores their potential to streamline complex architectures for sequence-to-sequence tasks.",
-    "full_text": "Rethinking Attention: Exploring Shallow Feed-Forward Neural Networks as an\nAlternative to Attention Layers in Transformers (Student Abstract)\nDanilo Dordevic*, Vukasin Bozic*, Joseph Thommes, Daniele Coppola, Sidak Pal Singh\nETH Zurich\n{ddordevic, vbozic, jthommes, dcoppola}@student.ethz.ch, sidak.singh@inf.ethz.ch\nAbstract\nThis work presents an analysis of the effectiveness of us-\ning standard shallow feed-forward networks to mimic the\nbehavior of the attention mechanism in the original Trans-\nformer model, a state-of-the-art architecture for sequence-to-\nsequence tasks. We substitute key elements of the attention\nmechanism in the Transformer with simple feed-forward net-\nworks, trained using the original components via knowledge\ndistillation. Our experiments, conducted on the IWSLT2017\ndataset, reveal the capacity of these ”attentionless Transform-\ners” to rival the performance of the original architecture.\nThrough rigorous ablation studies, and experimenting with\nvarious replacement network types and sizes, we offer in-\nsights that support the viability of our approach. This not\nonly sheds light on the adaptability of shallow feed-forward\nnetworks in emulating attention mechanisms but also under-\nscores their potential to streamline complex architectures for\nsequence-to-sequence tasks.\nIntroduction\nThe seminal paper (Vaswani et al. 2017) which intro-\nduced the Transformer model has fundamentally altered the\nlandscape of sequence-to-sequence modeling tasks. It set\nnew benchmarks for language translation, measured by the\nBLEU score (Papineni et al. 2002). The Transformer’s at-\ntention mechanism enables the establishment of long-term\ndependencies in sequential data, allowing it to attend to ev-\nery element in a sequence, a feat prior network architectures\nstruggled to achieve without significant computational over-\nheads.\nInspired by prior work (Ba and Caruana 2014), (Urban\net al. 2017) which explore the feasibility of training shallow\nfeed-forward networks to emulate the behavior of deep\nconvolutional networks with deep networks as teachers, we\nconduct a similar investigation on the original Transformer\npresented in (Vaswani et al. 2017). Our focus is on language\ntranslation, utilizing the IWSLT2017 dataset (Cettolo et al.\n2017). We aim to assess the extent to which standard shal-\nlow feed-forward networks can model attention mechanisms\nby substituting key attention components with feed-forward\n*These authors contributed equally.\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nnetworks trained to replicate their behavior.\nThis work provides empirical evidence supporting the\nnotion that shallow feed-forward networks can effectively\nlearn the behaviors of Transformer attention modules and\nreplace them without significantly impacting its overall per-\nformance. While it does not introduce a competitive advan-\ntage over established methods, it offers a conceptual analysis\nof existing techniques and potential alternatives.\nModels and Methods\nThe Transformer architecture is composed of stacked en-\ncoder and decoder blocks, which use attention to process in-\nput data. The encoder layer features one self-attention block,\nwhile the decoder layer encompasses both self-attention and\ncross-attention blocks, fusing the data processed by the en-\ncoder and itself. This model was used as the baseline, i.e.\nthe teacher model, where the intermediate activations of\nits blocks were used for knowledge distillation (Hinton,\nVinyals, and Dean 2015) in the training of the feed-forward\nnetworks.\nEncoder self-attention replacement.In the proposed ap-\nproach, a thorough ablation study of the potential replace-\nment methods was conducted. The experiments were done\non self-attention layers in all 6 encoder blocks.\nWe introduced four different levels of abstraction for re-\nplacing the original encoder attention:\nAttention Layer Replacement (ALR), Attention Layer with\nResidual Connection Replacement (ALRR), Attention Sep-\narate Heads Layer Replacement (ASLR), and Encoder\nLayer Replacement (ELR), as depicted in Figure 1. Further-\nmore, all of these architectures were trained in 5 different\nsizes, ranging from ”XS” to ”L”.\nFull Transformer attention replacement.As ALR was\nfound to be the most effective approach in the case of\nencoder attention replacement, featuring both high perfor-\nmance and a small number of parameters, the whole pro-\ncedure was recreated for decoder self-attention and cross-\nattention replacement. This required adaptations of the pre-\nviously introduced architectures, caused by different types\nof attention in the decoder.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23477\nFigure 1: Different encoder self-attention replacement ap-\nproaches presented.\nResults\nBLEU metric was used for evaluation purposes in this work,\nas it represents a standard metric for language translation\ntasks. The results for both encoder self-attention and full\nTransformer replacement studies span on 4 subsets of the\nIWSLT2017 dataset. Furthermore, BLEU scores relative to\nthe baseline (vanilla Transformer) score of every experiment\nwere calculated and then averaged over the datasets. The\nmost important experimental results are presented in Figures\n2 and 3. We provide the implementation code on Github1.\nDiscussion\nIn the case of encoder replacement, all of the proposed meth-\nods achieve competitive results compared to the baseline, as\nseen in Figure 2. Out of the four approaches, ELR performs\nthe worst, which is caused by the simplicity of the replace-\nment model, which discards all of the encoder structures that\naid training.\nFurthermore, the full Transformer replacement approach,\nwhere only the ALR method is utilized, yielded results\nshowcasing the potential of the feed-forward networks to\nsuccessfully replicate the decoder self-attention behavior,\nwhile the performance on decoder cross-attention is compar-\natively worse, as presented in Figure 3. The potential reason\nfor this behavior could be the lack of the expressiveness of\nthe feed-forward network needed to describe the more com-\nplex mapping and interaction between sequences used in the\ncross-attention block, which also influences final evaluation\nscores for the fully ”attentionless” Transformer.\nHowever, all of the replacement approaches come at a sig-\nnificant cost of having more parameters. Another downside\nof our replacement of the attention with a fixed-size feed-\nforward network is the imminent lack of flexibility of the\nmodel in terms of the length of sequences the model can op-\nerate with.\nConclusion\nEmpirical evidence suggests that the proposed approaches\nare capable of achieving comparable performance to that\nof the original Transformer, demonstrating that Transform-\ners do not necessarily need to have attention. These con-\nclusions also point out the deficiencies of the current opti-\nmization methods, which are not able to train these ”atten-\ntionless Transformers” from scratch but need more advanced\n1https://github.com/vulus98/Rethinking-attention.git\nFigure 2: Relative BLEU scores [%] (relative to the baseline\nTransformer), depending on the FF network size. Encoder\nself-attention is replaced using different replacement meth-\nods.\nFigure 3: Relative BLEU scores [%] (relative to the base-\nline), depending on the FF network size. ALR method is\nused to replace different attention parts of the transformer.\ntechniques, such as knowledge distillation to converge into\ndesired parameter configurations. This conclusion empha-\nsizes that with the advancements in optimization techniques,\nless specialized architectures such as feed-forward networks\ncould be used for advanced tasks, currently reserved for\nhighly specialized architectures.\nFuture Work\nBy matching the performance of the original Transformer, it\nis highly probable that the further optimization of the FF net-\nworks’ hyperparameters using advanced parameter search\n(e.g. using Bayesian optimization (Snoek, Larochelle, and\nAdams 2012)) could yield even better results in terms of\ntranslation quality and possibly even enable the usage of\nsmaller FF networks for the replacement, as the size of the\nnetworks represents one of the major bottlenecks for the de-\nployment of these ’attentionless’ Transformers in practice.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23478\nAcknowledgements\nWe would like to express our sincere gratitude to the Data\nAnalytics lab of ETH Zurich for providing the necessary re-\nsources and support during the course of this project.\nReferences\nBa, L. J.; and Caruana, R. 2014. Do Deep Nets Really Need\nto be Deep? ArXiv:1312.6184 [cs].\nCettolo, M.; Federico, M.; Bentivogli, L.; Niehues, J.;\nSt¨uker, S.; Sudoh, K.; Yoshino, K.; and Federmann, C. 2017.\nOverview of the IWSLT 2017 Evaluation Campaign. In\nSakti, S.; and Utiyama, M., eds.,Proceedings of the 14th In-\nternational Conference on Spoken Language Translation, 2–\n14. Tokyo, Japan: International Workshop on Spoken Lan-\nguage Translation.\nHinton, G.; Vinyals, O.; and Dean, J. 2015. Distilling the\nKnowledge in a Neural Network. ArXiv:1503.02531 [cs,\nstat].\nPapineni, K.; Roukos, S.; Ward, T.; and Zhu, W.-J. 2002.\nBleu: a Method for Automatic Evaluation of Machine Trans-\nlation. In Isabelle, P.; Charniak, E.; and Lin, D., eds., Pro-\nceedings of the 40th Annual Meeting of the Association for\nComputational Linguistics, 311–318. Philadelphia, Pennsyl-\nvania, USA: Association for Computational Linguistics.\nSnoek, J.; Larochelle, H.; and Adams, R. P. 2012. Practical\nBayesian Optimization of Machine Learning Algorithms.\narXiv:1206.2944.\nUrban, G.; Geras, K. J.; Kahou, S. E.; Aslan, O.; Wang, S.;\nCaruana, R.; Mohamed, A.; Philipose, M.; and Richardson,\nM. 2017. Do Deep Convolutional Nets Really Need to be\nDeep and Convolutional? ArXiv:1603.05691 [cs, stat].\nVaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones,\nL.; Gomez, A. N.; Kaiser, L.; and Polosukhin, I. 2017. At-\ntention Is All You Need. arXiv:1706.03762.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23479"
+  "title": "Rethinking Attention: Exploring Shallow Feed-Forward Neural Networks as an Alternative to Attention Layers in Transformers (Student Abstract)",
+  "url": "https://openalex.org/W4393152562",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101581324",
+      "name": "Danilo Dordevic",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093299981",
+      "name": "Vukasin Bozic",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093299982",
+      "name": "Joseph Thommes",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5054153175",
+      "name": "Daniele Coppola",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5020425968",
+      "name": "Sidak Pal Singh",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6774062504",
+    "https://openalex.org/W6638523607",
+    "https://openalex.org/W6898505805",
+    "https://openalex.org/W4297797729",
+    "https://openalex.org/W1821462560",
+    "https://openalex.org/W2131241448",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3005389111",
+    "https://openalex.org/W2134797427"
+  ],
+  "abstract": "This work presents an analysis of the effectiveness of using standard shallow feed-forward networks to mimic the behavior of the attention mechanism in the original Transformer model, a state-of-the-art architecture for sequence-to-sequence tasks. We substitute key elements of the attention mechanism in the Transformer with simple feed-forward networks, trained using the original components via knowledge distillation. Our experiments, conducted on the IWSLT2017 dataset, reveal the capacity of these ”attentionless Transformers” to rival the performance of the original architecture. Through rigorous ablation studies, and experimenting with various replacement network types and sizes, we offer insights that support the viability of our approach. This not only sheds light on the adaptability of shallow feed-forward networks in emulating attention mechanisms but also underscores their potential to streamline complex architectures for sequence-to-sequence tasks.",
+  "full_text": "Rethinking Attention: Exploring Shallow Feed-Forward Neural Networks as an\nAlternative to Attention Layers in Transformers (Student Abstract)\nDanilo Dordevic*, Vukasin Bozic*, Joseph Thommes, Daniele Coppola, Sidak Pal Singh\nETH Zurich\n{ddordevic, vbozic, jthommes, dcoppola}@student.ethz.ch, sidak.singh@inf.ethz.ch\nAbstract\nThis work presents an analysis of the effectiveness of us-\ning standard shallow feed-forward networks to mimic the\nbehavior of the attention mechanism in the original Trans-\nformer model, a state-of-the-art architecture for sequence-to-\nsequence tasks. We substitute key elements of the attention\nmechanism in the Transformer with simple feed-forward net-\nworks, trained using the original components via knowledge\ndistillation. Our experiments, conducted on the IWSLT2017\ndataset, reveal the capacity of these ”attentionless Transform-\ners” to rival the performance of the original architecture.\nThrough rigorous ablation studies, and experimenting with\nvarious replacement network types and sizes, we offer in-\nsights that support the viability of our approach. This not\nonly sheds light on the adaptability of shallow feed-forward\nnetworks in emulating attention mechanisms but also under-\nscores their potential to streamline complex architectures for\nsequence-to-sequence tasks.\nIntroduction\nThe seminal paper (Vaswani et al. 2017) which intro-\nduced the Transformer model has fundamentally altered the\nlandscape of sequence-to-sequence modeling tasks. It set\nnew benchmarks for language translation, measured by the\nBLEU score (Papineni et al. 2002). The Transformer’s at-\ntention mechanism enables the establishment of long-term\ndependencies in sequential data, allowing it to attend to ev-\nery element in a sequence, a feat prior network architectures\nstruggled to achieve without significant computational over-\nheads.\nInspired by prior work (Ba and Caruana 2014), (Urban\net al. 2017) which explore the feasibility of training shallow\nfeed-forward networks to emulate the behavior of deep\nconvolutional networks with deep networks as teachers, we\nconduct a similar investigation on the original Transformer\npresented in (Vaswani et al. 2017). Our focus is on language\ntranslation, utilizing the IWSLT2017 dataset (Cettolo et al.\n2017). We aim to assess the extent to which standard shal-\nlow feed-forward networks can model attention mechanisms\nby substituting key attention components with feed-forward\n*These authors contributed equally.\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nnetworks trained to replicate their behavior.\nThis work provides empirical evidence supporting the\nnotion that shallow feed-forward networks can effectively\nlearn the behaviors of Transformer attention modules and\nreplace them without significantly impacting its overall per-\nformance. While it does not introduce a competitive advan-\ntage over established methods, it offers a conceptual analysis\nof existing techniques and potential alternatives.\nModels and Methods\nThe Transformer architecture is composed of stacked en-\ncoder and decoder blocks, which use attention to process in-\nput data. The encoder layer features one self-attention block,\nwhile the decoder layer encompasses both self-attention and\ncross-attention blocks, fusing the data processed by the en-\ncoder and itself. This model was used as the baseline, i.e.\nthe teacher model, where the intermediate activations of\nits blocks were used for knowledge distillation (Hinton,\nVinyals, and Dean 2015) in the training of the feed-forward\nnetworks.\nEncoder self-attention replacement.In the proposed ap-\nproach, a thorough ablation study of the potential replace-\nment methods was conducted. The experiments were done\non self-attention layers in all 6 encoder blocks.\nWe introduced four different levels of abstraction for re-\nplacing the original encoder attention:\nAttention Layer Replacement (ALR), Attention Layer with\nResidual Connection Replacement (ALRR), Attention Sep-\narate Heads Layer Replacement (ASLR), and Encoder\nLayer Replacement (ELR), as depicted in Figure 1. Further-\nmore, all of these architectures were trained in 5 different\nsizes, ranging from ”XS” to ”L”.\nFull Transformer attention replacement.As ALR was\nfound to be the most effective approach in the case of\nencoder attention replacement, featuring both high perfor-\nmance and a small number of parameters, the whole pro-\ncedure was recreated for decoder self-attention and cross-\nattention replacement. This required adaptations of the pre-\nviously introduced architectures, caused by different types\nof attention in the decoder.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23477\nFigure 1: Different encoder self-attention replacement ap-\nproaches presented.\nResults\nBLEU metric was used for evaluation purposes in this work,\nas it represents a standard metric for language translation\ntasks. The results for both encoder self-attention and full\nTransformer replacement studies span on 4 subsets of the\nIWSLT2017 dataset. Furthermore, BLEU scores relative to\nthe baseline (vanilla Transformer) score of every experiment\nwere calculated and then averaged over the datasets. The\nmost important experimental results are presented in Figures\n2 and 3. We provide the implementation code on Github1.\nDiscussion\nIn the case of encoder replacement, all of the proposed meth-\nods achieve competitive results compared to the baseline, as\nseen in Figure 2. Out of the four approaches, ELR performs\nthe worst, which is caused by the simplicity of the replace-\nment model, which discards all of the encoder structures that\naid training.\nFurthermore, the full Transformer replacement approach,\nwhere only the ALR method is utilized, yielded results\nshowcasing the potential of the feed-forward networks to\nsuccessfully replicate the decoder self-attention behavior,\nwhile the performance on decoder cross-attention is compar-\natively worse, as presented in Figure 3. The potential reason\nfor this behavior could be the lack of the expressiveness of\nthe feed-forward network needed to describe the more com-\nplex mapping and interaction between sequences used in the\ncross-attention block, which also influences final evaluation\nscores for the fully ”attentionless” Transformer.\nHowever, all of the replacement approaches come at a sig-\nnificant cost of having more parameters. Another downside\nof our replacement of the attention with a fixed-size feed-\nforward network is the imminent lack of flexibility of the\nmodel in terms of the length of sequences the model can op-\nerate with.\nConclusion\nEmpirical evidence suggests that the proposed approaches\nare capable of achieving comparable performance to that\nof the original Transformer, demonstrating that Transform-\ners do not necessarily need to have attention. These con-\nclusions also point out the deficiencies of the current opti-\nmization methods, which are not able to train these ”atten-\ntionless Transformers” from scratch but need more advanced\n1https://github.com/vulus98/Rethinking-attention.git\nFigure 2: Relative BLEU scores [%] (relative to the baseline\nTransformer), depending on the FF network size. Encoder\nself-attention is replaced using different replacement meth-\nods.\nFigure 3: Relative BLEU scores [%] (relative to the base-\nline), depending on the FF network size. ALR method is\nused to replace different attention parts of the transformer.\ntechniques, such as knowledge distillation to converge into\ndesired parameter configurations. This conclusion empha-\nsizes that with the advancements in optimization techniques,\nless specialized architectures such as feed-forward networks\ncould be used for advanced tasks, currently reserved for\nhighly specialized architectures.\nFuture Work\nBy matching the performance of the original Transformer, it\nis highly probable that the further optimization of the FF net-\nworks’ hyperparameters using advanced parameter search\n(e.g. using Bayesian optimization (Snoek, Larochelle, and\nAdams 2012)) could yield even better results in terms of\ntranslation quality and possibly even enable the usage of\nsmaller FF networks for the replacement, as the size of the\nnetworks represents one of the major bottlenecks for the de-\nployment of these ’attentionless’ Transformers in practice.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23478\nAcknowledgements\nWe would like to express our sincere gratitude to the Data\nAnalytics lab of ETH Zurich for providing the necessary re-\nsources and support during the course of this project.\nReferences\nBa, L. J.; and Caruana, R. 2014. Do Deep Nets Really Need\nto be Deep? ArXiv:1312.6184 [cs].\nCettolo, M.; Federico, M.; Bentivogli, L.; Niehues, J.;\nSt¨uker, S.; Sudoh, K.; Yoshino, K.; and Federmann, C. 2017.\nOverview of the IWSLT 2017 Evaluation Campaign. In\nSakti, S.; and Utiyama, M., eds.,Proceedings of the 14th In-\nternational Conference on Spoken Language Translation, 2–\n14. Tokyo, Japan: International Workshop on Spoken Lan-\nguage Translation.\nHinton, G.; Vinyals, O.; and Dean, J. 2015. Distilling the\nKnowledge in a Neural Network. ArXiv:1503.02531 [cs,\nstat].\nPapineni, K.; Roukos, S.; Ward, T.; and Zhu, W.-J. 2002.\nBleu: a Method for Automatic Evaluation of Machine Trans-\nlation. In Isabelle, P.; Charniak, E.; and Lin, D., eds., Pro-\nceedings of the 40th Annual Meeting of the Association for\nComputational Linguistics, 311–318. Philadelphia, Pennsyl-\nvania, USA: Association for Computational Linguistics.\nSnoek, J.; Larochelle, H.; and Adams, R. P. 2012. Practical\nBayesian Optimization of Machine Learning Algorithms.\narXiv:1206.2944.\nUrban, G.; Geras, K. J.; Kahou, S. E.; Aslan, O.; Wang, S.;\nCaruana, R.; Mohamed, A.; Philipose, M.; and Richardson,\nM. 2017. Do Deep Convolutional Nets Really Need to be\nDeep and Convolutional? ArXiv:1603.05691 [cs, stat].\nVaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones,\nL.; Gomez, A. N.; Kaiser, L.; and Polosukhin, I. 2017. At-\ntention Is All You Need. arXiv:1706.03762.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23479",
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7130056023597717
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5150777697563171
+    },
+    {
+      "name": "Computer science",
+      "score": 0.44994276762008667
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3071051239967346
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.29321807622909546
+    },
+    {
+      "name": "Engineering",
+      "score": 0.27778589725494385
+    },
+    {
+      "name": "Voltage",
+      "score": 0.052753448486328125
+    }
+  ]
 }

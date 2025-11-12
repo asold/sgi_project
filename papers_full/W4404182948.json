@@ -1,133 +1,172 @@
 {
-    "title": "GUing: A Mobile GUI Search Engine using a Vision-Language Model",
-    "url": "https://openalex.org/W4404182948",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2616759300",
-            "name": "Jialiang Wei",
-            "affiliations": [
-                "IMT Mines Alès",
-                "EuroMov Digital Health in Motion",
-                "Université de Montpellier"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2747114948",
-            "name": "Anne-Lise Courbis",
-            "affiliations": [
-                "Université de Montpellier",
-                "EuroMov Digital Health in Motion",
-                "IMT Mines Alès"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2000929478",
-            "name": "Thomas Lambolais",
-            "affiliations": [
-                "EuroMov Digital Health in Motion",
-                "IMT Mines Alès",
-                "Université de Montpellier"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099159071",
-            "name": "Binbin Xu",
-            "affiliations": [
-                "EuroMov Digital Health in Motion",
-                "Université de Montpellier",
-                "IMT Mines Alès"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111684701",
-            "name": "Pierre Louis Bernard",
-            "affiliations": [
-                "EuroMov Digital Health in Motion",
-                "IMT Mines Alès",
-                "Université de Montpellier"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1297260904",
-            "name": "Gérard Dray",
-            "affiliations": [
-                "Université de Montpellier",
-                "EuroMov Digital Health in Motion",
-                "IMT Mines Alès"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1079826502",
-            "name": "Walid Maalej",
-            "affiliations": [
-                "Universität Hamburg"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2911025356",
-        "https://openalex.org/W2427881153",
-        "https://openalex.org/W2883419767",
-        "https://openalex.org/W4231109964",
-        "https://openalex.org/W2963034994",
-        "https://openalex.org/W3160022552",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2985406956",
-        "https://openalex.org/W2794908093",
-        "https://openalex.org/W3036505300",
-        "https://openalex.org/W3162893202",
-        "https://openalex.org/W4225594804",
-        "https://openalex.org/W2962992787",
-        "https://openalex.org/W2765874585",
-        "https://openalex.org/W4225683910",
-        "https://openalex.org/W4312243683",
-        "https://openalex.org/W4384345703",
-        "https://openalex.org/W3127529953",
-        "https://openalex.org/W3160341587",
-        "https://openalex.org/W3198659451",
-        "https://openalex.org/W2891288355",
-        "https://openalex.org/W2942422815",
-        "https://openalex.org/W4324029625",
-        "https://openalex.org/W3134648203",
-        "https://openalex.org/W4297220110",
-        "https://openalex.org/W3124240085",
-        "https://openalex.org/W3101041928",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W2897966957",
-        "https://openalex.org/W2159470208",
-        "https://openalex.org/W1987459880",
-        "https://openalex.org/W2992543179",
-        "https://openalex.org/W2952252698",
-        "https://openalex.org/W2559490865",
-        "https://openalex.org/W4226420090",
-        "https://openalex.org/W4226289277",
-        "https://openalex.org/W4213006144",
-        "https://openalex.org/W2963295463",
-        "https://openalex.org/W2787746902",
-        "https://openalex.org/W4286530324",
-        "https://openalex.org/W2884561253",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W2040489479",
-        "https://openalex.org/W4312933868",
-        "https://openalex.org/W4312910992",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3206316161",
-        "https://openalex.org/W4403888362",
-        "https://openalex.org/W4390339525",
-        "https://openalex.org/W4392172801",
-        "https://openalex.org/W4394673570",
-        "https://openalex.org/W4226182655",
-        "https://openalex.org/W4395021929",
-        "https://openalex.org/W4239932879",
-        "https://openalex.org/W4388483029",
-        "https://openalex.org/W4387801102",
-        "https://openalex.org/W822790223",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2613712744",
-        "https://openalex.org/W2912296587"
-    ],
-    "abstract": "Graphical User Interfaces (GUIs) are central to app development projects. App developers may use the GUIs of other apps as a means of requirements refinement and rapid prototyping or as a source of inspiration for designing and improving their own apps. Recent research has thus suggested retrieving relevant GUI designs that match a certain text query from screenshot datasets acquired through crowdsourced or automated exploration of GUIs. However, such text-to-GUI retrieval approaches only leverage the textual information of the GUI elements, neglecting visual information such as icons or background images. In addition, retrieved screenshots are not steered by app developers and lack app features that require particular input data. To overcome these limitations, this article proposes GUing, a GUI search engine based on a vision-language model called GUIClip, which we trained specifically for the problem of designing app GUIs. For this, we first collected from Google Play app introduction images which display the most representative screenshots and are often captioned (i.e., labeled) by app vendors. Then, we developed an automated pipeline to classify, crop, and extract the captions from these images. This resulted in a large dataset which we share with this article: including 303k app screenshots, out of which 135k have captions. We used this dataset to train a novel vision-language model, which is, to the best of our knowledge, the first of its kind for GUI retrieval. We evaluated our approach on various datasets from related work and in a manual experiment. The results demonstrate that our model outperforms previous approaches in text-to-GUI retrieval achieving a Recall@10 of up to 0.69 and a HIT@10 of 0.91. We also explored the performance of GUIClip for other GUI tasks, including GUI classification and sketch-to-GUI retrieval with encouraging results.",
-    "full_text": null
+  "title": "GUing: A Mobile GUI Search Engine using a Vision-Language Model",
+  "url": "https://openalex.org/W4404182948",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2616759300",
+      "name": "Jialiang Wei",
+      "affiliations": [
+        "IMT Mines Alès",
+        "EuroMov Digital Health in Motion",
+        "Université de Montpellier"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2747114948",
+      "name": "Anne-Lise Courbis",
+      "affiliations": [
+        "Université de Montpellier",
+        "EuroMov Digital Health in Motion",
+        "IMT Mines Alès"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2000929478",
+      "name": "Thomas Lambolais",
+      "affiliations": [
+        "EuroMov Digital Health in Motion",
+        "IMT Mines Alès",
+        "Université de Montpellier"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099159071",
+      "name": "Binbin Xu",
+      "affiliations": [
+        "EuroMov Digital Health in Motion",
+        "Université de Montpellier",
+        "IMT Mines Alès"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111684701",
+      "name": "Pierre Louis Bernard",
+      "affiliations": [
+        "EuroMov Digital Health in Motion",
+        "IMT Mines Alès",
+        "Université de Montpellier"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1297260904",
+      "name": "Gérard Dray",
+      "affiliations": [
+        "Université de Montpellier",
+        "EuroMov Digital Health in Motion",
+        "IMT Mines Alès"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1079826502",
+      "name": "Walid Maalej",
+      "affiliations": [
+        "Universität Hamburg"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2911025356",
+    "https://openalex.org/W2427881153",
+    "https://openalex.org/W2883419767",
+    "https://openalex.org/W4231109964",
+    "https://openalex.org/W2963034994",
+    "https://openalex.org/W3160022552",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2985406956",
+    "https://openalex.org/W2794908093",
+    "https://openalex.org/W3036505300",
+    "https://openalex.org/W3162893202",
+    "https://openalex.org/W4225594804",
+    "https://openalex.org/W2962992787",
+    "https://openalex.org/W2765874585",
+    "https://openalex.org/W4225683910",
+    "https://openalex.org/W4312243683",
+    "https://openalex.org/W4384345703",
+    "https://openalex.org/W3127529953",
+    "https://openalex.org/W3160341587",
+    "https://openalex.org/W3198659451",
+    "https://openalex.org/W2891288355",
+    "https://openalex.org/W2942422815",
+    "https://openalex.org/W4324029625",
+    "https://openalex.org/W3134648203",
+    "https://openalex.org/W4297220110",
+    "https://openalex.org/W3124240085",
+    "https://openalex.org/W3101041928",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W2897966957",
+    "https://openalex.org/W2159470208",
+    "https://openalex.org/W1987459880",
+    "https://openalex.org/W2992543179",
+    "https://openalex.org/W2952252698",
+    "https://openalex.org/W2559490865",
+    "https://openalex.org/W4226420090",
+    "https://openalex.org/W4226289277",
+    "https://openalex.org/W4213006144",
+    "https://openalex.org/W2963295463",
+    "https://openalex.org/W2787746902",
+    "https://openalex.org/W4286530324",
+    "https://openalex.org/W2884561253",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W2040489479",
+    "https://openalex.org/W4312933868",
+    "https://openalex.org/W4312910992",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3206316161",
+    "https://openalex.org/W4403888362",
+    "https://openalex.org/W4390339525",
+    "https://openalex.org/W4392172801",
+    "https://openalex.org/W4394673570",
+    "https://openalex.org/W4226182655",
+    "https://openalex.org/W4395021929",
+    "https://openalex.org/W4239932879",
+    "https://openalex.org/W4388483029",
+    "https://openalex.org/W4387801102",
+    "https://openalex.org/W822790223",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2613712744",
+    "https://openalex.org/W2912296587"
+  ],
+  "abstract": "Graphical User Interfaces (GUIs) are central to app development projects. App developers may use the GUIs of other apps as a means of requirements refinement and rapid prototyping or as a source of inspiration for designing and improving their own apps. Recent research has thus suggested retrieving relevant GUI designs that match a certain text query from screenshot datasets acquired through crowdsourced or automated exploration of GUIs. However, such text-to-GUI retrieval approaches only leverage the textual information of the GUI elements, neglecting visual information such as icons or background images. In addition, retrieved screenshots are not steered by app developers and lack app features that require particular input data. To overcome these limitations, this article proposes GUing, a GUI search engine based on a vision-language model called GUIClip, which we trained specifically for the problem of designing app GUIs. For this, we first collected from Google Play app introduction images which display the most representative screenshots and are often captioned (i.e., labeled) by app vendors. Then, we developed an automated pipeline to classify, crop, and extract the captions from these images. This resulted in a large dataset which we share with this article: including 303k app screenshots, out of which 135k have captions. We used this dataset to train a novel vision-language model, which is, to the best of our knowledge, the first of its kind for GUI retrieval. We evaluated our approach on various datasets from related work and in a manual experiment. The results demonstrate that our model outperforms previous approaches in text-to-GUI retrieval achieving a Recall@10 of up to 0.69 and a HIT@10 of 0.91. We also explored the performance of GUIClip for other GUI tasks, including GUI classification and sketch-to-GUI retrieval with encouraging results.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8765274286270142
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.6529505848884583
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.541753351688385
+    },
+    {
+      "name": "Graphical user interface",
+      "score": 0.5291871428489685
+    },
+    {
+      "name": "Mobile apps",
+      "score": 0.4415784776210785
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.4116969704627991
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3924523591995239
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38756266236305237
+    },
+    {
+      "name": "Programming language",
+      "score": 0.21458739042282104
+    }
+  ]
 }

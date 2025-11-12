@@ -1,140 +1,199 @@
 {
-    "title": "Rockfish: A transformer-based model for accurate 5-methylcytosine prediction from nanopore sequencing",
-    "url": "https://openalex.org/W4400292335",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2966215093",
-            "name": "Dominik Stanojević",
-            "affiliations": [
-                "University of Zagreb",
-                "Genome Institute of Singapore",
-                "Agency for Science, Technology and Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104531756",
-            "name": "Zhe Li",
-            "affiliations": [
-                "Genome Institute of Singapore",
-                "Agency for Science, Technology and Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3005558437",
-            "name": "Sara Bakić",
-            "affiliations": [
-                "Genome Institute of Singapore",
-                "Agency for Science, Technology and Research",
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2063500862",
-            "name": "Roger Foo",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4287569683",
-            "name": "Mile Šikić",
-            "affiliations": [
-                "University of Zagreb",
-                "Genome Institute of Singapore",
-                "Agency for Science, Technology and Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2966215093",
-            "name": "Dominik Stanojević",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2104531756",
-            "name": "Zhe Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3005558437",
-            "name": "Sara Bakić",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2063500862",
-            "name": "Roger Foo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4287569683",
-            "name": "Mile Šikić",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2168069435",
-        "https://openalex.org/W2123032740",
-        "https://openalex.org/W2051406511",
-        "https://openalex.org/W2036300762",
-        "https://openalex.org/W2061076014",
-        "https://openalex.org/W2165567873",
-        "https://openalex.org/W2140713688",
-        "https://openalex.org/W2784262524",
-        "https://openalex.org/W2019572309",
-        "https://openalex.org/W2084748297",
-        "https://openalex.org/W1979273476",
-        "https://openalex.org/W2172087672",
-        "https://openalex.org/W2109293112",
-        "https://openalex.org/W2038523604",
-        "https://openalex.org/W3125072712",
-        "https://openalex.org/W4214550678",
-        "https://openalex.org/W4317212032",
-        "https://openalex.org/W3111384720",
-        "https://openalex.org/W2607669908",
-        "https://openalex.org/W2346680365",
-        "https://openalex.org/W2591367881",
-        "https://openalex.org/W4282585897",
-        "https://openalex.org/W2790527784",
-        "https://openalex.org/W2590641123",
-        "https://openalex.org/W2951434717",
-        "https://openalex.org/W2948863695",
-        "https://openalex.org/W4225512842",
-        "https://openalex.org/W3205308293",
-        "https://openalex.org/W3170621487",
-        "https://openalex.org/W4391876502",
-        "https://openalex.org/W3129363240",
-        "https://openalex.org/W3211185186",
-        "https://openalex.org/W3037143988",
-        "https://openalex.org/W2141737525",
-        "https://openalex.org/W2165556149",
-        "https://openalex.org/W2810143528",
-        "https://openalex.org/W2607246103",
-        "https://openalex.org/W2029033394",
-        "https://openalex.org/W3149804071",
-        "https://openalex.org/W2038640115",
-        "https://openalex.org/W2080922260",
-        "https://openalex.org/W2789843538",
-        "https://openalex.org/W4220999759",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6772381481",
-        "https://openalex.org/W1847618513",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W6675354045",
-        "https://openalex.org/W2131374955",
-        "https://openalex.org/W2102619694",
-        "https://openalex.org/W4366083654",
-        "https://openalex.org/W2000007641",
-        "https://openalex.org/W2590952837",
-        "https://openalex.org/W4284963466",
-        "https://openalex.org/W2917246938",
-        "https://openalex.org/W2106340111",
-        "https://openalex.org/W2756518443",
-        "https://openalex.org/W2231865019",
-        "https://openalex.org/W6948937246",
-        "https://openalex.org/W2949062400",
-        "https://openalex.org/W4383619104",
-        "https://openalex.org/W4400292335"
-    ],
-    "abstract": "Abstract DNA methylation plays an important role in various biological processes, including cell differentiation, ageing, and cancer development. The most important methylation in mammals is 5-methylcytosine mostly occurring in the context of CpG dinucleotides. Sequencing methods such as whole-genome bisulfite sequencing successfully detect 5-methylcytosine DNA modifications. However, they suffer from the serious drawbacks of short read lengths and might introduce an amplification bias. Here we present Rockfish, a deep learning algorithm that significantly improves read-level 5-methylcytosine detection by using Nanopore sequencing. Rockfish is compared with other methods based on Nanopore sequencing on R9.4.1 and R10.4.1 datasets. There is an increase in the single-base accuracy and the F1 measure of up to 5 percentage points on R.9.4.1 datasets, and up to 0.82 percentage points on R10.4.1 datasets. Moreover, Rockfish shows a high correlation with whole-genome bisulfite sequencing, requires lower read depth, and achieves higher confidence in biologically important regions such as CpG-rich promoters while being computationally efficient. Its superior performance in human and mouse samples highlights its versatility for studying 5-methylcytosine methylation across varied organisms and diseases. Finally, its adaptable architecture ensures compatibility with new versions of pores and chemistry as well as modification types.",
-    "full_text": null
+  "title": "Rockfish: A transformer-based model for accurate 5-methylcytosine prediction from nanopore sequencing",
+  "url": "https://openalex.org/W4400292335",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2966215093",
+      "name": "Dominik Stanojević",
+      "affiliations": [
+        "University of Zagreb",
+        "Genome Institute of Singapore",
+        "Agency for Science, Technology and Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104531756",
+      "name": "Zhe Li",
+      "affiliations": [
+        "Genome Institute of Singapore",
+        "Agency for Science, Technology and Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3005558437",
+      "name": "Sara Bakić",
+      "affiliations": [
+        "Genome Institute of Singapore",
+        "Agency for Science, Technology and Research",
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2063500862",
+      "name": "Roger Foo",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4287569683",
+      "name": "Mile Šikić",
+      "affiliations": [
+        "University of Zagreb",
+        "Genome Institute of Singapore",
+        "Agency for Science, Technology and Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2966215093",
+      "name": "Dominik Stanojević",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2104531756",
+      "name": "Zhe Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3005558437",
+      "name": "Sara Bakić",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2063500862",
+      "name": "Roger Foo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4287569683",
+      "name": "Mile Šikić",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2168069435",
+    "https://openalex.org/W2123032740",
+    "https://openalex.org/W2051406511",
+    "https://openalex.org/W2036300762",
+    "https://openalex.org/W2061076014",
+    "https://openalex.org/W2165567873",
+    "https://openalex.org/W2140713688",
+    "https://openalex.org/W2784262524",
+    "https://openalex.org/W2019572309",
+    "https://openalex.org/W2084748297",
+    "https://openalex.org/W1979273476",
+    "https://openalex.org/W2172087672",
+    "https://openalex.org/W2109293112",
+    "https://openalex.org/W2038523604",
+    "https://openalex.org/W3125072712",
+    "https://openalex.org/W4214550678",
+    "https://openalex.org/W4317212032",
+    "https://openalex.org/W3111384720",
+    "https://openalex.org/W2607669908",
+    "https://openalex.org/W2346680365",
+    "https://openalex.org/W2591367881",
+    "https://openalex.org/W4282585897",
+    "https://openalex.org/W2790527784",
+    "https://openalex.org/W2590641123",
+    "https://openalex.org/W2951434717",
+    "https://openalex.org/W2948863695",
+    "https://openalex.org/W4225512842",
+    "https://openalex.org/W3205308293",
+    "https://openalex.org/W3170621487",
+    "https://openalex.org/W4391876502",
+    "https://openalex.org/W3129363240",
+    "https://openalex.org/W3211185186",
+    "https://openalex.org/W3037143988",
+    "https://openalex.org/W2141737525",
+    "https://openalex.org/W2165556149",
+    "https://openalex.org/W2810143528",
+    "https://openalex.org/W2607246103",
+    "https://openalex.org/W2029033394",
+    "https://openalex.org/W3149804071",
+    "https://openalex.org/W2038640115",
+    "https://openalex.org/W2080922260",
+    "https://openalex.org/W2789843538",
+    "https://openalex.org/W4220999759",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6772381481",
+    "https://openalex.org/W1847618513",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W6675354045",
+    "https://openalex.org/W2131374955",
+    "https://openalex.org/W2102619694",
+    "https://openalex.org/W4366083654",
+    "https://openalex.org/W2000007641",
+    "https://openalex.org/W2590952837",
+    "https://openalex.org/W4284963466",
+    "https://openalex.org/W2917246938",
+    "https://openalex.org/W2106340111",
+    "https://openalex.org/W2756518443",
+    "https://openalex.org/W2231865019",
+    "https://openalex.org/W6948937246",
+    "https://openalex.org/W2949062400",
+    "https://openalex.org/W4383619104",
+    "https://openalex.org/W4400292335"
+  ],
+  "abstract": "Abstract DNA methylation plays an important role in various biological processes, including cell differentiation, ageing, and cancer development. The most important methylation in mammals is 5-methylcytosine mostly occurring in the context of CpG dinucleotides. Sequencing methods such as whole-genome bisulfite sequencing successfully detect 5-methylcytosine DNA modifications. However, they suffer from the serious drawbacks of short read lengths and might introduce an amplification bias. Here we present Rockfish, a deep learning algorithm that significantly improves read-level 5-methylcytosine detection by using Nanopore sequencing. Rockfish is compared with other methods based on Nanopore sequencing on R9.4.1 and R10.4.1 datasets. There is an increase in the single-base accuracy and the F1 measure of up to 5 percentage points on R.9.4.1 datasets, and up to 0.82 percentage points on R10.4.1 datasets. Moreover, Rockfish shows a high correlation with whole-genome bisulfite sequencing, requires lower read depth, and achieves higher confidence in biologically important regions such as CpG-rich promoters while being computationally efficient. Its superior performance in human and mouse samples highlights its versatility for studying 5-methylcytosine methylation across varied organisms and diseases. Finally, its adaptable architecture ensures compatibility with new versions of pores and chemistry as well as modification types.",
+  "full_text": null,
+  "topic": "Nanopore sequencing",
+  "concepts": [
+    {
+      "name": "Nanopore sequencing",
+      "score": 0.622055172920227
+    },
+    {
+      "name": "Nanopore",
+      "score": 0.5635923743247986
+    },
+    {
+      "name": "Computer science",
+      "score": 0.49449393153190613
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4459529221057892
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44550856947898865
+    },
+    {
+      "name": "DNA sequencing",
+      "score": 0.3338547945022583
+    },
+    {
+      "name": "Biology",
+      "score": 0.25778552889823914
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14122462272644043
+    },
+    {
+      "name": "Genetics",
+      "score": 0.14090222120285034
+    },
+    {
+      "name": "Nanotechnology",
+      "score": 0.1298903226852417
+    },
+    {
+      "name": "Gene",
+      "score": 0.10172972083091736
+    },
+    {
+      "name": "Materials science",
+      "score": 0.08949980139732361
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,83 +1,134 @@
 {
-    "title": "Point cloud classification based on transformer",
-    "url": "https://openalex.org/W4307123804",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5043353686",
-            "name": "Xianfeng Wu",
-            "affiliations": [
-                "Jianghan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100395652",
-            "name": "Xinyi Liu",
-            "affiliations": [
-                "Jianghan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5068508279",
-            "name": "Junfei Wang",
-            "affiliations": [
-                "Jianghan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5091688065",
-            "name": "Zhongyuan Lai",
-            "affiliations": [
-                "Jianghan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5039237791",
-            "name": "Jing Zhou",
-            "affiliations": [
-                "Jianghan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100373210",
-            "name": "Xia Liu",
-            "affiliations": [
-                "Jianghan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6763422710",
-        "https://openalex.org/W6744580074",
-        "https://openalex.org/W6756775091",
-        "https://openalex.org/W6765094159",
-        "https://openalex.org/W6760644243",
-        "https://openalex.org/W6765629357",
-        "https://openalex.org/W2979750740",
-        "https://openalex.org/W6774036020",
-        "https://openalex.org/W6793172330",
-        "https://openalex.org/W6810249204",
-        "https://openalex.org/W6788305448",
-        "https://openalex.org/W3111535274",
-        "https://openalex.org/W6803813760",
-        "https://openalex.org/W6795276571",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6640300118",
-        "https://openalex.org/W6637108133",
-        "https://openalex.org/W6750457526",
-        "https://openalex.org/W6687932531",
-        "https://openalex.org/W6703933998",
-        "https://openalex.org/W6910779650",
-        "https://openalex.org/W6736644952",
-        "https://openalex.org/W2795245768",
-        "https://openalex.org/W6739778489",
-        "https://openalex.org/W6683799028",
-        "https://openalex.org/W6779879114",
-        "https://openalex.org/W2737234477",
-        "https://openalex.org/W3153465022",
-        "https://openalex.org/W4246329541",
-        "https://openalex.org/W586437679"
-    ],
-    "abstract": "PointNet is a deep neural network that directly takes 3D point cloud data as inputs. Due to its strong stability and computational efficiency, PointNet has become one of the most popular point cloud classification methods in the real applications. Recently, transformer techniques have achieved great successes in classifying objects with image inputs, which inspires us to transplant transformers into the object classification with point cloud inputs. In this paper, we propose a 3D point cloud classification method based on PointNet with transformers. Firstly, an offset-attention module is added after the spatial alignment network and multi-layer perceptron (MLP) of PointNet. Then, a cascade-attention module (CA) is introduced into the feature alignment network of PointNet. Finally, a CA is added after the feature alignment network and MLP of PointNet. Experimental results show that our method outperforms PointNet in terms of not only classification accuracy but also stability.",
-    "full_text": null
+  "title": "Point cloud classification based on transformer",
+  "url": "https://openalex.org/W4307123804",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5043353686",
+      "name": "Xianfeng Wu",
+      "affiliations": [
+        "Jianghan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100395652",
+      "name": "Xinyi Liu",
+      "affiliations": [
+        "Jianghan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5068508279",
+      "name": "Junfei Wang",
+      "affiliations": [
+        "Jianghan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5091688065",
+      "name": "Zhongyuan Lai",
+      "affiliations": [
+        "Jianghan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5039237791",
+      "name": "Jing Zhou",
+      "affiliations": [
+        "Jianghan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100373210",
+      "name": "Xia Liu",
+      "affiliations": [
+        "Jianghan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6763422710",
+    "https://openalex.org/W6744580074",
+    "https://openalex.org/W6756775091",
+    "https://openalex.org/W6765094159",
+    "https://openalex.org/W6760644243",
+    "https://openalex.org/W6765629357",
+    "https://openalex.org/W2979750740",
+    "https://openalex.org/W6774036020",
+    "https://openalex.org/W6793172330",
+    "https://openalex.org/W6810249204",
+    "https://openalex.org/W6788305448",
+    "https://openalex.org/W3111535274",
+    "https://openalex.org/W6803813760",
+    "https://openalex.org/W6795276571",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6640300118",
+    "https://openalex.org/W6637108133",
+    "https://openalex.org/W6750457526",
+    "https://openalex.org/W6687932531",
+    "https://openalex.org/W6703933998",
+    "https://openalex.org/W6910779650",
+    "https://openalex.org/W6736644952",
+    "https://openalex.org/W2795245768",
+    "https://openalex.org/W6739778489",
+    "https://openalex.org/W6683799028",
+    "https://openalex.org/W6779879114",
+    "https://openalex.org/W2737234477",
+    "https://openalex.org/W3153465022",
+    "https://openalex.org/W4246329541",
+    "https://openalex.org/W586437679"
+  ],
+  "abstract": "PointNet is a deep neural network that directly takes 3D point cloud data as inputs. Due to its strong stability and computational efficiency, PointNet has become one of the most popular point cloud classification methods in the real applications. Recently, transformer techniques have achieved great successes in classifying objects with image inputs, which inspires us to transplant transformers into the object classification with point cloud inputs. In this paper, we propose a 3D point cloud classification method based on PointNet with transformers. Firstly, an offset-attention module is added after the spatial alignment network and multi-layer perceptron (MLP) of PointNet. Then, a cascade-attention module (CA) is introduced into the feature alignment network of PointNet. Finally, a CA is added after the feature alignment network and MLP of PointNet. Experimental results show that our method outperforms PointNet in terms of not only classification accuracy but also stability.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.720483124256134
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6519170999526978
+    },
+    {
+      "name": "Point cloud",
+      "score": 0.6436952948570251
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4984252452850342
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4615594744682312
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4493367075920105
+    },
+    {
+      "name": "Offset (computer science)",
+      "score": 0.4362364113330841
+    },
+    {
+      "name": "Data mining",
+      "score": 0.35425809025764465
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15032359957695007
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

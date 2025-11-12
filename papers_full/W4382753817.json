@@ -1,85 +1,152 @@
 {
-    "title": "BSTC: A Fake Review Detection Model Based on a Pre-Trained Language Model and Convolutional Neural Network",
-    "url": "https://openalex.org/W4382753817",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5036720049",
-            "name": "Junwen Lu",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5027721303",
-            "name": "Xintao Zhan",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5070515519",
-            "name": "Guanfeng Liu",
-            "affiliations": [
-                "Macquarie University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089261790",
-            "name": "Xinrong Zhan",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5079869878",
-            "name": "Xiaolong Deng",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2154058875",
-        "https://openalex.org/W2144415203",
-        "https://openalex.org/W2047756776",
-        "https://openalex.org/W1967495422",
-        "https://openalex.org/W2039065374",
-        "https://openalex.org/W1980867644",
-        "https://openalex.org/W6758505813",
-        "https://openalex.org/W3009436785",
-        "https://openalex.org/W3011574394",
-        "https://openalex.org/W3035419191",
-        "https://openalex.org/W1832693441",
-        "https://openalex.org/W2074909580",
-        "https://openalex.org/W2135455985",
-        "https://openalex.org/W6637998964",
-        "https://openalex.org/W6678444979",
-        "https://openalex.org/W2767912391",
-        "https://openalex.org/W790897563",
-        "https://openalex.org/W2591945600",
-        "https://openalex.org/W2569238137",
-        "https://openalex.org/W3003892205",
-        "https://openalex.org/W2265846598",
-        "https://openalex.org/W2168681026",
-        "https://openalex.org/W2251792193",
-        "https://openalex.org/W4221057175",
-        "https://openalex.org/W3191022809",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W3096848254",
-        "https://openalex.org/W2985056549",
-        "https://openalex.org/W2155328222",
-        "https://openalex.org/W3003841907",
-        "https://openalex.org/W6684043126",
-        "https://openalex.org/W6691103430",
-        "https://openalex.org/W2251645975",
-        "https://openalex.org/W3202814506",
-        "https://openalex.org/W4285091574",
-        "https://openalex.org/W2124637344",
-        "https://openalex.org/W2909856647",
-        "https://openalex.org/W3088409176",
-        "https://openalex.org/W4293355737"
-    ],
-    "abstract": "Detecting fake reviews can help customers make better purchasing decisions and maintain a positive online business environment. In recent years, pre-trained language models have significantly improved the performance of natural language processing tasks. These models are able to generate different representation vectors for each word in different contexts, thus solving the challenge of multiple meanings of a word, which traditional word vector methods such as Word2Vec cannot solve, and, therefore, better capturing the text’s contextual information. In addition, we consider that reviews generally contain rich opinion and sentiment expressions, while most pre-trained language models, including BERT, lack the consideration of sentiment knowledge in the pre-training stage. Based on the above considerations, we propose a new fake review detection model based on a pre-trained language model and convolutional neural network, which is called BSTC. BSTC considers BERT, SKEP, and TextCNN, where SKEP is a pre-trained language model based on sentiment knowledge enhancement. We conducted a series of experiments on three gold-standard datasets, and the findings illustrate that BSTC outperforms state-of-the-art methods in detecting fake reviews. It achieved the highest accuracy on all three gold-standard datasets—Hotel, Restaurant, and Doctor—with 93.44%, 91.25%, and 92.86%, respectively.",
-    "full_text": null
+  "title": "BSTC: A Fake Review Detection Model Based on a Pre-Trained Language Model and Convolutional Neural Network",
+  "url": "https://openalex.org/W4382753817",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5036720049",
+      "name": "Junwen Lu",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5027721303",
+      "name": "Xintao Zhan",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5070515519",
+      "name": "Guanfeng Liu",
+      "affiliations": [
+        "Macquarie University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089261790",
+      "name": "Xinrong Zhan",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5079869878",
+      "name": "Xiaolong Deng",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2154058875",
+    "https://openalex.org/W2144415203",
+    "https://openalex.org/W2047756776",
+    "https://openalex.org/W1967495422",
+    "https://openalex.org/W2039065374",
+    "https://openalex.org/W1980867644",
+    "https://openalex.org/W6758505813",
+    "https://openalex.org/W3009436785",
+    "https://openalex.org/W3011574394",
+    "https://openalex.org/W3035419191",
+    "https://openalex.org/W1832693441",
+    "https://openalex.org/W2074909580",
+    "https://openalex.org/W2135455985",
+    "https://openalex.org/W6637998964",
+    "https://openalex.org/W6678444979",
+    "https://openalex.org/W2767912391",
+    "https://openalex.org/W790897563",
+    "https://openalex.org/W2591945600",
+    "https://openalex.org/W2569238137",
+    "https://openalex.org/W3003892205",
+    "https://openalex.org/W2265846598",
+    "https://openalex.org/W2168681026",
+    "https://openalex.org/W2251792193",
+    "https://openalex.org/W4221057175",
+    "https://openalex.org/W3191022809",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W3096848254",
+    "https://openalex.org/W2985056549",
+    "https://openalex.org/W2155328222",
+    "https://openalex.org/W3003841907",
+    "https://openalex.org/W6684043126",
+    "https://openalex.org/W6691103430",
+    "https://openalex.org/W2251645975",
+    "https://openalex.org/W3202814506",
+    "https://openalex.org/W4285091574",
+    "https://openalex.org/W2124637344",
+    "https://openalex.org/W2909856647",
+    "https://openalex.org/W3088409176",
+    "https://openalex.org/W4293355737"
+  ],
+  "abstract": "Detecting fake reviews can help customers make better purchasing decisions and maintain a positive online business environment. In recent years, pre-trained language models have significantly improved the performance of natural language processing tasks. These models are able to generate different representation vectors for each word in different contexts, thus solving the challenge of multiple meanings of a word, which traditional word vector methods such as Word2Vec cannot solve, and, therefore, better capturing the text’s contextual information. In addition, we consider that reviews generally contain rich opinion and sentiment expressions, while most pre-trained language models, including BERT, lack the consideration of sentiment knowledge in the pre-training stage. Based on the above considerations, we propose a new fake review detection model based on a pre-trained language model and convolutional neural network, which is called BSTC. BSTC considers BERT, SKEP, and TextCNN, where SKEP is a pre-trained language model based on sentiment knowledge enhancement. We conducted a series of experiments on three gold-standard datasets, and the findings illustrate that BSTC outperforms state-of-the-art methods in detecting fake reviews. It achieved the highest accuracy on all three gold-standard datasets—Hotel, Restaurant, and Doctor—with 93.44%, 91.25%, and 92.86%, respectively.",
+  "full_text": null,
+  "topic": "Word2vec",
+  "concepts": [
+    {
+      "name": "Word2vec",
+      "score": 0.8812516331672668
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8438781499862671
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.660987913608551
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.6347755193710327
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6157119274139404
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6060891151428223
+    },
+    {
+      "name": "Language model",
+      "score": 0.6055630445480347
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.4848233759403229
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.465938001871109
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.41353774070739746
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.10868847370147705
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Embedding",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    }
+  ]
 }

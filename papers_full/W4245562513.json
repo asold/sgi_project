@@ -1,90 +1,137 @@
 {
-    "title": "Transformer Neural Network for Structure Constrained Molecular Optimization",
-    "url": "https://openalex.org/W4245562513",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5089237271",
-            "name": "Jiazhen He",
-            "affiliations": [
-                "AstraZeneca (Brazil)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5006474268",
-            "name": "Felix Mattsson",
-            "affiliations": [
-                "AstraZeneca (Sweden)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5080007919",
-            "name": "Marcus Forsberg",
-            "affiliations": [
-                "AstraZeneca (Sweden)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5046421751",
-            "name": "Esben Jannik Bjerrum",
-            "affiliations": [
-                "AstraZeneca (Sweden)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5076975589",
-            "name": "Ola Engkvist",
-            "affiliations": [
-                "AstraZeneca (Sweden)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5077542460",
-            "name": "Eva Nittinger",
-            "affiliations": [
-                "AstraZeneca (Sweden)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5051401603",
-            "name": "Christian Tyrchan",
-            "affiliations": [
-                "AstraZeneca (Sweden)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5080565832",
-            "name": "Werngard Czechtizky",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2017398555",
-        "https://openalex.org/W2322193123",
-        "https://openalex.org/W4230007416",
-        "https://openalex.org/W2023818227",
-        "https://openalex.org/W3005111505",
-        "https://openalex.org/W2981104283",
-        "https://openalex.org/W4234959353",
-        "https://openalex.org/W3014962324",
-        "https://openalex.org/W3128880495",
-        "https://openalex.org/W1977242738",
-        "https://openalex.org/W2087952495",
-        "https://openalex.org/W2096541451",
-        "https://openalex.org/W3113251852",
-        "https://openalex.org/W1604884792",
-        "https://openalex.org/W3033658063",
-        "https://openalex.org/W3031195035",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2562677145",
-        "https://openalex.org/W2902415322",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W3013187757",
-        "https://openalex.org/W3015399432",
-        "https://openalex.org/W2323605167"
-    ],
-    "abstract": "Finding molecules with a desirable balance of multiple properties is a main challenge in drug discovery. Here, we focus on the task of molecular optimization, where a starting molecule with promising properties needs to be further optimized towards the desirable properties. Typically, chemists would apply chemical transformations to the starting molecule based on their intuition. A widely used strategy is the concept of matched molecular pairs where two molecules differ by a single transformation. In particular, a chemist would be interested in keeping one part of the starting molecule (core) constant, while substituting the other part (R-group), to optimize the starting molecule towards desirable properties. Motivated by this, we train a Transformer model, Transformer-R, to generate R-groups given the starting molecule (with its core and R-group specified) and the specified desirable properties. The generated R-groups will be attached to the core to form the final molecules, which are guaranteed to keep the core of interest and are expected to satisfy the desirable properties in the input. Our model could accelerate the process of optimizing antiviral drug candidates in terms of various properties of interest, e.g. pharmacokinetics.",
-    "full_text": null
+  "title": "Transformer Neural Network for Structure Constrained Molecular Optimization",
+  "url": "https://openalex.org/W4245562513",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5089237271",
+      "name": "Jiazhen He",
+      "affiliations": [
+        "AstraZeneca (Brazil)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5006474268",
+      "name": "Felix Mattsson",
+      "affiliations": [
+        "AstraZeneca (Sweden)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5080007919",
+      "name": "Marcus Forsberg",
+      "affiliations": [
+        "AstraZeneca (Sweden)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5046421751",
+      "name": "Esben Jannik Bjerrum",
+      "affiliations": [
+        "AstraZeneca (Sweden)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5076975589",
+      "name": "Ola Engkvist",
+      "affiliations": [
+        "AstraZeneca (Sweden)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5077542460",
+      "name": "Eva Nittinger",
+      "affiliations": [
+        "AstraZeneca (Sweden)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5051401603",
+      "name": "Christian Tyrchan",
+      "affiliations": [
+        "AstraZeneca (Sweden)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5080565832",
+      "name": "Werngard Czechtizky",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2017398555",
+    "https://openalex.org/W2322193123",
+    "https://openalex.org/W4230007416",
+    "https://openalex.org/W2023818227",
+    "https://openalex.org/W3005111505",
+    "https://openalex.org/W2981104283",
+    "https://openalex.org/W4234959353",
+    "https://openalex.org/W3014962324",
+    "https://openalex.org/W3128880495",
+    "https://openalex.org/W1977242738",
+    "https://openalex.org/W2087952495",
+    "https://openalex.org/W2096541451",
+    "https://openalex.org/W3113251852",
+    "https://openalex.org/W1604884792",
+    "https://openalex.org/W3033658063",
+    "https://openalex.org/W3031195035",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2562677145",
+    "https://openalex.org/W2902415322",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W3013187757",
+    "https://openalex.org/W3015399432",
+    "https://openalex.org/W2323605167"
+  ],
+  "abstract": "Finding molecules with a desirable balance of multiple properties is a main challenge in drug discovery. Here, we focus on the task of molecular optimization, where a starting molecule with promising properties needs to be further optimized towards the desirable properties. Typically, chemists would apply chemical transformations to the starting molecule based on their intuition. A widely used strategy is the concept of matched molecular pairs where two molecules differ by a single transformation. In particular, a chemist would be interested in keeping one part of the starting molecule (core) constant, while substituting the other part (R-group), to optimize the starting molecule towards desirable properties. Motivated by this, we train a Transformer model, Transformer-R, to generate R-groups given the starting molecule (with its core and R-group specified) and the specified desirable properties. The generated R-groups will be attached to the core to form the final molecules, which are guaranteed to keep the core of interest and are expected to satisfy the desirable properties in the input. Our model could accelerate the process of optimizing antiviral drug candidates in terms of various properties of interest, e.g. pharmacokinetics.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.6149379014968872
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5978465676307678
+    },
+    {
+      "name": "Intuition",
+      "score": 0.5806093811988831
+    },
+    {
+      "name": "Molecule",
+      "score": 0.50602787733078
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.2697892189025879
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15914538502693176
+    },
+    {
+      "name": "Voltage",
+      "score": 0.12170693278312683
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.06731566786766052
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

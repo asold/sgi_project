@@ -1,135 +1,174 @@
 {
-    "title": "SeTransformer: A Transformer-Based Code Semantic Parser for Code Comment Generation",
-    "url": "https://openalex.org/W4293509738",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2107695934",
-            "name": "Zheng Li",
-            "affiliations": [
-                "Beijing University of Chemical Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171575329",
-            "name": "Yonghao Wu",
-            "affiliations": [
-                "Beijing University of Chemical Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1992414010",
-            "name": "Bin Peng",
-            "affiliations": [
-                "Beijing University of Chemical Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105016708",
-            "name": "Xiang Chen",
-            "affiliations": [
-                "Nantong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2124130065",
-            "name": "Zeyu Sun",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098300734",
-            "name": "Yong Liu",
-            "affiliations": [
-                "Beijing University of Chemical Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4226716222",
-            "name": "Doyle Paul",
-            "affiliations": [
-                "Technological University Dublin"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2082160726",
-        "https://openalex.org/W2081749632",
-        "https://openalex.org/W1970407057",
-        "https://openalex.org/W2516621648",
-        "https://openalex.org/W6753851271",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W6678262379",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W1832693441",
-        "https://openalex.org/W2552839021",
-        "https://openalex.org/W6638545294",
-        "https://openalex.org/W6640212811",
-        "https://openalex.org/W6727690538",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2963868406",
-        "https://openalex.org/W6769717480",
-        "https://openalex.org/W6761628794",
-        "https://openalex.org/W2740336064",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6638667902",
-        "https://openalex.org/W2964194820",
-        "https://openalex.org/W2949297108",
-        "https://openalex.org/W6767047860",
-        "https://openalex.org/W3034689979",
-        "https://openalex.org/W2807964941",
-        "https://openalex.org/W2963648186",
-        "https://openalex.org/W2963515589",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W6674330103",
-        "https://openalex.org/W4233786811",
-        "https://openalex.org/W1978813754",
-        "https://openalex.org/W3027616835",
-        "https://openalex.org/W2133333349",
-        "https://openalex.org/W2136296681",
-        "https://openalex.org/W1989184611",
-        "https://openalex.org/W2294980783",
-        "https://openalex.org/W2111909698",
-        "https://openalex.org/W2999553660",
-        "https://openalex.org/W3034716028",
-        "https://openalex.org/W6761894412",
-        "https://openalex.org/W2600308295",
-        "https://openalex.org/W3086449553",
-        "https://openalex.org/W3011632945",
-        "https://openalex.org/W2922006620",
-        "https://openalex.org/W6752577372",
-        "https://openalex.org/W2954845633",
-        "https://openalex.org/W2997847174",
-        "https://openalex.org/W2920246506",
-        "https://openalex.org/W6773751614",
-        "https://openalex.org/W2999752750",
-        "https://openalex.org/W6782462979",
-        "https://openalex.org/W3146720657",
-        "https://openalex.org/W2140609933",
-        "https://openalex.org/W2282866165",
-        "https://openalex.org/W2963617989",
-        "https://openalex.org/W3089682460",
-        "https://openalex.org/W2809245278",
-        "https://openalex.org/W2123301721",
-        "https://openalex.org/W3082189482",
-        "https://openalex.org/W2095705004",
-        "https://openalex.org/W1924770834",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2979486033",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W3090867931",
-        "https://openalex.org/W2937623200",
-        "https://openalex.org/W2792145631",
-        "https://openalex.org/W4249122235",
-        "https://openalex.org/W4323654151",
-        "https://openalex.org/W1815076433",
-        "https://openalex.org/W4288088648",
-        "https://openalex.org/W2884276923",
-        "https://openalex.org/W1836465849"
-    ],
-    "abstract": "Automated code comment generation technologies can help developers understand code intent, which can significantly reduce the cost of software maintenance and revision. The latest studies in this field mainly depend on deep neural networks, such as convolutional neural networks and recurrent neural network. However, these methods may not generate high-quality and readable code comments due to the long-term dependence problem, which means that the code blocks used to summarize information are far from each other. Owing to the long-term dependence problem, these methods forget the previous input data’s feature information during the training process. In this article, to solve the long-term dependence problem and extract both the text and structure information from the program code, we propose a novel improved-Transformer-based comment generation method, named SeTransformer. Specifically, the SeTransformer utilizes the code tokens and an abstract syntax tree (AST) of programs to extract information as the inputs, and then, it leverages the self-attention mechanism to analyze the text and structural features of code simultaneously. Experimental results based on public corpus gathered from large-scale open-source projects show that our method can significantly outperform five state-of-the-art baselines (such as Hybrid-DeepCom and AST-attendgru). Furthermore, we also conduct a questionnaire survey for developers, and the results show that the SeTransformer can generate higher quality comments than those of other baselines.",
-    "full_text": null
+  "title": "SeTransformer: A Transformer-Based Code Semantic Parser for Code Comment Generation",
+  "url": "https://openalex.org/W4293509738",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2107695934",
+      "name": "Zheng Li",
+      "affiliations": [
+        "Beijing University of Chemical Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171575329",
+      "name": "Yonghao Wu",
+      "affiliations": [
+        "Beijing University of Chemical Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1992414010",
+      "name": "Bin Peng",
+      "affiliations": [
+        "Beijing University of Chemical Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105016708",
+      "name": "Xiang Chen",
+      "affiliations": [
+        "Nantong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2124130065",
+      "name": "Zeyu Sun",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098300734",
+      "name": "Yong Liu",
+      "affiliations": [
+        "Beijing University of Chemical Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4226716222",
+      "name": "Doyle Paul",
+      "affiliations": [
+        "Technological University Dublin"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2082160726",
+    "https://openalex.org/W2081749632",
+    "https://openalex.org/W1970407057",
+    "https://openalex.org/W2516621648",
+    "https://openalex.org/W6753851271",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W6678262379",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W1832693441",
+    "https://openalex.org/W2552839021",
+    "https://openalex.org/W6638545294",
+    "https://openalex.org/W6640212811",
+    "https://openalex.org/W6727690538",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2963868406",
+    "https://openalex.org/W6769717480",
+    "https://openalex.org/W6761628794",
+    "https://openalex.org/W2740336064",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6638667902",
+    "https://openalex.org/W2964194820",
+    "https://openalex.org/W2949297108",
+    "https://openalex.org/W6767047860",
+    "https://openalex.org/W3034689979",
+    "https://openalex.org/W2807964941",
+    "https://openalex.org/W2963648186",
+    "https://openalex.org/W2963515589",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W6674330103",
+    "https://openalex.org/W4233786811",
+    "https://openalex.org/W1978813754",
+    "https://openalex.org/W3027616835",
+    "https://openalex.org/W2133333349",
+    "https://openalex.org/W2136296681",
+    "https://openalex.org/W1989184611",
+    "https://openalex.org/W2294980783",
+    "https://openalex.org/W2111909698",
+    "https://openalex.org/W2999553660",
+    "https://openalex.org/W3034716028",
+    "https://openalex.org/W6761894412",
+    "https://openalex.org/W2600308295",
+    "https://openalex.org/W3086449553",
+    "https://openalex.org/W3011632945",
+    "https://openalex.org/W2922006620",
+    "https://openalex.org/W6752577372",
+    "https://openalex.org/W2954845633",
+    "https://openalex.org/W2997847174",
+    "https://openalex.org/W2920246506",
+    "https://openalex.org/W6773751614",
+    "https://openalex.org/W2999752750",
+    "https://openalex.org/W6782462979",
+    "https://openalex.org/W3146720657",
+    "https://openalex.org/W2140609933",
+    "https://openalex.org/W2282866165",
+    "https://openalex.org/W2963617989",
+    "https://openalex.org/W3089682460",
+    "https://openalex.org/W2809245278",
+    "https://openalex.org/W2123301721",
+    "https://openalex.org/W3082189482",
+    "https://openalex.org/W2095705004",
+    "https://openalex.org/W1924770834",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2979486033",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W3090867931",
+    "https://openalex.org/W2937623200",
+    "https://openalex.org/W2792145631",
+    "https://openalex.org/W4249122235",
+    "https://openalex.org/W4323654151",
+    "https://openalex.org/W1815076433",
+    "https://openalex.org/W4288088648",
+    "https://openalex.org/W2884276923",
+    "https://openalex.org/W1836465849"
+  ],
+  "abstract": "Automated code comment generation technologies can help developers understand code intent, which can significantly reduce the cost of software maintenance and revision. The latest studies in this field mainly depend on deep neural networks, such as convolutional neural networks and recurrent neural network. However, these methods may not generate high-quality and readable code comments due to the long-term dependence problem, which means that the code blocks used to summarize information are far from each other. Owing to the long-term dependence problem, these methods forget the previous input data’s feature information during the training process. In this article, to solve the long-term dependence problem and extract both the text and structure information from the program code, we propose a novel improved-Transformer-based comment generation method, named SeTransformer. Specifically, the SeTransformer utilizes the code tokens and an abstract syntax tree (AST) of programs to extract information as the inputs, and then, it leverages the self-attention mechanism to analyze the text and structural features of code simultaneously. Experimental results based on public corpus gathered from large-scale open-source projects show that our method can significantly outperform five state-of-the-art baselines (such as Hybrid-DeepCom and AST-attendgru). Furthermore, we also conduct a questionnaire survey for developers, and the results show that the SeTransformer can generate higher quality comments than those of other baselines.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7227861881256104
+    },
+    {
+      "name": "Programming language",
+      "score": 0.6504639983177185
+    },
+    {
+      "name": "Parsing",
+      "score": 0.543205976486206
+    },
+    {
+      "name": "Code generation",
+      "score": 0.5122691988945007
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.42104053497314453
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.4109314978122711
+    },
+    {
+      "name": "Operating system",
+      "score": 0.05730387568473816
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.0
+    }
+  ]
 }

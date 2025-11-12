@@ -1,87 +1,154 @@
 {
-    "title": "S-Swin Transformer: simplified Swin Transformer model for offline handwritten Chinese character recognition",
-    "url": "https://openalex.org/W4296391946",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2560630665",
-            "name": "Yongping Dan",
-            "affiliations": [
-                "Zhongyuan University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4296393027",
-            "name": "Zongnan Zhu",
-            "affiliations": [
-                "Zhongyuan University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4296393028",
-            "name": "Weishou Jin",
-            "affiliations": [
-                "Zhongyuan University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099059699",
-            "name": "Zhuo Li",
-            "affiliations": [
-                "Zhongyuan University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W2111364271",
-        "https://openalex.org/W2154579312",
-        "https://openalex.org/W1915952029",
-        "https://openalex.org/W6797708045",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W4226046636",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W2121029939",
-        "https://openalex.org/W2100495367",
-        "https://openalex.org/W3197196988",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W2418519490",
-        "https://openalex.org/W2900268290",
-        "https://openalex.org/W2963135756",
-        "https://openalex.org/W3214466318",
-        "https://openalex.org/W2119305530",
-        "https://openalex.org/W2115675483",
-        "https://openalex.org/W2110025586",
-        "https://openalex.org/W2156338447",
-        "https://openalex.org/W2991724350",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2998776895",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2905739540",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3195523560",
-        "https://openalex.org/W1978964824",
-        "https://openalex.org/W3121523901",
-        "https://openalex.org/W2962779710",
-        "https://openalex.org/W3120508656",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W6791705549",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2949191843",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W2097000478",
-        "https://openalex.org/W3176466780",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3137963805"
-    ],
-    "abstract": "The Transformer shows good prospects in computer vision. However, the Swin Transformer model has the disadvantage of a large number of parameters and high computational effort. To effectively solve these problems of the model, a simplified Swin Transformer (S-Swin Transformer) model was proposed in this article for handwritten Chinese character recognition. The model simplifies the initial four hierarchical stages into three hierarchical stages. In addition, the new model increases the size of the window in the window attention; the number of patches in the window is larger; and the perceptual field of the window is increased. As the network model deepens, the size of patches becomes larger, and the perceived range of each patch increases. Meanwhile, the purpose of shifting the window’s attention is to enhance the information interaction between the window and the window. Experimental results show that the verification accuracy improves slightly as the window becomes larger. The best validation accuracy of the simplified Swin Transformer model on the dataset reached 95.70%. The number of parameters is only 8.69 million, and FLOPs are 2.90G, which greatly reduces the number of parameters and computation of the model and proves the correctness and validity of the proposed model.",
-    "full_text": null
+  "title": "S-Swin Transformer: simplified Swin Transformer model for offline handwritten Chinese character recognition",
+  "url": "https://openalex.org/W4296391946",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2560630665",
+      "name": "Yongping Dan",
+      "affiliations": [
+        "Zhongyuan University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4296393027",
+      "name": "Zongnan Zhu",
+      "affiliations": [
+        "Zhongyuan University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4296393028",
+      "name": "Weishou Jin",
+      "affiliations": [
+        "Zhongyuan University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099059699",
+      "name": "Zhuo Li",
+      "affiliations": [
+        "Zhongyuan University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W2111364271",
+    "https://openalex.org/W2154579312",
+    "https://openalex.org/W1915952029",
+    "https://openalex.org/W6797708045",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W4226046636",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W2121029939",
+    "https://openalex.org/W2100495367",
+    "https://openalex.org/W3197196988",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W2418519490",
+    "https://openalex.org/W2900268290",
+    "https://openalex.org/W2963135756",
+    "https://openalex.org/W3214466318",
+    "https://openalex.org/W2119305530",
+    "https://openalex.org/W2115675483",
+    "https://openalex.org/W2110025586",
+    "https://openalex.org/W2156338447",
+    "https://openalex.org/W2991724350",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2998776895",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2905739540",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3195523560",
+    "https://openalex.org/W1978964824",
+    "https://openalex.org/W3121523901",
+    "https://openalex.org/W2962779710",
+    "https://openalex.org/W3120508656",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W6791705549",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2949191843",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W2097000478",
+    "https://openalex.org/W3176466780",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3137963805"
+  ],
+  "abstract": "The Transformer shows good prospects in computer vision. However, the Swin Transformer model has the disadvantage of a large number of parameters and high computational effort. To effectively solve these problems of the model, a simplified Swin Transformer (S-Swin Transformer) model was proposed in this article for handwritten Chinese character recognition. The model simplifies the initial four hierarchical stages into three hierarchical stages. In addition, the new model increases the size of the window in the window attention; the number of patches in the window is larger; and the perceptual field of the window is increased. As the network model deepens, the size of patches becomes larger, and the perceived range of each patch increases. Meanwhile, the purpose of shifting the window’s attention is to enhance the information interaction between the window and the window. Experimental results show that the verification accuracy improves slightly as the window becomes larger. The best validation accuracy of the simplified Swin Transformer model on the dataset reached 95.70%. The number of parameters is only 8.69 million, and FLOPs are 2.90G, which greatly reduces the number of parameters and computation of the model and proves the correctness and validity of the proposed model.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7823898196220398
+    },
+    {
+      "name": "Correctness",
+      "score": 0.6932456493377686
+    },
+    {
+      "name": "Computer science",
+      "score": 0.647915244102478
+    },
+    {
+      "name": "Computation",
+      "score": 0.6383417844772339
+    },
+    {
+      "name": "Character recognition",
+      "score": 0.5237032175064087
+    },
+    {
+      "name": "Sliding window protocol",
+      "score": 0.46523064374923706
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.445807546377182
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4075445532798767
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.35799768567085266
+    },
+    {
+      "name": "Window (computing)",
+      "score": 0.35748496651649475
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.3184305429458618
+    },
+    {
+      "name": "Engineering",
+      "score": 0.16062262654304504
+    },
+    {
+      "name": "Voltage",
+      "score": 0.14758840203285217
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0681283175945282
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    }
+  ]
 }

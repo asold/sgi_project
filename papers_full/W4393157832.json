@@ -1,76 +1,103 @@
 {
-    "title": "Automated Assessment of Fidelity and Interpretability: An Evaluation Framework for Large Language Models’ Explanations (Student Abstract)",
-    "url": "https://openalex.org/W4393157832",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5104162976",
-            "name": "Mu-Tien Kuo",
-            "affiliations": [
-                "Research Center for Humanities and Social Sciences, Academia Sinica"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028445655",
-            "name": "Chih-Chung Hsueh",
-            "affiliations": [
-                "Research Center for Humanities and Social Sciences, Academia Sinica"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2586047551",
-            "name": "Richard Tzong Han Tsai",
-            "affiliations": [
-                "Research Center for Humanities and Social Sciences, Academia Sinica",
-                "National Central University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5104162976",
-            "name": "Mu-Tien Kuo",
-            "affiliations": [
-                "Research Center for Humanities and Social Sciences, Academia Sinica",
-                "Cheng Ching Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028445655",
-            "name": "Chih-Chung Hsueh",
-            "affiliations": [
-                "Cheng Ching Hospital",
-                "Research Center for Humanities and Social Sciences, Academia Sinica"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2586047551",
-            "name": "Richard Tzong Han Tsai",
-            "affiliations": [
-                "Research Center for Humanities and Social Sciences, Academia Sinica",
-                "National Central University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6810250579",
-        "https://openalex.org/W3089186460",
-        "https://openalex.org/W3136136581",
-        "https://openalex.org/W2951365061",
-        "https://openalex.org/W2914598080",
-        "https://openalex.org/W2970014349",
-        "https://openalex.org/W6676572175",
-        "https://openalex.org/W4226056775",
-        "https://openalex.org/W3093530468",
-        "https://openalex.org/W6649754808",
-        "https://openalex.org/W3156686659",
-        "https://openalex.org/W4288548690",
-        "https://openalex.org/W4224996561",
-        "https://openalex.org/W3101155149",
-        "https://openalex.org/W1998413842",
-        "https://openalex.org/W4287854450",
-        "https://openalex.org/W2112487509",
-        "https://openalex.org/W2963847595",
-        "https://openalex.org/W3212191244"
-    ],
-    "abstract": "As Large Language Models (LLMs) become more prevalent in various fields, it is crucial to rigorously assess the quality of their explanations. Our research introduces a task-agnostic framework for evaluating free-text rationales, drawing on insights from both linguistics and machine learning. We evaluate two dimensions of explainability: fidelity and interpretability. For fidelity, we propose methods suitable for proprietary LLMs where direct introspection of internal features is unattainable. For interpretability, we use language models instead of human evaluators, addressing concerns about subjectivity and scalability in evaluations. We apply our framework to evaluate GPT-3.5 and the impact of prompts on the quality of its explanations. In conclusion, our framework streamlines the evaluation of explanations from LLMs, promoting the development of safer models.",
-    "full_text": "Automated Assessment of Fidelity and Interpretability: An Evaluation\nFramework for Large Language Models’ Explanations (Student Abstract)\nMu-Tien Kuo1, 2, Chih-Chung Hsueh1, 2, Richard Tzong-Han Tsai2, 3\n1Chingshin Academy, Taiwan\n2Research Center for Humanities and Social Sciences, Academia Sinica\n3Dept. of Computer Science and Engineering, National Central University, Taiwan\n{11035018, 11035038}@st.chjhs.tp.edu.tw, thtsai@g.ncu.edu.tw\nAbstract\nAs Large Language Models (LLMs) become more preva-\nlent in various fields, it is crucial to rigorously assess the\nquality of their explanations. Our research introduces a task-\nagnostic framework for evaluating free-text rationales, draw-\ning on insights from both linguistics and machine learning.\nWe evaluate two dimensions of explainability: fidelity and\ninterpretability. For fidelity, we propose methods suitable for\nproprietary LLMs where direct introspection of internal fea-\ntures is unattainable. For interpretability, we use language\nmodels instead of human evaluators, addressing concerns\nabout subjectivity and scalability in evaluations. We apply our\nframework to evaluate GPT-3.5 and the impact of prompts on\nthe quality of its explanations. In conclusion, our framework\nstreamlines the evaluation of explanations from LLMs, pro-\nmoting the development of safer models.\nIntroduction\nAs Large Language Models (LLMs) gain traction, it is of\nincreasing paramount to evaluate their explanations’ quality.\nA well-crafted explanation hinges on two elements: fidelity,\nwhich refers to a truthful representation of the model’s inner-\nworkings, and interpretability, which pertains to the ease\nwith which humans can comprehend it (Gilpin et al. 2018).\nOur work focuses on evaluating free-text rationales, which\nare model-generated natural language explanations and the\npredominant format of LLMs’ explanations. Although eval-\nuation methods for rationales have considerable develop-\nment, there are sizeable limitations on applying prior meth-\nods to SOTA LLMs. Traditional fidelity evaluations often\nassumed full access to the model, enabling commonly used\nmethods such as extracting rationale salience maps via gra-\ndients (Atanasova et al. 2020) and distorting encoded inputs\n(Wiegreffe, Marasovi´c, and Smith 2021). However, the con-\nstraints on contemporary proprietary LLMs, including lim-\nited access to model weights and encoded input modifica-\ntions, have rendered these methods less feasible. Previous\nmethods on evaluating interpretability also raise concerns.\nThe traditional practice of comparing machine-generated\nexplanations to human-written ones is inherently flawed\nas this measures only narrow aspects of text (Wiegreffe,\nMarasovi´c, and Smith 2021) and show minimal correlation\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nFigure 1: Framework Overview\nwith human evaluations (Clinciu, Eshghi, and Hastie 2021).\nThe use of human annotators is not ideal, as they can be ex-\npensive and may introduce a significant level of subjectivity\n(Lertvittayakumjorn and Toni 2019; Atanasova et al. 2020).\nOur study seeks to address these issues by proposing a\ntask-agnostic automated framework that evaluates both fi-\ndelity and interpretability. Our proposed fidelity evaluation\nonly requires perturbations to input text, coping with pro-\nprietary LLMs’ opaqueness. Similarly, our interpretability\nevaluation leverages LMs to replace human annotators, re-\nducing subjectivity and cost. In sum, our framework en-\nhances the efficacy and practicality of evaluating LLM ex-\nplanations, ensuring their reliability in diverse applications.\nMetrics\nMeasuring Fidelity\nFidelity pertains to how accurately an explanation represents\na model’s actual behavior (Gilpin et al. 2018). Two primary\ncomponents of fidelity are Faithfulness and Utility.Faithful-\nness (F)is defined as the extent to which an explanation mir-\nrors the internal workings of the model. Notably, a common\nnotion of which is that an interpretation system is unfaithful\nif it offers varying interpretations for similar input-decision\npairs (Jacovi and Goldberg 2020). Given the limitations of\naccessing closed-source models, we propose a ”textual per-\nturbation” approach, modifying the original input text in\nways the model should remain robust against, then evaluat-\ning the explanations’ consistency. Stable explanations across\nperturbations suggest they accurately reflect the model’s pri-\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23554\nmary decision factors. Utility (U)measures an explanation’s\neffectiveness by evaluating its informativeness and brevity.\nTo assess utility, we use the forward simulatabilitymetric,\nevaluating informativeness based on how well an auxiliary\nmodel can forecast a model’s decision based on its expla-\nnation, and brevity by observing the performance drop of\nthe auxiliary model when various amounts of explanation\ninformation are removed. Utility is then derived from these\ncalculations, capturing both the depth and succinctness.\nMeasuring Interpretability\nInterpretability gauges how easily a user can understand a\nmodel’s rationale. Instead of focusing on subjective aspects\nsuch as plausibility, this work addresses interpretability in\nthe lens of cognitive linguistics. More specifically, we di-\nvide interpretability into three main cognitive dimensions\nfollowing the notions proposed by Ylikoski and Kuorikoski\n(2010). Our methodology formulates evaluation into com-\nponents that effectively leverage LMs’ strengths, thereby fa-\ncilitating their substitution for human evaluators.\nRationale Coherence (RC)emphasizes the logical con-\nsistency within an explanation, as inconsistencies lead to\nconfusion and doubts towards its credibility. To measure\nthis, explanations are divided into sentences, and an exter-\nnal model (like an LM fine-tuned for Natural Language In-\nference) is used to spot contradictions between these sen-\ntences. Cognitive Fluency (CF), on the other hand, assesses\nhow closely an explanation’s logic aligns with common hu-\nman thought patterns (Unkelbach 2006). We score CF with\nLLMs due to their proven performance in benchmarks eval-\nuating the understanding of human-like rationale such as\nDROP (Dua et al. 2019) and ability to forecast over human\npreference of explanations (Wiegreffe et al. 2022). The main\ndifference between CF and plausibility is that CF aligns with\ngeneral human cognitive structures while plausibility can be\ninfluenced by individual beliefs and experiences. Lastly, as\ndifficult language (such as complex vocabulary or nonstan-\ndard sentence structure) hinders interpretability, Cognitive\nSalience (CS) evaluates the readability and complexity of\nthe language in the explanation. To assess CS, we employ\ntransformer-based encoders due to their ability to accurately\nevaluate text difficulty (Alaparthi et al. 2022).\nExperiments & Results\nIn our experiments, we focus on the task of Stance\nDetection, which entails determining a sentence’s stance\n(favor/against/none) towards a target. Given GPT-3.5’s\nwidespread usage, we assess its explanation quality. Our de-\nsign includes two prompts that direct the model to predict\na tweet’s stance towards a target and elucidate its decision:\none encourages the model to use Chain-of-Thought (CoT),\nwhile the other incorporates a specific instruction request-\ning faithful explanations which are ”true to what I think” (F-\nCoT). In summary, GPT-3.5’s explanations exhibit moderate\nfidelity and satisfactory interpretability scores. Though CoT\nprompts yield more accurate explanations, the intermediate\nsteps sometimes include irrelevant evidence to the model’s\nfinal label. Contrastively, F-CoT produces cohesive argu-\nPrompt Shots\nF U RC CF CS\nCoT 0 0.61 0.26 0.79 0.91 0.47\n4 0.67 0.24 0.62 0.89 0.45\nF-CoT 0 0.44 0.26 0.8 0.91 0.47\n4 0.5 0.24 0.81 0.89 0.46\nTable 1: GPT-3.5’s Explanation Quality\nments at the expense of faithfulness, demonstrating GPT-\n3.5’s misunderstanding of fidelity and the limitations of di-\nrectly prompting the model for faithfulness.\nConclusion\nIn this study, we introduced a task-agnostic framework for\nevaluating the quality of free-text rationales in terms of both\nfidelity and interpretability. Our methods can evaluate pro-\nprietary LLMs that limit user access, and our automated in-\nterpretability assessment does not require prior human an-\nnotations nor annotator involvement. We apply our frame-\nwork in evaluating GPT-3.5’s explanations, finding fidelity\ndecrements when prompted to produce explanations that are\nfaithful, caused by a misinterpretation of faithfulness.\nReferences\nAlaparthi, V . S.; Pawar, A. A.; Suneera, C. M.; and Prakash,\nJ. 2022. Rating Ease of Readability using Transformers. In\nICCAE.\nAtanasova, P.; Simonsen, J. G.; Lioma, C.; and Augenstein,\nI. 2020. A Diagnostic Study of Explainability Techniques\nfor Text Classification. In EMNLP.\nClinciu, M.-A.; Eshghi, A.; and Hastie, H. 2021. A Study of\nAutomatic Metrics for the Evaluation of Natural Language\nExplanations. In EACL.\nDua, D.; Wang, Y .; Dasigi, P.; Stanovsky, G.; Singh, S.;\nand Gardner, M. 2019. DROP: A Reading Comprehension\nBenchmark Requiring Discrete Reasoning Over Paragraphs.\nIn NAACL.\nGilpin, L. H.; Bau, D.; Yuan, B. Z.; Bajwa, A.; Specter, M.;\nand Kagal, L. 2018. Explaining explanations: An overview\nof interpretability of machine learning. In IEEE DSAA.\nJacovi, A.; and Goldberg, Y . 2020. Towards Faithfully Inter-\npretable NLP Systems: How Should We Define and Evaluate\nFaithfulness? In ACL.\nLertvittayakumjorn, P.; and Toni, F. 2019. Human-grounded\nEvaluations of Explanation Methods for Text Classification.\nIn EMNLP-IJCNLP.\nUnkelbach, C. 2006. The learned interpretation of cognitive\nfluency. Psychological Science, 17(4): 339–345.\nWiegreffe, S.; Hessel, J.; Swayamdipta, S.; Riedl, M.; and\nChoi, Y . 2022. Reframing Human-AI Collaboration for Gen-\nerating Free-Text Explanations. In NAACL.\nWiegreffe, S.; Marasovi´c, A.; and Smith, N. A. 2021. Mea-\nsuring Association Between Labels and Free-Text Ratio-\nnales. In EMNLP.\nYlikoski, P.; and Kuorikoski, J. 2010. Dissecting explana-\ntory power. Philosophical studies, 148: 201–219.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23555"
+  "title": "Automated Assessment of Fidelity and Interpretability: An Evaluation Framework for Large Language Models’ Explanations (Student Abstract)",
+  "url": "https://openalex.org/W4393157832",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5104162976",
+      "name": "Mu-Tien Kuo",
+      "affiliations": [
+        "Research Center for Humanities and Social Sciences, Academia Sinica"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028445655",
+      "name": "Chih-Chung Hsueh",
+      "affiliations": [
+        "Research Center for Humanities and Social Sciences, Academia Sinica"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2586047551",
+      "name": "Richard Tzong Han Tsai",
+      "affiliations": [
+        "Research Center for Humanities and Social Sciences, Academia Sinica",
+        "National Central University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5104162976",
+      "name": "Mu-Tien Kuo",
+      "affiliations": [
+        "Research Center for Humanities and Social Sciences, Academia Sinica",
+        "Cheng Ching Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028445655",
+      "name": "Chih-Chung Hsueh",
+      "affiliations": [
+        "Cheng Ching Hospital",
+        "Research Center for Humanities and Social Sciences, Academia Sinica"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2586047551",
+      "name": "Richard Tzong Han Tsai",
+      "affiliations": [
+        "Research Center for Humanities and Social Sciences, Academia Sinica",
+        "National Central University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6810250579",
+    "https://openalex.org/W3089186460",
+    "https://openalex.org/W3136136581",
+    "https://openalex.org/W2951365061",
+    "https://openalex.org/W2914598080",
+    "https://openalex.org/W2970014349",
+    "https://openalex.org/W6676572175",
+    "https://openalex.org/W4226056775",
+    "https://openalex.org/W3093530468",
+    "https://openalex.org/W6649754808",
+    "https://openalex.org/W3156686659",
+    "https://openalex.org/W4288548690",
+    "https://openalex.org/W4224996561",
+    "https://openalex.org/W3101155149",
+    "https://openalex.org/W1998413842",
+    "https://openalex.org/W4287854450",
+    "https://openalex.org/W2112487509",
+    "https://openalex.org/W2963847595",
+    "https://openalex.org/W3212191244"
+  ],
+  "abstract": "As Large Language Models (LLMs) become more prevalent in various fields, it is crucial to rigorously assess the quality of their explanations. Our research introduces a task-agnostic framework for evaluating free-text rationales, drawing on insights from both linguistics and machine learning. We evaluate two dimensions of explainability: fidelity and interpretability. For fidelity, we propose methods suitable for proprietary LLMs where direct introspection of internal features is unattainable. For interpretability, we use language models instead of human evaluators, addressing concerns about subjectivity and scalability in evaluations. We apply our framework to evaluate GPT-3.5 and the impact of prompts on the quality of its explanations. In conclusion, our framework streamlines the evaluation of explanations from LLMs, promoting the development of safer models.",
+  "full_text": "Automated Assessment of Fidelity and Interpretability: An Evaluation\nFramework for Large Language Models’ Explanations (Student Abstract)\nMu-Tien Kuo1, 2, Chih-Chung Hsueh1, 2, Richard Tzong-Han Tsai2, 3\n1Chingshin Academy, Taiwan\n2Research Center for Humanities and Social Sciences, Academia Sinica\n3Dept. of Computer Science and Engineering, National Central University, Taiwan\n{11035018, 11035038}@st.chjhs.tp.edu.tw, thtsai@g.ncu.edu.tw\nAbstract\nAs Large Language Models (LLMs) become more preva-\nlent in various fields, it is crucial to rigorously assess the\nquality of their explanations. Our research introduces a task-\nagnostic framework for evaluating free-text rationales, draw-\ning on insights from both linguistics and machine learning.\nWe evaluate two dimensions of explainability: fidelity and\ninterpretability. For fidelity, we propose methods suitable for\nproprietary LLMs where direct introspection of internal fea-\ntures is unattainable. For interpretability, we use language\nmodels instead of human evaluators, addressing concerns\nabout subjectivity and scalability in evaluations. We apply our\nframework to evaluate GPT-3.5 and the impact of prompts on\nthe quality of its explanations. In conclusion, our framework\nstreamlines the evaluation of explanations from LLMs, pro-\nmoting the development of safer models.\nIntroduction\nAs Large Language Models (LLMs) gain traction, it is of\nincreasing paramount to evaluate their explanations’ quality.\nA well-crafted explanation hinges on two elements: fidelity,\nwhich refers to a truthful representation of the model’s inner-\nworkings, and interpretability, which pertains to the ease\nwith which humans can comprehend it (Gilpin et al. 2018).\nOur work focuses on evaluating free-text rationales, which\nare model-generated natural language explanations and the\npredominant format of LLMs’ explanations. Although eval-\nuation methods for rationales have considerable develop-\nment, there are sizeable limitations on applying prior meth-\nods to SOTA LLMs. Traditional fidelity evaluations often\nassumed full access to the model, enabling commonly used\nmethods such as extracting rationale salience maps via gra-\ndients (Atanasova et al. 2020) and distorting encoded inputs\n(Wiegreffe, Marasovi´c, and Smith 2021). However, the con-\nstraints on contemporary proprietary LLMs, including lim-\nited access to model weights and encoded input modifica-\ntions, have rendered these methods less feasible. Previous\nmethods on evaluating interpretability also raise concerns.\nThe traditional practice of comparing machine-generated\nexplanations to human-written ones is inherently flawed\nas this measures only narrow aspects of text (Wiegreffe,\nMarasovi´c, and Smith 2021) and show minimal correlation\nCopyright © 2024, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\nFigure 1: Framework Overview\nwith human evaluations (Clinciu, Eshghi, and Hastie 2021).\nThe use of human annotators is not ideal, as they can be ex-\npensive and may introduce a significant level of subjectivity\n(Lertvittayakumjorn and Toni 2019; Atanasova et al. 2020).\nOur study seeks to address these issues by proposing a\ntask-agnostic automated framework that evaluates both fi-\ndelity and interpretability. Our proposed fidelity evaluation\nonly requires perturbations to input text, coping with pro-\nprietary LLMs’ opaqueness. Similarly, our interpretability\nevaluation leverages LMs to replace human annotators, re-\nducing subjectivity and cost. In sum, our framework en-\nhances the efficacy and practicality of evaluating LLM ex-\nplanations, ensuring their reliability in diverse applications.\nMetrics\nMeasuring Fidelity\nFidelity pertains to how accurately an explanation represents\na model’s actual behavior (Gilpin et al. 2018). Two primary\ncomponents of fidelity are Faithfulness and Utility.Faithful-\nness (F)is defined as the extent to which an explanation mir-\nrors the internal workings of the model. Notably, a common\nnotion of which is that an interpretation system is unfaithful\nif it offers varying interpretations for similar input-decision\npairs (Jacovi and Goldberg 2020). Given the limitations of\naccessing closed-source models, we propose a ”textual per-\nturbation” approach, modifying the original input text in\nways the model should remain robust against, then evaluat-\ning the explanations’ consistency. Stable explanations across\nperturbations suggest they accurately reflect the model’s pri-\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23554\nmary decision factors. Utility (U)measures an explanation’s\neffectiveness by evaluating its informativeness and brevity.\nTo assess utility, we use the forward simulatabilitymetric,\nevaluating informativeness based on how well an auxiliary\nmodel can forecast a model’s decision based on its expla-\nnation, and brevity by observing the performance drop of\nthe auxiliary model when various amounts of explanation\ninformation are removed. Utility is then derived from these\ncalculations, capturing both the depth and succinctness.\nMeasuring Interpretability\nInterpretability gauges how easily a user can understand a\nmodel’s rationale. Instead of focusing on subjective aspects\nsuch as plausibility, this work addresses interpretability in\nthe lens of cognitive linguistics. More specifically, we di-\nvide interpretability into three main cognitive dimensions\nfollowing the notions proposed by Ylikoski and Kuorikoski\n(2010). Our methodology formulates evaluation into com-\nponents that effectively leverage LMs’ strengths, thereby fa-\ncilitating their substitution for human evaluators.\nRationale Coherence (RC)emphasizes the logical con-\nsistency within an explanation, as inconsistencies lead to\nconfusion and doubts towards its credibility. To measure\nthis, explanations are divided into sentences, and an exter-\nnal model (like an LM fine-tuned for Natural Language In-\nference) is used to spot contradictions between these sen-\ntences. Cognitive Fluency (CF), on the other hand, assesses\nhow closely an explanation’s logic aligns with common hu-\nman thought patterns (Unkelbach 2006). We score CF with\nLLMs due to their proven performance in benchmarks eval-\nuating the understanding of human-like rationale such as\nDROP (Dua et al. 2019) and ability to forecast over human\npreference of explanations (Wiegreffe et al. 2022). The main\ndifference between CF and plausibility is that CF aligns with\ngeneral human cognitive structures while plausibility can be\ninfluenced by individual beliefs and experiences. Lastly, as\ndifficult language (such as complex vocabulary or nonstan-\ndard sentence structure) hinders interpretability, Cognitive\nSalience (CS) evaluates the readability and complexity of\nthe language in the explanation. To assess CS, we employ\ntransformer-based encoders due to their ability to accurately\nevaluate text difficulty (Alaparthi et al. 2022).\nExperiments & Results\nIn our experiments, we focus on the task of Stance\nDetection, which entails determining a sentence’s stance\n(favor/against/none) towards a target. Given GPT-3.5’s\nwidespread usage, we assess its explanation quality. Our de-\nsign includes two prompts that direct the model to predict\na tweet’s stance towards a target and elucidate its decision:\none encourages the model to use Chain-of-Thought (CoT),\nwhile the other incorporates a specific instruction request-\ning faithful explanations which are ”true to what I think” (F-\nCoT). In summary, GPT-3.5’s explanations exhibit moderate\nfidelity and satisfactory interpretability scores. Though CoT\nprompts yield more accurate explanations, the intermediate\nsteps sometimes include irrelevant evidence to the model’s\nfinal label. Contrastively, F-CoT produces cohesive argu-\nPrompt Shots\nF U RC CF CS\nCoT 0 0.61 0.26 0.79 0.91 0.47\n4 0.67 0.24 0.62 0.89 0.45\nF-CoT 0 0.44 0.26 0.8 0.91 0.47\n4 0.5 0.24 0.81 0.89 0.46\nTable 1: GPT-3.5’s Explanation Quality\nments at the expense of faithfulness, demonstrating GPT-\n3.5’s misunderstanding of fidelity and the limitations of di-\nrectly prompting the model for faithfulness.\nConclusion\nIn this study, we introduced a task-agnostic framework for\nevaluating the quality of free-text rationales in terms of both\nfidelity and interpretability. Our methods can evaluate pro-\nprietary LLMs that limit user access, and our automated in-\nterpretability assessment does not require prior human an-\nnotations nor annotator involvement. We apply our frame-\nwork in evaluating GPT-3.5’s explanations, finding fidelity\ndecrements when prompted to produce explanations that are\nfaithful, caused by a misinterpretation of faithfulness.\nReferences\nAlaparthi, V . S.; Pawar, A. A.; Suneera, C. M.; and Prakash,\nJ. 2022. Rating Ease of Readability using Transformers. In\nICCAE.\nAtanasova, P.; Simonsen, J. G.; Lioma, C.; and Augenstein,\nI. 2020. A Diagnostic Study of Explainability Techniques\nfor Text Classification. In EMNLP.\nClinciu, M.-A.; Eshghi, A.; and Hastie, H. 2021. A Study of\nAutomatic Metrics for the Evaluation of Natural Language\nExplanations. In EACL.\nDua, D.; Wang, Y .; Dasigi, P.; Stanovsky, G.; Singh, S.;\nand Gardner, M. 2019. DROP: A Reading Comprehension\nBenchmark Requiring Discrete Reasoning Over Paragraphs.\nIn NAACL.\nGilpin, L. H.; Bau, D.; Yuan, B. Z.; Bajwa, A.; Specter, M.;\nand Kagal, L. 2018. Explaining explanations: An overview\nof interpretability of machine learning. In IEEE DSAA.\nJacovi, A.; and Goldberg, Y . 2020. Towards Faithfully Inter-\npretable NLP Systems: How Should We Define and Evaluate\nFaithfulness? In ACL.\nLertvittayakumjorn, P.; and Toni, F. 2019. Human-grounded\nEvaluations of Explanation Methods for Text Classification.\nIn EMNLP-IJCNLP.\nUnkelbach, C. 2006. The learned interpretation of cognitive\nfluency. Psychological Science, 17(4): 339–345.\nWiegreffe, S.; Hessel, J.; Swayamdipta, S.; Riedl, M.; and\nChoi, Y . 2022. Reframing Human-AI Collaboration for Gen-\nerating Free-Text Explanations. In NAACL.\nWiegreffe, S.; Marasovi´c, A.; and Smith, N. A. 2021. Mea-\nsuring Association Between Labels and Free-Text Ratio-\nnales. In EMNLP.\nYlikoski, P.; and Kuorikoski, J. 2010. Dissecting explana-\ntory power. Philosophical studies, 148: 201–219.\nThe Thirty-Eighth AAAI Conference on Artiﬁcial Intelligence (AAAI-24)\n23555",
+  "topic": "Interpretability",
+  "concepts": [
+    {
+      "name": "Interpretability",
+      "score": 0.9740880131721497
+    },
+    {
+      "name": "Fidelity",
+      "score": 0.7952562570571899
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6790373921394348
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.46205535531044006
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.41122356057167053
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    }
+  ]
 }

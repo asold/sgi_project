@@ -1,161 +1,188 @@
 {
-    "title": "Improving Automated Deep Phenotyping Through Large Language Models Using Retrieval Augmented Generation",
-    "url": "https://openalex.org/W4404918847",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2607020446",
-            "name": "Brandon T. Garcia",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2169043936",
-            "name": "Lauren Westerfield",
-            "affiliations": [
-                "Texas Children's Hospital",
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4284555940",
-            "name": "Priya Yelemali",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2528875191",
-            "name": "Nikhita Gogate",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5064973000",
-            "name": "E. Andres Rivera-Munoz",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2299008173",
-            "name": "Haowei Du",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3149262128",
-            "name": "Moez Dawood",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2567150074",
-            "name": "Angad Jolly",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2220203656",
-            "name": "James R. Lupski",
-            "affiliations": [
-                "Texas Children's Hospital",
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120790929",
-            "name": "Jennifer E. Posey",
-            "affiliations": [
-                "Baylor College of Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2607020446",
-            "name": "Brandon T. Garcia",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2169043936",
-            "name": "Lauren Westerfield",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4284555940",
-            "name": "Priya Yelemali",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2528875191",
-            "name": "Nikhita Gogate",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5064973000",
-            "name": "E. Andres Rivera-Munoz",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2299008173",
-            "name": "Haowei Du",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3149262128",
-            "name": "Moez Dawood",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2567150074",
-            "name": "Angad Jolly",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2220203656",
-            "name": "James R. Lupski",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2120790929",
-            "name": "Jennifer E. Posey",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2560641002",
-        "https://openalex.org/W2949885556",
-        "https://openalex.org/W2950025267",
-        "https://openalex.org/W1644197353",
-        "https://openalex.org/W4365138239",
-        "https://openalex.org/W4365138505",
-        "https://openalex.org/W2911161668",
-        "https://openalex.org/W4389004870",
-        "https://openalex.org/W2136410628",
-        "https://openalex.org/W2809721358",
-        "https://openalex.org/W2946102094",
-        "https://openalex.org/W2951146425",
-        "https://openalex.org/W4399941107",
-        "https://openalex.org/W4402358523",
-        "https://openalex.org/W4391387740",
-        "https://openalex.org/W4401001407",
-        "https://openalex.org/W4402516372",
-        "https://openalex.org/W4399480372",
-        "https://openalex.org/W4392168151",
-        "https://openalex.org/W4391009466",
-        "https://openalex.org/W4385848332",
-        "https://openalex.org/W4224997359",
-        "https://openalex.org/W4401726216",
-        "https://openalex.org/W4400128031",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4224316961",
-        "https://openalex.org/W2119613819",
-        "https://openalex.org/W3128246218"
-    ],
-    "abstract": "Abstract Background Diagnosing rare genetic disorders relies on precise phenotypic and genotypic analysis, with the Human Phenotype Ontology (HPO) providing a standardized language for capturing clinical phenotypes. Traditional HPO tools, such as Doc2HPO and ClinPhen, employ concept recognition to automate phenotype extraction but struggle with incomplete phenotype assignment, often requiring intensive manual review. While large language models (LLMs) hold promise for more context-driven phenotype extraction, they are prone to errors and “hallucinations,” making them less reliable without further refinement. We present RAG-HPO, a Python-based tool that leverages Retrieval-Augmented Generation (RAG) to elevate LLM accuracy in HPO term assignment, bypassing the limitations of baseline models while avoiding the time and resource intensive process of fine-tuning. RAG-HPO integrates a dynamic vector database, allowing real-time retrieval and contextual matching. Methods The high-dimensional vector database utilized by RAG-HPO includes &gt;54,000 phenotypic phrases mapped to HPO IDs, derived from the HPO database and supplemented with additional validated phrases. The RAG-HPO workflow uses an LLM to first extract phenotypic phrases that are then matched via semantic similarity to entries within a vector database before providing best term matches back to the LLM as context for final HPO term assignment. A benchmarking dataset of 120 published case reports with 1,792 manually-assigned HPO terms was developed, and the performance of RAG-HPO measured against existing published tools Doc2HPO, ClinPhen, and FastHPOCR. Results In evaluations, RAG-HPO, powered by Llama-3 70B and applied to a set of 120 case reports, achieved a mean precision of 0.84, recall of 0.78, and an F1 score of 0.80—significantly surpassing conventional tools (p&lt;0.00001). False positive HPO term identification occurred for 15.8% (256/1,624) of terms, of which only 2.7% (7/256) represented hallucinations, and 33.6% (86/256) unrelated terms; the remainder of false positives (63.7%, 163/256) were relative terms of the target term. Conclusions RAG-HPO is a user-friendly, adaptable tool designed for secure evaluation of clinical text and outperforms standard HPO-matching tools in precision, recall, and F1. Its enhanced precision and recall represent a substantial advancement in phenotypic analysis, accelerating the identification of genetic mechanisms underlying rare diseases and driving progress in genetic research and clinical genomics.",
-    "full_text": null
+  "title": "Improving Automated Deep Phenotyping Through Large Language Models Using Retrieval Augmented Generation",
+  "url": "https://openalex.org/W4404918847",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2607020446",
+      "name": "Brandon T. Garcia",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2169043936",
+      "name": "Lauren Westerfield",
+      "affiliations": [
+        "Texas Children's Hospital",
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4284555940",
+      "name": "Priya Yelemali",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2528875191",
+      "name": "Nikhita Gogate",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5064973000",
+      "name": "E. Andres Rivera-Munoz",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2299008173",
+      "name": "Haowei Du",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3149262128",
+      "name": "Moez Dawood",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2567150074",
+      "name": "Angad Jolly",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2220203656",
+      "name": "James R. Lupski",
+      "affiliations": [
+        "Texas Children's Hospital",
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120790929",
+      "name": "Jennifer E. Posey",
+      "affiliations": [
+        "Baylor College of Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2607020446",
+      "name": "Brandon T. Garcia",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2169043936",
+      "name": "Lauren Westerfield",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4284555940",
+      "name": "Priya Yelemali",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2528875191",
+      "name": "Nikhita Gogate",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5064973000",
+      "name": "E. Andres Rivera-Munoz",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2299008173",
+      "name": "Haowei Du",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3149262128",
+      "name": "Moez Dawood",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2567150074",
+      "name": "Angad Jolly",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2220203656",
+      "name": "James R. Lupski",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2120790929",
+      "name": "Jennifer E. Posey",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2560641002",
+    "https://openalex.org/W2949885556",
+    "https://openalex.org/W2950025267",
+    "https://openalex.org/W1644197353",
+    "https://openalex.org/W4365138239",
+    "https://openalex.org/W4365138505",
+    "https://openalex.org/W2911161668",
+    "https://openalex.org/W4389004870",
+    "https://openalex.org/W2136410628",
+    "https://openalex.org/W2809721358",
+    "https://openalex.org/W2946102094",
+    "https://openalex.org/W2951146425",
+    "https://openalex.org/W4399941107",
+    "https://openalex.org/W4402358523",
+    "https://openalex.org/W4391387740",
+    "https://openalex.org/W4401001407",
+    "https://openalex.org/W4402516372",
+    "https://openalex.org/W4399480372",
+    "https://openalex.org/W4392168151",
+    "https://openalex.org/W4391009466",
+    "https://openalex.org/W4385848332",
+    "https://openalex.org/W4224997359",
+    "https://openalex.org/W4401726216",
+    "https://openalex.org/W4400128031",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4224316961",
+    "https://openalex.org/W2119613819",
+    "https://openalex.org/W3128246218"
+  ],
+  "abstract": "Abstract Background Diagnosing rare genetic disorders relies on precise phenotypic and genotypic analysis, with the Human Phenotype Ontology (HPO) providing a standardized language for capturing clinical phenotypes. Traditional HPO tools, such as Doc2HPO and ClinPhen, employ concept recognition to automate phenotype extraction but struggle with incomplete phenotype assignment, often requiring intensive manual review. While large language models (LLMs) hold promise for more context-driven phenotype extraction, they are prone to errors and “hallucinations,” making them less reliable without further refinement. We present RAG-HPO, a Python-based tool that leverages Retrieval-Augmented Generation (RAG) to elevate LLM accuracy in HPO term assignment, bypassing the limitations of baseline models while avoiding the time and resource intensive process of fine-tuning. RAG-HPO integrates a dynamic vector database, allowing real-time retrieval and contextual matching. Methods The high-dimensional vector database utilized by RAG-HPO includes &gt;54,000 phenotypic phrases mapped to HPO IDs, derived from the HPO database and supplemented with additional validated phrases. The RAG-HPO workflow uses an LLM to first extract phenotypic phrases that are then matched via semantic similarity to entries within a vector database before providing best term matches back to the LLM as context for final HPO term assignment. A benchmarking dataset of 120 published case reports with 1,792 manually-assigned HPO terms was developed, and the performance of RAG-HPO measured against existing published tools Doc2HPO, ClinPhen, and FastHPOCR. Results In evaluations, RAG-HPO, powered by Llama-3 70B and applied to a set of 120 case reports, achieved a mean precision of 0.84, recall of 0.78, and an F1 score of 0.80—significantly surpassing conventional tools (p&lt;0.00001). False positive HPO term identification occurred for 15.8% (256/1,624) of terms, of which only 2.7% (7/256) represented hallucinations, and 33.6% (86/256) unrelated terms; the remainder of false positives (63.7%, 163/256) were relative terms of the target term. Conclusions RAG-HPO is a user-friendly, adaptable tool designed for secure evaluation of clinical text and outperforms standard HPO-matching tools in precision, recall, and F1. Its enhanced precision and recall represent a substantial advancement in phenotypic analysis, accelerating the identification of genetic mechanisms underlying rare diseases and driving progress in genetic research and clinical genomics.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6072563529014587
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5411689877510071
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5251467227935791
+    },
+    {
+      "name": "Language model",
+      "score": 0.4173603057861328
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.34008142352104187
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.326013445854187
+    }
+  ]
 }

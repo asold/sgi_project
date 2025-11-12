@@ -1,87 +1,158 @@
 {
-    "title": "Parallel Stylometric Document Embeddings with Deep Learning Based Language Models in Literary Authorship Attribution",
-    "url": "https://openalex.org/W4220923620",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4214293747",
-            "name": "Mihailo Škorić",
-            "affiliations": [
-                "University of Belgrade"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2160984717",
-            "name": "Ranka Stanković",
-            "affiliations": [
-                "University of Belgrade"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4213551534",
-            "name": "Milica Ikonić Nešić",
-            "affiliations": [
-                "University of Belgrade"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2795683556",
-            "name": "Joanna Byszuk",
-            "affiliations": [
-                "The Institute of the Polish Language of the Polish Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132356516",
-            "name": "Maciej Eder",
-            "affiliations": [
-                "The Institute of the Polish Language of the Polish Academy of Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2048529946",
-        "https://openalex.org/W2067981273",
-        "https://openalex.org/W2125962012",
-        "https://openalex.org/W1976095474",
-        "https://openalex.org/W4250089123",
-        "https://openalex.org/W2095069785",
-        "https://openalex.org/W2107317033",
-        "https://openalex.org/W2171642238",
-        "https://openalex.org/W2242862111",
-        "https://openalex.org/W2251049886",
-        "https://openalex.org/W2840955633",
-        "https://openalex.org/W2146793826",
-        "https://openalex.org/W6908992300",
-        "https://openalex.org/W2110579258",
-        "https://openalex.org/W3097200556",
-        "https://openalex.org/W2787026234",
-        "https://openalex.org/W2793803988",
-        "https://openalex.org/W3025315152",
-        "https://openalex.org/W1752770703",
-        "https://openalex.org/W2477122767",
-        "https://openalex.org/W6686712581",
-        "https://openalex.org/W2613184892",
-        "https://openalex.org/W6800445181",
-        "https://openalex.org/W6800699494",
-        "https://openalex.org/W4229679462",
-        "https://openalex.org/W6632682031",
-        "https://openalex.org/W2070205520",
-        "https://openalex.org/W4206573600",
-        "https://openalex.org/W1970948046",
-        "https://openalex.org/W6734955907",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W6745763898",
-        "https://openalex.org/W2096913021",
-        "https://openalex.org/W3210204379",
-        "https://openalex.org/W3037547477",
-        "https://openalex.org/W3088886707",
-        "https://openalex.org/W2599132864",
-        "https://openalex.org/W2771347666",
-        "https://openalex.org/W2187238335",
-        "https://openalex.org/W3098999920",
-        "https://openalex.org/W3196647872"
-    ],
-    "abstract": "This paper explores the effectiveness of parallel stylometric document embeddings in solving the authorship attribution task by testing a novel approach on literary texts in 7 different languages, totaling in 7051 unique 10,000-token chunks from 700 PoS and lemma annotated documents. We used these documents to produce four document embedding models using Stylo R package (word-based, lemma-based, PoS-trigrams-based, and PoS-mask-based) and one document embedding model using mBERT for each of the seven languages. We created further derivations of these embeddings in the form of average, product, minimum, maximum, and l2 norm of these document embedding matrices and tested them both including and excluding the mBERT-based document embeddings for each language. Finally, we trained several perceptrons on the portions of the dataset in order to procure adequate weights for a weighted combination approach. We tested standalone (two baselines) and composite embeddings for classification accuracy, precision, recall, weighted-average, and macro-averaged F1-score, compared them with one another and have found that for each language most of our composition methods outperform the baselines (with a couple of methods outperforming all baselines for all languages), with or without mBERT inputs, which are found to have no significant positive impact on the results of our methods.",
-    "full_text": null
+  "title": "Parallel Stylometric Document Embeddings with Deep Learning Based Language Models in Literary Authorship Attribution",
+  "url": "https://openalex.org/W4220923620",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4214293747",
+      "name": "Mihailo Škorić",
+      "affiliations": [
+        "University of Belgrade"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2160984717",
+      "name": "Ranka Stanković",
+      "affiliations": [
+        "University of Belgrade"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4213551534",
+      "name": "Milica Ikonić Nešić",
+      "affiliations": [
+        "University of Belgrade"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2795683556",
+      "name": "Joanna Byszuk",
+      "affiliations": [
+        "The Institute of the Polish Language of the Polish Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132356516",
+      "name": "Maciej Eder",
+      "affiliations": [
+        "The Institute of the Polish Language of the Polish Academy of Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2048529946",
+    "https://openalex.org/W2067981273",
+    "https://openalex.org/W2125962012",
+    "https://openalex.org/W1976095474",
+    "https://openalex.org/W4250089123",
+    "https://openalex.org/W2095069785",
+    "https://openalex.org/W2107317033",
+    "https://openalex.org/W2171642238",
+    "https://openalex.org/W2242862111",
+    "https://openalex.org/W2251049886",
+    "https://openalex.org/W2840955633",
+    "https://openalex.org/W2146793826",
+    "https://openalex.org/W6908992300",
+    "https://openalex.org/W2110579258",
+    "https://openalex.org/W3097200556",
+    "https://openalex.org/W2787026234",
+    "https://openalex.org/W2793803988",
+    "https://openalex.org/W3025315152",
+    "https://openalex.org/W1752770703",
+    "https://openalex.org/W2477122767",
+    "https://openalex.org/W6686712581",
+    "https://openalex.org/W2613184892",
+    "https://openalex.org/W6800445181",
+    "https://openalex.org/W6800699494",
+    "https://openalex.org/W4229679462",
+    "https://openalex.org/W6632682031",
+    "https://openalex.org/W2070205520",
+    "https://openalex.org/W4206573600",
+    "https://openalex.org/W1970948046",
+    "https://openalex.org/W6734955907",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W6745763898",
+    "https://openalex.org/W2096913021",
+    "https://openalex.org/W3210204379",
+    "https://openalex.org/W3037547477",
+    "https://openalex.org/W3088886707",
+    "https://openalex.org/W2599132864",
+    "https://openalex.org/W2771347666",
+    "https://openalex.org/W2187238335",
+    "https://openalex.org/W3098999920",
+    "https://openalex.org/W3196647872"
+  ],
+  "abstract": "This paper explores the effectiveness of parallel stylometric document embeddings in solving the authorship attribution task by testing a novel approach on literary texts in 7 different languages, totaling in 7051 unique 10,000-token chunks from 700 PoS and lemma annotated documents. We used these documents to produce four document embedding models using Stylo R package (word-based, lemma-based, PoS-trigrams-based, and PoS-mask-based) and one document embedding model using mBERT for each of the seven languages. We created further derivations of these embeddings in the form of average, product, minimum, maximum, and l2 norm of these document embedding matrices and tested them both including and excluding the mBERT-based document embeddings for each language. Finally, we trained several perceptrons on the portions of the dataset in order to procure adequate weights for a weighted combination approach. We tested standalone (two baselines) and composite embeddings for classification accuracy, precision, recall, weighted-average, and macro-averaged F1-score, compared them with one another and have found that for each language most of our composition methods outperform the baselines (with a couple of methods outperforming all baselines for all languages), with or without mBERT inputs, which are found to have no significant positive impact on the results of our methods.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7131767272949219
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6838458180427551
+    },
+    {
+      "name": "Authorship attribution",
+      "score": 0.6671347618103027
+    },
+    {
+      "name": "Lemma (botany)",
+      "score": 0.6213876605033875
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5854960680007935
+    },
+    {
+      "name": "Embedding",
+      "score": 0.5699052214622498
+    },
+    {
+      "name": "Security token",
+      "score": 0.523983895778656
+    },
+    {
+      "name": "Stylometry",
+      "score": 0.46385952830314636
+    },
+    {
+      "name": "Language model",
+      "score": 0.4533410370349884
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.4451281428337097
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.33232438564300537
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Poaceae",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Ecology",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,85 +1,160 @@
 {
-    "title": "Retrieval-Augmented Response Generation for Knowledge-Grounded Conversation in the Wild",
-    "url": "https://openalex.org/W4312854033",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2232094850",
-            "name": "Yeonchan Ahn",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2159275413",
-            "name": "Sang Goo Lee",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122801727",
-            "name": "Junho Shim",
-            "affiliations": [
-                "Sookmyung Women's University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2139797254",
-            "name": "Jaehui Park",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2950902819",
-        "https://openalex.org/W6755699846",
-        "https://openalex.org/W2891826200",
-        "https://openalex.org/W3035755323",
-        "https://openalex.org/W3155807546",
-        "https://openalex.org/W6631501603",
-        "https://openalex.org/W6771543990",
-        "https://openalex.org/W2962838727",
-        "https://openalex.org/W3041096702",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W2998702515",
-        "https://openalex.org/W3099700870",
-        "https://openalex.org/W3092510499",
-        "https://openalex.org/W6771430711",
-        "https://openalex.org/W2972324944",
-        "https://openalex.org/W2963945575",
-        "https://openalex.org/W2963206148",
-        "https://openalex.org/W6727690538",
-        "https://openalex.org/W2963769536",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2963096510",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2133512280",
-        "https://openalex.org/W2078861931",
-        "https://openalex.org/W6755007375",
-        "https://openalex.org/W6776048684",
-        "https://openalex.org/W2105482032",
-        "https://openalex.org/W6638318767",
-        "https://openalex.org/W3198642385",
-        "https://openalex.org/W2997300509",
-        "https://openalex.org/W2964458951",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W3104123491",
-        "https://openalex.org/W3152943448",
-        "https://openalex.org/W3104777900",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W3134891661",
-        "https://openalex.org/W4389009499",
-        "https://openalex.org/W4206890427",
-        "https://openalex.org/W3034383590",
-        "https://openalex.org/W4285307790",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W1854214752",
-        "https://openalex.org/W3015468748",
-        "https://openalex.org/W2525778437",
-        "https://openalex.org/W2990138404",
-        "https://openalex.org/W3106429660"
-    ],
-    "abstract": "Users on the internet usually have conversations on interesting facts or topics along with diverse knowledge from the web. However, most existing knowledge-grounded conversation models consider only a single document regarding the topic of a conversation. The recently proposed retrieval-augmented models generate a response based on multiple documents; however, they ignore the given topic and use only the local context of the conversation. To this end, we introduce a novel retrieval-augmented response generation model that retrieves an appropriate range of documents relevant to both the topic and local context of a conversation and uses them for generating a knowledge-grounded response. Our model first accepts both topic words extracted from the whole conversation and the tokens before the response to yield multiple representations. It then chooses representations of the first N token and ones of keywords from the conversation and document encoders and compares the two groups of representation from the conversation with those groups of the document, respectively. For training, we introduce a new data-weighting scheme to encourage the model to produce knowledge-grounded responses without ground truth knowledge. Both automatic and human evaluation results with a large-scale dataset show that our models can generate more knowledgeable, diverse, and relevant responses compared to the state-of-the-art models.",
-    "full_text": null
+  "title": "Retrieval-Augmented Response Generation for Knowledge-Grounded Conversation in the Wild",
+  "url": "https://openalex.org/W4312854033",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2232094850",
+      "name": "Yeonchan Ahn",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2159275413",
+      "name": "Sang Goo Lee",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122801727",
+      "name": "Junho Shim",
+      "affiliations": [
+        "Sookmyung Women's University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2139797254",
+      "name": "Jaehui Park",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2950902819",
+    "https://openalex.org/W6755699846",
+    "https://openalex.org/W2891826200",
+    "https://openalex.org/W3035755323",
+    "https://openalex.org/W3155807546",
+    "https://openalex.org/W6631501603",
+    "https://openalex.org/W6771543990",
+    "https://openalex.org/W2962838727",
+    "https://openalex.org/W3041096702",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W2998702515",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W3092510499",
+    "https://openalex.org/W6771430711",
+    "https://openalex.org/W2972324944",
+    "https://openalex.org/W2963945575",
+    "https://openalex.org/W2963206148",
+    "https://openalex.org/W6727690538",
+    "https://openalex.org/W2963769536",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2963096510",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2133512280",
+    "https://openalex.org/W2078861931",
+    "https://openalex.org/W6755007375",
+    "https://openalex.org/W6776048684",
+    "https://openalex.org/W2105482032",
+    "https://openalex.org/W6638318767",
+    "https://openalex.org/W3198642385",
+    "https://openalex.org/W2997300509",
+    "https://openalex.org/W2964458951",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W3104123491",
+    "https://openalex.org/W3152943448",
+    "https://openalex.org/W3104777900",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W3134891661",
+    "https://openalex.org/W4389009499",
+    "https://openalex.org/W4206890427",
+    "https://openalex.org/W3034383590",
+    "https://openalex.org/W4285307790",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W1854214752",
+    "https://openalex.org/W3015468748",
+    "https://openalex.org/W2525778437",
+    "https://openalex.org/W2990138404",
+    "https://openalex.org/W3106429660"
+  ],
+  "abstract": "Users on the internet usually have conversations on interesting facts or topics along with diverse knowledge from the web. However, most existing knowledge-grounded conversation models consider only a single document regarding the topic of a conversation. The recently proposed retrieval-augmented models generate a response based on multiple documents; however, they ignore the given topic and use only the local context of the conversation. To this end, we introduce a novel retrieval-augmented response generation model that retrieves an appropriate range of documents relevant to both the topic and local context of a conversation and uses them for generating a knowledge-grounded response. Our model first accepts both topic words extracted from the whole conversation and the tokens before the response to yield multiple representations. It then chooses representations of the first N token and ones of keywords from the conversation and document encoders and compares the two groups of representation from the conversation with those groups of the document, respectively. For training, we introduce a new data-weighting scheme to encourage the model to produce knowledge-grounded responses without ground truth knowledge. Both automatic and human evaluation results with a large-scale dataset show that our models can generate more knowledgeable, diverse, and relevant responses compared to the state-of-the-art models.",
+  "full_text": null,
+  "topic": "Conversation",
+  "concepts": [
+    {
+      "name": "Conversation",
+      "score": 0.9040228128433228
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7798786163330078
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.6000450849533081
+    },
+    {
+      "name": "Security token",
+      "score": 0.5930781960487366
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.44156578183174133
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.432275652885437
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4303194284439087
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4273703694343567
+    },
+    {
+      "name": "The Internet",
+      "score": 0.41223597526550293
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.2657967209815979
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.13596367835998535
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    }
+  ]
 }

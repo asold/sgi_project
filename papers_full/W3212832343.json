@@ -1,139 +1,198 @@
 {
-    "title": "TRIG: Transformer-Based Text Recognizer with Initial Embedding Guidance",
-    "url": "https://openalex.org/W3212832343",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097814062",
-            "name": "Yue Tao",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100696868",
-            "name": "Zhiwei Jia",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2584977574",
-            "name": "Runze Ma",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2277157523",
-            "name": "Shugong Xu",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097814062",
-            "name": "Yue Tao",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100696868",
-            "name": "Zhiwei Jia",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2584977574",
-            "name": "Runze Ma",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2277157523",
-            "name": "Shugong Xu",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3082397598",
-        "https://openalex.org/W654550266",
-        "https://openalex.org/W2810983211",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3035449864",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3004846386",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W4214755140",
-        "https://openalex.org/W3132503749",
-        "https://openalex.org/W2965066169",
-        "https://openalex.org/W2978036638",
-        "https://openalex.org/W2076014259",
-        "https://openalex.org/W2043075591",
-        "https://openalex.org/W2049951199",
-        "https://openalex.org/W2146835493",
-        "https://openalex.org/W2194187530",
-        "https://openalex.org/W2970910956",
-        "https://openalex.org/W3034447740",
-        "https://openalex.org/W3030520226",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W3034414401",
-        "https://openalex.org/W3003642782",
-        "https://openalex.org/W2128409098",
-        "https://openalex.org/W3115860342",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2343052201",
-        "https://openalex.org/W1981283549",
-        "https://openalex.org/W2099247484",
-        "https://openalex.org/W2008806374",
-        "https://openalex.org/W2144554289",
-        "https://openalex.org/W1971822075",
-        "https://openalex.org/W2750938222",
-        "https://openalex.org/W2963712589",
-        "https://openalex.org/W2963526661",
-        "https://openalex.org/W6772198947",
-        "https://openalex.org/W3042537721",
-        "https://openalex.org/W3103667010",
-        "https://openalex.org/W3042760913",
-        "https://openalex.org/W3030971704",
-        "https://openalex.org/W2997864923",
-        "https://openalex.org/W3013224334",
-        "https://openalex.org/W3022265721",
-        "https://openalex.org/W3005400651",
-        "https://openalex.org/W3139073871",
-        "https://openalex.org/W3097270768",
-        "https://openalex.org/W3203480968",
-        "https://openalex.org/W1491389626",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2950635152",
-        "https://openalex.org/W3119786062",
-        "https://openalex.org/W3014074635",
-        "https://openalex.org/W3176948526",
-        "https://openalex.org/W1998042868",
-        "https://openalex.org/W1521064364",
-        "https://openalex.org/W3106271744",
-        "https://openalex.org/W3110267192",
-        "https://openalex.org/W3035422918",
-        "https://openalex.org/W2127141656",
-        "https://openalex.org/W3173990630",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W3114896399",
-        "https://openalex.org/W3107389023",
-        "https://openalex.org/W4394652702",
-        "https://openalex.org/W2962957458",
-        "https://openalex.org/W603908379",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2998382406",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Scene text recognition (STR) is an important bridge between images and text, attracting abundant research attention. While convolutional neural networks (CNNS) have achieved remarkable progress in this task, most of the existing works need an extra module (context modeling module) to help CNN to capture global dependencies to solve the inductive bias and strengthen the relationship between text features. Recently, the transformer has been proposed as a promising network for global context modeling by self-attention mechanism, but one of the main short-comings, when applied to recognition, is the efficiency. We propose a 1-D split to address the challenges of complexity and replace the CNN with the transformer encoder to reduce the need for a context modeling module. Furthermore, recent methods use a frozen initial embedding to guide the decoder to decode the features to text, leading to a loss of accuracy. We propose to use a learnable initial embedding learned from the transformer encoder to make it adaptive to different input images. Above all, we introduce a novel architecture for text recognition, named TRansformer-based text recognizer with Initial embedding Guidance (TRIG), composed of three stages (transformation, feature extraction, and prediction). Extensive experiments show that our approach can achieve state-of-the-art on text recognition benchmarks.",
-    "full_text": null
+  "title": "TRIG: Transformer-Based Text Recognizer with Initial Embedding Guidance",
+  "url": "https://openalex.org/W3212832343",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097814062",
+      "name": "Yue Tao",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100696868",
+      "name": "Zhiwei Jia",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2584977574",
+      "name": "Runze Ma",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2277157523",
+      "name": "Shugong Xu",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097814062",
+      "name": "Yue Tao",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100696868",
+      "name": "Zhiwei Jia",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2584977574",
+      "name": "Runze Ma",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2277157523",
+      "name": "Shugong Xu",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3082397598",
+    "https://openalex.org/W654550266",
+    "https://openalex.org/W2810983211",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3035449864",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3004846386",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W4214755140",
+    "https://openalex.org/W3132503749",
+    "https://openalex.org/W2965066169",
+    "https://openalex.org/W2978036638",
+    "https://openalex.org/W2076014259",
+    "https://openalex.org/W2043075591",
+    "https://openalex.org/W2049951199",
+    "https://openalex.org/W2146835493",
+    "https://openalex.org/W2194187530",
+    "https://openalex.org/W2970910956",
+    "https://openalex.org/W3034447740",
+    "https://openalex.org/W3030520226",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W3034414401",
+    "https://openalex.org/W3003642782",
+    "https://openalex.org/W2128409098",
+    "https://openalex.org/W3115860342",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2343052201",
+    "https://openalex.org/W1981283549",
+    "https://openalex.org/W2099247484",
+    "https://openalex.org/W2008806374",
+    "https://openalex.org/W2144554289",
+    "https://openalex.org/W1971822075",
+    "https://openalex.org/W2750938222",
+    "https://openalex.org/W2963712589",
+    "https://openalex.org/W2963526661",
+    "https://openalex.org/W6772198947",
+    "https://openalex.org/W3042537721",
+    "https://openalex.org/W3103667010",
+    "https://openalex.org/W3042760913",
+    "https://openalex.org/W3030971704",
+    "https://openalex.org/W2997864923",
+    "https://openalex.org/W3013224334",
+    "https://openalex.org/W3022265721",
+    "https://openalex.org/W3005400651",
+    "https://openalex.org/W3139073871",
+    "https://openalex.org/W3097270768",
+    "https://openalex.org/W3203480968",
+    "https://openalex.org/W1491389626",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2950635152",
+    "https://openalex.org/W3119786062",
+    "https://openalex.org/W3014074635",
+    "https://openalex.org/W3176948526",
+    "https://openalex.org/W1998042868",
+    "https://openalex.org/W1521064364",
+    "https://openalex.org/W3106271744",
+    "https://openalex.org/W3110267192",
+    "https://openalex.org/W3035422918",
+    "https://openalex.org/W2127141656",
+    "https://openalex.org/W3173990630",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W3114896399",
+    "https://openalex.org/W3107389023",
+    "https://openalex.org/W4394652702",
+    "https://openalex.org/W2962957458",
+    "https://openalex.org/W603908379",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2998382406",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Scene text recognition (STR) is an important bridge between images and text, attracting abundant research attention. While convolutional neural networks (CNNS) have achieved remarkable progress in this task, most of the existing works need an extra module (context modeling module) to help CNN to capture global dependencies to solve the inductive bias and strengthen the relationship between text features. Recently, the transformer has been proposed as a promising network for global context modeling by self-attention mechanism, but one of the main short-comings, when applied to recognition, is the efficiency. We propose a 1-D split to address the challenges of complexity and replace the CNN with the transformer encoder to reduce the need for a context modeling module. Furthermore, recent methods use a frozen initial embedding to guide the decoder to decode the features to text, leading to a loss of accuracy. We propose to use a learnable initial embedding learned from the transformer encoder to make it adaptive to different input images. Above all, we introduce a novel architecture for text recognition, named TRansformer-based text recognizer with Initial embedding Guidance (TRIG), composed of three stages (transformation, feature extraction, and prediction). Extensive experiments show that our approach can achieve state-of-the-art on text recognition benchmarks.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7981959581375122
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7895404696464539
+    },
+    {
+      "name": "Embedding",
+      "score": 0.7212367057800293
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6658669114112854
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.576958417892456
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.547515332698822
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4622352719306946
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4362730085849762
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.41304540634155273
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.34482449293136597
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0732041597366333
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

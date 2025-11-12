@@ -1,78 +1,121 @@
 {
-    "title": "An Explainable Vision Transformer Model Based White Blood Cells Classification and Localization",
-    "url": "https://openalex.org/W4385241226",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3107681148",
-            "name": "Oğuzhan Katar",
-            "affiliations": [
-                "Fırat University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099228199",
-            "name": "Ozal Yildirim",
-            "affiliations": [
-                "Fırat University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3107681148",
-            "name": "Oğuzhan Katar",
-            "affiliations": [
-                "Fırat University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099228199",
-            "name": "Ozal Yildirim",
-            "affiliations": [
-                "Fırat University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4285505138",
-        "https://openalex.org/W4206701314",
-        "https://openalex.org/W3201264210",
-        "https://openalex.org/W3121324814",
-        "https://openalex.org/W2944240340",
-        "https://openalex.org/W3205890828",
-        "https://openalex.org/W2953681063",
-        "https://openalex.org/W3037839692",
-        "https://openalex.org/W3011939472",
-        "https://openalex.org/W3084048731",
-        "https://openalex.org/W3048127440",
-        "https://openalex.org/W4206685736",
-        "https://openalex.org/W4206283862",
-        "https://openalex.org/W4308515701",
-        "https://openalex.org/W4309269102",
-        "https://openalex.org/W4317206882",
-        "https://openalex.org/W4360615838",
-        "https://openalex.org/W3145185940",
-        "https://openalex.org/W3128592650",
-        "https://openalex.org/W3171125843",
-        "https://openalex.org/W3217728966",
-        "https://openalex.org/W4323848631",
-        "https://openalex.org/W4313366877",
-        "https://openalex.org/W4313825652",
-        "https://openalex.org/W2905307056",
-        "https://openalex.org/W4207016125",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W6795300077",
-        "https://openalex.org/W4223651176",
-        "https://openalex.org/W6811483796",
-        "https://openalex.org/W3081876271",
-        "https://openalex.org/W3035253074",
-        "https://openalex.org/W3203232043",
-        "https://openalex.org/W6847760962",
-        "https://openalex.org/W4313207645",
-        "https://openalex.org/W4313481407",
-        "https://openalex.org/W4312076869",
-        "https://openalex.org/W4226408629",
-        "https://openalex.org/W4302275239"
-    ],
-    "abstract": "White blood cells (WBCs) are crucial components of the immune system that play a vital role in defending the body against infections and diseases. The identification of WBCs subtypes is useful in the detection of various diseases, such as infections, leukemia, and other hematological malignancies. The manual screening of blood films is time-consuming and subjective, leading to inconsistencies and errors. Convolutional neural networks (CNN)-based models can automate such classification processes, but are incapable of capturing long-range dependencies and global context. This paper proposes an explainable Vision Transformer (ViT) model for automatic WBCs detection from blood films. The proposed model uses a self-attention mechanism to extract features from input images. Our proposed model was trained and validated on a public dataset of 16,633 samples containing five different types of WBCs. As a result of experiments on the classification of five different types of WBCs, our model achieved an accuracy of 99.40%. Moreover, the model’s examination of misclassified test samples revealed a correlation between incorrect predictions and the presence or absence of granules in the cell samples. To validate this observation, we divided the dataset into two classes, Granulocytes and Agranulocytes, and conducted a secondary training process. The resulting ViT model, trained for binary classification, achieved impressive performance metrics during the test phase, including an accuracy of 99.70%, recall of 99.54%, precision of 99.32%, and F-1 score of 99.43%. To ensure the reliability of the ViT model’s, we employed the Score-CAM algorithm to visualize the pixel areas on which the model focuses during its predictions. Our proposed method is suitable for clinical use due to its explainable structure as well as its superior performance compared to similar studies in the literature. The classification and localization of WBCs with this model can facilitate the detection and reporting process for the pathologist.",
-    "full_text": null
+  "title": "An Explainable Vision Transformer Model Based White Blood Cells Classification and Localization",
+  "url": "https://openalex.org/W4385241226",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3107681148",
+      "name": "Oğuzhan Katar",
+      "affiliations": [
+        "Fırat University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099228199",
+      "name": "Ozal Yildirim",
+      "affiliations": [
+        "Fırat University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3107681148",
+      "name": "Oğuzhan Katar",
+      "affiliations": [
+        "Fırat University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099228199",
+      "name": "Ozal Yildirim",
+      "affiliations": [
+        "Fırat University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4285505138",
+    "https://openalex.org/W4206701314",
+    "https://openalex.org/W3201264210",
+    "https://openalex.org/W3121324814",
+    "https://openalex.org/W2944240340",
+    "https://openalex.org/W3205890828",
+    "https://openalex.org/W2953681063",
+    "https://openalex.org/W3037839692",
+    "https://openalex.org/W3011939472",
+    "https://openalex.org/W3084048731",
+    "https://openalex.org/W3048127440",
+    "https://openalex.org/W4206685736",
+    "https://openalex.org/W4206283862",
+    "https://openalex.org/W4308515701",
+    "https://openalex.org/W4309269102",
+    "https://openalex.org/W4317206882",
+    "https://openalex.org/W4360615838",
+    "https://openalex.org/W3145185940",
+    "https://openalex.org/W3128592650",
+    "https://openalex.org/W3171125843",
+    "https://openalex.org/W3217728966",
+    "https://openalex.org/W4323848631",
+    "https://openalex.org/W4313366877",
+    "https://openalex.org/W4313825652",
+    "https://openalex.org/W2905307056",
+    "https://openalex.org/W4207016125",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W6795300077",
+    "https://openalex.org/W4223651176",
+    "https://openalex.org/W6811483796",
+    "https://openalex.org/W3081876271",
+    "https://openalex.org/W3035253074",
+    "https://openalex.org/W3203232043",
+    "https://openalex.org/W6847760962",
+    "https://openalex.org/W4313207645",
+    "https://openalex.org/W4313481407",
+    "https://openalex.org/W4312076869",
+    "https://openalex.org/W4226408629",
+    "https://openalex.org/W4302275239"
+  ],
+  "abstract": "White blood cells (WBCs) are crucial components of the immune system that play a vital role in defending the body against infections and diseases. The identification of WBCs subtypes is useful in the detection of various diseases, such as infections, leukemia, and other hematological malignancies. The manual screening of blood films is time-consuming and subjective, leading to inconsistencies and errors. Convolutional neural networks (CNN)-based models can automate such classification processes, but are incapable of capturing long-range dependencies and global context. This paper proposes an explainable Vision Transformer (ViT) model for automatic WBCs detection from blood films. The proposed model uses a self-attention mechanism to extract features from input images. Our proposed model was trained and validated on a public dataset of 16,633 samples containing five different types of WBCs. As a result of experiments on the classification of five different types of WBCs, our model achieved an accuracy of 99.40%. Moreover, the model’s examination of misclassified test samples revealed a correlation between incorrect predictions and the presence or absence of granules in the cell samples. To validate this observation, we divided the dataset into two classes, Granulocytes and Agranulocytes, and conducted a secondary training process. The resulting ViT model, trained for binary classification, achieved impressive performance metrics during the test phase, including an accuracy of 99.70%, recall of 99.54%, precision of 99.32%, and F-1 score of 99.43%. To ensure the reliability of the ViT model’s, we employed the Score-CAM algorithm to visualize the pixel areas on which the model focuses during its predictions. Our proposed method is suitable for clinical use due to its explainable structure as well as its superior performance compared to similar studies in the literature. The classification and localization of WBCs with this model can facilitate the detection and reporting process for the pathologist.",
+  "full_text": null,
+  "topic": "Artificial intelligence",
+  "concepts": [
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6784952878952026
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6586920022964478
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5704829692840576
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4967806935310364
+    },
+    {
+      "name": "Binary classification",
+      "score": 0.46308356523513794
+    },
+    {
+      "name": "White blood cell",
+      "score": 0.4443095326423645
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4250739812850952
+    },
+    {
+      "name": "Support vector machine",
+      "score": 0.3102135956287384
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1477290689945221
+    },
+    {
+      "name": "Immunology",
+      "score": 0.11760661005973816
+    }
+  ]
 }

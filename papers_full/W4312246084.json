@@ -1,72 +1,131 @@
 {
-    "title": "CMJRT: Cross-Modal Joint Representation Transformer for Multimodal Sentiment Analysis",
-    "url": "https://openalex.org/W4312246084",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2086020282",
-            "name": "Meng Xu",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2151488386",
-            "name": "Feifei Liang",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3154480819",
-            "name": "Xiangyi Su",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1970607900",
-            "name": "Fang Cheng",
-            "affiliations": [
-                "Civil Aviation University of China"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2619383789",
-        "https://openalex.org/W2946165673",
-        "https://openalex.org/W2913428326",
-        "https://openalex.org/W4225650823",
-        "https://openalex.org/W2963710346",
-        "https://openalex.org/W2787581402",
-        "https://openalex.org/W2964346351",
-        "https://openalex.org/W2964010806",
-        "https://openalex.org/W2964051877",
-        "https://openalex.org/W3169801598",
-        "https://openalex.org/W2963871344",
-        "https://openalex.org/W6686207219",
-        "https://openalex.org/W2883430806",
-        "https://openalex.org/W2612041314",
-        "https://openalex.org/W3037572520",
-        "https://openalex.org/W3039869264",
-        "https://openalex.org/W3002123144",
-        "https://openalex.org/W2962931510",
-        "https://openalex.org/W2964216663",
-        "https://openalex.org/W3093051361",
-        "https://openalex.org/W3128412859",
-        "https://openalex.org/W4226150137",
-        "https://openalex.org/W4285105012",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W6640212811",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2556418146",
-        "https://openalex.org/W2883409523",
-        "https://openalex.org/W2095176743",
-        "https://openalex.org/W2395639500",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W6803759081",
-        "https://openalex.org/W2130942839"
-    ],
-    "abstract": "Multimodal Sentiment Analysis (MSA) is an emerging research field that aims to identify the sentiment of speakers through Audio (A), Video (V), and Text (T) modalities. The major challenge is to capture joint representations that can associate and integrate information from various modalities. Most of the existing methods are prone to acquiring joint representation through the concatenation of input features. However, these methods are short of exploiting interactions fully to ensure consistency and complementarity among modalities. To solve this problem, we design a novel multimodal sentiment analysis framework named Cross-Modal Joint Representation Transformer (CMJRT), which exploits hierarchical interactions among modalities by passing joint representations from bimodality to unimodality. Specifically, we adopt cyclic translation to obtain joint representations of bimodality, where one modality is translated to the other modality forward and backward by encoder-decoders. The translation process ensures consistency between modalities. In addition, to explore complementarity among modalities, the cross-modal transformer is used to reinforce each unimodality with common information from bimodality. Extensive experiments on CMU-MOSI and CMU-MOSEI datasets demonstrate that our proposed method outperforms existing approaches.",
-    "full_text": null
+  "title": "CMJRT: Cross-Modal Joint Representation Transformer for Multimodal Sentiment Analysis",
+  "url": "https://openalex.org/W4312246084",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2086020282",
+      "name": "Meng Xu",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2151488386",
+      "name": "Feifei Liang",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3154480819",
+      "name": "Xiangyi Su",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1970607900",
+      "name": "Fang Cheng",
+      "affiliations": [
+        "Civil Aviation University of China"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2619383789",
+    "https://openalex.org/W2946165673",
+    "https://openalex.org/W2913428326",
+    "https://openalex.org/W4225650823",
+    "https://openalex.org/W2963710346",
+    "https://openalex.org/W2787581402",
+    "https://openalex.org/W2964346351",
+    "https://openalex.org/W2964010806",
+    "https://openalex.org/W2964051877",
+    "https://openalex.org/W3169801598",
+    "https://openalex.org/W2963871344",
+    "https://openalex.org/W6686207219",
+    "https://openalex.org/W2883430806",
+    "https://openalex.org/W2612041314",
+    "https://openalex.org/W3037572520",
+    "https://openalex.org/W3039869264",
+    "https://openalex.org/W3002123144",
+    "https://openalex.org/W2962931510",
+    "https://openalex.org/W2964216663",
+    "https://openalex.org/W3093051361",
+    "https://openalex.org/W3128412859",
+    "https://openalex.org/W4226150137",
+    "https://openalex.org/W4285105012",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W6640212811",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2556418146",
+    "https://openalex.org/W2883409523",
+    "https://openalex.org/W2095176743",
+    "https://openalex.org/W2395639500",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W6803759081",
+    "https://openalex.org/W2130942839"
+  ],
+  "abstract": "Multimodal Sentiment Analysis (MSA) is an emerging research field that aims to identify the sentiment of speakers through Audio (A), Video (V), and Text (T) modalities. The major challenge is to capture joint representations that can associate and integrate information from various modalities. Most of the existing methods are prone to acquiring joint representation through the concatenation of input features. However, these methods are short of exploiting interactions fully to ensure consistency and complementarity among modalities. To solve this problem, we design a novel multimodal sentiment analysis framework named Cross-Modal Joint Representation Transformer (CMJRT), which exploits hierarchical interactions among modalities by passing joint representations from bimodality to unimodality. Specifically, we adopt cyclic translation to obtain joint representations of bimodality, where one modality is translated to the other modality forward and backward by encoder-decoders. The translation process ensures consistency between modalities. In addition, to explore complementarity among modalities, the cross-modal transformer is used to reinforce each unimodality with common information from bimodality. Extensive experiments on CMU-MOSI and CMU-MOSEI datasets demonstrate that our proposed method outperforms existing approaches.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7570990920066833
+    },
+    {
+      "name": "Modalities",
+      "score": 0.7369616627693176
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5194777250289917
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4463827610015869
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.43562623858451843
+    },
+    {
+      "name": "Modal",
+      "score": 0.419779896736145
+    },
+    {
+      "name": "Transformer",
+      "score": 0.41966331005096436
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Social science",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

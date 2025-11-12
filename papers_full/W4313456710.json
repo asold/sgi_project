@@ -1,154 +1,257 @@
 {
-    "title": "Sequence-to-sequence translation from mass spectra to peptides with a transformer model",
-    "url": "https://openalex.org/W4313456710",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2558650980",
-            "name": "Melih YILMAZ",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2464831776",
-            "name": "William E. Fondrie",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A183753122",
-            "name": "Wout Bittremieux",
-            "affiliations": [
-                "University of Antwerp"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Carlo F. Melendez",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4316160257",
-            "name": "Rowan Nelson",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4316160258",
-            "name": "Varun Ananth",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2166897319",
-            "name": "Se-woong Oh",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128170596",
-            "name": "William Stafford Noble",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2558650980",
-            "name": "Melih YILMAZ",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2464831776",
-            "name": "William E. Fondrie",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A183753122",
-            "name": "Wout Bittremieux",
-            "affiliations": [
-                "University of Antwerp"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4316160257",
-            "name": "Rowan Nelson",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4316160258",
-            "name": "Varun Ananth",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2166897319",
-            "name": "Se-woong Oh",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2128170596",
-            "name": "William Stafford Noble",
-            "affiliations": [
-                "University of Washington"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2519691041",
-        "https://openalex.org/W2026465178",
-        "https://openalex.org/W2008117982",
-        "https://openalex.org/W2749103096",
-        "https://openalex.org/W3010076457",
-        "https://openalex.org/W3164766217",
-        "https://openalex.org/W2132164705",
-        "https://openalex.org/W2736859409",
-        "https://openalex.org/W2126571169",
-        "https://openalex.org/W2001848433",
-        "https://openalex.org/W1971887998",
-        "https://openalex.org/W1995693931",
-        "https://openalex.org/W2038615001",
-        "https://openalex.org/W2106839327",
-        "https://openalex.org/W752259472",
-        "https://openalex.org/W2979770225",
-        "https://openalex.org/W3136924813",
-        "https://openalex.org/W2768087917",
-        "https://openalex.org/W4210902118",
-        "https://openalex.org/W2888985586",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3203588026",
-        "https://openalex.org/W4281911083",
-        "https://openalex.org/W1964194772",
-        "https://openalex.org/W2053943711",
-        "https://openalex.org/W3024570138",
-        "https://openalex.org/W2474302342",
-        "https://openalex.org/W2947763854",
-        "https://openalex.org/W2143210482",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2985622460",
-        "https://openalex.org/W4312095560",
-        "https://openalex.org/W4361279726",
-        "https://openalex.org/W4389269199",
-        "https://openalex.org/W4362670833",
-        "https://openalex.org/W4390498794",
-        "https://openalex.org/W4391724170",
-        "https://openalex.org/W4392242910",
-        "https://openalex.org/W2016589492",
-        "https://openalex.org/W2993327327",
-        "https://openalex.org/W3191740987",
-        "https://openalex.org/W2011301426",
-        "https://openalex.org/W3011589104",
-        "https://openalex.org/W2024668145",
-        "https://openalex.org/W2096057003",
-        "https://openalex.org/W2289616942"
-    ],
-    "abstract": "Abstract A fundamental challenge for any mass spectrometry-based proteomics experiment is the identification of the peptide that generated each acquired tandem mass spectrum. Although approaches that leverage known peptide sequence databases are widely used and effective for well-characterized model organisms, such methods cannot detect unexpected peptides and can be impractical or impossible to apply in some settings. Thus, the ability to assign peptide sequences to the acquired tandem mass spectra without prior information— de novo peptide sequencing—is valuable for gaining biological insights for tasks including antibody sequencing, immunopeptidomics, and metaproteomics. Although many methods have been developed to address this de novo sequencing problem, it remains an outstanding challenge, in part due to the difficulty of modeling the irregular data structure of tandem mass spectra. Here, we describe Casanovo, a machine learning model that uses a transformer neural network architecture to translate the sequence of peaks in a tandem mass spectrum into the sequence of amino acids that comprise the generating peptide. We train a Casanovo model from 30 million labeled spectra and demonstrate that the model outperforms several state-of-the-art methods on a cross-species benchmark dataset. We also develop a version of Casanovo that is fine-tuned for non-enzymatic peptides. Finally, we demonstrate that Casanovo’s superior performance improves the analysis of immunopeptidomics and metaproteomics experiments and allows us to delve deeper into the dark proteome.",
-    "full_text": null
+  "title": "Sequence-to-sequence translation from mass spectra to peptides with a transformer model",
+  "url": "https://openalex.org/W4313456710",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2558650980",
+      "name": "Melih YILMAZ",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2464831776",
+      "name": "William E. Fondrie",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A183753122",
+      "name": "Wout Bittremieux",
+      "affiliations": [
+        "University of Antwerp"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Carlo F. Melendez",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4316160257",
+      "name": "Rowan Nelson",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4316160258",
+      "name": "Varun Ananth",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2166897319",
+      "name": "Se-woong Oh",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128170596",
+      "name": "William Stafford Noble",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2558650980",
+      "name": "Melih YILMAZ",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2464831776",
+      "name": "William E. Fondrie",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A183753122",
+      "name": "Wout Bittremieux",
+      "affiliations": [
+        "University of Antwerp"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4316160257",
+      "name": "Rowan Nelson",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4316160258",
+      "name": "Varun Ananth",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2166897319",
+      "name": "Se-woong Oh",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2128170596",
+      "name": "William Stafford Noble",
+      "affiliations": [
+        "University of Washington"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2519691041",
+    "https://openalex.org/W2026465178",
+    "https://openalex.org/W2008117982",
+    "https://openalex.org/W2749103096",
+    "https://openalex.org/W3010076457",
+    "https://openalex.org/W3164766217",
+    "https://openalex.org/W2132164705",
+    "https://openalex.org/W2736859409",
+    "https://openalex.org/W2126571169",
+    "https://openalex.org/W2001848433",
+    "https://openalex.org/W1971887998",
+    "https://openalex.org/W1995693931",
+    "https://openalex.org/W2038615001",
+    "https://openalex.org/W2106839327",
+    "https://openalex.org/W752259472",
+    "https://openalex.org/W2979770225",
+    "https://openalex.org/W3136924813",
+    "https://openalex.org/W2768087917",
+    "https://openalex.org/W4210902118",
+    "https://openalex.org/W2888985586",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3203588026",
+    "https://openalex.org/W4281911083",
+    "https://openalex.org/W1964194772",
+    "https://openalex.org/W2053943711",
+    "https://openalex.org/W3024570138",
+    "https://openalex.org/W2474302342",
+    "https://openalex.org/W2947763854",
+    "https://openalex.org/W2143210482",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2985622460",
+    "https://openalex.org/W4312095560",
+    "https://openalex.org/W4361279726",
+    "https://openalex.org/W4389269199",
+    "https://openalex.org/W4362670833",
+    "https://openalex.org/W4390498794",
+    "https://openalex.org/W4391724170",
+    "https://openalex.org/W4392242910",
+    "https://openalex.org/W2016589492",
+    "https://openalex.org/W2993327327",
+    "https://openalex.org/W3191740987",
+    "https://openalex.org/W2011301426",
+    "https://openalex.org/W3011589104",
+    "https://openalex.org/W2024668145",
+    "https://openalex.org/W2096057003",
+    "https://openalex.org/W2289616942"
+  ],
+  "abstract": "Abstract A fundamental challenge for any mass spectrometry-based proteomics experiment is the identification of the peptide that generated each acquired tandem mass spectrum. Although approaches that leverage known peptide sequence databases are widely used and effective for well-characterized model organisms, such methods cannot detect unexpected peptides and can be impractical or impossible to apply in some settings. Thus, the ability to assign peptide sequences to the acquired tandem mass spectra without prior information— de novo peptide sequencing—is valuable for gaining biological insights for tasks including antibody sequencing, immunopeptidomics, and metaproteomics. Although many methods have been developed to address this de novo sequencing problem, it remains an outstanding challenge, in part due to the difficulty of modeling the irregular data structure of tandem mass spectra. Here, we describe Casanovo, a machine learning model that uses a transformer neural network architecture to translate the sequence of peaks in a tandem mass spectrum into the sequence of amino acids that comprise the generating peptide. We train a Casanovo model from 30 million labeled spectra and demonstrate that the model outperforms several state-of-the-art methods on a cross-species benchmark dataset. We also develop a version of Casanovo that is fine-tuned for non-enzymatic peptides. Finally, we demonstrate that Casanovo’s superior performance improves the analysis of immunopeptidomics and metaproteomics experiments and allows us to delve deeper into the dark proteome.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5922834277153015
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.588808536529541
+    },
+    {
+      "name": "Tandem mass spectrometry",
+      "score": 0.5878363251686096
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.567196249961853
+    },
+    {
+      "name": "Proteogenomics",
+      "score": 0.5493570566177368
+    },
+    {
+      "name": "Peptide",
+      "score": 0.5285483598709106
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.47956913709640503
+    },
+    {
+      "name": "Metaproteomics",
+      "score": 0.4788244068622589
+    },
+    {
+      "name": "Proteome",
+      "score": 0.45730453729629517
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4383120536804199
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.42268872261047363
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4179615378379822
+    },
+    {
+      "name": "Proteomics",
+      "score": 0.3935122489929199
+    },
+    {
+      "name": "Mass spectrometry",
+      "score": 0.38957011699676514
+    },
+    {
+      "name": "Biology",
+      "score": 0.3122496008872986
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.2675182521343231
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.2620881199836731
+    },
+    {
+      "name": "Genomics",
+      "score": 0.14601406455039978
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.12220296263694763
+    },
+    {
+      "name": "Genome",
+      "score": 0.11734089255332947
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10808232426643372
+    },
+    {
+      "name": "Gene",
+      "score": 0.07073330879211426
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Chromatography",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

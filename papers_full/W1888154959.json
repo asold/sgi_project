@@ -1,66 +1,133 @@
 {
-    "title": "An RNN-based Music Language Model for Improving Automatic Music Transcription",
-    "url": "https://openalex.org/W1888154959",
-    "year": 2014,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2059565933",
-            "name": "Siddharth Sigtia",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4223554910",
-            "name": "Benetos, Emmanouil",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2059384690",
-            "name": "Srikanth Cherla",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A116794489",
-            "name": "Tillman Weyde",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4286990719",
-            "name": "Garcez, Artur S. d'Avila",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2262366312",
-            "name": "Dixon, Simon",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2152937398",
-        "https://openalex.org/W2150355110",
-        "https://openalex.org/W2149368536",
-        "https://openalex.org/W2129638017",
-        "https://openalex.org/W1408639475",
-        "https://openalex.org/W2135151673",
-        "https://openalex.org/W2049633694",
-        "https://openalex.org/W1532956126",
-        "https://openalex.org/W1967442998",
-        "https://openalex.org/W2465080433",
-        "https://openalex.org/W2962968839",
-        "https://openalex.org/W2108563286",
-        "https://openalex.org/W1560013842",
-        "https://openalex.org/W2135181320",
-        "https://openalex.org/W2162911105",
-        "https://openalex.org/W2135341757",
-        "https://openalex.org/W2105143211",
-        "https://openalex.org/W2107878631",
-        "https://openalex.org/W2107328928",
-        "https://openalex.org/W2295460171",
-        "https://openalex.org/W2150354929",
-        "https://openalex.org/W1902027874",
-        "https://openalex.org/W1607142029",
-        "https://openalex.org/W2105343238"
-    ],
-    "abstract": "In this paper, we investigate the use of Music Language Models (MLMs) for improving Automatic Music Transcription performance. The MLMs are trained on sequences of symbolic polyphonic music from the Nottingham dataset. We train Recurrent Neural Network (RNN)-based models, as they are capable of capturing complex temporal structure present in symbolic music data. Similar to the function of language models in automatic speech recognition, we use the MLMs to generate a prior probability for the occurrence of a sequence. The acoustic AMT model is based on probabilistic latent component analysis, and prior information from the MLM is incorporated into the transcription framework using Dirichlet priors. We test our hybrid models on a dataset of multiple-instrument polyphonic music and report a significant 3% improvement in terms of F-measure, when compared to using an acoustic-only model.",
-    "full_text": null
+  "title": "An RNN-based Music Language Model for Improving Automatic Music Transcription",
+  "url": "https://openalex.org/W1888154959",
+  "year": 2014,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2059565933",
+      "name": "Siddharth Sigtia",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4223554910",
+      "name": "Benetos, Emmanouil",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2059384690",
+      "name": "Srikanth Cherla",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A116794489",
+      "name": "Tillman Weyde",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4286990719",
+      "name": "Garcez, Artur S. d'Avila",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2262366312",
+      "name": "Dixon, Simon",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2152937398",
+    "https://openalex.org/W2150355110",
+    "https://openalex.org/W2149368536",
+    "https://openalex.org/W2129638017",
+    "https://openalex.org/W1408639475",
+    "https://openalex.org/W2135151673",
+    "https://openalex.org/W2049633694",
+    "https://openalex.org/W1532956126",
+    "https://openalex.org/W1967442998",
+    "https://openalex.org/W2465080433",
+    "https://openalex.org/W2962968839",
+    "https://openalex.org/W2108563286",
+    "https://openalex.org/W1560013842",
+    "https://openalex.org/W2135181320",
+    "https://openalex.org/W2162911105",
+    "https://openalex.org/W2135341757",
+    "https://openalex.org/W2105143211",
+    "https://openalex.org/W2107878631",
+    "https://openalex.org/W2107328928",
+    "https://openalex.org/W2295460171",
+    "https://openalex.org/W2150354929",
+    "https://openalex.org/W1902027874",
+    "https://openalex.org/W1607142029",
+    "https://openalex.org/W2105343238"
+  ],
+  "abstract": "In this paper, we investigate the use of Music Language Models (MLMs) for improving Automatic Music Transcription performance. The MLMs are trained on sequences of symbolic polyphonic music from the Nottingham dataset. We train Recurrent Neural Network (RNN)-based models, as they are capable of capturing complex temporal structure present in symbolic music data. Similar to the function of language models in automatic speech recognition, we use the MLMs to generate a prior probability for the occurrence of a sequence. The acoustic AMT model is based on probabilistic latent component analysis, and prior information from the MLM is incorporated into the transcription framework using Dirichlet priors. We test our hybrid models on a dataset of multiple-instrument polyphonic music and report a significant 3% improvement in terms of F-measure, when compared to using an acoustic-only model.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7100959420204163
+    },
+    {
+      "name": "Language model",
+      "score": 0.6756983399391174
+    },
+    {
+      "name": "Probabilistic logic",
+      "score": 0.6286197900772095
+    },
+    {
+      "name": "Transcription (linguistics)",
+      "score": 0.620888352394104
+    },
+    {
+      "name": "Polyphony",
+      "score": 0.597421407699585
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.5929893255233765
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5399117469787598
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5146304368972778
+    },
+    {
+      "name": "Prior probability",
+      "score": 0.48886674642562866
+    },
+    {
+      "name": "Graphical model",
+      "score": 0.4204576015472412
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.2736365795135498
+    },
+    {
+      "name": "Bayesian probability",
+      "score": 0.1263275146484375
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.08275496959686279
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Acoustics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

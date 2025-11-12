@@ -1,71 +1,122 @@
 {
-    "title": "Stroke Diagnosis and Prediction Tool Using ChatGLM: Development and Validation Study",
-    "url": "https://openalex.org/W4407953428",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100363397",
-            "name": "Xiao-Wei Song",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2103656757",
-            "name": "Jiayi Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2110674222",
-            "name": "Feifei He",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2028666938",
-            "name": "Wei Yin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2429660940",
-            "name": "Weizhi Ma",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2099710249",
-            "name": "Jian Wu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2488953036",
-        "https://openalex.org/W4322758832",
-        "https://openalex.org/W2921524827",
-        "https://openalex.org/W4289518739",
-        "https://openalex.org/W2159233098",
-        "https://openalex.org/W2139621750",
-        "https://openalex.org/W3213988304",
-        "https://openalex.org/W4316468100",
-        "https://openalex.org/W4392709487",
-        "https://openalex.org/W4390904348",
-        "https://openalex.org/W3157717986",
-        "https://openalex.org/W4386818252",
-        "https://openalex.org/W2892773404",
-        "https://openalex.org/W3080810277",
-        "https://openalex.org/W3178799865",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W4392193048",
-        "https://openalex.org/W2982303713",
-        "https://openalex.org/W2991537762",
-        "https://openalex.org/W2167541413",
-        "https://openalex.org/W4281655143",
-        "https://openalex.org/W2105703776",
-        "https://openalex.org/W4385778466",
-        "https://openalex.org/W4385246805",
-        "https://openalex.org/W3022142852",
-        "https://openalex.org/W4386572187",
-        "https://openalex.org/W3204150987",
-        "https://openalex.org/W2081879829",
-        "https://openalex.org/W4210934379",
-        "https://openalex.org/W2090830903"
-    ],
-    "abstract": "Background Stroke is a globally prevalent disease that imposes a significant burden on health care systems and national economies. Accurate and rapid stroke diagnosis can substantially increase reperfusion rates, mitigate disability, and reduce mortality. However, there are considerable discrepancies in the diagnosis and treatment of acute stroke. Objective The aim of this study is to develop and validate a stroke diagnosis and prediction tool using ChatGLM-6B, which uses free-text information from electronic health records in conjunction with noncontrast computed tomography (NCCT) reports to enhance stroke detection and treatment. Methods A large language model (LLM) using ChatGLM-6B was proposed to facilitate stroke diagnosis by identifying optimal input combinations, using external tools, and applying instruction tuning and low-rank adaptation (LoRA) techniques. A dataset containing details of 1885 patients with and those without stroke from 2016 to 2024 was used for training and internal validation; another 335 patients from two hospitals were used as an external test set, including 230 patients from the training hospital but admitted at different periods, and 105 patients from another hospital. Results The LLM, which is based on clinical notes and NCCT, demonstrates exceptionally high accuracy in stroke diagnosis, achieving 99% in the internal validation dataset and 95.5% and 79.1% in two external test cohorts. It effectively distinguishes between ischemia and hemorrhage, with an accuracy of 100% in the validation dataset and 99.1% and 97.1% in the other test cohorts. In addition, it identifies large vessel occlusions (LVO) with an accuracy of 80% in the validation dataset and 88.6% and 83.3% in the other test cohorts. Furthermore, it screens patients eligible for intravenous thrombolysis (IVT) with an accuracy of 89.4% in the validation dataset and 60% and 80% in the other test cohorts. Conclusions We developed an LLM that leverages clinical text and NCCT to identify strokes and guide recanalization therapy. While our results necessitate validation through widespread deployment, they hold the potential to enhance stroke identification and reduce reperfusion time.",
-    "full_text": null
+  "title": "Stroke Diagnosis and Prediction Tool Using ChatGLM: Development and Validation Study",
+  "url": "https://openalex.org/W4407953428",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100363397",
+      "name": "Xiao-Wei Song",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2103656757",
+      "name": "Jiayi Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2110674222",
+      "name": "Feifei He",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2028666938",
+      "name": "Wei Yin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2429660940",
+      "name": "Weizhi Ma",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2099710249",
+      "name": "Jian Wu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2488953036",
+    "https://openalex.org/W4322758832",
+    "https://openalex.org/W2921524827",
+    "https://openalex.org/W4289518739",
+    "https://openalex.org/W2159233098",
+    "https://openalex.org/W2139621750",
+    "https://openalex.org/W3213988304",
+    "https://openalex.org/W4316468100",
+    "https://openalex.org/W4392709487",
+    "https://openalex.org/W4390904348",
+    "https://openalex.org/W3157717986",
+    "https://openalex.org/W4386818252",
+    "https://openalex.org/W2892773404",
+    "https://openalex.org/W3080810277",
+    "https://openalex.org/W3178799865",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W4392193048",
+    "https://openalex.org/W2982303713",
+    "https://openalex.org/W2991537762",
+    "https://openalex.org/W2167541413",
+    "https://openalex.org/W4281655143",
+    "https://openalex.org/W2105703776",
+    "https://openalex.org/W4385778466",
+    "https://openalex.org/W4385246805",
+    "https://openalex.org/W3022142852",
+    "https://openalex.org/W4386572187",
+    "https://openalex.org/W3204150987",
+    "https://openalex.org/W2081879829",
+    "https://openalex.org/W4210934379",
+    "https://openalex.org/W2090830903"
+  ],
+  "abstract": "Background Stroke is a globally prevalent disease that imposes a significant burden on health care systems and national economies. Accurate and rapid stroke diagnosis can substantially increase reperfusion rates, mitigate disability, and reduce mortality. However, there are considerable discrepancies in the diagnosis and treatment of acute stroke. Objective The aim of this study is to develop and validate a stroke diagnosis and prediction tool using ChatGLM-6B, which uses free-text information from electronic health records in conjunction with noncontrast computed tomography (NCCT) reports to enhance stroke detection and treatment. Methods A large language model (LLM) using ChatGLM-6B was proposed to facilitate stroke diagnosis by identifying optimal input combinations, using external tools, and applying instruction tuning and low-rank adaptation (LoRA) techniques. A dataset containing details of 1885 patients with and those without stroke from 2016 to 2024 was used for training and internal validation; another 335 patients from two hospitals were used as an external test set, including 230 patients from the training hospital but admitted at different periods, and 105 patients from another hospital. Results The LLM, which is based on clinical notes and NCCT, demonstrates exceptionally high accuracy in stroke diagnosis, achieving 99% in the internal validation dataset and 95.5% and 79.1% in two external test cohorts. It effectively distinguishes between ischemia and hemorrhage, with an accuracy of 100% in the validation dataset and 99.1% and 97.1% in the other test cohorts. In addition, it identifies large vessel occlusions (LVO) with an accuracy of 80% in the validation dataset and 88.6% and 83.3% in the other test cohorts. Furthermore, it screens patients eligible for intravenous thrombolysis (IVT) with an accuracy of 89.4% in the validation dataset and 60% and 80% in the other test cohorts. Conclusions We developed an LLM that leverages clinical text and NCCT to identify strokes and guide recanalization therapy. While our results necessitate validation through widespread deployment, they hold the potential to enhance stroke identification and reduce reperfusion time.",
+  "full_text": null,
+  "topic": "Stroke (engine)",
+  "concepts": [
+    {
+      "name": "Stroke (engine)",
+      "score": 0.7554761171340942
+    },
+    {
+      "name": "Medicine",
+      "score": 0.6711831092834473
+    },
+    {
+      "name": "Health care",
+      "score": 0.46273717284202576
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.45729103684425354
+    },
+    {
+      "name": "Emergency medicine",
+      "score": 0.4039183557033539
+    },
+    {
+      "name": "Physical therapy",
+      "score": 0.336803138256073
+    },
+    {
+      "name": "Economic growth",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

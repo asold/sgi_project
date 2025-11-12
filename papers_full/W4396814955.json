@@ -1,113 +1,172 @@
 {
-    "title": "Optimizing Distributed Training on Frontier for Large Language Models",
-    "url": "https://openalex.org/W4396814955",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2901864316",
-            "name": "Sajal Dash",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4365277700",
-            "name": "Isaac R. Lyngaas",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115313720",
-            "name": "Junqi Yin",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104684343",
-            "name": "Xiao Wang",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2971987009",
-            "name": "Romain Égelé",
-            "affiliations": [
-                "Université Paris-Saclay"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2765151197",
-            "name": "J. Austin Ellis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A250691336",
-            "name": "Matthias Maiterth",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2164093174",
-            "name": "Guojing Cong",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100649129",
-            "name": "Feiyi Wang",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A778918145",
-            "name": "Prasanna Balaprakash",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6772383348",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4308760226",
-        "https://openalex.org/W6811340617",
-        "https://openalex.org/W6810296985",
-        "https://openalex.org/W6810220367",
-        "https://openalex.org/W4388697414",
-        "https://openalex.org/W4404573785",
-        "https://openalex.org/W4380885974",
-        "https://openalex.org/W3204998121",
-        "https://openalex.org/W2991040477",
-        "https://openalex.org/W2969388332",
-        "https://openalex.org/W3206832494",
-        "https://openalex.org/W3129831491",
-        "https://openalex.org/W4386768656",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6838322825",
-        "https://openalex.org/W6854308872",
-        "https://openalex.org/W2913525628",
-        "https://openalex.org/W3132349482",
-        "https://openalex.org/W3209285784",
-        "https://openalex.org/W4387030238",
-        "https://openalex.org/W6737947904",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W4384648639",
-        "https://openalex.org/W3001279689",
-        "https://openalex.org/W4225591000",
-        "https://openalex.org/W4311642023",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4281758439",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4229005866",
-        "https://openalex.org/W4221167110"
-    ],
-    "abstract": "Large language models (LLMs) have demonstrated remarkable success as foundational models, benefiting various downstream applications through fine-tuning. Loss scaling studies have demonstrated the superior performance of larger LLMs compared to their smaller counterparts. Nevertheless, training LLMs with billions of parameters poses significant challenges and requires considerable computational resources. For example, training a one trillion parameter GPT-style model on 20 trillion tokens requires a staggering 120 million exaflops. This research explores efficient distributed training strategies to extract this computation from Frontier, the world's first exascale supercomputer. We enable and investigate various model and data parallel training techniques, such as tensor parallelism, pipeline parallelism, and sharded data parallelism, to facilitate training a trillion-parameter model on Frontier. We empirically assess these techniques and their associated parameters to determine their impact on memory footprint, communication latency, and GPU's computational efficiency. We analyze the complex interplay among these techniques and find a strategy to combine them to achieve high throughput through hyperparameter tuning. We have identified efficient strategies for training large LLMs of varying sizes through empirical analysis and hyperparameter tuning. For 22 Billion, 175 Billion, and 1 Trillion parameters, we achieved GPU throughputs of 38.38%, 36.14%, and 31.96%, respectively. For the training of the 175 Billion parameter model and the 1 Trillion parameter model, we achieved 100% weak scaling efficiency on 1024 and 3072 Mi250X GPUs, respectively. We also achieved strong scaling efficiencies of 89% and 87% for these two models. We trained these models only tens of iterations instead of training till completion.",
-    "full_text": null
+  "title": "Optimizing Distributed Training on Frontier for Large Language Models",
+  "url": "https://openalex.org/W4396814955",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2901864316",
+      "name": "Sajal Dash",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4365277700",
+      "name": "Isaac R. Lyngaas",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115313720",
+      "name": "Junqi Yin",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104684343",
+      "name": "Xiao Wang",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2971987009",
+      "name": "Romain Égelé",
+      "affiliations": [
+        "Université Paris-Saclay"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2765151197",
+      "name": "J. Austin Ellis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A250691336",
+      "name": "Matthias Maiterth",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2164093174",
+      "name": "Guojing Cong",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100649129",
+      "name": "Feiyi Wang",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A778918145",
+      "name": "Prasanna Balaprakash",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6772383348",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4308760226",
+    "https://openalex.org/W6811340617",
+    "https://openalex.org/W6810296985",
+    "https://openalex.org/W6810220367",
+    "https://openalex.org/W4388697414",
+    "https://openalex.org/W4404573785",
+    "https://openalex.org/W4380885974",
+    "https://openalex.org/W3204998121",
+    "https://openalex.org/W2991040477",
+    "https://openalex.org/W2969388332",
+    "https://openalex.org/W3206832494",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W4386768656",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6838322825",
+    "https://openalex.org/W6854308872",
+    "https://openalex.org/W2913525628",
+    "https://openalex.org/W3132349482",
+    "https://openalex.org/W3209285784",
+    "https://openalex.org/W4387030238",
+    "https://openalex.org/W6737947904",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W4384648639",
+    "https://openalex.org/W3001279689",
+    "https://openalex.org/W4225591000",
+    "https://openalex.org/W4311642023",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4281758439",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4229005866",
+    "https://openalex.org/W4221167110"
+  ],
+  "abstract": "Large language models (LLMs) have demonstrated remarkable success as foundational models, benefiting various downstream applications through fine-tuning. Loss scaling studies have demonstrated the superior performance of larger LLMs compared to their smaller counterparts. Nevertheless, training LLMs with billions of parameters poses significant challenges and requires considerable computational resources. For example, training a one trillion parameter GPT-style model on 20 trillion tokens requires a staggering 120 million exaflops. This research explores efficient distributed training strategies to extract this computation from Frontier, the world's first exascale supercomputer. We enable and investigate various model and data parallel training techniques, such as tensor parallelism, pipeline parallelism, and sharded data parallelism, to facilitate training a trillion-parameter model on Frontier. We empirically assess these techniques and their associated parameters to determine their impact on memory footprint, communication latency, and GPU's computational efficiency. We analyze the complex interplay among these techniques and find a strategy to combine them to achieve high throughput through hyperparameter tuning. We have identified efficient strategies for training large LLMs of varying sizes through empirical analysis and hyperparameter tuning. For 22 Billion, 175 Billion, and 1 Trillion parameters, we achieved GPU throughputs of 38.38%, 36.14%, and 31.96%, respectively. For the training of the 175 Billion parameter model and the 1 Trillion parameter model, we achieved 100% weak scaling efficiency on 1024 and 3072 Mi250X GPUs, respectively. We also achieved strong scaling efficiencies of 89% and 87% for these two models. We trained these models only tens of iterations instead of training till completion.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7616797685623169
+    },
+    {
+      "name": "Supercomputer",
+      "score": 0.6506116390228271
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.607612669467926
+    },
+    {
+      "name": "Scaling",
+      "score": 0.5433609485626221
+    },
+    {
+      "name": "Frontier",
+      "score": 0.467395156621933
+    },
+    {
+      "name": "Parallelism (grammar)",
+      "score": 0.4456435739994049
+    },
+    {
+      "name": "Data parallelism",
+      "score": 0.41708874702453613
+    },
+    {
+      "name": "Training (meteorology)",
+      "score": 0.41570496559143066
+    },
+    {
+      "name": "Meteorology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "History",
+      "score": 0.0
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

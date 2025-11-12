@@ -1,75 +1,106 @@
 {
-    "title": "ION: Navigating the HPC I/O Optimization Journey using Large Language Models",
-    "url": "https://openalex.org/W4400081687",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4320246299",
-            "name": "Chris Egersdoerfer",
-            "affiliations": [
-                "University of North Carolina at Charlotte"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5062225523",
-            "name": "Arnav Sareen",
-            "affiliations": [
-                "University of North Carolina at Charlotte"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2674348038",
-            "name": "Jean Luca Bez",
-            "affiliations": [
-                "Lawrence Berkeley National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1901844092",
-            "name": "Suren Byna",
-            "affiliations": [
-                "The Ohio State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110593993",
-            "name": "Dong Dai",
-            "affiliations": [
-                "University of North Carolina at Charlotte"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2024291555",
-        "https://openalex.org/W2106913893",
-        "https://openalex.org/W4320061925",
-        "https://openalex.org/W4200488498",
-        "https://openalex.org/W2021171338",
-        "https://openalex.org/W4320060562",
-        "https://openalex.org/W4385621806",
-        "https://openalex.org/W6940710577",
-        "https://openalex.org/W6967337556",
-        "https://openalex.org/W2048800894",
-        "https://openalex.org/W2952046647",
-        "https://openalex.org/W4306894812",
-        "https://openalex.org/W2156077349",
-        "https://openalex.org/W2766914978",
-        "https://openalex.org/W2167208373",
-        "https://openalex.org/W4388581234",
-        "https://openalex.org/W4382498938",
-        "https://openalex.org/W4387242229",
-        "https://openalex.org/W4388581149",
-        "https://openalex.org/W4399364678",
-        "https://openalex.org/W2042948586",
-        "https://openalex.org/W2105605904",
-        "https://openalex.org/W3046624992",
-        "https://openalex.org/W2003842249",
-        "https://openalex.org/W2899477092",
-        "https://openalex.org/W4385570036",
-        "https://openalex.org/W3185152627",
-        "https://openalex.org/W4384705386",
-        "https://openalex.org/W2909303936"
-    ],
-    "abstract": "Effectively leveraging the complex software and hardware I/O stacks of HPC systems to deliver needed I/O performance has been a challenging task for domain scientists. To identify and address I/O issues in their applications, scientists largely rely on I/O experts to analyze the recorded I/O traces of their applications and provide insights into the potential issues. However, due to the limited number of I/O experts and the growing demand for data-intensive applications across the wide spectrum of sciences, inaccessibility has become a major bottleneck hindering scientists from maximizing their productivity. Inspired by the recent rapid progress of large language models (LLMs), in this work we propose IO Navigator (ION), an LLM-based framework that takes a recorded I/O trace of an application as input and leverages the in-context learning, chain-of-thought, and code generation capabilities of LLMs to comprehensively analyze the I/O trace and provide diagnosis of potential I/O issues. Similar to an I/O expert, ION provides detailed justifications for the diagnosis and an interactive interface for scientists to ask detailed questions about the diagnosis. We illustrate ION's applicability by assessing it on a set of controlled I/O traces generated with different I/O issues. We also demonstrate that ION can match state-of-the-art I/O optimization tools and provide more insightful and adaptive diagnoses for real applications. We believe ION, with its full capabilities, has the potential to become a powerful tool for scientists to navigate through complex I/O subsystems in the future.",
-    "full_text": null
+  "title": "ION: Navigating the HPC I/O Optimization Journey using Large Language Models",
+  "url": "https://openalex.org/W4400081687",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4320246299",
+      "name": "Chris Egersdoerfer",
+      "affiliations": [
+        "University of North Carolina at Charlotte"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5062225523",
+      "name": "Arnav Sareen",
+      "affiliations": [
+        "University of North Carolina at Charlotte"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2674348038",
+      "name": "Jean Luca Bez",
+      "affiliations": [
+        "Lawrence Berkeley National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1901844092",
+      "name": "Suren Byna",
+      "affiliations": [
+        "The Ohio State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110593993",
+      "name": "Dong Dai",
+      "affiliations": [
+        "University of North Carolina at Charlotte"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2024291555",
+    "https://openalex.org/W2106913893",
+    "https://openalex.org/W4320061925",
+    "https://openalex.org/W4200488498",
+    "https://openalex.org/W2021171338",
+    "https://openalex.org/W4320060562",
+    "https://openalex.org/W4385621806",
+    "https://openalex.org/W6940710577",
+    "https://openalex.org/W6967337556",
+    "https://openalex.org/W2048800894",
+    "https://openalex.org/W2952046647",
+    "https://openalex.org/W4306894812",
+    "https://openalex.org/W2156077349",
+    "https://openalex.org/W2766914978",
+    "https://openalex.org/W2167208373",
+    "https://openalex.org/W4388581234",
+    "https://openalex.org/W4382498938",
+    "https://openalex.org/W4387242229",
+    "https://openalex.org/W4388581149",
+    "https://openalex.org/W4399364678",
+    "https://openalex.org/W2042948586",
+    "https://openalex.org/W2105605904",
+    "https://openalex.org/W3046624992",
+    "https://openalex.org/W2003842249",
+    "https://openalex.org/W2899477092",
+    "https://openalex.org/W4385570036",
+    "https://openalex.org/W3185152627",
+    "https://openalex.org/W4384705386",
+    "https://openalex.org/W2909303936"
+  ],
+  "abstract": "Effectively leveraging the complex software and hardware I/O stacks of HPC systems to deliver needed I/O performance has been a challenging task for domain scientists. To identify and address I/O issues in their applications, scientists largely rely on I/O experts to analyze the recorded I/O traces of their applications and provide insights into the potential issues. However, due to the limited number of I/O experts and the growing demand for data-intensive applications across the wide spectrum of sciences, inaccessibility has become a major bottleneck hindering scientists from maximizing their productivity. Inspired by the recent rapid progress of large language models (LLMs), in this work we propose IO Navigator (ION), an LLM-based framework that takes a recorded I/O trace of an application as input and leverages the in-context learning, chain-of-thought, and code generation capabilities of LLMs to comprehensively analyze the I/O trace and provide diagnosis of potential I/O issues. Similar to an I/O expert, ION provides detailed justifications for the diagnosis and an interactive interface for scientists to ask detailed questions about the diagnosis. We illustrate ION's applicability by assessing it on a set of controlled I/O traces generated with different I/O issues. We also demonstrate that ION can match state-of-the-art I/O optimization tools and provide more insightful and adaptive diagnoses for real applications. We believe ION, with its full capabilities, has the potential to become a powerful tool for scientists to navigate through complex I/O subsystems in the future.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6519538760185242
+    },
+    {
+      "name": "Ion",
+      "score": 0.47208306193351746
+    },
+    {
+      "name": "Programming language",
+      "score": 0.39711135625839233
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.3482391834259033
+    },
+    {
+      "name": "Computer architecture",
+      "score": 0.320901095867157
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.17416760325431824
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

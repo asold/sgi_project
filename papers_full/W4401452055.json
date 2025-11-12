@@ -1,77 +1,180 @@
 {
-    "title": "Transformers and large language models are efficient feature extractors for electronic health record studies",
-    "url": "https://openalex.org/W4401452055",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2482481020",
-            "name": "Kevin Yuan",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2582721644",
-            "name": "Chang Ho Yoon",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2808482189",
-            "name": "Qing-Ze Gu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2603508690",
-            "name": "Henry Munby",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2098148676",
-            "name": "Sarah Walker",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109825558",
-            "name": "Tingting Zhu",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2236436133",
-            "name": "David Eyre",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2809024468",
-        "https://openalex.org/W4280622721",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W4379769651",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W2805881292",
-        "https://openalex.org/W2101234009",
-        "https://openalex.org/W2980282514",
-        "https://openalex.org/W4387561528",
-        "https://openalex.org/W2997101676",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2101082552",
-        "https://openalex.org/W2095754613",
-        "https://openalex.org/W2295598076",
-        "https://openalex.org/W2755626276",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W3083892815",
-        "https://openalex.org/W3177265267",
-        "https://openalex.org/W2991490108",
-        "https://openalex.org/W2755089631",
-        "https://openalex.org/W2925863688",
-        "https://openalex.org/W4288347855"
-    ],
-    "abstract": "<title>Abstract</title> While unstructured free-text data is abundant in electronic health records, challenges in accurate and scalable information extraction often result in a preference for incorporating information from less specific clinical codes instead. We investigate the efficacy of modern natural language processing methods (NLP) and large language models (LLMs) in supervised and few-shot scenarios to extract features from 938,150 hospital antibiotic prescriptions from Oxfordshire, UK. A subset of 4000 most frequent indications for antibiotic use was labelled by clinical researchers into 11 categories, describing the infection source/clinical syndrome, for model training. On separate internal (n = 2000) and external test datasets (n = 2000), the fine-tuned domain-specific Bio + Clinical BERT model averaged an F1 score of 0.97 and 0.98 respectively across the classes and outperformed traditional regex (F1 = 0.71 and 0.74) and n-grams/XGBoost (F1 = 0.86 and 0.84). A few-shot OpenAI GPT4 model achieved F1 scores of 0.71 and 0.86 without using labelled training data and a fine-tuned GPT3.5 model F1 scores of 0.95 and 0.97. Finetuned BERT-based transformer models currently outperform LLMs for structured tasks, while few shot LLMs match the performance of traditional NLP without the need for labelling. Comparing infection sources extracted from ICD10 codes to those parsed from free-text indications, free-text indications revealed 31% more specific infection sources. With their high accuracy, modern transformer-based models have the potential to be used widely throughout medicine to structure free-text records, providing more granular information than clinical codes, facilitating better research and patient care.",
-    "full_text": null
+  "title": "Transformers and large language models are efficient feature extractors for electronic health record studies",
+  "url": "https://openalex.org/W4401452055",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2482481020",
+      "name": "Kevin Yuan",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2582721644",
+      "name": "Chang Ho Yoon",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2808482189",
+      "name": "Qing-Ze Gu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2603508690",
+      "name": "Henry Munby",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2098148676",
+      "name": "Sarah Walker",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109825558",
+      "name": "Tingting Zhu",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2236436133",
+      "name": "David Eyre",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2809024468",
+    "https://openalex.org/W4280622721",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W4379769651",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W2805881292",
+    "https://openalex.org/W2101234009",
+    "https://openalex.org/W2980282514",
+    "https://openalex.org/W4387561528",
+    "https://openalex.org/W2997101676",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2101082552",
+    "https://openalex.org/W2095754613",
+    "https://openalex.org/W2295598076",
+    "https://openalex.org/W2755626276",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W3083892815",
+    "https://openalex.org/W3177265267",
+    "https://openalex.org/W2991490108",
+    "https://openalex.org/W2755089631",
+    "https://openalex.org/W2925863688",
+    "https://openalex.org/W4288347855"
+  ],
+  "abstract": "<title>Abstract</title> While unstructured free-text data is abundant in electronic health records, challenges in accurate and scalable information extraction often result in a preference for incorporating information from less specific clinical codes instead. We investigate the efficacy of modern natural language processing methods (NLP) and large language models (LLMs) in supervised and few-shot scenarios to extract features from 938,150 hospital antibiotic prescriptions from Oxfordshire, UK. A subset of 4000 most frequent indications for antibiotic use was labelled by clinical researchers into 11 categories, describing the infection source/clinical syndrome, for model training. On separate internal (n = 2000) and external test datasets (n = 2000), the fine-tuned domain-specific Bio + Clinical BERT model averaged an F1 score of 0.97 and 0.98 respectively across the classes and outperformed traditional regex (F1 = 0.71 and 0.74) and n-grams/XGBoost (F1 = 0.86 and 0.84). A few-shot OpenAI GPT4 model achieved F1 scores of 0.71 and 0.86 without using labelled training data and a fine-tuned GPT3.5 model F1 scores of 0.95 and 0.97. Finetuned BERT-based transformer models currently outperform LLMs for structured tasks, while few shot LLMs match the performance of traditional NLP without the need for labelling. Comparing infection sources extracted from ICD10 codes to those parsed from free-text indications, free-text indications revealed 31% more specific infection sources. With their high accuracy, modern transformer-based models have the potential to be used widely throughout medicine to structure free-text records, providing more granular information than clinical codes, facilitating better research and patient care.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6501026749610901
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6331019401550293
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6281200647354126
+    },
+    {
+      "name": "Health records",
+      "score": 0.6159161329269409
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5985541939735413
+    },
+    {
+      "name": "Text messaging",
+      "score": 0.5791774988174438
+    },
+    {
+      "name": "Scalability",
+      "score": 0.5602319836616516
+    },
+    {
+      "name": "F1 score",
+      "score": 0.5554884672164917
+    },
+    {
+      "name": "Parsing",
+      "score": 0.5114642381668091
+    },
+    {
+      "name": "Language model",
+      "score": 0.49976491928100586
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.46291783452033997
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.452716201543808
+    },
+    {
+      "name": "Biomedical text mining",
+      "score": 0.42496049404144287
+    },
+    {
+      "name": "Natural language",
+      "score": 0.4118727743625641
+    },
+    {
+      "name": "Text mining",
+      "score": 0.3543049991130829
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.13542917370796204
+    },
+    {
+      "name": "Health care",
+      "score": 0.11676666140556335
+    },
+    {
+      "name": "Database",
+      "score": 0.11516419053077698
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Economic growth",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

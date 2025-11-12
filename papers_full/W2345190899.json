@@ -1,126 +1,189 @@
 {
-    "title": "Two Efficient Lattice Rescoring Methods Using Recurrent Neural Network Language Models",
-    "url": "https://openalex.org/W2345190899",
-    "year": 2016,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2988840627",
-            "name": "Liu X",
-            "affiliations": [
-                "Chinese University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2985170485",
-            "name": "Chen, X.",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2247379936",
-            "name": "Wang Y",
-            "affiliations": [
-                "University of Cambridge",
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Gales, MJF",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Woodland, PC",
-            "affiliations": [
-                "University of Cambridge"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2116625254",
-        "https://openalex.org/W2016185147",
-        "https://openalex.org/W2145431022",
-        "https://openalex.org/W2008398646",
-        "https://openalex.org/W6713366003",
-        "https://openalex.org/W6696955338",
-        "https://openalex.org/W2081323593",
-        "https://openalex.org/W1494108583",
-        "https://openalex.org/W6694492165",
-        "https://openalex.org/W6601546654",
-        "https://openalex.org/W2144790469",
-        "https://openalex.org/W1498436455",
-        "https://openalex.org/W1970689298",
-        "https://openalex.org/W6680532216",
-        "https://openalex.org/W6685327712",
-        "https://openalex.org/W6713561562",
-        "https://openalex.org/W6712188703",
-        "https://openalex.org/W6678720029",
-        "https://openalex.org/W1985258458",
-        "https://openalex.org/W2091981305",
-        "https://openalex.org/W2026149468",
-        "https://openalex.org/W2094971681",
-        "https://openalex.org/W2002342963",
-        "https://openalex.org/W1488980900",
-        "https://openalex.org/W2121522339",
-        "https://openalex.org/W2147768505",
-        "https://openalex.org/W6678292227",
-        "https://openalex.org/W2165712214",
-        "https://openalex.org/W2161199684",
-        "https://openalex.org/W2058695628",
-        "https://openalex.org/W2127049133",
-        "https://openalex.org/W6713893285",
-        "https://openalex.org/W6713001283",
-        "https://openalex.org/W6691642504",
-        "https://openalex.org/W6637698695",
-        "https://openalex.org/W2251682575",
-        "https://openalex.org/W2066378046",
-        "https://openalex.org/W2594610113",
-        "https://openalex.org/W6607114211",
-        "https://openalex.org/W6607333740",
-        "https://openalex.org/W6604085896",
-        "https://openalex.org/W6713098461",
-        "https://openalex.org/W2171928131",
-        "https://openalex.org/W2110415041",
-        "https://openalex.org/W2076094076",
-        "https://openalex.org/W2146871184",
-        "https://openalex.org/W1585876329",
-        "https://openalex.org/W2411442511",
-        "https://openalex.org/W7009185688",
-        "https://openalex.org/W6682398751",
-        "https://openalex.org/W2154423186",
-        "https://openalex.org/W6661081679",
-        "https://openalex.org/W6697336780",
-        "https://openalex.org/W2134950286",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W173561343",
-        "https://openalex.org/W2043762869",
-        "https://openalex.org/W2404974730",
-        "https://openalex.org/W2296705629",
-        "https://openalex.org/W2400801499",
-        "https://openalex.org/W2407031592",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W2474824677",
-        "https://openalex.org/W2150907703",
-        "https://openalex.org/W2402268235",
-        "https://openalex.org/W2403274071",
-        "https://openalex.org/W2292896937",
-        "https://openalex.org/W2271177914",
-        "https://openalex.org/W1753482797",
-        "https://openalex.org/W2998704965",
-        "https://openalex.org/W2125529971",
-        "https://openalex.org/W36903255",
-        "https://openalex.org/W2541478194",
-        "https://openalex.org/W2250489405",
-        "https://openalex.org/W101286142",
-        "https://openalex.org/W2063415950",
-        "https://openalex.org/W2176797192",
-        "https://openalex.org/W2123237149",
-        "https://openalex.org/W2397493599"
-    ],
-    "abstract": "An important part of the language modelling problem for automatic speech recognition (ASR) systems, and many other related applications, is to appropriately model long-distance context dependencies in natural languages. Hence, statistical language models (LMs) that can model longer span history contexts, for example, recurrent neural network language models (RNNLMs), have become increasingly popular for state-of-the-art ASR systems. As RNNLMs use a vector representation of complete history contexts, they are normally used to rescore N-best lists. Motivated by their intrinsic characteristics, two efficient lattice rescoring methods for RNNLMs are proposed in this paper. The first method uses an $n$-gram style clustering of history contexts. The second approach directly exploits the distance measure between recurrent hidden history vectors. Both methods produced 1-best performance comparable to a 10 k-best rescoring baseline RNNLM system on two large vocabulary conversational telephone speech recognition tasks for US English and Mandarin Chinese. Consistent lattice size compression and recognition performance improvements after confusion network (CN) decoding were also obtained over the prefix tree structured N-best rescoring approach.",
-    "full_text": null
+  "title": "Two Efficient Lattice Rescoring Methods Using Recurrent Neural Network Language Models",
+  "url": "https://openalex.org/W2345190899",
+  "year": 2016,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2988840627",
+      "name": "Liu X",
+      "affiliations": [
+        "Chinese University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2985170485",
+      "name": "Chen, X.",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2247379936",
+      "name": "Wang Y",
+      "affiliations": [
+        "University of Cambridge",
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Gales, MJF",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Woodland, PC",
+      "affiliations": [
+        "University of Cambridge"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2116625254",
+    "https://openalex.org/W2016185147",
+    "https://openalex.org/W2145431022",
+    "https://openalex.org/W2008398646",
+    "https://openalex.org/W6713366003",
+    "https://openalex.org/W6696955338",
+    "https://openalex.org/W2081323593",
+    "https://openalex.org/W1494108583",
+    "https://openalex.org/W6694492165",
+    "https://openalex.org/W6601546654",
+    "https://openalex.org/W2144790469",
+    "https://openalex.org/W1498436455",
+    "https://openalex.org/W1970689298",
+    "https://openalex.org/W6680532216",
+    "https://openalex.org/W6685327712",
+    "https://openalex.org/W6713561562",
+    "https://openalex.org/W6712188703",
+    "https://openalex.org/W6678720029",
+    "https://openalex.org/W1985258458",
+    "https://openalex.org/W2091981305",
+    "https://openalex.org/W2026149468",
+    "https://openalex.org/W2094971681",
+    "https://openalex.org/W2002342963",
+    "https://openalex.org/W1488980900",
+    "https://openalex.org/W2121522339",
+    "https://openalex.org/W2147768505",
+    "https://openalex.org/W6678292227",
+    "https://openalex.org/W2165712214",
+    "https://openalex.org/W2161199684",
+    "https://openalex.org/W2058695628",
+    "https://openalex.org/W2127049133",
+    "https://openalex.org/W6713893285",
+    "https://openalex.org/W6713001283",
+    "https://openalex.org/W6691642504",
+    "https://openalex.org/W6637698695",
+    "https://openalex.org/W2251682575",
+    "https://openalex.org/W2066378046",
+    "https://openalex.org/W2594610113",
+    "https://openalex.org/W6607114211",
+    "https://openalex.org/W6607333740",
+    "https://openalex.org/W6604085896",
+    "https://openalex.org/W6713098461",
+    "https://openalex.org/W2171928131",
+    "https://openalex.org/W2110415041",
+    "https://openalex.org/W2076094076",
+    "https://openalex.org/W2146871184",
+    "https://openalex.org/W1585876329",
+    "https://openalex.org/W2411442511",
+    "https://openalex.org/W7009185688",
+    "https://openalex.org/W6682398751",
+    "https://openalex.org/W2154423186",
+    "https://openalex.org/W6661081679",
+    "https://openalex.org/W6697336780",
+    "https://openalex.org/W2134950286",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W173561343",
+    "https://openalex.org/W2043762869",
+    "https://openalex.org/W2404974730",
+    "https://openalex.org/W2296705629",
+    "https://openalex.org/W2400801499",
+    "https://openalex.org/W2407031592",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W2474824677",
+    "https://openalex.org/W2150907703",
+    "https://openalex.org/W2402268235",
+    "https://openalex.org/W2403274071",
+    "https://openalex.org/W2292896937",
+    "https://openalex.org/W2271177914",
+    "https://openalex.org/W1753482797",
+    "https://openalex.org/W2998704965",
+    "https://openalex.org/W2125529971",
+    "https://openalex.org/W36903255",
+    "https://openalex.org/W2541478194",
+    "https://openalex.org/W2250489405",
+    "https://openalex.org/W101286142",
+    "https://openalex.org/W2063415950",
+    "https://openalex.org/W2176797192",
+    "https://openalex.org/W2123237149",
+    "https://openalex.org/W2397493599"
+  ],
+  "abstract": "An important part of the language modelling problem for automatic speech recognition (ASR) systems, and many other related applications, is to appropriately model long-distance context dependencies in natural languages. Hence, statistical language models (LMs) that can model longer span history contexts, for example, recurrent neural network language models (RNNLMs), have become increasingly popular for state-of-the-art ASR systems. As RNNLMs use a vector representation of complete history contexts, they are normally used to rescore N-best lists. Motivated by their intrinsic characteristics, two efficient lattice rescoring methods for RNNLMs are proposed in this paper. The first method uses an $n$-gram style clustering of history contexts. The second approach directly exploits the distance measure between recurrent hidden history vectors. Both methods produced 1-best performance comparable to a 10 k-best rescoring baseline RNNLM system on two large vocabulary conversational telephone speech recognition tasks for US English and Mandarin Chinese. Consistent lattice size compression and recognition performance improvements after confusion network (CN) decoding were also obtained over the prefix tree structured N-best rescoring approach.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8570331931114197
+    },
+    {
+      "name": "Language model",
+      "score": 0.7443158030509949
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.5326133966445923
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5276421904563904
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.5110520124435425
+    },
+    {
+      "name": "Cluster analysis",
+      "score": 0.475142240524292
+    },
+    {
+      "name": "Natural language understanding",
+      "score": 0.4728795886039734
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.46634146571159363
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.44600147008895874
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.43104034662246704
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40578556060791016
+    },
+    {
+      "name": "Natural language",
+      "score": 0.355482280254364
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.16601097583770752
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0918397307395935
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

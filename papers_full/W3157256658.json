@@ -1,76 +1,111 @@
 {
-    "title": "Synthesizing abstract transformers",
-    "url": "https://openalex.org/W3157256658",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4292102309",
-            "name": "Kalita, Pankaj Kumar",
-            "affiliations": [
-                "Indian Institute of Technology Kanpur"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4292125943",
-            "name": "Muduli, Sujit Kumar",
-            "affiliations": [
-                "Indian Institute of Technology Kanpur"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4227961820",
-            "name": "D'Antoni, Loris",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3197145294",
-            "name": "Reps Thomas",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2747602226",
-            "name": "Roy, Subhajit",
-            "affiliations": [
-                "Indian Institute of Technology Kanpur"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2600665173",
-        "https://openalex.org/W3205423569",
-        "https://openalex.org/W2120484044",
-        "https://openalex.org/W2552878490",
-        "https://openalex.org/W2043100293",
-        "https://openalex.org/W1973680906",
-        "https://openalex.org/W1497571013",
-        "https://openalex.org/W4292120995",
-        "https://openalex.org/W6931419780",
-        "https://openalex.org/W4285490366",
-        "https://openalex.org/W2140191215",
-        "https://openalex.org/W2126626789",
-        "https://openalex.org/W111132822",
-        "https://openalex.org/W146848279",
-        "https://openalex.org/W3033394649",
-        "https://openalex.org/W4307886659",
-        "https://openalex.org/W19404793",
-        "https://openalex.org/W2960693549",
-        "https://openalex.org/W3173556662",
-        "https://openalex.org/W1500085611",
-        "https://openalex.org/W2293309991",
-        "https://openalex.org/W2032053109",
-        "https://openalex.org/W3192343331",
-        "https://openalex.org/W1568212182",
-        "https://openalex.org/W2158735282",
-        "https://openalex.org/W1908449836",
-        "https://openalex.org/W3160380391",
-        "https://openalex.org/W2963049621",
-        "https://openalex.org/W1517790727",
-        "https://openalex.org/W2512416592"
-    ],
-    "abstract": "This paper addresses the problem of creating abstract transformers automatically. The method we present automates the construction of static analyzers in a fashion similar to the way yacc automates the construction of parsers. Our method treats the problem as a program-synthesis problem. The user provides specifications of (i) the concrete semantics of a given operation op , (ii) the abstract domain A to be used by the analyzer, and (iii) the semantics of a domain-specific language L in which the abstract transformer is to be expressed. As output, our method creates an abstract transformer for op in abstract domain A , expressed in L (an “ L -transformer for op over A ”). Moreover, the abstract transformer obtained is a most-precise L -transformer for op over A ; that is, there is no other L -transformer for op over A that is strictly more precise. We implemented our method in a tool called AMURTH. We used AMURTH to create sets of replacement abstract transformers for those used in two existing analyzers, and obtained essentially identical performance. However, when we compared the existing transformers with the transformers obtained using AMURTH, we discovered that four of the existing transformers were unsound, which demonstrates the risk of using manually created transformers.",
-    "full_text": null
+  "title": "Synthesizing abstract transformers",
+  "url": "https://openalex.org/W3157256658",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4292102309",
+      "name": "Kalita, Pankaj Kumar",
+      "affiliations": [
+        "Indian Institute of Technology Kanpur"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4292125943",
+      "name": "Muduli, Sujit Kumar",
+      "affiliations": [
+        "Indian Institute of Technology Kanpur"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4227961820",
+      "name": "D'Antoni, Loris",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3197145294",
+      "name": "Reps Thomas",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2747602226",
+      "name": "Roy, Subhajit",
+      "affiliations": [
+        "Indian Institute of Technology Kanpur"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2600665173",
+    "https://openalex.org/W3205423569",
+    "https://openalex.org/W2120484044",
+    "https://openalex.org/W2552878490",
+    "https://openalex.org/W2043100293",
+    "https://openalex.org/W1973680906",
+    "https://openalex.org/W1497571013",
+    "https://openalex.org/W4292120995",
+    "https://openalex.org/W6931419780",
+    "https://openalex.org/W4285490366",
+    "https://openalex.org/W2140191215",
+    "https://openalex.org/W2126626789",
+    "https://openalex.org/W111132822",
+    "https://openalex.org/W146848279",
+    "https://openalex.org/W3033394649",
+    "https://openalex.org/W4307886659",
+    "https://openalex.org/W19404793",
+    "https://openalex.org/W2960693549",
+    "https://openalex.org/W3173556662",
+    "https://openalex.org/W1500085611",
+    "https://openalex.org/W2293309991",
+    "https://openalex.org/W2032053109",
+    "https://openalex.org/W3192343331",
+    "https://openalex.org/W1568212182",
+    "https://openalex.org/W2158735282",
+    "https://openalex.org/W1908449836",
+    "https://openalex.org/W3160380391",
+    "https://openalex.org/W2963049621",
+    "https://openalex.org/W1517790727",
+    "https://openalex.org/W2512416592"
+  ],
+  "abstract": "This paper addresses the problem of creating abstract transformers automatically. The method we present automates the construction of static analyzers in a fashion similar to the way yacc automates the construction of parsers. Our method treats the problem as a program-synthesis problem. The user provides specifications of (i) the concrete semantics of a given operation op , (ii) the abstract domain A to be used by the analyzer, and (iii) the semantics of a domain-specific language L in which the abstract transformer is to be expressed. As output, our method creates an abstract transformer for op in abstract domain A , expressed in L (an “ L -transformer for op over A ”). Moreover, the abstract transformer obtained is a most-precise L -transformer for op over A ; that is, there is no other L -transformer for op over A that is strictly more precise. We implemented our method in a tool called AMURTH. We used AMURTH to create sets of replacement abstract transformers for those used in two existing analyzers, and obtained essentially identical performance. However, when we compared the existing transformers with the transformers obtained using AMURTH, we discovered that four of the existing transformers were unsound, which demonstrates the risk of using manually created transformers.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.8261628150939941
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6785176992416382
+    },
+    {
+      "name": "Programming language",
+      "score": 0.4278477132320404
+    },
+    {
+      "name": "Spectrum analyzer",
+      "score": 0.4134575128555298
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.22852936387062073
+    },
+    {
+      "name": "Engineering",
+      "score": 0.159171462059021
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09740597009658813
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    }
+  ]
 }

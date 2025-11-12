@@ -1,91 +1,138 @@
 {
-    "title": "Transformer-Based User Alignment Model across Social Networks",
-    "url": "https://openalex.org/W4362581699",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5006382784",
-            "name": "Tianliang Lei",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5061963513",
-            "name": "Lixin Ji",
-            "affiliations": [
-                "PLA Information Engineering University",
-                "Songshan Lake Materials Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5079028339",
-            "name": "Gengrun Wang",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100775924",
-            "name": "Shuxin Liu",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101915354",
-            "name": "Lan Wu",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100646705",
-            "name": "Fei Pan",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2294002049",
-        "https://openalex.org/W2072603505",
-        "https://openalex.org/W2278069886",
-        "https://openalex.org/W2022580894",
-        "https://openalex.org/W2268830323",
-        "https://openalex.org/W2339803498",
-        "https://openalex.org/W2794523102",
-        "https://openalex.org/W2075633077",
-        "https://openalex.org/W2055345291",
-        "https://openalex.org/W812851569",
-        "https://openalex.org/W6680405082",
-        "https://openalex.org/W3160625568",
-        "https://openalex.org/W2241660235",
-        "https://openalex.org/W2571692900",
-        "https://openalex.org/W6755340666",
-        "https://openalex.org/W3080406377",
-        "https://openalex.org/W3214436041",
-        "https://openalex.org/W3204088758",
-        "https://openalex.org/W4206045499",
-        "https://openalex.org/W4320152362",
-        "https://openalex.org/W3136513469",
-        "https://openalex.org/W3211394146",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2374981910",
-        "https://openalex.org/W2146143400",
-        "https://openalex.org/W2098747013",
-        "https://openalex.org/W6697095741",
-        "https://openalex.org/W2557751742",
-        "https://openalex.org/W1995683849",
-        "https://openalex.org/W2110505218",
-        "https://openalex.org/W2537308293",
-        "https://openalex.org/W3216501387",
-        "https://openalex.org/W2295072097"
-    ],
-    "abstract": "Cross-social network user identification refers to finding users with the same identity in multiple social networks, which is widely used in the cross-network recommendation, link prediction, personality recommendation, and data mining. At present, the traditional method is to obtain network structure information from neighboring nodes through graph convolution, and embed social networks into the low-dimensional vector space. However, as the network depth increases, the effect of the model will decrease. Therefore, in order to better obtain the network embedding representation, a Transformer-based user alignment model (TUAM) across social networks is proposed. This model converts the node information and network structure information from the graph data form into sequence data through a specific encoding method. Then, it inputs the data to the proposed model to learn the low-dimensional vector representation of the user. Finally, it maps the two social networks to the same feature space for alignment. Experiments on real datasets show that compared with GAT, TUAM improved ACC@10 indicators by 11.61% and 16.53% on Facebook–Twitter and Weibo–Douban datasets, respectively. This illustrates that the proposed model has a better performance compared to other user alignment models.",
-    "full_text": null
+  "title": "Transformer-Based User Alignment Model across Social Networks",
+  "url": "https://openalex.org/W4362581699",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5006382784",
+      "name": "Tianliang Lei",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5061963513",
+      "name": "Lixin Ji",
+      "affiliations": [
+        "PLA Information Engineering University",
+        "Songshan Lake Materials Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5079028339",
+      "name": "Gengrun Wang",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100775924",
+      "name": "Shuxin Liu",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101915354",
+      "name": "Lan Wu",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100646705",
+      "name": "Fei Pan",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2294002049",
+    "https://openalex.org/W2072603505",
+    "https://openalex.org/W2278069886",
+    "https://openalex.org/W2022580894",
+    "https://openalex.org/W2268830323",
+    "https://openalex.org/W2339803498",
+    "https://openalex.org/W2794523102",
+    "https://openalex.org/W2075633077",
+    "https://openalex.org/W2055345291",
+    "https://openalex.org/W812851569",
+    "https://openalex.org/W6680405082",
+    "https://openalex.org/W3160625568",
+    "https://openalex.org/W2241660235",
+    "https://openalex.org/W2571692900",
+    "https://openalex.org/W6755340666",
+    "https://openalex.org/W3080406377",
+    "https://openalex.org/W3214436041",
+    "https://openalex.org/W3204088758",
+    "https://openalex.org/W4206045499",
+    "https://openalex.org/W4320152362",
+    "https://openalex.org/W3136513469",
+    "https://openalex.org/W3211394146",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2374981910",
+    "https://openalex.org/W2146143400",
+    "https://openalex.org/W2098747013",
+    "https://openalex.org/W6697095741",
+    "https://openalex.org/W2557751742",
+    "https://openalex.org/W1995683849",
+    "https://openalex.org/W2110505218",
+    "https://openalex.org/W2537308293",
+    "https://openalex.org/W3216501387",
+    "https://openalex.org/W2295072097"
+  ],
+  "abstract": "Cross-social network user identification refers to finding users with the same identity in multiple social networks, which is widely used in the cross-network recommendation, link prediction, personality recommendation, and data mining. At present, the traditional method is to obtain network structure information from neighboring nodes through graph convolution, and embed social networks into the low-dimensional vector space. However, as the network depth increases, the effect of the model will decrease. Therefore, in order to better obtain the network embedding representation, a Transformer-based user alignment model (TUAM) across social networks is proposed. This model converts the node information and network structure information from the graph data form into sequence data through a specific encoding method. Then, it inputs the data to the proposed model to learn the low-dimensional vector representation of the user. Finally, it maps the two social networks to the same feature space for alignment. Experiments on real datasets show that compared with GAT, TUAM improved ACC@10 indicators by 11.61% and 16.53% on Facebook–Twitter and Weibo–Douban datasets, respectively. This illustrates that the proposed model has a better performance compared to other user alignment models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7954866886138916
+    },
+    {
+      "name": "Data mining",
+      "score": 0.5773797035217285
+    },
+    {
+      "name": "Feature vector",
+      "score": 0.5601102709770203
+    },
+    {
+      "name": "Social network (sociolinguistics)",
+      "score": 0.5293838381767273
+    },
+    {
+      "name": "Embedding",
+      "score": 0.45533981919288635
+    },
+    {
+      "name": "Graph",
+      "score": 0.45328643918037415
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.40520966053009033
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.33779507875442505
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.32665497064590454
+    },
+    {
+      "name": "Social media",
+      "score": 0.2992137670516968
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.12462526559829712
+    }
+  ]
 }

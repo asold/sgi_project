@@ -1,66 +1,93 @@
 {
-    "title": "Probing Large Language Model Hidden States for Adverse Drug Reaction Knowledge",
-    "url": "https://openalex.org/W4407395279",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2162923240",
-            "name": "Jacob Berkowitz",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A328311528",
-            "name": "Davy Weissenbacher",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3013407034",
-            "name": "Apoorva Srinivasan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4306846660",
-            "name": "Nadine A. Friedrich",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5093569950",
-            "name": "Jose Miguel Acitores Cortina",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2682508965",
-            "name": "Sophia Kivelson",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2429146436",
-            "name": "Graciela Gonzalez-Hernandez",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A81958894",
-            "name": "Nicholas P. Tatonetti",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4321499561",
-        "https://openalex.org/W4406679533",
-        "https://openalex.org/W4389519449",
-        "https://openalex.org/W4404783416",
-        "https://openalex.org/W3096144216",
-        "https://openalex.org/W4391645885",
-        "https://openalex.org/W4378640337",
-        "https://openalex.org/W2024862171",
-        "https://openalex.org/W4280518083",
-        "https://openalex.org/W4382192792",
-        "https://openalex.org/W4313460860",
-        "https://openalex.org/W2651948199",
-        "https://openalex.org/W3048905614",
-        "https://openalex.org/W2087467131",
-        "https://openalex.org/W4402671289"
-    ],
-    "abstract": "Abstract Large language models (LLMs) integrate knowledge from diverse sources into a single set of internal weights. However, these representations are difficult to interpret, complicating our understanding of the models’ learning capabilities. Sparse autoencoders (SAEs) linearize LLM embeddings, creating monosemantic features that both provide insight into the model’s comprehension and simplify downstream machine learning tasks. These features are especially important in biomedical applications where explainability is critical. Here, we evaluate the use of Gemma Scope SAEs to identify how LLMs store known facts involving adverse drug reactions (ADRs). We transform hidden-state embeddings of drug names from Gemma2-9b-it into interpretable features and train a linear classifier on these features to classify ADR likelihood, evaluating against an established benchmark. These embeddings provide strong predictive performance, giving AUC-ROC of 0.957 for identifying acute kidney injury, 0.902 for acute liver injury, 0.954 for acute myocardial infarction, and 0.963 for gastrointestinal bleeds. Notably, there are no significant differences (p &gt; 0.05) in performance between the simple linear classifiers built on SAE outputs and neural networks trained on the raw embeddings, suggesting that the information lost in reconstruction is minima. This finding suggests that SAE-derived representations retain the essential information from the LLM while reducing model complexity, paving the way for more transparent, compute-efficient strategies. We believe that this approach can help synthesize the biomedical knowledge our models learn in training and be used for downstream applications, such as expanding reference sets for pharmacovigilance.",
-    "full_text": null
+  "title": "Probing Large Language Model Hidden States for Adverse Drug Reaction Knowledge",
+  "url": "https://openalex.org/W4407395279",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2162923240",
+      "name": "Jacob Berkowitz",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A328311528",
+      "name": "Davy Weissenbacher",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3013407034",
+      "name": "Apoorva Srinivasan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4306846660",
+      "name": "Nadine A. Friedrich",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5093569950",
+      "name": "Jose Miguel Acitores Cortina",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2682508965",
+      "name": "Sophia Kivelson",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2429146436",
+      "name": "Graciela Gonzalez-Hernandez",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A81958894",
+      "name": "Nicholas P. Tatonetti",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4321499561",
+    "https://openalex.org/W4406679533",
+    "https://openalex.org/W4389519449",
+    "https://openalex.org/W4404783416",
+    "https://openalex.org/W3096144216",
+    "https://openalex.org/W4391645885",
+    "https://openalex.org/W4378640337",
+    "https://openalex.org/W2024862171",
+    "https://openalex.org/W4280518083",
+    "https://openalex.org/W4382192792",
+    "https://openalex.org/W4313460860",
+    "https://openalex.org/W2651948199",
+    "https://openalex.org/W3048905614",
+    "https://openalex.org/W2087467131",
+    "https://openalex.org/W4402671289"
+  ],
+  "abstract": "Abstract Large language models (LLMs) integrate knowledge from diverse sources into a single set of internal weights. However, these representations are difficult to interpret, complicating our understanding of the models’ learning capabilities. Sparse autoencoders (SAEs) linearize LLM embeddings, creating monosemantic features that both provide insight into the model’s comprehension and simplify downstream machine learning tasks. These features are especially important in biomedical applications where explainability is critical. Here, we evaluate the use of Gemma Scope SAEs to identify how LLMs store known facts involving adverse drug reactions (ADRs). We transform hidden-state embeddings of drug names from Gemma2-9b-it into interpretable features and train a linear classifier on these features to classify ADR likelihood, evaluating against an established benchmark. These embeddings provide strong predictive performance, giving AUC-ROC of 0.957 for identifying acute kidney injury, 0.902 for acute liver injury, 0.954 for acute myocardial infarction, and 0.963 for gastrointestinal bleeds. Notably, there are no significant differences (p &gt; 0.05) in performance between the simple linear classifiers built on SAE outputs and neural networks trained on the raw embeddings, suggesting that the information lost in reconstruction is minima. This finding suggests that SAE-derived representations retain the essential information from the LLM while reducing model complexity, paving the way for more transparent, compute-efficient strategies. We believe that this approach can help synthesize the biomedical knowledge our models learn in training and be used for downstream applications, such as expanding reference sets for pharmacovigilance.",
+  "full_text": null,
+  "topic": "Drug",
+  "concepts": [
+    {
+      "name": "Drug",
+      "score": 0.5642222762107849
+    },
+    {
+      "name": "Adverse drug reaction",
+      "score": 0.5170596241950989
+    },
+    {
+      "name": "Drug reaction",
+      "score": 0.4875487685203552
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4189611077308655
+    },
+    {
+      "name": "Medicine",
+      "score": 0.2597214877605438
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.2368491291999817
+    }
+  ]
 }

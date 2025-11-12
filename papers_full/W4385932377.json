@@ -1,107 +1,158 @@
 {
-    "title": "Effect of Tokenization on Transformers for Biological Sequences",
-    "url": "https://openalex.org/W4385932377",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4286781641",
-            "name": "Edo Dotan",
-            "affiliations": [
-                "Technion – Israel Institute of Technology",
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5092802853",
-            "name": "Gal Jaschek",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2051963343",
-            "name": "Tal Pupko",
-            "affiliations": [
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2279044859",
-            "name": "Yonatan Belinkov",
-            "affiliations": [
-                "Technion – Israel Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4286781641",
-            "name": "Edo Dotan",
-            "affiliations": [
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5092802853",
-            "name": "Gal Jaschek",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2051963343",
-            "name": "Tal Pupko",
-            "affiliations": [
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2279044859",
-            "name": "Yonatan Belinkov",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4236236547",
-        "https://openalex.org/W2984761660",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2140412940",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6601894380",
-        "https://openalex.org/W2889498145",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3085380432",
-        "https://openalex.org/W2615066396",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W6796707148",
-        "https://openalex.org/W2518553291",
-        "https://openalex.org/W3197918389",
-        "https://openalex.org/W2097107919",
-        "https://openalex.org/W2109553965",
-        "https://openalex.org/W4298006192",
-        "https://openalex.org/W3095583226",
-        "https://openalex.org/W4220999759",
-        "https://openalex.org/W2933138175",
-        "https://openalex.org/W2130909239",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W3133458480",
-        "https://openalex.org/W2146683382",
-        "https://openalex.org/W2735621019",
-        "https://openalex.org/W4320908344",
-        "https://openalex.org/W2379594833",
-        "https://openalex.org/W2121879602",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2950954328",
-        "https://openalex.org/W2953008890",
-        "https://openalex.org/W6734194636",
-        "https://openalex.org/W1999051528",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2794284562",
-        "https://openalex.org/W4307871192",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2990618091",
-        "https://openalex.org/W2912459817",
-        "https://openalex.org/W4382490702"
-    ],
-    "abstract": "Abstract Deep learning models are transforming biological research. Many bioinformatics and comparative genomics algorithms analyze genomic data, either DNA or protein sequences. Examples include sequence alignments, phylogenetic tree inference and automatic classification of protein functions. Among these deep learning algorithms, models for processing natural languages, developed in the natural language processing (NLP) community, were recently applied to biological sequences. However, biological sequences are different than natural languages, such as English, and French, in which segmentation of the text to separate words is relatively straightforward. Moreover, biological sequences are characterized by extremely long sentences, which hamper their processing by current machine-learning models, notably the transformer architecture. In NLP, one of the first processing steps is to transform the raw text to a list of tokens. Deep-learning applications to biological sequence data mostly segment proteins and DNA to single characters. In this work, we study the effect of alternative tokenization algorithms on eight different tasks in biology, from predicting the function of proteins and their stability, through nucleotide sequence alignment, to classifying proteins to specific families. We demonstrate that applying alternative tokenization algorithms can increase accuracy and at the same time, substantially reduce the input length compared to the trivial tokenizer in which each character is a token. Furthermore, applying these tokenization algorithms allows interpreting trained models, taking into account dependencies among positions. Finally, we trained these tokenizers on a large dataset of protein sequences containing more than 400 billion amino acids, which resulted in over a three-fold decrease in the number of tokens. We then tested these tokenizers trained on large-scale data on the above specific tasks and showed that for some tasks it is highly beneficial to train database-specific tokenizers. Our study suggests that tokenizers are likely to be a critical component in future deep-network analysis of biological sequence data.",
-    "full_text": null
+  "title": "Effect of Tokenization on Transformers for Biological Sequences",
+  "url": "https://openalex.org/W4385932377",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4286781641",
+      "name": "Edo Dotan",
+      "affiliations": [
+        "Technion – Israel Institute of Technology",
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5092802853",
+      "name": "Gal Jaschek",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2051963343",
+      "name": "Tal Pupko",
+      "affiliations": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2279044859",
+      "name": "Yonatan Belinkov",
+      "affiliations": [
+        "Technion – Israel Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4286781641",
+      "name": "Edo Dotan",
+      "affiliations": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5092802853",
+      "name": "Gal Jaschek",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2051963343",
+      "name": "Tal Pupko",
+      "affiliations": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2279044859",
+      "name": "Yonatan Belinkov",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4236236547",
+    "https://openalex.org/W2984761660",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2140412940",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6601894380",
+    "https://openalex.org/W2889498145",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3085380432",
+    "https://openalex.org/W2615066396",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W6796707148",
+    "https://openalex.org/W2518553291",
+    "https://openalex.org/W3197918389",
+    "https://openalex.org/W2097107919",
+    "https://openalex.org/W2109553965",
+    "https://openalex.org/W4298006192",
+    "https://openalex.org/W3095583226",
+    "https://openalex.org/W4220999759",
+    "https://openalex.org/W2933138175",
+    "https://openalex.org/W2130909239",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W3133458480",
+    "https://openalex.org/W2146683382",
+    "https://openalex.org/W2735621019",
+    "https://openalex.org/W4320908344",
+    "https://openalex.org/W2379594833",
+    "https://openalex.org/W2121879602",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2950954328",
+    "https://openalex.org/W2953008890",
+    "https://openalex.org/W6734194636",
+    "https://openalex.org/W1999051528",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2794284562",
+    "https://openalex.org/W4307871192",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2990618091",
+    "https://openalex.org/W2912459817",
+    "https://openalex.org/W4382490702"
+  ],
+  "abstract": "Abstract Deep learning models are transforming biological research. Many bioinformatics and comparative genomics algorithms analyze genomic data, either DNA or protein sequences. Examples include sequence alignments, phylogenetic tree inference and automatic classification of protein functions. Among these deep learning algorithms, models for processing natural languages, developed in the natural language processing (NLP) community, were recently applied to biological sequences. However, biological sequences are different than natural languages, such as English, and French, in which segmentation of the text to separate words is relatively straightforward. Moreover, biological sequences are characterized by extremely long sentences, which hamper their processing by current machine-learning models, notably the transformer architecture. In NLP, one of the first processing steps is to transform the raw text to a list of tokens. Deep-learning applications to biological sequence data mostly segment proteins and DNA to single characters. In this work, we study the effect of alternative tokenization algorithms on eight different tasks in biology, from predicting the function of proteins and their stability, through nucleotide sequence alignment, to classifying proteins to specific families. We demonstrate that applying alternative tokenization algorithms can increase accuracy and at the same time, substantially reduce the input length compared to the trivial tokenizer in which each character is a token. Furthermore, applying these tokenization algorithms allows interpreting trained models, taking into account dependencies among positions. Finally, we trained these tokenizers on a large dataset of protein sequences containing more than 400 billion amino acids, which resulted in over a three-fold decrease in the number of tokens. We then tested these tokenizers trained on large-scale data on the above specific tasks and showed that for some tasks it is highly beneficial to train database-specific tokenizers. Our study suggests that tokenizers are likely to be a critical component in future deep-network analysis of biological sequence data.",
+  "full_text": null,
+  "topic": "Lexical analysis",
+  "concepts": [
+    {
+      "name": "Lexical analysis",
+      "score": 0.7988856434822083
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7361411452293396
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6772547364234924
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.44685912132263184
+    },
+    {
+      "name": "Biological data",
+      "score": 0.44189339876174927
+    },
+    {
+      "name": "DNA sequencing",
+      "score": 0.44107434153556824
+    },
+    {
+      "name": "Inference",
+      "score": 0.4307704567909241
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.329058974981308
+    },
+    {
+      "name": "Biology",
+      "score": 0.21744638681411743
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.21628007292747498
+    },
+    {
+      "name": "DNA",
+      "score": 0.13786470890045166
+    },
+    {
+      "name": "Genetics",
+      "score": 0.11549800634384155
+    }
+  ]
 }

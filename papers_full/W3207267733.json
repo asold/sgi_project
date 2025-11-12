@@ -1,115 +1,190 @@
 {
-    "title": "Pre-training Graph Transformer with Multimodal Side Information for Recommendation",
-    "url": "https://openalex.org/W3207267733",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2098300734",
-            "name": "Yong Liu",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3017696394",
-            "name": "Susen Yang",
-            "affiliations": [
-                "Alibaba Group (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2261815496",
-            "name": "Chenyi Lei",
-            "affiliations": [
-                "University of Science and Technology of China",
-                "Alibaba Group (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2125492704",
-            "name": "Guoxin Wang",
-            "affiliations": [
-                "Alibaba Group (China)",
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2127228748",
-            "name": "Haihong Tang",
-            "affiliations": [
-                "Alibaba Group (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2160643605",
-            "name": "Juyong Zhang",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2124989948",
-            "name": "Aixin Sun",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2154137932",
-            "name": "Chunyan Miao",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2402144811",
-        "https://openalex.org/W2963224980",
-        "https://openalex.org/W2295598076",
-        "https://openalex.org/W3090449556",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2962756421",
-        "https://openalex.org/W2991391304",
-        "https://openalex.org/W4297971002",
-        "https://openalex.org/W2605350416",
-        "https://openalex.org/W2526050071",
-        "https://openalex.org/W3080997787",
-        "https://openalex.org/W3023371261",
-        "https://openalex.org/W2511794140",
-        "https://openalex.org/W2971196067",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2154851992",
-        "https://openalex.org/W3036446966",
-        "https://openalex.org/W2295739661",
-        "https://openalex.org/W2008886893",
-        "https://openalex.org/W2965209830",
-        "https://openalex.org/W1888005072",
-        "https://openalex.org/W2964182926",
-        "https://openalex.org/W2979129662",
-        "https://openalex.org/W4288083766",
-        "https://openalex.org/W2970929262",
-        "https://openalex.org/W2893944917",
-        "https://openalex.org/W3099152386",
-        "https://openalex.org/W2953384591",
-        "https://openalex.org/W2951707557",
-        "https://openalex.org/W3099619380",
-        "https://openalex.org/W2750075801",
-        "https://openalex.org/W2127795553",
-        "https://openalex.org/W3102476541",
-        "https://openalex.org/W2996604169",
-        "https://openalex.org/W3163325638",
-        "https://openalex.org/W3122507327",
-        "https://openalex.org/W2624431344",
-        "https://openalex.org/W2950133940",
-        "https://openalex.org/W2739273093",
-        "https://openalex.org/W3105705953",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2294501066",
-        "https://openalex.org/W3104097132",
-        "https://openalex.org/W3165548017",
-        "https://openalex.org/W2274287116",
-        "https://openalex.org/W2950813464"
-    ],
-    "abstract": "Side information of items, e.g., images and text description, has shown to be effective in contributing to accurate recommendations. Inspired by the recent success of pre-training models on natural language and images, we propose a pre-training strategy to learn item representations by considering both item side information and their relationships. We relate items by common user activities, e.g., co-purchase, and construct a homogeneous item graph. This graph provides a unified view of item relations and their associated side information in multimodality. We develop a novel sampling algorithm named MCNSampling to select contextual neighbors for each item. The proposed Pre-trained Multimodal Graph Transformer (PMGT) learns item representations with two objectives: 1) graph structure reconstruction, and 2) masked node feature reconstruction. Experimental results on real datasets demonstrate that the proposed PMGT model effectively exploits the multimodality side information to achieve better accuracies in downstream tasks including item recommendation and click-through ratio prediction. In addition, we also report a case study of testing PMGT in an online setting with 600 thousand users.",
-    "full_text": null
+  "title": "Pre-training Graph Transformer with Multimodal Side Information for Recommendation",
+  "url": "https://openalex.org/W3207267733",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2098300734",
+      "name": "Yong Liu",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3017696394",
+      "name": "Susen Yang",
+      "affiliations": [
+        "Alibaba Group (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2261815496",
+      "name": "Chenyi Lei",
+      "affiliations": [
+        "University of Science and Technology of China",
+        "Alibaba Group (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2125492704",
+      "name": "Guoxin Wang",
+      "affiliations": [
+        "Alibaba Group (China)",
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2127228748",
+      "name": "Haihong Tang",
+      "affiliations": [
+        "Alibaba Group (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2160643605",
+      "name": "Juyong Zhang",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2124989948",
+      "name": "Aixin Sun",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2154137932",
+      "name": "Chunyan Miao",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2402144811",
+    "https://openalex.org/W2963224980",
+    "https://openalex.org/W2295598076",
+    "https://openalex.org/W3090449556",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2962756421",
+    "https://openalex.org/W2991391304",
+    "https://openalex.org/W4297971002",
+    "https://openalex.org/W2605350416",
+    "https://openalex.org/W2526050071",
+    "https://openalex.org/W3080997787",
+    "https://openalex.org/W3023371261",
+    "https://openalex.org/W2511794140",
+    "https://openalex.org/W2971196067",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2154851992",
+    "https://openalex.org/W3036446966",
+    "https://openalex.org/W2295739661",
+    "https://openalex.org/W2008886893",
+    "https://openalex.org/W2965209830",
+    "https://openalex.org/W1888005072",
+    "https://openalex.org/W2964182926",
+    "https://openalex.org/W2979129662",
+    "https://openalex.org/W4288083766",
+    "https://openalex.org/W2970929262",
+    "https://openalex.org/W2893944917",
+    "https://openalex.org/W3099152386",
+    "https://openalex.org/W2953384591",
+    "https://openalex.org/W2951707557",
+    "https://openalex.org/W3099619380",
+    "https://openalex.org/W2750075801",
+    "https://openalex.org/W2127795553",
+    "https://openalex.org/W3102476541",
+    "https://openalex.org/W2996604169",
+    "https://openalex.org/W3163325638",
+    "https://openalex.org/W3122507327",
+    "https://openalex.org/W2624431344",
+    "https://openalex.org/W2950133940",
+    "https://openalex.org/W2739273093",
+    "https://openalex.org/W3105705953",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2294501066",
+    "https://openalex.org/W3104097132",
+    "https://openalex.org/W3165548017",
+    "https://openalex.org/W2274287116",
+    "https://openalex.org/W2950813464"
+  ],
+  "abstract": "Side information of items, e.g., images and text description, has shown to be effective in contributing to accurate recommendations. Inspired by the recent success of pre-training models on natural language and images, we propose a pre-training strategy to learn item representations by considering both item side information and their relationships. We relate items by common user activities, e.g., co-purchase, and construct a homogeneous item graph. This graph provides a unified view of item relations and their associated side information in multimodality. We develop a novel sampling algorithm named MCNSampling to select contextual neighbors for each item. The proposed Pre-trained Multimodal Graph Transformer (PMGT) learns item representations with two objectives: 1) graph structure reconstruction, and 2) masked node feature reconstruction. Experimental results on real datasets demonstrate that the proposed PMGT model effectively exploits the multimodality side information to achieve better accuracies in downstream tasks including item recommendation and click-through ratio prediction. In addition, we also report a case study of testing PMGT in an online setting with 600 thousand users.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8079631924629211
+    },
+    {
+      "name": "Exploit",
+      "score": 0.6447737812995911
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5689778923988342
+    },
+    {
+      "name": "Graph",
+      "score": 0.5308996438980103
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4864346981048584
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4816664457321167
+    },
+    {
+      "name": "Homogeneous",
+      "score": 0.4413609504699707
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4319623112678528
+    },
+    {
+      "name": "Multimodality",
+      "score": 0.41094279289245605
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3305005431175232
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3300641179084778
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.20956242084503174
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.17990243434906006
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Thermodynamics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    }
+  ]
 }

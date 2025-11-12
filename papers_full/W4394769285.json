@@ -1,123 +1,178 @@
 {
-    "title": "Uncovering the Causes of Emotions in Software Developer Communication Using Zero-shot LLMs",
-    "url": "https://openalex.org/W4394769285",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3174375974",
-            "name": "Mia Mohammad Imran",
-            "affiliations": [
-                "Virginia Commonwealth University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2603222158",
-            "name": "Preetha Chatterjee",
-            "affiliations": [
-                "Drexel University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2204197178",
-            "name": "Kostadin Damevski",
-            "affiliations": [
-                "Virginia Commonwealth University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2213700299",
-        "https://openalex.org/W1998470619",
-        "https://openalex.org/W6740938902",
-        "https://openalex.org/W2000471262",
-        "https://openalex.org/W1955944258",
-        "https://openalex.org/W4323338615",
-        "https://openalex.org/W2727177317",
-        "https://openalex.org/W3174210392",
-        "https://openalex.org/W3092281757",
-        "https://openalex.org/W2907213813",
-        "https://openalex.org/W2913957986",
-        "https://openalex.org/W4383180571",
-        "https://openalex.org/W4387928869",
-        "https://openalex.org/W4389519799",
-        "https://openalex.org/W6838865847",
-        "https://openalex.org/W4380136141",
-        "https://openalex.org/W2035680126",
-        "https://openalex.org/W4291220407",
-        "https://openalex.org/W2789851632",
-        "https://openalex.org/W4256441345",
-        "https://openalex.org/W6777120346",
-        "https://openalex.org/W2623177746",
-        "https://openalex.org/W3101079689",
-        "https://openalex.org/W6767350551",
-        "https://openalex.org/W3172969687",
-        "https://openalex.org/W3096160408",
-        "https://openalex.org/W4285129344",
-        "https://openalex.org/W2970443729",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W4226278401",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W6847076894",
-        "https://openalex.org/W2170505850",
-        "https://openalex.org/W4379259169",
-        "https://openalex.org/W4319793302",
-        "https://openalex.org/W6810242208",
-        "https://openalex.org/W3199412388",
-        "https://openalex.org/W3173765582",
-        "https://openalex.org/W3209479874",
-        "https://openalex.org/W6898505805",
-        "https://openalex.org/W25301398",
-        "https://openalex.org/W4320559482",
-        "https://openalex.org/W606759049",
-        "https://openalex.org/W2251856895",
-        "https://openalex.org/W3027616835",
-        "https://openalex.org/W755599",
-        "https://openalex.org/W6673061037",
-        "https://openalex.org/W2078219616",
-        "https://openalex.org/W2943967435",
-        "https://openalex.org/W1673310716",
-        "https://openalex.org/W2389246322",
-        "https://openalex.org/W2761329858",
-        "https://openalex.org/W2740924709",
-        "https://openalex.org/W2787894218",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W2766818166",
-        "https://openalex.org/W2754799758",
-        "https://openalex.org/W4310563050",
-        "https://openalex.org/W2966985943",
-        "https://openalex.org/W4384389941",
-        "https://openalex.org/W4221152111",
-        "https://openalex.org/W3198377975",
-        "https://openalex.org/W2725671465",
-        "https://openalex.org/W6800875267",
-        "https://openalex.org/W3194309076",
-        "https://openalex.org/W6729840497",
-        "https://openalex.org/W4382240064",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4283274111",
-        "https://openalex.org/W3166588663",
-        "https://openalex.org/W2948738230",
-        "https://openalex.org/W101809282",
-        "https://openalex.org/W2562539671",
-        "https://openalex.org/W4364385323",
-        "https://openalex.org/W3169407340",
-        "https://openalex.org/W3099262386",
-        "https://openalex.org/W4226209315",
-        "https://openalex.org/W4384026655",
-        "https://openalex.org/W6735931386",
-        "https://openalex.org/W2733560047",
-        "https://openalex.org/W4284672755",
-        "https://openalex.org/W4319737124",
-        "https://openalex.org/W3138968638",
-        "https://openalex.org/W3159563414",
-        "https://openalex.org/W2144160189",
-        "https://openalex.org/W2552383788",
-        "https://openalex.org/W3090867931",
-        "https://openalex.org/W4302233387",
-        "https://openalex.org/W3104057366",
-        "https://openalex.org/W4231458041"
-    ],
-    "abstract": "Understanding and identifying the causes behind developers' emotions (e.g., Frustration caused by 'delays in merging pull requests') can be crucial towards finding solutions to problems and fostering collaboration in open-source communities. Effectively identifying such information in the high volume of communications across the different project channels, such as chats, emails, and issue comments, requires automated recognition of emotions and their causes. To enable this automation, large-scale software engineering-specific datasets that can be used to train accurate machine learning models are required. However, such datasets are expensive to create with the variety and informal nature of software projects' communication channels.",
-    "full_text": null
+  "title": "Uncovering the Causes of Emotions in Software Developer Communication Using Zero-shot LLMs",
+  "url": "https://openalex.org/W4394769285",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3174375974",
+      "name": "Mia Mohammad Imran",
+      "affiliations": [
+        "Virginia Commonwealth University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2603222158",
+      "name": "Preetha Chatterjee",
+      "affiliations": [
+        "Drexel University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2204197178",
+      "name": "Kostadin Damevski",
+      "affiliations": [
+        "Virginia Commonwealth University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2213700299",
+    "https://openalex.org/W1998470619",
+    "https://openalex.org/W6740938902",
+    "https://openalex.org/W2000471262",
+    "https://openalex.org/W1955944258",
+    "https://openalex.org/W4323338615",
+    "https://openalex.org/W2727177317",
+    "https://openalex.org/W3174210392",
+    "https://openalex.org/W3092281757",
+    "https://openalex.org/W2907213813",
+    "https://openalex.org/W2913957986",
+    "https://openalex.org/W4383180571",
+    "https://openalex.org/W4387928869",
+    "https://openalex.org/W4389519799",
+    "https://openalex.org/W6838865847",
+    "https://openalex.org/W4380136141",
+    "https://openalex.org/W2035680126",
+    "https://openalex.org/W4291220407",
+    "https://openalex.org/W2789851632",
+    "https://openalex.org/W4256441345",
+    "https://openalex.org/W6777120346",
+    "https://openalex.org/W2623177746",
+    "https://openalex.org/W3101079689",
+    "https://openalex.org/W6767350551",
+    "https://openalex.org/W3172969687",
+    "https://openalex.org/W3096160408",
+    "https://openalex.org/W4285129344",
+    "https://openalex.org/W2970443729",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W6847076894",
+    "https://openalex.org/W2170505850",
+    "https://openalex.org/W4379259169",
+    "https://openalex.org/W4319793302",
+    "https://openalex.org/W6810242208",
+    "https://openalex.org/W3199412388",
+    "https://openalex.org/W3173765582",
+    "https://openalex.org/W3209479874",
+    "https://openalex.org/W6898505805",
+    "https://openalex.org/W25301398",
+    "https://openalex.org/W4320559482",
+    "https://openalex.org/W606759049",
+    "https://openalex.org/W2251856895",
+    "https://openalex.org/W3027616835",
+    "https://openalex.org/W755599",
+    "https://openalex.org/W6673061037",
+    "https://openalex.org/W2078219616",
+    "https://openalex.org/W2943967435",
+    "https://openalex.org/W1673310716",
+    "https://openalex.org/W2389246322",
+    "https://openalex.org/W2761329858",
+    "https://openalex.org/W2740924709",
+    "https://openalex.org/W2787894218",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W2766818166",
+    "https://openalex.org/W2754799758",
+    "https://openalex.org/W4310563050",
+    "https://openalex.org/W2966985943",
+    "https://openalex.org/W4384389941",
+    "https://openalex.org/W4221152111",
+    "https://openalex.org/W3198377975",
+    "https://openalex.org/W2725671465",
+    "https://openalex.org/W6800875267",
+    "https://openalex.org/W3194309076",
+    "https://openalex.org/W6729840497",
+    "https://openalex.org/W4382240064",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4283274111",
+    "https://openalex.org/W3166588663",
+    "https://openalex.org/W2948738230",
+    "https://openalex.org/W101809282",
+    "https://openalex.org/W2562539671",
+    "https://openalex.org/W4364385323",
+    "https://openalex.org/W3169407340",
+    "https://openalex.org/W3099262386",
+    "https://openalex.org/W4226209315",
+    "https://openalex.org/W4384026655",
+    "https://openalex.org/W6735931386",
+    "https://openalex.org/W2733560047",
+    "https://openalex.org/W4284672755",
+    "https://openalex.org/W4319737124",
+    "https://openalex.org/W3138968638",
+    "https://openalex.org/W3159563414",
+    "https://openalex.org/W2144160189",
+    "https://openalex.org/W2552383788",
+    "https://openalex.org/W3090867931",
+    "https://openalex.org/W4302233387",
+    "https://openalex.org/W3104057366",
+    "https://openalex.org/W4231458041"
+  ],
+  "abstract": "Understanding and identifying the causes behind developers' emotions (e.g., Frustration caused by 'delays in merging pull requests') can be crucial towards finding solutions to problems and fostering collaboration in open-source communities. Effectively identifying such information in the high volume of communications across the different project channels, such as chats, emails, and issue comments, requires automated recognition of emotions and their causes. To enable this automation, large-scale software engineering-specific datasets that can be used to train accurate machine learning models are required. However, such datasets are expensive to create with the variety and informal nature of software projects' communication channels.",
+  "full_text": null,
+  "topic": "Variety (cybernetics)",
+  "concepts": [
+    {
+      "name": "Variety (cybernetics)",
+      "score": 0.708659291267395
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6998850107192993
+    },
+    {
+      "name": "Software",
+      "score": 0.5963327884674072
+    },
+    {
+      "name": "Automation",
+      "score": 0.5583112239837646
+    },
+    {
+      "name": "Open source software",
+      "score": 0.4134427011013031
+    },
+    {
+      "name": "Data science",
+      "score": 0.4121587872505188
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.391777902841568
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.38350558280944824
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.36248356103897095
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2441003918647766
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15433552861213684
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    }
+  ]
 }

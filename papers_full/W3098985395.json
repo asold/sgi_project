@@ -1,75 +1,106 @@
 {
-    "title": "Scheduled DropHead: A Regularization Method for Transformer Models",
-    "url": "https://openalex.org/W3098985395",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2952165275",
-            "name": "Wangchunshu Zhou",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2133805355",
-            "name": "Tao Ge",
-            "affiliations": [
-                "Microsoft Research Asia (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171151462",
-            "name": "Furu Wei",
-            "affiliations": [
-                "Microsoft Research Asia (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096867225",
-            "name": "Ming Zhou",
-            "affiliations": [
-                "Microsoft Research Asia (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100549106",
-            "name": "Ke Xu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2951652751",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W1936750108",
-        "https://openalex.org/W2952634764",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W2980708516",
-        "https://openalex.org/W2890964657",
-        "https://openalex.org/W2903810591",
-        "https://openalex.org/W2963918774",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W2095705004",
-        "https://openalex.org/W4919037",
-        "https://openalex.org/W2331143823",
-        "https://openalex.org/W2212703438",
-        "https://openalex.org/W2740721704",
-        "https://openalex.org/W2989499211",
-        "https://openalex.org/W2170240176",
-        "https://openalex.org/W2975381464",
-        "https://openalex.org/W1840435438",
-        "https://openalex.org/W2767989436",
-        "https://openalex.org/W2408279554",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W4293714597",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W2946794439",
-        "https://openalex.org/W2964081807",
-        "https://openalex.org/W2113459411",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2963744496"
-    ],
-    "abstract": "We introduce DropHead, a structured dropout method specifically designed for regularizing the multi-head attention mechanism which is a key component of transformer. In contrast to the conventional dropout mechanism which randomly drops units or connections, DropHead drops entire attention heads during training to prevent the multi-head attention model from being dominated by a small portion of attention heads. It can help reduce the risk of overfitting and allow the models to better benefit from the multi-head attention. Given the interaction between multi-headedness and training dynamics, we further propose a novel dropout rate scheduler to adjust the dropout rate of DropHead throughout training, which results in a better regularization effect. Experimental results demonstrate that our proposed approach can improve transformer models by 0.9 BLEU score on WMT14 En-De translation task and around 1.0 accuracy for various text classification tasks.",
-    "full_text": "Findings of the Association for Computational Linguistics: EMNLP 2020, pages 1971–1980\nNovember 16 - 20, 2020.c⃝2020 Association for Computational Linguistics\n1971 \nhead \n1\nhead \n2\nhead \n3\nhead \nH\n…\n…\nhead \n1\nhead \n2\nhead \n3\nhead \nH\n(a) Standard Dropout\n(b) \nDropHead\n1972\n1973\n1974\n\n1975\n1976\n1977\n\n1978\n1979\n1980"
+  "title": "Scheduled DropHead: A Regularization Method for Transformer Models",
+  "url": "https://openalex.org/W3098985395",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2952165275",
+      "name": "Wangchunshu Zhou",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2133805355",
+      "name": "Tao Ge",
+      "affiliations": [
+        "Microsoft Research Asia (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171151462",
+      "name": "Furu Wei",
+      "affiliations": [
+        "Microsoft Research Asia (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096867225",
+      "name": "Ming Zhou",
+      "affiliations": [
+        "Microsoft Research Asia (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100549106",
+      "name": "Ke Xu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2951652751",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W1936750108",
+    "https://openalex.org/W2952634764",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W2980708516",
+    "https://openalex.org/W2890964657",
+    "https://openalex.org/W2903810591",
+    "https://openalex.org/W2963918774",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W2095705004",
+    "https://openalex.org/W4919037",
+    "https://openalex.org/W2331143823",
+    "https://openalex.org/W2212703438",
+    "https://openalex.org/W2740721704",
+    "https://openalex.org/W2989499211",
+    "https://openalex.org/W2170240176",
+    "https://openalex.org/W2975381464",
+    "https://openalex.org/W1840435438",
+    "https://openalex.org/W2767989436",
+    "https://openalex.org/W2408279554",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W4293714597",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W2946794439",
+    "https://openalex.org/W2964081807",
+    "https://openalex.org/W2113459411",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2963744496"
+  ],
+  "abstract": "We introduce DropHead, a structured dropout method specifically designed for regularizing the multi-head attention mechanism which is a key component of transformer. In contrast to the conventional dropout mechanism which randomly drops units or connections, DropHead drops entire attention heads during training to prevent the multi-head attention model from being dominated by a small portion of attention heads. It can help reduce the risk of overfitting and allow the models to better benefit from the multi-head attention. Given the interaction between multi-headedness and training dynamics, we further propose a novel dropout rate scheduler to adjust the dropout rate of DropHead throughout training, which results in a better regularization effect. Experimental results demonstrate that our proposed approach can improve transformer models by 0.9 BLEU score on WMT14 En-De translation task and around 1.0 accuracy for various text classification tasks.",
+  "full_text": "Findings of the Association for Computational Linguistics: EMNLP 2020, pages 1971–1980\nNovember 16 - 20, 2020.c⃝2020 Association for Computational Linguistics\n1971 \nhead \n1\nhead \n2\nhead \n3\nhead \nH\n…\n…\nhead \n1\nhead \n2\nhead \n3\nhead \nH\n(a) Standard Dropout\n(b) \nDropHead\n1972\n1973\n1974\n\n1975\n1976\n1977\n\n1978\n1979\n1980",
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5355026721954346
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4970727264881134
+    },
+    {
+      "name": "Regularization (linguistics)",
+      "score": 0.4893874526023865
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2785995900630951
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14823180437088013
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.1397530734539032
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0851600170135498
+    }
+  ]
 }

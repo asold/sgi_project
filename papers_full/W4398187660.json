@@ -1,69 +1,144 @@
 {
-    "title": "Methodology for Code Synthesis Evaluation of LLMs Presented by a Case Study of ChatGPT and Copilot",
-    "url": "https://openalex.org/W4398187660",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5018090045",
-            "name": "Zoltán Ságodi",
-            "affiliations": [
-                null,
-                "University of Szeged"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5083752250",
-            "name": "István Siket",
-            "affiliations": [
-                null,
-                "University of Szeged"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019664412",
-            "name": "Rudolf Ferenć",
-            "affiliations": [
-                "University of Szeged"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2087279853",
-        "https://openalex.org/W2123463031",
-        "https://openalex.org/W2038753367",
-        "https://openalex.org/W6798182279",
-        "https://openalex.org/W2093791094",
-        "https://openalex.org/W6633847785",
-        "https://openalex.org/W4225108562",
-        "https://openalex.org/W4294432232",
-        "https://openalex.org/W3138622308",
-        "https://openalex.org/W2996563961",
-        "https://openalex.org/W2954469728",
-        "https://openalex.org/W4284673343",
-        "https://openalex.org/W3038935150",
-        "https://openalex.org/W6843135644",
-        "https://openalex.org/W2012436850",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6811129797",
-        "https://openalex.org/W6633145936",
-        "https://openalex.org/W4285734663",
-        "https://openalex.org/W3173383004",
-        "https://openalex.org/W4284676027",
-        "https://openalex.org/W4385187421",
-        "https://openalex.org/W4386982649",
-        "https://openalex.org/W4288057765",
-        "https://openalex.org/W4315815628",
-        "https://openalex.org/W4391307510",
-        "https://openalex.org/W4323037544",
-        "https://openalex.org/W6850612876",
-        "https://openalex.org/W2082315183",
-        "https://openalex.org/W6855355790",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W4399203759",
-        "https://openalex.org/W4385681252",
-        "https://openalex.org/W4226399820",
-        "https://openalex.org/W4297726033"
-    ],
-    "abstract": "Large Language Models (LLMs) have grown in popularity in recent years and are now employed in a variety of software engineering domains thanks to their Natural Language Processing (NLP) capabilities, which include source code generation, understanding, and documentation. Selecting the appropriate model for source code generation presents a problem to developers as more and more powerful LLMs become available. While some studies have evaluated Copilot or ChatGPT, there is a lack of research on how developers can choose from available LLMs, which is a key factor in the growing set of available models and services. It is crucial to know if a model is capable of generating useful source code that meets the quality requirements and if the developers will be able to use the generated code. Regarding these factors, one has to decide which model to utilize during everyday tasks. This paper shows a methodology to compare such models by demonstrating an actual comparison of two models. Subsequently, we investigated the functional and non-functional qualities of the code synthesized by the models on a program synthesis benchmark containing 25 tasks. On average, the functional testing shows that ChatGPT generated 17 perfect solutions, while Copilot could only solve 13. The non-functional analysis reflected that both models generated good quality code, however, both have characteristic code smells. Our evaluation shows that ChatGPT performs better using this methodology, which is supported by human reviewers who evaluated the generated code by hand.",
-    "full_text": null
+  "title": "Methodology for Code Synthesis Evaluation of LLMs Presented by a Case Study of ChatGPT and Copilot",
+  "url": "https://openalex.org/W4398187660",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5018090045",
+      "name": "Zoltán Ságodi",
+      "affiliations": [
+        null,
+        "University of Szeged"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5083752250",
+      "name": "István Siket",
+      "affiliations": [
+        null,
+        "University of Szeged"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019664412",
+      "name": "Rudolf Ferenć",
+      "affiliations": [
+        "University of Szeged"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2087279853",
+    "https://openalex.org/W2123463031",
+    "https://openalex.org/W2038753367",
+    "https://openalex.org/W6798182279",
+    "https://openalex.org/W2093791094",
+    "https://openalex.org/W6633847785",
+    "https://openalex.org/W4225108562",
+    "https://openalex.org/W4294432232",
+    "https://openalex.org/W3138622308",
+    "https://openalex.org/W2996563961",
+    "https://openalex.org/W2954469728",
+    "https://openalex.org/W4284673343",
+    "https://openalex.org/W3038935150",
+    "https://openalex.org/W6843135644",
+    "https://openalex.org/W2012436850",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6811129797",
+    "https://openalex.org/W6633145936",
+    "https://openalex.org/W4285734663",
+    "https://openalex.org/W3173383004",
+    "https://openalex.org/W4284676027",
+    "https://openalex.org/W4385187421",
+    "https://openalex.org/W4386982649",
+    "https://openalex.org/W4288057765",
+    "https://openalex.org/W4315815628",
+    "https://openalex.org/W4391307510",
+    "https://openalex.org/W4323037544",
+    "https://openalex.org/W6850612876",
+    "https://openalex.org/W2082315183",
+    "https://openalex.org/W6855355790",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W4399203759",
+    "https://openalex.org/W4385681252",
+    "https://openalex.org/W4226399820",
+    "https://openalex.org/W4297726033"
+  ],
+  "abstract": "Large Language Models (LLMs) have grown in popularity in recent years and are now employed in a variety of software engineering domains thanks to their Natural Language Processing (NLP) capabilities, which include source code generation, understanding, and documentation. Selecting the appropriate model for source code generation presents a problem to developers as more and more powerful LLMs become available. While some studies have evaluated Copilot or ChatGPT, there is a lack of research on how developers can choose from available LLMs, which is a key factor in the growing set of available models and services. It is crucial to know if a model is capable of generating useful source code that meets the quality requirements and if the developers will be able to use the generated code. Regarding these factors, one has to decide which model to utilize during everyday tasks. This paper shows a methodology to compare such models by demonstrating an actual comparison of two models. Subsequently, we investigated the functional and non-functional qualities of the code synthesized by the models on a program synthesis benchmark containing 25 tasks. On average, the functional testing shows that ChatGPT generated 17 perfect solutions, while Copilot could only solve 13. The non-functional analysis reflected that both models generated good quality code, however, both have characteristic code smells. Our evaluation shows that ChatGPT performs better using this methodology, which is supported by human reviewers who evaluated the generated code by hand.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7843117713928223
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.669662356376648
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.6258975267410278
+    },
+    {
+      "name": "Popularity",
+      "score": 0.6024867296218872
+    },
+    {
+      "name": "Documentation",
+      "score": 0.5825341939926147
+    },
+    {
+      "name": "Source code",
+      "score": 0.5735538601875305
+    },
+    {
+      "name": "Quality (philosophy)",
+      "score": 0.5200918912887573
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.5097305178642273
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.45694005489349365
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.36675208806991577
+    },
+    {
+      "name": "Programming language",
+      "score": 0.29578661918640137
+    },
+    {
+      "name": "Computer security",
+      "score": 0.24267733097076416
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.0
+    }
+  ]
 }

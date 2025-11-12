@@ -1,69 +1,108 @@
 {
-    "title": "Vulnerability detection using BERT based LLM model with transparency obligation practice towards trustworthy AI",
-    "url": "https://openalex.org/W4403998111",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5106518680",
-            "name": "Jean Haurogné",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5099320976",
-            "name": "Nihala Basheer",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2108114631",
-            "name": "Shareeful Islam",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2980634678",
-        "https://openalex.org/W4401018839",
-        "https://openalex.org/W4399876747",
-        "https://openalex.org/W4387298393",
-        "https://openalex.org/W2792588201",
-        "https://openalex.org/W4393940451",
-        "https://openalex.org/W6782334395",
-        "https://openalex.org/W2900510316",
-        "https://openalex.org/W4283077289",
-        "https://openalex.org/W6858604069",
-        "https://openalex.org/W3106093299",
-        "https://openalex.org/W6776488390",
-        "https://openalex.org/W4394745423",
-        "https://openalex.org/W4400849205",
-        "https://openalex.org/W4393284202",
-        "https://openalex.org/W6800949977",
-        "https://openalex.org/W6858785218",
-        "https://openalex.org/W2922073769",
-        "https://openalex.org/W4398785927",
-        "https://openalex.org/W2962862931",
-        "https://openalex.org/W4238734770",
-        "https://openalex.org/W4240849091",
-        "https://openalex.org/W4390490761",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W4391945853",
-        "https://openalex.org/W4387891898",
-        "https://openalex.org/W4396821912",
-        "https://openalex.org/W4321854066",
-        "https://openalex.org/W4392297945",
-        "https://openalex.org/W3098605233",
-        "https://openalex.org/W4395484761",
-        "https://openalex.org/W4391421325",
-        "https://openalex.org/W4312716235",
-        "https://openalex.org/W4390572759",
-        "https://openalex.org/W4388962945",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4399410016",
-        "https://openalex.org/W4205807230",
-        "https://openalex.org/W4391212767",
-        "https://openalex.org/W4381587248",
-        "https://openalex.org/W4383045307",
-        "https://openalex.org/W4400064561",
-        "https://openalex.org/W2997335426"
-    ],
-    "abstract": "Vulnerabilities in the source code are one of the main causes of potential threats in software-intensive systems. There are a large number of vulnerabilities published each day, and effective vulnerability detection is critical to identifying and mitigating these vulnerabilities. AI has emerged as a promising solution to enhance vulnerability detection, offering the ability to analyse vast amounts of data and identify patterns indicative of potential threats. However, AI-based methods often face several challenges, specifically when dealing with large datasets and understanding the specific context of the problem. Large Language Model (LLM) is now widely considered to tackle more complex tasks and handle large datasets, which also exhibits limitations in terms of explaining the model outcome and existing works focus on providing overview of explainability and transparency. This research introduces a novel transparency obligation practice for vulnerability detection using BERT based LLMs. We address the black-box nature of LLMs by employing XAI techniques, unique combination of SHAP, LIME, heat map. We propose an architecture that combines the BERT model with transparency obligation practices, which ensures the assurance of transparency throughout the entire LLM life cycle. An experiment is performed with a large source code dataset to demonstrate the applicability of the proposed approach. The result shows higher accuracy of 91.8 % for the vulnerability detection and model explainability outcome is highly influenced by “vulnerable”, “function”, ''mysql_tmpdir_list'', “strmov” tokens using both SHAP and LIME framework. Heatmap of attention weights, highlights the local token interactions that aid in understanding the model's decision points.",
-    "full_text": null
+  "title": "Vulnerability detection using BERT based LLM model with transparency obligation practice towards trustworthy AI",
+  "url": "https://openalex.org/W4403998111",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5106518680",
+      "name": "Jean Haurogné",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5099320976",
+      "name": "Nihala Basheer",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2108114631",
+      "name": "Shareeful Islam",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2980634678",
+    "https://openalex.org/W4401018839",
+    "https://openalex.org/W4399876747",
+    "https://openalex.org/W4387298393",
+    "https://openalex.org/W2792588201",
+    "https://openalex.org/W4393940451",
+    "https://openalex.org/W6782334395",
+    "https://openalex.org/W2900510316",
+    "https://openalex.org/W4283077289",
+    "https://openalex.org/W6858604069",
+    "https://openalex.org/W3106093299",
+    "https://openalex.org/W6776488390",
+    "https://openalex.org/W4394745423",
+    "https://openalex.org/W4400849205",
+    "https://openalex.org/W4393284202",
+    "https://openalex.org/W6800949977",
+    "https://openalex.org/W6858785218",
+    "https://openalex.org/W2922073769",
+    "https://openalex.org/W4398785927",
+    "https://openalex.org/W2962862931",
+    "https://openalex.org/W4238734770",
+    "https://openalex.org/W4240849091",
+    "https://openalex.org/W4390490761",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W4391945853",
+    "https://openalex.org/W4387891898",
+    "https://openalex.org/W4396821912",
+    "https://openalex.org/W4321854066",
+    "https://openalex.org/W4392297945",
+    "https://openalex.org/W3098605233",
+    "https://openalex.org/W4395484761",
+    "https://openalex.org/W4391421325",
+    "https://openalex.org/W4312716235",
+    "https://openalex.org/W4390572759",
+    "https://openalex.org/W4388962945",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4399410016",
+    "https://openalex.org/W4205807230",
+    "https://openalex.org/W4391212767",
+    "https://openalex.org/W4381587248",
+    "https://openalex.org/W4383045307",
+    "https://openalex.org/W4400064561",
+    "https://openalex.org/W2997335426"
+  ],
+  "abstract": "Vulnerabilities in the source code are one of the main causes of potential threats in software-intensive systems. There are a large number of vulnerabilities published each day, and effective vulnerability detection is critical to identifying and mitigating these vulnerabilities. AI has emerged as a promising solution to enhance vulnerability detection, offering the ability to analyse vast amounts of data and identify patterns indicative of potential threats. However, AI-based methods often face several challenges, specifically when dealing with large datasets and understanding the specific context of the problem. Large Language Model (LLM) is now widely considered to tackle more complex tasks and handle large datasets, which also exhibits limitations in terms of explaining the model outcome and existing works focus on providing overview of explainability and transparency. This research introduces a novel transparency obligation practice for vulnerability detection using BERT based LLMs. We address the black-box nature of LLMs by employing XAI techniques, unique combination of SHAP, LIME, heat map. We propose an architecture that combines the BERT model with transparency obligation practices, which ensures the assurance of transparency throughout the entire LLM life cycle. An experiment is performed with a large source code dataset to demonstrate the applicability of the proposed approach. The result shows higher accuracy of 91.8 % for the vulnerability detection and model explainability outcome is highly influenced by “vulnerable”, “function”, ''mysql_tmpdir_list'', “strmov” tokens using both SHAP and LIME framework. Heatmap of attention weights, highlights the local token interactions that aid in understanding the model's decision points.",
+  "full_text": null,
+  "topic": "Transparency (behavior)",
+  "concepts": [
+    {
+      "name": "Transparency (behavior)",
+      "score": 0.8295716047286987
+    },
+    {
+      "name": "Trustworthiness",
+      "score": 0.7930131554603577
+    },
+    {
+      "name": "Obligation",
+      "score": 0.6626772880554199
+    },
+    {
+      "name": "Vulnerability (computing)",
+      "score": 0.5897985100746155
+    },
+    {
+      "name": "Computer science",
+      "score": 0.49627095460891724
+    },
+    {
+      "name": "Computer security",
+      "score": 0.4002598226070404
+    },
+    {
+      "name": "Internet privacy",
+      "score": 0.3235587477684021
+    },
+    {
+      "name": "Political science",
+      "score": 0.2648985981941223
+    },
+    {
+      "name": "Law",
+      "score": 0.14639216661453247
+    }
+  ]
 }

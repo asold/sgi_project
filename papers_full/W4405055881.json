@@ -1,108 +1,167 @@
 {
-    "title": "Accurate and General DNA Representations Emerge from Genome Foundation Models at Scale",
-    "url": "https://openalex.org/W4405055881",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5047695651",
-            "name": "Caleb N. Ellington",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5054626174",
-            "name": "Nian X. Sun",
-            "affiliations": [
-                "Mohamed bin Zayed University of Artificial Intelligence"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102978796",
-            "name": "Nicholas Ho",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5081822522",
-            "name": "Tianhua Tao",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5081666457",
-            "name": "Sazan Mahbub",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100675443",
-            "name": "Dian Li",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5076407338",
-            "name": "Yonghao Zhuang",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100701041",
-            "name": "Hongyi Wang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101589053",
-            "name": "Le Song",
-            "affiliations": [
-                "Mohamed bin Zayed University of Artificial Intelligence"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5009547049",
-            "name": "Eric P. Xing",
-            "affiliations": [
-                "Mohamed bin Zayed University of Artificial Intelligence",
-                "Carnegie Mellon University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2198606573",
-        "https://openalex.org/W3042669608",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W3203588026",
-        "https://openalex.org/W4387994442",
-        "https://openalex.org/W4316339774",
-        "https://openalex.org/W4387576685",
-        "https://openalex.org/W4392351837",
-        "https://openalex.org/W4393433029",
-        "https://openalex.org/W4393870943",
-        "https://openalex.org/W4380488316",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3191761521",
-        "https://openalex.org/W4385737488",
-        "https://openalex.org/W4386861232",
-        "https://openalex.org/W4400231442",
-        "https://openalex.org/W4392373804",
-        "https://openalex.org/W4225314874",
-        "https://openalex.org/W4389174444",
-        "https://openalex.org/W4401043959",
-        "https://openalex.org/W2990395719",
-        "https://openalex.org/W2077318478",
-        "https://openalex.org/W4389296151",
-        "https://openalex.org/W4396750115",
-        "https://openalex.org/W4226463315",
-        "https://openalex.org/W3038054114"
-    ],
-    "abstract": "Abstract Language models applied to protein sequences have become a panacea, enabling therapeutics development, materials engineering, and core biology research. Despite the successes of protein language models, genome language models remain nascent. Recent studies suggest the bottleneck is data volume or modeling context size, since long-range interactions are widely acknowledged but sparsely annotated. However, it may be the case that even short DNA sequences are modeled poorly by existing approaches, and current models are unable to represent the wide array of functions encoded by DNA. To study this, we develop AIDO.DNA, a pretrained module for DNA representation in an AI-driven Digital Organism [1]. AIDO.DNA is a seven billion parameter encoder-only transformer trained on 10.6 billion nucleotides from a dataset of 796 species. By scaling model size while maintaining a short context length of 4k nucleotides, AIDO.DNA shows substantial improvements across a breadth of supervised, generative, and zero-shot tasks relevant to functional genomics, synthetic biology, and drug development. Notably, AIDO.DNA outperforms prior encoder-only architectures without new data, suggesting that new scaling laws are needed to achieve computeoptimal DNA language models. Models and code are available through Model-Generator in https://github.com/genbio-ai/AIDO and on Hugging Face at https://huggingface.co/genbio-ai .",
-    "full_text": null
+  "title": "Accurate and General DNA Representations Emerge from Genome Foundation Models at Scale",
+  "url": "https://openalex.org/W4405055881",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5047695651",
+      "name": "Caleb N. Ellington",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5054626174",
+      "name": "Nian X. Sun",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102978796",
+      "name": "Nicholas Ho",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5081822522",
+      "name": "Tianhua Tao",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5081666457",
+      "name": "Sazan Mahbub",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100675443",
+      "name": "Dian Li",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5076407338",
+      "name": "Yonghao Zhuang",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100701041",
+      "name": "Hongyi Wang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101589053",
+      "name": "Le Song",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5009547049",
+      "name": "Eric P. Xing",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence",
+        "Carnegie Mellon University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2198606573",
+    "https://openalex.org/W3042669608",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W3203588026",
+    "https://openalex.org/W4387994442",
+    "https://openalex.org/W4316339774",
+    "https://openalex.org/W4387576685",
+    "https://openalex.org/W4392351837",
+    "https://openalex.org/W4393433029",
+    "https://openalex.org/W4393870943",
+    "https://openalex.org/W4380488316",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3191761521",
+    "https://openalex.org/W4385737488",
+    "https://openalex.org/W4386861232",
+    "https://openalex.org/W4400231442",
+    "https://openalex.org/W4392373804",
+    "https://openalex.org/W4225314874",
+    "https://openalex.org/W4389174444",
+    "https://openalex.org/W4401043959",
+    "https://openalex.org/W2990395719",
+    "https://openalex.org/W2077318478",
+    "https://openalex.org/W4389296151",
+    "https://openalex.org/W4396750115",
+    "https://openalex.org/W4226463315",
+    "https://openalex.org/W3038054114"
+  ],
+  "abstract": "Abstract Language models applied to protein sequences have become a panacea, enabling therapeutics development, materials engineering, and core biology research. Despite the successes of protein language models, genome language models remain nascent. Recent studies suggest the bottleneck is data volume or modeling context size, since long-range interactions are widely acknowledged but sparsely annotated. However, it may be the case that even short DNA sequences are modeled poorly by existing approaches, and current models are unable to represent the wide array of functions encoded by DNA. To study this, we develop AIDO.DNA, a pretrained module for DNA representation in an AI-driven Digital Organism [1]. AIDO.DNA is a seven billion parameter encoder-only transformer trained on 10.6 billion nucleotides from a dataset of 796 species. By scaling model size while maintaining a short context length of 4k nucleotides, AIDO.DNA shows substantial improvements across a breadth of supervised, generative, and zero-shot tasks relevant to functional genomics, synthetic biology, and drug development. Notably, AIDO.DNA outperforms prior encoder-only architectures without new data, suggesting that new scaling laws are needed to achieve computeoptimal DNA language models. Models and code are available through Model-Generator in https://github.com/genbio-ai/AIDO and on Hugging Face at https://huggingface.co/genbio-ai .",
+  "full_text": null,
+  "topic": "Foundation (evidence)",
+  "concepts": [
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.6458653807640076
+    },
+    {
+      "name": "Scale (ratio)",
+      "score": 0.5700043439865112
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.47627443075180054
+    },
+    {
+      "name": "Genome",
+      "score": 0.4466696083545685
+    },
+    {
+      "name": "DNA",
+      "score": 0.41145631670951843
+    },
+    {
+      "name": "Evolutionary biology",
+      "score": 0.38330399990081787
+    },
+    {
+      "name": "Biology",
+      "score": 0.3771783411502838
+    },
+    {
+      "name": "Computer science",
+      "score": 0.35483884811401367
+    },
+    {
+      "name": "Genetics",
+      "score": 0.31315532326698303
+    },
+    {
+      "name": "History",
+      "score": 0.2354036569595337
+    },
+    {
+      "name": "Geography",
+      "score": 0.22026759386062622
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.1441499888896942
+    },
+    {
+      "name": "Cartography",
+      "score": 0.11252683401107788
+    },
+    {
+      "name": "Gene",
+      "score": 0.10372403264045715
+    }
+  ]
 }

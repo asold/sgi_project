@@ -1,76 +1,155 @@
 {
-    "title": "Large Language Models are Competitive Near Cold-start Recommenders for Language- and Item-based Preferences",
-    "url": "https://openalex.org/W4386728930",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2113280975",
-            "name": "Scott Sanner",
-            "affiliations": [
-                "University of Toronto"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100338238",
-            "name": "Krisztian Balog",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2072292845",
-            "name": "Filip Radlinski",
-            "affiliations": [
-                "Google (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3112718206",
-            "name": "Ben Wedin",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2145003792",
-            "name": "Lucas Dixon",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2947612811",
-        "https://openalex.org/W3155676867",
-        "https://openalex.org/W2749926164",
-        "https://openalex.org/W4375956688",
-        "https://openalex.org/W4296591843",
-        "https://openalex.org/W2349436533",
-        "https://openalex.org/W2957191877",
-        "https://openalex.org/W1965355809",
-        "https://openalex.org/W3185784178",
-        "https://openalex.org/W4296591867",
-        "https://openalex.org/W3153594481",
-        "https://openalex.org/W2605350416",
-        "https://openalex.org/W4290944002",
-        "https://openalex.org/W1979356225",
-        "https://openalex.org/W2101409192",
-        "https://openalex.org/W2562236173",
-        "https://openalex.org/W2746689340",
-        "https://openalex.org/W2963085847",
-        "https://openalex.org/W3099577420",
-        "https://openalex.org/W4386729282",
-        "https://openalex.org/W4224325509",
-        "https://openalex.org/W1987431925",
-        "https://openalex.org/W4296604471",
-        "https://openalex.org/W3046039946",
-        "https://openalex.org/W4281263000",
-        "https://openalex.org/W2025129589",
-        "https://openalex.org/W2042281163",
-        "https://openalex.org/W2893518396",
-        "https://openalex.org/W2009455845",
-        "https://openalex.org/W3153206982",
-        "https://openalex.org/W2781528640",
-        "https://openalex.org/W1690919088",
-        "https://openalex.org/W3103410128",
-        "https://openalex.org/W3105114834"
-    ],
-    "abstract": "Traditional recommender systems leverage users' item preference history to recommend novel content that users may like. However, modern dialog interfaces that allow users to express language-based preferences offer a fundamentally different modality for preference input. Inspired by recent successes of prompting paradigms for large language models (LLMs), we study their use for making recommendations from both item-based and language-based preferences in comparison to state-of-the-art item-based collaborative filtering (CF) methods. To support this investigation, we collect a new dataset consisting of both item-based and language-based preferences elicited from users along with their ratings on a variety of (biased) recommended items and (unbiased) random items. Among numerous experimental results, we find that LLMs provide competitive recommendation performance for pure language-based preferences (no item preferences) in the near cold-start case in comparison to item-based CF methods, despite having no supervised training for this specific task (zero-shot) or only a few labels (few-shot). This is particularly promising as language-based preference representations are more explainable and scrutable than item-based or vector-based representations.",
-    "full_text": null
+  "title": "Large Language Models are Competitive Near Cold-start Recommenders for Language- and Item-based Preferences",
+  "url": "https://openalex.org/W4386728930",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2113280975",
+      "name": "Scott Sanner",
+      "affiliations": [
+        "University of Toronto"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100338238",
+      "name": "Krisztian Balog",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2072292845",
+      "name": "Filip Radlinski",
+      "affiliations": [
+        "Google (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3112718206",
+      "name": "Ben Wedin",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2145003792",
+      "name": "Lucas Dixon",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2947612811",
+    "https://openalex.org/W3155676867",
+    "https://openalex.org/W2749926164",
+    "https://openalex.org/W4375956688",
+    "https://openalex.org/W4296591843",
+    "https://openalex.org/W2349436533",
+    "https://openalex.org/W2957191877",
+    "https://openalex.org/W1965355809",
+    "https://openalex.org/W3185784178",
+    "https://openalex.org/W4296591867",
+    "https://openalex.org/W3153594481",
+    "https://openalex.org/W2605350416",
+    "https://openalex.org/W4290944002",
+    "https://openalex.org/W1979356225",
+    "https://openalex.org/W2101409192",
+    "https://openalex.org/W2562236173",
+    "https://openalex.org/W2746689340",
+    "https://openalex.org/W2963085847",
+    "https://openalex.org/W3099577420",
+    "https://openalex.org/W4386729282",
+    "https://openalex.org/W4224325509",
+    "https://openalex.org/W1987431925",
+    "https://openalex.org/W4296604471",
+    "https://openalex.org/W3046039946",
+    "https://openalex.org/W4281263000",
+    "https://openalex.org/W2025129589",
+    "https://openalex.org/W2042281163",
+    "https://openalex.org/W2893518396",
+    "https://openalex.org/W2009455845",
+    "https://openalex.org/W3153206982",
+    "https://openalex.org/W2781528640",
+    "https://openalex.org/W1690919088",
+    "https://openalex.org/W3103410128",
+    "https://openalex.org/W3105114834"
+  ],
+  "abstract": "Traditional recommender systems leverage users' item preference history to recommend novel content that users may like. However, modern dialog interfaces that allow users to express language-based preferences offer a fundamentally different modality for preference input. Inspired by recent successes of prompting paradigms for large language models (LLMs), we study their use for making recommendations from both item-based and language-based preferences in comparison to state-of-the-art item-based collaborative filtering (CF) methods. To support this investigation, we collect a new dataset consisting of both item-based and language-based preferences elicited from users along with their ratings on a variety of (biased) recommended items and (unbiased) random items. Among numerous experimental results, we find that LLMs provide competitive recommendation performance for pure language-based preferences (no item preferences) in the near cold-start case in comparison to item-based CF methods, despite having no supervised training for this specific task (zero-shot) or only a few labels (few-shot). This is particularly promising as language-based preference representations are more explainable and scrutable than item-based or vector-based representations.",
+  "full_text": null,
+  "topic": "Leverage (statistics)",
+  "concepts": [
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.7771172523498535
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7647454738616943
+    },
+    {
+      "name": "Preference",
+      "score": 0.6692250967025757
+    },
+    {
+      "name": "Cold start (automotive)",
+      "score": 0.6005462408065796
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5637335777282715
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5189547538757324
+    },
+    {
+      "name": "Dialog box",
+      "score": 0.49971508979797363
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.4783617854118347
+    },
+    {
+      "name": "Recommender system",
+      "score": 0.47503378987312317
+    },
+    {
+      "name": "Variety (cybernetics)",
+      "score": 0.47411659359931946
+    },
+    {
+      "name": "Preference learning",
+      "score": 0.46873125433921814
+    },
+    {
+      "name": "Language model",
+      "score": 0.43323665857315063
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3503345549106598
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.1943703591823578
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Aerospace engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Microeconomics",
+      "score": 0.0
+    }
+  ]
 }

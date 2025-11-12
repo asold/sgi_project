@@ -1,69 +1,144 @@
 {
-    "title": "Radiology Report Annotation Using Generative Large Language Models: Comparative Analysis",
-    "url": "https://openalex.org/W4407381051",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5116109138",
-            "name": "Bayan Altalla’",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2098432087",
-            "name": "Ashraf Ahmad",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5062185583",
-            "name": "Layla Bitar",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5116233489",
-            "name": "Mohammed Al-Bssol",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2992823469",
-            "name": "Amal Al‐Omari",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2159224674",
-            "name": "Iyad Sultan",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4390023570",
-        "https://openalex.org/W1484393529",
-        "https://openalex.org/W4384484700",
-        "https://openalex.org/W4386116593",
-        "https://openalex.org/W2999134777",
-        "https://openalex.org/W4381480701",
-        "https://openalex.org/W4389047577",
-        "https://openalex.org/W2108017642",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4385988359",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4385568225",
-        "https://openalex.org/W4391759824",
-        "https://openalex.org/W2785863263",
-        "https://openalex.org/W2952100895",
-        "https://openalex.org/W3170218295",
-        "https://openalex.org/W2765729115",
-        "https://openalex.org/W3149790948",
-        "https://openalex.org/W2769783090",
-        "https://openalex.org/W2953035525",
-        "https://openalex.org/W2995225687",
-        "https://openalex.org/W2152772232",
-        "https://openalex.org/W2998559045",
-        "https://openalex.org/W4391644915",
-        "https://openalex.org/W4385570594",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4353015365",
-        "https://openalex.org/W3105396370"
-    ],
-    "abstract": "Recent advancements in large language models (LLMs), particularly GPT‐3.5 and GPT‐4, have sparked significant interest in their application within the medical field. This research offers a detailed comparative analysis of the abilities of GPT‐3.5 and GPT‐4 in the context of annotating radiology reports and generating impressions from chest computed tomography (CT) scans. The primary objective is to use these models to assist healthcare professionals in handling routine documentation tasks. Employing methods such as in‐context learning (ICL) and retrieval‐augmented generation (RAG), the study focused on generating impression sections from radiological findings. Comprehensive evaluation was applied using a variety of metrics, including recall‐oriented understudy for gisting evaluation (ROUGE) for n‐gram analysis, Instructor Similarity for contextual similarity, and BERTScore for semantic similarity, to assess the performance of these models. The study shows distinct performance differences between GPT‐3.5 and GPT‐4 across both zero‐shot and few‐shot learning scenarios. It was observed that certain prompts significantly influenced the performance outcomes, with specific prompts leading to more accurate impressions. The RAG method achieved a superior BERTScore of 0.92, showcasing its ability to generate semantically rich and contextually accurate impressions. In contrast, GPT‐3.5 and GPT‐4 excel in preserving language tone, with Instructor Similarity scores of approximately 0.92 across scenarios, underscoring the importance of prompt design in effective summarization tasks. The findings of this research emphasize the critical role of prompt design in optimizing model efficacy and point to the significant potential for further exploration in prompt engineering. Moreover, the study advocates for the standardized integration of such advanced LLMs in healthcare practices, highlighting their potential to enhance the efficiency and accuracy of medical documentation.",
-    "full_text": null
+  "title": "Radiology Report Annotation Using Generative Large Language Models: Comparative Analysis",
+  "url": "https://openalex.org/W4407381051",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5116109138",
+      "name": "Bayan Altalla’",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2098432087",
+      "name": "Ashraf Ahmad",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5062185583",
+      "name": "Layla Bitar",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5116233489",
+      "name": "Mohammed Al-Bssol",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2992823469",
+      "name": "Amal Al‐Omari",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2159224674",
+      "name": "Iyad Sultan",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4390023570",
+    "https://openalex.org/W1484393529",
+    "https://openalex.org/W4384484700",
+    "https://openalex.org/W4386116593",
+    "https://openalex.org/W2999134777",
+    "https://openalex.org/W4381480701",
+    "https://openalex.org/W4389047577",
+    "https://openalex.org/W2108017642",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4385988359",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4385568225",
+    "https://openalex.org/W4391759824",
+    "https://openalex.org/W2785863263",
+    "https://openalex.org/W2952100895",
+    "https://openalex.org/W3170218295",
+    "https://openalex.org/W2765729115",
+    "https://openalex.org/W3149790948",
+    "https://openalex.org/W2769783090",
+    "https://openalex.org/W2953035525",
+    "https://openalex.org/W2995225687",
+    "https://openalex.org/W2152772232",
+    "https://openalex.org/W2998559045",
+    "https://openalex.org/W4391644915",
+    "https://openalex.org/W4385570594",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4353015365",
+    "https://openalex.org/W3105396370"
+  ],
+  "abstract": "Recent advancements in large language models (LLMs), particularly GPT‐3.5 and GPT‐4, have sparked significant interest in their application within the medical field. This research offers a detailed comparative analysis of the abilities of GPT‐3.5 and GPT‐4 in the context of annotating radiology reports and generating impressions from chest computed tomography (CT) scans. The primary objective is to use these models to assist healthcare professionals in handling routine documentation tasks. Employing methods such as in‐context learning (ICL) and retrieval‐augmented generation (RAG), the study focused on generating impression sections from radiological findings. Comprehensive evaluation was applied using a variety of metrics, including recall‐oriented understudy for gisting evaluation (ROUGE) for n‐gram analysis, Instructor Similarity for contextual similarity, and BERTScore for semantic similarity, to assess the performance of these models. The study shows distinct performance differences between GPT‐3.5 and GPT‐4 across both zero‐shot and few‐shot learning scenarios. It was observed that certain prompts significantly influenced the performance outcomes, with specific prompts leading to more accurate impressions. The RAG method achieved a superior BERTScore of 0.92, showcasing its ability to generate semantically rich and contextually accurate impressions. In contrast, GPT‐3.5 and GPT‐4 excel in preserving language tone, with Instructor Similarity scores of approximately 0.92 across scenarios, underscoring the importance of prompt design in effective summarization tasks. The findings of this research emphasize the critical role of prompt design in optimizing model efficacy and point to the significant potential for further exploration in prompt engineering. Moreover, the study advocates for the standardized integration of such advanced LLMs in healthcare practices, highlighting their potential to enhance the efficiency and accuracy of medical documentation.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6999144554138184
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.6973072290420532
+    },
+    {
+      "name": "Automatic summarization",
+      "score": 0.6493152379989624
+    },
+    {
+      "name": "Similarity (geometry)",
+      "score": 0.6150519251823425
+    },
+    {
+      "name": "Annotation",
+      "score": 0.478347510099411
+    },
+    {
+      "name": "Variety (cybernetics)",
+      "score": 0.4600538909435272
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.45278024673461914
+    },
+    {
+      "name": "Semantic similarity",
+      "score": 0.451651006937027
+    },
+    {
+      "name": "Documentation",
+      "score": 0.4512733817100525
+    },
+    {
+      "name": "Field (mathematics)",
+      "score": 0.42254117131233215
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3834494352340698
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.37615060806274414
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.10819137096405029
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Pure mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

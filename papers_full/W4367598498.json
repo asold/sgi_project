@@ -1,128 +1,183 @@
 {
-    "title": "ADOPT: intrinsic protein disorder prediction through deep bidirectional transformers",
-    "url": "https://openalex.org/W4367598498",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2336884716",
-            "name": "Istvan Redl",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4282424507",
-            "name": "Carlo Fisicaro",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4282407549",
-            "name": "Oliver Dutton",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2124912919",
-            "name": "Falk Hoffmann",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4282424508",
-            "name": "Louie Henderson",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4367741495",
-            "name": "Benjamin M J Owens",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2905987656",
-            "name": "Matthew Heberling",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2030002905",
-            "name": "Emanuele Paci",
-            "affiliations": [
-                "University of Bologna"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A747932578",
-            "name": "Kamil Tamiola",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2045777307",
-        "https://openalex.org/W2016170088",
-        "https://openalex.org/W2015115860",
-        "https://openalex.org/W2982547327",
-        "https://openalex.org/W2756625313",
-        "https://openalex.org/W1979079649",
-        "https://openalex.org/W1970577444",
-        "https://openalex.org/W2950641800",
-        "https://openalex.org/W2129170338",
-        "https://openalex.org/W2055193239",
-        "https://openalex.org/W2156407548",
-        "https://openalex.org/W2161199282",
-        "https://openalex.org/W2131965976",
-        "https://openalex.org/W2102845147",
-        "https://openalex.org/W2123969230",
-        "https://openalex.org/W2114604135",
-        "https://openalex.org/W1792685479",
-        "https://openalex.org/W2049517479",
-        "https://openalex.org/W2346205768",
-        "https://openalex.org/W2117640066",
-        "https://openalex.org/W2156465034",
-        "https://openalex.org/W2003561135",
-        "https://openalex.org/W2225640440",
-        "https://openalex.org/W1864564002",
-        "https://openalex.org/W2566370974",
-        "https://openalex.org/W2510934692",
-        "https://openalex.org/W3011698511",
-        "https://openalex.org/W2969180072",
-        "https://openalex.org/W3014133106",
-        "https://openalex.org/W3184265853",
-        "https://openalex.org/W2102818658",
-        "https://openalex.org/W2075095565",
-        "https://openalex.org/W2154501851",
-        "https://openalex.org/W3156051371",
-        "https://openalex.org/W6770686123",
-        "https://openalex.org/W2334543732",
-        "https://openalex.org/W4229743141",
-        "https://openalex.org/W2316665668",
-        "https://openalex.org/W3083871792",
-        "https://openalex.org/W2554294661",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W2088848851",
-        "https://openalex.org/W2102461176",
-        "https://openalex.org/W2161062388",
-        "https://openalex.org/W2557595285",
-        "https://openalex.org/W2972411752",
-        "https://openalex.org/W6791955017",
-        "https://openalex.org/W2787894218",
-        "https://openalex.org/W3137047737",
-        "https://openalex.org/W4303981501",
-        "https://openalex.org/W2562162676",
-        "https://openalex.org/W4281852011",
-        "https://openalex.org/W3196691244",
-        "https://openalex.org/W1501347866",
-        "https://openalex.org/W2889895782",
-        "https://openalex.org/W2140673705",
-        "https://openalex.org/W4308463927",
-        "https://openalex.org/W3183475563",
-        "https://openalex.org/W4303983095",
-        "https://openalex.org/W4224259818",
-        "https://openalex.org/W6763868836",
-        "https://openalex.org/W3166142427",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W1583837637",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W2987184424",
-        "https://openalex.org/W2971227267"
-    ],
-    "abstract": "Abstract Intrinsically disordered proteins (IDPs) are important for a broad range of biological functions and are involved in many diseases. An understanding of intrinsic disorder is key to develop compounds that target IDPs. Experimental characterization of IDPs is hindered by the very fact that they are highly dynamic. Computational methods that predict disorder from the amino acid sequence have been proposed. Here, we present ADOPT (Attention DisOrder PredicTor), a new predictor of protein disorder. ADOPT is composed of a self-supervised encoder and a supervised disorder predictor. The former is based on a deep bidirectional transformer, which extracts dense residue-level representations from Facebook’s Evolutionary Scale Modeling library. The latter uses a database of nuclear magnetic resonance chemical shifts, constructed to ensure balanced amounts of disordered and ordered residues, as a training and a test dataset for protein disorder. ADOPT predicts whether a protein or a specific region is disordered with better performance than the best existing predictors and faster than most other proposed methods (a few seconds per sequence). We identify the features that are relevant for the prediction performance and show that good performance can already be gained with &amp;lt;100 features. ADOPT is available as a stand-alone package at https://github.com/PeptoneLtd/ADOPT and as a web server at https://adopt.peptone.io/.",
-    "full_text": null
+  "title": "ADOPT: intrinsic protein disorder prediction through deep bidirectional transformers",
+  "url": "https://openalex.org/W4367598498",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2336884716",
+      "name": "Istvan Redl",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4282424507",
+      "name": "Carlo Fisicaro",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4282407549",
+      "name": "Oliver Dutton",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2124912919",
+      "name": "Falk Hoffmann",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4282424508",
+      "name": "Louie Henderson",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4367741495",
+      "name": "Benjamin M J Owens",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2905987656",
+      "name": "Matthew Heberling",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2030002905",
+      "name": "Emanuele Paci",
+      "affiliations": [
+        "University of Bologna"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A747932578",
+      "name": "Kamil Tamiola",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2045777307",
+    "https://openalex.org/W2016170088",
+    "https://openalex.org/W2015115860",
+    "https://openalex.org/W2982547327",
+    "https://openalex.org/W2756625313",
+    "https://openalex.org/W1979079649",
+    "https://openalex.org/W1970577444",
+    "https://openalex.org/W2950641800",
+    "https://openalex.org/W2129170338",
+    "https://openalex.org/W2055193239",
+    "https://openalex.org/W2156407548",
+    "https://openalex.org/W2161199282",
+    "https://openalex.org/W2131965976",
+    "https://openalex.org/W2102845147",
+    "https://openalex.org/W2123969230",
+    "https://openalex.org/W2114604135",
+    "https://openalex.org/W1792685479",
+    "https://openalex.org/W2049517479",
+    "https://openalex.org/W2346205768",
+    "https://openalex.org/W2117640066",
+    "https://openalex.org/W2156465034",
+    "https://openalex.org/W2003561135",
+    "https://openalex.org/W2225640440",
+    "https://openalex.org/W1864564002",
+    "https://openalex.org/W2566370974",
+    "https://openalex.org/W2510934692",
+    "https://openalex.org/W3011698511",
+    "https://openalex.org/W2969180072",
+    "https://openalex.org/W3014133106",
+    "https://openalex.org/W3184265853",
+    "https://openalex.org/W2102818658",
+    "https://openalex.org/W2075095565",
+    "https://openalex.org/W2154501851",
+    "https://openalex.org/W3156051371",
+    "https://openalex.org/W6770686123",
+    "https://openalex.org/W2334543732",
+    "https://openalex.org/W4229743141",
+    "https://openalex.org/W2316665668",
+    "https://openalex.org/W3083871792",
+    "https://openalex.org/W2554294661",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W2088848851",
+    "https://openalex.org/W2102461176",
+    "https://openalex.org/W2161062388",
+    "https://openalex.org/W2557595285",
+    "https://openalex.org/W2972411752",
+    "https://openalex.org/W6791955017",
+    "https://openalex.org/W2787894218",
+    "https://openalex.org/W3137047737",
+    "https://openalex.org/W4303981501",
+    "https://openalex.org/W2562162676",
+    "https://openalex.org/W4281852011",
+    "https://openalex.org/W3196691244",
+    "https://openalex.org/W1501347866",
+    "https://openalex.org/W2889895782",
+    "https://openalex.org/W2140673705",
+    "https://openalex.org/W4308463927",
+    "https://openalex.org/W3183475563",
+    "https://openalex.org/W4303983095",
+    "https://openalex.org/W4224259818",
+    "https://openalex.org/W6763868836",
+    "https://openalex.org/W3166142427",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W1583837637",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W2987184424",
+    "https://openalex.org/W2971227267"
+  ],
+  "abstract": "Abstract Intrinsically disordered proteins (IDPs) are important for a broad range of biological functions and are involved in many diseases. An understanding of intrinsic disorder is key to develop compounds that target IDPs. Experimental characterization of IDPs is hindered by the very fact that they are highly dynamic. Computational methods that predict disorder from the amino acid sequence have been proposed. Here, we present ADOPT (Attention DisOrder PredicTor), a new predictor of protein disorder. ADOPT is composed of a self-supervised encoder and a supervised disorder predictor. The former is based on a deep bidirectional transformer, which extracts dense residue-level representations from Facebook’s Evolutionary Scale Modeling library. The latter uses a database of nuclear magnetic resonance chemical shifts, constructed to ensure balanced amounts of disordered and ordered residues, as a training and a test dataset for protein disorder. ADOPT predicts whether a protein or a specific region is disordered with better performance than the best existing predictors and faster than most other proposed methods (a few seconds per sequence). We identify the features that are relevant for the prediction performance and show that good performance can already be gained with &amp;lt;100 features. ADOPT is available as a stand-alone package at https://github.com/PeptoneLtd/ADOPT and as a web server at https://adopt.peptone.io/.",
+  "full_text": null,
+  "topic": "Intrinsically disordered proteins",
+  "concepts": [
+    {
+      "name": "Intrinsically disordered proteins",
+      "score": 0.6411261558532715
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5999711751937866
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5851298570632935
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4787170886993408
+    },
+    {
+      "name": "Web server",
+      "score": 0.44619259238243103
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4051908254623413
+    },
+    {
+      "name": "Data mining",
+      "score": 0.35704106092453003
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3549084961414337
+    },
+    {
+      "name": "Biology",
+      "score": 0.23394998908042908
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.14134076237678528
+    },
+    {
+      "name": "The Internet",
+      "score": 0.101077139377594
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,130 +1,165 @@
 {
-    "title": "GSRFormer: Grounded Situation Recognition Transformer with Alternate Semantic Attention Refinement",
-    "url": "https://openalex.org/W4292433237",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2248879131",
-            "name": "Cheng, Zhi-Qi",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104488438",
-            "name": "Dai Qi",
-            "affiliations": [
-                "Microsoft Research Asia (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2485512375",
-            "name": "Li Si-Yao",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2285791829",
-            "name": "Mitamura, Teruko",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4282817502",
-            "name": "Hauptmann, Alexander G.",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2745461083",
-        "https://openalex.org/W2916723116",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2963524571",
-        "https://openalex.org/W3035517717",
-        "https://openalex.org/W2987123286",
-        "https://openalex.org/W2550553598",
-        "https://openalex.org/W2527464456",
-        "https://openalex.org/W3175958943",
-        "https://openalex.org/W2526377930",
-        "https://openalex.org/W2897169468",
-        "https://openalex.org/W2962974137",
-        "https://openalex.org/W2617576589",
-        "https://openalex.org/W4312900708",
-        "https://openalex.org/W3170956458",
-        "https://openalex.org/W3035399403",
-        "https://openalex.org/W3034655362",
-        "https://openalex.org/W3171660447",
-        "https://openalex.org/W2017875634",
-        "https://openalex.org/W4313118515",
-        "https://openalex.org/W3107320732",
-        "https://openalex.org/W2963936326",
-        "https://openalex.org/W3175824375",
-        "https://openalex.org/W3004349648",
-        "https://openalex.org/W2963346996",
-        "https://openalex.org/W2963649796",
-        "https://openalex.org/W3035598501",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2604673901",
-        "https://openalex.org/W2964157791",
-        "https://openalex.org/W4211156271",
-        "https://openalex.org/W3096682293",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2963084599",
-        "https://openalex.org/W2962766617",
-        "https://openalex.org/W3181951703",
-        "https://openalex.org/W3003365594",
-        "https://openalex.org/W2764273117",
-        "https://openalex.org/W3166304536",
-        "https://openalex.org/W3034971973",
-        "https://openalex.org/W2963560594",
-        "https://openalex.org/W2963155035",
-        "https://openalex.org/W2963542293",
-        "https://openalex.org/W2105101328",
-        "https://openalex.org/W4200630531",
-        "https://openalex.org/W3095624694",
-        "https://openalex.org/W2579549467",
-        "https://openalex.org/W3174012740",
-        "https://openalex.org/W3035413240",
-        "https://openalex.org/W2886970679",
-        "https://openalex.org/W2560747010",
-        "https://openalex.org/W2423576022",
-        "https://openalex.org/W2980088508",
-        "https://openalex.org/W2302086703",
-        "https://openalex.org/W2963536419",
-        "https://openalex.org/W3172872502",
-        "https://openalex.org/W2583194072",
-        "https://openalex.org/W2563032747",
-        "https://openalex.org/W2962788148",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W4298870559",
-        "https://openalex.org/W2964015378",
-        "https://openalex.org/W3217410189",
-        "https://openalex.org/W4287077836",
-        "https://openalex.org/W4308902356",
-        "https://openalex.org/W4323654151",
-        "https://openalex.org/W3015417922",
-        "https://openalex.org/W2796781795",
-        "https://openalex.org/W4287553517",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W3186621246",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4213168938",
-        "https://openalex.org/W4394666973",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W3205497712",
-        "https://openalex.org/W3013498424",
-        "https://openalex.org/W2606780347",
-        "https://openalex.org/W2596164567",
-        "https://openalex.org/W4298613318",
-        "https://openalex.org/W3216130706",
-        "https://openalex.org/W2950898568"
-    ],
-    "abstract": "Grounded Situation Recognition (GSR) aims to generate structured semantic\\nsummaries of images for \"human-like\" event understanding. Specifically, GSR\\ntask not only detects the salient activity verb (e.g. buying), but also\\npredicts all corresponding semantic roles (e.g. agent and goods). Inspired by\\nobject detection and image captioning tasks, existing methods typically employ\\na two-stage framework: 1) detect the activity verb, and then 2) predict\\nsemantic roles based on the detected verb. Obviously, this illogical framework\\nconstitutes a huge obstacle to semantic understanding. First, pre-detecting\\nverbs solely without semantic roles inevitably fails to distinguish many\\nsimilar daily activities (e.g., offering and giving, buying and selling).\\nSecond, predicting semantic roles in a closed auto-regressive manner can hardly\\nexploit the semantic relations among the verb and roles. To this end, in this\\npaper we propose a novel two-stage framework that focuses on utilizing such\\nbidirectional relations within verbs and roles. In the first stage, instead of\\npre-detecting the verb, we postpone the detection step and assume a pseudo\\nlabel, where an intermediate representation for each corresponding semantic\\nrole is learned from images. In the second stage, we exploit transformer layers\\nto unearth the potential semantic relations within both verbs and semantic\\nroles. With the help of a set of support images, an alternate learning scheme\\nis designed to simultaneously optimize the results: update the verb using nouns\\ncorresponding to the image, and update nouns using verbs from support images.\\nExtensive experimental results on challenging SWiG benchmarks show that our\\nrenovated framework outperforms other state-of-the-art methods under various\\nmetrics.\\n",
-    "full_text": null
+  "title": "GSRFormer: Grounded Situation Recognition Transformer with Alternate Semantic Attention Refinement",
+  "url": "https://openalex.org/W4292433237",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2248879131",
+      "name": "Cheng, Zhi-Qi",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104488438",
+      "name": "Dai Qi",
+      "affiliations": [
+        "Microsoft Research Asia (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2485512375",
+      "name": "Li Si-Yao",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2285791829",
+      "name": "Mitamura, Teruko",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4282817502",
+      "name": "Hauptmann, Alexander G.",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2745461083",
+    "https://openalex.org/W2916723116",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2963524571",
+    "https://openalex.org/W3035517717",
+    "https://openalex.org/W2987123286",
+    "https://openalex.org/W2550553598",
+    "https://openalex.org/W2527464456",
+    "https://openalex.org/W3175958943",
+    "https://openalex.org/W2526377930",
+    "https://openalex.org/W2897169468",
+    "https://openalex.org/W2962974137",
+    "https://openalex.org/W2617576589",
+    "https://openalex.org/W4312900708",
+    "https://openalex.org/W3170956458",
+    "https://openalex.org/W3035399403",
+    "https://openalex.org/W3034655362",
+    "https://openalex.org/W3171660447",
+    "https://openalex.org/W2017875634",
+    "https://openalex.org/W4313118515",
+    "https://openalex.org/W3107320732",
+    "https://openalex.org/W2963936326",
+    "https://openalex.org/W3175824375",
+    "https://openalex.org/W3004349648",
+    "https://openalex.org/W2963346996",
+    "https://openalex.org/W2963649796",
+    "https://openalex.org/W3035598501",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2604673901",
+    "https://openalex.org/W2964157791",
+    "https://openalex.org/W4211156271",
+    "https://openalex.org/W3096682293",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2963084599",
+    "https://openalex.org/W2962766617",
+    "https://openalex.org/W3181951703",
+    "https://openalex.org/W3003365594",
+    "https://openalex.org/W2764273117",
+    "https://openalex.org/W3166304536",
+    "https://openalex.org/W3034971973",
+    "https://openalex.org/W2963560594",
+    "https://openalex.org/W2963155035",
+    "https://openalex.org/W2963542293",
+    "https://openalex.org/W2105101328",
+    "https://openalex.org/W4200630531",
+    "https://openalex.org/W3095624694",
+    "https://openalex.org/W2579549467",
+    "https://openalex.org/W3174012740",
+    "https://openalex.org/W3035413240",
+    "https://openalex.org/W2886970679",
+    "https://openalex.org/W2560747010",
+    "https://openalex.org/W2423576022",
+    "https://openalex.org/W2980088508",
+    "https://openalex.org/W2302086703",
+    "https://openalex.org/W2963536419",
+    "https://openalex.org/W3172872502",
+    "https://openalex.org/W2583194072",
+    "https://openalex.org/W2563032747",
+    "https://openalex.org/W2962788148",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W4298870559",
+    "https://openalex.org/W2964015378",
+    "https://openalex.org/W3217410189",
+    "https://openalex.org/W4287077836",
+    "https://openalex.org/W4308902356",
+    "https://openalex.org/W4323654151",
+    "https://openalex.org/W3015417922",
+    "https://openalex.org/W2796781795",
+    "https://openalex.org/W4287553517",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W3186621246",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4213168938",
+    "https://openalex.org/W4394666973",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W3205497712",
+    "https://openalex.org/W3013498424",
+    "https://openalex.org/W2606780347",
+    "https://openalex.org/W2596164567",
+    "https://openalex.org/W4298613318",
+    "https://openalex.org/W3216130706",
+    "https://openalex.org/W2950898568"
+  ],
+  "abstract": "Grounded Situation Recognition (GSR) aims to generate structured semantic\\nsummaries of images for \"human-like\" event understanding. Specifically, GSR\\ntask not only detects the salient activity verb (e.g. buying), but also\\npredicts all corresponding semantic roles (e.g. agent and goods). Inspired by\\nobject detection and image captioning tasks, existing methods typically employ\\na two-stage framework: 1) detect the activity verb, and then 2) predict\\nsemantic roles based on the detected verb. Obviously, this illogical framework\\nconstitutes a huge obstacle to semantic understanding. First, pre-detecting\\nverbs solely without semantic roles inevitably fails to distinguish many\\nsimilar daily activities (e.g., offering and giving, buying and selling).\\nSecond, predicting semantic roles in a closed auto-regressive manner can hardly\\nexploit the semantic relations among the verb and roles. To this end, in this\\npaper we propose a novel two-stage framework that focuses on utilizing such\\nbidirectional relations within verbs and roles. In the first stage, instead of\\npre-detecting the verb, we postpone the detection step and assume a pseudo\\nlabel, where an intermediate representation for each corresponding semantic\\nrole is learned from images. In the second stage, we exploit transformer layers\\nto unearth the potential semantic relations within both verbs and semantic\\nroles. With the help of a set of support images, an alternate learning scheme\\nis designed to simultaneously optimize the results: update the verb using nouns\\ncorresponding to the image, and update nouns using verbs from support images.\\nExtensive experimental results on challenging SWiG benchmarks show that our\\nrenovated framework outperforms other state-of-the-art methods under various\\nmetrics.\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7068661451339722
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6907216906547546
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5205619931221008
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.39722806215286255
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.3780580759048462
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.1172802746295929
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10021373629570007
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

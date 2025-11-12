@@ -1,134 +1,197 @@
 {
-    "title": "Carmna: classification and regression models for nitrogenase activity based on a pretrained large protein language model",
-    "url": "https://openalex.org/W4409738282",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5042240426",
-            "name": "Anqiang Ye",
-            "affiliations": [
-                "Zhongnan Hospital of Wuhan University",
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2913975746",
-            "name": "Ji-Yun Zhang",
-            "affiliations": [
-                "Wuhan University",
-                "Zhongnan Hospital of Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1978548049",
-            "name": "Qian Xu",
-            "affiliations": [
-                "Wuhan University",
-                "Zhongnan Hospital of Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106585665",
-            "name": "Hai-Xia Guo",
-            "affiliations": [
-                "Zhongnan Hospital of Wuhan University",
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101082191",
-            "name": "Zhen Liao",
-            "affiliations": [
-                "Zhongnan Hospital of Wuhan University",
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2206317510",
-            "name": "Hongtu Cui",
-            "affiliations": [
-                "Zhongnan Hospital of Wuhan University",
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2131422403",
-            "name": "Dongdong Zhang",
-            "affiliations": [
-                "Zhongnan Hospital of Wuhan University",
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4229102219",
-            "name": "Feng-Biao Guo",
-            "affiliations": [
-                "Wuhan University",
-                "Zhongnan Hospital of Wuhan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4400915542",
-        "https://openalex.org/W2103745952",
-        "https://openalex.org/W4389440024",
-        "https://openalex.org/W2059722078",
-        "https://openalex.org/W4375860101",
-        "https://openalex.org/W4393156638",
-        "https://openalex.org/W4321248222",
-        "https://openalex.org/W4391780882",
-        "https://openalex.org/W4362717105",
-        "https://openalex.org/W4393952708",
-        "https://openalex.org/W4387378527",
-        "https://openalex.org/W4388037259",
-        "https://openalex.org/W4401135618",
-        "https://openalex.org/W4403196637",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W4229451461",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W4288066876",
-        "https://openalex.org/W4225264859",
-        "https://openalex.org/W2072284352",
-        "https://openalex.org/W4362521577",
-        "https://openalex.org/W4398310400",
-        "https://openalex.org/W4390678101",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W1982267716",
-        "https://openalex.org/W2618265628",
-        "https://openalex.org/W2136930152",
-        "https://openalex.org/W2616246685",
-        "https://openalex.org/W3124662554",
-        "https://openalex.org/W3126823466",
-        "https://openalex.org/W1974358663",
-        "https://openalex.org/W4401419102",
-        "https://openalex.org/W2018590530",
-        "https://openalex.org/W2895466298",
-        "https://openalex.org/W2004674004",
-        "https://openalex.org/W1987853052",
-        "https://openalex.org/W4281811953",
-        "https://openalex.org/W4402700928",
-        "https://openalex.org/W2997716322",
-        "https://openalex.org/W2997966006",
-        "https://openalex.org/W3152960421",
-        "https://openalex.org/W4393930013",
-        "https://openalex.org/W4390060135",
-        "https://openalex.org/W2104684144",
-        "https://openalex.org/W4310361315",
-        "https://openalex.org/W4297338594",
-        "https://openalex.org/W2313035794",
-        "https://openalex.org/W4402997023",
-        "https://openalex.org/W2036513942",
-        "https://openalex.org/W2165412280",
-        "https://openalex.org/W2138994112",
-        "https://openalex.org/W3035190513",
-        "https://openalex.org/W4386569197",
-        "https://openalex.org/W2111671940",
-        "https://openalex.org/W1984677796",
-        "https://openalex.org/W1602379591",
-        "https://openalex.org/W4236109816",
-        "https://openalex.org/W2109465920",
-        "https://openalex.org/W4402827655"
-    ],
-    "abstract": "Abstract Nitrogen-fixing microorganisms play a critical role in the global nitrogen cycle by converting atmospheric nitrogen into ammonia through the action of nitrogenase (EC 1.18.6.1). In this study, we employed six machine learning algorithms to model the classification and regression of nitrogenase activity (Carmna). Carmna utilized the pretrained large-scale model ProtT5 for feature extraction from nitrogenase sequences and incorporated additional features, such as gene expression and codon preference, for model training. The optimal classification model, based on XGBoost, achieved an average area under receiver operating characteristic curve of 0.9365 and an F1 score of 0.85 in five-fold cross-validation. For regression, the best-performing model was a stacking approach based on support vector regression, with an average R2 of 0.5572 and a mean absolute error of 0.3351. Further interpretability analysis of the optimal regression model revealed that not only the proportion and codon preferences of standard amino acids, but also the expression levels and spatial distance of nitrogenase genes were associated with nitrogenase activity. We also obtained the minimum nitrogen-fixing nif cluster. This study deepens our understanding of the complex mechanisms regulating nitrogenase activity and contributes to the development of efficient bio-fertilizers.",
-    "full_text": null
+  "title": "Carmna: classification and regression models for nitrogenase activity based on a pretrained large protein language model",
+  "url": "https://openalex.org/W4409738282",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5042240426",
+      "name": "Anqiang Ye",
+      "affiliations": [
+        "Zhongnan Hospital of Wuhan University",
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2913975746",
+      "name": "Ji-Yun Zhang",
+      "affiliations": [
+        "Wuhan University",
+        "Zhongnan Hospital of Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1978548049",
+      "name": "Qian Xu",
+      "affiliations": [
+        "Wuhan University",
+        "Zhongnan Hospital of Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106585665",
+      "name": "Hai-Xia Guo",
+      "affiliations": [
+        "Zhongnan Hospital of Wuhan University",
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101082191",
+      "name": "Zhen Liao",
+      "affiliations": [
+        "Zhongnan Hospital of Wuhan University",
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2206317510",
+      "name": "Hongtu Cui",
+      "affiliations": [
+        "Zhongnan Hospital of Wuhan University",
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2131422403",
+      "name": "Dongdong Zhang",
+      "affiliations": [
+        "Zhongnan Hospital of Wuhan University",
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4229102219",
+      "name": "Feng-Biao Guo",
+      "affiliations": [
+        "Wuhan University",
+        "Zhongnan Hospital of Wuhan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4400915542",
+    "https://openalex.org/W2103745952",
+    "https://openalex.org/W4389440024",
+    "https://openalex.org/W2059722078",
+    "https://openalex.org/W4375860101",
+    "https://openalex.org/W4393156638",
+    "https://openalex.org/W4321248222",
+    "https://openalex.org/W4391780882",
+    "https://openalex.org/W4362717105",
+    "https://openalex.org/W4393952708",
+    "https://openalex.org/W4387378527",
+    "https://openalex.org/W4388037259",
+    "https://openalex.org/W4401135618",
+    "https://openalex.org/W4403196637",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W4229451461",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W4288066876",
+    "https://openalex.org/W4225264859",
+    "https://openalex.org/W2072284352",
+    "https://openalex.org/W4362521577",
+    "https://openalex.org/W4398310400",
+    "https://openalex.org/W4390678101",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W1982267716",
+    "https://openalex.org/W2618265628",
+    "https://openalex.org/W2136930152",
+    "https://openalex.org/W2616246685",
+    "https://openalex.org/W3124662554",
+    "https://openalex.org/W3126823466",
+    "https://openalex.org/W1974358663",
+    "https://openalex.org/W4401419102",
+    "https://openalex.org/W2018590530",
+    "https://openalex.org/W2895466298",
+    "https://openalex.org/W2004674004",
+    "https://openalex.org/W1987853052",
+    "https://openalex.org/W4281811953",
+    "https://openalex.org/W4402700928",
+    "https://openalex.org/W2997716322",
+    "https://openalex.org/W2997966006",
+    "https://openalex.org/W3152960421",
+    "https://openalex.org/W4393930013",
+    "https://openalex.org/W4390060135",
+    "https://openalex.org/W2104684144",
+    "https://openalex.org/W4310361315",
+    "https://openalex.org/W4297338594",
+    "https://openalex.org/W2313035794",
+    "https://openalex.org/W4402997023",
+    "https://openalex.org/W2036513942",
+    "https://openalex.org/W2165412280",
+    "https://openalex.org/W2138994112",
+    "https://openalex.org/W3035190513",
+    "https://openalex.org/W4386569197",
+    "https://openalex.org/W2111671940",
+    "https://openalex.org/W1984677796",
+    "https://openalex.org/W1602379591",
+    "https://openalex.org/W4236109816",
+    "https://openalex.org/W2109465920",
+    "https://openalex.org/W4402827655"
+  ],
+  "abstract": "Abstract Nitrogen-fixing microorganisms play a critical role in the global nitrogen cycle by converting atmospheric nitrogen into ammonia through the action of nitrogenase (EC 1.18.6.1). In this study, we employed six machine learning algorithms to model the classification and regression of nitrogenase activity (Carmna). Carmna utilized the pretrained large-scale model ProtT5 for feature extraction from nitrogenase sequences and incorporated additional features, such as gene expression and codon preference, for model training. The optimal classification model, based on XGBoost, achieved an average area under receiver operating characteristic curve of 0.9365 and an F1 score of 0.85 in five-fold cross-validation. For regression, the best-performing model was a stacking approach based on support vector regression, with an average R2 of 0.5572 and a mean absolute error of 0.3351. Further interpretability analysis of the optimal regression model revealed that not only the proportion and codon preferences of standard amino acids, but also the expression levels and spatial distance of nitrogenase genes were associated with nitrogenase activity. We also obtained the minimum nitrogen-fixing nif cluster. This study deepens our understanding of the complex mechanisms regulating nitrogenase activity and contributes to the development of efficient bio-fertilizers.",
+  "full_text": null,
+  "topic": "Nitrogenase",
+  "concepts": [
+    {
+      "name": "Nitrogenase",
+      "score": 0.9427845478057861
+    },
+    {
+      "name": "Interpretability",
+      "score": 0.6099478602409363
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5381869077682495
+    },
+    {
+      "name": "Regression",
+      "score": 0.5349892973899841
+    },
+    {
+      "name": "Regression analysis",
+      "score": 0.4763203561306
+    },
+    {
+      "name": "Support vector machine",
+      "score": 0.4679151177406311
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4262635111808777
+    },
+    {
+      "name": "Nitrogen fixation",
+      "score": 0.420107901096344
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.382376104593277
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.37420719861984253
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3206043839454651
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.285512775182724
+    },
+    {
+      "name": "Statistics",
+      "score": 0.26066121459007263
+    },
+    {
+      "name": "Nitrogen",
+      "score": 0.17525258660316467
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

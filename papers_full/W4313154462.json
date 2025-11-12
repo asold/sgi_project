@@ -1,67 +1,134 @@
 {
-    "title": "Hierarchical Multi-modal Transformer for Automatic Detection of COVID-19",
-    "url": "https://openalex.org/W4313154462",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5037025716",
-            "name": "Shuyun Tang",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102514528",
-            "name": "Xinying Hu",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5019670377",
-            "name": "Les Atlas",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010647585",
-            "name": "Amil Khanzada",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5001436196",
-            "name": "Mert Pilancı",
-            "affiliations": [
-                "Stanford University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1924943994",
-        "https://openalex.org/W4287588084",
-        "https://openalex.org/W2148154194",
-        "https://openalex.org/W3135567124",
-        "https://openalex.org/W3196974791",
-        "https://openalex.org/W3205743929",
-        "https://openalex.org/W4221167107",
-        "https://openalex.org/W2511730936",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W1986669541",
-        "https://openalex.org/W3045460727",
-        "https://openalex.org/W3095379519",
-        "https://openalex.org/W2512160354",
-        "https://openalex.org/W3013174866",
-        "https://openalex.org/W3028563376",
-        "https://openalex.org/W2964350391",
-        "https://openalex.org/W3201123210",
-        "https://openalex.org/W3092933647",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4310658768",
-        "https://openalex.org/W4283809036"
-    ],
-    "abstract": "Automated COVID-19 detection based on analysis of cough recordings has been an important field of study, as efficient and accurate methods are necessary to contain the spread of the global pandemic and relieve the burden on medical facilities. While previous works presented lightweight machine learning models [9], these models may sacrifice accuracy and interpretability to integrate into mobile devices. Besides, the question of how to effectively associate indicators from audio signals to other modality inputs (i.e. patient information) is still largely unexplored, as previous works predominantly relied on simply concatenated features to learn. To tackle these issues, this paper proposes a novel Hierarchical Multi-modal Transformer (HMT) that learns more informative multi-modal representations with a cross attention module during the feature fusion procedure. Besides, the block aggregation algorithm for the HMT provides an efficient and improved solution from the Vanilla Vision Transformer for limited COVID-19 benchmark datasets. Extensive experiments show the effectiveness of our proposed model for more accurate COVID-19 detection, which yield state-of-the-art results on two public datasets, Coswara and COUGHVID.",
-    "full_text": null
+  "title": "Hierarchical Multi-modal Transformer for Automatic Detection of COVID-19",
+  "url": "https://openalex.org/W4313154462",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5037025716",
+      "name": "Shuyun Tang",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102514528",
+      "name": "Xinying Hu",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5019670377",
+      "name": "Les Atlas",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010647585",
+      "name": "Amil Khanzada",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5001436196",
+      "name": "Mert Pilancı",
+      "affiliations": [
+        "Stanford University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1924943994",
+    "https://openalex.org/W4287588084",
+    "https://openalex.org/W2148154194",
+    "https://openalex.org/W3135567124",
+    "https://openalex.org/W3196974791",
+    "https://openalex.org/W3205743929",
+    "https://openalex.org/W4221167107",
+    "https://openalex.org/W2511730936",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W1986669541",
+    "https://openalex.org/W3045460727",
+    "https://openalex.org/W3095379519",
+    "https://openalex.org/W2512160354",
+    "https://openalex.org/W3013174866",
+    "https://openalex.org/W3028563376",
+    "https://openalex.org/W2964350391",
+    "https://openalex.org/W3201123210",
+    "https://openalex.org/W3092933647",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4310658768",
+    "https://openalex.org/W4283809036"
+  ],
+  "abstract": "Automated COVID-19 detection based on analysis of cough recordings has been an important field of study, as efficient and accurate methods are necessary to contain the spread of the global pandemic and relieve the burden on medical facilities. While previous works presented lightweight machine learning models [9], these models may sacrifice accuracy and interpretability to integrate into mobile devices. Besides, the question of how to effectively associate indicators from audio signals to other modality inputs (i.e. patient information) is still largely unexplored, as previous works predominantly relied on simply concatenated features to learn. To tackle these issues, this paper proposes a novel Hierarchical Multi-modal Transformer (HMT) that learns more informative multi-modal representations with a cross attention module during the feature fusion procedure. Besides, the block aggregation algorithm for the HMT provides an efficient and improved solution from the Vanilla Vision Transformer for limited COVID-19 benchmark datasets. Extensive experiments show the effectiveness of our proposed model for more accurate COVID-19 detection, which yield state-of-the-art results on two public datasets, Coswara and COUGHVID.",
+  "full_text": null,
+  "topic": "Interpretability",
+  "concepts": [
+    {
+      "name": "Interpretability",
+      "score": 0.8290737271308899
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7552282214164734
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6287180185317993
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5722652673721313
+    },
+    {
+      "name": "Modal",
+      "score": 0.5376182198524475
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.46177801489830017
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.4240490794181824
+    },
+    {
+      "name": "Data mining",
+      "score": 0.36071884632110596
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3478957414627075
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10714229941368103
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08221331238746643
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    }
+  ]
 }

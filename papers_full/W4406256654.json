@@ -1,103 +1,162 @@
 {
-    "title": "Uncertainty estimation in diagnosis generation from large language models: next-word probability is not pre-test probability",
-    "url": "https://openalex.org/W4406256654",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2144316405",
-            "name": "Yanjun Gao",
-            "affiliations": [
-                "University of Colorado Anschutz Medical Campus",
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2972694323",
-            "name": "Skatje Myers",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102855736",
-            "name": "Shan Chen",
-            "affiliations": [
-                "Mass General Brigham",
-                "Harvard University",
-                "Dana-Farber Cancer Institute",
-                "Dana-Farber Brigham Cancer Center",
-                "Brigham and Women's Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2625526828",
-            "name": "Dmitriy Dligach",
-            "affiliations": [
-                "Loyola University Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096515443",
-            "name": "Timothy Miller",
-            "affiliations": [
-                "Boston Children's Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2089952979",
-            "name": "Danielle S Bitterman",
-            "affiliations": [
-                "Dana-Farber Cancer Institute",
-                "Dana-Farber Brigham Cancer Center",
-                "Harvard University",
-                "Brigham and Women's Hospital",
-                "Mass General Brigham"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2126977617",
-            "name": "Guanhua (陳冠華) Chen",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1993136452",
-            "name": "Anoop Mayampurath",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A896309055",
-            "name": "Matthew M. Churpek",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102230835",
-            "name": "Majid Afshar",
-            "affiliations": [
-                "University of Wisconsin–Madison"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2058373465",
-        "https://openalex.org/W2548421507",
-        "https://openalex.org/W4389554197",
-        "https://openalex.org/W4380730209",
-        "https://openalex.org/W4391170193",
-        "https://openalex.org/W4403362497",
-        "https://openalex.org/W6870111381",
-        "https://openalex.org/W4389559041",
-        "https://openalex.org/W4391579812",
-        "https://openalex.org/W4385264305",
-        "https://openalex.org/W4400807663",
-        "https://openalex.org/W4389917881",
-        "https://openalex.org/W4400324908"
-    ],
-    "abstract": "Abstract Objective To evaluate large language models (LLMs) for pre-test diagnostic probability estimation and compare their uncertainty estimation performance with a traditional machine learning classifier. Materials and Methods We assessed 2 instruction-tuned LLMs, Mistral-7B-Instruct and Llama3-70B-chat-hf, on predicting binary outcomes for Sepsis, Arrhythmia, and Congestive Heart Failure (CHF) using electronic health record (EHR) data from 660 patients. Three uncertainty estimation methods—Verbalized Confidence, Token Logits, and LLM Embedding+XGB—were compared against an eXtreme Gradient Boosting (XGB) classifier trained on raw EHR data. Performance metrics included AUROC and Pearson correlation between predicted probabilities. Results The XGB classifier outperformed the LLM-based methods across all tasks. LLM Embedding+XGB showed the closest performance to the XGB baseline, while Verbalized Confidence and Token Logits underperformed. Discussion These findings, consistent across multiple models and demographic groups, highlight the limitations of current LLMs in providing reliable pre-test probability estimations and underscore the need for improved calibration and bias mitigation strategies. Future work should explore hybrid approaches that integrate LLMs with numerical reasoning modules and calibrated embeddings to enhance diagnostic accuracy and ensure fairer predictions across diverse populations. Conclusions LLMs demonstrate potential but currently fall short in estimating diagnostic probabilities compared to traditional machine learning classifiers trained on structured EHR data. Further improvements are needed for reliable clinical use.",
-    "full_text": null
+  "title": "Uncertainty estimation in diagnosis generation from large language models: next-word probability is not pre-test probability",
+  "url": "https://openalex.org/W4406256654",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2144316405",
+      "name": "Yanjun Gao",
+      "affiliations": [
+        "University of Colorado Anschutz Medical Campus",
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2972694323",
+      "name": "Skatje Myers",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102855736",
+      "name": "Shan Chen",
+      "affiliations": [
+        "Mass General Brigham",
+        "Harvard University",
+        "Dana-Farber Cancer Institute",
+        "Dana-Farber Brigham Cancer Center",
+        "Brigham and Women's Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2625526828",
+      "name": "Dmitriy Dligach",
+      "affiliations": [
+        "Loyola University Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096515443",
+      "name": "Timothy Miller",
+      "affiliations": [
+        "Boston Children's Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2089952979",
+      "name": "Danielle S Bitterman",
+      "affiliations": [
+        "Dana-Farber Cancer Institute",
+        "Dana-Farber Brigham Cancer Center",
+        "Harvard University",
+        "Brigham and Women's Hospital",
+        "Mass General Brigham"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2126977617",
+      "name": "Guanhua (陳冠華) Chen",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1993136452",
+      "name": "Anoop Mayampurath",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A896309055",
+      "name": "Matthew M. Churpek",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102230835",
+      "name": "Majid Afshar",
+      "affiliations": [
+        "University of Wisconsin–Madison"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2058373465",
+    "https://openalex.org/W2548421507",
+    "https://openalex.org/W4389554197",
+    "https://openalex.org/W4380730209",
+    "https://openalex.org/W4391170193",
+    "https://openalex.org/W4403362497",
+    "https://openalex.org/W6870111381",
+    "https://openalex.org/W4389559041",
+    "https://openalex.org/W4391579812",
+    "https://openalex.org/W4385264305",
+    "https://openalex.org/W4400807663",
+    "https://openalex.org/W4389917881",
+    "https://openalex.org/W4400324908"
+  ],
+  "abstract": "Abstract Objective To evaluate large language models (LLMs) for pre-test diagnostic probability estimation and compare their uncertainty estimation performance with a traditional machine learning classifier. Materials and Methods We assessed 2 instruction-tuned LLMs, Mistral-7B-Instruct and Llama3-70B-chat-hf, on predicting binary outcomes for Sepsis, Arrhythmia, and Congestive Heart Failure (CHF) using electronic health record (EHR) data from 660 patients. Three uncertainty estimation methods—Verbalized Confidence, Token Logits, and LLM Embedding+XGB—were compared against an eXtreme Gradient Boosting (XGB) classifier trained on raw EHR data. Performance metrics included AUROC and Pearson correlation between predicted probabilities. Results The XGB classifier outperformed the LLM-based methods across all tasks. LLM Embedding+XGB showed the closest performance to the XGB baseline, while Verbalized Confidence and Token Logits underperformed. Discussion These findings, consistent across multiple models and demographic groups, highlight the limitations of current LLMs in providing reliable pre-test probability estimations and underscore the need for improved calibration and bias mitigation strategies. Future work should explore hybrid approaches that integrate LLMs with numerical reasoning modules and calibrated embeddings to enhance diagnostic accuracy and ensure fairer predictions across diverse populations. Conclusions LLMs demonstrate potential but currently fall short in estimating diagnostic probabilities compared to traditional machine learning classifiers trained on structured EHR data. Further improvements are needed for reliable clinical use.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5608298778533936
+    },
+    {
+      "name": "Probability estimation",
+      "score": 0.5473038554191589
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.463906466960907
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.45837119221687317
+    },
+    {
+      "name": "Statistics",
+      "score": 0.43188202381134033
+    },
+    {
+      "name": "Estimation",
+      "score": 0.4211505055427551
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3894649147987366
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38858723640441895
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2327345907688141
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09690645337104797
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,36 +1,75 @@
 {
-    "title": "Language Models Learn POS First",
-    "url": "https://openalex.org/W2911748701",
-    "year": 2018,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2269807410",
-            "name": "Naomi Saphra",
-            "affiliations": [
-                "University of Edinburgh",
-                "Language Science (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2250623146",
-            "name": "Adam Lopez",
-            "affiliations": [
-                "University of Edinburgh",
-                "Language Science (South Korea)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2767204723",
-        "https://openalex.org/W2606347107",
-        "https://openalex.org/W1951216520",
-        "https://openalex.org/W4297730150",
-        "https://openalex.org/W2773956126",
-        "https://openalex.org/W2605717780",
-        "https://openalex.org/W2962777840",
-        "https://openalex.org/W2549835527",
-        "https://openalex.org/W2963846239"
-    ],
-    "abstract": "A glut of recent research shows that language models capture linguistic structure. Such work answers the question of whether a model represents linguistic structure. But how and when are these structures acquired? Rather than treating the training process itself as a black box, we investigate how representations of linguistic structure are learned over time. In particular, we demonstrate that different aspects of linguistic structure are learned at different rates, with part of speech tagging acquired early and global topic information learned continuously.",
-    "full_text": "Proceedings of the 2018 EMNLP Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP, pages 328–330\nBrussels, Belgium, November 1, 2018.c⃝2018 Association for Computational Linguistics\n328\nLanguage Models Learn POS First\nNaomi Saphra and Adam Lopez\nn.saphra@ed.ac.uk alopez@ed.ac.uk\nInstitute for Language, Cognition, and Computation\nUniversity of Edinburgh\n1 Introduction\nA glut of recent research shows that language\nmodels capture linguistic structure. Linzen et al.\n(2016) found that LSTM-based language models\nmay encode syntactic information sufﬁcient to fa-\nvor verbs which match the number of their subject\nnouns. Liu et al. (2018) suggested that the high\nperformance of LSTMs may depend on the lin-\nguistic structure of the input data, as performance\non several artiﬁcial tasks was higher with natural\nlanguage data than with artiﬁcial sequential data.\nSuch work answers the question of whether a\nmodel represents linguistic structure. But how\nand when are these structures acquired? Rather\nthan treating the training process itself as a black\nbox, we investigate how representations of linguis-\ntic structure are learned over time. In particular,\nwe demonstrate that different aspects of linguistic\nstructure are learned at different rates, with part\nof speech tagging acquired early and global topic\ninformation learned continuously.\n2 Methods\n2.1 Concentration\nWe measure the degree to which a neural network\nhas “structured” its representationx of a particular\nword in a sequence through concentration.\nc(x) = ∥x∥2\n∥x∥1\n(1)\nThe more similar in value the cells of x are, the\nsmaller its l2/l1 ratio is. Thus if a neural network\nrelies heavily on a small number of cells in an acti-\nvation pattern, the activation is very concentrated.\nLikewise, a concentrated gradient is mainly mod-\nifying a few speciﬁc pathways. For example, it\nmight modify a neuron associated with particular\ninputs like parentheses (Karpathy et al., 2015), or\nproperties like sentiment (Radford et al., 2017).\nFigure 1: Correlation between mean concentration of\na word gradient and word frequency. Vertical dashes\nmark when the optimizer rescales step size.\n2.2 SVCCA\nExisting work investigates how language model\nlayers encode tags by training taggers on the ac-\ntivations produced by each layer (Belinkov et al.,\n2018). We use an alternative technique, SVCCA\n(Raghu et al., 2017), which interprets an arbitrary\nselection of neurons in terms of how they relate to\nanother selection of neurons from any network run\non the same input data. This method treats a se-\nlection of neurons as a subspace, spanned by their\nactivations. Given any 2 sets of neurons, SVCCA\nprojects the 2 distinct views of the same data onto\na shared subspace which maximizes correlation\nbetween the 2 views.\nIntuitively, if both views encode the same se-\nmantic information, the correlation in the shared\nsubspace will be high. If the 2 views are encoding\ndisjoint properties, the correlation will be low.\n3 Experiments\nAll experiments are conducted on 1.6GB of En-\nglish Wikipedia (70/10/20 train/dev/test split) with\na 2-layer LSTM language model featuring tied\nweights in the softmax and embedding layers.\n3.1 Gradient Concentration During Training\nOver time, the model learns to shape weight struc-\nture around familiar words, with more frequent\n329\nFigure 2: Correlation between mean concentration of a\nword gradient and word frequency.\nwords being more concentrated in their gradient.\nWe can inspect this correlation between word fre-\nquency and concentration over time in the gradi-\nents passed backwards from the decoder layer to\nthe RNN layer in Figure 1. It is clear that fre-\nquent words are more concentrated in their rep-\nresentation, and further that generally words be-\ncome more concentrated in their representation\nover time. These observations support the idea\nthat gradient concentration can measure the degree\nto which a word is relied on in shaping specialized\nstructures within the representation.\nHowever, Figure 2 shows that this correlation\nfollows dramatically different trends for open POS\nclasses (e.g., nouns and verbs) and closed classes\n(e.g., pronouns and prepositions). Initially, fre-\nquent words from closed classes are highly con-\ncentrated, but soon stabilize, while frequent words\nfrom open classes continue to become more con-\ncentrated. Why might this pattern emerge?\nClosed classes offer clear signals about the cur-\nrent part of speech in a sequence. Open classes,\nhowever, contain words which are often ambigu-\nous, such as “report”, which may be a noun or\nverb. Open classes may also offer murkier syntac-\ntic signals because there are far more words that\nmay occur in a particular open class POS role.\nWe posit that early in training, closed classes are\ntherefore essential for learning how to prototype\nsyntactic structure, and are essential for shaping\nnetwork structure. However, open classes are es-\nsential for modeling global sentence topic, so their\nimportance in training continues to increase after\npart of speech tags are effectively modeled.\nFigure 3: SVCCA correlation scores between LM and\ntaggers. Values are rescaled so maximum score is 1.\n3.2 Structure Encoding Over Time\nConcentration experiments imply that a network\nﬁrst learns syntax, but topic signiﬁcance continues\nto rise later. We test this claim directly.\nAs a proxy for syntactic representation, we use\nthe task of POS tagging, as in (Belinkov et al.,\n2017). For document-global topic information, we\nclassify the sequence by which Wikipedia article it\ncame from. Both taggers are single layer LSTMs.\nWe applied SVCCA to the RNN layers of our\nlanguage model and each tagger in order to ﬁnd\nthe correlation between the language model rep-\nresentation and the tagger representation. Indeed,\nFigure 3 illustrates that the POS structure is ef-\nfectively represented immediately, and continues\nto be learned in the early stages of training be-\nfore the ﬁrst optimizer step size rescale. After that\npoint, POS structure actually slightly declines and\nstabilizes below its peak value. Meanwhile, topic\nstructure continues to increase over the course of\ntraining.\n4 Conclusions\nThe SVCCA results imply that early in training,\nrepresenting syntax and POS is the natural way to\nget initial high performance. However, as train-\ning progresses, these low-level aspects of linguis-\ntic structure sees diminishing returns from com-\nmitting more parameters to their representation.\nInstead, later training realizes more gains from re-\nﬁning representations of global topic.\nThe concentration experiments tell the same\nstory through a different lens. Early in training,\nstructure is dictated by the closed POS classes,\nwhich give clear signals about syntax. However,\nsmall collections of directions within the network\nare increasingly responsive to words from open\nclasses, which are more useful for modeling topic.\nOur next step in this work is to develop ways of\ninterpreting syntactic structures during training.\n330\nReferences\nYonatan Belinkov, Nadir Durrani, Fahim Dalvi, Has-\nsan Sajjad, and James Glass. 2017. What do Neural\nMachine Translation Models Learn about Morphol-\nogy? In Proceedings of the 55th Annual Meeting of\nthe Association for Computational Linguistics (Vol-\nume 1: Long Papers), pages 861–872, Vancouver,\nCanada. Association for Computational Linguistics.\nYonatan Belinkov, Llus Mrquez, Hassan Sajjad, Nadir\nDurrani, Fahim Dalvi, and James R. Glass. 2018.\nEvaluating Layers of Representation in Neural Ma-\nchine Translation on Part-of-Speech and Semantic\nTagging Tasks. CoRR, abs/1801.07772.\nAndrej Karpathy, Justin Johnson, and Li Fei-Fei. 2015.\nVisualizing and Understanding Recurrent Networks.\narXiv:1506.02078 [cs]. ArXiv: 1506.02078.\nTal Linzen, Emmanuel Dupoux, and Yoav Goldberg.\n2016. Assessing the Ability of LSTMs to Learn\nSyntax-Sensitive Dependencies. arXiv:1611.01368\n[cs]. ArXiv: 1611.01368.\nNelson F. Liu, Omer Levy, Roy Schwartz, Chenhao\nTan, and Noah A. Smith. 2018. LSTMs Exploit Lin-\nguistic Attributes of Data. arXiv:1805.11653 [cs].\nArXiv: 1805.11653.\nAlec Radford, Rafal Jozefowicz, and Ilya Sutskever.\n2017. Learning to Generate Reviews and Discov-\nering Sentiment. arXiv:1704.01444 [cs]. ArXiv:\n1704.01444.\nMaithra Raghu, Justin Gilmer, Jason Yosinski, and\nJascha Sohl-Dickstein. 2017. SVCCA: Singu-\nlar Vector Canonical Correlation Analysis for\nDeep Learning Dynamics and Interpretability.\narXiv:1706.05806 [cs, stat]. ArXiv: 1706.05806."
+  "title": "Language Models Learn POS First",
+  "url": "https://openalex.org/W2911748701",
+  "year": 2018,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2269807410",
+      "name": "Naomi Saphra",
+      "affiliations": [
+        "University of Edinburgh",
+        "Language Science (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2250623146",
+      "name": "Adam Lopez",
+      "affiliations": [
+        "University of Edinburgh",
+        "Language Science (South Korea)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2767204723",
+    "https://openalex.org/W2606347107",
+    "https://openalex.org/W1951216520",
+    "https://openalex.org/W4297730150",
+    "https://openalex.org/W2773956126",
+    "https://openalex.org/W2605717780",
+    "https://openalex.org/W2962777840",
+    "https://openalex.org/W2549835527",
+    "https://openalex.org/W2963846239"
+  ],
+  "abstract": "A glut of recent research shows that language models capture linguistic structure. Such work answers the question of whether a model represents linguistic structure. But how and when are these structures acquired? Rather than treating the training process itself as a black box, we investigate how representations of linguistic structure are learned over time. In particular, we demonstrate that different aspects of linguistic structure are learned at different rates, with part of speech tagging acquired early and global topic information learned continuously.",
+  "full_text": "Proceedings of the 2018 EMNLP Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP, pages 328–330\nBrussels, Belgium, November 1, 2018.c⃝2018 Association for Computational Linguistics\n328\nLanguage Models Learn POS First\nNaomi Saphra and Adam Lopez\nn.saphra@ed.ac.uk alopez@ed.ac.uk\nInstitute for Language, Cognition, and Computation\nUniversity of Edinburgh\n1 Introduction\nA glut of recent research shows that language\nmodels capture linguistic structure. Linzen et al.\n(2016) found that LSTM-based language models\nmay encode syntactic information sufﬁcient to fa-\nvor verbs which match the number of their subject\nnouns. Liu et al. (2018) suggested that the high\nperformance of LSTMs may depend on the lin-\nguistic structure of the input data, as performance\non several artiﬁcial tasks was higher with natural\nlanguage data than with artiﬁcial sequential data.\nSuch work answers the question of whether a\nmodel represents linguistic structure. But how\nand when are these structures acquired? Rather\nthan treating the training process itself as a black\nbox, we investigate how representations of linguis-\ntic structure are learned over time. In particular,\nwe demonstrate that different aspects of linguistic\nstructure are learned at different rates, with part\nof speech tagging acquired early and global topic\ninformation learned continuously.\n2 Methods\n2.1 Concentration\nWe measure the degree to which a neural network\nhas “structured” its representationx of a particular\nword in a sequence through concentration.\nc(x) = ∥x∥2\n∥x∥1\n(1)\nThe more similar in value the cells of x are, the\nsmaller its l2/l1 ratio is. Thus if a neural network\nrelies heavily on a small number of cells in an acti-\nvation pattern, the activation is very concentrated.\nLikewise, a concentrated gradient is mainly mod-\nifying a few speciﬁc pathways. For example, it\nmight modify a neuron associated with particular\ninputs like parentheses (Karpathy et al., 2015), or\nproperties like sentiment (Radford et al., 2017).\nFigure 1: Correlation between mean concentration of\na word gradient and word frequency. Vertical dashes\nmark when the optimizer rescales step size.\n2.2 SVCCA\nExisting work investigates how language model\nlayers encode tags by training taggers on the ac-\ntivations produced by each layer (Belinkov et al.,\n2018). We use an alternative technique, SVCCA\n(Raghu et al., 2017), which interprets an arbitrary\nselection of neurons in terms of how they relate to\nanother selection of neurons from any network run\non the same input data. This method treats a se-\nlection of neurons as a subspace, spanned by their\nactivations. Given any 2 sets of neurons, SVCCA\nprojects the 2 distinct views of the same data onto\na shared subspace which maximizes correlation\nbetween the 2 views.\nIntuitively, if both views encode the same se-\nmantic information, the correlation in the shared\nsubspace will be high. If the 2 views are encoding\ndisjoint properties, the correlation will be low.\n3 Experiments\nAll experiments are conducted on 1.6GB of En-\nglish Wikipedia (70/10/20 train/dev/test split) with\na 2-layer LSTM language model featuring tied\nweights in the softmax and embedding layers.\n3.1 Gradient Concentration During Training\nOver time, the model learns to shape weight struc-\nture around familiar words, with more frequent\n329\nFigure 2: Correlation between mean concentration of a\nword gradient and word frequency.\nwords being more concentrated in their gradient.\nWe can inspect this correlation between word fre-\nquency and concentration over time in the gradi-\nents passed backwards from the decoder layer to\nthe RNN layer in Figure 1. It is clear that fre-\nquent words are more concentrated in their rep-\nresentation, and further that generally words be-\ncome more concentrated in their representation\nover time. These observations support the idea\nthat gradient concentration can measure the degree\nto which a word is relied on in shaping specialized\nstructures within the representation.\nHowever, Figure 2 shows that this correlation\nfollows dramatically different trends for open POS\nclasses (e.g., nouns and verbs) and closed classes\n(e.g., pronouns and prepositions). Initially, fre-\nquent words from closed classes are highly con-\ncentrated, but soon stabilize, while frequent words\nfrom open classes continue to become more con-\ncentrated. Why might this pattern emerge?\nClosed classes offer clear signals about the cur-\nrent part of speech in a sequence. Open classes,\nhowever, contain words which are often ambigu-\nous, such as “report”, which may be a noun or\nverb. Open classes may also offer murkier syntac-\ntic signals because there are far more words that\nmay occur in a particular open class POS role.\nWe posit that early in training, closed classes are\ntherefore essential for learning how to prototype\nsyntactic structure, and are essential for shaping\nnetwork structure. However, open classes are es-\nsential for modeling global sentence topic, so their\nimportance in training continues to increase after\npart of speech tags are effectively modeled.\nFigure 3: SVCCA correlation scores between LM and\ntaggers. Values are rescaled so maximum score is 1.\n3.2 Structure Encoding Over Time\nConcentration experiments imply that a network\nﬁrst learns syntax, but topic signiﬁcance continues\nto rise later. We test this claim directly.\nAs a proxy for syntactic representation, we use\nthe task of POS tagging, as in (Belinkov et al.,\n2017). For document-global topic information, we\nclassify the sequence by which Wikipedia article it\ncame from. Both taggers are single layer LSTMs.\nWe applied SVCCA to the RNN layers of our\nlanguage model and each tagger in order to ﬁnd\nthe correlation between the language model rep-\nresentation and the tagger representation. Indeed,\nFigure 3 illustrates that the POS structure is ef-\nfectively represented immediately, and continues\nto be learned in the early stages of training be-\nfore the ﬁrst optimizer step size rescale. After that\npoint, POS structure actually slightly declines and\nstabilizes below its peak value. Meanwhile, topic\nstructure continues to increase over the course of\ntraining.\n4 Conclusions\nThe SVCCA results imply that early in training,\nrepresenting syntax and POS is the natural way to\nget initial high performance. However, as train-\ning progresses, these low-level aspects of linguis-\ntic structure sees diminishing returns from com-\nmitting more parameters to their representation.\nInstead, later training realizes more gains from re-\nﬁning representations of global topic.\nThe concentration experiments tell the same\nstory through a different lens. Early in training,\nstructure is dictated by the closed POS classes,\nwhich give clear signals about syntax. However,\nsmall collections of directions within the network\nare increasingly responsive to words from open\nclasses, which are more useful for modeling topic.\nOur next step in this work is to develop ways of\ninterpreting syntactic structures during training.\n330\nReferences\nYonatan Belinkov, Nadir Durrani, Fahim Dalvi, Has-\nsan Sajjad, and James Glass. 2017. What do Neural\nMachine Translation Models Learn about Morphol-\nogy? In Proceedings of the 55th Annual Meeting of\nthe Association for Computational Linguistics (Vol-\nume 1: Long Papers), pages 861–872, Vancouver,\nCanada. Association for Computational Linguistics.\nYonatan Belinkov, Llus Mrquez, Hassan Sajjad, Nadir\nDurrani, Fahim Dalvi, and James R. Glass. 2018.\nEvaluating Layers of Representation in Neural Ma-\nchine Translation on Part-of-Speech and Semantic\nTagging Tasks. CoRR, abs/1801.07772.\nAndrej Karpathy, Justin Johnson, and Li Fei-Fei. 2015.\nVisualizing and Understanding Recurrent Networks.\narXiv:1506.02078 [cs]. ArXiv: 1506.02078.\nTal Linzen, Emmanuel Dupoux, and Yoav Goldberg.\n2016. Assessing the Ability of LSTMs to Learn\nSyntax-Sensitive Dependencies. arXiv:1611.01368\n[cs]. ArXiv: 1611.01368.\nNelson F. Liu, Omer Levy, Roy Schwartz, Chenhao\nTan, and Noah A. Smith. 2018. LSTMs Exploit Lin-\nguistic Attributes of Data. arXiv:1805.11653 [cs].\nArXiv: 1805.11653.\nAlec Radford, Rafal Jozefowicz, and Ilya Sutskever.\n2017. Learning to Generate Reviews and Discov-\nering Sentiment. arXiv:1704.01444 [cs]. ArXiv:\n1704.01444.\nMaithra Raghu, Justin Gilmer, Jason Yosinski, and\nJascha Sohl-Dickstein. 2017. SVCCA: Singu-\nlar Vector Canonical Correlation Analysis for\nDeep Learning Dynamics and Interpretability.\narXiv:1706.05806 [cs, stat]. ArXiv: 1706.05806.",
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7544248104095459
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.5972044467926025
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5742653608322144
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5534826517105103
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5468809008598328
+    },
+    {
+      "name": "Information structure",
+      "score": 0.45837947726249695
+    },
+    {
+      "name": "Language model",
+      "score": 0.4346429109573364
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

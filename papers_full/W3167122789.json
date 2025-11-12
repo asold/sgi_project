@@ -1,80 +1,167 @@
 {
-    "title": "Robust Predictive Control for Modular Solid-State Transformer With Reduced DC Link and Parameter Mismatch",
-    "url": "https://openalex.org/W3167122789",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2424981749",
-            "name": "Liran Zheng",
-            "affiliations": [
-                "Georgia Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2012742800",
-            "name": "Rajendra Prasad Kandula",
-            "affiliations": [
-                "Georgia Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2327875363",
-            "name": "Deepak Divan",
-            "affiliations": [
-                "Georgia Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2092060705",
-        "https://openalex.org/W2162820017",
-        "https://openalex.org/W6779937837",
-        "https://openalex.org/W2027985352",
-        "https://openalex.org/W2135027046",
-        "https://openalex.org/W2129379462",
-        "https://openalex.org/W3106469389",
-        "https://openalex.org/W2133909009",
-        "https://openalex.org/W3094233933",
-        "https://openalex.org/W3139444565",
-        "https://openalex.org/W2331360697",
-        "https://openalex.org/W2118736362",
-        "https://openalex.org/W2333012428",
-        "https://openalex.org/W2151038337",
-        "https://openalex.org/W2063319394",
-        "https://openalex.org/W3120994170",
-        "https://openalex.org/W2172181625",
-        "https://openalex.org/W1999302015",
-        "https://openalex.org/W2097227114",
-        "https://openalex.org/W2176835823",
-        "https://openalex.org/W2118922152",
-        "https://openalex.org/W2946143361",
-        "https://openalex.org/W2121664216",
-        "https://openalex.org/W2909805087",
-        "https://openalex.org/W2099524704",
-        "https://openalex.org/W2143819487",
-        "https://openalex.org/W2463098130",
-        "https://openalex.org/W2740073304",
-        "https://openalex.org/W3037905309",
-        "https://openalex.org/W2077711491",
-        "https://openalex.org/W2904285841",
-        "https://openalex.org/W1965884662",
-        "https://openalex.org/W2804532778",
-        "https://openalex.org/W2069657447",
-        "https://openalex.org/W2329456998",
-        "https://openalex.org/W2907381812",
-        "https://openalex.org/W2316568300",
-        "https://openalex.org/W2615013991",
-        "https://openalex.org/W3011036397",
-        "https://openalex.org/W2161768424",
-        "https://openalex.org/W2563111782",
-        "https://openalex.org/W2078497718",
-        "https://openalex.org/W2958556962",
-        "https://openalex.org/W3037717162",
-        "https://openalex.org/W2103792123",
-        "https://openalex.org/W2162475425",
-        "https://openalex.org/W2804721401",
-        "https://openalex.org/W4246785589"
-    ],
-    "abstract": "This paper presents the analysis and implementation of a predictive control method for dc-link regulation and voltage balance in a cascaded modular reduced dc-link solid-state transformer (SST). Passive components like bulky dc links limit the power density of power converters, especially medium-voltage (MV) SST. Reduced dc-link or low-inertia converters can dramatically reduce the size, cost, and weight by tolerating larger dc-link ripples and improve the reliability with electrolytic capacitor-less dc link. However, a small dc link leads to tight coupling between the input and the output stages, which is a challenge for control design. In stacked low-inertia converters (SLIC), the low-inertia converter modules are stacked for MV applications, resulting in coupling between the modules and making the control more challenging. A new model predictive control method which can achieve deadbeat regulation on the dc link without weighting factors has been proposed to address this novel problem. This paper focuses on analyzing the condition of the low-inertia dc link up to 80% ripple, the robustness of the control under parameter mismatches, high-order terms, and important implementation issues such as model-based sampling and computation delay compensation. Significantly, the high-order terms are introduced because of the large dc-link ripple. These high-order terms are unique to the SLIC and negligible in conventional high-inertia converters. A discrete-time large-signal model is built to capture the dc-link’s nonlinear dynamics, and the eigenvalues of a small-signal Jacobian matrix are analyzed with Floquet theory to evaluate stability, using the modular soft-switching solid-state transformer (M-S4T) as an example of the SLIC. Simulation and experimental results of an MVDC M-S4T verify the analysis and the predictive control method. Finally, the general application of the predictive control to low-inertia converters is compared against a conventional PI controller using a reduced dc-link active-front-end (AFE) rectifier as an example.",
-    "full_text": null
+  "title": "Robust Predictive Control for Modular Solid-State Transformer With Reduced DC Link and Parameter Mismatch",
+  "url": "https://openalex.org/W3167122789",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2424981749",
+      "name": "Liran Zheng",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2012742800",
+      "name": "Rajendra Prasad Kandula",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2327875363",
+      "name": "Deepak Divan",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2092060705",
+    "https://openalex.org/W2162820017",
+    "https://openalex.org/W6779937837",
+    "https://openalex.org/W2027985352",
+    "https://openalex.org/W2135027046",
+    "https://openalex.org/W2129379462",
+    "https://openalex.org/W3106469389",
+    "https://openalex.org/W2133909009",
+    "https://openalex.org/W3094233933",
+    "https://openalex.org/W3139444565",
+    "https://openalex.org/W2331360697",
+    "https://openalex.org/W2118736362",
+    "https://openalex.org/W2333012428",
+    "https://openalex.org/W2151038337",
+    "https://openalex.org/W2063319394",
+    "https://openalex.org/W3120994170",
+    "https://openalex.org/W2172181625",
+    "https://openalex.org/W1999302015",
+    "https://openalex.org/W2097227114",
+    "https://openalex.org/W2176835823",
+    "https://openalex.org/W2118922152",
+    "https://openalex.org/W2946143361",
+    "https://openalex.org/W2121664216",
+    "https://openalex.org/W2909805087",
+    "https://openalex.org/W2099524704",
+    "https://openalex.org/W2143819487",
+    "https://openalex.org/W2463098130",
+    "https://openalex.org/W2740073304",
+    "https://openalex.org/W3037905309",
+    "https://openalex.org/W2077711491",
+    "https://openalex.org/W2904285841",
+    "https://openalex.org/W1965884662",
+    "https://openalex.org/W2804532778",
+    "https://openalex.org/W2069657447",
+    "https://openalex.org/W2329456998",
+    "https://openalex.org/W2907381812",
+    "https://openalex.org/W2316568300",
+    "https://openalex.org/W2615013991",
+    "https://openalex.org/W3011036397",
+    "https://openalex.org/W2161768424",
+    "https://openalex.org/W2563111782",
+    "https://openalex.org/W2078497718",
+    "https://openalex.org/W2958556962",
+    "https://openalex.org/W3037717162",
+    "https://openalex.org/W2103792123",
+    "https://openalex.org/W2162475425",
+    "https://openalex.org/W2804721401",
+    "https://openalex.org/W4246785589"
+  ],
+  "abstract": "This paper presents the analysis and implementation of a predictive control method for dc-link regulation and voltage balance in a cascaded modular reduced dc-link solid-state transformer (SST). Passive components like bulky dc links limit the power density of power converters, especially medium-voltage (MV) SST. Reduced dc-link or low-inertia converters can dramatically reduce the size, cost, and weight by tolerating larger dc-link ripples and improve the reliability with electrolytic capacitor-less dc link. However, a small dc link leads to tight coupling between the input and the output stages, which is a challenge for control design. In stacked low-inertia converters (SLIC), the low-inertia converter modules are stacked for MV applications, resulting in coupling between the modules and making the control more challenging. A new model predictive control method which can achieve deadbeat regulation on the dc link without weighting factors has been proposed to address this novel problem. This paper focuses on analyzing the condition of the low-inertia dc link up to 80% ripple, the robustness of the control under parameter mismatches, high-order terms, and important implementation issues such as model-based sampling and computation delay compensation. Significantly, the high-order terms are introduced because of the large dc-link ripple. These high-order terms are unique to the SLIC and negligible in conventional high-inertia converters. A discrete-time large-signal model is built to capture the dc-link’s nonlinear dynamics, and the eigenvalues of a small-signal Jacobian matrix are analyzed with Floquet theory to evaluate stability, using the modular soft-switching solid-state transformer (M-S4T) as an example of the SLIC. Simulation and experimental results of an MVDC M-S4T verify the analysis and the predictive control method. Finally, the general application of the predictive control to low-inertia converters is compared against a conventional PI controller using a reduced dc-link active-front-end (AFE) rectifier as an example.",
+  "full_text": null,
+  "topic": "Control theory (sociology)",
+  "concepts": [
+    {
+      "name": "Control theory (sociology)",
+      "score": 0.6961138844490051
+    },
+    {
+      "name": "Converters",
+      "score": 0.6149293184280396
+    },
+    {
+      "name": "Ripple",
+      "score": 0.5891975164413452
+    },
+    {
+      "name": "Model predictive control",
+      "score": 0.5181285738945007
+    },
+    {
+      "name": "Inertia",
+      "score": 0.4838908612728119
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.47366270422935486
+    },
+    {
+      "name": "Transformer",
+      "score": 0.45259854197502136
+    },
+    {
+      "name": "Modular design",
+      "score": 0.4490245580673218
+    },
+    {
+      "name": "Computer science",
+      "score": 0.42120814323425293
+    },
+    {
+      "name": "Voltage",
+      "score": 0.3713492155075073
+    },
+    {
+      "name": "Electronic engineering",
+      "score": 0.34452229738235474
+    },
+    {
+      "name": "Engineering",
+      "score": 0.27435004711151123
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.1408533751964569
+    },
+    {
+      "name": "Physics",
+      "score": 0.11719033122062683
+    },
+    {
+      "name": "Control (management)",
+      "score": 0.0
+    },
+    {
+      "name": "Classical mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.0
+    }
+  ]
 }

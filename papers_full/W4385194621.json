@@ -1,112 +1,167 @@
 {
-    "title": "Enhancing Few-Shot Image Classification With Cosine Transformer",
-    "url": "https://openalex.org/W4385194621",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101437462",
-            "name": "Quang-Huy Nguyen",
-            "affiliations": [
-                "VinUniversity"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100658914",
-            "name": "Cuong Q. Nguyen",
-            "affiliations": [
-                "VinUniversity"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5037268324",
-            "name": "Dung D. Le",
-            "affiliations": [
-                "VinUniversity"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5065112274",
-            "name": "Hieu H. Pham",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign",
-                "VinUniversity"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3169286093",
-        "https://openalex.org/W2988501586",
-        "https://openalex.org/W2964105864",
-        "https://openalex.org/W6852298270",
-        "https://openalex.org/W3108975329",
-        "https://openalex.org/W4312887644",
-        "https://openalex.org/W6799479586",
-        "https://openalex.org/W4313010934",
-        "https://openalex.org/W2963845150",
-        "https://openalex.org/W2963943197",
-        "https://openalex.org/W6743661861",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W6755977528",
-        "https://openalex.org/W2798836702",
-        "https://openalex.org/W6752232076",
-        "https://openalex.org/W6780012728",
-        "https://openalex.org/W3034312118",
-        "https://openalex.org/W2594833348",
-        "https://openalex.org/W4312702383",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W3120637139",
-        "https://openalex.org/W3034942609",
-        "https://openalex.org/W3200358705",
-        "https://openalex.org/W6758126075",
-        "https://openalex.org/W6717697761",
-        "https://openalex.org/W6751959828",
-        "https://openalex.org/W4287180559",
-        "https://openalex.org/W6798837711",
-        "https://openalex.org/W3142729297",
-        "https://openalex.org/W6755766585",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6785450627",
-        "https://openalex.org/W2625674597",
-        "https://openalex.org/W6780975210",
-        "https://openalex.org/W6748136086",
-        "https://openalex.org/W6767471572",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W4226453083",
-        "https://openalex.org/W2783628520",
-        "https://openalex.org/W4214562728",
-        "https://openalex.org/W4283652716",
-        "https://openalex.org/W4312359569",
-        "https://openalex.org/W4285153705",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2115733720",
-        "https://openalex.org/W6736057607",
-        "https://openalex.org/W6735236233",
-        "https://openalex.org/W2964206659",
-        "https://openalex.org/W2604763608",
-        "https://openalex.org/W3190620190",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W2601450892",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W4386075713",
-        "https://openalex.org/W3036139671",
-        "https://openalex.org/W2963580001",
-        "https://openalex.org/W3102998533",
-        "https://openalex.org/W2753160622",
-        "https://openalex.org/W4300514939",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2899663614",
-        "https://openalex.org/W3205508356",
-        "https://openalex.org/W2895671740",
-        "https://openalex.org/W4295226723",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2980347982",
-        "https://openalex.org/W3213165621",
-        "https://openalex.org/W4300860215",
-        "https://openalex.org/W2963341924",
-        "https://openalex.org/W2963741406"
-    ],
-    "abstract": "This paper addresses the few-shot image classification problem, where the classification task is performed on unlabeled query samples given a small amount of labeled support samples only. One major challenge of the few-shot learning problem is the large variety of object visual appearances that prevents the support samples to represent that object comprehensively. This might result in a significant difference between support and query samples, therefore undermining the performance of few-shot algorithms. In this paper, we tackle the problem by proposing Few-shot Cosine Transformer (FS-CT), where the relational map between supports and queries is effectively obtained for the few-shot tasks. The FS-CT consists of two parts, a learnable prototypical embedding network to obtain categorical representations from support samples with hard cases, and a transformer encoder to effectively achieve the relational map from two different support and query samples. We introduce Cosine Attention, a more robust and stable attention module that enhances the transformer module significantly and therefore improves FS-CT performance from 5&#x0025; to over 20&#x0025; in accuracy compared to the default scaled dot-product mechanism. Our method performs competitive results in mini -ImageNet, CUB-200, and CIFAR-FS on 1-shot learning and 5-shot learning tasks across backbones and few-shot configurations. We also developed a custom few-shot dataset for Yoga pose recognition to demonstrate the potential of our algorithm for practical application. Our FS-CT with cosine attention is a lightweight, simple few-shot algorithm that can be applied for a wide range of applications, such as healthcare, medical, and security surveillance. The official implementation code of our Few-shot Cosine Transformer is available at <uri>https://github.com/vinuni-vishc/Few-Shot-Cosine-Transformer</uri>.",
-    "full_text": null
+  "title": "Enhancing Few-Shot Image Classification With Cosine Transformer",
+  "url": "https://openalex.org/W4385194621",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101437462",
+      "name": "Quang-Huy Nguyen",
+      "affiliations": [
+        "VinUniversity"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100658914",
+      "name": "Cuong Q. Nguyen",
+      "affiliations": [
+        "VinUniversity"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5037268324",
+      "name": "Dung D. Le",
+      "affiliations": [
+        "VinUniversity"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5065112274",
+      "name": "Hieu H. Pham",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign",
+        "VinUniversity"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3169286093",
+    "https://openalex.org/W2988501586",
+    "https://openalex.org/W2964105864",
+    "https://openalex.org/W6852298270",
+    "https://openalex.org/W3108975329",
+    "https://openalex.org/W4312887644",
+    "https://openalex.org/W6799479586",
+    "https://openalex.org/W4313010934",
+    "https://openalex.org/W2963845150",
+    "https://openalex.org/W2963943197",
+    "https://openalex.org/W6743661861",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W6755977528",
+    "https://openalex.org/W2798836702",
+    "https://openalex.org/W6752232076",
+    "https://openalex.org/W6780012728",
+    "https://openalex.org/W3034312118",
+    "https://openalex.org/W2594833348",
+    "https://openalex.org/W4312702383",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W3120637139",
+    "https://openalex.org/W3034942609",
+    "https://openalex.org/W3200358705",
+    "https://openalex.org/W6758126075",
+    "https://openalex.org/W6717697761",
+    "https://openalex.org/W6751959828",
+    "https://openalex.org/W4287180559",
+    "https://openalex.org/W6798837711",
+    "https://openalex.org/W3142729297",
+    "https://openalex.org/W6755766585",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6785450627",
+    "https://openalex.org/W2625674597",
+    "https://openalex.org/W6780975210",
+    "https://openalex.org/W6748136086",
+    "https://openalex.org/W6767471572",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W4226453083",
+    "https://openalex.org/W2783628520",
+    "https://openalex.org/W4214562728",
+    "https://openalex.org/W4283652716",
+    "https://openalex.org/W4312359569",
+    "https://openalex.org/W4285153705",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2115733720",
+    "https://openalex.org/W6736057607",
+    "https://openalex.org/W6735236233",
+    "https://openalex.org/W2964206659",
+    "https://openalex.org/W2604763608",
+    "https://openalex.org/W3190620190",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W2601450892",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W4386075713",
+    "https://openalex.org/W3036139671",
+    "https://openalex.org/W2963580001",
+    "https://openalex.org/W3102998533",
+    "https://openalex.org/W2753160622",
+    "https://openalex.org/W4300514939",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2899663614",
+    "https://openalex.org/W3205508356",
+    "https://openalex.org/W2895671740",
+    "https://openalex.org/W4295226723",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2980347982",
+    "https://openalex.org/W3213165621",
+    "https://openalex.org/W4300860215",
+    "https://openalex.org/W2963341924",
+    "https://openalex.org/W2963741406"
+  ],
+  "abstract": "This paper addresses the few-shot image classification problem, where the classification task is performed on unlabeled query samples given a small amount of labeled support samples only. One major challenge of the few-shot learning problem is the large variety of object visual appearances that prevents the support samples to represent that object comprehensively. This might result in a significant difference between support and query samples, therefore undermining the performance of few-shot algorithms. In this paper, we tackle the problem by proposing Few-shot Cosine Transformer (FS-CT), where the relational map between supports and queries is effectively obtained for the few-shot tasks. The FS-CT consists of two parts, a learnable prototypical embedding network to obtain categorical representations from support samples with hard cases, and a transformer encoder to effectively achieve the relational map from two different support and query samples. We introduce Cosine Attention, a more robust and stable attention module that enhances the transformer module significantly and therefore improves FS-CT performance from 5&#x0025; to over 20&#x0025; in accuracy compared to the default scaled dot-product mechanism. Our method performs competitive results in mini -ImageNet, CUB-200, and CIFAR-FS on 1-shot learning and 5-shot learning tasks across backbones and few-shot configurations. We also developed a custom few-shot dataset for Yoga pose recognition to demonstrate the potential of our algorithm for practical application. Our FS-CT with cosine attention is a lightweight, simple few-shot algorithm that can be applied for a wide range of applications, such as healthcare, medical, and security surveillance. The official implementation code of our Few-shot Cosine Transformer is available at <uri>https://github.com/vinuni-vishc/Few-Shot-Cosine-Transformer</uri>.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6552190184593201
+    },
+    {
+      "name": "Discrete cosine transform",
+      "score": 0.527590811252594
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4975440800189972
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.48570165038108826
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4677686095237732
+    },
+    {
+      "name": "Single shot",
+      "score": 0.4473874568939209
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3713294267654419
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.3184201717376709
+    },
+    {
+      "name": "Voltage",
+      "score": 0.10513773560523987
+    },
+    {
+      "name": "Physics",
+      "score": 0.09673359990119934
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08582773804664612
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07853567600250244
+    },
+    {
+      "name": "Optics",
+      "score": 0.07358136773109436
+    }
+  ]
 }

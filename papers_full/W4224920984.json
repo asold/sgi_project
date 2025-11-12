@@ -1,78 +1,149 @@
 {
-    "title": "Incorporating Explicit Knowledge in Pre-trained Language Models for Passage Re-ranking",
-    "url": "https://openalex.org/W4224920984",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5052605149",
-            "name": "Qian Dong",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Software"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101677601",
-            "name": "Yiding Liu",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5090159721",
-            "name": "Suqi Cheng",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5050255638",
-            "name": "Shuaiqiang Wang",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5004991630",
-            "name": "Zhicong Cheng",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5067174475",
-            "name": "Shuzi Niu",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Software"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100594590",
-            "name": "Dawei Yin",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4284689311",
-        "https://openalex.org/W4212963993",
-        "https://openalex.org/W2922386288",
-        "https://openalex.org/W1977556410",
-        "https://openalex.org/W3021397474",
-        "https://openalex.org/W3014367186",
-        "https://openalex.org/W2940927814",
-        "https://openalex.org/W3168875417",
-        "https://openalex.org/W2561529111",
-        "https://openalex.org/W3090716330",
-        "https://openalex.org/W2997200074",
-        "https://openalex.org/W6603850445",
-        "https://openalex.org/W2740321901",
-        "https://openalex.org/W4212907295",
-        "https://openalex.org/W3170841641",
-        "https://openalex.org/W3102286003"
-    ],
-    "abstract": "Passage re-ranking is to obtain a permutation over the candidate passage set from retrieval stage. Re-rankers have been boomed by Pre-trained Language Models (PLMs) due to their overwhelming advantages in natural language understanding. However, existing PLM based re-rankers may easily suffer from vocabulary mismatch and lack of domain specific knowledge. To alleviate these problems, explicit knowledge contained in knowledge graph is carefully introduced in our work. Specifically, we employ the existing knowledge graph which is incomplete and noisy, and first apply it in passage re-ranking task. To leverage a reliable knowledge, we propose a novel knowledge graph distillation method and obtain a knowledge meta graph as the bridge between query and passage. To align both kinds of embedding in the latent space, we employ PLM as text encoder and graph neural network over knowledge meta graph as knowledge encoder. Besides, a novel knowledge injector is designed for the dynamic interaction between text and knowledge encoder. Experimental results demonstrate the effectiveness of our method especially in queries requiring in-depth domain knowledge.",
-    "full_text": null
+  "title": "Incorporating Explicit Knowledge in Pre-trained Language Models for Passage Re-ranking",
+  "url": "https://openalex.org/W4224920984",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5052605149",
+      "name": "Qian Dong",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Software"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101677601",
+      "name": "Yiding Liu",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5090159721",
+      "name": "Suqi Cheng",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5050255638",
+      "name": "Shuaiqiang Wang",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5004991630",
+      "name": "Zhicong Cheng",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5067174475",
+      "name": "Shuzi Niu",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Software"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100594590",
+      "name": "Dawei Yin",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4284689311",
+    "https://openalex.org/W4212963993",
+    "https://openalex.org/W2922386288",
+    "https://openalex.org/W1977556410",
+    "https://openalex.org/W3021397474",
+    "https://openalex.org/W3014367186",
+    "https://openalex.org/W2940927814",
+    "https://openalex.org/W3168875417",
+    "https://openalex.org/W2561529111",
+    "https://openalex.org/W3090716330",
+    "https://openalex.org/W2997200074",
+    "https://openalex.org/W6603850445",
+    "https://openalex.org/W2740321901",
+    "https://openalex.org/W4212907295",
+    "https://openalex.org/W3170841641",
+    "https://openalex.org/W3102286003"
+  ],
+  "abstract": "Passage re-ranking is to obtain a permutation over the candidate passage set from retrieval stage. Re-rankers have been boomed by Pre-trained Language Models (PLMs) due to their overwhelming advantages in natural language understanding. However, existing PLM based re-rankers may easily suffer from vocabulary mismatch and lack of domain specific knowledge. To alleviate these problems, explicit knowledge contained in knowledge graph is carefully introduced in our work. Specifically, we employ the existing knowledge graph which is incomplete and noisy, and first apply it in passage re-ranking task. To leverage a reliable knowledge, we propose a novel knowledge graph distillation method and obtain a knowledge meta graph as the bridge between query and passage. To align both kinds of embedding in the latent space, we employ PLM as text encoder and graph neural network over knowledge meta graph as knowledge encoder. Besides, a novel knowledge injector is designed for the dynamic interaction between text and knowledge encoder. Experimental results demonstrate the effectiveness of our method especially in queries requiring in-depth domain knowledge.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8056192398071289
+    },
+    {
+      "name": "Knowledge graph",
+      "score": 0.5953994989395142
+    },
+    {
+      "name": "Domain knowledge",
+      "score": 0.5515996813774109
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.49230945110321045
+    },
+    {
+      "name": "Knowledge base",
+      "score": 0.49029234051704407
+    },
+    {
+      "name": "Embedding",
+      "score": 0.4763907790184021
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.4630366265773773
+    },
+    {
+      "name": "Graph",
+      "score": 0.44363856315612793
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.43104735016822815
+    },
+    {
+      "name": "Inference",
+      "score": 0.417110800743103
+    },
+    {
+      "name": "Language model",
+      "score": 0.41594499349594116
+    },
+    {
+      "name": "Question answering",
+      "score": 0.41048556566238403
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3671269416809082
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.35301291942596436
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.278158962726593
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    }
+  ]
 }

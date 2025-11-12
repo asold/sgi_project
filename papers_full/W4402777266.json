@@ -1,101 +1,132 @@
 {
-    "title": "Toponym resolution leveraging lightweight and open-source large language models and geo-knowledge",
-    "url": "https://openalex.org/W4402777266",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2754237653",
-            "name": "Xuke Hu",
-            "affiliations": [
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2085593594",
-            "name": "Jens Kersten",
-            "affiliations": [
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2479597983",
-            "name": "Friederike Klan",
-            "affiliations": [
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2911188815",
-            "name": "Sheikh Mastura Farzana",
-            "affiliations": [
-                "Software (Germany)",
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4206981623",
-        "https://openalex.org/W102708294",
-        "https://openalex.org/W6839910382",
-        "https://openalex.org/W4250763916",
-        "https://openalex.org/W4391136507",
-        "https://openalex.org/W2226371358",
-        "https://openalex.org/W2088091054",
-        "https://openalex.org/W2593537191",
-        "https://openalex.org/W2799089834",
-        "https://openalex.org/W2973619314",
-        "https://openalex.org/W2003094793",
-        "https://openalex.org/W2594284271",
-        "https://openalex.org/W2574923006",
-        "https://openalex.org/W4401555054",
-        "https://openalex.org/W3139007848",
-        "https://openalex.org/W4211026163",
-        "https://openalex.org/W4296550267",
-        "https://openalex.org/W4284713202",
-        "https://openalex.org/W4387460165",
-        "https://openalex.org/W3161200389",
-        "https://openalex.org/W4383860783",
-        "https://openalex.org/W6756688054",
-        "https://openalex.org/W2788931857",
-        "https://openalex.org/W2897725449",
-        "https://openalex.org/W4388184973",
-        "https://openalex.org/W6600168044",
-        "https://openalex.org/W4281689570",
-        "https://openalex.org/W2152229249",
-        "https://openalex.org/W2141835599",
-        "https://openalex.org/W4393002303",
-        "https://openalex.org/W3111371400",
-        "https://openalex.org/W3209721572",
-        "https://openalex.org/W6600403287",
-        "https://openalex.org/W4402364221",
-        "https://openalex.org/W2973135148",
-        "https://openalex.org/W2789215765",
-        "https://openalex.org/W2972978497",
-        "https://openalex.org/W2251896305",
-        "https://openalex.org/W4384525653",
-        "https://openalex.org/W2080133951",
-        "https://openalex.org/W2755127771",
-        "https://openalex.org/W2979524927",
-        "https://openalex.org/W6712725667",
-        "https://openalex.org/W3104748221",
-        "https://openalex.org/W6608782863",
-        "https://openalex.org/W4287887524",
-        "https://openalex.org/W6601013545",
-        "https://openalex.org/W4387929070",
-        "https://openalex.org/W3214659126",
-        "https://openalex.org/W2996857645",
-        "https://openalex.org/W2593831809",
-        "https://openalex.org/W4309651804",
-        "https://openalex.org/W4382246105",
-        "https://openalex.org/W4390100500",
-        "https://openalex.org/W4292083459",
-        "https://openalex.org/W1490960179",
-        "https://openalex.org/W4318679823",
-        "https://openalex.org/W1516184288",
-        "https://openalex.org/W4230918692",
-        "https://openalex.org/W3104532573",
-        "https://openalex.org/W4387344566"
-    ],
-    "abstract": "Toponym resolution is crucial for extracting geographic information from natural language texts, such as social media posts and news articles. Despite the advancements in current methods, including state-of-the-art deep learning solutions like GENRE and a sophisticated voting system that integrates seven individual methods, further enhancing their accuracy is essential. To achieve this goal, we propose a novel method that combines lightweight and open-source large language models and geo-knowledge. Specifically, we first fine-tune Mistral (7B), Baichuan2 (7B), Llama2 (7B &amp; 13B), and Falcon (7B) to estimate toponyms’ unambiguous reference (e.g., city, state, country) given their contexts. Subsequently, we correct inaccuracies in generated references and determine their geo-coordinates via sequentially querying GeoNames, Nominatim, and ArcGIS geocoders until a successful geocoding result is achieved. Our methods demonstrate enhanced performance compared to 20 existing methods, as evidenced across seven challenging datasets including 83,365 toponyms worldwide, with the Mistral-based method leading, followed by Baichuan2, Llama2, and Falcon-based methods. Specifically, the Mistral-based method achieves an Accuracy@161km of 0.91, surpassing GENRE, the best individual method, by 17% and the seven-methods composite voting system by 7%. Moreover, our methods are computationally efficient, operable on one general GPU, have modest memory requirements (14 GB for 7B models and 27 GB for 13B models), and exceed both GENRE and the voting system in inferring speed.",
-    "full_text": null
+  "title": "Toponym resolution leveraging lightweight and open-source large language models and geo-knowledge",
+  "url": "https://openalex.org/W4402777266",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2754237653",
+      "name": "Xuke Hu",
+      "affiliations": [
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2085593594",
+      "name": "Jens Kersten",
+      "affiliations": [
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2479597983",
+      "name": "Friederike Klan",
+      "affiliations": [
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2911188815",
+      "name": "Sheikh Mastura Farzana",
+      "affiliations": [
+        "Software (Germany)",
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4206981623",
+    "https://openalex.org/W102708294",
+    "https://openalex.org/W6839910382",
+    "https://openalex.org/W4250763916",
+    "https://openalex.org/W4391136507",
+    "https://openalex.org/W2226371358",
+    "https://openalex.org/W2088091054",
+    "https://openalex.org/W2593537191",
+    "https://openalex.org/W2799089834",
+    "https://openalex.org/W2973619314",
+    "https://openalex.org/W2003094793",
+    "https://openalex.org/W2594284271",
+    "https://openalex.org/W2574923006",
+    "https://openalex.org/W4401555054",
+    "https://openalex.org/W3139007848",
+    "https://openalex.org/W4211026163",
+    "https://openalex.org/W4296550267",
+    "https://openalex.org/W4284713202",
+    "https://openalex.org/W4387460165",
+    "https://openalex.org/W3161200389",
+    "https://openalex.org/W4383860783",
+    "https://openalex.org/W6756688054",
+    "https://openalex.org/W2788931857",
+    "https://openalex.org/W2897725449",
+    "https://openalex.org/W4388184973",
+    "https://openalex.org/W6600168044",
+    "https://openalex.org/W4281689570",
+    "https://openalex.org/W2152229249",
+    "https://openalex.org/W2141835599",
+    "https://openalex.org/W4393002303",
+    "https://openalex.org/W3111371400",
+    "https://openalex.org/W3209721572",
+    "https://openalex.org/W6600403287",
+    "https://openalex.org/W4402364221",
+    "https://openalex.org/W2973135148",
+    "https://openalex.org/W2789215765",
+    "https://openalex.org/W2972978497",
+    "https://openalex.org/W2251896305",
+    "https://openalex.org/W4384525653",
+    "https://openalex.org/W2080133951",
+    "https://openalex.org/W2755127771",
+    "https://openalex.org/W2979524927",
+    "https://openalex.org/W6712725667",
+    "https://openalex.org/W3104748221",
+    "https://openalex.org/W6608782863",
+    "https://openalex.org/W4287887524",
+    "https://openalex.org/W6601013545",
+    "https://openalex.org/W4387929070",
+    "https://openalex.org/W3214659126",
+    "https://openalex.org/W2996857645",
+    "https://openalex.org/W2593831809",
+    "https://openalex.org/W4309651804",
+    "https://openalex.org/W4382246105",
+    "https://openalex.org/W4390100500",
+    "https://openalex.org/W4292083459",
+    "https://openalex.org/W1490960179",
+    "https://openalex.org/W4318679823",
+    "https://openalex.org/W1516184288",
+    "https://openalex.org/W4230918692",
+    "https://openalex.org/W3104532573",
+    "https://openalex.org/W4387344566"
+  ],
+  "abstract": "Toponym resolution is crucial for extracting geographic information from natural language texts, such as social media posts and news articles. Despite the advancements in current methods, including state-of-the-art deep learning solutions like GENRE and a sophisticated voting system that integrates seven individual methods, further enhancing their accuracy is essential. To achieve this goal, we propose a novel method that combines lightweight and open-source large language models and geo-knowledge. Specifically, we first fine-tune Mistral (7B), Baichuan2 (7B), Llama2 (7B &amp; 13B), and Falcon (7B) to estimate toponyms’ unambiguous reference (e.g., city, state, country) given their contexts. Subsequently, we correct inaccuracies in generated references and determine their geo-coordinates via sequentially querying GeoNames, Nominatim, and ArcGIS geocoders until a successful geocoding result is achieved. Our methods demonstrate enhanced performance compared to 20 existing methods, as evidenced across seven challenging datasets including 83,365 toponyms worldwide, with the Mistral-based method leading, followed by Baichuan2, Llama2, and Falcon-based methods. Specifically, the Mistral-based method achieves an Accuracy@161km of 0.91, surpassing GENRE, the best individual method, by 17% and the seven-methods composite voting system by 7%. Moreover, our methods are computationally efficient, operable on one general GPU, have modest memory requirements (14 GB for 7B models and 27 GB for 13B models), and exceed both GENRE and the voting system in inferring speed.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6069053411483765
+    },
+    {
+      "name": "Open source",
+      "score": 0.5685756206512451
+    },
+    {
+      "name": "Resolution (logic)",
+      "score": 0.4758967161178589
+    },
+    {
+      "name": "Data science",
+      "score": 0.4037863314151764
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.23194554448127747
+    },
+    {
+      "name": "Software",
+      "score": 0.17209655046463013
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,63 +1,134 @@
 {
-    "title": "An Explainable Vision Transformer Model Based White Blood Cells Classification and Localization",
-    "url": "https://openalex.org/W4380738680",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5016296156",
-            "name": "Oğuzhan KATAR",
-            "affiliations": [
-                "Fırat University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5083618632",
-            "name": "Özal Yıldırım",
-            "affiliations": [
-                "Fırat University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4235060295",
-        "https://openalex.org/W4380738680",
-        "https://openalex.org/W6607151510",
-        "https://openalex.org/W6608099178",
-        "https://openalex.org/W6600402904",
-        "https://openalex.org/W4207016125",
-        "https://openalex.org/W3171125843",
-        "https://openalex.org/W4223651176",
-        "https://openalex.org/W4288095785",
-        "https://openalex.org/W4307359797",
-        "https://openalex.org/W3048127440",
-        "https://openalex.org/W3145185940",
-        "https://openalex.org/W3011939472",
-        "https://openalex.org/W3081876271",
-        "https://openalex.org/W2953681063",
-        "https://openalex.org/W4285734737",
-        "https://openalex.org/W4285505138",
-        "https://openalex.org/W3037839692",
-        "https://openalex.org/W4313207645",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3138052887",
-        "https://openalex.org/W4225464513",
-        "https://openalex.org/W4226530256",
-        "https://openalex.org/W4312076869",
-        "https://openalex.org/W3157067859",
-        "https://openalex.org/W4286233849",
-        "https://openalex.org/W4302275239",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W3035253074",
-        "https://openalex.org/W3201264210",
-        "https://openalex.org/W3128592650",
-        "https://openalex.org/W3084048731",
-        "https://openalex.org/W4313481407",
-        "https://openalex.org/W4206685736",
-        "https://openalex.org/W3205890828",
-        "https://openalex.org/W4226408629",
-        "https://openalex.org/W2902631601",
-        "https://openalex.org/W4308515701"
-    ],
-    "abstract": "Blood cell analysis is a crucial diagnostic process in medical practice. In particular, detecting white blood cells (WBCs) is essential for diagnosing of many diseases. The manual screening of blood films is a time-consuming and subjective process, which can lead to inconsistencies and errors. Therefore, automated detection of blood cells can improve the accuracy and efficiency of the screening process. In this study, an explainable Vision Transformer (ViT) model was proposed for the automatic detection of WBCs from blood films. The proposed model utilizes the self-attention mechanism to extract relevant features from the input images and leverages transfer learning by incorporating pre-trained model weights to improve its performance. The proposed model achieved a classification accuracy of 99.40% for five distinct types of WBCs and exhibited potential in reducing the time required for manual screening of blood films by pathologists. Upon examination of the misclassified test samples, it was observed that incorrect predictions were correlated with the presence or absence of granules in the cell samples. To validate this observation, the dataset was divided into two classes, namely Granulocytes and Agranulocytes, and a secondary training process was conducted. The resulting ViT model trained for binary classification achieved an accuracy of 99.70%, recall of 99.54%, precision of 99.32%, and F-1 score of 99.43% during the test phase. To ensure the reliability of the ViT model&amp;#039;s multi-class classification of WBCs, the pixel areas that the model focuses on in its predictions are visualized through the Score-CAM algorithm.",
-    "full_text": null
+  "title": "An Explainable Vision Transformer Model Based White Blood Cells Classification and Localization",
+  "url": "https://openalex.org/W4380738680",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5016296156",
+      "name": "Oğuzhan KATAR",
+      "affiliations": [
+        "Fırat University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5083618632",
+      "name": "Özal Yıldırım",
+      "affiliations": [
+        "Fırat University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4235060295",
+    "https://openalex.org/W4380738680",
+    "https://openalex.org/W6607151510",
+    "https://openalex.org/W6608099178",
+    "https://openalex.org/W6600402904",
+    "https://openalex.org/W4207016125",
+    "https://openalex.org/W3171125843",
+    "https://openalex.org/W4223651176",
+    "https://openalex.org/W4288095785",
+    "https://openalex.org/W4307359797",
+    "https://openalex.org/W3048127440",
+    "https://openalex.org/W3145185940",
+    "https://openalex.org/W3011939472",
+    "https://openalex.org/W3081876271",
+    "https://openalex.org/W2953681063",
+    "https://openalex.org/W4285734737",
+    "https://openalex.org/W4285505138",
+    "https://openalex.org/W3037839692",
+    "https://openalex.org/W4313207645",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3138052887",
+    "https://openalex.org/W4225464513",
+    "https://openalex.org/W4226530256",
+    "https://openalex.org/W4312076869",
+    "https://openalex.org/W3157067859",
+    "https://openalex.org/W4286233849",
+    "https://openalex.org/W4302275239",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W3035253074",
+    "https://openalex.org/W3201264210",
+    "https://openalex.org/W3128592650",
+    "https://openalex.org/W3084048731",
+    "https://openalex.org/W4313481407",
+    "https://openalex.org/W4206685736",
+    "https://openalex.org/W3205890828",
+    "https://openalex.org/W4226408629",
+    "https://openalex.org/W2902631601",
+    "https://openalex.org/W4308515701"
+  ],
+  "abstract": "Blood cell analysis is a crucial diagnostic process in medical practice. In particular, detecting white blood cells (WBCs) is essential for diagnosing of many diseases. The manual screening of blood films is a time-consuming and subjective process, which can lead to inconsistencies and errors. Therefore, automated detection of blood cells can improve the accuracy and efficiency of the screening process. In this study, an explainable Vision Transformer (ViT) model was proposed for the automatic detection of WBCs from blood films. The proposed model utilizes the self-attention mechanism to extract relevant features from the input images and leverages transfer learning by incorporating pre-trained model weights to improve its performance. The proposed model achieved a classification accuracy of 99.40% for five distinct types of WBCs and exhibited potential in reducing the time required for manual screening of blood films by pathologists. Upon examination of the misclassified test samples, it was observed that incorrect predictions were correlated with the presence or absence of granules in the cell samples. To validate this observation, the dataset was divided into two classes, namely Granulocytes and Agranulocytes, and a secondary training process was conducted. The resulting ViT model trained for binary classification achieved an accuracy of 99.70%, recall of 99.54%, precision of 99.32%, and F-1 score of 99.43% during the test phase. To ensure the reliability of the ViT model&amp;#039;s multi-class classification of WBCs, the pixel areas that the model focuses on in its predictions are visualized through the Score-CAM algorithm.",
+  "full_text": null,
+  "topic": "Artificial intelligence",
+  "concepts": [
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6498186588287354
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6414282917976379
+    },
+    {
+      "name": "Transfer of learning",
+      "score": 0.47716063261032104
+    },
+    {
+      "name": "White blood cell",
+      "score": 0.4748035967350006
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4593428075313568
+    },
+    {
+      "name": "Recall",
+      "score": 0.45908135175704956
+    },
+    {
+      "name": "Binary classification",
+      "score": 0.4429367482662201
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.42553016543388367
+    },
+    {
+      "name": "Transformer",
+      "score": 0.41400179266929626
+    },
+    {
+      "name": "Support vector machine",
+      "score": 0.29301515221595764
+    },
+    {
+      "name": "Medicine",
+      "score": 0.18428361415863037
+    },
+    {
+      "name": "Engineering",
+      "score": 0.12241923809051514
+    },
+    {
+      "name": "Immunology",
+      "score": 0.10089978575706482
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

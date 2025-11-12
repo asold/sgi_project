@@ -1,72 +1,123 @@
 {
-    "title": "Genomics transformer for diagnosing Parkinson's disease",
-    "url": "https://openalex.org/W4308216590",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3032635685",
-            "name": "Diego Machado-Reyes",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108398147",
-            "name": "Mansu Kim",
-            "affiliations": [
-                "Catholic University of Korea"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5112876268",
-            "name": "Hanqing Chaoh",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2251976514",
-            "name": "Juergen Hahn",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1898662817",
-            "name": "Li Shen",
-            "affiliations": [
-                "University of Pennsylvania"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2616984730",
-            "name": "Pingkun Yan",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2107940314",
-        "https://openalex.org/W2973963952",
-        "https://openalex.org/W2901600283",
-        "https://openalex.org/W4226256732",
-        "https://openalex.org/W2982638646",
-        "https://openalex.org/W2056132907",
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2980650902",
-        "https://openalex.org/W2953112487",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2972368830",
-        "https://openalex.org/W4226263121",
-        "https://openalex.org/W2254502762",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W2884561390",
-        "https://openalex.org/W2588858201",
-        "https://openalex.org/W2799817815",
-        "https://openalex.org/W3092331709"
-    ],
-    "abstract": "Parkinson's disease (PD) is the second most common neurodegenerative disease and presents a complex etiology with genomic and environmental factors and no recognized cures. Genotype data, such as single nucleotide polymorphisms (SNPs), could be used as a prodromal factor for early detection of PD. However, the polygenic nature of PD presents a challenge as the complex relationships between SNPs towards disease development are difficult to model. Traditional assessment methods such as polygenic risk scores and machine learning approaches struggle to capture the complex interactions present in the genotype data, thus limiting their discriminative capabilities in diagnosis. On the other hand, deep learning models are better suited for this task. Nevertheless, they encounter difficulties of their own such as a lack of interpretability. To overcome these limitations, in this work, a novel transformer encoder-based model is introduced to classify PD patients from healthy controls based on their genotype. This method is designed to effectively model complex global feature interactions and enable increased interpretability through the learned attention scores. The proposed framework outperformed traditional machine learning models and multilayer perceptron (MLP) baseline models. Moreover, visualization of the learned SNP-SNP associations provides not only interpretability to the model but also valuable insights into the biochemical pathways underlying PD development, which are corroborated by pathway enrichment analysis. Our results suggest novel SNP interactions to be further studied in wet lab and clinical settings.",
-    "full_text": null
+  "title": "Genomics transformer for diagnosing Parkinson's disease",
+  "url": "https://openalex.org/W4308216590",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3032635685",
+      "name": "Diego Machado-Reyes",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108398147",
+      "name": "Mansu Kim",
+      "affiliations": [
+        "Catholic University of Korea"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5112876268",
+      "name": "Hanqing Chaoh",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2251976514",
+      "name": "Juergen Hahn",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1898662817",
+      "name": "Li Shen",
+      "affiliations": [
+        "University of Pennsylvania"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2616984730",
+      "name": "Pingkun Yan",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2107940314",
+    "https://openalex.org/W2973963952",
+    "https://openalex.org/W2901600283",
+    "https://openalex.org/W4226256732",
+    "https://openalex.org/W2982638646",
+    "https://openalex.org/W2056132907",
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2980650902",
+    "https://openalex.org/W2953112487",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2972368830",
+    "https://openalex.org/W4226263121",
+    "https://openalex.org/W2254502762",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W2884561390",
+    "https://openalex.org/W2588858201",
+    "https://openalex.org/W2799817815",
+    "https://openalex.org/W3092331709"
+  ],
+  "abstract": "Parkinson's disease (PD) is the second most common neurodegenerative disease and presents a complex etiology with genomic and environmental factors and no recognized cures. Genotype data, such as single nucleotide polymorphisms (SNPs), could be used as a prodromal factor for early detection of PD. However, the polygenic nature of PD presents a challenge as the complex relationships between SNPs towards disease development are difficult to model. Traditional assessment methods such as polygenic risk scores and machine learning approaches struggle to capture the complex interactions present in the genotype data, thus limiting their discriminative capabilities in diagnosis. On the other hand, deep learning models are better suited for this task. Nevertheless, they encounter difficulties of their own such as a lack of interpretability. To overcome these limitations, in this work, a novel transformer encoder-based model is introduced to classify PD patients from healthy controls based on their genotype. This method is designed to effectively model complex global feature interactions and enable increased interpretability through the learned attention scores. The proposed framework outperformed traditional machine learning models and multilayer perceptron (MLP) baseline models. Moreover, visualization of the learned SNP-SNP associations provides not only interpretability to the model but also valuable insights into the biochemical pathways underlying PD development, which are corroborated by pathway enrichment analysis. Our results suggest novel SNP interactions to be further studied in wet lab and clinical settings.",
+  "full_text": null,
+  "topic": "Parkinson's disease",
+  "concepts": [
+    {
+      "name": "Parkinson's disease",
+      "score": 0.6459146738052368
+    },
+    {
+      "name": "Genomics",
+      "score": 0.564263105392456
+    },
+    {
+      "name": "Disease",
+      "score": 0.505997359752655
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4507841169834137
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4416777193546295
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.32929378747940063
+    },
+    {
+      "name": "Medicine",
+      "score": 0.3266172409057617
+    },
+    {
+      "name": "Biology",
+      "score": 0.24764734506607056
+    },
+    {
+      "name": "Genome",
+      "score": 0.21012726426124573
+    },
+    {
+      "name": "Genetics",
+      "score": 0.1622825264930725
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.16210585832595825
+    },
+    {
+      "name": "Gene",
+      "score": 0.15734398365020752
+    }
+  ]
 }

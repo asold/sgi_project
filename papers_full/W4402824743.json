@@ -1,90 +1,149 @@
 {
-    "title": "<i>Literature search sandbox</i>: a large language model that generates search queries for systematic reviews",
-    "url": "https://openalex.org/W4402824743",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2152496295",
-            "name": "Gaelen P Adam",
-            "affiliations": [
-                "Brown University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2775939591",
-            "name": "Jay DeYoung",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099568685",
-            "name": "Alice Paul",
-            "affiliations": [
-                "Brown University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2030016173",
-            "name": "Ian J. Saldanha",
-            "affiliations": [
-                "Johns Hopkins University",
-                "Brown University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1980844241",
-            "name": "Ethan M Balk",
-            "affiliations": [
-                "Brown University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2289453361",
-            "name": "THOMAS A. TRIKALINOS",
-            "affiliations": [
-                "Brown University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2673201243",
-            "name": "Byron C. Wallace",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4313371821",
-        "https://openalex.org/W4281789780",
-        "https://openalex.org/W2999783216",
-        "https://openalex.org/W4283159388",
-        "https://openalex.org/W2163168379",
-        "https://openalex.org/W4398203672",
-        "https://openalex.org/W4310496878",
-        "https://openalex.org/W2741023348",
-        "https://openalex.org/W2163661402",
-        "https://openalex.org/W2952789948",
-        "https://openalex.org/W2886344122",
-        "https://openalex.org/W4391470679",
-        "https://openalex.org/W3092256784",
-        "https://openalex.org/W2997536432",
-        "https://openalex.org/W4255096571",
-        "https://openalex.org/W4283394602",
-        "https://openalex.org/W2981008876",
-        "https://openalex.org/W3210767930",
-        "https://openalex.org/W3118273851",
-        "https://openalex.org/W4248952883",
-        "https://openalex.org/W4380446598",
-        "https://openalex.org/W2299177375",
-        "https://openalex.org/W1529409337",
-        "https://openalex.org/W1976770755",
-        "https://openalex.org/W2889414415",
-        "https://openalex.org/W4229979691",
-        "https://openalex.org/W2147469877",
-        "https://openalex.org/W2567362164",
-        "https://openalex.org/W1971351343"
-    ],
-    "abstract": "Abstract Objectives Development of search queries for systematic reviews (SRs) is time-consuming. In this work, we capitalize on recent advances in large language models (LLMs) and a relatively large dataset of natural language descriptions of reviews and corresponding Boolean searches to generate Boolean search queries from SR titles and key questions. Materials and Methods We curated a training dataset of 10 346 SR search queries registered in PROSPERO. We used this dataset to fine-tune a set of models to generate search queries based on Mistral-Instruct-7b. We evaluated the models quantitatively using an evaluation dataset of 57 SRs and qualitatively through semi-structured interviews with 8 experienced medical librarians. Results The model-generated search queries had median sensitivity of 85% (interquartile range [IQR] 40%-100%) and number needed to read of 1206 citations (IQR 205-5810). The interviews suggested that the models lack both the necessary sensitivity and precision to be used without scrutiny but could be useful for topic scoping or as initial queries to be refined. Discussion Future research should focus on improving the dataset with more high-quality search queries, assessing whether fine-tuning the model on other fields, such as the population and intervention, improves performance, and exploring the addition of interactivity to the interface. Conclusions The datasets developed for this project can be used to train and evaluate LLMs that map review descriptions to Boolean search queries. The models cannot replace thoughtful search query design but may be useful in providing suggestions for key words and the framework for the query.",
-    "full_text": null
+  "title": "<i>Literature search sandbox</i>: a large language model that generates search queries for systematic reviews",
+  "url": "https://openalex.org/W4402824743",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2152496295",
+      "name": "Gaelen P Adam",
+      "affiliations": [
+        "Brown University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2775939591",
+      "name": "Jay DeYoung",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099568685",
+      "name": "Alice Paul",
+      "affiliations": [
+        "Brown University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2030016173",
+      "name": "Ian J. Saldanha",
+      "affiliations": [
+        "Johns Hopkins University",
+        "Brown University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1980844241",
+      "name": "Ethan M Balk",
+      "affiliations": [
+        "Brown University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2289453361",
+      "name": "THOMAS A. TRIKALINOS",
+      "affiliations": [
+        "Brown University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2673201243",
+      "name": "Byron C. Wallace",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4313371821",
+    "https://openalex.org/W4281789780",
+    "https://openalex.org/W2999783216",
+    "https://openalex.org/W4283159388",
+    "https://openalex.org/W2163168379",
+    "https://openalex.org/W4398203672",
+    "https://openalex.org/W4310496878",
+    "https://openalex.org/W2741023348",
+    "https://openalex.org/W2163661402",
+    "https://openalex.org/W2952789948",
+    "https://openalex.org/W2886344122",
+    "https://openalex.org/W4391470679",
+    "https://openalex.org/W3092256784",
+    "https://openalex.org/W2997536432",
+    "https://openalex.org/W4255096571",
+    "https://openalex.org/W4283394602",
+    "https://openalex.org/W2981008876",
+    "https://openalex.org/W3210767930",
+    "https://openalex.org/W3118273851",
+    "https://openalex.org/W4248952883",
+    "https://openalex.org/W4380446598",
+    "https://openalex.org/W2299177375",
+    "https://openalex.org/W1529409337",
+    "https://openalex.org/W1976770755",
+    "https://openalex.org/W2889414415",
+    "https://openalex.org/W4229979691",
+    "https://openalex.org/W2147469877",
+    "https://openalex.org/W2567362164",
+    "https://openalex.org/W1971351343"
+  ],
+  "abstract": "Abstract Objectives Development of search queries for systematic reviews (SRs) is time-consuming. In this work, we capitalize on recent advances in large language models (LLMs) and a relatively large dataset of natural language descriptions of reviews and corresponding Boolean searches to generate Boolean search queries from SR titles and key questions. Materials and Methods We curated a training dataset of 10 346 SR search queries registered in PROSPERO. We used this dataset to fine-tune a set of models to generate search queries based on Mistral-Instruct-7b. We evaluated the models quantitatively using an evaluation dataset of 57 SRs and qualitatively through semi-structured interviews with 8 experienced medical librarians. Results The model-generated search queries had median sensitivity of 85% (interquartile range [IQR] 40%-100%) and number needed to read of 1206 citations (IQR 205-5810). The interviews suggested that the models lack both the necessary sensitivity and precision to be used without scrutiny but could be useful for topic scoping or as initial queries to be refined. Discussion Future research should focus on improving the dataset with more high-quality search queries, assessing whether fine-tuning the model on other fields, such as the population and intervention, improves performance, and exploring the addition of interactivity to the interface. Conclusions The datasets developed for this project can be used to train and evaluate LLMs that map review descriptions to Boolean search queries. The models cannot replace thoughtful search query design but may be useful in providing suggestions for key words and the framework for the query.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7387820482254028
+    },
+    {
+      "name": "Sandbox (software development)",
+      "score": 0.7016284465789795
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.603598952293396
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.5453327894210815
+    },
+    {
+      "name": "Scrutiny",
+      "score": 0.48808586597442627
+    },
+    {
+      "name": "Interactivity",
+      "score": 0.4628194272518158
+    },
+    {
+      "name": "Language model",
+      "score": 0.43804439902305603
+    },
+    {
+      "name": "Data science",
+      "score": 0.3817341923713684
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3109371066093445
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.18967100977897644
+    },
+    {
+      "name": "Programming language",
+      "score": 0.12773922085762024
+    },
+    {
+      "name": "Library science",
+      "score": 0.07635319232940674
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

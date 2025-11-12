@@ -1,162 +1,193 @@
 {
-    "title": "Leveraging Large Language Models for Decision Support in Personalized Oncology",
-    "url": "https://openalex.org/W4388759569",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2295063196",
-            "name": "Manuela Benary",
-            "affiliations": [
-                "Charité - Universitätsmedizin Berlin",
-                "Freie Universität Berlin",
-                "Berlin Institute of Health at Charité - Universitätsmedizin Berlin",
-                "Humboldt-Universität zu Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3099358948",
-            "name": "Xing David Wang",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103753105",
-            "name": "Max Schmidt",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Freie Universität Berlin",
-                "Charité - Universitätsmedizin Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2342859987",
-            "name": "Dominik Soll",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Freie Universität Berlin",
-                "Charité - Universitätsmedizin Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2663090659",
-            "name": "Georg Hilfenhaus",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Charité - Universitätsmedizin Berlin",
-                "Freie Universität Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2116944720",
-            "name": "Mani Nassir",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Freie Universität Berlin",
-                "Charité - Universitätsmedizin Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2530769841",
-            "name": "Christian Sigler",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Charité - Universitätsmedizin Berlin",
-                "Freie Universität Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104879831",
-            "name": "Maren Knödler",
-            "affiliations": [
-                "Charité - Universitätsmedizin Berlin",
-                "Freie Universität Berlin",
-                "Humboldt-Universität zu Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1214326849",
-            "name": "Ulrich Keller",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Freie Universität Berlin",
-                "Charité - Universitätsmedizin Berlin",
-                "German Cancer Research Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2308408859",
-            "name": "Dieter Beule",
-            "affiliations": [
-                "Berlin Institute of Health at Charité - Universitätsmedizin Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1605243697",
-            "name": "Ulrich Keilholz",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin",
-                "Charité - Universitätsmedizin Berlin",
-                "German Cancer Research Center",
-                "Freie Universität Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A612013498",
-            "name": "Ulf Leser",
-            "affiliations": [
-                "Humboldt-Universität zu Berlin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2777392947",
-            "name": "Damian T. Rieke",
-            "affiliations": [
-                "Charité - Universitätsmedizin Berlin",
-                "Humboldt-Universität zu Berlin",
-                "Freie Universität Berlin",
-                "German Cancer Research Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2777392947",
-            "name": "Damian T. Rieke",
-            "affiliations": [
-                "Freie Universität Berlin",
-                "German Cancer Research Center",
-                "Humboldt-Universität zu Berlin",
-                "Charité - Universitätsmedizin Berlin"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2060427373",
-        "https://openalex.org/W2790254562",
-        "https://openalex.org/W3081278682",
-        "https://openalex.org/W3080978633",
-        "https://openalex.org/W4307117550",
-        "https://openalex.org/W3001646965",
-        "https://openalex.org/W2962883142",
-        "https://openalex.org/W2896448590",
-        "https://openalex.org/W4366769280",
-        "https://openalex.org/W4316810205",
-        "https://openalex.org/W4381435065",
-        "https://openalex.org/W4367311208",
-        "https://openalex.org/W4361000349",
-        "https://openalex.org/W4383059305",
-        "https://openalex.org/W4384558920",
-        "https://openalex.org/W4378783467",
-        "https://openalex.org/W4380730209",
-        "https://openalex.org/W4319062614",
-        "https://openalex.org/W3175129117",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4365211688",
-        "https://openalex.org/W4320005767",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4327810158",
-        "https://openalex.org/W4394663271"
-    ],
-    "abstract": "Importance Clinical interpretation of complex biomarkers for precision oncology currently requires manual investigations of previous studies and databases. Conversational large language models (LLMs) might be beneficial as automated tools for assisting clinical decision-making. Objective To assess performance and define their role using 4 recent LLMs as support tools for precision oncology. Design, Setting, and Participants This diagnostic study examined 10 fictional cases of patients with advanced cancer with genetic alterations. Each case was submitted to 4 different LLMs (ChatGPT, Galactica, Perplexity, and BioMedLM) and 1 expert physician to identify personalized treatment options in 2023. Treatment options were masked and presented to a molecular tumor board (MTB), whose members rated the likelihood of a treatment option coming from an LLM on a scale from 0 to 10 (0, extremely unlikely; 10, extremely likely) and decided whether the treatment option was clinically useful. Main Outcomes and Measures Number of treatment options, precision, recall, F1 score of LLMs compared with human experts, recognizability, and usefulness of recommendations. Results For 10 fictional cancer patients (4 with lung cancer, 6 with other; median [IQR] 3.5 [3.0-4.8] molecular alterations per patient), a median (IQR) number of 4.0 (4.0-4.0) compared with 3.0 (3.0-5.0), 7.5 (4.3-9.8), 11.5 (7.8-13.0), and 13.0 (11.3-21.5) treatment options each was identified by the human expert and 4 LLMs, respectively. When considering the expert as a criterion standard, LLM-proposed treatment options reached F1 scores of 0.04, 0.17, 0.14, and 0.19 across all patients combined. Combining treatment options from different LLMs allowed a precision of 0.29 and a recall of 0.29 for an F1 score of 0.29. LLM-generated treatment options were recognized as AI-generated with a median (IQR) 7.5 (5.3-9.0) points in contrast to 2.0 (1.0-3.0) points for manually annotated cases. A crucial reason for identifying AI-generated treatment options was insufficient accompanying evidence. For each patient, at least 1 LLM generated a treatment option that was considered helpful by MTB members. Two unique useful treatment options (including 1 unique treatment strategy) were identified only by LLM. Conclusions and Relevance In this diagnostic study, treatment options of LLMs in precision oncology did not reach the quality and credibility of human experts; however, they generated helpful ideas that might have complemented established procedures. Considering technological progress, LLMs could play an increasingly important role in assisting with screening and selecting relevant biomedical literature to support evidence-based, personalized treatment decisions.",
-    "full_text": null
+  "title": "Leveraging Large Language Models for Decision Support in Personalized Oncology",
+  "url": "https://openalex.org/W4388759569",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2295063196",
+      "name": "Manuela Benary",
+      "affiliations": [
+        "Charité - Universitätsmedizin Berlin",
+        "Freie Universität Berlin",
+        "Berlin Institute of Health at Charité - Universitätsmedizin Berlin",
+        "Humboldt-Universität zu Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3099358948",
+      "name": "Xing David Wang",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103753105",
+      "name": "Max Schmidt",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Freie Universität Berlin",
+        "Charité - Universitätsmedizin Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2342859987",
+      "name": "Dominik Soll",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Freie Universität Berlin",
+        "Charité - Universitätsmedizin Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2663090659",
+      "name": "Georg Hilfenhaus",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Charité - Universitätsmedizin Berlin",
+        "Freie Universität Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2116944720",
+      "name": "Mani Nassir",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Freie Universität Berlin",
+        "Charité - Universitätsmedizin Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2530769841",
+      "name": "Christian Sigler",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Charité - Universitätsmedizin Berlin",
+        "Freie Universität Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104879831",
+      "name": "Maren Knödler",
+      "affiliations": [
+        "Charité - Universitätsmedizin Berlin",
+        "Freie Universität Berlin",
+        "Humboldt-Universität zu Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1214326849",
+      "name": "Ulrich Keller",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Freie Universität Berlin",
+        "Charité - Universitätsmedizin Berlin",
+        "German Cancer Research Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2308408859",
+      "name": "Dieter Beule",
+      "affiliations": [
+        "Berlin Institute of Health at Charité - Universitätsmedizin Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1605243697",
+      "name": "Ulrich Keilholz",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin",
+        "Charité - Universitätsmedizin Berlin",
+        "German Cancer Research Center",
+        "Freie Universität Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A612013498",
+      "name": "Ulf Leser",
+      "affiliations": [
+        "Humboldt-Universität zu Berlin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2777392947",
+      "name": "Damian T. Rieke",
+      "affiliations": [
+        "Charité - Universitätsmedizin Berlin",
+        "Humboldt-Universität zu Berlin",
+        "Freie Universität Berlin",
+        "German Cancer Research Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2777392947",
+      "name": "Damian T. Rieke",
+      "affiliations": [
+        "Freie Universität Berlin",
+        "German Cancer Research Center",
+        "Humboldt-Universität zu Berlin",
+        "Charité - Universitätsmedizin Berlin"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2060427373",
+    "https://openalex.org/W2790254562",
+    "https://openalex.org/W3081278682",
+    "https://openalex.org/W3080978633",
+    "https://openalex.org/W4307117550",
+    "https://openalex.org/W3001646965",
+    "https://openalex.org/W2962883142",
+    "https://openalex.org/W2896448590",
+    "https://openalex.org/W4366769280",
+    "https://openalex.org/W4316810205",
+    "https://openalex.org/W4381435065",
+    "https://openalex.org/W4367311208",
+    "https://openalex.org/W4361000349",
+    "https://openalex.org/W4383059305",
+    "https://openalex.org/W4384558920",
+    "https://openalex.org/W4378783467",
+    "https://openalex.org/W4380730209",
+    "https://openalex.org/W4319062614",
+    "https://openalex.org/W3175129117",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4365211688",
+    "https://openalex.org/W4320005767",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4327810158",
+    "https://openalex.org/W4394663271"
+  ],
+  "abstract": "Importance Clinical interpretation of complex biomarkers for precision oncology currently requires manual investigations of previous studies and databases. Conversational large language models (LLMs) might be beneficial as automated tools for assisting clinical decision-making. Objective To assess performance and define their role using 4 recent LLMs as support tools for precision oncology. Design, Setting, and Participants This diagnostic study examined 10 fictional cases of patients with advanced cancer with genetic alterations. Each case was submitted to 4 different LLMs (ChatGPT, Galactica, Perplexity, and BioMedLM) and 1 expert physician to identify personalized treatment options in 2023. Treatment options were masked and presented to a molecular tumor board (MTB), whose members rated the likelihood of a treatment option coming from an LLM on a scale from 0 to 10 (0, extremely unlikely; 10, extremely likely) and decided whether the treatment option was clinically useful. Main Outcomes and Measures Number of treatment options, precision, recall, F1 score of LLMs compared with human experts, recognizability, and usefulness of recommendations. Results For 10 fictional cancer patients (4 with lung cancer, 6 with other; median [IQR] 3.5 [3.0-4.8] molecular alterations per patient), a median (IQR) number of 4.0 (4.0-4.0) compared with 3.0 (3.0-5.0), 7.5 (4.3-9.8), 11.5 (7.8-13.0), and 13.0 (11.3-21.5) treatment options each was identified by the human expert and 4 LLMs, respectively. When considering the expert as a criterion standard, LLM-proposed treatment options reached F1 scores of 0.04, 0.17, 0.14, and 0.19 across all patients combined. Combining treatment options from different LLMs allowed a precision of 0.29 and a recall of 0.29 for an F1 score of 0.29. LLM-generated treatment options were recognized as AI-generated with a median (IQR) 7.5 (5.3-9.0) points in contrast to 2.0 (1.0-3.0) points for manually annotated cases. A crucial reason for identifying AI-generated treatment options was insufficient accompanying evidence. For each patient, at least 1 LLM generated a treatment option that was considered helpful by MTB members. Two unique useful treatment options (including 1 unique treatment strategy) were identified only by LLM. Conclusions and Relevance In this diagnostic study, treatment options of LLMs in precision oncology did not reach the quality and credibility of human experts; however, they generated helpful ideas that might have complemented established procedures. Considering technological progress, LLMs could play an increasingly important role in assisting with screening and selecting relevant biomedical literature to support evidence-based, personalized treatment decisions.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5068133473396301
+    },
+    {
+      "name": "Personalized medicine",
+      "score": 0.4891107678413391
+    },
+    {
+      "name": "Oncology",
+      "score": 0.40236368775367737
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.3484961688518524
+    },
+    {
+      "name": "Medicine",
+      "score": 0.32698142528533936
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.19762179255485535
+    },
+    {
+      "name": "Biology",
+      "score": 0.12044811248779297
+    }
+  ]
 }

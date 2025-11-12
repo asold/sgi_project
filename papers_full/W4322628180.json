@@ -1,71 +1,154 @@
 {
-    "title": "Transformer architecture based on mutual attention for image-anomaly detection",
-    "url": "https://openalex.org/W4322628180",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2106697687",
-            "name": "Mengting Zhang",
-            "affiliations": [
-                "Shanghai University of Electric Power"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2576746595",
-            "name": "Xiu-Xia Tian",
-            "affiliations": [
-                "Shanghai University of Electric Power"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106697687",
-            "name": "Mengting Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2576746595",
-            "name": "Xiu-Xia Tian",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6760816630",
-        "https://openalex.org/W6775545142",
-        "https://openalex.org/W3184778778",
-        "https://openalex.org/W4200134793",
-        "https://openalex.org/W6785596320",
-        "https://openalex.org/W2923486253",
-        "https://openalex.org/W3092704883",
-        "https://openalex.org/W6735108248",
-        "https://openalex.org/W6795092660",
-        "https://openalex.org/W3207692456",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W6788477181",
-        "https://openalex.org/W6786585107",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6794762147",
-        "https://openalex.org/W6796767071",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6779018880",
-        "https://openalex.org/W2963182372",
-        "https://openalex.org/W1964859077",
-        "https://openalex.org/W6763964532",
-        "https://openalex.org/W3104156061",
-        "https://openalex.org/W3214308028",
-        "https://openalex.org/W3023868590",
-        "https://openalex.org/W4286696412",
-        "https://openalex.org/W4249009392",
-        "https://openalex.org/W2599354622",
-        "https://openalex.org/W4386432925",
-        "https://openalex.org/W3106848223",
-        "https://openalex.org/W4376626035",
-        "https://openalex.org/W4214708455",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4248942896",
-        "https://openalex.org/W4312747027"
-    ],
-    "abstract": "Background: Image anomaly detection is a popular task in computer graphics, which is widely used in industrial fields. Previous works that address this problem often train CNN-based (e.g. Auto-Encoder, GANs) models to reconstruct covered parts of input images and calculate the difference between the input and the reconstructed image. However, convolutional operations are good at extracting local features making it difficult to identify larger image anomalies. To this end, we propose a transformer architecture based on mutual attention for image anomaly separation. This architecture can capture long-term dependencies and fuse local features with global features to facilitate better image anomaly detection. Our method was extensively evaluated on several benchmarks, and experimental results showed that it improved detection capability by 3.1% and localization capability by 1.0% compared with state-of-the-art reconstruction-based methods.",
-    "full_text": null
+  "title": "Transformer architecture based on mutual attention for image-anomaly detection",
+  "url": "https://openalex.org/W4322628180",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2106697687",
+      "name": "Mengting Zhang",
+      "affiliations": [
+        "Shanghai University of Electric Power"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2576746595",
+      "name": "Xiu-Xia Tian",
+      "affiliations": [
+        "Shanghai University of Electric Power"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106697687",
+      "name": "Mengting Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2576746595",
+      "name": "Xiu-Xia Tian",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6760816630",
+    "https://openalex.org/W6775545142",
+    "https://openalex.org/W3184778778",
+    "https://openalex.org/W4200134793",
+    "https://openalex.org/W6785596320",
+    "https://openalex.org/W2923486253",
+    "https://openalex.org/W3092704883",
+    "https://openalex.org/W6735108248",
+    "https://openalex.org/W6795092660",
+    "https://openalex.org/W3207692456",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W6788477181",
+    "https://openalex.org/W6786585107",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6794762147",
+    "https://openalex.org/W6796767071",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6779018880",
+    "https://openalex.org/W2963182372",
+    "https://openalex.org/W1964859077",
+    "https://openalex.org/W6763964532",
+    "https://openalex.org/W3104156061",
+    "https://openalex.org/W3214308028",
+    "https://openalex.org/W3023868590",
+    "https://openalex.org/W4286696412",
+    "https://openalex.org/W4249009392",
+    "https://openalex.org/W2599354622",
+    "https://openalex.org/W4386432925",
+    "https://openalex.org/W3106848223",
+    "https://openalex.org/W4376626035",
+    "https://openalex.org/W4214708455",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4248942896",
+    "https://openalex.org/W4312747027"
+  ],
+  "abstract": "Background: Image anomaly detection is a popular task in computer graphics, which is widely used in industrial fields. Previous works that address this problem often train CNN-based (e.g. Auto-Encoder, GANs) models to reconstruct covered parts of input images and calculate the difference between the input and the reconstructed image. However, convolutional operations are good at extracting local features making it difficult to identify larger image anomalies. To this end, we propose a transformer architecture based on mutual attention for image anomaly separation. This architecture can capture long-term dependencies and fuse local features with global features to facilitate better image anomaly detection. Our method was extensively evaluated on several benchmarks, and experimental results showed that it improved detection capability by 3.1% and localization capability by 1.0% compared with state-of-the-art reconstruction-based methods.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7192721366882324
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7122202515602112
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.6749518513679504
+    },
+    {
+      "name": "Architecture",
+      "score": 0.5899763703346252
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5543644428253174
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5352379083633423
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5203185081481934
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4794858396053314
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.43988409638404846
+    },
+    {
+      "name": "Graphics",
+      "score": 0.4354996383190155
+    },
+    {
+      "name": "Anomaly (physics)",
+      "score": 0.4135393798351288
+    },
+    {
+      "name": "Computer graphics (images)",
+      "score": 0.14939028024673462
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13918232917785645
+    },
+    {
+      "name": "Geography",
+      "score": 0.09525319933891296
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Condensed matter physics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

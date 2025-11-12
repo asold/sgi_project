@@ -1,75 +1,134 @@
 {
-    "title": "Multimodal transformers for wireless communications: A case study in beam prediction",
-    "url": "https://openalex.org/W4386456744",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2099243239",
-            "name": "Yu Tian",
-            "affiliations": [
-                "Technology Innovation Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113613876",
-            "name": "Qiyang Zhao",
-            "affiliations": [
-                "Technology Innovation Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2782612103",
-            "name": "Zine el abidine Kherroubi",
-            "affiliations": [
-                "Technology Innovation Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2924297329",
-            "name": "Fouzi Boukhalfa",
-            "affiliations": [
-                "Technology Innovation Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109910986",
-            "name": "Kebin Wu",
-            "affiliations": [
-                "Technology Innovation Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132405301",
-            "name": "Faouzi Bader",
-            "affiliations": [
-                "Technology Innovation Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3117922432",
-        "https://openalex.org/W4296151227",
-        "https://openalex.org/W3217462811",
-        "https://openalex.org/W3213965409",
-        "https://openalex.org/W4221153554",
-        "https://openalex.org/W4280653420",
-        "https://openalex.org/W3213045530",
-        "https://openalex.org/W4205423437",
-        "https://openalex.org/W2159380409",
-        "https://openalex.org/W3011614284",
-        "https://openalex.org/W2954996726",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2884561390",
-        "https://openalex.org/W4221142054",
-        "https://openalex.org/W3175086488",
-        "https://openalex.org/W4387870868",
-        "https://openalex.org/W4312739324",
-        "https://openalex.org/W4200102446",
-        "https://openalex.org/W4313000817",
-        "https://openalex.org/W4281665072",
-        "https://openalex.org/W3001197829",
-        "https://openalex.org/W3106758205"
-    ],
-    "abstract": "Wireless communications at high-frequency bands with large antenna arrays face challenges in beam management, which can potentially be improved by multimodality sensing information from cameras, LiDAR, radar, and GPS. In this paper, we present a multimodal transformer deep learning framework for sensing-assisted beam prediction. We employ a convolutional neural network to extract the features from a sequence of images, point clouds, and radar raw data sampled over time. At each convolutional layer, we use transformer encoders to learn the hidden relations between feature tokens from different modalities and time instances over abstraction space and produce encoded vectors for the next-level feature extraction. We train the model on a combination of different modalities with supervised learning. We try to enhance the model over imbalanced data by utilizing focal loss and exponential moving average. We also evaluate data processing and augmentation techniques such as image enhancement, segmentation, background filtering, multimodal data flipping, radar signal transformation, and GPS angle calibration. Experimental results show that our solution trained on image and GPS data produces the best distance-based accuracy of predicted beams at 78.44%, with effective generalization to unseen day scenarios near 73% and night scenarios over 84%. This outperforms using other modalities and arbitrary data processing techniques, which demonstrates the effectiveness of transformers with feature fusion in performing radio beam prediction from images and GPS. Furthermore, our solution could be pretrained from large sequences of multimodality wireless data, on fine-tuning for multiple downstream radio network tasks.",
-    "full_text": null
+  "title": "Multimodal transformers for wireless communications: A case study in beam prediction",
+  "url": "https://openalex.org/W4386456744",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2099243239",
+      "name": "Yu Tian",
+      "affiliations": [
+        "Technology Innovation Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113613876",
+      "name": "Qiyang Zhao",
+      "affiliations": [
+        "Technology Innovation Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2782612103",
+      "name": "Zine el abidine Kherroubi",
+      "affiliations": [
+        "Technology Innovation Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2924297329",
+      "name": "Fouzi Boukhalfa",
+      "affiliations": [
+        "Technology Innovation Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109910986",
+      "name": "Kebin Wu",
+      "affiliations": [
+        "Technology Innovation Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132405301",
+      "name": "Faouzi Bader",
+      "affiliations": [
+        "Technology Innovation Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3117922432",
+    "https://openalex.org/W4296151227",
+    "https://openalex.org/W3217462811",
+    "https://openalex.org/W3213965409",
+    "https://openalex.org/W4221153554",
+    "https://openalex.org/W4280653420",
+    "https://openalex.org/W3213045530",
+    "https://openalex.org/W4205423437",
+    "https://openalex.org/W2159380409",
+    "https://openalex.org/W3011614284",
+    "https://openalex.org/W2954996726",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2884561390",
+    "https://openalex.org/W4221142054",
+    "https://openalex.org/W3175086488",
+    "https://openalex.org/W4387870868",
+    "https://openalex.org/W4312739324",
+    "https://openalex.org/W4200102446",
+    "https://openalex.org/W4313000817",
+    "https://openalex.org/W4281665072",
+    "https://openalex.org/W3001197829",
+    "https://openalex.org/W3106758205"
+  ],
+  "abstract": "Wireless communications at high-frequency bands with large antenna arrays face challenges in beam management, which can potentially be improved by multimodality sensing information from cameras, LiDAR, radar, and GPS. In this paper, we present a multimodal transformer deep learning framework for sensing-assisted beam prediction. We employ a convolutional neural network to extract the features from a sequence of images, point clouds, and radar raw data sampled over time. At each convolutional layer, we use transformer encoders to learn the hidden relations between feature tokens from different modalities and time instances over abstraction space and produce encoded vectors for the next-level feature extraction. We train the model on a combination of different modalities with supervised learning. We try to enhance the model over imbalanced data by utilizing focal loss and exponential moving average. We also evaluate data processing and augmentation techniques such as image enhancement, segmentation, background filtering, multimodal data flipping, radar signal transformation, and GPS angle calibration. Experimental results show that our solution trained on image and GPS data produces the best distance-based accuracy of predicted beams at 78.44%, with effective generalization to unseen day scenarios near 73% and night scenarios over 84%. This outperforms using other modalities and arbitrary data processing techniques, which demonstrates the effectiveness of transformers with feature fusion in performing radio beam prediction from images and GPS. Furthermore, our solution could be pretrained from large sequences of multimodality wireless data, on fine-tuning for multiple downstream radio network tasks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7554485201835632
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5651984214782715
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5615701079368591
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5421560406684875
+    },
+    {
+      "name": "Radar",
+      "score": 0.5087762475013733
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.48743799328804016
+    },
+    {
+      "name": "Feature learning",
+      "score": 0.4735404849052429
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.44522354006767273
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.37272435426712036
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.32197195291519165
+    },
+    {
+      "name": "Engineering",
+      "score": 0.123980313539505
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.1218593418598175
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

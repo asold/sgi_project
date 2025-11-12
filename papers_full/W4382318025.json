@@ -1,59 +1,78 @@
 {
-    "title": "Explaining Large Language Model-Based Neural Semantic Parsers (Student Abstract)",
-    "url": "https://openalex.org/W4382318025",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4382325055",
-            "name": "Daking Rai",
-            "affiliations": [
-                "George Mason University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2149896112",
-            "name": "Yilun Zhou",
-            "affiliations": [
-                "Massachusetts Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2137305505",
-            "name": "Bailin Wang",
-            "affiliations": [
-                "Massachusetts Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2433342298",
-            "name": "Ziyu Yao",
-            "affiliations": [
-                "George Mason University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4382325055",
-            "name": "Daking Rai",
-            "affiliations": [
-                "George Mason University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2433342298",
-            "name": "Ziyu Yao",
-            "affiliations": [
-                "George Mason University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6695661434",
-        "https://openalex.org/W4289494028",
-        "https://openalex.org/W3212870795",
-        "https://openalex.org/W4385572953",
-        "https://openalex.org/W2962862931",
-        "https://openalex.org/W3214600982"
-    ],
-    "abstract": "While large language models (LLMs) have demonstrated strong capability in structured prediction tasks such as semantic parsing, few amounts of research have explored the underlying mechanisms of their success. Our work studies different methods for explaining an LLM-based semantic parser and qualitatively discusses the explained model behaviors, hoping to inspire future research toward better understanding them.",
-    "full_text": "Explaining Large Language Model-Based Neural Semantic Parsers (Student\nAbstract)\nDaking Rai1, Yilun Zhou2, Bailin Wang2, Ziyu Yao1\n1 George Mason University,\n2 Massachusetts Institute of Technology\ndrai2@gmu.edu, yilun@mit.edu, bailinw@mit.edu, ziyuyao@gmu.edu\nAbstract\nWhile large language models (LLMs) have demonstrated\nstrong capability in structured prediction tasks such as seman-\ntic parsing, few amounts of research have explored the under-\nlying mechanisms of their success. Our work studies different\nmethods for explaining an LLM-based semantic parser and\nqualitatively discusses the explained model behaviors, hoping\nto inspire future research toward better understanding them.\nIntroduction\nSemantic parsing is a task of mapping natural language ut-\nterances to their logical forms like SQL queries or lambda\nexpressions for database or knowledge base querying. De-\nspite its structured prediction nature, recent work has shown\nthat a large language model (LLM) which generates output\nsequentially could achieve comparable or even better per-\nformance than the traditional structured decoders (Scholak,\nSchucher, and Bahdanau 2021). However, why these LLMs\ncould do well in semantic parsing is still unclear.\nIn this paper, we seek to provide one of the first studies\ntoward explaining LLM-based neural semantic parsers. We\nuse the text-to-SQL semantic parsing task (Yu et al. 2018)\nand the UnifiedSKG model (Xie et al. 2022) for a case study.\nWe empirically explore a set of local explanation methods\nand quantitatively discussed the explanation results.\nMethod\n(1) LIME (Ribeiro, Singh, and Guestrin 2016) generates an\nexplanation by training locally-faithful interpretable models\nwith the dataset obtained by perturbing the prediction in-\nstance. (2) Shapley value measures the importance of a fea-\nture by its average marginal contribution to the prediction\nscore (Shapley 1952). (3) Kernel SHAP (Lundberg and Lee\n2017) is another efficient way of estimating Shapley values\nby training a linear classifier. (4) LERG (Tuan et al. 2021)\nis a set of two approaches, LERG\nL and LERG S, recently\nadapted from LIME and Shapley value to conditioned se-\nquence generation tasks. When applying these methods to\nexplain an LLM-based semantic parser, we consider each\noutput token as one prediction and attribute it to the input\nCopyright © 2023, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\n10% 20% 30% 40% 50%\nNecessity Ratio\n0\n20\n40\n60\n80\n100\n120\n50% 60% 70% 80% 90%\nSufficiency Ratio\n2\n4\n6\n8\n10Sufficiency value\nRandom\nLERG_L\nLIME\nAttention\nShapley value\nKernel SHAP\nLERG_S\nNecessity value\nFigure 1: Necessity (left) and Sufficiency (right) scores\nwhen removing or keeping the top-K% important features.\nfeatures. (5) Attention: Prior work has revealed that atten-\ntion may be interpreted as feature importance. Therefore, we\nalso introduce an attention-based local explanation method,\nwhere the feature attribution is calculated by averaging the\nlast layer of the multi-headed cross-attention weights.\nExperimental Setup\nIn our experiments, we consider the task of text-to-SQL se-\nmantic parsing where the goal is to generate a SQL query\ngiven a natural language question and the database schema\n(i.e., tables and columns included in the database) as input.\nWe experiment with UnifiedSKG (Xie et al. 2022), one\nof the state-of-the-art models, which adopts a T5 encoder-\ndecoder structure.1 Following Xie et al. (2022), we train and\nevaluate the parser on the Spider dataset (Yu et al. 2018).\nThrough the experiments, we seek to answer two Re-\nsearch Questions (RQs): (1) Which local explanation\nmethod is the most faithful to explaining the LLM-based\nUnifiedSKG parser? (2) How well does the explanation\nalign with human intuitions? To answer RQ1, we follow\nTuan et al. (2021) and compare different explanation meth-\nods on two metrics: (a) Sufficiency measures the perplexity\nwhen keeping only the top-K% most important features by\neach explanation method; the lower the better/faithful. (b)\nNecessity measures the perplexity change when the top-K%\n1We used the “T5 base prefix spider with cell value” version\nfrom https://github.com/HKUNLP/UnifiedSKG. We did not use\nthe T5-3B version because of the large computational demand,\nwhich we will discuss in Section .\nThe Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI-23)\n16308\n(a) Correct Prediction\n (b) Incorrect Prediction\n(c) In-domain Example\n (d) Compositional Generalization/Hard-level Example\nFigure 2: UnifiedSKG generally shows plausible explanations. In (a), “concert singer” is the database name; “singer : ...”\nshows the table along with its columns (omitted with ellipsis); similarly for other examples. For (b), the selected column “hp”\nis incorrect and should be “horsepower”. Blue/red indicates positive/negative importance. Darkness indicates strength.\nmost important features are removed; the higher the better/-\nfaithful. To answer RQ2, we qualitatively discuss the most\nfaithful explanation results.\nExperimental Results\nFaithfulness. The results in Figure 1 show LERG\nS has the\nbest performance as per both sufficiency and necessity met-\nrics with Kernel SHAP having comparable performance as\nwell. In general, we observe that Shapley value-based expla-\nnation methods have more faithful explanations than other\nmethods. In addition, we also found that attention-based ex-\nplanations are more faithful than LIME and LERG\nL.\nPlausibility. Using LERG S as a lens, we qualitatively\nstudy how UnifiedSKG works. We define plausible expla-\nnations as those which align well with human intuition. In\nour study, we classify each explanation into plausible or par-\ntially plausible ones. Interestingly, we didn’t find any expla-\nnation that is completely implausible. Under this setup, we\ninvestigate the four aspects listed below (Figure 2): (1) Fea-\nture Attribution for (In)correct Predictions: We randomly\nsample 20 examples where the model makes correct and in-\ncorrect predictions, respectively. We find out that in most\ncases (85% for correct and 70% for incorrect), LERG\nS gen-\nerates a plausible explanation for both types. (2) Different\nHardness Levels: We randomly sample 20 examples for\neach hardness level – easy, medium, hard, and extra hard,\nas defined by the Spider benchmark based on the SQL com-\nplexity. We observed that in most cases the model behaviors\nare in line with human intuitions even at the extra hard level\n(80%; >90% for other levels). (3) Compositional General-\nization: We seek to understand whether the model attributes\nthe output fragments to correct features compositionally\nwhen it makes correct predictions. We conducted a simi-\nlar manual examination as before and observed that in most\n(80%) cases our model shows compositionally generalizable\nfeature attribution. (4) In-domain vs. Out-of-domain: As\nthe Spider training and dev sets are split by databases (which\ncould be seen as different domains), we also manually com-\npare the model explanations in in-domain and out-of-domain\ncases. We observe that for both cases (75% and 80% respec-\ntively), the generated explanations were mostly plausible.\nDiscussion and Future Directions\nOur study has revealed several challenges and opportunities\nin explaining an LLM-based semantic parser:(1) Computa-\ntional costs: Most local explanation methods require model\ninference over a large set of input perturbations, which is\ncomputationally inefficient. Future work may look into im-\nproving the attention-based explanation method, which does\nnot rely on perturbations and hence could save much compu-\ntation. (2) Feature interaction: Traditional feature attribu-\ntion does not provide information about how features (e.g.,\nquestion tokens and contextual database schema items) in-\nteract with each other. Future work may uncover these in-\nteractions to gain deeper insights into how the model works.\n(3) Explanation for user understanding: Current saliency\nmaps encompass a lot of information. Future work could\nexamine how to present the information in a concise and\nfriendly way such that users could easily grasp the intuition\nof the model prediction and verify its correctness.(4) Expla-\nnation for debugging: Future work should also investigate\nhow the local explanation results could be used to probe and\ndebug a semantic parser, such as to improve their capability\nin compositional generalization.\nReferences\nLundberg, S.M.; and Lee, S.-I.. 2017. A unified approach to inter-\npreting model predictions. In NeurIPS.\nRibeiro, M.T.; Singh, S.; Guestrin, C.. 2016. “Why should I trust\nyou?”: Explaining the predictions of any classifier. In SIGKDD.\nScholak T.; Schucher N.; Bahdanau D.. 2021. PICARD: Parsing\nincrementally for constrained auto-regressive decoding from lan-\nguage models. In EMNLP.\nShapley, L.S.. 1952. A Value for N-Person Games. In RAND Cor-\nporation.\nTuan, Y .; Pryor, C.; Chen, W.; et al. 2021. Local explanation of\ndialogue response generation. In NeurIPS.\nXie, T; Wu, C.H.; Shi, P.; et al. 2022. UnifiedSKG: Unifying\nand multi-tasking structured knowledge grounding with text-to-text\nlanguage models. In EMNLP.\nYu, T.; Zhang, R.; Yang, K.; et al. 2018. Spider: A large-scale\nhuman-labeled dataset for complex and cross-domain semantic\nparsing and text-to-SQL task. In EMNLP.\n16309"
+  "title": "Explaining Large Language Model-Based Neural Semantic Parsers (Student Abstract)",
+  "url": "https://openalex.org/W4382318025",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4382325055",
+      "name": "Daking Rai",
+      "affiliations": [
+        "George Mason University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2149896112",
+      "name": "Yilun Zhou",
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2137305505",
+      "name": "Bailin Wang",
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2433342298",
+      "name": "Ziyu Yao",
+      "affiliations": [
+        "George Mason University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4382325055",
+      "name": "Daking Rai",
+      "affiliations": [
+        "George Mason University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2433342298",
+      "name": "Ziyu Yao",
+      "affiliations": [
+        "George Mason University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6695661434",
+    "https://openalex.org/W4289494028",
+    "https://openalex.org/W3212870795",
+    "https://openalex.org/W4385572953",
+    "https://openalex.org/W2962862931",
+    "https://openalex.org/W3214600982"
+  ],
+  "abstract": "While large language models (LLMs) have demonstrated strong capability in structured prediction tasks such as semantic parsing, few amounts of research have explored the underlying mechanisms of their success. Our work studies different methods for explaining an LLM-based semantic parser and qualitatively discusses the explained model behaviors, hoping to inspire future research toward better understanding them.",
+  "full_text": "Explaining Large Language Model-Based Neural Semantic Parsers (Student\nAbstract)\nDaking Rai1, Yilun Zhou2, Bailin Wang2, Ziyu Yao1\n1 George Mason University,\n2 Massachusetts Institute of Technology\ndrai2@gmu.edu, yilun@mit.edu, bailinw@mit.edu, ziyuyao@gmu.edu\nAbstract\nWhile large language models (LLMs) have demonstrated\nstrong capability in structured prediction tasks such as seman-\ntic parsing, few amounts of research have explored the under-\nlying mechanisms of their success. Our work studies different\nmethods for explaining an LLM-based semantic parser and\nqualitatively discusses the explained model behaviors, hoping\nto inspire future research toward better understanding them.\nIntroduction\nSemantic parsing is a task of mapping natural language ut-\nterances to their logical forms like SQL queries or lambda\nexpressions for database or knowledge base querying. De-\nspite its structured prediction nature, recent work has shown\nthat a large language model (LLM) which generates output\nsequentially could achieve comparable or even better per-\nformance than the traditional structured decoders (Scholak,\nSchucher, and Bahdanau 2021). However, why these LLMs\ncould do well in semantic parsing is still unclear.\nIn this paper, we seek to provide one of the first studies\ntoward explaining LLM-based neural semantic parsers. We\nuse the text-to-SQL semantic parsing task (Yu et al. 2018)\nand the UnifiedSKG model (Xie et al. 2022) for a case study.\nWe empirically explore a set of local explanation methods\nand quantitatively discussed the explanation results.\nMethod\n(1) LIME (Ribeiro, Singh, and Guestrin 2016) generates an\nexplanation by training locally-faithful interpretable models\nwith the dataset obtained by perturbing the prediction in-\nstance. (2) Shapley value measures the importance of a fea-\nture by its average marginal contribution to the prediction\nscore (Shapley 1952). (3) Kernel SHAP (Lundberg and Lee\n2017) is another efficient way of estimating Shapley values\nby training a linear classifier. (4) LERG (Tuan et al. 2021)\nis a set of two approaches, LERG\nL and LERG S, recently\nadapted from LIME and Shapley value to conditioned se-\nquence generation tasks. When applying these methods to\nexplain an LLM-based semantic parser, we consider each\noutput token as one prediction and attribute it to the input\nCopyright © 2023, Association for the Advancement of Artificial\nIntelligence (www.aaai.org). All rights reserved.\n10% 20% 30% 40% 50%\nNecessity Ratio\n0\n20\n40\n60\n80\n100\n120\n50% 60% 70% 80% 90%\nSufficiency Ratio\n2\n4\n6\n8\n10Sufficiency value\nRandom\nLERG_L\nLIME\nAttention\nShapley value\nKernel SHAP\nLERG_S\nNecessity value\nFigure 1: Necessity (left) and Sufficiency (right) scores\nwhen removing or keeping the top-K% important features.\nfeatures. (5) Attention: Prior work has revealed that atten-\ntion may be interpreted as feature importance. Therefore, we\nalso introduce an attention-based local explanation method,\nwhere the feature attribution is calculated by averaging the\nlast layer of the multi-headed cross-attention weights.\nExperimental Setup\nIn our experiments, we consider the task of text-to-SQL se-\nmantic parsing where the goal is to generate a SQL query\ngiven a natural language question and the database schema\n(i.e., tables and columns included in the database) as input.\nWe experiment with UnifiedSKG (Xie et al. 2022), one\nof the state-of-the-art models, which adopts a T5 encoder-\ndecoder structure.1 Following Xie et al. (2022), we train and\nevaluate the parser on the Spider dataset (Yu et al. 2018).\nThrough the experiments, we seek to answer two Re-\nsearch Questions (RQs): (1) Which local explanation\nmethod is the most faithful to explaining the LLM-based\nUnifiedSKG parser? (2) How well does the explanation\nalign with human intuitions? To answer RQ1, we follow\nTuan et al. (2021) and compare different explanation meth-\nods on two metrics: (a) Sufficiency measures the perplexity\nwhen keeping only the top-K% most important features by\neach explanation method; the lower the better/faithful. (b)\nNecessity measures the perplexity change when the top-K%\n1We used the “T5 base prefix spider with cell value” version\nfrom https://github.com/HKUNLP/UnifiedSKG. We did not use\nthe T5-3B version because of the large computational demand,\nwhich we will discuss in Section .\nThe Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI-23)\n16308\n(a) Correct Prediction\n (b) Incorrect Prediction\n(c) In-domain Example\n (d) Compositional Generalization/Hard-level Example\nFigure 2: UnifiedSKG generally shows plausible explanations. In (a), “concert singer” is the database name; “singer : ...”\nshows the table along with its columns (omitted with ellipsis); similarly for other examples. For (b), the selected column “hp”\nis incorrect and should be “horsepower”. Blue/red indicates positive/negative importance. Darkness indicates strength.\nmost important features are removed; the higher the better/-\nfaithful. To answer RQ2, we qualitatively discuss the most\nfaithful explanation results.\nExperimental Results\nFaithfulness. The results in Figure 1 show LERG\nS has the\nbest performance as per both sufficiency and necessity met-\nrics with Kernel SHAP having comparable performance as\nwell. In general, we observe that Shapley value-based expla-\nnation methods have more faithful explanations than other\nmethods. In addition, we also found that attention-based ex-\nplanations are more faithful than LIME and LERG\nL.\nPlausibility. Using LERG S as a lens, we qualitatively\nstudy how UnifiedSKG works. We define plausible expla-\nnations as those which align well with human intuition. In\nour study, we classify each explanation into plausible or par-\ntially plausible ones. Interestingly, we didn’t find any expla-\nnation that is completely implausible. Under this setup, we\ninvestigate the four aspects listed below (Figure 2): (1) Fea-\nture Attribution for (In)correct Predictions: We randomly\nsample 20 examples where the model makes correct and in-\ncorrect predictions, respectively. We find out that in most\ncases (85% for correct and 70% for incorrect), LERG\nS gen-\nerates a plausible explanation for both types. (2) Different\nHardness Levels: We randomly sample 20 examples for\neach hardness level – easy, medium, hard, and extra hard,\nas defined by the Spider benchmark based on the SQL com-\nplexity. We observed that in most cases the model behaviors\nare in line with human intuitions even at the extra hard level\n(80%; >90% for other levels). (3) Compositional General-\nization: We seek to understand whether the model attributes\nthe output fragments to correct features compositionally\nwhen it makes correct predictions. We conducted a simi-\nlar manual examination as before and observed that in most\n(80%) cases our model shows compositionally generalizable\nfeature attribution. (4) In-domain vs. Out-of-domain: As\nthe Spider training and dev sets are split by databases (which\ncould be seen as different domains), we also manually com-\npare the model explanations in in-domain and out-of-domain\ncases. We observe that for both cases (75% and 80% respec-\ntively), the generated explanations were mostly plausible.\nDiscussion and Future Directions\nOur study has revealed several challenges and opportunities\nin explaining an LLM-based semantic parser:(1) Computa-\ntional costs: Most local explanation methods require model\ninference over a large set of input perturbations, which is\ncomputationally inefficient. Future work may look into im-\nproving the attention-based explanation method, which does\nnot rely on perturbations and hence could save much compu-\ntation. (2) Feature interaction: Traditional feature attribu-\ntion does not provide information about how features (e.g.,\nquestion tokens and contextual database schema items) in-\nteract with each other. Future work may uncover these in-\nteractions to gain deeper insights into how the model works.\n(3) Explanation for user understanding: Current saliency\nmaps encompass a lot of information. Future work could\nexamine how to present the information in a concise and\nfriendly way such that users could easily grasp the intuition\nof the model prediction and verify its correctness.(4) Expla-\nnation for debugging: Future work should also investigate\nhow the local explanation results could be used to probe and\ndebug a semantic parser, such as to improve their capability\nin compositional generalization.\nReferences\nLundberg, S.M.; and Lee, S.-I.. 2017. A unified approach to inter-\npreting model predictions. In NeurIPS.\nRibeiro, M.T.; Singh, S.; Guestrin, C.. 2016. “Why should I trust\nyou?”: Explaining the predictions of any classifier. In SIGKDD.\nScholak T.; Schucher N.; Bahdanau D.. 2021. PICARD: Parsing\nincrementally for constrained auto-regressive decoding from lan-\nguage models. In EMNLP.\nShapley, L.S.. 1952. A Value for N-Person Games. In RAND Cor-\nporation.\nTuan, Y .; Pryor, C.; Chen, W.; et al. 2021. Local explanation of\ndialogue response generation. In NeurIPS.\nXie, T; Wu, C.H.; Shi, P.; et al. 2022. UnifiedSKG: Unifying\nand multi-tasking structured knowledge grounding with text-to-text\nlanguage models. In EMNLP.\nYu, T.; Zhang, R.; Yang, K.; et al. 2018. Spider: A large-scale\nhuman-labeled dataset for complex and cross-domain semantic\nparsing and text-to-SQL task. In EMNLP.\n16309",
+  "topic": "Parsing",
+  "concepts": [
+    {
+      "name": "Parsing",
+      "score": 0.8301032781600952
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7650927305221558
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.65276038646698
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5731196999549866
+    }
+  ]
 }

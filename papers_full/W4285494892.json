@@ -1,67 +1,154 @@
 {
-    "title": "An Improved Math Word Problem (MWP) Model Using Unified Pretrained Language Model (UniLM) for Pretraining",
-    "url": "https://openalex.org/W4285494892",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2770407571",
-            "name": "Dongqiu Zhang",
-            "affiliations": [
-                "Nanjing Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2139586434",
-            "name": "Wenkui Li",
-            "affiliations": [
-                "Suihua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6996569244",
-        "https://openalex.org/W1810499140",
-        "https://openalex.org/W3005855585",
-        "https://openalex.org/W6741459021",
-        "https://openalex.org/W4255155614",
-        "https://openalex.org/W2120861206",
-        "https://openalex.org/W2145833060",
-        "https://openalex.org/W2902931860",
-        "https://openalex.org/W2757276219",
-        "https://openalex.org/W101286142",
-        "https://openalex.org/W4224293426",
-        "https://openalex.org/W2271177914",
-        "https://openalex.org/W2117130368",
-        "https://openalex.org/W4239025696",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2563351168",
-        "https://openalex.org/W6610517080",
-        "https://openalex.org/W2972818416",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W2832139998",
-        "https://openalex.org/W2946417913",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3038476992",
-        "https://openalex.org/W6752695545",
-        "https://openalex.org/W4394659899",
-        "https://openalex.org/W3134504082",
-        "https://openalex.org/W2951107864",
-        "https://openalex.org/W4229372033",
-        "https://openalex.org/W3211457251",
-        "https://openalex.org/W3161976355",
-        "https://openalex.org/W2994045732",
-        "https://openalex.org/W2810038208",
-        "https://openalex.org/W2905122540",
-        "https://openalex.org/W2326121756",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2951701153",
-        "https://openalex.org/W2859207840",
-        "https://openalex.org/W4300427683",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W3007328579",
-        "https://openalex.org/W295894637"
-    ],
-    "abstract": "Natural Language Understanding (NLU) and Natural Language Generation (NLG) are the general methods that support machine understanding of text content. They play a very important role in the text information processing system including recommendation and question and answer systems. There are many researches in the field of NLU such as Bag of words, N-Gram, and neural network language model. These models have achieved a good performance in NLU and NLG tasks. However, since they require lots of training data, it is difficult to obtain rich data in practical applications. Thus, pretraining becomes important. This paper proposes a semisupervised way to deal with math word problem (MWP) tasks using unsupervised pretraining and supervised tuning methods, which are based on the Unified pretrained Language Model (UniLM). The proposed model requires fewer training data than traditional models since it uses model parameters of tasks that have been learned before to initialize the model parameters of new tasks. In this way, old knowledge helps new models successfully perform new tasks from old experiences instead of from scratch. Moreover, in order to help the decoder make accurate predictions, we combine the advantages of AR and AE language models to support one-way, sequence-to-sequence, and two-way predictions. Experiments, carried out on MWP tasks with 20,000+ mathematical questions, show that the improved model outperforms the traditional models with a maximum accuracy of 79.57%. The impact of different experiment parameters is also studied in the paper and we found that a wrong arithmetic order leads to incorrect solution expression generation.",
-    "full_text": null
+  "title": "An Improved Math Word Problem (MWP) Model Using Unified Pretrained Language Model (UniLM) for Pretraining",
+  "url": "https://openalex.org/W4285494892",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2770407571",
+      "name": "Dongqiu Zhang",
+      "affiliations": [
+        "Nanjing Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2139586434",
+      "name": "Wenkui Li",
+      "affiliations": [
+        "Suihua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6996569244",
+    "https://openalex.org/W1810499140",
+    "https://openalex.org/W3005855585",
+    "https://openalex.org/W6741459021",
+    "https://openalex.org/W4255155614",
+    "https://openalex.org/W2120861206",
+    "https://openalex.org/W2145833060",
+    "https://openalex.org/W2902931860",
+    "https://openalex.org/W2757276219",
+    "https://openalex.org/W101286142",
+    "https://openalex.org/W4224293426",
+    "https://openalex.org/W2271177914",
+    "https://openalex.org/W2117130368",
+    "https://openalex.org/W4239025696",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2563351168",
+    "https://openalex.org/W6610517080",
+    "https://openalex.org/W2972818416",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W2832139998",
+    "https://openalex.org/W2946417913",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3038476992",
+    "https://openalex.org/W6752695545",
+    "https://openalex.org/W4394659899",
+    "https://openalex.org/W3134504082",
+    "https://openalex.org/W2951107864",
+    "https://openalex.org/W4229372033",
+    "https://openalex.org/W3211457251",
+    "https://openalex.org/W3161976355",
+    "https://openalex.org/W2994045732",
+    "https://openalex.org/W2810038208",
+    "https://openalex.org/W2905122540",
+    "https://openalex.org/W2326121756",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2951701153",
+    "https://openalex.org/W2859207840",
+    "https://openalex.org/W4300427683",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W3007328579",
+    "https://openalex.org/W295894637"
+  ],
+  "abstract": "Natural Language Understanding (NLU) and Natural Language Generation (NLG) are the general methods that support machine understanding of text content. They play a very important role in the text information processing system including recommendation and question and answer systems. There are many researches in the field of NLU such as Bag of words, N-Gram, and neural network language model. These models have achieved a good performance in NLU and NLG tasks. However, since they require lots of training data, it is difficult to obtain rich data in practical applications. Thus, pretraining becomes important. This paper proposes a semisupervised way to deal with math word problem (MWP) tasks using unsupervised pretraining and supervised tuning methods, which are based on the Unified pretrained Language Model (UniLM). The proposed model requires fewer training data than traditional models since it uses model parameters of tasks that have been learned before to initialize the model parameters of new tasks. In this way, old knowledge helps new models successfully perform new tasks from old experiences instead of from scratch. Moreover, in order to help the decoder make accurate predictions, we combine the advantages of AR and AE language models to support one-way, sequence-to-sequence, and two-way predictions. Experiments, carried out on MWP tasks with 20,000+ mathematical questions, show that the improved model outperforms the traditional models with a maximum accuracy of 79.57%. The impact of different experiment parameters is also studied in the paper and we found that a wrong arithmetic order leads to incorrect solution expression generation.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8322345018386841
+    },
+    {
+      "name": "Language model",
+      "score": 0.6622731685638428
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6107745170593262
+    },
+    {
+      "name": "Natural language understanding",
+      "score": 0.6097080111503601
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.58711177110672
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5113089084625244
+    },
+    {
+      "name": "Field (mathematics)",
+      "score": 0.49590787291526794
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4813445508480072
+    },
+    {
+      "name": "Sequence labeling",
+      "score": 0.47580796480178833
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.46111464500427246
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.45290476083755493
+    },
+    {
+      "name": "Natural language",
+      "score": 0.45161181688308716
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.08149382472038269
+    },
+    {
+      "name": "Pure mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

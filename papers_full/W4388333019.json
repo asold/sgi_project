@@ -1,60 +1,135 @@
 {
-    "title": "Residual Transformer YOLO for Detecting Multi-Scale Crowded Pedestrian",
-    "url": "https://openalex.org/W4388333019",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5111068902",
-            "name": "Hechao Ye",
-            "affiliations": [
-                "Xi'an University of Architecture and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101462972",
-            "name": "Yanni Wang",
-            "affiliations": [
-                "Xi'an University of Architecture and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4320002812",
-        "https://openalex.org/W2998792609",
-        "https://openalex.org/W2164598857",
-        "https://openalex.org/W6683411478",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W1882819926",
-        "https://openalex.org/W2041497292",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W2497039038",
-        "https://openalex.org/W2200528286",
-        "https://openalex.org/W6797859680",
-        "https://openalex.org/W3196107618",
-        "https://openalex.org/W4386076325",
-        "https://openalex.org/W4297103117",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W3167976421",
-        "https://openalex.org/W6791793911",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2616247523",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W2956268511",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W4386076618",
-        "https://openalex.org/W4308325353",
-        "https://openalex.org/W4386076400",
-        "https://openalex.org/W3102564565",
-        "https://openalex.org/W3138994021",
-        "https://openalex.org/W4293584584",
-        "https://openalex.org/W3193501245",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W3125736290"
-    ],
-    "abstract": "Crowding and occlusion pose significant challenges for pedestrian detection, which can easily lead to missed and false detections for small-scale and occluded pedestrian objects in dense pedestrian scenarios. To enhance dense pedestrian detection accuracy, we propose the Residual Transformer YOLO (RT-YOLO) algorithm in this paper. The RT-YOLO algorithm enhances the multi-scale fusion strategy based on YOLOv7 and introduces a dedicated detection layer for small-scale occluded targets. It also integrates Resnet and Transformer structures to improve the small-scale feature layer and detection head, enhancing feature extraction capabilities. Additionally, the RT-YOLO algorithm incorporates the Normalization-based Attention Module (NAM) into the backbone and neck networks to identify the region of interest. The experiments demonstrate that on the CrowdHuman and WiderPerson datasets, at IOU (Intersection over Union) = 0.5, the overall improvement in mAP50 is 3.8% and 3.4%. In the IOU range from 0.5 to 1, the improvement in mAP50: 95 is 5.1% and 4%. RT-YOLO achieves an FPS of 67, maintaining real-time performance. On the VOC2007 dataset, mAP50 has been enhanced by 5.1%, indicating higher effectiveness and robustness.",
-    "full_text": null
+  "title": "Residual Transformer YOLO for Detecting Multi-Scale Crowded Pedestrian",
+  "url": "https://openalex.org/W4388333019",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5111068902",
+      "name": "Hechao Ye",
+      "affiliations": [
+        "Xi'an University of Architecture and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101462972",
+      "name": "Yanni Wang",
+      "affiliations": [
+        "Xi'an University of Architecture and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4320002812",
+    "https://openalex.org/W2998792609",
+    "https://openalex.org/W2164598857",
+    "https://openalex.org/W6683411478",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W1882819926",
+    "https://openalex.org/W2041497292",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W2497039038",
+    "https://openalex.org/W2200528286",
+    "https://openalex.org/W6797859680",
+    "https://openalex.org/W3196107618",
+    "https://openalex.org/W4386076325",
+    "https://openalex.org/W4297103117",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W3167976421",
+    "https://openalex.org/W6791793911",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2616247523",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W2956268511",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W4386076618",
+    "https://openalex.org/W4308325353",
+    "https://openalex.org/W4386076400",
+    "https://openalex.org/W3102564565",
+    "https://openalex.org/W3138994021",
+    "https://openalex.org/W4293584584",
+    "https://openalex.org/W3193501245",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W3125736290"
+  ],
+  "abstract": "Crowding and occlusion pose significant challenges for pedestrian detection, which can easily lead to missed and false detections for small-scale and occluded pedestrian objects in dense pedestrian scenarios. To enhance dense pedestrian detection accuracy, we propose the Residual Transformer YOLO (RT-YOLO) algorithm in this paper. The RT-YOLO algorithm enhances the multi-scale fusion strategy based on YOLOv7 and introduces a dedicated detection layer for small-scale occluded targets. It also integrates Resnet and Transformer structures to improve the small-scale feature layer and detection head, enhancing feature extraction capabilities. Additionally, the RT-YOLO algorithm incorporates the Normalization-based Attention Module (NAM) into the backbone and neck networks to identify the region of interest. The experiments demonstrate that on the CrowdHuman and WiderPerson datasets, at IOU (Intersection over Union) = 0.5, the overall improvement in mAP50 is 3.8% and 3.4%. In the IOU range from 0.5 to 1, the improvement in mAP50: 95 is 5.1% and 4%. RT-YOLO achieves an FPS of 67, maintaining real-time performance. On the VOC2007 dataset, mAP50 has been enhanced by 5.1%, indicating higher effectiveness and robustness.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6916607022285461
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6388084292411804
+    },
+    {
+      "name": "Residual",
+      "score": 0.5956503748893738
+    },
+    {
+      "name": "Pedestrian",
+      "score": 0.5721303820610046
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5101723670959473
+    },
+    {
+      "name": "Pedestrian detection",
+      "score": 0.49847936630249023
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4403926432132721
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.4217595160007477
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4169074594974518
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3942141532897949
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1601335108280182
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.14093559980392456
+    },
+    {
+      "name": "Transport engineering",
+      "score": 0.06394481658935547
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    }
+  ]
 }

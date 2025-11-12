@@ -1,90 +1,189 @@
 {
-    "title": "Enhancing Biomedical Relation Extraction with Transformer Models using Shortest Dependency Path Features and Triplet Information",
-    "url": "https://openalex.org/W3198824379",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3114607272",
-            "name": "Vani Kanjirangat",
-            "affiliations": [
-                "SIB Swiss Institute of Bioinformatics",
-                "Dalle Molle Institute for Artificial Intelligence Research",
-                "University of Applied Sciences and Arts of Southern Switzerland"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2163064704",
-            "name": "Fábio Rinaldi",
-            "affiliations": [
-                "University of Applied Sciences and Arts of Southern Switzerland",
-                "SIB Swiss Institute of Bioinformatics",
-                "Dalle Molle Institute for Artificial Intelligence Research",
-                "University of Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3114607272",
-            "name": "Vani Kanjirangat",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2163064704",
-            "name": "Fábio Rinaldi",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2989472987",
-        "https://openalex.org/W2997204042",
-        "https://openalex.org/W2963021258",
-        "https://openalex.org/W2912324667",
-        "https://openalex.org/W2963171262",
-        "https://openalex.org/W2964217331",
-        "https://openalex.org/W6744890539",
-        "https://openalex.org/W2097960255",
-        "https://openalex.org/W2611726225",
-        "https://openalex.org/W2601748485",
-        "https://openalex.org/W1990794790",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2944400536",
-        "https://openalex.org/W2896016608",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W1981276685",
-        "https://openalex.org/W2600659824",
-        "https://openalex.org/W2902528397",
-        "https://openalex.org/W2795129839",
-        "https://openalex.org/W2964026782",
-        "https://openalex.org/W2964193968",
-        "https://openalex.org/W2963020213",
-        "https://openalex.org/W2841315182",
-        "https://openalex.org/W2947858052",
-        "https://openalex.org/W2339107443",
-        "https://openalex.org/W2527712604",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2970771982",
-        "https://openalex.org/W2984452801",
-        "https://openalex.org/W3037311497",
-        "https://openalex.org/W3012108798",
-        "https://openalex.org/W2604372572",
-        "https://openalex.org/W2963862093",
-        "https://openalex.org/W2341742436",
-        "https://openalex.org/W2883362973",
-        "https://openalex.org/W2963014179",
-        "https://openalex.org/W2971221499",
-        "https://openalex.org/W2952179106",
-        "https://openalex.org/W3035372073",
-        "https://openalex.org/W3098012550",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2930601680",
-        "https://openalex.org/W113629972",
-        "https://openalex.org/W2765742249",
-        "https://openalex.org/W1604685658",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W3104059174",
-        "https://openalex.org/W2950133940"
-    ],
-    "abstract": "Entity relation extraction plays an important role in the biomedical, healthcare, and clinical research areas. Recently, pre-trained models based on transformer architectures and their variants have shown remarkable performances in various natural language processing tasks. Most of these variants were based on slight modifications in the architectural components, representation schemes and augmenting data using distant supervision methods. In distantly supervised methods, one of the main challenges is pruning out noisy samples. A similar situation can arise when the training samples are not directly available but need to be constructed from the given dataset. The BioCreative V Chemical Disease Relation (CDR) task provides a dataset that does not explicitly offer mention-level gold annotations and hence replicates the above scenario. Selecting the representative sentences from the given abstract or document text that could convey a potential entity relationship becomes essential. Most of the existing methods in literature propose to either consider the entire text or all the sentences which contain the entity mentions. This could be a computationally expensive and time consuming approach. This paper presents a novel approach to handle such scenarios, specifically in biomedical relation extraction. We propose utilizing the Shortest Dependency Path (SDP) features for constructing data samples by pruning out noisy information and selecting the most representative samples for model learning. We also utilize triplet information in model learning using the biomedical variant of BERT, viz., BioBERT. The problem is represented as a sentence pair classification task using the sentence and the entity-relation pair as input. We analyze the approach on both intra-sentential and inter-sentential relations in the CDR dataset. The proposed approach that utilizes the SDP and triplet features presents promising results, specifically on the inter-sentential relation extraction task. We make the code used for this work publicly available on Github.<sup>1</sup>.",
-    "full_text": null
+  "title": "Enhancing Biomedical Relation Extraction with Transformer Models using Shortest Dependency Path Features and Triplet Information",
+  "url": "https://openalex.org/W3198824379",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3114607272",
+      "name": "Vani Kanjirangat",
+      "affiliations": [
+        "SIB Swiss Institute of Bioinformatics",
+        "Dalle Molle Institute for Artificial Intelligence Research",
+        "University of Applied Sciences and Arts of Southern Switzerland"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2163064704",
+      "name": "Fábio Rinaldi",
+      "affiliations": [
+        "University of Applied Sciences and Arts of Southern Switzerland",
+        "SIB Swiss Institute of Bioinformatics",
+        "Dalle Molle Institute for Artificial Intelligence Research",
+        "University of Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3114607272",
+      "name": "Vani Kanjirangat",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2163064704",
+      "name": "Fábio Rinaldi",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2989472987",
+    "https://openalex.org/W2997204042",
+    "https://openalex.org/W2963021258",
+    "https://openalex.org/W2912324667",
+    "https://openalex.org/W2963171262",
+    "https://openalex.org/W2964217331",
+    "https://openalex.org/W6744890539",
+    "https://openalex.org/W2097960255",
+    "https://openalex.org/W2611726225",
+    "https://openalex.org/W2601748485",
+    "https://openalex.org/W1990794790",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2944400536",
+    "https://openalex.org/W2896016608",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W1981276685",
+    "https://openalex.org/W2600659824",
+    "https://openalex.org/W2902528397",
+    "https://openalex.org/W2795129839",
+    "https://openalex.org/W2964026782",
+    "https://openalex.org/W2964193968",
+    "https://openalex.org/W2963020213",
+    "https://openalex.org/W2841315182",
+    "https://openalex.org/W2947858052",
+    "https://openalex.org/W2339107443",
+    "https://openalex.org/W2527712604",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2970771982",
+    "https://openalex.org/W2984452801",
+    "https://openalex.org/W3037311497",
+    "https://openalex.org/W3012108798",
+    "https://openalex.org/W2604372572",
+    "https://openalex.org/W2963862093",
+    "https://openalex.org/W2341742436",
+    "https://openalex.org/W2883362973",
+    "https://openalex.org/W2963014179",
+    "https://openalex.org/W2971221499",
+    "https://openalex.org/W2952179106",
+    "https://openalex.org/W3035372073",
+    "https://openalex.org/W3098012550",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2930601680",
+    "https://openalex.org/W113629972",
+    "https://openalex.org/W2765742249",
+    "https://openalex.org/W1604685658",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W3104059174",
+    "https://openalex.org/W2950133940"
+  ],
+  "abstract": "Entity relation extraction plays an important role in the biomedical, healthcare, and clinical research areas. Recently, pre-trained models based on transformer architectures and their variants have shown remarkable performances in various natural language processing tasks. Most of these variants were based on slight modifications in the architectural components, representation schemes and augmenting data using distant supervision methods. In distantly supervised methods, one of the main challenges is pruning out noisy samples. A similar situation can arise when the training samples are not directly available but need to be constructed from the given dataset. The BioCreative V Chemical Disease Relation (CDR) task provides a dataset that does not explicitly offer mention-level gold annotations and hence replicates the above scenario. Selecting the representative sentences from the given abstract or document text that could convey a potential entity relationship becomes essential. Most of the existing methods in literature propose to either consider the entire text or all the sentences which contain the entity mentions. This could be a computationally expensive and time consuming approach. This paper presents a novel approach to handle such scenarios, specifically in biomedical relation extraction. We propose utilizing the Shortest Dependency Path (SDP) features for constructing data samples by pruning out noisy information and selecting the most representative samples for model learning. We also utilize triplet information in model learning using the biomedical variant of BERT, viz., BioBERT. The problem is represented as a sentence pair classification task using the sentence and the entity-relation pair as input. We analyze the approach on both intra-sentential and inter-sentential relations in the CDR dataset. The proposed approach that utilizes the SDP and triplet features presents promising results, specifically on the inter-sentential relation extraction task. We make the code used for this work publicly available on Github.<sup>1</sup>.",
+  "full_text": null,
+  "topic": "Relationship extraction",
+  "concepts": [
+    {
+      "name": "Relationship extraction",
+      "score": 0.8234200477600098
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8227871656417847
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6732566952705383
+    },
+    {
+      "name": "Pruning",
+      "score": 0.5938282608985901
+    },
+    {
+      "name": "Sentence",
+      "score": 0.5783493518829346
+    },
+    {
+      "name": "Dependency (UML)",
+      "score": 0.52376788854599
+    },
+    {
+      "name": "Relation (database)",
+      "score": 0.5234231948852539
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5202197432518005
+    },
+    {
+      "name": "Shortest path problem",
+      "score": 0.47266682982444763
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.46887874603271484
+    },
+    {
+      "name": "Information extraction",
+      "score": 0.46059951186180115
+    },
+    {
+      "name": "Transformer",
+      "score": 0.43606802821159363
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.43368399143218994
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.42440080642700195
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3542024493217468
+    },
+    {
+      "name": "Graph",
+      "score": 0.2153942584991455
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.16828900575637817
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Agronomy",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

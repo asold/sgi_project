@@ -1,69 +1,112 @@
 {
-    "title": "RealTranS: End-to-End Simultaneous Speech Translation with Convolutional Weighted-Shrinking Transformer",
-    "url": "https://openalex.org/W3174501695",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2804038696",
-            "name": "Xingshan Zeng",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2251786545",
-            "name": "Liangyou Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2109590494",
-            "name": "Qun Liu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2605202026",
-        "https://openalex.org/W3034571331",
-        "https://openalex.org/W3177215302",
-        "https://openalex.org/W2963779652",
-        "https://openalex.org/W2529548870",
-        "https://openalex.org/W2134546430",
-        "https://openalex.org/W2989819126",
-        "https://openalex.org/W2945700568",
-        "https://openalex.org/W2986963494",
-        "https://openalex.org/W3035348852",
-        "https://openalex.org/W2121457870",
-        "https://openalex.org/W2936774411",
-        "https://openalex.org/W2952992734",
-        "https://openalex.org/W2113106066",
-        "https://openalex.org/W4300558631",
-        "https://openalex.org/W3118578889",
-        "https://openalex.org/W2997436923",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W3143377973",
-        "https://openalex.org/W2964172053",
-        "https://openalex.org/W3006988520",
-        "https://openalex.org/W3037217258",
-        "https://openalex.org/W2970074184",
-        "https://openalex.org/W2127141656",
-        "https://openalex.org/W3162000275",
-        "https://openalex.org/W2964161387",
-        "https://openalex.org/W3096686110",
-        "https://openalex.org/W3115075512",
-        "https://openalex.org/W3093933225",
-        "https://openalex.org/W2605131327",
-        "https://openalex.org/W2089629691",
-        "https://openalex.org/W3035490255",
-        "https://openalex.org/W2951642234",
-        "https://openalex.org/W2949328740",
-        "https://openalex.org/W2891267443",
-        "https://openalex.org/W3101096852",
-        "https://openalex.org/W2963834942",
-        "https://openalex.org/W3176113130",
-        "https://openalex.org/W2973048981",
-        "https://openalex.org/W3034586846",
-        "https://openalex.org/W2785350307",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2970084653"
-    ],
-    "abstract": "End-to-end simultaneous speech translation (SST), which directly translates speech in one language into text in another language in real-time, is useful in many scenarios but has not been fully investigated. In this work, we propose RealTranS, an end-to-end model for SST. To bridge the modality gap between speech and text, RealTranS gradually downsamples the input speech with interleaved convolution and unidirectional Transformer layers for acoustic modeling, and then maps speech features into text space with a weighted-shrinking operation and a semantic encoder. Besides, to improve the model performance in simultaneous scenarios, we propose a blank penalty to enhance the shrinking quality and a Wait-K-Stride-N strategy to allow local reranking during decoding. Experiments on public and widely-used datasets show that RealTranS with the Wait-K-Stride-N strategy outperforms prior end-to-end models as well as cascaded models in diverse latency settings.",
-    "full_text": null
+  "title": "RealTranS: End-to-End Simultaneous Speech Translation with Convolutional Weighted-Shrinking Transformer",
+  "url": "https://openalex.org/W3174501695",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2804038696",
+      "name": "Xingshan Zeng",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2251786545",
+      "name": "Liangyou Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2109590494",
+      "name": "Qun Liu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2605202026",
+    "https://openalex.org/W3034571331",
+    "https://openalex.org/W3177215302",
+    "https://openalex.org/W2963779652",
+    "https://openalex.org/W2529548870",
+    "https://openalex.org/W2134546430",
+    "https://openalex.org/W2989819126",
+    "https://openalex.org/W2945700568",
+    "https://openalex.org/W2986963494",
+    "https://openalex.org/W3035348852",
+    "https://openalex.org/W2121457870",
+    "https://openalex.org/W2936774411",
+    "https://openalex.org/W2952992734",
+    "https://openalex.org/W2113106066",
+    "https://openalex.org/W4300558631",
+    "https://openalex.org/W3118578889",
+    "https://openalex.org/W2997436923",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W3143377973",
+    "https://openalex.org/W2964172053",
+    "https://openalex.org/W3006988520",
+    "https://openalex.org/W3037217258",
+    "https://openalex.org/W2970074184",
+    "https://openalex.org/W2127141656",
+    "https://openalex.org/W3162000275",
+    "https://openalex.org/W2964161387",
+    "https://openalex.org/W3096686110",
+    "https://openalex.org/W3115075512",
+    "https://openalex.org/W3093933225",
+    "https://openalex.org/W2605131327",
+    "https://openalex.org/W2089629691",
+    "https://openalex.org/W3035490255",
+    "https://openalex.org/W2951642234",
+    "https://openalex.org/W2949328740",
+    "https://openalex.org/W2891267443",
+    "https://openalex.org/W3101096852",
+    "https://openalex.org/W2963834942",
+    "https://openalex.org/W3176113130",
+    "https://openalex.org/W2973048981",
+    "https://openalex.org/W3034586846",
+    "https://openalex.org/W2785350307",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2970084653"
+  ],
+  "abstract": "End-to-end simultaneous speech translation (SST), which directly translates speech in one language into text in another language in real-time, is useful in many scenarios but has not been fully investigated. In this work, we propose RealTranS, an end-to-end model for SST. To bridge the modality gap between speech and text, RealTranS gradually downsamples the input speech with interleaved convolution and unidirectional Transformer layers for acoustic modeling, and then maps speech features into text space with a weighted-shrinking operation and a semantic encoder. Besides, to improve the model performance in simultaneous scenarios, we propose a blank penalty to enhance the shrinking quality and a Wait-K-Stride-N strategy to allow local reranking during decoding. Experiments on public and widely-used datasets show that RealTranS with the Wait-K-Stride-N strategy outperforms prior end-to-end models as well as cascaded models in diverse latency settings.",
+  "full_text": null,
+  "topic": "End-to-end principle",
+  "concepts": [
+    {
+      "name": "End-to-end principle",
+      "score": 0.7520073652267456
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6439087390899658
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6405938863754272
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5377902984619141
+    },
+    {
+      "name": "Speech translation",
+      "score": 0.4674687385559082
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.31168031692504883
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.2663688361644745
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.17328545451164246
+    },
+    {
+      "name": "Voltage",
+      "score": 0.13817375898361206
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11251199245452881
+    }
+  ]
 }

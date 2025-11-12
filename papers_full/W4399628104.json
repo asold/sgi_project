@@ -1,164 +1,231 @@
 {
-    "title": "Anonymizing medical documents with local, privacy preserving large language models: The LLM-Anonymizer",
-    "url": "https://openalex.org/W4399628104",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5020954920",
-            "name": "Isabella C. Wiest",
-            "affiliations": [
-                "University Hospital Heidelberg",
-                "Fresenius (Germany)",
-                "Heidelberg University",
-                "University Medical Centre Mannheim"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007284791",
-            "name": "Marie-Elisabeth Leßmann",
-            "affiliations": [
-                "Fresenius (Germany)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2153460001",
-            "name": "Fabian Wolf",
-            "affiliations": [
-                "Fresenius (Germany)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2789987764",
-            "name": "Dyke Ferber",
-            "affiliations": [
-                "Heidelberg University",
-                "National Center for Tumor Diseases",
-                "Fresenius (Germany)",
-                "University Hospital Heidelberg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4201660030",
-            "name": "Marko van Treeck",
-            "affiliations": [
-                "Fresenius (Germany)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128231539",
-            "name": "Jiefu Zhu",
-            "affiliations": [
-                "Fresenius (Germany)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2761240782",
-            "name": "Matthias P Ebert",
-            "affiliations": [
-                "University Medical Centre Mannheim",
-                "Heidelberg University",
-                "University Hospital Heidelberg",
-                "European Molecular Biology Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3152260210",
-            "name": "Christoph Benedikt Westphalen",
-            "affiliations": [
-                "Ludwig-Maximilians-Universität München",
-                "LMU Klinikum"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1993596326",
-            "name": "Martin Wermke",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2056217728",
-            "name": "Jakob Nikolas Kather",
-            "affiliations": [
-                "University Hospital Heidelberg",
-                "National Center for Tumor Diseases",
-                "Fresenius (Germany)",
-                "Heidelberg University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5020954920",
-            "name": "Isabella C. Wiest",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5007284791",
-            "name": "Marie-Elisabeth Leßmann",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2153460001",
-            "name": "Fabian Wolf",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2789987764",
-            "name": "Dyke Ferber",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4201660030",
-            "name": "Marko van Treeck",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2128231539",
-            "name": "Jiefu Zhu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2761240782",
-            "name": "Matthias P Ebert",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3152260210",
-            "name": "Christoph Benedikt Westphalen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1993596326",
-            "name": "Martin Wermke",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2056217728",
-            "name": "Jakob Nikolas Kather",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2058924226",
-        "https://openalex.org/W2991619079",
-        "https://openalex.org/W3109639294",
-        "https://openalex.org/W2007720112",
-        "https://openalex.org/W4200048999",
-        "https://openalex.org/W4396951587",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W4389490684",
-        "https://openalex.org/W4362522726",
-        "https://openalex.org/W4389792145",
-        "https://openalex.org/W4397003633",
-        "https://openalex.org/W4365143687",
-        "https://openalex.org/W4324308124",
-        "https://openalex.org/W2015620729",
-        "https://openalex.org/W3191072521",
-        "https://openalex.org/W1995228216",
-        "https://openalex.org/W2314398369",
-        "https://openalex.org/W4391880762",
-        "https://openalex.org/W4292793781",
-        "https://openalex.org/W2607299704",
-        "https://openalex.org/W4387017455",
-        "https://openalex.org/W2585785990"
-    ],
-    "abstract": "Abstract Background Medical research with real-world clinical data can be challenging due to privacy requirements. Ideally, patient data are handled in a fully pseudonymised or anonymised way. However, this can make it difficult for medical researchers to access and analyze large datasets or to exchange data between hospitals. De-identifying medical free text is particularly difficult due to the diverse documentation styles and the unstructured nature of the data. However, recent advancements in natural language processing (NLP), driven by the development of large language models (LLMs), have revolutionized the ability to extract information from unstructured text. Methods We hypothesize that LLMs are highly effective tools for extracting patient-related information, which can subsequently be used to de-identify medical reports. To test this hypothesis, we conduct a benchmark study using eight locally deployable LLMs (Llama-3 8B, Llama-3 70B, Llama-2 7B, Llama-2 70B, Llama-2 7B “Sauerkraut”, Llama-2 70B “Sauerkraut”, Mistral 7B, and Phi-3-mini) to extract patient-related information from a dataset of 100 real-world clinical letters. We then remove the identified information using our newly developed LLM-Anonymizer pipeline. Results Our results demonstrate that the LLM-Anonymizer, when used with Llama-3 70B, achieved a success rate of 98.05% in removing text characters carrying personal identifying information. When evaluating the performance in relation to the number of characters manually identified as containing personal information and identifiable characteristics, our system missed only 1.95% of personal identifying information and erroneously redacted only 0.85% of the characters. Conclusion We provide our full LLM-based Anonymizer pipeline under an open source license with a user-friendly web interface that operates on local hardware and requires no programming skills. This powerful tool has the potential to significantly facilitate medical research by enabling the secure and efficient de-identification of clinical free text data on premise, thereby addressing key challenges in medical data sharing.",
-    "full_text": null
+  "title": "Anonymizing medical documents with local, privacy preserving large language models: The LLM-Anonymizer",
+  "url": "https://openalex.org/W4399628104",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5020954920",
+      "name": "Isabella C. Wiest",
+      "affiliations": [
+        "University Hospital Heidelberg",
+        "Fresenius (Germany)",
+        "Heidelberg University",
+        "University Medical Centre Mannheim"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007284791",
+      "name": "Marie-Elisabeth Leßmann",
+      "affiliations": [
+        "Fresenius (Germany)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2153460001",
+      "name": "Fabian Wolf",
+      "affiliations": [
+        "Fresenius (Germany)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2789987764",
+      "name": "Dyke Ferber",
+      "affiliations": [
+        "Heidelberg University",
+        "National Center for Tumor Diseases",
+        "Fresenius (Germany)",
+        "University Hospital Heidelberg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4201660030",
+      "name": "Marko van Treeck",
+      "affiliations": [
+        "Fresenius (Germany)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128231539",
+      "name": "Jiefu Zhu",
+      "affiliations": [
+        "Fresenius (Germany)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2761240782",
+      "name": "Matthias P Ebert",
+      "affiliations": [
+        "University Medical Centre Mannheim",
+        "Heidelberg University",
+        "University Hospital Heidelberg",
+        "European Molecular Biology Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3152260210",
+      "name": "Christoph Benedikt Westphalen",
+      "affiliations": [
+        "Ludwig-Maximilians-Universität München",
+        "LMU Klinikum"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1993596326",
+      "name": "Martin Wermke",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2056217728",
+      "name": "Jakob Nikolas Kather",
+      "affiliations": [
+        "University Hospital Heidelberg",
+        "National Center for Tumor Diseases",
+        "Fresenius (Germany)",
+        "Heidelberg University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5020954920",
+      "name": "Isabella C. Wiest",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5007284791",
+      "name": "Marie-Elisabeth Leßmann",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2153460001",
+      "name": "Fabian Wolf",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2789987764",
+      "name": "Dyke Ferber",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4201660030",
+      "name": "Marko van Treeck",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2128231539",
+      "name": "Jiefu Zhu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2761240782",
+      "name": "Matthias P Ebert",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3152260210",
+      "name": "Christoph Benedikt Westphalen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1993596326",
+      "name": "Martin Wermke",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2056217728",
+      "name": "Jakob Nikolas Kather",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2058924226",
+    "https://openalex.org/W2991619079",
+    "https://openalex.org/W3109639294",
+    "https://openalex.org/W2007720112",
+    "https://openalex.org/W4200048999",
+    "https://openalex.org/W4396951587",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W4389490684",
+    "https://openalex.org/W4362522726",
+    "https://openalex.org/W4389792145",
+    "https://openalex.org/W4397003633",
+    "https://openalex.org/W4365143687",
+    "https://openalex.org/W4324308124",
+    "https://openalex.org/W2015620729",
+    "https://openalex.org/W3191072521",
+    "https://openalex.org/W1995228216",
+    "https://openalex.org/W2314398369",
+    "https://openalex.org/W4391880762",
+    "https://openalex.org/W4292793781",
+    "https://openalex.org/W2607299704",
+    "https://openalex.org/W4387017455",
+    "https://openalex.org/W2585785990"
+  ],
+  "abstract": "Abstract Background Medical research with real-world clinical data can be challenging due to privacy requirements. Ideally, patient data are handled in a fully pseudonymised or anonymised way. However, this can make it difficult for medical researchers to access and analyze large datasets or to exchange data between hospitals. De-identifying medical free text is particularly difficult due to the diverse documentation styles and the unstructured nature of the data. However, recent advancements in natural language processing (NLP), driven by the development of large language models (LLMs), have revolutionized the ability to extract information from unstructured text. Methods We hypothesize that LLMs are highly effective tools for extracting patient-related information, which can subsequently be used to de-identify medical reports. To test this hypothesis, we conduct a benchmark study using eight locally deployable LLMs (Llama-3 8B, Llama-3 70B, Llama-2 7B, Llama-2 70B, Llama-2 7B “Sauerkraut”, Llama-2 70B “Sauerkraut”, Mistral 7B, and Phi-3-mini) to extract patient-related information from a dataset of 100 real-world clinical letters. We then remove the identified information using our newly developed LLM-Anonymizer pipeline. Results Our results demonstrate that the LLM-Anonymizer, when used with Llama-3 70B, achieved a success rate of 98.05% in removing text characters carrying personal identifying information. When evaluating the performance in relation to the number of characters manually identified as containing personal information and identifiable characteristics, our system missed only 1.95% of personal identifying information and erroneously redacted only 0.85% of the characters. Conclusion We provide our full LLM-based Anonymizer pipeline under an open source license with a user-friendly web interface that operates on local hardware and requires no programming skills. This powerful tool has the potential to significantly facilitate medical research by enabling the secure and efficient de-identification of clinical free text data on premise, thereby addressing key challenges in medical data sharing.",
+  "full_text": null,
+  "topic": "Benchmark (surveying)",
+  "concepts": [
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.574763298034668
+    },
+    {
+      "name": "Documentation",
+      "score": 0.5629633665084839
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5622076988220215
+    },
+    {
+      "name": "Personally identifiable information",
+      "score": 0.47738975286483765
+    },
+    {
+      "name": "Pipeline (software)",
+      "score": 0.4525236487388611
+    },
+    {
+      "name": "Unstructured data",
+      "score": 0.4469609558582306
+    },
+    {
+      "name": "Relation (database)",
+      "score": 0.43540748953819275
+    },
+    {
+      "name": "Medical record",
+      "score": 0.41800862550735474
+    },
+    {
+      "name": "Big data",
+      "score": 0.24437600374221802
+    },
+    {
+      "name": "Medicine",
+      "score": 0.23269915580749512
+    },
+    {
+      "name": "Data mining",
+      "score": 0.17930227518081665
+    },
+    {
+      "name": "Computer security",
+      "score": 0.16877394914627075
+    },
+    {
+      "name": "Geography",
+      "score": 0.1202591061592102
+    },
+    {
+      "name": "Radiology",
+      "score": 0.10735270380973816
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

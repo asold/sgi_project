@@ -1,90 +1,137 @@
 {
-    "title": "Vision Transformer-Based Tailing Detection in Videos",
-    "url": "https://openalex.org/W4200141711",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2108567451",
-            "name": "Jaewoo Lee",
-            "affiliations": [
-                "Sogang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101668545",
-            "name": "Sung-Jun Lee",
-            "affiliations": [
-                "Sogang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2268625419",
-            "name": "Won-Ki Cho",
-            "affiliations": [
-                "Sogang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2699116280",
-            "name": "Zahid Ali Siddiqui",
-            "affiliations": [
-                "Sogang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105350755",
-            "name": "Unsang Park",
-            "affiliations": [
-                "Sogang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2982875523",
-        "https://openalex.org/W3035358327",
-        "https://openalex.org/W3043840704",
-        "https://openalex.org/W3197449311",
-        "https://openalex.org/W3195320361",
-        "https://openalex.org/W2163612318",
-        "https://openalex.org/W2110383222",
-        "https://openalex.org/W2154946129",
-        "https://openalex.org/W2168173974",
-        "https://openalex.org/W2476588267",
-        "https://openalex.org/W2942439128",
-        "https://openalex.org/W2123751508",
-        "https://openalex.org/W1967456674",
-        "https://openalex.org/W2021659075",
-        "https://openalex.org/W1922656917",
-        "https://openalex.org/W2974686944",
-        "https://openalex.org/W3123791969",
-        "https://openalex.org/W2746053795",
-        "https://openalex.org/W3044290927",
-        "https://openalex.org/W1818594852",
-        "https://openalex.org/W6799941996",
-        "https://openalex.org/W3172507542",
-        "https://openalex.org/W3114278947",
-        "https://openalex.org/W2560474170",
-        "https://openalex.org/W2766042539",
-        "https://openalex.org/W2111918405",
-        "https://openalex.org/W2129520225",
-        "https://openalex.org/W2142412278",
-        "https://openalex.org/W1991597092",
-        "https://openalex.org/W2130349088",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W2341058432",
-        "https://openalex.org/W1946238955",
-        "https://openalex.org/W2280777305",
-        "https://openalex.org/W2524168323",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2122361470",
-        "https://openalex.org/W1994616650",
-        "https://openalex.org/W6756588888",
-        "https://openalex.org/W2901762488",
-        "https://openalex.org/W3193204716",
-        "https://openalex.org/W2163605009"
-    ],
-    "abstract": "Tailing is defined as an event where a suspicious person follows someone closely. We define the problem of tailing detection from videos as an anomaly detection problem, where the goal is to find abnormalities in the walking pattern of the pedestrians (victim and follower). We, therefore, propose a modified Time-Series Vision Transformer (TSViT), a method for anomaly detection in video, specifically for tailing detection with a small dataset. We introduce an effective way to train TSViT with a small dataset by regularizing the prediction model. To do so, we first encode the spatial information of the pedestrians into 2D patterns and then pass them as tokens to the TSViT. Through a series of experiments, we show that the tailing detection on a small dataset using TSViT outperforms popular CNN-based architectures, as the CNN architectures tend to overfit with a small dataset of time-series images. We also show that when using time-series images, the performance of CNN-based architecture gradually drops, as the network depth is increased, to increase its capacity. On the other hand, a decreasing number of heads in Vision Transformer architecture shows good performance on time-series images, and the performance is further increased as the input resolution of the images is increased. Experimental results demonstrate that the TSViT performs better than the handcrafted rule-based method and CNN-based method for tailing detection. TSViT can be used in many applications for video anomaly detection, even with a small dataset.",
-    "full_text": null
+  "title": "Vision Transformer-Based Tailing Detection in Videos",
+  "url": "https://openalex.org/W4200141711",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2108567451",
+      "name": "Jaewoo Lee",
+      "affiliations": [
+        "Sogang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101668545",
+      "name": "Sung-Jun Lee",
+      "affiliations": [
+        "Sogang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2268625419",
+      "name": "Won-Ki Cho",
+      "affiliations": [
+        "Sogang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2699116280",
+      "name": "Zahid Ali Siddiqui",
+      "affiliations": [
+        "Sogang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105350755",
+      "name": "Unsang Park",
+      "affiliations": [
+        "Sogang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2982875523",
+    "https://openalex.org/W3035358327",
+    "https://openalex.org/W3043840704",
+    "https://openalex.org/W3197449311",
+    "https://openalex.org/W3195320361",
+    "https://openalex.org/W2163612318",
+    "https://openalex.org/W2110383222",
+    "https://openalex.org/W2154946129",
+    "https://openalex.org/W2168173974",
+    "https://openalex.org/W2476588267",
+    "https://openalex.org/W2942439128",
+    "https://openalex.org/W2123751508",
+    "https://openalex.org/W1967456674",
+    "https://openalex.org/W2021659075",
+    "https://openalex.org/W1922656917",
+    "https://openalex.org/W2974686944",
+    "https://openalex.org/W3123791969",
+    "https://openalex.org/W2746053795",
+    "https://openalex.org/W3044290927",
+    "https://openalex.org/W1818594852",
+    "https://openalex.org/W6799941996",
+    "https://openalex.org/W3172507542",
+    "https://openalex.org/W3114278947",
+    "https://openalex.org/W2560474170",
+    "https://openalex.org/W2766042539",
+    "https://openalex.org/W2111918405",
+    "https://openalex.org/W2129520225",
+    "https://openalex.org/W2142412278",
+    "https://openalex.org/W1991597092",
+    "https://openalex.org/W2130349088",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W2341058432",
+    "https://openalex.org/W1946238955",
+    "https://openalex.org/W2280777305",
+    "https://openalex.org/W2524168323",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2122361470",
+    "https://openalex.org/W1994616650",
+    "https://openalex.org/W6756588888",
+    "https://openalex.org/W2901762488",
+    "https://openalex.org/W3193204716",
+    "https://openalex.org/W2163605009"
+  ],
+  "abstract": "Tailing is defined as an event where a suspicious person follows someone closely. We define the problem of tailing detection from videos as an anomaly detection problem, where the goal is to find abnormalities in the walking pattern of the pedestrians (victim and follower). We, therefore, propose a modified Time-Series Vision Transformer (TSViT), a method for anomaly detection in video, specifically for tailing detection with a small dataset. We introduce an effective way to train TSViT with a small dataset by regularizing the prediction model. To do so, we first encode the spatial information of the pedestrians into 2D patterns and then pass them as tokens to the TSViT. Through a series of experiments, we show that the tailing detection on a small dataset using TSViT outperforms popular CNN-based architectures, as the CNN architectures tend to overfit with a small dataset of time-series images. We also show that when using time-series images, the performance of CNN-based architecture gradually drops, as the network depth is increased, to increase its capacity. On the other hand, a decreasing number of heads in Vision Transformer architecture shows good performance on time-series images, and the performance is further increased as the input resolution of the images is increased. Experimental results demonstrate that the TSViT performs better than the handcrafted rule-based method and CNN-based method for tailing detection. TSViT can be used in many applications for video anomaly detection, even with a small dataset.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8205493688583374
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6929541826248169
+    },
+    {
+      "name": "Overfitting",
+      "score": 0.6255589723587036
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.6182198524475098
+    },
+    {
+      "name": "Transformer",
+      "score": 0.594062864780426
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4838232398033142
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4815283417701721
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.11085933446884155
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07677185535430908
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

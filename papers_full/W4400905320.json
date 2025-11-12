@@ -1,68 +1,175 @@
 {
-    "title": "Exploring a learning-to-rank approach to enhance the Retrieval Augmented Generation (RAG)-based electronic medical records search engines",
-    "url": "https://openalex.org/W4400905320",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2008380171",
-            "name": "Cheng Ye",
-            "affiliations": [
-                "Vanderbilt University Medical Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2008380171",
-            "name": "Cheng Ye",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2076157564",
-        "https://openalex.org/W2189098292",
-        "https://openalex.org/W1800226305",
-        "https://openalex.org/W1919152067",
-        "https://openalex.org/W2143026702",
-        "https://openalex.org/W2163573540",
-        "https://openalex.org/W2144773969",
-        "https://openalex.org/W6669145992",
-        "https://openalex.org/W6688126251",
-        "https://openalex.org/W1930458234",
-        "https://openalex.org/W4236720009",
-        "https://openalex.org/W4241676240",
-        "https://openalex.org/W2074109107",
-        "https://openalex.org/W6755690726",
-        "https://openalex.org/W2463133191",
-        "https://openalex.org/W2565621161",
-        "https://openalex.org/W2592420893",
-        "https://openalex.org/W6730438553",
-        "https://openalex.org/W4391136507",
-        "https://openalex.org/W4388896754",
-        "https://openalex.org/W6861710234",
-        "https://openalex.org/W4389274881",
-        "https://openalex.org/W4383301640",
-        "https://openalex.org/W4383346782",
-        "https://openalex.org/W6777314059",
-        "https://openalex.org/W6752096027",
-        "https://openalex.org/W4200495596",
-        "https://openalex.org/W2006776184",
-        "https://openalex.org/W2132339004",
-        "https://openalex.org/W1071251684",
-        "https://openalex.org/W4393858709",
-        "https://openalex.org/W3080238567",
-        "https://openalex.org/W6802327984",
-        "https://openalex.org/W4380994089",
-        "https://openalex.org/W6853410444",
-        "https://openalex.org/W4388860683",
-        "https://openalex.org/W3023509171",
-        "https://openalex.org/W2073857421",
-        "https://openalex.org/W2803703262",
-        "https://openalex.org/W2141406286",
-        "https://openalex.org/W3205997337",
-        "https://openalex.org/W2201876182",
-        "https://openalex.org/W4391815795",
-        "https://openalex.org/W4379117246",
-        "https://openalex.org/W2560087886"
-    ],
-    "abstract": "Background: This study addresses the challenge of enhancing Retrieval Augmented Generation (RAG) search engines for electronic medical records (EMR) by learning users' distinct search semantics. The specific aim is to develop a learning-to-rank system that improves the accuracy and relevance of search results to support RAG-based search engines. Methods: Given a prompt or search query, the system first asks the user to label a few randomly selected documents, which contain some keywords, as relevant to the prompt or not. The system then identifies relevant sentences and adjusts word similarities by updating a medical semantic embedding. New documents are ranked by the number of relevant sentences identified by the weighted embedding. Only the top-ranked documents and sentences are provided to a Large-Language-Model (LLM) to generate answers for further review. Findings: To evaluate our approach, four medical researchers labeled documents based on their relevance to specific diseases. We measured the information retrieval performance of our approach and two baseline methods. Results show that our approach achieved at least a 0.60 Precision-at-10 (P @ 10) score with only ten positive labels, outperforming the baseline methods. In our pilot study, we demonstrate that the learned semantic preference can transfer to the analysis of unseen datasets, boosting the accuracy of an RAG model in extracting and explaining cancer progression diagnoses from 0.14 to 0.50. Interpretation: This study demonstrates that a customized learning-to-rank method can enhance state-of-the-art natural language models, such as LLMs, by quickly adapting to users' semantics. This approach supports EMR document retrieval and helps RAG models generate clinically meaningful answers to specific questions, underscoring the potential of user-tailored learning-to-rank methods in clinical practice.",
-    "full_text": null
+  "title": "Exploring a learning-to-rank approach to enhance the Retrieval Augmented Generation (RAG)-based electronic medical records search engines",
+  "url": "https://openalex.org/W4400905320",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2008380171",
+      "name": "Cheng Ye",
+      "affiliations": [
+        "Vanderbilt University Medical Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2008380171",
+      "name": "Cheng Ye",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2076157564",
+    "https://openalex.org/W2189098292",
+    "https://openalex.org/W1800226305",
+    "https://openalex.org/W1919152067",
+    "https://openalex.org/W2143026702",
+    "https://openalex.org/W2163573540",
+    "https://openalex.org/W2144773969",
+    "https://openalex.org/W6669145992",
+    "https://openalex.org/W6688126251",
+    "https://openalex.org/W1930458234",
+    "https://openalex.org/W4236720009",
+    "https://openalex.org/W4241676240",
+    "https://openalex.org/W2074109107",
+    "https://openalex.org/W6755690726",
+    "https://openalex.org/W2463133191",
+    "https://openalex.org/W2565621161",
+    "https://openalex.org/W2592420893",
+    "https://openalex.org/W6730438553",
+    "https://openalex.org/W4391136507",
+    "https://openalex.org/W4388896754",
+    "https://openalex.org/W6861710234",
+    "https://openalex.org/W4389274881",
+    "https://openalex.org/W4383301640",
+    "https://openalex.org/W4383346782",
+    "https://openalex.org/W6777314059",
+    "https://openalex.org/W6752096027",
+    "https://openalex.org/W4200495596",
+    "https://openalex.org/W2006776184",
+    "https://openalex.org/W2132339004",
+    "https://openalex.org/W1071251684",
+    "https://openalex.org/W4393858709",
+    "https://openalex.org/W3080238567",
+    "https://openalex.org/W6802327984",
+    "https://openalex.org/W4380994089",
+    "https://openalex.org/W6853410444",
+    "https://openalex.org/W4388860683",
+    "https://openalex.org/W3023509171",
+    "https://openalex.org/W2073857421",
+    "https://openalex.org/W2803703262",
+    "https://openalex.org/W2141406286",
+    "https://openalex.org/W3205997337",
+    "https://openalex.org/W2201876182",
+    "https://openalex.org/W4391815795",
+    "https://openalex.org/W4379117246",
+    "https://openalex.org/W2560087886"
+  ],
+  "abstract": "Background: This study addresses the challenge of enhancing Retrieval Augmented Generation (RAG) search engines for electronic medical records (EMR) by learning users' distinct search semantics. The specific aim is to develop a learning-to-rank system that improves the accuracy and relevance of search results to support RAG-based search engines. Methods: Given a prompt or search query, the system first asks the user to label a few randomly selected documents, which contain some keywords, as relevant to the prompt or not. The system then identifies relevant sentences and adjusts word similarities by updating a medical semantic embedding. New documents are ranked by the number of relevant sentences identified by the weighted embedding. Only the top-ranked documents and sentences are provided to a Large-Language-Model (LLM) to generate answers for further review. Findings: To evaluate our approach, four medical researchers labeled documents based on their relevance to specific diseases. We measured the information retrieval performance of our approach and two baseline methods. Results show that our approach achieved at least a 0.60 Precision-at-10 (P @ 10) score with only ten positive labels, outperforming the baseline methods. In our pilot study, we demonstrate that the learned semantic preference can transfer to the analysis of unseen datasets, boosting the accuracy of an RAG model in extracting and explaining cancer progression diagnoses from 0.14 to 0.50. Interpretation: This study demonstrates that a customized learning-to-rank method can enhance state-of-the-art natural language models, such as LLMs, by quickly adapting to users' semantics. This approach supports EMR document retrieval and helps RAG models generate clinically meaningful answers to specific questions, underscoring the potential of user-tailored learning-to-rank methods in clinical practice.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7762875556945801
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.7179573774337769
+    },
+    {
+      "name": "Learning to rank",
+      "score": 0.7171565890312195
+    },
+    {
+      "name": "Relevance (law)",
+      "score": 0.6866179704666138
+    },
+    {
+      "name": "Word embedding",
+      "score": 0.6320031881332397
+    },
+    {
+      "name": "Semantics (computer science)",
+      "score": 0.5571253895759583
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.5279898643493652
+    },
+    {
+      "name": "Rank (graph theory)",
+      "score": 0.5114375352859497
+    },
+    {
+      "name": "Search engine",
+      "score": 0.5059263110160828
+    },
+    {
+      "name": "Semantic search",
+      "score": 0.4976201355457306
+    },
+    {
+      "name": "Medical diagnosis",
+      "score": 0.4688003659248352
+    },
+    {
+      "name": "Boosting (machine learning)",
+      "score": 0.46753355860710144
+    },
+    {
+      "name": "Language model",
+      "score": 0.4461284875869751
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.44415223598480225
+    },
+    {
+      "name": "Embedding",
+      "score": 0.41794922947883606
+    },
+    {
+      "name": "Ranking (information retrieval)",
+      "score": 0.4069772958755493
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40613630414009094
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

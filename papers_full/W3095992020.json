@@ -1,94 +1,165 @@
 {
-    "title": "An Empirical Study on Robustness to Spurious Correlations using Pre-trained Language Models",
-    "url": "https://openalex.org/W3095992020",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2520064248",
-            "name": "Lifu Tu",
-            "affiliations": [
-                "Toyota Technological Institute at Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2970520603",
-            "name": "Garima Lalwani",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2250393971",
-            "name": "Spandana Gella",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105465932",
-            "name": "He He",
-            "affiliations": [
-                "New York University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2162888803",
-        "https://openalex.org/W2913340405",
-        "https://openalex.org/W2953494151",
-        "https://openalex.org/W3104240813",
-        "https://openalex.org/W398859631",
-        "https://openalex.org/W2970680991",
-        "https://openalex.org/W2970789589",
-        "https://openalex.org/W3018280704",
-        "https://openalex.org/W2912512851",
-        "https://openalex.org/W569478347",
-        "https://openalex.org/W2953084091",
-        "https://openalex.org/W2952989203",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3011798063",
-        "https://openalex.org/W2798665661",
-        "https://openalex.org/W2556468274",
-        "https://openalex.org/W2932893307",
-        "https://openalex.org/W2790415926",
-        "https://openalex.org/W2994934025",
-        "https://openalex.org/W3034709122",
-        "https://openalex.org/W2516255829",
-        "https://openalex.org/W2927622107",
-        "https://openalex.org/W2624871570",
-        "https://openalex.org/W4310895557",
-        "https://openalex.org/W2736422900",
-        "https://openalex.org/W3008618223",
-        "https://openalex.org/W2912237282",
-        "https://openalex.org/W2123442489",
-        "https://openalex.org/W131533222",
-        "https://openalex.org/W2237537322",
-        "https://openalex.org/W3034381157",
-        "https://openalex.org/W2986366538",
-        "https://openalex.org/W3022235268",
-        "https://openalex.org/W2607892599",
-        "https://openalex.org/W2626967530",
-        "https://openalex.org/W2991497298",
-        "https://openalex.org/W2914526845",
-        "https://openalex.org/W3021992287",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W2987241137",
-        "https://openalex.org/W2963542100",
-        "https://openalex.org/W3015377432",
-        "https://openalex.org/W4253205364",
-        "https://openalex.org/W2799032899",
-        "https://openalex.org/W2911435132",
-        "https://openalex.org/W3035331128",
-        "https://openalex.org/W3035139434",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W2972051251",
-        "https://openalex.org/W1506859583",
-        "https://openalex.org/W2963655793",
-        "https://openalex.org/W2963420481",
-        "https://openalex.org/W3104033643",
-        "https://openalex.org/W2786028390",
-        "https://openalex.org/W2984256198"
-    ],
-    "abstract": "Recent work has shown that pre-trained language models such as BERT improve robustness to spurious correlations in the dataset. Intrigued by these results, we find that the key to their success is generalization from a small amount of counterexamples where the spurious correlations do not hold. When such minority examples are scarce, pre-trained models perform as poorly as models trained from scratch. In the case of extreme minority, we propose to use multi-task learning (MTL) to improve generalization. Our experiments on natural language inference and paraphrase identification show that MTL with the right auxiliary tasks significantly improves performance on challenging examples without hurting the in-distribution performance. Further, we show that the gain from MTL mainly comes from improved generalization from the minority examples. Our results highlight the importance of data diversity for overcoming spurious correlations. 1",
-    "full_text": null
+  "title": "An Empirical Study on Robustness to Spurious Correlations using Pre-trained Language Models",
+  "url": "https://openalex.org/W3095992020",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2520064248",
+      "name": "Lifu Tu",
+      "affiliations": [
+        "Toyota Technological Institute at Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2970520603",
+      "name": "Garima Lalwani",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2250393971",
+      "name": "Spandana Gella",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105465932",
+      "name": "He He",
+      "affiliations": [
+        "New York University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2162888803",
+    "https://openalex.org/W2913340405",
+    "https://openalex.org/W2953494151",
+    "https://openalex.org/W3104240813",
+    "https://openalex.org/W398859631",
+    "https://openalex.org/W2970680991",
+    "https://openalex.org/W2970789589",
+    "https://openalex.org/W3018280704",
+    "https://openalex.org/W2912512851",
+    "https://openalex.org/W569478347",
+    "https://openalex.org/W2953084091",
+    "https://openalex.org/W2952989203",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3011798063",
+    "https://openalex.org/W2798665661",
+    "https://openalex.org/W2556468274",
+    "https://openalex.org/W2932893307",
+    "https://openalex.org/W2790415926",
+    "https://openalex.org/W2994934025",
+    "https://openalex.org/W3034709122",
+    "https://openalex.org/W2516255829",
+    "https://openalex.org/W2927622107",
+    "https://openalex.org/W2624871570",
+    "https://openalex.org/W4310895557",
+    "https://openalex.org/W2736422900",
+    "https://openalex.org/W3008618223",
+    "https://openalex.org/W2912237282",
+    "https://openalex.org/W2123442489",
+    "https://openalex.org/W131533222",
+    "https://openalex.org/W2237537322",
+    "https://openalex.org/W3034381157",
+    "https://openalex.org/W2986366538",
+    "https://openalex.org/W3022235268",
+    "https://openalex.org/W2607892599",
+    "https://openalex.org/W2626967530",
+    "https://openalex.org/W2991497298",
+    "https://openalex.org/W2914526845",
+    "https://openalex.org/W3021992287",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W2987241137",
+    "https://openalex.org/W2963542100",
+    "https://openalex.org/W3015377432",
+    "https://openalex.org/W4253205364",
+    "https://openalex.org/W2799032899",
+    "https://openalex.org/W2911435132",
+    "https://openalex.org/W3035331128",
+    "https://openalex.org/W3035139434",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2972051251",
+    "https://openalex.org/W1506859583",
+    "https://openalex.org/W2963655793",
+    "https://openalex.org/W2963420481",
+    "https://openalex.org/W3104033643",
+    "https://openalex.org/W2786028390",
+    "https://openalex.org/W2984256198"
+  ],
+  "abstract": "Recent work has shown that pre-trained language models such as BERT improve robustness to spurious correlations in the dataset. Intrigued by these results, we find that the key to their success is generalization from a small amount of counterexamples where the spurious correlations do not hold. When such minority examples are scarce, pre-trained models perform as poorly as models trained from scratch. In the case of extreme minority, we propose to use multi-task learning (MTL) to improve generalization. Our experiments on natural language inference and paraphrase identification show that MTL with the right auxiliary tasks significantly improves performance on challenging examples without hurting the in-distribution performance. Further, we show that the gain from MTL mainly comes from improved generalization from the minority examples. Our results highlight the importance of data diversity for overcoming spurious correlations. 1",
+  "full_text": null,
+  "topic": "Spurious relationship",
+  "concepts": [
+    {
+      "name": "Spurious relationship",
+      "score": 0.9515286684036255
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8108806610107422
+    },
+    {
+      "name": "Inference",
+      "score": 0.6709603667259216
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.6604690551757812
+    },
+    {
+      "name": "Generalization",
+      "score": 0.6324413418769836
+    },
+    {
+      "name": "Paraphrase",
+      "score": 0.6294385194778442
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.584703803062439
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.573224663734436
+    },
+    {
+      "name": "Counterexample",
+      "score": 0.5402121543884277
+    },
+    {
+      "name": "Language model",
+      "score": 0.4447958171367645
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3882761597633362
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09999352693557739
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Discrete mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    }
+  ]
 }

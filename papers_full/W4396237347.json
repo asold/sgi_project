@@ -1,90 +1,145 @@
 {
-    "title": "CoTNeT: Contextual transformer network for encrypted traffic classification",
-    "url": "https://openalex.org/W4396237347",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5073109129",
-            "name": "Hongwei Huang",
-            "affiliations": [
-                "Sichuan University of Science and Engineering"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100334836",
-            "name": "Lu Ye",
-            "affiliations": [
-                "Sichuan University of Science and Engineering"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101318642",
-            "name": "Shaohua Zhou",
-            "affiliations": [
-                "Sichuan University of Science and Engineering"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100343569",
-            "name": "Xingxing Zhang",
-            "affiliations": [
-                "Sichuan University of Science and Engineering"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100424637",
-            "name": "Ze Li",
-            "affiliations": [
-                "Sichuan University of Science and Engineering"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2897202622",
-        "https://openalex.org/W2963516518",
-        "https://openalex.org/W6629631377",
-        "https://openalex.org/W6742396496",
-        "https://openalex.org/W6631453533",
-        "https://openalex.org/W2149600645",
-        "https://openalex.org/W2286071403",
-        "https://openalex.org/W2148913232",
-        "https://openalex.org/W2620689220",
-        "https://openalex.org/W6771411346",
-        "https://openalex.org/W6764151911",
-        "https://openalex.org/W3173457006",
-        "https://openalex.org/W4206804859",
-        "https://openalex.org/W3022478400",
-        "https://openalex.org/W2978116268",
-        "https://openalex.org/W3145680685",
-        "https://openalex.org/W3134125695",
-        "https://openalex.org/W6798067931",
-        "https://openalex.org/W3202986187",
-        "https://openalex.org/W4385738188",
-        "https://openalex.org/W3183430956",
-        "https://openalex.org/W6687483927",
-        "https://openalex.org/W6734080319",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6855947407",
-        "https://openalex.org/W2974442408",
-        "https://openalex.org/W3039623901",
-        "https://openalex.org/W6758022392",
-        "https://openalex.org/W2096118443",
-        "https://openalex.org/W6643321793",
-        "https://openalex.org/W2785889759",
-        "https://openalex.org/W4310362703",
-        "https://openalex.org/W4392873233",
-        "https://openalex.org/W4249729687",
-        "https://openalex.org/W4256257446",
-        "https://openalex.org/W4242328395",
-        "https://openalex.org/W4236226531",
-        "https://openalex.org/W4386091971",
-        "https://openalex.org/W1550529073",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2914059076",
-        "https://openalex.org/W4236965008",
-        "https://openalex.org/W4239227852",
-        "https://openalex.org/W648871171"
-    ],
-    "abstract": "As network infrastructures continue to grow and traffic encryption technologies evolve at a rapid pace, the task of classifying encrypted traffic has become significantly more intricate. These emerging encryption methods render conventional approaches ineffectual in discerning traffic types, consequently posing novel challenges to network security and administration. Evidently, conventional traffic classification techniques are inadequate when it comes to encrypted traffic. Consequently, researchers have turned to machine learning and deep learning models to address this challenge, achieving remarkable results in this domain. Nonetheless, contemporary deep learning models exhibit a propensity to overly depend on self-attention mechanisms while processing 2D feature maps. This mechanism typically focuses only on individual query-key pairs, neglecting the rich contextual information among adjacent keys, thereby limiting their performance in encrypted traffic classification. To address this limitation, our study examines an innovative approach called CoTNet. The CoT module is integrated into the ResNet model to more comprehensively exploit the contextual associations among input keys. This innovation engenders a sturdier and more potent classification model, adept at comprehensively capturing the inherent patterns and correlated information within input features. The suggested method enhances the ResNet model by substituting the conventional 3x3 convolution operations with CoT modules, thereby more effectively harnessing the contextual associations among input keys. In particular, we integrate self-attention mechanisms at various model levels to more thoroughly capture the inherent patterns and correlated information within input features. Experimental results on two real-world datasets show that CoTNet outperforms multiple state-of-the-art methods in the encrypted traffic classification task.",
-    "full_text": null
+  "title": "CoTNeT: Contextual transformer network for encrypted traffic classification",
+  "url": "https://openalex.org/W4396237347",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5073109129",
+      "name": "Hongwei Huang",
+      "affiliations": [
+        "Sichuan University of Science and Engineering"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100334836",
+      "name": "Lu Ye",
+      "affiliations": [
+        "Sichuan University of Science and Engineering"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101318642",
+      "name": "Shaohua Zhou",
+      "affiliations": [
+        "Sichuan University of Science and Engineering"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100343569",
+      "name": "Xingxing Zhang",
+      "affiliations": [
+        "Sichuan University of Science and Engineering"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100424637",
+      "name": "Ze Li",
+      "affiliations": [
+        "Sichuan University of Science and Engineering"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2897202622",
+    "https://openalex.org/W2963516518",
+    "https://openalex.org/W6629631377",
+    "https://openalex.org/W6742396496",
+    "https://openalex.org/W6631453533",
+    "https://openalex.org/W2149600645",
+    "https://openalex.org/W2286071403",
+    "https://openalex.org/W2148913232",
+    "https://openalex.org/W2620689220",
+    "https://openalex.org/W6771411346",
+    "https://openalex.org/W6764151911",
+    "https://openalex.org/W3173457006",
+    "https://openalex.org/W4206804859",
+    "https://openalex.org/W3022478400",
+    "https://openalex.org/W2978116268",
+    "https://openalex.org/W3145680685",
+    "https://openalex.org/W3134125695",
+    "https://openalex.org/W6798067931",
+    "https://openalex.org/W3202986187",
+    "https://openalex.org/W4385738188",
+    "https://openalex.org/W3183430956",
+    "https://openalex.org/W6687483927",
+    "https://openalex.org/W6734080319",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6855947407",
+    "https://openalex.org/W2974442408",
+    "https://openalex.org/W3039623901",
+    "https://openalex.org/W6758022392",
+    "https://openalex.org/W2096118443",
+    "https://openalex.org/W6643321793",
+    "https://openalex.org/W2785889759",
+    "https://openalex.org/W4310362703",
+    "https://openalex.org/W4392873233",
+    "https://openalex.org/W4249729687",
+    "https://openalex.org/W4256257446",
+    "https://openalex.org/W4242328395",
+    "https://openalex.org/W4236226531",
+    "https://openalex.org/W4386091971",
+    "https://openalex.org/W1550529073",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2914059076",
+    "https://openalex.org/W4236965008",
+    "https://openalex.org/W4239227852",
+    "https://openalex.org/W648871171"
+  ],
+  "abstract": "As network infrastructures continue to grow and traffic encryption technologies evolve at a rapid pace, the task of classifying encrypted traffic has become significantly more intricate. These emerging encryption methods render conventional approaches ineffectual in discerning traffic types, consequently posing novel challenges to network security and administration. Evidently, conventional traffic classification techniques are inadequate when it comes to encrypted traffic. Consequently, researchers have turned to machine learning and deep learning models to address this challenge, achieving remarkable results in this domain. Nonetheless, contemporary deep learning models exhibit a propensity to overly depend on self-attention mechanisms while processing 2D feature maps. This mechanism typically focuses only on individual query-key pairs, neglecting the rich contextual information among adjacent keys, thereby limiting their performance in encrypted traffic classification. To address this limitation, our study examines an innovative approach called CoTNet. The CoT module is integrated into the ResNet model to more comprehensively exploit the contextual associations among input keys. This innovation engenders a sturdier and more potent classification model, adept at comprehensively capturing the inherent patterns and correlated information within input features. The suggested method enhances the ResNet model by substituting the conventional 3x3 convolution operations with CoT modules, thereby more effectively harnessing the contextual associations among input keys. In particular, we integrate self-attention mechanisms at various model levels to more thoroughly capture the inherent patterns and correlated information within input features. Experimental results on two real-world datasets show that CoTNet outperforms multiple state-of-the-art methods in the encrypted traffic classification task.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8793350458145142
+    },
+    {
+      "name": "Encryption",
+      "score": 0.7704182267189026
+    },
+    {
+      "name": "Traffic classification",
+      "score": 0.7016585469245911
+    },
+    {
+      "name": "Exploit",
+      "score": 0.6194355487823486
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.49659496545791626
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.47821471095085144
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.43661782145500183
+    },
+    {
+      "name": "Pace",
+      "score": 0.41289839148521423
+    },
+    {
+      "name": "Data mining",
+      "score": 0.38172855973243713
+    },
+    {
+      "name": "Computer security",
+      "score": 0.2758767008781433
+    },
+    {
+      "name": "Network packet",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

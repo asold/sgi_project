@@ -1,119 +1,198 @@
 {
-    "title": "Anomaly Detection in Aerial Videos With Transformers",
-    "url": "https://openalex.org/W4290973251",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2150336853",
-            "name": "Jin Pu",
-            "affiliations": [
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2897427698",
-            "name": "Mou, Lichao",
-            "affiliations": [
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4200861725",
-            "name": "Xia, Gui-Song",
-            "affiliations": [
-                "State Key Laboratory of Information Engineering in Surveying Mapping and Remote Sensing",
-                "Wuhan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2173027155",
-            "name": "Zhu, Xiao Xiang",
-            "affiliations": [
-                "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3040266635",
-        "https://openalex.org/W3040266255",
-        "https://openalex.org/W2003533291",
-        "https://openalex.org/W2915683453",
-        "https://openalex.org/W2136091149",
-        "https://openalex.org/W3122069467",
-        "https://openalex.org/W2149587482",
-        "https://openalex.org/W1990953362",
-        "https://openalex.org/W2975052829",
-        "https://openalex.org/W2990630613",
-        "https://openalex.org/W2770337116",
-        "https://openalex.org/W1533420448",
-        "https://openalex.org/W3003741573",
-        "https://openalex.org/W6774798957",
-        "https://openalex.org/W2996821722",
-        "https://openalex.org/W2586646478",
-        "https://openalex.org/W2907085048",
-        "https://openalex.org/W2793706358",
-        "https://openalex.org/W1970099214",
-        "https://openalex.org/W2142552707",
-        "https://openalex.org/W2740976805",
-        "https://openalex.org/W2343117455",
-        "https://openalex.org/W4205932092",
-        "https://openalex.org/W3137199127",
-        "https://openalex.org/W3118889207",
-        "https://openalex.org/W3158390871",
-        "https://openalex.org/W6751866786",
-        "https://openalex.org/W2963061824",
-        "https://openalex.org/W6712574313",
-        "https://openalex.org/W2015887370",
-        "https://openalex.org/W6748102297",
-        "https://openalex.org/W3122380385",
-        "https://openalex.org/W3169077988",
-        "https://openalex.org/W3212044949",
-        "https://openalex.org/W2808318865",
-        "https://openalex.org/W3152827256",
-        "https://openalex.org/W2942836719",
-        "https://openalex.org/W4233065845",
-        "https://openalex.org/W3207827401",
-        "https://openalex.org/W2047870694",
-        "https://openalex.org/W2004491663",
-        "https://openalex.org/W2029316659",
-        "https://openalex.org/W1521436688",
-        "https://openalex.org/W2124267685",
-        "https://openalex.org/W2165447611",
-        "https://openalex.org/W2140340527",
-        "https://openalex.org/W2124463804",
-        "https://openalex.org/W2014238333",
-        "https://openalex.org/W1997893472",
-        "https://openalex.org/W3171213434",
-        "https://openalex.org/W2566084149",
-        "https://openalex.org/W2031392670",
-        "https://openalex.org/W1186830400",
-        "https://openalex.org/W6756753118",
-        "https://openalex.org/W2953352227",
-        "https://openalex.org/W3190748826",
-        "https://openalex.org/W2579718262",
-        "https://openalex.org/W2341058432",
-        "https://openalex.org/W2777342313",
-        "https://openalex.org/W2964232409",
-        "https://openalex.org/W2766042539",
-        "https://openalex.org/W2753526808",
-        "https://openalex.org/W2559927751",
-        "https://openalex.org/W3090280491",
-        "https://openalex.org/W3207288364",
-        "https://openalex.org/W7016021835",
-        "https://openalex.org/W2136655611",
-        "https://openalex.org/W2043441451",
-        "https://openalex.org/W6757973977",
-        "https://openalex.org/W2987821246",
-        "https://openalex.org/W2963045681",
-        "https://openalex.org/W2978971541",
-        "https://openalex.org/W2987228832",
-        "https://openalex.org/W3035240825",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3010888245",
-        "https://openalex.org/W3135550350",
-        "https://openalex.org/W3153872861",
-        "https://openalex.org/W2803674491"
-    ],
-    "abstract": "Unmanned aerial vehicles (UAVs) are widely applied for purposes of\\ninspection, search, and rescue operations by the virtue of low-cost,\\nlarge-coverage, real-time, and high-resolution data acquisition capacities.\\nMassive volumes of aerial videos are produced in these processes, in which\\nnormal events often account for an overwhelming proportion. It is extremely\\ndifficult to localize and extract abnormal events containing potentially\\nvaluable information from long video streams manually. Therefore, we are\\ndedicated to developing anomaly detection methods to solve this issue. In this\\npaper, we create a new dataset, named DroneAnomaly, for anomaly detection in\\naerial videos. This dataset provides 37 training video sequences and 22 testing\\nvideo sequences from 7 different realistic scenes with various anomalous\\nevents. There are 87,488 color video frames (51,635 for training and 35,853 for\\ntesting) with the size of $640 \\\\times 640$ at 30 frames per second. Based on\\nthis dataset, we evaluate existing methods and offer a benchmark for this task.\\nFurthermore, we present a new baseline model, ANomaly Detection with\\nTransformers (ANDT), which treats consecutive video frames as a sequence of\\ntubelets, utilizes a Transformer encoder to learn feature representations from\\nthe sequence, and leverages a decoder to predict the next frame. Our network\\nmodels normality in the training phase and identifies an event with\\nunpredictable temporal dynamics as an anomaly in the test phase. Moreover, To\\ncomprehensively evaluate the performance of our proposed method, we use not\\nonly our Drone-Anomaly dataset but also another dataset. We will make our\\ndataset and code publicly available. A demo video is available at\\nhttps://youtu.be/ancczYryOBY. We make our dataset and code publicly available .\\n",
-    "full_text": null
+  "title": "Anomaly Detection in Aerial Videos With Transformers",
+  "url": "https://openalex.org/W4290973251",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2150336853",
+      "name": "Jin Pu",
+      "affiliations": [
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2897427698",
+      "name": "Mou, Lichao",
+      "affiliations": [
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4200861725",
+      "name": "Xia, Gui-Song",
+      "affiliations": [
+        "State Key Laboratory of Information Engineering in Surveying Mapping and Remote Sensing",
+        "Wuhan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2173027155",
+      "name": "Zhu, Xiao Xiang",
+      "affiliations": [
+        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3040266635",
+    "https://openalex.org/W3040266255",
+    "https://openalex.org/W2003533291",
+    "https://openalex.org/W2915683453",
+    "https://openalex.org/W2136091149",
+    "https://openalex.org/W3122069467",
+    "https://openalex.org/W2149587482",
+    "https://openalex.org/W1990953362",
+    "https://openalex.org/W2975052829",
+    "https://openalex.org/W2990630613",
+    "https://openalex.org/W2770337116",
+    "https://openalex.org/W1533420448",
+    "https://openalex.org/W3003741573",
+    "https://openalex.org/W6774798957",
+    "https://openalex.org/W2996821722",
+    "https://openalex.org/W2586646478",
+    "https://openalex.org/W2907085048",
+    "https://openalex.org/W2793706358",
+    "https://openalex.org/W1970099214",
+    "https://openalex.org/W2142552707",
+    "https://openalex.org/W2740976805",
+    "https://openalex.org/W2343117455",
+    "https://openalex.org/W4205932092",
+    "https://openalex.org/W3137199127",
+    "https://openalex.org/W3118889207",
+    "https://openalex.org/W3158390871",
+    "https://openalex.org/W6751866786",
+    "https://openalex.org/W2963061824",
+    "https://openalex.org/W6712574313",
+    "https://openalex.org/W2015887370",
+    "https://openalex.org/W6748102297",
+    "https://openalex.org/W3122380385",
+    "https://openalex.org/W3169077988",
+    "https://openalex.org/W3212044949",
+    "https://openalex.org/W2808318865",
+    "https://openalex.org/W3152827256",
+    "https://openalex.org/W2942836719",
+    "https://openalex.org/W4233065845",
+    "https://openalex.org/W3207827401",
+    "https://openalex.org/W2047870694",
+    "https://openalex.org/W2004491663",
+    "https://openalex.org/W2029316659",
+    "https://openalex.org/W1521436688",
+    "https://openalex.org/W2124267685",
+    "https://openalex.org/W2165447611",
+    "https://openalex.org/W2140340527",
+    "https://openalex.org/W2124463804",
+    "https://openalex.org/W2014238333",
+    "https://openalex.org/W1997893472",
+    "https://openalex.org/W3171213434",
+    "https://openalex.org/W2566084149",
+    "https://openalex.org/W2031392670",
+    "https://openalex.org/W1186830400",
+    "https://openalex.org/W6756753118",
+    "https://openalex.org/W2953352227",
+    "https://openalex.org/W3190748826",
+    "https://openalex.org/W2579718262",
+    "https://openalex.org/W2341058432",
+    "https://openalex.org/W2777342313",
+    "https://openalex.org/W2964232409",
+    "https://openalex.org/W2766042539",
+    "https://openalex.org/W2753526808",
+    "https://openalex.org/W2559927751",
+    "https://openalex.org/W3090280491",
+    "https://openalex.org/W3207288364",
+    "https://openalex.org/W7016021835",
+    "https://openalex.org/W2136655611",
+    "https://openalex.org/W2043441451",
+    "https://openalex.org/W6757973977",
+    "https://openalex.org/W2987821246",
+    "https://openalex.org/W2963045681",
+    "https://openalex.org/W2978971541",
+    "https://openalex.org/W2987228832",
+    "https://openalex.org/W3035240825",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3010888245",
+    "https://openalex.org/W3135550350",
+    "https://openalex.org/W3153872861",
+    "https://openalex.org/W2803674491"
+  ],
+  "abstract": "Unmanned aerial vehicles (UAVs) are widely applied for purposes of\\ninspection, search, and rescue operations by the virtue of low-cost,\\nlarge-coverage, real-time, and high-resolution data acquisition capacities.\\nMassive volumes of aerial videos are produced in these processes, in which\\nnormal events often account for an overwhelming proportion. It is extremely\\ndifficult to localize and extract abnormal events containing potentially\\nvaluable information from long video streams manually. Therefore, we are\\ndedicated to developing anomaly detection methods to solve this issue. In this\\npaper, we create a new dataset, named DroneAnomaly, for anomaly detection in\\naerial videos. This dataset provides 37 training video sequences and 22 testing\\nvideo sequences from 7 different realistic scenes with various anomalous\\nevents. There are 87,488 color video frames (51,635 for training and 35,853 for\\ntesting) with the size of $640 \\\\times 640$ at 30 frames per second. Based on\\nthis dataset, we evaluate existing methods and offer a benchmark for this task.\\nFurthermore, we present a new baseline model, ANomaly Detection with\\nTransformers (ANDT), which treats consecutive video frames as a sequence of\\ntubelets, utilizes a Transformer encoder to learn feature representations from\\nthe sequence, and leverages a decoder to predict the next frame. Our network\\nmodels normality in the training phase and identifies an event with\\nunpredictable temporal dynamics as an anomaly in the test phase. Moreover, To\\ncomprehensively evaluate the performance of our proposed method, we use not\\nonly our Drone-Anomaly dataset but also another dataset. We will make our\\ndataset and code publicly available. A demo video is available at\\nhttps://youtu.be/ancczYryOBY. We make our dataset and code publicly available .\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8189237117767334
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.7841434478759766
+    },
+    {
+      "name": "Drone",
+      "score": 0.6763274669647217
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6396382451057434
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5154944062232971
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5017781257629395
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4492567181587219
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4078162908554077
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.34279969334602356
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.3328171968460083
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3266025483608246
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

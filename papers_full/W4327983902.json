@@ -1,85 +1,148 @@
 {
-    "title": "PTA-Det: Point Transformer Associating Point Cloud and Image for 3D Object Detection",
-    "url": "https://openalex.org/W4327983902",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5077950332",
-            "name": "Rui Wan",
-            "affiliations": [
-                "Northwestern Polytechnical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5073872744",
-            "name": "Tianyun Zhao",
-            "affiliations": [
-                "Northwestern Polytechnical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5075519052",
-            "name": "Wei Zhao",
-            "affiliations": [
-                "Northwest University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4310793305",
-        "https://openalex.org/W2949708697",
-        "https://openalex.org/W2963727135",
-        "https://openalex.org/W2150066425",
-        "https://openalex.org/W2555618208",
-        "https://openalex.org/W2963400571",
-        "https://openalex.org/W2964062501",
-        "https://openalex.org/W2962888833",
-        "https://openalex.org/W2967324759",
-        "https://openalex.org/W3035461736",
-        "https://openalex.org/W3004237909",
-        "https://openalex.org/W2998254148",
-        "https://openalex.org/W3108426750",
-        "https://openalex.org/W3034429258",
-        "https://openalex.org/W4200629389",
-        "https://openalex.org/W3170030651",
-        "https://openalex.org/W4224289557",
-        "https://openalex.org/W4281773987",
-        "https://openalex.org/W2624503621",
-        "https://openalex.org/W2897529137",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W3035333188",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4214755140",
-        "https://openalex.org/W3111535274",
-        "https://openalex.org/W2997790735",
-        "https://openalex.org/W3173668541",
-        "https://openalex.org/W2954174912",
-        "https://openalex.org/W2969053624",
-        "https://openalex.org/W3035749845",
-        "https://openalex.org/W2951517617",
-        "https://openalex.org/W4303980413",
-        "https://openalex.org/W4312941264",
-        "https://openalex.org/W4312707458",
-        "https://openalex.org/W2963150697",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3136408985",
-        "https://openalex.org/W2601564443",
-        "https://openalex.org/W3177276051",
-        "https://openalex.org/W6772253573",
-        "https://openalex.org/W2884561390",
-        "https://openalex.org/W6756040250",
-        "https://openalex.org/W3166089996",
-        "https://openalex.org/W2905528244",
-        "https://openalex.org/W4285606661",
-        "https://openalex.org/W3217335336",
-        "https://openalex.org/W3167095230",
-        "https://openalex.org/W2968296999",
-        "https://openalex.org/W3166470370",
-        "https://openalex.org/W3099930232",
-        "https://openalex.org/W3008105217",
-        "https://openalex.org/W4311728943",
-        "https://openalex.org/W3153465022"
-    ],
-    "abstract": "In autonomous driving, 3D object detection based on multi-modal data has become an indispensable perceptual approach when facing complex environments around the vehicle. During multi-modal detection, LiDAR and a camera are simultaneously applied for capturing and modeling. However, due to the intrinsic discrepancies between the LiDAR point and camera image, the fusion of the data for object detection encounters a series of problems, which results in most multi-modal detection methods performing worse than LiDAR-only methods. In this investigation, we propose a method named PTA-Det to improve the performance of multi-modal detection. Accompanied by PTA-Det, a Pseudo Point Cloud Generation Network is proposed, which can represent the textural and semantic features of keypoints in the image by pseudo points. Thereafter, through a transformer-based Point Fusion Transition (PFT) module, the features of LiDAR points and pseudo points from an image can be deeply fused under a unified point-based form. The combination of these modules can overcome the main obstacle of cross-modal feature fusion and achieves a complementary and discriminative representation for proposal generation. Extensive experiments on KITTI dataset support the effectiveness of PTA-Det, achieving a mAP (mean average precision) of 77.88% on the car category with relatively few LiDAR input points.",
-    "full_text": null
+  "title": "PTA-Det: Point Transformer Associating Point Cloud and Image for 3D Object Detection",
+  "url": "https://openalex.org/W4327983902",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5077950332",
+      "name": "Rui Wan",
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5073872744",
+      "name": "Tianyun Zhao",
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5075519052",
+      "name": "Wei Zhao",
+      "affiliations": [
+        "Northwest University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4310793305",
+    "https://openalex.org/W2949708697",
+    "https://openalex.org/W2963727135",
+    "https://openalex.org/W2150066425",
+    "https://openalex.org/W2555618208",
+    "https://openalex.org/W2963400571",
+    "https://openalex.org/W2964062501",
+    "https://openalex.org/W2962888833",
+    "https://openalex.org/W2967324759",
+    "https://openalex.org/W3035461736",
+    "https://openalex.org/W3004237909",
+    "https://openalex.org/W2998254148",
+    "https://openalex.org/W3108426750",
+    "https://openalex.org/W3034429258",
+    "https://openalex.org/W4200629389",
+    "https://openalex.org/W3170030651",
+    "https://openalex.org/W4224289557",
+    "https://openalex.org/W4281773987",
+    "https://openalex.org/W2624503621",
+    "https://openalex.org/W2897529137",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W3035333188",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4214755140",
+    "https://openalex.org/W3111535274",
+    "https://openalex.org/W2997790735",
+    "https://openalex.org/W3173668541",
+    "https://openalex.org/W2954174912",
+    "https://openalex.org/W2969053624",
+    "https://openalex.org/W3035749845",
+    "https://openalex.org/W2951517617",
+    "https://openalex.org/W4303980413",
+    "https://openalex.org/W4312941264",
+    "https://openalex.org/W4312707458",
+    "https://openalex.org/W2963150697",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3136408985",
+    "https://openalex.org/W2601564443",
+    "https://openalex.org/W3177276051",
+    "https://openalex.org/W6772253573",
+    "https://openalex.org/W2884561390",
+    "https://openalex.org/W6756040250",
+    "https://openalex.org/W3166089996",
+    "https://openalex.org/W2905528244",
+    "https://openalex.org/W4285606661",
+    "https://openalex.org/W3217335336",
+    "https://openalex.org/W3167095230",
+    "https://openalex.org/W2968296999",
+    "https://openalex.org/W3166470370",
+    "https://openalex.org/W3099930232",
+    "https://openalex.org/W3008105217",
+    "https://openalex.org/W4311728943",
+    "https://openalex.org/W3153465022"
+  ],
+  "abstract": "In autonomous driving, 3D object detection based on multi-modal data has become an indispensable perceptual approach when facing complex environments around the vehicle. During multi-modal detection, LiDAR and a camera are simultaneously applied for capturing and modeling. However, due to the intrinsic discrepancies between the LiDAR point and camera image, the fusion of the data for object detection encounters a series of problems, which results in most multi-modal detection methods performing worse than LiDAR-only methods. In this investigation, we propose a method named PTA-Det to improve the performance of multi-modal detection. Accompanied by PTA-Det, a Pseudo Point Cloud Generation Network is proposed, which can represent the textural and semantic features of keypoints in the image by pseudo points. Thereafter, through a transformer-based Point Fusion Transition (PFT) module, the features of LiDAR points and pseudo points from an image can be deeply fused under a unified point-based form. The combination of these modules can overcome the main obstacle of cross-modal feature fusion and achieves a complementary and discriminative representation for proposal generation. Extensive experiments on KITTI dataset support the effectiveness of PTA-Det, achieving a mAP (mean average precision) of 77.88% on the car category with relatively few LiDAR input points.",
+  "full_text": null,
+  "topic": "Point cloud",
+  "concepts": [
+    {
+      "name": "Point cloud",
+      "score": 0.8029133081436157
+    },
+    {
+      "name": "Lidar",
+      "score": 0.7802146673202515
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7208872437477112
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.6535739898681641
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6491023898124695
+    },
+    {
+      "name": "Object detection",
+      "score": 0.5673989653587341
+    },
+    {
+      "name": "Modal",
+      "score": 0.5379062294960022
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.45119285583496094
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3655509352684021
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.3078209161758423
+    },
+    {
+      "name": "Geography",
+      "score": 0.17091694474220276
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    }
+  ]
 }

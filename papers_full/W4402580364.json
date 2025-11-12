@@ -1,56 +1,155 @@
 {
-    "title": "The Two Word Test as a semantic benchmark for large language models",
-    "url": "https://openalex.org/W4402580364",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2549603462",
-            "name": "Nicholas Riccardi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2103515571",
-            "name": "Xuan Yang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2147466293",
-            "name": "Rutvik H. Desai",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3195577433",
-        "https://openalex.org/W4320009668",
-        "https://openalex.org/W4319662928",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W4360836968",
-        "https://openalex.org/W4293791041",
-        "https://openalex.org/W4328049044",
-        "https://openalex.org/W3172669006",
-        "https://openalex.org/W4317463334",
-        "https://openalex.org/W4297847660",
-        "https://openalex.org/W4287208410",
-        "https://openalex.org/W4287794335",
-        "https://openalex.org/W2015174774",
-        "https://openalex.org/W1990687494",
-        "https://openalex.org/W1980572274",
-        "https://openalex.org/W2978450937",
-        "https://openalex.org/W2130205161",
-        "https://openalex.org/W2065476066",
-        "https://openalex.org/W1614298861",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2964350953",
-        "https://openalex.org/W4291908385",
-        "https://openalex.org/W4281690148",
-        "https://openalex.org/W4378942694",
-        "https://openalex.org/W4361806395",
-        "https://openalex.org/W4361863170",
-        "https://openalex.org/W4389523957",
-        "https://openalex.org/W3173435641",
-        "https://openalex.org/W4392935324"
-    ],
-    "abstract": "Large language models (LLMs) have shown remarkable abilities recently, including passing advanced professional exams and demanding benchmark tests. This performance has led many to suggest that they are close to achieving humanlike or \"true\" understanding of language, and even artificial general intelligence (AGI). Here, we provide a new open-source benchmark, the Two Word Test (TWT), that can assess semantic abilities of LLMs using two-word phrases in a task that can be performed relatively easily by humans without advanced training. Combining multiple words into a single concept is a fundamental linguistic and conceptual operation routinely performed by people. The test requires meaningfulness judgments of 1768 noun-noun combinations that have been rated as meaningful (e.g., baby boy) or as having low meaningfulness (e.g., goat sky) by human raters. This novel test differs from existing benchmarks that rely on logical reasoning, inference, puzzle-solving, or domain expertise. We provide versions of the task that probe meaningfulness ratings on a 0-4 scale as well as binary judgments. With both versions, we conducted a series of experiments using the TWT on GPT-4, GPT-3.5, Claude-3-Optus, and Gemini-1-Pro-001. Results demonstrated that, compared to humans, all models performed relatively poorly at rating meaningfulness of these phrases. GPT-3.5-turbo, Gemini-1.0-Pro-001 and GPT-4-turbo were also unable to make binary discriminations between sensible and nonsense phrases, with these models consistently judging nonsensical phrases as making sense. Claude-3-Opus made a substantial improvement in binary discrimination of combinatorial phrases but was still significantly worse than human performance. The TWT can be used to understand and assess the limitations of current LLMs, and potentially improve them. The test also reminds us that caution is warranted in attributing \"true\" or human-level understanding to LLMs based only on tests that are challenging for humans.",
-    "full_text": null
+  "title": "The Two Word Test as a semantic benchmark for large language models",
+  "url": "https://openalex.org/W4402580364",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2549603462",
+      "name": "Nicholas Riccardi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2103515571",
+      "name": "Xuan Yang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2147466293",
+      "name": "Rutvik H. Desai",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3195577433",
+    "https://openalex.org/W4320009668",
+    "https://openalex.org/W4319662928",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W4360836968",
+    "https://openalex.org/W4293791041",
+    "https://openalex.org/W4328049044",
+    "https://openalex.org/W3172669006",
+    "https://openalex.org/W4317463334",
+    "https://openalex.org/W4297847660",
+    "https://openalex.org/W4287208410",
+    "https://openalex.org/W4287794335",
+    "https://openalex.org/W2015174774",
+    "https://openalex.org/W1990687494",
+    "https://openalex.org/W1980572274",
+    "https://openalex.org/W2978450937",
+    "https://openalex.org/W2130205161",
+    "https://openalex.org/W2065476066",
+    "https://openalex.org/W1614298861",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2964350953",
+    "https://openalex.org/W4291908385",
+    "https://openalex.org/W4281690148",
+    "https://openalex.org/W4378942694",
+    "https://openalex.org/W4361806395",
+    "https://openalex.org/W4361863170",
+    "https://openalex.org/W4389523957",
+    "https://openalex.org/W3173435641",
+    "https://openalex.org/W4392935324"
+  ],
+  "abstract": "Large language models (LLMs) have shown remarkable abilities recently, including passing advanced professional exams and demanding benchmark tests. This performance has led many to suggest that they are close to achieving humanlike or \"true\" understanding of language, and even artificial general intelligence (AGI). Here, we provide a new open-source benchmark, the Two Word Test (TWT), that can assess semantic abilities of LLMs using two-word phrases in a task that can be performed relatively easily by humans without advanced training. Combining multiple words into a single concept is a fundamental linguistic and conceptual operation routinely performed by people. The test requires meaningfulness judgments of 1768 noun-noun combinations that have been rated as meaningful (e.g., baby boy) or as having low meaningfulness (e.g., goat sky) by human raters. This novel test differs from existing benchmarks that rely on logical reasoning, inference, puzzle-solving, or domain expertise. We provide versions of the task that probe meaningfulness ratings on a 0-4 scale as well as binary judgments. With both versions, we conducted a series of experiments using the TWT on GPT-4, GPT-3.5, Claude-3-Optus, and Gemini-1-Pro-001. Results demonstrated that, compared to humans, all models performed relatively poorly at rating meaningfulness of these phrases. GPT-3.5-turbo, Gemini-1.0-Pro-001 and GPT-4-turbo were also unable to make binary discriminations between sensible and nonsense phrases, with these models consistently judging nonsensical phrases as making sense. Claude-3-Opus made a substantial improvement in binary discrimination of combinatorial phrases but was still significantly worse than human performance. The TWT can be used to understand and assess the limitations of current LLMs, and potentially improve them. The test also reminds us that caution is warranted in attributing \"true\" or human-level understanding to LLMs based only on tests that are challenging for humans.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.718041181564331
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6679210066795349
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.6614252328872681
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.630379855632782
+    },
+    {
+      "name": "Inference",
+      "score": 0.6082050800323486
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6051623225212097
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.544037401676178
+    },
+    {
+      "name": "Binary classification",
+      "score": 0.5097612738609314
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.48285824060440063
+    },
+    {
+      "name": "Noun",
+      "score": 0.4387039542198181
+    },
+    {
+      "name": "Semantic memory",
+      "score": 0.41366544365882874
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.34766170382499695
+    },
+    {
+      "name": "Psychology",
+      "score": 0.2689976692199707
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.24899208545684814
+    },
+    {
+      "name": "Support vector machine",
+      "score": 0.10235181450843811
+    },
+    {
+      "name": "Cognition",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

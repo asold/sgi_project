@@ -1,77 +1,152 @@
 {
-    "title": "EPI-Trans: an effective transformer-based deep learning model for enhancer promoter interaction prediction",
-    "url": "https://openalex.org/W4399783809",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5027391578",
-            "name": "Fatma S. Ahmed",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010511301",
-            "name": "Saleh Aly",
-            "affiliations": [
-                "Aswan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5026771763",
-            "name": "Xiangrong Liu",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2945038365",
-        "https://openalex.org/W2534005127",
-        "https://openalex.org/W2802007658",
-        "https://openalex.org/W1973062929",
-        "https://openalex.org/W1977308882",
-        "https://openalex.org/W2011463791",
-        "https://openalex.org/W2073026107",
-        "https://openalex.org/W2752211734",
-        "https://openalex.org/W2168191908",
-        "https://openalex.org/W2131186458",
-        "https://openalex.org/W2333286569",
-        "https://openalex.org/W2311607323",
-        "https://openalex.org/W2951934944",
-        "https://openalex.org/W2563411328",
-        "https://openalex.org/W2198606573",
-        "https://openalex.org/W1019830208",
-        "https://openalex.org/W4297263351",
-        "https://openalex.org/W3209455776",
-        "https://openalex.org/W2502949459",
-        "https://openalex.org/W2735099323",
-        "https://openalex.org/W2768844315",
-        "https://openalex.org/W2951218167",
-        "https://openalex.org/W2911079020",
-        "https://openalex.org/W2971769670",
-        "https://openalex.org/W3093812284",
-        "https://openalex.org/W3167524404",
-        "https://openalex.org/W4285094511",
-        "https://openalex.org/W2901218091",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2554247923",
-        "https://openalex.org/W2336509392",
-        "https://openalex.org/W2896262061",
-        "https://openalex.org/W2163922914",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W4282028407",
-        "https://openalex.org/W2900694973",
-        "https://openalex.org/W2165064122",
-        "https://openalex.org/W3004577623",
-        "https://openalex.org/W1976526581",
-        "https://openalex.org/W2800112443",
-        "https://openalex.org/W2800941188",
-        "https://openalex.org/W2889664156",
-        "https://openalex.org/W3100645411",
-        "https://openalex.org/W2157825442"
-    ],
-    "abstract": "Abstract Background Recognition of enhancer–promoter Interactions (EPIs) is crucial for human development. EPIs in the genome play a key role in regulating transcription. However, experimental approaches for classifying EPIs are too expensive in terms of effort, time, and resources. Therefore, more and more studies are being done on developing computational techniques, particularly using deep learning and other machine learning techniques, to address such problems. Unfortunately, the majority of current computational methods are based on convolutional neural networks, recurrent neural networks, or a combination of them, which don’t take into consideration contextual details and the long-range interactions between the enhancer and promoter sequences. A new transformer-based model called EPI-Trans is presented in this study to overcome the aforementioned limitations. The multi-head attention mechanism in the transformer model automatically learns features that represent the long interrelationships between enhancer and promoter sequences. Furthermore, a generic model is created with transferability that can be utilized as a pre-trained model for various cell lines. Moreover, the parameters of the generic model are fine-tuned using a particular cell line dataset to improve performance. Results Based on the results obtained from six benchmark cell lines, the average AUROC for the specific, generic, and best models is 94.2%, 95%, and 95.7%, while the average AUPR is 80.5%, 66.1%, and 79.6% respectively. Conclusions This study proposed a transformer-based deep learning model for EPI prediction. The comparative results on certain cell lines show that EPI-Trans outperforms other cutting-edge techniques and can provide superior performance on the challenge of recognizing EPI.",
-    "full_text": null
+  "title": "EPI-Trans: an effective transformer-based deep learning model for enhancer promoter interaction prediction",
+  "url": "https://openalex.org/W4399783809",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5027391578",
+      "name": "Fatma S. Ahmed",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010511301",
+      "name": "Saleh Aly",
+      "affiliations": [
+        "Aswan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5026771763",
+      "name": "Xiangrong Liu",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2945038365",
+    "https://openalex.org/W2534005127",
+    "https://openalex.org/W2802007658",
+    "https://openalex.org/W1973062929",
+    "https://openalex.org/W1977308882",
+    "https://openalex.org/W2011463791",
+    "https://openalex.org/W2073026107",
+    "https://openalex.org/W2752211734",
+    "https://openalex.org/W2168191908",
+    "https://openalex.org/W2131186458",
+    "https://openalex.org/W2333286569",
+    "https://openalex.org/W2311607323",
+    "https://openalex.org/W2951934944",
+    "https://openalex.org/W2563411328",
+    "https://openalex.org/W2198606573",
+    "https://openalex.org/W1019830208",
+    "https://openalex.org/W4297263351",
+    "https://openalex.org/W3209455776",
+    "https://openalex.org/W2502949459",
+    "https://openalex.org/W2735099323",
+    "https://openalex.org/W2768844315",
+    "https://openalex.org/W2951218167",
+    "https://openalex.org/W2911079020",
+    "https://openalex.org/W2971769670",
+    "https://openalex.org/W3093812284",
+    "https://openalex.org/W3167524404",
+    "https://openalex.org/W4285094511",
+    "https://openalex.org/W2901218091",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2554247923",
+    "https://openalex.org/W2336509392",
+    "https://openalex.org/W2896262061",
+    "https://openalex.org/W2163922914",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W4282028407",
+    "https://openalex.org/W2900694973",
+    "https://openalex.org/W2165064122",
+    "https://openalex.org/W3004577623",
+    "https://openalex.org/W1976526581",
+    "https://openalex.org/W2800112443",
+    "https://openalex.org/W2800941188",
+    "https://openalex.org/W2889664156",
+    "https://openalex.org/W3100645411",
+    "https://openalex.org/W2157825442"
+  ],
+  "abstract": "Abstract Background Recognition of enhancer–promoter Interactions (EPIs) is crucial for human development. EPIs in the genome play a key role in regulating transcription. However, experimental approaches for classifying EPIs are too expensive in terms of effort, time, and resources. Therefore, more and more studies are being done on developing computational techniques, particularly using deep learning and other machine learning techniques, to address such problems. Unfortunately, the majority of current computational methods are based on convolutional neural networks, recurrent neural networks, or a combination of them, which don’t take into consideration contextual details and the long-range interactions between the enhancer and promoter sequences. A new transformer-based model called EPI-Trans is presented in this study to overcome the aforementioned limitations. The multi-head attention mechanism in the transformer model automatically learns features that represent the long interrelationships between enhancer and promoter sequences. Furthermore, a generic model is created with transferability that can be utilized as a pre-trained model for various cell lines. Moreover, the parameters of the generic model are fine-tuned using a particular cell line dataset to improve performance. Results Based on the results obtained from six benchmark cell lines, the average AUROC for the specific, generic, and best models is 94.2%, 95%, and 95.7%, while the average AUPR is 80.5%, 66.1%, and 79.6% respectively. Conclusions This study proposed a transformer-based deep learning model for EPI prediction. The comparative results on certain cell lines show that EPI-Trans outperforms other cutting-edge techniques and can provide superior performance on the challenge of recognizing EPI.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7309148907661438
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6988043785095215
+    },
+    {
+      "name": "Enhancer",
+      "score": 0.5994945168495178
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.5706738829612732
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5701957941055298
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5641592144966125
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5384542346000671
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5150575637817383
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4554840922355652
+    },
+    {
+      "name": "Transcription factor",
+      "score": 0.2665867507457733
+    },
+    {
+      "name": "Biology",
+      "score": 0.1752992868423462
+    },
+    {
+      "name": "Gene",
+      "score": 0.14317074418067932
+    },
+    {
+      "name": "Genetics",
+      "score": 0.07600358128547668
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,98 +1,177 @@
 {
-    "title": "Evaluating the Ripple Effects of Knowledge Editing in Language Models",
-    "url": "https://openalex.org/W4394743141",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2182941915",
-            "name": "Roi Cohen",
-            "affiliations": [
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5000288029",
-            "name": "Eden Biran",
-            "affiliations": [
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3123211793",
-            "name": "Ori Yoran",
-            "affiliations": [
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1484279603",
-            "name": "Amir Globerson",
-            "affiliations": [
-                "Google (Israel)",
-                "Tel Aviv University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2736090994",
-            "name": "Mor Geva",
-            "affiliations": [
-                "Google (Israel)",
-                "Tel Aviv University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4285225959",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6798182279",
-        "https://openalex.org/W4386566424",
-        "https://openalex.org/W3152884768",
-        "https://openalex.org/W4206118214",
-        "https://openalex.org/W4287111051",
-        "https://openalex.org/W6622182490",
-        "https://openalex.org/W4389520380",
-        "https://openalex.org/W4205460703",
-        "https://openalex.org/W4386566752",
-        "https://openalex.org/W3146844750",
-        "https://openalex.org/W6851390376",
-        "https://openalex.org/W4385571289",
-        "https://openalex.org/W6802505033",
-        "https://openalex.org/W6839548382",
-        "https://openalex.org/W4230262515",
-        "https://openalex.org/W6803337692",
-        "https://openalex.org/W2962881743",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W4385570777",
-        "https://openalex.org/W6839328737",
-        "https://openalex.org/W6846320025",
-        "https://openalex.org/W6802629465",
-        "https://openalex.org/W4385569933",
-        "https://openalex.org/W6810738896",
-        "https://openalex.org/W2970986510",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W6802857829",
-        "https://openalex.org/W3102659883",
-        "https://openalex.org/W3098267758",
-        "https://openalex.org/W6845463252",
-        "https://openalex.org/W6850625674",
-        "https://openalex.org/W3175604467",
-        "https://openalex.org/W3151929433",
-        "https://openalex.org/W4296878971",
-        "https://openalex.org/W4389520370",
-        "https://openalex.org/W3188635098",
-        "https://openalex.org/W2953356739",
-        "https://openalex.org/W4389518797",
-        "https://openalex.org/W4389519586",
-        "https://openalex.org/W4285429195",
-        "https://openalex.org/W2529466265",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W4281657280",
-        "https://openalex.org/W4362598605",
-        "https://openalex.org/W3206959854",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W4226278401"
-    ],
-    "abstract": "Abstract Modern language models capture a large body of factual knowledge. However, some facts can be incorrectly induced or become obsolete over time, resulting in factually incorrect generations. This has led to the development of various editing methods that allow updating facts encoded by the model. Evaluation of these methods has primarily focused on testing whether an individual fact has been successfully injected, and if similar predictions for other subjects have not changed. Here we argue that such evaluation is limited, since injecting one fact (e.g., “Jack Depp is the son of Johnny Depp”) introduces a “ripple effect” in the form of additional facts that the model needs to update (e.g., “Jack Depp is the sibling of Lily-Rose Depp”). To address this, we propose novel evaluation criteria that consider the implications of an edit on related facts. Using these criteria, we then construct RippleEdits, a diagnostic benchmark of 5K factual edits, capturing various types of ripple effects. We evaluate prominent editing methods on RippleEdits, showing that they fail to introduce consistent changes in the model’s knowledge. In addition, we find that a simple in-context editing baseline obtains the best scores on our benchmark, suggesting a promising research direction for model editing.1",
-    "full_text": null
+  "title": "Evaluating the Ripple Effects of Knowledge Editing in Language Models",
+  "url": "https://openalex.org/W4394743141",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2182941915",
+      "name": "Roi Cohen",
+      "affiliations": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5000288029",
+      "name": "Eden Biran",
+      "affiliations": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3123211793",
+      "name": "Ori Yoran",
+      "affiliations": [
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1484279603",
+      "name": "Amir Globerson",
+      "affiliations": [
+        "Google (Israel)",
+        "Tel Aviv University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2736090994",
+      "name": "Mor Geva",
+      "affiliations": [
+        "Google (Israel)",
+        "Tel Aviv University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4285225959",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6798182279",
+    "https://openalex.org/W4386566424",
+    "https://openalex.org/W3152884768",
+    "https://openalex.org/W4206118214",
+    "https://openalex.org/W4287111051",
+    "https://openalex.org/W6622182490",
+    "https://openalex.org/W4389520380",
+    "https://openalex.org/W4205460703",
+    "https://openalex.org/W4386566752",
+    "https://openalex.org/W3146844750",
+    "https://openalex.org/W6851390376",
+    "https://openalex.org/W4385571289",
+    "https://openalex.org/W6802505033",
+    "https://openalex.org/W6839548382",
+    "https://openalex.org/W4230262515",
+    "https://openalex.org/W6803337692",
+    "https://openalex.org/W2962881743",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W4385570777",
+    "https://openalex.org/W6839328737",
+    "https://openalex.org/W6846320025",
+    "https://openalex.org/W6802629465",
+    "https://openalex.org/W4385569933",
+    "https://openalex.org/W6810738896",
+    "https://openalex.org/W2970986510",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W6802857829",
+    "https://openalex.org/W3102659883",
+    "https://openalex.org/W3098267758",
+    "https://openalex.org/W6845463252",
+    "https://openalex.org/W6850625674",
+    "https://openalex.org/W3175604467",
+    "https://openalex.org/W3151929433",
+    "https://openalex.org/W4296878971",
+    "https://openalex.org/W4389520370",
+    "https://openalex.org/W3188635098",
+    "https://openalex.org/W2953356739",
+    "https://openalex.org/W4389518797",
+    "https://openalex.org/W4389519586",
+    "https://openalex.org/W4285429195",
+    "https://openalex.org/W2529466265",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W4281657280",
+    "https://openalex.org/W4362598605",
+    "https://openalex.org/W3206959854",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W4226278401"
+  ],
+  "abstract": "Abstract Modern language models capture a large body of factual knowledge. However, some facts can be incorrectly induced or become obsolete over time, resulting in factually incorrect generations. This has led to the development of various editing methods that allow updating facts encoded by the model. Evaluation of these methods has primarily focused on testing whether an individual fact has been successfully injected, and if similar predictions for other subjects have not changed. Here we argue that such evaluation is limited, since injecting one fact (e.g., “Jack Depp is the son of Johnny Depp”) introduces a “ripple effect” in the form of additional facts that the model needs to update (e.g., “Jack Depp is the sibling of Lily-Rose Depp”). To address this, we propose novel evaluation criteria that consider the implications of an edit on related facts. Using these criteria, we then construct RippleEdits, a diagnostic benchmark of 5K factual edits, capturing various types of ripple effects. We evaluate prominent editing methods on RippleEdits, showing that they fail to introduce consistent changes in the model’s knowledge. In addition, we find that a simple in-context editing baseline obtains the best scores on our benchmark, suggesting a promising research direction for model editing.1",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.850110650062561
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.7570508718490601
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.6329291462898254
+    },
+    {
+      "name": "Construct (python library)",
+      "score": 0.5612640976905823
+    },
+    {
+      "name": "Ripple",
+      "score": 0.5329257845878601
+    },
+    {
+      "name": "Language model",
+      "score": 0.5176092386245728
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.468546986579895
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.4635545313358307
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4162830412387848
+    },
+    {
+      "name": "Programming language",
+      "score": 0.16109341382980347
+    },
+    {
+      "name": "History",
+      "score": 0.08490350842475891
+    },
+    {
+      "name": "Power (physics)",
+      "score": 0.054514080286026
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    }
+  ]
 }

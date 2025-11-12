@@ -1,133 +1,204 @@
 {
-    "title": "SLViT: Shuffle-convolution-based lightweight Vision transformer for effective diagnosis of sugarcane leaf diseases",
-    "url": "https://openalex.org/W4297878068",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5027490170",
-            "name": "Xuechen Li",
-            "affiliations": [
-                "Guangxi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5002180234",
-            "name": "Xiuhua Li",
-            "affiliations": [
-                "Guangxi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5002061099",
-            "name": "Shimin Zhang",
-            "affiliations": [
-                "Guangxi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5015640710",
-            "name": "Guiying Zhang",
-            "affiliations": [
-                "Guangxi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5008281035",
-            "name": "Muqing Zhang",
-            "affiliations": [
-                "Guangxi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5006689061",
-            "name": "Heyang Shang",
-            "affiliations": [
-                "Guangxi University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2277854822",
-        "https://openalex.org/W3036537849",
-        "https://openalex.org/W6762205418",
-        "https://openalex.org/W4284670866",
-        "https://openalex.org/W2614850301",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6768782777",
-        "https://openalex.org/W2964970384",
-        "https://openalex.org/W6786585107",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4206618551",
-        "https://openalex.org/W4214588794",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W6770473083",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2963855133",
-        "https://openalex.org/W3160605745",
-        "https://openalex.org/W2937035224",
-        "https://openalex.org/W2982083293",
-        "https://openalex.org/W6737664043",
-        "https://openalex.org/W2339460098",
-        "https://openalex.org/W2790979755",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W3088754512",
-        "https://openalex.org/W6785652829",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4312443924",
-        "https://openalex.org/W3035883408",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W6810109598",
-        "https://openalex.org/W6753767121",
-        "https://openalex.org/W6780171056",
-        "https://openalex.org/W6764894170",
-        "https://openalex.org/W2901380936",
-        "https://openalex.org/W2989192967",
-        "https://openalex.org/W6776188000",
-        "https://openalex.org/W6763367864",
-        "https://openalex.org/W2735962203",
-        "https://openalex.org/W2923504698",
-        "https://openalex.org/W2019664980",
-        "https://openalex.org/W6633603355",
-        "https://openalex.org/W2616247523",
-        "https://openalex.org/W3036085849",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2470368200",
-        "https://openalex.org/W6754553897",
-        "https://openalex.org/W3091846766",
-        "https://openalex.org/W6674914833",
-        "https://openalex.org/W3084726437",
-        "https://openalex.org/W2050500094",
-        "https://openalex.org/W6734061528",
-        "https://openalex.org/W4284958385",
-        "https://openalex.org/W6786708909",
-        "https://openalex.org/W4211009416",
-        "https://openalex.org/W6797790494",
-        "https://openalex.org/W3205172848",
-        "https://openalex.org/W2902013328",
-        "https://openalex.org/W6696085341",
-        "https://openalex.org/W6730471545",
-        "https://openalex.org/W4205495162",
-        "https://openalex.org/W4206796133",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W4297775537",
-        "https://openalex.org/W3175544090",
-        "https://openalex.org/W2560429394",
-        "https://openalex.org/W2883780447",
-        "https://openalex.org/W4298395628",
-        "https://openalex.org/W3102564565",
-        "https://openalex.org/W223233584",
-        "https://openalex.org/W3035414587",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W2952399126",
-        "https://openalex.org/W2887603965",
-        "https://openalex.org/W4298417552",
-        "https://openalex.org/W3100931193",
-        "https://openalex.org/W4220947986",
-        "https://openalex.org/W4231421859",
-        "https://openalex.org/W4242293569"
-    ],
-    "abstract": "Farmers must accurately and promptly identify sugarcane leaf diseases with identical symptoms. RGB images have a beneficial function in disease identification. Nevertheless, complex backgrounds and identical symptoms can significantly reduce the recognition accuracy and robustness. To overcome these challenges, the SLViT hybrid network is presented, in which the transformer encoder is converted to a flexible plug-in (LViT) that is subsequently integrated into several locations of a lightweight CNN architecture (SHDC). SLViT is initially trained on the publicly available disease dataset Plant Village before being moved to the self-created sugarcane leaf disease dataset SLD10k, which consists of seven classes and 10,309 images. The ablation experiments demonstrate that all the adjustments to SLViT have contributed positively to its overall performance. SLViT outperforms six SOTA models and three custom-designed leaf-disease recognition models on Plant Village in terms of speed (1,832 FPS), weight (2 MB), consumption (50 M), and precision (98.84 %). SLViT also outperformed MobileNetV3_small on the SLD10k dataset with an accuracy bonus of 1.87 % and a size reduction of 66.3 %. The experiment also reveals that SLViT has absorbed the advantages of both the lightweight CNN and the noise-resistant transformer. This study demonstrates the applicability of SLViT for sugarcane leaf diagnosis in the field.",
-    "full_text": null
+  "title": "SLViT: Shuffle-convolution-based lightweight Vision transformer for effective diagnosis of sugarcane leaf diseases",
+  "url": "https://openalex.org/W4297878068",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5027490170",
+      "name": "Xuechen Li",
+      "affiliations": [
+        "Guangxi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5002180234",
+      "name": "Xiuhua Li",
+      "affiliations": [
+        "Guangxi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5002061099",
+      "name": "Shimin Zhang",
+      "affiliations": [
+        "Guangxi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5015640710",
+      "name": "Guiying Zhang",
+      "affiliations": [
+        "Guangxi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5008281035",
+      "name": "Muqing Zhang",
+      "affiliations": [
+        "Guangxi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5006689061",
+      "name": "Heyang Shang",
+      "affiliations": [
+        "Guangxi University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2277854822",
+    "https://openalex.org/W3036537849",
+    "https://openalex.org/W6762205418",
+    "https://openalex.org/W4284670866",
+    "https://openalex.org/W2614850301",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6768782777",
+    "https://openalex.org/W2964970384",
+    "https://openalex.org/W6786585107",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4206618551",
+    "https://openalex.org/W4214588794",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W6770473083",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2963855133",
+    "https://openalex.org/W3160605745",
+    "https://openalex.org/W2937035224",
+    "https://openalex.org/W2982083293",
+    "https://openalex.org/W6737664043",
+    "https://openalex.org/W2339460098",
+    "https://openalex.org/W2790979755",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W3088754512",
+    "https://openalex.org/W6785652829",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4312443924",
+    "https://openalex.org/W3035883408",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W6810109598",
+    "https://openalex.org/W6753767121",
+    "https://openalex.org/W6780171056",
+    "https://openalex.org/W6764894170",
+    "https://openalex.org/W2901380936",
+    "https://openalex.org/W2989192967",
+    "https://openalex.org/W6776188000",
+    "https://openalex.org/W6763367864",
+    "https://openalex.org/W2735962203",
+    "https://openalex.org/W2923504698",
+    "https://openalex.org/W2019664980",
+    "https://openalex.org/W6633603355",
+    "https://openalex.org/W2616247523",
+    "https://openalex.org/W3036085849",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2470368200",
+    "https://openalex.org/W6754553897",
+    "https://openalex.org/W3091846766",
+    "https://openalex.org/W6674914833",
+    "https://openalex.org/W3084726437",
+    "https://openalex.org/W2050500094",
+    "https://openalex.org/W6734061528",
+    "https://openalex.org/W4284958385",
+    "https://openalex.org/W6786708909",
+    "https://openalex.org/W4211009416",
+    "https://openalex.org/W6797790494",
+    "https://openalex.org/W3205172848",
+    "https://openalex.org/W2902013328",
+    "https://openalex.org/W6696085341",
+    "https://openalex.org/W6730471545",
+    "https://openalex.org/W4205495162",
+    "https://openalex.org/W4206796133",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W4297775537",
+    "https://openalex.org/W3175544090",
+    "https://openalex.org/W2560429394",
+    "https://openalex.org/W2883780447",
+    "https://openalex.org/W4298395628",
+    "https://openalex.org/W3102564565",
+    "https://openalex.org/W223233584",
+    "https://openalex.org/W3035414587",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W2952399126",
+    "https://openalex.org/W2887603965",
+    "https://openalex.org/W4298417552",
+    "https://openalex.org/W3100931193",
+    "https://openalex.org/W4220947986",
+    "https://openalex.org/W4231421859",
+    "https://openalex.org/W4242293569"
+  ],
+  "abstract": "Farmers must accurately and promptly identify sugarcane leaf diseases with identical symptoms. RGB images have a beneficial function in disease identification. Nevertheless, complex backgrounds and identical symptoms can significantly reduce the recognition accuracy and robustness. To overcome these challenges, the SLViT hybrid network is presented, in which the transformer encoder is converted to a flexible plug-in (LViT) that is subsequently integrated into several locations of a lightweight CNN architecture (SHDC). SLViT is initially trained on the publicly available disease dataset Plant Village before being moved to the self-created sugarcane leaf disease dataset SLD10k, which consists of seven classes and 10,309 images. The ablation experiments demonstrate that all the adjustments to SLViT have contributed positively to its overall performance. SLViT outperforms six SOTA models and three custom-designed leaf-disease recognition models on Plant Village in terms of speed (1,832 FPS), weight (2 MB), consumption (50 M), and precision (98.84 %). SLViT also outperformed MobileNetV3_small on the SLD10k dataset with an accuracy bonus of 1.87 % and a size reduction of 66.3 %. The experiment also reveals that SLViT has absorbed the advantages of both the lightweight CNN and the noise-resistant transformer. This study demonstrates the applicability of SLViT for sugarcane leaf diagnosis in the field.",
+  "full_text": null,
+  "topic": "Robustness (evolution)",
+  "concepts": [
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.5964427590370178
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5824578404426575
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.567093014717102
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5235475897789001
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5004231929779053
+    },
+    {
+      "name": "RGB color model",
+      "score": 0.4926929771900177
+    },
+    {
+      "name": "Transformer",
+      "score": 0.48728621006011963
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4561939835548401
+    },
+    {
+      "name": "Pixel",
+      "score": 0.4285605847835541
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.42079275846481323
+    },
+    {
+      "name": "Biology",
+      "score": 0.1385471224784851
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13464239239692688
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

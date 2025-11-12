@@ -1,61 +1,144 @@
 {
-    "title": "Mitigating Hallucinations in Large Language Models with Sliding Generation and Self-Checks",
-    "url": "https://openalex.org/W4401353657",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2149929786",
-            "name": "Fiona Harrington",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5106328576",
-            "name": "Elliot Rosenthal",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5106328577",
-            "name": "Miles Swinburne",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4399757118",
-        "https://openalex.org/W4399328902",
-        "https://openalex.org/W4393390506",
-        "https://openalex.org/W4399590448",
-        "https://openalex.org/W4390572883",
-        "https://openalex.org/W4399302278",
-        "https://openalex.org/W4399792597",
-        "https://openalex.org/W4396914983",
-        "https://openalex.org/W4396811910",
-        "https://openalex.org/W4397019678",
-        "https://openalex.org/W4391234699",
-        "https://openalex.org/W4399444210",
-        "https://openalex.org/W4390268970",
-        "https://openalex.org/W4388691793",
-        "https://openalex.org/W4399383377",
-        "https://openalex.org/W4390497390",
-        "https://openalex.org/W4396762959",
-        "https://openalex.org/W4399395229",
-        "https://openalex.org/W4400288205",
-        "https://openalex.org/W4400665563",
-        "https://openalex.org/W4399423677",
-        "https://openalex.org/W4399420817",
-        "https://openalex.org/W4393131873",
-        "https://openalex.org/W4399395131",
-        "https://openalex.org/W4399496975",
-        "https://openalex.org/W4399730120",
-        "https://openalex.org/W4392936081",
-        "https://openalex.org/W4400571651",
-        "https://openalex.org/W4399115751",
-        "https://openalex.org/W4397029679",
-        "https://openalex.org/W4386409617",
-        "https://openalex.org/W4399105075",
-        "https://openalex.org/W4393319504",
-        "https://openalex.org/W4394846382",
-        "https://openalex.org/W4390736801"
-    ],
-    "abstract": "LLMs have demonstrated strong capabilities in generating human-like text and understanding complex linguistic patterns; however, they are prone to generating plausiblesounding information that is factually incorrect, known as hallucinations, which poses a significant challenge for applications requiring high accuracy and reliability. The proposed methodologies, Sliding Generation and Self-Checks, introduce novel and significant techniques to mitigate hallucinations through structured segmentation, iterative refinement, and multi-step verification processes, enhancing the factual accuracy and consistency of LLM outputs. The Sliding Generation technique improves contextual relevance by dividing input prompts into overlapping segments and aggregating the responses, while the Self-Checks mechanism ensures internal consistency through rephrasing prompts and posing related questions, thereby reducing erroneous outputs. Comprehensive evaluations demonstrated the efficacy of these integrated approaches, highlighting marked improvements in accuracy and reliability across various domains, and emphasizing their potential for deployment in high-stakes environments where the integrity of information is crucial. This research contributes to the advancement of AI technology, providing a robust framework for developing more trustworthy and effective LLMs capable of handling complex and sensitive tasks.",
-    "full_text": null
+  "title": "Mitigating Hallucinations in Large Language Models with Sliding Generation and Self-Checks",
+  "url": "https://openalex.org/W4401353657",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2149929786",
+      "name": "Fiona Harrington",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5106328576",
+      "name": "Elliot Rosenthal",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5106328577",
+      "name": "Miles Swinburne",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4399757118",
+    "https://openalex.org/W4399328902",
+    "https://openalex.org/W4393390506",
+    "https://openalex.org/W4399590448",
+    "https://openalex.org/W4390572883",
+    "https://openalex.org/W4399302278",
+    "https://openalex.org/W4399792597",
+    "https://openalex.org/W4396914983",
+    "https://openalex.org/W4396811910",
+    "https://openalex.org/W4397019678",
+    "https://openalex.org/W4391234699",
+    "https://openalex.org/W4399444210",
+    "https://openalex.org/W4390268970",
+    "https://openalex.org/W4388691793",
+    "https://openalex.org/W4399383377",
+    "https://openalex.org/W4390497390",
+    "https://openalex.org/W4396762959",
+    "https://openalex.org/W4399395229",
+    "https://openalex.org/W4400288205",
+    "https://openalex.org/W4400665563",
+    "https://openalex.org/W4399423677",
+    "https://openalex.org/W4399420817",
+    "https://openalex.org/W4393131873",
+    "https://openalex.org/W4399395131",
+    "https://openalex.org/W4399496975",
+    "https://openalex.org/W4399730120",
+    "https://openalex.org/W4392936081",
+    "https://openalex.org/W4400571651",
+    "https://openalex.org/W4399115751",
+    "https://openalex.org/W4397029679",
+    "https://openalex.org/W4386409617",
+    "https://openalex.org/W4399105075",
+    "https://openalex.org/W4393319504",
+    "https://openalex.org/W4394846382",
+    "https://openalex.org/W4390736801"
+  ],
+  "abstract": "LLMs have demonstrated strong capabilities in generating human-like text and understanding complex linguistic patterns; however, they are prone to generating plausiblesounding information that is factually incorrect, known as hallucinations, which poses a significant challenge for applications requiring high accuracy and reliability. The proposed methodologies, Sliding Generation and Self-Checks, introduce novel and significant techniques to mitigate hallucinations through structured segmentation, iterative refinement, and multi-step verification processes, enhancing the factual accuracy and consistency of LLM outputs. The Sliding Generation technique improves contextual relevance by dividing input prompts into overlapping segments and aggregating the responses, while the Self-Checks mechanism ensures internal consistency through rephrasing prompts and posing related questions, thereby reducing erroneous outputs. Comprehensive evaluations demonstrated the efficacy of these integrated approaches, highlighting marked improvements in accuracy and reliability across various domains, and emphasizing their potential for deployment in high-stakes environments where the integrity of information is crucial. This research contributes to the advancement of AI technology, providing a robust framework for developing more trustworthy and effective LLMs capable of handling complex and sensitive tasks.",
+  "full_text": null,
+  "topic": "Consistency (knowledge bases)",
+  "concepts": [
+    {
+      "name": "Consistency (knowledge bases)",
+      "score": 0.7801982164382935
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7404957413673401
+    },
+    {
+      "name": "Reliability (semiconductor)",
+      "score": 0.6581487059593201
+    },
+    {
+      "name": "Trustworthiness",
+      "score": 0.6070327162742615
+    },
+    {
+      "name": "Software deployment",
+      "score": 0.5638074278831482
+    },
+    {
+      "name": "Relevance (law)",
+      "score": 0.5257994532585144
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5058810114860535
+    },
+    {
+      "name": "Risk analysis (engineering)",
+      "score": 0.44475057721138
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4252588152885437
+    },
+    {
+      "name": "Data science",
+      "score": 0.3637385070323944
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.3440079689025879
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3246258497238159
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.2767430245876312
+    },
+    {
+      "name": "Computer security",
+      "score": 0.25794702768325806
+    },
+    {
+      "name": "Power (physics)",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

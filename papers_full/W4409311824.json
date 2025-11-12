@@ -1,87 +1,102 @@
 {
-    "title": "Laurel: Unblocking Automated Verification with Large Language Models",
-    "url": "https://openalex.org/W4409311824",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4221412540",
-            "name": "Eric Mugnier",
-            "affiliations": [
-                "UC San Diego Health System"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102678176",
-            "name": "Emmanuel Anaya Gonzalez",
-            "affiliations": [
-                "UC San Diego Health System"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1974217900",
-            "name": "Nadia Polikarpova",
-            "affiliations": [
-                "UC San Diego Health System"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2068611990",
-            "name": "Ranjit Jhala",
-            "affiliations": [
-                "UC San Diego Health System"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117147140",
-            "name": "Zhou Yuan-yuan",
-            "affiliations": [
-                "UC San Diego Health System"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2565255124",
-        "https://openalex.org/W2964150020",
-        "https://openalex.org/W2913530642",
-        "https://openalex.org/W4323027107",
-        "https://openalex.org/W2248270447",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W4313147490",
-        "https://openalex.org/W1480909796",
-        "https://openalex.org/W4305010641",
-        "https://openalex.org/W4226529643",
-        "https://openalex.org/W1820726602",
-        "https://openalex.org/W4389158536",
-        "https://openalex.org/W2069300761",
-        "https://openalex.org/W2149907859",
-        "https://openalex.org/W2128782367",
-        "https://openalex.org/W4368754606",
-        "https://openalex.org/W3210636085",
-        "https://openalex.org/W4362661194",
-        "https://openalex.org/W4379536176",
-        "https://openalex.org/W2130427425",
-        "https://openalex.org/W3122241445",
-        "https://openalex.org/W3156470785",
-        "https://openalex.org/W4391505367",
-        "https://openalex.org/W6930539693",
-        "https://openalex.org/W2964540713",
-        "https://openalex.org/W2919074952",
-        "https://openalex.org/W2165739648",
-        "https://openalex.org/W4399397087",
-        "https://openalex.org/W4285129823",
-        "https://openalex.org/W4400675892",
-        "https://openalex.org/W2267469130",
-        "https://openalex.org/W2316073290",
-        "https://openalex.org/W2971969905",
-        "https://openalex.org/W2793475882",
-        "https://openalex.org/W2139143398",
-        "https://openalex.org/W1970026646",
-        "https://openalex.org/W4384345708",
-        "https://openalex.org/W4402457546",
-        "https://openalex.org/W4283737339",
-        "https://openalex.org/W4383215759",
-        "https://openalex.org/W1976373002"
-    ],
-    "abstract": "Program verifiers such as Dafny automate proofs by outsourcing them to an SMT solver. This automation is not perfect, however, and the solver often requires hints in the form of assertions , creating a burden for the proof engineer. In this paper, we propose , a tool that alleviates this burden by automatically generating assertions using large language models (LLMs). To improve the success rate of LLMs in this task, we design two domain-specific prompting techniques. First, we help the LLM determine the location of the missing assertion by analyzing the verifier’s error message and inserting an assertion placeholder at that location. Second, we provide the LLM with example assertions from the same codebase, which we select based on a new proof similarity metric. We evaluate our techniques on our new benchmark , a dataset of complex lemmas we extracted from three real-world Dafny codebases. Our evaluation shows that is able to generate over 56.6% of the required assertions given only a few attempts, making LLMs an affordable tool for unblocking program verifiers without human intervention.",
-    "full_text": null
+  "title": "Laurel: Unblocking Automated Verification with Large Language Models",
+  "url": "https://openalex.org/W4409311824",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4221412540",
+      "name": "Eric Mugnier",
+      "affiliations": [
+        "UC San Diego Health System"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102678176",
+      "name": "Emmanuel Anaya Gonzalez",
+      "affiliations": [
+        "UC San Diego Health System"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1974217900",
+      "name": "Nadia Polikarpova",
+      "affiliations": [
+        "UC San Diego Health System"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2068611990",
+      "name": "Ranjit Jhala",
+      "affiliations": [
+        "UC San Diego Health System"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117147140",
+      "name": "Zhou Yuan-yuan",
+      "affiliations": [
+        "UC San Diego Health System"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2565255124",
+    "https://openalex.org/W2964150020",
+    "https://openalex.org/W2913530642",
+    "https://openalex.org/W4323027107",
+    "https://openalex.org/W2248270447",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W4313147490",
+    "https://openalex.org/W1480909796",
+    "https://openalex.org/W4305010641",
+    "https://openalex.org/W4226529643",
+    "https://openalex.org/W1820726602",
+    "https://openalex.org/W4389158536",
+    "https://openalex.org/W2069300761",
+    "https://openalex.org/W2149907859",
+    "https://openalex.org/W2128782367",
+    "https://openalex.org/W4368754606",
+    "https://openalex.org/W3210636085",
+    "https://openalex.org/W4362661194",
+    "https://openalex.org/W4379536176",
+    "https://openalex.org/W2130427425",
+    "https://openalex.org/W3122241445",
+    "https://openalex.org/W3156470785",
+    "https://openalex.org/W4391505367",
+    "https://openalex.org/W6930539693",
+    "https://openalex.org/W2964540713",
+    "https://openalex.org/W2919074952",
+    "https://openalex.org/W2165739648",
+    "https://openalex.org/W4399397087",
+    "https://openalex.org/W4285129823",
+    "https://openalex.org/W4400675892",
+    "https://openalex.org/W2267469130",
+    "https://openalex.org/W2316073290",
+    "https://openalex.org/W2971969905",
+    "https://openalex.org/W2793475882",
+    "https://openalex.org/W2139143398",
+    "https://openalex.org/W1970026646",
+    "https://openalex.org/W4384345708",
+    "https://openalex.org/W4402457546",
+    "https://openalex.org/W4283737339",
+    "https://openalex.org/W4383215759",
+    "https://openalex.org/W1976373002"
+  ],
+  "abstract": "Program verifiers such as Dafny automate proofs by outsourcing them to an SMT solver. This automation is not perfect, however, and the solver often requires hints in the form of assertions , creating a burden for the proof engineer. In this paper, we propose , a tool that alleviates this burden by automatically generating assertions using large language models (LLMs). To improve the success rate of LLMs in this task, we design two domain-specific prompting techniques. First, we help the LLM determine the location of the missing assertion by analyzing the verifier’s error message and inserting an assertion placeholder at that location. Second, we provide the LLM with example assertions from the same codebase, which we select based on a new proof similarity metric. We evaluate our techniques on our new benchmark , a dataset of complex lemmas we extracted from three real-world Dafny codebases. Our evaluation shows that is able to generate over 56.6% of the required assertions given only a few attempts, making LLMs an affordable tool for unblocking program verifiers without human intervention.",
+  "full_text": null,
+  "topic": "Natural language processing",
+  "concepts": [
+    {
+      "name": "Natural language processing",
+      "score": 0.5791503190994263
+    },
+    {
+      "name": "Computer science",
+      "score": 0.558332622051239
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3840146064758301
+    }
+  ]
 }

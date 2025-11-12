@@ -1,51 +1,138 @@
 {
-    "title": "EchoBERT: A Transformer-Based Approach for Behavior Detection in Echograms",
-    "url": "https://openalex.org/W3112502222",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2809212274",
-            "name": "Håkon Måløy",
-            "affiliations": [
-                "Norwegian University of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2982993655",
-        "https://openalex.org/W6770112756",
-        "https://openalex.org/W2109553965",
-        "https://openalex.org/W2048410406",
-        "https://openalex.org/W2617972520",
-        "https://openalex.org/W6769125206",
-        "https://openalex.org/W2327562896",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W2777374116",
-        "https://openalex.org/W6771378952",
-        "https://openalex.org/W2007985331",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W1986043091",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W2620760558",
-        "https://openalex.org/W2995839192",
-        "https://openalex.org/W6674330103",
-        "https://openalex.org/W2963587345",
-        "https://openalex.org/W2097929532",
-        "https://openalex.org/W2015452969",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2980407545",
-        "https://openalex.org/W2986178848",
-        "https://openalex.org/W2992525328",
-        "https://openalex.org/W4287995382",
-        "https://openalex.org/W2095705004",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W3094122579"
-    ],
-    "abstract": "Monitoring fish welfare has become increasingly important for salmon farmers. Current approaches require manual labor and physical inspection or interpretation of video. Echo sounders make real-time monitoring of the entire fish population over time possible. However, current approaches for automatic interpretation of echograms mainly focus on species classification and therefore fail to appropriately encode the spatiotemporal properties contained within the data. Other approaches are primarily aimed at the feeding process and require a human-in-the-loop. Transformer-based approaches have been shown to better handle long sequences than Long Short-Term Memory networks in recent Natural Language Processing research. We therefore introduce EchoBERT - Echo Bidirectional Encoder Representation Transformer, a transformer-based approach for behavior detection in farmed Atlantic salmon (Salmo salar, Salmonidae), using the spatiotemporal properties contained in echograms. The model interprets the spatiotemporal dynamics of echograms through attention mechanisms to classify fish behavior. We compare EchoBERT to a traditional sequence modeling approach on the task of detecting behavior indicative of pancreas disease in a six-fold cross-validation study using data from 6 distinct farming cages. We show that EchoBERT shows a strong correlation between model predictions and true labels, indicated by a Matthew's Correlation Coefficient score of 0.694 &#x00B1; 0.178 using an ensemble approach, compared to 0.626 &#x00B1; 0.084 for traditional sequence models. We also find that EchoBERT is capable of detecting disease indicators over a month prior to detection using standard procedures. Our results show that EchoBERT has high potential for automatic behavior detection through unintrusive methods suitable for applications in aquaculture. The source code is available at: https://gitlab.com/hakonma/echobert.",
-    "full_text": null
+  "title": "EchoBERT: A Transformer-Based Approach for Behavior Detection in Echograms",
+  "url": "https://openalex.org/W3112502222",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2809212274",
+      "name": "Håkon Måløy",
+      "affiliations": [
+        "Norwegian University of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2982993655",
+    "https://openalex.org/W6770112756",
+    "https://openalex.org/W2109553965",
+    "https://openalex.org/W2048410406",
+    "https://openalex.org/W2617972520",
+    "https://openalex.org/W6769125206",
+    "https://openalex.org/W2327562896",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W2777374116",
+    "https://openalex.org/W6771378952",
+    "https://openalex.org/W2007985331",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W1986043091",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W2620760558",
+    "https://openalex.org/W2995839192",
+    "https://openalex.org/W6674330103",
+    "https://openalex.org/W2963587345",
+    "https://openalex.org/W2097929532",
+    "https://openalex.org/W2015452969",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2980407545",
+    "https://openalex.org/W2986178848",
+    "https://openalex.org/W2992525328",
+    "https://openalex.org/W4287995382",
+    "https://openalex.org/W2095705004",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W3094122579"
+  ],
+  "abstract": "Monitoring fish welfare has become increasingly important for salmon farmers. Current approaches require manual labor and physical inspection or interpretation of video. Echo sounders make real-time monitoring of the entire fish population over time possible. However, current approaches for automatic interpretation of echograms mainly focus on species classification and therefore fail to appropriately encode the spatiotemporal properties contained within the data. Other approaches are primarily aimed at the feeding process and require a human-in-the-loop. Transformer-based approaches have been shown to better handle long sequences than Long Short-Term Memory networks in recent Natural Language Processing research. We therefore introduce EchoBERT - Echo Bidirectional Encoder Representation Transformer, a transformer-based approach for behavior detection in farmed Atlantic salmon (Salmo salar, Salmonidae), using the spatiotemporal properties contained in echograms. The model interprets the spatiotemporal dynamics of echograms through attention mechanisms to classify fish behavior. We compare EchoBERT to a traditional sequence modeling approach on the task of detecting behavior indicative of pancreas disease in a six-fold cross-validation study using data from 6 distinct farming cages. We show that EchoBERT shows a strong correlation between model predictions and true labels, indicated by a Matthew's Correlation Coefficient score of 0.694 &#x00B1; 0.178 using an ensemble approach, compared to 0.626 &#x00B1; 0.084 for traditional sequence models. We also find that EchoBERT is capable of detecting disease indicators over a month prior to detection using standard procedures. Our results show that EchoBERT has high potential for automatic behavior detection through unintrusive methods suitable for applications in aquaculture. The source code is available at: https://gitlab.com/hakonma/echobert.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7086179852485657
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5302776098251343
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.523216962814331
+    },
+    {
+      "name": "Salmo",
+      "score": 0.4357069134712219
+    },
+    {
+      "name": "ENCODE",
+      "score": 0.4317846894264221
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4237719178199768
+    },
+    {
+      "name": "Population",
+      "score": 0.42195698618888855
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4184940457344055
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.38483110070228577
+    },
+    {
+      "name": "Fish <Actinopterygii>",
+      "score": 0.19548624753952026
+    },
+    {
+      "name": "Fishery",
+      "score": 0.15594112873077393
+    },
+    {
+      "name": "Voltage",
+      "score": 0.11398279666900635
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08979940414428711
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Demography",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

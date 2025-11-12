@@ -1,76 +1,143 @@
 {
-    "title": "Prediction of antibiotic resistance mechanisms using a protein language model",
-    "url": "https://openalex.org/W4402428761",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5096912514",
-            "name": "Kanami Yagimoto",
-            "affiliations": [
-                "Waseda University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2950460091",
-            "name": "Shion Hosoda",
-            "affiliations": [
-                "Hitachi (Japan)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109090207",
-            "name": "Miwa Sato",
-            "affiliations": [
-                "Hitachi (Japan)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122163076",
-            "name": "Michiaki Hamada",
-            "affiliations": [
-                "Waseda University",
-                "Nippon Medical School",
-                "National Institute of Advanced Industrial Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4393237456",
-        "https://openalex.org/W6769556952",
-        "https://openalex.org/W4306871314",
-        "https://openalex.org/W2050339020",
-        "https://openalex.org/W2055043387",
-        "https://openalex.org/W2951274106",
-        "https://openalex.org/W2103017472",
-        "https://openalex.org/W2296199695",
-        "https://openalex.org/W4399693782",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2113790776",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4392686654",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W3170689505",
-        "https://openalex.org/W6807087183",
-        "https://openalex.org/W6685031731",
-        "https://openalex.org/W4323036511",
-        "https://openalex.org/W103447239",
-        "https://openalex.org/W2118688136",
-        "https://openalex.org/W2968322804",
-        "https://openalex.org/W2101291993",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3135303689",
-        "https://openalex.org/W4310641985",
-        "https://openalex.org/W4280625391",
-        "https://openalex.org/W3128120098",
-        "https://openalex.org/W4308616064",
-        "https://openalex.org/W6675354045",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W3216325381",
-        "https://openalex.org/W3211795435",
-        "https://openalex.org/W4388928465",
-        "https://openalex.org/W4225917625",
-        "https://openalex.org/W4391444521"
-    ],
-    "abstract": "Abstract Motivation Antibiotic resistance has emerged as a major global health threat, with an increasing number of bacterial infections becoming difficult to treat. Predicting the underlying resistance mechanisms of antibiotic resistance genes (ARGs) is crucial for understanding and combating this problem. However, existing methods struggle to accurately predict resistance mechanisms for ARGs with low similarity to known sequences and lack sufficient interpretability of the prediction models. Results In this study, we present a novel approach for predicting ARG resistance mechanisms using ProteinBERT, a protein language model (pLM) based on deep learning. Our method outperforms state-of-the-art techniques on diverse ARG datasets, including those with low homology to the training data, highlighting its potential for predicting the resistance mechanisms of unknown ARGs. Attention analysis of the model reveals that it considers biologically relevant features, such as conserved amino acid residues and antibiotic target binding sites, when making predictions. These findings provide valuable insights into the molecular basis of antibiotic resistance and demonstrate the interpretability of pLMs, offering a new perspective on their application in bioinformatics. Availability and implementation The source code is available for free at https://github.com/hmdlab/ARG-BERT. The output results of the model are published at https://waseda.box.com/v/ARG-BERT-suppl.",
-    "full_text": null
+  "title": "Prediction of antibiotic resistance mechanisms using a protein language model",
+  "url": "https://openalex.org/W4402428761",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5096912514",
+      "name": "Kanami Yagimoto",
+      "affiliations": [
+        "Waseda University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2950460091",
+      "name": "Shion Hosoda",
+      "affiliations": [
+        "Hitachi (Japan)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109090207",
+      "name": "Miwa Sato",
+      "affiliations": [
+        "Hitachi (Japan)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122163076",
+      "name": "Michiaki Hamada",
+      "affiliations": [
+        "Waseda University",
+        "Nippon Medical School",
+        "National Institute of Advanced Industrial Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4393237456",
+    "https://openalex.org/W6769556952",
+    "https://openalex.org/W4306871314",
+    "https://openalex.org/W2050339020",
+    "https://openalex.org/W2055043387",
+    "https://openalex.org/W2951274106",
+    "https://openalex.org/W2103017472",
+    "https://openalex.org/W2296199695",
+    "https://openalex.org/W4399693782",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2113790776",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4392686654",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W3170689505",
+    "https://openalex.org/W6807087183",
+    "https://openalex.org/W6685031731",
+    "https://openalex.org/W4323036511",
+    "https://openalex.org/W103447239",
+    "https://openalex.org/W2118688136",
+    "https://openalex.org/W2968322804",
+    "https://openalex.org/W2101291993",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3135303689",
+    "https://openalex.org/W4310641985",
+    "https://openalex.org/W4280625391",
+    "https://openalex.org/W3128120098",
+    "https://openalex.org/W4308616064",
+    "https://openalex.org/W6675354045",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W3216325381",
+    "https://openalex.org/W3211795435",
+    "https://openalex.org/W4388928465",
+    "https://openalex.org/W4225917625",
+    "https://openalex.org/W4391444521"
+  ],
+  "abstract": "Abstract Motivation Antibiotic resistance has emerged as a major global health threat, with an increasing number of bacterial infections becoming difficult to treat. Predicting the underlying resistance mechanisms of antibiotic resistance genes (ARGs) is crucial for understanding and combating this problem. However, existing methods struggle to accurately predict resistance mechanisms for ARGs with low similarity to known sequences and lack sufficient interpretability of the prediction models. Results In this study, we present a novel approach for predicting ARG resistance mechanisms using ProteinBERT, a protein language model (pLM) based on deep learning. Our method outperforms state-of-the-art techniques on diverse ARG datasets, including those with low homology to the training data, highlighting its potential for predicting the resistance mechanisms of unknown ARGs. Attention analysis of the model reveals that it considers biologically relevant features, such as conserved amino acid residues and antibiotic target binding sites, when making predictions. These findings provide valuable insights into the molecular basis of antibiotic resistance and demonstrate the interpretability of pLMs, offering a new perspective on their application in bioinformatics. Availability and implementation The source code is available for free at https://github.com/hmdlab/ARG-BERT. The output results of the model are published at https://waseda.box.com/v/ARG-BERT-suppl.",
+  "full_text": null,
+  "topic": "Interpretability",
+  "concepts": [
+    {
+      "name": "Interpretability",
+      "score": 0.9634125232696533
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6365428566932678
+    },
+    {
+      "name": "Antibiotic resistance",
+      "score": 0.6115419268608093
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5880248546600342
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5384876728057861
+    },
+    {
+      "name": "Source code",
+      "score": 0.5371070504188538
+    },
+    {
+      "name": "Similarity (geometry)",
+      "score": 0.4737725555896759
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4454765319824219
+    },
+    {
+      "name": "Resistance (ecology)",
+      "score": 0.4183095693588257
+    },
+    {
+      "name": "Antibiotics",
+      "score": 0.3758265972137451
+    },
+    {
+      "name": "Data mining",
+      "score": 0.32971349358558655
+    },
+    {
+      "name": "Biology",
+      "score": 0.26812171936035156
+    },
+    {
+      "name": "Genetics",
+      "score": 0.1857810914516449
+    },
+    {
+      "name": "Programming language",
+      "score": 0.15702280402183533
+    },
+    {
+      "name": "Ecology",
+      "score": 0.0
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    }
+  ]
 }

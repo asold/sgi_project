@@ -1,83 +1,130 @@
 {
-    "title": "CoST-UNet: Convolution and swin transformer based deep learning architecture for cardiac segmentation",
-    "url": "https://openalex.org/W4400604353",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100458055",
-            "name": "Md. Rabiul Islam",
-            "affiliations": [
-                "Texas A&M University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2068488440",
-            "name": "Marwa Qaraqe",
-            "affiliations": [
-                "Hamad bin Khalifa University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A323870348",
-            "name": "Erchin Serpedin",
-            "affiliations": [
-                "Texas A&M University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100458055",
-            "name": "Md. Rabiul Islam",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2068488440",
-            "name": "Marwa Qaraqe",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A323870348",
-            "name": "Erchin Serpedin",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4379879059",
-        "https://openalex.org/W3207168755",
-        "https://openalex.org/W3200484382",
-        "https://openalex.org/W2981175948",
-        "https://openalex.org/W4388037661",
-        "https://openalex.org/W3209901427",
-        "https://openalex.org/W6780153151",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W4293163051",
-        "https://openalex.org/W4212875960",
-        "https://openalex.org/W4323357155",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W6848027525",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6795435739",
-        "https://openalex.org/W6857817555",
-        "https://openalex.org/W6809243643",
-        "https://openalex.org/W6798616986",
-        "https://openalex.org/W4220697973",
-        "https://openalex.org/W4303945777",
-        "https://openalex.org/W2915232829",
-        "https://openalex.org/W2804047627",
-        "https://openalex.org/W1993947467",
-        "https://openalex.org/W6651245597",
-        "https://openalex.org/W2160754664",
-        "https://openalex.org/W6639824700",
-        "https://openalex.org/W3093273221",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W3142086527",
-        "https://openalex.org/W4312568229",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4281489883",
-        "https://openalex.org/W3186019569",
-        "https://openalex.org/W4365799978"
-    ],
-    "abstract": "Automatic segmentation of two-dimensional (2D) echocardiogram is beneficial for heart disease diagnosis and assessment. Convolutional Neural Network (CNN) based U-shaped architectures such as UNet have shown remarkable success for medical images segmentation. UNet generally exhibits limitations for seizing long-range dependencies due to the intrinsic locality of the convolution operation. On the contrary, transformer models can capture global-level information using the multi-head attention mechanism. Taken separately these models exhibit limited localization abilities due to insufficient low-level details. To overcome these limitations, this paper proposes the novel vision transformer CoST-UNet (Convolution and Swin Transformer-based U-shaped Network) architecture that incorporates CNN to leverage spatial information from images in the upper layers and transformer to emphasize global contextual insight in the deeper levels. Unlike existing hybrid models like TransUNet and UNETR, the transformer block of the proposed model employs a Swin Transformer backbone, which ensures linear computational complexity relative to image size. Furthermore, the primary barrier to improving the performance of the transformers, which is the lack of medical images, is effectively addressed by incorporating two convolution layers at the network's uppermost level. The experimental results demonstrate that the model achieved state-of-the-art performance on the ultrasound-based CAMUS dataset (by achieving mean Dice Similarity Coefficients of 0.925, 0.851, and 0.895 for segmenting LVendo, LVepi, and LA, respectively, from apical 4CH echocardiograms), as well as competitive results for MRI-based ACDC datasets, due to its effective capture of local and global context.",
-    "full_text": null
+  "title": "CoST-UNet: Convolution and swin transformer based deep learning architecture for cardiac segmentation",
+  "url": "https://openalex.org/W4400604353",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100458055",
+      "name": "Md. Rabiul Islam",
+      "affiliations": [
+        "Texas A&M University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2068488440",
+      "name": "Marwa Qaraqe",
+      "affiliations": [
+        "Hamad bin Khalifa University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A323870348",
+      "name": "Erchin Serpedin",
+      "affiliations": [
+        "Texas A&M University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100458055",
+      "name": "Md. Rabiul Islam",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2068488440",
+      "name": "Marwa Qaraqe",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A323870348",
+      "name": "Erchin Serpedin",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4379879059",
+    "https://openalex.org/W3207168755",
+    "https://openalex.org/W3200484382",
+    "https://openalex.org/W2981175948",
+    "https://openalex.org/W4388037661",
+    "https://openalex.org/W3209901427",
+    "https://openalex.org/W6780153151",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W4293163051",
+    "https://openalex.org/W4212875960",
+    "https://openalex.org/W4323357155",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W6848027525",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6795435739",
+    "https://openalex.org/W6857817555",
+    "https://openalex.org/W6809243643",
+    "https://openalex.org/W6798616986",
+    "https://openalex.org/W4220697973",
+    "https://openalex.org/W4303945777",
+    "https://openalex.org/W2915232829",
+    "https://openalex.org/W2804047627",
+    "https://openalex.org/W1993947467",
+    "https://openalex.org/W6651245597",
+    "https://openalex.org/W2160754664",
+    "https://openalex.org/W6639824700",
+    "https://openalex.org/W3093273221",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W3142086527",
+    "https://openalex.org/W4312568229",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4281489883",
+    "https://openalex.org/W3186019569",
+    "https://openalex.org/W4365799978"
+  ],
+  "abstract": "Automatic segmentation of two-dimensional (2D) echocardiogram is beneficial for heart disease diagnosis and assessment. Convolutional Neural Network (CNN) based U-shaped architectures such as UNet have shown remarkable success for medical images segmentation. UNet generally exhibits limitations for seizing long-range dependencies due to the intrinsic locality of the convolution operation. On the contrary, transformer models can capture global-level information using the multi-head attention mechanism. Taken separately these models exhibit limited localization abilities due to insufficient low-level details. To overcome these limitations, this paper proposes the novel vision transformer CoST-UNet (Convolution and Swin Transformer-based U-shaped Network) architecture that incorporates CNN to leverage spatial information from images in the upper layers and transformer to emphasize global contextual insight in the deeper levels. Unlike existing hybrid models like TransUNet and UNETR, the transformer block of the proposed model employs a Swin Transformer backbone, which ensures linear computational complexity relative to image size. Furthermore, the primary barrier to improving the performance of the transformers, which is the lack of medical images, is effectively addressed by incorporating two convolution layers at the network's uppermost level. The experimental results demonstrate that the model achieved state-of-the-art performance on the ultrasound-based CAMUS dataset (by achieving mean Dice Similarity Coefficients of 0.925, 0.851, and 0.895 for segmenting LVendo, LVepi, and LA, respectively, from apical 4CH echocardiograms), as well as competitive results for MRI-based ACDC datasets, due to its effective capture of local and global context.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7249410152435303
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.702316164970398
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6013802886009216
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.587339460849762
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.575182318687439
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5452589988708496
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.5135705471038818
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.44249817728996277
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

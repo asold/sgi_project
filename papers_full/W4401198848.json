@@ -1,79 +1,118 @@
 {
-    "title": "MedExpQA: Multilingual benchmarking of Large Language Models for Medical Question Answering",
-    "url": "https://openalex.org/W4401198848",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Alonso González, Iñigo Borja",
-            "affiliations": [
-                "University of the Basque Country"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Oronoz Anchordoqui, Maite",
-            "affiliations": [
-                "University of the Basque Country"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Agerri Gascón, Rodrigo",
-            "affiliations": [
-                "University of the Basque Country"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W4385266429",
-        "https://openalex.org/W6852025739",
-        "https://openalex.org/W4380373988",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6810081322",
-        "https://openalex.org/W4394781884",
-        "https://openalex.org/W4297253404",
-        "https://openalex.org/W6767102903",
-        "https://openalex.org/W2970986790",
-        "https://openalex.org/W6764040829",
-        "https://openalex.org/W6770424080",
-        "https://openalex.org/W3162922479",
-        "https://openalex.org/W6810108873",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W4391221150",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W4252076394",
-        "https://openalex.org/W4388409299",
-        "https://openalex.org/W6775750170",
-        "https://openalex.org/W6853920016",
-        "https://openalex.org/W6854034802",
-        "https://openalex.org/W6681650935",
-        "https://openalex.org/W6769243733",
-        "https://openalex.org/W6682123351",
-        "https://openalex.org/W6796581206",
-        "https://openalex.org/W2167277498",
-        "https://openalex.org/W4402670290",
-        "https://openalex.org/W4366327625",
-        "https://openalex.org/W4245260356",
-        "https://openalex.org/W4377009978",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4367623495",
-        "https://openalex.org/W4360891289",
-        "https://openalex.org/W4381930847",
-        "https://openalex.org/W4402966917",
-        "https://openalex.org/W4234477270",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W3168090480",
-        "https://openalex.org/W4381253519",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4388482013",
-        "https://openalex.org/W4391940656",
-        "https://openalex.org/W4205098185",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4389301995"
-    ],
-    "abstract": "Large Language Models (LLMs) have the potential of facilitating the development of Artificial Intelligence technology to assist medical experts for interactive decision support. This potential has been illustrated by the state-of-the-art performance obtained by LLMs in Medical Question Answering, with striking results such as passing marks in licensing medical exams. However, while impressive, the required quality bar for medical applications remains far from being achieved. Currently, LLMs remain challenged by outdated knowledge and by their tendency to generate hallucinated content. Furthermore, most benchmarks to assess medical knowledge lack reference gold explanations which means that it is not possible to evaluate the reasoning of LLMs predictions. Finally, the situation is particularly grim if we consider benchmarking LLMs for languages other than English which remains, as far as we know, a totally neglected topic. In order to address these shortcomings, in this paper we present MedExpQA, the first multilingual benchmark based on medical exams to evaluate LLMs in Medical Question Answering. To the best of our knowledge, MedExpQA includes for the first time reference gold explanations, written by medical doctors, of the correct and incorrect options in the exams. Comprehensive multilingual experimentation using both the gold reference explanations and Retrieval Augmented Generation (RAG) approaches show that performance of LLMs, with best results around 75 accuracy for English, still has large room for improvement, especially for languages other than English, for which accuracy drops 10 points. Therefore, despite using state-of-the-art RAG methods, our results also demonstrate the difficulty of obtaining and integrating readily available medical knowledge that may positively impact results on downstream evaluations for Medical Question Answering. Data, code, and fine-tuned models will be made publicly available.<sup>1</sup>.",
-    "full_text": null
+  "title": "MedExpQA: Multilingual benchmarking of Large Language Models for Medical Question Answering",
+  "url": "https://openalex.org/W4401198848",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Alonso González, Iñigo Borja",
+      "affiliations": [
+        "University of the Basque Country"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Oronoz Anchordoqui, Maite",
+      "affiliations": [
+        "University of the Basque Country"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Agerri Gascón, Rodrigo",
+      "affiliations": [
+        "University of the Basque Country"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W4385266429",
+    "https://openalex.org/W6852025739",
+    "https://openalex.org/W4380373988",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6810081322",
+    "https://openalex.org/W4394781884",
+    "https://openalex.org/W4297253404",
+    "https://openalex.org/W6767102903",
+    "https://openalex.org/W2970986790",
+    "https://openalex.org/W6764040829",
+    "https://openalex.org/W6770424080",
+    "https://openalex.org/W3162922479",
+    "https://openalex.org/W6810108873",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W4391221150",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W4252076394",
+    "https://openalex.org/W4388409299",
+    "https://openalex.org/W6775750170",
+    "https://openalex.org/W6853920016",
+    "https://openalex.org/W6854034802",
+    "https://openalex.org/W6681650935",
+    "https://openalex.org/W6769243733",
+    "https://openalex.org/W6682123351",
+    "https://openalex.org/W6796581206",
+    "https://openalex.org/W2167277498",
+    "https://openalex.org/W4402670290",
+    "https://openalex.org/W4366327625",
+    "https://openalex.org/W4245260356",
+    "https://openalex.org/W4377009978",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4367623495",
+    "https://openalex.org/W4360891289",
+    "https://openalex.org/W4381930847",
+    "https://openalex.org/W4402966917",
+    "https://openalex.org/W4234477270",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W3168090480",
+    "https://openalex.org/W4381253519",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4388482013",
+    "https://openalex.org/W4391940656",
+    "https://openalex.org/W4205098185",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4389301995"
+  ],
+  "abstract": "Large Language Models (LLMs) have the potential of facilitating the development of Artificial Intelligence technology to assist medical experts for interactive decision support. This potential has been illustrated by the state-of-the-art performance obtained by LLMs in Medical Question Answering, with striking results such as passing marks in licensing medical exams. However, while impressive, the required quality bar for medical applications remains far from being achieved. Currently, LLMs remain challenged by outdated knowledge and by their tendency to generate hallucinated content. Furthermore, most benchmarks to assess medical knowledge lack reference gold explanations which means that it is not possible to evaluate the reasoning of LLMs predictions. Finally, the situation is particularly grim if we consider benchmarking LLMs for languages other than English which remains, as far as we know, a totally neglected topic. In order to address these shortcomings, in this paper we present MedExpQA, the first multilingual benchmark based on medical exams to evaluate LLMs in Medical Question Answering. To the best of our knowledge, MedExpQA includes for the first time reference gold explanations, written by medical doctors, of the correct and incorrect options in the exams. Comprehensive multilingual experimentation using both the gold reference explanations and Retrieval Augmented Generation (RAG) approaches show that performance of LLMs, with best results around 75 accuracy for English, still has large room for improvement, especially for languages other than English, for which accuracy drops 10 points. Therefore, despite using state-of-the-art RAG methods, our results also demonstrate the difficulty of obtaining and integrating readily available medical knowledge that may positively impact results on downstream evaluations for Medical Question Answering. Data, code, and fine-tuned models will be made publicly available.<sup>1</sup>.",
+  "full_text": null,
+  "topic": "Benchmarking",
+  "concepts": [
+    {
+      "name": "Benchmarking",
+      "score": 0.787132978439331
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.6839861869812012
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6184930801391602
+    },
+    {
+      "name": "Data science",
+      "score": 0.34697335958480835
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3317475914955139
+    },
+    {
+      "name": "Business",
+      "score": 0.10269683599472046
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Marketing",
+      "score": 0.0
+    }
+  ]
 }

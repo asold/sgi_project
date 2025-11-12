@@ -1,142 +1,193 @@
 {
-    "title": "ViTT: Vision Transformer Tracker",
-    "url": "https://openalex.org/W3194820837",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2115852315",
-            "name": "Xiaoning Zhu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2334305303",
-            "name": "Yannan Jia",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1911566220",
-            "name": "Sun Jian",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2162949209",
-            "name": "Lize Gu",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104835249",
-            "name": "Zhang, Pu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115852315",
-            "name": "Xiaoning Zhu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2334305303",
-            "name": "Yannan Jia",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1911566220",
-            "name": "Sun Jian",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2162949209",
-            "name": "Lize Gu",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104835249",
-            "name": "Zhang, Pu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2100495367",
-        "https://openalex.org/W2102605133",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W2925554975",
-        "https://openalex.org/W2972656576",
-        "https://openalex.org/W3090573937",
-        "https://openalex.org/W2252355370",
-        "https://openalex.org/W2603203130",
-        "https://openalex.org/W2964019074",
-        "https://openalex.org/W2886581236",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2204750386",
-        "https://openalex.org/W2964289004",
-        "https://openalex.org/W3106763294",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3119686997",
-        "https://openalex.org/W2944255943",
-        "https://openalex.org/W6763509872",
-        "https://openalex.org/W6779879114",
-        "https://openalex.org/W2913314773",
-        "https://openalex.org/W2222512263",
-        "https://openalex.org/W6769075430",
-        "https://openalex.org/W3095753995",
-        "https://openalex.org/W2618011341",
-        "https://openalex.org/W2096733369",
-        "https://openalex.org/W2963901085",
-        "https://openalex.org/W2963574614",
-        "https://openalex.org/W4230498685",
-        "https://openalex.org/W2150298366",
-        "https://openalex.org/W2594507094",
-        "https://openalex.org/W2902137659",
-        "https://openalex.org/W2534578893",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2989226908",
-        "https://openalex.org/W2291627510",
-        "https://openalex.org/W2981393651",
-        "https://openalex.org/W2935837427",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W2951655307",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W2963677766",
-        "https://openalex.org/W2976466812",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W2107775979",
-        "https://openalex.org/W2949120105",
-        "https://openalex.org/W2950325590",
-        "https://openalex.org/W3104218139",
-        "https://openalex.org/W3030520226",
-        "https://openalex.org/W3034445277",
-        "https://openalex.org/W3039817009",
-        "https://openalex.org/W2991213871",
-        "https://openalex.org/W2950739196",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W3115390238",
-        "https://openalex.org/W3103005696"
-    ],
-    "abstract": "This paper presents a new model for multi-object tracking (MOT) with a transformer. MOT is a spatiotemporal correlation task among interest objects and one of the crucial technologies of multi-unmanned aerial vehicles (Multi-UAV). The transformer is a self-attentional codec architecture that has been successfully used in natural language processing and is emerging in computer vision. This study proposes the Vision Transformer Tracker (ViTT), which uses a transformer encoder as the backbone and takes images directly as input. Compared with convolution networks, it can model global context at every encoder layer from the beginning, which addresses the challenges of occlusion and complex scenarios. The model simultaneously outputs object locations and corresponding appearance embeddings in a shared network through multi-task learning. Our work demonstrates the superiority and effectiveness of transformer-based networks in complex computer vision tasks and paves the way for applying the pure transformer in MOT. We evaluated the proposed model on the MOT16 dataset, achieving 65.7% MOTA, and obtained a competitive result compared with other typical multi-object trackers.",
-    "full_text": null
+  "title": "ViTT: Vision Transformer Tracker",
+  "url": "https://openalex.org/W3194820837",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2115852315",
+      "name": "Xiaoning Zhu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2334305303",
+      "name": "Yannan Jia",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1911566220",
+      "name": "Sun Jian",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2162949209",
+      "name": "Lize Gu",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104835249",
+      "name": "Zhang, Pu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115852315",
+      "name": "Xiaoning Zhu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2334305303",
+      "name": "Yannan Jia",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1911566220",
+      "name": "Sun Jian",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2162949209",
+      "name": "Lize Gu",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104835249",
+      "name": "Zhang, Pu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2100495367",
+    "https://openalex.org/W2102605133",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W2925554975",
+    "https://openalex.org/W2972656576",
+    "https://openalex.org/W3090573937",
+    "https://openalex.org/W2252355370",
+    "https://openalex.org/W2603203130",
+    "https://openalex.org/W2964019074",
+    "https://openalex.org/W2886581236",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2204750386",
+    "https://openalex.org/W2964289004",
+    "https://openalex.org/W3106763294",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3119686997",
+    "https://openalex.org/W2944255943",
+    "https://openalex.org/W6763509872",
+    "https://openalex.org/W6779879114",
+    "https://openalex.org/W2913314773",
+    "https://openalex.org/W2222512263",
+    "https://openalex.org/W6769075430",
+    "https://openalex.org/W3095753995",
+    "https://openalex.org/W2618011341",
+    "https://openalex.org/W2096733369",
+    "https://openalex.org/W2963901085",
+    "https://openalex.org/W2963574614",
+    "https://openalex.org/W4230498685",
+    "https://openalex.org/W2150298366",
+    "https://openalex.org/W2594507094",
+    "https://openalex.org/W2902137659",
+    "https://openalex.org/W2534578893",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2989226908",
+    "https://openalex.org/W2291627510",
+    "https://openalex.org/W2981393651",
+    "https://openalex.org/W2935837427",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W2951655307",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W2963677766",
+    "https://openalex.org/W2976466812",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W2107775979",
+    "https://openalex.org/W2949120105",
+    "https://openalex.org/W2950325590",
+    "https://openalex.org/W3104218139",
+    "https://openalex.org/W3030520226",
+    "https://openalex.org/W3034445277",
+    "https://openalex.org/W3039817009",
+    "https://openalex.org/W2991213871",
+    "https://openalex.org/W2950739196",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W3115390238",
+    "https://openalex.org/W3103005696"
+  ],
+  "abstract": "This paper presents a new model for multi-object tracking (MOT) with a transformer. MOT is a spatiotemporal correlation task among interest objects and one of the crucial technologies of multi-unmanned aerial vehicles (Multi-UAV). The transformer is a self-attentional codec architecture that has been successfully used in natural language processing and is emerging in computer vision. This study proposes the Vision Transformer Tracker (ViTT), which uses a transformer encoder as the backbone and takes images directly as input. Compared with convolution networks, it can model global context at every encoder layer from the beginning, which addresses the challenges of occlusion and complex scenarios. The model simultaneously outputs object locations and corresponding appearance embeddings in a shared network through multi-task learning. Our work demonstrates the superiority and effectiveness of transformer-based networks in complex computer vision tasks and paves the way for applying the pure transformer in MOT. We evaluated the proposed model on the MOT16 dataset, achieving 65.7% MOTA, and obtained a competitive result compared with other typical multi-object trackers.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.6727798581123352
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6643321514129639
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5591292381286621
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4563279151916504
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.44967347383499146
+    },
+    {
+      "name": "BitTorrent tracker",
+      "score": 0.4101182222366333
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.32271838188171387
+    },
+    {
+      "name": "Eye tracking",
+      "score": 0.26134711503982544
+    },
+    {
+      "name": "Engineering",
+      "score": 0.23601683974266052
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.09071564674377441
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

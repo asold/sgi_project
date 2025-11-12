@@ -1,78 +1,137 @@
 {
-    "title": "Bidirectional Transformer GAN for Long-term Human Motion Prediction",
-    "url": "https://openalex.org/W4315491145",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5001187336",
-            "name": "Zhao My",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4209277408",
-            "name": "Tang H",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4209412330",
-            "name": "Xie P",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5088363930",
-            "name": "Dai Sl",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4366583723",
-            "name": "Sebe, N.",
-            "affiliations": [
-                "University of Trento"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2293285133",
-            "name": "Wang W",
-            "affiliations": [
-                "University of Trento"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2584009249",
-        "https://openalex.org/W3196198596",
-        "https://openalex.org/W2141049796",
-        "https://openalex.org/W2101032778",
-        "https://openalex.org/W2963165299",
-        "https://openalex.org/W6788556936",
-        "https://openalex.org/W1483019628",
-        "https://openalex.org/W2963548793",
-        "https://openalex.org/W3035545045",
-        "https://openalex.org/W2613864254",
-        "https://openalex.org/W3207054996",
-        "https://openalex.org/W4214931354",
-        "https://openalex.org/W2964203186",
-        "https://openalex.org/W3213100861",
-        "https://openalex.org/W3092950464",
-        "https://openalex.org/W3207234065",
-        "https://openalex.org/W2802025241",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W3212852649",
-        "https://openalex.org/W2962793481",
-        "https://openalex.org/W3207520933",
-        "https://openalex.org/W2186222003",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W4236965008"
-    ],
-    "abstract": "The mainstream motion prediction methods usually focus on short-term prediction, and their predicted long-term motions often fall into an average pose, i.e., the freezing forecasting problem [ 27 ]. To mitigate this problem, we propose a novel Bidirectional Transformer-based Generative Adversarial Network (BiTGAN) for long-term human motion prediction. The bidirectional setup leads to consistent and smooth generation in both forward and backward directions. Besides, to make full use of the history motions, we split them into two parts. The first part is fed to the Transformer encoder in our BiTGAN while the second part is used as the decoder input. This strategy can alleviate the exposure problem [ 37 ]. Additionally, to better maintain both the local (i.e., frame-level pose) and global (i.e., video-level semantic) similarities between the predicted motion sequence and the real one, the soft dynamic time warping (Soft-DTW) loss is introduced into the generator. Finally, we utilize a dual-discriminator to distinguish the predicted sequence at both frame and sequence levels. Extensive experiments on the public Human3.6M dataset demonstrate that our proposed BiTGAN achieves state-of-the-art performance on long-term (4 s ) human motion prediction, and reduces the average error of all actions by 4%.",
-    "full_text": null
+  "title": "Bidirectional Transformer GAN for Long-term Human Motion Prediction",
+  "url": "https://openalex.org/W4315491145",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5001187336",
+      "name": "Zhao My",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4209277408",
+      "name": "Tang H",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4209412330",
+      "name": "Xie P",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5088363930",
+      "name": "Dai Sl",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4366583723",
+      "name": "Sebe, N.",
+      "affiliations": [
+        "University of Trento"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2293285133",
+      "name": "Wang W",
+      "affiliations": [
+        "University of Trento"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2584009249",
+    "https://openalex.org/W3196198596",
+    "https://openalex.org/W2141049796",
+    "https://openalex.org/W2101032778",
+    "https://openalex.org/W2963165299",
+    "https://openalex.org/W6788556936",
+    "https://openalex.org/W1483019628",
+    "https://openalex.org/W2963548793",
+    "https://openalex.org/W3035545045",
+    "https://openalex.org/W2613864254",
+    "https://openalex.org/W3207054996",
+    "https://openalex.org/W4214931354",
+    "https://openalex.org/W2964203186",
+    "https://openalex.org/W3213100861",
+    "https://openalex.org/W3092950464",
+    "https://openalex.org/W3207234065",
+    "https://openalex.org/W2802025241",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W3212852649",
+    "https://openalex.org/W2962793481",
+    "https://openalex.org/W3207520933",
+    "https://openalex.org/W2186222003",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W4236965008"
+  ],
+  "abstract": "The mainstream motion prediction methods usually focus on short-term prediction, and their predicted long-term motions often fall into an average pose, i.e., the freezing forecasting problem [ 27 ]. To mitigate this problem, we propose a novel Bidirectional Transformer-based Generative Adversarial Network (BiTGAN) for long-term human motion prediction. The bidirectional setup leads to consistent and smooth generation in both forward and backward directions. Besides, to make full use of the history motions, we split them into two parts. The first part is fed to the Transformer encoder in our BiTGAN while the second part is used as the decoder input. This strategy can alleviate the exposure problem [ 37 ]. Additionally, to better maintain both the local (i.e., frame-level pose) and global (i.e., video-level semantic) similarities between the predicted motion sequence and the real one, the soft dynamic time warping (Soft-DTW) loss is introduced into the generator. Finally, we utilize a dual-discriminator to distinguish the predicted sequence at both frame and sequence levels. Extensive experiments on the public Human3.6M dataset demonstrate that our proposed BiTGAN achieves state-of-the-art performance on long-term (4 s ) human motion prediction, and reduces the average error of all actions by 4%.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7029573917388916
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6942674517631531
+    },
+    {
+      "name": "Dynamic time warping",
+      "score": 0.6551854014396667
+    },
+    {
+      "name": "Image warping",
+      "score": 0.634228527545929
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5808230042457581
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5228936076164246
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.46025407314300537
+    },
+    {
+      "name": "Term (time)",
+      "score": 0.41788405179977417
+    },
+    {
+      "name": "Engineering",
+      "score": 0.16379740834236145
+    },
+    {
+      "name": "Voltage",
+      "score": 0.11836344003677368
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

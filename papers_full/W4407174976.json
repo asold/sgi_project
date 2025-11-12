@@ -1,69 +1,124 @@
 {
-    "title": "Large language models generating synthetic clinical datasets: a feasibility and comparative analysis with real-world perioperative data",
-    "url": "https://openalex.org/W4407174976",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3158640584",
-            "name": "Austin A Barr",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2323809082",
-            "name": "Joshua Quan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4208650056",
-            "name": "Eddie Guo",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1971732328",
-            "name": "Emre Sezgin",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2961396908",
-        "https://openalex.org/W6760105176",
-        "https://openalex.org/W3192478323",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4398224360",
-        "https://openalex.org/W6782338924",
-        "https://openalex.org/W3041938240",
-        "https://openalex.org/W4382654846",
-        "https://openalex.org/W3091951858",
-        "https://openalex.org/W4224311959",
-        "https://openalex.org/W3022574011",
-        "https://openalex.org/W3096831136",
-        "https://openalex.org/W4366549000",
-        "https://openalex.org/W4300579659",
-        "https://openalex.org/W4404330874",
-        "https://openalex.org/W4385515870",
-        "https://openalex.org/W4229446766",
-        "https://openalex.org/W4311415873",
-        "https://openalex.org/W4281878921",
-        "https://openalex.org/W3178751578",
-        "https://openalex.org/W2580456502",
-        "https://openalex.org/W4391644915",
-        "https://openalex.org/W4387425757",
-        "https://openalex.org/W1983005394",
-        "https://openalex.org/W1606824532",
-        "https://openalex.org/W3040893072",
-        "https://openalex.org/W3175134484",
-        "https://openalex.org/W4306175122",
-        "https://openalex.org/W4388896754",
-        "https://openalex.org/W3091123787",
-        "https://openalex.org/W2735869285",
-        "https://openalex.org/W4392710543",
-        "https://openalex.org/W4363676096",
-        "https://openalex.org/W1983033421",
-        "https://openalex.org/W3007935259",
-        "https://openalex.org/W4310917402",
-        "https://openalex.org/W2918975802",
-        "https://openalex.org/W3071470454"
-    ],
-    "abstract": "Background Clinical data is instrumental to medical research, machine learning (ML) model development, and advancing surgical care, but access is often constrained by privacy regulations and missing data. Synthetic data offers a promising solution to preserve privacy while enabling broader data access. Recent advances in large language models (LLMs) provide an opportunity to generate synthetic data with reduced reliance on domain expertise, computational resources, and pre-training. Objective This study aims to assess the feasibility of generating realistic tabular clinical data with OpenAI’s GPT-4o using zero-shot prompting, and evaluate the fidelity of LLM-generated data by comparing its statistical properties to the Vital Signs DataBase (VitalDB), a real-world open-source perioperative dataset. Methods In Phase 1, GPT-4o was prompted to generate a dataset with qualitative descriptions of 13 clinical parameters. The resultant data was assessed for general errors, plausibility of outputs, and cross-verification of related parameters. In Phase 2, GPT-4o was prompted to generate a dataset using descriptive statistics of the VitalDB dataset. Fidelity was assessed using two-sample t -tests, two-sample proportion tests, and 95% confidence interval (CI) overlap. Results In Phase 1, GPT-4o generated a complete and structured dataset comprising 6,166 case files. The dataset was plausible in range and correctly calculated body mass index for all case files based on respective heights and weights. Statistical comparison between the LLM-generated datasets and VitalDB revealed that Phase 2 data achieved significant fidelity. Phase 2 data demonstrated statistical similarity in 12/13 (92.31%) parameters, whereby no statistically significant differences were observed in 6/6 (100.0%) categorical/binary and 6/7 (85.71%) continuous parameters. Overlap of 95% CIs were observed in 6/7 (85.71%) continuous parameters. Conclusion Zero-shot prompting with GPT-4o can generate realistic tabular synthetic datasets, which can replicate key statistical properties of real-world perioperative data. This study highlights the potential of LLMs as a novel and accessible modality for synthetic data generation, which may address critical barriers in clinical data access and eliminate the need for technical expertise, extensive computational resources, and pre-training. Further research is warranted to enhance fidelity and investigate the use of LLMs to amplify and augment datasets, preserve multivariate relationships, and train robust ML models.",
-    "full_text": null
+  "title": "Large language models generating synthetic clinical datasets: a feasibility and comparative analysis with real-world perioperative data",
+  "url": "https://openalex.org/W4407174976",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3158640584",
+      "name": "Austin A Barr",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2323809082",
+      "name": "Joshua Quan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4208650056",
+      "name": "Eddie Guo",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1971732328",
+      "name": "Emre Sezgin",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2961396908",
+    "https://openalex.org/W6760105176",
+    "https://openalex.org/W3192478323",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4398224360",
+    "https://openalex.org/W6782338924",
+    "https://openalex.org/W3041938240",
+    "https://openalex.org/W4382654846",
+    "https://openalex.org/W3091951858",
+    "https://openalex.org/W4224311959",
+    "https://openalex.org/W3022574011",
+    "https://openalex.org/W3096831136",
+    "https://openalex.org/W4366549000",
+    "https://openalex.org/W4300579659",
+    "https://openalex.org/W4404330874",
+    "https://openalex.org/W4385515870",
+    "https://openalex.org/W4229446766",
+    "https://openalex.org/W4311415873",
+    "https://openalex.org/W4281878921",
+    "https://openalex.org/W3178751578",
+    "https://openalex.org/W2580456502",
+    "https://openalex.org/W4391644915",
+    "https://openalex.org/W4387425757",
+    "https://openalex.org/W1983005394",
+    "https://openalex.org/W1606824532",
+    "https://openalex.org/W3040893072",
+    "https://openalex.org/W3175134484",
+    "https://openalex.org/W4306175122",
+    "https://openalex.org/W4388896754",
+    "https://openalex.org/W3091123787",
+    "https://openalex.org/W2735869285",
+    "https://openalex.org/W4392710543",
+    "https://openalex.org/W4363676096",
+    "https://openalex.org/W1983033421",
+    "https://openalex.org/W3007935259",
+    "https://openalex.org/W4310917402",
+    "https://openalex.org/W2918975802",
+    "https://openalex.org/W3071470454"
+  ],
+  "abstract": "Background Clinical data is instrumental to medical research, machine learning (ML) model development, and advancing surgical care, but access is often constrained by privacy regulations and missing data. Synthetic data offers a promising solution to preserve privacy while enabling broader data access. Recent advances in large language models (LLMs) provide an opportunity to generate synthetic data with reduced reliance on domain expertise, computational resources, and pre-training. Objective This study aims to assess the feasibility of generating realistic tabular clinical data with OpenAI’s GPT-4o using zero-shot prompting, and evaluate the fidelity of LLM-generated data by comparing its statistical properties to the Vital Signs DataBase (VitalDB), a real-world open-source perioperative dataset. Methods In Phase 1, GPT-4o was prompted to generate a dataset with qualitative descriptions of 13 clinical parameters. The resultant data was assessed for general errors, plausibility of outputs, and cross-verification of related parameters. In Phase 2, GPT-4o was prompted to generate a dataset using descriptive statistics of the VitalDB dataset. Fidelity was assessed using two-sample t -tests, two-sample proportion tests, and 95% confidence interval (CI) overlap. Results In Phase 1, GPT-4o generated a complete and structured dataset comprising 6,166 case files. The dataset was plausible in range and correctly calculated body mass index for all case files based on respective heights and weights. Statistical comparison between the LLM-generated datasets and VitalDB revealed that Phase 2 data achieved significant fidelity. Phase 2 data demonstrated statistical similarity in 12/13 (92.31%) parameters, whereby no statistically significant differences were observed in 6/6 (100.0%) categorical/binary and 6/7 (85.71%) continuous parameters. Overlap of 95% CIs were observed in 6/7 (85.71%) continuous parameters. Conclusion Zero-shot prompting with GPT-4o can generate realistic tabular synthetic datasets, which can replicate key statistical properties of real-world perioperative data. This study highlights the potential of LLMs as a novel and accessible modality for synthetic data generation, which may address critical barriers in clinical data access and eliminate the need for technical expertise, extensive computational resources, and pre-training. Further research is warranted to enhance fidelity and investigate the use of LLMs to amplify and augment datasets, preserve multivariate relationships, and train robust ML models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6541925668716431
+    },
+    {
+      "name": "Fidelity",
+      "score": 0.5899946093559265
+    },
+    {
+      "name": "Data mining",
+      "score": 0.5194070339202881
+    },
+    {
+      "name": "Sample (material)",
+      "score": 0.5062126517295837
+    },
+    {
+      "name": "Missing data",
+      "score": 0.46879395842552185
+    },
+    {
+      "name": "Sample size determination",
+      "score": 0.44288215041160583
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3676404654979706
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.360623836517334
+    },
+    {
+      "name": "Statistics",
+      "score": 0.2908821105957031
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.13727182149887085
+    },
+    {
+      "name": "Chromatography",
+      "score": 0.0
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    }
+  ]
 }

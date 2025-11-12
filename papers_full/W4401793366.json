@@ -1,81 +1,152 @@
 {
-    "title": "Automated Extraction of Patient-Centered Outcomes After Breast Cancer Treatment: An Open-Source Large Language Model–Based Toolkit",
-    "url": "https://openalex.org/W4401793366",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2103670821",
-            "name": "Man Luo",
-            "affiliations": [
-                "Mayo Clinic Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2933101254",
-            "name": "Shubham Trivedi",
-            "affiliations": [
-                "Mayo Clinic Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115370190",
-            "name": "Allison W. Kurian",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2030471998",
-            "name": "Kevin Ward",
-            "affiliations": [
-                "University of California, Davis"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106293100",
-            "name": "Theresa H.M. Keegan",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2095595336",
-            "name": "Daniel Rubin",
-            "affiliations": [
-                "Emory University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122079672",
-            "name": "Imon Banerjee",
-            "affiliations": [
-                "Arizona State University",
-                "Mayo Clinic Hospital"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2942893411",
-        "https://openalex.org/W2170783721",
-        "https://openalex.org/W2747585789",
-        "https://openalex.org/W2114574065",
-        "https://openalex.org/W2995417818",
-        "https://openalex.org/W2070183833",
-        "https://openalex.org/W2329099948",
-        "https://openalex.org/W2033728406",
-        "https://openalex.org/W2787969497",
-        "https://openalex.org/W2897376593",
-        "https://openalex.org/W4379883463",
-        "https://openalex.org/W4312220150",
-        "https://openalex.org/W3027260829",
-        "https://openalex.org/W4320065330",
-        "https://openalex.org/W4386932783",
-        "https://openalex.org/W4297253404",
-        "https://openalex.org/W2009637031",
-        "https://openalex.org/W4386352380",
-        "https://openalex.org/W4388759569",
-        "https://openalex.org/W4389513553"
-    ],
-    "abstract": "PURPOSE Patient-centered outcomes (PCOs) are pivotal in cancer treatment, as they directly reflect patients' quality of life. Although multiple studies suggest that factors affecting breast cancer–related morbidity and survival are influenced by treatment side effects and adherence to long-term treatment, such data are generally only available on a smaller scale or from a single center. The primary challenge with collecting these data is that the outcomes are captured as free text in clinical narratives written by clinicians. MATERIALS AND METHODS Given the complexity of PCO documentation in these narratives, computerized methods are necessary to unlock the wealth of information buried in unstructured text notes that often document PCOs. Inspired by the success of large language models (LLMs), we examined the adaptability of three LLMs, GPT-2, BioGPT, and PMC-LLaMA, on PCO tasks across three institutions, Mayo Clinic, Emory University Hospital, and Stanford University. We developed an open-source framework for fine-tuning LLM that can directly extract the five different categories of PCO from the clinic notes. RESULTS We found that these LLMs without fine-tuning (zero-shot) struggle with challenging PCO extraction tasks, displaying almost random performance, even with some task-specific examples (few-shot learning). The performance of our fine-tuned, task-specific models is notably superior compared with their non–fine-tuned LLM models. Moreover, the fine-tuned GPT-2 model has demonstrated a significantly better performance than the other two larger LLMs. CONCLUSION Our discovery indicates that although LLMs serve as effective general-purpose models for tasks across various domains, they require fine-tuning when applied to the clinician domain. Our proposed approach has the potential to lead more efficient, adaptable models for PCO information extraction, reducing reliance on extensive computational resources while still delivering superior performance for specific tasks.",
-    "full_text": null
+  "title": "Automated Extraction of Patient-Centered Outcomes After Breast Cancer Treatment: An Open-Source Large Language Model–Based Toolkit",
+  "url": "https://openalex.org/W4401793366",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2103670821",
+      "name": "Man Luo",
+      "affiliations": [
+        "Mayo Clinic Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2933101254",
+      "name": "Shubham Trivedi",
+      "affiliations": [
+        "Mayo Clinic Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115370190",
+      "name": "Allison W. Kurian",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2030471998",
+      "name": "Kevin Ward",
+      "affiliations": [
+        "University of California, Davis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106293100",
+      "name": "Theresa H.M. Keegan",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2095595336",
+      "name": "Daniel Rubin",
+      "affiliations": [
+        "Emory University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122079672",
+      "name": "Imon Banerjee",
+      "affiliations": [
+        "Arizona State University",
+        "Mayo Clinic Hospital"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2942893411",
+    "https://openalex.org/W2170783721",
+    "https://openalex.org/W2747585789",
+    "https://openalex.org/W2114574065",
+    "https://openalex.org/W2995417818",
+    "https://openalex.org/W2070183833",
+    "https://openalex.org/W2329099948",
+    "https://openalex.org/W2033728406",
+    "https://openalex.org/W2787969497",
+    "https://openalex.org/W2897376593",
+    "https://openalex.org/W4379883463",
+    "https://openalex.org/W4312220150",
+    "https://openalex.org/W3027260829",
+    "https://openalex.org/W4320065330",
+    "https://openalex.org/W4386932783",
+    "https://openalex.org/W4297253404",
+    "https://openalex.org/W2009637031",
+    "https://openalex.org/W4386352380",
+    "https://openalex.org/W4388759569",
+    "https://openalex.org/W4389513553"
+  ],
+  "abstract": "PURPOSE Patient-centered outcomes (PCOs) are pivotal in cancer treatment, as they directly reflect patients' quality of life. Although multiple studies suggest that factors affecting breast cancer–related morbidity and survival are influenced by treatment side effects and adherence to long-term treatment, such data are generally only available on a smaller scale or from a single center. The primary challenge with collecting these data is that the outcomes are captured as free text in clinical narratives written by clinicians. MATERIALS AND METHODS Given the complexity of PCO documentation in these narratives, computerized methods are necessary to unlock the wealth of information buried in unstructured text notes that often document PCOs. Inspired by the success of large language models (LLMs), we examined the adaptability of three LLMs, GPT-2, BioGPT, and PMC-LLaMA, on PCO tasks across three institutions, Mayo Clinic, Emory University Hospital, and Stanford University. We developed an open-source framework for fine-tuning LLM that can directly extract the five different categories of PCO from the clinic notes. RESULTS We found that these LLMs without fine-tuning (zero-shot) struggle with challenging PCO extraction tasks, displaying almost random performance, even with some task-specific examples (few-shot learning). The performance of our fine-tuned, task-specific models is notably superior compared with their non–fine-tuned LLM models. Moreover, the fine-tuned GPT-2 model has demonstrated a significantly better performance than the other two larger LLMs. CONCLUSION Our discovery indicates that although LLMs serve as effective general-purpose models for tasks across various domains, they require fine-tuning when applied to the clinician domain. Our proposed approach has the potential to lead more efficient, adaptable models for PCO information extraction, reducing reliance on extensive computational resources while still delivering superior performance for specific tasks.",
+  "full_text": null,
+  "topic": "Breast cancer",
+  "concepts": [
+    {
+      "name": "Breast cancer",
+      "score": 0.6037645936012268
+    },
+    {
+      "name": "Medicine",
+      "score": 0.5680826306343079
+    },
+    {
+      "name": "Data extraction",
+      "score": 0.5353233218193054
+    },
+    {
+      "name": "Quality of life (healthcare)",
+      "score": 0.48533692955970764
+    },
+    {
+      "name": "Cancer",
+      "score": 0.46983596682548523
+    },
+    {
+      "name": "Scale (ratio)",
+      "score": 0.4185827076435089
+    },
+    {
+      "name": "Cancer treatment",
+      "score": 0.41318440437316895
+    },
+    {
+      "name": "Intensive care medicine",
+      "score": 0.3833542764186859
+    },
+    {
+      "name": "Medical physics",
+      "score": 0.36180394887924194
+    },
+    {
+      "name": "MEDLINE",
+      "score": 0.3524411916732788
+    },
+    {
+      "name": "Oncology",
+      "score": 0.3320525288581848
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.2896539866924286
+    },
+    {
+      "name": "Nursing",
+      "score": 0.10549411177635193
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

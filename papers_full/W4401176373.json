@@ -1,151 +1,178 @@
 {
-    "title": "CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving",
-    "url": "https://openalex.org/W4401176373",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2107651679",
-            "name": "Yuhan Liu",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136046443",
-            "name": "Hanchen Li",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2183846628",
-            "name": "Yihua Cheng",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3006136084",
-            "name": "Siddhant Ray",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2142434089",
-            "name": "Yuyang Huang",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3046231377",
-            "name": "Qizheng Zhang",
-            "affiliations": [
-                "Palo Alto University",
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3023630123",
-            "name": "Kuntai Du",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112993033",
-            "name": "Jiayi Yao",
-            "affiliations": [
-                "Chinese University of Hong Kong, Shenzhen"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099458182",
-            "name": "Shan Lu",
-            "affiliations": [
-                "Seattle University",
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108780062",
-            "name": "Ganesh Ananthanarayanan",
-            "affiliations": [
-                "Seattle University",
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2276079446",
-            "name": "Michael Maire",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2138695045",
-            "name": "Henry Hoffmann",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2785787486",
-            "name": "Ari Holtzman",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2639910160",
-            "name": "Junchen Jiang",
-            "affiliations": [
-                "University of Chicago"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4313547549",
-        "https://openalex.org/W4321636575",
-        "https://openalex.org/W1975570633",
-        "https://openalex.org/W2962985038",
-        "https://openalex.org/W1494910745",
-        "https://openalex.org/W4362559429",
-        "https://openalex.org/W4241554665",
-        "https://openalex.org/W3156789018",
-        "https://openalex.org/W4389519226",
-        "https://openalex.org/W2963339397",
-        "https://openalex.org/W3099700870",
-        "https://openalex.org/W4387321091",
-        "https://openalex.org/W2806085960",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4388644518",
-        "https://openalex.org/W2965631471",
-        "https://openalex.org/W2970139579",
-        "https://openalex.org/W1993482030",
-        "https://openalex.org/W4388778348",
-        "https://openalex.org/W3081168214",
-        "https://openalex.org/W3131922516",
-        "https://openalex.org/W4392904185",
-        "https://openalex.org/W4319163914",
-        "https://openalex.org/W2167359416",
-        "https://openalex.org/W4372260356",
-        "https://openalex.org/W4372267133",
-        "https://openalex.org/W2129652681",
-        "https://openalex.org/W3156359583",
-        "https://openalex.org/W2912817604",
-        "https://openalex.org/W4213354024",
-        "https://openalex.org/W3015468748",
-        "https://openalex.org/W4385570688",
-        "https://openalex.org/W4386395487",
-        "https://openalex.org/W4361216835",
-        "https://openalex.org/W3105238007",
-        "https://openalex.org/W4387561453",
-        "https://openalex.org/W4287704453",
-        "https://openalex.org/W3121694563",
-        "https://openalex.org/W2734941459"
-    ],
-    "abstract": "&lt;p&gt;As large language models (LLMs) take on complex tasks, their inputs are supplemented with longer contexts that incorporate domain knowledge. Yet using long contexts is challenging as nothing can be generated until the whole context is processed by the LLM. While the context-processing delay can be reduced by reusing the KV cache of a context across different inputs, fetching the KV cache, which contains large tensors, over the network can cause high extra network delays.&lt;/p&gt; &lt;p&gt;CacheGen is a fast context-loading module for LLM systems. First, CacheGen uses a custom tensor encoder, leveraging KV cache's distributional properties to encode a KV cache into more compact bitstream representations with negligible decoding overhead, to save bandwidth usage. Second, CacheGen adapts the compression level of different parts of a KV cache to cope with changes in available bandwidth, in order to maintain low context-loading delay and high generation quality. We test CacheGen on popular LLMs and datasets. Compared to the recent systems that reuse the KV cache, CacheGen reduces the KV cache size by 3.5--4.3x and the total delay in fetching and processing contexts by 3.2--3.7x with negligible impact on the LLM response quality. Our code is at: &lt;a href=\"https://github.com/UChi-JCL/CacheGen\" target=\"_blank\"&gt;https://github.com/UChi-JCL/CacheGen&lt;/a&gt;.&lt;/p&gt;",
-    "full_text": null
+  "title": "CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving",
+  "url": "https://openalex.org/W4401176373",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2107651679",
+      "name": "Yuhan Liu",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136046443",
+      "name": "Hanchen Li",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2183846628",
+      "name": "Yihua Cheng",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3006136084",
+      "name": "Siddhant Ray",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2142434089",
+      "name": "Yuyang Huang",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3046231377",
+      "name": "Qizheng Zhang",
+      "affiliations": [
+        "Palo Alto University",
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3023630123",
+      "name": "Kuntai Du",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112993033",
+      "name": "Jiayi Yao",
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099458182",
+      "name": "Shan Lu",
+      "affiliations": [
+        "Seattle University",
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108780062",
+      "name": "Ganesh Ananthanarayanan",
+      "affiliations": [
+        "Seattle University",
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2276079446",
+      "name": "Michael Maire",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2138695045",
+      "name": "Henry Hoffmann",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2785787486",
+      "name": "Ari Holtzman",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2639910160",
+      "name": "Junchen Jiang",
+      "affiliations": [
+        "University of Chicago"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4313547549",
+    "https://openalex.org/W4321636575",
+    "https://openalex.org/W1975570633",
+    "https://openalex.org/W2962985038",
+    "https://openalex.org/W1494910745",
+    "https://openalex.org/W4362559429",
+    "https://openalex.org/W4241554665",
+    "https://openalex.org/W3156789018",
+    "https://openalex.org/W4389519226",
+    "https://openalex.org/W2963339397",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W4387321091",
+    "https://openalex.org/W2806085960",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4388644518",
+    "https://openalex.org/W2965631471",
+    "https://openalex.org/W2970139579",
+    "https://openalex.org/W1993482030",
+    "https://openalex.org/W4388778348",
+    "https://openalex.org/W3081168214",
+    "https://openalex.org/W3131922516",
+    "https://openalex.org/W4392904185",
+    "https://openalex.org/W4319163914",
+    "https://openalex.org/W2167359416",
+    "https://openalex.org/W4372260356",
+    "https://openalex.org/W4372267133",
+    "https://openalex.org/W2129652681",
+    "https://openalex.org/W3156359583",
+    "https://openalex.org/W2912817604",
+    "https://openalex.org/W4213354024",
+    "https://openalex.org/W3015468748",
+    "https://openalex.org/W4385570688",
+    "https://openalex.org/W4386395487",
+    "https://openalex.org/W4361216835",
+    "https://openalex.org/W3105238007",
+    "https://openalex.org/W4387561453",
+    "https://openalex.org/W4287704453",
+    "https://openalex.org/W3121694563",
+    "https://openalex.org/W2734941459"
+  ],
+  "abstract": "&lt;p&gt;As large language models (LLMs) take on complex tasks, their inputs are supplemented with longer contexts that incorporate domain knowledge. Yet using long contexts is challenging as nothing can be generated until the whole context is processed by the LLM. While the context-processing delay can be reduced by reusing the KV cache of a context across different inputs, fetching the KV cache, which contains large tensors, over the network can cause high extra network delays.&lt;/p&gt; &lt;p&gt;CacheGen is a fast context-loading module for LLM systems. First, CacheGen uses a custom tensor encoder, leveraging KV cache's distributional properties to encode a KV cache into more compact bitstream representations with negligible decoding overhead, to save bandwidth usage. Second, CacheGen adapts the compression level of different parts of a KV cache to cope with changes in available bandwidth, in order to maintain low context-loading delay and high generation quality. We test CacheGen on popular LLMs and datasets. Compared to the recent systems that reuse the KV cache, CacheGen reduces the KV cache size by 3.5--4.3x and the total delay in fetching and processing contexts by 3.2--3.7x with negligible impact on the LLM response quality. Our code is at: &lt;a href=\"https://github.com/UChi-JCL/CacheGen\" target=\"_blank\"&gt;https://github.com/UChi-JCL/CacheGen&lt;/a&gt;.&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7680065631866455
+    },
+    {
+      "name": "Cache",
+      "score": 0.7498752474784851
+    },
+    {
+      "name": "Compression (physics)",
+      "score": 0.604250431060791
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.3478120267391205
+    },
+    {
+      "name": "Materials science",
+      "score": 0.07414957880973816
+    },
+    {
+      "name": "Composite material",
+      "score": 0.0
+    }
+  ]
 }

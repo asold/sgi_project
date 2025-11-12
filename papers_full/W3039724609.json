@@ -1,62 +1,121 @@
 {
-    "title": "Hierarchical Transformer Network for Utterance-Level Emotion Recognition",
-    "url": "https://openalex.org/W3039724609",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2158545531",
-            "name": "Qingbiao Li",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099530265",
-            "name": "Wu Chunhua",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A339941058",
-            "name": "Zhe Wang",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2495598635",
-            "name": "Kangfeng Zheng",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2740550900",
-        "https://openalex.org/W1679826675",
-        "https://openalex.org/W2805662932",
-        "https://openalex.org/W2939362715",
-        "https://openalex.org/W2970431814",
-        "https://openalex.org/W2578994755",
-        "https://openalex.org/W2149684865",
-        "https://openalex.org/W6680532216",
-        "https://openalex.org/W71795751",
-        "https://openalex.org/W1832693441",
-        "https://openalex.org/W2741447225",
-        "https://openalex.org/W2251394420",
-        "https://openalex.org/W2963920114",
-        "https://openalex.org/W2749002090",
-        "https://openalex.org/W2798456655",
-        "https://openalex.org/W2911109671",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W2923978210",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W2885949735",
-        "https://openalex.org/W2886696774",
-        "https://openalex.org/W2140679639",
-        "https://openalex.org/W4285719527"
-    ],
-    "abstract": "While there have been significant advances in detecting emotions in text, in the field of utterance-level emotion recognition (ULER), there are still many problems to be solved. In this paper, we address some challenges in ULER in dialog systems. (1) The same utterance can deliver different emotions when it is in different contexts. (2) Long-range contextual information is hard to effectively capture. (3) Unlike the traditional text classification problem, for most datasets of this task, they contain inadequate conversations or speech. (4) To better model the emotional interaction between speakers, speaker information is necessary. To address the problems of (1) and (2), we propose a hierarchical transformer framework (apart from the description of other studies, the “transformer” in this paper usually refers to the encoder part of the transformer) with a lower-level transformer to model the word-level input and an upper-level transformer to capture the context of utterance-level embeddings. For problem (3), we use bidirectional encoder representations from transformers (BERT), a pretrained language model, as the lower-level transformer, which is equivalent to introducing external data into the model and solves the problem of data shortage to some extent. For problem (4), we add speaker embeddings to the model for the first time, which enables our model to capture the interaction between speakers. Experiments on three dialog emotion datasets, Friends, EmotionPush, and EmoryNLP, demonstrate that our proposed hierarchical transformer network models obtain competitive results compared with the state-of-the-art methods in terms of the macro-averaged F1-score (macro-F1).",
-    "full_text": null
+  "title": "Hierarchical Transformer Network for Utterance-Level Emotion Recognition",
+  "url": "https://openalex.org/W3039724609",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2158545531",
+      "name": "Qingbiao Li",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099530265",
+      "name": "Wu Chunhua",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A339941058",
+      "name": "Zhe Wang",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2495598635",
+      "name": "Kangfeng Zheng",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2740550900",
+    "https://openalex.org/W1679826675",
+    "https://openalex.org/W2805662932",
+    "https://openalex.org/W2939362715",
+    "https://openalex.org/W2970431814",
+    "https://openalex.org/W2578994755",
+    "https://openalex.org/W2149684865",
+    "https://openalex.org/W6680532216",
+    "https://openalex.org/W71795751",
+    "https://openalex.org/W1832693441",
+    "https://openalex.org/W2741447225",
+    "https://openalex.org/W2251394420",
+    "https://openalex.org/W2963920114",
+    "https://openalex.org/W2749002090",
+    "https://openalex.org/W2798456655",
+    "https://openalex.org/W2911109671",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2923978210",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W2885949735",
+    "https://openalex.org/W2886696774",
+    "https://openalex.org/W2140679639",
+    "https://openalex.org/W4285719527"
+  ],
+  "abstract": "While there have been significant advances in detecting emotions in text, in the field of utterance-level emotion recognition (ULER), there are still many problems to be solved. In this paper, we address some challenges in ULER in dialog systems. (1) The same utterance can deliver different emotions when it is in different contexts. (2) Long-range contextual information is hard to effectively capture. (3) Unlike the traditional text classification problem, for most datasets of this task, they contain inadequate conversations or speech. (4) To better model the emotional interaction between speakers, speaker information is necessary. To address the problems of (1) and (2), we propose a hierarchical transformer framework (apart from the description of other studies, the “transformer” in this paper usually refers to the encoder part of the transformer) with a lower-level transformer to model the word-level input and an upper-level transformer to capture the context of utterance-level embeddings. For problem (3), we use bidirectional encoder representations from transformers (BERT), a pretrained language model, as the lower-level transformer, which is equivalent to introducing external data into the model and solves the problem of data shortage to some extent. For problem (4), we add speaker embeddings to the model for the first time, which enables our model to capture the interaction between speakers. Experiments on three dialog emotion datasets, Friends, EmotionPush, and EmoryNLP, demonstrate that our proposed hierarchical transformer network models obtain competitive results compared with the state-of-the-art methods in terms of the macro-averaged F1-score (macro-F1).",
+  "full_text": null,
+  "topic": "Utterance",
+  "concepts": [
+    {
+      "name": "Utterance",
+      "score": 0.8047128915786743
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7836856842041016
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7352092862129211
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6087242364883423
+    },
+    {
+      "name": "Dialog box",
+      "score": 0.5776156783103943
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5359576344490051
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.49054449796676636
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4864044189453125
+    },
+    {
+      "name": "Language model",
+      "score": 0.4110136926174164
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0914117693901062
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

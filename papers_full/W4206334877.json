@@ -1,73 +1,140 @@
 {
-    "title": "TransDTI: Transformer-Based Language Models for Estimating DTIs and Building a Drug Recommendation Workflow",
-    "url": "https://openalex.org/W4206334877",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3018760408",
-            "name": "Yogesh Kalakoti",
-            "affiliations": [
-                "Indian Institute of Technology Delhi"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2671380661",
-            "name": "Shashank Yadav",
-            "affiliations": [
-                "Indian Institute of Technology Delhi"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2153908482",
-            "name": "Durai Sundar",
-            "affiliations": [
-                "Indian Institute of Technology Delhi"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2152158712",
-        "https://openalex.org/W26940188",
-        "https://openalex.org/W3048065091",
-        "https://openalex.org/W2016610112",
-        "https://openalex.org/W3208753658",
-        "https://openalex.org/W2078653892",
-        "https://openalex.org/W2153838454",
-        "https://openalex.org/W2100672820",
-        "https://openalex.org/W1544009106",
-        "https://openalex.org/W1989661323",
-        "https://openalex.org/W2898402099",
-        "https://openalex.org/W2749122933",
-        "https://openalex.org/W3011680753",
-        "https://openalex.org/W3087156149",
-        "https://openalex.org/W3088070507",
-        "https://openalex.org/W2997680655",
-        "https://openalex.org/W2999143619",
-        "https://openalex.org/W3018980093",
-        "https://openalex.org/W3028589594",
-        "https://openalex.org/W2785947426",
-        "https://openalex.org/W2899788782",
-        "https://openalex.org/W2592742128",
-        "https://openalex.org/W2943495267",
-        "https://openalex.org/W3040739508",
-        "https://openalex.org/W2999044305",
-        "https://openalex.org/W2900458600",
-        "https://openalex.org/W2343560051",
-        "https://openalex.org/W74841586",
-        "https://openalex.org/W4213255340",
-        "https://openalex.org/W2729725906",
-        "https://openalex.org/W2035585923",
-        "https://openalex.org/W2064387441",
-        "https://openalex.org/W2027423337",
-        "https://openalex.org/W2031168104",
-        "https://openalex.org/W1990724722",
-        "https://openalex.org/W2102377211",
-        "https://openalex.org/W3031380939",
-        "https://openalex.org/W2153228625",
-        "https://openalex.org/W4252094727",
-        "https://openalex.org/W4281790889",
-        "https://openalex.org/W3146944767"
-    ],
-    "abstract": "The identification of novel drug-target interactions is a labor-intensive and low-throughput process. In silico alternatives have proved to be of immense importance in assisting the drug discovery process. Here, we present TransDTI, a multiclass classification and regression workflow employing transformer-based language models to segregate interactions between drug-target pairs as active, inactive, and intermediate. The models were trained with large-scale drug-target interaction (DTI) data sets, which reported an improvement in performance in terms of the area under receiver operating characteristic (auROC), the area under precision recall (auPR), Matthew's correlation coefficient (MCC), and <i>R</i>2 over baseline methods. The results showed that models based on transformer-based language models effectively predict novel drug-target interactions from sequence data. The proposed models significantly outperformed existing methods like DeepConvDTI, DeepDTA, and DeepDTI on a test data set. Further, the validity of novel interactions predicted by TransDTI was found to be backed by molecular docking and simulation analysis, where the model prediction had similar or better interaction potential for MAP2k and transforming growth factor-β (TGFβ) and their known inhibitors. Proposed approaches can have a significant impact on the development of personalized therapy and clinical decision making.",
-    "full_text": null
+  "title": "TransDTI: Transformer-Based Language Models for Estimating DTIs and Building a Drug Recommendation Workflow",
+  "url": "https://openalex.org/W4206334877",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3018760408",
+      "name": "Yogesh Kalakoti",
+      "affiliations": [
+        "Indian Institute of Technology Delhi"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2671380661",
+      "name": "Shashank Yadav",
+      "affiliations": [
+        "Indian Institute of Technology Delhi"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2153908482",
+      "name": "Durai Sundar",
+      "affiliations": [
+        "Indian Institute of Technology Delhi"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2152158712",
+    "https://openalex.org/W26940188",
+    "https://openalex.org/W3048065091",
+    "https://openalex.org/W2016610112",
+    "https://openalex.org/W3208753658",
+    "https://openalex.org/W2078653892",
+    "https://openalex.org/W2153838454",
+    "https://openalex.org/W2100672820",
+    "https://openalex.org/W1544009106",
+    "https://openalex.org/W1989661323",
+    "https://openalex.org/W2898402099",
+    "https://openalex.org/W2749122933",
+    "https://openalex.org/W3011680753",
+    "https://openalex.org/W3087156149",
+    "https://openalex.org/W3088070507",
+    "https://openalex.org/W2997680655",
+    "https://openalex.org/W2999143619",
+    "https://openalex.org/W3018980093",
+    "https://openalex.org/W3028589594",
+    "https://openalex.org/W2785947426",
+    "https://openalex.org/W2899788782",
+    "https://openalex.org/W2592742128",
+    "https://openalex.org/W2943495267",
+    "https://openalex.org/W3040739508",
+    "https://openalex.org/W2999044305",
+    "https://openalex.org/W2900458600",
+    "https://openalex.org/W2343560051",
+    "https://openalex.org/W74841586",
+    "https://openalex.org/W4213255340",
+    "https://openalex.org/W2729725906",
+    "https://openalex.org/W2035585923",
+    "https://openalex.org/W2064387441",
+    "https://openalex.org/W2027423337",
+    "https://openalex.org/W2031168104",
+    "https://openalex.org/W1990724722",
+    "https://openalex.org/W2102377211",
+    "https://openalex.org/W3031380939",
+    "https://openalex.org/W2153228625",
+    "https://openalex.org/W4252094727",
+    "https://openalex.org/W4281790889",
+    "https://openalex.org/W3146944767"
+  ],
+  "abstract": "The identification of novel drug-target interactions is a labor-intensive and low-throughput process. In silico alternatives have proved to be of immense importance in assisting the drug discovery process. Here, we present TransDTI, a multiclass classification and regression workflow employing transformer-based language models to segregate interactions between drug-target pairs as active, inactive, and intermediate. The models were trained with large-scale drug-target interaction (DTI) data sets, which reported an improvement in performance in terms of the area under receiver operating characteristic (auROC), the area under precision recall (auPR), Matthew's correlation coefficient (MCC), and <i>R</i>2 over baseline methods. The results showed that models based on transformer-based language models effectively predict novel drug-target interactions from sequence data. The proposed models significantly outperformed existing methods like DeepConvDTI, DeepDTA, and DeepDTI on a test data set. Further, the validity of novel interactions predicted by TransDTI was found to be backed by molecular docking and simulation analysis, where the model prediction had similar or better interaction potential for MAP2k and transforming growth factor-β (TGFβ) and their known inhibitors. Proposed approaches can have a significant impact on the development of personalized therapy and clinical decision making.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.695972204208374
+    },
+    {
+      "name": "Workflow",
+      "score": 0.6186726689338684
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6184343695640564
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4841347634792328
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.43568509817123413
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.43360787630081177
+    },
+    {
+      "name": "Regression testing",
+      "score": 0.43114349246025085
+    },
+    {
+      "name": "Language model",
+      "score": 0.41837501525878906
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15976136922836304
+    },
+    {
+      "name": "Database",
+      "score": 0.11555621027946472
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09749618172645569
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09619012475013733
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Software",
+      "score": 0.0
+    },
+    {
+      "name": "Software construction",
+      "score": 0.0
+    },
+    {
+      "name": "Software system",
+      "score": 0.0
+    }
+  ]
 }

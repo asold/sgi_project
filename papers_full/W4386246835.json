@@ -1,78 +1,141 @@
 {
-    "title": "Supporting Human-AI Collaboration in Auditing LLMs with LLMs",
-    "url": "https://openalex.org/W4386246835",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2770369453",
-            "name": "Charvi Rastogi",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2986741849",
-            "name": "Marco Tulio Ribeiro",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2125302643",
-            "name": "Nicholas King",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2788602323",
-            "name": "Harsha Nori",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2073051687",
-            "name": "Saleema Amershi",
-            "affiliations": [
-                "Microsoft (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1501005121",
-        "https://openalex.org/W2011824517",
-        "https://openalex.org/W2059362837",
-        "https://openalex.org/W3159435787",
-        "https://openalex.org/W3037831233",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3204393347",
-        "https://openalex.org/W4313429401",
-        "https://openalex.org/W2789415069",
-        "https://openalex.org/W4224992683",
-        "https://openalex.org/W2809925683",
-        "https://openalex.org/W3163078977",
-        "https://openalex.org/W2059216172",
-        "https://openalex.org/W2162409443",
-        "https://openalex.org/W2583689529",
-        "https://openalex.org/W4309618902",
-        "https://openalex.org/W3017863658",
-        "https://openalex.org/W3215475614",
-        "https://openalex.org/W4385894687",
-        "https://openalex.org/W2962059918",
-        "https://openalex.org/W3001807593",
-        "https://openalex.org/W4285113702",
-        "https://openalex.org/W3035507081",
-        "https://openalex.org/W4312788391",
-        "https://openalex.org/W3160887439",
-        "https://openalex.org/W4385574250",
-        "https://openalex.org/W2949858875",
-        "https://openalex.org/W3203321135",
-        "https://openalex.org/W4366548330",
-        "https://openalex.org/W2956281901",
-        "https://openalex.org/W3205290952",
-        "https://openalex.org/W3206420877"
-    ],
-    "abstract": "Large language models (LLMs) are increasingly becoming all-powerful and pervasive via deployment in sociotechnical systems. Yet these language models, be it for classification or generation, have been shown to be biased, behave irresponsibly, causing harm to people at scale. It is crucial to audit these language models rigorously before deployment. Existing auditing tools use either or both humans and AI to find failures. In this work, we draw upon literature in human-AI collaboration and sensemaking, and interview research experts in safe and fair AI, to build upon the auditing tool: AdaTest [36], which is powered by a generative LLM. Through the design process we highlight the importance of sensemaking and human-AI communication to leverage complementary strengths of humans and generative models in collaborative auditing. To evaluate the effectiveness of AdaTest++, the augmented tool, we conduct user studies with participants auditing two commercial language models: OpenAI's GPT-3 and Azure's sentiment analysis model. Qualitative analysis shows that AdaTest++ effectively leverages human strengths such as schematization, hypothesis testing. Further, with our tool, users identified a variety of failures modes, covering 26 different topics over 2 tasks, that have been shown in formal audits and also those previously under-reported.",
-    "full_text": null
+  "title": "Supporting Human-AI Collaboration in Auditing LLMs with LLMs",
+  "url": "https://openalex.org/W4386246835",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2770369453",
+      "name": "Charvi Rastogi",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2986741849",
+      "name": "Marco Tulio Ribeiro",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2125302643",
+      "name": "Nicholas King",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2788602323",
+      "name": "Harsha Nori",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2073051687",
+      "name": "Saleema Amershi",
+      "affiliations": [
+        "Microsoft (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1501005121",
+    "https://openalex.org/W2011824517",
+    "https://openalex.org/W2059362837",
+    "https://openalex.org/W3159435787",
+    "https://openalex.org/W3037831233",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3204393347",
+    "https://openalex.org/W4313429401",
+    "https://openalex.org/W2789415069",
+    "https://openalex.org/W4224992683",
+    "https://openalex.org/W2809925683",
+    "https://openalex.org/W3163078977",
+    "https://openalex.org/W2059216172",
+    "https://openalex.org/W2162409443",
+    "https://openalex.org/W2583689529",
+    "https://openalex.org/W4309618902",
+    "https://openalex.org/W3017863658",
+    "https://openalex.org/W3215475614",
+    "https://openalex.org/W4385894687",
+    "https://openalex.org/W2962059918",
+    "https://openalex.org/W3001807593",
+    "https://openalex.org/W4285113702",
+    "https://openalex.org/W3035507081",
+    "https://openalex.org/W4312788391",
+    "https://openalex.org/W3160887439",
+    "https://openalex.org/W4385574250",
+    "https://openalex.org/W2949858875",
+    "https://openalex.org/W3203321135",
+    "https://openalex.org/W4366548330",
+    "https://openalex.org/W2956281901",
+    "https://openalex.org/W3205290952",
+    "https://openalex.org/W3206420877"
+  ],
+  "abstract": "Large language models (LLMs) are increasingly becoming all-powerful and pervasive via deployment in sociotechnical systems. Yet these language models, be it for classification or generation, have been shown to be biased, behave irresponsibly, causing harm to people at scale. It is crucial to audit these language models rigorously before deployment. Existing auditing tools use either or both humans and AI to find failures. In this work, we draw upon literature in human-AI collaboration and sensemaking, and interview research experts in safe and fair AI, to build upon the auditing tool: AdaTest [36], which is powered by a generative LLM. Through the design process we highlight the importance of sensemaking and human-AI communication to leverage complementary strengths of humans and generative models in collaborative auditing. To evaluate the effectiveness of AdaTest++, the augmented tool, we conduct user studies with participants auditing two commercial language models: OpenAI's GPT-3 and Azure's sentiment analysis model. Qualitative analysis shows that AdaTest++ effectively leverages human strengths such as schematization, hypothesis testing. Further, with our tool, users identified a variety of failures modes, covering 26 different topics over 2 tasks, that have been shown in formal audits and also those previously under-reported.",
+  "full_text": null,
+  "topic": "Sensemaking",
+  "concepts": [
+    {
+      "name": "Sensemaking",
+      "score": 0.7935796976089478
+    },
+    {
+      "name": "Sociotechnical system",
+      "score": 0.7637569904327393
+    },
+    {
+      "name": "Audit",
+      "score": 0.6995216608047485
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5960846543312073
+    },
+    {
+      "name": "Software deployment",
+      "score": 0.5503250956535339
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.4902344346046448
+    },
+    {
+      "name": "Stakeholder",
+      "score": 0.4842202663421631
+    },
+    {
+      "name": "Knowledge management",
+      "score": 0.4675625264644623
+    },
+    {
+      "name": "Data science",
+      "score": 0.3871021270751953
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3716248869895935
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.19211849570274353
+    },
+    {
+      "name": "Business",
+      "score": 0.14328530430793762
+    },
+    {
+      "name": "Accounting",
+      "score": 0.12244796752929688
+    },
+    {
+      "name": "Political science",
+      "score": 0.10964557528495789
+    },
+    {
+      "name": "Public relations",
+      "score": 0.0
+    }
+  ]
 }

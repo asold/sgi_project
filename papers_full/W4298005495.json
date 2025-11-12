@@ -1,88 +1,155 @@
 {
-    "title": "Gait-ViT: Gait Recognition with Vision Transformer",
-    "url": "https://openalex.org/W4298005495",
-    "year": 2022,
-    "authors": [
-        {
-            "id": null,
-            "name": "Mogan, Jashila Nair",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3203032335",
-            "name": "Lee Chin Poo",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2528248902",
-            "name": "Lim Kian Ming",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Sonai Muthu Anbananthen, Kalaiarasi",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2991723127",
-        "https://openalex.org/W2996910432",
-        "https://openalex.org/W2160813177",
-        "https://openalex.org/W2775676195",
-        "https://openalex.org/W2902259627",
-        "https://openalex.org/W2071576700",
-        "https://openalex.org/W1971358173",
-        "https://openalex.org/W1891905176",
-        "https://openalex.org/W1989696410",
-        "https://openalex.org/W2592839637",
-        "https://openalex.org/W2766064249",
-        "https://openalex.org/W3036199157",
-        "https://openalex.org/W2573716527",
-        "https://openalex.org/W2760814882",
-        "https://openalex.org/W2896244440",
-        "https://openalex.org/W6790086291",
-        "https://openalex.org/W3161902240",
-        "https://openalex.org/W3082981339",
-        "https://openalex.org/W3193780740",
-        "https://openalex.org/W4289205798",
-        "https://openalex.org/W2515630407",
-        "https://openalex.org/W2848421704",
-        "https://openalex.org/W2916695504",
-        "https://openalex.org/W3104352412",
-        "https://openalex.org/W2557965628",
-        "https://openalex.org/W2790787622",
-        "https://openalex.org/W2626699190",
-        "https://openalex.org/W2922211281",
-        "https://openalex.org/W2517225990",
-        "https://openalex.org/W2981156023",
-        "https://openalex.org/W3015249368",
-        "https://openalex.org/W2966138416",
-        "https://openalex.org/W3159719055",
-        "https://openalex.org/W7019254944",
-        "https://openalex.org/W4289110633",
-        "https://openalex.org/W2942010964",
-        "https://openalex.org/W3008732063",
-        "https://openalex.org/W3091988595",
-        "https://openalex.org/W2016327746",
-        "https://openalex.org/W2104335344",
-        "https://openalex.org/W2040270931",
-        "https://openalex.org/W2018331988",
-        "https://openalex.org/W2510190030",
-        "https://openalex.org/W2766172911",
-        "https://openalex.org/W2973806887",
-        "https://openalex.org/W3129376202",
-        "https://openalex.org/W6795171343",
-        "https://openalex.org/W3128064349",
-        "https://openalex.org/W3162464492"
-    ],
-    "abstract": "Identifying an individual based on their physical/behavioral characteristics is known as biometric recognition. Gait is one of the most reliable biometrics due to its advantages, such as being perceivable at a long distance and difficult to replicate. The existing works mostly leverage Convolutional Neural Networks for gait recognition. The Convolutional Neural Networks perform well in image recognition tasks; however, they lack the attention mechanism to emphasize more on the significant regions of the image. The attention mechanism encodes information in the image patches, which facilitates the model to learn the substantial features in the specific regions. In light of this, this work employs the Vision Transformer (ViT) with an attention mechanism for gait recognition, referred to as Gait-ViT. In the proposed Gait-ViT, the gait energy image is first obtained by averaging the series of images over the gait cycle. The images are then split into patches and transformed into sequences by flattening and patch embedding. Position embedding, along with patch embedding, are applied on the sequence of patches to restore the positional information of the patches. Subsequently, the sequence of vectors is fed to the Transformer encoder to produce the final gait representation. As for the classification, the first element of the sequence is sent to the multi-layer perceptron to predict the class label. The proposed method obtained 99.93% on CASIA-B, 100% on OU-ISIR D and 99.51% on OU-LP, which exhibit the ability of the Vision Transformer model to outperform the state-of-the-art methods.",
-    "full_text": null
+  "title": "Gait-ViT: Gait Recognition with Vision Transformer",
+  "url": "https://openalex.org/W4298005495",
+  "year": 2022,
+  "authors": [
+    {
+      "id": null,
+      "name": "Mogan, Jashila Nair",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3203032335",
+      "name": "Lee Chin Poo",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2528248902",
+      "name": "Lim Kian Ming",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Sonai Muthu Anbananthen, Kalaiarasi",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2991723127",
+    "https://openalex.org/W2996910432",
+    "https://openalex.org/W2160813177",
+    "https://openalex.org/W2775676195",
+    "https://openalex.org/W2902259627",
+    "https://openalex.org/W2071576700",
+    "https://openalex.org/W1971358173",
+    "https://openalex.org/W1891905176",
+    "https://openalex.org/W1989696410",
+    "https://openalex.org/W2592839637",
+    "https://openalex.org/W2766064249",
+    "https://openalex.org/W3036199157",
+    "https://openalex.org/W2573716527",
+    "https://openalex.org/W2760814882",
+    "https://openalex.org/W2896244440",
+    "https://openalex.org/W6790086291",
+    "https://openalex.org/W3161902240",
+    "https://openalex.org/W3082981339",
+    "https://openalex.org/W3193780740",
+    "https://openalex.org/W4289205798",
+    "https://openalex.org/W2515630407",
+    "https://openalex.org/W2848421704",
+    "https://openalex.org/W2916695504",
+    "https://openalex.org/W3104352412",
+    "https://openalex.org/W2557965628",
+    "https://openalex.org/W2790787622",
+    "https://openalex.org/W2626699190",
+    "https://openalex.org/W2922211281",
+    "https://openalex.org/W2517225990",
+    "https://openalex.org/W2981156023",
+    "https://openalex.org/W3015249368",
+    "https://openalex.org/W2966138416",
+    "https://openalex.org/W3159719055",
+    "https://openalex.org/W7019254944",
+    "https://openalex.org/W4289110633",
+    "https://openalex.org/W2942010964",
+    "https://openalex.org/W3008732063",
+    "https://openalex.org/W3091988595",
+    "https://openalex.org/W2016327746",
+    "https://openalex.org/W2104335344",
+    "https://openalex.org/W2040270931",
+    "https://openalex.org/W2018331988",
+    "https://openalex.org/W2510190030",
+    "https://openalex.org/W2766172911",
+    "https://openalex.org/W2973806887",
+    "https://openalex.org/W3129376202",
+    "https://openalex.org/W6795171343",
+    "https://openalex.org/W3128064349",
+    "https://openalex.org/W3162464492"
+  ],
+  "abstract": "Identifying an individual based on their physical/behavioral characteristics is known as biometric recognition. Gait is one of the most reliable biometrics due to its advantages, such as being perceivable at a long distance and difficult to replicate. The existing works mostly leverage Convolutional Neural Networks for gait recognition. The Convolutional Neural Networks perform well in image recognition tasks; however, they lack the attention mechanism to emphasize more on the significant regions of the image. The attention mechanism encodes information in the image patches, which facilitates the model to learn the substantial features in the specific regions. In light of this, this work employs the Vision Transformer (ViT) with an attention mechanism for gait recognition, referred to as Gait-ViT. In the proposed Gait-ViT, the gait energy image is first obtained by averaging the series of images over the gait cycle. The images are then split into patches and transformed into sequences by flattening and patch embedding. Position embedding, along with patch embedding, are applied on the sequence of patches to restore the positional information of the patches. Subsequently, the sequence of vectors is fed to the Transformer encoder to produce the final gait representation. As for the classification, the first element of the sequence is sent to the multi-layer perceptron to predict the class label. The proposed method obtained 99.93% on CASIA-B, 100% on OU-ISIR D and 99.51% on OU-LP, which exhibit the ability of the Vision Transformer model to outperform the state-of-the-art methods.",
+  "full_text": null,
+  "topic": "Artificial intelligence",
+  "concepts": [
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7161641120910645
+    },
+    {
+      "name": "Gait",
+      "score": 0.6796194911003113
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5986655950546265
+    },
+    {
+      "name": "Biometrics",
+      "score": 0.5707358121871948
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5653915405273438
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5212938785552979
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5166578888893127
+    },
+    {
+      "name": "Embedding",
+      "score": 0.49848365783691406
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4779627025127411
+    },
+    {
+      "name": "Encoder",
+      "score": 0.43425512313842773
+    },
+    {
+      "name": "Engineering",
+      "score": 0.19989502429962158
+    },
+    {
+      "name": "Physical medicine and rehabilitation",
+      "score": 0.09104177355766296
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    }
+  ]
 }

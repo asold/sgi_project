@@ -1,96 +1,179 @@
 {
-    "title": "A Comparison of Pre-Trained Language Models for Multi-Class Text Classification in the Financial Domain",
-    "url": "https://openalex.org/W3169554260",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1988755468",
-            "name": "Yusuf Arslan",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A314075480",
-            "name": "Kevin Allix",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3034844213",
-            "name": "Lisa Veiber",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3113628750",
-            "name": "Cedric Lothritz",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1484347589",
-            "name": "Tegawende F. Bissyande",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107650653",
-            "name": "Jacques Klein",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2087190585",
-            "name": "Anne Goujon",
-            "affiliations": [
-                "National Library of Luxembourg"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963716420",
-        "https://openalex.org/W2773837541",
-        "https://openalex.org/W2970771982",
-        "https://openalex.org/W2129250947",
-        "https://openalex.org/W2891488835",
-        "https://openalex.org/W2135813353",
-        "https://openalex.org/W2937423263",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2128310653",
-        "https://openalex.org/W1546425147",
-        "https://openalex.org/W1550206324",
-        "https://openalex.org/W2951286828",
-        "https://openalex.org/W2981458766",
-        "https://openalex.org/W2952984539",
-        "https://openalex.org/W3037063616",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2963809228",
-        "https://openalex.org/W2980708516",
-        "https://openalex.org/W2151595407",
-        "https://openalex.org/W2470673105",
-        "https://openalex.org/W2991170427",
-        "https://openalex.org/W2750779823",
-        "https://openalex.org/W2142066721",
-        "https://openalex.org/W3105625590",
-        "https://openalex.org/W2948740140",
-        "https://openalex.org/W3089073069",
-        "https://openalex.org/W2939507640",
-        "https://openalex.org/W1748436461",
-        "https://openalex.org/W2950577311",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W1562615108",
-        "https://openalex.org/W2983841094",
-        "https://openalex.org/W2937845937",
-        "https://openalex.org/W2914120296",
-        "https://openalex.org/W119778216",
-        "https://openalex.org/W1570978137"
-    ],
-    "abstract": "Neural networks for language modeling have been proven effective on several sub-tasks of natural language processing. Training deep language models, however, is time-consuming and computationally intensive. Pre-trained language models such as BERT are thus appealing since (1) they yielded state-of-the-art performance, and (2) they offload practitioners from the burden of preparing the adequate resources (time, hardware, and data) to train models. Nevertheless, because pre-trained models are generic, they may underperform on specific domains. In this study, we investigate the case of multi-class text classification, a task that is relatively less studied in the literature evaluating pre-trained language models. Our work is further placed under the industrial settings of the financial domain. We thus leverage generic benchmark datasets from the literature and two proprietary datasets from our partners in the financial technological industry. After highlighting a challenge for generic pre-trained models (BERT, DistilBERT, RoBERTa, XLNet, XLM) to classify a portion of the financial document dataset, we investigate the intuition that a specialized pre-trained model for financial documents, such as FinBERT, should be leveraged. Nevertheless, our experiments show that the FinBERT model, even with an adapted vocabulary, does not lead to improvements compared to the generic BERT models.",
-    "full_text": null
+  "title": "A Comparison of Pre-Trained Language Models for Multi-Class Text Classification in the Financial Domain",
+  "url": "https://openalex.org/W3169554260",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1988755468",
+      "name": "Yusuf Arslan",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A314075480",
+      "name": "Kevin Allix",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3034844213",
+      "name": "Lisa Veiber",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3113628750",
+      "name": "Cedric Lothritz",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1484347589",
+      "name": "Tegawende F. Bissyande",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107650653",
+      "name": "Jacques Klein",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2087190585",
+      "name": "Anne Goujon",
+      "affiliations": [
+        "National Library of Luxembourg"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963716420",
+    "https://openalex.org/W2773837541",
+    "https://openalex.org/W2970771982",
+    "https://openalex.org/W2129250947",
+    "https://openalex.org/W2891488835",
+    "https://openalex.org/W2135813353",
+    "https://openalex.org/W2937423263",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2128310653",
+    "https://openalex.org/W1546425147",
+    "https://openalex.org/W1550206324",
+    "https://openalex.org/W2951286828",
+    "https://openalex.org/W2981458766",
+    "https://openalex.org/W2952984539",
+    "https://openalex.org/W3037063616",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2963809228",
+    "https://openalex.org/W2980708516",
+    "https://openalex.org/W2151595407",
+    "https://openalex.org/W2470673105",
+    "https://openalex.org/W2991170427",
+    "https://openalex.org/W2750779823",
+    "https://openalex.org/W2142066721",
+    "https://openalex.org/W3105625590",
+    "https://openalex.org/W2948740140",
+    "https://openalex.org/W3089073069",
+    "https://openalex.org/W2939507640",
+    "https://openalex.org/W1748436461",
+    "https://openalex.org/W2950577311",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W1562615108",
+    "https://openalex.org/W2983841094",
+    "https://openalex.org/W2937845937",
+    "https://openalex.org/W2914120296",
+    "https://openalex.org/W119778216",
+    "https://openalex.org/W1570978137"
+  ],
+  "abstract": "Neural networks for language modeling have been proven effective on several sub-tasks of natural language processing. Training deep language models, however, is time-consuming and computationally intensive. Pre-trained language models such as BERT are thus appealing since (1) they yielded state-of-the-art performance, and (2) they offload practitioners from the burden of preparing the adequate resources (time, hardware, and data) to train models. Nevertheless, because pre-trained models are generic, they may underperform on specific domains. In this study, we investigate the case of multi-class text classification, a task that is relatively less studied in the literature evaluating pre-trained language models. Our work is further placed under the industrial settings of the financial domain. We thus leverage generic benchmark datasets from the literature and two proprietary datasets from our partners in the financial technological industry. After highlighting a challenge for generic pre-trained models (BERT, DistilBERT, RoBERTa, XLNet, XLM) to classify a portion of the financial document dataset, we investigate the intuition that a specialized pre-trained model for financial documents, such as FinBERT, should be leveraged. Nevertheless, our experiments show that the FinBERT model, even with an adapted vocabulary, does not lead to improvements compared to the generic BERT models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.808018684387207
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.7875828146934509
+    },
+    {
+      "name": "Language model",
+      "score": 0.6782526969909668
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6464521288871765
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.6240843534469604
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5850615501403809
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5067554116249084
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.4922861158847809
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.4815443158149719
+    },
+    {
+      "name": "Interpretability",
+      "score": 0.474097341299057
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4262353181838989
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.42365431785583496
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

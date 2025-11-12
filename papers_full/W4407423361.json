@@ -1,68 +1,91 @@
 {
-    "title": "Large Language Models for In-File Vulnerability Localization Can Be “Lost in the End”",
-    "url": "https://openalex.org/W4407423361",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2556207286",
-            "name": "Francesco Sovrano",
-            "affiliations": [
-                "ETH Zurich",
-                "University of Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141732421",
-            "name": "Adam Bauer",
-            "affiliations": [
-                "University of Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A329100065",
-            "name": "Alberto Bacchelli",
-            "affiliations": [
-                "University of Zurich"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4395687520",
-        "https://openalex.org/W6930610288",
-        "https://openalex.org/W4399317055",
-        "https://openalex.org/W4385749752",
-        "https://openalex.org/W7093349750",
-        "https://openalex.org/W2029059557",
-        "https://openalex.org/W4382603041",
-        "https://openalex.org/W4387298393",
-        "https://openalex.org/W4366208482",
-        "https://openalex.org/W2501822000",
-        "https://openalex.org/W4392090070",
-        "https://openalex.org/W2069863414",
-        "https://openalex.org/W4312436517",
-        "https://openalex.org/W4393212466",
-        "https://openalex.org/W4405894420",
-        "https://openalex.org/W4392181659",
-        "https://openalex.org/W4395444087",
-        "https://openalex.org/W4288400169",
-        "https://openalex.org/W4391876619",
-        "https://openalex.org/W4394867460",
-        "https://openalex.org/W4390638022",
-        "https://openalex.org/W4394745423",
-        "https://openalex.org/W4319083508",
-        "https://openalex.org/W4404334616",
-        "https://openalex.org/W4386081878",
-        "https://openalex.org/W2004147962",
-        "https://openalex.org/W1966693694",
-        "https://openalex.org/W4249297534",
-        "https://openalex.org/W4393284202",
-        "https://openalex.org/W4311165836",
-        "https://openalex.org/W4398239044",
-        "https://openalex.org/W4386185318",
-        "https://openalex.org/W4390722419",
-        "https://openalex.org/W4391376361",
-        "https://openalex.org/W4398785927"
-    ],
-    "abstract": "Traditionally, software vulnerability detection research has focused on individual small functions due to earlier language processing technologies’ limitations in handling larger inputs. However, this function-level approach may miss bugs that span multiple functions and code blocks. Recent advancements in artificial intelligence have enabled processing of larger inputs, leading everyday software developers to increasingly rely on chat-based large language models (LLMs) like GPT-3.5 and GPT-4 to detect vulnerabilities across entire files, not just within functions. This new development practice requires researchers to urgently investigate whether commonly used LLMs can effectively analyze large file-sized inputs, in order to provide timely insights for software developers and engineers about the pros and cons of this emerging technological trend. Hence, the goal of this paper is to evaluate the effectiveness of several state-of-the-art chat-based LLMs, including the GPT models, in detecting in-file vulnerabilities. We conducted a costly investigation into how the performance of LLMs varies based on vulnerability type , input size , and vulnerability location within the file. To give enough statistical power (β ≥ .8) to our study, we could only focus on the three most common (as well as dangerous) vulnerabilities: XSS, SQL injection, and path traversal. Our findings indicate that the effectiveness of LLMs in detecting these vulnerabilities is strongly influenced by both the location of the vulnerability and the overall size of the input. Specifically, regardless of the vulnerability type, LLMs tend to significantly ( p &lt; .05) underperform when detecting vulnerabilities located toward the end of larger files—a pattern we call the lost-in-the-end effect. Finally, to further support software developers and practitioners, we also explored the optimal input size for these LLMs and presented a simple strategy for identifying it, which can be applied to other models and vulnerability types. Eventually, we show how adjusting the input size can lead to significant improvements in LLM-based vulnerability detection, with an average recall increase of over 37% across all models.",
-    "full_text": null
+  "title": "Large Language Models for In-File Vulnerability Localization Can Be “Lost in the End”",
+  "url": "https://openalex.org/W4407423361",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2556207286",
+      "name": "Francesco Sovrano",
+      "affiliations": [
+        "ETH Zurich",
+        "University of Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141732421",
+      "name": "Adam Bauer",
+      "affiliations": [
+        "University of Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A329100065",
+      "name": "Alberto Bacchelli",
+      "affiliations": [
+        "University of Zurich"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4395687520",
+    "https://openalex.org/W6930610288",
+    "https://openalex.org/W4399317055",
+    "https://openalex.org/W4385749752",
+    "https://openalex.org/W7093349750",
+    "https://openalex.org/W2029059557",
+    "https://openalex.org/W4382603041",
+    "https://openalex.org/W4387298393",
+    "https://openalex.org/W4366208482",
+    "https://openalex.org/W2501822000",
+    "https://openalex.org/W4392090070",
+    "https://openalex.org/W2069863414",
+    "https://openalex.org/W4312436517",
+    "https://openalex.org/W4393212466",
+    "https://openalex.org/W4405894420",
+    "https://openalex.org/W4392181659",
+    "https://openalex.org/W4395444087",
+    "https://openalex.org/W4288400169",
+    "https://openalex.org/W4391876619",
+    "https://openalex.org/W4394867460",
+    "https://openalex.org/W4390638022",
+    "https://openalex.org/W4394745423",
+    "https://openalex.org/W4319083508",
+    "https://openalex.org/W4404334616",
+    "https://openalex.org/W4386081878",
+    "https://openalex.org/W2004147962",
+    "https://openalex.org/W1966693694",
+    "https://openalex.org/W4249297534",
+    "https://openalex.org/W4393284202",
+    "https://openalex.org/W4311165836",
+    "https://openalex.org/W4398239044",
+    "https://openalex.org/W4386185318",
+    "https://openalex.org/W4390722419",
+    "https://openalex.org/W4391376361",
+    "https://openalex.org/W4398785927"
+  ],
+  "abstract": "Traditionally, software vulnerability detection research has focused on individual small functions due to earlier language processing technologies’ limitations in handling larger inputs. However, this function-level approach may miss bugs that span multiple functions and code blocks. Recent advancements in artificial intelligence have enabled processing of larger inputs, leading everyday software developers to increasingly rely on chat-based large language models (LLMs) like GPT-3.5 and GPT-4 to detect vulnerabilities across entire files, not just within functions. This new development practice requires researchers to urgently investigate whether commonly used LLMs can effectively analyze large file-sized inputs, in order to provide timely insights for software developers and engineers about the pros and cons of this emerging technological trend. Hence, the goal of this paper is to evaluate the effectiveness of several state-of-the-art chat-based LLMs, including the GPT models, in detecting in-file vulnerabilities. We conducted a costly investigation into how the performance of LLMs varies based on vulnerability type , input size , and vulnerability location within the file. To give enough statistical power (β ≥ .8) to our study, we could only focus on the three most common (as well as dangerous) vulnerabilities: XSS, SQL injection, and path traversal. Our findings indicate that the effectiveness of LLMs in detecting these vulnerabilities is strongly influenced by both the location of the vulnerability and the overall size of the input. Specifically, regardless of the vulnerability type, LLMs tend to significantly ( p &lt; .05) underperform when detecting vulnerabilities located toward the end of larger files—a pattern we call the lost-in-the-end effect. Finally, to further support software developers and practitioners, we also explored the optimal input size for these LLMs and presented a simple strategy for identifying it, which can be applied to other models and vulnerability types. Eventually, we show how adjusting the input size can lead to significant improvements in LLM-based vulnerability detection, with an average recall increase of over 37% across all models.",
+  "full_text": null,
+  "topic": "Vulnerability (computing)",
+  "concepts": [
+    {
+      "name": "Vulnerability (computing)",
+      "score": 0.6539556384086609
+    },
+    {
+      "name": "Computer science",
+      "score": 0.588943600654602
+    },
+    {
+      "name": "Tree traversal",
+      "score": 0.4567064940929413
+    },
+    {
+      "name": "Computer security",
+      "score": 0.44907715916633606
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

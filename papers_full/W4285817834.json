@@ -1,111 +1,158 @@
 {
-    "title": "Language Model Guided Knowledge Graph Embeddings",
-    "url": "https://openalex.org/W4285817834",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2808840081",
-            "name": "Mirza Mohtashim Alam",
-            "affiliations": [
-                "Institut für Biomedizinische Analytik und NMR Imaging (Germany)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2798490560",
-            "name": "Md. Rashad Al Hasan Rony",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2941907964",
-            "name": "Mojtaba Nayyeri",
-            "affiliations": [
-                "University of Bonn"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2810105747",
-            "name": "Karishma Mohiuddin",
-            "affiliations": [
-                "University of Bonn"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089095814",
-            "name": "M. S. T. Mahfuja Akter",
-            "affiliations": [
-                "University of Bonn"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2069100084",
-            "name": "Sahar Vahdati",
-            "affiliations": [
-                "Institut für Biomedizinische Analytik und NMR Imaging (Germany)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101122831",
-            "name": "Jens Lehmann",
-            "affiliations": [
-                "Institut für Biomedizinische Analytik und NMR Imaging (Germany)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2759136286",
-        "https://openalex.org/W3042291192",
-        "https://openalex.org/W3043562712",
-        "https://openalex.org/W3208785685",
-        "https://openalex.org/W3120491054",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W2493916176",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W3021393704",
-        "https://openalex.org/W4386290290",
-        "https://openalex.org/W6678830454",
-        "https://openalex.org/W2283196293",
-        "https://openalex.org/W2184957013",
-        "https://openalex.org/W6631964550",
-        "https://openalex.org/W6718112784",
-        "https://openalex.org/W2099752825",
-        "https://openalex.org/W6761783306",
-        "https://openalex.org/W6758075616",
-        "https://openalex.org/W2499696929",
-        "https://openalex.org/W6636510571",
-        "https://openalex.org/W2980763157",
-        "https://openalex.org/W6767905578",
-        "https://openalex.org/W2998385486",
-        "https://openalex.org/W2953356739",
-        "https://openalex.org/W6793771069",
-        "https://openalex.org/W3151929433",
-        "https://openalex.org/W4285222754",
-        "https://openalex.org/W6810730852",
-        "https://openalex.org/W4285281069",
-        "https://openalex.org/W2970785793",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2125027602",
-        "https://openalex.org/W2157272674",
-        "https://openalex.org/W3099836348",
-        "https://openalex.org/W68132019",
-        "https://openalex.org/W2038880450",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W6838557027",
-        "https://openalex.org/W6811340617",
-        "https://openalex.org/W4229005866",
-        "https://openalex.org/W4287235428",
-        "https://openalex.org/W4226082499",
-        "https://openalex.org/W1614298861",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2942026896",
-        "https://openalex.org/W2972167903",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2949434543",
-        "https://openalex.org/W1533230146"
-    ],
-    "abstract": "Knowledge graph embedding models have become a popular approach for knowledge graph completion through predicting the plausibility of (potential) triples. This is performed by transforming the entities and relations of the knowledge graph into an embedding space. However, knowledge graphs often include further textual information stored in literal, which is ignored by such embedding models. As a consequence, the learning process stays limited to the structure and the connections between the entities, which has the potential to negatively influence the performance. We bridge this gap by leveraging the capabilities of pre-trained language models to include textual knowledge in the learning process of embedding models. This is achieved by introducing a new loss function that guides embedding models in measuring the likelihood of triples by taking such complementary knowledge into consideration. The proposed solution is a model-independent loss function that can be plugged into any knowledge graph embedding model. In this paper, Sentence-BERT and fastText are used as pre-trained language models from which the embeddings of the textual knowledge are obtained and injected into the loss function. The loss function contains a trainable slack variable that determines the degree to which the language models influence the plausibility of triples. Our experimental evaluation on six benchmarks, namely Nations, UMLS, WordNet, and three versions of CodEx confirms the advantage of using pre-trained language models for boosting the accuracy of knowledge graph embedding models. We showcase this by performing evaluations on top of the five well-known knowledge graph embedding models such as TransE, RotatE, ComplEx, DistMult, and QuatE. The results show an improvement in accuracy up to 9&#x0025; on UMLS dataset for the Distmult model and 4.2&#x0025; on the Nations dataset for the ComplEx model when they are guided by pre-trained language models. We additionally studied the effect of multiple factors such as the structure of the knowledge graphs and training steps and presented them as ablation studies.",
-    "full_text": null
+  "title": "Language Model Guided Knowledge Graph Embeddings",
+  "url": "https://openalex.org/W4285817834",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2808840081",
+      "name": "Mirza Mohtashim Alam",
+      "affiliations": [
+        "Institut für Biomedizinische Analytik und NMR Imaging (Germany)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2798490560",
+      "name": "Md. Rashad Al Hasan Rony",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2941907964",
+      "name": "Mojtaba Nayyeri",
+      "affiliations": [
+        "University of Bonn"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2810105747",
+      "name": "Karishma Mohiuddin",
+      "affiliations": [
+        "University of Bonn"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089095814",
+      "name": "M. S. T. Mahfuja Akter",
+      "affiliations": [
+        "University of Bonn"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2069100084",
+      "name": "Sahar Vahdati",
+      "affiliations": [
+        "Institut für Biomedizinische Analytik und NMR Imaging (Germany)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101122831",
+      "name": "Jens Lehmann",
+      "affiliations": [
+        "Institut für Biomedizinische Analytik und NMR Imaging (Germany)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2759136286",
+    "https://openalex.org/W3042291192",
+    "https://openalex.org/W3043562712",
+    "https://openalex.org/W3208785685",
+    "https://openalex.org/W3120491054",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W2493916176",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W3021393704",
+    "https://openalex.org/W4386290290",
+    "https://openalex.org/W6678830454",
+    "https://openalex.org/W2283196293",
+    "https://openalex.org/W2184957013",
+    "https://openalex.org/W6631964550",
+    "https://openalex.org/W6718112784",
+    "https://openalex.org/W2099752825",
+    "https://openalex.org/W6761783306",
+    "https://openalex.org/W6758075616",
+    "https://openalex.org/W2499696929",
+    "https://openalex.org/W6636510571",
+    "https://openalex.org/W2980763157",
+    "https://openalex.org/W6767905578",
+    "https://openalex.org/W2998385486",
+    "https://openalex.org/W2953356739",
+    "https://openalex.org/W6793771069",
+    "https://openalex.org/W3151929433",
+    "https://openalex.org/W4285222754",
+    "https://openalex.org/W6810730852",
+    "https://openalex.org/W4285281069",
+    "https://openalex.org/W2970785793",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2125027602",
+    "https://openalex.org/W2157272674",
+    "https://openalex.org/W3099836348",
+    "https://openalex.org/W68132019",
+    "https://openalex.org/W2038880450",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W6838557027",
+    "https://openalex.org/W6811340617",
+    "https://openalex.org/W4229005866",
+    "https://openalex.org/W4287235428",
+    "https://openalex.org/W4226082499",
+    "https://openalex.org/W1614298861",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2942026896",
+    "https://openalex.org/W2972167903",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2949434543",
+    "https://openalex.org/W1533230146"
+  ],
+  "abstract": "Knowledge graph embedding models have become a popular approach for knowledge graph completion through predicting the plausibility of (potential) triples. This is performed by transforming the entities and relations of the knowledge graph into an embedding space. However, knowledge graphs often include further textual information stored in literal, which is ignored by such embedding models. As a consequence, the learning process stays limited to the structure and the connections between the entities, which has the potential to negatively influence the performance. We bridge this gap by leveraging the capabilities of pre-trained language models to include textual knowledge in the learning process of embedding models. This is achieved by introducing a new loss function that guides embedding models in measuring the likelihood of triples by taking such complementary knowledge into consideration. The proposed solution is a model-independent loss function that can be plugged into any knowledge graph embedding model. In this paper, Sentence-BERT and fastText are used as pre-trained language models from which the embeddings of the textual knowledge are obtained and injected into the loss function. The loss function contains a trainable slack variable that determines the degree to which the language models influence the plausibility of triples. Our experimental evaluation on six benchmarks, namely Nations, UMLS, WordNet, and three versions of CodEx confirms the advantage of using pre-trained language models for boosting the accuracy of knowledge graph embedding models. We showcase this by performing evaluations on top of the five well-known knowledge graph embedding models such as TransE, RotatE, ComplEx, DistMult, and QuatE. The results show an improvement in accuracy up to 9&#x0025; on UMLS dataset for the Distmult model and 4.2&#x0025; on the Nations dataset for the ComplEx model when they are guided by pre-trained language models. We additionally studied the effect of multiple factors such as the structure of the knowledge graphs and training steps and presented them as ablation studies.",
+  "full_text": null,
+  "topic": "Embedding",
+  "concepts": [
+    {
+      "name": "Embedding",
+      "score": 0.7971410751342773
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7685929536819458
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5914700031280518
+    },
+    {
+      "name": "Knowledge graph",
+      "score": 0.5908476710319519
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.56849205493927
+    },
+    {
+      "name": "WordNet",
+      "score": 0.5646197199821472
+    },
+    {
+      "name": "Language model",
+      "score": 0.5290778279304504
+    },
+    {
+      "name": "Graph",
+      "score": 0.5068204998970032
+    },
+    {
+      "name": "Sentence",
+      "score": 0.43167075514793396
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3981301188468933
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3350042402744293
+    }
+  ]
 }

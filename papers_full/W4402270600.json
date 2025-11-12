@@ -1,79 +1,170 @@
 {
-    "title": "Leveraging Large Language Models and BERT for Log Parsing and Anomaly Detection",
-    "url": "https://openalex.org/W4402270600",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2107978626",
-            "name": "Yihan Zhou",
-            "affiliations": [
-                "Hong Kong Polytechnic University",
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2091638196",
-            "name": "Yan Chen",
-            "affiliations": [
-                "Central South University"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Xuanming Rao",
-            "affiliations": [
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2570877243",
-            "name": "Yukang Zhou",
-            "affiliations": [
-                "Hong Kong Polytechnic University",
-                "Central South University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107044663",
-            "name": "Yuxin Li",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107951049",
-            "name": "Chao Hu",
-            "affiliations": [
-                "Central South University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3035160178",
-        "https://openalex.org/W2963999143",
-        "https://openalex.org/W2583874385",
-        "https://openalex.org/W2754665629",
-        "https://openalex.org/W2775696952",
-        "https://openalex.org/W2767094836",
-        "https://openalex.org/W2965838158",
-        "https://openalex.org/W2947815220",
-        "https://openalex.org/W4384345785",
-        "https://openalex.org/W4367146761",
-        "https://openalex.org/W4391558438",
-        "https://openalex.org/W4394769528",
-        "https://openalex.org/W4385562582",
-        "https://openalex.org/W2039157918",
-        "https://openalex.org/W4281764099",
-        "https://openalex.org/W2560021099",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4285056750",
-        "https://openalex.org/W2401686019",
-        "https://openalex.org/W6683199847",
-        "https://openalex.org/W4385605314",
-        "https://openalex.org/W4400447564",
-        "https://openalex.org/W4391235307",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Computer systems and applications generate large amounts of logs to measure and record information, which is vital to protect the systems from malicious attacks and useful for repairing faults, especially with the rapid development of distributed computing. Among various logs, the anomaly log is beneficial for operations and maintenance (O&amp;M) personnel to locate faults and improve efficiency. In this paper, we utilize a large language model, ChatGPT, for the log parser task. We choose the BERT model, a self-supervised framework for log anomaly detection. BERT, an embedded transformer encoder, with a self-attention mechanism can better handle context-dependent tasks such as anomaly log detection. Meanwhile, it is based on the masked language model task and next sentence prediction task in the pretraining period to capture the normal log sequence pattern. The experimental results on two log datasets show that the BERT model combined with an LLM performed better than other classical models such as Deelog and Loganomaly.",
-    "full_text": null
+  "title": "Leveraging Large Language Models and BERT for Log Parsing and Anomaly Detection",
+  "url": "https://openalex.org/W4402270600",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2107978626",
+      "name": "Yihan Zhou",
+      "affiliations": [
+        "Hong Kong Polytechnic University",
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2091638196",
+      "name": "Yan Chen",
+      "affiliations": [
+        "Central South University"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Xuanming Rao",
+      "affiliations": [
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2570877243",
+      "name": "Yukang Zhou",
+      "affiliations": [
+        "Hong Kong Polytechnic University",
+        "Central South University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107044663",
+      "name": "Yuxin Li",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107951049",
+      "name": "Chao Hu",
+      "affiliations": [
+        "Central South University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3035160178",
+    "https://openalex.org/W2963999143",
+    "https://openalex.org/W2583874385",
+    "https://openalex.org/W2754665629",
+    "https://openalex.org/W2775696952",
+    "https://openalex.org/W2767094836",
+    "https://openalex.org/W2965838158",
+    "https://openalex.org/W2947815220",
+    "https://openalex.org/W4384345785",
+    "https://openalex.org/W4367146761",
+    "https://openalex.org/W4391558438",
+    "https://openalex.org/W4394769528",
+    "https://openalex.org/W4385562582",
+    "https://openalex.org/W2039157918",
+    "https://openalex.org/W4281764099",
+    "https://openalex.org/W2560021099",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4285056750",
+    "https://openalex.org/W2401686019",
+    "https://openalex.org/W6683199847",
+    "https://openalex.org/W4385605314",
+    "https://openalex.org/W4400447564",
+    "https://openalex.org/W4391235307",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Computer systems and applications generate large amounts of logs to measure and record information, which is vital to protect the systems from malicious attacks and useful for repairing faults, especially with the rapid development of distributed computing. Among various logs, the anomaly log is beneficial for operations and maintenance (O&amp;M) personnel to locate faults and improve efficiency. In this paper, we utilize a large language model, ChatGPT, for the log parser task. We choose the BERT model, a self-supervised framework for log anomaly detection. BERT, an embedded transformer encoder, with a self-attention mechanism can better handle context-dependent tasks such as anomaly log detection. Meanwhile, it is based on the masked language model task and next sentence prediction task in the pretraining period to capture the normal log sequence pattern. The experimental results on two log datasets show that the BERT model combined with an LLM performed better than other classical models such as Deelog and Loganomaly.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7974297404289246
+    },
+    {
+      "name": "Parsing",
+      "score": 0.7555372714996338
+    },
+    {
+      "name": "Anomaly detection",
+      "score": 0.6486843824386597
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6447857618331909
+    },
+    {
+      "name": "Language model",
+      "score": 0.6047084927558899
+    },
+    {
+      "name": "Sentence",
+      "score": 0.58669513463974
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5451005697250366
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5237436294555664
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4987614154815674
+    },
+    {
+      "name": "Anomaly (physics)",
+      "score": 0.4786164164543152
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.4720262587070465
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3802720308303833
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3495357632637024
+    },
+    {
+      "name": "Voltage",
+      "score": 0.14695823192596436
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Condensed matter physics",
+      "score": 0.0
+    }
+  ]
 }

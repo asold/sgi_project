@@ -1,80 +1,147 @@
 {
-    "title": "Cross-lingual Language Model Pretraining for Retrieval",
-    "url": "https://openalex.org/W3154079701",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2955687716",
-            "name": "Puxuan Yu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2125525699",
-            "name": "Hongliang Fei",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2103444047",
-            "name": "Ping Li",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2741602058",
-        "https://openalex.org/W3035540729",
-        "https://openalex.org/W2962947218",
-        "https://openalex.org/W3035390927",
-        "https://openalex.org/W3035547806",
-        "https://openalex.org/W2046456023",
-        "https://openalex.org/W2612746495",
-        "https://openalex.org/W3034978379",
-        "https://openalex.org/W2536015822",
-        "https://openalex.org/W2945802750",
-        "https://openalex.org/W3034238904",
-        "https://openalex.org/W3044284384",
-        "https://openalex.org/W2971207485",
-        "https://openalex.org/W2907069963",
-        "https://openalex.org/W2891896107",
-        "https://openalex.org/W3035497479",
-        "https://openalex.org/W2963617771",
-        "https://openalex.org/W3021300761",
-        "https://openalex.org/W2940927814",
-        "https://openalex.org/W2127365348",
-        "https://openalex.org/W2797253696",
-        "https://openalex.org/W4206765718",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2913337508",
-        "https://openalex.org/W2769280657",
-        "https://openalex.org/W2946241506",
-        "https://openalex.org/W2051195041",
-        "https://openalex.org/W2648699835",
-        "https://openalex.org/W2971209824",
-        "https://openalex.org/W3032608552",
-        "https://openalex.org/W3004654429",
-        "https://openalex.org/W2978329087",
-        "https://openalex.org/W3102374157",
-        "https://openalex.org/W2914120296",
-        "https://openalex.org/W3028616679",
-        "https://openalex.org/W2995118574",
-        "https://openalex.org/W3098366475",
-        "https://openalex.org/W4310895557",
-        "https://openalex.org/W2996064239",
-        "https://openalex.org/W2887729785",
-        "https://openalex.org/W2963118869",
-        "https://openalex.org/W2093390569",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2963061446",
-        "https://openalex.org/W3100547398",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W2118305464",
-        "https://openalex.org/W3102286003",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W4239019441",
-        "https://openalex.org/W3104723404",
-        "https://openalex.org/W2068297964",
-        "https://openalex.org/W3098620803",
-        "https://openalex.org/W1982474572"
-    ],
-    "abstract": "Existing research on cross-lingual retrieval cannot take good advantage of large-scale pretrained language models such as multilingual BERT and XLM. We hypothesize that the absence of cross-lingual passage-level relevance data for finetuning and the lack of query-document style pretraining are key factors of this issue. In this paper, we introduce two novel retrieval-oriented pretraining tasks to further pretrain cross-lingual language models for downstream retrieval tasks such as cross-lingual ad-hoc retrieval (CLIR) and cross-lingual question answering (CLQA). We construct distant supervision data from multilingual Wikipedia using section alignment to support retrieval-oriented language model pretraining. We also propose to directly finetune language models on part of the evaluation collection by making Transformers capable of accepting longer sequences. Experiments on multiple benchmark datasets show that our proposed model can significantly improve upon general multilingual language models in both the cross-lingual retrieval setting and the cross-lingual transfer setting.",
-    "full_text": null
+  "title": "Cross-lingual Language Model Pretraining for Retrieval",
+  "url": "https://openalex.org/W3154079701",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2955687716",
+      "name": "Puxuan Yu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2125525699",
+      "name": "Hongliang Fei",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2103444047",
+      "name": "Ping Li",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2741602058",
+    "https://openalex.org/W3035540729",
+    "https://openalex.org/W2962947218",
+    "https://openalex.org/W3035390927",
+    "https://openalex.org/W3035547806",
+    "https://openalex.org/W2046456023",
+    "https://openalex.org/W2612746495",
+    "https://openalex.org/W3034978379",
+    "https://openalex.org/W2536015822",
+    "https://openalex.org/W2945802750",
+    "https://openalex.org/W3034238904",
+    "https://openalex.org/W3044284384",
+    "https://openalex.org/W2971207485",
+    "https://openalex.org/W2907069963",
+    "https://openalex.org/W2891896107",
+    "https://openalex.org/W3035497479",
+    "https://openalex.org/W2963617771",
+    "https://openalex.org/W3021300761",
+    "https://openalex.org/W2940927814",
+    "https://openalex.org/W2127365348",
+    "https://openalex.org/W2797253696",
+    "https://openalex.org/W4206765718",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2913337508",
+    "https://openalex.org/W2769280657",
+    "https://openalex.org/W2946241506",
+    "https://openalex.org/W2051195041",
+    "https://openalex.org/W2648699835",
+    "https://openalex.org/W2971209824",
+    "https://openalex.org/W3032608552",
+    "https://openalex.org/W3004654429",
+    "https://openalex.org/W2978329087",
+    "https://openalex.org/W3102374157",
+    "https://openalex.org/W2914120296",
+    "https://openalex.org/W3028616679",
+    "https://openalex.org/W2995118574",
+    "https://openalex.org/W3098366475",
+    "https://openalex.org/W4310895557",
+    "https://openalex.org/W2996064239",
+    "https://openalex.org/W2887729785",
+    "https://openalex.org/W2963118869",
+    "https://openalex.org/W2093390569",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2963061446",
+    "https://openalex.org/W3100547398",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W2118305464",
+    "https://openalex.org/W3102286003",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W4239019441",
+    "https://openalex.org/W3104723404",
+    "https://openalex.org/W2068297964",
+    "https://openalex.org/W3098620803",
+    "https://openalex.org/W1982474572"
+  ],
+  "abstract": "Existing research on cross-lingual retrieval cannot take good advantage of large-scale pretrained language models such as multilingual BERT and XLM. We hypothesize that the absence of cross-lingual passage-level relevance data for finetuning and the lack of query-document style pretraining are key factors of this issue. In this paper, we introduce two novel retrieval-oriented pretraining tasks to further pretrain cross-lingual language models for downstream retrieval tasks such as cross-lingual ad-hoc retrieval (CLIR) and cross-lingual question answering (CLQA). We construct distant supervision data from multilingual Wikipedia using section alignment to support retrieval-oriented language model pretraining. We also propose to directly finetune language models on part of the evaluation collection by making Transformers capable of accepting longer sequences. Experiments on multiple benchmark datasets show that our proposed model can significantly improve upon general multilingual language models in both the cross-lingual retrieval setting and the cross-lingual transfer setting.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8822276592254639
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6679309606552124
+    },
+    {
+      "name": "Language model",
+      "score": 0.6600148677825928
+    },
+    {
+      "name": "Question answering",
+      "score": 0.6364545822143555
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.576158881187439
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5545415878295898
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5447642803192139
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5100913643836975
+    },
+    {
+      "name": "Relevance (law)",
+      "score": 0.4986870288848877
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

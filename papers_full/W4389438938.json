@@ -1,64 +1,163 @@
 {
-    "title": "StructCoder: Structure-Aware Transformer for Code Generation",
-    "url": "https://openalex.org/W4389438938",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3192518390",
-            "name": "Sindhu Tipirneni",
-            "affiliations": [
-                "Virginia Tech"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2040397382",
-            "name": "Ming Zhu",
-            "affiliations": [
-                "Virginia Tech"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100435683",
-            "name": "Chandan K. Reddy",
-            "affiliations": [
-                "Virginia Tech"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3170092793",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3098605233",
-        "https://openalex.org/W4224060952",
-        "https://openalex.org/W2973529529",
-        "https://openalex.org/W2962936887",
-        "https://openalex.org/W4205749957",
-        "https://openalex.org/W3171200957",
-        "https://openalex.org/W3162689995",
-        "https://openalex.org/W2768572539",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W4226485558",
-        "https://openalex.org/W6795545164",
-        "https://openalex.org/W2962728167",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W3089307846",
-        "https://openalex.org/W2997847174",
-        "https://openalex.org/W3198685994",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2963617989",
-        "https://openalex.org/W3183962691",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W3176868790",
-        "https://openalex.org/W1593271688",
-        "https://openalex.org/W2747329762",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W3099302725",
-        "https://openalex.org/W4394638297"
-    ],
-    "abstract": "There has been a recent surge of interest in automating software engineering tasks using deep learning. This article addresses the problem of code generation, in which the goal is to generate target code given source code in a different language or a natural language description. Most state-of-the-art deep learning models for code generation use training strategies primarily designed for natural language. However, understanding and generating code requires a more rigorous comprehension of the code syntax and semantics. With this motivation, we develop an encoder-decoder Transformer model in which both the encoder and decoder are explicitly trained to recognize the syntax and dataflow in the source and target codes, respectively. We not only make the encoder structure aware by leveraging the source code’s syntax tree and dataflow graph, but we also support the decoder in preserving the syntax and dataflow of the target code by introducing two novel auxiliary tasks: Abstract Syntax Tree (AST) path prediction and dataflow prediction. To the best of our knowledge, this is the first work to introduce a structure-aware Transformer decoder that models both syntax and dataflow to enhance the quality of generated code. The proposed StructCoder model achieves state-of-the-art performance on code translation and text-to-code generation tasks in the CodeXGLUE benchmark and improves over baselines of similar size on the APPS code generation benchmark. Our code is publicly available at https://github.com/reddy-lab-code-research/StructCoder/ .",
-    "full_text": null
+  "title": "StructCoder: Structure-Aware Transformer for Code Generation",
+  "url": "https://openalex.org/W4389438938",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3192518390",
+      "name": "Sindhu Tipirneni",
+      "affiliations": [
+        "Virginia Tech"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2040397382",
+      "name": "Ming Zhu",
+      "affiliations": [
+        "Virginia Tech"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100435683",
+      "name": "Chandan K. Reddy",
+      "affiliations": [
+        "Virginia Tech"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3170092793",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3098605233",
+    "https://openalex.org/W4224060952",
+    "https://openalex.org/W2973529529",
+    "https://openalex.org/W2962936887",
+    "https://openalex.org/W4205749957",
+    "https://openalex.org/W3171200957",
+    "https://openalex.org/W3162689995",
+    "https://openalex.org/W2768572539",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W4226485558",
+    "https://openalex.org/W6795545164",
+    "https://openalex.org/W2962728167",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W3089307846",
+    "https://openalex.org/W2997847174",
+    "https://openalex.org/W3198685994",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2963617989",
+    "https://openalex.org/W3183962691",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W3176868790",
+    "https://openalex.org/W1593271688",
+    "https://openalex.org/W2747329762",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W3099302725",
+    "https://openalex.org/W4394638297"
+  ],
+  "abstract": "There has been a recent surge of interest in automating software engineering tasks using deep learning. This article addresses the problem of code generation, in which the goal is to generate target code given source code in a different language or a natural language description. Most state-of-the-art deep learning models for code generation use training strategies primarily designed for natural language. However, understanding and generating code requires a more rigorous comprehension of the code syntax and semantics. With this motivation, we develop an encoder-decoder Transformer model in which both the encoder and decoder are explicitly trained to recognize the syntax and dataflow in the source and target codes, respectively. We not only make the encoder structure aware by leveraging the source code’s syntax tree and dataflow graph, but we also support the decoder in preserving the syntax and dataflow of the target code by introducing two novel auxiliary tasks: Abstract Syntax Tree (AST) path prediction and dataflow prediction. To the best of our knowledge, this is the first work to introduce a structure-aware Transformer decoder that models both syntax and dataflow to enhance the quality of generated code. The proposed StructCoder model achieves state-of-the-art performance on code translation and text-to-code generation tasks in the CodeXGLUE benchmark and improves over baselines of similar size on the APPS code generation benchmark. Our code is publicly available at https://github.com/reddy-lab-code-research/StructCoder/ .",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8651366233825684
+    },
+    {
+      "name": "Abstract syntax tree",
+      "score": 0.7958455085754395
+    },
+    {
+      "name": "Code generation",
+      "score": 0.7570956349372864
+    },
+    {
+      "name": "Abstract syntax",
+      "score": 0.6923152208328247
+    },
+    {
+      "name": "Source code",
+      "score": 0.6688458323478699
+    },
+    {
+      "name": "Programming language",
+      "score": 0.6447300910949707
+    },
+    {
+      "name": "Syntax",
+      "score": 0.5425518155097961
+    },
+    {
+      "name": "KPI-driven code analysis",
+      "score": 0.5138938426971436
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4736410677433014
+    },
+    {
+      "name": "Transformer",
+      "score": 0.46822449564933777
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.41939738392829895
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.41929149627685547
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4045005440711975
+    },
+    {
+      "name": "Static program analysis",
+      "score": 0.3415524959564209
+    },
+    {
+      "name": "Software",
+      "score": 0.25033822655677795
+    },
+    {
+      "name": "Software development",
+      "score": 0.19048890471458435
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

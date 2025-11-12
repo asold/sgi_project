@@ -1,63 +1,154 @@
 {
-    "title": "Probing Biomedical Embeddings from Language Models",
-    "url": "https://openalex.org/W2964242047",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2091663374",
-            "name": "Qiao Jin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2359800348",
-            "name": "Bhuwan Dhingra",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1989912291",
-            "name": "William Cohen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2098403471",
-            "name": "Xinghua Lu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4288351520",
-        "https://openalex.org/W2608787653",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W2952341153",
-        "https://openalex.org/W2889468083",
-        "https://openalex.org/W2144578941",
-        "https://openalex.org/W2888120268",
-        "https://openalex.org/W2898355739",
-        "https://openalex.org/W2899463504",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W2951714314",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W2187089797",
-        "https://openalex.org/W2611669587",
-        "https://openalex.org/W2527896214",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W2147880316",
-        "https://openalex.org/W4289366653",
-        "https://openalex.org/W2963918774",
-        "https://openalex.org/W2952087486",
-        "https://openalex.org/W1840435438",
-        "https://openalex.org/W4297748452",
-        "https://openalex.org/W2888329843",
-        "https://openalex.org/W2296283641",
-        "https://openalex.org/W2963372062",
-        "https://openalex.org/W2154142897",
-        "https://openalex.org/W2963651521",
-        "https://openalex.org/W2741930244",
-        "https://openalex.org/W2963488798"
-    ],
-    "abstract": "Contextualized word embeddings derived from pre-trained language models (LMs) show significant improvements on downstream NLP tasks. Pre-training on domain-specific corpora, such as biomedical articles, further improves their performance. In this paper, we conduct probing experiments to determine what additional information is carried intrinsically by the in-domain trained contextualized embeddings. For this we use the pre-trained LMs as fixed feature extractors and restrict the downstream task models to not have additional sequence modeling layers. We compare BERT (Devlin et al. 2018), ELMo (Peters et al., 2018), BioBERT (Lee et al., 2019) and BioELMo, a biomedical version of ELMo trained on 10M PubMed abstracts. Surprisingly, while fine-tuned BioBERT is better than BioELMo in biomedical NER and NLI tasks, as a fixed feature extractor BioELMo outperforms BioBERT in our probing tasks. We use visualization and nearest neighbor analysis to show that better encoding of entity-type and relational information leads to this superiority.",
-    "full_text": null
+  "title": "Probing Biomedical Embeddings from Language Models",
+  "url": "https://openalex.org/W2964242047",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2091663374",
+      "name": "Qiao Jin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2359800348",
+      "name": "Bhuwan Dhingra",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1989912291",
+      "name": "William Cohen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2098403471",
+      "name": "Xinghua Lu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4288351520",
+    "https://openalex.org/W2608787653",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W2952341153",
+    "https://openalex.org/W2889468083",
+    "https://openalex.org/W2144578941",
+    "https://openalex.org/W2888120268",
+    "https://openalex.org/W2898355739",
+    "https://openalex.org/W2899463504",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2951714314",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W2187089797",
+    "https://openalex.org/W2611669587",
+    "https://openalex.org/W2527896214",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2147880316",
+    "https://openalex.org/W4289366653",
+    "https://openalex.org/W2963918774",
+    "https://openalex.org/W2952087486",
+    "https://openalex.org/W1840435438",
+    "https://openalex.org/W4297748452",
+    "https://openalex.org/W2888329843",
+    "https://openalex.org/W2296283641",
+    "https://openalex.org/W2963372062",
+    "https://openalex.org/W2154142897",
+    "https://openalex.org/W2963651521",
+    "https://openalex.org/W2741930244",
+    "https://openalex.org/W2963488798"
+  ],
+  "abstract": "Contextualized word embeddings derived from pre-trained language models (LMs) show significant improvements on downstream NLP tasks. Pre-training on domain-specific corpora, such as biomedical articles, further improves their performance. In this paper, we conduct probing experiments to determine what additional information is carried intrinsically by the in-domain trained contextualized embeddings. For this we use the pre-trained LMs as fixed feature extractors and restrict the downstream task models to not have additional sequence modeling layers. We compare BERT (Devlin et al. 2018), ELMo (Peters et al., 2018), BioBERT (Lee et al., 2019) and BioELMo, a biomedical version of ELMo trained on 10M PubMed abstracts. Surprisingly, while fine-tuned BioBERT is better than BioELMo in biomedical NER and NLI tasks, as a fixed feature extractor BioELMo outperforms BioBERT in our probing tasks. We use visualization and nearest neighbor analysis to show that better encoding of entity-type and relational information leads to this superiority.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8663564920425415
+    },
+    {
+      "name": "Extractor",
+      "score": 0.6342104077339172
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6210151314735413
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5896930694580078
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5846447348594666
+    },
+    {
+      "name": "Language model",
+      "score": 0.5836740732192993
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.5607187747955322
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.5467090606689453
+    },
+    {
+      "name": "Sequence labeling",
+      "score": 0.5317277908325195
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.5019335746765137
+    },
+    {
+      "name": "Visualization",
+      "score": 0.48485028743743896
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.46758103370666504
+    },
+    {
+      "name": "Encoding (memory)",
+      "score": 0.45492640137672424
+    },
+    {
+      "name": "Question answering",
+      "score": 0.4445647895336151
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Process engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,144 +1,195 @@
 {
-    "title": "ScribFormer: Transformer Makes CNN Work Better for Scribble-Based Medical Image Segmentation",
-    "url": "https://openalex.org/W4391594064",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2254783061",
-            "name": "Li, Zihan",
-            "affiliations": [
-                "Xiamen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2032612703",
-            "name": "Zheng Yuan",
-            "affiliations": [
-                "Xiamen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2353310645",
-            "name": "Shan Dan-dan",
-            "affiliations": [
-                "Xiamen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4222472508",
-            "name": "Yang, Shuzhou",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3124070692",
-            "name": "Li Qingde",
-            "affiliations": [
-                "University of Hull"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2284174788",
-            "name": "Wang Beizhan",
-            "affiliations": [
-                "Xiamen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2359152991",
-            "name": "Zhang Yuanting",
-            "affiliations": [
-                "Chinese University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2641365340",
-            "name": "Hong Qingqi",
-            "affiliations": [
-                "Xiamen University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2227878914",
-            "name": "Shen, Dinggang",
-            "affiliations": [
-                "ShanghaiTech University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2996290406",
-        "https://openalex.org/W2971013993",
-        "https://openalex.org/W3037793939",
-        "https://openalex.org/W3129501203",
-        "https://openalex.org/W6776660084",
-        "https://openalex.org/W2337429362",
-        "https://openalex.org/W2976295171",
-        "https://openalex.org/W6681588610",
-        "https://openalex.org/W4214961286",
-        "https://openalex.org/W4295747380",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3160694286",
-        "https://openalex.org/W4372260366",
-        "https://openalex.org/W4388191550",
-        "https://openalex.org/W2295107390",
-        "https://openalex.org/W6838569960",
-        "https://openalex.org/W3034930876",
-        "https://openalex.org/W3177958285",
-        "https://openalex.org/W4307287440",
-        "https://openalex.org/W2135535334",
-        "https://openalex.org/W2168031320",
-        "https://openalex.org/W2890761445",
-        "https://openalex.org/W1997677703",
-        "https://openalex.org/W4318566866",
-        "https://openalex.org/W4312428231",
-        "https://openalex.org/W4382998948",
-        "https://openalex.org/W4212875960",
-        "https://openalex.org/W4284966855",
-        "https://openalex.org/W6857357958",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W4210373591",
-        "https://openalex.org/W3204255739",
-        "https://openalex.org/W3187378100",
-        "https://openalex.org/W3203841574",
-        "https://openalex.org/W6810755270",
-        "https://openalex.org/W3034453930",
-        "https://openalex.org/W3177087374",
-        "https://openalex.org/W4382465636",
-        "https://openalex.org/W3166286626",
-        "https://openalex.org/W3132851869",
-        "https://openalex.org/W4387211617",
-        "https://openalex.org/W2979770789",
-        "https://openalex.org/W2871579310",
-        "https://openalex.org/W4226396876",
-        "https://openalex.org/W2804047627",
-        "https://openalex.org/W4281938689",
-        "https://openalex.org/W2995848654",
-        "https://openalex.org/W2525945566",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2124592697",
-        "https://openalex.org/W3199551447",
-        "https://openalex.org/W6744338214",
-        "https://openalex.org/W6790312409",
-        "https://openalex.org/W2992308087",
-        "https://openalex.org/W6779447676",
-        "https://openalex.org/W6743428213",
-        "https://openalex.org/W2765407302",
-        "https://openalex.org/W2125637308",
-        "https://openalex.org/W3092564080",
-        "https://openalex.org/W6795435739",
-        "https://openalex.org/W4238186339",
-        "https://openalex.org/W3021034461",
-        "https://openalex.org/W3152004749",
-        "https://openalex.org/W3103562302",
-        "https://openalex.org/W4281250643",
-        "https://openalex.org/W4387293722",
-        "https://openalex.org/W3128825919",
-        "https://openalex.org/W3160284783",
-        "https://openalex.org/W2746314669"
-    ],
-    "abstract": "Most recent scribble-supervised segmentation methods commonly adopt a CNN framework with an encoder-decoder architecture. Despite its multiple benefits, this framework generally can only capture small-range feature dependency for the convolutional layer with the local receptive field, which makes it difficult to learn global shape information from the limited information provided by scribble annotations. To address this issue, this paper proposes a new CNN-Transformer hybrid solution for scribble-supervised medical image segmentation called ScribFormer. The proposed ScribFormer model has a triple-branch structure, i.e., the hybrid of a CNN branch, a Transformer branch, and an attention-guided class activation map (ACAM) branch. Specifically, the CNN branch collaborates with the Transformer branch to fuse the local features learned from CNN with the global representations obtained from Transformer, which can effectively overcome limitations of existing scribble-supervised segmentation methods. Furthermore, the ACAM branch assists in unifying the shallow convolution features and the deep convolution features to improve model's performance further. Extensive experiments on two public datasets and one private dataset show that our ScribFormer has superior performance over the state-of-the-art scribble-supervised segmentation methods, and achieves even better results than the fully-supervised segmentation methods. The code is released at https://github.com/HUANGLIZI/ScribFormer.",
-    "full_text": null
+  "title": "ScribFormer: Transformer Makes CNN Work Better for Scribble-Based Medical Image Segmentation",
+  "url": "https://openalex.org/W4391594064",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2254783061",
+      "name": "Li, Zihan",
+      "affiliations": [
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2032612703",
+      "name": "Zheng Yuan",
+      "affiliations": [
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2353310645",
+      "name": "Shan Dan-dan",
+      "affiliations": [
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4222472508",
+      "name": "Yang, Shuzhou",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3124070692",
+      "name": "Li Qingde",
+      "affiliations": [
+        "University of Hull"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2284174788",
+      "name": "Wang Beizhan",
+      "affiliations": [
+        "Xiamen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2359152991",
+      "name": "Zhang Yuanting",
+      "affiliations": [
+        "Chinese University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2641365340",
+      "name": "Hong Qingqi",
+      "affiliations": [
+        "Xiamen University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2227878914",
+      "name": "Shen, Dinggang",
+      "affiliations": [
+        "ShanghaiTech University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2996290406",
+    "https://openalex.org/W2971013993",
+    "https://openalex.org/W3037793939",
+    "https://openalex.org/W3129501203",
+    "https://openalex.org/W6776660084",
+    "https://openalex.org/W2337429362",
+    "https://openalex.org/W2976295171",
+    "https://openalex.org/W6681588610",
+    "https://openalex.org/W4214961286",
+    "https://openalex.org/W4295747380",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3160694286",
+    "https://openalex.org/W4372260366",
+    "https://openalex.org/W4388191550",
+    "https://openalex.org/W2295107390",
+    "https://openalex.org/W6838569960",
+    "https://openalex.org/W3034930876",
+    "https://openalex.org/W3177958285",
+    "https://openalex.org/W4307287440",
+    "https://openalex.org/W2135535334",
+    "https://openalex.org/W2168031320",
+    "https://openalex.org/W2890761445",
+    "https://openalex.org/W1997677703",
+    "https://openalex.org/W4318566866",
+    "https://openalex.org/W4312428231",
+    "https://openalex.org/W4382998948",
+    "https://openalex.org/W4212875960",
+    "https://openalex.org/W4284966855",
+    "https://openalex.org/W6857357958",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W4210373591",
+    "https://openalex.org/W3204255739",
+    "https://openalex.org/W3187378100",
+    "https://openalex.org/W3203841574",
+    "https://openalex.org/W6810755270",
+    "https://openalex.org/W3034453930",
+    "https://openalex.org/W3177087374",
+    "https://openalex.org/W4382465636",
+    "https://openalex.org/W3166286626",
+    "https://openalex.org/W3132851869",
+    "https://openalex.org/W4387211617",
+    "https://openalex.org/W2979770789",
+    "https://openalex.org/W2871579310",
+    "https://openalex.org/W4226396876",
+    "https://openalex.org/W2804047627",
+    "https://openalex.org/W4281938689",
+    "https://openalex.org/W2995848654",
+    "https://openalex.org/W2525945566",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2124592697",
+    "https://openalex.org/W3199551447",
+    "https://openalex.org/W6744338214",
+    "https://openalex.org/W6790312409",
+    "https://openalex.org/W2992308087",
+    "https://openalex.org/W6779447676",
+    "https://openalex.org/W6743428213",
+    "https://openalex.org/W2765407302",
+    "https://openalex.org/W2125637308",
+    "https://openalex.org/W3092564080",
+    "https://openalex.org/W6795435739",
+    "https://openalex.org/W4238186339",
+    "https://openalex.org/W3021034461",
+    "https://openalex.org/W3152004749",
+    "https://openalex.org/W3103562302",
+    "https://openalex.org/W4281250643",
+    "https://openalex.org/W4387293722",
+    "https://openalex.org/W3128825919",
+    "https://openalex.org/W3160284783",
+    "https://openalex.org/W2746314669"
+  ],
+  "abstract": "Most recent scribble-supervised segmentation methods commonly adopt a CNN framework with an encoder-decoder architecture. Despite its multiple benefits, this framework generally can only capture small-range feature dependency for the convolutional layer with the local receptive field, which makes it difficult to learn global shape information from the limited information provided by scribble annotations. To address this issue, this paper proposes a new CNN-Transformer hybrid solution for scribble-supervised medical image segmentation called ScribFormer. The proposed ScribFormer model has a triple-branch structure, i.e., the hybrid of a CNN branch, a Transformer branch, and an attention-guided class activation map (ACAM) branch. Specifically, the CNN branch collaborates with the Transformer branch to fuse the local features learned from CNN with the global representations obtained from Transformer, which can effectively overcome limitations of existing scribble-supervised segmentation methods. Furthermore, the ACAM branch assists in unifying the shallow convolution features and the deep convolution features to improve model's performance further. Extensive experiments on two public datasets and one private dataset show that our ScribFormer has superior performance over the state-of-the-art scribble-supervised segmentation methods, and achieves even better results than the fully-supervised segmentation methods. The code is released at https://github.com/HUANGLIZI/ScribFormer.",
+  "full_text": null,
+  "topic": "Image segmentation",
+  "concepts": [
+    {
+      "name": "Image segmentation",
+      "score": 0.7134935855865479
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6818777918815613
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6561837792396545
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.6170541644096375
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5289226770401001
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5244584083557129
+    },
+    {
+      "name": "Medical imaging",
+      "score": 0.4544655382633209
+    },
+    {
+      "name": "Scale-space segmentation",
+      "score": 0.4417487382888794
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.40087807178497314
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11518466472625732
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07282409071922302
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

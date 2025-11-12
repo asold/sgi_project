@@ -1,121 +1,148 @@
 {
-    "title": "Template-Aware Transformer for Person Reidentification",
-    "url": "https://openalex.org/W4225624959",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2141108610",
-            "name": "Yanwei Zheng",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3004457556",
-            "name": "Zengrui Zhao",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096325735",
-            "name": "Xiaowei Yu",
-            "affiliations": [
-                "Jiangsu Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2158095242",
-            "name": "Dongxiao Yu",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2790764075",
-        "https://openalex.org/W2998792609",
-        "https://openalex.org/W2912406707",
-        "https://openalex.org/W2556967412",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3128723389",
-        "https://openalex.org/W2892153639",
-        "https://openalex.org/W2798550112",
-        "https://openalex.org/W3123416309",
-        "https://openalex.org/W3014752368",
-        "https://openalex.org/W2953684117",
-        "https://openalex.org/W2204750386",
-        "https://openalex.org/W2511791013",
-        "https://openalex.org/W2981393440",
-        "https://openalex.org/W2135442311",
-        "https://openalex.org/W2769346661",
-        "https://openalex.org/W1928419358",
-        "https://openalex.org/W2259687230",
-        "https://openalex.org/W2467139031",
-        "https://openalex.org/W2964163358",
-        "https://openalex.org/W2984145721",
-        "https://openalex.org/W2794809451",
-        "https://openalex.org/W2747359207",
-        "https://openalex.org/W2963322158",
-        "https://openalex.org/W3194074702",
-        "https://openalex.org/W3202603867",
-        "https://openalex.org/W2998508940",
-        "https://openalex.org/W2986093954",
-        "https://openalex.org/W3010840919",
-        "https://openalex.org/W2936258086",
-        "https://openalex.org/W2989820052",
-        "https://openalex.org/W2953214814",
-        "https://openalex.org/W2962859295",
-        "https://openalex.org/W2988852559",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W3172752666",
-        "https://openalex.org/W2916798096",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3205959870",
-        "https://openalex.org/W3175823695",
-        "https://openalex.org/W3197896218",
-        "https://openalex.org/W3143016713",
-        "https://openalex.org/W3142358935",
-        "https://openalex.org/W2963383990",
-        "https://openalex.org/W2988964414",
-        "https://openalex.org/W46454230",
-        "https://openalex.org/W1941498359",
-        "https://openalex.org/W2972332787",
-        "https://openalex.org/W3035186652",
-        "https://openalex.org/W3097870364",
-        "https://openalex.org/W2798775284",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W2967359135",
-        "https://openalex.org/W2963978393",
-        "https://openalex.org/W2983640911",
-        "https://openalex.org/W2769555051",
-        "https://openalex.org/W2963047834",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2584637367",
-        "https://openalex.org/W2963842104",
-        "https://openalex.org/W3035539956",
-        "https://openalex.org/W2795758732",
-        "https://openalex.org/W3000133216",
-        "https://openalex.org/W3045817950",
-        "https://openalex.org/W2962706983",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W3205065953",
-        "https://openalex.org/W2395611524",
-        "https://openalex.org/W4229442942",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3096285474",
-        "https://openalex.org/W4287330514",
-        "https://openalex.org/W3115484111",
-        "https://openalex.org/W3122239467",
-        "https://openalex.org/W3100506510",
-        "https://openalex.org/W2949846184",
-        "https://openalex.org/W3125736290"
-    ],
-    "abstract": "Person reidentification (ReID) is a challenging computer vision task for identifying or verifying one or more persons when the faces are not available. In ReID, the indistinguishable background usually affects the model’s perception of the foreground, which reduces the performance of ReID. Generally, the background of the same camera is similar, whereas that of different cameras is quite different. Based on this finding, we propose a template-aware transformer (TAT) method which can learn intersample indistinguishable features by introducing a learnable template for the transformer structure to cut down the model’s attention to regions of the image with low discrimination, including backgrounds and occlusions. In the multiheaded attention module of the encoder, this template directs template-aware attention to indistinguishable features of the image and gradually increases the attention to distinguishable features as the encoder block deepens. We also increase the number of templates using side information considering the characteristics of ReID tasks to adapt the model to backgrounds that vary significantly with different camera IDs. Finally, we demonstrate the validity of our theories using various public data sets and achieve competitive results via a quantitative evaluation.",
-    "full_text": null
+  "title": "Template-Aware Transformer for Person Reidentification",
+  "url": "https://openalex.org/W4225624959",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2141108610",
+      "name": "Yanwei Zheng",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3004457556",
+      "name": "Zengrui Zhao",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096325735",
+      "name": "Xiaowei Yu",
+      "affiliations": [
+        "Jiangsu Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2158095242",
+      "name": "Dongxiao Yu",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2790764075",
+    "https://openalex.org/W2998792609",
+    "https://openalex.org/W2912406707",
+    "https://openalex.org/W2556967412",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3128723389",
+    "https://openalex.org/W2892153639",
+    "https://openalex.org/W2798550112",
+    "https://openalex.org/W3123416309",
+    "https://openalex.org/W3014752368",
+    "https://openalex.org/W2953684117",
+    "https://openalex.org/W2204750386",
+    "https://openalex.org/W2511791013",
+    "https://openalex.org/W2981393440",
+    "https://openalex.org/W2135442311",
+    "https://openalex.org/W2769346661",
+    "https://openalex.org/W1928419358",
+    "https://openalex.org/W2259687230",
+    "https://openalex.org/W2467139031",
+    "https://openalex.org/W2964163358",
+    "https://openalex.org/W2984145721",
+    "https://openalex.org/W2794809451",
+    "https://openalex.org/W2747359207",
+    "https://openalex.org/W2963322158",
+    "https://openalex.org/W3194074702",
+    "https://openalex.org/W3202603867",
+    "https://openalex.org/W2998508940",
+    "https://openalex.org/W2986093954",
+    "https://openalex.org/W3010840919",
+    "https://openalex.org/W2936258086",
+    "https://openalex.org/W2989820052",
+    "https://openalex.org/W2953214814",
+    "https://openalex.org/W2962859295",
+    "https://openalex.org/W2988852559",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W3172752666",
+    "https://openalex.org/W2916798096",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3205959870",
+    "https://openalex.org/W3175823695",
+    "https://openalex.org/W3197896218",
+    "https://openalex.org/W3143016713",
+    "https://openalex.org/W3142358935",
+    "https://openalex.org/W2963383990",
+    "https://openalex.org/W2988964414",
+    "https://openalex.org/W46454230",
+    "https://openalex.org/W1941498359",
+    "https://openalex.org/W2972332787",
+    "https://openalex.org/W3035186652",
+    "https://openalex.org/W3097870364",
+    "https://openalex.org/W2798775284",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W2967359135",
+    "https://openalex.org/W2963978393",
+    "https://openalex.org/W2983640911",
+    "https://openalex.org/W2769555051",
+    "https://openalex.org/W2963047834",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2584637367",
+    "https://openalex.org/W2963842104",
+    "https://openalex.org/W3035539956",
+    "https://openalex.org/W2795758732",
+    "https://openalex.org/W3000133216",
+    "https://openalex.org/W3045817950",
+    "https://openalex.org/W2962706983",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W3205065953",
+    "https://openalex.org/W2395611524",
+    "https://openalex.org/W4229442942",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3096285474",
+    "https://openalex.org/W4287330514",
+    "https://openalex.org/W3115484111",
+    "https://openalex.org/W3122239467",
+    "https://openalex.org/W3100506510",
+    "https://openalex.org/W2949846184",
+    "https://openalex.org/W3125736290"
+  ],
+  "abstract": "Person reidentification (ReID) is a challenging computer vision task for identifying or verifying one or more persons when the faces are not available. In ReID, the indistinguishable background usually affects the model’s perception of the foreground, which reduces the performance of ReID. Generally, the background of the same camera is similar, whereas that of different cameras is quite different. Based on this finding, we propose a template-aware transformer (TAT) method which can learn intersample indistinguishable features by introducing a learnable template for the transformer structure to cut down the model’s attention to regions of the image with low discrimination, including backgrounds and occlusions. In the multiheaded attention module of the encoder, this template directs template-aware attention to indistinguishable features of the image and gradually increases the attention to distinguishable features as the encoder block deepens. We also increase the number of templates using side information considering the characteristics of ReID tasks to adapt the model to backgrounds that vary significantly with different camera IDs. Finally, we demonstrate the validity of our theories using various public data sets and achieve competitive results via a quantitative evaluation.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.5918213725090027
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5907348990440369
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3914943337440491
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.11898192763328552
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07141131162643433
+    },
+    {
+      "name": "Voltage",
+      "score": 0.06407412886619568
+    }
+  ]
 }

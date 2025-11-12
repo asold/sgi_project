@@ -1,94 +1,173 @@
 {
-    "title": "I3 Retriever: Incorporating Implicit Interaction in Pre-trained Language Models for Passage Retrieval",
-    "url": "https://openalex.org/W4387846439",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1965764624",
-            "name": "Qian Dong",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2154797353",
-            "name": "Yiding Liu",
-            "affiliations": [
-                "Baidu (China)",
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2223502885",
-            "name": "Qingyao Ai",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096293545",
-            "name": "Haitao Li",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2166001617",
-            "name": "Shuaiqiang Wang",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111097927",
-            "name": "Yiqun Liu",
-            "affiliations": [
-                "Baidu (China)",
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112665048",
-            "name": "Dawei Yin",
-            "affiliations": [
-                "Baidu (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109195263",
-            "name": "Shao-Ping Ma",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3034912391",
-        "https://openalex.org/W2783640434",
-        "https://openalex.org/W3141911889",
-        "https://openalex.org/W3156638011",
-        "https://openalex.org/W4212963993",
-        "https://openalex.org/W2536015822",
-        "https://openalex.org/W2922386288",
-        "https://openalex.org/W2136189984",
-        "https://openalex.org/W2998702515",
-        "https://openalex.org/W3021397474",
-        "https://openalex.org/W3212725701",
-        "https://openalex.org/W3157758108",
-        "https://openalex.org/W2142920810",
-        "https://openalex.org/W3168875417",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W4252076394",
-        "https://openalex.org/W3217305727",
-        "https://openalex.org/W2131876387",
-        "https://openalex.org/W2265289447",
-        "https://openalex.org/W3175349176",
-        "https://openalex.org/W4212907295",
-        "https://openalex.org/W4306873598",
-        "https://openalex.org/W2069065514",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2963469388"
-    ],
-    "abstract": "Passage retrieval is a fundamental task in many information systems, such as web search and question answering, where both efficiency and effectiveness are critical concerns. In recent years, neural retrievers based on pre-trained language models (PLM), such as dual-encoders, have achieved huge success. Yet, studies have found that the performance of dual-encoders are often limited due to the neglecting of the interaction information between queries and candidate passages. Therefore, various interaction paradigms have been proposed to improve the performance of vanilla dual-encoders. Particularly, recent state-of-the-art methods often introduce late-interaction during the model inference process. However, such late-interaction based methods usually bring extensive computation and storage cost on large corpus. Despite their effectiveness, the concern of efficiency and space footprint is still an important factor that limits the application of interaction-based neural retrieval models. To tackle this issue, we Incorporate Implicit Interaction into dual-encoders, and propose I3 retriever. In particular, our implicit interaction paradigm leverages generated pseudo-queries to simulate query-passage interaction, which jointly optimizes with query and passage encoders in an end-to-end manner. It can be fully pre-computed and cached, and its inference process only involves simple dot product operation of the query vector and passage vector, which makes it as efficient as the vanilla dual encoders. We conduct comprehensive experiments on MSMARCO and TREC2019 Deep Learning Datasets, demonstrating the I3 retriever's superiority in terms of both effectiveness and efficiency. Moreover, the proposed implicit interaction is compatible with special pre-training and knowledge distillation for passage retrieval, which brings a new state-of-the-art performance. The codes are available at https://github.com/Deriq-Qian-Dong/III-Retriever.",
-    "full_text": null
+  "title": "I3 Retriever: Incorporating Implicit Interaction in Pre-trained Language Models for Passage Retrieval",
+  "url": "https://openalex.org/W4387846439",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1965764624",
+      "name": "Qian Dong",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2154797353",
+      "name": "Yiding Liu",
+      "affiliations": [
+        "Baidu (China)",
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2223502885",
+      "name": "Qingyao Ai",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096293545",
+      "name": "Haitao Li",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2166001617",
+      "name": "Shuaiqiang Wang",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111097927",
+      "name": "Yiqun Liu",
+      "affiliations": [
+        "Baidu (China)",
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112665048",
+      "name": "Dawei Yin",
+      "affiliations": [
+        "Baidu (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109195263",
+      "name": "Shao-Ping Ma",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3034912391",
+    "https://openalex.org/W2783640434",
+    "https://openalex.org/W3141911889",
+    "https://openalex.org/W3156638011",
+    "https://openalex.org/W4212963993",
+    "https://openalex.org/W2536015822",
+    "https://openalex.org/W2922386288",
+    "https://openalex.org/W2136189984",
+    "https://openalex.org/W2998702515",
+    "https://openalex.org/W3021397474",
+    "https://openalex.org/W3212725701",
+    "https://openalex.org/W3157758108",
+    "https://openalex.org/W2142920810",
+    "https://openalex.org/W3168875417",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W4252076394",
+    "https://openalex.org/W3217305727",
+    "https://openalex.org/W2131876387",
+    "https://openalex.org/W2265289447",
+    "https://openalex.org/W3175349176",
+    "https://openalex.org/W4212907295",
+    "https://openalex.org/W4306873598",
+    "https://openalex.org/W2069065514",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2963469388"
+  ],
+  "abstract": "Passage retrieval is a fundamental task in many information systems, such as web search and question answering, where both efficiency and effectiveness are critical concerns. In recent years, neural retrievers based on pre-trained language models (PLM), such as dual-encoders, have achieved huge success. Yet, studies have found that the performance of dual-encoders are often limited due to the neglecting of the interaction information between queries and candidate passages. Therefore, various interaction paradigms have been proposed to improve the performance of vanilla dual-encoders. Particularly, recent state-of-the-art methods often introduce late-interaction during the model inference process. However, such late-interaction based methods usually bring extensive computation and storage cost on large corpus. Despite their effectiveness, the concern of efficiency and space footprint is still an important factor that limits the application of interaction-based neural retrieval models. To tackle this issue, we Incorporate Implicit Interaction into dual-encoders, and propose I3 retriever. In particular, our implicit interaction paradigm leverages generated pseudo-queries to simulate query-passage interaction, which jointly optimizes with query and passage encoders in an end-to-end manner. It can be fully pre-computed and cached, and its inference process only involves simple dot product operation of the query vector and passage vector, which makes it as efficient as the vanilla dual encoders. We conduct comprehensive experiments on MSMARCO and TREC2019 Deep Learning Datasets, demonstrating the I3 retriever's superiority in terms of both effectiveness and efficiency. Moreover, the proposed implicit interaction is compatible with special pre-training and knowledge distillation for passage retrieval, which brings a new state-of-the-art performance. The codes are available at https://github.com/Deriq-Qian-Dong/III-Retriever.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8244472742080688
+    },
+    {
+      "name": "Inference",
+      "score": 0.5846301913261414
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5404658317565918
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5304616689682007
+    },
+    {
+      "name": "Dual (grammatical number)",
+      "score": 0.4935070276260376
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.4399870038032532
+    },
+    {
+      "name": "Language model",
+      "score": 0.4343078136444092
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4275355935096741
+    },
+    {
+      "name": "ENCODE",
+      "score": 0.4239428639411926
+    },
+    {
+      "name": "Encoding (memory)",
+      "score": 0.42184650897979736
+    },
+    {
+      "name": "Question answering",
+      "score": 0.4127753973007202
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.38416236639022827
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3216724395751953
+    },
+    {
+      "name": "Literature",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

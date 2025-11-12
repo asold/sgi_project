@@ -1,146 +1,197 @@
 {
-    "title": "Feasibility of decoding covert speech in ECoG with a Transformer trained on overt speech",
-    "url": "https://openalex.org/W4398141957",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2228173379",
-            "name": "Shuji Komeiji",
-            "affiliations": [
-                "Tokyo University of Agriculture and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2513217093",
-            "name": "Takumi Mitsuhashi",
-            "affiliations": [
-                "Juntendo University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2163658191",
-            "name": "Yasushi Iimura",
-            "affiliations": [
-                "Juntendo University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108559032",
-            "name": "Hiroharu Suzuki",
-            "affiliations": [
-                "Juntendo University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100993161",
-            "name": "Hidenori Sugano",
-            "affiliations": [
-                "Juntendo University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112733660",
-            "name": "Koichi Shinoda",
-            "affiliations": [
-                "Tokyo Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096168224",
-            "name": "Toshihisa Tanaka",
-            "affiliations": [
-                "Tokyo University of Agriculture and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2228173379",
-            "name": "Shuji Komeiji",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2513217093",
-            "name": "Takumi Mitsuhashi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2163658191",
-            "name": "Yasushi Iimura",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2108559032",
-            "name": "Hiroharu Suzuki",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100993161",
-            "name": "Hidenori Sugano",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2112733660",
-            "name": "Koichi Shinoda",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096168224",
-            "name": "Toshihisa Tanaka",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2145302786",
-        "https://openalex.org/W2106006415",
-        "https://openalex.org/W2033225291",
-        "https://openalex.org/W2589952473",
-        "https://openalex.org/W2909141918",
-        "https://openalex.org/W2160783467",
-        "https://openalex.org/W2010495159",
-        "https://openalex.org/W2049363352",
-        "https://openalex.org/W2388216700",
-        "https://openalex.org/W1488659701",
-        "https://openalex.org/W2481854178",
-        "https://openalex.org/W2964982538",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2127141656",
-        "https://openalex.org/W3095432487",
-        "https://openalex.org/W3013691153",
-        "https://openalex.org/W2913144232",
-        "https://openalex.org/W2940585064",
-        "https://openalex.org/W4224926216",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3198923947",
-        "https://openalex.org/W2028664989",
-        "https://openalex.org/W4205549622",
-        "https://openalex.org/W2029626315",
-        "https://openalex.org/W3007433671",
-        "https://openalex.org/W3008191852",
-        "https://openalex.org/W2981857663",
-        "https://openalex.org/W4220904310",
-        "https://openalex.org/W4205466227",
-        "https://openalex.org/W4386906306",
-        "https://openalex.org/W4387378260",
-        "https://openalex.org/W4289538860",
-        "https://openalex.org/W4223920619",
-        "https://openalex.org/W4292731283",
-        "https://openalex.org/W3028543194",
-        "https://openalex.org/W2793512971",
-        "https://openalex.org/W2894692871",
-        "https://openalex.org/W4372342291",
-        "https://openalex.org/W3015338123",
-        "https://openalex.org/W2237320994",
-        "https://openalex.org/W1996799790",
-        "https://openalex.org/W2155686235",
-        "https://openalex.org/W2102103192",
-        "https://openalex.org/W1982352919",
-        "https://openalex.org/W2171816835",
-        "https://openalex.org/W2161632259",
-        "https://openalex.org/W2596538236",
-        "https://openalex.org/W2101135654",
-        "https://openalex.org/W2011825791",
-        "https://openalex.org/W2268719463",
-        "https://openalex.org/W4206978609"
-    ],
-    "abstract": "Abstract Several attempts for speech brain–computer interfacing (BCI) have been made to decode phonemes, sub-words, words, or sentences using invasive measurements, such as the electrocorticogram (ECoG), during auditory speech perception, overt speech, or imagined (covert) speech. Decoding sentences from covert speech is a challenging task. Sixteen epilepsy patients with intracranially implanted electrodes participated in this study, and ECoGs were recorded during overt speech and covert speech of eight Japanese sentences, each consisting of three tokens. In particular, Transformer neural network model was applied to decode text sentences from covert speech, which was trained using ECoGs obtained during overt speech. We first examined the proposed Transformer model using the same task for training and testing, and then evaluated the model’s performance when trained with overt task for decoding covert speech. The Transformer model trained on covert speech achieved an average token error rate (TER) of 46.6% for decoding covert speech, whereas the model trained on overt speech achieved a TER of 46.3% $$( p &gt; 0.05; d=0.07)$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mrow> <mml:mo>(</mml:mo> <mml:mi>p</mml:mi> <mml:mo>&gt;</mml:mo> <mml:mn>0.05</mml:mn> <mml:mo>;</mml:mo> <mml:mi>d</mml:mi> <mml:mo>=</mml:mo> <mml:mn>0.07</mml:mn> <mml:mo>)</mml:mo> </mml:mrow> </mml:math> . Therefore, the challenge of collecting training data for covert speech can be addressed using overt speech. The performance of covert speech can improve by employing several overt speeches.",
-    "full_text": null
+  "title": "Feasibility of decoding covert speech in ECoG with a Transformer trained on overt speech",
+  "url": "https://openalex.org/W4398141957",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2228173379",
+      "name": "Shuji Komeiji",
+      "affiliations": [
+        "Tokyo University of Agriculture and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2513217093",
+      "name": "Takumi Mitsuhashi",
+      "affiliations": [
+        "Juntendo University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2163658191",
+      "name": "Yasushi Iimura",
+      "affiliations": [
+        "Juntendo University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108559032",
+      "name": "Hiroharu Suzuki",
+      "affiliations": [
+        "Juntendo University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100993161",
+      "name": "Hidenori Sugano",
+      "affiliations": [
+        "Juntendo University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112733660",
+      "name": "Koichi Shinoda",
+      "affiliations": [
+        "Tokyo Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096168224",
+      "name": "Toshihisa Tanaka",
+      "affiliations": [
+        "Tokyo University of Agriculture and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2228173379",
+      "name": "Shuji Komeiji",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2513217093",
+      "name": "Takumi Mitsuhashi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2163658191",
+      "name": "Yasushi Iimura",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2108559032",
+      "name": "Hiroharu Suzuki",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100993161",
+      "name": "Hidenori Sugano",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2112733660",
+      "name": "Koichi Shinoda",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096168224",
+      "name": "Toshihisa Tanaka",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2145302786",
+    "https://openalex.org/W2106006415",
+    "https://openalex.org/W2033225291",
+    "https://openalex.org/W2589952473",
+    "https://openalex.org/W2909141918",
+    "https://openalex.org/W2160783467",
+    "https://openalex.org/W2010495159",
+    "https://openalex.org/W2049363352",
+    "https://openalex.org/W2388216700",
+    "https://openalex.org/W1488659701",
+    "https://openalex.org/W2481854178",
+    "https://openalex.org/W2964982538",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2127141656",
+    "https://openalex.org/W3095432487",
+    "https://openalex.org/W3013691153",
+    "https://openalex.org/W2913144232",
+    "https://openalex.org/W2940585064",
+    "https://openalex.org/W4224926216",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3198923947",
+    "https://openalex.org/W2028664989",
+    "https://openalex.org/W4205549622",
+    "https://openalex.org/W2029626315",
+    "https://openalex.org/W3007433671",
+    "https://openalex.org/W3008191852",
+    "https://openalex.org/W2981857663",
+    "https://openalex.org/W4220904310",
+    "https://openalex.org/W4205466227",
+    "https://openalex.org/W4386906306",
+    "https://openalex.org/W4387378260",
+    "https://openalex.org/W4289538860",
+    "https://openalex.org/W4223920619",
+    "https://openalex.org/W4292731283",
+    "https://openalex.org/W3028543194",
+    "https://openalex.org/W2793512971",
+    "https://openalex.org/W2894692871",
+    "https://openalex.org/W4372342291",
+    "https://openalex.org/W3015338123",
+    "https://openalex.org/W2237320994",
+    "https://openalex.org/W1996799790",
+    "https://openalex.org/W2155686235",
+    "https://openalex.org/W2102103192",
+    "https://openalex.org/W1982352919",
+    "https://openalex.org/W2171816835",
+    "https://openalex.org/W2161632259",
+    "https://openalex.org/W2596538236",
+    "https://openalex.org/W2101135654",
+    "https://openalex.org/W2011825791",
+    "https://openalex.org/W2268719463",
+    "https://openalex.org/W4206978609"
+  ],
+  "abstract": "Abstract Several attempts for speech brain–computer interfacing (BCI) have been made to decode phonemes, sub-words, words, or sentences using invasive measurements, such as the electrocorticogram (ECoG), during auditory speech perception, overt speech, or imagined (covert) speech. Decoding sentences from covert speech is a challenging task. Sixteen epilepsy patients with intracranially implanted electrodes participated in this study, and ECoGs were recorded during overt speech and covert speech of eight Japanese sentences, each consisting of three tokens. In particular, Transformer neural network model was applied to decode text sentences from covert speech, which was trained using ECoGs obtained during overt speech. We first examined the proposed Transformer model using the same task for training and testing, and then evaluated the model’s performance when trained with overt task for decoding covert speech. The Transformer model trained on covert speech achieved an average token error rate (TER) of 46.6% for decoding covert speech, whereas the model trained on overt speech achieved a TER of 46.3% $$( p &gt; 0.05; d=0.07)$$ <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mrow> <mml:mo>(</mml:mo> <mml:mi>p</mml:mi> <mml:mo>&gt;</mml:mo> <mml:mn>0.05</mml:mn> <mml:mo>;</mml:mo> <mml:mi>d</mml:mi> <mml:mo>=</mml:mo> <mml:mn>0.07</mml:mn> <mml:mo>)</mml:mo> </mml:mrow> </mml:math> . Therefore, the challenge of collecting training data for covert speech can be addressed using overt speech. The performance of covert speech can improve by employing several overt speeches.",
+  "full_text": null,
+  "topic": "Covert",
+  "concepts": [
+    {
+      "name": "Covert",
+      "score": 0.8404825329780579
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.7481311559677124
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6454684734344482
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.6308428049087524
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5245271325111389
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.35314035415649414
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.10226386785507202
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.09718641638755798
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07853323221206665
+    },
+    {
+      "name": "Engineering",
+      "score": 0.054836153984069824
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

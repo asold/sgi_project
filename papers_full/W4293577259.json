@@ -1,79 +1,154 @@
 {
-    "title": "A Generalized Transformer-Based Pulse Detection Algorithm",
-    "url": "https://openalex.org/W4293577259",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5012083077",
-            "name": "Darío Demattíes",
-            "affiliations": [
-                "Argonne National Laboratory",
-                "Northwestern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5073461361",
-            "name": "Chenyu Wen",
-            "affiliations": [
-                "Delft University of Technology",
-                "Wageningen University & Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5018025509",
-            "name": "Shi‐Li Zhang",
-            "affiliations": [
-                "Uppsala University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2994146441",
-        "https://openalex.org/W3119306654",
-        "https://openalex.org/W2991274154",
-        "https://openalex.org/W3198767362",
-        "https://openalex.org/W4283320897",
-        "https://openalex.org/W4281287098",
-        "https://openalex.org/W4214575600",
-        "https://openalex.org/W2099026571",
-        "https://openalex.org/W1992436825",
-        "https://openalex.org/W2112390692",
-        "https://openalex.org/W2318002609",
-        "https://openalex.org/W3167231087",
-        "https://openalex.org/W2972439584",
-        "https://openalex.org/W2032711662",
-        "https://openalex.org/W3211239537",
-        "https://openalex.org/W2562252980",
-        "https://openalex.org/W3203899326",
-        "https://openalex.org/W1982280799",
-        "https://openalex.org/W3195953704",
-        "https://openalex.org/W4286212540",
-        "https://openalex.org/W2540379510",
-        "https://openalex.org/W2027359820",
-        "https://openalex.org/W3204648240",
-        "https://openalex.org/W2807257562",
-        "https://openalex.org/W2137018822",
-        "https://openalex.org/W2328788097",
-        "https://openalex.org/W2316903776",
-        "https://openalex.org/W2588911568",
-        "https://openalex.org/W3194491669",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W6600466347",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3140854437",
-        "https://openalex.org/W6607687417",
-        "https://openalex.org/W6603394118",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W3088197158",
-        "https://openalex.org/W3047373814",
-        "https://openalex.org/W2586103361",
-        "https://openalex.org/W3006545642",
-        "https://openalex.org/W2978535631",
-        "https://openalex.org/W2024366778",
-        "https://openalex.org/W3213493173",
-        "https://openalex.org/W2155748850",
-        "https://openalex.org/W4393696327"
-    ],
-    "abstract": "Pulse-like signals are ubiquitous in the field of single molecule analysis, <i>e.g.</i>, electrical or optical pulses caused by analyte translocations in nanopores. The primary challenge in processing pulse-like signals is to capture the pulses in noisy backgrounds, but current methods are subjectively based on a user-defined threshold for pulse recognition. Here, we propose a generalized machine-learning based method, named pulse detection transformer (PETR), for pulse detection. PETR determines the start and end time points of individual pulses, thereby singling out pulse segments in a time-sequential trace. It is objective without needing to specify any threshold. It provides a generalized interface for downstream algorithms for specific application scenarios. PETR is validated using both simulated and experimental nanopore translocation data. It returns a competitive performance in detecting pulses through assessing them with several standard metrics. Finally, the generalization nature of the PETR output is demonstrated using two representative algorithms for feature extraction.",
-    "full_text": null
+  "title": "A Generalized Transformer-Based Pulse Detection Algorithm",
+  "url": "https://openalex.org/W4293577259",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5012083077",
+      "name": "Darío Demattíes",
+      "affiliations": [
+        "Argonne National Laboratory",
+        "Northwestern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5073461361",
+      "name": "Chenyu Wen",
+      "affiliations": [
+        "Delft University of Technology",
+        "Wageningen University & Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5018025509",
+      "name": "Shi‐Li Zhang",
+      "affiliations": [
+        "Uppsala University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2994146441",
+    "https://openalex.org/W3119306654",
+    "https://openalex.org/W2991274154",
+    "https://openalex.org/W3198767362",
+    "https://openalex.org/W4283320897",
+    "https://openalex.org/W4281287098",
+    "https://openalex.org/W4214575600",
+    "https://openalex.org/W2099026571",
+    "https://openalex.org/W1992436825",
+    "https://openalex.org/W2112390692",
+    "https://openalex.org/W2318002609",
+    "https://openalex.org/W3167231087",
+    "https://openalex.org/W2972439584",
+    "https://openalex.org/W2032711662",
+    "https://openalex.org/W3211239537",
+    "https://openalex.org/W2562252980",
+    "https://openalex.org/W3203899326",
+    "https://openalex.org/W1982280799",
+    "https://openalex.org/W3195953704",
+    "https://openalex.org/W4286212540",
+    "https://openalex.org/W2540379510",
+    "https://openalex.org/W2027359820",
+    "https://openalex.org/W3204648240",
+    "https://openalex.org/W2807257562",
+    "https://openalex.org/W2137018822",
+    "https://openalex.org/W2328788097",
+    "https://openalex.org/W2316903776",
+    "https://openalex.org/W2588911568",
+    "https://openalex.org/W3194491669",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W6600466347",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3140854437",
+    "https://openalex.org/W6607687417",
+    "https://openalex.org/W6603394118",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W3088197158",
+    "https://openalex.org/W3047373814",
+    "https://openalex.org/W2586103361",
+    "https://openalex.org/W3006545642",
+    "https://openalex.org/W2978535631",
+    "https://openalex.org/W2024366778",
+    "https://openalex.org/W3213493173",
+    "https://openalex.org/W2155748850",
+    "https://openalex.org/W4393696327"
+  ],
+  "abstract": "Pulse-like signals are ubiquitous in the field of single molecule analysis, <i>e.g.</i>, electrical or optical pulses caused by analyte translocations in nanopores. The primary challenge in processing pulse-like signals is to capture the pulses in noisy backgrounds, but current methods are subjectively based on a user-defined threshold for pulse recognition. Here, we propose a generalized machine-learning based method, named pulse detection transformer (PETR), for pulse detection. PETR determines the start and end time points of individual pulses, thereby singling out pulse segments in a time-sequential trace. It is objective without needing to specify any threshold. It provides a generalized interface for downstream algorithms for specific application scenarios. PETR is validated using both simulated and experimental nanopore translocation data. It returns a competitive performance in detecting pulses through assessing them with several standard metrics. Finally, the generalization nature of the PETR output is demonstrated using two representative algorithms for feature extraction.",
+  "full_text": null,
+  "topic": "Algorithm",
+  "concepts": [
+    {
+      "name": "Algorithm",
+      "score": 0.6697158813476562
+    },
+    {
+      "name": "Computer science",
+      "score": 0.600456953048706
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5954139828681946
+    },
+    {
+      "name": "Pulse (music)",
+      "score": 0.5782825946807861
+    },
+    {
+      "name": "Nanopore",
+      "score": 0.5668572187423706
+    },
+    {
+      "name": "Analyte",
+      "score": 0.4813143014907837
+    },
+    {
+      "name": "Generalization",
+      "score": 0.4283127784729004
+    },
+    {
+      "name": "Voltage",
+      "score": 0.21569028496742249
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.19105380773544312
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1885707676410675
+    },
+    {
+      "name": "Engineering",
+      "score": 0.17810189723968506
+    },
+    {
+      "name": "Materials science",
+      "score": 0.1616418957710266
+    },
+    {
+      "name": "Nanotechnology",
+      "score": 0.12947136163711548
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.12634479999542236
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.1077946126461029
+    },
+    {
+      "name": "Detector",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Physical chemistry",
+      "score": 0.0
+    }
+  ]
 }

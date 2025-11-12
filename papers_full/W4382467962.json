@@ -1,139 +1,210 @@
 {
-    "title": "Early smoke and flame detection based on transformer",
-    "url": "https://openalex.org/W4382467962",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100752627",
-            "name": "Xinzhi Wang",
-            "affiliations": [
-                "Shanghai University of Engineering Science"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2332551016",
-            "name": "Mengyue Li",
-            "affiliations": [
-                "Shanghai University of Engineering Science"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2125591006",
-            "name": "Mingke Gao",
-            "affiliations": [
-                "China Electronics Technology Group Corporation"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2210274714",
-            "name": "Quanyi Liu",
-            "affiliations": [
-                "Civil Aviation Flight University of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2129991534",
-            "name": "Zhennan Li",
-            "affiliations": [
-                "Shanghai University of Engineering Science"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2622453439",
-            "name": "Luyao Kou",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100752627",
-            "name": "Xinzhi Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2332551016",
-            "name": "Mengyue Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2125591006",
-            "name": "Mingke Gao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2210274714",
-            "name": "Quanyi Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2129991534",
-            "name": "Zhennan Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2622453439",
-            "name": "Luyao Kou",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4318777648",
-        "https://openalex.org/W6701542384",
-        "https://openalex.org/W2318826393",
-        "https://openalex.org/W6683633714",
-        "https://openalex.org/W2792580111",
-        "https://openalex.org/W2901896113",
-        "https://openalex.org/W2900072638",
-        "https://openalex.org/W2058513207",
-        "https://openalex.org/W2904304793",
-        "https://openalex.org/W4224930816",
-        "https://openalex.org/W4312250248",
-        "https://openalex.org/W2013300501",
-        "https://openalex.org/W1843259916",
-        "https://openalex.org/W4207031702",
-        "https://openalex.org/W4214530913",
-        "https://openalex.org/W6838940232",
-        "https://openalex.org/W3132971810",
-        "https://openalex.org/W6770600958",
-        "https://openalex.org/W6762718338",
-        "https://openalex.org/W6842430463",
-        "https://openalex.org/W3206824631",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W6800957011",
-        "https://openalex.org/W6838689884",
-        "https://openalex.org/W6770593839",
-        "https://openalex.org/W2919981789",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W4288066856",
-        "https://openalex.org/W6790945221",
-        "https://openalex.org/W4200555195",
-        "https://openalex.org/W4316506390",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W4303644807",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W6842110086",
-        "https://openalex.org/W2954996726",
-        "https://openalex.org/W6803916128",
-        "https://openalex.org/W6730903564",
-        "https://openalex.org/W6735463952",
-        "https://openalex.org/W6760947256",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W6784094891",
-        "https://openalex.org/W6792041679",
-        "https://openalex.org/W6800610578",
-        "https://openalex.org/W6796325491",
-        "https://openalex.org/W6742348326",
-        "https://openalex.org/W6764024669",
-        "https://openalex.org/W6810460913",
-        "https://openalex.org/W4301409532",
-        "https://openalex.org/W4285377031",
-        "https://openalex.org/W3018757597",
-        "https://openalex.org/W4244353041",
-        "https://openalex.org/W4236965008",
-        "https://openalex.org/W3171206729",
-        "https://openalex.org/W4293660432",
-        "https://openalex.org/W2327472328"
-    ],
-    "abstract": "Fire-detection technology plays a critical role in ensuring public safety and facilitating the development of smart cities. Early fire detection is imperative to mitigate potential hazards and minimize associated losses. However, existing vision-based fire-detection methods exhibit limited generalizability and fail to adequately consider the effect of fire object size on detection accuracy. To address this issue, in this study a decoder-free fully transformer-based (DFFT) detector is used to achieve early smoke and flame detection, improving the detection performance for fires of different sizes. This method effectively captures multi-level and multi-scale fire features with rich semantic information while using two powerful encoders to maintain the accuracy of the single-feature map prediction. First, data augmentation is performed to enhance the generalizability of the model. Second, the detection-oriented transformer (DOT) backbone network is treated as a single-layer fire-feature extractor to obtain fire-related features on four scales, which are then fed into an encoder-only single-layer dense prediction module. Finally, the prediction module aggregates the multi-scale fire features into a single feature map using a scale-aggregated encoder (SAE). The prediction module then aligns the classification and regression features using a task-aligned encoder (TAE) to ensure the semantic interaction of the classification and regression predictions. Experimental results on one private dataset and one public dataset demonstrate that the adopted DFFT possesses high detection accuracy and a strong generalizability for fires of different sizes, particularly early small fires. The DFFT achieved mean average precision (mAP) values of 87.40% and 81.12% for the two datasets, outperforming other baseline models. It exhibits a better detection performance on flame objects than on smoke objects because of the prominence of flame features.",
-    "full_text": null
+  "title": "Early smoke and flame detection based on transformer",
+  "url": "https://openalex.org/W4382467962",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100752627",
+      "name": "Xinzhi Wang",
+      "affiliations": [
+        "Shanghai University of Engineering Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2332551016",
+      "name": "Mengyue Li",
+      "affiliations": [
+        "Shanghai University of Engineering Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2125591006",
+      "name": "Mingke Gao",
+      "affiliations": [
+        "China Electronics Technology Group Corporation"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2210274714",
+      "name": "Quanyi Liu",
+      "affiliations": [
+        "Civil Aviation Flight University of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2129991534",
+      "name": "Zhennan Li",
+      "affiliations": [
+        "Shanghai University of Engineering Science"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2622453439",
+      "name": "Luyao Kou",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100752627",
+      "name": "Xinzhi Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2332551016",
+      "name": "Mengyue Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2125591006",
+      "name": "Mingke Gao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2210274714",
+      "name": "Quanyi Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2129991534",
+      "name": "Zhennan Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2622453439",
+      "name": "Luyao Kou",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4318777648",
+    "https://openalex.org/W6701542384",
+    "https://openalex.org/W2318826393",
+    "https://openalex.org/W6683633714",
+    "https://openalex.org/W2792580111",
+    "https://openalex.org/W2901896113",
+    "https://openalex.org/W2900072638",
+    "https://openalex.org/W2058513207",
+    "https://openalex.org/W2904304793",
+    "https://openalex.org/W4224930816",
+    "https://openalex.org/W4312250248",
+    "https://openalex.org/W2013300501",
+    "https://openalex.org/W1843259916",
+    "https://openalex.org/W4207031702",
+    "https://openalex.org/W4214530913",
+    "https://openalex.org/W6838940232",
+    "https://openalex.org/W3132971810",
+    "https://openalex.org/W6770600958",
+    "https://openalex.org/W6762718338",
+    "https://openalex.org/W6842430463",
+    "https://openalex.org/W3206824631",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W6800957011",
+    "https://openalex.org/W6838689884",
+    "https://openalex.org/W6770593839",
+    "https://openalex.org/W2919981789",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W4288066856",
+    "https://openalex.org/W6790945221",
+    "https://openalex.org/W4200555195",
+    "https://openalex.org/W4316506390",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W4303644807",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W6842110086",
+    "https://openalex.org/W2954996726",
+    "https://openalex.org/W6803916128",
+    "https://openalex.org/W6730903564",
+    "https://openalex.org/W6735463952",
+    "https://openalex.org/W6760947256",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W6784094891",
+    "https://openalex.org/W6792041679",
+    "https://openalex.org/W6800610578",
+    "https://openalex.org/W6796325491",
+    "https://openalex.org/W6742348326",
+    "https://openalex.org/W6764024669",
+    "https://openalex.org/W6810460913",
+    "https://openalex.org/W4301409532",
+    "https://openalex.org/W4285377031",
+    "https://openalex.org/W3018757597",
+    "https://openalex.org/W4244353041",
+    "https://openalex.org/W4236965008",
+    "https://openalex.org/W3171206729",
+    "https://openalex.org/W4293660432",
+    "https://openalex.org/W2327472328"
+  ],
+  "abstract": "Fire-detection technology plays a critical role in ensuring public safety and facilitating the development of smart cities. Early fire detection is imperative to mitigate potential hazards and minimize associated losses. However, existing vision-based fire-detection methods exhibit limited generalizability and fail to adequately consider the effect of fire object size on detection accuracy. To address this issue, in this study a decoder-free fully transformer-based (DFFT) detector is used to achieve early smoke and flame detection, improving the detection performance for fires of different sizes. This method effectively captures multi-level and multi-scale fire features with rich semantic information while using two powerful encoders to maintain the accuracy of the single-feature map prediction. First, data augmentation is performed to enhance the generalizability of the model. Second, the detection-oriented transformer (DOT) backbone network is treated as a single-layer fire-feature extractor to obtain fire-related features on four scales, which are then fed into an encoder-only single-layer dense prediction module. Finally, the prediction module aggregates the multi-scale fire features into a single feature map using a scale-aggregated encoder (SAE). The prediction module then aligns the classification and regression features using a task-aligned encoder (TAE) to ensure the semantic interaction of the classification and regression predictions. Experimental results on one private dataset and one public dataset demonstrate that the adopted DFFT possesses high detection accuracy and a strong generalizability for fires of different sizes, particularly early small fires. The DFFT achieved mean average precision (mAP) values of 87.40% and 81.12% for the two datasets, outperforming other baseline models. It exhibits a better detection performance on flame objects than on smoke objects because of the prominence of flame features.",
+  "full_text": null,
+  "topic": "Generalizability theory",
+  "concepts": [
+    {
+      "name": "Generalizability theory",
+      "score": 0.7535250782966614
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6523064970970154
+    },
+    {
+      "name": "Fire detection",
+      "score": 0.49094799160957336
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.47427162528038025
+    },
+    {
+      "name": "Encoder",
+      "score": 0.47057315707206726
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4572739899158478
+    },
+    {
+      "name": "Detector",
+      "score": 0.4531566798686981
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42188021540641785
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3581235110759735
+    },
+    {
+      "name": "Engineering",
+      "score": 0.18380111455917358
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09948310256004333
+    },
+    {
+      "name": "Statistics",
+      "score": 0.09788811206817627
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Architectural engineering",
+      "score": 0.0
+    }
+  ]
 }

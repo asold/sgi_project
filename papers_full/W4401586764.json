@@ -1,56 +1,143 @@
 {
-    "title": "Sparsity Limit to Prune Large Language Models for on-Device AI Assistants: Llama-2 as an Example",
-    "url": "https://openalex.org/W4401586764",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2036346442",
-            "name": "Bo Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2172501990",
-            "name": "Yuru Xu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2145889472",
-        "https://openalex.org/W4392678114",
-        "https://openalex.org/W4385890089",
-        "https://openalex.org/W4379548477",
-        "https://openalex.org/W4327810158",
-        "https://openalex.org/W4390041933",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2964067969",
-        "https://openalex.org/W3106009088",
-        "https://openalex.org/W4389157038",
-        "https://openalex.org/W4387929411",
-        "https://openalex.org/W1977628053",
-        "https://openalex.org/W2092938751",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4393248014",
-        "https://openalex.org/W4387561365",
-        "https://openalex.org/W4287208846",
-        "https://openalex.org/W4396786597",
-        "https://openalex.org/W2125389748",
-        "https://openalex.org/W4399837985",
-        "https://openalex.org/W1902150074",
-        "https://openalex.org/W4377371819",
-        "https://openalex.org/W4383174296",
-        "https://openalex.org/W1989893274",
-        "https://openalex.org/W4392619028",
-        "https://openalex.org/W3176010265",
-        "https://openalex.org/W3176828726",
-        "https://openalex.org/W1993533483",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4388092867",
-        "https://openalex.org/W4287363917",
-        "https://openalex.org/W2800931065",
-        "https://openalex.org/W4362598949",
-        "https://openalex.org/W4381586827",
-        "https://openalex.org/W2060277733"
-    ],
-    "abstract": "Large language models (LLMs) have shown impressive performance and versatility. However, their billions of parameters and high computational costs hinder the development of personalized and privacy-preserving AI assistants operating locally on user devices. In this work, we explored the potential of pruning LLMs to create lightweight models suitable for user devices, using the moderate-sized Llama-2 7B model as an example. By adopting a simple yet effective pruning method, we found that up to 60% of the weights in the Llama-2 7B model could be pruned without significantly impairing its language modeling capabilities. Furthermore, despite occasional factual inaccuracies, the pruned model at the sparsity limit generated fluent and helpful answers to daily queries, demonstrating its feasibility of on-device AI assistants. These inaccuracies might originate from forgetting or hallucination due to pruning. We proposed a simple protocol to distinguish between the two mechanisms, as well as future directions to improve the pruned models for local AI assistants.",
-    "full_text": null
+  "title": "Sparsity Limit to Prune Large Language Models for on-Device AI Assistants: Llama-2 as an Example",
+  "url": "https://openalex.org/W4401586764",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2036346442",
+      "name": "Bo Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2172501990",
+      "name": "Yuru Xu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2145889472",
+    "https://openalex.org/W4392678114",
+    "https://openalex.org/W4385890089",
+    "https://openalex.org/W4379548477",
+    "https://openalex.org/W4327810158",
+    "https://openalex.org/W4390041933",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2964067969",
+    "https://openalex.org/W3106009088",
+    "https://openalex.org/W4389157038",
+    "https://openalex.org/W4387929411",
+    "https://openalex.org/W1977628053",
+    "https://openalex.org/W2092938751",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4393248014",
+    "https://openalex.org/W4387561365",
+    "https://openalex.org/W4287208846",
+    "https://openalex.org/W4396786597",
+    "https://openalex.org/W2125389748",
+    "https://openalex.org/W4399837985",
+    "https://openalex.org/W1902150074",
+    "https://openalex.org/W4377371819",
+    "https://openalex.org/W4383174296",
+    "https://openalex.org/W1989893274",
+    "https://openalex.org/W4392619028",
+    "https://openalex.org/W3176010265",
+    "https://openalex.org/W3176828726",
+    "https://openalex.org/W1993533483",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4388092867",
+    "https://openalex.org/W4287363917",
+    "https://openalex.org/W2800931065",
+    "https://openalex.org/W4362598949",
+    "https://openalex.org/W4381586827",
+    "https://openalex.org/W2060277733"
+  ],
+  "abstract": "Large language models (LLMs) have shown impressive performance and versatility. However, their billions of parameters and high computational costs hinder the development of personalized and privacy-preserving AI assistants operating locally on user devices. In this work, we explored the potential of pruning LLMs to create lightweight models suitable for user devices, using the moderate-sized Llama-2 7B model as an example. By adopting a simple yet effective pruning method, we found that up to 60% of the weights in the Llama-2 7B model could be pruned without significantly impairing its language modeling capabilities. Furthermore, despite occasional factual inaccuracies, the pruned model at the sparsity limit generated fluent and helpful answers to daily queries, demonstrating its feasibility of on-device AI assistants. These inaccuracies might originate from forgetting or hallucination due to pruning. We proposed a simple protocol to distinguish between the two mechanisms, as well as future directions to improve the pruned models for local AI assistants.",
+  "full_text": null,
+  "topic": "Pruning",
+  "concepts": [
+    {
+      "name": "Pruning",
+      "score": 0.8599877953529358
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7323376536369324
+    },
+    {
+      "name": "Limit (mathematics)",
+      "score": 0.6934717297554016
+    },
+    {
+      "name": "Simple (philosophy)",
+      "score": 0.6889262199401855
+    },
+    {
+      "name": "Forgetting",
+      "score": 0.6721259951591492
+    },
+    {
+      "name": "Language model",
+      "score": 0.6272952556610107
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4412892460823059
+    },
+    {
+      "name": "Protocol (science)",
+      "score": 0.43344438076019287
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40595000982284546
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.3245953321456909
+    },
+    {
+      "name": "Cognitive psychology",
+      "score": 0.11526483297348022
+    },
+    {
+      "name": "Psychology",
+      "score": 0.08852776885032654
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08132904767990112
+    },
+    {
+      "name": "Medicine",
+      "score": 0.07582637667655945
+    },
+    {
+      "name": "Alternative medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Agronomy",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

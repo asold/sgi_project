@@ -1,89 +1,136 @@
 {
-    "title": "TrajFormer: Efficient Trajectory Classification with Transformers",
-    "url": "https://openalex.org/W4306316985",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2129628882",
-            "name": "Yuxuan Liang",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2140877995",
-            "name": "Kun Ouyang",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097698393",
-            "name": "Yiwei Wang",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100229437",
-            "name": "Xu Liu",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122502546",
-            "name": "Hongyang Chen",
-            "affiliations": [
-                "Zhejiang Lab"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2114610031",
-            "name": "Junbo Zhang",
-            "affiliations": [
-                "Jingdong (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2079030413",
-            "name": "Yu Zheng",
-            "affiliations": [
-                "Jingdong (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2130854877",
-            "name": "Roger Zimmermann",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3115910106",
-        "https://openalex.org/W2005988094",
-        "https://openalex.org/W2097268493",
-        "https://openalex.org/W2798903611",
-        "https://openalex.org/W2981420090",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W2795016801",
-        "https://openalex.org/W3193240208",
-        "https://openalex.org/W2292151842",
-        "https://openalex.org/W2998556100",
-        "https://openalex.org/W2101429492",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W2788997482",
-        "https://openalex.org/W2741460999",
-        "https://openalex.org/W2073013176",
-        "https://openalex.org/W2905432015",
-        "https://openalex.org/W2136317921",
-        "https://openalex.org/W2143394441",
-        "https://openalex.org/W1626398438",
-        "https://openalex.org/W2739805805",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W3003858448"
-    ],
-    "abstract": "Transformers have been an efficient alternative to recurrent neural networks in many sequential learning tasks. When adapting transformers to modeling trajectories, we encounter two major issues. First, being originally designed for language modeling, transformers assume regular intervals between input tokens, which contradicts the irregularity of trajectories. Second, transformers often suffer high computational costs, especially for long trajectories. In this paper, we address these challenges by presenting a novel transformer architecture entitled TrajFormer. Our model first generates continuous point embeddings by jointly considering the input features and the information of spatio-temporal intervals, and then adopts a squeeze function to speed up the representation learning. Moreover, we introduce an auxiliary loss to ease the training of transformers using the supervision signals provided by all output tokens. Extensive experiments verify that our TrajFormer achieves a preferable speed-accuracy balance compared to existing approaches.",
-    "full_text": null
+  "title": "TrajFormer: Efficient Trajectory Classification with Transformers",
+  "url": "https://openalex.org/W4306316985",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2129628882",
+      "name": "Yuxuan Liang",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2140877995",
+      "name": "Kun Ouyang",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097698393",
+      "name": "Yiwei Wang",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100229437",
+      "name": "Xu Liu",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122502546",
+      "name": "Hongyang Chen",
+      "affiliations": [
+        "Zhejiang Lab"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2114610031",
+      "name": "Junbo Zhang",
+      "affiliations": [
+        "Jingdong (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2079030413",
+      "name": "Yu Zheng",
+      "affiliations": [
+        "Jingdong (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2130854877",
+      "name": "Roger Zimmermann",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3115910106",
+    "https://openalex.org/W2005988094",
+    "https://openalex.org/W2097268493",
+    "https://openalex.org/W2798903611",
+    "https://openalex.org/W2981420090",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W2795016801",
+    "https://openalex.org/W3193240208",
+    "https://openalex.org/W2292151842",
+    "https://openalex.org/W2998556100",
+    "https://openalex.org/W2101429492",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W2788997482",
+    "https://openalex.org/W2741460999",
+    "https://openalex.org/W2073013176",
+    "https://openalex.org/W2905432015",
+    "https://openalex.org/W2136317921",
+    "https://openalex.org/W2143394441",
+    "https://openalex.org/W1626398438",
+    "https://openalex.org/W2739805805",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W3003858448"
+  ],
+  "abstract": "Transformers have been an efficient alternative to recurrent neural networks in many sequential learning tasks. When adapting transformers to modeling trajectories, we encounter two major issues. First, being originally designed for language modeling, transformers assume regular intervals between input tokens, which contradicts the irregularity of trajectories. Second, transformers often suffer high computational costs, especially for long trajectories. In this paper, we address these challenges by presenting a novel transformer architecture entitled TrajFormer. Our model first generates continuous point embeddings by jointly considering the input features and the information of spatio-temporal intervals, and then adopts a squeeze function to speed up the representation learning. Moreover, we introduce an auxiliary loss to ease the training of transformers using the supervision signals provided by all output tokens. Extensive experiments verify that our TrajFormer achieves a preferable speed-accuracy balance compared to existing approaches.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.8198224902153015
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7239072322845459
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5067813992500305
+    },
+    {
+      "name": "Architecture",
+      "score": 0.4919857680797577
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4614144563674927
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3286129832267761
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1685618758201599
+    },
+    {
+      "name": "Voltage",
+      "score": 0.16383814811706543
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.11755481362342834
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    }
+  ]
 }

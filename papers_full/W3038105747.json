@@ -1,86 +1,177 @@
 {
-    "title": "When Low Resource NLP Meets Unsupervised Language Model: Meta-Pretraining then Meta-Learning for Few-Shot Text Classification (Student Abstract)",
-    "url": "https://openalex.org/W3038105747",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2099075082",
-            "name": "Shumin Deng",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132377640",
-            "name": "Ningyu Zhang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2918883200",
-            "name": "Zhanlin Sun",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120067049",
-            "name": "Jiaoyan Chen",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2114954316",
-            "name": "Huajun Chen",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099075082",
-            "name": "Shumin Deng",
-            "affiliations": [
-                "Zhejiang University of Science and Technology",
-                "Alibaba Group (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132377640",
-            "name": "Ningyu Zhang",
-            "affiliations": [
-                "Alibaba Group (United States)",
-                "Alibaba Group (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2918883200",
-            "name": "Zhanlin Sun",
-            "affiliations": [
-                "Carnegie Mellon University",
-                "Alibaba Group (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2114954316",
-            "name": "Huajun Chen",
-            "affiliations": [
-                "Zhejiang University of Science and Technology",
-                "First Affiliated Hospital Zhejiang University",
-                "Alibaba Group (China)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6735236233",
-        "https://openalex.org/W2601450892",
-        "https://openalex.org/W2930925340",
-        "https://openalex.org/W2963341924",
-        "https://openalex.org/W2604763608",
-        "https://openalex.org/W2964316912",
-        "https://openalex.org/W2964105864"
-    ],
-    "abstract": "Text classification tends to be difficult when data are deficient or when it is required to adapt to unseen classes. In such challenging scenarios, recent studies have often used meta-learning to simulate the few-shot task, thus negating implicit common linguistic features across tasks. This paper addresses such problems using meta-learning and unsupervised language models. Our approach is based on the insight that having a good generalization from a few examples relies on both a generic model initialization and an effective strategy for adapting this model to newly arising tasks. We show that our approach is not only simple but also produces a state-of-the-art performance on a well-studied sentiment classification dataset. It can thus be further suggested that pretraining could be a promising solution for few-shot learning of many other NLP tasks. The code and the dataset to replicate the experiments are made available at https://github.com/zxlzr/FewShotNLP.",
-    "full_text": "The Thirty-Fourth AAAI Conference on Artiﬁcial Intelligence (AAAI-20)\nWhen Low Resource NLP Meets\nUnsupervised Language Model: Meta-Pretraining then\nMeta-Learning for Few-Shot Text Classiﬁcation (Student Abstract)\nShumin Deng,1,2∗ Ningyu Zhang,2,4∗ Zhanlin Sun,2,5∗ Jiaoyan Chen,6 Huajun Chen1,2,3†\n1College of Computer Science and Technology, Zhejiang University\n2Alibaba-Zhejiang University Frontier Technology Research Center Joint Lab for Knowledge Engine\n3The First Afﬁliated Hospital of Zhejiang University\n4Alibaba Group,5Carnegie Mellon University,6Oxford University\n{231sm, huajunsir}@zju.edu.cn, zhanlins@andrew.cmu.edu\njiaoyan.chen@cs.ox.ac.uk, ningyu.zny@alibaba-inc.com\nAbstract\nText classiﬁcation tends to be difﬁcult when data are deﬁ-\ncient or when it is required to adapt to unseen classes. In\nsuch challenging scenarios, recent studies have often used\nmeta-learning to simulate the few-shot task, thus negating im-\nplicit common linguistic features across tasks. This paper ad-\ndresses such problems using meta-learning and unsupervised\nlanguage models. Our approach is based on the insight that\nhaving a good generalization from a few examples relies on\nboth a generic model initialization and an effective strategy\nfor adapting this model to newly arising tasks. We show that\nour approach is not only simple but also produces a state-\nof-the-art performance on a well-studied sentiment classiﬁca-\ntion dataset. It can thus be further suggested that pretraining\ncould be a promising solution for few-shot learning of many\nother NLP tasks. The code and the dataset to replicate the\nexperiments are made available at https://github.com/zxlzr/\nFewShotNLP.\nIntroduction\nDeep learning (DL) has achieved great success in many\nﬁelds owing to the advancements in optimization tech-\nniques, large datasets, and streamlined designs of deep neu-\nral architectures. However, DL is notorious for requiring\nlarge labeled datasets, which limits the scalability of a deep\nmodel to new classes owing to the cost of annotation. Few-\nshot learning generally resolves the data deﬁciency problem\nby recognizing novel classes from very few labeled exam-\nples. This limitation in the size of samples (only one or very\nfew examples) challenges the standard ﬁne-tuning method\nin DL. Early studies in this ﬁeld applied data augmenta-\ntion and regularization techniques to alleviate the overﬁtting\nproblem caused by data scarcity but only to a limited ex-\ntent. Instead, researchers have been inspired by exploration\nof meta-learning (Finn and et al. 2017) to leverage the dis-\ntribution over similar tasks. However, existing meta-learning\n∗All authors contributed equally to this work.\n†Corresponding author.\nCopyright c⃝ 2020, Association for the Advancement of Artiﬁcial\nIntelligence (www.aaai.org). All rights reserved.\napproaches for few-shot learning can not explicitly disentan-\ngle task-agnostic and task-speciﬁc representations, and they\nare not able to take advantage of the knowledge of linguistic\nproperties via unsupervised language models.\nIn this paper, we raise the question that whether it is\npossible to boost the performance of low-resource nat-\nural language processing with the large scale of raw cor-\npus via unsupervised leaning, which require us to handle\nboth task-agnostic and task-speciﬁc representation learning.\nThus we propose a Meta-pretraining Then Meta-learning\n(MTM) approach motivated by the observation that meta-\nlearning leads to learning a better parameter initialization\nfor new tasks than multi-task learning across all tasks. The\nformer meta-pretraining is to learn task-agnostic representa-\ntions that explicitly learns a model parameter initialization\nfor enhanced predictive performance with limited supervi-\nsion. The latter meta-learning considers all classes as com-\ning from a joint distribution and seeks to learn model pa-\nrameters that can be quickly adapted via using each class’s\ntraining instances to enhance predictive performance on its\ntest set. In other words, our approach explicitly disentangles\nthe task-agnostic and task-speciﬁc feature learning. Experi-\nmental results demonstrate that the proposed model achieves\nsigniﬁcant improvement on public benchmark datasets.\nApproach\nProblem Deﬁnition\nFew-shot text classiﬁcation (Y u and et al. 2018; Geng and\net al. 2019) is a task in which a classiﬁer must adapt new\nclasses that are not seen in training, given only a few exam-\nples for each of these new classes. To be speciﬁc, we have\na labeled training set with a set of deﬁned classesC\ntrain.\nOur goal is to output classiﬁers on the testing set with a dis-\njoint set of new classesC\ntest when only a small labeled sup-\nport set is available. If the support set containsK labeled\nexamples for each of theC unique classes, the target few-\nshot problem is called aC-way-K-shot problem. The sam-\nple set is usually too small to train a supervised classiﬁcation\nmodel. To this end, we try to utilize meta-learning method\non the training set to extract task-agnostic knowledge, which\n13773\nmay perform better for few-shot text classiﬁcation on the test\nset.\nTraining Procedure\nTask-agnostic Meta Pretraining. Given all the training\nsamples, we ﬁrst utilize pretraining strategies such as BERT\nto learn task-agnostic contextualized features that capture\nlinguistic properties to beneﬁt downstream few-shot text\nclassiﬁcation tasks.\nMeta-learning Text Classiﬁcation.Given the pretrained\nlanguage representations, we construct episodes to compute\ngradients and update the model in each training iteration.\nAlgorithm 1MTM Algorithm\nRequire: Training DatapointsD =\n{\nx(j),y(j)}\n1: Construct a taskTj with training examples using a sup-\nport setS(j)\nK and a test exampleD′\nj =\n(\nx(j),y(j))\n2: Randomly initializeθ\n3: Pre-train D with unsupervised language models\n4: Denote p(T ) as distribution over tasks\n5: while not donedo\n6: Sample batch of tasksTi ∼ p(T ):\n7: for for allTi do\n8: Evaluate ∇θLTi (fθ) using S(j)\nK\n9: Compute adapted parameters with gradient de-\nscent: θ′\ni = θ −α∇θLTi (fθ)\n10: Update θ ← θ − β∇θ\n∑\nTi∼p(T ) LTi\n(\nfθ′\ni\n)\nusing\neach D′\ni from Ti and LTi\nExperiments\nDatasets and Evaluation\nWe use the multiple tasks with the multi-domain sentiment\nclassiﬁcation dataset ARSC1. This dataset comprises En-\nglish reviews for23 types of products on Amazon. For each\nproduct domain, there are three different binary classiﬁca-\ntion tasks. These buckets then form23 × 3=6 9 tasks in\ntotal. We select12(4 × 3) tasks from four domains as the\ntest set, with only ﬁve examples as support set for each label\nin the test set. We evaluate the performance by few-shot clas-\nsiﬁcation accuracy following previous studies in few-shot\nlearning (Snell, Swersky, and Zemel 2017). To evaluate the\nproposed model objectively with the baselines, note that for\nARSC, the support set for testing is ﬁxed by (Y u and et al.\n2018); therefore, we need to run the test episode once for\neach of the target tasks. The mean accuracy from the12 tar-\nget tasks are compared to those of the baseline models in\naccordance with (Y u and et al. 2018).\nEvaluation Results\nThe evaluation results are shown in Table 1:MTM is our\ncurrent approach,Match Network(Vinyals and et al. 2016)\nis a few-shot learning model using metric-based attention\nmethod, Prototypical Network(Snell, Swersky, and Zemel\n1https://github.com/Gorov/DiverseFewShot Amazon\n2017) is a deep matrix-based method using sample aver-\nages as class prototypes,MAML (Finn and et al. 2017) is\na model-agnostic method that is compatible with any model\ntrained with gradient descent and applicable to a variety\nof learning problems, Relation Network (Sung and et al.\n2018) is a metric-based few-shot learning model that uses\na neural network as the distance measurement and calcu-\nlate class vectors by summing sample vectors in the sup-\nport set, ROBUSTTC-FSL (Y u and et al. 2018) is an ap-\nproach that combines adaptive metric methods by cluster-\ning the tasks,Induction-Network-Routing (Geng and et al.\n2019) is a recent state-of-the-art method which learn gener-\nalized class-wise representations by combining the dynamic\nrouting algorithm with a typical meta-learning framework.\nFrom the results shown in Table 1, we observe that our ap-\nproach achieves the best results amongst all meta-learning\nmodels. Note that, our model is task-agnostic, which means\nit can be easily adapted to any other NLP tasks.\nModel Mean Acc\nMatching Network 65.73\nPrototypical Network 68.15\nRelation Network 83.74\nMAML 78.33\nROBUSTTC-FSL 83.12\nInduction-Network-Routing 85.47\nMTM 90.01*\nTable 1: Comparison of mean accuracy (%) on ARSC. * in-\ndicates p\nvalue < 0.01 in a paired t-test (10-fold) evaluation.\nConclusion\nIn this study, we attempt to analyze language meta-\npretraining with meta-learning for few-shot text classiﬁca-\ntion. Results show that our model outperforms conventional\nstate-of-the-art few-shot text classiﬁcation models. In the fu-\nture, we plan to apply our method to other NLP scenarios.\nAcknowledgments\nWe want to express gratitude to the anonymous reviewers\nfor their hard work and kind comments and this work is\nfunded by NSFC 91846204, national key research program\n2018YFB1402800, and Alibaba CangJingGe(Knowledge\nEngine) Research Plan.\nReferences\nFinn, C., and et al. 2017. Model-agnostic meta-learning for fast\nadaptation of deep networks. InICML.\nGeng, R., and et al. 2019. Few-shot text classiﬁcation with induc-\ntion network. In EMNLP.\nSnell, J.; Swersky, K.; and Zemel, R. 2017. Prototypical networks\nfor few-shot learning. InNIPS, 4077–4087.\nSung, F., and et al. 2018. Learning to compare: Relation network\nfor few-shot learning. InCVPR, 1199–1208.\nVinyals, O., and et al. 2016. Matching networks for one shot learn-\ning. In NIPS, 3630–3638.\nY u, M., and et al. 2018. Diverse few-shot text classiﬁcation with\nmultiple metrics. In NAACL.\n13774"
+  "title": "When Low Resource NLP Meets Unsupervised Language Model: Meta-Pretraining then Meta-Learning for Few-Shot Text Classification (Student Abstract)",
+  "url": "https://openalex.org/W3038105747",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2099075082",
+      "name": "Shumin Deng",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132377640",
+      "name": "Ningyu Zhang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2918883200",
+      "name": "Zhanlin Sun",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120067049",
+      "name": "Jiaoyan Chen",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2114954316",
+      "name": "Huajun Chen",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099075082",
+      "name": "Shumin Deng",
+      "affiliations": [
+        "Zhejiang University of Science and Technology",
+        "Alibaba Group (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132377640",
+      "name": "Ningyu Zhang",
+      "affiliations": [
+        "Alibaba Group (United States)",
+        "Alibaba Group (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2918883200",
+      "name": "Zhanlin Sun",
+      "affiliations": [
+        "Carnegie Mellon University",
+        "Alibaba Group (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2114954316",
+      "name": "Huajun Chen",
+      "affiliations": [
+        "Zhejiang University of Science and Technology",
+        "First Affiliated Hospital Zhejiang University",
+        "Alibaba Group (China)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6735236233",
+    "https://openalex.org/W2601450892",
+    "https://openalex.org/W2930925340",
+    "https://openalex.org/W2963341924",
+    "https://openalex.org/W2604763608",
+    "https://openalex.org/W2964316912",
+    "https://openalex.org/W2964105864"
+  ],
+  "abstract": "Text classification tends to be difficult when data are deficient or when it is required to adapt to unseen classes. In such challenging scenarios, recent studies have often used meta-learning to simulate the few-shot task, thus negating implicit common linguistic features across tasks. This paper addresses such problems using meta-learning and unsupervised language models. Our approach is based on the insight that having a good generalization from a few examples relies on both a generic model initialization and an effective strategy for adapting this model to newly arising tasks. We show that our approach is not only simple but also produces a state-of-the-art performance on a well-studied sentiment classification dataset. It can thus be further suggested that pretraining could be a promising solution for few-shot learning of many other NLP tasks. The code and the dataset to replicate the experiments are made available at https://github.com/zxlzr/FewShotNLP.",
+  "full_text": "The Thirty-Fourth AAAI Conference on Artiﬁcial Intelligence (AAAI-20)\nWhen Low Resource NLP Meets\nUnsupervised Language Model: Meta-Pretraining then\nMeta-Learning for Few-Shot Text Classiﬁcation (Student Abstract)\nShumin Deng,1,2∗ Ningyu Zhang,2,4∗ Zhanlin Sun,2,5∗ Jiaoyan Chen,6 Huajun Chen1,2,3†\n1College of Computer Science and Technology, Zhejiang University\n2Alibaba-Zhejiang University Frontier Technology Research Center Joint Lab for Knowledge Engine\n3The First Afﬁliated Hospital of Zhejiang University\n4Alibaba Group,5Carnegie Mellon University,6Oxford University\n{231sm, huajunsir}@zju.edu.cn, zhanlins@andrew.cmu.edu\njiaoyan.chen@cs.ox.ac.uk, ningyu.zny@alibaba-inc.com\nAbstract\nText classiﬁcation tends to be difﬁcult when data are deﬁ-\ncient or when it is required to adapt to unseen classes. In\nsuch challenging scenarios, recent studies have often used\nmeta-learning to simulate the few-shot task, thus negating im-\nplicit common linguistic features across tasks. This paper ad-\ndresses such problems using meta-learning and unsupervised\nlanguage models. Our approach is based on the insight that\nhaving a good generalization from a few examples relies on\nboth a generic model initialization and an effective strategy\nfor adapting this model to newly arising tasks. We show that\nour approach is not only simple but also produces a state-\nof-the-art performance on a well-studied sentiment classiﬁca-\ntion dataset. It can thus be further suggested that pretraining\ncould be a promising solution for few-shot learning of many\nother NLP tasks. The code and the dataset to replicate the\nexperiments are made available at https://github.com/zxlzr/\nFewShotNLP.\nIntroduction\nDeep learning (DL) has achieved great success in many\nﬁelds owing to the advancements in optimization tech-\nniques, large datasets, and streamlined designs of deep neu-\nral architectures. However, DL is notorious for requiring\nlarge labeled datasets, which limits the scalability of a deep\nmodel to new classes owing to the cost of annotation. Few-\nshot learning generally resolves the data deﬁciency problem\nby recognizing novel classes from very few labeled exam-\nples. This limitation in the size of samples (only one or very\nfew examples) challenges the standard ﬁne-tuning method\nin DL. Early studies in this ﬁeld applied data augmenta-\ntion and regularization techniques to alleviate the overﬁtting\nproblem caused by data scarcity but only to a limited ex-\ntent. Instead, researchers have been inspired by exploration\nof meta-learning (Finn and et al. 2017) to leverage the dis-\ntribution over similar tasks. However, existing meta-learning\n∗All authors contributed equally to this work.\n†Corresponding author.\nCopyright c⃝ 2020, Association for the Advancement of Artiﬁcial\nIntelligence (www.aaai.org). All rights reserved.\napproaches for few-shot learning can not explicitly disentan-\ngle task-agnostic and task-speciﬁc representations, and they\nare not able to take advantage of the knowledge of linguistic\nproperties via unsupervised language models.\nIn this paper, we raise the question that whether it is\npossible to boost the performance of low-resource nat-\nural language processing with the large scale of raw cor-\npus via unsupervised leaning, which require us to handle\nboth task-agnostic and task-speciﬁc representation learning.\nThus we propose a Meta-pretraining Then Meta-learning\n(MTM) approach motivated by the observation that meta-\nlearning leads to learning a better parameter initialization\nfor new tasks than multi-task learning across all tasks. The\nformer meta-pretraining is to learn task-agnostic representa-\ntions that explicitly learns a model parameter initialization\nfor enhanced predictive performance with limited supervi-\nsion. The latter meta-learning considers all classes as com-\ning from a joint distribution and seeks to learn model pa-\nrameters that can be quickly adapted via using each class’s\ntraining instances to enhance predictive performance on its\ntest set. In other words, our approach explicitly disentangles\nthe task-agnostic and task-speciﬁc feature learning. Experi-\nmental results demonstrate that the proposed model achieves\nsigniﬁcant improvement on public benchmark datasets.\nApproach\nProblem Deﬁnition\nFew-shot text classiﬁcation (Y u and et al. 2018; Geng and\net al. 2019) is a task in which a classiﬁer must adapt new\nclasses that are not seen in training, given only a few exam-\nples for each of these new classes. To be speciﬁc, we have\na labeled training set with a set of deﬁned classesC\ntrain.\nOur goal is to output classiﬁers on the testing set with a dis-\njoint set of new classesC\ntest when only a small labeled sup-\nport set is available. If the support set containsK labeled\nexamples for each of theC unique classes, the target few-\nshot problem is called aC-way-K-shot problem. The sam-\nple set is usually too small to train a supervised classiﬁcation\nmodel. To this end, we try to utilize meta-learning method\non the training set to extract task-agnostic knowledge, which\n13773\nmay perform better for few-shot text classiﬁcation on the test\nset.\nTraining Procedure\nTask-agnostic Meta Pretraining. Given all the training\nsamples, we ﬁrst utilize pretraining strategies such as BERT\nto learn task-agnostic contextualized features that capture\nlinguistic properties to beneﬁt downstream few-shot text\nclassiﬁcation tasks.\nMeta-learning Text Classiﬁcation.Given the pretrained\nlanguage representations, we construct episodes to compute\ngradients and update the model in each training iteration.\nAlgorithm 1MTM Algorithm\nRequire: Training DatapointsD =\n{\nx(j),y(j)}\n1: Construct a taskTj with training examples using a sup-\nport setS(j)\nK and a test exampleD′\nj =\n(\nx(j),y(j))\n2: Randomly initializeθ\n3: Pre-train D with unsupervised language models\n4: Denote p(T ) as distribution over tasks\n5: while not donedo\n6: Sample batch of tasksTi ∼ p(T ):\n7: for for allTi do\n8: Evaluate ∇θLTi (fθ) using S(j)\nK\n9: Compute adapted parameters with gradient de-\nscent: θ′\ni = θ −α∇θLTi (fθ)\n10: Update θ ← θ − β∇θ\n∑\nTi∼p(T ) LTi\n(\nfθ′\ni\n)\nusing\neach D′\ni from Ti and LTi\nExperiments\nDatasets and Evaluation\nWe use the multiple tasks with the multi-domain sentiment\nclassiﬁcation dataset ARSC1. This dataset comprises En-\nglish reviews for23 types of products on Amazon. For each\nproduct domain, there are three different binary classiﬁca-\ntion tasks. These buckets then form23 × 3=6 9 tasks in\ntotal. We select12(4 × 3) tasks from four domains as the\ntest set, with only ﬁve examples as support set for each label\nin the test set. We evaluate the performance by few-shot clas-\nsiﬁcation accuracy following previous studies in few-shot\nlearning (Snell, Swersky, and Zemel 2017). To evaluate the\nproposed model objectively with the baselines, note that for\nARSC, the support set for testing is ﬁxed by (Y u and et al.\n2018); therefore, we need to run the test episode once for\neach of the target tasks. The mean accuracy from the12 tar-\nget tasks are compared to those of the baseline models in\naccordance with (Y u and et al. 2018).\nEvaluation Results\nThe evaluation results are shown in Table 1:MTM is our\ncurrent approach,Match Network(Vinyals and et al. 2016)\nis a few-shot learning model using metric-based attention\nmethod, Prototypical Network(Snell, Swersky, and Zemel\n1https://github.com/Gorov/DiverseFewShot Amazon\n2017) is a deep matrix-based method using sample aver-\nages as class prototypes,MAML (Finn and et al. 2017) is\na model-agnostic method that is compatible with any model\ntrained with gradient descent and applicable to a variety\nof learning problems, Relation Network (Sung and et al.\n2018) is a metric-based few-shot learning model that uses\na neural network as the distance measurement and calcu-\nlate class vectors by summing sample vectors in the sup-\nport set, ROBUSTTC-FSL (Y u and et al. 2018) is an ap-\nproach that combines adaptive metric methods by cluster-\ning the tasks,Induction-Network-Routing (Geng and et al.\n2019) is a recent state-of-the-art method which learn gener-\nalized class-wise representations by combining the dynamic\nrouting algorithm with a typical meta-learning framework.\nFrom the results shown in Table 1, we observe that our ap-\nproach achieves the best results amongst all meta-learning\nmodels. Note that, our model is task-agnostic, which means\nit can be easily adapted to any other NLP tasks.\nModel Mean Acc\nMatching Network 65.73\nPrototypical Network 68.15\nRelation Network 83.74\nMAML 78.33\nROBUSTTC-FSL 83.12\nInduction-Network-Routing 85.47\nMTM 90.01*\nTable 1: Comparison of mean accuracy (%) on ARSC. * in-\ndicates p\nvalue < 0.01 in a paired t-test (10-fold) evaluation.\nConclusion\nIn this study, we attempt to analyze language meta-\npretraining with meta-learning for few-shot text classiﬁca-\ntion. Results show that our model outperforms conventional\nstate-of-the-art few-shot text classiﬁcation models. In the fu-\nture, we plan to apply our method to other NLP scenarios.\nAcknowledgments\nWe want to express gratitude to the anonymous reviewers\nfor their hard work and kind comments and this work is\nfunded by NSFC 91846204, national key research program\n2018YFB1402800, and Alibaba CangJingGe(Knowledge\nEngine) Research Plan.\nReferences\nFinn, C., and et al. 2017. Model-agnostic meta-learning for fast\nadaptation of deep networks. InICML.\nGeng, R., and et al. 2019. Few-shot text classiﬁcation with induc-\ntion network. In EMNLP.\nSnell, J.; Swersky, K.; and Zemel, R. 2017. Prototypical networks\nfor few-shot learning. InNIPS, 4077–4087.\nSung, F., and et al. 2018. Learning to compare: Relation network\nfor few-shot learning. InCVPR, 1199–1208.\nVinyals, O., and et al. 2016. Matching networks for one shot learn-\ning. In NIPS, 3630–3638.\nY u, M., and et al. 2018. Diverse few-shot text classiﬁcation with\nmultiple metrics. In NAACL.\n13774",
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8362444639205933
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7398515939712524
+    },
+    {
+      "name": "Initialization",
+      "score": 0.6402097940444946
+    },
+    {
+      "name": "Generalization",
+      "score": 0.6250177621841431
+    },
+    {
+      "name": "Meta learning (computer science)",
+      "score": 0.6015272736549377
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5900458097457886
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5770517587661743
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5379835367202759
+    },
+    {
+      "name": "Replicate",
+      "score": 0.5030500292778015
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.4765784740447998
+    },
+    {
+      "name": "Language model",
+      "score": 0.4620916247367859
+    },
+    {
+      "name": "Simple (philosophy)",
+      "score": 0.4472431540489197
+    },
+    {
+      "name": "Unsupervised learning",
+      "score": 0.416627436876297
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

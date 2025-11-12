@@ -1,109 +1,184 @@
 {
-    "title": "Differentiable Subset Pruning of Transformer Heads",
-    "url": "https://openalex.org/W4206281850",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2948798687",
-            "name": "Jiaoda Li",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2148165152",
-            "name": "Ryan Cotterell",
-            "affiliations": [
-                "University of Cambridge",
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2035754532",
-            "name": "Mrinmaya Sachan",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6679434410",
-        "https://openalex.org/W3102446692",
-        "https://openalex.org/W6690026940",
-        "https://openalex.org/W3034230673",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3102519438",
-        "https://openalex.org/W6802318714",
-        "https://openalex.org/W2972324944",
-        "https://openalex.org/W2963069394",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3004346089",
-        "https://openalex.org/W6768080748",
-        "https://openalex.org/W6751979845",
-        "https://openalex.org/W6617145748",
-        "https://openalex.org/W6678251536",
-        "https://openalex.org/W6757883768",
-        "https://openalex.org/W6762947928",
-        "https://openalex.org/W3038012435",
-        "https://openalex.org/W2797569913",
-        "https://openalex.org/W6724998850",
-        "https://openalex.org/W2950656546",
-        "https://openalex.org/W6681015464",
-        "https://openalex.org/W2963363373",
-        "https://openalex.org/W2963382930",
-        "https://openalex.org/W6729448088",
-        "https://openalex.org/W2948947170",
-        "https://openalex.org/W6638836233",
-        "https://openalex.org/W6734621010",
-        "https://openalex.org/W6760167989",
-        "https://openalex.org/W6677103964",
-        "https://openalex.org/W6726275242",
-        "https://openalex.org/W6743087176",
-        "https://openalex.org/W6745499552",
-        "https://openalex.org/W2964233199",
-        "https://openalex.org/W6730091202",
-        "https://openalex.org/W6697501834",
-        "https://openalex.org/W6775432837",
-        "https://openalex.org/W6762945437",
-        "https://openalex.org/W6732814185",
-        "https://openalex.org/W6739917289",
-        "https://openalex.org/W2970295111",
-        "https://openalex.org/W6761164592",
-        "https://openalex.org/W3103754749",
-        "https://openalex.org/W6791096077",
-        "https://openalex.org/W6777017071",
-        "https://openalex.org/W6674330103",
-        "https://openalex.org/W6748171661",
-        "https://openalex.org/W6735799286",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2119885577",
-        "https://openalex.org/W2946794439",
-        "https://openalex.org/W6725543821",
-        "https://openalex.org/W6737236263",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2964554227",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W2134445663",
-        "https://openalex.org/W2963021447",
-        "https://openalex.org/W6745148473",
-        "https://openalex.org/W2783873922",
-        "https://openalex.org/W2947644971",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W1994530392",
-        "https://openalex.org/W2095705004",
-        "https://openalex.org/W3015982254",
-        "https://openalex.org/W4301409532",
-        "https://openalex.org/W2914584698",
-        "https://openalex.org/W2346626577",
-        "https://openalex.org/W3136363192",
-        "https://openalex.org/W2242818861",
-        "https://openalex.org/W4238634189",
-        "https://openalex.org/W2917458986",
-        "https://openalex.org/W2990138404",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W1631063262",
-        "https://openalex.org/W4288631803"
-    ],
-    "abstract": "Abstract Multi-head attention, a collection of several attention mechanisms that independently attend to different parts of the input, is the key ingredient in the Transformer. Recent work has shown, however, that a large proportion of the heads in a Transformer’s multi-head attention mechanism can be safely pruned away without significantly harming the performance of the model; such pruning leads to models that are noticeably smaller and faster in practice. Our work introduces a new head pruning technique that we term differentiable subset pruning. ntuitively, our method learns per- head importance variables and then enforces a user-specified hard constraint on the number of unpruned heads. he importance variables are learned via stochastic gradient descent. e conduct experiments on natural language inference and machine translation; we show that differentiable subset pruning performs comparably or better than previous works while offering precise control of the sparsity level.1",
-    "full_text": null
+  "title": "Differentiable Subset Pruning of Transformer Heads",
+  "url": "https://openalex.org/W4206281850",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2948798687",
+      "name": "Jiaoda Li",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2148165152",
+      "name": "Ryan Cotterell",
+      "affiliations": [
+        "University of Cambridge",
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2035754532",
+      "name": "Mrinmaya Sachan",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6679434410",
+    "https://openalex.org/W3102446692",
+    "https://openalex.org/W6690026940",
+    "https://openalex.org/W3034230673",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3102519438",
+    "https://openalex.org/W6802318714",
+    "https://openalex.org/W2972324944",
+    "https://openalex.org/W2963069394",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3004346089",
+    "https://openalex.org/W6768080748",
+    "https://openalex.org/W6751979845",
+    "https://openalex.org/W6617145748",
+    "https://openalex.org/W6678251536",
+    "https://openalex.org/W6757883768",
+    "https://openalex.org/W6762947928",
+    "https://openalex.org/W3038012435",
+    "https://openalex.org/W2797569913",
+    "https://openalex.org/W6724998850",
+    "https://openalex.org/W2950656546",
+    "https://openalex.org/W6681015464",
+    "https://openalex.org/W2963363373",
+    "https://openalex.org/W2963382930",
+    "https://openalex.org/W6729448088",
+    "https://openalex.org/W2948947170",
+    "https://openalex.org/W6638836233",
+    "https://openalex.org/W6734621010",
+    "https://openalex.org/W6760167989",
+    "https://openalex.org/W6677103964",
+    "https://openalex.org/W6726275242",
+    "https://openalex.org/W6743087176",
+    "https://openalex.org/W6745499552",
+    "https://openalex.org/W2964233199",
+    "https://openalex.org/W6730091202",
+    "https://openalex.org/W6697501834",
+    "https://openalex.org/W6775432837",
+    "https://openalex.org/W6762945437",
+    "https://openalex.org/W6732814185",
+    "https://openalex.org/W6739917289",
+    "https://openalex.org/W2970295111",
+    "https://openalex.org/W6761164592",
+    "https://openalex.org/W3103754749",
+    "https://openalex.org/W6791096077",
+    "https://openalex.org/W6777017071",
+    "https://openalex.org/W6674330103",
+    "https://openalex.org/W6748171661",
+    "https://openalex.org/W6735799286",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2119885577",
+    "https://openalex.org/W2946794439",
+    "https://openalex.org/W6725543821",
+    "https://openalex.org/W6737236263",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2964554227",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W2134445663",
+    "https://openalex.org/W2963021447",
+    "https://openalex.org/W6745148473",
+    "https://openalex.org/W2783873922",
+    "https://openalex.org/W2947644971",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W1994530392",
+    "https://openalex.org/W2095705004",
+    "https://openalex.org/W3015982254",
+    "https://openalex.org/W4301409532",
+    "https://openalex.org/W2914584698",
+    "https://openalex.org/W2346626577",
+    "https://openalex.org/W3136363192",
+    "https://openalex.org/W2242818861",
+    "https://openalex.org/W4238634189",
+    "https://openalex.org/W2917458986",
+    "https://openalex.org/W2990138404",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W1631063262",
+    "https://openalex.org/W4288631803"
+  ],
+  "abstract": "Abstract Multi-head attention, a collection of several attention mechanisms that independently attend to different parts of the input, is the key ingredient in the Transformer. Recent work has shown, however, that a large proportion of the heads in a Transformer’s multi-head attention mechanism can be safely pruned away without significantly harming the performance of the model; such pruning leads to models that are noticeably smaller and faster in practice. Our work introduces a new head pruning technique that we term differentiable subset pruning. ntuitively, our method learns per- head importance variables and then enforces a user-specified hard constraint on the number of unpruned heads. he importance variables are learned via stochastic gradient descent. e conduct experiments on natural language inference and machine translation; we show that differentiable subset pruning performs comparably or better than previous works while offering precise control of the sparsity level.1",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8350197672843933
+    },
+    {
+      "name": "Differentiable function",
+      "score": 0.7549800872802734
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6686335206031799
+    },
+    {
+      "name": "Pruning",
+      "score": 0.6251684427261353
+    },
+    {
+      "name": "Inference",
+      "score": 0.5913239121437073
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.48892632126808167
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4775006175041199
+    },
+    {
+      "name": "Gradient descent",
+      "score": 0.43076226115226746
+    },
+    {
+      "name": "Language model",
+      "score": 0.4111217260360718
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3859228193759918
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.11731579899787903
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.11045783758163452
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Agronomy",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

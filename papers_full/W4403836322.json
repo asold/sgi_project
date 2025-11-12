@@ -1,109 +1,204 @@
 {
-    "title": "GexMolGen: cross-modal generation of hit-like molecules via large language model encoding of gene expression signatures",
-    "url": "https://openalex.org/W4403836322",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5087182888",
-            "name": "Jiabei Cheng",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2059247565",
-            "name": "Xiaoyong Pan",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1990688107",
-            "name": "Yi Fang",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101165853",
-            "name": "Kaiyuan Yang",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2222470328",
-            "name": "Yiming Xue",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2345085626",
-            "name": "Qingran Yan",
-            "affiliations": [
-                "Shanghai Jiao Tong University",
-                "Renji Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1988620429",
-            "name": "Ye Yuan",
-            "affiliations": [
-                "Shanghai Jiao Tong University",
-                "Chinese Academy of Sciences",
-                "Institute of Process Engineering"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4282036924",
-        "https://openalex.org/W4247513463",
-        "https://openalex.org/W3192398644",
-        "https://openalex.org/W2998571806",
-        "https://openalex.org/W4361000628",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4362589790",
-        "https://openalex.org/W2948162129",
-        "https://openalex.org/W2806351858",
-        "https://openalex.org/W3036527662",
-        "https://openalex.org/W3005111505",
-        "https://openalex.org/W4387866792",
-        "https://openalex.org/W4297243391",
-        "https://openalex.org/W4378838672",
-        "https://openalex.org/W4316096017",
-        "https://openalex.org/W4392168151",
-        "https://openalex.org/W4399387478",
-        "https://openalex.org/W4384821687",
-        "https://openalex.org/W4403174218",
-        "https://openalex.org/W4224035735",
-        "https://openalex.org/W3211951295",
-        "https://openalex.org/W4320342754",
-        "https://openalex.org/W4385948838",
-        "https://openalex.org/W2096541451",
-        "https://openalex.org/W2612467560",
-        "https://openalex.org/W2593632281",
-        "https://openalex.org/W2299115575",
-        "https://openalex.org/W3036535673",
-        "https://openalex.org/W2887447356",
-        "https://openalex.org/W4385955324",
-        "https://openalex.org/W3108655343",
-        "https://openalex.org/W2842511635",
-        "https://openalex.org/W3165647589",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W3016876724",
-        "https://openalex.org/W3201411589",
-        "https://openalex.org/W3000348967",
-        "https://openalex.org/W4283811348",
-        "https://openalex.org/W3094686696",
-        "https://openalex.org/W2901476322",
-        "https://openalex.org/W2578240541",
-        "https://openalex.org/W6863210959",
-        "https://openalex.org/W4386498912",
-        "https://openalex.org/W4393181728",
-        "https://openalex.org/W3019676419",
-        "https://openalex.org/W3099414221"
-    ],
-    "abstract": "Abstract Designing de novo molecules with specific biological activity is an essential task since it holds the potential to bypass the exploration of target genes, which is an initial step in the modern drug discovery paradigm. However, traditional methods mainly screen molecules by comparing the desired molecular effects within the documented experimental results. The data set limits this process, and it is hard to conduct direct cross-modal comparisons. Therefore, we propose a solution based on cross-modal generation called GexMolGen (Gene Expression-based Molecule Generator), which generates hit-like molecules using gene expression signatures alone. These signatures are calculated by inputting control and desired gene expression states. Our model GexMolGen adopts a “first-align-then-generate” strategy, aligning the gene expression signatures and molecules within a mapping space, ensuring a smooth cross-modal transition. The transformed molecular embeddings are then decoded into molecular graphs. In addition, we employ an advanced single-cell large language model for input flexibility and pre-train a scaffold-based molecular model to ensure that all generated molecules are 100% valid. Empirical results show that our model can produce molecules highly similar to known references, whether feeding in- or out-of-domain transcriptome data. Furthermore, it can also serve as a reliable tool for cross-modal screening.",
-    "full_text": null
+  "title": "GexMolGen: cross-modal generation of hit-like molecules via large language model encoding of gene expression signatures",
+  "url": "https://openalex.org/W4403836322",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5087182888",
+      "name": "Jiabei Cheng",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2059247565",
+      "name": "Xiaoyong Pan",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1990688107",
+      "name": "Yi Fang",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101165853",
+      "name": "Kaiyuan Yang",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2222470328",
+      "name": "Yiming Xue",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2345085626",
+      "name": "Qingran Yan",
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Renji Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1988620429",
+      "name": "Ye Yuan",
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Chinese Academy of Sciences",
+        "Institute of Process Engineering"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4282036924",
+    "https://openalex.org/W4247513463",
+    "https://openalex.org/W3192398644",
+    "https://openalex.org/W2998571806",
+    "https://openalex.org/W4361000628",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4362589790",
+    "https://openalex.org/W2948162129",
+    "https://openalex.org/W2806351858",
+    "https://openalex.org/W3036527662",
+    "https://openalex.org/W3005111505",
+    "https://openalex.org/W4387866792",
+    "https://openalex.org/W4297243391",
+    "https://openalex.org/W4378838672",
+    "https://openalex.org/W4316096017",
+    "https://openalex.org/W4392168151",
+    "https://openalex.org/W4399387478",
+    "https://openalex.org/W4384821687",
+    "https://openalex.org/W4403174218",
+    "https://openalex.org/W4224035735",
+    "https://openalex.org/W3211951295",
+    "https://openalex.org/W4320342754",
+    "https://openalex.org/W4385948838",
+    "https://openalex.org/W2096541451",
+    "https://openalex.org/W2612467560",
+    "https://openalex.org/W2593632281",
+    "https://openalex.org/W2299115575",
+    "https://openalex.org/W3036535673",
+    "https://openalex.org/W2887447356",
+    "https://openalex.org/W4385955324",
+    "https://openalex.org/W3108655343",
+    "https://openalex.org/W2842511635",
+    "https://openalex.org/W3165647589",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W3016876724",
+    "https://openalex.org/W3201411589",
+    "https://openalex.org/W3000348967",
+    "https://openalex.org/W4283811348",
+    "https://openalex.org/W3094686696",
+    "https://openalex.org/W2901476322",
+    "https://openalex.org/W2578240541",
+    "https://openalex.org/W6863210959",
+    "https://openalex.org/W4386498912",
+    "https://openalex.org/W4393181728",
+    "https://openalex.org/W3019676419",
+    "https://openalex.org/W3099414221"
+  ],
+  "abstract": "Abstract Designing de novo molecules with specific biological activity is an essential task since it holds the potential to bypass the exploration of target genes, which is an initial step in the modern drug discovery paradigm. However, traditional methods mainly screen molecules by comparing the desired molecular effects within the documented experimental results. The data set limits this process, and it is hard to conduct direct cross-modal comparisons. Therefore, we propose a solution based on cross-modal generation called GexMolGen (Gene Expression-based Molecule Generator), which generates hit-like molecules using gene expression signatures alone. These signatures are calculated by inputting control and desired gene expression states. Our model GexMolGen adopts a “first-align-then-generate” strategy, aligning the gene expression signatures and molecules within a mapping space, ensuring a smooth cross-modal transition. The transformed molecular embeddings are then decoded into molecular graphs. In addition, we employ an advanced single-cell large language model for input flexibility and pre-train a scaffold-based molecular model to ensure that all generated molecules are 100% valid. Empirical results show that our model can produce molecules highly similar to known references, whether feeding in- or out-of-domain transcriptome data. Furthermore, it can also serve as a reliable tool for cross-modal screening.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6511930227279663
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.5347657799720764
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.5208711624145508
+    },
+    {
+      "name": "Expression (computer science)",
+      "score": 0.515510082244873
+    },
+    {
+      "name": "Generator (circuit theory)",
+      "score": 0.4992818832397461
+    },
+    {
+      "name": "Encoding (memory)",
+      "score": 0.45700204372406006
+    },
+    {
+      "name": "Gene",
+      "score": 0.44159209728240967
+    },
+    {
+      "name": "Modal",
+      "score": 0.43434813618659973
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.42472442984580994
+    },
+    {
+      "name": "Flexibility (engineering)",
+      "score": 0.4137718379497528
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.3259962797164917
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.26682156324386597
+    },
+    {
+      "name": "Biology",
+      "score": 0.23680031299591064
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.2229551374912262
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.20433634519577026
+    },
+    {
+      "name": "Physics",
+      "score": 0.19580405950546265
+    },
+    {
+      "name": "Genetics",
+      "score": 0.1716461479663849
+    },
+    {
+      "name": "Programming language",
+      "score": 0.11055240035057068
+    },
+    {
+      "name": "Power (physics)",
+      "score": 0.10603213310241699
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09999170899391174
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,53 +1,132 @@
 {
-    "title": "Token shift transformer for video classification",
-    "url": "https://openalex.org/W3205497712",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1979946437",
-            "name": "Zhang Hao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2044076812",
-            "name": "Hao, Yanbin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4225056604",
-            "name": "Ngo Chong-Wah",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2998254302",
-        "https://openalex.org/W2990152177",
-        "https://openalex.org/W2982619380",
-        "https://openalex.org/W2059843319",
-        "https://openalex.org/W1522734439",
-        "https://openalex.org/W2948048211",
-        "https://openalex.org/W3092803786",
-        "https://openalex.org/W2997004687",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W2963844898",
-        "https://openalex.org/W2990503944",
-        "https://openalex.org/W3034572008",
-        "https://openalex.org/W3173223111",
-        "https://openalex.org/W2963524571",
-        "https://openalex.org/W2883429621",
-        "https://openalex.org/W3093270130",
-        "https://openalex.org/W3034414373",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3093028502",
-        "https://openalex.org/W2467487249",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3093074259",
-        "https://openalex.org/W3101367838",
-        "https://openalex.org/W3093002089",
-        "https://openalex.org/W2963820951",
-        "https://openalex.org/W2902190902",
-        "https://openalex.org/W2526198870"
-    ],
-    "abstract": "Transformer achieves remarkable successes in understanding 1 and 2-dimensional signals (e.g., NLP and Image Content Understanding). As a potential alternative to convolutional neural networks, it shares merits of strong interpretability, high discriminative power on hyper-scale data, and flexibility in processing varying length inputs. However, its encoders naturally contain computational intensive operations such as pair-wise self-attention, incurring heavy computational burden when being applied on the complex 3-dimensional video signals. This paper presents Token Shift Module (i.e., TokShift), a novel, zero-parameter, zero-FLOPs operator, for modeling temporal relations within each transformer encoder. Specifically, the TokShift barely temporally shifts partial [Class] token features back-and-forth across adjacent frames. Then, we densely plug the module into each encoder of a plain 2D vision transformer for learning 3D video representation. It is worth noticing that our TokShift transformer is a pure convolutional-free video transformer pilot with computational efficiency for video understanding. Experiments on standard benchmarks verify its robustness, effectiveness, and efficiency. Particularly, with input clips of 8/12 frames, the TokShift transformer achieves SOTA precision: 79.83%/80.40% on the Kinetics-400, 66.56% on EGTEA-Gaze+, and 96.80% on UCF-101 datasets, comparable or better than existing SOTA convolutional counterparts. Our code is open-sourced in: https://github.com/VideoNetworks/TokShift-Transformer.",
-    "full_text": null
+  "title": "Token shift transformer for video classification",
+  "url": "https://openalex.org/W3205497712",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1979946437",
+      "name": "Zhang Hao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2044076812",
+      "name": "Hao, Yanbin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4225056604",
+      "name": "Ngo Chong-Wah",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2998254302",
+    "https://openalex.org/W2990152177",
+    "https://openalex.org/W2982619380",
+    "https://openalex.org/W2059843319",
+    "https://openalex.org/W1522734439",
+    "https://openalex.org/W2948048211",
+    "https://openalex.org/W3092803786",
+    "https://openalex.org/W2997004687",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W2963844898",
+    "https://openalex.org/W2990503944",
+    "https://openalex.org/W3034572008",
+    "https://openalex.org/W3173223111",
+    "https://openalex.org/W2963524571",
+    "https://openalex.org/W2883429621",
+    "https://openalex.org/W3093270130",
+    "https://openalex.org/W3034414373",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3093028502",
+    "https://openalex.org/W2467487249",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3093074259",
+    "https://openalex.org/W3101367838",
+    "https://openalex.org/W3093002089",
+    "https://openalex.org/W2963820951",
+    "https://openalex.org/W2902190902",
+    "https://openalex.org/W2526198870"
+  ],
+  "abstract": "Transformer achieves remarkable successes in understanding 1 and 2-dimensional signals (e.g., NLP and Image Content Understanding). As a potential alternative to convolutional neural networks, it shares merits of strong interpretability, high discriminative power on hyper-scale data, and flexibility in processing varying length inputs. However, its encoders naturally contain computational intensive operations such as pair-wise self-attention, incurring heavy computational burden when being applied on the complex 3-dimensional video signals. This paper presents Token Shift Module (i.e., TokShift), a novel, zero-parameter, zero-FLOPs operator, for modeling temporal relations within each transformer encoder. Specifically, the TokShift barely temporally shifts partial [Class] token features back-and-forth across adjacent frames. Then, we densely plug the module into each encoder of a plain 2D vision transformer for learning 3D video representation. It is worth noticing that our TokShift transformer is a pure convolutional-free video transformer pilot with computational efficiency for video understanding. Experiments on standard benchmarks verify its robustness, effectiveness, and efficiency. Particularly, with input clips of 8/12 frames, the TokShift transformer achieves SOTA precision: 79.83%/80.40% on the Kinetics-400, 66.56% on EGTEA-Gaze+, and 96.80% on UCF-101 datasets, comparable or better than existing SOTA convolutional counterparts. Our code is open-sourced in: https://github.com/VideoNetworks/TokShift-Transformer.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7436708211898804
+    },
+    {
+      "name": "Security token",
+      "score": 0.6880110502243042
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6755110621452332
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6366538405418396
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5207917094230652
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.4909653961658478
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.46903881430625916
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.46689116954803467
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.36602967977523804
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3546980321407318
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.34253525733947754
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11144888401031494
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

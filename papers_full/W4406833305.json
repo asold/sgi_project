@@ -1,81 +1,116 @@
 {
-    "title": "Large Language Model Approach for Zero-Shot Information Extraction and Clustering of Japanese Radiology Reports: Algorithm Development and Validation",
-    "url": "https://openalex.org/W4406833305",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2136993711",
-            "name": "Yamagishi Yosuke",
-            "affiliations": [
-                "The University of Tokyo"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102227604",
-            "name": "Yuta Nakamura",
-            "affiliations": [
-                "University of Tokyo Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171612130",
-            "name": "Shouhei Hanaoka",
-            "affiliations": [
-                "The University of Tokyo"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1422477371",
-            "name": "Osamu Abe",
-            "affiliations": [
-                "The University of Tokyo"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136993711",
-            "name": "Yamagishi Yosuke",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2102227604",
-            "name": "Yuta Nakamura",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2171612130",
-            "name": "Shouhei Hanaoka",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1422477371",
-            "name": "Osamu Abe",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963466845",
-        "https://openalex.org/W2995225687",
-        "https://openalex.org/W4385572235",
-        "https://openalex.org/W3188252230",
-        "https://openalex.org/W144923133",
-        "https://openalex.org/W4313236956",
-        "https://openalex.org/W4401108758",
-        "https://openalex.org/W2144594967",
-        "https://openalex.org/W4327810158",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W4385573087",
-        "https://openalex.org/W3013294478",
-        "https://openalex.org/W4399125735",
-        "https://openalex.org/W4386955457",
-        "https://openalex.org/W3198380000",
-        "https://openalex.org/W3046201587",
-        "https://openalex.org/W4281627552",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W3034617741",
-        "https://openalex.org/W2181523240",
-        "https://openalex.org/W4386867830",
-        "https://openalex.org/W3101860695"
-    ],
-    "abstract": "Abstract Background The application of natural language processing in medicine has increased significantly, including tasks such as information extraction and classification. Natural language processing plays a crucial role in structuring free-form radiology reports, facilitating the interpretation of textual content, and enhancing data utility through clustering techniques. Clustering allows for the identification of similar lesions and disease patterns across a broad dataset, making it useful for aggregating information and discovering new insights in medical imaging. However, most publicly available medical datasets are in English, with limited resources in other languages. This scarcity poses a challenge for development of models geared toward non-English downstream tasks. Objective This study aimed to develop and evaluate an algorithm that uses large language models (LLMs) to extract information from Japanese lung cancer radiology reports and perform clustering analysis. The effectiveness of this approach was assessed and compared with previous supervised methods. Methods This study employed the MedTxt-RR dataset, comprising 135 Japanese radiology reports from 9 radiologists who interpreted the computed tomography images of 15 lung cancer patients obtained from Radiopaedia. Previously used in the NTCIR-16 (NII Testbeds and Community for Information Access Research) shared task for clustering performance competition, this dataset was ideal for comparing the clustering ability of our algorithm with those of previous methods. The dataset was split into 8 cases for development and 7 for testing, respectively. The study’s approach involved using the LLM to extract information pertinent to lung cancer findings and transforming it into numeric features for clustering, using the K-means method. Performance was evaluated using 135 reports for information extraction accuracy and 63 test reports for clustering performance. This study focused on the accuracy of automated systems for extracting tumor size, location, and laterality from clinical reports. The clustering performance was evaluated using normalized mutual information, adjusted mutual information , and the Fowlkes-Mallows index for both the development and test data. Results The tumor size was accurately identified in 99 out of 135 reports (73.3%), with errors in 36 reports (26.7%), primarily due to missing or incorrect size information. Tumor location and laterality were identified with greater accuracy in 112 out of 135 reports (83%); however, 23 reports (17%) contained errors mainly due to empty values or incorrect data. Clustering performance of the test data yielded an normalized mutual information of 0.6414, adjusted mutual information of 0.5598, and Fowlkes-Mallows index of 0.5354. The proposed method demonstrated superior performance across all evaluation metrics compared to previous methods. Conclusions The unsupervised LLM approach surpassed the existing supervised methods in clustering Japanese radiology reports. These findings suggest that LLMs hold promise for extracting information from radiology reports and integrating it into disease-specific knowledge structures.",
-    "full_text": null
+  "title": "Large Language Model Approach for Zero-Shot Information Extraction and Clustering of Japanese Radiology Reports: Algorithm Development and Validation",
+  "url": "https://openalex.org/W4406833305",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2136993711",
+      "name": "Yamagishi Yosuke",
+      "affiliations": [
+        "The University of Tokyo"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102227604",
+      "name": "Yuta Nakamura",
+      "affiliations": [
+        "University of Tokyo Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171612130",
+      "name": "Shouhei Hanaoka",
+      "affiliations": [
+        "The University of Tokyo"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1422477371",
+      "name": "Osamu Abe",
+      "affiliations": [
+        "The University of Tokyo"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136993711",
+      "name": "Yamagishi Yosuke",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2102227604",
+      "name": "Yuta Nakamura",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2171612130",
+      "name": "Shouhei Hanaoka",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1422477371",
+      "name": "Osamu Abe",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963466845",
+    "https://openalex.org/W2995225687",
+    "https://openalex.org/W4385572235",
+    "https://openalex.org/W3188252230",
+    "https://openalex.org/W144923133",
+    "https://openalex.org/W4313236956",
+    "https://openalex.org/W4401108758",
+    "https://openalex.org/W2144594967",
+    "https://openalex.org/W4327810158",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W4385573087",
+    "https://openalex.org/W3013294478",
+    "https://openalex.org/W4399125735",
+    "https://openalex.org/W4386955457",
+    "https://openalex.org/W3198380000",
+    "https://openalex.org/W3046201587",
+    "https://openalex.org/W4281627552",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W3034617741",
+    "https://openalex.org/W2181523240",
+    "https://openalex.org/W4386867830",
+    "https://openalex.org/W3101860695"
+  ],
+  "abstract": "Abstract Background The application of natural language processing in medicine has increased significantly, including tasks such as information extraction and classification. Natural language processing plays a crucial role in structuring free-form radiology reports, facilitating the interpretation of textual content, and enhancing data utility through clustering techniques. Clustering allows for the identification of similar lesions and disease patterns across a broad dataset, making it useful for aggregating information and discovering new insights in medical imaging. However, most publicly available medical datasets are in English, with limited resources in other languages. This scarcity poses a challenge for development of models geared toward non-English downstream tasks. Objective This study aimed to develop and evaluate an algorithm that uses large language models (LLMs) to extract information from Japanese lung cancer radiology reports and perform clustering analysis. The effectiveness of this approach was assessed and compared with previous supervised methods. Methods This study employed the MedTxt-RR dataset, comprising 135 Japanese radiology reports from 9 radiologists who interpreted the computed tomography images of 15 lung cancer patients obtained from Radiopaedia. Previously used in the NTCIR-16 (NII Testbeds and Community for Information Access Research) shared task for clustering performance competition, this dataset was ideal for comparing the clustering ability of our algorithm with those of previous methods. The dataset was split into 8 cases for development and 7 for testing, respectively. The study’s approach involved using the LLM to extract information pertinent to lung cancer findings and transforming it into numeric features for clustering, using the K-means method. Performance was evaluated using 135 reports for information extraction accuracy and 63 test reports for clustering performance. This study focused on the accuracy of automated systems for extracting tumor size, location, and laterality from clinical reports. The clustering performance was evaluated using normalized mutual information, adjusted mutual information , and the Fowlkes-Mallows index for both the development and test data. Results The tumor size was accurately identified in 99 out of 135 reports (73.3%), with errors in 36 reports (26.7%), primarily due to missing or incorrect size information. Tumor location and laterality were identified with greater accuracy in 112 out of 135 reports (83%); however, 23 reports (17%) contained errors mainly due to empty values or incorrect data. Clustering performance of the test data yielded an normalized mutual information of 0.6414, adjusted mutual information of 0.5598, and Fowlkes-Mallows index of 0.5354. The proposed method demonstrated superior performance across all evaluation metrics compared to previous methods. Conclusions The unsupervised LLM approach surpassed the existing supervised methods in clustering Japanese radiology reports. These findings suggest that LLMs hold promise for extracting information from radiology reports and integrating it into disease-specific knowledge structures.",
+  "full_text": null,
+  "topic": "Cluster analysis",
+  "concepts": [
+    {
+      "name": "Cluster analysis",
+      "score": 0.8786790370941162
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7371921539306641
+    },
+    {
+      "name": "Information extraction",
+      "score": 0.5763770937919617
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5398939847946167
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4520752429962158
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4229012131690979
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4173422157764435
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.38679760694503784
+    }
+  ]
 }

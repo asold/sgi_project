@@ -1,101 +1,148 @@
 {
-    "title": "FeatureForest: the power of foundation models, the usability of random forests",
-    "url": "https://openalex.org/W4405655293",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5093710387",
-            "name": "Mehdi Seifi",
-            "affiliations": [
-                "Human Technopole"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010745669",
-            "name": "Damian E. Dalle Nogare",
-            "affiliations": [
-                "Human Technopole"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5115572589",
-            "name": "Juan Manuel Battagliotti",
-            "affiliations": [
-                "Human Technopole"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5094214765",
-            "name": "Vera Galinova",
-            "affiliations": [
-                "Human Technopole"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5070993468",
-            "name": "Ananya Kedige Rao",
-            "affiliations": [
-                "CEA Grenoble",
-                "Centre National de la Recherche Scientifique",
-                "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
-                "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-                "Université Grenoble Alpes"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5057021217",
-            "name": "Johan Decelle",
-            "affiliations": [
-                "CEA Grenoble",
-                "Centre National de la Recherche Scientifique",
-                "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
-                "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-                "Université Grenoble Alpes"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5045834690",
-            "name": "Florian Jug",
-            "affiliations": [
-                "Human Technopole"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5056038454",
-            "name": "J.R. Deschamps",
-            "affiliations": [
-                "Human Technopole"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2133990480",
-        "https://openalex.org/W2975634117",
-        "https://openalex.org/W3207334748",
-        "https://openalex.org/W2586745507",
-        "https://openalex.org/W2806530968",
-        "https://openalex.org/W3111521801",
-        "https://openalex.org/W2805655379",
-        "https://openalex.org/W4385605177",
-        "https://openalex.org/W4308361273",
-        "https://openalex.org/W4390874575",
-        "https://openalex.org/W4386053872",
-        "https://openalex.org/W4386066470",
-        "https://openalex.org/W4394671819",
-        "https://openalex.org/W3201820946",
-        "https://openalex.org/W4379878595",
-        "https://openalex.org/W6912013287",
-        "https://openalex.org/W4382322597",
-        "https://openalex.org/W4401307635",
-        "https://openalex.org/W4403658370",
-        "https://openalex.org/W4281750612",
-        "https://openalex.org/W4362553305",
-        "https://openalex.org/W4367293213",
-        "https://openalex.org/W4402808735",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W1965092590",
-        "https://openalex.org/W4361216823"
-    ],
-    "abstract": "ABSTRACT Once the work at the microscope is done, biological discoveries rely heavily on proper downstream analysis. This often amounts to first segmenting the biological objects of interest in the image before performing a quantitative analysis. Deep-learning (DL) is nowadays ubiquitous in such segmentation tasks. However, DL can be cumbersome to apply, as it often requires large amount of manual labeling to produce ground-truth data, and expert knowledge to train the models from scratch. Nonetheless, the performance of large foundation models, although trained on natural images, are improving on scientific images with every new model released. They, however, require either manual prompting or tedious post-processing to selectively segment the biological objects of interest. Classical machine learning algorithms, such as random forest classifiers, on the other hand, are well-established, easy to train, and often yield results of sufficient quality for downstream processing tasks, hence their continued popularity. Unfortunately, they are limited to objects with distinct, well-defined textures compared to their environment. This generally limits their usefulness to structures easy to recognize. Here, we present FeatureForest, an open-source tool that leverages the feature embeddings of large foundation models to train a random forest classifier, thereby providing users with a rapid way of semantically segmenting complex images using only a few labeling strokes. We demonstrate the improvement in performance over a variety of datasets, including large and complex volumetric electron microscopy stacks. Our implementation is available in napari, currently integrates four foundation models, and can easily be extended to any new model once they become available.",
-    "full_text": null
+  "title": "FeatureForest: the power of foundation models, the usability of random forests",
+  "url": "https://openalex.org/W4405655293",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5093710387",
+      "name": "Mehdi Seifi",
+      "affiliations": [
+        "Human Technopole"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010745669",
+      "name": "Damian E. Dalle Nogare",
+      "affiliations": [
+        "Human Technopole"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5115572589",
+      "name": "Juan Manuel Battagliotti",
+      "affiliations": [
+        "Human Technopole"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5094214765",
+      "name": "Vera Galinova",
+      "affiliations": [
+        "Human Technopole"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5070993468",
+      "name": "Ananya Kedige Rao",
+      "affiliations": [
+        "CEA Grenoble",
+        "Centre National de la Recherche Scientifique",
+        "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+        "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+        "Université Grenoble Alpes"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5057021217",
+      "name": "Johan Decelle",
+      "affiliations": [
+        "CEA Grenoble",
+        "Centre National de la Recherche Scientifique",
+        "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+        "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+        "Université Grenoble Alpes"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5045834690",
+      "name": "Florian Jug",
+      "affiliations": [
+        "Human Technopole"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5056038454",
+      "name": "J.R. Deschamps",
+      "affiliations": [
+        "Human Technopole"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2133990480",
+    "https://openalex.org/W2975634117",
+    "https://openalex.org/W3207334748",
+    "https://openalex.org/W2586745507",
+    "https://openalex.org/W2806530968",
+    "https://openalex.org/W3111521801",
+    "https://openalex.org/W2805655379",
+    "https://openalex.org/W4385605177",
+    "https://openalex.org/W4308361273",
+    "https://openalex.org/W4390874575",
+    "https://openalex.org/W4386053872",
+    "https://openalex.org/W4386066470",
+    "https://openalex.org/W4394671819",
+    "https://openalex.org/W3201820946",
+    "https://openalex.org/W4379878595",
+    "https://openalex.org/W6912013287",
+    "https://openalex.org/W4382322597",
+    "https://openalex.org/W4401307635",
+    "https://openalex.org/W4403658370",
+    "https://openalex.org/W4281750612",
+    "https://openalex.org/W4362553305",
+    "https://openalex.org/W4367293213",
+    "https://openalex.org/W4402808735",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W1965092590",
+    "https://openalex.org/W4361216823"
+  ],
+  "abstract": "ABSTRACT Once the work at the microscope is done, biological discoveries rely heavily on proper downstream analysis. This often amounts to first segmenting the biological objects of interest in the image before performing a quantitative analysis. Deep-learning (DL) is nowadays ubiquitous in such segmentation tasks. However, DL can be cumbersome to apply, as it often requires large amount of manual labeling to produce ground-truth data, and expert knowledge to train the models from scratch. Nonetheless, the performance of large foundation models, although trained on natural images, are improving on scientific images with every new model released. They, however, require either manual prompting or tedious post-processing to selectively segment the biological objects of interest. Classical machine learning algorithms, such as random forest classifiers, on the other hand, are well-established, easy to train, and often yield results of sufficient quality for downstream processing tasks, hence their continued popularity. Unfortunately, they are limited to objects with distinct, well-defined textures compared to their environment. This generally limits their usefulness to structures easy to recognize. Here, we present FeatureForest, an open-source tool that leverages the feature embeddings of large foundation models to train a random forest classifier, thereby providing users with a rapid way of semantically segmenting complex images using only a few labeling strokes. We demonstrate the improvement in performance over a variety of datasets, including large and complex volumetric electron microscopy stacks. Our implementation is available in napari, currently integrates four foundation models, and can easily be extended to any new model once they become available.",
+  "full_text": null,
+  "topic": "Usability",
+  "concepts": [
+    {
+      "name": "Usability",
+      "score": 0.8366191387176514
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.6078500151634216
+    },
+    {
+      "name": "Random forest",
+      "score": 0.5470706224441528
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4497584402561188
+    },
+    {
+      "name": "Power (physics)",
+      "score": 0.4196491241455078
+    },
+    {
+      "name": "Geography",
+      "score": 0.2731480002403259
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.21409308910369873
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.18665894865989685
+    },
+    {
+      "name": "Physics",
+      "score": 0.10377666354179382
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.060911476612091064
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

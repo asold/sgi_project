@@ -1,52 +1,139 @@
 {
-    "title": "TEFDTA: a transformer encoder and fingerprint representation combined prediction method for bonded and non-bonded drug–target affinities",
-    "url": "https://openalex.org/W4390140606",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2169361281",
-            "name": "Zongquan Li",
-            "affiliations": [
-                "ShanghaiTech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100007593",
-            "name": "Fang Bai",
-            "affiliations": [
-                "ShanghaiTech University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3029836473",
-        "https://openalex.org/W2970603197",
-        "https://openalex.org/W4384296638",
-        "https://openalex.org/W3028589594",
-        "https://openalex.org/W2086286404",
-        "https://openalex.org/W3093091145",
-        "https://openalex.org/W1985588649",
-        "https://openalex.org/W2992752586",
-        "https://openalex.org/W3021453944",
-        "https://openalex.org/W2605952223",
-        "https://openalex.org/W4312094131",
-        "https://openalex.org/W3018980093",
-        "https://openalex.org/W2784213390",
-        "https://openalex.org/W2096864392",
-        "https://openalex.org/W3096561213",
-        "https://openalex.org/W4298087161",
-        "https://openalex.org/W2785947426",
-        "https://openalex.org/W2109991441",
-        "https://openalex.org/W2781821160",
-        "https://openalex.org/W2035585923",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3217568487",
-        "https://openalex.org/W4205167309",
-        "https://openalex.org/W2974531988",
-        "https://openalex.org/W4386554477",
-        "https://openalex.org/W3098189759",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Abstract Motivation The prediction of binding affinity between drug and target is crucial in drug discovery. However, the accuracy of current methods still needs to be improved. On the other hand, most deep learning methods focus only on the prediction of non-covalent (non-bonded) binding molecular systems, but neglect the cases of covalent binding, which has gained increasing attention in the field of drug development. Results In this work, a new attention-based model, A Transformer Encoder and Fingerprint combined Prediction method for Drug–Target Affinity (TEFDTA) is proposed to predict the binding affinity for bonded and non-bonded drug–target interactions. To deal with such complicated problems, we used different representations for protein and drug molecules, respectively. In detail, an initial framework was built by training our model using the datasets of non-bonded protein–ligand interactions. For the widely used dataset Davis, an additional contribution of this study is that we provide a manually corrected Davis database. The model was subsequently fine-tuned on a smaller dataset of covalent interactions from the CovalentInDB database to optimize performance. The results demonstrate a significant improvement over existing approaches, with an average improvement of 7.6% in predicting non-covalent binding affinity and a remarkable average improvement of 62.9% in predicting covalent binding affinity compared to using BindingDB data alone. At the end, the potential ability of our model to identify activity cliffs was investigated through a case study. The prediction results indicate that our model is sensitive to discriminate the difference of binding affinities arising from small variances in the structures of compounds. Availability and implementation The codes and datasets of TEFDTA are available at https://github.com/lizongquan01/TEFDTA.",
-    "full_text": null
+  "title": "TEFDTA: a transformer encoder and fingerprint representation combined prediction method for bonded and non-bonded drug–target affinities",
+  "url": "https://openalex.org/W4390140606",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2169361281",
+      "name": "Zongquan Li",
+      "affiliations": [
+        "ShanghaiTech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100007593",
+      "name": "Fang Bai",
+      "affiliations": [
+        "ShanghaiTech University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3029836473",
+    "https://openalex.org/W2970603197",
+    "https://openalex.org/W4384296638",
+    "https://openalex.org/W3028589594",
+    "https://openalex.org/W2086286404",
+    "https://openalex.org/W3093091145",
+    "https://openalex.org/W1985588649",
+    "https://openalex.org/W2992752586",
+    "https://openalex.org/W3021453944",
+    "https://openalex.org/W2605952223",
+    "https://openalex.org/W4312094131",
+    "https://openalex.org/W3018980093",
+    "https://openalex.org/W2784213390",
+    "https://openalex.org/W2096864392",
+    "https://openalex.org/W3096561213",
+    "https://openalex.org/W4298087161",
+    "https://openalex.org/W2785947426",
+    "https://openalex.org/W2109991441",
+    "https://openalex.org/W2781821160",
+    "https://openalex.org/W2035585923",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3217568487",
+    "https://openalex.org/W4205167309",
+    "https://openalex.org/W2974531988",
+    "https://openalex.org/W4386554477",
+    "https://openalex.org/W3098189759",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Abstract Motivation The prediction of binding affinity between drug and target is crucial in drug discovery. However, the accuracy of current methods still needs to be improved. On the other hand, most deep learning methods focus only on the prediction of non-covalent (non-bonded) binding molecular systems, but neglect the cases of covalent binding, which has gained increasing attention in the field of drug development. Results In this work, a new attention-based model, A Transformer Encoder and Fingerprint combined Prediction method for Drug–Target Affinity (TEFDTA) is proposed to predict the binding affinity for bonded and non-bonded drug–target interactions. To deal with such complicated problems, we used different representations for protein and drug molecules, respectively. In detail, an initial framework was built by training our model using the datasets of non-bonded protein–ligand interactions. For the widely used dataset Davis, an additional contribution of this study is that we provide a manually corrected Davis database. The model was subsequently fine-tuned on a smaller dataset of covalent interactions from the CovalentInDB database to optimize performance. The results demonstrate a significant improvement over existing approaches, with an average improvement of 7.6% in predicting non-covalent binding affinity and a remarkable average improvement of 62.9% in predicting covalent binding affinity compared to using BindingDB data alone. At the end, the potential ability of our model to identify activity cliffs was investigated through a case study. The prediction results indicate that our model is sensitive to discriminate the difference of binding affinities arising from small variances in the structures of compounds. Availability and implementation The codes and datasets of TEFDTA are available at https://github.com/lizongquan01/TEFDTA.",
+  "full_text": null,
+  "topic": "Affinities",
+  "concepts": [
+    {
+      "name": "Affinities",
+      "score": 0.8368460536003113
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6815725564956665
+    },
+    {
+      "name": "Fingerprint (computing)",
+      "score": 0.6809996366500854
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.5463772416114807
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5383597016334534
+    },
+    {
+      "name": "Drug",
+      "score": 0.5094884037971497
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49982666969299316
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40557658672332764
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.333293616771698
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.32773178815841675
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.19549670815467834
+    },
+    {
+      "name": "Biology",
+      "score": 0.18521398305892944
+    },
+    {
+      "name": "Engineering",
+      "score": 0.18503093719482422
+    },
+    {
+      "name": "Stereochemistry",
+      "score": 0.13158664107322693
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.10255298018455505
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.08717751502990723
+    },
+    {
+      "name": "Operating system",
+      "score": 0.05776587128639221
+    },
+    {
+      "name": "Law",
+      "score": 0.05526578426361084
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

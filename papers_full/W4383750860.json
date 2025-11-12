@@ -1,116 +1,155 @@
 {
-    "title": "Recurrent DETR: Transformer-Based Object Detection for Crowded Scenes",
-    "url": "https://openalex.org/W4383750860",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2887751323",
-            "name": "Hyeong-Kyu Choi",
-            "affiliations": [
-                "Korea University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4383792834",
-            "name": "Chong Keun Paik",
-            "affiliations": [
-                "Samsung (South Korea)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4383792835",
-            "name": "Hyun-woo Ko",
-            "affiliations": [
-                "Korea University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096962569",
-            "name": "Min Chul Park",
-            "affiliations": [
-                "Korea University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4222656396",
-            "name": "Hyunwoo J. Kim",
-            "affiliations": [
-                "Korea University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W6794345597",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6777046832",
-        "https://openalex.org/W6750697433",
-        "https://openalex.org/W6639102338",
-        "https://openalex.org/W6790830454",
-        "https://openalex.org/W3137278571",
-        "https://openalex.org/W3199093552",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2962766617",
-        "https://openalex.org/W6753640285",
-        "https://openalex.org/W6735707571",
-        "https://openalex.org/W6810383526",
-        "https://openalex.org/W6798404027",
-        "https://openalex.org/W4293413766",
-        "https://openalex.org/W4321510833",
-        "https://openalex.org/W6701498492",
-        "https://openalex.org/W4323833118",
-        "https://openalex.org/W607748843",
-        "https://openalex.org/W3203020760",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6804794748",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W4297238531",
-        "https://openalex.org/W3035323039",
-        "https://openalex.org/W4221159372",
-        "https://openalex.org/W3158261146",
-        "https://openalex.org/W6771626834",
-        "https://openalex.org/W4313155487",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W6774054309",
-        "https://openalex.org/W6620707391",
-        "https://openalex.org/W2102605133",
-        "https://openalex.org/W4214700196",
-        "https://openalex.org/W4283586395",
-        "https://openalex.org/W3203003533",
-        "https://openalex.org/W6793267612",
-        "https://openalex.org/W3168488421",
-        "https://openalex.org/W4214886591",
-        "https://openalex.org/W6784094891",
-        "https://openalex.org/W6809665764",
-        "https://openalex.org/W3171169846",
-        "https://openalex.org/W3174164794",
-        "https://openalex.org/W3174480456",
-        "https://openalex.org/W2604231779",
-        "https://openalex.org/W2798542761",
-        "https://openalex.org/W2325237720",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W3018757597",
-        "https://openalex.org/W4295838474",
-        "https://openalex.org/W2866343820",
-        "https://openalex.org/W3217139832",
-        "https://openalex.org/W3006683367",
-        "https://openalex.org/W4221146106",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W3146455718",
-        "https://openalex.org/W3157528469",
-        "https://openalex.org/W3122239467",
-        "https://openalex.org/W3169064633",
-        "https://openalex.org/W3182814358",
-        "https://openalex.org/W4225365588",
-        "https://openalex.org/W639708223"
-    ],
-    "abstract": "Recent Transformer-based object detectors have achieved remarkable performance on benchmark datasets, but few have addressed the real-world challenge of object detection in crowded scenes using transformers. This limitation stems from the fixed query set size of the transformer decoder, which restricts the model&#x2019;s inference capacity. To overcome this challenge, we propose Recurrent Detection Transformer (Recurrent DETR), an object detector that iterates the decoder block to render more predictions with a finite number of query tokens. Recurrent DETR can adaptively control the number of decoder block iterations based on the image&#x2019;s crowdedness or complexity, resulting in a variable-size prediction set. This is enabled by our novel Pondering Hungarian Loss, which helps the model to learn when additional computation is required to identify all the objects in a crowded scene. We demonstrate the effectiveness of Recurrent DETR on two datasets: COCO 2017, which represents a standard setting, and CrowdHuman, which features a crowded setting. Our experiments on both datasets show that Recurrent DETR achieves significant performance gains of 0.8 AP and 0.4 AP, respectively, over its base architectures. Moreover, we conduct comprehensive analyses under different query set size constraints to provide a thorough evaluation of our proposed method.",
-    "full_text": null
+  "title": "Recurrent DETR: Transformer-Based Object Detection for Crowded Scenes",
+  "url": "https://openalex.org/W4383750860",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2887751323",
+      "name": "Hyeong-Kyu Choi",
+      "affiliations": [
+        "Korea University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4383792834",
+      "name": "Chong Keun Paik",
+      "affiliations": [
+        "Samsung (South Korea)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4383792835",
+      "name": "Hyun-woo Ko",
+      "affiliations": [
+        "Korea University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096962569",
+      "name": "Min Chul Park",
+      "affiliations": [
+        "Korea University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4222656396",
+      "name": "Hyunwoo J. Kim",
+      "affiliations": [
+        "Korea University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W6794345597",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6777046832",
+    "https://openalex.org/W6750697433",
+    "https://openalex.org/W6639102338",
+    "https://openalex.org/W6790830454",
+    "https://openalex.org/W3137278571",
+    "https://openalex.org/W3199093552",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2962766617",
+    "https://openalex.org/W6753640285",
+    "https://openalex.org/W6735707571",
+    "https://openalex.org/W6810383526",
+    "https://openalex.org/W6798404027",
+    "https://openalex.org/W4293413766",
+    "https://openalex.org/W4321510833",
+    "https://openalex.org/W6701498492",
+    "https://openalex.org/W4323833118",
+    "https://openalex.org/W607748843",
+    "https://openalex.org/W3203020760",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6804794748",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W4297238531",
+    "https://openalex.org/W3035323039",
+    "https://openalex.org/W4221159372",
+    "https://openalex.org/W3158261146",
+    "https://openalex.org/W6771626834",
+    "https://openalex.org/W4313155487",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W6774054309",
+    "https://openalex.org/W6620707391",
+    "https://openalex.org/W2102605133",
+    "https://openalex.org/W4214700196",
+    "https://openalex.org/W4283586395",
+    "https://openalex.org/W3203003533",
+    "https://openalex.org/W6793267612",
+    "https://openalex.org/W3168488421",
+    "https://openalex.org/W4214886591",
+    "https://openalex.org/W6784094891",
+    "https://openalex.org/W6809665764",
+    "https://openalex.org/W3171169846",
+    "https://openalex.org/W3174164794",
+    "https://openalex.org/W3174480456",
+    "https://openalex.org/W2604231779",
+    "https://openalex.org/W2798542761",
+    "https://openalex.org/W2325237720",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W3018757597",
+    "https://openalex.org/W4295838474",
+    "https://openalex.org/W2866343820",
+    "https://openalex.org/W3217139832",
+    "https://openalex.org/W3006683367",
+    "https://openalex.org/W4221146106",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W3146455718",
+    "https://openalex.org/W3157528469",
+    "https://openalex.org/W3122239467",
+    "https://openalex.org/W3169064633",
+    "https://openalex.org/W3182814358",
+    "https://openalex.org/W4225365588",
+    "https://openalex.org/W639708223"
+  ],
+  "abstract": "Recent Transformer-based object detectors have achieved remarkable performance on benchmark datasets, but few have addressed the real-world challenge of object detection in crowded scenes using transformers. This limitation stems from the fixed query set size of the transformer decoder, which restricts the model&#x2019;s inference capacity. To overcome this challenge, we propose Recurrent Detection Transformer (Recurrent DETR), an object detector that iterates the decoder block to render more predictions with a finite number of query tokens. Recurrent DETR can adaptively control the number of decoder block iterations based on the image&#x2019;s crowdedness or complexity, resulting in a variable-size prediction set. This is enabled by our novel Pondering Hungarian Loss, which helps the model to learn when additional computation is required to identify all the objects in a crowded scene. We demonstrate the effectiveness of Recurrent DETR on two datasets: COCO 2017, which represents a standard setting, and CrowdHuman, which features a crowded setting. Our experiments on both datasets show that Recurrent DETR achieves significant performance gains of 0.8 AP and 0.4 AP, respectively, over its base architectures. Moreover, we conduct comprehensive analyses under different query set size constraints to provide a thorough evaluation of our proposed method.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6849863529205322
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5462961792945862
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5172175168991089
+    },
+    {
+      "name": "Object detection",
+      "score": 0.47898268699645996
+    },
+    {
+      "name": "Transformer",
+      "score": 0.46923500299453735
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3040483593940735
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08340376615524292
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08018097281455994
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,80 +1,175 @@
 {
-    "title": "Molecular Descriptors Property Prediction Using Transformer-Based Approach",
-    "url": "https://openalex.org/W4385310178",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5102947600",
-            "name": "Tuan Tran",
-            "affiliations": [
-                "University at Albany, State University of New York"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5017440090",
-            "name": "Chinwe Ekenna",
-            "affiliations": [
-                "University at Albany, State University of New York"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2789816271",
-        "https://openalex.org/W2467309505",
-        "https://openalex.org/W3127596955",
-        "https://openalex.org/W3010813949",
-        "https://openalex.org/W2749279690",
-        "https://openalex.org/W2888164077",
-        "https://openalex.org/W3128029990",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2973114758",
-        "https://openalex.org/W1973698523",
-        "https://openalex.org/W2742753960",
-        "https://openalex.org/W2885592687",
-        "https://openalex.org/W2138906088",
-        "https://openalex.org/W2614053601",
-        "https://openalex.org/W6736685754",
-        "https://openalex.org/W2931367569",
-        "https://openalex.org/W6745537798",
-        "https://openalex.org/W2087563523",
-        "https://openalex.org/W4306179830",
-        "https://openalex.org/W3032781902",
-        "https://openalex.org/W3036931110",
-        "https://openalex.org/W4210592951",
-        "https://openalex.org/W2405035126",
-        "https://openalex.org/W1560202902",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2063060349",
-        "https://openalex.org/W2046653925",
-        "https://openalex.org/W1965313623",
-        "https://openalex.org/W6699500094",
-        "https://openalex.org/W2582187633",
-        "https://openalex.org/W3008194656",
-        "https://openalex.org/W2894559996",
-        "https://openalex.org/W2578240541",
-        "https://openalex.org/W3000139398",
-        "https://openalex.org/W3215781140",
-        "https://openalex.org/W2991255273",
-        "https://openalex.org/W2966357564",
-        "https://openalex.org/W6640462745",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W4249179470",
-        "https://openalex.org/W6763868836",
-        "https://openalex.org/W6779789776",
-        "https://openalex.org/W3187251571",
-        "https://openalex.org/W2899070097",
-        "https://openalex.org/W2594183968",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W4313527186",
-        "https://openalex.org/W3105259638",
-        "https://openalex.org/W3023353883",
-        "https://openalex.org/W2971227267",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W3036737467",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4297733535",
-        "https://openalex.org/W2317467438"
-    ],
-    "abstract": "In this study, we introduce semi-supervised machine learning models designed to predict molecular properties. Our model employs a two-stage approach, involving pre-training and fine-tuning. Particularly, our model leverages a substantial amount of labeled and unlabeled data consisting of SMILES strings, a text representation system for molecules. During the pre-training stage, our model capitalizes on the Masked Language Model, which is widely used in natural language processing, for learning molecular chemical space representations. During the fine-tuning stage, our model is trained on a smaller labeled dataset to tackle specific downstream tasks, such as classification or regression. Preliminary results indicate that our model demonstrates comparable performance to state-of-the-art models on the chosen downstream tasks from MoleculeNet. Additionally, to reduce the computational overhead, we propose a new approach taking advantage of 3D compound structures for calculating the attention score used in the end-to-end transformer model to predict anti-malaria drug candidates. The results show that using the proposed attention score, our end-to-end model is able to have comparable performance with pre-trained models.",
-    "full_text": null
+  "title": "Molecular Descriptors Property Prediction Using Transformer-Based Approach",
+  "url": "https://openalex.org/W4385310178",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5102947600",
+      "name": "Tuan Tran",
+      "affiliations": [
+        "University at Albany, State University of New York"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5017440090",
+      "name": "Chinwe Ekenna",
+      "affiliations": [
+        "University at Albany, State University of New York"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2789816271",
+    "https://openalex.org/W2467309505",
+    "https://openalex.org/W3127596955",
+    "https://openalex.org/W3010813949",
+    "https://openalex.org/W2749279690",
+    "https://openalex.org/W2888164077",
+    "https://openalex.org/W3128029990",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2973114758",
+    "https://openalex.org/W1973698523",
+    "https://openalex.org/W2742753960",
+    "https://openalex.org/W2885592687",
+    "https://openalex.org/W2138906088",
+    "https://openalex.org/W2614053601",
+    "https://openalex.org/W6736685754",
+    "https://openalex.org/W2931367569",
+    "https://openalex.org/W6745537798",
+    "https://openalex.org/W2087563523",
+    "https://openalex.org/W4306179830",
+    "https://openalex.org/W3032781902",
+    "https://openalex.org/W3036931110",
+    "https://openalex.org/W4210592951",
+    "https://openalex.org/W2405035126",
+    "https://openalex.org/W1560202902",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2063060349",
+    "https://openalex.org/W2046653925",
+    "https://openalex.org/W1965313623",
+    "https://openalex.org/W6699500094",
+    "https://openalex.org/W2582187633",
+    "https://openalex.org/W3008194656",
+    "https://openalex.org/W2894559996",
+    "https://openalex.org/W2578240541",
+    "https://openalex.org/W3000139398",
+    "https://openalex.org/W3215781140",
+    "https://openalex.org/W2991255273",
+    "https://openalex.org/W2966357564",
+    "https://openalex.org/W6640462745",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W4249179470",
+    "https://openalex.org/W6763868836",
+    "https://openalex.org/W6779789776",
+    "https://openalex.org/W3187251571",
+    "https://openalex.org/W2899070097",
+    "https://openalex.org/W2594183968",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W4313527186",
+    "https://openalex.org/W3105259638",
+    "https://openalex.org/W3023353883",
+    "https://openalex.org/W2971227267",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W3036737467",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4297733535",
+    "https://openalex.org/W2317467438"
+  ],
+  "abstract": "In this study, we introduce semi-supervised machine learning models designed to predict molecular properties. Our model employs a two-stage approach, involving pre-training and fine-tuning. Particularly, our model leverages a substantial amount of labeled and unlabeled data consisting of SMILES strings, a text representation system for molecules. During the pre-training stage, our model capitalizes on the Masked Language Model, which is widely used in natural language processing, for learning molecular chemical space representations. During the fine-tuning stage, our model is trained on a smaller labeled dataset to tackle specific downstream tasks, such as classification or regression. Preliminary results indicate that our model demonstrates comparable performance to state-of-the-art models on the chosen downstream tasks from MoleculeNet. Additionally, to reduce the computational overhead, we propose a new approach taking advantage of 3D compound structures for calculating the attention score used in the end-to-end transformer model to predict anti-malaria drug candidates. The results show that using the proposed attention score, our end-to-end model is able to have comparable performance with pre-trained models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7549334764480591
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7044532299041748
+    },
+    {
+      "name": "Language model",
+      "score": 0.6535409688949585
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6529475450515747
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5991833209991455
+    },
+    {
+      "name": "Property (philosophy)",
+      "score": 0.47658273577690125
+    },
+    {
+      "name": "Training set",
+      "score": 0.42919594049453735
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.42481833696365356
+    },
+    {
+      "name": "Chemical space",
+      "score": 0.4239717423915863
+    },
+    {
+      "name": "Regression",
+      "score": 0.4239419400691986
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.375196635723114
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.14511191844940186
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.1220981776714325
+    },
+    {
+      "name": "Voltage",
+      "score": 0.11384120583534241
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09341070055961609
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08981844782829285
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

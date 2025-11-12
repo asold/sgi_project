@@ -1,89 +1,156 @@
 {
-    "title": "A Lightweight Multi-View Learning Approach for Phishing Attack Detection Using Transformer with Mixture of Experts",
-    "url": "https://openalex.org/W4381741171",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097487873",
-            "name": "Yan-bin Wang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100652339",
-            "name": "Wenrui Ma",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102779235",
-            "name": "Haitao Xu",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098370609",
-            "name": "Yiwei Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1937317863",
-            "name": "Peng Yin",
-            "affiliations": [
-                "University of Chinese Academy of Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2979313622",
-        "https://openalex.org/W6681784104",
-        "https://openalex.org/W3092163375",
-        "https://openalex.org/W2604422183",
-        "https://openalex.org/W2780954022",
-        "https://openalex.org/W1985920648",
-        "https://openalex.org/W6773451494",
-        "https://openalex.org/W6939868455",
-        "https://openalex.org/W2297844173",
-        "https://openalex.org/W2012481173",
-        "https://openalex.org/W2043034431",
-        "https://openalex.org/W7038491112",
-        "https://openalex.org/W6755215265",
-        "https://openalex.org/W4296617364",
-        "https://openalex.org/W4352976972",
-        "https://openalex.org/W4320004386",
-        "https://openalex.org/W4313889240",
-        "https://openalex.org/W4317207036",
-        "https://openalex.org/W3015534721",
-        "https://openalex.org/W4221129096",
-        "https://openalex.org/W4220799537",
-        "https://openalex.org/W3137108924",
-        "https://openalex.org/W4372260394",
-        "https://openalex.org/W3004765419",
-        "https://openalex.org/W4311622233",
-        "https://openalex.org/W4362586487",
-        "https://openalex.org/W3189081616",
-        "https://openalex.org/W4321483498",
-        "https://openalex.org/W2971561269",
-        "https://openalex.org/W4322736749",
-        "https://openalex.org/W4281483860",
-        "https://openalex.org/W4282966566",
-        "https://openalex.org/W4289656135",
-        "https://openalex.org/W3035431747",
-        "https://openalex.org/W2593768305",
-        "https://openalex.org/W2728121559",
-        "https://openalex.org/W6798337895",
-        "https://openalex.org/W3109608701",
-        "https://openalex.org/W2783587842",
-        "https://openalex.org/W4298008244",
-        "https://openalex.org/W4283815817",
-        "https://openalex.org/W2898351540",
-        "https://openalex.org/W3106126975",
-        "https://openalex.org/W3000716457",
-        "https://openalex.org/W2148614760"
-    ],
-    "abstract": "Phishing poses a significant threat to the financial and privacy security of internet users and often serves as the starting point for cyberattacks. Many machine-learning-based methods for detecting phishing websites rely on URL analysis, offering simplicity and efficiency. However, these approaches are not always effective due to the following reasons: (1) highly concealed phishing websites may employ tactics such as masquerading URL addresses to deceive machine learning models, and (2) phishing attackers frequently change their phishing website URLs to evade detection. In this study, we propose a robust, multi-view Transformer model with an expert-mixture mechanism for accurate phishing website detection utilizing website URLs, attributes, content, and behavioral information. Specifically, we first adapted a pretrained language model for URL representation learning by applying adversarial post-training learning in order to extract semantic information from URLs. Next, we captured the attribute, content, and behavioral features of the websites and encoded them as vectors, which, alongside the URL embeddings, constitute the website’s multi-view information. Subsequently, we introduced a mixture-of-experts mechanism into the Transformer network to learn knowledge from different views and adaptively fuse information from various views. The proposed method outperforms state-of-the-art approaches in evaluations of real phishing websites, demonstrating greater performance with less label dependency. Furthermore, we show the superior robustness and enhanced adaptability of the proposed method to unseen samples and data drift in more challenging experimental settings.",
-    "full_text": null
+  "title": "A Lightweight Multi-View Learning Approach for Phishing Attack Detection Using Transformer with Mixture of Experts",
+  "url": "https://openalex.org/W4381741171",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097487873",
+      "name": "Yan-bin Wang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100652339",
+      "name": "Wenrui Ma",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102779235",
+      "name": "Haitao Xu",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098370609",
+      "name": "Yiwei Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1937317863",
+      "name": "Peng Yin",
+      "affiliations": [
+        "University of Chinese Academy of Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2979313622",
+    "https://openalex.org/W6681784104",
+    "https://openalex.org/W3092163375",
+    "https://openalex.org/W2604422183",
+    "https://openalex.org/W2780954022",
+    "https://openalex.org/W1985920648",
+    "https://openalex.org/W6773451494",
+    "https://openalex.org/W6939868455",
+    "https://openalex.org/W2297844173",
+    "https://openalex.org/W2012481173",
+    "https://openalex.org/W2043034431",
+    "https://openalex.org/W7038491112",
+    "https://openalex.org/W6755215265",
+    "https://openalex.org/W4296617364",
+    "https://openalex.org/W4352976972",
+    "https://openalex.org/W4320004386",
+    "https://openalex.org/W4313889240",
+    "https://openalex.org/W4317207036",
+    "https://openalex.org/W3015534721",
+    "https://openalex.org/W4221129096",
+    "https://openalex.org/W4220799537",
+    "https://openalex.org/W3137108924",
+    "https://openalex.org/W4372260394",
+    "https://openalex.org/W3004765419",
+    "https://openalex.org/W4311622233",
+    "https://openalex.org/W4362586487",
+    "https://openalex.org/W3189081616",
+    "https://openalex.org/W4321483498",
+    "https://openalex.org/W2971561269",
+    "https://openalex.org/W4322736749",
+    "https://openalex.org/W4281483860",
+    "https://openalex.org/W4282966566",
+    "https://openalex.org/W4289656135",
+    "https://openalex.org/W3035431747",
+    "https://openalex.org/W2593768305",
+    "https://openalex.org/W2728121559",
+    "https://openalex.org/W6798337895",
+    "https://openalex.org/W3109608701",
+    "https://openalex.org/W2783587842",
+    "https://openalex.org/W4298008244",
+    "https://openalex.org/W4283815817",
+    "https://openalex.org/W2898351540",
+    "https://openalex.org/W3106126975",
+    "https://openalex.org/W3000716457",
+    "https://openalex.org/W2148614760"
+  ],
+  "abstract": "Phishing poses a significant threat to the financial and privacy security of internet users and often serves as the starting point for cyberattacks. Many machine-learning-based methods for detecting phishing websites rely on URL analysis, offering simplicity and efficiency. However, these approaches are not always effective due to the following reasons: (1) highly concealed phishing websites may employ tactics such as masquerading URL addresses to deceive machine learning models, and (2) phishing attackers frequently change their phishing website URLs to evade detection. In this study, we propose a robust, multi-view Transformer model with an expert-mixture mechanism for accurate phishing website detection utilizing website URLs, attributes, content, and behavioral information. Specifically, we first adapted a pretrained language model for URL representation learning by applying adversarial post-training learning in order to extract semantic information from URLs. Next, we captured the attribute, content, and behavioral features of the websites and encoded them as vectors, which, alongside the URL embeddings, constitute the website’s multi-view information. Subsequently, we introduced a mixture-of-experts mechanism into the Transformer network to learn knowledge from different views and adaptively fuse information from various views. The proposed method outperforms state-of-the-art approaches in evaluations of real phishing websites, demonstrating greater performance with less label dependency. Furthermore, we show the superior robustness and enhanced adaptability of the proposed method to unseen samples and data drift in more challenging experimental settings.",
+  "full_text": null,
+  "topic": "Phishing",
+  "concepts": [
+    {
+      "name": "Phishing",
+      "score": 0.8975449800491333
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7646493911743164
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5573861002922058
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5308398008346558
+    },
+    {
+      "name": "Transformer",
+      "score": 0.47140148282051086
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.42850780487060547
+    },
+    {
+      "name": "Information leakage",
+      "score": 0.4133793115615845
+    },
+    {
+      "name": "The Internet",
+      "score": 0.3748387396335602
+    },
+    {
+      "name": "Computer security",
+      "score": 0.2842146158218384
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.2796436548233032
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11087822914123535
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

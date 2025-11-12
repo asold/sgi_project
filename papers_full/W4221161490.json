@@ -1,79 +1,118 @@
 {
-    "title": "ScoreNet: Learning Non-Uniform Attention and Augmentation for Transformer-Based Histopathological Image Classification",
-    "url": "https://openalex.org/W4221161490",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5008461359",
-            "name": "Thomas Stegmüller",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5058274549",
-            "name": "Behzad Bozorgtabar",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5058601241",
-            "name": "Antoine Spahr",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5067782007",
-            "name": "Jean‐Philippe Thiran",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2885824038",
-        "https://openalex.org/W3011769840",
-        "https://openalex.org/W2772723798",
-        "https://openalex.org/W3159481202",
-        "https://openalex.org/W4312747676",
-        "https://openalex.org/W3203898052",
-        "https://openalex.org/W3212889265",
-        "https://openalex.org/W3177017840",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2302302587",
-        "https://openalex.org/W6747701563",
-        "https://openalex.org/W3203363377",
-        "https://openalex.org/W3037731665",
-        "https://openalex.org/W3128210037",
-        "https://openalex.org/W3176719058",
-        "https://openalex.org/W6797371478",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3135547872",
-        "https://openalex.org/W6683033130",
-        "https://openalex.org/W2924361103",
-        "https://openalex.org/W6795475546",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W3096587759",
-        "https://openalex.org/W3209367260",
-        "https://openalex.org/W3120695313",
-        "https://openalex.org/W6800134800",
-        "https://openalex.org/W2964317032",
-        "https://openalex.org/W3089090082",
-        "https://openalex.org/W3128158496",
-        "https://openalex.org/W2964157630",
-        "https://openalex.org/W6778963470",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3015233197",
-        "https://openalex.org/W3203168750",
-        "https://openalex.org/W1946635378",
-        "https://openalex.org/W2992308087",
-        "https://openalex.org/W4307823382",
-        "https://openalex.org/W2988856610"
-    ],
-    "abstract": "Progress in digital pathology is hindered by high-resolution images and the prohibitive cost of exhaustive localized annotations. The commonly used paradigm to categorize pathology images is patch-based processing, which often incorporates multiple instance learning (MIL) to aggregate local patch-level representations yielding image-level prediction. Nonetheless, diagnostically relevant regions may only take a small fraction of the whole tissue, and current MIL-based approaches often process images uniformly, discarding the inter-patches interactions. To alleviate these issues, we propose ScoreNet, a new efficient transformer that exploits a differentiable recommendation stage to extract discriminative image regions and dedicate computational resources accordingly. The proposed transformer leverages the local and global attention of a few dynamically recommended high-resolution regions at an efficient computational cost. We further introduce a novel mixing data-augmentation, namely ScoreMix, by leveraging the image's semantic distribution to guide the data mixing and produce coherent sample-label pairs. ScoreMix is embarrassingly simple and mitigates the pitfalls of previous augmentations, which assume a uniform semantic distribution and risk mislabeling the samples. Thorough experiments and ablation studies on three breast cancer histology datasets of Haematoxylin &amp; Eosin (H&amp;E) have validated the superiority of our approach over prior arts, including transformer-based models on tumour regions-of-interest (TRoIs) classification. ScoreNet equipped with proposed ScoreMix augmentation demonstrates better generalization capabilities and achieves new state-of-the-art (SOTA) results with only 50% of the data compared to other mixing augmentation variants. Finally, ScoreNet yields high efficacy and outperforms SOTA efficient transformers, namely TransPath and SwinTransformer.",
-    "full_text": null
+  "title": "ScoreNet: Learning Non-Uniform Attention and Augmentation for Transformer-Based Histopathological Image Classification",
+  "url": "https://openalex.org/W4221161490",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5008461359",
+      "name": "Thomas Stegmüller",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5058274549",
+      "name": "Behzad Bozorgtabar",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5058601241",
+      "name": "Antoine Spahr",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5067782007",
+      "name": "Jean‐Philippe Thiran",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2885824038",
+    "https://openalex.org/W3011769840",
+    "https://openalex.org/W2772723798",
+    "https://openalex.org/W3159481202",
+    "https://openalex.org/W4312747676",
+    "https://openalex.org/W3203898052",
+    "https://openalex.org/W3212889265",
+    "https://openalex.org/W3177017840",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2302302587",
+    "https://openalex.org/W6747701563",
+    "https://openalex.org/W3203363377",
+    "https://openalex.org/W3037731665",
+    "https://openalex.org/W3128210037",
+    "https://openalex.org/W3176719058",
+    "https://openalex.org/W6797371478",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3135547872",
+    "https://openalex.org/W6683033130",
+    "https://openalex.org/W2924361103",
+    "https://openalex.org/W6795475546",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W3096587759",
+    "https://openalex.org/W3209367260",
+    "https://openalex.org/W3120695313",
+    "https://openalex.org/W6800134800",
+    "https://openalex.org/W2964317032",
+    "https://openalex.org/W3089090082",
+    "https://openalex.org/W3128158496",
+    "https://openalex.org/W2964157630",
+    "https://openalex.org/W6778963470",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3015233197",
+    "https://openalex.org/W3203168750",
+    "https://openalex.org/W1946635378",
+    "https://openalex.org/W2992308087",
+    "https://openalex.org/W4307823382",
+    "https://openalex.org/W2988856610"
+  ],
+  "abstract": "Progress in digital pathology is hindered by high-resolution images and the prohibitive cost of exhaustive localized annotations. The commonly used paradigm to categorize pathology images is patch-based processing, which often incorporates multiple instance learning (MIL) to aggregate local patch-level representations yielding image-level prediction. Nonetheless, diagnostically relevant regions may only take a small fraction of the whole tissue, and current MIL-based approaches often process images uniformly, discarding the inter-patches interactions. To alleviate these issues, we propose ScoreNet, a new efficient transformer that exploits a differentiable recommendation stage to extract discriminative image regions and dedicate computational resources accordingly. The proposed transformer leverages the local and global attention of a few dynamically recommended high-resolution regions at an efficient computational cost. We further introduce a novel mixing data-augmentation, namely ScoreMix, by leveraging the image's semantic distribution to guide the data mixing and produce coherent sample-label pairs. ScoreMix is embarrassingly simple and mitigates the pitfalls of previous augmentations, which assume a uniform semantic distribution and risk mislabeling the samples. Thorough experiments and ablation studies on three breast cancer histology datasets of Haematoxylin &amp; Eosin (H&amp;E) have validated the superiority of our approach over prior arts, including transformer-based models on tumour regions-of-interest (TRoIs) classification. ScoreNet equipped with proposed ScoreMix augmentation demonstrates better generalization capabilities and achieves new state-of-the-art (SOTA) results with only 50% of the data compared to other mixing augmentation variants. Finally, ScoreNet yields high efficacy and outperforms SOTA efficient transformers, namely TransPath and SwinTransformer.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7145001888275146
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.6679458022117615
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5739482641220093
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.47388404607772827
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4592743515968323
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4334331452846527
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,128 +1,159 @@
 {
-    "title": "An Efficient Hybrid CNN-Transformer Approach for Remote Sensing Super-Resolution",
-    "url": "https://openalex.org/W4392360686",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2103601026",
-            "name": "Wenjian Zhang",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Aerospace Information Research Institute",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099958239",
-            "name": "Zheng Tan",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences",
-                "Aerospace Information Research Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2016323105",
-            "name": "Qunbo Lv",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Aerospace Information Research Institute",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2534548690",
-            "name": "Jiaao Li",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Aerospace Information Research Institute",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2430919319",
-            "name": "Baoyu Zhu",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "University of Chinese Academy of Sciences",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105928691",
-            "name": "Yangyang Liu",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3203827541",
-        "https://openalex.org/W4282937861",
-        "https://openalex.org/W6843286308",
-        "https://openalex.org/W4362672456",
-        "https://openalex.org/W3213053480",
-        "https://openalex.org/W6838947484",
-        "https://openalex.org/W6741820586",
-        "https://openalex.org/W2121058967",
-        "https://openalex.org/W2150081556",
-        "https://openalex.org/W54257720",
-        "https://openalex.org/W2242218935",
-        "https://openalex.org/W2963372104",
-        "https://openalex.org/W2780544323",
-        "https://openalex.org/W4292793979",
-        "https://openalex.org/W2214802144",
-        "https://openalex.org/W4213374277",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2884436604",
-        "https://openalex.org/W2982470081",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W3171125843",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3207918547",
-        "https://openalex.org/W6811047480",
-        "https://openalex.org/W4386075509",
-        "https://openalex.org/W2476548250",
-        "https://openalex.org/W2866634454",
-        "https://openalex.org/W4386083034",
-        "https://openalex.org/W2621121458",
-        "https://openalex.org/W2920074116",
-        "https://openalex.org/W6806648790",
-        "https://openalex.org/W6793807222",
-        "https://openalex.org/W6806678482",
-        "https://openalex.org/W2503339013",
-        "https://openalex.org/W2954930822",
-        "https://openalex.org/W3096739052",
-        "https://openalex.org/W4292829111",
-        "https://openalex.org/W2976372274",
-        "https://openalex.org/W3085051361",
-        "https://openalex.org/W3005521100",
-        "https://openalex.org/W3129538137",
-        "https://openalex.org/W4285411567",
-        "https://openalex.org/W4383818974",
-        "https://openalex.org/W2752782242",
-        "https://openalex.org/W4321232185",
-        "https://openalex.org/W3178925107",
-        "https://openalex.org/W1980038761",
-        "https://openalex.org/W2515866431",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W3034552520",
-        "https://openalex.org/W3105577662",
-        "https://openalex.org/W3153239544",
-        "https://openalex.org/W2741324394",
-        "https://openalex.org/W3211490618",
-        "https://openalex.org/W4285111599",
-        "https://openalex.org/W4206244656",
-        "https://openalex.org/W4327785494",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4226219071",
-        "https://openalex.org/W4206433182"
-    ],
-    "abstract": "Transformer models have great potential in the field of remote sensing super-resolution (SR) due to their excellent self-attention mechanisms. However, transformer models are prone to overfitting because of their large number of parameters, especially with the typically small remote sensing datasets. Additionally, the reliance of transformer-based SR models on convolution-based upsampling often leads to mismatched semantic information. To tackle these challenges, we propose an efficient super-resolution hybrid network (EHNet) based on the encoder composed of our designed lightweight convolution module and the decoder composed of an improved swin transformer. The encoder, featuring our novel Lightweight Feature Extraction Block (LFEB), employs a more efficient convolution method than depthwise separable convolution based on depthwise convolution. Our LFEB also integrates a Cross Stage Partial structure for enhanced feature extraction. In terms of the decoder, based on the swin transformer, we innovatively propose a sequence-based upsample block (SUB) for the first time, which directly uses the sequence of tokens in the transformer to focus on semantic information through the MLP layer, which enhances the feature expression ability of the model and improves the reconstruction accuracy. Experiments show that EHNet’s PSNR on UCMerced and AID datasets obtains a SOTA performance of 28.02 and 29.44, respectively, and is also visually better than other existing methods. Its 2.64 M parameters effectively balance model efficiency and computational demands.",
-    "full_text": null
+  "title": "An Efficient Hybrid CNN-Transformer Approach for Remote Sensing Super-Resolution",
+  "url": "https://openalex.org/W4392360686",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2103601026",
+      "name": "Wenjian Zhang",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Aerospace Information Research Institute",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099958239",
+      "name": "Zheng Tan",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences",
+        "Aerospace Information Research Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2016323105",
+      "name": "Qunbo Lv",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Aerospace Information Research Institute",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2534548690",
+      "name": "Jiaao Li",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Aerospace Information Research Institute",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2430919319",
+      "name": "Baoyu Zhu",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "University of Chinese Academy of Sciences",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105928691",
+      "name": "Yangyang Liu",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3203827541",
+    "https://openalex.org/W4282937861",
+    "https://openalex.org/W6843286308",
+    "https://openalex.org/W4362672456",
+    "https://openalex.org/W3213053480",
+    "https://openalex.org/W6838947484",
+    "https://openalex.org/W6741820586",
+    "https://openalex.org/W2121058967",
+    "https://openalex.org/W2150081556",
+    "https://openalex.org/W54257720",
+    "https://openalex.org/W2242218935",
+    "https://openalex.org/W2963372104",
+    "https://openalex.org/W2780544323",
+    "https://openalex.org/W4292793979",
+    "https://openalex.org/W2214802144",
+    "https://openalex.org/W4213374277",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2884436604",
+    "https://openalex.org/W2982470081",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W3171125843",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3207918547",
+    "https://openalex.org/W6811047480",
+    "https://openalex.org/W4386075509",
+    "https://openalex.org/W2476548250",
+    "https://openalex.org/W2866634454",
+    "https://openalex.org/W4386083034",
+    "https://openalex.org/W2621121458",
+    "https://openalex.org/W2920074116",
+    "https://openalex.org/W6806648790",
+    "https://openalex.org/W6793807222",
+    "https://openalex.org/W6806678482",
+    "https://openalex.org/W2503339013",
+    "https://openalex.org/W2954930822",
+    "https://openalex.org/W3096739052",
+    "https://openalex.org/W4292829111",
+    "https://openalex.org/W2976372274",
+    "https://openalex.org/W3085051361",
+    "https://openalex.org/W3005521100",
+    "https://openalex.org/W3129538137",
+    "https://openalex.org/W4285411567",
+    "https://openalex.org/W4383818974",
+    "https://openalex.org/W2752782242",
+    "https://openalex.org/W4321232185",
+    "https://openalex.org/W3178925107",
+    "https://openalex.org/W1980038761",
+    "https://openalex.org/W2515866431",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W3034552520",
+    "https://openalex.org/W3105577662",
+    "https://openalex.org/W3153239544",
+    "https://openalex.org/W2741324394",
+    "https://openalex.org/W3211490618",
+    "https://openalex.org/W4285111599",
+    "https://openalex.org/W4206244656",
+    "https://openalex.org/W4327785494",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4226219071",
+    "https://openalex.org/W4206433182"
+  ],
+  "abstract": "Transformer models have great potential in the field of remote sensing super-resolution (SR) due to their excellent self-attention mechanisms. However, transformer models are prone to overfitting because of their large number of parameters, especially with the typically small remote sensing datasets. Additionally, the reliance of transformer-based SR models on convolution-based upsampling often leads to mismatched semantic information. To tackle these challenges, we propose an efficient super-resolution hybrid network (EHNet) based on the encoder composed of our designed lightweight convolution module and the decoder composed of an improved swin transformer. The encoder, featuring our novel Lightweight Feature Extraction Block (LFEB), employs a more efficient convolution method than depthwise separable convolution based on depthwise convolution. Our LFEB also integrates a Cross Stage Partial structure for enhanced feature extraction. In terms of the decoder, based on the swin transformer, we innovatively propose a sequence-based upsample block (SUB) for the first time, which directly uses the sequence of tokens in the transformer to focus on semantic information through the MLP layer, which enhances the feature expression ability of the model and improves the reconstruction accuracy. Experiments show that EHNet’s PSNR on UCMerced and AID datasets obtains a SOTA performance of 28.02 and 29.44, respectively, and is also visually better than other existing methods. Its 2.64 M parameters effectively balance model efficiency and computational demands.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6468038558959961
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5097512602806091
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.49514642357826233
+    },
+    {
+      "name": "Geology",
+      "score": 0.1472678780555725
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.10918617248535156
+    },
+    {
+      "name": "Engineering",
+      "score": 0.04185435175895691
+    },
+    {
+      "name": "Voltage",
+      "score": 0.03630858659744263
+    }
+  ]
 }

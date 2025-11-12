@@ -1,59 +1,78 @@
 {
-    "title": "Topic Structure-Aware Neural Language Model",
-    "url": "https://openalex.org/W2955495067",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2304150033",
-            "name": "Noriaki Kawamae",
-            "affiliations": [
-                "NTT (Japan)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1880262756",
-        "https://openalex.org/W2016995838",
-        "https://openalex.org/W2223881431",
-        "https://openalex.org/W4297971002",
-        "https://openalex.org/W6691506594",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2101409192",
-        "https://openalex.org/W2067002391",
-        "https://openalex.org/W2087863196",
-        "https://openalex.org/W2339184484",
-        "https://openalex.org/W2608962050",
-        "https://openalex.org/W2125031621",
-        "https://openalex.org/W2508504774",
-        "https://openalex.org/W1878153963",
-        "https://openalex.org/W6689951360",
-        "https://openalex.org/W2027731328",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W2178725228",
-        "https://openalex.org/W2204007383",
-        "https://openalex.org/W2702896255",
-        "https://openalex.org/W2788615138",
-        "https://openalex.org/W2104210067",
-        "https://openalex.org/W2169606435",
-        "https://openalex.org/W2744007523",
-        "https://openalex.org/W2782822144",
-        "https://openalex.org/W2949377321",
-        "https://openalex.org/W2238728730",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W4300437043",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W2963620259",
-        "https://openalex.org/W2171928131",
-        "https://openalex.org/W3101767658",
-        "https://openalex.org/W3122471732",
-        "https://openalex.org/W2952723479",
-        "https://openalex.org/W2950577311",
-        "https://openalex.org/W2250944176",
-        "https://openalex.org/W2739724844",
-        "https://openalex.org/W2950133940",
-        "https://openalex.org/W3098649723"
-    ],
-    "abstract": "Our goal is to exploit a unified language model so as to explain the generative process of documents precisely in view of their semantic and topic structures. Because various methods model documents in disparate ways, we are motivated by the expectation that coordinating these methods will allow us to achieve this goal more efficiently than using them in isolation; we combine topic models, embedding models, and neural language models. As we focus on the fact that topic models can be shared among, and indeed complement embedding models and neural language models, we propose Word and topic 2 vec (Wat2vec), and Topic Structure-Aware Neural Language Model (TSANL). Wat2vec uses topics as global semantic information and local semantic information as embedding representations of topics and words, and embeds both words and topics in the same space. TSANL uses recurrent neural networks to capture long-range dependencies over topics and words. Since existing topic models demand time consuming learning and have poor scalability, both due to breaking the document?s structure such as order of words and topics, TSANL maintains the orders of words and topics as phrases and segments, respectively. TSANL reduces the calculation cost and required memory by feeding topic recurrent neural networks, and topic specific word networks with these embedding representations. Experiments show that TSANL maintains both segments and topical phrases, and so enhances previous models.",
-    "full_text": null
+  "title": "Topic Structure-Aware Neural Language Model",
+  "url": "https://openalex.org/W2955495067",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2304150033",
+      "name": "Noriaki Kawamae",
+      "affiliations": [
+        "NTT (Japan)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1880262756",
+    "https://openalex.org/W2016995838",
+    "https://openalex.org/W2223881431",
+    "https://openalex.org/W4297971002",
+    "https://openalex.org/W6691506594",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2101409192",
+    "https://openalex.org/W2067002391",
+    "https://openalex.org/W2087863196",
+    "https://openalex.org/W2339184484",
+    "https://openalex.org/W2608962050",
+    "https://openalex.org/W2125031621",
+    "https://openalex.org/W2508504774",
+    "https://openalex.org/W1878153963",
+    "https://openalex.org/W6689951360",
+    "https://openalex.org/W2027731328",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2178725228",
+    "https://openalex.org/W2204007383",
+    "https://openalex.org/W2702896255",
+    "https://openalex.org/W2788615138",
+    "https://openalex.org/W2104210067",
+    "https://openalex.org/W2169606435",
+    "https://openalex.org/W2744007523",
+    "https://openalex.org/W2782822144",
+    "https://openalex.org/W2949377321",
+    "https://openalex.org/W2238728730",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W4300437043",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W2963620259",
+    "https://openalex.org/W2171928131",
+    "https://openalex.org/W3101767658",
+    "https://openalex.org/W3122471732",
+    "https://openalex.org/W2952723479",
+    "https://openalex.org/W2950577311",
+    "https://openalex.org/W2250944176",
+    "https://openalex.org/W2739724844",
+    "https://openalex.org/W2950133940",
+    "https://openalex.org/W3098649723"
+  ],
+  "abstract": "Our goal is to exploit a unified language model so as to explain the generative process of documents precisely in view of their semantic and topic structures. Because various methods model documents in disparate ways, we are motivated by the expectation that coordinating these methods will allow us to achieve this goal more efficiently than using them in isolation; we combine topic models, embedding models, and neural language models. As we focus on the fact that topic models can be shared among, and indeed complement embedding models and neural language models, we propose Word and topic 2 vec (Wat2vec), and Topic Structure-Aware Neural Language Model (TSANL). Wat2vec uses topics as global semantic information and local semantic information as embedding representations of topics and words, and embeds both words and topics in the same space. TSANL uses recurrent neural networks to capture long-range dependencies over topics and words. Since existing topic models demand time consuming learning and have poor scalability, both due to breaking the document?s structure such as order of words and topics, TSANL maintains the orders of words and topics as phrases and segments, respectively. TSANL reduces the calculation cost and required memory by feeding topic recurrent neural networks, and topic specific word networks with these embedding representations. Experiments show that TSANL maintains both segments and topical phrases, and so enhances previous models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7686700820922852
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5211598873138428
+    },
+    {
+      "name": "Language model",
+      "score": 0.46955376863479614
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4570893943309784
+    }
+  ]
 }

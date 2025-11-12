@@ -1,71 +1,122 @@
 {
-    "title": "ProtoCode: Leveraging large language models (LLMs) for automated generation of machine-readable PCR protocols from scientific publications",
-    "url": "https://openalex.org/W4395475952",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2101612218",
-            "name": "Shuo Jiang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2768122562",
-            "name": "Daniel Evans Yamamoto",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5093487054",
-            "name": "Dennis Bersenev",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2119150818",
-            "name": "Sucheendra K. Palaniappan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2938666072",
-            "name": "Ayako Yachie‐Kinoshita",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2302501749",
-        "https://openalex.org/W2116041602",
-        "https://openalex.org/W2130479394",
-        "https://openalex.org/W4281392044",
-        "https://openalex.org/W2806448679",
-        "https://openalex.org/W2099467659",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W6856253072",
-        "https://openalex.org/W6852541490",
-        "https://openalex.org/W4387725663",
-        "https://openalex.org/W6852177120",
-        "https://openalex.org/W6857041642",
-        "https://openalex.org/W6857923511",
-        "https://openalex.org/W4387826128",
-        "https://openalex.org/W6858329865",
-        "https://openalex.org/W2148312059",
-        "https://openalex.org/W2339738230",
-        "https://openalex.org/W4206302690",
-        "https://openalex.org/W4313546084",
-        "https://openalex.org/W4388793223",
-        "https://openalex.org/W2607136978",
-        "https://openalex.org/W3140836912",
-        "https://openalex.org/W4311742683",
-        "https://openalex.org/W3107828763",
-        "https://openalex.org/W4282941149",
-        "https://openalex.org/W4388825410",
-        "https://openalex.org/W4380433666",
-        "https://openalex.org/W3108817984",
-        "https://openalex.org/W4379966467",
-        "https://openalex.org/W4391117134",
-        "https://openalex.org/W4366734321",
-        "https://openalex.org/W4389523833",
-        "https://openalex.org/W4404824622",
-        "https://openalex.org/W4389300644",
-        "https://openalex.org/W4388197750"
-    ],
-    "abstract": "Protocol standardization and sharing are crucial for reproducibility in life sciences. In spite of numerous efforts for standardized protocol description, adherence to these standards in literature remains largely inconsistent. Curation of protocols are especially challenging due to the labor intensive process, requiring expert domain knowledge of each experimental procedure. Recent advancements in Large Language Models (LLMs) offer a promising solution to interpret and curate knowledge from complex scientific literature. In this work, we develop ProtoCode, a tool leveraging fine-tune LLMs to curate protocols into intermediate representation formats which can be interpretable by both human and machine interfaces. Our proof-of-concept, focused on polymerase chain reaction (PCR) protocols, retrieves information from PCR protocols at an accuracy ranging 69-100 % depending on the information content. In all tested protocols, we demonstrate that ProtoCode successfully converts literature-based protocols into correct operational files for multiple thermal cycler systems. In conclusion, ProtoCode can alleviate labor intensive curation and standardization of life science protocols to enhance research reproducibility by providing a reliable, automated means to process and standardize protocols. ProtoCode is freely available as a web server at https://curation.taxila.io/ProtoCode/.",
-    "full_text": null
+  "title": "ProtoCode: Leveraging large language models (LLMs) for automated generation of machine-readable PCR protocols from scientific publications",
+  "url": "https://openalex.org/W4395475952",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2101612218",
+      "name": "Shuo Jiang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2768122562",
+      "name": "Daniel Evans Yamamoto",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5093487054",
+      "name": "Dennis Bersenev",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2119150818",
+      "name": "Sucheendra K. Palaniappan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2938666072",
+      "name": "Ayako Yachie‐Kinoshita",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2302501749",
+    "https://openalex.org/W2116041602",
+    "https://openalex.org/W2130479394",
+    "https://openalex.org/W4281392044",
+    "https://openalex.org/W2806448679",
+    "https://openalex.org/W2099467659",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W6856253072",
+    "https://openalex.org/W6852541490",
+    "https://openalex.org/W4387725663",
+    "https://openalex.org/W6852177120",
+    "https://openalex.org/W6857041642",
+    "https://openalex.org/W6857923511",
+    "https://openalex.org/W4387826128",
+    "https://openalex.org/W6858329865",
+    "https://openalex.org/W2148312059",
+    "https://openalex.org/W2339738230",
+    "https://openalex.org/W4206302690",
+    "https://openalex.org/W4313546084",
+    "https://openalex.org/W4388793223",
+    "https://openalex.org/W2607136978",
+    "https://openalex.org/W3140836912",
+    "https://openalex.org/W4311742683",
+    "https://openalex.org/W3107828763",
+    "https://openalex.org/W4282941149",
+    "https://openalex.org/W4388825410",
+    "https://openalex.org/W4380433666",
+    "https://openalex.org/W3108817984",
+    "https://openalex.org/W4379966467",
+    "https://openalex.org/W4391117134",
+    "https://openalex.org/W4366734321",
+    "https://openalex.org/W4389523833",
+    "https://openalex.org/W4404824622",
+    "https://openalex.org/W4389300644",
+    "https://openalex.org/W4388197750"
+  ],
+  "abstract": "Protocol standardization and sharing are crucial for reproducibility in life sciences. In spite of numerous efforts for standardized protocol description, adherence to these standards in literature remains largely inconsistent. Curation of protocols are especially challenging due to the labor intensive process, requiring expert domain knowledge of each experimental procedure. Recent advancements in Large Language Models (LLMs) offer a promising solution to interpret and curate knowledge from complex scientific literature. In this work, we develop ProtoCode, a tool leveraging fine-tune LLMs to curate protocols into intermediate representation formats which can be interpretable by both human and machine interfaces. Our proof-of-concept, focused on polymerase chain reaction (PCR) protocols, retrieves information from PCR protocols at an accuracy ranging 69-100 % depending on the information content. In all tested protocols, we demonstrate that ProtoCode successfully converts literature-based protocols into correct operational files for multiple thermal cycler systems. In conclusion, ProtoCode can alleviate labor intensive curation and standardization of life science protocols to enhance research reproducibility by providing a reliable, automated means to process and standardize protocols. ProtoCode is freely available as a web server at https://curation.taxila.io/ProtoCode/.",
+  "full_text": null,
+  "topic": "Standardization",
+  "concepts": [
+    {
+      "name": "Standardization",
+      "score": 0.79878830909729
+    },
+    {
+      "name": "Protocol (science)",
+      "score": 0.7872812747955322
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7649374008178711
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5529016256332397
+    },
+    {
+      "name": "Data science",
+      "score": 0.4326361417770386
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.4084005057811737
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3904156982898712
+    },
+    {
+      "name": "Medicine",
+      "score": 0.10135558247566223
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09323936700820923
+    },
+    {
+      "name": "Pathology",
+      "score": 0.08417320251464844
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Alternative medicine",
+      "score": 0.0
+    }
+  ]
 }

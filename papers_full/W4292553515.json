@@ -1,132 +1,191 @@
 {
-    "title": "Encoding Contextual Information by Interlacing Transformer and Convolution for Remote Sensing Imagery Semantic Segmentation",
-    "url": "https://openalex.org/W4292553515",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100379612",
-            "name": "Xin Li",
-            "affiliations": [
-                "Hohai University",
-                "Ministry of Water Resources of the People's Republic of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1973214435",
-            "name": "Feng Xu",
-            "affiliations": [
-                "Hohai University",
-                "Ministry of Water Resources of the People's Republic of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132282943",
-            "name": "Xia Runliang",
-            "affiliations": [
-                "Yellow River Institute of Hydraulic Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1895993614",
-            "name": "Tao Li",
-            "affiliations": [
-                "Yellow River Institute of Hydraulic Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111558477",
-            "name": "Ziqi Chen",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2170709231",
-            "name": "Xinyuan Wang",
-            "affiliations": [
-                "Hohai University",
-                "Ministry of Water Resources of the People's Republic of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101979154",
-            "name": "Zhennan Xu",
-            "affiliations": [
-                "Hohai University",
-                "Ministry of Water Resources of the People's Republic of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2145378921",
-            "name": "Xin Lyu",
-            "affiliations": [
-                "Hohai University",
-                "Ministry of Water Resources of the People's Republic of China"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2764034829",
-        "https://openalex.org/W4282558612",
-        "https://openalex.org/W2926582353",
-        "https://openalex.org/W3042017680",
-        "https://openalex.org/W3207007712",
-        "https://openalex.org/W3044672218",
-        "https://openalex.org/W4220664785",
-        "https://openalex.org/W3181876914",
-        "https://openalex.org/W4285141051",
-        "https://openalex.org/W4229449797",
-        "https://openalex.org/W3131916787",
-        "https://openalex.org/W3016889634",
-        "https://openalex.org/W2095389390",
-        "https://openalex.org/W3004996399",
-        "https://openalex.org/W2006015451",
-        "https://openalex.org/W2083620454",
-        "https://openalex.org/W2064354376",
-        "https://openalex.org/W2908753233",
-        "https://openalex.org/W3168997536",
-        "https://openalex.org/W1979730959",
-        "https://openalex.org/W2980054274",
-        "https://openalex.org/W6640054144",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W4220706270",
-        "https://openalex.org/W3011248632",
-        "https://openalex.org/W3160596558",
-        "https://openalex.org/W2981689412",
-        "https://openalex.org/W3130455691",
-        "https://openalex.org/W6798387234",
-        "https://openalex.org/W3189528951",
-        "https://openalex.org/W4200386693",
-        "https://openalex.org/W6772565011",
-        "https://openalex.org/W3103092912",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W3170544306",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2921781974",
-        "https://openalex.org/W2804199516",
-        "https://openalex.org/W2963420686",
-        "https://openalex.org/W2963091558",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W3165745140",
-        "https://openalex.org/W2955058313",
-        "https://openalex.org/W2902540630",
-        "https://openalex.org/W2944418962",
-        "https://openalex.org/W2995766874",
-        "https://openalex.org/W3162977387",
-        "https://openalex.org/W4214893857",
-        "https://openalex.org/W3128592650",
-        "https://openalex.org/W3207506706",
-        "https://openalex.org/W6806678482",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W3007268491",
-        "https://openalex.org/W4206433182",
-        "https://openalex.org/W2782522152",
-        "https://openalex.org/W3183174367",
-        "https://openalex.org/W3138136606",
-        "https://openalex.org/W2395611524"
-    ],
-    "abstract": "Contextual information plays a pivotal role in the semantic segmentation of remote sensing imagery (RSI) due to the imbalanced distributions and ubiquitous intra-class variants. The emergence of the transformer intrigues the revolution of vision tasks with its impressive scalability in establishing long-range dependencies. However, the local patterns, such as inherent structures and spatial details, are broken with the tokenization of the transformer. Therefore, the ICTNet is devised to confront the deficiencies mentioned above. Principally, ICTNet inherits the encoder–decoder architecture. First of all, Swin Transformer blocks (STBs) and convolution blocks (CBs) are deployed and interlaced, accompanied by encoded feature aggregation modules (EFAs) in the encoder stage. This design allows the network to learn the local patterns and distant dependencies and their interactions simultaneously. Moreover, multiple DUpsamplings (DUPs) followed by decoded feature aggregation modules (DFAs) form the decoder of ICTNet. Specifically, the transformation and upsampling loss are shrunken while recovering features. Together with the devised encoder and decoder, the well-rounded context is captured and contributes to the inference most. Extensive experiments are conducted on the ISPRS Vaihingen, Potsdam and DeepGlobe benchmarks. Quantitative and qualitative evaluations exhibit the competitive performance of ICTNet compared to mainstream and state-of-the-art methods. Additionally, the ablation study of DFA and DUP is implemented to validate the effects.",
-    "full_text": null
+  "title": "Encoding Contextual Information by Interlacing Transformer and Convolution for Remote Sensing Imagery Semantic Segmentation",
+  "url": "https://openalex.org/W4292553515",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100379612",
+      "name": "Xin Li",
+      "affiliations": [
+        "Hohai University",
+        "Ministry of Water Resources of the People's Republic of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1973214435",
+      "name": "Feng Xu",
+      "affiliations": [
+        "Hohai University",
+        "Ministry of Water Resources of the People's Republic of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132282943",
+      "name": "Xia Runliang",
+      "affiliations": [
+        "Yellow River Institute of Hydraulic Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1895993614",
+      "name": "Tao Li",
+      "affiliations": [
+        "Yellow River Institute of Hydraulic Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111558477",
+      "name": "Ziqi Chen",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2170709231",
+      "name": "Xinyuan Wang",
+      "affiliations": [
+        "Hohai University",
+        "Ministry of Water Resources of the People's Republic of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101979154",
+      "name": "Zhennan Xu",
+      "affiliations": [
+        "Hohai University",
+        "Ministry of Water Resources of the People's Republic of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2145378921",
+      "name": "Xin Lyu",
+      "affiliations": [
+        "Hohai University",
+        "Ministry of Water Resources of the People's Republic of China"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2764034829",
+    "https://openalex.org/W4282558612",
+    "https://openalex.org/W2926582353",
+    "https://openalex.org/W3042017680",
+    "https://openalex.org/W3207007712",
+    "https://openalex.org/W3044672218",
+    "https://openalex.org/W4220664785",
+    "https://openalex.org/W3181876914",
+    "https://openalex.org/W4285141051",
+    "https://openalex.org/W4229449797",
+    "https://openalex.org/W3131916787",
+    "https://openalex.org/W3016889634",
+    "https://openalex.org/W2095389390",
+    "https://openalex.org/W3004996399",
+    "https://openalex.org/W2006015451",
+    "https://openalex.org/W2083620454",
+    "https://openalex.org/W2064354376",
+    "https://openalex.org/W2908753233",
+    "https://openalex.org/W3168997536",
+    "https://openalex.org/W1979730959",
+    "https://openalex.org/W2980054274",
+    "https://openalex.org/W6640054144",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W4220706270",
+    "https://openalex.org/W3011248632",
+    "https://openalex.org/W3160596558",
+    "https://openalex.org/W2981689412",
+    "https://openalex.org/W3130455691",
+    "https://openalex.org/W6798387234",
+    "https://openalex.org/W3189528951",
+    "https://openalex.org/W4200386693",
+    "https://openalex.org/W6772565011",
+    "https://openalex.org/W3103092912",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W3170544306",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2921781974",
+    "https://openalex.org/W2804199516",
+    "https://openalex.org/W2963420686",
+    "https://openalex.org/W2963091558",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W3165745140",
+    "https://openalex.org/W2955058313",
+    "https://openalex.org/W2902540630",
+    "https://openalex.org/W2944418962",
+    "https://openalex.org/W2995766874",
+    "https://openalex.org/W3162977387",
+    "https://openalex.org/W4214893857",
+    "https://openalex.org/W3128592650",
+    "https://openalex.org/W3207506706",
+    "https://openalex.org/W6806678482",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W3007268491",
+    "https://openalex.org/W4206433182",
+    "https://openalex.org/W2782522152",
+    "https://openalex.org/W3183174367",
+    "https://openalex.org/W3138136606",
+    "https://openalex.org/W2395611524"
+  ],
+  "abstract": "Contextual information plays a pivotal role in the semantic segmentation of remote sensing imagery (RSI) due to the imbalanced distributions and ubiquitous intra-class variants. The emergence of the transformer intrigues the revolution of vision tasks with its impressive scalability in establishing long-range dependencies. However, the local patterns, such as inherent structures and spatial details, are broken with the tokenization of the transformer. Therefore, the ICTNet is devised to confront the deficiencies mentioned above. Principally, ICTNet inherits the encoder–decoder architecture. First of all, Swin Transformer blocks (STBs) and convolution blocks (CBs) are deployed and interlaced, accompanied by encoded feature aggregation modules (EFAs) in the encoder stage. This design allows the network to learn the local patterns and distant dependencies and their interactions simultaneously. Moreover, multiple DUpsamplings (DUPs) followed by decoded feature aggregation modules (DFAs) form the decoder of ICTNet. Specifically, the transformation and upsampling loss are shrunken while recovering features. Together with the devised encoder and decoder, the well-rounded context is captured and contributes to the inference most. Extensive experiments are conducted on the ISPRS Vaihingen, Potsdam and DeepGlobe benchmarks. Quantitative and qualitative evaluations exhibit the competitive performance of ICTNet compared to mainstream and state-of-the-art methods. Additionally, the ablation study of DFA and DUP is implemented to validate the effects.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8770726919174194
+    },
+    {
+      "name": "Encoder",
+      "score": 0.7345083951950073
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5931987762451172
+    },
+    {
+      "name": "Inference",
+      "score": 0.5441710352897644
+    },
+    {
+      "name": "Upsampling",
+      "score": 0.5244762301445007
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5244230031967163
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44898608326911926
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.37196075916290283
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3208242356777191
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.1021190881729126
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

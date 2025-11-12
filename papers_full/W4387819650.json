@@ -1,81 +1,128 @@
 {
-    "title": "GenePT: A Simple But Effective Foundation Model for Genes and Cells Built From ChatGPT",
-    "url": "https://openalex.org/W4387819650",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2131470109",
-            "name": "Yiqun Chen",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2207784945",
-            "name": "James Zou",
-            "affiliations": [
-                "Stanford University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2131470109",
-            "name": "Yiqun Chen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2207784945",
-            "name": "James Zou",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4378838672",
-        "https://openalex.org/W4392168151",
-        "https://openalex.org/W4366595110",
-        "https://openalex.org/W4324304837",
-        "https://openalex.org/W4367310920",
-        "https://openalex.org/W4384561103",
-        "https://openalex.org/W4297243391",
-        "https://openalex.org/W2901677030",
-        "https://openalex.org/W2965552103",
-        "https://openalex.org/W2341128841",
-        "https://openalex.org/W2612519453",
-        "https://openalex.org/W2952631022",
-        "https://openalex.org/W2899017194",
-        "https://openalex.org/W3017463390",
-        "https://openalex.org/W4366723564",
-        "https://openalex.org/W4296783454",
-        "https://openalex.org/W4239634997",
-        "https://openalex.org/W4386791134",
-        "https://openalex.org/W2970862333",
-        "https://openalex.org/W2964204621",
-        "https://openalex.org/W2605717780",
-        "https://openalex.org/W2052250375",
-        "https://openalex.org/W4306353191",
-        "https://openalex.org/W4221153690",
-        "https://openalex.org/W3015964336",
-        "https://openalex.org/W2081375228",
-        "https://openalex.org/W1981409633",
-        "https://openalex.org/W4309506674",
-        "https://openalex.org/W4225598893",
-        "https://openalex.org/W2131681506",
-        "https://openalex.org/W3090295751",
-        "https://openalex.org/W4304775823",
-        "https://openalex.org/W3039453617",
-        "https://openalex.org/W3126902084",
-        "https://openalex.org/W2951560273",
-        "https://openalex.org/W4283257569",
-        "https://openalex.org/W1968426398",
-        "https://openalex.org/W3047366767",
-        "https://openalex.org/W4302008968",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2163924952",
-        "https://openalex.org/W4213108508",
-        "https://openalex.org/W4386530347",
-        "https://openalex.org/W2096525273",
-        "https://openalex.org/W3099768174",
-        "https://openalex.org/W3099668342"
-    ],
-    "abstract": "Abstract There has been significant recent progress in leveraging large-scale gene expression data to develop foundation models for single-cell biology. Models such as Geneformer and scGPT implicitly learn gene and cellular functions from the gene expression profiles of millions of cells, which requires extensive data curation and resource-intensive training. Here we explore a much simpler alternative by leveraging ChatGPT embeddings of genes based on literature. Our proposal, GenePT, uses NCBI text descriptions of individual genes with GPT-3.5 to generate gene embeddings. From there, GenePT generates single-cell embeddings in two ways: (i) by averaging the gene embeddings, weighted by each gene’s expression level; or (ii) by creating a sentence embedding for each cell, using gene names ordered by the expression level. Without the need for dataset curation and additional pretraining, GenePT is efficient and easy to use. On many downstream tasks used to evaluate recent single-cell foundation models — e.g., classifying gene properties and cell types — GenePT achieves comparable, and often better, performance than Geneformer and other models. GenePT demonstrates that large language model embedding of literature is a simple and effective path for biological foundation models.",
-    "full_text": null
+  "title": "GenePT: A Simple But Effective Foundation Model for Genes and Cells Built From ChatGPT",
+  "url": "https://openalex.org/W4387819650",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2131470109",
+      "name": "Yiqun Chen",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2207784945",
+      "name": "James Zou",
+      "affiliations": [
+        "Stanford University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2131470109",
+      "name": "Yiqun Chen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2207784945",
+      "name": "James Zou",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4378838672",
+    "https://openalex.org/W4392168151",
+    "https://openalex.org/W4366595110",
+    "https://openalex.org/W4324304837",
+    "https://openalex.org/W4367310920",
+    "https://openalex.org/W4384561103",
+    "https://openalex.org/W4297243391",
+    "https://openalex.org/W2901677030",
+    "https://openalex.org/W2965552103",
+    "https://openalex.org/W2341128841",
+    "https://openalex.org/W2612519453",
+    "https://openalex.org/W2952631022",
+    "https://openalex.org/W2899017194",
+    "https://openalex.org/W3017463390",
+    "https://openalex.org/W4366723564",
+    "https://openalex.org/W4296783454",
+    "https://openalex.org/W4239634997",
+    "https://openalex.org/W4386791134",
+    "https://openalex.org/W2970862333",
+    "https://openalex.org/W2964204621",
+    "https://openalex.org/W2605717780",
+    "https://openalex.org/W2052250375",
+    "https://openalex.org/W4306353191",
+    "https://openalex.org/W4221153690",
+    "https://openalex.org/W3015964336",
+    "https://openalex.org/W2081375228",
+    "https://openalex.org/W1981409633",
+    "https://openalex.org/W4309506674",
+    "https://openalex.org/W4225598893",
+    "https://openalex.org/W2131681506",
+    "https://openalex.org/W3090295751",
+    "https://openalex.org/W4304775823",
+    "https://openalex.org/W3039453617",
+    "https://openalex.org/W3126902084",
+    "https://openalex.org/W2951560273",
+    "https://openalex.org/W4283257569",
+    "https://openalex.org/W1968426398",
+    "https://openalex.org/W3047366767",
+    "https://openalex.org/W4302008968",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2163924952",
+    "https://openalex.org/W4213108508",
+    "https://openalex.org/W4386530347",
+    "https://openalex.org/W2096525273",
+    "https://openalex.org/W3099768174",
+    "https://openalex.org/W3099668342"
+  ],
+  "abstract": "Abstract There has been significant recent progress in leveraging large-scale gene expression data to develop foundation models for single-cell biology. Models such as Geneformer and scGPT implicitly learn gene and cellular functions from the gene expression profiles of millions of cells, which requires extensive data curation and resource-intensive training. Here we explore a much simpler alternative by leveraging ChatGPT embeddings of genes based on literature. Our proposal, GenePT, uses NCBI text descriptions of individual genes with GPT-3.5 to generate gene embeddings. From there, GenePT generates single-cell embeddings in two ways: (i) by averaging the gene embeddings, weighted by each gene’s expression level; or (ii) by creating a sentence embedding for each cell, using gene names ordered by the expression level. Without the need for dataset curation and additional pretraining, GenePT is efficient and easy to use. On many downstream tasks used to evaluate recent single-cell foundation models — e.g., classifying gene properties and cell types — GenePT achieves comparable, and often better, performance than Geneformer and other models. GenePT demonstrates that large language model embedding of literature is a simple and effective path for biological foundation models.",
+  "full_text": null,
+  "topic": "Foundation (evidence)",
+  "concepts": [
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.836611807346344
+    },
+    {
+      "name": "Simple (philosophy)",
+      "score": 0.8237031698226929
+    },
+    {
+      "name": "Gene",
+      "score": 0.5374581813812256
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.48262128233909607
+    },
+    {
+      "name": "Biology",
+      "score": 0.4193311929702759
+    },
+    {
+      "name": "Computer science",
+      "score": 0.37661105394363403
+    },
+    {
+      "name": "Genetics",
+      "score": 0.30791908502578735
+    },
+    {
+      "name": "Geography",
+      "score": 0.18322426080703735
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.15521681308746338
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.1120196282863617
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.07529234886169434
+    }
+  ]
 }

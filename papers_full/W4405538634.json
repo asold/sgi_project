@@ -1,101 +1,148 @@
 {
-    "title": "SurgeryLLM: a retrieval-augmented generation large language model framework for surgical decision support and workflow enhancement",
-    "url": "https://openalex.org/W4405538634",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2512879929",
-            "name": "Chin Siang Ong",
-            "affiliations": [
-                "Yale University",
-                "Harvard University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5107786117",
-            "name": "Nicholas T. Obey",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107010754",
-            "name": "Yanan Zheng",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1983754593",
-            "name": "Arman Cohan",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2156035286",
-            "name": "Eric B. Schneider",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2512879929",
-            "name": "Chin Siang Ong",
-            "affiliations": [
-                "Harvard University",
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5107786117",
-            "name": "Nicholas T. Obey",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107010754",
-            "name": "Yanan Zheng",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1983754593",
-            "name": "Arman Cohan",
-            "affiliations": [
-                "Yale University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2156035286",
-            "name": "Eric B. Schneider",
-            "affiliations": [
-                "Yale University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3186510719",
-        "https://openalex.org/W1969089620",
-        "https://openalex.org/W4396862413",
-        "https://openalex.org/W4387500346",
-        "https://openalex.org/W4388725043",
-        "https://openalex.org/W4384071683",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4404136861",
-        "https://openalex.org/W4400128031",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4401306886",
-        "https://openalex.org/W4200565151",
-        "https://openalex.org/W4307934708",
-        "https://openalex.org/W3112785303",
-        "https://openalex.org/W4367834948",
-        "https://openalex.org/W4225633078",
-        "https://openalex.org/W4200205471",
-        "https://openalex.org/W4200452381"
-    ],
-    "abstract": null,
-    "full_text": "npj |digital medicine Brief communication\nPublished in partnership with Seoul National University Bundang Hospital\nhttps://doi.org/10.1038/s41746-024-01391-3\nSurgeryLLM: a retrieval-augmented\ngeneration large language model\nframework for surgical decision support\nand workﬂow enhancement\nCheck for updates\nChin Siang Ong1,2 , Nicholas T. Obey1, Yanan Zheng3, Arman Cohan3,4 &E r i cB .S c h n e i d e r1\nSurgeryLLM, a large language model framework using Retrieval Augmented Generation demonstrably incor-\nporated domain-speciﬁc knowledge from current evidence-based surgical guidelines when presented with\npatient-speciﬁc data. The successful incorporation of guideline-based information represents a substantial\nstep toward enabling greater surgeon efﬁciency, improving patient safety, and optimizing surgical outcomes.\nAs the United States population continues to age1, projected demand for\ncardiac surgeon effort is expected toexceed surgeon availability by 31% in\n2030, 42% in 2040 and 51% in 20502. Data maintained by American\nAssociation of Medical Colleges (AAMC) has additionally shown that, as of\n2022, 25.6% of U.S. surgeons were ages 65 years or older, with greater\npercentages nearing retirement age in several specialties\n3,4. Efforts to\nincrease future surgeon availability and training in high-demand specialties\nare currently underway; however, many surgical specialties are likely to face\nincreasingly challenging workloads4, creating an urgent need for innovative\nsolutions to enhance efﬁciency and support decision making.\nEfforts to develop artiﬁcial intelligence (AI) solutions for healthcare are\nexpanding rapidly, with growing bodies of research aimed to optimize\nclinical efﬁciency and improve patient outcomes across specialties. A\nnumber of studies have tested AI-based tools for improved diagnostic\naccuracy, risk assessment, and patient evaluation demonstrating potentially\nuseful applications in surgery at preoperative, intraoperative, and post-\noperative timepoints\n5. Recent breakthroughs in generative AI and large\nlanguage models (LLMs) show substantial promise as the basis for tools that\nmay reduce the non-operative effort requirements of surgeons6,7.\nWhile currently available LLMs encode general medical knowledge8,\nthey are limited by the corpus of text on which they were trained. Addi-\ntionally, LLMs may conﬁdently provide inaccurate answers when prompted\nto generate responses outside of the data used to train the LLM, a phe-\nnomenon that, when anthropomorphized, became commonly known as\n“hallucinations”\n9. Since LLMs are server constrained and cannot access or\nreference external knowledge sources by default10, their responses may\nexclude up-to-date specialized surgical knowledge, such as the latest diag-\nnostic and treatment guidelines, and responses may not be based on the\nlatest available medical evidence.\nTo overcome these limitations of“out-of-the-box” LLMs, in 2020,\nLewis et al. proposed Retrieval-Augmented Generation (RAG) for\nknowledge-intensive natural language processing tasks11,a n dR A Gh a s\nsince become an effective method forretrieving external, domain-speciﬁc\nknowledge needed to perform specialized tasks12,13.R A Gi m p r o v e sL L M\noutput by incorporating information from an approved, trusted, curated\nknowledge base with source attribution, allowing the user to assess whether\nthe knowledge presented is contextually appropriate\n14.\nWe sought to assess the feasibility of and potential beneﬁts of incor-\nporating RAG in a LLM framework, hereafter referred to as SurgeryLLM\n(Figs. 1–3). The assessment was carried out by comparing the output from\nthe RAG-enhanced LLM model, SurgeryLLM, with output from the\nunmodiﬁed, non-augmented“out-of-the-box” LLM\n15,16, hereafter referred\nto as VanillaLLM. Based upon identical data provided to both models\nregarding three simulated patients with cardiovascular conditions, both\nSurgeryLLM and VanillaLLM were prompted to perform four tasks that are\nroutinely performed in surgical practice: 1. Checking patient records for\nmissing clinical investigation data, 2. Identifying andﬂagging investigation\nresults outside of normal ranges; 3. Developing recommendations for next\nmanagement steps based on national surgical guidelines, and; 4. Preparing\nstructured operative notes based upon recommended management steps.\nFor Task 1, when both VanillaLLM and SurgeryLLM were given\nexample lab values for simulated coronary artery bypass graft (CABG),\naortic, and valve surgery patients, SurgeryLLM was able to correctly identify\nabnormal hemoglobin levels based on externally sourced reference ranges,\nwhereas VanillaLLM consistently declined (Figs. 1–3, Supplementary\nTables 1–3).\nFor Task 2, when given clinical vignettes of patients with incomplete\nworkup, SurgeryLLM was able to correctly identify missing investigations,\nbased on the external knowledge base, whereas VanillaLLM was uncertain\n(Figs. 1–3, Supplementary Tables 1–3).\nFor Task 3, when SurgeryLLM was given relevant clinical\nguidelines\n17–19, published by the American College of Cardiology (ACC),\n1Department of Surgery, Yale School of Medicine, New Haven, CT, USA.2Harvard T.H. Chan School of Public Health, Boston, MA, USA.3Department of Computer\nScience, Yale University, New Haven, CT, USA.4Wu Tsai Institute, Yale University, New Haven, CT, USA.e-mail: chinsiang.ong@yale.edu\nnpj Digital Medicine|           (2024) 7:364 1\n1234567890():,;\n1234567890():,;\nAmerican Heart Association (AHA) and the Society for Cardiovascular\nAngiography & Interventions (SCAI), it provided clinically accurate\nrecommendations. The simulated patient with coronary artery disease\n(CAD) was recommended to undergo a Coronary Artery Bypass Graft\n(CABG) procedure, instead of percutaneous coronary intervention (PCI)\n(Fig. 1, Supplementary Table 1). The simulated aortic patient was recom-\nmended to undergo surgery to replace the aortic root and ascending aorta\n(Fig. 2, Supplementary Table 2). The simulated valve surgery patient was\nrecommended to undergo transcatheter aortic valve implantation (TAVI),\nin preference to surgical aorticvalve replacement (SAVR) (Fig.3, Supple-\nmentary Table 3). These recommendations by SurgeryLLM were made in\nline with the published guidelines, whereas VanillaLLM either gave an\nequivocal and vague response or indicated it did not know (Figs.1–3,\nSupplementary Tables 1–3).\nFinally, for Task 4, when given access to samples of operative notes,\nSurgeryLLM was able to draft a preliminary version of the operative notes\nfor each of the simulated patients based upon the anticipated process of the\nrecommended procedure using pre-speciﬁed formats, whereas VanillaLLM\neither declined or indicated its inability to perform this task (Figs.1–3,\nSupplementary Tables 1–3).\nWhile SurgeryLLM has shown the potential to support surgical deci-\nsion-making, case preparation, and operative reporting, challenges related\nto patient data availability, completeness, and accuracy may arise. Future\nefforts will focus on addressing these challenges through innovative\napproaches. This includes enhancing the precision and completeness of\nsurgical case summaries, prioritizing high-quality, context-speciﬁcs u r g i c a l\nliterature, and improving response precision. Additionally, we aim to\nintegrate advanced techniques for representation editing, develop iterative\nself-training frameworks, and employ strategies to ensure reliable and\ncontrollable generation of surgical documentation. Incorporating surgeon-\nspeciﬁc preferences in decision-making will also be a key area for further\nreﬁnement. Furthermore, in this feasibility study we used limited examples;\nFig. 1 | VanillaLLM (no RAG) vs SurgeryLLM (RAG): Coronary artery disease.\nSimulated patient information and prompts corresponding with each of the four\ntasks were presented to both VanilllaLLM and retrieval-augmented SurgeryLLM.\nWhen RAG was enabled, retrieved information from an external knowledge base\nwas presented to the LLM. For brevity, coronary arteries were abbreviated in the\nﬁgure, i.e., LIMA (Left internal mammary artery), LAD (Left anterior descending\nartery), and RCA (Right coronary artery).\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 2\nhowever, we plan to incorporate robust and advanced techniques for bias\ndetection and correction, such as fairness auditing and bias mitigation\nalgorithms.\nIn conclusion, SurgeryLLM, using RAG-enhanced LLM modeling,\nsuccessfully demonstrated the feasibility of incorporating external domain-\nspeciﬁc information from current evidence-based guidelines, reference lists\nand other sources into a fast-running tool that may be used to support\nsurgical decision-making. With reﬁnement and substantial further devel-\nopment, SurgeryLLM has the potential to improve patient safety, and\noptimize surgical outcomes. Perhaps most importantly, SurgeryLLM\ndemonstrates the feasibility of using AI and LLMs to increase efﬁciency\namong surgeons on an individual level which, in turn, may support opti-\nmization of surgeon effort allocationacross healthcare systems in a time of\ngrowing need for access to surgical services.\nMethods\nDocument loading\nExternal documents of interest, including laboratory reference ranges,\npreoperative assessment guideline s, sample operative or procedure\nnotes, and extracts of current ACC/AHA/SCAI Guideline for Cor-\nonary Artery Revascularization\n17,A C C / A H AG u i d e l i n ef o rt h e\nDiagnosis and Management of Aortic Disease 18, and ACC/AHA\nGuideline for the Management of Patients With Valvular Heart\nDisease\n19, were loaded using the TextLoader class of LangChain20 and\nsplit into chunks of characters w ith overlap between consecutive\nchunks.\nEmbedding generation\nGPT4All (Nomic AI, New York City, NY)21 was used to generate embed-\ndings for each chunk and these embeddings were then stored in a Chroma\n(ChromaDB, San Francisco, CA) vector store.\nQuery processing\nPrompts or queries are processed by a LLM framework (“SurgeryLLM”)\nrunning locally, based on the Llama herd of models (Meta Platforms, Inc.,\nMenlo Park, CA)\n15,16, and uses RAG (Retrieval-Augmented Generation) to\nretrieve relevant documents or text chunks from the prepared data using a\nChroma vector store retriever.\nFig. 2 | VanillaLLM (no RAG) vs SurgeryLLM (RAG): Aortic disease.Simulated patient information and prompts corresponding with each of the four tasks were presented\nto both VanilllaLLM and retrieval-augmented SurgeryLLM. When RAG was enabled, retrieved information from an external knowledge base was presentedto the LLM.\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 3\nAnswer generation\nAfter retrieval of relevant information, the LLM framework generates\nanswers as prompted. Using RAG improves answers, ensuring they are\naccurate, relevant, and directly related to the prompts or queries. While\nsimulated data was used for this study, the use of locally deployed LLM\nframeworks will ensure HIPAA-compliance if deployed in real-world set-\ntings, as no individual-level patient data is ever sent to external servers.\nData availability\nStudy data are available upon reasonable request from the corresponding\nauthor, in accordance with institutional policies and any applicable data\nsharing or data use agreements.\nCode availability\nThe custom code used for data generation and analysis in this study is\navailable upon reasonable request from the corresponding author, in\naccordance with institutional policies and any applicable code sharing or\nd a t au s ea g r e e m e n t s .T h ec o d ei sw r i t t e ni nP y t h o n3 . 9 . 1 3a n du s e st h e\nfollowing software versions: LangChain 0.3.1. Llama 2 to 3.2. Speciﬁc\ndetails regarding document loading,embedding generation, query proces-\nsing and answer generation are described in the Methods section.\nReceived: 27 September 2024; Accepted: 12 December 2024;\nReferences\n1. Mather, M. & Scommegna, P. Fact Sheet: Aging in the United States.\nPRB https://www.prb.org/resources/fact-sheet-aging-in-the-united-\nstates (2024).\n2. Oslock, W. M. et al. A contemporary reassessment of the US surgical\nworkforce through 2050 predicts continued shortages and increased\nproductivity demands.Am. J. Surg.223,2 8– 35 (2022).\n3. Association of American Medical Colleges. 2023 US Physician\nWorkforce Data Dashboard: 2023 Key Findings and Deﬁnitions.\nhttps://www.aamc.org/data-reports/data/2023-key-ﬁndings-and-\ndeﬁnitions (2024).\nFig. 3 | VanillaLLM (no RAG) vs SurgeryLLM (RAG): Valvular heart disease.\nSimulated patient information and prompts corresponding with each of the four\ntasks were presented to both VanilllaLLM and retrieval-augmented SurgeryLLM.\nWhen RAG was enabled, retrieved information from an external knowledge base\nwas presented to the LLM.\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 4\n4. Newman, M. S. Physician Workforce Data Suggest Epochal Change.\nBull. Am. Coll. Surg.109,2 8– 35 (2024).\n5. Varghese, C., Harrison, E. M., O’Grady, G. & Topol, E. J. Artiﬁcial\nintelligence in surgery.Nat. Med.30, 1257– 1268 (2024).\n6. Clusmann, J. et al. The future landscape of large language models in\nmedicine. Commun. Med.3,1 – 8 (2023).\n7. Peng, C. et al. A study of generative large language model for medical\nresearch and healthcare.Npj Digit. Med.6,1 – 10 (2023).\n8. Singhal, K. et al. Large language models encode clinical knowledge.\nNature 620, 172– 180 (2023).\n9. de Pontes. Adachi, F. Understanding and Mitigating LLM\nHallucinations. Medium https://towardsdatascience.com/\nunderstanding-and-mitigating-llm-hallucinations-be88d31c4200\n(2023).\n10. Miller, R. A Surgical Perspective on Large Language Models.Ann.\nSurg. 278, e211 (2023).\n11. Lewis, P. et al. Retrieval-augmented generation for knowledge-\nintensive NLP tasks. InProceedings of the 34th International\nConference on Neural Information Processing Systems (NIPS '20).\nCurran Associates Inc., Red Hook, NY, USA, 9459– 9474.\n12. Woo, J. J. et al. Custom Large Language Models Improve Accuracy:\nComparing Retrieval Augmented Generation and Artiﬁcial Intelligence\nAgents to Non-Custom Models for Evidence-Based Medicine.\nArthrosc. J. Arthrosc. Relat. Surg. https://doi.org/10.1016/j.arthro.\n2024.10.042 (2024).\n13. Jeong, M., Sohn, J., Sung, M. & Kang, J. Improving medical reasoning\nthrough retrieval and self-reﬂection with retrieval-augmented large\nlanguage models.Bioinformatics 40, i119– i129 (2024).\n14. What is RAG? - Retrieval-Augmented Generation AI Explained - AWS.\nAmazon Web Services, Inc. https://aws.amazon.com/what-is/\nretrieval-augmented-generation/ (2024).\n15. Touvron, H. et al. Llama 2: Open Foundation and Fine-Tuned Chat\nModels. Preprint athttps://doi.org/10.48550/arXiv.2307.09288\n(2023).\n16. Dubey, A. et al. The Llama 3 Herd of Models. Preprint athttps://doi.\norg/10.48550/arXiv.2407.21783 (2024).\n17. Lawton, J. S. et al. 2021 ACC/AHA/SCAI Guideline for Coronary Artery\nRevascularization: A Report of the American College of Cardiology/\nAmerican Heart Association Joint Committee on Clinical Practice\nGuidelines. Circulation 145, e18– e114 (2022).\n18. Isselbacher, E. M. et al. 2022 ACC/AHA Guideline for the Diagnosis\nand Management of Aortic Disease: A Report of the American Heart\nAssociation/American College of Cardiology Joint Committee on\nClinical Practice Guidelines.Circulation 146, e334\n– e482 (2022).\n19. Otto, C. M. et al. 2020 ACC/AHA Guideline for the Management of\nPatients With Valvular Heart Disease: A Report of the American\nCollege of Cardiology/American Heart Association Joint Committee\non Clinical Practice Guidelines.Circulation 143, e72– e227 (2021).\n20. Chase, H. LangChain.GitHub https://github.com/langchain-ai/\nlangchain (2022).\n21. Anand, Y., Nussbaum, Z., Duderstadt, B. & Schmidt, B. GPT4All:\nTraining an Assistant-style Chatbot with Large Scale Data Distillation\nfrom GPT-3.5-Turbo.GitHub https://github.com/nomic-ai/gpt4all\n(2023).\nAcknowledgements\nThis study received no funding. Figures were created using Lucidchart, with\nfree icons provided by Streamline (https://streamlinehq.com).\nAuthor contributions\nC.S.O. conceived and designed the study. C.S.O. and E.S. drafted the\nmanuscript, with further contributions from N.O., Y.Z. and A.C. C.S.O., A.C.\nand E.S. supervised the study. All authors have read and approved theﬁnal\nmanuscript.\nCompeting interests\nThe authors declare no competing interests.\nAdditional information\nSupplementary informationThe online version contains\nsupplementary material available at\nhttps://doi.org/10.1038/s41746-024-01391-3\n.\nCorrespondenceand requests for materials should be addressed to\nChin Siang Ong.\nReprints and permissions informationis available at\nhttp://www.nature.com/reprints\nPublisher’s noteSpringer Nature remains neutral with regard to\njurisdictional claims in published maps and institutional afﬁliations.\nOpen AccessThis article is licensed under a Creative Commons\nAttribution 4.0 International License, which permits use, sharing,\nadaptation, distribution and reproduction in any medium or format, as long\nas you give appropriate credit to the original author(s) and the source,\nprovide a link to the Creative Commons licence, and indicate if changes\nwere made. The images or other third party material in this article are\nincluded in the article’s Creative Commons licence, unless indicated\notherwise in a credit line to the material. If material is not included in the\narticle’s Creative Commons licence and your intended use is not permitted\nby statutory regulation or exceeds the permitted use, you will need to\nobtain permission directly from the copyright holder. To view a copy of this\nlicence, visithttp://creativecommons.org/licenses/by/4.0/\n.\n© The Author(s) 2024\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 5"
+  "title": "SurgeryLLM: a retrieval-augmented generation large language model framework for surgical decision support and workflow enhancement",
+  "url": "https://openalex.org/W4405538634",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2512879929",
+      "name": "Chin Siang Ong",
+      "affiliations": [
+        "Yale University",
+        "Harvard University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5107786117",
+      "name": "Nicholas T. Obey",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107010754",
+      "name": "Yanan Zheng",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1983754593",
+      "name": "Arman Cohan",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2156035286",
+      "name": "Eric B. Schneider",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2512879929",
+      "name": "Chin Siang Ong",
+      "affiliations": [
+        "Harvard University",
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5107786117",
+      "name": "Nicholas T. Obey",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107010754",
+      "name": "Yanan Zheng",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1983754593",
+      "name": "Arman Cohan",
+      "affiliations": [
+        "Yale University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2156035286",
+      "name": "Eric B. Schneider",
+      "affiliations": [
+        "Yale University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3186510719",
+    "https://openalex.org/W1969089620",
+    "https://openalex.org/W4396862413",
+    "https://openalex.org/W4387500346",
+    "https://openalex.org/W4388725043",
+    "https://openalex.org/W4384071683",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4404136861",
+    "https://openalex.org/W4400128031",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4401306886",
+    "https://openalex.org/W4200565151",
+    "https://openalex.org/W4307934708",
+    "https://openalex.org/W3112785303",
+    "https://openalex.org/W4367834948",
+    "https://openalex.org/W4225633078",
+    "https://openalex.org/W4200205471",
+    "https://openalex.org/W4200452381"
+  ],
+  "abstract": null,
+  "full_text": "npj |digital medicine Brief communication\nPublished in partnership with Seoul National University Bundang Hospital\nhttps://doi.org/10.1038/s41746-024-01391-3\nSurgeryLLM: a retrieval-augmented\ngeneration large language model\nframework for surgical decision support\nand workﬂow enhancement\nCheck for updates\nChin Siang Ong1,2 , Nicholas T. Obey1, Yanan Zheng3, Arman Cohan3,4 &E r i cB .S c h n e i d e r1\nSurgeryLLM, a large language model framework using Retrieval Augmented Generation demonstrably incor-\nporated domain-speciﬁc knowledge from current evidence-based surgical guidelines when presented with\npatient-speciﬁc data. The successful incorporation of guideline-based information represents a substantial\nstep toward enabling greater surgeon efﬁciency, improving patient safety, and optimizing surgical outcomes.\nAs the United States population continues to age1, projected demand for\ncardiac surgeon effort is expected toexceed surgeon availability by 31% in\n2030, 42% in 2040 and 51% in 20502. Data maintained by American\nAssociation of Medical Colleges (AAMC) has additionally shown that, as of\n2022, 25.6% of U.S. surgeons were ages 65 years or older, with greater\npercentages nearing retirement age in several specialties\n3,4. Efforts to\nincrease future surgeon availability and training in high-demand specialties\nare currently underway; however, many surgical specialties are likely to face\nincreasingly challenging workloads4, creating an urgent need for innovative\nsolutions to enhance efﬁciency and support decision making.\nEfforts to develop artiﬁcial intelligence (AI) solutions for healthcare are\nexpanding rapidly, with growing bodies of research aimed to optimize\nclinical efﬁciency and improve patient outcomes across specialties. A\nnumber of studies have tested AI-based tools for improved diagnostic\naccuracy, risk assessment, and patient evaluation demonstrating potentially\nuseful applications in surgery at preoperative, intraoperative, and post-\noperative timepoints\n5. Recent breakthroughs in generative AI and large\nlanguage models (LLMs) show substantial promise as the basis for tools that\nmay reduce the non-operative effort requirements of surgeons6,7.\nWhile currently available LLMs encode general medical knowledge8,\nthey are limited by the corpus of text on which they were trained. Addi-\ntionally, LLMs may conﬁdently provide inaccurate answers when prompted\nto generate responses outside of the data used to train the LLM, a phe-\nnomenon that, when anthropomorphized, became commonly known as\n“hallucinations”\n9. Since LLMs are server constrained and cannot access or\nreference external knowledge sources by default10, their responses may\nexclude up-to-date specialized surgical knowledge, such as the latest diag-\nnostic and treatment guidelines, and responses may not be based on the\nlatest available medical evidence.\nTo overcome these limitations of“out-of-the-box” LLMs, in 2020,\nLewis et al. proposed Retrieval-Augmented Generation (RAG) for\nknowledge-intensive natural language processing tasks11,a n dR A Gh a s\nsince become an effective method forretrieving external, domain-speciﬁc\nknowledge needed to perform specialized tasks12,13.R A Gi m p r o v e sL L M\noutput by incorporating information from an approved, trusted, curated\nknowledge base with source attribution, allowing the user to assess whether\nthe knowledge presented is contextually appropriate\n14.\nWe sought to assess the feasibility of and potential beneﬁts of incor-\nporating RAG in a LLM framework, hereafter referred to as SurgeryLLM\n(Figs. 1–3). The assessment was carried out by comparing the output from\nthe RAG-enhanced LLM model, SurgeryLLM, with output from the\nunmodiﬁed, non-augmented“out-of-the-box” LLM\n15,16, hereafter referred\nto as VanillaLLM. Based upon identical data provided to both models\nregarding three simulated patients with cardiovascular conditions, both\nSurgeryLLM and VanillaLLM were prompted to perform four tasks that are\nroutinely performed in surgical practice: 1. Checking patient records for\nmissing clinical investigation data, 2. Identifying andﬂagging investigation\nresults outside of normal ranges; 3. Developing recommendations for next\nmanagement steps based on national surgical guidelines, and; 4. Preparing\nstructured operative notes based upon recommended management steps.\nFor Task 1, when both VanillaLLM and SurgeryLLM were given\nexample lab values for simulated coronary artery bypass graft (CABG),\naortic, and valve surgery patients, SurgeryLLM was able to correctly identify\nabnormal hemoglobin levels based on externally sourced reference ranges,\nwhereas VanillaLLM consistently declined (Figs. 1–3, Supplementary\nTables 1–3).\nFor Task 2, when given clinical vignettes of patients with incomplete\nworkup, SurgeryLLM was able to correctly identify missing investigations,\nbased on the external knowledge base, whereas VanillaLLM was uncertain\n(Figs. 1–3, Supplementary Tables 1–3).\nFor Task 3, when SurgeryLLM was given relevant clinical\nguidelines\n17–19, published by the American College of Cardiology (ACC),\n1Department of Surgery, Yale School of Medicine, New Haven, CT, USA.2Harvard T.H. Chan School of Public Health, Boston, MA, USA.3Department of Computer\nScience, Yale University, New Haven, CT, USA.4Wu Tsai Institute, Yale University, New Haven, CT, USA.e-mail: chinsiang.ong@yale.edu\nnpj Digital Medicine|           (2024) 7:364 1\n1234567890():,;\n1234567890():,;\nAmerican Heart Association (AHA) and the Society for Cardiovascular\nAngiography & Interventions (SCAI), it provided clinically accurate\nrecommendations. The simulated patient with coronary artery disease\n(CAD) was recommended to undergo a Coronary Artery Bypass Graft\n(CABG) procedure, instead of percutaneous coronary intervention (PCI)\n(Fig. 1, Supplementary Table 1). The simulated aortic patient was recom-\nmended to undergo surgery to replace the aortic root and ascending aorta\n(Fig. 2, Supplementary Table 2). The simulated valve surgery patient was\nrecommended to undergo transcatheter aortic valve implantation (TAVI),\nin preference to surgical aorticvalve replacement (SAVR) (Fig.3, Supple-\nmentary Table 3). These recommendations by SurgeryLLM were made in\nline with the published guidelines, whereas VanillaLLM either gave an\nequivocal and vague response or indicated it did not know (Figs.1–3,\nSupplementary Tables 1–3).\nFinally, for Task 4, when given access to samples of operative notes,\nSurgeryLLM was able to draft a preliminary version of the operative notes\nfor each of the simulated patients based upon the anticipated process of the\nrecommended procedure using pre-speciﬁed formats, whereas VanillaLLM\neither declined or indicated its inability to perform this task (Figs.1–3,\nSupplementary Tables 1–3).\nWhile SurgeryLLM has shown the potential to support surgical deci-\nsion-making, case preparation, and operative reporting, challenges related\nto patient data availability, completeness, and accuracy may arise. Future\nefforts will focus on addressing these challenges through innovative\napproaches. This includes enhancing the precision and completeness of\nsurgical case summaries, prioritizing high-quality, context-speciﬁcs u r g i c a l\nliterature, and improving response precision. Additionally, we aim to\nintegrate advanced techniques for representation editing, develop iterative\nself-training frameworks, and employ strategies to ensure reliable and\ncontrollable generation of surgical documentation. Incorporating surgeon-\nspeciﬁc preferences in decision-making will also be a key area for further\nreﬁnement. Furthermore, in this feasibility study we used limited examples;\nFig. 1 | VanillaLLM (no RAG) vs SurgeryLLM (RAG): Coronary artery disease.\nSimulated patient information and prompts corresponding with each of the four\ntasks were presented to both VanilllaLLM and retrieval-augmented SurgeryLLM.\nWhen RAG was enabled, retrieved information from an external knowledge base\nwas presented to the LLM. For brevity, coronary arteries were abbreviated in the\nﬁgure, i.e., LIMA (Left internal mammary artery), LAD (Left anterior descending\nartery), and RCA (Right coronary artery).\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 2\nhowever, we plan to incorporate robust and advanced techniques for bias\ndetection and correction, such as fairness auditing and bias mitigation\nalgorithms.\nIn conclusion, SurgeryLLM, using RAG-enhanced LLM modeling,\nsuccessfully demonstrated the feasibility of incorporating external domain-\nspeciﬁc information from current evidence-based guidelines, reference lists\nand other sources into a fast-running tool that may be used to support\nsurgical decision-making. With reﬁnement and substantial further devel-\nopment, SurgeryLLM has the potential to improve patient safety, and\noptimize surgical outcomes. Perhaps most importantly, SurgeryLLM\ndemonstrates the feasibility of using AI and LLMs to increase efﬁciency\namong surgeons on an individual level which, in turn, may support opti-\nmization of surgeon effort allocationacross healthcare systems in a time of\ngrowing need for access to surgical services.\nMethods\nDocument loading\nExternal documents of interest, including laboratory reference ranges,\npreoperative assessment guideline s, sample operative or procedure\nnotes, and extracts of current ACC/AHA/SCAI Guideline for Cor-\nonary Artery Revascularization\n17,A C C / A H AG u i d e l i n ef o rt h e\nDiagnosis and Management of Aortic Disease 18, and ACC/AHA\nGuideline for the Management of Patients With Valvular Heart\nDisease\n19, were loaded using the TextLoader class of LangChain20 and\nsplit into chunks of characters w ith overlap between consecutive\nchunks.\nEmbedding generation\nGPT4All (Nomic AI, New York City, NY)21 was used to generate embed-\ndings for each chunk and these embeddings were then stored in a Chroma\n(ChromaDB, San Francisco, CA) vector store.\nQuery processing\nPrompts or queries are processed by a LLM framework (“SurgeryLLM”)\nrunning locally, based on the Llama herd of models (Meta Platforms, Inc.,\nMenlo Park, CA)\n15,16, and uses RAG (Retrieval-Augmented Generation) to\nretrieve relevant documents or text chunks from the prepared data using a\nChroma vector store retriever.\nFig. 2 | VanillaLLM (no RAG) vs SurgeryLLM (RAG): Aortic disease.Simulated patient information and prompts corresponding with each of the four tasks were presented\nto both VanilllaLLM and retrieval-augmented SurgeryLLM. When RAG was enabled, retrieved information from an external knowledge base was presentedto the LLM.\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 3\nAnswer generation\nAfter retrieval of relevant information, the LLM framework generates\nanswers as prompted. Using RAG improves answers, ensuring they are\naccurate, relevant, and directly related to the prompts or queries. While\nsimulated data was used for this study, the use of locally deployed LLM\nframeworks will ensure HIPAA-compliance if deployed in real-world set-\ntings, as no individual-level patient data is ever sent to external servers.\nData availability\nStudy data are available upon reasonable request from the corresponding\nauthor, in accordance with institutional policies and any applicable data\nsharing or data use agreements.\nCode availability\nThe custom code used for data generation and analysis in this study is\navailable upon reasonable request from the corresponding author, in\naccordance with institutional policies and any applicable code sharing or\nd a t au s ea g r e e m e n t s .T h ec o d ei sw r i t t e ni nP y t h o n3 . 9 . 1 3a n du s e st h e\nfollowing software versions: LangChain 0.3.1. Llama 2 to 3.2. Speciﬁc\ndetails regarding document loading,embedding generation, query proces-\nsing and answer generation are described in the Methods section.\nReceived: 27 September 2024; Accepted: 12 December 2024;\nReferences\n1. Mather, M. & Scommegna, P. Fact Sheet: Aging in the United States.\nPRB https://www.prb.org/resources/fact-sheet-aging-in-the-united-\nstates (2024).\n2. Oslock, W. M. et al. A contemporary reassessment of the US surgical\nworkforce through 2050 predicts continued shortages and increased\nproductivity demands.Am. J. Surg.223,2 8– 35 (2022).\n3. Association of American Medical Colleges. 2023 US Physician\nWorkforce Data Dashboard: 2023 Key Findings and Deﬁnitions.\nhttps://www.aamc.org/data-reports/data/2023-key-ﬁndings-and-\ndeﬁnitions (2024).\nFig. 3 | VanillaLLM (no RAG) vs SurgeryLLM (RAG): Valvular heart disease.\nSimulated patient information and prompts corresponding with each of the four\ntasks were presented to both VanilllaLLM and retrieval-augmented SurgeryLLM.\nWhen RAG was enabled, retrieved information from an external knowledge base\nwas presented to the LLM.\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 4\n4. Newman, M. S. Physician Workforce Data Suggest Epochal Change.\nBull. Am. Coll. Surg.109,2 8– 35 (2024).\n5. Varghese, C., Harrison, E. M., O’Grady, G. & Topol, E. J. Artiﬁcial\nintelligence in surgery.Nat. Med.30, 1257– 1268 (2024).\n6. Clusmann, J. et al. The future landscape of large language models in\nmedicine. Commun. Med.3,1 – 8 (2023).\n7. Peng, C. et al. A study of generative large language model for medical\nresearch and healthcare.Npj Digit. Med.6,1 – 10 (2023).\n8. Singhal, K. et al. Large language models encode clinical knowledge.\nNature 620, 172– 180 (2023).\n9. de Pontes. Adachi, F. Understanding and Mitigating LLM\nHallucinations. Medium https://towardsdatascience.com/\nunderstanding-and-mitigating-llm-hallucinations-be88d31c4200\n(2023).\n10. Miller, R. A Surgical Perspective on Large Language Models.Ann.\nSurg. 278, e211 (2023).\n11. Lewis, P. et al. Retrieval-augmented generation for knowledge-\nintensive NLP tasks. InProceedings of the 34th International\nConference on Neural Information Processing Systems (NIPS '20).\nCurran Associates Inc., Red Hook, NY, USA, 9459– 9474.\n12. Woo, J. J. et al. Custom Large Language Models Improve Accuracy:\nComparing Retrieval Augmented Generation and Artiﬁcial Intelligence\nAgents to Non-Custom Models for Evidence-Based Medicine.\nArthrosc. J. Arthrosc. Relat. Surg. https://doi.org/10.1016/j.arthro.\n2024.10.042 (2024).\n13. Jeong, M., Sohn, J., Sung, M. & Kang, J. Improving medical reasoning\nthrough retrieval and self-reﬂection with retrieval-augmented large\nlanguage models.Bioinformatics 40, i119– i129 (2024).\n14. What is RAG? - Retrieval-Augmented Generation AI Explained - AWS.\nAmazon Web Services, Inc. https://aws.amazon.com/what-is/\nretrieval-augmented-generation/ (2024).\n15. Touvron, H. et al. Llama 2: Open Foundation and Fine-Tuned Chat\nModels. Preprint athttps://doi.org/10.48550/arXiv.2307.09288\n(2023).\n16. Dubey, A. et al. The Llama 3 Herd of Models. Preprint athttps://doi.\norg/10.48550/arXiv.2407.21783 (2024).\n17. Lawton, J. S. et al. 2021 ACC/AHA/SCAI Guideline for Coronary Artery\nRevascularization: A Report of the American College of Cardiology/\nAmerican Heart Association Joint Committee on Clinical Practice\nGuidelines. Circulation 145, e18– e114 (2022).\n18. Isselbacher, E. M. et al. 2022 ACC/AHA Guideline for the Diagnosis\nand Management of Aortic Disease: A Report of the American Heart\nAssociation/American College of Cardiology Joint Committee on\nClinical Practice Guidelines.Circulation 146, e334\n– e482 (2022).\n19. Otto, C. M. et al. 2020 ACC/AHA Guideline for the Management of\nPatients With Valvular Heart Disease: A Report of the American\nCollege of Cardiology/American Heart Association Joint Committee\non Clinical Practice Guidelines.Circulation 143, e72– e227 (2021).\n20. Chase, H. LangChain.GitHub https://github.com/langchain-ai/\nlangchain (2022).\n21. Anand, Y., Nussbaum, Z., Duderstadt, B. & Schmidt, B. GPT4All:\nTraining an Assistant-style Chatbot with Large Scale Data Distillation\nfrom GPT-3.5-Turbo.GitHub https://github.com/nomic-ai/gpt4all\n(2023).\nAcknowledgements\nThis study received no funding. Figures were created using Lucidchart, with\nfree icons provided by Streamline (https://streamlinehq.com).\nAuthor contributions\nC.S.O. conceived and designed the study. C.S.O. and E.S. drafted the\nmanuscript, with further contributions from N.O., Y.Z. and A.C. C.S.O., A.C.\nand E.S. supervised the study. All authors have read and approved theﬁnal\nmanuscript.\nCompeting interests\nThe authors declare no competing interests.\nAdditional information\nSupplementary informationThe online version contains\nsupplementary material available at\nhttps://doi.org/10.1038/s41746-024-01391-3\n.\nCorrespondenceand requests for materials should be addressed to\nChin Siang Ong.\nReprints and permissions informationis available at\nhttp://www.nature.com/reprints\nPublisher’s noteSpringer Nature remains neutral with regard to\njurisdictional claims in published maps and institutional afﬁliations.\nOpen AccessThis article is licensed under a Creative Commons\nAttribution 4.0 International License, which permits use, sharing,\nadaptation, distribution and reproduction in any medium or format, as long\nas you give appropriate credit to the original author(s) and the source,\nprovide a link to the Creative Commons licence, and indicate if changes\nwere made. The images or other third party material in this article are\nincluded in the article’s Creative Commons licence, unless indicated\notherwise in a credit line to the material. If material is not included in the\narticle’s Creative Commons licence and your intended use is not permitted\nby statutory regulation or exceeds the permitted use, you will need to\nobtain permission directly from the copyright holder. To view a copy of this\nlicence, visithttp://creativecommons.org/licenses/by/4.0/\n.\n© The Author(s) 2024\nhttps://doi.org/10.1038/s41746-024-01391-3 Brief communication\nnpj Digital Medicine|           (2024) 7:364 5",
+  "topic": "Workflow",
+  "concepts": [
+    {
+      "name": "Workflow",
+      "score": 0.7806791663169861
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6312144994735718
+    },
+    {
+      "name": "Guideline",
+      "score": 0.5554769039154053
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.4540683627128601
+    },
+    {
+      "name": "Decision support system",
+      "score": 0.4207664728164673
+    },
+    {
+      "name": "Medicine",
+      "score": 0.2720315456390381
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.23156842589378357
+    },
+    {
+      "name": "Database",
+      "score": 0.1456916630268097
+    },
+    {
+      "name": "Pathology",
+      "score": 0.06754705309867859
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

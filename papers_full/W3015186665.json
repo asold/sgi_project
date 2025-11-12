@@ -1,100 +1,175 @@
 {
-    "title": "Suggesting Comment Completions for Python using Neural Language Models",
-    "url": "https://openalex.org/W3015186665",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2603604635",
-            "name": "Adelina Ciurumelea",
-            "affiliations": [
-                "University of Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1970104307",
-            "name": "Sebastian Proksch",
-            "affiliations": [
-                "University of Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2158171975",
-            "name": "Harald C. Gall",
-            "affiliations": [
-                "University of Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2603604635",
-            "name": "Adelina Ciurumelea",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1970104307",
-            "name": "Sebastian Proksch",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2158171975",
-            "name": "Harald C. Gall",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2724503592",
-        "https://openalex.org/W2054288159",
-        "https://openalex.org/W2171928131",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W6636510571",
-        "https://openalex.org/W2242083635",
-        "https://openalex.org/W2126793110",
-        "https://openalex.org/W2081749632",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W6685562342",
-        "https://openalex.org/W4210984920",
-        "https://openalex.org/W2043223258",
-        "https://openalex.org/W2133333349",
-        "https://openalex.org/W2090398160",
-        "https://openalex.org/W6767059414",
-        "https://openalex.org/W6749270128",
-        "https://openalex.org/W6760150090",
-        "https://openalex.org/W6748986372",
-        "https://openalex.org/W2148190602",
-        "https://openalex.org/W6756730223",
-        "https://openalex.org/W2947160092",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W2899384793",
-        "https://openalex.org/W2070111972",
-        "https://openalex.org/W3146720657",
-        "https://openalex.org/W6725207838",
-        "https://openalex.org/W4252398070",
-        "https://openalex.org/W1771830246",
-        "https://openalex.org/W2884276923",
-        "https://openalex.org/W2954274464",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2082160726",
-        "https://openalex.org/W6638575559",
-        "https://openalex.org/W2516621648",
-        "https://openalex.org/W1517055698",
-        "https://openalex.org/W2950635152",
-        "https://openalex.org/W2921792613",
-        "https://openalex.org/W2963285578",
-        "https://openalex.org/W2968771148",
-        "https://openalex.org/W2979792666",
-        "https://openalex.org/W3145100113",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2890672905",
-        "https://openalex.org/W1614298861",
-        "https://openalex.org/W2784570262",
-        "https://openalex.org/W1579838312",
-        "https://openalex.org/W2903709763",
-        "https://openalex.org/W2793439736",
-        "https://openalex.org/W2964268484",
-        "https://openalex.org/W1970859802",
-        "https://openalex.org/W2142403498",
-        "https://openalex.org/W2606089314",
-        "https://openalex.org/W2130942839"
-    ],
-    "abstract": "Source-code comments are an important communication medium between developers to better understand and maintain software. Current research focuses on auto-generating comments by summarizing the code. However, good comments contain additional details, like important design decisions or required trade-offs, and only developers can decide on the proper comment content. Automated summarization techniques cannot include information that does not exist in the code, therefore fully-automated approaches while helpful, will be of limited use. In our work, we propose to empower developers through a semi-automated system instead. We investigate the feasibility of using neural language models trained on a large corpus of Python documentation strings to generate completion suggestions and obtain promising results. By focusing on confident predictions, we can obtain a top-3 accuracy of over 70%, although this comes at the cost of lower suggestion frequency. Our models can be improved by leveraging context information like the signature and the full body of the method. Additionally, we are able to return good accuracy completions even for new projects, suggesting the generalizability of our approach.",
-    "full_text": null
+  "title": "Suggesting Comment Completions for Python using Neural Language Models",
+  "url": "https://openalex.org/W3015186665",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2603604635",
+      "name": "Adelina Ciurumelea",
+      "affiliations": [
+        "University of Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1970104307",
+      "name": "Sebastian Proksch",
+      "affiliations": [
+        "University of Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2158171975",
+      "name": "Harald C. Gall",
+      "affiliations": [
+        "University of Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2603604635",
+      "name": "Adelina Ciurumelea",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1970104307",
+      "name": "Sebastian Proksch",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2158171975",
+      "name": "Harald C. Gall",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2724503592",
+    "https://openalex.org/W2054288159",
+    "https://openalex.org/W2171928131",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W6636510571",
+    "https://openalex.org/W2242083635",
+    "https://openalex.org/W2126793110",
+    "https://openalex.org/W2081749632",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W6685562342",
+    "https://openalex.org/W4210984920",
+    "https://openalex.org/W2043223258",
+    "https://openalex.org/W2133333349",
+    "https://openalex.org/W2090398160",
+    "https://openalex.org/W6767059414",
+    "https://openalex.org/W6749270128",
+    "https://openalex.org/W6760150090",
+    "https://openalex.org/W6748986372",
+    "https://openalex.org/W2148190602",
+    "https://openalex.org/W6756730223",
+    "https://openalex.org/W2947160092",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W2899384793",
+    "https://openalex.org/W2070111972",
+    "https://openalex.org/W3146720657",
+    "https://openalex.org/W6725207838",
+    "https://openalex.org/W4252398070",
+    "https://openalex.org/W1771830246",
+    "https://openalex.org/W2884276923",
+    "https://openalex.org/W2954274464",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2082160726",
+    "https://openalex.org/W6638575559",
+    "https://openalex.org/W2516621648",
+    "https://openalex.org/W1517055698",
+    "https://openalex.org/W2950635152",
+    "https://openalex.org/W2921792613",
+    "https://openalex.org/W2963285578",
+    "https://openalex.org/W2968771148",
+    "https://openalex.org/W2979792666",
+    "https://openalex.org/W3145100113",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2890672905",
+    "https://openalex.org/W1614298861",
+    "https://openalex.org/W2784570262",
+    "https://openalex.org/W1579838312",
+    "https://openalex.org/W2903709763",
+    "https://openalex.org/W2793439736",
+    "https://openalex.org/W2964268484",
+    "https://openalex.org/W1970859802",
+    "https://openalex.org/W2142403498",
+    "https://openalex.org/W2606089314",
+    "https://openalex.org/W2130942839"
+  ],
+  "abstract": "Source-code comments are an important communication medium between developers to better understand and maintain software. Current research focuses on auto-generating comments by summarizing the code. However, good comments contain additional details, like important design decisions or required trade-offs, and only developers can decide on the proper comment content. Automated summarization techniques cannot include information that does not exist in the code, therefore fully-automated approaches while helpful, will be of limited use. In our work, we propose to empower developers through a semi-automated system instead. We investigate the feasibility of using neural language models trained on a large corpus of Python documentation strings to generate completion suggestions and obtain promising results. By focusing on confident predictions, we can obtain a top-3 accuracy of over 70%, although this comes at the cost of lower suggestion frequency. Our models can be improved by leveraging context information like the signature and the full body of the method. Additionally, we are able to return good accuracy completions even for new projects, suggesting the generalizability of our approach.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8785734176635742
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.796748161315918
+    },
+    {
+      "name": "Automatic summarization",
+      "score": 0.7703883647918701
+    },
+    {
+      "name": "Generalizability theory",
+      "score": 0.7317677140235901
+    },
+    {
+      "name": "Documentation",
+      "score": 0.5793255567550659
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.5479684472084045
+    },
+    {
+      "name": "Source code",
+      "score": 0.5052619576454163
+    },
+    {
+      "name": "Programming language",
+      "score": 0.4700796902179718
+    },
+    {
+      "name": "Scripting language",
+      "score": 0.457919716835022
+    },
+    {
+      "name": "Language model",
+      "score": 0.4415643513202667
+    },
+    {
+      "name": "Software",
+      "score": 0.43845996260643005
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42520755529403687
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.41600358486175537
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3822261095046997
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.36759769916534424
+    },
+    {
+      "name": "Data mining",
+      "score": 0.33558791875839233
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

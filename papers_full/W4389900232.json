@@ -1,63 +1,182 @@
 {
-    "title": "A compressed large language model embedding dataset of ICD 10 CM descriptions",
-    "url": "https://openalex.org/W4389900232",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2102527288",
-            "name": "Michael J. Kane",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2659349605",
-            "name": "Casey King",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A722124802",
-            "name": "Denise Esserman",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2005826525",
-            "name": "Nancy K. Latham",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2123510448",
-            "name": "Erich J. Greene",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2444683351",
-            "name": "David A. Ganz",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2051222283",
-        "https://openalex.org/W2284851926",
-        "https://openalex.org/W3005285779",
-        "https://openalex.org/W3037887574",
-        "https://openalex.org/W2997522493",
-        "https://openalex.org/W4239025696",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W6636364444",
-        "https://openalex.org/W2963716420",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W3160137267",
-        "https://openalex.org/W4297253404",
-        "https://openalex.org/W3094217983",
-        "https://openalex.org/W2029017735",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W4312120649",
-        "https://openalex.org/W4281737056",
-        "https://openalex.org/W2159583324",
-        "https://openalex.org/W2101807845",
-        "https://openalex.org/W4254687493",
-        "https://openalex.org/W4399578546"
-    ],
-    "abstract": "Abstract This paper presents novel datasets providing numerical representations of ICD-10-CM codes by generating description embeddings using a large language model followed by a dimension reduction via autoencoder. The embeddings serve as informative input features for machine learning models by capturing relationships among categories and preserving inherent context information. The model generating the data was validated in two ways. First, the dimension reduction was validated using an autoencoder, and secondly, a supervised model was created to estimate the ICD-10-CM hierarchical categories. Results show that the dimension of the data can be reduced to as few as 10 dimensions while maintaining the ability to reproduce the original embeddings, with the fidelity decreasing as the reduced-dimension representation decreases. Multiple compression levels are provided, allowing users to choose as per their requirements, download and use without any other setup. The readily available datasets of ICD-10-CM codes are anticipated to be highly valuable for researchers in biomedical informatics, enabling more advanced analyses in the field. This approach has the potential to significantly improve the utility of ICD-10-CM codes in the biomedical domain.",
-    "full_text": null
+  "title": "A compressed large language model embedding dataset of ICD 10 CM descriptions",
+  "url": "https://openalex.org/W4389900232",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2102527288",
+      "name": "Michael J. Kane",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2659349605",
+      "name": "Casey King",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A722124802",
+      "name": "Denise Esserman",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2005826525",
+      "name": "Nancy K. Latham",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2123510448",
+      "name": "Erich J. Greene",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2444683351",
+      "name": "David A. Ganz",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2051222283",
+    "https://openalex.org/W2284851926",
+    "https://openalex.org/W3005285779",
+    "https://openalex.org/W3037887574",
+    "https://openalex.org/W2997522493",
+    "https://openalex.org/W4239025696",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W6636364444",
+    "https://openalex.org/W2963716420",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W3160137267",
+    "https://openalex.org/W4297253404",
+    "https://openalex.org/W3094217983",
+    "https://openalex.org/W2029017735",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W4312120649",
+    "https://openalex.org/W4281737056",
+    "https://openalex.org/W2159583324",
+    "https://openalex.org/W2101807845",
+    "https://openalex.org/W4254687493",
+    "https://openalex.org/W4399578546"
+  ],
+  "abstract": "Abstract This paper presents novel datasets providing numerical representations of ICD-10-CM codes by generating description embeddings using a large language model followed by a dimension reduction via autoencoder. The embeddings serve as informative input features for machine learning models by capturing relationships among categories and preserving inherent context information. The model generating the data was validated in two ways. First, the dimension reduction was validated using an autoencoder, and secondly, a supervised model was created to estimate the ICD-10-CM hierarchical categories. Results show that the dimension of the data can be reduced to as few as 10 dimensions while maintaining the ability to reproduce the original embeddings, with the fidelity decreasing as the reduced-dimension representation decreases. Multiple compression levels are provided, allowing users to choose as per their requirements, download and use without any other setup. The readily available datasets of ICD-10-CM codes are anticipated to be highly valuable for researchers in biomedical informatics, enabling more advanced analyses in the field. This approach has the potential to significantly improve the utility of ICD-10-CM codes in the biomedical domain.",
+  "full_text": null,
+  "topic": "Autoencoder",
+  "concepts": [
+    {
+      "name": "Autoencoder",
+      "score": 0.7642030119895935
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7511488199234009
+    },
+    {
+      "name": "Dimensionality reduction",
+      "score": 0.6098103523254395
+    },
+    {
+      "name": "Dimension (graph theory)",
+      "score": 0.6021040678024292
+    },
+    {
+      "name": "Embedding",
+      "score": 0.571425199508667
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.5538290739059448
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5060529112815857
+    },
+    {
+      "name": "Data mining",
+      "score": 0.5044585466384888
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.47820591926574707
+    },
+    {
+      "name": "Fidelity",
+      "score": 0.47729527950286865
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.47508326172828674
+    },
+    {
+      "name": "Field (mathematics)",
+      "score": 0.47339046001434326
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.44279274344444275
+    },
+    {
+      "name": "Language model",
+      "score": 0.4363473653793335
+    },
+    {
+      "name": "Reduction (mathematics)",
+      "score": 0.43349334597587585
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.37801772356033325
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.35200685262680054
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.2144620418548584
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.12960591912269592
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.09353670477867126
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09235969185829163
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Pure mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

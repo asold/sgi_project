@@ -1,73 +1,132 @@
 {
-    "title": "Demystifying LLM-Based Software Engineering Agents",
-    "url": "https://openalex.org/W4411449940",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4308643667",
-            "name": "Chunqiu Steven Xia",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4284905371",
-            "name": "Yinlin Deng",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Soren Dunn",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107392162",
-            "name": "Lingming Zhang",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2165663378",
-        "https://openalex.org/W2907705732",
-        "https://openalex.org/W3208407575",
-        "https://openalex.org/W2851896161",
-        "https://openalex.org/W4384304728",
-        "https://openalex.org/W3140804348",
-        "https://openalex.org/W2101819268",
-        "https://openalex.org/W2145373440",
-        "https://openalex.org/W2958754741",
-        "https://openalex.org/W2924629359",
-        "https://openalex.org/W2060333670",
-        "https://openalex.org/W2288083000",
-        "https://openalex.org/W3042956498",
-        "https://openalex.org/W2373227884",
-        "https://openalex.org/W4391724785",
-        "https://openalex.org/W4284670965",
-        "https://openalex.org/W1990785546",
-        "https://openalex.org/W1950030762",
-        "https://openalex.org/W1985947101",
-        "https://openalex.org/W6600367688",
-        "https://openalex.org/W2736091366",
-        "https://openalex.org/W2012380206",
-        "https://openalex.org/W2040577374",
-        "https://openalex.org/W2343875716",
-        "https://openalex.org/W4384345708",
-        "https://openalex.org/W4308643319",
-        "https://openalex.org/W4391579639",
-        "https://openalex.org/W4402442868",
-        "https://openalex.org/W3149255455",
-        "https://openalex.org/W3193682477",
-        "https://openalex.org/W4238623774",
-        "https://openalex.org/W4398239361",
-        "https://openalex.org/W4391558518",
-        "https://openalex.org/W8870360"
-    ],
-    "abstract": "Recent advancements in large language models (LLMs) have significantly advanced the automation of software development tasks, including code synthesis, program repair, and test generation. More recently, researchers and industry practitioners have developed various autonomous LLM agents to perform end-to-end software development tasks. These agents are equipped with the ability to use tools, run commands, observe feedback from the environment, and plan for future actions. However, the complexity of these agent-based approaches, together with the limited abilities of current LLMs, raises the following question: Do we really have to employ complex autonomous software agents? To attempt to answer this question, we build Agentless – an agentless approach to automatically resolve software development issues. Compared to the verbose and complex setup of agent-based approaches, Agentless employs a simplistic three-phase process of localization, repair, and patch validation, without letting the LLM decide future actions or operate with complex tools. Our results on the popular SWE-bench Lite benchmark show that surprisingly the simplistic Agentless is able to achieve both the highest performance (32.00%, 96 correct fixes) and low cost ($0.70) compared with all existing open-source software agents at the time of paper submission! Agentless also achieves more than 50% solve rate when using Claude 3.5 Sonnet on the new SWE-bench Verified benchmark. In fact, Agentless has already been adopted by OpenAI as the go-to approach to showcase the real-world coding performance of both GPT-4o and the new o1 models; more recently, Agentless has also been used by DeepSeek to evaluate their newest DeepSeek V3 and R1 models. Furthermore, we manually classified the problems in SWE-bench Lite and found problems with exact ground truth patches or insufficient/misleading issue descriptions. As such, we construct SWE-bench Lite-𝑆 by excluding such problematic issues to perform more rigorous evaluation and comparison. Our work highlights the currently overlooked potential of a simplistic, cost-effective technique in autonomous software development. We hope Agentless will help reset the baseline, starting point, and horizon for autonomous software agents, and inspire future work along this crucial direction. We have open-sourced Agentless at: https://github.com/OpenAutoCoder/Agentless",
-    "full_text": null
+  "title": "Demystifying LLM-Based Software Engineering Agents",
+  "url": "https://openalex.org/W4411449940",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4308643667",
+      "name": "Chunqiu Steven Xia",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4284905371",
+      "name": "Yinlin Deng",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Soren Dunn",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107392162",
+      "name": "Lingming Zhang",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2165663378",
+    "https://openalex.org/W2907705732",
+    "https://openalex.org/W3208407575",
+    "https://openalex.org/W2851896161",
+    "https://openalex.org/W4384304728",
+    "https://openalex.org/W3140804348",
+    "https://openalex.org/W2101819268",
+    "https://openalex.org/W2145373440",
+    "https://openalex.org/W2958754741",
+    "https://openalex.org/W2924629359",
+    "https://openalex.org/W2060333670",
+    "https://openalex.org/W2288083000",
+    "https://openalex.org/W3042956498",
+    "https://openalex.org/W2373227884",
+    "https://openalex.org/W4391724785",
+    "https://openalex.org/W4284670965",
+    "https://openalex.org/W1990785546",
+    "https://openalex.org/W1950030762",
+    "https://openalex.org/W1985947101",
+    "https://openalex.org/W6600367688",
+    "https://openalex.org/W2736091366",
+    "https://openalex.org/W2012380206",
+    "https://openalex.org/W2040577374",
+    "https://openalex.org/W2343875716",
+    "https://openalex.org/W4384345708",
+    "https://openalex.org/W4308643319",
+    "https://openalex.org/W4391579639",
+    "https://openalex.org/W4402442868",
+    "https://openalex.org/W3149255455",
+    "https://openalex.org/W3193682477",
+    "https://openalex.org/W4238623774",
+    "https://openalex.org/W4398239361",
+    "https://openalex.org/W4391558518",
+    "https://openalex.org/W8870360"
+  ],
+  "abstract": "Recent advancements in large language models (LLMs) have significantly advanced the automation of software development tasks, including code synthesis, program repair, and test generation. More recently, researchers and industry practitioners have developed various autonomous LLM agents to perform end-to-end software development tasks. These agents are equipped with the ability to use tools, run commands, observe feedback from the environment, and plan for future actions. However, the complexity of these agent-based approaches, together with the limited abilities of current LLMs, raises the following question: Do we really have to employ complex autonomous software agents? To attempt to answer this question, we build Agentless – an agentless approach to automatically resolve software development issues. Compared to the verbose and complex setup of agent-based approaches, Agentless employs a simplistic three-phase process of localization, repair, and patch validation, without letting the LLM decide future actions or operate with complex tools. Our results on the popular SWE-bench Lite benchmark show that surprisingly the simplistic Agentless is able to achieve both the highest performance (32.00%, 96 correct fixes) and low cost ($0.70) compared with all existing open-source software agents at the time of paper submission! Agentless also achieves more than 50% solve rate when using Claude 3.5 Sonnet on the new SWE-bench Verified benchmark. In fact, Agentless has already been adopted by OpenAI as the go-to approach to showcase the real-world coding performance of both GPT-4o and the new o1 models; more recently, Agentless has also been used by DeepSeek to evaluate their newest DeepSeek V3 and R1 models. Furthermore, we manually classified the problems in SWE-bench Lite and found problems with exact ground truth patches or insufficient/misleading issue descriptions. As such, we construct SWE-bench Lite-𝑆 by excluding such problematic issues to perform more rigorous evaluation and comparison. Our work highlights the currently overlooked potential of a simplistic, cost-effective technique in autonomous software development. We hope Agentless will help reset the baseline, starting point, and horizon for autonomous software agents, and inspire future work along this crucial direction. We have open-sourced Agentless at: https://github.com/OpenAutoCoder/Agentless",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7015048265457153
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.6829240322113037
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.6488171219825745
+    },
+    {
+      "name": "Software",
+      "score": 0.5197210311889648
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5136882662773132
+    },
+    {
+      "name": "Compiler",
+      "score": 0.46583452820777893
+    },
+    {
+      "name": "Automation",
+      "score": 0.4562188386917114
+    },
+    {
+      "name": "Software development",
+      "score": 0.4379197359085083
+    },
+    {
+      "name": "Software development process",
+      "score": 0.4158787131309509
+    },
+    {
+      "name": "Programming language",
+      "score": 0.23668694496154785
+    },
+    {
+      "name": "Engineering",
+      "score": 0.17700141668319702
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    }
+  ]
 }

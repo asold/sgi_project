@@ -1,83 +1,166 @@
 {
-    "title": "Meta-Learning the Difference: Preparing Large Language Models for Efficient Adaptation",
-    "url": "https://openalex.org/W4313182274",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2440875664",
-            "name": "Zejiang Hou",
-            "affiliations": [
-                "Princeton University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136963084",
-            "name": "Julián Salazar",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2982905579",
-            "name": "George Polovets",
-            "affiliations": [
-                "Amazon (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3124687886",
-        "https://openalex.org/W3177323791",
-        "https://openalex.org/W2970925270",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6685158001",
-        "https://openalex.org/W2970678056",
-        "https://openalex.org/W6736057607",
-        "https://openalex.org/W2786660442",
-        "https://openalex.org/W3174702398",
-        "https://openalex.org/W3034238904",
-        "https://openalex.org/W3174784402",
-        "https://openalex.org/W6802744804",
-        "https://openalex.org/W6759579507",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W6788701349",
-        "https://openalex.org/W3103616906",
-        "https://openalex.org/W6752515464",
-        "https://openalex.org/W6792279967",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W2945978556",
-        "https://openalex.org/W6796710205",
-        "https://openalex.org/W6796549874",
-        "https://openalex.org/W2963912046",
-        "https://openalex.org/W3153675281",
-        "https://openalex.org/W6748057086",
-        "https://openalex.org/W3035691519",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6749495938",
-        "https://openalex.org/W3098267758",
-        "https://openalex.org/W6801441846",
-        "https://openalex.org/W3025611493",
-        "https://openalex.org/W6758026734",
-        "https://openalex.org/W6756810460",
-        "https://openalex.org/W2923014074",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W3139357205",
-        "https://openalex.org/W3176828726",
-        "https://openalex.org/W6788237939",
-        "https://openalex.org/W2963825865",
-        "https://openalex.org/W3020268419",
-        "https://openalex.org/W3176602224",
-        "https://openalex.org/W4287122891",
-        "https://openalex.org/W4238846128",
-        "https://openalex.org/W2123399796",
-        "https://openalex.org/W2750779823",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4285704109",
-        "https://openalex.org/W2965373594"
-    ],
-    "abstract": "Abstract Large pretrained language models (PLMs) are often domain- or task-adapted via finetuning or prompting. Finetuning requires modifying all of the parameters and having enough data to avoid overfitting while prompting requires no training and few examples but limits performance. Instead, we prepare PLMs for data- and parameter-efficient adaptation by learning to learn the difference between general and adapted PLMs. This difference is expressed in terms of model weights and sublayer structure through our proposed dynamic low-rank reparameterization and learned architecture controller. Experiments on few-shot dialogue completion, low-resource abstractive summarization, and multi-domain language modeling show improvements in adaptation time and performance over direct finetuning or preparation via domain-adaptive pretraining. Ablations show our task-adaptive reparameterization (TARP) and model search (TAMS) components individually improve on other parameter-efficient transfer like adapters and structure-learning methods like learned sparsification.",
-    "full_text": null
+  "title": "Meta-Learning the Difference: Preparing Large Language Models for Efficient Adaptation",
+  "url": "https://openalex.org/W4313182274",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2440875664",
+      "name": "Zejiang Hou",
+      "affiliations": [
+        "Princeton University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136963084",
+      "name": "Julián Salazar",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2982905579",
+      "name": "George Polovets",
+      "affiliations": [
+        "Amazon (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3124687886",
+    "https://openalex.org/W3177323791",
+    "https://openalex.org/W2970925270",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6685158001",
+    "https://openalex.org/W2970678056",
+    "https://openalex.org/W6736057607",
+    "https://openalex.org/W2786660442",
+    "https://openalex.org/W3174702398",
+    "https://openalex.org/W3034238904",
+    "https://openalex.org/W3174784402",
+    "https://openalex.org/W6802744804",
+    "https://openalex.org/W6759579507",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W6788701349",
+    "https://openalex.org/W3103616906",
+    "https://openalex.org/W6752515464",
+    "https://openalex.org/W6792279967",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W2945978556",
+    "https://openalex.org/W6796710205",
+    "https://openalex.org/W6796549874",
+    "https://openalex.org/W2963912046",
+    "https://openalex.org/W3153675281",
+    "https://openalex.org/W6748057086",
+    "https://openalex.org/W3035691519",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6749495938",
+    "https://openalex.org/W3098267758",
+    "https://openalex.org/W6801441846",
+    "https://openalex.org/W3025611493",
+    "https://openalex.org/W6758026734",
+    "https://openalex.org/W6756810460",
+    "https://openalex.org/W2923014074",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W3139357205",
+    "https://openalex.org/W3176828726",
+    "https://openalex.org/W6788237939",
+    "https://openalex.org/W2963825865",
+    "https://openalex.org/W3020268419",
+    "https://openalex.org/W3176602224",
+    "https://openalex.org/W4287122891",
+    "https://openalex.org/W4238846128",
+    "https://openalex.org/W2123399796",
+    "https://openalex.org/W2750779823",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4285704109",
+    "https://openalex.org/W2965373594"
+  ],
+  "abstract": "Abstract Large pretrained language models (PLMs) are often domain- or task-adapted via finetuning or prompting. Finetuning requires modifying all of the parameters and having enough data to avoid overfitting while prompting requires no training and few examples but limits performance. Instead, we prepare PLMs for data- and parameter-efficient adaptation by learning to learn the difference between general and adapted PLMs. This difference is expressed in terms of model weights and sublayer structure through our proposed dynamic low-rank reparameterization and learned architecture controller. Experiments on few-shot dialogue completion, low-resource abstractive summarization, and multi-domain language modeling show improvements in adaptation time and performance over direct finetuning or preparation via domain-adaptive pretraining. Ablations show our task-adaptive reparameterization (TARP) and model search (TAMS) components individually improve on other parameter-efficient transfer like adapters and structure-learning methods like learned sparsification.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8907902240753174
+    },
+    {
+      "name": "Overfitting",
+      "score": 0.8337185382843018
+    },
+    {
+      "name": "Automatic summarization",
+      "score": 0.7565898299217224
+    },
+    {
+      "name": "Domain adaptation",
+      "score": 0.6576964855194092
+    },
+    {
+      "name": "Language model",
+      "score": 0.629733681678772
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5846334099769592
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.582567572593689
+    },
+    {
+      "name": "Adaptation (eye)",
+      "score": 0.56688392162323
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5213255286216736
+    },
+    {
+      "name": "Transfer of learning",
+      "score": 0.4667641818523407
+    },
+    {
+      "name": "Generalization",
+      "score": 0.4561634659767151
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.43747425079345703
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.16414254903793335
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,119 +1,198 @@
 {
-    "title": "Utilizing large language models for detecting hospital-acquired conditions: an empirical study on pulmonary embolism",
-    "url": "https://openalex.org/W4408591745",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4306233075",
-            "name": "Cheligeer Cheligeer",
-            "affiliations": [
-                "Alberta Health Services",
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2006565704",
-            "name": "Danielle A. Southern",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2060984669",
-            "name": "Jun Yan",
-            "affiliations": [
-                "Concordia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2148028513",
-            "name": "Guosong Wu",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1996250324",
-            "name": "Jie Pan",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097647933",
-            "name": "Seungwon Lee",
-            "affiliations": [
-                "Alberta Health Services",
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4320799572",
-            "name": "Elliot A. Martin",
-            "affiliations": [
-                "University of Calgary",
-                "Alberta Health Services"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2757992071",
-            "name": "Hamed Jafarpour",
-            "affiliations": [
-                "Concordia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1987441035",
-            "name": "Cathy A. Eastwood",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099398934",
-            "name": "Yong Zeng",
-            "affiliations": [
-                "Concordia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2281826614",
-            "name": "Hude Quan",
-            "affiliations": [
-                "Libin Cardiovascular Institute of Alberta",
-                "University of Calgary"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2283041611",
-        "https://openalex.org/W2072597369",
-        "https://openalex.org/W4390148007",
-        "https://openalex.org/W4388837965",
-        "https://openalex.org/W2050276969",
-        "https://openalex.org/W3016970010",
-        "https://openalex.org/W2886200927",
-        "https://openalex.org/W2261776294",
-        "https://openalex.org/W2888271319",
-        "https://openalex.org/W1966516148",
-        "https://openalex.org/W2966351171",
-        "https://openalex.org/W2912971066",
-        "https://openalex.org/W4385575760",
-        "https://openalex.org/W3023919040",
-        "https://openalex.org/W2166213950",
-        "https://openalex.org/W4394894160",
-        "https://openalex.org/W4302012063",
-        "https://openalex.org/W2151830509",
-        "https://openalex.org/W1986630556",
-        "https://openalex.org/W2948878747",
-        "https://openalex.org/W4404068267",
-        "https://openalex.org/W6776148200",
-        "https://openalex.org/W1584459549",
-        "https://openalex.org/W2563929214",
-        "https://openalex.org/W3156696144",
-        "https://openalex.org/W3102251128",
-        "https://openalex.org/W3016473712"
-    ],
-    "abstract": "Abstract Objectives Adverse event detection from Electronic Medical Records (EMRs) is challenging due to the low incidence of the event, variability in clinical documentation, and the complexity of data formats. Pulmonary embolism as an adverse event (PEAE) is particularly difficult to identify using existing approaches. This study aims to develop and evaluate a Large Language Model (LLM)-based framework for detecting PEAE from unstructured narrative data in EMRs. Materials and Methods We conducted a chart review of adult patients (aged 18-100) admitted to tertiary-care hospitals in Calgary, Alberta, Canada, between 2017-2022. We developed an LLM-based detection framework consisting of three modules: evidence extraction (implementing both keyword-based and semantic similarity-based filtering methods), discharge information extraction (focusing on six key clinical sections), and PEAE detection. Four open-source LLMs (Llama3, Mistral-7B, Gemma, and Phi-3) were evaluated using positive predictive value, sensitivity, specificity, and F1-score. Model performance for population-level surveillance was assessed at yearly, quarterly, and monthly granularities. Results The chart review included 10 066 patients, with 40 cases of PEAE identified (0.4% prevalence). All four LLMs demonstrated high sensitivity (87.5-100%) and specificity (94.9-98.9%) across different experimental conditions. Gemma achieved the highest F1-score (28.11%) using keyword-based retrieval with discharge summary inclusion, along with 98.4% specificity, 87.5% sensitivity, and 99.95% negative predictive value. Keyword-based filtering reduced the median chunks per patient from 789 to 310, while semantic filtering further reduced this to 9 chunks. Including discharge summaries improved performance metrics across most models. For population-level surveillance, all models showed strong correlation with actual PEAE trends at yearly granularity (r=0.92-0.99), with Llama3 achieving the highest correlation (0.988). Discussion The results of our method for PEAE detection using EMR notes demonstrate high sensitivity and specificity across all four tested LLMs, indicating strong performance in distinguishing PEAE from non-PEAE cases. However, the low incidence rate of PEAE contributed to a lower PPV. The keyword-based chunking approach consistently outperformed semantic similarity-based methods, achieving higher F1 scores and PPV, underscoring the importance of domain knowledge in text segmentation. Including discharge summaries further enhanced performance metrics. Our population-based analysis revealed better performance for yearly trends compared to monthly granularity, suggesting the framework's utility for long-term surveillance despite dataset imbalance. Error analysis identified contextual misinterpretation, terminology confusion, and preprocessing limitations as key challenges for future improvement. Conclusions Our proposed method demonstrates that LLMs can effectively detect PEAE from narrative EMRs with high sensitivity and specificity. While these models serve as effective screening tools to exclude non-PEAE cases, their lower PPV indicates they cannot be relied upon solely for definitive PEAE identification. Further chart review remains necessary for confirmation. Future work should focus on improving contextual understanding, medical terminology interpretation, and exploring advanced prompting techniques to enhance precision in adverse event detection from EMRs.",
-    "full_text": null
+  "title": "Utilizing large language models for detecting hospital-acquired conditions: an empirical study on pulmonary embolism",
+  "url": "https://openalex.org/W4408591745",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4306233075",
+      "name": "Cheligeer Cheligeer",
+      "affiliations": [
+        "Alberta Health Services",
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2006565704",
+      "name": "Danielle A. Southern",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2060984669",
+      "name": "Jun Yan",
+      "affiliations": [
+        "Concordia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2148028513",
+      "name": "Guosong Wu",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1996250324",
+      "name": "Jie Pan",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097647933",
+      "name": "Seungwon Lee",
+      "affiliations": [
+        "Alberta Health Services",
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4320799572",
+      "name": "Elliot A. Martin",
+      "affiliations": [
+        "University of Calgary",
+        "Alberta Health Services"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2757992071",
+      "name": "Hamed Jafarpour",
+      "affiliations": [
+        "Concordia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1987441035",
+      "name": "Cathy A. Eastwood",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099398934",
+      "name": "Yong Zeng",
+      "affiliations": [
+        "Concordia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2281826614",
+      "name": "Hude Quan",
+      "affiliations": [
+        "Libin Cardiovascular Institute of Alberta",
+        "University of Calgary"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2283041611",
+    "https://openalex.org/W2072597369",
+    "https://openalex.org/W4390148007",
+    "https://openalex.org/W4388837965",
+    "https://openalex.org/W2050276969",
+    "https://openalex.org/W3016970010",
+    "https://openalex.org/W2886200927",
+    "https://openalex.org/W2261776294",
+    "https://openalex.org/W2888271319",
+    "https://openalex.org/W1966516148",
+    "https://openalex.org/W2966351171",
+    "https://openalex.org/W2912971066",
+    "https://openalex.org/W4385575760",
+    "https://openalex.org/W3023919040",
+    "https://openalex.org/W2166213950",
+    "https://openalex.org/W4394894160",
+    "https://openalex.org/W4302012063",
+    "https://openalex.org/W2151830509",
+    "https://openalex.org/W1986630556",
+    "https://openalex.org/W2948878747",
+    "https://openalex.org/W4404068267",
+    "https://openalex.org/W6776148200",
+    "https://openalex.org/W1584459549",
+    "https://openalex.org/W2563929214",
+    "https://openalex.org/W3156696144",
+    "https://openalex.org/W3102251128",
+    "https://openalex.org/W3016473712"
+  ],
+  "abstract": "Abstract Objectives Adverse event detection from Electronic Medical Records (EMRs) is challenging due to the low incidence of the event, variability in clinical documentation, and the complexity of data formats. Pulmonary embolism as an adverse event (PEAE) is particularly difficult to identify using existing approaches. This study aims to develop and evaluate a Large Language Model (LLM)-based framework for detecting PEAE from unstructured narrative data in EMRs. Materials and Methods We conducted a chart review of adult patients (aged 18-100) admitted to tertiary-care hospitals in Calgary, Alberta, Canada, between 2017-2022. We developed an LLM-based detection framework consisting of three modules: evidence extraction (implementing both keyword-based and semantic similarity-based filtering methods), discharge information extraction (focusing on six key clinical sections), and PEAE detection. Four open-source LLMs (Llama3, Mistral-7B, Gemma, and Phi-3) were evaluated using positive predictive value, sensitivity, specificity, and F1-score. Model performance for population-level surveillance was assessed at yearly, quarterly, and monthly granularities. Results The chart review included 10 066 patients, with 40 cases of PEAE identified (0.4% prevalence). All four LLMs demonstrated high sensitivity (87.5-100%) and specificity (94.9-98.9%) across different experimental conditions. Gemma achieved the highest F1-score (28.11%) using keyword-based retrieval with discharge summary inclusion, along with 98.4% specificity, 87.5% sensitivity, and 99.95% negative predictive value. Keyword-based filtering reduced the median chunks per patient from 789 to 310, while semantic filtering further reduced this to 9 chunks. Including discharge summaries improved performance metrics across most models. For population-level surveillance, all models showed strong correlation with actual PEAE trends at yearly granularity (r=0.92-0.99), with Llama3 achieving the highest correlation (0.988). Discussion The results of our method for PEAE detection using EMR notes demonstrate high sensitivity and specificity across all four tested LLMs, indicating strong performance in distinguishing PEAE from non-PEAE cases. However, the low incidence rate of PEAE contributed to a lower PPV. The keyword-based chunking approach consistently outperformed semantic similarity-based methods, achieving higher F1 scores and PPV, underscoring the importance of domain knowledge in text segmentation. Including discharge summaries further enhanced performance metrics. Our population-based analysis revealed better performance for yearly trends compared to monthly granularity, suggesting the framework's utility for long-term surveillance despite dataset imbalance. Error analysis identified contextual misinterpretation, terminology confusion, and preprocessing limitations as key challenges for future improvement. Conclusions Our proposed method demonstrates that LLMs can effectively detect PEAE from narrative EMRs with high sensitivity and specificity. While these models serve as effective screening tools to exclude non-PEAE cases, their lower PPV indicates they cannot be relied upon solely for definitive PEAE identification. Further chart review remains necessary for confirmation. Future work should focus on improving contextual understanding, medical terminology interpretation, and exploring advanced prompting techniques to enhance precision in adverse event detection from EMRs.",
+  "full_text": null,
+  "topic": "Medicine",
+  "concepts": [
+    {
+      "name": "Medicine",
+      "score": 0.5690770745277405
+    },
+    {
+      "name": "Medical record",
+      "score": 0.5131264328956604
+    },
+    {
+      "name": "Population",
+      "score": 0.5036181807518005
+    },
+    {
+      "name": "Pulmonary embolism",
+      "score": 0.47643500566482544
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4495748281478882
+    },
+    {
+      "name": "Chart",
+      "score": 0.4344305992126465
+    },
+    {
+      "name": "Documentation",
+      "score": 0.4307117462158203
+    },
+    {
+      "name": "Data extraction",
+      "score": 0.4169183671474457
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40059179067611694
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3749661445617676
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3271663784980774
+    },
+    {
+      "name": "MEDLINE",
+      "score": 0.2869926691055298
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.2515089511871338
+    },
+    {
+      "name": "Statistics",
+      "score": 0.21107518672943115
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Environmental health",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

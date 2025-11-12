@@ -1,81 +1,144 @@
 {
-    "title": "Meme Analysis Using LLM-Based Contextual Information and U-Net Encapsulated Transformer",
-    "url": "https://openalex.org/W4400411491",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100256169",
-            "name": "Marvin John Ignacio",
-            "affiliations": [
-                "Sejong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101521045",
-            "name": "Thanh Tin Nguyen",
-            "affiliations": [
-                "Auburn University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103935927",
-            "name": "Hulin Jin",
-            "affiliations": [
-                "Anhui University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5064727471",
-            "name": "Yong-Guk Kim",
-            "affiliations": [
-                "Sejong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3115532187",
-        "https://openalex.org/W6851106153",
-        "https://openalex.org/W4225007492",
-        "https://openalex.org/W3114664593",
-        "https://openalex.org/W3113282227",
-        "https://openalex.org/W3118193270",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3115926261",
-        "https://openalex.org/W3116529957",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3116159721",
-        "https://openalex.org/W6811249650",
-        "https://openalex.org/W6849460097",
-        "https://openalex.org/W4382318603",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3113887605",
-        "https://openalex.org/W3115253639",
-        "https://openalex.org/W3114968970",
-        "https://openalex.org/W6849326727",
-        "https://openalex.org/W6849976536",
-        "https://openalex.org/W4386065596",
-        "https://openalex.org/W4394693390",
-        "https://openalex.org/W6849177959",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W6811340617",
-        "https://openalex.org/W6776148200",
-        "https://openalex.org/W6856584823",
-        "https://openalex.org/W6751512325",
-        "https://openalex.org/W4200120832",
-        "https://openalex.org/W4318718936",
-        "https://openalex.org/W4321277095",
-        "https://openalex.org/W4386793308",
-        "https://openalex.org/W4327991869",
-        "https://openalex.org/W4229005866",
-        "https://openalex.org/W4321010239",
-        "https://openalex.org/W4320813149",
-        "https://openalex.org/W4226250476",
-        "https://openalex.org/W2963452667"
-    ],
-    "abstract": "A meme is social media content with which the creator tries to convey a certain idea in public via the internet. Each meme consists of typically an image and supporting text. Its message can be humorous and inspiring, but hilarious and offensive often targeting a specific audience. To address the potential harm such memes can cause, Artificial Intelligence researchers have proposed solutions to classify a meme automatically according to the sentiment, emotion, and intensity felt by the users. Recent models for meme analysis often adopt the Transformer architecture, which is known to perform well but computationally expensive. The present study aims to introduce a novel method by providing (1) deep contextual information and (2) reducing resource utilization while keeping its efficiency. For the former, GPT-4 has been utilized to provide meaningful insights regarding the context behind the meme. For the latter, we extract Keyphrases and forward them to a U-net Encapsulated Transformer, called UET, to process the information. Extensive evaluation with ablation study using three standard meme datasets, i.e. Memotions, suggests that it outperforms state-of-the-art models on sentiment analysis, while it shows comparable performance on the emotion and intensity task. As the proposed model is more lightweight than a standard one and yet shows high performance, it provides new insights into meme analysis and could be useful for other Natural Language Processing tasks.",
-    "full_text": null
+  "title": "Meme Analysis Using LLM-Based Contextual Information and U-Net Encapsulated Transformer",
+  "url": "https://openalex.org/W4400411491",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100256169",
+      "name": "Marvin John Ignacio",
+      "affiliations": [
+        "Sejong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101521045",
+      "name": "Thanh Tin Nguyen",
+      "affiliations": [
+        "Auburn University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103935927",
+      "name": "Hulin Jin",
+      "affiliations": [
+        "Anhui University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5064727471",
+      "name": "Yong-Guk Kim",
+      "affiliations": [
+        "Sejong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3115532187",
+    "https://openalex.org/W6851106153",
+    "https://openalex.org/W4225007492",
+    "https://openalex.org/W3114664593",
+    "https://openalex.org/W3113282227",
+    "https://openalex.org/W3118193270",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3115926261",
+    "https://openalex.org/W3116529957",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3116159721",
+    "https://openalex.org/W6811249650",
+    "https://openalex.org/W6849460097",
+    "https://openalex.org/W4382318603",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3113887605",
+    "https://openalex.org/W3115253639",
+    "https://openalex.org/W3114968970",
+    "https://openalex.org/W6849326727",
+    "https://openalex.org/W6849976536",
+    "https://openalex.org/W4386065596",
+    "https://openalex.org/W4394693390",
+    "https://openalex.org/W6849177959",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W6811340617",
+    "https://openalex.org/W6776148200",
+    "https://openalex.org/W6856584823",
+    "https://openalex.org/W6751512325",
+    "https://openalex.org/W4200120832",
+    "https://openalex.org/W4318718936",
+    "https://openalex.org/W4321277095",
+    "https://openalex.org/W4386793308",
+    "https://openalex.org/W4327991869",
+    "https://openalex.org/W4229005866",
+    "https://openalex.org/W4321010239",
+    "https://openalex.org/W4320813149",
+    "https://openalex.org/W4226250476",
+    "https://openalex.org/W2963452667"
+  ],
+  "abstract": "A meme is social media content with which the creator tries to convey a certain idea in public via the internet. Each meme consists of typically an image and supporting text. Its message can be humorous and inspiring, but hilarious and offensive often targeting a specific audience. To address the potential harm such memes can cause, Artificial Intelligence researchers have proposed solutions to classify a meme automatically according to the sentiment, emotion, and intensity felt by the users. Recent models for meme analysis often adopt the Transformer architecture, which is known to perform well but computationally expensive. The present study aims to introduce a novel method by providing (1) deep contextual information and (2) reducing resource utilization while keeping its efficiency. For the former, GPT-4 has been utilized to provide meaningful insights regarding the context behind the meme. For the latter, we extract Keyphrases and forward them to a U-net Encapsulated Transformer, called UET, to process the information. Extensive evaluation with ablation study using three standard meme datasets, i.e. Memotions, suggests that it outperforms state-of-the-art models on sentiment analysis, while it shows comparable performance on the emotion and intensity task. As the proposed model is more lightweight than a standard one and yet shows high performance, it provides new insights into meme analysis and could be useful for other Natural Language Processing tasks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.858776330947876
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7127326726913452
+    },
+    {
+      "name": "Offensive",
+      "score": 0.6728560924530029
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.6329073905944824
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4909403622150421
+    },
+    {
+      "name": "The Internet",
+      "score": 0.4822598099708557
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.38139235973358154
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3579047620296478
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3374565839767456
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.20787397027015686
+    },
+    {
+      "name": "Operations research",
+      "score": 0.10426971316337585
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

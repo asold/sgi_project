@@ -1,136 +1,195 @@
 {
-    "title": "From Plane to Hierarchy: Deformable Transformer for Remote Sensing Image Captioning",
-    "url": "https://openalex.org/W4385864244",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4207179375",
-            "name": "Runyan Du",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2017713828",
-            "name": "Wei Cao",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Aerospace Information Research Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2121434895",
-            "name": "Wenkai Zhang",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Aerospace Information Research Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2160755021",
-            "name": "Guo Zhi",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117059228",
-            "name": "Xian Sun",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2554043840",
-            "name": "Shuoke Li",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2222940473",
-            "name": "Jihao Li",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6760223296",
-        "https://openalex.org/W6630875275",
-        "https://openalex.org/W3194015448",
-        "https://openalex.org/W3038038411",
-        "https://openalex.org/W4283360854",
-        "https://openalex.org/W3006487741",
-        "https://openalex.org/W2779054585",
-        "https://openalex.org/W2774965253",
-        "https://openalex.org/W6809415072",
-        "https://openalex.org/W3154766321",
-        "https://openalex.org/W4206111836",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W2963686907",
-        "https://openalex.org/W2790047899",
-        "https://openalex.org/W6682631176",
-        "https://openalex.org/W2133459682",
-        "https://openalex.org/W2506483933",
-        "https://openalex.org/W1956340063",
-        "https://openalex.org/W1980038761",
-        "https://openalex.org/W2086866337",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2592962403",
-        "https://openalex.org/W6639432524",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2131774270",
-        "https://openalex.org/W2510520237",
-        "https://openalex.org/W1895577753",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2946862972",
-        "https://openalex.org/W6751420435",
-        "https://openalex.org/W2061149158",
-        "https://openalex.org/W2963084599",
-        "https://openalex.org/W6739696289",
-        "https://openalex.org/W6637431447",
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W2088049833",
-        "https://openalex.org/W2603566245",
-        "https://openalex.org/W2911584214",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W3046260628",
-        "https://openalex.org/W3117344638",
-        "https://openalex.org/W2800782462",
-        "https://openalex.org/W4292968451",
-        "https://openalex.org/W2995904231",
-        "https://openalex.org/W3196922338",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3173767661",
-        "https://openalex.org/W2981165461",
-        "https://openalex.org/W2920981979",
-        "https://openalex.org/W2630837129",
-        "https://openalex.org/W2948210185",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2803187616",
-        "https://openalex.org/W4220716465",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W1889081078",
-        "https://openalex.org/W3100245404",
-        "https://openalex.org/W2148603752",
-        "https://openalex.org/W1514535095",
-        "https://openalex.org/W3097754216",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W1694858705",
-        "https://openalex.org/W3100650420",
-        "https://openalex.org/W2154652894",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "With the growth of remote sensing images, understanding image content automatically has attracted many researchers&#x0027; interests in deep learning for remote sensing image. Inspired from the natural image captioning, the model with convolutional neural network (CNN)-Recurrent neural network (RNN) as the backbone and supplemented by attention has been widely used in remote sensing image captioning. However, it is inefficient for the current attention layer to simultaneously mine hidden foreground from the background of remote sensing image and perform feature interactive learning. Meanwhile, the new mainstream language model has recently surpassed the traditional long short-term memory (LSTM) in sentence generation. For solving the above problems, in this article, we proposed a novel thought to make the flat remote sensing images stereoscopic by separating the foreground and background. Based on hierarchical image information, we designed a novel Deformable Transformer equipped with deformable scaled dot-product attention to learn multiscale feature from foreground and background through the powerful interactive learning ability. Evaluations are conducted on four classic remote sensing image captioning datasets. Compared with the state-of-the-art methods, our Transformer variant achieves higher captioning accuracy.",
-    "full_text": null
+  "title": "From Plane to Hierarchy: Deformable Transformer for Remote Sensing Image Captioning",
+  "url": "https://openalex.org/W4385864244",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4207179375",
+      "name": "Runyan Du",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2017713828",
+      "name": "Wei Cao",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Aerospace Information Research Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2121434895",
+      "name": "Wenkai Zhang",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Aerospace Information Research Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2160755021",
+      "name": "Guo Zhi",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117059228",
+      "name": "Xian Sun",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2554043840",
+      "name": "Shuoke Li",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2222940473",
+      "name": "Jihao Li",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6760223296",
+    "https://openalex.org/W6630875275",
+    "https://openalex.org/W3194015448",
+    "https://openalex.org/W3038038411",
+    "https://openalex.org/W4283360854",
+    "https://openalex.org/W3006487741",
+    "https://openalex.org/W2779054585",
+    "https://openalex.org/W2774965253",
+    "https://openalex.org/W6809415072",
+    "https://openalex.org/W3154766321",
+    "https://openalex.org/W4206111836",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W2963686907",
+    "https://openalex.org/W2790047899",
+    "https://openalex.org/W6682631176",
+    "https://openalex.org/W2133459682",
+    "https://openalex.org/W2506483933",
+    "https://openalex.org/W1956340063",
+    "https://openalex.org/W1980038761",
+    "https://openalex.org/W2086866337",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2592962403",
+    "https://openalex.org/W6639432524",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2131774270",
+    "https://openalex.org/W2510520237",
+    "https://openalex.org/W1895577753",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2946862972",
+    "https://openalex.org/W6751420435",
+    "https://openalex.org/W2061149158",
+    "https://openalex.org/W2963084599",
+    "https://openalex.org/W6739696289",
+    "https://openalex.org/W6637431447",
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W2088049833",
+    "https://openalex.org/W2603566245",
+    "https://openalex.org/W2911584214",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W3046260628",
+    "https://openalex.org/W3117344638",
+    "https://openalex.org/W2800782462",
+    "https://openalex.org/W4292968451",
+    "https://openalex.org/W2995904231",
+    "https://openalex.org/W3196922338",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3173767661",
+    "https://openalex.org/W2981165461",
+    "https://openalex.org/W2920981979",
+    "https://openalex.org/W2630837129",
+    "https://openalex.org/W2948210185",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2803187616",
+    "https://openalex.org/W4220716465",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W1889081078",
+    "https://openalex.org/W3100245404",
+    "https://openalex.org/W2148603752",
+    "https://openalex.org/W1514535095",
+    "https://openalex.org/W3097754216",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W1694858705",
+    "https://openalex.org/W3100650420",
+    "https://openalex.org/W2154652894",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "With the growth of remote sensing images, understanding image content automatically has attracted many researchers&#x0027; interests in deep learning for remote sensing image. Inspired from the natural image captioning, the model with convolutional neural network (CNN)-Recurrent neural network (RNN) as the backbone and supplemented by attention has been widely used in remote sensing image captioning. However, it is inefficient for the current attention layer to simultaneously mine hidden foreground from the background of remote sensing image and perform feature interactive learning. Meanwhile, the new mainstream language model has recently surpassed the traditional long short-term memory (LSTM) in sentence generation. For solving the above problems, in this article, we proposed a novel thought to make the flat remote sensing images stereoscopic by separating the foreground and background. Based on hierarchical image information, we designed a novel Deformable Transformer equipped with deformable scaled dot-product attention to learn multiscale feature from foreground and background through the powerful interactive learning ability. Evaluations are conducted on four classic remote sensing image captioning datasets. Compared with the state-of-the-art methods, our Transformer variant achieves higher captioning accuracy.",
+  "full_text": null,
+  "topic": "Closed captioning",
+  "concepts": [
+    {
+      "name": "Closed captioning",
+      "score": 0.9845364093780518
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8151231408119202
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6331019401550293
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6150325536727905
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4908469319343567
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.489227294921875
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4621921181678772
+    },
+    {
+      "name": "Sentence",
+      "score": 0.4443530738353729
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.408995121717453
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

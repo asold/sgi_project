@@ -1,91 +1,158 @@
 {
-    "title": "Open-Set Signal Recognition Based on Transformer and Wasserstein Distance",
-    "url": "https://openalex.org/W4319599718",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1506313323",
-            "name": "Wei Zhang",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097494764",
-            "name": "Da Huang",
-            "affiliations": [
-                "East China Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2127988146",
-            "name": "Zhou Minghui",
-            "affiliations": [
-                "East China Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117855148",
-            "name": "Jingran Lin",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2126578184",
-            "name": "Xiangfeng Wang",
-            "affiliations": [
-                "East China Normal University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2402669159",
-        "https://openalex.org/W2773170971",
-        "https://openalex.org/W3016147814",
-        "https://openalex.org/W3138656191",
-        "https://openalex.org/W3217009747",
-        "https://openalex.org/W4313472201",
-        "https://openalex.org/W2901114541",
-        "https://openalex.org/W2119880843",
-        "https://openalex.org/W2018459374",
-        "https://openalex.org/W1032927584",
-        "https://openalex.org/W2981749573",
-        "https://openalex.org/W2418213296",
-        "https://openalex.org/W2466114631",
-        "https://openalex.org/W2737669589",
-        "https://openalex.org/W2526075485",
-        "https://openalex.org/W2248269543",
-        "https://openalex.org/W2785496677",
-        "https://openalex.org/W572355794",
-        "https://openalex.org/W6694286045",
-        "https://openalex.org/W6765503408",
-        "https://openalex.org/W2963924212",
-        "https://openalex.org/W2735639773",
-        "https://openalex.org/W2904509905",
-        "https://openalex.org/W2973218493",
-        "https://openalex.org/W2787720882",
-        "https://openalex.org/W6791774990",
-        "https://openalex.org/W4214911013",
-        "https://openalex.org/W2272847350",
-        "https://openalex.org/W2884089434",
-        "https://openalex.org/W2893903145",
-        "https://openalex.org/W2968867107",
-        "https://openalex.org/W2889858242",
-        "https://openalex.org/W2921412127",
-        "https://openalex.org/W2953143151",
-        "https://openalex.org/W2736068844",
-        "https://openalex.org/W2736067536",
-        "https://openalex.org/W2895752198",
-        "https://openalex.org/W2963875483",
-        "https://openalex.org/W2962914604",
-        "https://openalex.org/W3176716813",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3203105104",
-        "https://openalex.org/W2520774990",
-        "https://openalex.org/W3134961575"
-    ],
-    "abstract": "Open-set signal recognition provides a new approach for verifying the robustness of models by introducing novel unknown signal classes into the model testing and breaking the conventional closed-set assumption, which has become very popular in real-world scenarios. In the present work, we propose an efficient open-set signal recognition algorithm, which contains three key sub-modules: the signal representation sub-module based on a vision transformer (ViT) structure, a set distance metric sub-module based on Wasserstein distance, and a class space compression sub-module based on reciprocal point separation and central loss. In this algorithm, the representing features of signals are established based on transformer-based neural networks, i.e., ViT, in order to extract global information about time series-related data. The employed reciprocal point is used in modeling the potential unknown space without using the corresponding samples, while the distance metric between different class spaces is mathematically modeled in terms of the Wasserstein distance instead of the classical Euclidean distance. Numerical experiments on different open-set signal recognition tasks show that the proposed algorithm can significantly improve the recognition efficiency in both known and unknown categories.",
-    "full_text": null
+  "title": "Open-Set Signal Recognition Based on Transformer and Wasserstein Distance",
+  "url": "https://openalex.org/W4319599718",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1506313323",
+      "name": "Wei Zhang",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097494764",
+      "name": "Da Huang",
+      "affiliations": [
+        "East China Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2127988146",
+      "name": "Zhou Minghui",
+      "affiliations": [
+        "East China Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117855148",
+      "name": "Jingran Lin",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2126578184",
+      "name": "Xiangfeng Wang",
+      "affiliations": [
+        "East China Normal University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2402669159",
+    "https://openalex.org/W2773170971",
+    "https://openalex.org/W3016147814",
+    "https://openalex.org/W3138656191",
+    "https://openalex.org/W3217009747",
+    "https://openalex.org/W4313472201",
+    "https://openalex.org/W2901114541",
+    "https://openalex.org/W2119880843",
+    "https://openalex.org/W2018459374",
+    "https://openalex.org/W1032927584",
+    "https://openalex.org/W2981749573",
+    "https://openalex.org/W2418213296",
+    "https://openalex.org/W2466114631",
+    "https://openalex.org/W2737669589",
+    "https://openalex.org/W2526075485",
+    "https://openalex.org/W2248269543",
+    "https://openalex.org/W2785496677",
+    "https://openalex.org/W572355794",
+    "https://openalex.org/W6694286045",
+    "https://openalex.org/W6765503408",
+    "https://openalex.org/W2963924212",
+    "https://openalex.org/W2735639773",
+    "https://openalex.org/W2904509905",
+    "https://openalex.org/W2973218493",
+    "https://openalex.org/W2787720882",
+    "https://openalex.org/W6791774990",
+    "https://openalex.org/W4214911013",
+    "https://openalex.org/W2272847350",
+    "https://openalex.org/W2884089434",
+    "https://openalex.org/W2893903145",
+    "https://openalex.org/W2968867107",
+    "https://openalex.org/W2889858242",
+    "https://openalex.org/W2921412127",
+    "https://openalex.org/W2953143151",
+    "https://openalex.org/W2736068844",
+    "https://openalex.org/W2736067536",
+    "https://openalex.org/W2895752198",
+    "https://openalex.org/W2963875483",
+    "https://openalex.org/W2962914604",
+    "https://openalex.org/W3176716813",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3203105104",
+    "https://openalex.org/W2520774990",
+    "https://openalex.org/W3134961575"
+  ],
+  "abstract": "Open-set signal recognition provides a new approach for verifying the robustness of models by introducing novel unknown signal classes into the model testing and breaking the conventional closed-set assumption, which has become very popular in real-world scenarios. In the present work, we propose an efficient open-set signal recognition algorithm, which contains three key sub-modules: the signal representation sub-module based on a vision transformer (ViT) structure, a set distance metric sub-module based on Wasserstein distance, and a class space compression sub-module based on reciprocal point separation and central loss. In this algorithm, the representing features of signals are established based on transformer-based neural networks, i.e., ViT, in order to extract global information about time series-related data. The employed reciprocal point is used in modeling the potential unknown space without using the corresponding samples, while the distance metric between different class spaces is mathematically modeled in terms of the Wasserstein distance instead of the classical Euclidean distance. Numerical experiments on different open-set signal recognition tasks show that the proposed algorithm can significantly improve the recognition efficiency in both known and unknown categories.",
+  "full_text": null,
+  "topic": "Euclidean distance",
+  "concepts": [
+    {
+      "name": "Euclidean distance",
+      "score": 0.6517740488052368
+    },
+    {
+      "name": "Open set",
+      "score": 0.5592293739318848
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.499622106552124
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4982795715332031
+    },
+    {
+      "name": "Transformer",
+      "score": 0.48444628715515137
+    },
+    {
+      "name": "Computer science",
+      "score": 0.46837788820266724
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4435290992259979
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.43675506114959717
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4253942370414734
+    },
+    {
+      "name": "Discrete mathematics",
+      "score": 0.10616090893745422
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

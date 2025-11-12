@@ -1,81 +1,148 @@
 {
-    "title": "Language Modeling with Reduced Densities",
-    "url": "https://openalex.org/W3042073375",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4214381701",
-            "name": "Tai-Danae Bradley",
-            "affiliations": [
-                "Initial Teaching Alphabet Foundation"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2477607953",
-            "name": "Yiannis Vlassopoulos",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4251799386",
-        "https://openalex.org/W2293506269",
-        "https://openalex.org/W2922094240",
-        "https://openalex.org/W2963976006",
-        "https://openalex.org/W2980319985",
-        "https://openalex.org/W2756668352",
-        "https://openalex.org/W1549334072",
-        "https://openalex.org/W1852909287",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2889786171",
-        "https://openalex.org/W2002485180",
-        "https://openalex.org/W1866230956",
-        "https://openalex.org/W2794727009",
-        "https://openalex.org/W3015983231",
-        "https://openalex.org/W1507692549",
-        "https://openalex.org/W2020879982",
-        "https://openalex.org/W4233669187",
-        "https://openalex.org/W3102543255",
-        "https://openalex.org/W2937900489",
-        "https://openalex.org/W2335622251",
-        "https://openalex.org/W3103230196",
-        "https://openalex.org/W3037231279",
-        "https://openalex.org/W2033368244",
-        "https://openalex.org/W2904511170",
-        "https://openalex.org/W1993482030",
-        "https://openalex.org/W2963099229",
-        "https://openalex.org/W3161721222",
-        "https://openalex.org/W2122816100",
-        "https://openalex.org/W2213717825",
-        "https://openalex.org/W2160416736",
-        "https://openalex.org/W2396770278",
-        "https://openalex.org/W2917217327",
-        "https://openalex.org/W2784311771",
-        "https://openalex.org/W2889425359",
-        "https://openalex.org/W2905052854",
-        "https://openalex.org/W3101885140",
-        "https://openalex.org/W3103945605",
-        "https://openalex.org/W2766674064",
-        "https://openalex.org/W3040869941",
-        "https://openalex.org/W3103713775",
-        "https://openalex.org/W2767307735",
-        "https://openalex.org/W2962813108",
-        "https://openalex.org/W3104263599",
-        "https://openalex.org/W3015974472",
-        "https://openalex.org/W3099321628",
-        "https://openalex.org/W2922393180",
-        "https://openalex.org/W1560285462",
-        "https://openalex.org/W3158200207",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W3081468433",
-        "https://openalex.org/W2329506819",
-        "https://openalex.org/W3032992556",
-        "https://openalex.org/W3016208849",
-        "https://openalex.org/W3001908380",
-        "https://openalex.org/W2740579034",
-        "https://openalex.org/W2962845550",
-        "https://openalex.org/W3001279689",
-        "https://openalex.org/W2995811874"
-    ],
-    "abstract": "This work originates from the observation that today's state-of-the-art statistical language models are impressive not only for their performance, but also---and quite crucially---because they are built entirely from correlations in unstructured text data. The latter observation prompts a fundamental question that lies at the heart of this paper: What mathematical structure exists in unstructured text data? We put forth enriched category theory as a natural answer. We show that sequences of symbols from a finite alphabet, such as those found in a corpus of text, form a category enriched over probabilities. We then address a second fundamental question: How can this information be stored and modeled in a way that preserves the categorical structure? We answer this by constructing a functor from our enriched category of text to a particular enriched category of reduced density operators. The latter leverages the Loewner order on positive semidefinite operators, which can further be interpreted as a toy example of entailment.",
-    "full_text": null
+  "title": "Language Modeling with Reduced Densities",
+  "url": "https://openalex.org/W3042073375",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4214381701",
+      "name": "Tai-Danae Bradley",
+      "affiliations": [
+        "Initial Teaching Alphabet Foundation"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2477607953",
+      "name": "Yiannis Vlassopoulos",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4251799386",
+    "https://openalex.org/W2293506269",
+    "https://openalex.org/W2922094240",
+    "https://openalex.org/W2963976006",
+    "https://openalex.org/W2980319985",
+    "https://openalex.org/W2756668352",
+    "https://openalex.org/W1549334072",
+    "https://openalex.org/W1852909287",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2889786171",
+    "https://openalex.org/W2002485180",
+    "https://openalex.org/W1866230956",
+    "https://openalex.org/W2794727009",
+    "https://openalex.org/W3015983231",
+    "https://openalex.org/W1507692549",
+    "https://openalex.org/W2020879982",
+    "https://openalex.org/W4233669187",
+    "https://openalex.org/W3102543255",
+    "https://openalex.org/W2937900489",
+    "https://openalex.org/W2335622251",
+    "https://openalex.org/W3103230196",
+    "https://openalex.org/W3037231279",
+    "https://openalex.org/W2033368244",
+    "https://openalex.org/W2904511170",
+    "https://openalex.org/W1993482030",
+    "https://openalex.org/W2963099229",
+    "https://openalex.org/W3161721222",
+    "https://openalex.org/W2122816100",
+    "https://openalex.org/W2213717825",
+    "https://openalex.org/W2160416736",
+    "https://openalex.org/W2396770278",
+    "https://openalex.org/W2917217327",
+    "https://openalex.org/W2784311771",
+    "https://openalex.org/W2889425359",
+    "https://openalex.org/W2905052854",
+    "https://openalex.org/W3101885140",
+    "https://openalex.org/W3103945605",
+    "https://openalex.org/W2766674064",
+    "https://openalex.org/W3040869941",
+    "https://openalex.org/W3103713775",
+    "https://openalex.org/W2767307735",
+    "https://openalex.org/W2962813108",
+    "https://openalex.org/W3104263599",
+    "https://openalex.org/W3015974472",
+    "https://openalex.org/W3099321628",
+    "https://openalex.org/W2922393180",
+    "https://openalex.org/W1560285462",
+    "https://openalex.org/W3158200207",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W3081468433",
+    "https://openalex.org/W2329506819",
+    "https://openalex.org/W3032992556",
+    "https://openalex.org/W3016208849",
+    "https://openalex.org/W3001908380",
+    "https://openalex.org/W2740579034",
+    "https://openalex.org/W2962845550",
+    "https://openalex.org/W3001279689",
+    "https://openalex.org/W2995811874"
+  ],
+  "abstract": "This work originates from the observation that today's state-of-the-art statistical language models are impressive not only for their performance, but also---and quite crucially---because they are built entirely from correlations in unstructured text data. The latter observation prompts a fundamental question that lies at the heart of this paper: What mathematical structure exists in unstructured text data? We put forth enriched category theory as a natural answer. We show that sequences of symbols from a finite alphabet, such as those found in a corpus of text, form a category enriched over probabilities. We then address a second fundamental question: How can this information be stored and modeled in a way that preserves the categorical structure? We answer this by constructing a functor from our enriched category of text to a particular enriched category of reduced density operators. The latter leverages the Loewner order on positive semidefinite operators, which can further be interpreted as a toy example of entailment.",
+  "full_text": null,
+  "topic": "Simple (philosophy)",
+  "concepts": [
+    {
+      "name": "Simple (philosophy)",
+      "score": 0.7130512595176697
+    },
+    {
+      "name": "Meaning (existential)",
+      "score": 0.6271824240684509
+    },
+    {
+      "name": "Functor",
+      "score": 0.5877820253372192
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4650980234146118
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4441668391227722
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.44309675693511963
+    },
+    {
+      "name": "Order (exchange)",
+      "score": 0.4298904538154602
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.40467700362205505
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.37174227833747864
+    },
+    {
+      "name": "Pure mathematics",
+      "score": 0.25599268078804016
+    },
+    {
+      "name": "Psychology",
+      "score": 0.14248690009117126
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.060322195291519165
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Finance",
+      "score": 0.0
+    },
+    {
+      "name": "Psychotherapist",
+      "score": 0.0
+    }
+  ]
 }

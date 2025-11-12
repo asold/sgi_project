@@ -1,62 +1,125 @@
 {
-    "title": "Distilling Monolingual Models from Large Multilingual Transformers",
-    "url": "https://openalex.org/W4321377225",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3024898845",
-            "name": "Pranaydeep Singh",
-            "affiliations": [
-                "Ghent University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A607836863",
-            "name": "Orphée de Clercq",
-            "affiliations": [
-                "Ghent University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141599409",
-            "name": "Els Lefever",
-            "affiliations": [
-                "Ghent University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3035390927",
-        "https://openalex.org/W2986154550",
-        "https://openalex.org/W3105220303",
-        "https://openalex.org/W3169483174",
-        "https://openalex.org/W3175898847",
-        "https://openalex.org/W3035579820",
-        "https://openalex.org/W7025513385",
-        "https://openalex.org/W2294370754",
-        "https://openalex.org/W1602122992",
-        "https://openalex.org/W2968483100",
-        "https://openalex.org/W2889796598",
-        "https://openalex.org/W4385573813",
-        "https://openalex.org/W3035317912",
-        "https://openalex.org/W2970454332",
-        "https://openalex.org/W3105966348",
-        "https://openalex.org/W2923014074",
-        "https://openalex.org/W3212651325",
-        "https://openalex.org/W3103490574",
-        "https://openalex.org/W3035547806",
-        "https://openalex.org/W6763687114",
-        "https://openalex.org/W3038047279",
-        "https://openalex.org/W2986015886",
-        "https://openalex.org/W2880029892",
-        "https://openalex.org/W6763999555",
-        "https://openalex.org/W3207937903",
-        "https://openalex.org/W3105234097",
-        "https://openalex.org/W3034457371",
-        "https://openalex.org/W3103187652",
-        "https://openalex.org/W2896457183"
-    ],
-    "abstract": "Although language modeling has been trending upwards steadily, models available for low-resourced languages are limited to large multilingual models such as mBERT and XLM-RoBERTa, which come with significant overheads for deployment vis-à-vis their model size, inference speeds, etc. We attempt to tackle this problem by proposing a novel methodology to apply knowledge distillation techniques to filter language-specific information from a large multilingual model into a small, fast monolingual model that can often outperform the teacher model. We demonstrate the viability of this methodology on two downstream tasks each for six languages. We further dive into the possible modifications to the basic setup for low-resourced languages by exploring ideas to tune the final vocabulary of the distilled models. Lastly, we perform a detailed ablation study to understand the different components of the setup better and find out what works best for the two under-resourced languages, Swahili and Slovene.",
-    "full_text": null
+  "title": "Distilling Monolingual Models from Large Multilingual Transformers",
+  "url": "https://openalex.org/W4321377225",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3024898845",
+      "name": "Pranaydeep Singh",
+      "affiliations": [
+        "Ghent University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A607836863",
+      "name": "Orphée de Clercq",
+      "affiliations": [
+        "Ghent University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141599409",
+      "name": "Els Lefever",
+      "affiliations": [
+        "Ghent University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3035390927",
+    "https://openalex.org/W2986154550",
+    "https://openalex.org/W3105220303",
+    "https://openalex.org/W3169483174",
+    "https://openalex.org/W3175898847",
+    "https://openalex.org/W3035579820",
+    "https://openalex.org/W7025513385",
+    "https://openalex.org/W2294370754",
+    "https://openalex.org/W1602122992",
+    "https://openalex.org/W2968483100",
+    "https://openalex.org/W2889796598",
+    "https://openalex.org/W4385573813",
+    "https://openalex.org/W3035317912",
+    "https://openalex.org/W2970454332",
+    "https://openalex.org/W3105966348",
+    "https://openalex.org/W2923014074",
+    "https://openalex.org/W3212651325",
+    "https://openalex.org/W3103490574",
+    "https://openalex.org/W3035547806",
+    "https://openalex.org/W6763687114",
+    "https://openalex.org/W3038047279",
+    "https://openalex.org/W2986015886",
+    "https://openalex.org/W2880029892",
+    "https://openalex.org/W6763999555",
+    "https://openalex.org/W3207937903",
+    "https://openalex.org/W3105234097",
+    "https://openalex.org/W3034457371",
+    "https://openalex.org/W3103187652",
+    "https://openalex.org/W2896457183"
+  ],
+  "abstract": "Although language modeling has been trending upwards steadily, models available for low-resourced languages are limited to large multilingual models such as mBERT and XLM-RoBERTa, which come with significant overheads for deployment vis-à-vis their model size, inference speeds, etc. We attempt to tackle this problem by proposing a novel methodology to apply knowledge distillation techniques to filter language-specific information from a large multilingual model into a small, fast monolingual model that can often outperform the teacher model. We demonstrate the viability of this methodology on two downstream tasks each for six languages. We further dive into the possible modifications to the basic setup for low-resourced languages by exploring ideas to tune the final vocabulary of the distilled models. Lastly, we perform a detailed ablation study to understand the different components of the setup better and find out what works best for the two under-resourced languages, Swahili and Slovene.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8083417415618896
+    },
+    {
+      "name": "Inference",
+      "score": 0.6161342859268188
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5647643208503723
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5149165391921997
+    },
+    {
+      "name": "Language model",
+      "score": 0.5034546256065369
+    },
+    {
+      "name": "Software deployment",
+      "score": 0.4942181408405304
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4798516631126404
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.4375329315662384
+    },
+    {
+      "name": "Multilingualism",
+      "score": 0.4153205156326294
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.19722965359687805
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.18678998947143555
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09069758653640747
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

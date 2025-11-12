@@ -1,112 +1,171 @@
 {
-    "title": "BiTSRS: A Bi-Decoder Transformer Segmentor for High-Spatial-Resolution Remote Sensing Images",
-    "url": "https://openalex.org/W4319083665",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100743965",
-            "name": "Yuheng Liu",
-            "affiliations": [
-                "Northwestern Polytechnical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100376972",
-            "name": "Yifan Zhang",
-            "affiliations": [
-                "Northwestern Polytechnical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100423500",
-            "name": "Ye Wang",
-            "affiliations": [
-                "Northwestern Polytechnical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5067207818",
-            "name": "Shaohui Mei",
-            "affiliations": [
-                "Northwestern Polytechnical University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2902190145",
-        "https://openalex.org/W2480078828",
-        "https://openalex.org/W3023329043",
-        "https://openalex.org/W3035989822",
-        "https://openalex.org/W4200174151",
-        "https://openalex.org/W3033361357",
-        "https://openalex.org/W4221112472",
-        "https://openalex.org/W2991488782",
-        "https://openalex.org/W4226411967",
-        "https://openalex.org/W6767071366",
-        "https://openalex.org/W3045642835",
-        "https://openalex.org/W3027542479",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W4210333049",
-        "https://openalex.org/W4220853886",
-        "https://openalex.org/W4283760989",
-        "https://openalex.org/W4212897988",
-        "https://openalex.org/W2613718673",
-        "https://openalex.org/W2167510172",
-        "https://openalex.org/W2022508996",
-        "https://openalex.org/W1842610785",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2794948653",
-        "https://openalex.org/W2793268137",
-        "https://openalex.org/W2892096486",
-        "https://openalex.org/W3143984685",
-        "https://openalex.org/W2995766874",
-        "https://openalex.org/W4281756397",
-        "https://openalex.org/W4292794017",
-        "https://openalex.org/W3206222148",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W3175515048",
-        "https://openalex.org/W6790690058",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W6842931160",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4312560592",
-        "https://openalex.org/W3207918547",
-        "https://openalex.org/W3217153199",
-        "https://openalex.org/W4313032421",
-        "https://openalex.org/W3202923600",
-        "https://openalex.org/W6805641521",
-        "https://openalex.org/W3200870516",
-        "https://openalex.org/W2884822772",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W3091811842",
-        "https://openalex.org/W2963378109",
-        "https://openalex.org/W3034427230",
-        "https://openalex.org/W3103092912",
-        "https://openalex.org/W3100006985",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W4214893857",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W4226013274",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2601564443",
-        "https://openalex.org/W2551751523",
-        "https://openalex.org/W3018169007",
-        "https://openalex.org/W2995059005",
-        "https://openalex.org/W4283450732",
-        "https://openalex.org/W3133696297",
-        "https://openalex.org/W3102850314",
-        "https://openalex.org/W3014641072",
-        "https://openalex.org/W4296339430",
-        "https://openalex.org/W4205365435",
-        "https://openalex.org/W3211490618",
-        "https://openalex.org/W3105698493"
-    ],
-    "abstract": "Semantic segmentation of high-spatial-resolution (HSR) remote sensing (RS) images has been extensively studied, and most of the existing methods are based on convolutional neural network (CNN) models. However, the CNN is regarded to have less power in global representation modeling. In the past few years, methods using transformer have attracted increasing attention and generate improved results in semantic segmentation of natural images, owing to their powerful ability in global information acquisition. Nevertheless, these transformer-based methods exhibit limited performance in semantic segmentation of RS images, probably because of the lack of comprehensive understanding in the feature decoding process. In this paper, a novel transformer-based model named the bi-decoder transformer segmentor for remote sensing (BiTSRS) is proposed, aiming at alleviating the problem of flexible feature decoding, through a bi-decoder design for semantic segmentation of RS images. In the proposed BiTSRS, the Swin transformer is adopted as encoder to take both global and local representations into consideration, and a unique design module (ITM) is designed to deal with the limitation of input size for Swin transformer. Furthermore, BiTSRS adopts a bi-decoder structure consisting of a Dilated-Uper decoder and a fully deformable convolutional network (FDCN) module embedded with focal loss, with which it is capable of decoding a wide range of features and local detail deformations. Both ablation experiments and comparison experiments were conducted on three representative RS images datasets. The ablation analysis demonstrates the contributions of specifically designed modules in the proposed BiTSRS to performance improvement. The comparison experimental results illustrate that the proposed BiTSRS clearly outperforms some state-of-the-art semantic segmentation methods.",
-    "full_text": null
+  "title": "BiTSRS: A Bi-Decoder Transformer Segmentor for High-Spatial-Resolution Remote Sensing Images",
+  "url": "https://openalex.org/W4319083665",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100743965",
+      "name": "Yuheng Liu",
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100376972",
+      "name": "Yifan Zhang",
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100423500",
+      "name": "Ye Wang",
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5067207818",
+      "name": "Shaohui Mei",
+      "affiliations": [
+        "Northwestern Polytechnical University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2902190145",
+    "https://openalex.org/W2480078828",
+    "https://openalex.org/W3023329043",
+    "https://openalex.org/W3035989822",
+    "https://openalex.org/W4200174151",
+    "https://openalex.org/W3033361357",
+    "https://openalex.org/W4221112472",
+    "https://openalex.org/W2991488782",
+    "https://openalex.org/W4226411967",
+    "https://openalex.org/W6767071366",
+    "https://openalex.org/W3045642835",
+    "https://openalex.org/W3027542479",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W4210333049",
+    "https://openalex.org/W4220853886",
+    "https://openalex.org/W4283760989",
+    "https://openalex.org/W4212897988",
+    "https://openalex.org/W2613718673",
+    "https://openalex.org/W2167510172",
+    "https://openalex.org/W2022508996",
+    "https://openalex.org/W1842610785",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2794948653",
+    "https://openalex.org/W2793268137",
+    "https://openalex.org/W2892096486",
+    "https://openalex.org/W3143984685",
+    "https://openalex.org/W2995766874",
+    "https://openalex.org/W4281756397",
+    "https://openalex.org/W4292794017",
+    "https://openalex.org/W3206222148",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W3175515048",
+    "https://openalex.org/W6790690058",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W6842931160",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4312560592",
+    "https://openalex.org/W3207918547",
+    "https://openalex.org/W3217153199",
+    "https://openalex.org/W4313032421",
+    "https://openalex.org/W3202923600",
+    "https://openalex.org/W6805641521",
+    "https://openalex.org/W3200870516",
+    "https://openalex.org/W2884822772",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W3091811842",
+    "https://openalex.org/W2963378109",
+    "https://openalex.org/W3034427230",
+    "https://openalex.org/W3103092912",
+    "https://openalex.org/W3100006985",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W4214893857",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W4226013274",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2601564443",
+    "https://openalex.org/W2551751523",
+    "https://openalex.org/W3018169007",
+    "https://openalex.org/W2995059005",
+    "https://openalex.org/W4283450732",
+    "https://openalex.org/W3133696297",
+    "https://openalex.org/W3102850314",
+    "https://openalex.org/W3014641072",
+    "https://openalex.org/W4296339430",
+    "https://openalex.org/W4205365435",
+    "https://openalex.org/W3211490618",
+    "https://openalex.org/W3105698493"
+  ],
+  "abstract": "Semantic segmentation of high-spatial-resolution (HSR) remote sensing (RS) images has been extensively studied, and most of the existing methods are based on convolutional neural network (CNN) models. However, the CNN is regarded to have less power in global representation modeling. In the past few years, methods using transformer have attracted increasing attention and generate improved results in semantic segmentation of natural images, owing to their powerful ability in global information acquisition. Nevertheless, these transformer-based methods exhibit limited performance in semantic segmentation of RS images, probably because of the lack of comprehensive understanding in the feature decoding process. In this paper, a novel transformer-based model named the bi-decoder transformer segmentor for remote sensing (BiTSRS) is proposed, aiming at alleviating the problem of flexible feature decoding, through a bi-decoder design for semantic segmentation of RS images. In the proposed BiTSRS, the Swin transformer is adopted as encoder to take both global and local representations into consideration, and a unique design module (ITM) is designed to deal with the limitation of input size for Swin transformer. Furthermore, BiTSRS adopts a bi-decoder structure consisting of a Dilated-Uper decoder and a fully deformable convolutional network (FDCN) module embedded with focal loss, with which it is capable of decoding a wide range of features and local detail deformations. Both ablation experiments and comparison experiments were conducted on three representative RS images datasets. The ablation analysis demonstrates the contributions of specifically designed modules in the proposed BiTSRS to performance improvement. The comparison experimental results illustrate that the proposed BiTSRS clearly outperforms some state-of-the-art semantic segmentation methods.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.823884129524231
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6796354651451111
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6249811053276062
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6122222542762756
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.6100755929946899
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5526542663574219
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.515726625919342
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4045674204826355
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.36460810899734497
+    },
+    {
+      "name": "Voltage",
+      "score": 0.1051320731639862
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.1028532087802887
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07318231463432312
+    },
+    {
+      "name": "Engineering",
+      "score": 0.06558513641357422
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

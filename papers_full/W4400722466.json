@@ -1,96 +1,159 @@
 {
-    "title": "A Novel Mamba Architecture with a Semantic Transformer for Efficient Real-Time Remote Sensing Semantic Segmentation",
-    "url": "https://openalex.org/W4400722466",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1979593781",
-            "name": "Hao Ding",
-            "affiliations": [
-                "Linyi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2077889478",
-            "name": "Bo Xia",
-            "affiliations": [
-                "Linyi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2121654511",
-            "name": "Weilin Liu",
-            "affiliations": [
-                "Linyi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2420303053",
-            "name": "Zekai Zhang",
-            "affiliations": [
-                "Shandong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120609961",
-            "name": "Jinglin Zhang",
-            "affiliations": [
-                "Shandong University",
-                "Jinan Institute of Quantum Technology",
-                "Linyi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106523734",
-            "name": "Xing Wang",
-            "affiliations": [
-                "Linyi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104162230",
-            "name": "Sen Xu",
-            "affiliations": [
-                "Yancheng Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3014372673",
-        "https://openalex.org/W3045585619",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2552440277",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2886934227",
-        "https://openalex.org/W3196904463",
-        "https://openalex.org/W6856747243",
-        "https://openalex.org/W4308720495",
-        "https://openalex.org/W4283450732",
-        "https://openalex.org/W4386076267",
-        "https://openalex.org/W6860329493",
-        "https://openalex.org/W4399154429",
-        "https://openalex.org/W4400448280",
-        "https://openalex.org/W4399618753",
-        "https://openalex.org/W4308090264",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W4281763314",
-        "https://openalex.org/W4214524539",
-        "https://openalex.org/W4386047745",
-        "https://openalex.org/W2962914239",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W6861557523",
-        "https://openalex.org/W2990371274",
-        "https://openalex.org/W3169512402",
-        "https://openalex.org/W2962858109",
-        "https://openalex.org/W4386536452",
-        "https://openalex.org/W4393159321",
-        "https://openalex.org/W4391878073",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W3211490618"
-    ],
-    "abstract": "Real-time remote sensing segmentation technology is crucial for unmanned aerial vehicles (UAVs) in battlefield surveillance, land characterization observation, earthquake disaster assessment, etc., and can significantly enhance the application value of UAVs in military and civilian fields. To realize this potential, it is essential to develop real-time semantic segmentation methods that can be applied to resource-limited platforms, such as edge devices. The majority of mainstream real-time semantic segmentation methods rely on convolutional neural networks (CNNs) and transformers. However, CNNs cannot effectively capture long-range dependencies, while transformers have high computational complexity. This paper proposes a novel remote sensing Mamba architecture for real-time segmentation tasks in remote sensing, named RTMamba. Specifically, the backbone utilizes a Visual State-Space (VSS) block to extract deep features and maintains linear computational complexity, thereby capturing long-range contextual information. Additionally, a novel Inverted Triangle Pyramid Pooling (ITP) module is incorporated into the decoder. The ITP module can effectively filter redundant feature information and enhance the perception of objects and their boundaries in remote sensing images. Extensive experiments were conducted on three challenging aerial remote sensing segmentation benchmarks, including Vaihingen, Potsdam, and LoveDA. The results show that RTMamba achieves competitive performance advantages in terms of segmentation accuracy and inference speed compared to state-of-the-art CNN and transformer methods. To further validate the deployment potential of the model on embedded devices with limited resources, such as UAVs, we conducted tests on the Jetson AGX Orin edge device. The experimental results demonstrate that RTMamba achieves impressive real-time segmentation performance.",
-    "full_text": null
+  "title": "A Novel Mamba Architecture with a Semantic Transformer for Efficient Real-Time Remote Sensing Semantic Segmentation",
+  "url": "https://openalex.org/W4400722466",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1979593781",
+      "name": "Hao Ding",
+      "affiliations": [
+        "Linyi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2077889478",
+      "name": "Bo Xia",
+      "affiliations": [
+        "Linyi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2121654511",
+      "name": "Weilin Liu",
+      "affiliations": [
+        "Linyi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2420303053",
+      "name": "Zekai Zhang",
+      "affiliations": [
+        "Shandong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120609961",
+      "name": "Jinglin Zhang",
+      "affiliations": [
+        "Shandong University",
+        "Jinan Institute of Quantum Technology",
+        "Linyi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106523734",
+      "name": "Xing Wang",
+      "affiliations": [
+        "Linyi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104162230",
+      "name": "Sen Xu",
+      "affiliations": [
+        "Yancheng Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3014372673",
+    "https://openalex.org/W3045585619",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2552440277",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2886934227",
+    "https://openalex.org/W3196904463",
+    "https://openalex.org/W6856747243",
+    "https://openalex.org/W4308720495",
+    "https://openalex.org/W4283450732",
+    "https://openalex.org/W4386076267",
+    "https://openalex.org/W6860329493",
+    "https://openalex.org/W4399154429",
+    "https://openalex.org/W4400448280",
+    "https://openalex.org/W4399618753",
+    "https://openalex.org/W4308090264",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W4281763314",
+    "https://openalex.org/W4214524539",
+    "https://openalex.org/W4386047745",
+    "https://openalex.org/W2962914239",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W6861557523",
+    "https://openalex.org/W2990371274",
+    "https://openalex.org/W3169512402",
+    "https://openalex.org/W2962858109",
+    "https://openalex.org/W4386536452",
+    "https://openalex.org/W4393159321",
+    "https://openalex.org/W4391878073",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W3211490618"
+  ],
+  "abstract": "Real-time remote sensing segmentation technology is crucial for unmanned aerial vehicles (UAVs) in battlefield surveillance, land characterization observation, earthquake disaster assessment, etc., and can significantly enhance the application value of UAVs in military and civilian fields. To realize this potential, it is essential to develop real-time semantic segmentation methods that can be applied to resource-limited platforms, such as edge devices. The majority of mainstream real-time semantic segmentation methods rely on convolutional neural networks (CNNs) and transformers. However, CNNs cannot effectively capture long-range dependencies, while transformers have high computational complexity. This paper proposes a novel remote sensing Mamba architecture for real-time segmentation tasks in remote sensing, named RTMamba. Specifically, the backbone utilizes a Visual State-Space (VSS) block to extract deep features and maintains linear computational complexity, thereby capturing long-range contextual information. Additionally, a novel Inverted Triangle Pyramid Pooling (ITP) module is incorporated into the decoder. The ITP module can effectively filter redundant feature information and enhance the perception of objects and their boundaries in remote sensing images. Extensive experiments were conducted on three challenging aerial remote sensing segmentation benchmarks, including Vaihingen, Potsdam, and LoveDA. The results show that RTMamba achieves competitive performance advantages in terms of segmentation accuracy and inference speed compared to state-of-the-art CNN and transformer methods. To further validate the deployment potential of the model on embedded devices with limited resources, such as UAVs, we conducted tests on the Jetson AGX Orin edge device. The experimental results demonstrate that RTMamba achieves impressive real-time segmentation performance.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8193163871765137
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6605665683746338
+    },
+    {
+      "name": "Edge device",
+      "score": 0.6132718324661255
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5364964604377747
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5098544955253601
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.4438515901565552
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4113371670246124
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.36133483052253723
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.3230499029159546
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Cloud computing",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

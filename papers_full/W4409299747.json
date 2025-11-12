@@ -1,74 +1,109 @@
 {
-    "title": "Optimizing translation for low-resource languages: Efficient fine-tuning with custom prompt engineering in large language models",
-    "url": "https://openalex.org/W4409299747",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5117089779",
-            "name": "Pitso Walter Khoboko",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2308997331",
-            "name": "Vukosi Marivate",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5094320170",
-            "name": "Joseph Sefara",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2473217181",
-        "https://openalex.org/W2123301721",
-        "https://openalex.org/W4389519812",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6853251322",
-        "https://openalex.org/W3198331626",
-        "https://openalex.org/W3169369929",
-        "https://openalex.org/W2118992666",
-        "https://openalex.org/W2786253471",
-        "https://openalex.org/W6869848185",
-        "https://openalex.org/W3127887696",
-        "https://openalex.org/W4384263459",
-        "https://openalex.org/W6682631176",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2993259699",
-        "https://openalex.org/W3173162544",
-        "https://openalex.org/W3160638507",
-        "https://openalex.org/W4386487605",
-        "https://openalex.org/W7051469422",
-        "https://openalex.org/W2912084969",
-        "https://openalex.org/W4317547647",
-        "https://openalex.org/W4385696173",
-        "https://openalex.org/W4396601147",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4391988255",
-        "https://openalex.org/W4395065100",
-        "https://openalex.org/W4310631191",
-        "https://openalex.org/W4389519254",
-        "https://openalex.org/W4392735695",
-        "https://openalex.org/W4321177597",
-        "https://openalex.org/W3210368241",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W4392822465",
-        "https://openalex.org/W2398936787",
-        "https://openalex.org/W4378509449",
-        "https://openalex.org/W3142309261",
-        "https://openalex.org/W4390963044",
-        "https://openalex.org/W4404729147",
-        "https://openalex.org/W4388716262",
-        "https://openalex.org/W3172399575",
-        "https://openalex.org/W4323323154",
-        "https://openalex.org/W4402684331",
-        "https://openalex.org/W4387686975",
-        "https://openalex.org/W4285077564",
-        "https://openalex.org/W4401042993",
-        "https://openalex.org/W4388748466",
-        "https://openalex.org/W4394662532",
-        "https://openalex.org/W4387687542"
-    ],
-    "abstract": "Training large language models (LLMs) can be prohibitively expensive. However, the emergence of new Parameter-Efficient Fine-Tuning (PEFT) strategies provides a cost-effective approach to unlocking the potential of LLMs across a variety of natural language processing (NLP) tasks. In this study, we selected the Mistral 7B language model as our primary LLM due to its superior performance, which surpasses that of LLAMA 2 13B across multiple benchmarks. By leveraging PEFT methods, we aimed to significantly reduce the cost of fine-tuning while maintaining high levels of performance.Despite their advancements, LLMs often struggle with translation tasks for low-resource languages, particularly morphologically rich African languages. To address this, we employed customized prompt engineering techniques to enhance LLM translation capabilities for these languages.Our experimentation focused on fine-tuning the Mistral 7B model to identify the best-performing ensemble using a custom prompt strategy. The results obtained from the fine-tuned Mistral 7B model were compared against several models: Serengeti, Gemma, Google Translate, and No Language Left Behind (NLLB). Specifically, Serengeti and Gemma were fine-tuned using the same custom prompt strategy as the Mistral model, while Google Translate and NLLB Gemma, which are pre-trained to handle English-to-Zulu and English-to-Xhosa translations, were evaluated directly on the test data set. This comparative analysis allowed us to assess the efficacy of the fine-tuned Mistral 7B model against both custom-tuned and pre-trained translation models.LLMs have traditionally struggled to produce high-quality translations, especially for low-resource languages. Our experiments revealed that the key to improving translation performance lies in using the correct prompt during fine-tuning. We used the Mistral 7B model to develop a custom prompt that significantly enhanced translation quality for English-to-Zulu and English-to-Xhosa language pairs. After fine-tuning the Mistral 7B model for 30 GPU days, we compared its performance to the No Language Left Behind (NLLB) model and Google Translator API on the same test dataset. While NLLB achieved the highest scores across BLEU, G-Eval (cosine similarity), and Chrf++ (F1-score), our results demonstrated that Mistral 7B, with the custom prompt, still performed competitively.Additionally, we showed that our prompt template can improve the translation accuracy of other models, such as Gemma and Serengeti, when applied to high-quality bilingual datasets. This demonstrates that our custom prompt strategy is adaptable across different model architectures, bilingual settings, and is highly effective in accelerating learning for low-resource language translation.",
-    "full_text": null
+  "title": "Optimizing translation for low-resource languages: Efficient fine-tuning with custom prompt engineering in large language models",
+  "url": "https://openalex.org/W4409299747",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5117089779",
+      "name": "Pitso Walter Khoboko",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2308997331",
+      "name": "Vukosi Marivate",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5094320170",
+      "name": "Joseph Sefara",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2473217181",
+    "https://openalex.org/W2123301721",
+    "https://openalex.org/W4389519812",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6853251322",
+    "https://openalex.org/W3198331626",
+    "https://openalex.org/W3169369929",
+    "https://openalex.org/W2118992666",
+    "https://openalex.org/W2786253471",
+    "https://openalex.org/W6869848185",
+    "https://openalex.org/W3127887696",
+    "https://openalex.org/W4384263459",
+    "https://openalex.org/W6682631176",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2993259699",
+    "https://openalex.org/W3173162544",
+    "https://openalex.org/W3160638507",
+    "https://openalex.org/W4386487605",
+    "https://openalex.org/W7051469422",
+    "https://openalex.org/W2912084969",
+    "https://openalex.org/W4317547647",
+    "https://openalex.org/W4385696173",
+    "https://openalex.org/W4396601147",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4391988255",
+    "https://openalex.org/W4395065100",
+    "https://openalex.org/W4310631191",
+    "https://openalex.org/W4389519254",
+    "https://openalex.org/W4392735695",
+    "https://openalex.org/W4321177597",
+    "https://openalex.org/W3210368241",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W4392822465",
+    "https://openalex.org/W2398936787",
+    "https://openalex.org/W4378509449",
+    "https://openalex.org/W3142309261",
+    "https://openalex.org/W4390963044",
+    "https://openalex.org/W4404729147",
+    "https://openalex.org/W4388716262",
+    "https://openalex.org/W3172399575",
+    "https://openalex.org/W4323323154",
+    "https://openalex.org/W4402684331",
+    "https://openalex.org/W4387686975",
+    "https://openalex.org/W4285077564",
+    "https://openalex.org/W4401042993",
+    "https://openalex.org/W4388748466",
+    "https://openalex.org/W4394662532",
+    "https://openalex.org/W4387687542"
+  ],
+  "abstract": "Training large language models (LLMs) can be prohibitively expensive. However, the emergence of new Parameter-Efficient Fine-Tuning (PEFT) strategies provides a cost-effective approach to unlocking the potential of LLMs across a variety of natural language processing (NLP) tasks. In this study, we selected the Mistral 7B language model as our primary LLM due to its superior performance, which surpasses that of LLAMA 2 13B across multiple benchmarks. By leveraging PEFT methods, we aimed to significantly reduce the cost of fine-tuning while maintaining high levels of performance.Despite their advancements, LLMs often struggle with translation tasks for low-resource languages, particularly morphologically rich African languages. To address this, we employed customized prompt engineering techniques to enhance LLM translation capabilities for these languages.Our experimentation focused on fine-tuning the Mistral 7B model to identify the best-performing ensemble using a custom prompt strategy. The results obtained from the fine-tuned Mistral 7B model were compared against several models: Serengeti, Gemma, Google Translate, and No Language Left Behind (NLLB). Specifically, Serengeti and Gemma were fine-tuned using the same custom prompt strategy as the Mistral model, while Google Translate and NLLB Gemma, which are pre-trained to handle English-to-Zulu and English-to-Xhosa translations, were evaluated directly on the test data set. This comparative analysis allowed us to assess the efficacy of the fine-tuned Mistral 7B model against both custom-tuned and pre-trained translation models.LLMs have traditionally struggled to produce high-quality translations, especially for low-resource languages. Our experiments revealed that the key to improving translation performance lies in using the correct prompt during fine-tuning. We used the Mistral 7B model to develop a custom prompt that significantly enhanced translation quality for English-to-Zulu and English-to-Xhosa language pairs. After fine-tuning the Mistral 7B model for 30 GPU days, we compared its performance to the No Language Left Behind (NLLB) model and Google Translator API on the same test dataset. While NLLB achieved the highest scores across BLEU, G-Eval (cosine similarity), and Chrf++ (F1-score), our results demonstrated that Mistral 7B, with the custom prompt, still performed competitively.Additionally, we showed that our prompt template can improve the translation accuracy of other models, such as Gemma and Serengeti, when applied to high-quality bilingual datasets. This demonstrates that our custom prompt strategy is adaptable across different model architectures, bilingual settings, and is highly effective in accelerating learning for low-resource language translation.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6282125115394592
+    },
+    {
+      "name": "Translation (biology)",
+      "score": 0.6022507548332214
+    },
+    {
+      "name": "Resource (disambiguation)",
+      "score": 0.4569880962371826
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.09326082468032837
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Messenger RNA",
+      "score": 0.0
+    },
+    {
+      "name": "Computer network",
+      "score": 0.0
+    }
+  ]
 }

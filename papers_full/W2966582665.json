@@ -1,65 +1,152 @@
 {
-    "title": "Embodied Conversational AI Agents in a Multi-modal Multi-agent Competitive Dialogue",
-    "url": "https://openalex.org/W2966582665",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2604820161",
-            "name": "Rahul R. Divekar",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2966184695",
-            "name": "Xiangyang Mou",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112184223",
-            "name": "Lisha Chen",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2228643433",
-            "name": "Maíra Gatti de Bayser",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2798658366",
-            "name": "Melina Alberio Guerra",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2101850849",
-            "name": "Hui Su",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2405622356",
-        "https://openalex.org/W1997045063",
-        "https://openalex.org/W2747419968",
-        "https://openalex.org/W2578390274",
-        "https://openalex.org/W3104792420",
-        "https://openalex.org/W2963050656",
-        "https://openalex.org/W2964499307",
-        "https://openalex.org/W2265959009",
-        "https://openalex.org/W2807844885",
-        "https://openalex.org/W1570557094",
-        "https://openalex.org/W2585374426",
-        "https://openalex.org/W2808524432",
-        "https://openalex.org/W2949662773",
-        "https://openalex.org/W2900045608",
-        "https://openalex.org/W2969911550",
-        "https://openalex.org/W2886001316"
-    ],
-    "abstract": "In a setting where two AI agents embodied as animated humanoid avatars are engaged in a conversation with one human and each other, we see two challenges. One, determination by the AI agents about which one of them is being addressed. Two, determination by the AI agents if they may/could/should speak at the end of a turn. In this work we bring these two challenges together and explore the participation of AI agents in multi-party conversations. Particularly, we show two embodied AI shopkeeper agents who sell similar items aiming to get the business of a user by competing with each other on the price. In this scenario, we solve the first challenge by using headpose (estimated by deep learning techniques) to determine who the user is talking to. For the second challenge we use deontic logic to model rules of a negotiation conversation.",
-    "full_text": "Embodied Conversational AI Agents in a\nMulti-modal Multi-agent Competitive Dialogue\nRahul R. Divekar1 , Xiangyang Mou1 , Lisha Chen1 ,\nMaira Gatti de Bayser2 , Melina Alberio Guerra2 and Hui Su1;2\n1Rensselaer Polytechnic Institute\n2IBM Research\nfdivekr, moux4, chenl21g@rpi.edu, fmgdebayser, melinagg@br.ibm.com, huisuibmres@us.ibm.com\nAbstract\nIn a setting where two AI agents embodied as an-\nimated humanoid avatars are engaged in a con-\nversation with one human and each other, we\nsee two challenges. One, determination by the\nAI agents about which one of them is being ad-\ndressed. Two, determination by the AI agents if\nthey may/could/should speak at the end of a turn.\nIn this work we bring these two challenges together\nand explore the participation of AI agents in multi-\nparty conversations. Particularly, we show two em-\nbodied AI shopkeeper agents who sell similar items\naiming to get the business of a user by competing\nwith each other on the price. In this scenario, we\nsolve the ﬁrst challenge by using headpose (esti-\nmated by deep learning techniques) to determine\nwho the user is talking to. For the second challenge\nwe use deontic logic to model rules of a negotiation\nconversation.\n1 Introduction and Motivation\nWe have developed a conversational setting in which two\nAI agents playing the role of shopkeepers who sell similar\nitems want to get the business of a user. AI agents do this\nby competing on the price. They are referred to A1 and A2\nhereon. This scenario is developed to teach Chinese as a for-\neign language and culture through conversational role play\nwith embodied AI. Enthusiastic readers are encouraged to see\n[Allen et al., 2019] [Divekar et al., 2018c] and [Divekar et al.,\n2018a]’s work to read more about the context of the project.\nPart of learning the new culture is learning to negotiate\nwith street-market vendors which is uncommon for our users.\nTo build AI agents that can participate in such a conversation,\nwe explore how turn taking would work in a situation where\nmultiple agents and humans are engaged in negotiations.\nIn any conversational setting, the ﬁrst challenge towards\ndetermining whether an AI agent should respond is to de-\ntermine if it is being addressed. It has been shown that the\ncommon practice of using a wake-word while talking to AI is\nnot preferable in long conversations by[Divekar et al., 2019].\nResearch in multi-modal addressee detection by [Ravuri and\nStolcke, 2015 ], [Tsai et al., 2015 ], [Sheikhi and Odobez,\n2015], [Akhtiamov et al., 2017], [Le Minh et al., 2018] and\n[Norouzian et al., 2019] has inspired us. It is a premise of the\ninteractive aspect of our demo that it is common for people\nto look at the AI agent that they are speaking to especially\nwhen the AI agent is embodied as an animated avatar. As in\n[Divekar et al., 2019]’s work, our system uses headpose as a\nprimary determiner of addressee. It coupled with visual feed-\nback from the agent to make the interaction smoother. Their\nsystem uses a facial landmark based approach for headpose\ndetection. Our environment’s lack of lighting and unusual\ncamera position throw additional challenges. Here traditional\nfacial landmark based estimation techniques fall short. Hence\nwe use a deep learning approach to tackle this shortcoming.\nDetails of the challenge and solution are described in Sec-\ntion 2.3. The addressee is determined by calculating the time\noverlap between the user’s headpose intersection with the em-\nbodiments of the AI and the user’s speech.\nIt is usually straightforward that once an addressee is\nclearly determined, the addressee must respond. However,\naddressee detection alone cannot trigger the non-addressed\nAI agents to participate in the conversation thereby making\nthe agents reactive to users input rather than proactive. In a\ncompetitive setting, it is essential for the agents to be proac-\ntive in pitching their sale. Yet, they must not reply to ev-\nery turn to the extent of being annoying. They must also not\njust talk with each other and leave the user out of the conver-\nsation. Therefore, they require a more complex set of rules\nthat govern the conversation in order to determine the answer\nto the second challenge, i.e. when should the AI agent re-\nspond. [Andrist et al., 2016 ] and [Khouzaimi et al., 2016 ]\nhave motivated the problem of turn-taking in AI. For our con-\nversational setting, we explore the potential of using deontic\nlogic to model rules of turn taking as previously shown by\n[de Bayser et al., 2018b] and [de Bayser et al., 2018a]. They\nhave modeled social rules of multi agents but in collaboration\nconversations. We use their tool to model rules we wrote for\ncompetitive agents as shown in Section 2.2.\nThe interdependence of addressee detection and rules of\nturn-taking, speciﬁcally, in our said scenario is clear by the\nfollowing example —\nSituation 1: Addressee and thus speaker is determined by\nheadpose.\nUser: (looking at A1) How much for water?\nA1: $5\nA2: No response (Erroneous: Rules of competition are not\nProceedings of the Twenty-Eighth International Joint Conference on Artiﬁcial Intelligence (IJCAI-19)\n6512\nunderstood)\nSituation 2: Speaker is determined by turn taking rules\nA1: I can do $5\nUser: (looking at A2) Can you do better?\nA1: Yes I can do $4 (Erroneous: User meant to talk to A2.\nSystem did not consider headpose to ascertain addressee)\nWe thus integrate headpose based addressee detection and\ndeontic rules for a negotiation conversation to create a more\nintelligent interaction. We show a proof of concept in which\ntwo agents can successfully compete with each other and have\na conversation with the user.\n2 Technologies Involved\n2.1 Dialogue and Integration\nUser’s voice input is transcribed by Automatic Speech Recog-\nnition (ASR) and tagged with an addressee based on which\nagent was looked at more by the user while speaking. Then,\neach AI agent generates output text based on the intent de-\ntected from the utterance and the state of the dialogue tree\nfollowing [Divekar et al., 2018b]’s architecture. Whether the\noutput text gets broadcasted/spoken will be decided by Ravel\n(tool to model social rules) described in Section 2.2.\nIt can be seen from the two scenarios in Section 1 that the\ntwo technologies (addressee detection and turn taking rules)\ncan provide conﬂicting results. One way to solve such con-\nﬂicts is to convert the output from the headpose-based ad-\ndressee module to text that signiﬁes addressee (e.g. @A1).\nThen, instead of separately using headpose and Ravel to de-\ntermine whether a turn should be allowed or not and then\nbreaking the tie, use this headpose result as an input to Ravel.\nRavel allows us to apply rules about what should happen in\ncase an addressee is detected.\n2.2 Norm Speciﬁcation Using Deontic Logic\nRavel maintains a Finite State Machine (FSM) representation\nof the conversation. Rules can be applied on the state tran-\nsitions. Every incoming utterance (human and machine) is\nclassiﬁed into an intent and gets tagged with it. Ravel de-\ncides whether the intent/utterance has a valid transition from\nthe current state i.e. decides whether the agent that generated\nthe utterance is obligated, allowed or prohibited to respond\nwith that intent. If the agent is obligated or allowed, the sys-\ntem broadcasts the message to all participants by using JSON\nmessages for AI agents and voice output for the user. Each\nagent receives the broadcasted output as input and generates\na response which follows the same loop. If the agent is pro-\nhibited then its response is blocked.\nWe crafted the following rules. Their application can be\nseen in Table 1.\nR1: User is always allowed to reply.\nR2: AI Agents are prohibited from responding to themselves.\nR3: If direct addressee detected, the direct addressee has the\nobligation to respond. Other AI agents are prohibited\nR4: AI Agents are allowed to respond to a price pitch\nTo further show the applicability of rules, we made our\nagents agnostic to message sender. Thus they try to out-bid\nthemselves (Turn 5 in Table 1). Our deﬁned social rules block\nthis utterance and add intelligence to the interaction.\nSender Utterance Status Rule\nUser @A1 Do you have water? Broadcast R1\nA1 I will give it for $5 Broadcast R3\nA2 I will give it for $4 Block R3\nA1 I can do a better price Block R2\nA2 I can do a better price Broadcast R4\nTable 1: Application of Rules to Dialogue Turns\n2.3 Head Orientation Estimation Using Deep\nLearning Techniques\nThe headpose estimation system takes image input from cam-\neras to detect and track a face, detect facial landmarks and\nestimate headpose based on those landmarks. Using cameras\nenables non-intrusive markerless interactions. In our environ-\nment1, the camera is constrained to be on the ground in a low-\nlight condition (used to accentuate displays) and the users\nstand more than 3 meters from the camera, causing a low res-\nolution face. Further, the position of the face w.r.t. the camera\ncauses large pitch pose which affects the accuracy of even\nthe state-of-the-art landmark detection algorithms trained on\nbenchmark dataset [Bulat and Tzimiropoulos, 2017].\nWe therefore combine a generative model [Zhu et al.,\n2019] and a probabilistic deep model [Chen and Ji, 2018 ].\nSpeciﬁcally, frontal faces captured in the environment are an-\nnotated, then large pose faces along with their landmark an-\nnotations are generated to ﬁne-tune the probabilistic model\n[Chen and Ji, 2018] for facial landmark detection.\nTo calculate headpose, we assume a weak perspective pro-\njection model, where we have a 3D mean face shape \u0016y3d, a\n3D rotation matrix R, translation vector T and a camera in-\ntrinsic matrix W obtained from camera calibration. Given\nthe detected 2D landmark points y2d, we estimate headpose\nby minimizing the weighted projection error, i.e. R\u0003; T\u0003 =\narg minR;Tky2d \u00001\n\u0015W[R; T]\u0016y3dk2\nC (in homogeneous coor-\ndinate), C consists of the inverse of the determinant of the\npredicted covariance for facial landmarks. Headpose is ob-\ntained from the rotation matrix R\u0003. The estimated head-\npose and translation T w.r.t. the camera coordinate is then\ntransformed to the room coordinate using the camera extrin-\nsic matrix. The probabilistic model quantiﬁes uncertainty to\navoid over-conﬁdent erroneous predictions, i.e. we reject pre-\ndictions with corresponding uncertainty above threshold.\n3 Conclusion and Future Work\nWe show the integration of headpose-based addressee detec-\ntion and turn-taking rules in a negotiation conversation be-\ntween two AI agents and one human. With this demo, we can\ngive culture/language learners an opportunity to practice ne-\ngotiation skills. We plan to conduct experiments to evaluate\nits effectiveness. This demo will be used to further understand\nthe rules of a conversation through various approaches e.g.\nmachine learning and, explore ways to empower the agents\nwith stronger negotiation strategies in multi-agent settings.\n1Demonstration Video - https://youtu.be/z6CJJ3ig8Hs\nProceedings of the Twenty-Eighth International Joint Conference on Artiﬁcial Intelligence (IJCAI-19)\n6513\nReferences\n[Akhtiamov et al., 2017] Oleg Akhtiamov, Maxim Sidorov,\nAlexey A Karpov, and Wolfgang Minker. Speech and\ntext analysis for multimodal addressee detection in human-\nhuman-computer interaction. In INTERSPEECH, pages\n2521–2525, 2017.\n[Allen et al., 2019] David Allen, Rahul R Divekar, Jaimie\nDrozdal, and Lilit Balagyozyan. The Rensselaer Mandarin\nProject—a Cognitive and Immersive Language Learning\nEnvironment. In Thirty-third AAAI Conference on Artiﬁ-\ncial Intelligence, 2019.\n[Andrist et al., 2016] Sean Andrist, Dan Bohus, Bilge\nMutlu, and David Schlangen. Turn-taking and coordina-\ntion in human-machine interaction. AI Magazine, 37(4):5–\n6, 2016.\n[Bulat and Tzimiropoulos, 2017] Adrian Bulat and Georgios\nTzimiropoulos. How far are we from solving the 2D & 3D\nface alignment problem? (and a dataset of 230,000 3d fa-\ncial landmarks). In International Conference on Computer\nVision, 2017.\n[Chen and Ji, 2018] Lisha Chen and Qiang Ji. Kernel den-\nsity network for quantifying uncertainty in face alignment.\nIn 3rd Bayesian Deep Learning Workshop of Advances in\nNeural Information Processing Systems (NeurIPS), 2018.\n[de Bayser et al., 2018a] Maira Gatti de Bayser, Melina Al-\nberio Guerra, Paulo Cavalin, and Claudio Pinhanez. Spec-\nifying and implementing multi-party conversation rules\nwith ﬁnite-state-automata. In Workshops at the Thirty-\nSecond AAAI Conference on Artiﬁcial Intelligence, 2018.\n[de Bayser et al., 2018b] Maira Gatti de Bayser, Clau-\ndio Pinhanez, Heloisa Candello, Marisa Affonso,\nMauro Pichiliani Vasconcelos, Melina Alberio Guerra,\nPaulo Cavalin, and Renan Souza. Ravel: A MAS or-\nchestration platform for human-chatbots conversations.\n2018.\n[Divekar et al., 2018a] Rahul R Divekar, Jaimie Drozdal,\nYalun Zhou, Ziyi Song, David Allen, Robert Rouhani,\nRui Zhao, Shuyue Zheng, Lilit Balagyozyan, and Hui\nSu. Interaction challenges in AI equipped environments\nbuilt to teach foreign languages through dialogue and task-\ncompletion. In Proceedings of the 2018 on Designing In-\nteractive Systems Conference 2018, pages 597–609. ACM,\n2018.\n[Divekar et al., 2018b] Rahul R Divekar, Matthew Peveler,\nRobert Rouhani, Rui Zhao, Jeffrey O Kephart, David\nAllen, Kang Wang, Qiang Ji, and Hui Su. CIRA: An\nArchitecture for Building Conﬁgurable Immersive Smart-\nRooms. In Proceedings of SAI Intelligent Systems Confer-\nence, pages 76–95. Springer, 2018.\n[Divekar et al., 2018c] Rahul R Divekar, Yalun Zhou, David\nAllen, Jaimie Drozdal, and Hui Su. Building human-scale\nintelligent immersive spaces for foreign language learning.\niLRN 2018 Montana, page 94, 2018.\n[Divekar et al., 2019] Rahul R Divekar, Jeffrey O Kephart,\nXiangyang Mou, Lisha Chen, and Hui Su. You talkin’\nto me? - a practical attention-aware embodied agent. In\nHuman-Computer Interaction – INTERACT 2019, 2019.\n[Khouzaimi et al., 2016] Hatim Khouzaimi, Romain\nLaroche, and Fabrice Lef`evre. Reinforcement learning for\nturn-taking management in incremental spoken dialogue\nsystems. In IJCAI, pages 2831–2837, 2016.\n[Le Minh et al., 2018] Thao Le Minh, Nobuyuki Shimizu,\nTakashi Miyazaki, and Koichi Shinoda. Deep Learn-\ning Based Multi-modal Addressee Recognition in Visual\nScenes with Utterances. IJCAI 2018, pages 1546–1553,\n2018.\n[Norouzian et al., 2019] Atta Norouzian, Bogdan Mazoure,\nDermot Connolly, and Daniel Willett. Exploring atten-\ntion mechanism for acoustic-based classiﬁcation of speech\nutterances into system-directed and non-system-directed.\narXiv preprint arXiv:1902.00570, 2019.\n[Ravuri and Stolcke, 2015] Suman Ravuri and Andreas Stol-\ncke. Recurrent neural network and LSTM models for lex-\nical utterance classiﬁcation. In Sixteenth Annual Confer-\nence of the International Speech Communication Associa-\ntion, 2015.\n[Sheikhi and Odobez, 2015] Samira Sheikhi and Jean Marc\nOdobez. Combining dynamic head pose-gaze mapping\nwith the robot conversational state for attention recogni-\ntion in human-robot interactions. Pattern Recognition Let-\nters, 66:81–90, 2015.\n[Tsai et al., 2015] TJ Tsai, Andreas Stolcke, and Malcolm\nSlaney. A study of multimodal addressee detection in\nhuman-human-computer interaction. IEEE Transactions\non Multimedia, 17(9):1550–1561, 2015.\n[Zhu et al., 2019] Xiangyu Zhu, Xiaoming Liu, Zhen Lei,\nand Stan Z Li. Face alignment in full pose range: A 3D\ntotal solution. IEEE transactions on pattern analysis and\nmachine intelligence, 41(1):78–92, 2019.\nProceedings of the Twenty-Eighth International Joint Conference on Artiﬁcial Intelligence (IJCAI-19)\n6514"
+  "title": "Embodied Conversational AI Agents in a Multi-modal Multi-agent Competitive Dialogue",
+  "url": "https://openalex.org/W2966582665",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2604820161",
+      "name": "Rahul R. Divekar",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2966184695",
+      "name": "Xiangyang Mou",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112184223",
+      "name": "Lisha Chen",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2228643433",
+      "name": "Maíra Gatti de Bayser",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2798658366",
+      "name": "Melina Alberio Guerra",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2101850849",
+      "name": "Hui Su",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2405622356",
+    "https://openalex.org/W1997045063",
+    "https://openalex.org/W2747419968",
+    "https://openalex.org/W2578390274",
+    "https://openalex.org/W3104792420",
+    "https://openalex.org/W2963050656",
+    "https://openalex.org/W2964499307",
+    "https://openalex.org/W2265959009",
+    "https://openalex.org/W2807844885",
+    "https://openalex.org/W1570557094",
+    "https://openalex.org/W2585374426",
+    "https://openalex.org/W2808524432",
+    "https://openalex.org/W2949662773",
+    "https://openalex.org/W2900045608",
+    "https://openalex.org/W2969911550",
+    "https://openalex.org/W2886001316"
+  ],
+  "abstract": "In a setting where two AI agents embodied as animated humanoid avatars are engaged in a conversation with one human and each other, we see two challenges. One, determination by the AI agents about which one of them is being addressed. Two, determination by the AI agents if they may/could/should speak at the end of a turn. In this work we bring these two challenges together and explore the participation of AI agents in multi-party conversations. Particularly, we show two embodied AI shopkeeper agents who sell similar items aiming to get the business of a user by competing with each other on the price. In this scenario, we solve the first challenge by using headpose (estimated by deep learning techniques) to determine who the user is talking to. For the second challenge we use deontic logic to model rules of a negotiation conversation.",
+  "full_text": "Embodied Conversational AI Agents in a\nMulti-modal Multi-agent Competitive Dialogue\nRahul R. Divekar1 , Xiangyang Mou1 , Lisha Chen1 ,\nMaira Gatti de Bayser2 , Melina Alberio Guerra2 and Hui Su1;2\n1Rensselaer Polytechnic Institute\n2IBM Research\nfdivekr, moux4, chenl21g@rpi.edu, fmgdebayser, melinagg@br.ibm.com, huisuibmres@us.ibm.com\nAbstract\nIn a setting where two AI agents embodied as an-\nimated humanoid avatars are engaged in a con-\nversation with one human and each other, we\nsee two challenges. One, determination by the\nAI agents about which one of them is being ad-\ndressed. Two, determination by the AI agents if\nthey may/could/should speak at the end of a turn.\nIn this work we bring these two challenges together\nand explore the participation of AI agents in multi-\nparty conversations. Particularly, we show two em-\nbodied AI shopkeeper agents who sell similar items\naiming to get the business of a user by competing\nwith each other on the price. In this scenario, we\nsolve the ﬁrst challenge by using headpose (esti-\nmated by deep learning techniques) to determine\nwho the user is talking to. For the second challenge\nwe use deontic logic to model rules of a negotiation\nconversation.\n1 Introduction and Motivation\nWe have developed a conversational setting in which two\nAI agents playing the role of shopkeepers who sell similar\nitems want to get the business of a user. AI agents do this\nby competing on the price. They are referred to A1 and A2\nhereon. This scenario is developed to teach Chinese as a for-\neign language and culture through conversational role play\nwith embodied AI. Enthusiastic readers are encouraged to see\n[Allen et al., 2019] [Divekar et al., 2018c] and [Divekar et al.,\n2018a]’s work to read more about the context of the project.\nPart of learning the new culture is learning to negotiate\nwith street-market vendors which is uncommon for our users.\nTo build AI agents that can participate in such a conversation,\nwe explore how turn taking would work in a situation where\nmultiple agents and humans are engaged in negotiations.\nIn any conversational setting, the ﬁrst challenge towards\ndetermining whether an AI agent should respond is to de-\ntermine if it is being addressed. It has been shown that the\ncommon practice of using a wake-word while talking to AI is\nnot preferable in long conversations by[Divekar et al., 2019].\nResearch in multi-modal addressee detection by [Ravuri and\nStolcke, 2015 ], [Tsai et al., 2015 ], [Sheikhi and Odobez,\n2015], [Akhtiamov et al., 2017], [Le Minh et al., 2018] and\n[Norouzian et al., 2019] has inspired us. It is a premise of the\ninteractive aspect of our demo that it is common for people\nto look at the AI agent that they are speaking to especially\nwhen the AI agent is embodied as an animated avatar. As in\n[Divekar et al., 2019]’s work, our system uses headpose as a\nprimary determiner of addressee. It coupled with visual feed-\nback from the agent to make the interaction smoother. Their\nsystem uses a facial landmark based approach for headpose\ndetection. Our environment’s lack of lighting and unusual\ncamera position throw additional challenges. Here traditional\nfacial landmark based estimation techniques fall short. Hence\nwe use a deep learning approach to tackle this shortcoming.\nDetails of the challenge and solution are described in Sec-\ntion 2.3. The addressee is determined by calculating the time\noverlap between the user’s headpose intersection with the em-\nbodiments of the AI and the user’s speech.\nIt is usually straightforward that once an addressee is\nclearly determined, the addressee must respond. However,\naddressee detection alone cannot trigger the non-addressed\nAI agents to participate in the conversation thereby making\nthe agents reactive to users input rather than proactive. In a\ncompetitive setting, it is essential for the agents to be proac-\ntive in pitching their sale. Yet, they must not reply to ev-\nery turn to the extent of being annoying. They must also not\njust talk with each other and leave the user out of the conver-\nsation. Therefore, they require a more complex set of rules\nthat govern the conversation in order to determine the answer\nto the second challenge, i.e. when should the AI agent re-\nspond. [Andrist et al., 2016 ] and [Khouzaimi et al., 2016 ]\nhave motivated the problem of turn-taking in AI. For our con-\nversational setting, we explore the potential of using deontic\nlogic to model rules of turn taking as previously shown by\n[de Bayser et al., 2018b] and [de Bayser et al., 2018a]. They\nhave modeled social rules of multi agents but in collaboration\nconversations. We use their tool to model rules we wrote for\ncompetitive agents as shown in Section 2.2.\nThe interdependence of addressee detection and rules of\nturn-taking, speciﬁcally, in our said scenario is clear by the\nfollowing example —\nSituation 1: Addressee and thus speaker is determined by\nheadpose.\nUser: (looking at A1) How much for water?\nA1: $5\nA2: No response (Erroneous: Rules of competition are not\nProceedings of the Twenty-Eighth International Joint Conference on Artiﬁcial Intelligence (IJCAI-19)\n6512\nunderstood)\nSituation 2: Speaker is determined by turn taking rules\nA1: I can do $5\nUser: (looking at A2) Can you do better?\nA1: Yes I can do $4 (Erroneous: User meant to talk to A2.\nSystem did not consider headpose to ascertain addressee)\nWe thus integrate headpose based addressee detection and\ndeontic rules for a negotiation conversation to create a more\nintelligent interaction. We show a proof of concept in which\ntwo agents can successfully compete with each other and have\na conversation with the user.\n2 Technologies Involved\n2.1 Dialogue and Integration\nUser’s voice input is transcribed by Automatic Speech Recog-\nnition (ASR) and tagged with an addressee based on which\nagent was looked at more by the user while speaking. Then,\neach AI agent generates output text based on the intent de-\ntected from the utterance and the state of the dialogue tree\nfollowing [Divekar et al., 2018b]’s architecture. Whether the\noutput text gets broadcasted/spoken will be decided by Ravel\n(tool to model social rules) described in Section 2.2.\nIt can be seen from the two scenarios in Section 1 that the\ntwo technologies (addressee detection and turn taking rules)\ncan provide conﬂicting results. One way to solve such con-\nﬂicts is to convert the output from the headpose-based ad-\ndressee module to text that signiﬁes addressee (e.g. @A1).\nThen, instead of separately using headpose and Ravel to de-\ntermine whether a turn should be allowed or not and then\nbreaking the tie, use this headpose result as an input to Ravel.\nRavel allows us to apply rules about what should happen in\ncase an addressee is detected.\n2.2 Norm Speciﬁcation Using Deontic Logic\nRavel maintains a Finite State Machine (FSM) representation\nof the conversation. Rules can be applied on the state tran-\nsitions. Every incoming utterance (human and machine) is\nclassiﬁed into an intent and gets tagged with it. Ravel de-\ncides whether the intent/utterance has a valid transition from\nthe current state i.e. decides whether the agent that generated\nthe utterance is obligated, allowed or prohibited to respond\nwith that intent. If the agent is obligated or allowed, the sys-\ntem broadcasts the message to all participants by using JSON\nmessages for AI agents and voice output for the user. Each\nagent receives the broadcasted output as input and generates\na response which follows the same loop. If the agent is pro-\nhibited then its response is blocked.\nWe crafted the following rules. Their application can be\nseen in Table 1.\nR1: User is always allowed to reply.\nR2: AI Agents are prohibited from responding to themselves.\nR3: If direct addressee detected, the direct addressee has the\nobligation to respond. Other AI agents are prohibited\nR4: AI Agents are allowed to respond to a price pitch\nTo further show the applicability of rules, we made our\nagents agnostic to message sender. Thus they try to out-bid\nthemselves (Turn 5 in Table 1). Our deﬁned social rules block\nthis utterance and add intelligence to the interaction.\nSender Utterance Status Rule\nUser @A1 Do you have water? Broadcast R1\nA1 I will give it for $5 Broadcast R3\nA2 I will give it for $4 Block R3\nA1 I can do a better price Block R2\nA2 I can do a better price Broadcast R4\nTable 1: Application of Rules to Dialogue Turns\n2.3 Head Orientation Estimation Using Deep\nLearning Techniques\nThe headpose estimation system takes image input from cam-\neras to detect and track a face, detect facial landmarks and\nestimate headpose based on those landmarks. Using cameras\nenables non-intrusive markerless interactions. In our environ-\nment1, the camera is constrained to be on the ground in a low-\nlight condition (used to accentuate displays) and the users\nstand more than 3 meters from the camera, causing a low res-\nolution face. Further, the position of the face w.r.t. the camera\ncauses large pitch pose which affects the accuracy of even\nthe state-of-the-art landmark detection algorithms trained on\nbenchmark dataset [Bulat and Tzimiropoulos, 2017].\nWe therefore combine a generative model [Zhu et al.,\n2019] and a probabilistic deep model [Chen and Ji, 2018 ].\nSpeciﬁcally, frontal faces captured in the environment are an-\nnotated, then large pose faces along with their landmark an-\nnotations are generated to ﬁne-tune the probabilistic model\n[Chen and Ji, 2018] for facial landmark detection.\nTo calculate headpose, we assume a weak perspective pro-\njection model, where we have a 3D mean face shape \u0016y3d, a\n3D rotation matrix R, translation vector T and a camera in-\ntrinsic matrix W obtained from camera calibration. Given\nthe detected 2D landmark points y2d, we estimate headpose\nby minimizing the weighted projection error, i.e. R\u0003; T\u0003 =\narg minR;Tky2d \u00001\n\u0015W[R; T]\u0016y3dk2\nC (in homogeneous coor-\ndinate), C consists of the inverse of the determinant of the\npredicted covariance for facial landmarks. Headpose is ob-\ntained from the rotation matrix R\u0003. The estimated head-\npose and translation T w.r.t. the camera coordinate is then\ntransformed to the room coordinate using the camera extrin-\nsic matrix. The probabilistic model quantiﬁes uncertainty to\navoid over-conﬁdent erroneous predictions, i.e. we reject pre-\ndictions with corresponding uncertainty above threshold.\n3 Conclusion and Future Work\nWe show the integration of headpose-based addressee detec-\ntion and turn-taking rules in a negotiation conversation be-\ntween two AI agents and one human. With this demo, we can\ngive culture/language learners an opportunity to practice ne-\ngotiation skills. We plan to conduct experiments to evaluate\nits effectiveness. This demo will be used to further understand\nthe rules of a conversation through various approaches e.g.\nmachine learning and, explore ways to empower the agents\nwith stronger negotiation strategies in multi-agent settings.\n1Demonstration Video - https://youtu.be/z6CJJ3ig8Hs\nProceedings of the Twenty-Eighth International Joint Conference on Artiﬁcial Intelligence (IJCAI-19)\n6513\nReferences\n[Akhtiamov et al., 2017] Oleg Akhtiamov, Maxim Sidorov,\nAlexey A Karpov, and Wolfgang Minker. Speech and\ntext analysis for multimodal addressee detection in human-\nhuman-computer interaction. In INTERSPEECH, pages\n2521–2525, 2017.\n[Allen et al., 2019] David Allen, Rahul R Divekar, Jaimie\nDrozdal, and Lilit Balagyozyan. The Rensselaer Mandarin\nProject—a Cognitive and Immersive Language Learning\nEnvironment. In Thirty-third AAAI Conference on Artiﬁ-\ncial Intelligence, 2019.\n[Andrist et al., 2016] Sean Andrist, Dan Bohus, Bilge\nMutlu, and David Schlangen. Turn-taking and coordina-\ntion in human-machine interaction. AI Magazine, 37(4):5–\n6, 2016.\n[Bulat and Tzimiropoulos, 2017] Adrian Bulat and Georgios\nTzimiropoulos. How far are we from solving the 2D & 3D\nface alignment problem? (and a dataset of 230,000 3d fa-\ncial landmarks). In International Conference on Computer\nVision, 2017.\n[Chen and Ji, 2018] Lisha Chen and Qiang Ji. Kernel den-\nsity network for quantifying uncertainty in face alignment.\nIn 3rd Bayesian Deep Learning Workshop of Advances in\nNeural Information Processing Systems (NeurIPS), 2018.\n[de Bayser et al., 2018a] Maira Gatti de Bayser, Melina Al-\nberio Guerra, Paulo Cavalin, and Claudio Pinhanez. Spec-\nifying and implementing multi-party conversation rules\nwith ﬁnite-state-automata. In Workshops at the Thirty-\nSecond AAAI Conference on Artiﬁcial Intelligence, 2018.\n[de Bayser et al., 2018b] Maira Gatti de Bayser, Clau-\ndio Pinhanez, Heloisa Candello, Marisa Affonso,\nMauro Pichiliani Vasconcelos, Melina Alberio Guerra,\nPaulo Cavalin, and Renan Souza. Ravel: A MAS or-\nchestration platform for human-chatbots conversations.\n2018.\n[Divekar et al., 2018a] Rahul R Divekar, Jaimie Drozdal,\nYalun Zhou, Ziyi Song, David Allen, Robert Rouhani,\nRui Zhao, Shuyue Zheng, Lilit Balagyozyan, and Hui\nSu. Interaction challenges in AI equipped environments\nbuilt to teach foreign languages through dialogue and task-\ncompletion. In Proceedings of the 2018 on Designing In-\nteractive Systems Conference 2018, pages 597–609. ACM,\n2018.\n[Divekar et al., 2018b] Rahul R Divekar, Matthew Peveler,\nRobert Rouhani, Rui Zhao, Jeffrey O Kephart, David\nAllen, Kang Wang, Qiang Ji, and Hui Su. CIRA: An\nArchitecture for Building Conﬁgurable Immersive Smart-\nRooms. In Proceedings of SAI Intelligent Systems Confer-\nence, pages 76–95. Springer, 2018.\n[Divekar et al., 2018c] Rahul R Divekar, Yalun Zhou, David\nAllen, Jaimie Drozdal, and Hui Su. Building human-scale\nintelligent immersive spaces for foreign language learning.\niLRN 2018 Montana, page 94, 2018.\n[Divekar et al., 2019] Rahul R Divekar, Jeffrey O Kephart,\nXiangyang Mou, Lisha Chen, and Hui Su. You talkin’\nto me? - a practical attention-aware embodied agent. In\nHuman-Computer Interaction – INTERACT 2019, 2019.\n[Khouzaimi et al., 2016] Hatim Khouzaimi, Romain\nLaroche, and Fabrice Lef`evre. Reinforcement learning for\nturn-taking management in incremental spoken dialogue\nsystems. In IJCAI, pages 2831–2837, 2016.\n[Le Minh et al., 2018] Thao Le Minh, Nobuyuki Shimizu,\nTakashi Miyazaki, and Koichi Shinoda. Deep Learn-\ning Based Multi-modal Addressee Recognition in Visual\nScenes with Utterances. IJCAI 2018, pages 1546–1553,\n2018.\n[Norouzian et al., 2019] Atta Norouzian, Bogdan Mazoure,\nDermot Connolly, and Daniel Willett. Exploring atten-\ntion mechanism for acoustic-based classiﬁcation of speech\nutterances into system-directed and non-system-directed.\narXiv preprint arXiv:1902.00570, 2019.\n[Ravuri and Stolcke, 2015] Suman Ravuri and Andreas Stol-\ncke. Recurrent neural network and LSTM models for lex-\nical utterance classiﬁcation. In Sixteenth Annual Confer-\nence of the International Speech Communication Associa-\ntion, 2015.\n[Sheikhi and Odobez, 2015] Samira Sheikhi and Jean Marc\nOdobez. Combining dynamic head pose-gaze mapping\nwith the robot conversational state for attention recogni-\ntion in human-robot interactions. Pattern Recognition Let-\nters, 66:81–90, 2015.\n[Tsai et al., 2015] TJ Tsai, Andreas Stolcke, and Malcolm\nSlaney. A study of multimodal addressee detection in\nhuman-human-computer interaction. IEEE Transactions\non Multimedia, 17(9):1550–1561, 2015.\n[Zhu et al., 2019] Xiangyu Zhu, Xiaoming Liu, Zhen Lei,\nand Stan Z Li. Face alignment in full pose range: A 3D\ntotal solution. IEEE transactions on pattern analysis and\nmachine intelligence, 41(1):78–92, 2019.\nProceedings of the Twenty-Eighth International Joint Conference on Artiﬁcial Intelligence (IJCAI-19)\n6514",
+  "topic": "Deontic logic",
+  "concepts": [
+    {
+      "name": "Deontic logic",
+      "score": 0.895199179649353
+    },
+    {
+      "name": "Embodied cognition",
+      "score": 0.8941709399223328
+    },
+    {
+      "name": "Conversation",
+      "score": 0.7831147313117981
+    },
+    {
+      "name": "Negotiation",
+      "score": 0.7518692016601562
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7450335025787354
+    },
+    {
+      "name": "Dialog system",
+      "score": 0.581443727016449
+    },
+    {
+      "name": "Embodied agent",
+      "score": 0.574974000453949
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.5664832592010498
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5008628368377686
+    },
+    {
+      "name": "Modal",
+      "score": 0.48292800784111023
+    },
+    {
+      "name": "Intelligent agent",
+      "score": 0.4814828634262085
+    },
+    {
+      "name": "Knowledge management",
+      "score": 0.35269784927368164
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.23167484998703003
+    },
+    {
+      "name": "Dialog box",
+      "score": 0.2238265573978424
+    },
+    {
+      "name": "Sociology",
+      "score": 0.15045994520187378
+    },
+    {
+      "name": "Communication",
+      "score": 0.13215318322181702
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.1285097599029541
+    },
+    {
+      "name": "Social science",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    }
+  ]
 }

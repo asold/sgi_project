@@ -1,96 +1,131 @@
 {
-    "title": "Large Language Model guided Protocol Fuzzing",
-    "url": "https://openalex.org/W4391724785",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5053022213",
-            "name": "Ruijie Meng",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5060375528",
-            "name": "Мартин Мирчев",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5005260100",
-            "name": "Marcel Böhme",
-            "affiliations": [
-                "Monash University",
-                "Max Planck Institute for Security and Privacy"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5060115298",
-            "name": "Abhik Roychoudhury",
-            "affiliations": [
-                "National University of Singapore"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6982813667",
-        "https://openalex.org/W4384163464",
-        "https://openalex.org/W4221162427",
-        "https://openalex.org/W3046946156",
-        "https://openalex.org/W6810421805",
-        "https://openalex.org/W6679554657",
-        "https://openalex.org/W4284706927",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4360836968",
-        "https://openalex.org/W6884739614",
-        "https://openalex.org/W6798182279",
-        "https://openalex.org/W6810081322",
-        "https://openalex.org/W4313447595",
-        "https://openalex.org/W4362656212",
-        "https://openalex.org/W6839139713",
-        "https://openalex.org/W3048197573",
-        "https://openalex.org/W6631721891",
-        "https://openalex.org/W6853867249",
-        "https://openalex.org/W4225887207",
-        "https://openalex.org/W6754412467",
-        "https://openalex.org/W6760385162",
-        "https://openalex.org/W4384304865",
-        "https://openalex.org/W6752029628",
-        "https://openalex.org/W179510128",
-        "https://openalex.org/W3207926955",
-        "https://openalex.org/W3120111116",
-        "https://openalex.org/W2886081690",
-        "https://openalex.org/W6781625084",
-        "https://openalex.org/W4321383526",
-        "https://openalex.org/W3154121988",
-        "https://openalex.org/W3208566226",
-        "https://openalex.org/W6850183316",
-        "https://openalex.org/W6811129797",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4221161695",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W1531203382",
-        "https://openalex.org/W2129975948",
-        "https://openalex.org/W4378591002",
-        "https://openalex.org/W4308538981",
-        "https://openalex.org/W4281389888",
-        "https://openalex.org/W4321650154",
-        "https://openalex.org/W3047947484",
-        "https://openalex.org/W4380558484",
-        "https://openalex.org/W1526710119",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W4226248966",
-        "https://openalex.org/W4362466275",
-        "https://openalex.org/W3181528482",
-        "https://openalex.org/W4384345745",
-        "https://openalex.org/W2766540688",
-        "https://openalex.org/W4226399820",
-        "https://openalex.org/W2964241064"
-    ],
-    "abstract": "How to find security flaws in a protocol implementation without a machine-readable specification of the protocol?Facing the internet, protocol implementations are particularly security-critical software systems where inputs must adhere to a specific structure and order that is often informally specified in hundreds of pages in natural language (RFC).Without some machine-readable version of that protocol, it is difficult to automatically generate valid test inputs for its implementation that follow the required structure and order.It is possible to partially alleviate this challenge using mutational fuzzing on a set of recorded message sequences as seed inputs.However, the set of available seeds is often quite limited and will hardly cover the great diversity of protocol states and input structures.In this paper, we explore the opportunities of systematic interaction with pre-trained large language models (LLMs), which have ingested millions of pages of human-readable protocol specifications, to draw out machine-readable information about the protocol that can be used during protocol fuzzing.We use the knowledge of the LLMs about protocol message types for well-known protocols.We also checked the LLM's capability in detecting \"states\" for stateful protocol implementations by generating sequences of messages and predicting response codes.Based on these observations, we have developed an LLM-guided protocol implementation fuzzing engine.Our protocol fuzzer CHATAFL constructs grammars for each message type in a protocol, and then mutates messages or predicts the next messages in a message sequence via interactions with LLMs.Experiments on a wide range of real-world protocols from PROFUZZBENCH show significant efficacy in state and code coverage.Our LLMguided stateful fuzzer was compared with state-of-the-art fuzzers AFLNET and NSFUZZ.CHATAFL covers 47.60% and 42.69% more state transitions, 29.55% and 25.75% more states, and 5.81% and 6.74% more code, respectively.Apart from enhanced coverage, CHATAFL discovered nine distinct and previously unknown vulnerabilities in widely-used and extensively-tested protocol implementations while AFLNET and NSFUZZ only discovered three and four of them, respectively.",
-    "full_text": null
+  "title": "Large Language Model guided Protocol Fuzzing",
+  "url": "https://openalex.org/W4391724785",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5053022213",
+      "name": "Ruijie Meng",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5060375528",
+      "name": "Мартин Мирчев",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5005260100",
+      "name": "Marcel Böhme",
+      "affiliations": [
+        "Monash University",
+        "Max Planck Institute for Security and Privacy"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5060115298",
+      "name": "Abhik Roychoudhury",
+      "affiliations": [
+        "National University of Singapore"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6982813667",
+    "https://openalex.org/W4384163464",
+    "https://openalex.org/W4221162427",
+    "https://openalex.org/W3046946156",
+    "https://openalex.org/W6810421805",
+    "https://openalex.org/W6679554657",
+    "https://openalex.org/W4284706927",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4360836968",
+    "https://openalex.org/W6884739614",
+    "https://openalex.org/W6798182279",
+    "https://openalex.org/W6810081322",
+    "https://openalex.org/W4313447595",
+    "https://openalex.org/W4362656212",
+    "https://openalex.org/W6839139713",
+    "https://openalex.org/W3048197573",
+    "https://openalex.org/W6631721891",
+    "https://openalex.org/W6853867249",
+    "https://openalex.org/W4225887207",
+    "https://openalex.org/W6754412467",
+    "https://openalex.org/W6760385162",
+    "https://openalex.org/W4384304865",
+    "https://openalex.org/W6752029628",
+    "https://openalex.org/W179510128",
+    "https://openalex.org/W3207926955",
+    "https://openalex.org/W3120111116",
+    "https://openalex.org/W2886081690",
+    "https://openalex.org/W6781625084",
+    "https://openalex.org/W4321383526",
+    "https://openalex.org/W3154121988",
+    "https://openalex.org/W3208566226",
+    "https://openalex.org/W6850183316",
+    "https://openalex.org/W6811129797",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4221161695",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W1531203382",
+    "https://openalex.org/W2129975948",
+    "https://openalex.org/W4378591002",
+    "https://openalex.org/W4308538981",
+    "https://openalex.org/W4281389888",
+    "https://openalex.org/W4321650154",
+    "https://openalex.org/W3047947484",
+    "https://openalex.org/W4380558484",
+    "https://openalex.org/W1526710119",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W4226248966",
+    "https://openalex.org/W4362466275",
+    "https://openalex.org/W3181528482",
+    "https://openalex.org/W4384345745",
+    "https://openalex.org/W2766540688",
+    "https://openalex.org/W4226399820",
+    "https://openalex.org/W2964241064"
+  ],
+  "abstract": "How to find security flaws in a protocol implementation without a machine-readable specification of the protocol?Facing the internet, protocol implementations are particularly security-critical software systems where inputs must adhere to a specific structure and order that is often informally specified in hundreds of pages in natural language (RFC).Without some machine-readable version of that protocol, it is difficult to automatically generate valid test inputs for its implementation that follow the required structure and order.It is possible to partially alleviate this challenge using mutational fuzzing on a set of recorded message sequences as seed inputs.However, the set of available seeds is often quite limited and will hardly cover the great diversity of protocol states and input structures.In this paper, we explore the opportunities of systematic interaction with pre-trained large language models (LLMs), which have ingested millions of pages of human-readable protocol specifications, to draw out machine-readable information about the protocol that can be used during protocol fuzzing.We use the knowledge of the LLMs about protocol message types for well-known protocols.We also checked the LLM's capability in detecting \"states\" for stateful protocol implementations by generating sequences of messages and predicting response codes.Based on these observations, we have developed an LLM-guided protocol implementation fuzzing engine.Our protocol fuzzer CHATAFL constructs grammars for each message type in a protocol, and then mutates messages or predicts the next messages in a message sequence via interactions with LLMs.Experiments on a wide range of real-world protocols from PROFUZZBENCH show significant efficacy in state and code coverage.Our LLMguided stateful fuzzer was compared with state-of-the-art fuzzers AFLNET and NSFUZZ.CHATAFL covers 47.60% and 42.69% more state transitions, 29.55% and 25.75% more states, and 5.81% and 6.74% more code, respectively.Apart from enhanced coverage, CHATAFL discovered nine distinct and previously unknown vulnerabilities in widely-used and extensively-tested protocol implementations while AFLNET and NSFUZZ only discovered three and four of them, respectively.",
+  "full_text": null,
+  "topic": "Fuzz testing",
+  "concepts": [
+    {
+      "name": "Fuzz testing",
+      "score": 0.977497935295105
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8040317296981812
+    },
+    {
+      "name": "Protocol (science)",
+      "score": 0.6404265761375427
+    },
+    {
+      "name": "Programming language",
+      "score": 0.4387572407722473
+    },
+    {
+      "name": "Software",
+      "score": 0.07715189456939697
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Alternative medicine",
+      "score": 0.0
+    }
+  ]
 }

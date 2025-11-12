@@ -1,127 +1,142 @@
 {
-    "title": "Fully Autonomous Programming Using Iterative Multi-Agent Debugging with Large Language Models",
-    "url": "https://openalex.org/W4407961382",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3195503616",
-            "name": "Grishina Anastasiia",
-            "affiliations": [
-                "Simula Research Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4287539186",
-            "name": "Liventsev, Vadim",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": null,
-            "name": "H\\\"arm\\\"a, Aki",
-            "affiliations": [
-                "Philips (Netherlands)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2751834255",
-            "name": "Moonen, Leon",
-            "affiliations": [
-                "Simula Research Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2747682232",
-            "name": "Harma Aki",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2947704387",
-        "https://openalex.org/W2963935794",
-        "https://openalex.org/W2116272605",
-        "https://openalex.org/W1526922602",
-        "https://openalex.org/W2900121847",
-        "https://openalex.org/W4225533190",
-        "https://openalex.org/W4307887045",
-        "https://openalex.org/W3166095789",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W4365205411",
-        "https://openalex.org/W3175200128",
-        "https://openalex.org/W4401214102",
-        "https://openalex.org/W3194936304",
-        "https://openalex.org/W3178193590",
-        "https://openalex.org/W4303450757",
-        "https://openalex.org/W4366342667",
-        "https://openalex.org/W4281567711",
-        "https://openalex.org/W2402199355",
-        "https://openalex.org/W2981207549",
-        "https://openalex.org/W4229675450",
-        "https://openalex.org/W3043281046",
-        "https://openalex.org/W1994022788",
-        "https://openalex.org/W4394660363",
-        "https://openalex.org/W4281669782",
-        "https://openalex.org/W1978661986",
-        "https://openalex.org/W3198225904",
-        "https://openalex.org/W2072473332",
-        "https://openalex.org/W4289670534",
-        "https://openalex.org/W1982607217",
-        "https://openalex.org/W3196440773",
-        "https://openalex.org/W4379540175",
-        "https://openalex.org/W4308641625",
-        "https://openalex.org/W4293138061",
-        "https://openalex.org/W2156723666",
-        "https://openalex.org/W4381613440",
-        "https://openalex.org/W6764109406",
-        "https://openalex.org/W4231241365",
-        "https://openalex.org/W2998011150",
-        "https://openalex.org/W4283218802",
-        "https://openalex.org/W4311887664",
-        "https://openalex.org/W4389115798",
-        "https://openalex.org/W4367860052",
-        "https://openalex.org/W4366735548",
-        "https://openalex.org/W4285080116",
-        "https://openalex.org/W2113352466",
-        "https://openalex.org/W2037237472",
-        "https://openalex.org/W3088632941",
-        "https://openalex.org/W4319793412",
-        "https://openalex.org/W2779806713",
-        "https://openalex.org/W4327810158",
-        "https://openalex.org/W3097664220",
-        "https://openalex.org/W4385681252",
-        "https://openalex.org/W4288057765",
-        "https://openalex.org/W2608579592",
-        "https://openalex.org/W2060610732",
-        "https://openalex.org/W3089307846",
-        "https://openalex.org/W4361767706",
-        "https://openalex.org/W4386185625",
-        "https://openalex.org/W4353112996",
-        "https://openalex.org/W4382323141",
-        "https://openalex.org/W2106172458",
-        "https://openalex.org/W4285734663",
-        "https://openalex.org/W4287019942",
-        "https://openalex.org/W2477695133",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W2153203800",
-        "https://openalex.org/W4318902699",
-        "https://openalex.org/W2990908872",
-        "https://openalex.org/W4281763794",
-        "https://openalex.org/W4389518960",
-        "https://openalex.org/W4387559558",
-        "https://openalex.org/W4385572142",
-        "https://openalex.org/W4385572345",
-        "https://openalex.org/W4396651321",
-        "https://openalex.org/W4386273180",
-        "https://openalex.org/W4385562549",
-        "https://openalex.org/W2576723740",
-        "https://openalex.org/W4307867790",
-        "https://openalex.org/W2418011578",
-        "https://openalex.org/W2970575144",
-        "https://openalex.org/W1901493616",
-        "https://openalex.org/W2122410182",
-        "https://openalex.org/W3106006733"
-    ],
-    "abstract": "Program synthesis with Large Language Models (LLMs) suffers from a “near-miss syndrome”: The generated code closely resembles a correct solution but fails unit tests due to minor errors. We address this with a multi-agent framework called Synthesize, Execute, Instruct, Debug, and Repair (SEIDR). Effectively applying SEIDR to instruction-tuned LLMs requires determining (a) optimal prompts for LLMs, (b) what ranking algorithm selects the best programs in debugging rounds, and (c) balancing the repair of unsuccessful programs with the generation of new ones. We empirically explore these tradeoffs by comparing replace-focused, repair-focused, and hybrid debug strategies. We also evaluate lexicase and tournament selection to rank candidates in each generation. On Program Synthesis Benchmark 2 (PSB2), our framework outperforms both conventional use of OpenAI Codex without a repair phase and traditional genetic programming approaches. SEIDR outperforms the use of an LLM alone, solving 18 problems in C++ and 20 in Python on PSB2 at least once across experiments. To assess generalizability, we employ GPT-3.5 and Llama 3 on the PSB2 and HumanEval-X benchmarks. Although SEIDR with these models does not surpass current state-of-the-art methods on the Python benchmarks, the results on HumanEval-C++ are promising. SEIDR with Llama 3-8B achieves an average pass@100 of 84.2%. Across all SEIDR runs, 163 of 164 problems are solved at least once with GPT-3.5 in HumanEval-C++, and 162 of 164 with the smaller Llama 3-8B. We conclude that SEIDR effectively overcomes the near-miss syndrome in program synthesis with LLMs.",
-    "full_text": null
+  "title": "Fully Autonomous Programming Using Iterative Multi-Agent Debugging with Large Language Models",
+  "url": "https://openalex.org/W4407961382",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3195503616",
+      "name": "Grishina Anastasiia",
+      "affiliations": [
+        "Simula Research Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4287539186",
+      "name": "Liventsev, Vadim",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": null,
+      "name": "H\\\"arm\\\"a, Aki",
+      "affiliations": [
+        "Philips (Netherlands)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2751834255",
+      "name": "Moonen, Leon",
+      "affiliations": [
+        "Simula Research Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2747682232",
+      "name": "Harma Aki",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2947704387",
+    "https://openalex.org/W2963935794",
+    "https://openalex.org/W2116272605",
+    "https://openalex.org/W1526922602",
+    "https://openalex.org/W2900121847",
+    "https://openalex.org/W4225533190",
+    "https://openalex.org/W4307887045",
+    "https://openalex.org/W3166095789",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W4365205411",
+    "https://openalex.org/W3175200128",
+    "https://openalex.org/W4401214102",
+    "https://openalex.org/W3194936304",
+    "https://openalex.org/W3178193590",
+    "https://openalex.org/W4303450757",
+    "https://openalex.org/W4366342667",
+    "https://openalex.org/W4281567711",
+    "https://openalex.org/W2402199355",
+    "https://openalex.org/W2981207549",
+    "https://openalex.org/W4229675450",
+    "https://openalex.org/W3043281046",
+    "https://openalex.org/W1994022788",
+    "https://openalex.org/W4394660363",
+    "https://openalex.org/W4281669782",
+    "https://openalex.org/W1978661986",
+    "https://openalex.org/W3198225904",
+    "https://openalex.org/W2072473332",
+    "https://openalex.org/W4289670534",
+    "https://openalex.org/W1982607217",
+    "https://openalex.org/W3196440773",
+    "https://openalex.org/W4379540175",
+    "https://openalex.org/W4308641625",
+    "https://openalex.org/W4293138061",
+    "https://openalex.org/W2156723666",
+    "https://openalex.org/W4381613440",
+    "https://openalex.org/W6764109406",
+    "https://openalex.org/W4231241365",
+    "https://openalex.org/W2998011150",
+    "https://openalex.org/W4283218802",
+    "https://openalex.org/W4311887664",
+    "https://openalex.org/W4389115798",
+    "https://openalex.org/W4367860052",
+    "https://openalex.org/W4366735548",
+    "https://openalex.org/W4285080116",
+    "https://openalex.org/W2113352466",
+    "https://openalex.org/W2037237472",
+    "https://openalex.org/W3088632941",
+    "https://openalex.org/W4319793412",
+    "https://openalex.org/W2779806713",
+    "https://openalex.org/W4327810158",
+    "https://openalex.org/W3097664220",
+    "https://openalex.org/W4385681252",
+    "https://openalex.org/W4288057765",
+    "https://openalex.org/W2608579592",
+    "https://openalex.org/W2060610732",
+    "https://openalex.org/W3089307846",
+    "https://openalex.org/W4361767706",
+    "https://openalex.org/W4386185625",
+    "https://openalex.org/W4353112996",
+    "https://openalex.org/W4382323141",
+    "https://openalex.org/W2106172458",
+    "https://openalex.org/W4285734663",
+    "https://openalex.org/W4287019942",
+    "https://openalex.org/W2477695133",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W2153203800",
+    "https://openalex.org/W4318902699",
+    "https://openalex.org/W2990908872",
+    "https://openalex.org/W4281763794",
+    "https://openalex.org/W4389518960",
+    "https://openalex.org/W4387559558",
+    "https://openalex.org/W4385572142",
+    "https://openalex.org/W4385572345",
+    "https://openalex.org/W4396651321",
+    "https://openalex.org/W4386273180",
+    "https://openalex.org/W4385562549",
+    "https://openalex.org/W2576723740",
+    "https://openalex.org/W4307867790",
+    "https://openalex.org/W2418011578",
+    "https://openalex.org/W2970575144",
+    "https://openalex.org/W1901493616",
+    "https://openalex.org/W2122410182",
+    "https://openalex.org/W3106006733"
+  ],
+  "abstract": "Program synthesis with Large Language Models (LLMs) suffers from a “near-miss syndrome”: The generated code closely resembles a correct solution but fails unit tests due to minor errors. We address this with a multi-agent framework called Synthesize, Execute, Instruct, Debug, and Repair (SEIDR). Effectively applying SEIDR to instruction-tuned LLMs requires determining (a) optimal prompts for LLMs, (b) what ranking algorithm selects the best programs in debugging rounds, and (c) balancing the repair of unsuccessful programs with the generation of new ones. We empirically explore these tradeoffs by comparing replace-focused, repair-focused, and hybrid debug strategies. We also evaluate lexicase and tournament selection to rank candidates in each generation. On Program Synthesis Benchmark 2 (PSB2), our framework outperforms both conventional use of OpenAI Codex without a repair phase and traditional genetic programming approaches. SEIDR outperforms the use of an LLM alone, solving 18 problems in C++ and 20 in Python on PSB2 at least once across experiments. To assess generalizability, we employ GPT-3.5 and Llama 3 on the PSB2 and HumanEval-X benchmarks. Although SEIDR with these models does not surpass current state-of-the-art methods on the Python benchmarks, the results on HumanEval-C++ are promising. SEIDR with Llama 3-8B achieves an average pass@100 of 84.2%. Across all SEIDR runs, 163 of 164 problems are solved at least once with GPT-3.5 in HumanEval-C++, and 162 of 164 with the smaller Llama 3-8B. We conclude that SEIDR effectively overcomes the near-miss syndrome in program synthesis with LLMs.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7240809798240662
+    },
+    {
+      "name": "Debugging",
+      "score": 0.7156404256820679
+    },
+    {
+      "name": "Programming language",
+      "score": 0.7153939008712769
+    }
+  ]
 }

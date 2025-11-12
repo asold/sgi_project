@@ -1,41 +1,120 @@
 {
-    "title": "Position Masking for Language Models",
-    "url": "https://openalex.org/W3035071485",
-    "year": 2022,
-    "authors": [
-        {
-            "id": null,
-            "name": "Wagner, Andy",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Mitra, Tiyasa",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4297637288",
-            "name": "Iyer, Mrinal",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4362449079",
-            "name": "Da costa, Godfrey",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Tremblay, Marc",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2427527485",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2965373594"
-    ],
-    "abstract": "Masked language modeling (MLM) pre-training models such as BERT corrupt the input by replacing some tokens with [MASK] and then train a model to reconstruct the original tokens. This is an effective technique which has led to good results on all NLP benchmarks. We propose to expand upon this idea by masking the positions of some tokens along with the masked input token ids. We follow the same standard approach as BERT masking a percentage of the tokens positions and then predicting their original values using an additional fully connected classifier stage. This approach has shown good performance gains (.3\\% improvement) for the SQUAD additional improvement in convergence times. For the Graphcore IPU the convergence of BERT Base with position masking requires only 50\\% of the tokens from the original BERT paper.",
-    "full_text": "POSITIONAL MASKING FOR LANGUAGE MODELS\nAndy Wagner\nMicrosoft\nanwagner@microsoft.com\nTiyasa Mitra\nMicrosoft\nTiyasa.Mitra@microsoft.com\nMrinal Iyer\nGraphcore\nmrinali@graphcore.ai\nGodfrey De Costa\nGraphcore\ngodfrey.da.costa@graphcore.ai\nMarc Tremblay\nMicrosoft\nmarc.tremblay@microsoft.com\nJune 11, 2020\nABSTRACT\nMasked language modeling (MLM) pre-training models such as BERT[ 1] corrupt the input by\nreplacing some tokens with [MASK] and then train a model to reconstruct the original tokens. This is\nan effective technique which has led to good results on all NLP benchmarks. We propose to expand\nupon this idea by masking the positions of some tokens along with the masked input token ids. We\nfollow the same standard approach as BERT[1] masking a percentage of the tokens positions and then\npredicting their original values using an additional fully connected classiﬁer stage. This approach has\nshown good performance gains (.3% improvement) for the SQUAD[2] task in general along with an\nadditional improvement in convergence times. For the Graphcore IPU[3] the convergence of BERT\nBase with position masking requires only 50% of the tokens from the original BERT paper.\n1 Introduction\nSelf training methods based on models using Transformer[4] blocks like BERT[1] and it’s descendants like XlNet[5],\nAlbert[6], Roberta[7] and many others have brought signiﬁcant performance gains for NLP tasks. We are enhancing the\ntraining approach of these models by masking the positions along with the token ids. Our simulations are focused on the\nBERT architecture but the results should scale to other networks as well given we are just supplying extra information\nto the network.\nIn Bert a small subset of the unlabeled input sequence is masked or replaced and the network is trained to recover the\ninput. We enhanced this approach by performing a similar masking operation on the token positions. The technique has\na few advantages. First it gives the network extra information to train leading to quicker convergence and greater stability.\nSecond it helps by adding extra information in training which is normally limited by masking a small percentage of\ntokens. Third it improves the training of the position encodings which have a large impact on the performance.\n2 Improvements\nThe focus of this paper is position masking but we also found that by allowing all gradients to ﬂow through the dropout\nlayer led to substantially better squad results ( .5%).\n2.1 Position Masking\nPosition masking requires a single extra classiﬁer layer to be added to a transformer based system. A standard BERT\nimplementation with an extra fully connected classiﬁer stage targeted towards estimating the location of the masked\nposition tokens is shown in ﬁgure 2 with the changes in a darker background. This diagram assumes that the tokens are\npacked in the embedding layer to allow an efﬁcient implementation at the classiﬁer. A more standard gather/scatter\noperation could also be used.\narXiv:2006.05676v1  [cs.CL]  2 Jun 2020\nA PREPRINT - JUNE 11, 2020\nFigure 1: Example of position masking\nFigure 2: Diagram of changes from bert architecture\nThe concept behind position masking is a somewhat obvious extension intuitively although leads to a slightly different\nanalytic solution than masking the token ids. The position masking problem optimizes the network to solve the location\nof the position encoding which differs from the desired solution of identifying the masked token. While this leads to\nsome inefﬁciency in the network, this effect is overcome due to the tighter control over the position encodings and\ngreater information accessible to the network. We have not considered approaches where ﬁnding the position of a\nmasked token could be used directly or used in a different way to enhance networks using a less direct approach but\nbelieve there are approaches possible.\n2.2 Enhanced Dropout Gradient\nFor ﬁne tuning tasks, although we dropout the attention weights in the forward, we do not apply the dropout mask when\nthe gradients are back-propagated. We have seen that for some tasks this gives a consistently better performance over\nmultiple runs than applying the dropout mask as would typically be expected when dropout is used.\n3 Experimental Approach\nWe chose BERT[1] Base for to use as the baseline for out study with Squad[2] as the performance metric. We chose\ntwo implementations to study for comparison purposes GPUs and IPUs. The majority of our work has been done on\nIPUs due to it’s performance advantage but GPU results were included given it is a more mature technology.\n2\nA PREPRINT - JUNE 11, 2020\nFigure 3: GPU phase 1 MLM accuracy\n Figure 4: GPU phase 1 Squad Accuracy\nTable 1: GPU phase 2 bert base performance\nName Squad v1.1 F1\nBase 384 87.99\nPosition 384 88.26\nOur approach consists of masking the position encodings along with the masked token ids. A simple example of this is\nshown in ﬁgure 2. We use the same masking strategy for position as BERT[1] used for token ids. 90% of the tokens\nwere masked with 5% usign the correct position and 5% using a random token.\nWe have for the most part stayed true to the original approaches from the BERT paper [1]. We used Wikipedia as a\ntraining set and tokenized the data using the original BERT code base. We loosely followed the standard approach\nwhich consists of 90% training with sequence length 128 followed by 10% of the training using sequence length 384.\nWe did not necessarily stay true to the split times and optimized for efﬁciency. For Base, we chose to have a more even\nsplit on IPUs due to the scaling efﬁciency for that case. We chose not to use BookCorpus as early experiments didn’t\nshow an advantage.\nWe chose a pipelined implementation of BERT using Graphcore IPU which was standard from an algorithmic perspective\nwith the exception that we chose to use standard SGD rather than ADAM as well as adding a new technique in ﬁne\ntuning in handling the gradient through the dropout layers. We also used the Nvidia Mixed Precision implementation\nwhich used the LAMB optimizer with default settings supplied for comparison with a more mature technology.\n4 GPU Results\nThe GPU results were created using the PyTorch version of Nvidia’s mixed precision directly from their website[8]\nwith the default settings. The only changes made was to use a 384 sequence length rather than 511 to allow better\ncomparisons with the IPU results. For Phase 1 tracking the GPU performance was better after the warmup phase by\n.3% which carried over to phase 2. The results for phase 1 MLM and Position loss are shown in ﬁgure 3 and the squad\nperformance for this data is shown in ﬁgure 4. The performance with position masking is about .3% throughout the run\nwith the exception of the warm-up period.\nThe results from phase 2 are shown in table 1. The GPU performance was .3% better at the end of the run. These results\nwere averaged over multiple pre-training and squad runs but never reached the published BERT Base results. This is\npartially due to using sequence length 384 which degrades performance and partially due to not looking for the peak\nperformance. The results in the paper are all based on averages to better compare techniques.\n5 IPU Results\nThe IPU has a general advantage over the GPU for BERT Base on the Squad Task. It converges in about 60% of\nthe tokens of the original paper with 1% better performance results. The addition of position masking added .3% F1\nperformance improvement and .4% EM performance improvement on top of the results and brings the convergence\n3\nA PREPRINT - JUNE 11, 2020\nFigure 5: IPU phase 1 MLM accuracy\n Figure 6: IPU phase 2 MLM accuracy\nFigure 7: IPU percentage sweep\n Figure 8: Phase 1 position improvement\ntime down to 50% of the tokens used in the original paper. The difference in EM performance is probably due to the\ntighter control over positions.\nThe results for phase 1 MLM convergence with position masking is shown compared to the baseline mode in ﬁgure\n5. The baseline mode has a 1.5% better MLM performance which is due to the masking of positions resulting in lost\ninformation which degrades the MLM performance. The phase 2 results are shown in ﬁgure 6 and has a similar response\nwhere the performance is 2% lower.\nThe results for phase 1 of the Squad downstream task are shown in ﬁgure 8. There is approximately a 1% performance\nadvantage at about 20% of the original training time for BERT Base. Figure 9 and ﬁgure 10 shows the results of phase 2\ntraining for this run which converge to a .3% performance advantage matching the GPU simulations. The convergence\ntime is 10% faster with position masking which is likely caused by the tighter control over the position encodings.\n5.1 Position Mask Percentage Comparison\nFigure 7 shows a comparison of the MLM and position accuracy when the position masking percentage was varied\nfrom 5% to 15%. As expected the greater masking leads to a lower MLM and position accuracy. The majority of the\nwork was done using 10% masking percentage which led to the best results. Figures 11 and 12 show a result from a\nsweep over the position masking percentage. For phase 1 a 10% masking percentage led to the best results with a 15%\nmasking percentage leading to equivalent performance as no masking. The 5% masking showed similar results to the\n10% masking results.\n5.2 Enhanced Dropout Gradient Approach\nFigure 13 shows a comparison for results with and without the enhanced dropout gradient approach for the default\nBERT Base with Figure 14 showing the results with position masking.We have analysed the gradients at the output of\n4\nA PREPRINT - JUNE 11, 2020\nFigure 9: Phase 2 exact match improvement\n Figure 10: Phase 2 F1 score improvement\nFigure 11: Convergence time\n Figure 12: Phase 1 masking sweep\nthe Softmax operation starting from the same pre-trained weights, and ﬁnd them to be higher for the case when the\ndropout is not applied. We are unsure whether this give some sort of a regularisation effect due to the small size of the\ndata sets. The reasons for the gains need further study and exploration as the gains are not insigniﬁcant.\nFigure 13: Default Dropout Gradient\n Figure 14: Position Dropout Gradient\n5\nA PREPRINT - JUNE 11, 2020\nFigure 15: IPU vs GPU Performance\n5.3 IPU vs GPU Performance\nThe IPU implementation has a convergence and steady state advantage over the GPU for the BERT BASE implementa-\ntion with both position masking and in general. Figure 15 shows a comparison between the IPU Squad performance,\nGPU performance and results from the original BERT paper. The IPU has a convergence time advantage as well as a\nsteady state performance advantage. The reasons for the gains are not currently clear and require further study.\n6 Conclusion\nWe have shown that masking positions as well as tokens leads to both a convergence time advantage as well as steady\nstate accuracy improvement. In the future we plan to map this to other architectures to determine if the performance\nadvantage scales. We also feel that masking the position opens up a new dimension for optimizing transformer networks\nthat hopefully can open up new ideas which greatly improve performance.\nBroader Impact\nThis paper is an algorithmic improvement upon an existing architecture and doesn’t have a broad impact other than\nenhancing existing techniques.\nReferences\n[1] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: Pre-training of deep bidirectional\ntransformers for language understanding. In Proceedings of the 2019 Conference of the North American Chapter of\nthe Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers),\npages 4171–4186, Minneapolis, Minnesota, June 2019. Association for Computational Linguistics.\n[2] Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang. SQuAD: 100,000+ questions for machine\ncomprehension of text. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language\nProcessing, pages 2383–2392, Austin, Texas, November 2016. Association for Computational Linguistics.\n[3] Graphcore. Graphcore webiste. https://www.graphcore.ai/, May 2020.\n6\nA PREPRINT - JUNE 11, 2020\n[4] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and\nIllia Polosukhin. Attention is all you need. In NIPS, 2017.\n[5] Zhilin Yang, Zihang Dai, Yiming Yang, Jaime G. Carbonell, Ruslan Salakhutdinov, and Quoc V . Le. Xlnet:\nGeneralized autoregressive pretraining for language understanding. In NeurIPS, 2019.\n[6] Zhen-Zhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, and Radu Soricut. Albert: A\nlite bert for self-supervised learning of language representations. ArXiv, abs/1909.11942, 2020.\n[7] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettle-\nmoyer, and Veselin Stoyanov. Roberta: A robustly optimized bert pretraining approach. ArXiv, abs/1907.11692,\n2019.\n[8] Nvidia. Bert deep learning. https://github.com/NVIDIA/DeepLearningExamples/tree/master/\nPyTorch/LanguageModeling/BERT, May 2020.\n7"
+  "title": "Position Masking for Language Models",
+  "url": "https://openalex.org/W3035071485",
+  "year": 2022,
+  "authors": [
+    {
+      "id": null,
+      "name": "Wagner, Andy",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Mitra, Tiyasa",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4297637288",
+      "name": "Iyer, Mrinal",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4362449079",
+      "name": "Da costa, Godfrey",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Tremblay, Marc",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2427527485",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2965373594"
+  ],
+  "abstract": "Masked language modeling (MLM) pre-training models such as BERT corrupt the input by replacing some tokens with [MASK] and then train a model to reconstruct the original tokens. This is an effective technique which has led to good results on all NLP benchmarks. We propose to expand upon this idea by masking the positions of some tokens along with the masked input token ids. We follow the same standard approach as BERT masking a percentage of the tokens positions and then predicting their original values using an additional fully connected classifier stage. This approach has shown good performance gains (.3\\% improvement) for the SQUAD additional improvement in convergence times. For the Graphcore IPU the convergence of BERT Base with position masking requires only 50\\% of the tokens from the original BERT paper.",
+  "full_text": "POSITIONAL MASKING FOR LANGUAGE MODELS\nAndy Wagner\nMicrosoft\nanwagner@microsoft.com\nTiyasa Mitra\nMicrosoft\nTiyasa.Mitra@microsoft.com\nMrinal Iyer\nGraphcore\nmrinali@graphcore.ai\nGodfrey De Costa\nGraphcore\ngodfrey.da.costa@graphcore.ai\nMarc Tremblay\nMicrosoft\nmarc.tremblay@microsoft.com\nJune 11, 2020\nABSTRACT\nMasked language modeling (MLM) pre-training models such as BERT[ 1] corrupt the input by\nreplacing some tokens with [MASK] and then train a model to reconstruct the original tokens. This is\nan effective technique which has led to good results on all NLP benchmarks. We propose to expand\nupon this idea by masking the positions of some tokens along with the masked input token ids. We\nfollow the same standard approach as BERT[1] masking a percentage of the tokens positions and then\npredicting their original values using an additional fully connected classiﬁer stage. This approach has\nshown good performance gains (.3% improvement) for the SQUAD[2] task in general along with an\nadditional improvement in convergence times. For the Graphcore IPU[3] the convergence of BERT\nBase with position masking requires only 50% of the tokens from the original BERT paper.\n1 Introduction\nSelf training methods based on models using Transformer[4] blocks like BERT[1] and it’s descendants like XlNet[5],\nAlbert[6], Roberta[7] and many others have brought signiﬁcant performance gains for NLP tasks. We are enhancing the\ntraining approach of these models by masking the positions along with the token ids. Our simulations are focused on the\nBERT architecture but the results should scale to other networks as well given we are just supplying extra information\nto the network.\nIn Bert a small subset of the unlabeled input sequence is masked or replaced and the network is trained to recover the\ninput. We enhanced this approach by performing a similar masking operation on the token positions. The technique has\na few advantages. First it gives the network extra information to train leading to quicker convergence and greater stability.\nSecond it helps by adding extra information in training which is normally limited by masking a small percentage of\ntokens. Third it improves the training of the position encodings which have a large impact on the performance.\n2 Improvements\nThe focus of this paper is position masking but we also found that by allowing all gradients to ﬂow through the dropout\nlayer led to substantially better squad results ( .5%).\n2.1 Position Masking\nPosition masking requires a single extra classiﬁer layer to be added to a transformer based system. A standard BERT\nimplementation with an extra fully connected classiﬁer stage targeted towards estimating the location of the masked\nposition tokens is shown in ﬁgure 2 with the changes in a darker background. This diagram assumes that the tokens are\npacked in the embedding layer to allow an efﬁcient implementation at the classiﬁer. A more standard gather/scatter\noperation could also be used.\narXiv:2006.05676v1  [cs.CL]  2 Jun 2020\nA PREPRINT - JUNE 11, 2020\nFigure 1: Example of position masking\nFigure 2: Diagram of changes from bert architecture\nThe concept behind position masking is a somewhat obvious extension intuitively although leads to a slightly different\nanalytic solution than masking the token ids. The position masking problem optimizes the network to solve the location\nof the position encoding which differs from the desired solution of identifying the masked token. While this leads to\nsome inefﬁciency in the network, this effect is overcome due to the tighter control over the position encodings and\ngreater information accessible to the network. We have not considered approaches where ﬁnding the position of a\nmasked token could be used directly or used in a different way to enhance networks using a less direct approach but\nbelieve there are approaches possible.\n2.2 Enhanced Dropout Gradient\nFor ﬁne tuning tasks, although we dropout the attention weights in the forward, we do not apply the dropout mask when\nthe gradients are back-propagated. We have seen that for some tasks this gives a consistently better performance over\nmultiple runs than applying the dropout mask as would typically be expected when dropout is used.\n3 Experimental Approach\nWe chose BERT[1] Base for to use as the baseline for out study with Squad[2] as the performance metric. We chose\ntwo implementations to study for comparison purposes GPUs and IPUs. The majority of our work has been done on\nIPUs due to it’s performance advantage but GPU results were included given it is a more mature technology.\n2\nA PREPRINT - JUNE 11, 2020\nFigure 3: GPU phase 1 MLM accuracy\n Figure 4: GPU phase 1 Squad Accuracy\nTable 1: GPU phase 2 bert base performance\nName Squad v1.1 F1\nBase 384 87.99\nPosition 384 88.26\nOur approach consists of masking the position encodings along with the masked token ids. A simple example of this is\nshown in ﬁgure 2. We use the same masking strategy for position as BERT[1] used for token ids. 90% of the tokens\nwere masked with 5% usign the correct position and 5% using a random token.\nWe have for the most part stayed true to the original approaches from the BERT paper [1]. We used Wikipedia as a\ntraining set and tokenized the data using the original BERT code base. We loosely followed the standard approach\nwhich consists of 90% training with sequence length 128 followed by 10% of the training using sequence length 384.\nWe did not necessarily stay true to the split times and optimized for efﬁciency. For Base, we chose to have a more even\nsplit on IPUs due to the scaling efﬁciency for that case. We chose not to use BookCorpus as early experiments didn’t\nshow an advantage.\nWe chose a pipelined implementation of BERT using Graphcore IPU which was standard from an algorithmic perspective\nwith the exception that we chose to use standard SGD rather than ADAM as well as adding a new technique in ﬁne\ntuning in handling the gradient through the dropout layers. We also used the Nvidia Mixed Precision implementation\nwhich used the LAMB optimizer with default settings supplied for comparison with a more mature technology.\n4 GPU Results\nThe GPU results were created using the PyTorch version of Nvidia’s mixed precision directly from their website[8]\nwith the default settings. The only changes made was to use a 384 sequence length rather than 511 to allow better\ncomparisons with the IPU results. For Phase 1 tracking the GPU performance was better after the warmup phase by\n.3% which carried over to phase 2. The results for phase 1 MLM and Position loss are shown in ﬁgure 3 and the squad\nperformance for this data is shown in ﬁgure 4. The performance with position masking is about .3% throughout the run\nwith the exception of the warm-up period.\nThe results from phase 2 are shown in table 1. The GPU performance was .3% better at the end of the run. These results\nwere averaged over multiple pre-training and squad runs but never reached the published BERT Base results. This is\npartially due to using sequence length 384 which degrades performance and partially due to not looking for the peak\nperformance. The results in the paper are all based on averages to better compare techniques.\n5 IPU Results\nThe IPU has a general advantage over the GPU for BERT Base on the Squad Task. It converges in about 60% of\nthe tokens of the original paper with 1% better performance results. The addition of position masking added .3% F1\nperformance improvement and .4% EM performance improvement on top of the results and brings the convergence\n3\nA PREPRINT - JUNE 11, 2020\nFigure 5: IPU phase 1 MLM accuracy\n Figure 6: IPU phase 2 MLM accuracy\nFigure 7: IPU percentage sweep\n Figure 8: Phase 1 position improvement\ntime down to 50% of the tokens used in the original paper. The difference in EM performance is probably due to the\ntighter control over positions.\nThe results for phase 1 MLM convergence with position masking is shown compared to the baseline mode in ﬁgure\n5. The baseline mode has a 1.5% better MLM performance which is due to the masking of positions resulting in lost\ninformation which degrades the MLM performance. The phase 2 results are shown in ﬁgure 6 and has a similar response\nwhere the performance is 2% lower.\nThe results for phase 1 of the Squad downstream task are shown in ﬁgure 8. There is approximately a 1% performance\nadvantage at about 20% of the original training time for BERT Base. Figure 9 and ﬁgure 10 shows the results of phase 2\ntraining for this run which converge to a .3% performance advantage matching the GPU simulations. The convergence\ntime is 10% faster with position masking which is likely caused by the tighter control over the position encodings.\n5.1 Position Mask Percentage Comparison\nFigure 7 shows a comparison of the MLM and position accuracy when the position masking percentage was varied\nfrom 5% to 15%. As expected the greater masking leads to a lower MLM and position accuracy. The majority of the\nwork was done using 10% masking percentage which led to the best results. Figures 11 and 12 show a result from a\nsweep over the position masking percentage. For phase 1 a 10% masking percentage led to the best results with a 15%\nmasking percentage leading to equivalent performance as no masking. The 5% masking showed similar results to the\n10% masking results.\n5.2 Enhanced Dropout Gradient Approach\nFigure 13 shows a comparison for results with and without the enhanced dropout gradient approach for the default\nBERT Base with Figure 14 showing the results with position masking.We have analysed the gradients at the output of\n4\nA PREPRINT - JUNE 11, 2020\nFigure 9: Phase 2 exact match improvement\n Figure 10: Phase 2 F1 score improvement\nFigure 11: Convergence time\n Figure 12: Phase 1 masking sweep\nthe Softmax operation starting from the same pre-trained weights, and ﬁnd them to be higher for the case when the\ndropout is not applied. We are unsure whether this give some sort of a regularisation effect due to the small size of the\ndata sets. The reasons for the gains need further study and exploration as the gains are not insigniﬁcant.\nFigure 13: Default Dropout Gradient\n Figure 14: Position Dropout Gradient\n5\nA PREPRINT - JUNE 11, 2020\nFigure 15: IPU vs GPU Performance\n5.3 IPU vs GPU Performance\nThe IPU implementation has a convergence and steady state advantage over the GPU for the BERT BASE implementa-\ntion with both position masking and in general. Figure 15 shows a comparison between the IPU Squad performance,\nGPU performance and results from the original BERT paper. The IPU has a convergence time advantage as well as a\nsteady state performance advantage. The reasons for the gains are not currently clear and require further study.\n6 Conclusion\nWe have shown that masking positions as well as tokens leads to both a convergence time advantage as well as steady\nstate accuracy improvement. In the future we plan to map this to other architectures to determine if the performance\nadvantage scales. We also feel that masking the position opens up a new dimension for optimizing transformer networks\nthat hopefully can open up new ideas which greatly improve performance.\nBroader Impact\nThis paper is an algorithmic improvement upon an existing architecture and doesn’t have a broad impact other than\nenhancing existing techniques.\nReferences\n[1] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: Pre-training of deep bidirectional\ntransformers for language understanding. In Proceedings of the 2019 Conference of the North American Chapter of\nthe Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers),\npages 4171–4186, Minneapolis, Minnesota, June 2019. Association for Computational Linguistics.\n[2] Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang. SQuAD: 100,000+ questions for machine\ncomprehension of text. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language\nProcessing, pages 2383–2392, Austin, Texas, November 2016. Association for Computational Linguistics.\n[3] Graphcore. Graphcore webiste. https://www.graphcore.ai/, May 2020.\n6\nA PREPRINT - JUNE 11, 2020\n[4] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and\nIllia Polosukhin. Attention is all you need. In NIPS, 2017.\n[5] Zhilin Yang, Zihang Dai, Yiming Yang, Jaime G. Carbonell, Ruslan Salakhutdinov, and Quoc V . Le. Xlnet:\nGeneralized autoregressive pretraining for language understanding. In NeurIPS, 2019.\n[6] Zhen-Zhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, and Radu Soricut. Albert: A\nlite bert for self-supervised learning of language representations. ArXiv, abs/1909.11942, 2020.\n[7] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettle-\nmoyer, and Veselin Stoyanov. Roberta: A robustly optimized bert pretraining approach. ArXiv, abs/1907.11692,\n2019.\n[8] Nvidia. Bert deep learning. https://github.com/NVIDIA/DeepLearningExamples/tree/master/\nPyTorch/LanguageModeling/BERT, May 2020.\n7",
+  "topic": "Security token",
+  "concepts": [
+    {
+      "name": "Security token",
+      "score": 0.8466283679008484
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8081341981887817
+    },
+    {
+      "name": "Masking (illustration)",
+      "score": 0.79585200548172
+    },
+    {
+      "name": "Language model",
+      "score": 0.6051679849624634
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.5460463166236877
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.49067771434783936
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.47945037484169006
+    },
+    {
+      "name": "Convergence (economics)",
+      "score": 0.4659254252910614
+    },
+    {
+      "name": "Position (finance)",
+      "score": 0.46579182147979736
+    },
+    {
+      "name": "Base (topology)",
+      "score": 0.4157181680202484
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.36161789298057556
+    },
+    {
+      "name": "Computer network",
+      "score": 0.07105696201324463
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.06977170705795288
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Finance",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Economic growth",
+      "score": 0.0
+    }
+  ]
 }

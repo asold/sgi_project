@@ -1,138 +1,185 @@
 {
-    "title": "NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing",
-    "url": "https://openalex.org/W4392427708",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Heo, Guseul",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2205102355",
-            "name": "Lee Sangyeop",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Cho, Jaehong",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2742625575",
-            "name": "Choi， Hyun-Min",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A296119463",
-            "name": "Lee， Sang-Hyeon",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Ham, Hyungkyu",
-            "affiliations": [
-                "Pohang University of Science and Technology"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Kim, Gwangsun",
-            "affiliations": [
-                "Pohang University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2751241604",
-            "name": "Mahajan, Divya",
-            "affiliations": [
-                "Georgia Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2227472393",
-            "name": "Park Jongse",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3200211247",
-        "https://openalex.org/W1981943579",
-        "https://openalex.org/W2086112773",
-        "https://openalex.org/W4249322926",
-        "https://openalex.org/W2725159389",
-        "https://openalex.org/W4224051134",
-        "https://openalex.org/W3177813494",
-        "https://openalex.org/W4280542458",
-        "https://openalex.org/W3106937018",
-        "https://openalex.org/W4385834084",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2979874885",
-        "https://openalex.org/W4284886102",
-        "https://openalex.org/W4281733247",
-        "https://openalex.org/W4312258681",
-        "https://openalex.org/W4312438982",
-        "https://openalex.org/W4285121610",
-        "https://openalex.org/W3100710793",
-        "https://openalex.org/W4389163115",
-        "https://openalex.org/W4225591000",
-        "https://openalex.org/W2901299405",
-        "https://openalex.org/W4393407040",
-        "https://openalex.org/W3103415979",
-        "https://openalex.org/W4392015341",
-        "https://openalex.org/W4362655494",
-        "https://openalex.org/W4389476267",
-        "https://openalex.org/W4211105506",
-        "https://openalex.org/W3043023836",
-        "https://openalex.org/W4390280330",
-        "https://openalex.org/W3158634533",
-        "https://openalex.org/W3210580311",
-        "https://openalex.org/W4387321091",
-        "https://openalex.org/W2965643269",
-        "https://openalex.org/W4320023979",
-        "https://openalex.org/W3185889905",
-        "https://openalex.org/W3210038683",
-        "https://openalex.org/W3189166979",
-        "https://openalex.org/W3006586535",
-        "https://openalex.org/W4221159132",
-        "https://openalex.org/W4321853806",
-        "https://openalex.org/W4380881178",
-        "https://openalex.org/W2261808795",
-        "https://openalex.org/W2782800349",
-        "https://openalex.org/W2612654866",
-        "https://openalex.org/W2969388332",
-        "https://openalex.org/W4293731257",
-        "https://openalex.org/W2779888504",
-        "https://openalex.org/W3207399097",
-        "https://openalex.org/W6745386328",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W6846659131",
-        "https://openalex.org/W4224035735",
-        "https://openalex.org/W4386185625",
-        "https://openalex.org/W2562773490",
-        "https://openalex.org/W3039050620",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W3144382362",
-        "https://openalex.org/W4327930430",
-        "https://openalex.org/W3158275024",
-        "https://openalex.org/W6846002521",
-        "https://openalex.org/W6811340617",
-        "https://openalex.org/W4226479682",
-        "https://openalex.org/W3205088407",
-        "https://openalex.org/W4280496502"
-    ],
-    "abstract": "Modern transformer-based Large Language Models (LLMs) are constructed with a series of decoder blocks. Each block comprises three key components: (1) QKV generation, (2) multi-head attention, and (3) feed-forward networks. In batched processing, QKV generation and feed-forward networks involve compute-intensive matrix-matrix multiplications (GEMM), while multi-head attention requires bandwidth-heavy matrix-vector multiplications (GEMV). Machine learning accelerators like TPUs or NPUs are proficient in handling GEMM but are less efficient for GEMV computations. Conversely, Processing-in-Memory (PIM) technology is tailored for efficient GEMV computation, while it lacks the computational power to handle GEMM effectively. Inspired by this insight, we propose NeuPIMs, a heterogeneous acceleration system that jointly exploits a conventional GEMM-focused NPU and GEMV-optimized PIM devices. The main challenge in efficiently integrating NPU and PIM lies in enabling concurrent operations on both platforms, each addressing a specific kernel type. First, existing PIMs typically operate in a \"blocked\" mode, allowing only either NPU or PIM to be active at any given time. Second, the inherent dependencies between GEMM and GEMV in LLMs restrict their parallel processing. To tackle these challenges, NeuPIMs is equipped with dual row buffers in each bank, facilitating the simultaneous management of memory read/write operations and PIM commands. Further, NeuPIMs employs a runtime sub-batch interleaving technique to maximize concurrent execution, leveraging batch parallelism to allow two independent sub-batches to be pipelined within a single NeuPIMs device. Our evaluation demonstrates that compared to GPU-only, NPU-only, and a na\\\"ive NPU+PIM integrated acceleration approaches, NeuPIMs achieves 3$\\times$, 2.4$\\times$ and 1.6$\\times$ throughput improvement, respectively.",
-    "full_text": null
+  "title": "NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing",
+  "url": "https://openalex.org/W4392427708",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Heo, Guseul",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2205102355",
+      "name": "Lee Sangyeop",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Cho, Jaehong",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2742625575",
+      "name": "Choi， Hyun-Min",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A296119463",
+      "name": "Lee， Sang-Hyeon",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Ham, Hyungkyu",
+      "affiliations": [
+        "Pohang University of Science and Technology"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Kim, Gwangsun",
+      "affiliations": [
+        "Pohang University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2751241604",
+      "name": "Mahajan, Divya",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2227472393",
+      "name": "Park Jongse",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3200211247",
+    "https://openalex.org/W1981943579",
+    "https://openalex.org/W2086112773",
+    "https://openalex.org/W4249322926",
+    "https://openalex.org/W2725159389",
+    "https://openalex.org/W4224051134",
+    "https://openalex.org/W3177813494",
+    "https://openalex.org/W4280542458",
+    "https://openalex.org/W3106937018",
+    "https://openalex.org/W4385834084",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2979874885",
+    "https://openalex.org/W4284886102",
+    "https://openalex.org/W4281733247",
+    "https://openalex.org/W4312258681",
+    "https://openalex.org/W4312438982",
+    "https://openalex.org/W4285121610",
+    "https://openalex.org/W3100710793",
+    "https://openalex.org/W4389163115",
+    "https://openalex.org/W4225591000",
+    "https://openalex.org/W2901299405",
+    "https://openalex.org/W4393407040",
+    "https://openalex.org/W3103415979",
+    "https://openalex.org/W4392015341",
+    "https://openalex.org/W4362655494",
+    "https://openalex.org/W4389476267",
+    "https://openalex.org/W4211105506",
+    "https://openalex.org/W3043023836",
+    "https://openalex.org/W4390280330",
+    "https://openalex.org/W3158634533",
+    "https://openalex.org/W3210580311",
+    "https://openalex.org/W4387321091",
+    "https://openalex.org/W2965643269",
+    "https://openalex.org/W4320023979",
+    "https://openalex.org/W3185889905",
+    "https://openalex.org/W3210038683",
+    "https://openalex.org/W3189166979",
+    "https://openalex.org/W3006586535",
+    "https://openalex.org/W4221159132",
+    "https://openalex.org/W4321853806",
+    "https://openalex.org/W4380881178",
+    "https://openalex.org/W2261808795",
+    "https://openalex.org/W2782800349",
+    "https://openalex.org/W2612654866",
+    "https://openalex.org/W2969388332",
+    "https://openalex.org/W4293731257",
+    "https://openalex.org/W2779888504",
+    "https://openalex.org/W3207399097",
+    "https://openalex.org/W6745386328",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W6846659131",
+    "https://openalex.org/W4224035735",
+    "https://openalex.org/W4386185625",
+    "https://openalex.org/W2562773490",
+    "https://openalex.org/W3039050620",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W3144382362",
+    "https://openalex.org/W4327930430",
+    "https://openalex.org/W3158275024",
+    "https://openalex.org/W6846002521",
+    "https://openalex.org/W6811340617",
+    "https://openalex.org/W4226479682",
+    "https://openalex.org/W3205088407",
+    "https://openalex.org/W4280496502"
+  ],
+  "abstract": "Modern transformer-based Large Language Models (LLMs) are constructed with a series of decoder blocks. Each block comprises three key components: (1) QKV generation, (2) multi-head attention, and (3) feed-forward networks. In batched processing, QKV generation and feed-forward networks involve compute-intensive matrix-matrix multiplications (GEMM), while multi-head attention requires bandwidth-heavy matrix-vector multiplications (GEMV). Machine learning accelerators like TPUs or NPUs are proficient in handling GEMM but are less efficient for GEMV computations. Conversely, Processing-in-Memory (PIM) technology is tailored for efficient GEMV computation, while it lacks the computational power to handle GEMM effectively. Inspired by this insight, we propose NeuPIMs, a heterogeneous acceleration system that jointly exploits a conventional GEMM-focused NPU and GEMV-optimized PIM devices. The main challenge in efficiently integrating NPU and PIM lies in enabling concurrent operations on both platforms, each addressing a specific kernel type. First, existing PIMs typically operate in a \"blocked\" mode, allowing only either NPU or PIM to be active at any given time. Second, the inherent dependencies between GEMM and GEMV in LLMs restrict their parallel processing. To tackle these challenges, NeuPIMs is equipped with dual row buffers in each bank, facilitating the simultaneous management of memory read/write operations and PIM commands. Further, NeuPIMs employs a runtime sub-batch interleaving technique to maximize concurrent execution, leveraging batch parallelism to allow two independent sub-batches to be pipelined within a single NeuPIMs device. Our evaluation demonstrates that compared to GPU-only, NPU-only, and a na\\\"ive NPU+PIM integrated acceleration approaches, NeuPIMs achieves 3$\\times$, 2.4$\\times$ and 1.6$\\times$ throughput improvement, respectively.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.851225733757019
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.6702066659927368
+    },
+    {
+      "name": "Computation",
+      "score": 0.4996349811553955
+    },
+    {
+      "name": "Interleaving",
+      "score": 0.48827052116394043
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.4823684096336365
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.42533016204833984
+    },
+    {
+      "name": "Distributed computing",
+      "score": 0.36210525035858154
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.19417554140090942
+    },
+    {
+      "name": "Operating system",
+      "score": 0.10777583718299866
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

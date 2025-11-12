@@ -1,68 +1,115 @@
 {
-    "title": "How to Benchmark Vision Foundation Models for Semantic Segmentation?",
-    "url": "https://openalex.org/W4402916738",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5087382700",
-            "name": "Tommie Kerssies",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5061463972",
-            "name": "Daan de Geus",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5024010116",
-            "name": "Gijs Dubbelman",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4386076428",
-        "https://openalex.org/W4386075535",
-        "https://openalex.org/W6800751262",
-        "https://openalex.org/W4312815172",
-        "https://openalex.org/W4386065512",
-        "https://openalex.org/W2340897893",
-        "https://openalex.org/W6849928207",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W2031489346",
-        "https://openalex.org/W6857172037",
-        "https://openalex.org/W4400721967",
-        "https://openalex.org/W6852164222",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W4386075563",
-        "https://openalex.org/W4239181501",
-        "https://openalex.org/W4390874575",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W6857702963",
-        "https://openalex.org/W6851800889",
-        "https://openalex.org/W4319300373",
-        "https://openalex.org/W6791353385",
-        "https://openalex.org/W6859989683",
-        "https://openalex.org/W2487365028",
-        "https://openalex.org/W6850991314",
-        "https://openalex.org/W4312453657",
-        "https://openalex.org/W6859198220",
-        "https://openalex.org/W4402915908",
-        "https://openalex.org/W4386071687",
-        "https://openalex.org/W4402727160",
-        "https://openalex.org/W4390054062",
-        "https://openalex.org/W2884822772",
-        "https://openalex.org/W6856853793",
-        "https://openalex.org/W4390873312",
-        "https://openalex.org/W2737258237"
-    ],
-    "abstract": "Recent vision foundation models (VFMs) have demonstrated proficiency in various tasks but require supervised fine-tuning to perform the task of semantic segmentation effectively. Benchmarking their performance is essential for selecting current models and guiding future model developments for this task. The lack of a standardized benchmark complicates comparisons. Therefore, the primary objective of this paper is to study how VFMs should be benchmarked for semantic segmentation. To do so, various VFMs are fine-tuned under various settings, and the impact of individual settings on the performance ranking and training time is assessed. Based on the results, the recommendation is to fine-tune the ViT-B variants of VFMs with a 16 × 16 patch size and a linear decoder, as these settings are representative of using a larger model, more advanced decoder and smaller patch size, while reducing training time by more than 13 times. Using multiple datasets for training and evaluation is also recommended, as the performance ranking across datasets and domain shifts varies. Linear probing, a common practice for some VFMs, is not recommended, as it is not representative of end-to-end fine-tuning. The benchmarking setup recommended in this paper enables a performance analysis of VFMs for semantic segmentation. The findings of such an analysis reveal that pretraining with promptable segmentation is not beneficial, whereas masked image modeling (MIM) with abstract representations is crucial, even more important than the type of supervision used. The code for efficiently fine-tuning VFMs for semantic segmentation can be accessed through the project page.",
-    "full_text": null
+  "title": "How to Benchmark Vision Foundation Models for Semantic Segmentation?",
+  "url": "https://openalex.org/W4402916738",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5087382700",
+      "name": "Tommie Kerssies",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5061463972",
+      "name": "Daan de Geus",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5024010116",
+      "name": "Gijs Dubbelman",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4386076428",
+    "https://openalex.org/W4386075535",
+    "https://openalex.org/W6800751262",
+    "https://openalex.org/W4312815172",
+    "https://openalex.org/W4386065512",
+    "https://openalex.org/W2340897893",
+    "https://openalex.org/W6849928207",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W2031489346",
+    "https://openalex.org/W6857172037",
+    "https://openalex.org/W4400721967",
+    "https://openalex.org/W6852164222",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W4386075563",
+    "https://openalex.org/W4239181501",
+    "https://openalex.org/W4390874575",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W6857702963",
+    "https://openalex.org/W6851800889",
+    "https://openalex.org/W4319300373",
+    "https://openalex.org/W6791353385",
+    "https://openalex.org/W6859989683",
+    "https://openalex.org/W2487365028",
+    "https://openalex.org/W6850991314",
+    "https://openalex.org/W4312453657",
+    "https://openalex.org/W6859198220",
+    "https://openalex.org/W4402915908",
+    "https://openalex.org/W4386071687",
+    "https://openalex.org/W4402727160",
+    "https://openalex.org/W4390054062",
+    "https://openalex.org/W2884822772",
+    "https://openalex.org/W6856853793",
+    "https://openalex.org/W4390873312",
+    "https://openalex.org/W2737258237"
+  ],
+  "abstract": "Recent vision foundation models (VFMs) have demonstrated proficiency in various tasks but require supervised fine-tuning to perform the task of semantic segmentation effectively. Benchmarking their performance is essential for selecting current models and guiding future model developments for this task. The lack of a standardized benchmark complicates comparisons. Therefore, the primary objective of this paper is to study how VFMs should be benchmarked for semantic segmentation. To do so, various VFMs are fine-tuned under various settings, and the impact of individual settings on the performance ranking and training time is assessed. Based on the results, the recommendation is to fine-tune the ViT-B variants of VFMs with a 16 × 16 patch size and a linear decoder, as these settings are representative of using a larger model, more advanced decoder and smaller patch size, while reducing training time by more than 13 times. Using multiple datasets for training and evaluation is also recommended, as the performance ranking across datasets and domain shifts varies. Linear probing, a common practice for some VFMs, is not recommended, as it is not representative of end-to-end fine-tuning. The benchmarking setup recommended in this paper enables a performance analysis of VFMs for semantic segmentation. The findings of such an analysis reveal that pretraining with promptable segmentation is not beneficial, whereas masked image modeling (MIM) with abstract representations is crucial, even more important than the type of supervision used. The code for efficiently fine-tuning VFMs for semantic segmentation can be accessed through the project page.",
+  "full_text": null,
+  "topic": "Foundation (evidence)",
+  "concepts": [
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.7530311346054077
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.7273485660552979
+    },
+    {
+      "name": "Computer science",
+      "score": 0.707150936126709
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6482391357421875
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6012929081916809
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.5152125954627991
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.34584906697273254
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3376602530479431
+    },
+    {
+      "name": "Cartography",
+      "score": 0.09898313879966736
+    },
+    {
+      "name": "Geography",
+      "score": 0.09664443135261536
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    }
+  ]
 }

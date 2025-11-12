@@ -1,103 +1,182 @@
 {
-    "title": "Prompt-tuned Code Language Model as a Neural Knowledge Base for Type Inference in Statically-Typed Partial Code",
-    "url": "https://openalex.org/W4313563756",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2127989496",
-            "name": "Qing Huang",
-            "affiliations": [
-                "Jiangxi Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136134240",
-            "name": "Zhiqiang Yuan",
-            "affiliations": [
-                "Jiangxi Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2779303333",
-            "name": "Zhenchang Xing",
-            "affiliations": [
-                "Data61",
-                "Commonwealth Scientific and Industrial Research Organisation",
-                "Australian National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104907697",
-            "name": "XiWei Xu",
-            "affiliations": [
-                "Data61",
-                "Commonwealth Scientific and Industrial Research Organisation"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122883615",
-            "name": "Liming Zhu",
-            "affiliations": [
-                "Commonwealth Scientific and Industrial Research Organisation",
-                "Data61"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1971717091",
-            "name": "Qinghua Lu",
-            "affiliations": [
-                "Data61",
-                "Commonwealth Scientific and Industrial Research Organisation"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3034689979",
-        "https://openalex.org/W2346411278",
-        "https://openalex.org/W2963935794",
-        "https://openalex.org/W2963541700",
-        "https://openalex.org/W2094728533",
-        "https://openalex.org/W2122401044",
-        "https://openalex.org/W2011458734",
-        "https://openalex.org/W3195893957",
-        "https://openalex.org/W3098605233",
-        "https://openalex.org/W2129658791",
-        "https://openalex.org/W3095493018",
-        "https://openalex.org/W3146844750",
-        "https://openalex.org/W3014877975",
-        "https://openalex.org/W2967937885",
-        "https://openalex.org/W2921611887",
-        "https://openalex.org/W2795013376",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W2901934569",
-        "https://openalex.org/W3174770825",
-        "https://openalex.org/W2164961799",
-        "https://openalex.org/W2968388969",
-        "https://openalex.org/W4285247752",
-        "https://openalex.org/W1997646511",
-        "https://openalex.org/W1972141422",
-        "https://openalex.org/W1962482270",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W3125402553",
-        "https://openalex.org/W3102659883",
-        "https://openalex.org/W2999648948",
-        "https://openalex.org/W3153427360",
-        "https://openalex.org/W3172642864",
-        "https://openalex.org/W2994316338",
-        "https://openalex.org/W2106259924",
-        "https://openalex.org/W4385572925",
-        "https://openalex.org/W2972082064",
-        "https://openalex.org/W2932789158",
-        "https://openalex.org/W4284710241",
-        "https://openalex.org/W3138429261",
-        "https://openalex.org/W3198685994",
-        "https://openalex.org/W2794992746",
-        "https://openalex.org/W2955685982",
-        "https://openalex.org/W4250691433",
-        "https://openalex.org/W4238623774",
-        "https://openalex.org/W3212893438"
-    ],
-    "abstract": "Partial code usually involves non-fully-qualified type names (non-FQNs) and undeclared receiving objects. Resolving the FQNs of these non-FQN types and undeclared receiving objects (referred to as type inference) is the prerequisite to effective search and reuse of partial code. Existing dictionary-lookup based methods build a symbolic knowledge base of API names and code contexts, which involve significant compilation overhead and are sensitive to unseen API names and code context variations. In this paper, we formulate type inference as a cloze-style fill-in-blank language task. Built on source code naturalness, our approach fine-tunes a code masked language model (MLM) as a neural knowledge base of code elements with a novel \"pre-train, prompt and predict\" paradigm from raw source code. Our approach is lightweight and has minimum requirements on code compilation. Unlike existing symbolic name and context matching for type inference, our prompt-tuned code MLM packs FQN syntax and usage in its parameters and supports fuzzy neural type inference. We systematically evaluate our approach on a large amount of source code from GitHub and Stack Overflow. Our results confirm the effectiveness of our approach design and the practicality for partial code type inference. As the first of its kind, our neural type inference method opens the door to many innovative ways of using partial code.",
-    "full_text": null
+  "title": "Prompt-tuned Code Language Model as a Neural Knowledge Base for Type Inference in Statically-Typed Partial Code",
+  "url": "https://openalex.org/W4313563756",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2127989496",
+      "name": "Qing Huang",
+      "affiliations": [
+        "Jiangxi Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136134240",
+      "name": "Zhiqiang Yuan",
+      "affiliations": [
+        "Jiangxi Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2779303333",
+      "name": "Zhenchang Xing",
+      "affiliations": [
+        "Data61",
+        "Commonwealth Scientific and Industrial Research Organisation",
+        "Australian National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104907697",
+      "name": "XiWei Xu",
+      "affiliations": [
+        "Data61",
+        "Commonwealth Scientific and Industrial Research Organisation"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122883615",
+      "name": "Liming Zhu",
+      "affiliations": [
+        "Commonwealth Scientific and Industrial Research Organisation",
+        "Data61"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1971717091",
+      "name": "Qinghua Lu",
+      "affiliations": [
+        "Data61",
+        "Commonwealth Scientific and Industrial Research Organisation"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3034689979",
+    "https://openalex.org/W2346411278",
+    "https://openalex.org/W2963935794",
+    "https://openalex.org/W2963541700",
+    "https://openalex.org/W2094728533",
+    "https://openalex.org/W2122401044",
+    "https://openalex.org/W2011458734",
+    "https://openalex.org/W3195893957",
+    "https://openalex.org/W3098605233",
+    "https://openalex.org/W2129658791",
+    "https://openalex.org/W3095493018",
+    "https://openalex.org/W3146844750",
+    "https://openalex.org/W3014877975",
+    "https://openalex.org/W2967937885",
+    "https://openalex.org/W2921611887",
+    "https://openalex.org/W2795013376",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W2901934569",
+    "https://openalex.org/W3174770825",
+    "https://openalex.org/W2164961799",
+    "https://openalex.org/W2968388969",
+    "https://openalex.org/W4285247752",
+    "https://openalex.org/W1997646511",
+    "https://openalex.org/W1972141422",
+    "https://openalex.org/W1962482270",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W3125402553",
+    "https://openalex.org/W3102659883",
+    "https://openalex.org/W2999648948",
+    "https://openalex.org/W3153427360",
+    "https://openalex.org/W3172642864",
+    "https://openalex.org/W2994316338",
+    "https://openalex.org/W2106259924",
+    "https://openalex.org/W4385572925",
+    "https://openalex.org/W2972082064",
+    "https://openalex.org/W2932789158",
+    "https://openalex.org/W4284710241",
+    "https://openalex.org/W3138429261",
+    "https://openalex.org/W3198685994",
+    "https://openalex.org/W2794992746",
+    "https://openalex.org/W2955685982",
+    "https://openalex.org/W4250691433",
+    "https://openalex.org/W4238623774",
+    "https://openalex.org/W3212893438"
+  ],
+  "abstract": "Partial code usually involves non-fully-qualified type names (non-FQNs) and undeclared receiving objects. Resolving the FQNs of these non-FQN types and undeclared receiving objects (referred to as type inference) is the prerequisite to effective search and reuse of partial code. Existing dictionary-lookup based methods build a symbolic knowledge base of API names and code contexts, which involve significant compilation overhead and are sensitive to unseen API names and code context variations. In this paper, we formulate type inference as a cloze-style fill-in-blank language task. Built on source code naturalness, our approach fine-tunes a code masked language model (MLM) as a neural knowledge base of code elements with a novel \"pre-train, prompt and predict\" paradigm from raw source code. Our approach is lightweight and has minimum requirements on code compilation. Unlike existing symbolic name and context matching for type inference, our prompt-tuned code MLM packs FQN syntax and usage in its parameters and supports fuzzy neural type inference. We systematically evaluate our approach on a large amount of source code from GitHub and Stack Overflow. Our results confirm the effectiveness of our approach design and the practicality for partial code type inference. As the first of its kind, our neural type inference method opens the door to many innovative ways of using partial code.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8360163569450378
+    },
+    {
+      "name": "Type inference",
+      "score": 0.655967116355896
+    },
+    {
+      "name": "Programming language",
+      "score": 0.6361367702484131
+    },
+    {
+      "name": "Inference",
+      "score": 0.6209231019020081
+    },
+    {
+      "name": "Source code",
+      "score": 0.5699987411499023
+    },
+    {
+      "name": "Abstract syntax tree",
+      "score": 0.5253086686134338
+    },
+    {
+      "name": "Code generation",
+      "score": 0.5148407816886902
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.5145984888076782
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.4891410171985626
+    },
+    {
+      "name": "Code reuse",
+      "score": 0.4365934133529663
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3973897099494934
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3944282829761505
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.1593818962574005
+    },
+    {
+      "name": "Parsing",
+      "score": 0.13654100894927979
+    },
+    {
+      "name": "Software",
+      "score": 0.1345362663269043
+    },
+    {
+      "name": "Operating system",
+      "score": 0.1079719066619873
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

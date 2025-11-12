@@ -1,72 +1,111 @@
 {
-    "title": "LANTERN: Leveraging Large Language Models and Transformers for Enhanced Molecular Interactions",
-    "url": "https://openalex.org/W4407598479",
-    "year": 2025,
-    "authors": [
-        {
-            "id": null,
-            "name": "Ha Cong Nga",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2108261390",
-            "name": "Phuc Pham",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2787286393",
-            "name": "Truong-Son Hy",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2957436444",
-        "https://openalex.org/W3093934881",
-        "https://openalex.org/W2086286404",
-        "https://openalex.org/W2616246685",
-        "https://openalex.org/W4385572894",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W2896026924",
-        "https://openalex.org/W2890911678",
-        "https://openalex.org/W4406440058",
-        "https://openalex.org/W2580289839",
-        "https://openalex.org/W3134169372",
-        "https://openalex.org/W3108458441",
-        "https://openalex.org/W3018980093",
-        "https://openalex.org/W2167869241",
-        "https://openalex.org/W4280617006",
-        "https://openalex.org/W3032123378",
-        "https://openalex.org/W4394800516",
-        "https://openalex.org/W4367860565",
-        "https://openalex.org/W2885583144",
-        "https://openalex.org/W4283586679",
-        "https://openalex.org/W4406312972",
-        "https://openalex.org/W4391737993",
-        "https://openalex.org/W3089485449",
-        "https://openalex.org/W4399766525",
-        "https://openalex.org/W4404699531",
-        "https://openalex.org/W2785947426",
-        "https://openalex.org/W4399011591",
-        "https://openalex.org/W4313485929",
-        "https://openalex.org/W2935632020",
-        "https://openalex.org/W4379932151",
-        "https://openalex.org/W2007490029",
-        "https://openalex.org/W4205177317",
-        "https://openalex.org/W2571863445",
-        "https://openalex.org/W4392564168",
-        "https://openalex.org/W4401387378",
-        "https://openalex.org/W2923140072",
-        "https://openalex.org/W3094497296",
-        "https://openalex.org/W2767891136",
-        "https://openalex.org/W2405065882",
-        "https://openalex.org/W2119583098",
-        "https://openalex.org/W3159276577",
-        "https://openalex.org/W1977391294",
-        "https://openalex.org/W1974575979",
-        "https://openalex.org/W4391788770",
-        "https://openalex.org/W4391140809"
-    ],
-    "abstract": "Abstract Understanding molecular interactions such as Drug-Target Interaction (DTI), Protein-Protein Interaction (PPI), and Drug-Drug Interaction (DDI) is critical for advancing drug discovery and systems biology. However, existing methods often struggle with scalability due to the vast chemical and biological space and suffer from limited accuracy when capturing intricate biochemical relationships. To address these challenges, we introduce LANTERN (Leveraging Large LAN guage Models and T ransformers for E nhanced molecula R interactio N s), a novel deep learning framework that integrates Large Language Models (LLMs) with Transformer-based architectures to model molecular interactions more effectively. LANTERN generates high-quality, context-aware embeddings for drug and protein sequences, enabling richer feature representations and improving predictive accuracy. By leveraging a Transformer-based fusion mechanism, our framework enhances scalability by efficiently integrating diverse interaction data while maintaining computational feasibility. Experimental results demonstrate that LANTERN achieves state-of-the-art performance on multiple DTI and DDI benchmarks, significantly outperforming traditional deep learning approaches. Additionally, LANTERN exhibits competitive performance on challenging PPI tasks, underscoring its versatility across diverse molecular interaction domains. The proposed framework offers a robust and adaptable solution for modeling molecular interactions, efficiently handling a diverse range of molecular entities without the need for 3D structural data and making it a promising framework for foundation models in molecular interaction. Our findings highlight the transformative potential of combining LLM-based embeddings with Transformer architectures, setting a new standard for molecular interaction prediction. The source code and relevant documentation are available at: https://github.com/HySonLab/LANTERN .",
-    "full_text": null
+  "title": "LANTERN: Leveraging Large Language Models and Transformers for Enhanced Molecular Interactions",
+  "url": "https://openalex.org/W4407598479",
+  "year": 2025,
+  "authors": [
+    {
+      "id": null,
+      "name": "Ha Cong Nga",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2108261390",
+      "name": "Phuc Pham",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2787286393",
+      "name": "Truong-Son Hy",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2957436444",
+    "https://openalex.org/W3093934881",
+    "https://openalex.org/W2086286404",
+    "https://openalex.org/W2616246685",
+    "https://openalex.org/W4385572894",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W2896026924",
+    "https://openalex.org/W2890911678",
+    "https://openalex.org/W4406440058",
+    "https://openalex.org/W2580289839",
+    "https://openalex.org/W3134169372",
+    "https://openalex.org/W3108458441",
+    "https://openalex.org/W3018980093",
+    "https://openalex.org/W2167869241",
+    "https://openalex.org/W4280617006",
+    "https://openalex.org/W3032123378",
+    "https://openalex.org/W4394800516",
+    "https://openalex.org/W4367860565",
+    "https://openalex.org/W2885583144",
+    "https://openalex.org/W4283586679",
+    "https://openalex.org/W4406312972",
+    "https://openalex.org/W4391737993",
+    "https://openalex.org/W3089485449",
+    "https://openalex.org/W4399766525",
+    "https://openalex.org/W4404699531",
+    "https://openalex.org/W2785947426",
+    "https://openalex.org/W4399011591",
+    "https://openalex.org/W4313485929",
+    "https://openalex.org/W2935632020",
+    "https://openalex.org/W4379932151",
+    "https://openalex.org/W2007490029",
+    "https://openalex.org/W4205177317",
+    "https://openalex.org/W2571863445",
+    "https://openalex.org/W4392564168",
+    "https://openalex.org/W4401387378",
+    "https://openalex.org/W2923140072",
+    "https://openalex.org/W3094497296",
+    "https://openalex.org/W2767891136",
+    "https://openalex.org/W2405065882",
+    "https://openalex.org/W2119583098",
+    "https://openalex.org/W3159276577",
+    "https://openalex.org/W1977391294",
+    "https://openalex.org/W1974575979",
+    "https://openalex.org/W4391788770",
+    "https://openalex.org/W4391140809"
+  ],
+  "abstract": "Abstract Understanding molecular interactions such as Drug-Target Interaction (DTI), Protein-Protein Interaction (PPI), and Drug-Drug Interaction (DDI) is critical for advancing drug discovery and systems biology. However, existing methods often struggle with scalability due to the vast chemical and biological space and suffer from limited accuracy when capturing intricate biochemical relationships. To address these challenges, we introduce LANTERN (Leveraging Large LAN guage Models and T ransformers for E nhanced molecula R interactio N s), a novel deep learning framework that integrates Large Language Models (LLMs) with Transformer-based architectures to model molecular interactions more effectively. LANTERN generates high-quality, context-aware embeddings for drug and protein sequences, enabling richer feature representations and improving predictive accuracy. By leveraging a Transformer-based fusion mechanism, our framework enhances scalability by efficiently integrating diverse interaction data while maintaining computational feasibility. Experimental results demonstrate that LANTERN achieves state-of-the-art performance on multiple DTI and DDI benchmarks, significantly outperforming traditional deep learning approaches. Additionally, LANTERN exhibits competitive performance on challenging PPI tasks, underscoring its versatility across diverse molecular interaction domains. The proposed framework offers a robust and adaptable solution for modeling molecular interactions, efficiently handling a diverse range of molecular entities without the need for 3D structural data and making it a promising framework for foundation models in molecular interaction. Our findings highlight the transformative potential of combining LLM-based embeddings with Transformer architectures, setting a new standard for molecular interaction prediction. The source code and relevant documentation are available at: https://github.com/HySonLab/LANTERN .",
+  "full_text": null,
+  "topic": "Lantern",
+  "concepts": [
+    {
+      "name": "Lantern",
+      "score": 0.7423967123031616
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7350168824195862
+    },
+    {
+      "name": "Computer science",
+      "score": 0.504508376121521
+    },
+    {
+      "name": "Engineering",
+      "score": 0.22320783138275146
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.19512024521827698
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.1867675483226776
+    },
+    {
+      "name": "Voltage",
+      "score": 0.108674556016922
+    },
+    {
+      "name": "Ring (chemistry)",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

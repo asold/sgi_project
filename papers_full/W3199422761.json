@@ -1,131 +1,214 @@
 {
-    "title": "BioALBERT: A Simple and Effective Pre-trained Language Model for Biomedical Named Entity Recognition",
-    "url": "https://openalex.org/W3199422761",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2963399842",
-            "name": "Usman Naseem",
-            "affiliations": [
-                "University of Sydney"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2155621213",
-            "name": "Matloob Khushi",
-            "affiliations": [
-                "University of Sydney"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2182013615",
-            "name": "Vinay Reddy",
-            "affiliations": [
-                "University of Sydney"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2305653111",
-            "name": "Sakthivel Rajendran",
-            "affiliations": [
-                "University of Sydney"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1980213862",
-            "name": "Imran Razzak",
-            "affiliations": [
-                "Deakin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098955200",
-            "name": "Jinman Kim",
-            "affiliations": [
-                "University of Sydney"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2963399842",
-            "name": "Usman Naseem",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2155621213",
-            "name": "Matloob Khushi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2182013615",
-            "name": "Vinay Reddy",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2305653111",
-            "name": "Sakthivel Rajendran",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1980213862",
-            "name": "Imran Razzak",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2098955200",
-            "name": "Jinman Kim",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2925613093",
-        "https://openalex.org/W2955483668",
-        "https://openalex.org/W2110279753",
-        "https://openalex.org/W6755617350",
-        "https://openalex.org/W2890830728",
-        "https://openalex.org/W6758109434",
-        "https://openalex.org/W2047782770",
-        "https://openalex.org/W2149369282",
-        "https://openalex.org/W2346452181",
-        "https://openalex.org/W2785001576",
-        "https://openalex.org/W6713582272",
-        "https://openalex.org/W6759543333",
-        "https://openalex.org/W2604019706",
-        "https://openalex.org/W2168905447",
-        "https://openalex.org/W2896016608",
-        "https://openalex.org/W2169099542",
-        "https://openalex.org/W3011574394",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W2949176808",
-        "https://openalex.org/W2100627415",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W2769387903",
-        "https://openalex.org/W2114388055",
-        "https://openalex.org/W2168782065",
-        "https://openalex.org/W6783678719",
-        "https://openalex.org/W6682691769",
-        "https://openalex.org/W2071879021",
-        "https://openalex.org/W3105491236",
-        "https://openalex.org/W2407776548",
-        "https://openalex.org/W2963854351",
-        "https://openalex.org/W2970771982",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W2964242047",
-        "https://openalex.org/W2971258845",
-        "https://openalex.org/W2963709490",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2887593177",
-        "https://openalex.org/W3088409176",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2911681509",
-        "https://openalex.org/W2527896214",
-        "https://openalex.org/W3091311542",
-        "https://openalex.org/W2993029738",
-        "https://openalex.org/W3104059174",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W4289366653",
-        "https://openalex.org/W2857028992"
-    ],
-    "abstract": "In recent years, with the growing amount of biomedical documents, coupled with advancement in natural language processing algorithms, the research on biomedical named entity recognition (BioNER) has increased exponentially. However, BioNER research is challenging as NER in the biomedical domain are: (i) often restricted due to limited amount of training data, (ii) an entity can refer to multiple types and concepts depending on its context and, (iii) heavy reliance on acronyms that are sub-domain specific. Existing BioNER approaches often neglect these issues and directly adopt the state-of-the-art (SOTA) models trained in general corpora, which often yields unsatisfactory results. We propose biomedical ALBERT (A Lite Bidirectional Encoder Representations from Transformers for Biomedical Text Mining) - bioALBERT - an effective domain-specific pre-trained language model trained on a huge biomedical corpus designed to capture biomedical context-dependent NER. We adopted a self-supervised loss function used in ALBERT that targets modelling inter-sentence coherence to better learn context-dependent representations and incorporated parameter reduction strategies to minimise memory usage and enhance the training time in BioNER. In our experiments, BioALBERT outperformed comparative SOTA BioNER models on 8 biomedical NER benchmark datasets with 4 different entity types. The performance is increased for; (i) disease type corpora by 7.47% (NCBI- disease) and 10.63% (BC5CDR-disease); (ii) drug-chem type corpora by 4.61 % (BC5CDR-Chem) and 3.89% (BC4CHEMD); (iii) gene-protein type corpora by 12.25% (BC2GM) and 6.42% (JNLPBA); and (iv) species type corpora by 6.19% (LINNAEUS) and 23.71 % (Species-800) is observed which leads to a state-of-the-art results. The performance of a proposed model on four different biomedical entity types shows that our model is robust and generalisable in recognising biomedical entities in text.",
-    "full_text": null
+  "title": "BioALBERT: A Simple and Effective Pre-trained Language Model for Biomedical Named Entity Recognition",
+  "url": "https://openalex.org/W3199422761",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2963399842",
+      "name": "Usman Naseem",
+      "affiliations": [
+        "University of Sydney"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2155621213",
+      "name": "Matloob Khushi",
+      "affiliations": [
+        "University of Sydney"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2182013615",
+      "name": "Vinay Reddy",
+      "affiliations": [
+        "University of Sydney"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2305653111",
+      "name": "Sakthivel Rajendran",
+      "affiliations": [
+        "University of Sydney"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1980213862",
+      "name": "Imran Razzak",
+      "affiliations": [
+        "Deakin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098955200",
+      "name": "Jinman Kim",
+      "affiliations": [
+        "University of Sydney"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2963399842",
+      "name": "Usman Naseem",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2155621213",
+      "name": "Matloob Khushi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2182013615",
+      "name": "Vinay Reddy",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2305653111",
+      "name": "Sakthivel Rajendran",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1980213862",
+      "name": "Imran Razzak",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2098955200",
+      "name": "Jinman Kim",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2925613093",
+    "https://openalex.org/W2955483668",
+    "https://openalex.org/W2110279753",
+    "https://openalex.org/W6755617350",
+    "https://openalex.org/W2890830728",
+    "https://openalex.org/W6758109434",
+    "https://openalex.org/W2047782770",
+    "https://openalex.org/W2149369282",
+    "https://openalex.org/W2346452181",
+    "https://openalex.org/W2785001576",
+    "https://openalex.org/W6713582272",
+    "https://openalex.org/W6759543333",
+    "https://openalex.org/W2604019706",
+    "https://openalex.org/W2168905447",
+    "https://openalex.org/W2896016608",
+    "https://openalex.org/W2169099542",
+    "https://openalex.org/W3011574394",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W2949176808",
+    "https://openalex.org/W2100627415",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W2769387903",
+    "https://openalex.org/W2114388055",
+    "https://openalex.org/W2168782065",
+    "https://openalex.org/W6783678719",
+    "https://openalex.org/W6682691769",
+    "https://openalex.org/W2071879021",
+    "https://openalex.org/W3105491236",
+    "https://openalex.org/W2407776548",
+    "https://openalex.org/W2963854351",
+    "https://openalex.org/W2970771982",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W2964242047",
+    "https://openalex.org/W2971258845",
+    "https://openalex.org/W2963709490",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2887593177",
+    "https://openalex.org/W3088409176",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2911681509",
+    "https://openalex.org/W2527896214",
+    "https://openalex.org/W3091311542",
+    "https://openalex.org/W2993029738",
+    "https://openalex.org/W3104059174",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W4289366653",
+    "https://openalex.org/W2857028992"
+  ],
+  "abstract": "In recent years, with the growing amount of biomedical documents, coupled with advancement in natural language processing algorithms, the research on biomedical named entity recognition (BioNER) has increased exponentially. However, BioNER research is challenging as NER in the biomedical domain are: (i) often restricted due to limited amount of training data, (ii) an entity can refer to multiple types and concepts depending on its context and, (iii) heavy reliance on acronyms that are sub-domain specific. Existing BioNER approaches often neglect these issues and directly adopt the state-of-the-art (SOTA) models trained in general corpora, which often yields unsatisfactory results. We propose biomedical ALBERT (A Lite Bidirectional Encoder Representations from Transformers for Biomedical Text Mining) - bioALBERT - an effective domain-specific pre-trained language model trained on a huge biomedical corpus designed to capture biomedical context-dependent NER. We adopted a self-supervised loss function used in ALBERT that targets modelling inter-sentence coherence to better learn context-dependent representations and incorporated parameter reduction strategies to minimise memory usage and enhance the training time in BioNER. In our experiments, BioALBERT outperformed comparative SOTA BioNER models on 8 biomedical NER benchmark datasets with 4 different entity types. The performance is increased for; (i) disease type corpora by 7.47% (NCBI- disease) and 10.63% (BC5CDR-disease); (ii) drug-chem type corpora by 4.61 % (BC5CDR-Chem) and 3.89% (BC4CHEMD); (iii) gene-protein type corpora by 12.25% (BC2GM) and 6.42% (JNLPBA); and (iv) species type corpora by 6.19% (LINNAEUS) and 23.71 % (Species-800) is observed which leads to a state-of-the-art results. The performance of a proposed model on four different biomedical entity types shows that our model is robust and generalisable in recognising biomedical entities in text.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7951319813728333
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.7009283900260925
+    },
+    {
+      "name": "Sentence",
+      "score": 0.6754601001739502
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6748859286308289
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.6733158826828003
+    },
+    {
+      "name": "Biomedical text mining",
+      "score": 0.5822015404701233
+    },
+    {
+      "name": "Language model",
+      "score": 0.5511929988861084
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.551019549369812
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.4964626431465149
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.4179234802722931
+    },
+    {
+      "name": "Text mining",
+      "score": 0.3026074171066284
+    },
+    {
+      "name": "Biology",
+      "score": 0.07876825332641602
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

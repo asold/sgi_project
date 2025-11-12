@@ -1,94 +1,185 @@
 {
-    "title": "DSformer: A Double Sampling Transformer for Multivariate Time Series Long-term Prediction",
-    "url": "https://openalex.org/W4387848755",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2796941484",
-            "name": "Chengqing Yu",
-            "affiliations": [
-                "Institute of Computing Technology",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1983569093",
-            "name": "Fei Wang",
-            "affiliations": [
-                "University of Chinese Academy of Sciences",
-                "Institute of Computing Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2428340495",
-            "name": "Zezhi Shao",
-            "affiliations": [
-                "Institute of Computing Technology",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1989813406",
-            "name": "Tao Sun",
-            "affiliations": [
-                "Institute of Computing Technology",
-                "Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2014075682",
-            "name": "Lin Wu",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Institute of Computing Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106063261",
-            "name": "Yongjun Xu",
-            "affiliations": [
-                "Institute of Computing Technology",
-                "Chinese Academy of Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4200287510",
-        "https://openalex.org/W4283817628",
-        "https://openalex.org/W4210405904",
-        "https://openalex.org/W3171633882",
-        "https://openalex.org/W4283807683",
-        "https://openalex.org/W4367046889",
-        "https://openalex.org/W2888109343",
-        "https://openalex.org/W4224942284",
-        "https://openalex.org/W4224947654",
-        "https://openalex.org/W2604847698",
-        "https://openalex.org/W3023213286",
-        "https://openalex.org/W3152585042",
-        "https://openalex.org/W3199797768",
-        "https://openalex.org/W4385567607",
-        "https://openalex.org/W4286564623",
-        "https://openalex.org/W4281715865",
-        "https://openalex.org/W4306317966",
-        "https://openalex.org/W4283315029",
-        "https://openalex.org/W4312703862",
-        "https://openalex.org/W4285489795",
-        "https://openalex.org/W4321460300",
-        "https://openalex.org/W3173539742",
-        "https://openalex.org/W4225862894",
-        "https://openalex.org/W3210165781",
-        "https://openalex.org/W4224245763",
-        "https://openalex.org/W3198316914",
-        "https://openalex.org/W4308929797",
-        "https://openalex.org/W3199148273",
-        "https://openalex.org/W4382203079",
-        "https://openalex.org/W3188872815",
-        "https://openalex.org/W3177318507",
-        "https://openalex.org/W4280626475",
-        "https://openalex.org/W4311901809",
-        "https://openalex.org/W3212890323",
-        "https://openalex.org/W4380303532"
-    ],
-    "abstract": "Multivariate time series long-term prediction, which aims to predict the change of data in a long time, can provide references for decision-making. Although transformer-based models have made progress in this field, they usually do not make full use of three features of multivariate time series: global information, local information, and variables correlation. To effectively mine the above three features and establish a high-precision prediction model, we propose a double sampling transformer (DSformer), which consists of the double sampling (DS) block and the temporal variable attention (TVA) block. Firstly, the DS block employs down sampling and piecewise sampling to transform the original series into feature vectors that focus on global information and local information respectively. Then, TVA block uses temporal attention and variable attention to mine these feature vectors from different dimensions and extract key information. Finally, based on a parallel structure, DSformer uses multiple TVA blocks to mine and integrate different features obtained from DS blocks respectively. The integrated feature information is passed to the generative decoder based on a multi-layer perceptron to realize multivariate time series long-term prediction. Experimental results on nine real-world datasets show that DSformer can outperform eight existing baselines.",
-    "full_text": null
+  "title": "DSformer: A Double Sampling Transformer for Multivariate Time Series Long-term Prediction",
+  "url": "https://openalex.org/W4387848755",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2796941484",
+      "name": "Chengqing Yu",
+      "affiliations": [
+        "Institute of Computing Technology",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1983569093",
+      "name": "Fei Wang",
+      "affiliations": [
+        "University of Chinese Academy of Sciences",
+        "Institute of Computing Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2428340495",
+      "name": "Zezhi Shao",
+      "affiliations": [
+        "Institute of Computing Technology",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1989813406",
+      "name": "Tao Sun",
+      "affiliations": [
+        "Institute of Computing Technology",
+        "Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2014075682",
+      "name": "Lin Wu",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106063261",
+      "name": "Yongjun Xu",
+      "affiliations": [
+        "Institute of Computing Technology",
+        "Chinese Academy of Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4200287510",
+    "https://openalex.org/W4283817628",
+    "https://openalex.org/W4210405904",
+    "https://openalex.org/W3171633882",
+    "https://openalex.org/W4283807683",
+    "https://openalex.org/W4367046889",
+    "https://openalex.org/W2888109343",
+    "https://openalex.org/W4224942284",
+    "https://openalex.org/W4224947654",
+    "https://openalex.org/W2604847698",
+    "https://openalex.org/W3023213286",
+    "https://openalex.org/W3152585042",
+    "https://openalex.org/W3199797768",
+    "https://openalex.org/W4385567607",
+    "https://openalex.org/W4286564623",
+    "https://openalex.org/W4281715865",
+    "https://openalex.org/W4306317966",
+    "https://openalex.org/W4283315029",
+    "https://openalex.org/W4312703862",
+    "https://openalex.org/W4285489795",
+    "https://openalex.org/W4321460300",
+    "https://openalex.org/W3173539742",
+    "https://openalex.org/W4225862894",
+    "https://openalex.org/W3210165781",
+    "https://openalex.org/W4224245763",
+    "https://openalex.org/W3198316914",
+    "https://openalex.org/W4308929797",
+    "https://openalex.org/W3199148273",
+    "https://openalex.org/W4382203079",
+    "https://openalex.org/W3188872815",
+    "https://openalex.org/W3177318507",
+    "https://openalex.org/W4280626475",
+    "https://openalex.org/W4311901809",
+    "https://openalex.org/W3212890323",
+    "https://openalex.org/W4380303532"
+  ],
+  "abstract": "Multivariate time series long-term prediction, which aims to predict the change of data in a long time, can provide references for decision-making. Although transformer-based models have made progress in this field, they usually do not make full use of three features of multivariate time series: global information, local information, and variables correlation. To effectively mine the above three features and establish a high-precision prediction model, we propose a double sampling transformer (DSformer), which consists of the double sampling (DS) block and the temporal variable attention (TVA) block. Firstly, the DS block employs down sampling and piecewise sampling to transform the original series into feature vectors that focus on global information and local information respectively. Then, TVA block uses temporal attention and variable attention to mine these feature vectors from different dimensions and extract key information. Finally, based on a parallel structure, DSformer uses multiple TVA blocks to mine and integrate different features obtained from DS blocks respectively. The integrated feature information is passed to the generative decoder based on a multi-layer perceptron to realize multivariate time series long-term prediction. Experimental results on nine real-world datasets show that DSformer can outperform eight existing baselines.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6811224222183228
+    },
+    {
+      "name": "Multivariate statistics",
+      "score": 0.6752988696098328
+    },
+    {
+      "name": "Data mining",
+      "score": 0.5642619132995605
+    },
+    {
+      "name": "Time series",
+      "score": 0.5504627227783203
+    },
+    {
+      "name": "Mutual information",
+      "score": 0.5291982889175415
+    },
+    {
+      "name": "Piecewise",
+      "score": 0.4987607002258301
+    },
+    {
+      "name": "Sampling (signal processing)",
+      "score": 0.4546927809715271
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.44590815901756287
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.4430515766143799
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4331378638744354
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.42883527278900146
+    },
+    {
+      "name": "Series (stratigraphy)",
+      "score": 0.4100116193294525
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.319739431142807
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.18814706802368164
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Filter (signal processing)",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

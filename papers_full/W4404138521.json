@@ -1,91 +1,130 @@
 {
-    "title": "Leveraging Medical Knowledge Graphs Into Large Language Models for Diagnosis Prediction: Design and Application Study",
-    "url": "https://openalex.org/W4404138521",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2358652350",
-            "name": "Gao Yan-jun",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2749667565",
-            "name": "Li, Ruizhe",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Croxford, Emma",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3118987054",
-            "name": "Caskey, John",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4221662977",
-            "name": "Patterson, Brian W.",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Churpek, Matthew",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2801746948",
-            "name": "Miller, Timothy",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4225662723",
-            "name": "Dligach, Dmitriy",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2278448472",
-            "name": "Afshar, Majid",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2079609562",
-        "https://openalex.org/W3186100284",
-        "https://openalex.org/W4286567174",
-        "https://openalex.org/W4225845990",
-        "https://openalex.org/W2998856543",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W4385572545",
-        "https://openalex.org/W4385572365",
-        "https://openalex.org/W4385571070",
-        "https://openalex.org/W3095319910",
-        "https://openalex.org/W4322618218",
-        "https://openalex.org/W2159583324",
-        "https://openalex.org/W3104725668",
-        "https://openalex.org/W3211384762",
-        "https://openalex.org/W4385567033",
-        "https://openalex.org/W3098266846",
-        "https://openalex.org/W4390692489",
-        "https://openalex.org/W2058373465",
-        "https://openalex.org/W3157754124",
-        "https://openalex.org/W3159493748",
-        "https://openalex.org/W3170450419",
-        "https://openalex.org/W2143514833",
-        "https://openalex.org/W2963235246",
-        "https://openalex.org/W4225580830",
-        "https://openalex.org/W4385573687",
-        "https://openalex.org/W2007244663",
-        "https://openalex.org/W2146089916",
-        "https://openalex.org/W3164540570",
-        "https://openalex.org/W2963918774",
-        "https://openalex.org/W4389520255",
-        "https://openalex.org/W2958894272",
-        "https://openalex.org/W2735585131",
-        "https://openalex.org/W3175944005",
-        "https://openalex.org/W4402671211",
-        "https://openalex.org/W4366580365"
-    ],
-    "abstract": "Background Electronic health records (EHRs) and routine documentation practices play a vital role in patients’ daily care, providing a holistic record of health, diagnoses, and treatment. However, complex and verbose EHR narratives can overwhelm health care providers, increasing the risk of diagnostic inaccuracies. While large language models (LLMs) have showcased their potential in diverse language tasks, their application in health care must prioritize the minimization of diagnostic errors and the prevention of patient harm. Integrating knowledge graphs (KGs) into LLMs offers a promising approach because structured knowledge from KGs could enhance LLMs’ diagnostic reasoning by providing contextually relevant medical information. Objective This study introduces DR.KNOWS (Diagnostic Reasoning Knowledge Graph System), a model that integrates Unified Medical Language System–based KGs with LLMs to improve diagnostic predictions from EHR data by retrieving contextually relevant paths aligned with patient-specific information. Methods DR.KNOWS combines a stack graph isomorphism network for node embedding with an attention-based path ranker to identify and rank knowledge paths relevant to a patient’s clinical context. We evaluated DR.KNOWS on 2 real-world EHR datasets from different geographic locations, comparing its performance to baseline models, including QuickUMLS and standard LLMs (Text-to-Text Transfer Transformer and ChatGPT). To assess diagnostic reasoning quality, we designed and implemented a human evaluation framework grounded in clinical safety metrics. Results DR.KNOWS demonstrated notable improvements over baseline models, showing higher accuracy in extracting diagnostic concepts and enhanced diagnostic prediction metrics. Prompt-based fine-tuning of Text-to-Text Transfer Transformer with DR.KNOWS knowledge paths achieved the highest ROUGE-L (Recall-Oriented Understudy for Gisting Evaluation–Longest Common Subsequence) and concept unique identifier F1-scores, highlighting the benefits of KG integration. Human evaluators found the diagnostic rationales of DR.KNOWS to be aligned strongly with correct clinical reasoning, indicating improved abstraction and reasoning. Recognized limitations include potential biases within the KG data, which we addressed by emphasizing case-specific path selection and proposing future bias-mitigation strategies. Conclusions DR.KNOWS offers a robust approach for enhancing diagnostic accuracy and reasoning by integrating structured KG knowledge into LLM-based clinical workflows. Although further work is required to address KG biases and extend generalizability, DR.KNOWS represents progress toward trustworthy artificial intelligence–driven clinical decision support, with a human evaluation framework focused on diagnostic safety and alignment with clinical standards.",
-    "full_text": null
+  "title": "Leveraging Medical Knowledge Graphs Into Large Language Models for Diagnosis Prediction: Design and Application Study",
+  "url": "https://openalex.org/W4404138521",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2358652350",
+      "name": "Gao Yan-jun",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2749667565",
+      "name": "Li, Ruizhe",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Croxford, Emma",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3118987054",
+      "name": "Caskey, John",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4221662977",
+      "name": "Patterson, Brian W.",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Churpek, Matthew",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2801746948",
+      "name": "Miller, Timothy",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4225662723",
+      "name": "Dligach, Dmitriy",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2278448472",
+      "name": "Afshar, Majid",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2079609562",
+    "https://openalex.org/W3186100284",
+    "https://openalex.org/W4286567174",
+    "https://openalex.org/W4225845990",
+    "https://openalex.org/W2998856543",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W4385572545",
+    "https://openalex.org/W4385572365",
+    "https://openalex.org/W4385571070",
+    "https://openalex.org/W3095319910",
+    "https://openalex.org/W4322618218",
+    "https://openalex.org/W2159583324",
+    "https://openalex.org/W3104725668",
+    "https://openalex.org/W3211384762",
+    "https://openalex.org/W4385567033",
+    "https://openalex.org/W3098266846",
+    "https://openalex.org/W4390692489",
+    "https://openalex.org/W2058373465",
+    "https://openalex.org/W3157754124",
+    "https://openalex.org/W3159493748",
+    "https://openalex.org/W3170450419",
+    "https://openalex.org/W2143514833",
+    "https://openalex.org/W2963235246",
+    "https://openalex.org/W4225580830",
+    "https://openalex.org/W4385573687",
+    "https://openalex.org/W2007244663",
+    "https://openalex.org/W2146089916",
+    "https://openalex.org/W3164540570",
+    "https://openalex.org/W2963918774",
+    "https://openalex.org/W4389520255",
+    "https://openalex.org/W2958894272",
+    "https://openalex.org/W2735585131",
+    "https://openalex.org/W3175944005",
+    "https://openalex.org/W4402671211",
+    "https://openalex.org/W4366580365"
+  ],
+  "abstract": "Background Electronic health records (EHRs) and routine documentation practices play a vital role in patients’ daily care, providing a holistic record of health, diagnoses, and treatment. However, complex and verbose EHR narratives can overwhelm health care providers, increasing the risk of diagnostic inaccuracies. While large language models (LLMs) have showcased their potential in diverse language tasks, their application in health care must prioritize the minimization of diagnostic errors and the prevention of patient harm. Integrating knowledge graphs (KGs) into LLMs offers a promising approach because structured knowledge from KGs could enhance LLMs’ diagnostic reasoning by providing contextually relevant medical information. Objective This study introduces DR.KNOWS (Diagnostic Reasoning Knowledge Graph System), a model that integrates Unified Medical Language System–based KGs with LLMs to improve diagnostic predictions from EHR data by retrieving contextually relevant paths aligned with patient-specific information. Methods DR.KNOWS combines a stack graph isomorphism network for node embedding with an attention-based path ranker to identify and rank knowledge paths relevant to a patient’s clinical context. We evaluated DR.KNOWS on 2 real-world EHR datasets from different geographic locations, comparing its performance to baseline models, including QuickUMLS and standard LLMs (Text-to-Text Transfer Transformer and ChatGPT). To assess diagnostic reasoning quality, we designed and implemented a human evaluation framework grounded in clinical safety metrics. Results DR.KNOWS demonstrated notable improvements over baseline models, showing higher accuracy in extracting diagnostic concepts and enhanced diagnostic prediction metrics. Prompt-based fine-tuning of Text-to-Text Transfer Transformer with DR.KNOWS knowledge paths achieved the highest ROUGE-L (Recall-Oriented Understudy for Gisting Evaluation–Longest Common Subsequence) and concept unique identifier F1-scores, highlighting the benefits of KG integration. Human evaluators found the diagnostic rationales of DR.KNOWS to be aligned strongly with correct clinical reasoning, indicating improved abstraction and reasoning. Recognized limitations include potential biases within the KG data, which we addressed by emphasizing case-specific path selection and proposing future bias-mitigation strategies. Conclusions DR.KNOWS offers a robust approach for enhancing diagnostic accuracy and reasoning by integrating structured KG knowledge into LLM-based clinical workflows. Although further work is required to address KG biases and extend generalizability, DR.KNOWS represents progress toward trustworthy artificial intelligence–driven clinical decision support, with a human evaluation framework focused on diagnostic safety and alignment with clinical standards.",
+  "full_text": null,
+  "topic": "Preprint",
+  "concepts": [
+    {
+      "name": "Preprint",
+      "score": 0.9636590480804443
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6285479068756104
+    },
+    {
+      "name": "Graph",
+      "score": 0.44948089122772217
+    },
+    {
+      "name": "Data science",
+      "score": 0.4061791002750397
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4004981517791748
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3973177969455719
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3956143260002136
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.23434025049209595
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.1430276334285736
+    }
+  ]
 }

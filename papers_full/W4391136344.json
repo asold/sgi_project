@@ -1,121 +1,184 @@
 {
-    "title": "Deepfake Detection Using Spatiotemporal Transformer",
-    "url": "https://openalex.org/W4391136344",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2560124494",
-            "name": "Bachir Kaddar",
-            "affiliations": [
-                "Université IBN Khaldoun Tiaret"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2310353809",
-            "name": "Sid Ahmed Fezza",
-            "affiliations": [
-                "Institut National des Télécommunications et des Technologies de l'Information et de la Communication"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2271866745",
-            "name": "Zahid Akhtar",
-            "affiliations": [
-                "SUNY Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1979702355",
-            "name": "Wassim Hamidouche",
-            "affiliations": [
-                "Institut National des Sciences Appliquées de Rennes",
-                "Centre National de la Recherche Scientifique",
-                "Université de Rennes"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2150554866",
-            "name": "Abdenour Hadid",
-            "affiliations": [
-                "Sorbonne Université",
-                "Sorbonne University Abu Dhabi"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2021854700",
-            "name": "Joan Serra-Sagristà",
-            "affiliations": [
-                "Universitat Autònoma de Barcelona"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2891145043",
-        "https://openalex.org/W2787595978",
-        "https://openalex.org/W3011820288",
-        "https://openalex.org/W2995516027",
-        "https://openalex.org/W2811325011",
-        "https://openalex.org/W2412509443",
-        "https://openalex.org/W2798117183",
-        "https://openalex.org/W4236440698",
-        "https://openalex.org/W4313127140",
-        "https://openalex.org/W2883289607",
-        "https://openalex.org/W2531409750",
-        "https://openalex.org/W2541922885",
-        "https://openalex.org/W2888338418",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W3034552680",
-        "https://openalex.org/W3137278571",
-        "https://openalex.org/W2912940386",
-        "https://openalex.org/W2009130368",
-        "https://openalex.org/W2023556846",
-        "https://openalex.org/W3096831136",
-        "https://openalex.org/W2911424785",
-        "https://openalex.org/W2963616706",
-        "https://openalex.org/W2109255472",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2802701183",
-        "https://openalex.org/W4313157251",
-        "https://openalex.org/W2115252128",
-        "https://openalex.org/W2903369540",
-        "https://openalex.org/W3162020795",
-        "https://openalex.org/W3034196597",
-        "https://openalex.org/W2914447220",
-        "https://openalex.org/W3034713808",
-        "https://openalex.org/W4383753813",
-        "https://openalex.org/W2890052933",
-        "https://openalex.org/W2811414481",
-        "https://openalex.org/W3135809943",
-        "https://openalex.org/W2913399670",
-        "https://openalex.org/W2979259381",
-        "https://openalex.org/W3019200173",
-        "https://openalex.org/W2808763756",
-        "https://openalex.org/W3040168631",
-        "https://openalex.org/W3083246145",
-        "https://openalex.org/W2963720850",
-        "https://openalex.org/W2095613088",
-        "https://openalex.org/W2786289897",
-        "https://openalex.org/W2093512257",
-        "https://openalex.org/W2982058372",
-        "https://openalex.org/W2945262873",
-        "https://openalex.org/W172260869",
-        "https://openalex.org/W4200635057",
-        "https://openalex.org/W2964350391",
-        "https://openalex.org/W2806609126",
-        "https://openalex.org/W3038930935",
-        "https://openalex.org/W2025768430",
-        "https://openalex.org/W3174814557",
-        "https://openalex.org/W3154326567",
-        "https://openalex.org/W2963684180",
-        "https://openalex.org/W2991318208",
-        "https://openalex.org/W3136416617",
-        "https://openalex.org/W2341528187",
-        "https://openalex.org/W2774037436",
-        "https://openalex.org/W2962958939",
-        "https://openalex.org/W2963172626",
-        "https://openalex.org/W3101998545",
-        "https://openalex.org/W3125803510"
-    ],
-    "abstract": "Recent advances in generative models and the availability of large-scale benchmarks have made deepfake video generation and manipulation easier. Nowadays, the number of new hyper-realistic deepfake videos used for negative purposes is dramatically increasing, thus creating the need for effective deepfake detection methods. Although many existing deepfake detection approaches, particularly CNN-based methods, show promising results, they suffer from several drawbacks. In general, poor generalization results have been obtained under unseen/new deepfake generation methods. The crucial reason for the above defect is that CNN-based methods focus on the local spatial artifacts, which are unique for every manipulation method. Therefore, it is hard to learn the general forgery traces of different manipulation methods without considering the dependencies that extend beyond the local receptive field. To address this problem, this article proposes a framework that combines Convolutional Neural Network (CNN) with Vision Transformer (ViT) to improve detection accuracy and enhance generalizability. Our method, named HCiT , exploits the advantages of CNNs to extract meaningful local features, as well as the ViT’s self-attention mechanism to learn discriminative global contextual dependencies in a frame-level image explicitly. In this hybrid architecture, the high-level feature maps extracted from the CNN are fed into the ViT model that determines whether a specific video is fake or real. Experiments were performed on Faceforensics++, DeepFake Detection Challenge preview, Celeb datasets, and the results show that the proposed method significantly outperforms the state-of-the-art methods. In addition, the HCiT method shows a great capacity for generalization on datasets covering various techniques of deepfake generation. The source code is available at: https://github.com/KADDAR-Bachir/HCiT",
-    "full_text": null
+  "title": "Deepfake Detection Using Spatiotemporal Transformer",
+  "url": "https://openalex.org/W4391136344",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2560124494",
+      "name": "Bachir Kaddar",
+      "affiliations": [
+        "Université IBN Khaldoun Tiaret"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2310353809",
+      "name": "Sid Ahmed Fezza",
+      "affiliations": [
+        "Institut National des Télécommunications et des Technologies de l'Information et de la Communication"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2271866745",
+      "name": "Zahid Akhtar",
+      "affiliations": [
+        "SUNY Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1979702355",
+      "name": "Wassim Hamidouche",
+      "affiliations": [
+        "Institut National des Sciences Appliquées de Rennes",
+        "Centre National de la Recherche Scientifique",
+        "Université de Rennes"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2150554866",
+      "name": "Abdenour Hadid",
+      "affiliations": [
+        "Sorbonne Université",
+        "Sorbonne University Abu Dhabi"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2021854700",
+      "name": "Joan Serra-Sagristà",
+      "affiliations": [
+        "Universitat Autònoma de Barcelona"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2891145043",
+    "https://openalex.org/W2787595978",
+    "https://openalex.org/W3011820288",
+    "https://openalex.org/W2995516027",
+    "https://openalex.org/W2811325011",
+    "https://openalex.org/W2412509443",
+    "https://openalex.org/W2798117183",
+    "https://openalex.org/W4236440698",
+    "https://openalex.org/W4313127140",
+    "https://openalex.org/W2883289607",
+    "https://openalex.org/W2531409750",
+    "https://openalex.org/W2541922885",
+    "https://openalex.org/W2888338418",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W3034552680",
+    "https://openalex.org/W3137278571",
+    "https://openalex.org/W2912940386",
+    "https://openalex.org/W2009130368",
+    "https://openalex.org/W2023556846",
+    "https://openalex.org/W3096831136",
+    "https://openalex.org/W2911424785",
+    "https://openalex.org/W2963616706",
+    "https://openalex.org/W2109255472",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2802701183",
+    "https://openalex.org/W4313157251",
+    "https://openalex.org/W2115252128",
+    "https://openalex.org/W2903369540",
+    "https://openalex.org/W3162020795",
+    "https://openalex.org/W3034196597",
+    "https://openalex.org/W2914447220",
+    "https://openalex.org/W3034713808",
+    "https://openalex.org/W4383753813",
+    "https://openalex.org/W2890052933",
+    "https://openalex.org/W2811414481",
+    "https://openalex.org/W3135809943",
+    "https://openalex.org/W2913399670",
+    "https://openalex.org/W2979259381",
+    "https://openalex.org/W3019200173",
+    "https://openalex.org/W2808763756",
+    "https://openalex.org/W3040168631",
+    "https://openalex.org/W3083246145",
+    "https://openalex.org/W2963720850",
+    "https://openalex.org/W2095613088",
+    "https://openalex.org/W2786289897",
+    "https://openalex.org/W2093512257",
+    "https://openalex.org/W2982058372",
+    "https://openalex.org/W2945262873",
+    "https://openalex.org/W172260869",
+    "https://openalex.org/W4200635057",
+    "https://openalex.org/W2964350391",
+    "https://openalex.org/W2806609126",
+    "https://openalex.org/W3038930935",
+    "https://openalex.org/W2025768430",
+    "https://openalex.org/W3174814557",
+    "https://openalex.org/W3154326567",
+    "https://openalex.org/W2963684180",
+    "https://openalex.org/W2991318208",
+    "https://openalex.org/W3136416617",
+    "https://openalex.org/W2341528187",
+    "https://openalex.org/W2774037436",
+    "https://openalex.org/W2962958939",
+    "https://openalex.org/W2963172626",
+    "https://openalex.org/W3101998545",
+    "https://openalex.org/W3125803510"
+  ],
+  "abstract": "Recent advances in generative models and the availability of large-scale benchmarks have made deepfake video generation and manipulation easier. Nowadays, the number of new hyper-realistic deepfake videos used for negative purposes is dramatically increasing, thus creating the need for effective deepfake detection methods. Although many existing deepfake detection approaches, particularly CNN-based methods, show promising results, they suffer from several drawbacks. In general, poor generalization results have been obtained under unseen/new deepfake generation methods. The crucial reason for the above defect is that CNN-based methods focus on the local spatial artifacts, which are unique for every manipulation method. Therefore, it is hard to learn the general forgery traces of different manipulation methods without considering the dependencies that extend beyond the local receptive field. To address this problem, this article proposes a framework that combines Convolutional Neural Network (CNN) with Vision Transformer (ViT) to improve detection accuracy and enhance generalizability. Our method, named HCiT , exploits the advantages of CNNs to extract meaningful local features, as well as the ViT’s self-attention mechanism to learn discriminative global contextual dependencies in a frame-level image explicitly. In this hybrid architecture, the high-level feature maps extracted from the CNN are fed into the ViT model that determines whether a specific video is fake or real. Experiments were performed on Faceforensics++, DeepFake Detection Challenge preview, Celeb datasets, and the results show that the proposed method significantly outperforms the state-of-the-art methods. In addition, the HCiT method shows a great capacity for generalization on datasets covering various techniques of deepfake generation. The source code is available at: https://github.com/KADDAR-Bachir/HCiT",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.9035388827323914
+    },
+    {
+      "name": "Generalizability theory",
+      "score": 0.7230047583580017
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.680767297744751
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.577914834022522
+    },
+    {
+      "name": "Exploit",
+      "score": 0.5542944669723511
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5374240279197693
+    },
+    {
+      "name": "Generalization",
+      "score": 0.5362953543663025
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.47403788566589355
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.47286033630371094
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.42509031295776367
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.41232171654701233
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    }
+  ]
 }

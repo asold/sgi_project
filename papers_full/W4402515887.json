@@ -1,117 +1,136 @@
 {
-    "title": "WorkloadGPT: A Large Language Model Approach to Real-Time Detection of Pilot Workload",
-    "url": "https://openalex.org/W4402515887",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2129750271",
-            "name": "Yijing Gao",
-            "affiliations": [
-                "Tongji University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2795062445",
-            "name": "Lishengsa Yue",
-            "affiliations": [
-                "Tongji University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2168980517",
-            "name": "Jiahang Sun",
-            "affiliations": [
-                "Tongji University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2580328036",
-            "name": "Xiaonian Shan",
-            "affiliations": [
-                "Hohai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115948089",
-            "name": "Yihan Liu",
-            "affiliations": [
-                "Tongji University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096015255",
-            "name": "Xuerui Wu",
-            "affiliations": [
-                "Tongji University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2098740605",
-        "https://openalex.org/W2384943855",
-        "https://openalex.org/W7030334860",
-        "https://openalex.org/W3053130072",
-        "https://openalex.org/W3007593444",
-        "https://openalex.org/W4290613800",
-        "https://openalex.org/W3007653948",
-        "https://openalex.org/W1974893143",
-        "https://openalex.org/W2047401359",
-        "https://openalex.org/W2149355565",
-        "https://openalex.org/W2294281604",
-        "https://openalex.org/W6744384827",
-        "https://openalex.org/W2136229462",
-        "https://openalex.org/W1980581539",
-        "https://openalex.org/W4312591085",
-        "https://openalex.org/W4393867412",
-        "https://openalex.org/W2896220595",
-        "https://openalex.org/W2979830539",
-        "https://openalex.org/W4391232619",
-        "https://openalex.org/W2897744987",
-        "https://openalex.org/W2032778084",
-        "https://openalex.org/W4307046006",
-        "https://openalex.org/W2894692871",
-        "https://openalex.org/W2997849943",
-        "https://openalex.org/W4281292977",
-        "https://openalex.org/W2970879516",
-        "https://openalex.org/W2969811463",
-        "https://openalex.org/W3035561807",
-        "https://openalex.org/W2153288312",
-        "https://openalex.org/W2072810705",
-        "https://openalex.org/W3211732073",
-        "https://openalex.org/W2013112874",
-        "https://openalex.org/W2092762459",
-        "https://openalex.org/W2029228773",
-        "https://openalex.org/W2286482604",
-        "https://openalex.org/W2062242288",
-        "https://openalex.org/W1971264587",
-        "https://openalex.org/W3035140194",
-        "https://openalex.org/W4312554912",
-        "https://openalex.org/W4281826654",
-        "https://openalex.org/W3158303960",
-        "https://openalex.org/W3116342879",
-        "https://openalex.org/W3081416707",
-        "https://openalex.org/W6776996033",
-        "https://openalex.org/W2148143831",
-        "https://openalex.org/W4382239582",
-        "https://openalex.org/W4396667188",
-        "https://openalex.org/W4389519841",
-        "https://openalex.org/W4392366650",
-        "https://openalex.org/W4293235517",
-        "https://openalex.org/W4323767753",
-        "https://openalex.org/W4255717269",
-        "https://openalex.org/W4399225857",
-        "https://openalex.org/W2128495200",
-        "https://openalex.org/W4308346348",
-        "https://openalex.org/W2997205428",
-        "https://openalex.org/W6762453230",
-        "https://openalex.org/W2988124359",
-        "https://openalex.org/W2803729547",
-        "https://openalex.org/W2560647685",
-        "https://openalex.org/W2963588172",
-        "https://openalex.org/W3010631090",
-        "https://openalex.org/W3020825954",
-        "https://openalex.org/W2755510477"
-    ],
-    "abstract": "The occurrence of flight risks and accidents is closely related to pilot workload. Effective detection of pilot workload has been a key research area in the aviation industry. However, traditional methods for detecting pilot workload have several shortcomings: firstly, the collection of metrics via contact-based devices can interfere with pilots; secondly, real-time detection of pilot workload is challenging, making it difficult to capture sudden increases in workload; thirdly, the detection accuracy of these models is limited; fourthly, the models lack cross-pilot generalization. To address these challenges, this study proposes a large language model, WorkloadGPT, which utilizes low-interference indicators: eye movement and seat pressure. Specifically, features are extracted in 10 s time windows and input into WorkloadGPT for classification into low, medium, and high workload categories. Additionally, this article presents the design of an appropriate text template to serialize the tabular feature dataset into natural language, incorporating individual difference prompts during instance construction to enhance cross-pilot generalization. Finally, the LoRA algorithm was used to fine-tune the pre-trained large language model ChatGLM3-6B, resulting in WorkloadGPT. During the training process of WorkloadGPT, the GAN-Ensemble algorithm was employed to augment the experimental raw data, constructing a realistic and robust extended dataset for model training. The results show that WorkloadGPT achieved a classification accuracy of 87.3%, with a cross-pilot standard deviation of only 2.1% and a response time of just 1.76 s, overall outperforming existing studies in terms of accuracy, real-time performance, and cross-pilot generalization capability, thereby providing a solid foundation for enhancing flight safety.",
-    "full_text": null
+  "title": "WorkloadGPT: A Large Language Model Approach to Real-Time Detection of Pilot Workload",
+  "url": "https://openalex.org/W4402515887",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2129750271",
+      "name": "Yijing Gao",
+      "affiliations": [
+        "Tongji University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2795062445",
+      "name": "Lishengsa Yue",
+      "affiliations": [
+        "Tongji University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2168980517",
+      "name": "Jiahang Sun",
+      "affiliations": [
+        "Tongji University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2580328036",
+      "name": "Xiaonian Shan",
+      "affiliations": [
+        "Hohai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115948089",
+      "name": "Yihan Liu",
+      "affiliations": [
+        "Tongji University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096015255",
+      "name": "Xuerui Wu",
+      "affiliations": [
+        "Tongji University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2098740605",
+    "https://openalex.org/W2384943855",
+    "https://openalex.org/W7030334860",
+    "https://openalex.org/W3053130072",
+    "https://openalex.org/W3007593444",
+    "https://openalex.org/W4290613800",
+    "https://openalex.org/W3007653948",
+    "https://openalex.org/W1974893143",
+    "https://openalex.org/W2047401359",
+    "https://openalex.org/W2149355565",
+    "https://openalex.org/W2294281604",
+    "https://openalex.org/W6744384827",
+    "https://openalex.org/W2136229462",
+    "https://openalex.org/W1980581539",
+    "https://openalex.org/W4312591085",
+    "https://openalex.org/W4393867412",
+    "https://openalex.org/W2896220595",
+    "https://openalex.org/W2979830539",
+    "https://openalex.org/W4391232619",
+    "https://openalex.org/W2897744987",
+    "https://openalex.org/W2032778084",
+    "https://openalex.org/W4307046006",
+    "https://openalex.org/W2894692871",
+    "https://openalex.org/W2997849943",
+    "https://openalex.org/W4281292977",
+    "https://openalex.org/W2970879516",
+    "https://openalex.org/W2969811463",
+    "https://openalex.org/W3035561807",
+    "https://openalex.org/W2153288312",
+    "https://openalex.org/W2072810705",
+    "https://openalex.org/W3211732073",
+    "https://openalex.org/W2013112874",
+    "https://openalex.org/W2092762459",
+    "https://openalex.org/W2029228773",
+    "https://openalex.org/W2286482604",
+    "https://openalex.org/W2062242288",
+    "https://openalex.org/W1971264587",
+    "https://openalex.org/W3035140194",
+    "https://openalex.org/W4312554912",
+    "https://openalex.org/W4281826654",
+    "https://openalex.org/W3158303960",
+    "https://openalex.org/W3116342879",
+    "https://openalex.org/W3081416707",
+    "https://openalex.org/W6776996033",
+    "https://openalex.org/W2148143831",
+    "https://openalex.org/W4382239582",
+    "https://openalex.org/W4396667188",
+    "https://openalex.org/W4389519841",
+    "https://openalex.org/W4392366650",
+    "https://openalex.org/W4293235517",
+    "https://openalex.org/W4323767753",
+    "https://openalex.org/W4255717269",
+    "https://openalex.org/W4399225857",
+    "https://openalex.org/W2128495200",
+    "https://openalex.org/W4308346348",
+    "https://openalex.org/W2997205428",
+    "https://openalex.org/W6762453230",
+    "https://openalex.org/W2988124359",
+    "https://openalex.org/W2803729547",
+    "https://openalex.org/W2560647685",
+    "https://openalex.org/W2963588172",
+    "https://openalex.org/W3010631090",
+    "https://openalex.org/W3020825954",
+    "https://openalex.org/W2755510477"
+  ],
+  "abstract": "The occurrence of flight risks and accidents is closely related to pilot workload. Effective detection of pilot workload has been a key research area in the aviation industry. However, traditional methods for detecting pilot workload have several shortcomings: firstly, the collection of metrics via contact-based devices can interfere with pilots; secondly, real-time detection of pilot workload is challenging, making it difficult to capture sudden increases in workload; thirdly, the detection accuracy of these models is limited; fourthly, the models lack cross-pilot generalization. To address these challenges, this study proposes a large language model, WorkloadGPT, which utilizes low-interference indicators: eye movement and seat pressure. Specifically, features are extracted in 10 s time windows and input into WorkloadGPT for classification into low, medium, and high workload categories. Additionally, this article presents the design of an appropriate text template to serialize the tabular feature dataset into natural language, incorporating individual difference prompts during instance construction to enhance cross-pilot generalization. Finally, the LoRA algorithm was used to fine-tune the pre-trained large language model ChatGLM3-6B, resulting in WorkloadGPT. During the training process of WorkloadGPT, the GAN-Ensemble algorithm was employed to augment the experimental raw data, constructing a realistic and robust extended dataset for model training. The results show that WorkloadGPT achieved a classification accuracy of 87.3%, with a cross-pilot standard deviation of only 2.1% and a response time of just 1.76 s, overall outperforming existing studies in terms of accuracy, real-time performance, and cross-pilot generalization capability, thereby providing a solid foundation for enhancing flight safety.",
+  "full_text": null,
+  "topic": "Workload",
+  "concepts": [
+    {
+      "name": "Workload",
+      "score": 0.6161965131759644
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5952621102333069
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.43319615721702576
+    },
+    {
+      "name": "Operating system",
+      "score": 0.22799816727638245
+    }
+  ]
 }

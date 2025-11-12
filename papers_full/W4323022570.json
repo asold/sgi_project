@@ -1,95 +1,138 @@
 {
-    "title": "SSViT-HCD: A Spatial–Spectral Convolutional Vision Transformer for Hyperspectral Change Detection",
-    "url": "https://openalex.org/W4323022570",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2757984414",
-            "name": "Ayesha Shafique",
-            "affiliations": [
-                "Nanjing University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2475006769",
-            "name": "Seyd Teymoor Seydi",
-            "affiliations": [
-                "University of Tehran"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2228771795",
-            "name": "Tayeb Alipour Fard",
-            "affiliations": [
-                "University of Tehran"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117682706",
-            "name": "Guo Cao",
-            "affiliations": [
-                "Nanjing University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096345180",
-            "name": "Di Yang",
-            "affiliations": [
-                "University of Wyoming"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6629944422",
-        "https://openalex.org/W2800240447",
-        "https://openalex.org/W3037587714",
-        "https://openalex.org/W4206267281",
-        "https://openalex.org/W2332183138",
-        "https://openalex.org/W2312468355",
-        "https://openalex.org/W2050763737",
-        "https://openalex.org/W3176244435",
-        "https://openalex.org/W2900587135",
-        "https://openalex.org/W3200228418",
-        "https://openalex.org/W3215176889",
-        "https://openalex.org/W4304172276",
-        "https://openalex.org/W2898923688",
-        "https://openalex.org/W2964072855",
-        "https://openalex.org/W3140678646",
-        "https://openalex.org/W1977942753",
-        "https://openalex.org/W2790073283",
-        "https://openalex.org/W2022855678",
-        "https://openalex.org/W6637202156",
-        "https://openalex.org/W1998595580",
-        "https://openalex.org/W2006383776",
-        "https://openalex.org/W2884276099",
-        "https://openalex.org/W4211155378",
-        "https://openalex.org/W2157026765",
-        "https://openalex.org/W4285121789",
-        "https://openalex.org/W2334023959",
-        "https://openalex.org/W3134663792",
-        "https://openalex.org/W2089327948",
-        "https://openalex.org/W2914676574",
-        "https://openalex.org/W2146444479",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W3207451971",
-        "https://openalex.org/W2577832105",
-        "https://openalex.org/W4281393096",
-        "https://openalex.org/W1990693003",
-        "https://openalex.org/W4206994619",
-        "https://openalex.org/W2890376060",
-        "https://openalex.org/W2528975388",
-        "https://openalex.org/W2911648799",
-        "https://openalex.org/W2789806937",
-        "https://openalex.org/W2343117455",
-        "https://openalex.org/W2752414286",
-        "https://openalex.org/W3139316975",
-        "https://openalex.org/W3205965083",
-        "https://openalex.org/W2944512710",
-        "https://openalex.org/W3171001481",
-        "https://openalex.org/W3099831940",
-        "https://openalex.org/W1499255288",
-        "https://openalex.org/W3094502228"
-    ],
-    "abstract": "In recent decades, the wide use of deep-learning-based methods has consistently improved the performance of remote sensing images and is widely used for hyperspectral change detection (HCD) tasks. However, most of the existing HCD method is based on the convolutional neural network (CNN), which shows limitations in long-range dependencies and also cannot mine sequence features well. The change detection (CD) performance still has margins for improvement. In this study, inspired by the excellent performance of transformers in computer vision, which has shown a significant ability to model global dependencies to attenuate the loss of long-range information, we built a hybrid spatial&#x2013;spectral convolutional vision transformer (SSViT) for HCD. Our proposed method combines the merits of CNN and transformer to fulfill effective and efficient HCD. This study focused on highly reliable pseudo sample data generation by a selection scenario. To generate a pseudo sample, we have used different methods: 1) predicting change and no-change areas by using Euclidean distance; 2) thresholding by the Chan&#x2013;Vese segmentation method for determining change and no-change pixels for intensity maps; 3) sorting of change and no-change pixels; and 4) selection of the minimum value of initial no-change pixels as pseudo change sample data, in addition to choosing the maximum intensity value for change candidate pixels as change sample data. The highly reliable change pixels were selected, and then, pseudo training data were used to train the SSViT model. At last, the change map is generated by training the SSViT network based on pseudo training data. The performance of the SSViT model is evaluated for real-world hyperspectral (HS) datasets with different change land cover types. Furthermore, a new series of HS images is introduced for CD purposes. The results of CD show that the HS images have a high potential for detecting subtle changes. The experimental results demonstrate that the proposed SSViT could outperform the advanced HCD methods.",
-    "full_text": null
+  "title": "SSViT-HCD: A Spatial–Spectral Convolutional Vision Transformer for Hyperspectral Change Detection",
+  "url": "https://openalex.org/W4323022570",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2757984414",
+      "name": "Ayesha Shafique",
+      "affiliations": [
+        "Nanjing University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2475006769",
+      "name": "Seyd Teymoor Seydi",
+      "affiliations": [
+        "University of Tehran"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2228771795",
+      "name": "Tayeb Alipour Fard",
+      "affiliations": [
+        "University of Tehran"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117682706",
+      "name": "Guo Cao",
+      "affiliations": [
+        "Nanjing University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096345180",
+      "name": "Di Yang",
+      "affiliations": [
+        "University of Wyoming"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6629944422",
+    "https://openalex.org/W2800240447",
+    "https://openalex.org/W3037587714",
+    "https://openalex.org/W4206267281",
+    "https://openalex.org/W2332183138",
+    "https://openalex.org/W2312468355",
+    "https://openalex.org/W2050763737",
+    "https://openalex.org/W3176244435",
+    "https://openalex.org/W2900587135",
+    "https://openalex.org/W3200228418",
+    "https://openalex.org/W3215176889",
+    "https://openalex.org/W4304172276",
+    "https://openalex.org/W2898923688",
+    "https://openalex.org/W2964072855",
+    "https://openalex.org/W3140678646",
+    "https://openalex.org/W1977942753",
+    "https://openalex.org/W2790073283",
+    "https://openalex.org/W2022855678",
+    "https://openalex.org/W6637202156",
+    "https://openalex.org/W1998595580",
+    "https://openalex.org/W2006383776",
+    "https://openalex.org/W2884276099",
+    "https://openalex.org/W4211155378",
+    "https://openalex.org/W2157026765",
+    "https://openalex.org/W4285121789",
+    "https://openalex.org/W2334023959",
+    "https://openalex.org/W3134663792",
+    "https://openalex.org/W2089327948",
+    "https://openalex.org/W2914676574",
+    "https://openalex.org/W2146444479",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W3207451971",
+    "https://openalex.org/W2577832105",
+    "https://openalex.org/W4281393096",
+    "https://openalex.org/W1990693003",
+    "https://openalex.org/W4206994619",
+    "https://openalex.org/W2890376060",
+    "https://openalex.org/W2528975388",
+    "https://openalex.org/W2911648799",
+    "https://openalex.org/W2789806937",
+    "https://openalex.org/W2343117455",
+    "https://openalex.org/W2752414286",
+    "https://openalex.org/W3139316975",
+    "https://openalex.org/W3205965083",
+    "https://openalex.org/W2944512710",
+    "https://openalex.org/W3171001481",
+    "https://openalex.org/W3099831940",
+    "https://openalex.org/W1499255288",
+    "https://openalex.org/W3094502228"
+  ],
+  "abstract": "In recent decades, the wide use of deep-learning-based methods has consistently improved the performance of remote sensing images and is widely used for hyperspectral change detection (HCD) tasks. However, most of the existing HCD method is based on the convolutional neural network (CNN), which shows limitations in long-range dependencies and also cannot mine sequence features well. The change detection (CD) performance still has margins for improvement. In this study, inspired by the excellent performance of transformers in computer vision, which has shown a significant ability to model global dependencies to attenuate the loss of long-range information, we built a hybrid spatial&#x2013;spectral convolutional vision transformer (SSViT) for HCD. Our proposed method combines the merits of CNN and transformer to fulfill effective and efficient HCD. This study focused on highly reliable pseudo sample data generation by a selection scenario. To generate a pseudo sample, we have used different methods: 1) predicting change and no-change areas by using Euclidean distance; 2) thresholding by the Chan&#x2013;Vese segmentation method for determining change and no-change pixels for intensity maps; 3) sorting of change and no-change pixels; and 4) selection of the minimum value of initial no-change pixels as pseudo change sample data, in addition to choosing the maximum intensity value for change candidate pixels as change sample data. The highly reliable change pixels were selected, and then, pseudo training data were used to train the SSViT model. At last, the change map is generated by training the SSViT network based on pseudo training data. The performance of the SSViT model is evaluated for real-world hyperspectral (HS) datasets with different change land cover types. Furthermore, a new series of HS images is introduced for CD purposes. The results of CD show that the HS images have a high potential for detecting subtle changes. The experimental results demonstrate that the proposed SSViT could outperform the advanced HCD methods.",
+  "full_text": null,
+  "topic": "Pixel",
+  "concepts": [
+    {
+      "name": "Pixel",
+      "score": 0.7711060643196106
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7364016771316528
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.715972900390625
+    },
+    {
+      "name": "Change detection",
+      "score": 0.7067684531211853
+    },
+    {
+      "name": "Hyperspectral imaging",
+      "score": 0.6500805616378784
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5833781361579895
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5140994191169739
+    },
+    {
+      "name": "Thresholding",
+      "score": 0.4667966961860657
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4023270010948181
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.10613024234771729
+    }
+  ]
 }

@@ -1,84 +1,139 @@
 {
-    "title": "TransMF: Transformer-Based Multi-Scale Fusion Model for Crack Detection",
-    "url": "https://openalex.org/W4283830853",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2111618082",
-            "name": "Xiaochen Ju",
-            "affiliations": [
-                "China Academy of Railway Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2131498533",
-            "name": "Xinxin Zhao",
-            "affiliations": [
-                "China Academy of Railway Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122776214",
-            "name": "Shengsheng Qian",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shandong Institute of Automation"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2145287260",
-        "https://openalex.org/W2895160027",
-        "https://openalex.org/W2897494103",
-        "https://openalex.org/W2339315338",
-        "https://openalex.org/W753187444",
-        "https://openalex.org/W2022844898",
-        "https://openalex.org/W2963908722",
-        "https://openalex.org/W1971100300",
-        "https://openalex.org/W4312496534",
-        "https://openalex.org/W3022492425",
-        "https://openalex.org/W2998997213",
-        "https://openalex.org/W3011200270",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2912350898",
-        "https://openalex.org/W3087277009",
-        "https://openalex.org/W2588612844",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2915716523",
-        "https://openalex.org/W3201890785",
-        "https://openalex.org/W4205831148",
-        "https://openalex.org/W6809616301",
-        "https://openalex.org/W3216720075",
-        "https://openalex.org/W3205191178",
-        "https://openalex.org/W2972309292",
-        "https://openalex.org/W3000110218",
-        "https://openalex.org/W2899242765",
-        "https://openalex.org/W2074865067",
-        "https://openalex.org/W3023192521",
-        "https://openalex.org/W6794874040",
-        "https://openalex.org/W3193768753",
-        "https://openalex.org/W4200066127",
-        "https://openalex.org/W4285248944",
-        "https://openalex.org/W3127550792",
-        "https://openalex.org/W3138786441",
-        "https://openalex.org/W2997174672",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W3208438369",
-        "https://openalex.org/W2889494142",
-        "https://openalex.org/W4226252340",
-        "https://openalex.org/W2905163589",
-        "https://openalex.org/W2908667960",
-        "https://openalex.org/W3044580098",
-        "https://openalex.org/W3049654278",
-        "https://openalex.org/W2995177923",
-        "https://openalex.org/W3125935532",
-        "https://openalex.org/W845365781",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W4214602694",
-        "https://openalex.org/W3158546727",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "Cracks are widespread in infrastructure that are closely related to human activity. It is very popular to use artificial intelligence to detect cracks intelligently, which is known as crack detection. The noise in the background of crack images, discontinuity of cracks and other problems make the crack detection task a huge challenge. Although many approaches have been proposed, there are still two challenges: (1) cracks are long and complex in shape, making it difficult to capture long-range continuity; (2) most of the images in the crack dataset have noise, and it is difficult to detect only the cracks and ignore the noise. In this paper, we propose a novel method called Transformer-based Multi-scale Fusion Model (TransMF) for crack detection, including an Encoder Module (EM), Decoder Module (DM) and Fusion Module (FM). The Encoder Module uses a hybrid of convolution blocks and Swin Transformer block to model the long-range dependencies of different parts in a crack image from a local and global perspective. The Decoder Module is designed with symmetrical structure to the Encoder Module. In the Fusion Module, the output in each layer with unique scales of Encoder Module and Decoder Module are fused in the form of convolution, which can release the effect of background noise and strengthen the correlations between relevant context in order to enhance the crack detection. Finally, the output of each layer of the Fusion Module is concatenated to achieve the purpose of crack detection. Extensive experiments on three benchmark datasets (CrackLS315, CRKWH100 and DeepCrack) demonstrate that the proposed TransMF in this paper exceeds the best performance of present baselines.",
-    "full_text": null
+  "title": "TransMF: Transformer-Based Multi-Scale Fusion Model for Crack Detection",
+  "url": "https://openalex.org/W4283830853",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2111618082",
+      "name": "Xiaochen Ju",
+      "affiliations": [
+        "China Academy of Railway Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2131498533",
+      "name": "Xinxin Zhao",
+      "affiliations": [
+        "China Academy of Railway Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122776214",
+      "name": "Shengsheng Qian",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shandong Institute of Automation"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2145287260",
+    "https://openalex.org/W2895160027",
+    "https://openalex.org/W2897494103",
+    "https://openalex.org/W2339315338",
+    "https://openalex.org/W753187444",
+    "https://openalex.org/W2022844898",
+    "https://openalex.org/W2963908722",
+    "https://openalex.org/W1971100300",
+    "https://openalex.org/W4312496534",
+    "https://openalex.org/W3022492425",
+    "https://openalex.org/W2998997213",
+    "https://openalex.org/W3011200270",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2912350898",
+    "https://openalex.org/W3087277009",
+    "https://openalex.org/W2588612844",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2915716523",
+    "https://openalex.org/W3201890785",
+    "https://openalex.org/W4205831148",
+    "https://openalex.org/W6809616301",
+    "https://openalex.org/W3216720075",
+    "https://openalex.org/W3205191178",
+    "https://openalex.org/W2972309292",
+    "https://openalex.org/W3000110218",
+    "https://openalex.org/W2899242765",
+    "https://openalex.org/W2074865067",
+    "https://openalex.org/W3023192521",
+    "https://openalex.org/W6794874040",
+    "https://openalex.org/W3193768753",
+    "https://openalex.org/W4200066127",
+    "https://openalex.org/W4285248944",
+    "https://openalex.org/W3127550792",
+    "https://openalex.org/W3138786441",
+    "https://openalex.org/W2997174672",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W3208438369",
+    "https://openalex.org/W2889494142",
+    "https://openalex.org/W4226252340",
+    "https://openalex.org/W2905163589",
+    "https://openalex.org/W2908667960",
+    "https://openalex.org/W3044580098",
+    "https://openalex.org/W3049654278",
+    "https://openalex.org/W2995177923",
+    "https://openalex.org/W3125935532",
+    "https://openalex.org/W845365781",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W4214602694",
+    "https://openalex.org/W3158546727",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "Cracks are widespread in infrastructure that are closely related to human activity. It is very popular to use artificial intelligence to detect cracks intelligently, which is known as crack detection. The noise in the background of crack images, discontinuity of cracks and other problems make the crack detection task a huge challenge. Although many approaches have been proposed, there are still two challenges: (1) cracks are long and complex in shape, making it difficult to capture long-range continuity; (2) most of the images in the crack dataset have noise, and it is difficult to detect only the cracks and ignore the noise. In this paper, we propose a novel method called Transformer-based Multi-scale Fusion Model (TransMF) for crack detection, including an Encoder Module (EM), Decoder Module (DM) and Fusion Module (FM). The Encoder Module uses a hybrid of convolution blocks and Swin Transformer block to model the long-range dependencies of different parts in a crack image from a local and global perspective. The Decoder Module is designed with symmetrical structure to the Encoder Module. In the Fusion Module, the output in each layer with unique scales of Encoder Module and Decoder Module are fused in the form of convolution, which can release the effect of background noise and strengthen the correlations between relevant context in order to enhance the crack detection. Finally, the output of each layer of the Fusion Module is concatenated to achieve the purpose of crack detection. Extensive experiments on three benchmark datasets (CrackLS315, CRKWH100 and DeepCrack) demonstrate that the proposed TransMF in this paper exceeds the best performance of present baselines.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.65753173828125
+    },
+    {
+      "name": "Encoder",
+      "score": 0.560454249382019
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5540611743927002
+    },
+    {
+      "name": "Discontinuity (linguistics)",
+      "score": 0.4719768166542053
+    },
+    {
+      "name": "Noise (video)",
+      "score": 0.45536795258522034
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40984946489334106
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1670919954776764
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.16540449857711792
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0895063579082489
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.07338014245033264
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

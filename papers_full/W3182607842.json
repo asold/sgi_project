@@ -1,82 +1,137 @@
 {
-    "title": "Multi-Modal Adaptive Fusion Transformer Network for the Estimation of Depression Level",
-    "url": "https://openalex.org/W3182607842",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2070768212",
-            "name": "Hao Sun",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2152947185",
-            "name": "Jiaqing LIU",
-            "affiliations": [
-                "Ritsumeikan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3181402715",
-            "name": "Shurong Chai",
-            "affiliations": [
-                "Ritsumeikan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2981772259",
-            "name": "Zhaolin Qiu",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2146947757",
-            "name": "Lanfen LIN",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2147311113",
-            "name": "Xinyin Huang",
-            "affiliations": [
-                "Soochow University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2187113996",
-            "name": "Yenwei Chen",
-            "affiliations": [
-                "Ritsumeikan University",
-                "Zhejiang Lab"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2793273050",
-        "https://openalex.org/W2982183006",
-        "https://openalex.org/W2978855205",
-        "https://openalex.org/W2981501230",
-        "https://openalex.org/W2981677410",
-        "https://openalex.org/W2948605448",
-        "https://openalex.org/W2981590713",
-        "https://openalex.org/W3097777922",
-        "https://openalex.org/W3045969489",
-        "https://openalex.org/W2116335159",
-        "https://openalex.org/W2040232951",
-        "https://openalex.org/W2981660166",
-        "https://openalex.org/W1985329916",
-        "https://openalex.org/W2313339984",
-        "https://openalex.org/W2048533792",
-        "https://openalex.org/W2252180568",
-        "https://openalex.org/W2085662862",
-        "https://openalex.org/W2395639500",
-        "https://openalex.org/W2964348070",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W3080324032"
-    ],
-    "abstract": "Depression is a severe psychological condition that affects millions of people worldwide. As depression has received more attention in recent years, it has become imperative to develop automatic methods for detecting depression. Although numerous machine learning methods have been proposed for estimating the levels of depression via audio, visual, and audiovisual emotion sensing, several challenges still exist. For example, it is difficult to extract long-term temporal context information from long sequences of audio and visual data, and it is also difficult to select and fuse useful multi-modal information or features effectively. In addition, how to include other information or tasks to enhance the estimation accuracy is also one of the challenges. In this study, we propose a multi-modal adaptive fusion transformer network for estimating the levels of depression. Transformer-based models have achieved state-of-the-art performance in language understanding and sequence modeling. Thus, the proposed transformer-based network is utilized to extract long-term temporal context information from uni-modal audio and visual data in our work. This is the first transformer-based approach for depression detection. We also propose an adaptive fusion method for adaptively fusing useful multi-modal features. Furthermore, inspired by current multi-task learning work, we also incorporate an auxiliary task (depression classification) to enhance the main task of depression level regression (estimation). The effectiveness of the proposed method has been validated on a public dataset (AVEC 2019 Detecting Depression with AI Sub-challenge) in terms of the PHQ-8 scores. Experimental results indicate that the proposed method achieves better performance compared with currently state-of-the-art methods. Our proposed method achieves a concordance correlation coefficient (CCC) of 0.733 on AVEC 2019 which is 6.2% higher than the accuracy (CCC = 0.696) of the state-of-the-art method.",
-    "full_text": null
+  "title": "Multi-Modal Adaptive Fusion Transformer Network for the Estimation of Depression Level",
+  "url": "https://openalex.org/W3182607842",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2070768212",
+      "name": "Hao Sun",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2152947185",
+      "name": "Jiaqing LIU",
+      "affiliations": [
+        "Ritsumeikan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3181402715",
+      "name": "Shurong Chai",
+      "affiliations": [
+        "Ritsumeikan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2981772259",
+      "name": "Zhaolin Qiu",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2146947757",
+      "name": "Lanfen LIN",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2147311113",
+      "name": "Xinyin Huang",
+      "affiliations": [
+        "Soochow University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2187113996",
+      "name": "Yenwei Chen",
+      "affiliations": [
+        "Ritsumeikan University",
+        "Zhejiang Lab"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2793273050",
+    "https://openalex.org/W2982183006",
+    "https://openalex.org/W2978855205",
+    "https://openalex.org/W2981501230",
+    "https://openalex.org/W2981677410",
+    "https://openalex.org/W2948605448",
+    "https://openalex.org/W2981590713",
+    "https://openalex.org/W3097777922",
+    "https://openalex.org/W3045969489",
+    "https://openalex.org/W2116335159",
+    "https://openalex.org/W2040232951",
+    "https://openalex.org/W2981660166",
+    "https://openalex.org/W1985329916",
+    "https://openalex.org/W2313339984",
+    "https://openalex.org/W2048533792",
+    "https://openalex.org/W2252180568",
+    "https://openalex.org/W2085662862",
+    "https://openalex.org/W2395639500",
+    "https://openalex.org/W2964348070",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W3080324032"
+  ],
+  "abstract": "Depression is a severe psychological condition that affects millions of people worldwide. As depression has received more attention in recent years, it has become imperative to develop automatic methods for detecting depression. Although numerous machine learning methods have been proposed for estimating the levels of depression via audio, visual, and audiovisual emotion sensing, several challenges still exist. For example, it is difficult to extract long-term temporal context information from long sequences of audio and visual data, and it is also difficult to select and fuse useful multi-modal information or features effectively. In addition, how to include other information or tasks to enhance the estimation accuracy is also one of the challenges. In this study, we propose a multi-modal adaptive fusion transformer network for estimating the levels of depression. Transformer-based models have achieved state-of-the-art performance in language understanding and sequence modeling. Thus, the proposed transformer-based network is utilized to extract long-term temporal context information from uni-modal audio and visual data in our work. This is the first transformer-based approach for depression detection. We also propose an adaptive fusion method for adaptively fusing useful multi-modal features. Furthermore, inspired by current multi-task learning work, we also incorporate an auxiliary task (depression classification) to enhance the main task of depression level regression (estimation). The effectiveness of the proposed method has been validated on a public dataset (AVEC 2019 Detecting Depression with AI Sub-challenge) in terms of the PHQ-8 scores. Experimental results indicate that the proposed method achieves better performance compared with currently state-of-the-art methods. Our proposed method achieves a concordance correlation coefficient (CCC) of 0.733 on AVEC 2019 which is 6.2% higher than the accuracy (CCC = 0.696) of the state-of-the-art method.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6543136239051819
+    },
+    {
+      "name": "Transformer",
+      "score": 0.608221173286438
+    },
+    {
+      "name": "Modal",
+      "score": 0.5747171640396118
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5097972750663757
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5061413645744324
+    },
+    {
+      "name": "Sensor fusion",
+      "score": 0.4836310148239136
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4260181784629822
+    },
+    {
+      "name": "Data mining",
+      "score": 0.33894777297973633
+    },
+    {
+      "name": "Engineering",
+      "score": 0.17959165573120117
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0962100625038147
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    }
+  ]
 }

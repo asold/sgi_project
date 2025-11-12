@@ -1,61 +1,152 @@
 {
-    "title": "Half-Context Language Models",
-    "url": "https://openalex.org/W2164492273",
-    "year": 2011,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2035156685",
-            "name": "Hinrich Schütze",
-            "affiliations": [
-                "University of Stuttgart"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1993771642",
-            "name": "Michael Walsh",
-            "affiliations": [
-                "University of Stuttgart"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2041940447",
-        "https://openalex.org/W2132339004",
-        "https://openalex.org/W1593239840",
-        "https://openalex.org/W2082385556",
-        "https://openalex.org/W2076798679",
-        "https://openalex.org/W2080018251",
-        "https://openalex.org/W2075201173",
-        "https://openalex.org/W4242558598",
-        "https://openalex.org/W2081295016",
-        "https://openalex.org/W2132089731",
-        "https://openalex.org/W2135777451",
-        "https://openalex.org/W1631260214",
-        "https://openalex.org/W1694571275",
-        "https://openalex.org/W2165112885",
-        "https://openalex.org/W1651093245",
-        "https://openalex.org/W2129087637",
-        "https://openalex.org/W2408503330",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W2126386462",
-        "https://openalex.org/W1579590578",
-        "https://openalex.org/W2951769629",
-        "https://openalex.org/W2018471243",
-        "https://openalex.org/W2170206653",
-        "https://openalex.org/W47415966",
-        "https://openalex.org/W2158195707",
-        "https://openalex.org/W1606884126",
-        "https://openalex.org/W2110993209",
-        "https://openalex.org/W2068054967",
-        "https://openalex.org/W2118487481",
-        "https://openalex.org/W2148321140",
-        "https://openalex.org/W4360598533",
-        "https://openalex.org/W2118742098",
-        "https://openalex.org/W2127817732",
-        "https://openalex.org/W2118692229",
-        "https://openalex.org/W2101564109",
-        "https://openalex.org/W2121227244"
-    ],
-    "abstract": "This article investigates the effects of different degrees of contextual granularity on language model performance. It presents a new language model that combines clustering and half-contextualization, a novel representation of contexts. Half-contextualization is based on the half-context hypothesis that states that the distributional characteristics of a word or bigram are best represented by treating its context distribution to the left and right separately and that only directionally relevant distributional information should be used. Clustering is achieved using a new clustering algorithm for class-based language models that compares favorably to the exchange algorithm. When interpolated with a Kneser-Ney model, half-context models are shown to have better perplexity than commonly used interpolated n-gram models and traditional class-based approaches. A novel, fine-grained, context-specific analysis highlights those contexts in which the model performs well and those which are better treated by existing non-class-based models.",
-    "full_text": null
+  "title": "Half-Context Language Models",
+  "url": "https://openalex.org/W2164492273",
+  "year": 2011,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2035156685",
+      "name": "Hinrich Schütze",
+      "affiliations": [
+        "University of Stuttgart"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1993771642",
+      "name": "Michael Walsh",
+      "affiliations": [
+        "University of Stuttgart"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2041940447",
+    "https://openalex.org/W2132339004",
+    "https://openalex.org/W1593239840",
+    "https://openalex.org/W2082385556",
+    "https://openalex.org/W2076798679",
+    "https://openalex.org/W2080018251",
+    "https://openalex.org/W2075201173",
+    "https://openalex.org/W4242558598",
+    "https://openalex.org/W2081295016",
+    "https://openalex.org/W2132089731",
+    "https://openalex.org/W2135777451",
+    "https://openalex.org/W1631260214",
+    "https://openalex.org/W1694571275",
+    "https://openalex.org/W2165112885",
+    "https://openalex.org/W1651093245",
+    "https://openalex.org/W2129087637",
+    "https://openalex.org/W2408503330",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W2126386462",
+    "https://openalex.org/W1579590578",
+    "https://openalex.org/W2951769629",
+    "https://openalex.org/W2018471243",
+    "https://openalex.org/W2170206653",
+    "https://openalex.org/W47415966",
+    "https://openalex.org/W2158195707",
+    "https://openalex.org/W1606884126",
+    "https://openalex.org/W2110993209",
+    "https://openalex.org/W2068054967",
+    "https://openalex.org/W2118487481",
+    "https://openalex.org/W2148321140",
+    "https://openalex.org/W4360598533",
+    "https://openalex.org/W2118742098",
+    "https://openalex.org/W2127817732",
+    "https://openalex.org/W2118692229",
+    "https://openalex.org/W2101564109",
+    "https://openalex.org/W2121227244"
+  ],
+  "abstract": "This article investigates the effects of different degrees of contextual granularity on language model performance. It presents a new language model that combines clustering and half-contextualization, a novel representation of contexts. Half-contextualization is based on the half-context hypothesis that states that the distributional characteristics of a word or bigram are best represented by treating its context distribution to the left and right separately and that only directionally relevant distributional information should be used. Clustering is achieved using a new clustering algorithm for class-based language models that compares favorably to the exchange algorithm. When interpolated with a Kneser-Ney model, half-context models are shown to have better perplexity than commonly used interpolated n-gram models and traditional class-based approaches. A novel, fine-grained, context-specific analysis highlights those contexts in which the model performs well and those which are better treated by existing non-class-based models.",
+  "full_text": null,
+  "topic": "Perplexity",
+  "concepts": [
+    {
+      "name": "Perplexity",
+      "score": 0.9223194122314453
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8257782459259033
+    },
+    {
+      "name": "Language model",
+      "score": 0.8242781162261963
+    },
+    {
+      "name": "Contextualization",
+      "score": 0.8233016133308411
+    },
+    {
+      "name": "Bigram",
+      "score": 0.7110926508903503
+    },
+    {
+      "name": "Cluster analysis",
+      "score": 0.7052381038665771
+    },
+    {
+      "name": "Class (philosophy)",
+      "score": 0.5936258435249329
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.5818384885787964
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5409470796585083
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.49724844098091125
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.44810715317726135
+    },
+    {
+      "name": "Context model",
+      "score": 0.41916030645370483
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3243430256843567
+    },
+    {
+      "name": "Trigram",
+      "score": 0.19745415449142456
+    },
+    {
+      "name": "Object (grammar)",
+      "score": 0.10963663458824158
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Interpretation (philosophy)",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    }
+  ]
 }

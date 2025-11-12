@@ -1,61 +1,148 @@
 {
-    "title": "Uncertainty quantification in large language models through convex hull analysis",
-    "url": "https://openalex.org/W4404691742",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2260197753",
-            "name": "Ferhat Ozgur Catak",
-            "affiliations": [
-                "University of Stavanger"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1541228592",
-            "name": "Murat Kuzlu",
-            "affiliations": [
-                "Old Dominion University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2260197753",
-            "name": "Ferhat Ozgur Catak",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1541228592",
-            "name": "Murat Kuzlu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4396835373",
-        "https://openalex.org/W4210276879",
-        "https://openalex.org/W3089555015",
-        "https://openalex.org/W4366498198",
-        "https://openalex.org/W4313270479",
-        "https://openalex.org/W4382050752",
-        "https://openalex.org/W3102100346",
-        "https://openalex.org/W4404784419",
-        "https://openalex.org/W6600225990",
-        "https://openalex.org/W4404783656",
-        "https://openalex.org/W6600135713",
-        "https://openalex.org/W4399469733",
-        "https://openalex.org/W4399423107",
-        "https://openalex.org/W4399365040",
-        "https://openalex.org/W4387762676",
-        "https://openalex.org/W2901274124",
-        "https://openalex.org/W4390034061",
-        "https://openalex.org/W6601731210",
-        "https://openalex.org/W4311993028",
-        "https://openalex.org/W4220753921",
-        "https://openalex.org/W4231799626",
-        "https://openalex.org/W4378802379",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W6600202702",
-        "https://openalex.org/W184958601",
-        "https://openalex.org/W3164731060"
-    ],
-    "abstract": "Uncertainty quantification approaches have been more critical in large language models (LLMs), particularly high-risk applications requiring reliable outputs. However, traditional methods for uncertainty quantification, such as probabilistic models and ensemble techniques, face challenges when applied to the complex and high-dimensional nature of LLM-generated outputs. This study proposes a novel geometric approach to uncertainty quantification using convex hull analysis. The proposed method leverages the spatial properties of response embeddings to measure the dispersion and variability of model outputs. The prompts are categorized into three types, i.e., ’easy’, ’moderate’, and ’confusing’, to generate multiple responses using different LLMs at varying temperature settings. The responses are transformed into high-dimensional embeddings via a BERT model and subsequently projected into a two-dimensional space using Principal Component Analysis (PCA), Isomap, Multidimensional Scaling (MDS). The Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm is utilized to cluster the embeddings and compute the convex hull for each selected cluster. The experimental results indicate that the uncertainty of the model for LLMs depends on the prompt complexity, the model, and the temperature setting.",
-    "full_text": null
+  "title": "Uncertainty quantification in large language models through convex hull analysis",
+  "url": "https://openalex.org/W4404691742",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2260197753",
+      "name": "Ferhat Ozgur Catak",
+      "affiliations": [
+        "University of Stavanger"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1541228592",
+      "name": "Murat Kuzlu",
+      "affiliations": [
+        "Old Dominion University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2260197753",
+      "name": "Ferhat Ozgur Catak",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1541228592",
+      "name": "Murat Kuzlu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4396835373",
+    "https://openalex.org/W4210276879",
+    "https://openalex.org/W3089555015",
+    "https://openalex.org/W4366498198",
+    "https://openalex.org/W4313270479",
+    "https://openalex.org/W4382050752",
+    "https://openalex.org/W3102100346",
+    "https://openalex.org/W4404784419",
+    "https://openalex.org/W6600225990",
+    "https://openalex.org/W4404783656",
+    "https://openalex.org/W6600135713",
+    "https://openalex.org/W4399469733",
+    "https://openalex.org/W4399423107",
+    "https://openalex.org/W4399365040",
+    "https://openalex.org/W4387762676",
+    "https://openalex.org/W2901274124",
+    "https://openalex.org/W4390034061",
+    "https://openalex.org/W6601731210",
+    "https://openalex.org/W4311993028",
+    "https://openalex.org/W4220753921",
+    "https://openalex.org/W4231799626",
+    "https://openalex.org/W4378802379",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W6600202702",
+    "https://openalex.org/W184958601",
+    "https://openalex.org/W3164731060"
+  ],
+  "abstract": "Uncertainty quantification approaches have been more critical in large language models (LLMs), particularly high-risk applications requiring reliable outputs. However, traditional methods for uncertainty quantification, such as probabilistic models and ensemble techniques, face challenges when applied to the complex and high-dimensional nature of LLM-generated outputs. This study proposes a novel geometric approach to uncertainty quantification using convex hull analysis. The proposed method leverages the spatial properties of response embeddings to measure the dispersion and variability of model outputs. The prompts are categorized into three types, i.e., ’easy’, ’moderate’, and ’confusing’, to generate multiple responses using different LLMs at varying temperature settings. The responses are transformed into high-dimensional embeddings via a BERT model and subsequently projected into a two-dimensional space using Principal Component Analysis (PCA), Isomap, Multidimensional Scaling (MDS). The Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm is utilized to cluster the embeddings and compute the convex hull for each selected cluster. The experimental results indicate that the uncertainty of the model for LLMs depends on the prompt complexity, the model, and the temperature setting.",
+  "full_text": null,
+  "topic": "Convex hull",
+  "concepts": [
+    {
+      "name": "Convex hull",
+      "score": 0.6772493124008179
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5475677847862244
+    },
+    {
+      "name": "Cluster analysis",
+      "score": 0.5444324016571045
+    },
+    {
+      "name": "Isomap",
+      "score": 0.49599751830101013
+    },
+    {
+      "name": "Principal component analysis",
+      "score": 0.4878256618976593
+    },
+    {
+      "name": "Multidimensional scaling",
+      "score": 0.44473764300346375
+    },
+    {
+      "name": "Cluster (spacecraft)",
+      "score": 0.4414340853691101
+    },
+    {
+      "name": "Probabilistic logic",
+      "score": 0.4217718243598938
+    },
+    {
+      "name": "Uncertainty quantification",
+      "score": 0.4125479459762573
+    },
+    {
+      "name": "Noise (video)",
+      "score": 0.41050493717193604
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.375568687915802
+    },
+    {
+      "name": "Data mining",
+      "score": 0.37364211678504944
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.3394402861595154
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.30558013916015625
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.29601314663887024
+    },
+    {
+      "name": "Regular polygon",
+      "score": 0.25755804777145386
+    },
+    {
+      "name": "Dimensionality reduction",
+      "score": 0.17377415299415588
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.10860750079154968
+    },
+    {
+      "name": "Nonlinear dimensionality reduction",
+      "score": 0.098093181848526
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

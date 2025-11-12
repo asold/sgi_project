@@ -1,76 +1,95 @@
 {
-    "title": "Repeatability of Fine-Tuning Large Language Models Illustrated Using QLoRA",
-    "url": "https://openalex.org/W4402978641",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2903119858",
-            "name": "Saeed S. Alahmari",
-            "affiliations": [
-                "Najran University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2159848645",
-            "name": "Lawrence O. Hall",
-            "affiliations": [
-                "University of South Florida"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2002612719",
-            "name": "Peter R. Mouton",
-            "affiliations": [
-                "University of South Florida"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A193618192",
-            "name": "Dmitry B. Goldgof",
-            "affiliations": [
-                "Najran University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6788811087",
-        "https://openalex.org/W4389520455",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W6741002519",
-        "https://openalex.org/W6803129872",
-        "https://openalex.org/W6800875267",
-        "https://openalex.org/W6810738896",
-        "https://openalex.org/W6853251322",
-        "https://openalex.org/W2789816182",
-        "https://openalex.org/W3107770003",
-        "https://openalex.org/W2798405286",
-        "https://openalex.org/W6797386277",
-        "https://openalex.org/W6790150266",
-        "https://openalex.org/W6790353301",
-        "https://openalex.org/W4309563912",
-        "https://openalex.org/W6773642575",
-        "https://openalex.org/W6779629370",
-        "https://openalex.org/W6768586863",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6857055897",
-        "https://openalex.org/W6855829824",
-        "https://openalex.org/W6852476831",
-        "https://openalex.org/W6843405348",
-        "https://openalex.org/W6855315766",
-        "https://openalex.org/W6771720625",
-        "https://openalex.org/W4389520703",
-        "https://openalex.org/W6791376898",
-        "https://openalex.org/W6854540241",
-        "https://openalex.org/W6788175385",
-        "https://openalex.org/W6793987055",
-        "https://openalex.org/W4389518760",
-        "https://openalex.org/W6767440493",
-        "https://openalex.org/W6773820404"
-    ],
-    "abstract": "Large language models (LLMs) have shown progress and promise in diverse applications ranging from the medical field to chat bots. Developing LLMs requires a large corpus of data and significant computation resources to achieve efficient learning. Foundation models (in particular LLMs) serve as the basis for fine-tuning on a new corpus of data. Since the original foundation models contain a very large number of parameters, fine-tuning them can be quite challenging. Development of the low-rank adaption technique (LoRA) for fine-tuning, and the quantized version of LoRA, also known as QLoRA, allows for fine-tuning of LLMs on a new smaller corpus of data. This paper focuses on the repeatability of fine-tuning four LLMs using QLoRA. We have fine-tuned them for seven trials each under the same hardware and software settings. We also validated our study for the repeatability (stability) issue by fine-tuning LLMs on two public datasets. For each trial, each LLM was fine-tuned on a subset of the dataset and tested on a holdout test set. Fine-tuning and inference were done on a single GPU. Our study shows that fine-tuning of LLMs with the QLoRA method is not repeatable (not stable), such that different fine-tuned runs result in different performance on the holdout test set.",
-    "full_text": null
+  "title": "Repeatability of Fine-Tuning Large Language Models Illustrated Using QLoRA",
+  "url": "https://openalex.org/W4402978641",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2903119858",
+      "name": "Saeed S. Alahmari",
+      "affiliations": [
+        "Najran University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2159848645",
+      "name": "Lawrence O. Hall",
+      "affiliations": [
+        "University of South Florida"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2002612719",
+      "name": "Peter R. Mouton",
+      "affiliations": [
+        "University of South Florida"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A193618192",
+      "name": "Dmitry B. Goldgof",
+      "affiliations": [
+        "Najran University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6788811087",
+    "https://openalex.org/W4389520455",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W6741002519",
+    "https://openalex.org/W6803129872",
+    "https://openalex.org/W6800875267",
+    "https://openalex.org/W6810738896",
+    "https://openalex.org/W6853251322",
+    "https://openalex.org/W2789816182",
+    "https://openalex.org/W3107770003",
+    "https://openalex.org/W2798405286",
+    "https://openalex.org/W6797386277",
+    "https://openalex.org/W6790150266",
+    "https://openalex.org/W6790353301",
+    "https://openalex.org/W4309563912",
+    "https://openalex.org/W6773642575",
+    "https://openalex.org/W6779629370",
+    "https://openalex.org/W6768586863",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6857055897",
+    "https://openalex.org/W6855829824",
+    "https://openalex.org/W6852476831",
+    "https://openalex.org/W6843405348",
+    "https://openalex.org/W6855315766",
+    "https://openalex.org/W6771720625",
+    "https://openalex.org/W4389520703",
+    "https://openalex.org/W6791376898",
+    "https://openalex.org/W6854540241",
+    "https://openalex.org/W6788175385",
+    "https://openalex.org/W6793987055",
+    "https://openalex.org/W4389518760",
+    "https://openalex.org/W6767440493",
+    "https://openalex.org/W6773820404"
+  ],
+  "abstract": "Large language models (LLMs) have shown progress and promise in diverse applications ranging from the medical field to chat bots. Developing LLMs requires a large corpus of data and significant computation resources to achieve efficient learning. Foundation models (in particular LLMs) serve as the basis for fine-tuning on a new corpus of data. Since the original foundation models contain a very large number of parameters, fine-tuning them can be quite challenging. Development of the low-rank adaption technique (LoRA) for fine-tuning, and the quantized version of LoRA, also known as QLoRA, allows for fine-tuning of LLMs on a new smaller corpus of data. This paper focuses on the repeatability of fine-tuning four LLMs using QLoRA. We have fine-tuned them for seven trials each under the same hardware and software settings. We also validated our study for the repeatability (stability) issue by fine-tuning LLMs on two public datasets. For each trial, each LLM was fine-tuned on a subset of the dataset and tested on a holdout test set. Fine-tuning and inference were done on a single GPU. Our study shows that fine-tuning of LLMs with the QLoRA method is not repeatable (not stable), such that different fine-tuned runs result in different performance on the holdout test set.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6965962052345276
+    },
+    {
+      "name": "Repeatability",
+      "score": 0.6188616156578064
+    },
+    {
+      "name": "Statistics",
+      "score": 0.16130772233009338
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.11584845185279846
+    }
+  ]
 }

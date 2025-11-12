@@ -1,104 +1,171 @@
 {
-    "title": "Transformers Improve Breast Cancer Diagnosis from Unregistered Multi-View Mammograms",
-    "url": "https://openalex.org/W4283316516",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2134360529",
-            "name": "Xuxin Chen",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2088962425",
-            "name": "Ke Zhang",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2135352124",
-            "name": "Ximin Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3180771255",
-            "name": "Neman Abdoli",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4286442578",
-            "name": "Patrik W. Gilley",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102445713",
-            "name": "Hong Liu",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1966567440",
-            "name": "Bin Zheng",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099829063",
-            "name": "Yuchen Qiu",
-            "affiliations": [
-                "University of Oklahoma"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6633658626",
-        "https://openalex.org/W2157687887",
-        "https://openalex.org/W2287342701",
-        "https://openalex.org/W2029106704",
-        "https://openalex.org/W2181504377",
-        "https://openalex.org/W2913774342",
-        "https://openalex.org/W2965758364",
-        "https://openalex.org/W1972202666",
-        "https://openalex.org/W2944016032",
-        "https://openalex.org/W2580480204",
-        "https://openalex.org/W2065564800",
-        "https://openalex.org/W2755855890",
-        "https://openalex.org/W2923106228",
-        "https://openalex.org/W3134904735",
-        "https://openalex.org/W4283316516",
-        "https://openalex.org/W3164581645",
-        "https://openalex.org/W2343217573",
-        "https://openalex.org/W2049847075",
-        "https://openalex.org/W2064473418",
-        "https://openalex.org/W2979608765",
-        "https://openalex.org/W2074072216",
-        "https://openalex.org/W3202236840",
-        "https://openalex.org/W4246253245",
-        "https://openalex.org/W2899663614",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3208279478",
-        "https://openalex.org/W2141619730",
-        "https://openalex.org/W3193873731",
-        "https://openalex.org/W4394666973",
-        "https://openalex.org/W4282962039",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W1981405018",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W2980030301",
-        "https://openalex.org/W2890945786",
-        "https://openalex.org/W2527654160",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3188404242"
-    ],
-    "abstract": "Deep convolutional neural networks (CNNs) have been widely used in various medical imaging tasks. However, due to the intrinsic locality of convolution operation, CNNs generally cannot model long-range dependencies well, which are important for accurately identifying breast cancer from unregistered multi-view mammograms. This motivates us to leverage the architecture of Vision Transformers to capture long-range relationships of multiple mammograms from the same patient. For this purpose, we employ local Transformer blocks to separately learn patch relationships within a specific view (CC/MLO) of one side (right/left) of mammogram. The outputs from different views and sides are concatenated and fed into global Transformer blocks, to jointly learn patch relationships between two different views of the left and right breasts. To evaluate the proposed model, we retrospectively assembled a dataset involving 949 sets of CC and MLO view mammograms, which include 470 malignant cases and 479 normal or benign cases. We trained and evaluated the model using a five-fold cross-validation method. Without any arduous preprocessing steps (e.g., optimal window cropping, chest wall or pectoral muscle removal, two-view image registration, etc.), our two-view Transformer-based model achieves lesion classification accuracy of 77.0% and area under ROC curve (AUC = 0.814), outperforming state-of-the-art multi-view CNNs by 3.1% and 3%, respectively. Meanwhile, the new two-view model improves mammographic case classification accuracies of two single-view models by 7.4% (CC) and 4.5% (MLO), respectively. The promising results unveil the great potential of using Transformers to develop high-performing computer-aided diagnosis (CADx) schemes of mammography.",
-    "full_text": null
+  "title": "Transformers Improve Breast Cancer Diagnosis from Unregistered Multi-View Mammograms",
+  "url": "https://openalex.org/W4283316516",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2134360529",
+      "name": "Xuxin Chen",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2088962425",
+      "name": "Ke Zhang",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2135352124",
+      "name": "Ximin Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3180771255",
+      "name": "Neman Abdoli",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4286442578",
+      "name": "Patrik W. Gilley",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102445713",
+      "name": "Hong Liu",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1966567440",
+      "name": "Bin Zheng",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099829063",
+      "name": "Yuchen Qiu",
+      "affiliations": [
+        "University of Oklahoma"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6633658626",
+    "https://openalex.org/W2157687887",
+    "https://openalex.org/W2287342701",
+    "https://openalex.org/W2029106704",
+    "https://openalex.org/W2181504377",
+    "https://openalex.org/W2913774342",
+    "https://openalex.org/W2965758364",
+    "https://openalex.org/W1972202666",
+    "https://openalex.org/W2944016032",
+    "https://openalex.org/W2580480204",
+    "https://openalex.org/W2065564800",
+    "https://openalex.org/W2755855890",
+    "https://openalex.org/W2923106228",
+    "https://openalex.org/W3134904735",
+    "https://openalex.org/W4283316516",
+    "https://openalex.org/W3164581645",
+    "https://openalex.org/W2343217573",
+    "https://openalex.org/W2049847075",
+    "https://openalex.org/W2064473418",
+    "https://openalex.org/W2979608765",
+    "https://openalex.org/W2074072216",
+    "https://openalex.org/W3202236840",
+    "https://openalex.org/W4246253245",
+    "https://openalex.org/W2899663614",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3208279478",
+    "https://openalex.org/W2141619730",
+    "https://openalex.org/W3193873731",
+    "https://openalex.org/W4394666973",
+    "https://openalex.org/W4282962039",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W1981405018",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W2980030301",
+    "https://openalex.org/W2890945786",
+    "https://openalex.org/W2527654160",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3188404242"
+  ],
+  "abstract": "Deep convolutional neural networks (CNNs) have been widely used in various medical imaging tasks. However, due to the intrinsic locality of convolution operation, CNNs generally cannot model long-range dependencies well, which are important for accurately identifying breast cancer from unregistered multi-view mammograms. This motivates us to leverage the architecture of Vision Transformers to capture long-range relationships of multiple mammograms from the same patient. For this purpose, we employ local Transformer blocks to separately learn patch relationships within a specific view (CC/MLO) of one side (right/left) of mammogram. The outputs from different views and sides are concatenated and fed into global Transformer blocks, to jointly learn patch relationships between two different views of the left and right breasts. To evaluate the proposed model, we retrospectively assembled a dataset involving 949 sets of CC and MLO view mammograms, which include 470 malignant cases and 479 normal or benign cases. We trained and evaluated the model using a five-fold cross-validation method. Without any arduous preprocessing steps (e.g., optimal window cropping, chest wall or pectoral muscle removal, two-view image registration, etc.), our two-view Transformer-based model achieves lesion classification accuracy of 77.0% and area under ROC curve (AUC = 0.814), outperforming state-of-the-art multi-view CNNs by 3.1% and 3%, respectively. Meanwhile, the new two-view model improves mammographic case classification accuracies of two single-view models by 7.4% (CC) and 4.5% (MLO), respectively. The promising results unveil the great potential of using Transformers to develop high-performing computer-aided diagnosis (CADx) schemes of mammography.",
+  "full_text": null,
+  "topic": "Artificial intelligence",
+  "concepts": [
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6766372323036194
+    },
+    {
+      "name": "Preprocessor",
+      "score": 0.6527819633483887
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6420649886131287
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5860306024551392
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.573535680770874
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5203484892845154
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.5115988850593567
+    },
+    {
+      "name": "Breast cancer",
+      "score": 0.49333348870277405
+    },
+    {
+      "name": "Mammography",
+      "score": 0.4674791991710663
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.4345613718032837
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1758725941181183
+    },
+    {
+      "name": "Cancer",
+      "score": 0.13044795393943787
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

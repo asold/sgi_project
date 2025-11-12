@@ -1,97 +1,180 @@
 {
-    "title": "Stochastic Transformer Networks with Linear Competing Units: Application to end-to-end SL Translation",
-    "url": "https://openalex.org/W3202850984",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5017171848",
-            "name": "Andreas Voskou",
-            "affiliations": [
-                "Cyprus University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5110853913",
-            "name": "Konstantinos P. Panousis",
-            "affiliations": [
-                "Cyprus University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5021338623",
-            "name": "Dimitrios Kosmopoulos",
-            "affiliations": [
-                "University of Patras"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5064437234",
-            "name": "Dimitris Metaxas",
-            "affiliations": [
-                "Rutgers, The State University of New Jersey"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5040795718",
-            "name": "Sotirios Chatzis",
-            "affiliations": [
-                "Cyprus University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6772618528",
-        "https://openalex.org/W2964350391",
-        "https://openalex.org/W2207050309",
-        "https://openalex.org/W2134788091",
-        "https://openalex.org/W2775154420",
-        "https://openalex.org/W3114337930",
-        "https://openalex.org/W2091808376",
-        "https://openalex.org/W1570461371",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W1677182931",
-        "https://openalex.org/W6729448088",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W6782324824",
-        "https://openalex.org/W2941870244",
-        "https://openalex.org/W2188882108",
-        "https://openalex.org/W2755802490",
-        "https://openalex.org/W2970756316",
-        "https://openalex.org/W112750639",
-        "https://openalex.org/W2154790436",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W3111532450",
-        "https://openalex.org/W2799020610",
-        "https://openalex.org/W2140170007",
-        "https://openalex.org/W581810680",
-        "https://openalex.org/W3015075688",
-        "https://openalex.org/W6631943919",
-        "https://openalex.org/W2746301562",
-        "https://openalex.org/W3024060113",
-        "https://openalex.org/W2127141656",
-        "https://openalex.org/W2125201599",
-        "https://openalex.org/W6730091202",
-        "https://openalex.org/W2963192057",
-        "https://openalex.org/W2471695703",
-        "https://openalex.org/W6751523092",
-        "https://openalex.org/W3127711005",
-        "https://openalex.org/W3034765865",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W3080888993",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W2963533215",
-        "https://openalex.org/W1533861849",
-        "https://openalex.org/W4295312788",
-        "https://openalex.org/W2548228487",
-        "https://openalex.org/W4298386155",
-        "https://openalex.org/W2250051515",
-        "https://openalex.org/W2619890685",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2997931247",
-        "https://openalex.org/W2547875792"
-    ],
-    "abstract": "Automating sign language translation (SLT) is a challenging real-world application. Despite its societal importance, though, research progress in the field remains rather poor. Crucially, existing methods that yield viable performance necessitate the availability of laborious to obtain gloss sequence groundtruth. In this paper, we attenuate this need, by introducing an end-to-end SLT model that does not entail explicit use of glosses; the model only needs text groundtruth. This is in stark contrast to existing end-to-end models that use gloss sequence groundtruth, either in the form of a modality that is recognized at an intermediate model stage, or in the form of a parallel output process, jointly trained with the SLT model. Our approach constitutes a Transformer network with a novel type of layers that combines: (i) local winner-takes-all (LWTA) layers with stochastic winner sampling, instead of conventional ReLU layers, (ii) stochastic weights with posterior distributions estimated via variational inference, and (iii) a weight compression technique at inference time that exploits estimated posterior variance to perform massive, almost lossless compression. We demonstrate that our approach can reach the currently best reported BLEU-4 score on the PHOENIX 2014T benchmark, but without making use of glosses for model training, and with a memory footprint reduced by more than 70%.",
-    "full_text": null
+  "title": "Stochastic Transformer Networks with Linear Competing Units: Application to end-to-end SL Translation",
+  "url": "https://openalex.org/W3202850984",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5017171848",
+      "name": "Andreas Voskou",
+      "affiliations": [
+        "Cyprus University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5110853913",
+      "name": "Konstantinos P. Panousis",
+      "affiliations": [
+        "Cyprus University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5021338623",
+      "name": "Dimitrios Kosmopoulos",
+      "affiliations": [
+        "University of Patras"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5064437234",
+      "name": "Dimitris Metaxas",
+      "affiliations": [
+        "Rutgers, The State University of New Jersey"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5040795718",
+      "name": "Sotirios Chatzis",
+      "affiliations": [
+        "Cyprus University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6772618528",
+    "https://openalex.org/W2964350391",
+    "https://openalex.org/W2207050309",
+    "https://openalex.org/W2134788091",
+    "https://openalex.org/W2775154420",
+    "https://openalex.org/W3114337930",
+    "https://openalex.org/W2091808376",
+    "https://openalex.org/W1570461371",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W1677182931",
+    "https://openalex.org/W6729448088",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W6782324824",
+    "https://openalex.org/W2941870244",
+    "https://openalex.org/W2188882108",
+    "https://openalex.org/W2755802490",
+    "https://openalex.org/W2970756316",
+    "https://openalex.org/W112750639",
+    "https://openalex.org/W2154790436",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W3111532450",
+    "https://openalex.org/W2799020610",
+    "https://openalex.org/W2140170007",
+    "https://openalex.org/W581810680",
+    "https://openalex.org/W3015075688",
+    "https://openalex.org/W6631943919",
+    "https://openalex.org/W2746301562",
+    "https://openalex.org/W3024060113",
+    "https://openalex.org/W2127141656",
+    "https://openalex.org/W2125201599",
+    "https://openalex.org/W6730091202",
+    "https://openalex.org/W2963192057",
+    "https://openalex.org/W2471695703",
+    "https://openalex.org/W6751523092",
+    "https://openalex.org/W3127711005",
+    "https://openalex.org/W3034765865",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W3080888993",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W2963533215",
+    "https://openalex.org/W1533861849",
+    "https://openalex.org/W4295312788",
+    "https://openalex.org/W2548228487",
+    "https://openalex.org/W4298386155",
+    "https://openalex.org/W2250051515",
+    "https://openalex.org/W2619890685",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2997931247",
+    "https://openalex.org/W2547875792"
+  ],
+  "abstract": "Automating sign language translation (SLT) is a challenging real-world application. Despite its societal importance, though, research progress in the field remains rather poor. Crucially, existing methods that yield viable performance necessitate the availability of laborious to obtain gloss sequence groundtruth. In this paper, we attenuate this need, by introducing an end-to-end SLT model that does not entail explicit use of glosses; the model only needs text groundtruth. This is in stark contrast to existing end-to-end models that use gloss sequence groundtruth, either in the form of a modality that is recognized at an intermediate model stage, or in the form of a parallel output process, jointly trained with the SLT model. Our approach constitutes a Transformer network with a novel type of layers that combines: (i) local winner-takes-all (LWTA) layers with stochastic winner sampling, instead of conventional ReLU layers, (ii) stochastic weights with posterior distributions estimated via variational inference, and (iii) a weight compression technique at inference time that exploits estimated posterior variance to perform massive, almost lossless compression. We demonstrate that our approach can reach the currently best reported BLEU-4 score on the PHOENIX 2014T benchmark, but without making use of glosses for model training, and with a memory footprint reduced by more than 70%.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7755458354949951
+    },
+    {
+      "name": "End-to-end principle",
+      "score": 0.5915253162384033
+    },
+    {
+      "name": "Transformer",
+      "score": 0.573384702205658
+    },
+    {
+      "name": "Memory footprint",
+      "score": 0.5703757405281067
+    },
+    {
+      "name": "Inference",
+      "score": 0.5379107594490051
+    },
+    {
+      "name": "Language model",
+      "score": 0.44838523864746094
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.4473405182361603
+    },
+    {
+      "name": "Encoder",
+      "score": 0.44218480587005615
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4181459844112396
+    },
+    {
+      "name": "Lossless compression",
+      "score": 0.41302716732025146
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3657628297805786
+    },
+    {
+      "name": "Data compression",
+      "score": 0.20040908455848694
+    },
+    {
+      "name": "Programming language",
+      "score": 0.13600781559944153
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,70 +1,125 @@
 {
-    "title": "AbLang: an antibody language model for completing antibody sequences",
-    "url": "https://openalex.org/W4283068487",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3206575993",
-            "name": "Tobias H Olsen",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1293589691",
-            "name": "Iain H. Moal",
-            "affiliations": [
-                "GlaxoSmithKline (United Kingdom)",
-                "Age UK"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2051648533",
-            "name": "Charlotte M. Deane",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3206575993",
-            "name": "Tobias H Olsen",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1293589691",
-            "name": "Iain H. Moal",
-            "affiliations": [
-                "GlaxoSmithKline (United Kingdom)",
-                "Age UK"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2051648533",
-            "name": "Charlotte M. Deane",
-            "affiliations": [
-                "University of Oxford"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2980789587",
-        "https://openalex.org/W2792924456",
-        "https://openalex.org/W1855237549",
-        "https://openalex.org/W3205490018",
-        "https://openalex.org/W2115122333",
-        "https://openalex.org/W2130077037",
-        "https://openalex.org/W2978709467",
-        "https://openalex.org/W2950118240",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W3206187363",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2953008890",
-        "https://openalex.org/W6768817161",
-        "https://openalex.org/W2187089797",
-        "https://openalex.org/W2965373594"
-    ],
-    "abstract": "Abstract Motivation General protein language models have been shown to summarize the semantics of protein sequences into representations that are useful for state-of-the-art predictive methods. However, for antibody specific problems, such as restoring residues lost due to sequencing errors, a model trained solely on antibodies may be more powerful. Antibodies are one of the few protein types where the volume of sequence data needed for such language models is available, e.g. in the Observed Antibody Space (OAS) database. Results Here, we introduce AbLang, a language model trained on the antibody sequences in the OAS database. We demonstrate the power of AbLang by using it to restore missing residues in antibody sequence data, a key issue with B-cell receptor repertoire sequencing, e.g. over 40% of OAS sequences are missing the first 15 amino acids. AbLang restores the missing residues of antibody sequences better than using IMGT germlines or the general protein language model ESM-1b. Further, AbLang does not require knowledge of the germline of the antibody and is seven times faster than ESM-1b. Availability and implementation AbLang is a python package available at https://github.com/oxpig/AbLang. Supplementary information Supplementary data are available at Bioinformatics Advances online.",
-    "full_text": null
+  "title": "AbLang: an antibody language model for completing antibody sequences",
+  "url": "https://openalex.org/W4283068487",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3206575993",
+      "name": "Tobias H Olsen",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1293589691",
+      "name": "Iain H. Moal",
+      "affiliations": [
+        "GlaxoSmithKline (United Kingdom)",
+        "Age UK"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2051648533",
+      "name": "Charlotte M. Deane",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3206575993",
+      "name": "Tobias H Olsen",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1293589691",
+      "name": "Iain H. Moal",
+      "affiliations": [
+        "GlaxoSmithKline (United Kingdom)",
+        "Age UK"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2051648533",
+      "name": "Charlotte M. Deane",
+      "affiliations": [
+        "University of Oxford"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2980789587",
+    "https://openalex.org/W2792924456",
+    "https://openalex.org/W1855237549",
+    "https://openalex.org/W3205490018",
+    "https://openalex.org/W2115122333",
+    "https://openalex.org/W2130077037",
+    "https://openalex.org/W2978709467",
+    "https://openalex.org/W2950118240",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W3206187363",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2953008890",
+    "https://openalex.org/W6768817161",
+    "https://openalex.org/W2187089797",
+    "https://openalex.org/W2965373594"
+  ],
+  "abstract": "Abstract Motivation General protein language models have been shown to summarize the semantics of protein sequences into representations that are useful for state-of-the-art predictive methods. However, for antibody specific problems, such as restoring residues lost due to sequencing errors, a model trained solely on antibodies may be more powerful. Antibodies are one of the few protein types where the volume of sequence data needed for such language models is available, e.g. in the Observed Antibody Space (OAS) database. Results Here, we introduce AbLang, a language model trained on the antibody sequences in the OAS database. We demonstrate the power of AbLang by using it to restore missing residues in antibody sequence data, a key issue with B-cell receptor repertoire sequencing, e.g. over 40% of OAS sequences are missing the first 15 amino acids. AbLang restores the missing residues of antibody sequences better than using IMGT germlines or the general protein language model ESM-1b. Further, AbLang does not require knowledge of the germline of the antibody and is seven times faster than ESM-1b. Availability and implementation AbLang is a python package available at https://github.com/oxpig/AbLang. Supplementary information Supplementary data are available at Bioinformatics Advances online.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.627543568611145
+    },
+    {
+      "name": "Antibody",
+      "score": 0.6153774857521057
+    },
+    {
+      "name": "Antibody Repertoire",
+      "score": 0.5623428821563721
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.519333004951477
+    },
+    {
+      "name": "Repertoire",
+      "score": 0.481740266084671
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.47313156723976135
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.38798263669013977
+    },
+    {
+      "name": "Programming language",
+      "score": 0.3252936601638794
+    },
+    {
+      "name": "Biology",
+      "score": 0.3140857219696045
+    },
+    {
+      "name": "Immunology",
+      "score": 0.1494714617729187
+    },
+    {
+      "name": "Genetics",
+      "score": 0.1405712366104126
+    },
+    {
+      "name": "Acoustics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

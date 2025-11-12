@@ -1,76 +1,123 @@
 {
-    "title": "Efficient Fine-Tuning of Large Language Models via a Low-Rank Gradient Estimator",
-    "url": "https://openalex.org/W4405810147",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5001975771",
-            "name": "Luoming Zhang",
-            "affiliations": [
-                null,
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066532760",
-            "name": "Zhenyu Lou",
-            "affiliations": [
-                null,
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5055645364",
-            "name": "Yangwei Ying",
-            "affiliations": [
-                null,
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5051785990",
-            "name": "Cheng Yang",
-            "affiliations": [
-                null,
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5043169810",
-            "name": "Hong Zhou",
-            "affiliations": [
-                null,
-                "Zhejiang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W6759579507",
-        "https://openalex.org/W3174702398",
-        "https://openalex.org/W3153675281",
-        "https://openalex.org/W6796581206",
-        "https://openalex.org/W3119438769",
-        "https://openalex.org/W3166846774",
-        "https://openalex.org/W4404781224",
-        "https://openalex.org/W3199761064",
-        "https://openalex.org/W4390874728",
-        "https://openalex.org/W6853251322",
-        "https://openalex.org/W2268788034",
-        "https://openalex.org/W2103972604",
-        "https://openalex.org/W2789048837",
-        "https://openalex.org/W1967077133",
-        "https://openalex.org/W4384263459",
-        "https://openalex.org/W4313484599",
-        "https://openalex.org/W4385572634",
-        "https://openalex.org/W3083410900",
-        "https://openalex.org/W4366341216",
-        "https://openalex.org/W4402683806",
-        "https://openalex.org/W6852874933",
-        "https://openalex.org/W2799054028",
-        "https://openalex.org/W4380353763",
-        "https://openalex.org/W4378509449"
-    ],
-    "abstract": "In this paper, we present a Low-Rank Gradient Estimator (LoGE) to accelerate the finetune-time computation of transformers, especially large language models (LLMs). Unlike Parameter-Efficient Fine-Tuning (PEFT) methods, which primarily aim to minimize the number of fine-tuning parameters, LoGE also significantly reduces the computational load of activation gradient calculations by decomposing pre-trained weights and utilizing low-rank matrices during the backward pass. Our approach includes an effective solution for identifying sensitive and important latent subspaces in large models before training with downstream datasets. As LoGE does not alter the network structure, it can be conveniently integrated into existing models. We validated LoGE’s efficacy through comprehensive experiments across various models on various tasks. For the widely used LLaMA model equipped with LoRA, LoGE achieves up to a 1.3× speedup while maintaining graceful accuracy.",
-    "full_text": null
+  "title": "Efficient Fine-Tuning of Large Language Models via a Low-Rank Gradient Estimator",
+  "url": "https://openalex.org/W4405810147",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5001975771",
+      "name": "Luoming Zhang",
+      "affiliations": [
+        null,
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066532760",
+      "name": "Zhenyu Lou",
+      "affiliations": [
+        null,
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5055645364",
+      "name": "Yangwei Ying",
+      "affiliations": [
+        null,
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5051785990",
+      "name": "Cheng Yang",
+      "affiliations": [
+        null,
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5043169810",
+      "name": "Hong Zhou",
+      "affiliations": [
+        null,
+        "Zhejiang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W6759579507",
+    "https://openalex.org/W3174702398",
+    "https://openalex.org/W3153675281",
+    "https://openalex.org/W6796581206",
+    "https://openalex.org/W3119438769",
+    "https://openalex.org/W3166846774",
+    "https://openalex.org/W4404781224",
+    "https://openalex.org/W3199761064",
+    "https://openalex.org/W4390874728",
+    "https://openalex.org/W6853251322",
+    "https://openalex.org/W2268788034",
+    "https://openalex.org/W2103972604",
+    "https://openalex.org/W2789048837",
+    "https://openalex.org/W1967077133",
+    "https://openalex.org/W4384263459",
+    "https://openalex.org/W4313484599",
+    "https://openalex.org/W4385572634",
+    "https://openalex.org/W3083410900",
+    "https://openalex.org/W4366341216",
+    "https://openalex.org/W4402683806",
+    "https://openalex.org/W6852874933",
+    "https://openalex.org/W2799054028",
+    "https://openalex.org/W4380353763",
+    "https://openalex.org/W4378509449"
+  ],
+  "abstract": "In this paper, we present a Low-Rank Gradient Estimator (LoGE) to accelerate the finetune-time computation of transformers, especially large language models (LLMs). Unlike Parameter-Efficient Fine-Tuning (PEFT) methods, which primarily aim to minimize the number of fine-tuning parameters, LoGE also significantly reduces the computational load of activation gradient calculations by decomposing pre-trained weights and utilizing low-rank matrices during the backward pass. Our approach includes an effective solution for identifying sensitive and important latent subspaces in large models before training with downstream datasets. As LoGE does not alter the network structure, it can be conveniently integrated into existing models. We validated LoGE’s efficacy through comprehensive experiments across various models on various tasks. For the widely used LLaMA model equipped with LoRA, LoGE achieves up to a 1.3× speedup while maintaining graceful accuracy.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7320839166641235
+    },
+    {
+      "name": "Estimator",
+      "score": 0.7254125475883484
+    },
+    {
+      "name": "Rank (graph theory)",
+      "score": 0.5570394992828369
+    },
+    {
+      "name": "Computation",
+      "score": 0.5449525117874146
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.4489360749721527
+    },
+    {
+      "name": "Fine-tuning",
+      "score": 0.4279940724372864
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1456441879272461
+    },
+    {
+      "name": "Statistics",
+      "score": 0.10057973861694336
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    }
+  ]
 }

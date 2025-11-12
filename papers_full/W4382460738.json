@@ -1,79 +1,150 @@
 {
-    "title": "Transformer Fault Diagnosis Method Based on Incomplete Data and TPE-XGBoost",
-    "url": "https://openalex.org/W4382460738",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5089616174",
-            "name": "Tonglei Wang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100426184",
-            "name": "Qun Li",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5110466031",
-            "name": "Jinggang Yang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100863608",
-            "name": "Tianxi Xie",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5042367706",
-            "name": "Peng Wu",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5112120772",
-            "name": "Jiabi Liang",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3133138473",
-        "https://openalex.org/W3210666031",
-        "https://openalex.org/W3205143131",
-        "https://openalex.org/W2908849044",
-        "https://openalex.org/W2067248431",
-        "https://openalex.org/W2084880510",
-        "https://openalex.org/W2084277209",
-        "https://openalex.org/W2548153325",
-        "https://openalex.org/W6729527365",
-        "https://openalex.org/W3011435659",
-        "https://openalex.org/W2084575229",
-        "https://openalex.org/W3205097059",
-        "https://openalex.org/W4210929766",
-        "https://openalex.org/W4313122446",
-        "https://openalex.org/W2911964244",
-        "https://openalex.org/W4323350904",
-        "https://openalex.org/W2295598076",
-        "https://openalex.org/W4306906955",
-        "https://openalex.org/W2192203593",
-        "https://openalex.org/W2106411961",
-        "https://openalex.org/W3045707326",
-        "https://openalex.org/W2122111042",
-        "https://openalex.org/W2741979111",
-        "https://openalex.org/W3034145617",
-        "https://openalex.org/W4293565759",
-        "https://openalex.org/W2551488610"
-    ],
-    "abstract": "Dissolved gas analysis is an important method for diagnosing the operating condition of power transformers. Traditional methods such as IEC Ratios and Duval Triangles and Pentagon methods are not applicable in the case of abnormal or missing values of DGA data. A novel transformer fault diagnosis method based on an extreme gradient boosting algorithm is proposed in this paper. First, the traditional statistical method is replaced by the random forest regression algorithm for filling in missing values of dissolved gas data. Normalization and feature derivation of the outlier data is adopted based on the gas content. Then, hyperparameter optimization of the transformer fault diagnosis model based on an extreme gradient boosting algorithm is carried out using the tree-structured probability density estimator algorithm. Finally, the influence of missing data and optimization algorithms on transformer fault diagnosis models is analyzed. The effects of different algorithms based on incomplete datasets are also discussed. The results show that the performance of the random forest regression algorithm on missing data filling is better than classification and regression trees and traditional statistical methods. The average accuracy of the fault diagnosis method proposed in the paper is 89.5%, even when the missing data rate reaches 20%. The accuracy and robustness of the TPE-XGBoost model are superior to other machine learning algorithms described in this paper, such as k-nearest neighbor, deep neural networks, random forest, etc.",
-    "full_text": null
+  "title": "Transformer Fault Diagnosis Method Based on Incomplete Data and TPE-XGBoost",
+  "url": "https://openalex.org/W4382460738",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5089616174",
+      "name": "Tonglei Wang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100426184",
+      "name": "Qun Li",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5110466031",
+      "name": "Jinggang Yang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100863608",
+      "name": "Tianxi Xie",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5042367706",
+      "name": "Peng Wu",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5112120772",
+      "name": "Jiabi Liang",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3133138473",
+    "https://openalex.org/W3210666031",
+    "https://openalex.org/W3205143131",
+    "https://openalex.org/W2908849044",
+    "https://openalex.org/W2067248431",
+    "https://openalex.org/W2084880510",
+    "https://openalex.org/W2084277209",
+    "https://openalex.org/W2548153325",
+    "https://openalex.org/W6729527365",
+    "https://openalex.org/W3011435659",
+    "https://openalex.org/W2084575229",
+    "https://openalex.org/W3205097059",
+    "https://openalex.org/W4210929766",
+    "https://openalex.org/W4313122446",
+    "https://openalex.org/W2911964244",
+    "https://openalex.org/W4323350904",
+    "https://openalex.org/W2295598076",
+    "https://openalex.org/W4306906955",
+    "https://openalex.org/W2192203593",
+    "https://openalex.org/W2106411961",
+    "https://openalex.org/W3045707326",
+    "https://openalex.org/W2122111042",
+    "https://openalex.org/W2741979111",
+    "https://openalex.org/W3034145617",
+    "https://openalex.org/W4293565759",
+    "https://openalex.org/W2551488610"
+  ],
+  "abstract": "Dissolved gas analysis is an important method for diagnosing the operating condition of power transformers. Traditional methods such as IEC Ratios and Duval Triangles and Pentagon methods are not applicable in the case of abnormal or missing values of DGA data. A novel transformer fault diagnosis method based on an extreme gradient boosting algorithm is proposed in this paper. First, the traditional statistical method is replaced by the random forest regression algorithm for filling in missing values of dissolved gas data. Normalization and feature derivation of the outlier data is adopted based on the gas content. Then, hyperparameter optimization of the transformer fault diagnosis model based on an extreme gradient boosting algorithm is carried out using the tree-structured probability density estimator algorithm. Finally, the influence of missing data and optimization algorithms on transformer fault diagnosis models is analyzed. The effects of different algorithms based on incomplete datasets are also discussed. The results show that the performance of the random forest regression algorithm on missing data filling is better than classification and regression trees and traditional statistical methods. The average accuracy of the fault diagnosis method proposed in the paper is 89.5%, even when the missing data rate reaches 20%. The accuracy and robustness of the TPE-XGBoost model are superior to other machine learning algorithms described in this paper, such as k-nearest neighbor, deep neural networks, random forest, etc.",
+  "full_text": null,
+  "topic": "Missing data",
+  "concepts": [
+    {
+      "name": "Missing data",
+      "score": 0.6731696128845215
+    },
+    {
+      "name": "Random forest",
+      "score": 0.6319051384925842
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5650594234466553
+    },
+    {
+      "name": "Dissolved gas analysis",
+      "score": 0.514290988445282
+    },
+    {
+      "name": "Data mining",
+      "score": 0.5035392642021179
+    },
+    {
+      "name": "Outlier",
+      "score": 0.4550827145576477
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.44445526599884033
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4261338412761688
+    },
+    {
+      "name": "Decision tree",
+      "score": 0.4111376404762268
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3787018656730652
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.32956892251968384
+    },
+    {
+      "name": "Transformer",
+      "score": 0.28657448291778564
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.22159883379936218
+    },
+    {
+      "name": "Transformer oil",
+      "score": 0.13592815399169922
+    },
+    {
+      "name": "Engineering",
+      "score": 0.13197371363639832
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,72 +1,143 @@
 {
-    "title": "Tuberculosis Detection From Chest X-Ray Image Modalities Based on Transformer and Convolutional Neural Network",
-    "url": "https://openalex.org/W4400645493",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2559942581",
-            "name": "Evans Kotei",
-            "affiliations": [
-                "Kumasi Technical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2732057995",
-            "name": "Ramkumar Thirunavukarasu",
-            "affiliations": [
-                "Vellore Institute of Technology University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4311426066",
-        "https://openalex.org/W4200538893",
-        "https://openalex.org/W4220666538",
-        "https://openalex.org/W3013601031",
-        "https://openalex.org/W3088611441",
-        "https://openalex.org/W2895084243",
-        "https://openalex.org/W4308415767",
-        "https://openalex.org/W4313453779",
-        "https://openalex.org/W2921856303",
-        "https://openalex.org/W3019899894",
-        "https://openalex.org/W3136651352",
-        "https://openalex.org/W3134866734",
-        "https://openalex.org/W4317940785",
-        "https://openalex.org/W3130080283",
-        "https://openalex.org/W3109731544",
-        "https://openalex.org/W4377012025",
-        "https://openalex.org/W2963466845",
-        "https://openalex.org/W4372082015",
-        "https://openalex.org/W3041266228",
-        "https://openalex.org/W3109680477",
-        "https://openalex.org/W2774788879",
-        "https://openalex.org/W1904878066",
-        "https://openalex.org/W2943084442",
-        "https://openalex.org/W3092048782",
-        "https://openalex.org/W3003475284",
-        "https://openalex.org/W3124375766",
-        "https://openalex.org/W2998957378",
-        "https://openalex.org/W4309548228",
-        "https://openalex.org/W2898891934",
-        "https://openalex.org/W3200177155",
-        "https://openalex.org/W4281386887",
-        "https://openalex.org/W6803530880",
-        "https://openalex.org/W3207549851",
-        "https://openalex.org/W3181327235",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W4327737695",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3140854437",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3204538018",
-        "https://openalex.org/W3034922525",
-        "https://openalex.org/W2046339738",
-        "https://openalex.org/W6755977528",
-        "https://openalex.org/W3207725591",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W3106437781",
-        "https://openalex.org/W2899663614"
-    ],
-    "abstract": "Tuberculosis (TB) is an airborne disease with a high fatality rate that often affects people&#x2019;s lungs. Early detection of the disease can guarantee a cure, but that is not the case due to the lack of experts and screening facilities. With the advancement in Artificial Intelligence (AI) techniques, publicly available clinical datasets and high computer systems, several solutions have been proposed to automate the diagnosing process based on deep learning (DL) algorithms. This study presents a DL technique based on a combined Data efficient image transformer and the Residual Network-16 (ResNet-16) model for effective TB diagnosis from X-ray images. The TBX11K dataset got utilized for this investigation. The dataset has three categories&#x2014;Healthy, Sick but non-TB and TB. Relying on only healthy X-rays as the negative category in clinical settings where there are many unwell but non-TB samples can cause considerable false positives in the model prediction, hence the adoption of the sick but non-TB class. The dataset got divided into training, validation, and testing sets for the experiment. The self-attention mechanism within the transformer part of the proposed model learns crucial information and constructs the relationship between image tokens. The ResNet-16 part uses depth-wise convolution to gather local representations and reduce computing costs while increasing the diagnosing accuracy. The global average pooling is applied to the feature maps at the final convolution layer to generate heatmaps based on the class activation map to show exactly where the prediction happened. The suggested model obtained TB diagnostic accuracy, sensitivity, specificity and precision rates of 99.38%, 99.49%, 99.26% and 99.24%, respectively. Additionally, it is lightweight (6.9M) and detects more quickly (4.79ms) than the other comparative cutting-edge versions. The suggested model&#x2019;s exceptional results demonstrate its effectiveness in TB detection, allowing for practical use.",
-    "full_text": null
+  "title": "Tuberculosis Detection From Chest X-Ray Image Modalities Based on Transformer and Convolutional Neural Network",
+  "url": "https://openalex.org/W4400645493",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2559942581",
+      "name": "Evans Kotei",
+      "affiliations": [
+        "Kumasi Technical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2732057995",
+      "name": "Ramkumar Thirunavukarasu",
+      "affiliations": [
+        "Vellore Institute of Technology University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4311426066",
+    "https://openalex.org/W4200538893",
+    "https://openalex.org/W4220666538",
+    "https://openalex.org/W3013601031",
+    "https://openalex.org/W3088611441",
+    "https://openalex.org/W2895084243",
+    "https://openalex.org/W4308415767",
+    "https://openalex.org/W4313453779",
+    "https://openalex.org/W2921856303",
+    "https://openalex.org/W3019899894",
+    "https://openalex.org/W3136651352",
+    "https://openalex.org/W3134866734",
+    "https://openalex.org/W4317940785",
+    "https://openalex.org/W3130080283",
+    "https://openalex.org/W3109731544",
+    "https://openalex.org/W4377012025",
+    "https://openalex.org/W2963466845",
+    "https://openalex.org/W4372082015",
+    "https://openalex.org/W3041266228",
+    "https://openalex.org/W3109680477",
+    "https://openalex.org/W2774788879",
+    "https://openalex.org/W1904878066",
+    "https://openalex.org/W2943084442",
+    "https://openalex.org/W3092048782",
+    "https://openalex.org/W3003475284",
+    "https://openalex.org/W3124375766",
+    "https://openalex.org/W2998957378",
+    "https://openalex.org/W4309548228",
+    "https://openalex.org/W2898891934",
+    "https://openalex.org/W3200177155",
+    "https://openalex.org/W4281386887",
+    "https://openalex.org/W6803530880",
+    "https://openalex.org/W3207549851",
+    "https://openalex.org/W3181327235",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W4327737695",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3140854437",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3204538018",
+    "https://openalex.org/W3034922525",
+    "https://openalex.org/W2046339738",
+    "https://openalex.org/W6755977528",
+    "https://openalex.org/W3207725591",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W3106437781",
+    "https://openalex.org/W2899663614"
+  ],
+  "abstract": "Tuberculosis (TB) is an airborne disease with a high fatality rate that often affects people&#x2019;s lungs. Early detection of the disease can guarantee a cure, but that is not the case due to the lack of experts and screening facilities. With the advancement in Artificial Intelligence (AI) techniques, publicly available clinical datasets and high computer systems, several solutions have been proposed to automate the diagnosing process based on deep learning (DL) algorithms. This study presents a DL technique based on a combined Data efficient image transformer and the Residual Network-16 (ResNet-16) model for effective TB diagnosis from X-ray images. The TBX11K dataset got utilized for this investigation. The dataset has three categories&#x2014;Healthy, Sick but non-TB and TB. Relying on only healthy X-rays as the negative category in clinical settings where there are many unwell but non-TB samples can cause considerable false positives in the model prediction, hence the adoption of the sick but non-TB class. The dataset got divided into training, validation, and testing sets for the experiment. The self-attention mechanism within the transformer part of the proposed model learns crucial information and constructs the relationship between image tokens. The ResNet-16 part uses depth-wise convolution to gather local representations and reduce computing costs while increasing the diagnosing accuracy. The global average pooling is applied to the feature maps at the final convolution layer to generate heatmaps based on the class activation map to show exactly where the prediction happened. The suggested model obtained TB diagnostic accuracy, sensitivity, specificity and precision rates of 99.38%, 99.49%, 99.26% and 99.24%, respectively. Additionally, it is lightweight (6.9M) and detects more quickly (4.79ms) than the other comparative cutting-edge versions. The suggested model&#x2019;s exceptional results demonstrate its effectiveness in TB detection, allowing for practical use.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7640665173530579
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6710833311080933
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6314744353294373
+    },
+    {
+      "name": "False positive paradox",
+      "score": 0.5812404155731201
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.5556026697158813
+    },
+    {
+      "name": "Residual",
+      "score": 0.5509374737739563
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5360085964202881
+    },
+    {
+      "name": "Pooling",
+      "score": 0.5166195034980774
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.48906072974205017
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4622615873813629
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4357575476169586
+    },
+    {
+      "name": "Contextual image classification",
+      "score": 0.4304009974002838
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.27729159593582153
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.12468227744102478
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,55 +1,90 @@
 {
-    "title": "Rapidly Benchmarking Large Language Models for Diagnosing Comorbid Patients: Comparative Study Leveraging the LLM-as-a-Judge Method",
-    "url": "https://openalex.org/W4413846962",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2989498716",
-            "name": "Peter Sarvari",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5075412878",
-            "name": "Zaid Al-fagih",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3210123112",
-        "https://openalex.org/W4384524772",
-        "https://openalex.org/W3025573732",
-        "https://openalex.org/W2117137077",
-        "https://openalex.org/W4285795332",
-        "https://openalex.org/W4391215372",
-        "https://openalex.org/W4389685420",
-        "https://openalex.org/W4388896754",
-        "https://openalex.org/W4387232979",
-        "https://openalex.org/W4319662928",
-        "https://openalex.org/W4401345679",
-        "https://openalex.org/W4396856309",
-        "https://openalex.org/W4395037579",
-        "https://openalex.org/W4393527427",
-        "https://openalex.org/W4400260578",
-        "https://openalex.org/W4388525110",
-        "https://openalex.org/W4380730209",
-        "https://openalex.org/W4385798548",
-        "https://openalex.org/W4396852688",
-        "https://openalex.org/W4396646848",
-        "https://openalex.org/W4392655718",
-        "https://openalex.org/W4313439128",
-        "https://openalex.org/W4391439189",
-        "https://openalex.org/W4402401807",
-        "https://openalex.org/W4392077089",
-        "https://openalex.org/W4389917881",
-        "https://openalex.org/W4404996964",
-        "https://openalex.org/W4405063711",
-        "https://openalex.org/W4404082843",
-        "https://openalex.org/W4401615032",
-        "https://openalex.org/W2136169895",
-        "https://openalex.org/W4408045025",
-        "https://openalex.org/W4226457774",
-        "https://openalex.org/W4206234254"
-    ],
-    "abstract": "Abstract Background On average, 1 in 10 patients die because of a diagnostic error, and medical errors represent the third largest cause of death in the United States. While large language models (LLMs) have been proposed to aid doctors in diagnoses, no research results have been published comparing the diagnostic abilities of many popular LLMs on a large, openly accessible real-patient cohort. Objective In this study, we set out to compare the diagnostic ability of 18 LLMs from Google, OpenAI, Meta, Mistral, Cohere, and Anthropic, using 3 prompts, 2 temperature settings, and 1000 randomly selected Medical Information Mart for Intensive Care-IV (MIMIC-IV) hospital admissions. We also explore improving the diagnostic hit rate of GPT-4o 05‐13 with retrieval-augmented generation (RAG) by utilizing reference ranges provided by the American Board of Internal Medicine. Methods We evaluated the diagnostic ability of 21 LLMs, using an LLM-as-a-judge approach (an automated, LLM-based evaluation) on MIMIC-IV patient records, which contain final diagnostic codes. For each case, a separate assessor LLM (“judge”) compared the predictor LLM’s diagnostic output to the true diagnoses from the patient record. The assessor determined whether each true diagnosis was inferable from the available data and, if so, whether it was correctly predicted (“hit”) or not (“miss”). Diagnoses not inferable from the patient record were excluded from the hit rate analysis. The reported hit rate was defined as the number of hits divided by the total number of hits and misses. The statistical significance of the differences in model performance was assessed using a pooled z -test for proportions. Results Gemini 2.5 was the top performer with a hit rate of 97.4% (95% CI 97.0%‐97.8%) as assessed by GPT-4.1, significantly outperforming GPT-4.1, Claude-4 Opus, and Claude Sonnet. However, GPT-4.1 ranked the highest in a separate set of experiments evaluated by GPT-4 Turbo, which tended to be less conservative than GPT-4.1 in its assessments. Significant variation in diagnostic hit rates was observed across different prompts, while changes in temperature generally had little effect. Finally, RAG significantly improved the hit rate of GPT-4o 05‐13 by an average of 0.8% ( P &lt;.006). Conclusions While the results are promising, more diverse datasets and hospital pilots, as well as close collaborations with physicians, are needed to obtain a better understanding of the diagnostic abilities of these models.",
-    "full_text": null
+  "title": "Rapidly Benchmarking Large Language Models for Diagnosing Comorbid Patients: Comparative Study Leveraging the LLM-as-a-Judge Method",
+  "url": "https://openalex.org/W4413846962",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2989498716",
+      "name": "Peter Sarvari",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5075412878",
+      "name": "Zaid Al-fagih",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3210123112",
+    "https://openalex.org/W4384524772",
+    "https://openalex.org/W3025573732",
+    "https://openalex.org/W2117137077",
+    "https://openalex.org/W4285795332",
+    "https://openalex.org/W4391215372",
+    "https://openalex.org/W4389685420",
+    "https://openalex.org/W4388896754",
+    "https://openalex.org/W4387232979",
+    "https://openalex.org/W4319662928",
+    "https://openalex.org/W4401345679",
+    "https://openalex.org/W4396856309",
+    "https://openalex.org/W4395037579",
+    "https://openalex.org/W4393527427",
+    "https://openalex.org/W4400260578",
+    "https://openalex.org/W4388525110",
+    "https://openalex.org/W4380730209",
+    "https://openalex.org/W4385798548",
+    "https://openalex.org/W4396852688",
+    "https://openalex.org/W4396646848",
+    "https://openalex.org/W4392655718",
+    "https://openalex.org/W4313439128",
+    "https://openalex.org/W4391439189",
+    "https://openalex.org/W4402401807",
+    "https://openalex.org/W4392077089",
+    "https://openalex.org/W4389917881",
+    "https://openalex.org/W4404996964",
+    "https://openalex.org/W4405063711",
+    "https://openalex.org/W4404082843",
+    "https://openalex.org/W4401615032",
+    "https://openalex.org/W2136169895",
+    "https://openalex.org/W4408045025",
+    "https://openalex.org/W4226457774",
+    "https://openalex.org/W4206234254"
+  ],
+  "abstract": "Abstract Background On average, 1 in 10 patients die because of a diagnostic error, and medical errors represent the third largest cause of death in the United States. While large language models (LLMs) have been proposed to aid doctors in diagnoses, no research results have been published comparing the diagnostic abilities of many popular LLMs on a large, openly accessible real-patient cohort. Objective In this study, we set out to compare the diagnostic ability of 18 LLMs from Google, OpenAI, Meta, Mistral, Cohere, and Anthropic, using 3 prompts, 2 temperature settings, and 1000 randomly selected Medical Information Mart for Intensive Care-IV (MIMIC-IV) hospital admissions. We also explore improving the diagnostic hit rate of GPT-4o 05‐13 with retrieval-augmented generation (RAG) by utilizing reference ranges provided by the American Board of Internal Medicine. Methods We evaluated the diagnostic ability of 21 LLMs, using an LLM-as-a-judge approach (an automated, LLM-based evaluation) on MIMIC-IV patient records, which contain final diagnostic codes. For each case, a separate assessor LLM (“judge”) compared the predictor LLM’s diagnostic output to the true diagnoses from the patient record. The assessor determined whether each true diagnosis was inferable from the available data and, if so, whether it was correctly predicted (“hit”) or not (“miss”). Diagnoses not inferable from the patient record were excluded from the hit rate analysis. The reported hit rate was defined as the number of hits divided by the total number of hits and misses. The statistical significance of the differences in model performance was assessed using a pooled z -test for proportions. Results Gemini 2.5 was the top performer with a hit rate of 97.4% (95% CI 97.0%‐97.8%) as assessed by GPT-4.1, significantly outperforming GPT-4.1, Claude-4 Opus, and Claude Sonnet. However, GPT-4.1 ranked the highest in a separate set of experiments evaluated by GPT-4 Turbo, which tended to be less conservative than GPT-4.1 in its assessments. Significant variation in diagnostic hit rates was observed across different prompts, while changes in temperature generally had little effect. Finally, RAG significantly improved the hit rate of GPT-4o 05‐13 by an average of 0.8% ( P &lt;.006). Conclusions While the results are promising, more diverse datasets and hospital pilots, as well as close collaborations with physicians, are needed to obtain a better understanding of the diagnostic abilities of these models.",
+  "full_text": null,
+  "topic": "Benchmarking",
+  "concepts": [
+    {
+      "name": "Benchmarking",
+      "score": 0.8806126117706299
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5560765862464905
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.38436275720596313
+    },
+    {
+      "name": "Data science",
+      "score": 0.3546665906906128
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3318651616573334
+    },
+    {
+      "name": "Psychology",
+      "score": 0.32368987798690796
+    },
+    {
+      "name": "Business",
+      "score": 0.1395842432975769
+    },
+    {
+      "name": "Marketing",
+      "score": 0.0
+    }
+  ]
 }

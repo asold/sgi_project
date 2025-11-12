@@ -1,68 +1,131 @@
 {
-    "title": "A simplified retriever to improve accuracy of phenotype normalizations by large language models",
-    "url": "https://openalex.org/W4408135179",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2154855537",
-            "name": "Daniel B. Hier",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5114402384",
-            "name": "Thanh Son Do",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4202016651",
-            "name": "Tayo Obafemi-Ajayi",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4381587418",
-        "https://openalex.org/W4387485634",
-        "https://openalex.org/W4387500346",
-        "https://openalex.org/W4391292768",
-        "https://openalex.org/W4385163750",
-        "https://openalex.org/W6869998741",
-        "https://openalex.org/W4395067526",
-        "https://openalex.org/W4402683886",
-        "https://openalex.org/W2513408092",
-        "https://openalex.org/W2060427373",
-        "https://openalex.org/W2025349319",
-        "https://openalex.org/W2548932017",
-        "https://openalex.org/W2588904016",
-        "https://openalex.org/W4226119217",
-        "https://openalex.org/W2151068025",
-        "https://openalex.org/W4210876812",
-        "https://openalex.org/W4405492031",
-        "https://openalex.org/W2168091868",
-        "https://openalex.org/W3021112536",
-        "https://openalex.org/W2165748167",
-        "https://openalex.org/W1808652302",
-        "https://openalex.org/W4311903220",
-        "https://openalex.org/W6870634631",
-        "https://openalex.org/W2946102094",
-        "https://openalex.org/W4224997359",
-        "https://openalex.org/W4221142212",
-        "https://openalex.org/W4212919921",
-        "https://openalex.org/W4399941107",
-        "https://openalex.org/W2810450065",
-        "https://openalex.org/W2119613819",
-        "https://openalex.org/W6876141110",
-        "https://openalex.org/W6856223801",
-        "https://openalex.org/W6859201984",
-        "https://openalex.org/W2162151166",
-        "https://openalex.org/W6870391763",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W4408521246",
-        "https://openalex.org/W4400177176",
-        "https://openalex.org/W4386501849",
-        "https://openalex.org/W4389984066",
-        "https://openalex.org/W4400435111",
-        "https://openalex.org/W4399986826"
-    ],
-    "abstract": "Large language models have shown improved accuracy in phenotype term normalization tasks when augmented with retrievers that suggest candidate normalizations based on term definitions. In this work, we introduce a simplified retriever that enhances large language model accuracy by searching the Human Phenotype Ontology (HPO) for candidate matches using contextual word embeddings from BioBERT without the need for explicit term definitions. Testing this method on terms derived from the clinical synopses of Online Mendelian Inheritance in Man (OMIM ® ), we demonstrate that the normalization accuracy of GPT-4o increases from a baseline of 62% without augmentation to 85% with retriever augmentation. This approach is potentially generalizable to other biomedical term normalization tasks and offers an efficient alternative to more complex retrieval methods.",
-    "full_text": null
+  "title": "A simplified retriever to improve accuracy of phenotype normalizations by large language models",
+  "url": "https://openalex.org/W4408135179",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2154855537",
+      "name": "Daniel B. Hier",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5114402384",
+      "name": "Thanh Son Do",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4202016651",
+      "name": "Tayo Obafemi-Ajayi",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4381587418",
+    "https://openalex.org/W4387485634",
+    "https://openalex.org/W4387500346",
+    "https://openalex.org/W4391292768",
+    "https://openalex.org/W4385163750",
+    "https://openalex.org/W6869998741",
+    "https://openalex.org/W4395067526",
+    "https://openalex.org/W4402683886",
+    "https://openalex.org/W2513408092",
+    "https://openalex.org/W2060427373",
+    "https://openalex.org/W2025349319",
+    "https://openalex.org/W2548932017",
+    "https://openalex.org/W2588904016",
+    "https://openalex.org/W4226119217",
+    "https://openalex.org/W2151068025",
+    "https://openalex.org/W4210876812",
+    "https://openalex.org/W4405492031",
+    "https://openalex.org/W2168091868",
+    "https://openalex.org/W3021112536",
+    "https://openalex.org/W2165748167",
+    "https://openalex.org/W1808652302",
+    "https://openalex.org/W4311903220",
+    "https://openalex.org/W6870634631",
+    "https://openalex.org/W2946102094",
+    "https://openalex.org/W4224997359",
+    "https://openalex.org/W4221142212",
+    "https://openalex.org/W4212919921",
+    "https://openalex.org/W4399941107",
+    "https://openalex.org/W2810450065",
+    "https://openalex.org/W2119613819",
+    "https://openalex.org/W6876141110",
+    "https://openalex.org/W6856223801",
+    "https://openalex.org/W6859201984",
+    "https://openalex.org/W2162151166",
+    "https://openalex.org/W6870391763",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W4408521246",
+    "https://openalex.org/W4400177176",
+    "https://openalex.org/W4386501849",
+    "https://openalex.org/W4389984066",
+    "https://openalex.org/W4400435111",
+    "https://openalex.org/W4399986826"
+  ],
+  "abstract": "Large language models have shown improved accuracy in phenotype term normalization tasks when augmented with retrievers that suggest candidate normalizations based on term definitions. In this work, we introduce a simplified retriever that enhances large language model accuracy by searching the Human Phenotype Ontology (HPO) for candidate matches using contextual word embeddings from BioBERT without the need for explicit term definitions. Testing this method on terms derived from the clinical synopses of Online Mendelian Inheritance in Man (OMIM ® ), we demonstrate that the normalization accuracy of GPT-4o increases from a baseline of 62% without augmentation to 85% with retriever augmentation. This approach is potentially generalizable to other biomedical term normalization tasks and offers an efficient alternative to more complex retrieval methods.",
+  "full_text": null,
+  "topic": "Normalization (sociology)",
+  "concepts": [
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.8020951747894287
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7150018811225891
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5668050050735474
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5540602803230286
+    },
+    {
+      "name": "Labrador Retriever",
+      "score": 0.5368967652320862
+    },
+    {
+      "name": "Term (time)",
+      "score": 0.47293806076049805
+    },
+    {
+      "name": "Language model",
+      "score": 0.4558587670326233
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.367196261882782
+    },
+    {
+      "name": "Data mining",
+      "score": 0.33531898260116577
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    }
+  ]
 }

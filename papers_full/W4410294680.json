@@ -1,100 +1,135 @@
 {
-    "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
-    "url": "https://openalex.org/W4410294680",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101403806",
-            "name": "Ziqian Zeng",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102415308",
-            "name": "Jiahong Yu",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5111136901",
-            "name": "Qianshi Pang",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100413085",
-            "name": "Zihao Wang",
-            "affiliations": [
-                "Hong Kong University of Science and Technology",
-                "University of Hong Kong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5061256037",
-            "name": "Huiping Zhuang",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101814062",
-            "name": "Yu Fan",
-            "affiliations": [
-                "Huawei Technologies (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114151973",
-            "name": "Hongen Shao",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5071736086",
-            "name": "Xiaofeng Zou",
-            "affiliations": [
-                "South China University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4247370645",
-        "https://openalex.org/W4385258403",
-        "https://openalex.org/W4401807361",
-        "https://openalex.org/W6754244489",
-        "https://openalex.org/W6847386241",
-        "https://openalex.org/W6860434696",
-        "https://openalex.org/W2948947170",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W4389519819",
-        "https://openalex.org/W4396506525",
-        "https://openalex.org/W4280641199",
-        "https://openalex.org/W3168126734",
-        "https://openalex.org/W6729972426",
-        "https://openalex.org/W4283581972",
-        "https://openalex.org/W4402901320",
-        "https://openalex.org/W4402669974",
-        "https://openalex.org/W6857817228",
-        "https://openalex.org/W2783772867",
-        "https://openalex.org/W4404250004",
-        "https://openalex.org/W4214883719",
-        "https://openalex.org/W4391582407",
-        "https://openalex.org/W4392543779",
-        "https://openalex.org/W3136450870",
-        "https://openalex.org/W4395112660",
-        "https://openalex.org/W6857696566",
-        "https://openalex.org/W6849765749",
-        "https://openalex.org/W6857438674",
-        "https://openalex.org/W4385571586",
-        "https://openalex.org/W4402672007",
-        "https://openalex.org/W4385572299",
-        "https://openalex.org/W4402683901",
-        "https://openalex.org/W6861670789"
-    ],
-    "abstract": "Large language Models (LLMs) have immense potential to enhance the capabilities of Cyber-Physical-Social Intelligence (CPSI) systems, enabling them to better engage with complex cyber, physical, and social environments. However, the high inference latency of LLMs, which is inherited from the autoregressive decoding process, hinders their wide application in CPSI systems. To address this challenge, current approaches have incorporated speculative decoding to enable parallel prediction of multiple subsequent tokens, thereby achieving inference acceleration. Nevertheless, the accuracy of these decoding heads falls short of the autoregressive decoding approach. In light of these limitations, we propose ResDecode, a novel speculative decoding method characterized by its efficient and accurate decoding heads. Within the lightweight draft model, we propose a residual decoding head to compensate for the full context encoder’s limited capability on long-range dependencies, thus improving accuracy. ResDecode demonstrates impressive results, achieving a maximum speedup ratio of 3.2× on the MT-bench compared to vanilla autoregressive decoding.",
-    "full_text": null
+  "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
+  "url": "https://openalex.org/W4410294680",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101403806",
+      "name": "Ziqian Zeng",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102415308",
+      "name": "Jiahong Yu",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5111136901",
+      "name": "Qianshi Pang",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100413085",
+      "name": "Zihao Wang",
+      "affiliations": [
+        "Hong Kong University of Science and Technology",
+        "University of Hong Kong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5061256037",
+      "name": "Huiping Zhuang",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101814062",
+      "name": "Yu Fan",
+      "affiliations": [
+        "Huawei Technologies (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114151973",
+      "name": "Hongen Shao",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5071736086",
+      "name": "Xiaofeng Zou",
+      "affiliations": [
+        "South China University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4247370645",
+    "https://openalex.org/W4385258403",
+    "https://openalex.org/W4401807361",
+    "https://openalex.org/W6754244489",
+    "https://openalex.org/W6847386241",
+    "https://openalex.org/W6860434696",
+    "https://openalex.org/W2948947170",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W4389519819",
+    "https://openalex.org/W4396506525",
+    "https://openalex.org/W4280641199",
+    "https://openalex.org/W3168126734",
+    "https://openalex.org/W6729972426",
+    "https://openalex.org/W4283581972",
+    "https://openalex.org/W4402901320",
+    "https://openalex.org/W4402669974",
+    "https://openalex.org/W6857817228",
+    "https://openalex.org/W2783772867",
+    "https://openalex.org/W4404250004",
+    "https://openalex.org/W4214883719",
+    "https://openalex.org/W4391582407",
+    "https://openalex.org/W4392543779",
+    "https://openalex.org/W3136450870",
+    "https://openalex.org/W4395112660",
+    "https://openalex.org/W6857696566",
+    "https://openalex.org/W6849765749",
+    "https://openalex.org/W6857438674",
+    "https://openalex.org/W4385571586",
+    "https://openalex.org/W4402672007",
+    "https://openalex.org/W4385572299",
+    "https://openalex.org/W4402683901",
+    "https://openalex.org/W6861670789"
+  ],
+  "abstract": "Large language Models (LLMs) have immense potential to enhance the capabilities of Cyber-Physical-Social Intelligence (CPSI) systems, enabling them to better engage with complex cyber, physical, and social environments. However, the high inference latency of LLMs, which is inherited from the autoregressive decoding process, hinders their wide application in CPSI systems. To address this challenge, current approaches have incorporated speculative decoding to enable parallel prediction of multiple subsequent tokens, thereby achieving inference acceleration. Nevertheless, the accuracy of these decoding heads falls short of the autoregressive decoding approach. In light of these limitations, we propose ResDecode, a novel speculative decoding method characterized by its efficient and accurate decoding heads. Within the lightweight draft model, we propose a residual decoding head to compensate for the full context encoder’s limited capability on long-range dependencies, thus improving accuracy. ResDecode demonstrates impressive results, achieving a maximum speedup ratio of 3.2× on the MT-bench compared to vanilla autoregressive decoding.",
+  "full_text": null,
+  "topic": "Residual",
+  "concepts": [
+    {
+      "name": "Residual",
+      "score": 0.7401943206787109
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.7046432495117188
+    },
+    {
+      "name": "Inference",
+      "score": 0.702434778213501
+    },
+    {
+      "name": "Computer science",
+      "score": 0.571358859539032
+    },
+    {
+      "name": "Language model",
+      "score": 0.412275493144989
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.358278751373291
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3465504050254822
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.23862957954406738
+    }
+  ]
 }

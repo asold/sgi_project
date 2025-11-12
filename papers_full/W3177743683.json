@@ -1,82 +1,137 @@
 {
-    "title": "Pretrained Transformers for Text Ranking: BERT and Beyond",
-    "url": "https://openalex.org/W3177743683",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5059489981",
-            "name": "Andrew Yates",
-            "affiliations": [
-                "Max Planck Institute for Informatics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5030647281",
-            "name": "Rodrigo Nogueira",
-            "affiliations": [
-                "University of Waterloo"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5082997975",
-            "name": "Jimmy Lin",
-            "affiliations": [
-                "University of Waterloo"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2971209824",
-        "https://openalex.org/W6605614091",
-        "https://openalex.org/W2945127593",
-        "https://openalex.org/W3023238803",
-        "https://openalex.org/W2462891382",
-        "https://openalex.org/W3104657626",
-        "https://openalex.org/W3045033475",
-        "https://openalex.org/W6626288397",
-        "https://openalex.org/W6812575427",
-        "https://openalex.org/W2136189984",
-        "https://openalex.org/W3099700870",
-        "https://openalex.org/W3021397474",
-        "https://openalex.org/W2951434086",
-        "https://openalex.org/W6600263792",
-        "https://openalex.org/W3021779606",
-        "https://openalex.org/W2940927814",
-        "https://openalex.org/W3035183674",
-        "https://openalex.org/W3100107515",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W3034212969",
-        "https://openalex.org/W2962779279",
-        "https://openalex.org/W3012594078",
-        "https://openalex.org/W2897754576",
-        "https://openalex.org/W3092952717",
-        "https://openalex.org/W3105107530",
-        "https://openalex.org/W2937036051",
-        "https://openalex.org/W2982096936",
-        "https://openalex.org/W3022373106",
-        "https://openalex.org/W2909544278",
-        "https://openalex.org/W3038572442",
-        "https://openalex.org/W2260194779",
-        "https://openalex.org/W3064953855",
-        "https://openalex.org/W2346933546",
-        "https://openalex.org/W3099384026",
-        "https://openalex.org/W3099446234",
-        "https://openalex.org/W3044812140",
-        "https://openalex.org/W2892181857",
-        "https://openalex.org/W2982596739",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3093955333",
-        "https://openalex.org/W3102286003",
-        "https://openalex.org/W2607074821",
-        "https://openalex.org/W2995289474",
-        "https://openalex.org/W2611029872",
-        "https://openalex.org/W2755957574",
-        "https://openalex.org/W2950133940",
-        "https://openalex.org/W4248999506",
-        "https://openalex.org/W3092683697",
-        "https://openalex.org/W3154670582",
-        "https://openalex.org/W3004654429"
-    ],
-    "abstract": "The goal of text ranking is to generate an ordered list of texts retrieved from a corpus in response to a query. Although the most common formulation of text ranking is search, instances of the task can also be found in many natural language processing applications. This tutorial, based on a forthcoming book, provides an overview of text ranking with neural network architectures known as transformers, of which BERT is the best-known example. The combination of transformers and self-supervised pretraining has, without exaggeration, revolutionized the fields of natural language processing (NLP), information retrieval (IR), and beyond. We provide a synthesis of existing work as a single point of entry for both researchers and practitioners. Our coverage is grouped into two categories: transformer models that perform reranking in multi-stage ranking architectures and learned dense representations that perform ranking directly. Two themes pervade our treatment: techniques for handling long documents and techniques for addressing the tradeoff between effectiveness (result quality) and efficiency (query latency). Although transformer architectures and pretraining techniques are recent innovations, many aspects of their application are well understood. Nevertheless, there remain many open research questions, and thus in addition to laying out the foundations of pretrained transformers for text ranking, we also attempt to prognosticate the future.",
-    "full_text": null
+  "title": "Pretrained Transformers for Text Ranking: BERT and Beyond",
+  "url": "https://openalex.org/W3177743683",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5059489981",
+      "name": "Andrew Yates",
+      "affiliations": [
+        "Max Planck Institute for Informatics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5030647281",
+      "name": "Rodrigo Nogueira",
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5082997975",
+      "name": "Jimmy Lin",
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2971209824",
+    "https://openalex.org/W6605614091",
+    "https://openalex.org/W2945127593",
+    "https://openalex.org/W3023238803",
+    "https://openalex.org/W2462891382",
+    "https://openalex.org/W3104657626",
+    "https://openalex.org/W3045033475",
+    "https://openalex.org/W6626288397",
+    "https://openalex.org/W6812575427",
+    "https://openalex.org/W2136189984",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W3021397474",
+    "https://openalex.org/W2951434086",
+    "https://openalex.org/W6600263792",
+    "https://openalex.org/W3021779606",
+    "https://openalex.org/W2940927814",
+    "https://openalex.org/W3035183674",
+    "https://openalex.org/W3100107515",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W3034212969",
+    "https://openalex.org/W2962779279",
+    "https://openalex.org/W3012594078",
+    "https://openalex.org/W2897754576",
+    "https://openalex.org/W3092952717",
+    "https://openalex.org/W3105107530",
+    "https://openalex.org/W2937036051",
+    "https://openalex.org/W2982096936",
+    "https://openalex.org/W3022373106",
+    "https://openalex.org/W2909544278",
+    "https://openalex.org/W3038572442",
+    "https://openalex.org/W2260194779",
+    "https://openalex.org/W3064953855",
+    "https://openalex.org/W2346933546",
+    "https://openalex.org/W3099384026",
+    "https://openalex.org/W3099446234",
+    "https://openalex.org/W3044812140",
+    "https://openalex.org/W2892181857",
+    "https://openalex.org/W2982596739",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3093955333",
+    "https://openalex.org/W3102286003",
+    "https://openalex.org/W2607074821",
+    "https://openalex.org/W2995289474",
+    "https://openalex.org/W2611029872",
+    "https://openalex.org/W2755957574",
+    "https://openalex.org/W2950133940",
+    "https://openalex.org/W4248999506",
+    "https://openalex.org/W3092683697",
+    "https://openalex.org/W3154670582",
+    "https://openalex.org/W3004654429"
+  ],
+  "abstract": "The goal of text ranking is to generate an ordered list of texts retrieved from a corpus in response to a query. Although the most common formulation of text ranking is search, instances of the task can also be found in many natural language processing applications. This tutorial, based on a forthcoming book, provides an overview of text ranking with neural network architectures known as transformers, of which BERT is the best-known example. The combination of transformers and self-supervised pretraining has, without exaggeration, revolutionized the fields of natural language processing (NLP), information retrieval (IR), and beyond. We provide a synthesis of existing work as a single point of entry for both researchers and practitioners. Our coverage is grouped into two categories: transformer models that perform reranking in multi-stage ranking architectures and learned dense representations that perform ranking directly. Two themes pervade our treatment: techniques for handling long documents and techniques for addressing the tradeoff between effectiveness (result quality) and efficiency (query latency). Although transformer architectures and pretraining techniques are recent innovations, many aspects of their application are well understood. Nevertheless, there remain many open research questions, and thus in addition to laying out the foundations of pretrained transformers for text ranking, we also attempt to prognosticate the future.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.8102116584777832
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7908480167388916
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5765235424041748
+    },
+    {
+      "name": "Ranking (information retrieval)",
+      "score": 0.5452824234962463
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.49150288105010986
+    },
+    {
+      "name": "Question answering",
+      "score": 0.48078078031539917
+    },
+    {
+      "name": "Language model",
+      "score": 0.47102054953575134
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.45867475867271423
+    },
+    {
+      "name": "Natural language",
+      "score": 0.4465911090373993
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4460749924182892
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08361715078353882
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

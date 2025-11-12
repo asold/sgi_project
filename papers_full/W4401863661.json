@@ -1,85 +1,116 @@
 {
-    "title": "LPFormer: An Adaptive Graph Transformer for Link Prediction",
-    "url": "https://openalex.org/W4401863661",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5057319756",
-            "name": "Harry Shomer",
-            "affiliations": [
-                "Michigan State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111425979",
-            "name": "Yao Ma",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136566476",
-            "name": "Haitao Mao",
-            "affiliations": [
-                "Michigan State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2553377813",
-            "name": "Juan-Hui Li",
-            "affiliations": [
-                "Michigan State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1430480577",
-            "name": "Bo Wu",
-            "affiliations": [
-                "Colorado School of Mines"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2146463745",
-            "name": "Jiliang Tang",
-            "affiliations": [
-                "Michigan State University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2086254934",
-        "https://openalex.org/W3039500550",
-        "https://openalex.org/W3082429057",
-        "https://openalex.org/W2171878761",
-        "https://openalex.org/W2970777192",
-        "https://openalex.org/W3026640598",
-        "https://openalex.org/W2963281832",
-        "https://openalex.org/W1954241630",
-        "https://openalex.org/W2151498529",
-        "https://openalex.org/W2026417691",
-        "https://openalex.org/W6839395506",
-        "https://openalex.org/W3169575312",
-        "https://openalex.org/W3094003325",
-        "https://openalex.org/W2420733993",
-        "https://openalex.org/W2962943802",
-        "https://openalex.org/W2206718945",
-        "https://openalex.org/W4312056373",
-        "https://openalex.org/W4281706128",
-        "https://openalex.org/W3160872503",
-        "https://openalex.org/W4380993339",
-        "https://openalex.org/W3211394146",
-        "https://openalex.org/W2807021761",
-        "https://openalex.org/W3213267662",
-        "https://openalex.org/W3210188290",
-        "https://openalex.org/W2007444087",
-        "https://openalex.org/W3172525852",
-        "https://openalex.org/W3101543043",
-        "https://openalex.org/W4284896159",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W4287123803",
-        "https://openalex.org/W3100848837"
-    ],
-    "abstract": "Link prediction is a common task on graph-structured data that has seen applications in a variety of domains. Classically, hand-crafted heuristics were used for this task. Heuristic measures are chosen such that they correlate well with the underlying factors related to link formation. In recent years, a new class of methods has emerged that combines the advantages of message-passing neural networks (MPNN) and heuristics methods. These methods perform predictions by using the output of an MPNN in conjunction with a \"pairwise encoding\" that captures the relationship between nodes in the candidate link. They have been shown to achieve strong performance on numerous datasets. However, current pairwise encodings often contain a strong inductive bias, using the same underlying factors to classify all links. This limits the ability of existing methods to learn how to properly classify a variety of different links that may form from different factors. To address this limitation, we propose a new method, LPFormer, which attempts to adaptively learn the pairwise encodings for each link. LPFormer models the link factors via an attention module that learns the pairwise encoding that exists between nodes by modeling multiple factors integral to link prediction. Extensive experiments demonstrate that LPFormer can achieve SOTA performance on numerous datasets while maintaining efficiency. The code is available at The code is available at https://github.com/HarryShomer/LPFormer.",
-    "full_text": null
+  "title": "LPFormer: An Adaptive Graph Transformer for Link Prediction",
+  "url": "https://openalex.org/W4401863661",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5057319756",
+      "name": "Harry Shomer",
+      "affiliations": [
+        "Michigan State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111425979",
+      "name": "Yao Ma",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136566476",
+      "name": "Haitao Mao",
+      "affiliations": [
+        "Michigan State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2553377813",
+      "name": "Juan-Hui Li",
+      "affiliations": [
+        "Michigan State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1430480577",
+      "name": "Bo Wu",
+      "affiliations": [
+        "Colorado School of Mines"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2146463745",
+      "name": "Jiliang Tang",
+      "affiliations": [
+        "Michigan State University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2086254934",
+    "https://openalex.org/W3039500550",
+    "https://openalex.org/W3082429057",
+    "https://openalex.org/W2171878761",
+    "https://openalex.org/W2970777192",
+    "https://openalex.org/W3026640598",
+    "https://openalex.org/W2963281832",
+    "https://openalex.org/W1954241630",
+    "https://openalex.org/W2151498529",
+    "https://openalex.org/W2026417691",
+    "https://openalex.org/W6839395506",
+    "https://openalex.org/W3169575312",
+    "https://openalex.org/W3094003325",
+    "https://openalex.org/W2420733993",
+    "https://openalex.org/W2962943802",
+    "https://openalex.org/W2206718945",
+    "https://openalex.org/W4312056373",
+    "https://openalex.org/W4281706128",
+    "https://openalex.org/W3160872503",
+    "https://openalex.org/W4380993339",
+    "https://openalex.org/W3211394146",
+    "https://openalex.org/W2807021761",
+    "https://openalex.org/W3213267662",
+    "https://openalex.org/W3210188290",
+    "https://openalex.org/W2007444087",
+    "https://openalex.org/W3172525852",
+    "https://openalex.org/W3101543043",
+    "https://openalex.org/W4284896159",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W4287123803",
+    "https://openalex.org/W3100848837"
+  ],
+  "abstract": "Link prediction is a common task on graph-structured data that has seen applications in a variety of domains. Classically, hand-crafted heuristics were used for this task. Heuristic measures are chosen such that they correlate well with the underlying factors related to link formation. In recent years, a new class of methods has emerged that combines the advantages of message-passing neural networks (MPNN) and heuristics methods. These methods perform predictions by using the output of an MPNN in conjunction with a \"pairwise encoding\" that captures the relationship between nodes in the candidate link. They have been shown to achieve strong performance on numerous datasets. However, current pairwise encodings often contain a strong inductive bias, using the same underlying factors to classify all links. This limits the ability of existing methods to learn how to properly classify a variety of different links that may form from different factors. To address this limitation, we propose a new method, LPFormer, which attempts to adaptively learn the pairwise encodings for each link. LPFormer models the link factors via an attention module that learns the pairwise encoding that exists between nodes by modeling multiple factors integral to link prediction. Extensive experiments demonstrate that LPFormer can achieve SOTA performance on numerous datasets while maintaining efficiency. The code is available at The code is available at https://github.com/HarryShomer/LPFormer.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6664064526557922
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4987955093383789
+    },
+    {
+      "name": "Link (geometry)",
+      "score": 0.41554051637649536
+    },
+    {
+      "name": "Computer network",
+      "score": 0.211790531873703
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.10943353176116943
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10582396388053894
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08790698647499084
+    }
+  ]
 }

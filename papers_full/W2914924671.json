@@ -1,36 +1,107 @@
 {
-    "title": "Language Modeling Teaches You More than Translation Does: Lessons Learned Through Auxiliary Syntactic Task Analysis",
-    "url": "https://openalex.org/W2914924671",
-    "year": 2018,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2109182809",
-            "name": "Kelly Zhang",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2145255766",
-            "name": "Samuel Bowman",
-            "affiliations": [
-                "New York University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2760656271",
-        "https://openalex.org/W2512924740",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2159636675",
-        "https://openalex.org/W2963756346",
-        "https://openalex.org/W1632114991",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W2962777840",
-        "https://openalex.org/W4302343710",
-        "https://openalex.org/W2605717780",
-        "https://openalex.org/W2773956126"
-    ],
-    "abstract": "Recently, researchers have found that deep LSTMs trained on tasks like machine translation learn substantial syntactic and semantic information about their input sentences, including part-of-speech. These findings begin to shed light on why pretrained representations, like ELMo and CoVe, are so beneficial for neural language understanding models. We still, though, do not yet have a clear understanding of how the choice of pretraining objective affects the type of linguistic information that models learn. With this in mind, we compare four objectives—language modeling, translation, skip-thought, and autoencoding—on their ability to induce syntactic and part-of-speech information, holding constant the quantity and genre of the training data, as well as the LSTM architecture.",
-    "full_text": "Proceedings of the 2018 EMNLP Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP, pages 359–361\nBrussels, Belgium, November 1, 2018.c⃝2018 Association for Computational Linguistics\n359\nLanguage Modeling Teaches You More Syntax than Translation Does:\nLessons Learned Through Auxiliary Task Analysis\nKelly W. Zhang1\nkz918@nyu.edu\nSamuel R. Bowman1,2,3\nbowman@nyu.edu\n1Dept. of Computer Science\nNew York University\n60 Fifth Avenue\nNew York, NY 10011\n2Center for Data Science\nNew York University\n60 Fifth Avenue\nNew York, NY 10011\n3Dept. of Linguistics\nNew York University\n10 Washington Place\nNew York, NY 10003\n1 Introduction\nRecently, researchers have found that deep\nLSTMs (Hochreiter and Schmidhuber, 1997)\ntrained on tasks like machine translation learn sub-\nstantial syntactic and semantic information about\ntheir input sentences, including part-of-speech\n(Belinkov et al., 2017a,b; Blevins et al., 2018).\nThese ﬁndings begin to shed light on why pre-\ntrained representations, like ELMo and CoVe, are\nso beneﬁcial for neural language understanding\nmodels (Peters et al., 2018; McCann et al., 2017).\nWe still, though, do not yet have a clear under-\nstanding of how the choice of pretraining objec-\ntive affects the type of linguistic information that\nmodels learn. With this in mind, we compare\nfour objectives—language modeling, translation,\nskip-thought, and autoencoding—on their ability\nto induce syntactic and part-of-speech informa-\ntion, holding constant the quantity and genre of the\ntraining data, as well as the LSTM architecture.\n2 Methodology\nWe control for the data domain by exclusively\ntraining on datasets from WMT 2016 (Bojar et al.,\n2016). We train models on all tasks using the par-\nallel En-De corpus, which allows us to make fair\ncomparisons across all tasks. We also augment the\nparallel data with a large monolingual corpus from\nWMT to examine how the performance of the un-\nsupervised tasks scales with more data.\nWe analyze representations learned by lan-\nguage models and by the encoders of sequence-\nto-sequence models. 1 Following Belinkov et al.\n(2017a), after pretraining, we ﬁx the LSTM model\nparameters and use the hidden states to train aux-\niliary classiﬁers on several probing tasks. We\n1All our encoders are 2-layer, bidirectional LSTMs (500-\nD in each direction)—except for our large forward language\nmodels, which are 1000-D and unidirectional.\nuse two syntactic evaluation tasks: part-of-speech\n(POS) tagging on Penn Treebank WSJ (Marcus\net al., 1993) and Combinatorial Categorical Gram-\nmar (CCG) supertagging on CCG Bank (Hocken-\nmaier and Steedman, 2007). CCG supertagging\nallows us to measure the degree to which models\nlearn syntactic structure above the word. We also\nmeasure how much LSTMs simply memorize in-\nput sequences with a word identity prediction task.\n3 Results\nComparing Pretraining Tasks For all pretrain-\ning dataset sizes, bidirectional language model\n(BiLM) and translation encoder representations\noutperform skip-thought and autoencoder repre-\nsentations on both POS and CCG tagging. Trans-\nlation encoders, however, slightly underperform\nBiLMs, even when both models are trained on\nthe same amount of data. Furthermore, BiLMs\ntrained on the smallest amount of data (1 mil-\nlion sentences) outperform models trained on all\nother tasks using larger dataset sizes (5 million\nsentences for translation, and 63 million sentences\nfor skip-thought and autoencoding). Especially\nsince BiLMs do not require aligned data to train,\nthe superior performance of BiLM representations\non these tasks suggests that BiLMs (like ELMo)\nare better than translation encoders (like CoVe) for\ntransfer learning of syntactic information.\nUntrained Baseline Surprisingly, we ﬁnd that\nthe untrained LSTM baseline—frozen after ran-\ndom initialization—performs quite well on syn-\ntactic tagging tasks (a few percentage points be-\nhind BiLMs) when using all auxiliary data; how-\never, decreasing the amount of classiﬁer training\ndata leads to a signiﬁcantly greater drop in the un-\ntrained encoder performance compared to trained\nencoders. We hypothesize that the classiﬁers can\nrecover neighboring word identity information—\n360\nFigure 1: POS accuracies when training on different amounts of encoder and classiﬁer data. We show\nresults for the best performing layer of each model. The most frequent class baseline is word-conditional.\neven from untrained LSTMs representations—and\nthus perform well on tagging tasks by memorizing\nword conﬁgurations and their associated tags from\nthe training data. We test this hypothesis directly\nwith the word identity task.\nWord Identity For this task, we train classiﬁers\nto take LSTM hidden states and predict the identi-\nties of the words from different time steps. For ex-\nample, for the sentence “I love NLP .” and a time\nstep shift of -2, we would train the classiﬁer to take\nthe hidden state for “NLP” and predict the word\n“I”. While trained encoders outperform untrained\nones on both POS and CCG tagging, we ﬁnd that\nall trained LSTMs underperform untrained ones\non word identity prediction. This ﬁnding conﬁrms\nthat trained encoders genuinely capture substantial\nsyntactic features, beyond mere word identity, that\nthe auxiliary classiﬁers can use.\nEffect of Depth Belinkov et al. (2017a) ﬁnd\nthat, for translation models, the ﬁrst layer con-\nsistently outperforms the second on POS tagging.\nWe ﬁnd that this pattern holds for all our models,\nexcept BiLMs, where the ﬁrst and second layers\nperform equivalently. This pattern occurs even in\nuntrained models, which suggests that POS infor-\nmation is stored on the lower layer not necessarily\nbecause the training tasks encourage this, but due\nto properties of the deep LSTM architecture. For\nCCG supertagging though, the second layer per-\nforms better than the ﬁrst in some cases (ﬁrst layer\nperforms best for untrained LSTMs). Which layer\nperforms best appears to be independent of abso-\nlute performance on the supertagging task.\nOn word identity prediction, we ﬁnd that for\nboth trained and untrained models, the ﬁrst layer\noutperforms the second layer when predicting the\nidentity of the immediate neighbors of a word.\nHowever, the second layer tends to outperform\nthe ﬁrst at predicting the identity of more distant\nneighboring words. As is the case for convolu-\ntional neural networks, our ﬁndings suggest that\ndepth in recurrent neural networks has the effect\nof increasing the “receptive ﬁeld” and allows the\nupper layers to have representations that capture a\nlarger context. These results reﬂect the ﬁndings of\nBlevins et al. (2018) that for trained models, upper\nlevels of LSTMs encode more abstract syntactic\ninformation, since more abstract information gen-\nerally requires larger context information.\n4 Conclusion\nBy controlling for the genre and quantity of the\ntraining data, we make fair comparisons between\nseveral data-rich training tasks in their ability to\ninduce syntactic information. Our results suggest\nthat for transfer learning, bidirectional language\nmodels like ELMo (Peters et al., 2018) capture\nmore useful features than translation encoders—\nand that this holds even on genres for which data is\nnot abundant. Our work also highlights the inter-\nesting behavior of untrained LSTMs, which show\nan ability to preserve the contents of their inputs\nbetter than trained models.\n361\nReferences\nYonatan Belinkov, Nadir Durrani, Fahim Dalvi, Hassan\nSajjad, and James R. Glass. 2017a. What do Neural\nMachine Translation Models Learn about Morphol-\nogy? ACL.\nYonatan Belinkov, Llu ´ıs M `arquez, Hassan Sajjad,\nNadir Durrani, Fahim Dalvi, and James Glass.\n2017b. Evaluating Layers of Representation in Neu-\nral Machine Translation on Part-of-Speech and Se-\nmantic Tagging Tasks. IJCNLP.\nTerra Blevins, Omer Levy, and Luke Zettlemoyer.\n2018. Deep RNNs Learn Hierarchical Syntax. ACL.\nOndrej Bojar, Rajen Chatterjee, Christian Federmann,\nYvette Graham, Barry Haddow, Matthias Huck,\nAntonio Jimeno Yepes, Philipp Koehn, Varvara\nLogacheva, Christof Monz, Matteo Negri, Aure-\nlie Neveol, Mariana Neves, Martin Popel, Matt\nPost, Raphael Rubino, Carolina Scarton, Lucia Spe-\ncia, Marco Turchi, Karin Verspoor, and Marcos\nZampieri. 2016. Findings of the 2016 Conference\non Machine Translation (WMT16). ACL.\nSepp Hochreiter and J ¨uergen Schmidhuber. 1997.\nLong Short-Term Memory. Neural Computation ,\n9(8):1735–1780.\nJulia Hockenmaier and Mark Steedman. 2007. CCG-\nbank: A Corpus of CCG Derivations and Depen-\ndency Structures Extracted from the Penn Treebank.\nComputational Linguistics.\nMitchell P. Marcus, Mary Ann Marcinkiewicz, and\nBeatrice Santorini. 1993. Building a Large Anno-\ntated Corpus of English: The Penn Treebank. Com-\nputational Linguistics.\nBryan McCann, James Bradbury, Caiming Xiong, and\nRichard Socher. 2017. Learned in Translation: Con-\ntextualized Word Vectors. NIPS.\nMatthew E. Peters, Mark Neumann, Mohit Iyyer, Matt\nGardner, Christopher Clark, Kenton Lee, and Luke\nZettlemoyer. 2018. Deep contextualized word rep-\nresentations. NAACL."
+  "title": "Language Modeling Teaches You More than Translation Does: Lessons Learned Through Auxiliary Syntactic Task Analysis",
+  "url": "https://openalex.org/W2914924671",
+  "year": 2018,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2109182809",
+      "name": "Kelly Zhang",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2145255766",
+      "name": "Samuel Bowman",
+      "affiliations": [
+        "New York University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2760656271",
+    "https://openalex.org/W2512924740",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2159636675",
+    "https://openalex.org/W2963756346",
+    "https://openalex.org/W1632114991",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2962777840",
+    "https://openalex.org/W4302343710",
+    "https://openalex.org/W2605717780",
+    "https://openalex.org/W2773956126"
+  ],
+  "abstract": "Recently, researchers have found that deep LSTMs trained on tasks like machine translation learn substantial syntactic and semantic information about their input sentences, including part-of-speech. These findings begin to shed light on why pretrained representations, like ELMo and CoVe, are so beneficial for neural language understanding models. We still, though, do not yet have a clear understanding of how the choice of pretraining objective affects the type of linguistic information that models learn. With this in mind, we compare four objectives—language modeling, translation, skip-thought, and autoencoding—on their ability to induce syntactic and part-of-speech information, holding constant the quantity and genre of the training data, as well as the LSTM architecture.",
+  "full_text": "Proceedings of the 2018 EMNLP Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP, pages 359–361\nBrussels, Belgium, November 1, 2018.c⃝2018 Association for Computational Linguistics\n359\nLanguage Modeling Teaches You More Syntax than Translation Does:\nLessons Learned Through Auxiliary Task Analysis\nKelly W. Zhang1\nkz918@nyu.edu\nSamuel R. Bowman1,2,3\nbowman@nyu.edu\n1Dept. of Computer Science\nNew York University\n60 Fifth Avenue\nNew York, NY 10011\n2Center for Data Science\nNew York University\n60 Fifth Avenue\nNew York, NY 10011\n3Dept. of Linguistics\nNew York University\n10 Washington Place\nNew York, NY 10003\n1 Introduction\nRecently, researchers have found that deep\nLSTMs (Hochreiter and Schmidhuber, 1997)\ntrained on tasks like machine translation learn sub-\nstantial syntactic and semantic information about\ntheir input sentences, including part-of-speech\n(Belinkov et al., 2017a,b; Blevins et al., 2018).\nThese ﬁndings begin to shed light on why pre-\ntrained representations, like ELMo and CoVe, are\nso beneﬁcial for neural language understanding\nmodels (Peters et al., 2018; McCann et al., 2017).\nWe still, though, do not yet have a clear under-\nstanding of how the choice of pretraining objec-\ntive affects the type of linguistic information that\nmodels learn. With this in mind, we compare\nfour objectives—language modeling, translation,\nskip-thought, and autoencoding—on their ability\nto induce syntactic and part-of-speech informa-\ntion, holding constant the quantity and genre of the\ntraining data, as well as the LSTM architecture.\n2 Methodology\nWe control for the data domain by exclusively\ntraining on datasets from WMT 2016 (Bojar et al.,\n2016). We train models on all tasks using the par-\nallel En-De corpus, which allows us to make fair\ncomparisons across all tasks. We also augment the\nparallel data with a large monolingual corpus from\nWMT to examine how the performance of the un-\nsupervised tasks scales with more data.\nWe analyze representations learned by lan-\nguage models and by the encoders of sequence-\nto-sequence models. 1 Following Belinkov et al.\n(2017a), after pretraining, we ﬁx the LSTM model\nparameters and use the hidden states to train aux-\niliary classiﬁers on several probing tasks. We\n1All our encoders are 2-layer, bidirectional LSTMs (500-\nD in each direction)—except for our large forward language\nmodels, which are 1000-D and unidirectional.\nuse two syntactic evaluation tasks: part-of-speech\n(POS) tagging on Penn Treebank WSJ (Marcus\net al., 1993) and Combinatorial Categorical Gram-\nmar (CCG) supertagging on CCG Bank (Hocken-\nmaier and Steedman, 2007). CCG supertagging\nallows us to measure the degree to which models\nlearn syntactic structure above the word. We also\nmeasure how much LSTMs simply memorize in-\nput sequences with a word identity prediction task.\n3 Results\nComparing Pretraining Tasks For all pretrain-\ning dataset sizes, bidirectional language model\n(BiLM) and translation encoder representations\noutperform skip-thought and autoencoder repre-\nsentations on both POS and CCG tagging. Trans-\nlation encoders, however, slightly underperform\nBiLMs, even when both models are trained on\nthe same amount of data. Furthermore, BiLMs\ntrained on the smallest amount of data (1 mil-\nlion sentences) outperform models trained on all\nother tasks using larger dataset sizes (5 million\nsentences for translation, and 63 million sentences\nfor skip-thought and autoencoding). Especially\nsince BiLMs do not require aligned data to train,\nthe superior performance of BiLM representations\non these tasks suggests that BiLMs (like ELMo)\nare better than translation encoders (like CoVe) for\ntransfer learning of syntactic information.\nUntrained Baseline Surprisingly, we ﬁnd that\nthe untrained LSTM baseline—frozen after ran-\ndom initialization—performs quite well on syn-\ntactic tagging tasks (a few percentage points be-\nhind BiLMs) when using all auxiliary data; how-\never, decreasing the amount of classiﬁer training\ndata leads to a signiﬁcantly greater drop in the un-\ntrained encoder performance compared to trained\nencoders. We hypothesize that the classiﬁers can\nrecover neighboring word identity information—\n360\nFigure 1: POS accuracies when training on different amounts of encoder and classiﬁer data. We show\nresults for the best performing layer of each model. The most frequent class baseline is word-conditional.\neven from untrained LSTMs representations—and\nthus perform well on tagging tasks by memorizing\nword conﬁgurations and their associated tags from\nthe training data. We test this hypothesis directly\nwith the word identity task.\nWord Identity For this task, we train classiﬁers\nto take LSTM hidden states and predict the identi-\nties of the words from different time steps. For ex-\nample, for the sentence “I love NLP .” and a time\nstep shift of -2, we would train the classiﬁer to take\nthe hidden state for “NLP” and predict the word\n“I”. While trained encoders outperform untrained\nones on both POS and CCG tagging, we ﬁnd that\nall trained LSTMs underperform untrained ones\non word identity prediction. This ﬁnding conﬁrms\nthat trained encoders genuinely capture substantial\nsyntactic features, beyond mere word identity, that\nthe auxiliary classiﬁers can use.\nEffect of Depth Belinkov et al. (2017a) ﬁnd\nthat, for translation models, the ﬁrst layer con-\nsistently outperforms the second on POS tagging.\nWe ﬁnd that this pattern holds for all our models,\nexcept BiLMs, where the ﬁrst and second layers\nperform equivalently. This pattern occurs even in\nuntrained models, which suggests that POS infor-\nmation is stored on the lower layer not necessarily\nbecause the training tasks encourage this, but due\nto properties of the deep LSTM architecture. For\nCCG supertagging though, the second layer per-\nforms better than the ﬁrst in some cases (ﬁrst layer\nperforms best for untrained LSTMs). Which layer\nperforms best appears to be independent of abso-\nlute performance on the supertagging task.\nOn word identity prediction, we ﬁnd that for\nboth trained and untrained models, the ﬁrst layer\noutperforms the second layer when predicting the\nidentity of the immediate neighbors of a word.\nHowever, the second layer tends to outperform\nthe ﬁrst at predicting the identity of more distant\nneighboring words. As is the case for convolu-\ntional neural networks, our ﬁndings suggest that\ndepth in recurrent neural networks has the effect\nof increasing the “receptive ﬁeld” and allows the\nupper layers to have representations that capture a\nlarger context. These results reﬂect the ﬁndings of\nBlevins et al. (2018) that for trained models, upper\nlevels of LSTMs encode more abstract syntactic\ninformation, since more abstract information gen-\nerally requires larger context information.\n4 Conclusion\nBy controlling for the genre and quantity of the\ntraining data, we make fair comparisons between\nseveral data-rich training tasks in their ability to\ninduce syntactic information. Our results suggest\nthat for transfer learning, bidirectional language\nmodels like ELMo (Peters et al., 2018) capture\nmore useful features than translation encoders—\nand that this holds even on genres for which data is\nnot abundant. Our work also highlights the inter-\nesting behavior of untrained LSTMs, which show\nan ability to preserve the contents of their inputs\nbetter than trained models.\n361\nReferences\nYonatan Belinkov, Nadir Durrani, Fahim Dalvi, Hassan\nSajjad, and James R. Glass. 2017a. What do Neural\nMachine Translation Models Learn about Morphol-\nogy? ACL.\nYonatan Belinkov, Llu ´ıs M `arquez, Hassan Sajjad,\nNadir Durrani, Fahim Dalvi, and James Glass.\n2017b. Evaluating Layers of Representation in Neu-\nral Machine Translation on Part-of-Speech and Se-\nmantic Tagging Tasks. IJCNLP.\nTerra Blevins, Omer Levy, and Luke Zettlemoyer.\n2018. Deep RNNs Learn Hierarchical Syntax. ACL.\nOndrej Bojar, Rajen Chatterjee, Christian Federmann,\nYvette Graham, Barry Haddow, Matthias Huck,\nAntonio Jimeno Yepes, Philipp Koehn, Varvara\nLogacheva, Christof Monz, Matteo Negri, Aure-\nlie Neveol, Mariana Neves, Martin Popel, Matt\nPost, Raphael Rubino, Carolina Scarton, Lucia Spe-\ncia, Marco Turchi, Karin Verspoor, and Marcos\nZampieri. 2016. Findings of the 2016 Conference\non Machine Translation (WMT16). ACL.\nSepp Hochreiter and J ¨uergen Schmidhuber. 1997.\nLong Short-Term Memory. Neural Computation ,\n9(8):1735–1780.\nJulia Hockenmaier and Mark Steedman. 2007. CCG-\nbank: A Corpus of CCG Derivations and Depen-\ndency Structures Extracted from the Penn Treebank.\nComputational Linguistics.\nMitchell P. Marcus, Mary Ann Marcinkiewicz, and\nBeatrice Santorini. 1993. Building a Large Anno-\ntated Corpus of English: The Penn Treebank. Com-\nputational Linguistics.\nBryan McCann, James Bradbury, Caiming Xiong, and\nRichard Socher. 2017. Learned in Translation: Con-\ntextualized Word Vectors. NIPS.\nMatthew E. Peters, Mark Neumann, Mohit Iyyer, Matt\nGardner, Christopher Clark, Kenton Lee, and Luke\nZettlemoyer. 2018. Deep contextualized word rep-\nresentations. NAACL.",
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8606094121932983
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.7841134667396545
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.7627296447753906
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.6988934874534607
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6869825124740601
+    },
+    {
+      "name": "Language model",
+      "score": 0.48617643117904663
+    },
+    {
+      "name": "Constant (computer programming)",
+      "score": 0.4292852282524109
+    },
+    {
+      "name": "Translation (biology)",
+      "score": 0.4109492599964142
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.3747129440307617
+    },
+    {
+      "name": "Programming language",
+      "score": 0.06217259168624878
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Messenger RNA",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

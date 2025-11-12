@@ -1,138 +1,169 @@
 {
-    "title": "EDTNet: A spatial aware attention-based transformer for the pulmonary nodule segmentation",
-    "url": "https://openalex.org/W4404399326",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3067180632",
-            "name": "Dhirendra Prasad Yadav",
-            "affiliations": [
-                "GLA University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2336224498",
-            "name": "Bhisham Sharma",
-            "affiliations": [
-                "Chitkara University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4202312307",
-            "name": "Julian L. Webber",
-            "affiliations": [
-                "Kuwait College of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1615812118",
-            "name": "Abolfazl Mehbodniya",
-            "affiliations": [
-                "Kuwait College of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4379749374",
-            "name": "Shivank Chauhan",
-            "affiliations": [
-                "GLA University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3067180632",
-            "name": "Dhirendra Prasad Yadav",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2336224498",
-            "name": "Bhisham Sharma",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4202312307",
-            "name": "Julian L. Webber",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1615812118",
-            "name": "Abolfazl Mehbodniya",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4379749374",
-            "name": "Shivank Chauhan",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4383497922",
-        "https://openalex.org/W4309035112",
-        "https://openalex.org/W4205283523",
-        "https://openalex.org/W4282915171",
-        "https://openalex.org/W4293515133",
-        "https://openalex.org/W4229051439",
-        "https://openalex.org/W3003511227",
-        "https://openalex.org/W3154931192",
-        "https://openalex.org/W4294125336",
-        "https://openalex.org/W3208919116",
-        "https://openalex.org/W4366503135",
-        "https://openalex.org/W2732063980",
-        "https://openalex.org/W2358734635",
-        "https://openalex.org/W4323357155",
-        "https://openalex.org/W4309433391",
-        "https://openalex.org/W3010471571",
-        "https://openalex.org/W4318486282",
-        "https://openalex.org/W2945955629",
-        "https://openalex.org/W4362690257",
-        "https://openalex.org/W3024890010",
-        "https://openalex.org/W3217412913",
-        "https://openalex.org/W3174246506",
-        "https://openalex.org/W4316022108",
-        "https://openalex.org/W2922342825",
-        "https://openalex.org/W3212760103",
-        "https://openalex.org/W2967694144",
-        "https://openalex.org/W3165621184",
-        "https://openalex.org/W4310056726",
-        "https://openalex.org/W2542707222",
-        "https://openalex.org/W3111621101",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2999580839",
-        "https://openalex.org/W3015788359",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W3127751679",
-        "https://openalex.org/W3160284783",
-        "https://openalex.org/W4387866574",
-        "https://openalex.org/W4391591097",
-        "https://openalex.org/W4327941939",
-        "https://openalex.org/W4387184186",
-        "https://openalex.org/W4214893857",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4200096693",
-        "https://openalex.org/W4386825451",
-        "https://openalex.org/W4315927613",
-        "https://openalex.org/W4311591349",
-        "https://openalex.org/W4319985880",
-        "https://openalex.org/W4386000360",
-        "https://openalex.org/W3201664735",
-        "https://openalex.org/W4310398161",
-        "https://openalex.org/W4287378135",
-        "https://openalex.org/W2759474193",
-        "https://openalex.org/W2951250226",
-        "https://openalex.org/W3172681723",
-        "https://openalex.org/W1986649315",
-        "https://openalex.org/W4391520528",
-        "https://openalex.org/W4385884061",
-        "https://openalex.org/W4386782598",
-        "https://openalex.org/W4392762942",
-        "https://openalex.org/W4387213001",
-        "https://openalex.org/W2984294507",
-        "https://openalex.org/W4309047333",
-        "https://openalex.org/W3098977020",
-        "https://openalex.org/W4399056909",
-        "https://openalex.org/W4200160717",
-        "https://openalex.org/W4280490731"
-    ],
-    "abstract": "Accurate segmentation of lung lesions in CT-scan images is essential to diagnose lung cancer. The challenges in lung nodule diagnosis arise due to their small size and diverse nature. We designed a transformer-based model EDTNet (Encoder Decoder Transformer Network) for PNS (Pulmonary Nodule Segmentation). Traditional CNN-based encoders and decoders are hindered by their inability to capture long-range spatial dependencies, leading to suboptimal performance in complex object segmentation tasks. To address the limitation, we leverage an enhanced spatial attention-based Vision Transformer (ViT) as an encoder and decoder in the EDTNet. The EDTNet integrates two successive transformer blocks, a patch-expanding layer, down-sampling layers, and up-sampling layers to improve segmentation capabilities. In addition, ESLA (Enhanced spatial aware local attention) and EGLA (Enhanced global aware local attention) blocks are added to provide attention to the spatial features. Furthermore, skip connections are introduced to facilitate symmetrical interaction between the corresponding encoder and decoder layer, enabling the retrieval of intricate details in the output. The EDTNet performance is compared with several models on DS1 and DS2, including Unet, ResUNet++, U-NET 3+, DeepLabV3+, SegNet, Trans-Unet, and Swin-UNet, demonstrates superior quantitative and visual results. On DS1, the EDTNet achieved 96.27%, 95.81%, 96.15% precision, IoU (Intersection over Union), and DSC (Sorensen–Dice coefficient). Moreover, the model has demonstrated sensitivity, IoU and SDC of 98.84%, 96.06% and 97.85% on DS2.",
-    "full_text": null
+  "title": "EDTNet: A spatial aware attention-based transformer for the pulmonary nodule segmentation",
+  "url": "https://openalex.org/W4404399326",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3067180632",
+      "name": "Dhirendra Prasad Yadav",
+      "affiliations": [
+        "GLA University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2336224498",
+      "name": "Bhisham Sharma",
+      "affiliations": [
+        "Chitkara University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4202312307",
+      "name": "Julian L. Webber",
+      "affiliations": [
+        "Kuwait College of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1615812118",
+      "name": "Abolfazl Mehbodniya",
+      "affiliations": [
+        "Kuwait College of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4379749374",
+      "name": "Shivank Chauhan",
+      "affiliations": [
+        "GLA University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3067180632",
+      "name": "Dhirendra Prasad Yadav",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2336224498",
+      "name": "Bhisham Sharma",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4202312307",
+      "name": "Julian L. Webber",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1615812118",
+      "name": "Abolfazl Mehbodniya",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4379749374",
+      "name": "Shivank Chauhan",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4383497922",
+    "https://openalex.org/W4309035112",
+    "https://openalex.org/W4205283523",
+    "https://openalex.org/W4282915171",
+    "https://openalex.org/W4293515133",
+    "https://openalex.org/W4229051439",
+    "https://openalex.org/W3003511227",
+    "https://openalex.org/W3154931192",
+    "https://openalex.org/W4294125336",
+    "https://openalex.org/W3208919116",
+    "https://openalex.org/W4366503135",
+    "https://openalex.org/W2732063980",
+    "https://openalex.org/W2358734635",
+    "https://openalex.org/W4323357155",
+    "https://openalex.org/W4309433391",
+    "https://openalex.org/W3010471571",
+    "https://openalex.org/W4318486282",
+    "https://openalex.org/W2945955629",
+    "https://openalex.org/W4362690257",
+    "https://openalex.org/W3024890010",
+    "https://openalex.org/W3217412913",
+    "https://openalex.org/W3174246506",
+    "https://openalex.org/W4316022108",
+    "https://openalex.org/W2922342825",
+    "https://openalex.org/W3212760103",
+    "https://openalex.org/W2967694144",
+    "https://openalex.org/W3165621184",
+    "https://openalex.org/W4310056726",
+    "https://openalex.org/W2542707222",
+    "https://openalex.org/W3111621101",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2999580839",
+    "https://openalex.org/W3015788359",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W3127751679",
+    "https://openalex.org/W3160284783",
+    "https://openalex.org/W4387866574",
+    "https://openalex.org/W4391591097",
+    "https://openalex.org/W4327941939",
+    "https://openalex.org/W4387184186",
+    "https://openalex.org/W4214893857",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4200096693",
+    "https://openalex.org/W4386825451",
+    "https://openalex.org/W4315927613",
+    "https://openalex.org/W4311591349",
+    "https://openalex.org/W4319985880",
+    "https://openalex.org/W4386000360",
+    "https://openalex.org/W3201664735",
+    "https://openalex.org/W4310398161",
+    "https://openalex.org/W4287378135",
+    "https://openalex.org/W2759474193",
+    "https://openalex.org/W2951250226",
+    "https://openalex.org/W3172681723",
+    "https://openalex.org/W1986649315",
+    "https://openalex.org/W4391520528",
+    "https://openalex.org/W4385884061",
+    "https://openalex.org/W4386782598",
+    "https://openalex.org/W4392762942",
+    "https://openalex.org/W4387213001",
+    "https://openalex.org/W2984294507",
+    "https://openalex.org/W4309047333",
+    "https://openalex.org/W3098977020",
+    "https://openalex.org/W4399056909",
+    "https://openalex.org/W4200160717",
+    "https://openalex.org/W4280490731"
+  ],
+  "abstract": "Accurate segmentation of lung lesions in CT-scan images is essential to diagnose lung cancer. The challenges in lung nodule diagnosis arise due to their small size and diverse nature. We designed a transformer-based model EDTNet (Encoder Decoder Transformer Network) for PNS (Pulmonary Nodule Segmentation). Traditional CNN-based encoders and decoders are hindered by their inability to capture long-range spatial dependencies, leading to suboptimal performance in complex object segmentation tasks. To address the limitation, we leverage an enhanced spatial attention-based Vision Transformer (ViT) as an encoder and decoder in the EDTNet. The EDTNet integrates two successive transformer blocks, a patch-expanding layer, down-sampling layers, and up-sampling layers to improve segmentation capabilities. In addition, ESLA (Enhanced spatial aware local attention) and EGLA (Enhanced global aware local attention) blocks are added to provide attention to the spatial features. Furthermore, skip connections are introduced to facilitate symmetrical interaction between the corresponding encoder and decoder layer, enabling the retrieval of intricate details in the output. The EDTNet performance is compared with several models on DS1 and DS2, including Unet, ResUNet++, U-NET 3+, DeepLabV3+, SegNet, Trans-Unet, and Swin-UNet, demonstrates superior quantitative and visual results. On DS1, the EDTNet achieved 96.27%, 95.81%, 96.15% precision, IoU (Intersection over Union), and DSC (Sorensen–Dice coefficient). Moreover, the model has demonstrated sensitivity, IoU and SDC of 98.84%, 96.06% and 97.85% on DS2.",
+  "full_text": null,
+  "topic": "Segmentation",
+  "concepts": [
+    {
+      "name": "Segmentation",
+      "score": 0.7278209328651428
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6910695433616638
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6804744005203247
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5977057814598083
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4955989122390747
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.44458597898483276
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

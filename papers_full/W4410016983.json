@@ -1,71 +1,110 @@
 {
-    "title": "Understanding Language Model Scaling on Protein Fitness Prediction",
-    "url": "https://openalex.org/W4410016983",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5062769133",
-            "name": "Chao Hou",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100324219",
-            "name": "Di Liu",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5005999074",
-            "name": "Ahmad Usman Zafar",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5051597447",
-            "name": "Yufeng Shen",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2060588922",
-        "https://openalex.org/W4386861232",
-        "https://openalex.org/W4309563206",
-        "https://openalex.org/W4378976943",
-        "https://openalex.org/W3038248848",
-        "https://openalex.org/W4385737488",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W3133458480",
-        "https://openalex.org/W3209435229",
-        "https://openalex.org/W4223581484",
-        "https://openalex.org/W4406440058",
-        "https://openalex.org/W6910662745",
-        "https://openalex.org/W3001279689",
-        "https://openalex.org/W4409579563",
-        "https://openalex.org/W4403141065",
-        "https://openalex.org/W3179485843",
-        "https://openalex.org/W2794121543",
-        "https://openalex.org/W3205136345",
-        "https://openalex.org/W4403422310",
-        "https://openalex.org/W4392302569",
-        "https://openalex.org/W4280491725",
-        "https://openalex.org/W4387303685",
-        "https://openalex.org/W2245592118",
-        "https://openalex.org/W2890223884",
-        "https://openalex.org/W4410811941",
-        "https://openalex.org/W6929558060",
-        "https://openalex.org/W4210672654",
-        "https://openalex.org/W3154046074",
-        "https://openalex.org/W4415332740",
-        "https://openalex.org/W4375858802",
-        "https://openalex.org/W4388024559",
-        "https://openalex.org/W3211728297"
-    ],
-    "abstract": "Abstract Protein language models, and models that incorporate structure or homologous sequences, estimate sequence likelihoods p(sequence) that reflect the protein fitness landscape and are commonly used in mutation effect prediction and protein design. It is widely believed in deep learning field that larger model performs better across tasks. However, for fitness prediction, language model performance declines beyond a certain size, raising concerns about their scalability. Here, we showed that model size, training dataset, and stochastic elements can bias the predicted p(sequence) away from real fitness. Model performance on fitness prediction depends on how well p(sequence) matches evolutionary patterns in homologs, which is best achieved at a moderate p(sequence) level for most proteins. At extreme predicted wild-type sequence likelihoods, models predict uniformly low or high likelihoods for nearly all mutations, failing to reflect the real fitness landscape. Notably, larger models tend to predict proteins with higher p(sequence) , which may exceed the moderate range and thus reduce performance. Our findings clarify the scaling behavior of protein models on fitness prediction and provide practical guidelines for their application and future development.",
-    "full_text": null
+  "title": "Understanding Language Model Scaling on Protein Fitness Prediction",
+  "url": "https://openalex.org/W4410016983",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5062769133",
+      "name": "Chao Hou",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100324219",
+      "name": "Di Liu",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5005999074",
+      "name": "Ahmad Usman Zafar",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5051597447",
+      "name": "Yufeng Shen",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2060588922",
+    "https://openalex.org/W4386861232",
+    "https://openalex.org/W4309563206",
+    "https://openalex.org/W4378976943",
+    "https://openalex.org/W3038248848",
+    "https://openalex.org/W4385737488",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W3133458480",
+    "https://openalex.org/W3209435229",
+    "https://openalex.org/W4223581484",
+    "https://openalex.org/W4406440058",
+    "https://openalex.org/W6910662745",
+    "https://openalex.org/W3001279689",
+    "https://openalex.org/W4409579563",
+    "https://openalex.org/W4403141065",
+    "https://openalex.org/W3179485843",
+    "https://openalex.org/W2794121543",
+    "https://openalex.org/W3205136345",
+    "https://openalex.org/W4403422310",
+    "https://openalex.org/W4392302569",
+    "https://openalex.org/W4280491725",
+    "https://openalex.org/W4387303685",
+    "https://openalex.org/W2245592118",
+    "https://openalex.org/W2890223884",
+    "https://openalex.org/W4410811941",
+    "https://openalex.org/W6929558060",
+    "https://openalex.org/W4210672654",
+    "https://openalex.org/W3154046074",
+    "https://openalex.org/W4415332740",
+    "https://openalex.org/W4375858802",
+    "https://openalex.org/W4388024559",
+    "https://openalex.org/W3211728297"
+  ],
+  "abstract": "Abstract Protein language models, and models that incorporate structure or homologous sequences, estimate sequence likelihoods p(sequence) that reflect the protein fitness landscape and are commonly used in mutation effect prediction and protein design. It is widely believed in deep learning field that larger model performs better across tasks. However, for fitness prediction, language model performance declines beyond a certain size, raising concerns about their scalability. Here, we showed that model size, training dataset, and stochastic elements can bias the predicted p(sequence) away from real fitness. Model performance on fitness prediction depends on how well p(sequence) matches evolutionary patterns in homologs, which is best achieved at a moderate p(sequence) level for most proteins. At extreme predicted wild-type sequence likelihoods, models predict uniformly low or high likelihoods for nearly all mutations, failing to reflect the real fitness landscape. Notably, larger models tend to predict proteins with higher p(sequence) , which may exceed the moderate range and thus reduce performance. Our findings clarify the scaling behavior of protein models on fitness prediction and provide practical guidelines for their application and future development.",
+  "full_text": null,
+  "topic": "Scaling",
+  "concepts": [
+    {
+      "name": "Scaling",
+      "score": 0.6564367413520813
+    },
+    {
+      "name": "Mutation",
+      "score": 0.5237086415290833
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4202573001384735
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3314884603023529
+    },
+    {
+      "name": "Genetics",
+      "score": 0.22844448685646057
+    },
+    {
+      "name": "Biology",
+      "score": 0.22132012248039246
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2032836675643921
+    },
+    {
+      "name": "Gene",
+      "score": 0.06334555149078369
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

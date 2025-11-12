@@ -1,52 +1,103 @@
 {
-    "title": "DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models",
-    "url": "https://openalex.org/W4399757647",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Maurya, Avinash",
-            "affiliations": [
-                "Rochester Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4227129172",
-            "name": "Underwood, Robert",
-            "affiliations": [
-                "Argonne National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2746790492",
-            "name": "Rafique M. Mustafa",
-            "affiliations": [
-                "Rochester Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2587840909",
-            "name": "Cappello, Franck",
-            "affiliations": [
-                "Argonne National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2164397562",
-            "name": "Nicolae, Bogdan",
-            "affiliations": [
-                "Argonne National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3130554079",
-        "https://openalex.org/W3041193038",
-        "https://openalex.org/W2116115793",
-        "https://openalex.org/W3086105743",
-        "https://openalex.org/W3129831491",
-        "https://openalex.org/W3205803342"
-    ],
-    "abstract": "LLMs have seen rapid adoption in all domains. They need to be trained on\\nhigh-end high-performance computing (HPC) infrastructures and ingest massive\\namounts of input data. Unsurprisingly, at such a large scale, unexpected events\\n(e.g., failures of components, instability of the software, undesirable\\nlearning patterns, etc.), are frequent and typically impact the training in a\\nnegative fashion. Thus, LLMs need to be checkpointed frequently so that they\\ncan be rolled back to a stable state and subsequently fine-tuned. However,\\ngiven the large sizes of LLMs, a straightforward checkpointing solution that\\ndirectly writes the model parameters and optimizer state to persistent storage\\n(e.g., a parallel file system), incurs significant I/O overheads. To address\\nthis challenge, in this paper we study how to reduce the I/O overheads for\\nenabling fast and scalable checkpointing for LLMs that can be applied at high\\nfrequency (up to the granularity of individual iterations) without significant\\nimpact on the training process. Specifically, we introduce a lazy asynchronous\\nmulti-level approach that takes advantage of the fact that the tensors making\\nup the model and optimizer state shards remain immutable for extended periods\\nof time, which makes it possible to copy their content in the background with\\nminimal interference during the training process. We evaluate our approach at\\nscales of up to 180 GPUs using different model sizes, parallelism settings, and\\ncheckpointing frequencies. The results show up to 48$\\\\times$ faster\\ncheckpointing and 2.2$\\\\times$ faster end-to-end training runtime compared with\\nthe state-of-art checkpointing approaches.\\n",
-    "full_text": null
+  "title": "DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models",
+  "url": "https://openalex.org/W4399757647",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Maurya, Avinash",
+      "affiliations": [
+        "Rochester Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4227129172",
+      "name": "Underwood, Robert",
+      "affiliations": [
+        "Argonne National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2746790492",
+      "name": "Rafique M. Mustafa",
+      "affiliations": [
+        "Rochester Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2587840909",
+      "name": "Cappello, Franck",
+      "affiliations": [
+        "Argonne National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2164397562",
+      "name": "Nicolae, Bogdan",
+      "affiliations": [
+        "Argonne National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3130554079",
+    "https://openalex.org/W3041193038",
+    "https://openalex.org/W2116115793",
+    "https://openalex.org/W3086105743",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W3205803342"
+  ],
+  "abstract": "LLMs have seen rapid adoption in all domains. They need to be trained on\\nhigh-end high-performance computing (HPC) infrastructures and ingest massive\\namounts of input data. Unsurprisingly, at such a large scale, unexpected events\\n(e.g., failures of components, instability of the software, undesirable\\nlearning patterns, etc.), are frequent and typically impact the training in a\\nnegative fashion. Thus, LLMs need to be checkpointed frequently so that they\\ncan be rolled back to a stable state and subsequently fine-tuned. However,\\ngiven the large sizes of LLMs, a straightforward checkpointing solution that\\ndirectly writes the model parameters and optimizer state to persistent storage\\n(e.g., a parallel file system), incurs significant I/O overheads. To address\\nthis challenge, in this paper we study how to reduce the I/O overheads for\\nenabling fast and scalable checkpointing for LLMs that can be applied at high\\nfrequency (up to the granularity of individual iterations) without significant\\nimpact on the training process. Specifically, we introduce a lazy asynchronous\\nmulti-level approach that takes advantage of the fact that the tensors making\\nup the model and optimizer state shards remain immutable for extended periods\\nof time, which makes it possible to copy their content in the background with\\nminimal interference during the training process. We evaluate our approach at\\nscales of up to 180 GPUs using different model sizes, parallelism settings, and\\ncheckpointing frequencies. The results show up to 48$\\\\times$ faster\\ncheckpointing and 2.2$\\\\times$ faster end-to-end training runtime compared with\\nthe state-of-art checkpointing approaches.\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.870658278465271
+    },
+    {
+      "name": "Asynchronous communication",
+      "score": 0.8353250026702881
+    },
+    {
+      "name": "Scalability",
+      "score": 0.7605575919151306
+    },
+    {
+      "name": "Granularity",
+      "score": 0.6640466451644897
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.6063946485519409
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5675054788589478
+    },
+    {
+      "name": "State (computer science)",
+      "score": 0.519860565662384
+    },
+    {
+      "name": "Distributed computing",
+      "score": 0.47809407114982605
+    },
+    {
+      "name": "Software",
+      "score": 0.43111446499824524
+    },
+    {
+      "name": "Operating system",
+      "score": 0.29413124918937683
+    },
+    {
+      "name": "Programming language",
+      "score": 0.2712019383907318
+    },
+    {
+      "name": "Computer network",
+      "score": 0.13789686560630798
+    }
+  ]
 }

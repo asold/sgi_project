@@ -1,71 +1,110 @@
 {
-    "title": "Can Identifier Splitting Improve Open-Vocabulary Language Model of Code?",
-    "url": "https://openalex.org/W4225878270",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2906252358",
-            "name": "Jieke Shi",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2012237231",
-            "name": "Zhou Yang",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2231731884",
-            "name": "Junda He",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2160336983",
-            "name": "Bowen Xu",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108409548",
-            "name": "David Lo",
-            "affiliations": [
-                "Singapore Management University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2740220421",
-        "https://openalex.org/W2795516572",
-        "https://openalex.org/W2165747537",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2954451301",
-        "https://openalex.org/W2128737833",
-        "https://openalex.org/W2077537588",
-        "https://openalex.org/W2010608861",
-        "https://openalex.org/W6754601402",
-        "https://openalex.org/W3196001856",
-        "https://openalex.org/W3175212568",
-        "https://openalex.org/W2963935794",
-        "https://openalex.org/W3011564318",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2147296306",
-        "https://openalex.org/W6679846933",
-        "https://openalex.org/W2907705732",
-        "https://openalex.org/W3005855585",
-        "https://openalex.org/W2111909698",
-        "https://openalex.org/W2040577374",
-        "https://openalex.org/W6661024068",
-        "https://openalex.org/W4206443035",
-        "https://openalex.org/W2887364112",
-        "https://openalex.org/W2042803716",
-        "https://openalex.org/W2130388803"
-    ],
-    "abstract": "Statistical language models on source code have successfully assisted software engineering tasks. However, developers can create or pick arbitrary identifiers when writing source code. Freely chosen identifiers lead to the notorious out-of-vocabulary (OOV) problem that negatively affects model performance. Recently, Karampatsis et al. showed that using the Byte Pair Encoding (BPE) algorithm to address the OOV problem can improve the language models' predictive performance on source code. However, a drawback of BPE is that it cannot split the identifiers in a way that preserves the meaningful semantics. Prior researchers also show that splitting compound identifiers into sub-words that reflect the semantics can benefit software development tools. These two facts motivate us to explore whether identifier splitting techniques can be utilized to augment the BPE algorithm and boost the performance of open-vocabulary language models considered in Karampatsis et al.'s work. <br> This paper proposes to split identifiers in both constructing vocabulary and processing model inputs procedures, thus exploiting three different settings of applying identifier splitting to language models for the code completion task. We contrast models' performance under these settings and find that simply inserting identifier splitting into the pipeline hurts the model performance, while a hybrid strategy combining identifier splitting and the BPE algorithm can outperform the original open-vocabulary models on predicting identifiers by 3.68% of recall and 6.32% of Mean Reciprocal Rank. The results also show that the hybrid strategy can improve the entropy of language models by 2.02%.",
-    "full_text": null
+  "title": "Can Identifier Splitting Improve Open-Vocabulary Language Model of Code?",
+  "url": "https://openalex.org/W4225878270",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2906252358",
+      "name": "Jieke Shi",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2012237231",
+      "name": "Zhou Yang",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2231731884",
+      "name": "Junda He",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2160336983",
+      "name": "Bowen Xu",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108409548",
+      "name": "David Lo",
+      "affiliations": [
+        "Singapore Management University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2740220421",
+    "https://openalex.org/W2795516572",
+    "https://openalex.org/W2165747537",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2954451301",
+    "https://openalex.org/W2128737833",
+    "https://openalex.org/W2077537588",
+    "https://openalex.org/W2010608861",
+    "https://openalex.org/W6754601402",
+    "https://openalex.org/W3196001856",
+    "https://openalex.org/W3175212568",
+    "https://openalex.org/W2963935794",
+    "https://openalex.org/W3011564318",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2147296306",
+    "https://openalex.org/W6679846933",
+    "https://openalex.org/W2907705732",
+    "https://openalex.org/W3005855585",
+    "https://openalex.org/W2111909698",
+    "https://openalex.org/W2040577374",
+    "https://openalex.org/W6661024068",
+    "https://openalex.org/W4206443035",
+    "https://openalex.org/W2887364112",
+    "https://openalex.org/W2042803716",
+    "https://openalex.org/W2130388803"
+  ],
+  "abstract": "Statistical language models on source code have successfully assisted software engineering tasks. However, developers can create or pick arbitrary identifiers when writing source code. Freely chosen identifiers lead to the notorious out-of-vocabulary (OOV) problem that negatively affects model performance. Recently, Karampatsis et al. showed that using the Byte Pair Encoding (BPE) algorithm to address the OOV problem can improve the language models' predictive performance on source code. However, a drawback of BPE is that it cannot split the identifiers in a way that preserves the meaningful semantics. Prior researchers also show that splitting compound identifiers into sub-words that reflect the semantics can benefit software development tools. These two facts motivate us to explore whether identifier splitting techniques can be utilized to augment the BPE algorithm and boost the performance of open-vocabulary language models considered in Karampatsis et al.'s work. <br> This paper proposes to split identifiers in both constructing vocabulary and processing model inputs procedures, thus exploiting three different settings of applying identifier splitting to language models for the code completion task. We contrast models' performance under these settings and find that simply inserting identifier splitting into the pipeline hurts the model performance, while a hybrid strategy combining identifier splitting and the BPE algorithm can outperform the original open-vocabulary models on predicting identifiers by 3.68% of recall and 6.32% of Mean Reciprocal Rank. The results also show that the hybrid strategy can improve the entropy of language models by 2.02%.",
+  "full_text": null,
+  "topic": "Identifier",
+  "concepts": [
+    {
+      "name": "Identifier",
+      "score": 0.8219428062438965
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8086549043655396
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.6107944846153259
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.5476937294006348
+    },
+    {
+      "name": "Programming language",
+      "score": 0.5237131714820862
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3432634770870209
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.160535991191864
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

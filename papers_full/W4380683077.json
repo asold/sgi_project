@@ -1,89 +1,176 @@
 {
-    "title": "HGR-ViT: Hand Gesture Recognition with Vision Transformer",
-    "url": "https://openalex.org/W4380683077",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2227899597",
-            "name": "Tan Chun Keat",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2528248902",
-            "name": "Lim Kian Ming",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Chang, Roy Kwang Yang",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3203032335",
-            "name": "Lee Chin Poo",
-            "affiliations": [
-                "Multimedia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3214826388",
-            "name": "Alqahtani Ali",
-            "affiliations": [
-                "King Khalid University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6768584750",
-        "https://openalex.org/W2969529392",
-        "https://openalex.org/W3086971787",
-        "https://openalex.org/W3157903123",
-        "https://openalex.org/W4289111271",
-        "https://openalex.org/W3134115326",
-        "https://openalex.org/W6997516361",
-        "https://openalex.org/W2624221680",
-        "https://openalex.org/W2910217813",
-        "https://openalex.org/W2972944115",
-        "https://openalex.org/W2913293418",
-        "https://openalex.org/W6794648788",
-        "https://openalex.org/W6762380775",
-        "https://openalex.org/W2564972608",
-        "https://openalex.org/W2952745542",
-        "https://openalex.org/W2989135917",
-        "https://openalex.org/W2743137872",
-        "https://openalex.org/W2886091234",
-        "https://openalex.org/W3033852812",
-        "https://openalex.org/W6798521269",
-        "https://openalex.org/W6808430684",
-        "https://openalex.org/W6729978005",
-        "https://openalex.org/W2409876247",
-        "https://openalex.org/W2889026460",
-        "https://openalex.org/W2801177105",
-        "https://openalex.org/W3042899078",
-        "https://openalex.org/W2765785234",
-        "https://openalex.org/W2810030407",
-        "https://openalex.org/W2795130376",
-        "https://openalex.org/W2975768142",
-        "https://openalex.org/W2963075127",
-        "https://openalex.org/W4318823619",
-        "https://openalex.org/W2337211524",
-        "https://openalex.org/W1993928670",
-        "https://openalex.org/W6676925370",
-        "https://openalex.org/W2028471190",
-        "https://openalex.org/W4212863562",
-        "https://openalex.org/W2113819043",
-        "https://openalex.org/W2978637579",
-        "https://openalex.org/W3159051549",
-        "https://openalex.org/W2549419601",
-        "https://openalex.org/W3184946952",
-        "https://openalex.org/W2944752292"
-    ],
-    "abstract": "Hand gesture recognition (HGR) is a crucial area of research that enhances communication by overcoming language barriers and facilitating human-computer interaction. Although previous works in HGR have employed deep neural networks, they fail to encode the orientation and position of the hand in the image. To address this issue, this paper proposes HGR-ViT, a Vision Transformer (ViT) model with an attention mechanism for hand gesture recognition. Given a hand gesture image, it is first split into fixed size patches. Positional embedding is added to these embeddings to form learnable vectors that capture the positional information of the hand patches. The resulting sequence of vectors are then served as the input to a standard Transformer encoder to obtain the hand gesture representation. A multilayer perceptron head is added to the output of the encoder to classify the hand gesture to the correct class. The proposed HGR-ViT obtains an accuracy of 99.98%, 99.36% and 99.85% for the American Sign Language (ASL) dataset, ASL with Digits dataset, and National University of Singapore (NUS) hand gesture dataset, respectively.",
-    "full_text": null
+  "title": "HGR-ViT: Hand Gesture Recognition with Vision Transformer",
+  "url": "https://openalex.org/W4380683077",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2227899597",
+      "name": "Tan Chun Keat",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2528248902",
+      "name": "Lim Kian Ming",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Chang, Roy Kwang Yang",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3203032335",
+      "name": "Lee Chin Poo",
+      "affiliations": [
+        "Multimedia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3214826388",
+      "name": "Alqahtani Ali",
+      "affiliations": [
+        "King Khalid University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6768584750",
+    "https://openalex.org/W2969529392",
+    "https://openalex.org/W3086971787",
+    "https://openalex.org/W3157903123",
+    "https://openalex.org/W4289111271",
+    "https://openalex.org/W3134115326",
+    "https://openalex.org/W6997516361",
+    "https://openalex.org/W2624221680",
+    "https://openalex.org/W2910217813",
+    "https://openalex.org/W2972944115",
+    "https://openalex.org/W2913293418",
+    "https://openalex.org/W6794648788",
+    "https://openalex.org/W6762380775",
+    "https://openalex.org/W2564972608",
+    "https://openalex.org/W2952745542",
+    "https://openalex.org/W2989135917",
+    "https://openalex.org/W2743137872",
+    "https://openalex.org/W2886091234",
+    "https://openalex.org/W3033852812",
+    "https://openalex.org/W6798521269",
+    "https://openalex.org/W6808430684",
+    "https://openalex.org/W6729978005",
+    "https://openalex.org/W2409876247",
+    "https://openalex.org/W2889026460",
+    "https://openalex.org/W2801177105",
+    "https://openalex.org/W3042899078",
+    "https://openalex.org/W2765785234",
+    "https://openalex.org/W2810030407",
+    "https://openalex.org/W2795130376",
+    "https://openalex.org/W2975768142",
+    "https://openalex.org/W2963075127",
+    "https://openalex.org/W4318823619",
+    "https://openalex.org/W2337211524",
+    "https://openalex.org/W1993928670",
+    "https://openalex.org/W6676925370",
+    "https://openalex.org/W2028471190",
+    "https://openalex.org/W4212863562",
+    "https://openalex.org/W2113819043",
+    "https://openalex.org/W2978637579",
+    "https://openalex.org/W3159051549",
+    "https://openalex.org/W2549419601",
+    "https://openalex.org/W3184946952",
+    "https://openalex.org/W2944752292"
+  ],
+  "abstract": "Hand gesture recognition (HGR) is a crucial area of research that enhances communication by overcoming language barriers and facilitating human-computer interaction. Although previous works in HGR have employed deep neural networks, they fail to encode the orientation and position of the hand in the image. To address this issue, this paper proposes HGR-ViT, a Vision Transformer (ViT) model with an attention mechanism for hand gesture recognition. Given a hand gesture image, it is first split into fixed size patches. Positional embedding is added to these embeddings to form learnable vectors that capture the positional information of the hand patches. The resulting sequence of vectors are then served as the input to a standard Transformer encoder to obtain the hand gesture representation. A multilayer perceptron head is added to the output of the encoder to classify the hand gesture to the correct class. The proposed HGR-ViT obtains an accuracy of 99.98%, 99.36% and 99.85% for the American Sign Language (ASL) dataset, ASL with Digits dataset, and National University of Singapore (NUS) hand gesture dataset, respectively.",
+  "full_text": null,
+  "topic": "Gesture",
+  "concepts": [
+    {
+      "name": "Gesture",
+      "score": 0.8458060622215271
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7124807834625244
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6735150814056396
+    },
+    {
+      "name": "Gesture recognition",
+      "score": 0.6680213212966919
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6232711672782898
+    },
+    {
+      "name": "ENCODE",
+      "score": 0.577556312084198
+    },
+    {
+      "name": "Sign language",
+      "score": 0.5713658332824707
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5567598938941956
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5178849697113037
+    },
+    {
+      "name": "Embedding",
+      "score": 0.5065973997116089
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.353908896446228
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.34490853548049927
+    },
+    {
+      "name": "Engineering",
+      "score": 0.18127170205116272
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,81 +1,160 @@
 {
-    "title": "Pretrained transformer models for predicting the withdrawal of drugs from the market",
-    "url": "https://openalex.org/W4386084438",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3045102892",
-            "name": "Eyal Mazuz",
-            "affiliations": [
-                "Ben-Gurion University of the Negev"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2804232609",
-            "name": "Guy Shtar",
-            "affiliations": [
-                "Ben-Gurion University of the Negev"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5092810184",
-            "name": "Nir Kutsky",
-            "affiliations": [
-                "Ben-Gurion University of the Negev"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1979308116",
-            "name": "Lior Rokach",
-            "affiliations": [
-                "Ben-Gurion University of the Negev"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1966632966",
-            "name": "Bracha Shapira",
-            "affiliations": [
-                "Ben-Gurion University of the Negev"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3209056694",
-        "https://openalex.org/W2033757486",
-        "https://openalex.org/W4239510810",
-        "https://openalex.org/W1981924471",
-        "https://openalex.org/W2273267066",
-        "https://openalex.org/W2777416523",
-        "https://openalex.org/W2085732173",
-        "https://openalex.org/W2899070097",
-        "https://openalex.org/W1966454287",
-        "https://openalex.org/W2145137957",
-        "https://openalex.org/W1969879564",
-        "https://openalex.org/W2204599701",
-        "https://openalex.org/W4220902634",
-        "https://openalex.org/W2124575784",
-        "https://openalex.org/W2010783249",
-        "https://openalex.org/W2900090807",
-        "https://openalex.org/W2269807470",
-        "https://openalex.org/W2586358477",
-        "https://openalex.org/W2049946556",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2044542784",
-        "https://openalex.org/W2074978477",
-        "https://openalex.org/W2147670638",
-        "https://openalex.org/W2119002393",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W1971387816",
-        "https://openalex.org/W2026330543",
-        "https://openalex.org/W2767891136",
-        "https://openalex.org/W2027710934",
-        "https://openalex.org/W2269194472",
-        "https://openalex.org/W2966357564",
-        "https://openalex.org/W2107893931",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4288089799"
-    ],
-    "abstract": "Abstract Motivation The process of drug discovery is notoriously complex, costing an average of 2.6 billion dollars and taking ∼13 years to bring a new drug to the market. The success rate for new drugs is alarmingly low (around 0.0001%), and severe adverse drug reactions (ADRs) frequently occur, some of which may even result in death. Early identification of potential ADRs is critical to improve the efficiency and safety of the drug development process. Results In this study, we employed pretrained large language models (LLMs) to predict the likelihood of a drug being withdrawn from the market due to safety concerns. Our method achieved an area under the curve (AUC) of over 0.75 through cross-database validation, outperforming classical machine learning models and graph-based models. Notably, our pretrained LLMs successfully identified over 50% drugs that were subsequently withdrawn, when predictions were made on a subset of drugs with inconsistent labeling between the training and test sets. Availability and implementation The code and datasets are available at https://github.com/eyalmazuz/DrugWithdrawn.",
-    "full_text": null
+  "title": "Pretrained transformer models for predicting the withdrawal of drugs from the market",
+  "url": "https://openalex.org/W4386084438",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3045102892",
+      "name": "Eyal Mazuz",
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2804232609",
+      "name": "Guy Shtar",
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5092810184",
+      "name": "Nir Kutsky",
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1979308116",
+      "name": "Lior Rokach",
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1966632966",
+      "name": "Bracha Shapira",
+      "affiliations": [
+        "Ben-Gurion University of the Negev"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3209056694",
+    "https://openalex.org/W2033757486",
+    "https://openalex.org/W4239510810",
+    "https://openalex.org/W1981924471",
+    "https://openalex.org/W2273267066",
+    "https://openalex.org/W2777416523",
+    "https://openalex.org/W2085732173",
+    "https://openalex.org/W2899070097",
+    "https://openalex.org/W1966454287",
+    "https://openalex.org/W2145137957",
+    "https://openalex.org/W1969879564",
+    "https://openalex.org/W2204599701",
+    "https://openalex.org/W4220902634",
+    "https://openalex.org/W2124575784",
+    "https://openalex.org/W2010783249",
+    "https://openalex.org/W2900090807",
+    "https://openalex.org/W2269807470",
+    "https://openalex.org/W2586358477",
+    "https://openalex.org/W2049946556",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2044542784",
+    "https://openalex.org/W2074978477",
+    "https://openalex.org/W2147670638",
+    "https://openalex.org/W2119002393",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W1971387816",
+    "https://openalex.org/W2026330543",
+    "https://openalex.org/W2767891136",
+    "https://openalex.org/W2027710934",
+    "https://openalex.org/W2269194472",
+    "https://openalex.org/W2966357564",
+    "https://openalex.org/W2107893931",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4288089799"
+  ],
+  "abstract": "Abstract Motivation The process of drug discovery is notoriously complex, costing an average of 2.6 billion dollars and taking ∼13 years to bring a new drug to the market. The success rate for new drugs is alarmingly low (around 0.0001%), and severe adverse drug reactions (ADRs) frequently occur, some of which may even result in death. Early identification of potential ADRs is critical to improve the efficiency and safety of the drug development process. Results In this study, we employed pretrained large language models (LLMs) to predict the likelihood of a drug being withdrawn from the market due to safety concerns. Our method achieved an area under the curve (AUC) of over 0.75 through cross-database validation, outperforming classical machine learning models and graph-based models. Notably, our pretrained LLMs successfully identified over 50% drugs that were subsequently withdrawn, when predictions were made on a subset of drugs with inconsistent labeling between the training and test sets. Availability and implementation The code and datasets are available at https://github.com/eyalmazuz/DrugWithdrawn.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6199416518211365
+    },
+    {
+      "name": "Drug",
+      "score": 0.5995817184448242
+    },
+    {
+      "name": "Drug reaction",
+      "score": 0.5625067353248596
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5214235782623291
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4849105477333069
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.443695068359375
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.4430299401283264
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42790746688842773
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.41124895215034485
+    },
+    {
+      "name": "Medicine",
+      "score": 0.2625662684440613
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.2426915168762207
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.19630327820777893
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10536259412765503
+    },
+    {
+      "name": "Biology",
+      "score": 0.10281705856323242
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

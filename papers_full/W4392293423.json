@@ -1,82 +1,153 @@
 {
-    "title": "A bilingual benchmark for evaluating large language models",
-    "url": "https://openalex.org/W4392293423",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2528469152",
-            "name": "Mohamed Alkaoud",
-            "affiliations": [
-                "King Saud University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6852502634",
-        "https://openalex.org/W3176169354",
-        "https://openalex.org/W6852800892",
-        "https://openalex.org/W6774526564",
-        "https://openalex.org/W6789924496",
-        "https://openalex.org/W6788007171",
-        "https://openalex.org/W3035407756",
-        "https://openalex.org/W6679434410",
-        "https://openalex.org/W4392669753",
-        "https://openalex.org/W2493916176",
-        "https://openalex.org/W6850936240",
-        "https://openalex.org/W6749838110",
-        "https://openalex.org/W6771917389",
-        "https://openalex.org/W6803096969",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2919420119",
-        "https://openalex.org/W6748304040",
-        "https://openalex.org/W6853797351",
-        "https://openalex.org/W6781254577",
-        "https://openalex.org/W6782879696",
-        "https://openalex.org/W6790837184",
-        "https://openalex.org/W4221140906",
-        "https://openalex.org/W4327519588",
-        "https://openalex.org/W4389519409",
-        "https://openalex.org/W4389519817",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2986154550",
-        "https://openalex.org/W6636510571",
-        "https://openalex.org/W6682691769",
-        "https://openalex.org/W6680890276",
-        "https://openalex.org/W6839757900",
-        "https://openalex.org/W6850668563",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6850625674",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6771823989",
-        "https://openalex.org/W3047185145",
-        "https://openalex.org/W4286892945",
-        "https://openalex.org/W4378465203",
-        "https://openalex.org/W4378499145",
-        "https://openalex.org/W3121904249",
-        "https://openalex.org/W2794325560",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W2996580882",
-        "https://openalex.org/W1614298861",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4297823766",
-        "https://openalex.org/W3103187652",
-        "https://openalex.org/W3134155512",
-        "https://openalex.org/W4360891289",
-        "https://openalex.org/W4297801177",
-        "https://openalex.org/W4287824654",
-        "https://openalex.org/W3153642904",
-        "https://openalex.org/W4392773006",
-        "https://openalex.org/W4287993739",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W4360836968",
-        "https://openalex.org/W2141599568",
-        "https://openalex.org/W3008110149",
-        "https://openalex.org/W4285289306",
-        "https://openalex.org/W4385573810"
-    ],
-    "abstract": "This work introduces a new benchmark for the bilingual evaluation of large language models (LLMs) in English and Arabic. While LLMs have transformed various fields, their evaluation in Arabic remains limited. This work addresses this gap by proposing a novel evaluation method for LLMs in both Arabic and English, allowing for a direct comparison between the performance of the two languages. We build a new evaluation dataset based on the General Aptitude Test (GAT), a standardized test widely used for university admissions in the Arab world, that we utilize to measure the linguistic capabilities of LLMs. We conduct several experiments to examine the linguistic capabilities of ChatGPT and quantify how much better it is at English than Arabic. We also examine the effect of changing task descriptions from Arabic to English and vice-versa. In addition to that, we find that fastText can surpass ChatGPT in finding Arabic word analogies. We conclude by showing that GPT-4 Arabic linguistic capabilities are much better than ChatGPT’s Arabic capabilities and are close to ChatGPT’s English capabilities.",
-    "full_text": null
+  "title": "A bilingual benchmark for evaluating large language models",
+  "url": "https://openalex.org/W4392293423",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2528469152",
+      "name": "Mohamed Alkaoud",
+      "affiliations": [
+        "King Saud University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6852502634",
+    "https://openalex.org/W3176169354",
+    "https://openalex.org/W6852800892",
+    "https://openalex.org/W6774526564",
+    "https://openalex.org/W6789924496",
+    "https://openalex.org/W6788007171",
+    "https://openalex.org/W3035407756",
+    "https://openalex.org/W6679434410",
+    "https://openalex.org/W4392669753",
+    "https://openalex.org/W2493916176",
+    "https://openalex.org/W6850936240",
+    "https://openalex.org/W6749838110",
+    "https://openalex.org/W6771917389",
+    "https://openalex.org/W6803096969",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2919420119",
+    "https://openalex.org/W6748304040",
+    "https://openalex.org/W6853797351",
+    "https://openalex.org/W6781254577",
+    "https://openalex.org/W6782879696",
+    "https://openalex.org/W6790837184",
+    "https://openalex.org/W4221140906",
+    "https://openalex.org/W4327519588",
+    "https://openalex.org/W4389519409",
+    "https://openalex.org/W4389519817",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2986154550",
+    "https://openalex.org/W6636510571",
+    "https://openalex.org/W6682691769",
+    "https://openalex.org/W6680890276",
+    "https://openalex.org/W6839757900",
+    "https://openalex.org/W6850668563",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6850625674",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6771823989",
+    "https://openalex.org/W3047185145",
+    "https://openalex.org/W4286892945",
+    "https://openalex.org/W4378465203",
+    "https://openalex.org/W4378499145",
+    "https://openalex.org/W3121904249",
+    "https://openalex.org/W2794325560",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W2996580882",
+    "https://openalex.org/W1614298861",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4297823766",
+    "https://openalex.org/W3103187652",
+    "https://openalex.org/W3134155512",
+    "https://openalex.org/W4360891289",
+    "https://openalex.org/W4297801177",
+    "https://openalex.org/W4287824654",
+    "https://openalex.org/W3153642904",
+    "https://openalex.org/W4392773006",
+    "https://openalex.org/W4287993739",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W4360836968",
+    "https://openalex.org/W2141599568",
+    "https://openalex.org/W3008110149",
+    "https://openalex.org/W4285289306",
+    "https://openalex.org/W4385573810"
+  ],
+  "abstract": "This work introduces a new benchmark for the bilingual evaluation of large language models (LLMs) in English and Arabic. While LLMs have transformed various fields, their evaluation in Arabic remains limited. This work addresses this gap by proposing a novel evaluation method for LLMs in both Arabic and English, allowing for a direct comparison between the performance of the two languages. We build a new evaluation dataset based on the General Aptitude Test (GAT), a standardized test widely used for university admissions in the Arab world, that we utilize to measure the linguistic capabilities of LLMs. We conduct several experiments to examine the linguistic capabilities of ChatGPT and quantify how much better it is at English than Arabic. We also examine the effect of changing task descriptions from Arabic to English and vice-versa. In addition to that, we find that fastText can surpass ChatGPT in finding Arabic word analogies. We conclude by showing that GPT-4 Arabic linguistic capabilities are much better than ChatGPT’s Arabic capabilities and are close to ChatGPT’s English capabilities.",
+  "full_text": null,
+  "topic": "Arabic",
+  "concepts": [
+    {
+      "name": "Arabic",
+      "score": 0.7778898477554321
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.721001386642456
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5529303550720215
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5451095104217529
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.5415042638778687
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.5317721962928772
+    },
+    {
+      "name": "Work (physics)",
+      "score": 0.4928281605243683
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4440375864505768
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.36493295431137085
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1132761538028717
+    },
+    {
+      "name": "Geography",
+      "score": 0.10624703764915466
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

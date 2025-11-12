@@ -1,65 +1,100 @@
 {
-    "title": "Classification of geological borehole descriptions using a domain adapted large language model",
-    "url": "https://openalex.org/W4407874187",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3048890752",
-            "name": "Hossein Ghorbanfekr",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2747458153",
-            "name": "Pieter Jan Kerstens",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1535513966",
-            "name": "Katrijn Dirix",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2767106145",
-        "https://openalex.org/W3031118452",
-        "https://openalex.org/W3106631706",
-        "https://openalex.org/W3157818492",
-        "https://openalex.org/W3119497443",
-        "https://openalex.org/W6741252197",
-        "https://openalex.org/W3027943584",
-        "https://openalex.org/W3107366692",
-        "https://openalex.org/W6761108979",
-        "https://openalex.org/W6757279503",
-        "https://openalex.org/W2936503027",
-        "https://openalex.org/W2060342775",
-        "https://openalex.org/W6852946974",
-        "https://openalex.org/W4229370390",
-        "https://openalex.org/W3167450463",
-        "https://openalex.org/W6802257852",
-        "https://openalex.org/W6929788023",
-        "https://openalex.org/W2913421861",
-        "https://openalex.org/W2892118517",
-        "https://openalex.org/W2968187429",
-        "https://openalex.org/W6718966509",
-        "https://openalex.org/W2562395274",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2004529964",
-        "https://openalex.org/W6769243733",
-        "https://openalex.org/W3201319578",
-        "https://openalex.org/W2521118911",
-        "https://openalex.org/W2996580882",
-        "https://openalex.org/W4205185581",
-        "https://openalex.org/W2986154550",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W4308613717",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W2923352998",
-        "https://openalex.org/W3093436917",
-        "https://openalex.org/W4379157432",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4401306979"
-    ],
-    "abstract": "Geological borehole descriptions contain detailed textual information about the composition of the subsurface. However, their unstructured format presents significant challenges for extracting relevant features into a structured format. This paper introduces GEOBERTje: a domain adapted large language model trained on geological borehole descriptions from Flanders (Belgium) in the Dutch language. This model effectively extracts relevant information from the borehole descriptions and represents it into a numeric vector space. Showcasing just one potential application of GEOBERTje, we finetune a classifier model on a limited number of manually labeled observations. This classifier categorizes borehole descriptions into a main, second and third lithology class. We show that our classifier outperforms a rule-based approach (by 30% on average), non-contextual Word2Vec embeddings combined with a random forest classifier (by 38% on average), and a prompt engineering method with large language models (i.e., GPT-4 (by 11% on average) and Gemma 2 (by 28% on average)). This study exemplifies how domain adapted large language models enhance the efficiency and accuracy of extracting information from complex, unstructured geological descriptions. This offers new opportunities for geological analysis and modeling using vast amounts of data.",
-    "full_text": null
+  "title": "Classification of geological borehole descriptions using a domain adapted large language model",
+  "url": "https://openalex.org/W4407874187",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3048890752",
+      "name": "Hossein Ghorbanfekr",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2747458153",
+      "name": "Pieter Jan Kerstens",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1535513966",
+      "name": "Katrijn Dirix",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2767106145",
+    "https://openalex.org/W3031118452",
+    "https://openalex.org/W3106631706",
+    "https://openalex.org/W3157818492",
+    "https://openalex.org/W3119497443",
+    "https://openalex.org/W6741252197",
+    "https://openalex.org/W3027943584",
+    "https://openalex.org/W3107366692",
+    "https://openalex.org/W6761108979",
+    "https://openalex.org/W6757279503",
+    "https://openalex.org/W2936503027",
+    "https://openalex.org/W2060342775",
+    "https://openalex.org/W6852946974",
+    "https://openalex.org/W4229370390",
+    "https://openalex.org/W3167450463",
+    "https://openalex.org/W6802257852",
+    "https://openalex.org/W6929788023",
+    "https://openalex.org/W2913421861",
+    "https://openalex.org/W2892118517",
+    "https://openalex.org/W2968187429",
+    "https://openalex.org/W6718966509",
+    "https://openalex.org/W2562395274",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2004529964",
+    "https://openalex.org/W6769243733",
+    "https://openalex.org/W3201319578",
+    "https://openalex.org/W2521118911",
+    "https://openalex.org/W2996580882",
+    "https://openalex.org/W4205185581",
+    "https://openalex.org/W2986154550",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W4308613717",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W2923352998",
+    "https://openalex.org/W3093436917",
+    "https://openalex.org/W4379157432",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4401306979"
+  ],
+  "abstract": "Geological borehole descriptions contain detailed textual information about the composition of the subsurface. However, their unstructured format presents significant challenges for extracting relevant features into a structured format. This paper introduces GEOBERTje: a domain adapted large language model trained on geological borehole descriptions from Flanders (Belgium) in the Dutch language. This model effectively extracts relevant information from the borehole descriptions and represents it into a numeric vector space. Showcasing just one potential application of GEOBERTje, we finetune a classifier model on a limited number of manually labeled observations. This classifier categorizes borehole descriptions into a main, second and third lithology class. We show that our classifier outperforms a rule-based approach (by 30% on average), non-contextual Word2Vec embeddings combined with a random forest classifier (by 38% on average), and a prompt engineering method with large language models (i.e., GPT-4 (by 11% on average) and Gemma 2 (by 28% on average)). This study exemplifies how domain adapted large language models enhance the efficiency and accuracy of extracting information from complex, unstructured geological descriptions. This offers new opportunities for geological analysis and modeling using vast amounts of data.",
+  "full_text": null,
+  "topic": "Borehole",
+  "concepts": [
+    {
+      "name": "Borehole",
+      "score": 0.6279206871986389
+    },
+    {
+      "name": "Geology",
+      "score": 0.5127347707748413
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4851704239845276
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.4809269607067108
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.41780540347099304
+    },
+    {
+      "name": "Geotechnical engineering",
+      "score": 0.163110613822937
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08193206787109375
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

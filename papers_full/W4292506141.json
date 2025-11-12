@@ -1,134 +1,173 @@
 {
-    "title": "Vision Transformer for Detecting Critical Situations and Extracting Functional Scenario for Automated Vehicle Safety Assessment",
-    "url": "https://openalex.org/W4292506141",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1967511438",
-            "name": "Minhee Kang",
-            "affiliations": [
-                "Hongik University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2531319042",
-            "name": "Wooseop Lee",
-            "affiliations": [
-                "Seoul Metropolitan Government"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2630762066",
-            "name": "Keeyeon Hwang",
-            "affiliations": [
-                "Hongik University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111544675",
-            "name": "Young Yoon",
-            "affiliations": [
-                "Hongik University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1967511438",
-            "name": "Minhee Kang",
-            "affiliations": [
-                "Hongik University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2531319042",
-            "name": "Wooseop Lee",
-            "affiliations": [
-                "Seoul Metropolitan Government"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2630762066",
-            "name": "Keeyeon Hwang",
-            "affiliations": [
-                "Hongik University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111544675",
-            "name": "Young Yoon",
-            "affiliations": [
-                "Hongik University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4211005336",
-        "https://openalex.org/W4223628423",
-        "https://openalex.org/W2991138066",
-        "https://openalex.org/W1977992720",
-        "https://openalex.org/W4225976909",
-        "https://openalex.org/W2997595857",
-        "https://openalex.org/W3127930352",
-        "https://openalex.org/W2904929882",
-        "https://openalex.org/W2997554894",
-        "https://openalex.org/W2908584258",
-        "https://openalex.org/W2543521969",
-        "https://openalex.org/W3024414633",
-        "https://openalex.org/W2795485095",
-        "https://openalex.org/W1895727713",
-        "https://openalex.org/W2970461147",
-        "https://openalex.org/W3095270036",
-        "https://openalex.org/W2755893646",
-        "https://openalex.org/W3184376943",
-        "https://openalex.org/W6733956904",
-        "https://openalex.org/W3117307549",
-        "https://openalex.org/W3196452755",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2973048981",
-        "https://openalex.org/W3142316150",
-        "https://openalex.org/W6796289742",
-        "https://openalex.org/W2980433389",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4214612132",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W3205314805",
-        "https://openalex.org/W2963657083",
-        "https://openalex.org/W2970180737",
-        "https://openalex.org/W2937651733",
-        "https://openalex.org/W3013263304",
-        "https://openalex.org/W2975878275",
-        "https://openalex.org/W2884173352",
-        "https://openalex.org/W2963392613",
-        "https://openalex.org/W3115511661",
-        "https://openalex.org/W3003987610",
-        "https://openalex.org/W2741912914",
-        "https://openalex.org/W2818188140",
-        "https://openalex.org/W3114637727",
-        "https://openalex.org/W2969291609",
-        "https://openalex.org/W3147029408",
-        "https://openalex.org/W2609292110",
-        "https://openalex.org/W3048670116",
-        "https://openalex.org/W2080718434",
-        "https://openalex.org/W3176454305",
-        "https://openalex.org/W3046330049",
-        "https://openalex.org/W1665851364",
-        "https://openalex.org/W4251538070",
-        "https://openalex.org/W48891054",
-        "https://openalex.org/W239731138",
-        "https://openalex.org/W2508280630",
-        "https://openalex.org/W2554599086",
-        "https://openalex.org/W4280538627",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W2942736276",
-        "https://openalex.org/W3040346668",
-        "https://openalex.org/W3120248005",
-        "https://openalex.org/W2118960450",
-        "https://openalex.org/W2769777733",
-        "https://openalex.org/W2892254176",
-        "https://openalex.org/W3000208741",
-        "https://openalex.org/W3191161603",
-        "https://openalex.org/W3101279734",
-        "https://openalex.org/W3169291081"
-    ],
-    "abstract": "Automated Vehicles (AVs) are attracting attention as a safer mobility option thanks to the recent advancement of various sensing technologies that realize a much quicker Perception–Reaction Time than Human-Driven Vehicles (HVs). However, AVs are not entirely free from the risk of accidents, and we currently lack a systematic and reliable method to improve AV safety functions. The manual composition of accident scenarios does not scale. Simulation-based methods do not fully cover the peculiar AV accident patterns that can occur in the real world. Artificial Intelligence (AI) techniques are employed to identify the moments of accidents from ego-vehicle videos. However, most AI-based approaches fall short in accounting for the probable causes of the accidents. Neither of these AI-driven methods offer details for authoring accident scenarios used for AV safety testing. In this paper, we present a customized Vision Transformer (named ViT-TA) that accurately classifies the critical situations around traffic accidents and automatically points out the objects as probable causes based on an Attention map. Using 24,740 frames from Dashcam Accident Dataset (DAD) as training data, ViT-TA detected critical moments at Time-To-Collision (TTC) ≤ 1 s with 34.92 higher accuracy than the state-of-the-art approach. ViT-TA’s Attention map highlighting the critical objects helped us understand how the situations unfold to put the hypothetical ego vehicles with AV functions at risk. Based on the ViT-TA-assisted interpretation, we systematized the composition of Functional scenarios conceptualized by the PEGASUS project for describing a high-level plan to improve AVs’ capability of evading critical situations. We propose a novel framework for automatically deriving Logical and Concrete scenarios specified with 6-Layer situational variables defined by the PEGASUS project. We believe our work is vital towards systematically generating highly reliable and trustworthy safety improvement plans for AVs in a scalable manner.",
-    "full_text": null
+  "title": "Vision Transformer for Detecting Critical Situations and Extracting Functional Scenario for Automated Vehicle Safety Assessment",
+  "url": "https://openalex.org/W4292506141",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1967511438",
+      "name": "Minhee Kang",
+      "affiliations": [
+        "Hongik University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2531319042",
+      "name": "Wooseop Lee",
+      "affiliations": [
+        "Seoul Metropolitan Government"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2630762066",
+      "name": "Keeyeon Hwang",
+      "affiliations": [
+        "Hongik University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111544675",
+      "name": "Young Yoon",
+      "affiliations": [
+        "Hongik University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1967511438",
+      "name": "Minhee Kang",
+      "affiliations": [
+        "Hongik University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2531319042",
+      "name": "Wooseop Lee",
+      "affiliations": [
+        "Seoul Metropolitan Government"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2630762066",
+      "name": "Keeyeon Hwang",
+      "affiliations": [
+        "Hongik University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111544675",
+      "name": "Young Yoon",
+      "affiliations": [
+        "Hongik University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4211005336",
+    "https://openalex.org/W4223628423",
+    "https://openalex.org/W2991138066",
+    "https://openalex.org/W1977992720",
+    "https://openalex.org/W4225976909",
+    "https://openalex.org/W2997595857",
+    "https://openalex.org/W3127930352",
+    "https://openalex.org/W2904929882",
+    "https://openalex.org/W2997554894",
+    "https://openalex.org/W2908584258",
+    "https://openalex.org/W2543521969",
+    "https://openalex.org/W3024414633",
+    "https://openalex.org/W2795485095",
+    "https://openalex.org/W1895727713",
+    "https://openalex.org/W2970461147",
+    "https://openalex.org/W3095270036",
+    "https://openalex.org/W2755893646",
+    "https://openalex.org/W3184376943",
+    "https://openalex.org/W6733956904",
+    "https://openalex.org/W3117307549",
+    "https://openalex.org/W3196452755",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2973048981",
+    "https://openalex.org/W3142316150",
+    "https://openalex.org/W6796289742",
+    "https://openalex.org/W2980433389",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4214612132",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W3205314805",
+    "https://openalex.org/W2963657083",
+    "https://openalex.org/W2970180737",
+    "https://openalex.org/W2937651733",
+    "https://openalex.org/W3013263304",
+    "https://openalex.org/W2975878275",
+    "https://openalex.org/W2884173352",
+    "https://openalex.org/W2963392613",
+    "https://openalex.org/W3115511661",
+    "https://openalex.org/W3003987610",
+    "https://openalex.org/W2741912914",
+    "https://openalex.org/W2818188140",
+    "https://openalex.org/W3114637727",
+    "https://openalex.org/W2969291609",
+    "https://openalex.org/W3147029408",
+    "https://openalex.org/W2609292110",
+    "https://openalex.org/W3048670116",
+    "https://openalex.org/W2080718434",
+    "https://openalex.org/W3176454305",
+    "https://openalex.org/W3046330049",
+    "https://openalex.org/W1665851364",
+    "https://openalex.org/W4251538070",
+    "https://openalex.org/W48891054",
+    "https://openalex.org/W239731138",
+    "https://openalex.org/W2508280630",
+    "https://openalex.org/W2554599086",
+    "https://openalex.org/W4280538627",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W2942736276",
+    "https://openalex.org/W3040346668",
+    "https://openalex.org/W3120248005",
+    "https://openalex.org/W2118960450",
+    "https://openalex.org/W2769777733",
+    "https://openalex.org/W2892254176",
+    "https://openalex.org/W3000208741",
+    "https://openalex.org/W3191161603",
+    "https://openalex.org/W3101279734",
+    "https://openalex.org/W3169291081"
+  ],
+  "abstract": "Automated Vehicles (AVs) are attracting attention as a safer mobility option thanks to the recent advancement of various sensing technologies that realize a much quicker Perception–Reaction Time than Human-Driven Vehicles (HVs). However, AVs are not entirely free from the risk of accidents, and we currently lack a systematic and reliable method to improve AV safety functions. The manual composition of accident scenarios does not scale. Simulation-based methods do not fully cover the peculiar AV accident patterns that can occur in the real world. Artificial Intelligence (AI) techniques are employed to identify the moments of accidents from ego-vehicle videos. However, most AI-based approaches fall short in accounting for the probable causes of the accidents. Neither of these AI-driven methods offer details for authoring accident scenarios used for AV safety testing. In this paper, we present a customized Vision Transformer (named ViT-TA) that accurately classifies the critical situations around traffic accidents and automatically points out the objects as probable causes based on an Attention map. Using 24,740 frames from Dashcam Accident Dataset (DAD) as training data, ViT-TA detected critical moments at Time-To-Collision (TTC) ≤ 1 s with 34.92 higher accuracy than the state-of-the-art approach. ViT-TA’s Attention map highlighting the critical objects helped us understand how the situations unfold to put the hypothetical ego vehicles with AV functions at risk. Based on the ViT-TA-assisted interpretation, we systematized the composition of Functional scenarios conceptualized by the PEGASUS project for describing a high-level plan to improve AVs’ capability of evading critical situations. We propose a novel framework for automatically deriving Logical and Concrete scenarios specified with 6-Layer situational variables defined by the PEGASUS project. We believe our work is vital towards systematically generating highly reliable and trustworthy safety improvement plans for AVs in a scalable manner.",
+  "full_text": null,
+  "topic": "SAFER",
+  "concepts": [
+    {
+      "name": "SAFER",
+      "score": 0.717705249786377
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6375556588172913
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.48069316148757935
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44850459694862366
+    },
+    {
+      "name": "Collision",
+      "score": 0.4225258231163025
+    },
+    {
+      "name": "Computer security",
+      "score": 0.310111403465271
+    },
+    {
+      "name": "Engineering",
+      "score": 0.21352079510688782
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

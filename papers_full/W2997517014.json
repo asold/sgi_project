@@ -1,85 +1,144 @@
 {
-    "title": "Efficient Content-Based Sparse Attention with Routing Transformers",
-    "url": "https://openalex.org/W2997517014",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2190765948",
-            "name": "Aurko Roy",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2624203562",
-            "name": "Mohammad Saffar",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171687631",
-            "name": "Ashish Vaswani",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2959607770",
-            "name": "David Grangier",
-            "affiliations": [
-                "Google (United States)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2149521737",
-        "https://openalex.org/W2970777192",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W2963062480",
-        "https://openalex.org/W97540112",
-        "https://openalex.org/W2946567085",
-        "https://openalex.org/W2242818861",
-        "https://openalex.org/W2950527759",
-        "https://openalex.org/W2491408735",
-        "https://openalex.org/W2962741254",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W3000514857",
-        "https://openalex.org/W2963139417",
-        "https://openalex.org/W2996287690",
-        "https://openalex.org/W2952406142",
-        "https://openalex.org/W980713158",
-        "https://openalex.org/W2963636093",
-        "https://openalex.org/W2571859396",
-        "https://openalex.org/W2165141262",
-        "https://openalex.org/W2940744433",
-        "https://openalex.org/W2963494889",
-        "https://openalex.org/W2963729263",
-        "https://openalex.org/W2963428348",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2950635152",
-        "https://openalex.org/W2963631907",
-        "https://openalex.org/W2949335953",
-        "https://openalex.org/W2952339051",
-        "https://openalex.org/W2964272710",
-        "https://openalex.org/W2962911098",
-        "https://openalex.org/W2540419089",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2914526845",
-        "https://openalex.org/W3130660608",
-        "https://openalex.org/W2964308564",
-        "https://openalex.org/W2962839844",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W1514535095",
-        "https://openalex.org/W2115665694",
-        "https://openalex.org/W2950946978",
-        "https://openalex.org/W2792376130",
-        "https://openalex.org/W2964110616",
-        "https://openalex.org/W2405210557",
-        "https://openalex.org/W1593114658",
-        "https://openalex.org/W854541894"
-    ],
-    "abstract": "Self-attention has recently been adopted for a wide range of sequence modeling problems. Despite its effectiveness, self-attention suffers from quadratic computation and memory requirements with respect to sequence length. Successful approaches to reduce this complexity focused on attending to local sliding windows or a small set of locations independent of content. Our work proposes to learn dynamic sparse attention patterns that avoid allocating computation and memory to attend to content unrelated to the query of interest. This work builds upon two lines of research: It combines the modeling flexibility of prior work on content-based sparse attention with the efficiency gains from approaches based on local, temporal sparse attention. Our model, the Routing Transformer, endows self-attention with a sparse routing module based on online k-means while reducing the overall complexity of attention to O( n 1.5 d) from O( n 2 d) for sequence length n and hidden dimension d. We show that our model outperforms comparable sparse attention models on language modeling on Wikitext-103 (15.8 vs 18.3 perplexity), as well as on image generation on ImageNet-64 (3.43 vs 3.44 bits/dim) while using fewer self-attention layers. Additionally, we set a new state-of-the-art on the newly released PG-19 data-set, obtaining a test perplexity of 33.2 with a 22 layer Routing Transformer model trained on sequences of length 8192. We open-source the code for Routing Transformer in Tensorflow. 1",
-    "full_text": null
+  "title": "Efficient Content-Based Sparse Attention with Routing Transformers",
+  "url": "https://openalex.org/W2997517014",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2190765948",
+      "name": "Aurko Roy",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2624203562",
+      "name": "Mohammad Saffar",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171687631",
+      "name": "Ashish Vaswani",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2959607770",
+      "name": "David Grangier",
+      "affiliations": [
+        "Google (United States)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2149521737",
+    "https://openalex.org/W2970777192",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W2963062480",
+    "https://openalex.org/W97540112",
+    "https://openalex.org/W2946567085",
+    "https://openalex.org/W2242818861",
+    "https://openalex.org/W2950527759",
+    "https://openalex.org/W2491408735",
+    "https://openalex.org/W2962741254",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W3000514857",
+    "https://openalex.org/W2963139417",
+    "https://openalex.org/W2996287690",
+    "https://openalex.org/W2952406142",
+    "https://openalex.org/W980713158",
+    "https://openalex.org/W2963636093",
+    "https://openalex.org/W2571859396",
+    "https://openalex.org/W2165141262",
+    "https://openalex.org/W2940744433",
+    "https://openalex.org/W2963494889",
+    "https://openalex.org/W2963729263",
+    "https://openalex.org/W2963428348",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2950635152",
+    "https://openalex.org/W2963631907",
+    "https://openalex.org/W2949335953",
+    "https://openalex.org/W2952339051",
+    "https://openalex.org/W2964272710",
+    "https://openalex.org/W2962911098",
+    "https://openalex.org/W2540419089",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2914526845",
+    "https://openalex.org/W3130660608",
+    "https://openalex.org/W2964308564",
+    "https://openalex.org/W2962839844",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W1514535095",
+    "https://openalex.org/W2115665694",
+    "https://openalex.org/W2950946978",
+    "https://openalex.org/W2792376130",
+    "https://openalex.org/W2964110616",
+    "https://openalex.org/W2405210557",
+    "https://openalex.org/W1593114658",
+    "https://openalex.org/W854541894"
+  ],
+  "abstract": "Self-attention has recently been adopted for a wide range of sequence modeling problems. Despite its effectiveness, self-attention suffers from quadratic computation and memory requirements with respect to sequence length. Successful approaches to reduce this complexity focused on attending to local sliding windows or a small set of locations independent of content. Our work proposes to learn dynamic sparse attention patterns that avoid allocating computation and memory to attend to content unrelated to the query of interest. This work builds upon two lines of research: It combines the modeling flexibility of prior work on content-based sparse attention with the efficiency gains from approaches based on local, temporal sparse attention. Our model, the Routing Transformer, endows self-attention with a sparse routing module based on online k-means while reducing the overall complexity of attention to O( n 1.5 d) from O( n 2 d) for sequence length n and hidden dimension d. We show that our model outperforms comparable sparse attention models on language modeling on Wikitext-103 (15.8 vs 18.3 perplexity), as well as on image generation on ImageNet-64 (3.43 vs 3.44 bits/dim) while using fewer self-attention layers. Additionally, we set a new state-of-the-art on the newly released PG-19 data-set, obtaining a test perplexity of 33.2 with a 22 layer Routing Transformer model trained on sequences of length 8192. We open-source the code for Routing Transformer in Tensorflow. 1",
+  "full_text": null,
+  "topic": "Perplexity",
+  "concepts": [
+    {
+      "name": "Perplexity",
+      "score": 0.9641983509063721
+    },
+    {
+      "name": "Computer science",
+      "score": 0.663551390171051
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6047618985176086
+    },
+    {
+      "name": "Language model",
+      "score": 0.5004851818084717
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.4301314651966095
+    },
+    {
+      "name": "Computation",
+      "score": 0.4184947609901428
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3526003062725067
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.35165169835090637
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3394821882247925
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.29465678334236145
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

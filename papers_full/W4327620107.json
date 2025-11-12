@@ -1,142 +1,197 @@
 {
-    "title": "Seg-Road: A Segmentation Network for Road Extraction Based on Transformer and CNN with Connectivity Structures",
-    "url": "https://openalex.org/W4327620107",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2124754655",
-            "name": "Jingjing Tao",
-            "affiliations": [
-                "Tianjin Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2073420235",
-            "name": "Zhe Chen",
-            "affiliations": [
-                "Beijing Institute of Big Data Research",
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences",
-                "Chengdu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117501102",
-            "name": "Zhongchang Sun",
-            "affiliations": [
-                "Aerospace Information Research Institute",
-                "Chinese Academy of Sciences",
-                "Beijing Institute of Big Data Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2115863081",
-            "name": "Huadong Guo",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Beijing Institute of Big Data Research",
-                "Aerospace Information Research Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2175911346",
-            "name": "Bo Leng",
-            "affiliations": [
-                "Chengdu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2462651041",
-            "name": "Zhengbo Yu",
-            "affiliations": [
-                "Chengdu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120912849",
-            "name": "Yanli Wang",
-            "affiliations": [
-                "Chengdu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2510582015",
-            "name": "Ziqiong He",
-            "affiliations": [
-                "Chengdu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4322896503",
-            "name": "Xiangqi Lei",
-            "affiliations": [
-                "Chengdu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2148598658",
-            "name": "Jinpei Yang",
-            "affiliations": [
-                "Nanjing University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2774320778",
-        "https://openalex.org/W4210919941",
-        "https://openalex.org/W2595964094",
-        "https://openalex.org/W2205800717",
-        "https://openalex.org/W1535289548",
-        "https://openalex.org/W3022397457",
-        "https://openalex.org/W4295927731",
-        "https://openalex.org/W4311529505",
-        "https://openalex.org/W2963270775",
-        "https://openalex.org/W2798925380",
-        "https://openalex.org/W2893801697",
-        "https://openalex.org/W3035012694",
-        "https://openalex.org/W3089040116",
-        "https://openalex.org/W3203699578",
-        "https://openalex.org/W4313436932",
-        "https://openalex.org/W4310717794",
-        "https://openalex.org/W4280491130",
-        "https://openalex.org/W3157557309",
-        "https://openalex.org/W3018914855",
-        "https://openalex.org/W4290998965",
-        "https://openalex.org/W4322619705",
-        "https://openalex.org/W3121754326",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W4312349930",
-        "https://openalex.org/W4313594245",
-        "https://openalex.org/W2892964097",
-        "https://openalex.org/W3182256037",
-        "https://openalex.org/W2975194617",
-        "https://openalex.org/W3204255739",
-        "https://openalex.org/W4292829111",
-        "https://openalex.org/W4312423415",
-        "https://openalex.org/W4308489557",
-        "https://openalex.org/W3133458480",
-        "https://openalex.org/W3015788359",
-        "https://openalex.org/W2927980542",
-        "https://openalex.org/W2963136578",
-        "https://openalex.org/W3168649818",
-        "https://openalex.org/W2804199516",
-        "https://openalex.org/W3207536936",
-        "https://openalex.org/W6767258250",
-        "https://openalex.org/W2780861787",
-        "https://openalex.org/W3168641556",
-        "https://openalex.org/W4224249921",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2949381166",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W6752378368",
-        "https://openalex.org/W80138705",
-        "https://openalex.org/W4283589144",
-        "https://openalex.org/W2037227137",
-        "https://openalex.org/W2780740184",
-        "https://openalex.org/W2892614179",
-        "https://openalex.org/W3211490618",
-        "https://openalex.org/W3121619677"
-    ],
-    "abstract": "Acquiring road information is important for smart cities and sustainable urban development. In recent years, significant progress has been made in the extraction of urban road information from remote sensing images using deep learning (DL) algorithms. However, due to the complex shape, narrowness, and high span of roads in the images, the results are often unsatisfactory. This article proposes a Seg-Road model to improve road connectivity. The Seg-Road uses a transformer structure to extract the long-range dependency and global contextual information to improve the fragmentation of road segmentation and uses a convolutional neural network (CNN) structure to extract local contextual information to improve the segmentation of road details. Furthermore, a novel pixel connectivity structure (PCS) is proposed to improve the connectivity of road segmentation and the robustness of prediction results. To verify the effectiveness of Seg-Road for road segmentation, the DeepGlobe and Massachusetts datasets were used for training and testing. The experimental results show that Seg-Road achieves state-of-the-art (SOTA) performance, with an intersection over union (IoU) of 67.20%, mean intersection over union (MIoU) of 82.06%, F1 of 91.43%, precision of 90.05%, and recall of 92.85% in the DeepGlobe dataset, and achieves an IoU of 68.38%, MIoU of 83.89%, F1 of 90.01%, precision of 87.34%, and recall of 92.86% in the Massachusetts dataset, which is better than the values for CoANet. Further, it has higher application value for achieving sustainable urban development.",
-    "full_text": null
+  "title": "Seg-Road: A Segmentation Network for Road Extraction Based on Transformer and CNN with Connectivity Structures",
+  "url": "https://openalex.org/W4327620107",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2124754655",
+      "name": "Jingjing Tao",
+      "affiliations": [
+        "Tianjin Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2073420235",
+      "name": "Zhe Chen",
+      "affiliations": [
+        "Beijing Institute of Big Data Research",
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences",
+        "Chengdu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117501102",
+      "name": "Zhongchang Sun",
+      "affiliations": [
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences",
+        "Beijing Institute of Big Data Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2115863081",
+      "name": "Huadong Guo",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Beijing Institute of Big Data Research",
+        "Aerospace Information Research Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2175911346",
+      "name": "Bo Leng",
+      "affiliations": [
+        "Chengdu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2462651041",
+      "name": "Zhengbo Yu",
+      "affiliations": [
+        "Chengdu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120912849",
+      "name": "Yanli Wang",
+      "affiliations": [
+        "Chengdu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2510582015",
+      "name": "Ziqiong He",
+      "affiliations": [
+        "Chengdu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4322896503",
+      "name": "Xiangqi Lei",
+      "affiliations": [
+        "Chengdu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2148598658",
+      "name": "Jinpei Yang",
+      "affiliations": [
+        "Nanjing University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2774320778",
+    "https://openalex.org/W4210919941",
+    "https://openalex.org/W2595964094",
+    "https://openalex.org/W2205800717",
+    "https://openalex.org/W1535289548",
+    "https://openalex.org/W3022397457",
+    "https://openalex.org/W4295927731",
+    "https://openalex.org/W4311529505",
+    "https://openalex.org/W2963270775",
+    "https://openalex.org/W2798925380",
+    "https://openalex.org/W2893801697",
+    "https://openalex.org/W3035012694",
+    "https://openalex.org/W3089040116",
+    "https://openalex.org/W3203699578",
+    "https://openalex.org/W4313436932",
+    "https://openalex.org/W4310717794",
+    "https://openalex.org/W4280491130",
+    "https://openalex.org/W3157557309",
+    "https://openalex.org/W3018914855",
+    "https://openalex.org/W4290998965",
+    "https://openalex.org/W4322619705",
+    "https://openalex.org/W3121754326",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W4312349930",
+    "https://openalex.org/W4313594245",
+    "https://openalex.org/W2892964097",
+    "https://openalex.org/W3182256037",
+    "https://openalex.org/W2975194617",
+    "https://openalex.org/W3204255739",
+    "https://openalex.org/W4292829111",
+    "https://openalex.org/W4312423415",
+    "https://openalex.org/W4308489557",
+    "https://openalex.org/W3133458480",
+    "https://openalex.org/W3015788359",
+    "https://openalex.org/W2927980542",
+    "https://openalex.org/W2963136578",
+    "https://openalex.org/W3168649818",
+    "https://openalex.org/W2804199516",
+    "https://openalex.org/W3207536936",
+    "https://openalex.org/W6767258250",
+    "https://openalex.org/W2780861787",
+    "https://openalex.org/W3168641556",
+    "https://openalex.org/W4224249921",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2949381166",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W6752378368",
+    "https://openalex.org/W80138705",
+    "https://openalex.org/W4283589144",
+    "https://openalex.org/W2037227137",
+    "https://openalex.org/W2780740184",
+    "https://openalex.org/W2892614179",
+    "https://openalex.org/W3211490618",
+    "https://openalex.org/W3121619677"
+  ],
+  "abstract": "Acquiring road information is important for smart cities and sustainable urban development. In recent years, significant progress has been made in the extraction of urban road information from remote sensing images using deep learning (DL) algorithms. However, due to the complex shape, narrowness, and high span of roads in the images, the results are often unsatisfactory. This article proposes a Seg-Road model to improve road connectivity. The Seg-Road uses a transformer structure to extract the long-range dependency and global contextual information to improve the fragmentation of road segmentation and uses a convolutional neural network (CNN) structure to extract local contextual information to improve the segmentation of road details. Furthermore, a novel pixel connectivity structure (PCS) is proposed to improve the connectivity of road segmentation and the robustness of prediction results. To verify the effectiveness of Seg-Road for road segmentation, the DeepGlobe and Massachusetts datasets were used for training and testing. The experimental results show that Seg-Road achieves state-of-the-art (SOTA) performance, with an intersection over union (IoU) of 67.20%, mean intersection over union (MIoU) of 82.06%, F1 of 91.43%, precision of 90.05%, and recall of 92.85% in the DeepGlobe dataset, and achieves an IoU of 68.38%, MIoU of 83.89%, F1 of 90.01%, precision of 87.34%, and recall of 92.86% in the Massachusetts dataset, which is better than the values for CoANet. Further, it has higher application value for achieving sustainable urban development.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7338311076164246
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.724434494972229
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6202191114425659
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5960706472396851
+    },
+    {
+      "name": "Intersection (aeronautics)",
+      "score": 0.46409717202186584
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4418477416038513
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.43953120708465576
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.38530510663986206
+    },
+    {
+      "name": "Cartography",
+      "score": 0.22898566722869873
+    },
+    {
+      "name": "Geography",
+      "score": 0.17785018682479858
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    }
+  ]
 }

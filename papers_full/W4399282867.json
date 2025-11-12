@@ -1,129 +1,196 @@
 {
-    "title": "On-device query intent prediction with lightweight LLMs to support ubiquitous conversations",
-    "url": "https://openalex.org/W4399282867",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2803997799",
-            "name": "Mateusz Dubiel",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5098993469",
-            "name": "Yasmine Barghouti",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5098993470",
-            "name": "Kristina Kudryavtseva",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2133476366",
-            "name": "Luis A. Leiva",
-            "affiliations": [
-                "University of Luxembourg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2803997799",
-            "name": "Mateusz Dubiel",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5098993469",
-            "name": "Yasmine Barghouti",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5098993470",
-            "name": "Kristina Kudryavtseva",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2133476366",
-            "name": "Luis A. Leiva",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1991246983",
-        "https://openalex.org/W1640628807",
-        "https://openalex.org/W2136058926",
-        "https://openalex.org/W2808240146",
-        "https://openalex.org/W2866044803",
-        "https://openalex.org/W3185034189",
-        "https://openalex.org/W3159664178",
-        "https://openalex.org/W34819116",
-        "https://openalex.org/W2766505384",
-        "https://openalex.org/W3009436833",
-        "https://openalex.org/W4312709636",
-        "https://openalex.org/W2129554061",
-        "https://openalex.org/W1978347212",
-        "https://openalex.org/W2861196621",
-        "https://openalex.org/W6861172960",
-        "https://openalex.org/W4391799270",
-        "https://openalex.org/W4285247752",
-        "https://openalex.org/W4315781024",
-        "https://openalex.org/W6602380923",
-        "https://openalex.org/W3159275992",
-        "https://openalex.org/W2765874585",
-        "https://openalex.org/W3134648203",
-        "https://openalex.org/W3160022552",
-        "https://openalex.org/W4366549916",
-        "https://openalex.org/W2007644286",
-        "https://openalex.org/W3009091046",
-        "https://openalex.org/W3205105007",
-        "https://openalex.org/W6631688033",
-        "https://openalex.org/W3003486610",
-        "https://openalex.org/W4226057248",
-        "https://openalex.org/W4224882009",
-        "https://openalex.org/W4366549767",
-        "https://openalex.org/W4385734302",
-        "https://openalex.org/W4401042146",
-        "https://openalex.org/W4401042286",
-        "https://openalex.org/W2130660124",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W3186055994",
-        "https://openalex.org/W6600195168",
-        "https://openalex.org/W2946417913",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6782465632",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4283170666",
-        "https://openalex.org/W2090138186",
-        "https://openalex.org/W2997124840",
-        "https://openalex.org/W4313266774",
-        "https://openalex.org/W2035265971",
-        "https://openalex.org/W2100329625",
-        "https://openalex.org/W2963809228",
-        "https://openalex.org/W3133702157",
-        "https://openalex.org/W3135347383",
-        "https://openalex.org/W4224219407",
-        "https://openalex.org/W1566289585",
-        "https://openalex.org/W3094045953",
-        "https://openalex.org/W2975059944",
-        "https://openalex.org/W2964110616",
-        "https://openalex.org/W3103368673",
-        "https://openalex.org/W3172318343",
-        "https://openalex.org/W4214761766",
-        "https://openalex.org/W4313547880",
-        "https://openalex.org/W4385219425",
-        "https://openalex.org/W4221145545",
-        "https://openalex.org/W6796581206",
-        "https://openalex.org/W4391285347",
-        "https://openalex.org/W3105899904",
-        "https://openalex.org/W4282945631",
-        "https://openalex.org/W3105992359"
-    ],
-    "abstract": "Abstract Conversational Agents (CAs) have made their way to providing interactive assistance to users. However, the current dialogue modelling techniques for CAs are predominantly based on hard-coded rules and rigid interaction flows, which negatively affects their flexibility and scalability. Large Language Models (LLMs) can be used as an alternative, but unfortunately they do not always provide good levels of privacy protection for end-users since most of them are running on cloud services. To address these problems, we leverage the potential of transfer learning and study how to best fine-tune lightweight pre-trained LLMs to predict the intent of user queries. Importantly, our LLMs allow for on-device deployment, making them suitable for personalised, ubiquitous, and privacy-preserving scenarios. Our experiments suggest that RoBERTa and XLNet offer the best trade-off considering these constraints. We also show that, after fine-tuning, these models perform on par with ChatGPT. We also discuss the implications of this research for relevant stakeholders, including researchers and practitioners. Taken together, this paper provides insights into LLM suitability for on-device CAs and highlights the middle ground between LLM performance and memory footprint while also considering privacy implications.",
-    "full_text": null
+  "title": "On-device query intent prediction with lightweight LLMs to support ubiquitous conversations",
+  "url": "https://openalex.org/W4399282867",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2803997799",
+      "name": "Mateusz Dubiel",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5098993469",
+      "name": "Yasmine Barghouti",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5098993470",
+      "name": "Kristina Kudryavtseva",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2133476366",
+      "name": "Luis A. Leiva",
+      "affiliations": [
+        "University of Luxembourg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2803997799",
+      "name": "Mateusz Dubiel",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5098993469",
+      "name": "Yasmine Barghouti",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5098993470",
+      "name": "Kristina Kudryavtseva",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2133476366",
+      "name": "Luis A. Leiva",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1991246983",
+    "https://openalex.org/W1640628807",
+    "https://openalex.org/W2136058926",
+    "https://openalex.org/W2808240146",
+    "https://openalex.org/W2866044803",
+    "https://openalex.org/W3185034189",
+    "https://openalex.org/W3159664178",
+    "https://openalex.org/W34819116",
+    "https://openalex.org/W2766505384",
+    "https://openalex.org/W3009436833",
+    "https://openalex.org/W4312709636",
+    "https://openalex.org/W2129554061",
+    "https://openalex.org/W1978347212",
+    "https://openalex.org/W2861196621",
+    "https://openalex.org/W6861172960",
+    "https://openalex.org/W4391799270",
+    "https://openalex.org/W4285247752",
+    "https://openalex.org/W4315781024",
+    "https://openalex.org/W6602380923",
+    "https://openalex.org/W3159275992",
+    "https://openalex.org/W2765874585",
+    "https://openalex.org/W3134648203",
+    "https://openalex.org/W3160022552",
+    "https://openalex.org/W4366549916",
+    "https://openalex.org/W2007644286",
+    "https://openalex.org/W3009091046",
+    "https://openalex.org/W3205105007",
+    "https://openalex.org/W6631688033",
+    "https://openalex.org/W3003486610",
+    "https://openalex.org/W4226057248",
+    "https://openalex.org/W4224882009",
+    "https://openalex.org/W4366549767",
+    "https://openalex.org/W4385734302",
+    "https://openalex.org/W4401042146",
+    "https://openalex.org/W4401042286",
+    "https://openalex.org/W2130660124",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W3186055994",
+    "https://openalex.org/W6600195168",
+    "https://openalex.org/W2946417913",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6782465632",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4283170666",
+    "https://openalex.org/W2090138186",
+    "https://openalex.org/W2997124840",
+    "https://openalex.org/W4313266774",
+    "https://openalex.org/W2035265971",
+    "https://openalex.org/W2100329625",
+    "https://openalex.org/W2963809228",
+    "https://openalex.org/W3133702157",
+    "https://openalex.org/W3135347383",
+    "https://openalex.org/W4224219407",
+    "https://openalex.org/W1566289585",
+    "https://openalex.org/W3094045953",
+    "https://openalex.org/W2975059944",
+    "https://openalex.org/W2964110616",
+    "https://openalex.org/W3103368673",
+    "https://openalex.org/W3172318343",
+    "https://openalex.org/W4214761766",
+    "https://openalex.org/W4313547880",
+    "https://openalex.org/W4385219425",
+    "https://openalex.org/W4221145545",
+    "https://openalex.org/W6796581206",
+    "https://openalex.org/W4391285347",
+    "https://openalex.org/W3105899904",
+    "https://openalex.org/W4282945631",
+    "https://openalex.org/W3105992359"
+  ],
+  "abstract": "Abstract Conversational Agents (CAs) have made their way to providing interactive assistance to users. However, the current dialogue modelling techniques for CAs are predominantly based on hard-coded rules and rigid interaction flows, which negatively affects their flexibility and scalability. Large Language Models (LLMs) can be used as an alternative, but unfortunately they do not always provide good levels of privacy protection for end-users since most of them are running on cloud services. To address these problems, we leverage the potential of transfer learning and study how to best fine-tune lightweight pre-trained LLMs to predict the intent of user queries. Importantly, our LLMs allow for on-device deployment, making them suitable for personalised, ubiquitous, and privacy-preserving scenarios. Our experiments suggest that RoBERTa and XLNet offer the best trade-off considering these constraints. We also show that, after fine-tuning, these models perform on par with ChatGPT. We also discuss the implications of this research for relevant stakeholders, including researchers and practitioners. Taken together, this paper provides insights into LLM suitability for on-device CAs and highlights the middle ground between LLM performance and memory footprint while also considering privacy implications.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7803365588188171
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.7087796330451965
+    },
+    {
+      "name": "Software deployment",
+      "score": 0.7086744904518127
+    },
+    {
+      "name": "Scalability",
+      "score": 0.5997298955917358
+    },
+    {
+      "name": "Flexibility (engineering)",
+      "score": 0.5660154819488525
+    },
+    {
+      "name": "Cloud computing",
+      "score": 0.4746171534061432
+    },
+    {
+      "name": "Data science",
+      "score": 0.39734405279159546
+    },
+    {
+      "name": "Computer security",
+      "score": 0.3916008770465851
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.38033270835876465
+    },
+    {
+      "name": "Internet privacy",
+      "score": 0.33196452260017395
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.20243793725967407
+    },
+    {
+      "name": "Database",
+      "score": 0.17622730135917664
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.12133237719535828
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    }
+  ]
 }

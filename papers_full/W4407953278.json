@@ -1,69 +1,92 @@
 {
-    "title": "Large Language Model driven Policy Exploration for Recommender Systems",
-    "url": "https://openalex.org/W4407953278",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2095685898",
-            "name": "Jie Wang",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A14841688",
-            "name": "Alexandros Karatzoglou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1902139230",
-            "name": "Ioannis Arapakis",
-            "affiliations": [
-                "Telefonica Research and Development"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2167481407",
-            "name": "Joemon M. Jose",
-            "affiliations": [
-                "University of Glasgow"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4400118952",
-        "https://openalex.org/W4378465281",
-        "https://openalex.org/W4296591867",
-        "https://openalex.org/W3088365077",
-        "https://openalex.org/W4386081001",
-        "https://openalex.org/W4290944002",
-        "https://openalex.org/W2963367478",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W4319792126",
-        "https://openalex.org/W4382246105",
-        "https://openalex.org/W2971196067",
-        "https://openalex.org/W4226278401",
-        "https://openalex.org/W4384652161",
-        "https://openalex.org/W3168236455",
-        "https://openalex.org/W2419128894",
-        "https://openalex.org/W4392490033",
-        "https://openalex.org/W2783272285",
-        "https://openalex.org/W4400528355",
-        "https://openalex.org/W4403582712",
-        "https://openalex.org/W3035170973",
-        "https://openalex.org/W3034853385",
-        "https://openalex.org/W3211540990",
-        "https://openalex.org/W4284702156",
-        "https://openalex.org/W2902040508",
-        "https://openalex.org/W4386729449",
-        "https://openalex.org/W2788295351",
-        "https://openalex.org/W2914020154",
-        "https://openalex.org/W2525579820",
-        "https://openalex.org/W4403577524",
-        "https://openalex.org/W4400530533",
-        "https://openalex.org/W2947150733",
-        "https://openalex.org/W3102778384"
-    ],
-    "abstract": "Recent advancements in Recommender Systems (RS) have incorporated Reinforcement Learning (RL), framing the recommendation as a Markov Decision Process (MDP). However, offline RL policies trained on static user data are vulnerable to distribution shift when deployed in dynamic online environments. Additionally, excessive focus on exploiting short-term relevant items can hinder exploration, leading to sub-optimal recommendations and negatively impacting long-term user gains. Online RL-based RS also face challenges in production deployment, due to the risks of exposing users to untrained or unstable policies. Large Language Models (LLMs) offer a promising solution to mimic user objectives and preferences for pre-training policies offline to enhance the initial recommendations in online settings. Effectively managing distribution shift and balancing exploration are crucial for improving RL-based RS, especially when leveraging LLM-based pre-training. To address these challenges, we propose an Interaction-Augmented Learned Policy (iALP) that utilizes user preferences distilled from an LLM. Our approach involves prompting the LLM with user states to extract item preferences, learning rewards based on feedback, and updating the RL policy using an actor-critic framework. Furthermore, to deploy iALP in an online scenario, we introduce an adaptive variant, A-iALP, that implements a simple fine-tuning strategy (A-iALPft), and an adaptive approach (A-iALPap) designed to mitigate issues with compromised policies and limited exploration. Experiments across three simulated environments demonstrate that A-iALP introduces substantial performance improvements.",
-    "full_text": null
+  "title": "Large Language Model driven Policy Exploration for Recommender Systems",
+  "url": "https://openalex.org/W4407953278",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2095685898",
+      "name": "Jie Wang",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A14841688",
+      "name": "Alexandros Karatzoglou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1902139230",
+      "name": "Ioannis Arapakis",
+      "affiliations": [
+        "Telefonica Research and Development"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2167481407",
+      "name": "Joemon M. Jose",
+      "affiliations": [
+        "University of Glasgow"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4400118952",
+    "https://openalex.org/W4378465281",
+    "https://openalex.org/W4296591867",
+    "https://openalex.org/W3088365077",
+    "https://openalex.org/W4386081001",
+    "https://openalex.org/W4290944002",
+    "https://openalex.org/W2963367478",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W4319792126",
+    "https://openalex.org/W4382246105",
+    "https://openalex.org/W2971196067",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W4384652161",
+    "https://openalex.org/W3168236455",
+    "https://openalex.org/W2419128894",
+    "https://openalex.org/W4392490033",
+    "https://openalex.org/W2783272285",
+    "https://openalex.org/W4400528355",
+    "https://openalex.org/W4403582712",
+    "https://openalex.org/W3035170973",
+    "https://openalex.org/W3034853385",
+    "https://openalex.org/W3211540990",
+    "https://openalex.org/W4284702156",
+    "https://openalex.org/W2902040508",
+    "https://openalex.org/W4386729449",
+    "https://openalex.org/W2788295351",
+    "https://openalex.org/W2914020154",
+    "https://openalex.org/W2525579820",
+    "https://openalex.org/W4403577524",
+    "https://openalex.org/W4400530533",
+    "https://openalex.org/W2947150733",
+    "https://openalex.org/W3102778384"
+  ],
+  "abstract": "Recent advancements in Recommender Systems (RS) have incorporated Reinforcement Learning (RL), framing the recommendation as a Markov Decision Process (MDP). However, offline RL policies trained on static user data are vulnerable to distribution shift when deployed in dynamic online environments. Additionally, excessive focus on exploiting short-term relevant items can hinder exploration, leading to sub-optimal recommendations and negatively impacting long-term user gains. Online RL-based RS also face challenges in production deployment, due to the risks of exposing users to untrained or unstable policies. Large Language Models (LLMs) offer a promising solution to mimic user objectives and preferences for pre-training policies offline to enhance the initial recommendations in online settings. Effectively managing distribution shift and balancing exploration are crucial for improving RL-based RS, especially when leveraging LLM-based pre-training. To address these challenges, we propose an Interaction-Augmented Learned Policy (iALP) that utilizes user preferences distilled from an LLM. Our approach involves prompting the LLM with user states to extract item preferences, learning rewards based on feedback, and updating the RL policy using an actor-critic framework. Furthermore, to deploy iALP in an online scenario, we introduce an adaptive variant, A-iALP, that implements a simple fine-tuning strategy (A-iALPft), and an adaptive approach (A-iALPap) designed to mitigate issues with compromised policies and limited exploration. Experiments across three simulated environments demonstrate that A-iALP introduces substantial performance improvements.",
+  "full_text": null,
+  "topic": "Recommender system",
+  "concepts": [
+    {
+      "name": "Recommender system",
+      "score": 0.8295300006866455
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7790254950523376
+    },
+    {
+      "name": "Language model",
+      "score": 0.45312172174453735
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3078514039516449
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.27585840225219727
+    }
+  ]
 }

@@ -1,156 +1,187 @@
 {
-    "title": "aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Completion",
-    "url": "https://openalex.org/W4404900300",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096367723",
-            "name": "Siyuan Jiang",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2020097424",
-            "name": "Jia Li",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2254038360",
-            "name": "He Zong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2227250967",
-            "name": "Huanyu Liu",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101703816",
-            "name": "Hao Zhu",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2501737210",
-            "name": "Shukai. Hu",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Erlu Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2904019931",
-            "name": "Jiazheng Ding",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2099587190",
-            "name": "Yu, Han",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1985117663",
-            "name": "Wei Ning",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2104957954",
-            "name": "Gen Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2115786560",
-            "name": "Yihong Dong",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3108057470",
-            "name": "Kechi Zhang",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1993360758",
-            "name": "Ge Li",
-            "affiliations": [
-                "Peking University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096367723",
-            "name": "Siyuan Jiang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2020097424",
-            "name": "Jia Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2227250967",
-            "name": "Huanyu Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2101703816",
-            "name": "Hao Zhu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2115786560",
-            "name": "Yihong Dong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3108057470",
-            "name": "Kechi Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1993360758",
-            "name": "Ge Li",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4386185625",
-        "https://openalex.org/W4391272793",
-        "https://openalex.org/W4376167329",
-        "https://openalex.org/W6967084484",
-        "https://openalex.org/W6846665566",
-        "https://openalex.org/W2148885851",
-        "https://openalex.org/W2397770138",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W4388979610",
-        "https://openalex.org/W4389518760",
-        "https://openalex.org/W4288804596",
-        "https://openalex.org/W4368755703",
-        "https://openalex.org/W4385562549",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W6863965318",
-        "https://openalex.org/W6798182279",
-        "https://openalex.org/W6800166007",
-        "https://openalex.org/W4387799771",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W3089307846",
-        "https://openalex.org/W1647671624",
-        "https://openalex.org/W6772383348",
-        "https://openalex.org/W4226434736",
-        "https://openalex.org/W6860041859",
-        "https://openalex.org/W4399836663"
-    ],
-    "abstract": "Large Language Models (LLMs) have been widely used in code completion, and researchers are focusing on scaling up LLMs to improve their accuracy. However, larger LLMs will increase the response time of code completion and decrease the developers’ productivity. In this paper, we propose a lightweight and effective LLM for code completion named aiXcoder-7B. Compared to existing LLMs, aiXcoder-7B achieves higher code completion accuracy while having smaller scales (i.e., 7 billion parameters). We attribute the superiority of aiXcoder-7B to three key factors: ❶ Multi-objective training. We employ three training objectives, one of which is our proposed Structured Fill-In-the-Middle (SFIM). SFIM considers the syntax structures in code and effectively improves the performance of LLMs for code. ❷ Diverse data sampling strategies. They consider inter-file relationships and enhance the capability of LLMs in understanding cross-file contexts. ❸ Extensive high-quality data. We establish a rigorous data collection pipeline and consume a total of 1.2 trillion unique tokens for training aiXcoder-7B. This vast volume of data enables aiXcoder-7B to learn a broad distribution of code. We evaluate aiXcoder-7B in five popular code completion benchmarks and a new benchmark collected by this paper. The results show that aiXcoder-7B outperforms the latest six LLMs with similar sizes and even surpasses four larger LLMs (e.g., StarCoder2-15B and CodeLlama-34B), positioning aiXcoder-7B as a lightweight and effective LLM for academia and industry. Finally, we summarize three valuable insights for helping practitioners train the next generations of LLMs for code. aiXcoder-7B has been open-souced and gained significant attention[1]. As of the submission date, aiXcoder-7B has received 2,193 GitHub Stars.",
-    "full_text": null
+  "title": "aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Completion",
+  "url": "https://openalex.org/W4404900300",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096367723",
+      "name": "Siyuan Jiang",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2020097424",
+      "name": "Jia Li",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2254038360",
+      "name": "He Zong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2227250967",
+      "name": "Huanyu Liu",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101703816",
+      "name": "Hao Zhu",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2501737210",
+      "name": "Shukai. Hu",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Erlu Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2904019931",
+      "name": "Jiazheng Ding",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2099587190",
+      "name": "Yu, Han",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1985117663",
+      "name": "Wei Ning",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2104957954",
+      "name": "Gen Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2115786560",
+      "name": "Yihong Dong",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3108057470",
+      "name": "Kechi Zhang",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1993360758",
+      "name": "Ge Li",
+      "affiliations": [
+        "Peking University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096367723",
+      "name": "Siyuan Jiang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2020097424",
+      "name": "Jia Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2227250967",
+      "name": "Huanyu Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2101703816",
+      "name": "Hao Zhu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2115786560",
+      "name": "Yihong Dong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3108057470",
+      "name": "Kechi Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1993360758",
+      "name": "Ge Li",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4386185625",
+    "https://openalex.org/W4391272793",
+    "https://openalex.org/W4376167329",
+    "https://openalex.org/W6967084484",
+    "https://openalex.org/W6846665566",
+    "https://openalex.org/W2148885851",
+    "https://openalex.org/W2397770138",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W4388979610",
+    "https://openalex.org/W4389518760",
+    "https://openalex.org/W4288804596",
+    "https://openalex.org/W4368755703",
+    "https://openalex.org/W4385562549",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W6863965318",
+    "https://openalex.org/W6798182279",
+    "https://openalex.org/W6800166007",
+    "https://openalex.org/W4387799771",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W3089307846",
+    "https://openalex.org/W1647671624",
+    "https://openalex.org/W6772383348",
+    "https://openalex.org/W4226434736",
+    "https://openalex.org/W6860041859",
+    "https://openalex.org/W4399836663"
+  ],
+  "abstract": "Large Language Models (LLMs) have been widely used in code completion, and researchers are focusing on scaling up LLMs to improve their accuracy. However, larger LLMs will increase the response time of code completion and decrease the developers’ productivity. In this paper, we propose a lightweight and effective LLM for code completion named aiXcoder-7B. Compared to existing LLMs, aiXcoder-7B achieves higher code completion accuracy while having smaller scales (i.e., 7 billion parameters). We attribute the superiority of aiXcoder-7B to three key factors: ❶ Multi-objective training. We employ three training objectives, one of which is our proposed Structured Fill-In-the-Middle (SFIM). SFIM considers the syntax structures in code and effectively improves the performance of LLMs for code. ❷ Diverse data sampling strategies. They consider inter-file relationships and enhance the capability of LLMs in understanding cross-file contexts. ❸ Extensive high-quality data. We establish a rigorous data collection pipeline and consume a total of 1.2 trillion unique tokens for training aiXcoder-7B. This vast volume of data enables aiXcoder-7B to learn a broad distribution of code. We evaluate aiXcoder-7B in five popular code completion benchmarks and a new benchmark collected by this paper. The results show that aiXcoder-7B outperforms the latest six LLMs with similar sizes and even surpasses four larger LLMs (e.g., StarCoder2-15B and CodeLlama-34B), positioning aiXcoder-7B as a lightweight and effective LLM for academia and industry. Finally, we summarize three valuable insights for helping practitioners train the next generations of LLMs for code. aiXcoder-7B has been open-souced and gained significant attention[1]. As of the submission date, aiXcoder-7B has received 2,193 GitHub Stars.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6231278777122498
+    },
+    {
+      "name": "Completion (oil and gas wells)",
+      "score": 0.6146352887153625
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.6068379878997803
+    },
+    {
+      "name": "Programming language",
+      "score": 0.5645059943199158
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10887005925178528
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.04785832762718201
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

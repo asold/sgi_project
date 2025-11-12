@@ -1,91 +1,170 @@
 {
-    "title": "Scalable Syntax-Aware Language Models Using Knowledge Distillation",
-    "url": "https://openalex.org/W2949629417",
-    "year": 2019,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2509308542",
-            "name": "Adhiguna Kuncoro",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2107310219",
-            "name": "Chris Dyer",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A182221175",
-            "name": "Laura Rimell",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2101784870",
-            "name": "Stephen Clark",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A297118547",
-            "name": "Phil Blunsom",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2799124508",
-        "https://openalex.org/W2962941914",
-        "https://openalex.org/W2963462075",
-        "https://openalex.org/W2963073938",
-        "https://openalex.org/W2963842982",
-        "https://openalex.org/W2564486991",
-        "https://openalex.org/W2098050104",
-        "https://openalex.org/W2963751529",
-        "https://openalex.org/W2563574619",
-        "https://openalex.org/W2625014264",
-        "https://openalex.org/W2962776659",
-        "https://openalex.org/W2123893795",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2594047108",
-        "https://openalex.org/W2946359678",
-        "https://openalex.org/W2962733492",
-        "https://openalex.org/W1989705153",
-        "https://openalex.org/W2294370754",
-        "https://openalex.org/W2888922637",
-        "https://openalex.org/W1508165687",
-        "https://openalex.org/W2737638662",
-        "https://openalex.org/W108437174",
-        "https://openalex.org/W2962935015",
-        "https://openalex.org/W2963648186",
-        "https://openalex.org/W2577255746",
-        "https://openalex.org/W2117626683",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2949952998",
-        "https://openalex.org/W1821462560",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W1528941926",
-        "https://openalex.org/W2932637973",
-        "https://openalex.org/W2963661253",
-        "https://openalex.org/W2020382207",
-        "https://openalex.org/W2963735467",
-        "https://openalex.org/W2134797427",
-        "https://openalex.org/W2798727047",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W2100506586",
-        "https://openalex.org/W2964222566",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W2963411763",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2554915555",
-        "https://openalex.org/W2549835527",
-        "https://openalex.org/W2963651521",
-        "https://openalex.org/W1916559533",
-        "https://openalex.org/W2963205761",
-        "https://openalex.org/W1818785862",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W2581377246",
-        "https://openalex.org/W2962911926",
-        "https://openalex.org/W2910243263",
-        "https://openalex.org/W2786167576",
-        "https://openalex.org/W2962820991"
-    ],
-    "abstract": "Prior work has shown that, on small amounts of training data, syntactic neural language models learn structurally sensitive generalisations more successfully than sequential language models. However, their computational complexity renders scaling difficult, and it remains an open question whether structural biases are still necessary when sequential models have access to ever larger amounts of training data. To answer this question, we introduce an efficient knowledge distillation (KD) technique that transfers knowledge from a syntactic language model trained on a small corpus to an LSTM language model, hence enabling the LSTM to develop a more structurally sensitive representation of the larger training data it learns from. On targeted syntactic evaluations, we find that, while sequential LSTMs perform much better than previously reported, our proposed technique substantially improves on this baseline, yielding a new state of the art. Our findings and analysis affirm the importance of structural biases, even in models that learn from large amounts of data.",
-    "full_text": null
+  "title": "Scalable Syntax-Aware Language Models Using Knowledge Distillation",
+  "url": "https://openalex.org/W2949629417",
+  "year": 2019,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2509308542",
+      "name": "Adhiguna Kuncoro",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2107310219",
+      "name": "Chris Dyer",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A182221175",
+      "name": "Laura Rimell",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2101784870",
+      "name": "Stephen Clark",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A297118547",
+      "name": "Phil Blunsom",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2799124508",
+    "https://openalex.org/W2962941914",
+    "https://openalex.org/W2963462075",
+    "https://openalex.org/W2963073938",
+    "https://openalex.org/W2963842982",
+    "https://openalex.org/W2564486991",
+    "https://openalex.org/W2098050104",
+    "https://openalex.org/W2963751529",
+    "https://openalex.org/W2563574619",
+    "https://openalex.org/W2625014264",
+    "https://openalex.org/W2962776659",
+    "https://openalex.org/W2123893795",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2594047108",
+    "https://openalex.org/W2946359678",
+    "https://openalex.org/W2962733492",
+    "https://openalex.org/W1989705153",
+    "https://openalex.org/W2294370754",
+    "https://openalex.org/W2888922637",
+    "https://openalex.org/W1508165687",
+    "https://openalex.org/W2737638662",
+    "https://openalex.org/W108437174",
+    "https://openalex.org/W2962935015",
+    "https://openalex.org/W2963648186",
+    "https://openalex.org/W2577255746",
+    "https://openalex.org/W2117626683",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2949952998",
+    "https://openalex.org/W1821462560",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W1528941926",
+    "https://openalex.org/W2932637973",
+    "https://openalex.org/W2963661253",
+    "https://openalex.org/W2020382207",
+    "https://openalex.org/W2963735467",
+    "https://openalex.org/W2134797427",
+    "https://openalex.org/W2798727047",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W2100506586",
+    "https://openalex.org/W2964222566",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W2963411763",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2554915555",
+    "https://openalex.org/W2549835527",
+    "https://openalex.org/W2963651521",
+    "https://openalex.org/W1916559533",
+    "https://openalex.org/W2963205761",
+    "https://openalex.org/W1818785862",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W2581377246",
+    "https://openalex.org/W2962911926",
+    "https://openalex.org/W2910243263",
+    "https://openalex.org/W2786167576",
+    "https://openalex.org/W2962820991"
+  ],
+  "abstract": "Prior work has shown that, on small amounts of training data, syntactic neural language models learn structurally sensitive generalisations more successfully than sequential language models. However, their computational complexity renders scaling difficult, and it remains an open question whether structural biases are still necessary when sequential models have access to ever larger amounts of training data. To answer this question, we introduce an efficient knowledge distillation (KD) technique that transfers knowledge from a syntactic language model trained on a small corpus to an LSTM language model, hence enabling the LSTM to develop a more structurally sensitive representation of the larger training data it learns from. On targeted syntactic evaluations, we find that, while sequential LSTMs perform much better than previously reported, our proposed technique substantially improves on this baseline, yielding a new state of the art. Our findings and analysis affirm the importance of structural biases, even in models that learn from large amounts of data.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8790090680122375
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6689584255218506
+    },
+    {
+      "name": "Language model",
+      "score": 0.6651977300643921
+    },
+    {
+      "name": "Syntax",
+      "score": 0.6560361981391907
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6457144021987915
+    },
+    {
+      "name": "Scalability",
+      "score": 0.6128532886505127
+    },
+    {
+      "name": "Language understanding",
+      "score": 0.4506880044937134
+    },
+    {
+      "name": "Intermediate language",
+      "score": 0.43049898743629456
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4282826781272888
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.41587430238723755
+    },
+    {
+      "name": "Scaling",
+      "score": 0.4110889434814453
+    },
+    {
+      "name": "Programming language",
+      "score": 0.18883660435676575
+    },
+    {
+      "name": "Database",
+      "score": 0.0708351731300354
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    },
+    {
+      "name": "Compiler",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

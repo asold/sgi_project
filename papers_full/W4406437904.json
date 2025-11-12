@@ -1,150 +1,193 @@
 {
-    "title": "MTRAG: A Multi-Turn Conversational Benchmark for Evaluating Retrieval-Augmented Generation Systems",
-    "url": "https://openalex.org/W4406437904",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A43064774",
-            "name": "Yannis Katsis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2124036869",
-            "name": "Sara Rosenthal",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4293548014",
-            "name": "Kshitij Fadnis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5016166855",
-            "name": "Chulaka Gunasekara",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100006581",
-            "name": "Young-suk Lee",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2089482989",
-            "name": "Lucian Popa",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2611332285",
-            "name": "Vraj Shah",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100410066",
-            "name": "Huaiyu Zhu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2204959241",
-            "name": "Danish Contractor",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2046577858",
-            "name": "Marina Danilevsky",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A43064774",
-            "name": "Yannis Katsis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2124036869",
-            "name": "Sara Rosenthal",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4293548014",
-            "name": "Kshitij Fadnis",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5016166855",
-            "name": "Chulaka Gunasekara",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100006581",
-            "name": "Young-suk Lee",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2089482989",
-            "name": "Lucian Popa",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2611332285",
-            "name": "Vraj Shah",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100410066",
-            "name": "Huaiyu Zhu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2204959241",
-            "name": "Danish Contractor",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2046577858",
-            "name": "Marina Danilevsky",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4321601639",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4393147129",
-        "https://openalex.org/W4403753183",
-        "https://openalex.org/W4402671555",
-        "https://openalex.org/W4403747456",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2912924812",
-        "https://openalex.org/W2950681488",
-        "https://openalex.org/W4385573898",
-        "https://openalex.org/W4393967376",
-        "https://openalex.org/W2951434086",
-        "https://openalex.org/W4380353763",
-        "https://openalex.org/W2898875342",
-        "https://openalex.org/W3202422640",
-        "https://openalex.org/W3195621356",
-        "https://openalex.org/W4283773758",
-        "https://openalex.org/W4296557505",
-        "https://openalex.org/W2888302696",
-        "https://openalex.org/W3034654340",
-        "https://openalex.org/W2964223283",
-        "https://openalex.org/W2891304738",
-        "https://openalex.org/W3202390784",
-        "https://openalex.org/W4313459318",
-        "https://openalex.org/W4396786282",
-        "https://openalex.org/W4389519118",
-        "https://openalex.org/W4403707125",
-        "https://openalex.org/W4403709778",
-        "https://openalex.org/W2963323070",
-        "https://openalex.org/W4392575864",
-        "https://openalex.org/W4387156782",
-        "https://openalex.org/W2798658104",
-        "https://openalex.org/W6860710830",
-        "https://openalex.org/W4386794805",
-        "https://openalex.org/W4385571375",
-        "https://openalex.org/W4389519400",
-        "https://openalex.org/W4398757454",
-        "https://openalex.org/W4398794856",
-        "https://openalex.org/W3099944244"
-    ],
-    "abstract": "Retrieval-augmented generation (RAG) has recently become a very popular task for Large Language Models (LLMs). Evaluating them on _multi-turn_ RAG conversations, where the system is asked to generate a response to a question in the context of a preceding conversation is an important and often overlooked task with several additional challenges. We present mtRAG: an end-to-end human-generated multi-turn RAG benchmark that reflects several real-world properties across diverse dimensions for evaluating the full RAG pipeline. mtRAG contains 110 conversations averaging 7.7 turns each across four domains for a total of 842 tasks. We also explore automation paths via synthetic data and LLM-as-a-Judge evaluation. Our human and automatic evaluations show that even state-of-the-art LLM RAG systems struggle on mtRAG. We demonstrate the need for strong retrieval and generation systems that can handle later turns, unanswerable questions, non-standalone questions, and multiple domains. mtRAG is available at https://github.com/ibm/mt-rag-benchmark.",
-    "full_text": null
+  "title": "MTRAG: A Multi-Turn Conversational Benchmark for Evaluating Retrieval-Augmented Generation Systems",
+  "url": "https://openalex.org/W4406437904",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A43064774",
+      "name": "Yannis Katsis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2124036869",
+      "name": "Sara Rosenthal",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4293548014",
+      "name": "Kshitij Fadnis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5016166855",
+      "name": "Chulaka Gunasekara",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100006581",
+      "name": "Young-suk Lee",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2089482989",
+      "name": "Lucian Popa",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2611332285",
+      "name": "Vraj Shah",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100410066",
+      "name": "Huaiyu Zhu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2204959241",
+      "name": "Danish Contractor",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2046577858",
+      "name": "Marina Danilevsky",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A43064774",
+      "name": "Yannis Katsis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2124036869",
+      "name": "Sara Rosenthal",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4293548014",
+      "name": "Kshitij Fadnis",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5016166855",
+      "name": "Chulaka Gunasekara",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100006581",
+      "name": "Young-suk Lee",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2089482989",
+      "name": "Lucian Popa",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2611332285",
+      "name": "Vraj Shah",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100410066",
+      "name": "Huaiyu Zhu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2204959241",
+      "name": "Danish Contractor",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2046577858",
+      "name": "Marina Danilevsky",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4321601639",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4393147129",
+    "https://openalex.org/W4403753183",
+    "https://openalex.org/W4402671555",
+    "https://openalex.org/W4403747456",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2912924812",
+    "https://openalex.org/W2950681488",
+    "https://openalex.org/W4385573898",
+    "https://openalex.org/W4393967376",
+    "https://openalex.org/W2951434086",
+    "https://openalex.org/W4380353763",
+    "https://openalex.org/W2898875342",
+    "https://openalex.org/W3202422640",
+    "https://openalex.org/W3195621356",
+    "https://openalex.org/W4283773758",
+    "https://openalex.org/W4296557505",
+    "https://openalex.org/W2888302696",
+    "https://openalex.org/W3034654340",
+    "https://openalex.org/W2964223283",
+    "https://openalex.org/W2891304738",
+    "https://openalex.org/W3202390784",
+    "https://openalex.org/W4313459318",
+    "https://openalex.org/W4396786282",
+    "https://openalex.org/W4389519118",
+    "https://openalex.org/W4403707125",
+    "https://openalex.org/W4403709778",
+    "https://openalex.org/W2963323070",
+    "https://openalex.org/W4392575864",
+    "https://openalex.org/W4387156782",
+    "https://openalex.org/W2798658104",
+    "https://openalex.org/W6860710830",
+    "https://openalex.org/W4386794805",
+    "https://openalex.org/W4385571375",
+    "https://openalex.org/W4389519400",
+    "https://openalex.org/W4398757454",
+    "https://openalex.org/W4398794856",
+    "https://openalex.org/W3099944244"
+  ],
+  "abstract": "Retrieval-augmented generation (RAG) has recently become a very popular task for Large Language Models (LLMs). Evaluating them on _multi-turn_ RAG conversations, where the system is asked to generate a response to a question in the context of a preceding conversation is an important and often overlooked task with several additional challenges. We present mtRAG: an end-to-end human-generated multi-turn RAG benchmark that reflects several real-world properties across diverse dimensions for evaluating the full RAG pipeline. mtRAG contains 110 conversations averaging 7.7 turns each across four domains for a total of 842 tasks. We also explore automation paths via synthetic data and LLM-as-a-Judge evaluation. Our human and automatic evaluations show that even state-of-the-art LLM RAG systems struggle on mtRAG. We demonstrate the need for strong retrieval and generation systems that can handle later turns, unanswerable questions, non-standalone questions, and multiple domains. mtRAG is available at https://github.com/ibm/mt-rag-benchmark.",
+  "full_text": null,
+  "topic": "Benchmark (surveying)",
+  "concepts": [
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.7724094390869141
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6401842832565308
+    },
+    {
+      "name": "Turn-taking",
+      "score": 0.47986477613449097
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4332617223262787
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.35296785831451416
+    },
+    {
+      "name": "Conversation",
+      "score": 0.16868793964385986
+    },
+    {
+      "name": "Communication",
+      "score": 0.12186813354492188
+    },
+    {
+      "name": "Psychology",
+      "score": 0.11593765020370483
+    },
+    {
+      "name": "Geography",
+      "score": 0.06832060217857361
+    },
+    {
+      "name": "Cartography",
+      "score": 0.04507780075073242
+    }
+  ]
 }

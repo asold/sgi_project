@@ -1,63 +1,142 @@
 {
-    "title": "Lipschitz Constrained Parameter Initialization for Deep Transformers",
-    "url": "https://openalex.org/W3035747971",
-    "year": 2020,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2108325679",
-            "name": "Hongfei Xu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2135126498",
-            "name": "Qiuhui Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A93711912",
-            "name": "Josef van Genabith",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2139156831",
-            "name": "Deyi Xiong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096209862",
-            "name": "Jingyi Zhang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2970290486",
-        "https://openalex.org/W2798761464",
-        "https://openalex.org/W2574872930",
-        "https://openalex.org/W2964093309",
-        "https://openalex.org/W2778814079",
-        "https://openalex.org/W3082674894",
-        "https://openalex.org/W2964265128",
-        "https://openalex.org/W4297747548",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W1533861849",
-        "https://openalex.org/W2962742960",
-        "https://openalex.org/W2964045208",
-        "https://openalex.org/W2921311659",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2604268533",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2963212250",
-        "https://openalex.org/W2963542740",
-        "https://openalex.org/W2253400648",
-        "https://openalex.org/W4394666973",
-        "https://openalex.org/W2888520903",
-        "https://openalex.org/W2964308564",
-        "https://openalex.org/W2948798935",
-        "https://openalex.org/W2962990163",
-        "https://openalex.org/W2133564696",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2613904329"
-    ],
-    "abstract": "The Transformer translation model employs residual connection and layer normalization to ease the optimization difficulties caused by its multi-layer encoder/decoder structure. Previous research shows that even with residual connection and layer normalization, deep Transformers still have difficulty in training, and particularly Transformer models with more than 12 encoder/decoder layers fail to converge. In this paper, we first empirically demonstrate that a simple modification made in the official implementation, which changes the computation order of residual connection and layer normalization, can significantly ease the optimization of deep Transformers. We then compare the subtle differences in computation order in considerable detail, and present a parameter initialization method that leverages the Lipschitz constraint on the initialization of Transformer parameters that effectively ensures training convergence. In contrast to findings in previous research we further demonstrate that with Lipschitz parameter initialization, deep Transformers with the original computation order can converge, and obtain significant BLEU improvements with up to 24 layers. In contrast to previous research which focuses on deep encoders, our approach additionally enables Transformers to also benefit from deep decoders.",
-    "full_text": null
+  "title": "Lipschitz Constrained Parameter Initialization for Deep Transformers",
+  "url": "https://openalex.org/W3035747971",
+  "year": 2020,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2108325679",
+      "name": "Hongfei Xu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2135126498",
+      "name": "Qiuhui Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A93711912",
+      "name": "Josef van Genabith",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2139156831",
+      "name": "Deyi Xiong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096209862",
+      "name": "Jingyi Zhang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2970290486",
+    "https://openalex.org/W2798761464",
+    "https://openalex.org/W2574872930",
+    "https://openalex.org/W2964093309",
+    "https://openalex.org/W2778814079",
+    "https://openalex.org/W3082674894",
+    "https://openalex.org/W2964265128",
+    "https://openalex.org/W4297747548",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W1533861849",
+    "https://openalex.org/W2962742960",
+    "https://openalex.org/W2964045208",
+    "https://openalex.org/W2921311659",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2604268533",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2963212250",
+    "https://openalex.org/W2963542740",
+    "https://openalex.org/W2253400648",
+    "https://openalex.org/W4394666973",
+    "https://openalex.org/W2888520903",
+    "https://openalex.org/W2964308564",
+    "https://openalex.org/W2948798935",
+    "https://openalex.org/W2962990163",
+    "https://openalex.org/W2133564696",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2613904329"
+  ],
+  "abstract": "The Transformer translation model employs residual connection and layer normalization to ease the optimization difficulties caused by its multi-layer encoder/decoder structure. Previous research shows that even with residual connection and layer normalization, deep Transformers still have difficulty in training, and particularly Transformer models with more than 12 encoder/decoder layers fail to converge. In this paper, we first empirically demonstrate that a simple modification made in the official implementation, which changes the computation order of residual connection and layer normalization, can significantly ease the optimization of deep Transformers. We then compare the subtle differences in computation order in considerable detail, and present a parameter initialization method that leverages the Lipschitz constraint on the initialization of Transformer parameters that effectively ensures training convergence. In contrast to findings in previous research we further demonstrate that with Lipschitz parameter initialization, deep Transformers with the original computation order can converge, and obtain significant BLEU improvements with up to 24 layers. In contrast to previous research which focuses on deep encoders, our approach additionally enables Transformers to also benefit from deep decoders.",
+  "full_text": null,
+  "topic": "Initialization",
+  "concepts": [
+    {
+      "name": "Initialization",
+      "score": 0.8872328996658325
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6761159896850586
+    },
+    {
+      "name": "Computation",
+      "score": 0.6457560658454895
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6389756202697754
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6267577409744263
+    },
+    {
+      "name": "Residual",
+      "score": 0.6085629463195801
+    },
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.5536037683486938
+    },
+    {
+      "name": "Lipschitz continuity",
+      "score": 0.4873283803462982
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.4249942898750305
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38566091656684875
+    },
+    {
+      "name": "Voltage",
+      "score": 0.24283596873283386
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1775008738040924
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11138167977333069
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.08028736710548401
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    }
+  ]
 }

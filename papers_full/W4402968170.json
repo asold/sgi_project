@@ -1,77 +1,136 @@
 {
-    "title": "A Lightweight Sparse Focus Transformer for Remote Sensing Image Change Captioning",
-    "url": "https://openalex.org/W4402968170",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5021734754",
-            "name": "Dongwei Sun",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5058947568",
-            "name": "Yajie Bao",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5014312349",
-            "name": "Junmin Liu",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028103486",
-            "name": "Xiangyong Cao",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1947481528",
-        "https://openalex.org/W2575842049",
-        "https://openalex.org/W2745461083",
-        "https://openalex.org/W2988981892",
-        "https://openalex.org/W2255466643",
-        "https://openalex.org/W2963609017",
-        "https://openalex.org/W4289537913",
-        "https://openalex.org/W3207627484",
-        "https://openalex.org/W4313021481",
-        "https://openalex.org/W4362598957",
-        "https://openalex.org/W6761628794",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W6776048684",
-        "https://openalex.org/W4214588794",
-        "https://openalex.org/W6802648153",
-        "https://openalex.org/W6794345597",
-        "https://openalex.org/W6796526935",
-        "https://openalex.org/W2981689412",
-        "https://openalex.org/W6772853553",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W6838160470",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4313007769",
-        "https://openalex.org/W6796237581",
-        "https://openalex.org/W4312599212",
-        "https://openalex.org/W6853378651",
-        "https://openalex.org/W4390874124",
-        "https://openalex.org/W4387802245",
-        "https://openalex.org/W4387350510",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3216130706",
-        "https://openalex.org/W3003478339",
-        "https://openalex.org/W4283271696",
-        "https://openalex.org/W4213455776",
-        "https://openalex.org/W6898505805",
-        "https://openalex.org/W1956340063",
-        "https://openalex.org/W6631190155"
-    ],
-    "abstract": "Remote sensing image change captioning (RSICC) aims to automatically generate sentences that describe content differences in remote sensing bitemporal images. Recently, attention-based transformers have become a prevalent idea for capturing the features of global change. However, existing transformer-based RSICC methods face challenges, e.g., high parameters and high computational complexity caused by the self-attention operation in the transformer encoder component. To alleviate these issues, this article proposes a sparse focus transformer (SFT) for the RSICC task. Specifically, the SFT network consists of three main components, i.e., a high-level features extractor based on a convolutional neural network, a sparse focus attention mechanism-based transformer encoder network designed to locate and capture changing regions in dual-temporal images, and a description decoder that embeds images and words to generate sentences for captioning differences. The proposed SFT network can reduce the parameter number and computational complexity by incorporating a sparse attention mechanism within the transformer encoder network. Experimental results on various datasets demonstrate that even with a reduction of over 90&#x0025; in parameters and computational complexity for the transformer encoder, our proposed network can still obtain competitive performance compared to other state-of-the-art RSICC methods.",
-    "full_text": null
+  "title": "A Lightweight Sparse Focus Transformer for Remote Sensing Image Change Captioning",
+  "url": "https://openalex.org/W4402968170",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5021734754",
+      "name": "Dongwei Sun",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5058947568",
+      "name": "Yajie Bao",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5014312349",
+      "name": "Junmin Liu",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028103486",
+      "name": "Xiangyong Cao",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1947481528",
+    "https://openalex.org/W2575842049",
+    "https://openalex.org/W2745461083",
+    "https://openalex.org/W2988981892",
+    "https://openalex.org/W2255466643",
+    "https://openalex.org/W2963609017",
+    "https://openalex.org/W4289537913",
+    "https://openalex.org/W3207627484",
+    "https://openalex.org/W4313021481",
+    "https://openalex.org/W4362598957",
+    "https://openalex.org/W6761628794",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W6776048684",
+    "https://openalex.org/W4214588794",
+    "https://openalex.org/W6802648153",
+    "https://openalex.org/W6794345597",
+    "https://openalex.org/W6796526935",
+    "https://openalex.org/W2981689412",
+    "https://openalex.org/W6772853553",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W6838160470",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4313007769",
+    "https://openalex.org/W6796237581",
+    "https://openalex.org/W4312599212",
+    "https://openalex.org/W6853378651",
+    "https://openalex.org/W4390874124",
+    "https://openalex.org/W4387802245",
+    "https://openalex.org/W4387350510",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3216130706",
+    "https://openalex.org/W3003478339",
+    "https://openalex.org/W4283271696",
+    "https://openalex.org/W4213455776",
+    "https://openalex.org/W6898505805",
+    "https://openalex.org/W1956340063",
+    "https://openalex.org/W6631190155"
+  ],
+  "abstract": "Remote sensing image change captioning (RSICC) aims to automatically generate sentences that describe content differences in remote sensing bitemporal images. Recently, attention-based transformers have become a prevalent idea for capturing the features of global change. However, existing transformer-based RSICC methods face challenges, e.g., high parameters and high computational complexity caused by the self-attention operation in the transformer encoder component. To alleviate these issues, this article proposes a sparse focus transformer (SFT) for the RSICC task. Specifically, the SFT network consists of three main components, i.e., a high-level features extractor based on a convolutional neural network, a sparse focus attention mechanism-based transformer encoder network designed to locate and capture changing regions in dual-temporal images, and a description decoder that embeds images and words to generate sentences for captioning differences. The proposed SFT network can reduce the parameter number and computational complexity by incorporating a sparse attention mechanism within the transformer encoder network. Experimental results on various datasets demonstrate that even with a reduction of over 90&#x0025; in parameters and computational complexity for the transformer encoder, our proposed network can still obtain competitive performance compared to other state-of-the-art RSICC methods.",
+  "full_text": null,
+  "topic": "Closed captioning",
+  "concepts": [
+    {
+      "name": "Closed captioning",
+      "score": 0.8188152313232422
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7445352077484131
+    },
+    {
+      "name": "Focus (optics)",
+      "score": 0.557259738445282
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5498131513595581
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.41707926988601685
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.41705119609832764
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.3762882351875305
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.34332841634750366
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.13117527961730957
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11100301146507263
+    },
+    {
+      "name": "Geology",
+      "score": 0.10522544384002686
+    },
+    {
+      "name": "Optics",
+      "score": 0.06483951210975647
+    },
+    {
+      "name": "Voltage",
+      "score": 0.06452664732933044
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,101 +1,180 @@
 {
-    "title": "RoadFormer: Road Extraction Using a Swin Transformer Combined with a Spatial and Channel Separable Convolution",
-    "url": "https://openalex.org/W4320919181",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2113220745",
-            "name": "Xiangzeng Liu",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2106774294",
-            "name": "Ziyao Wang",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3085835464",
-            "name": "Jinting Wan",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117071288",
-            "name": "Juli Zhang",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2110555250",
-            "name": "Yue Xi",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2178511088",
-            "name": "Ruyi Liu",
-            "affiliations": [
-                "Xidian University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2094461243",
-            "name": "Qiguang Miao",
-            "affiliations": [
-                "Xidian University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3024167159",
-        "https://openalex.org/W2989928722",
-        "https://openalex.org/W1967427853",
-        "https://openalex.org/W2078816540",
-        "https://openalex.org/W1480020587",
-        "https://openalex.org/W2774320778",
-        "https://openalex.org/W3158184288",
-        "https://openalex.org/W3021297918",
-        "https://openalex.org/W2413473068",
-        "https://openalex.org/W2594203750",
-        "https://openalex.org/W2964255128",
-        "https://openalex.org/W2798925380",
-        "https://openalex.org/W2898504016",
-        "https://openalex.org/W4286634283",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2547880720",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2884436604",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W2735039185",
-        "https://openalex.org/W2893801697",
-        "https://openalex.org/W3162672913",
-        "https://openalex.org/W2307770531",
-        "https://openalex.org/W2975194617",
-        "https://openalex.org/W6804177484",
-        "https://openalex.org/W4213205652",
-        "https://openalex.org/W2138317821",
-        "https://openalex.org/W2623490820",
-        "https://openalex.org/W3206874106",
-        "https://openalex.org/W2790444446",
-        "https://openalex.org/W2914974669",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2982628450",
-        "https://openalex.org/W6838417955",
-        "https://openalex.org/W3105636206",
-        "https://openalex.org/W3214248441",
-        "https://openalex.org/W4282967568",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "The accurate detection and extraction of roads using remote sensing technology are crucial to the development of the transportation industry and intelligent perception tasks. Recently, in view of the advantages of CNNs in feature extraction, its related road extraction methods have been proposed successively. However, due to the limitation of kernel size, they perform less effectively at capturing long-range information and global context, which are crucial for road targets distributed over long distances and highly structured. To deal with this problem, a novel model named RoadFormer with a Swin Transformer as the backbone is developed in this paper. Firstly, to extract long-range information effectively, a Swin Transformer multi-scale encoder is adopted in our model. Secondly, to enhance the feature representation capability of the model, we design an innovative bottleneck module, in which the spatial and channel separable convolution is employed to obtain fine-grained and globe features, and then a dilated block is connected after the spatial convolution module to capture more integrated road structures. Finally, a lightweight decoder consisting of transposed convolution and skip connection generates the final extraction results. Extensive experimental results confirm the advantages of RoadFormer on the Deepglobe and Massachusetts datasets. The comparative results of visualization and quantification demonstrate that our model outperforms comparable methods.",
-    "full_text": null
+  "title": "RoadFormer: Road Extraction Using a Swin Transformer Combined with a Spatial and Channel Separable Convolution",
+  "url": "https://openalex.org/W4320919181",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2113220745",
+      "name": "Xiangzeng Liu",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2106774294",
+      "name": "Ziyao Wang",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3085835464",
+      "name": "Jinting Wan",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117071288",
+      "name": "Juli Zhang",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2110555250",
+      "name": "Yue Xi",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2178511088",
+      "name": "Ruyi Liu",
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2094461243",
+      "name": "Qiguang Miao",
+      "affiliations": [
+        "Xidian University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3024167159",
+    "https://openalex.org/W2989928722",
+    "https://openalex.org/W1967427853",
+    "https://openalex.org/W2078816540",
+    "https://openalex.org/W1480020587",
+    "https://openalex.org/W2774320778",
+    "https://openalex.org/W3158184288",
+    "https://openalex.org/W3021297918",
+    "https://openalex.org/W2413473068",
+    "https://openalex.org/W2594203750",
+    "https://openalex.org/W2964255128",
+    "https://openalex.org/W2798925380",
+    "https://openalex.org/W2898504016",
+    "https://openalex.org/W4286634283",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2547880720",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2884436604",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W2735039185",
+    "https://openalex.org/W2893801697",
+    "https://openalex.org/W3162672913",
+    "https://openalex.org/W2307770531",
+    "https://openalex.org/W2975194617",
+    "https://openalex.org/W6804177484",
+    "https://openalex.org/W4213205652",
+    "https://openalex.org/W2138317821",
+    "https://openalex.org/W2623490820",
+    "https://openalex.org/W3206874106",
+    "https://openalex.org/W2790444446",
+    "https://openalex.org/W2914974669",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2982628450",
+    "https://openalex.org/W6838417955",
+    "https://openalex.org/W3105636206",
+    "https://openalex.org/W3214248441",
+    "https://openalex.org/W4282967568",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "The accurate detection and extraction of roads using remote sensing technology are crucial to the development of the transportation industry and intelligent perception tasks. Recently, in view of the advantages of CNNs in feature extraction, its related road extraction methods have been proposed successively. However, due to the limitation of kernel size, they perform less effectively at capturing long-range information and global context, which are crucial for road targets distributed over long distances and highly structured. To deal with this problem, a novel model named RoadFormer with a Swin Transformer as the backbone is developed in this paper. Firstly, to extract long-range information effectively, a Swin Transformer multi-scale encoder is adopted in our model. Secondly, to enhance the feature representation capability of the model, we design an innovative bottleneck module, in which the spatial and channel separable convolution is employed to obtain fine-grained and globe features, and then a dilated block is connected after the spatial convolution module to capture more integrated road structures. Finally, a lightweight decoder consisting of transposed convolution and skip connection generates the final extraction results. Extensive experimental results confirm the advantages of RoadFormer on the Deepglobe and Massachusetts datasets. The comparative results of visualization and quantification demonstrate that our model outperforms comparable methods.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8185847401618958
+    },
+    {
+      "name": "Bottleneck",
+      "score": 0.5294206738471985
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.5243447422981262
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5045152902603149
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4521005153656006
+    },
+    {
+      "name": "Kernel (algebra)",
+      "score": 0.44253674149513245
+    },
+    {
+      "name": "Convolution (computer science)",
+      "score": 0.43350550532341003
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42426010966300964
+    },
+    {
+      "name": "Visualization",
+      "score": 0.4187955856323242
+    },
+    {
+      "name": "Data mining",
+      "score": 0.35668450593948364
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3395726680755615
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.16398507356643677
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.14457255601882935
+    },
+    {
+      "name": "Voltage",
+      "score": 0.1367950737476349
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

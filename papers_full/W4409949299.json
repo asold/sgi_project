@@ -1,66 +1,93 @@
 {
-    "title": "Improving Personalized Meal Planning with Large Language Models: Identifying and Decomposing Compound Ingredients",
-    "url": "https://openalex.org/W4409949299",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5067333520",
-            "name": "Leon Kopitar",
-            "affiliations": [
-                "University of Maribor"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5092622623",
-            "name": "Leon Bedrač",
-            "affiliations": [
-                "Leiden University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007045100",
-            "name": "Larissa J. Strath",
-            "affiliations": [
-                "University of Florida"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5030951014",
-            "name": "Jiang Bian",
-            "affiliations": [
-                "Indiana University Bloomington",
-                "Regenstrief Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5017783286",
-            "name": "Gregor Štiglic",
-            "affiliations": [
-                "University of Edinburgh",
-                "University of Maribor"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4394576240",
-        "https://openalex.org/W4391020799",
-        "https://openalex.org/W2996941103",
-        "https://openalex.org/W4386069987",
-        "https://openalex.org/W4389400804",
-        "https://openalex.org/W3165402315",
-        "https://openalex.org/W2786922689",
-        "https://openalex.org/W3046372357",
-        "https://openalex.org/W4406777876",
-        "https://openalex.org/W4403232235",
-        "https://openalex.org/W6809646742",
-        "https://openalex.org/W4394865839",
-        "https://openalex.org/W3113133930",
-        "https://openalex.org/W4225597912",
-        "https://openalex.org/W4400614385",
-        "https://openalex.org/W4393054226",
-        "https://openalex.org/W2095071191",
-        "https://openalex.org/W4221143046"
-    ],
-    "abstract": "Background/Objectives: Identifying and decomposing compound ingredients within meal plans presents meal customization and nutritional analysis challenges. It is essential for accurately identifying and replacing problematic ingredients linked to allergies or intolerances and helping nutritional evaluation. Methods: This study explored the effectiveness of three large language models (LLMs)—GPT-4o, Llama-3 (70B), and Mixtral (8x7B), in decomposing compound ingredients into basic ingredients within meal plans. GPT-4o was used to generate 15 structured meal plans, each containing compound ingredients. Each LLM then identified and decomposed these compound items into basic ingredients. The decomposed ingredients were matched to entries in a subset of the USDA FoodData Central repository using API-based search and mapping techniques. Nutritional values were retrieved and aggregated to evaluate accuracy of decomposition. Performance was assessed through manual review by nutritionists and quantified using accuracy and F1-score. Statistical significance was tested using paired t-tests or Wilcoxon signed-rank tests based on normality. Results: Results showed that large models—both Llama-3 (70B) and GPT-4o—outperformed Mixtral (8x7B), achieving average F1-scores of 0.894 (95% CI: 0.84–0.95) and 0.842 (95% CI: 0.79–0.89), respectively, compared to an F1-score of 0.690 (95% CI: 0.62–0.76) from Mixtral (8x7B). Conclusions: The open-source Llama-3 (70B) model achieved the best performance, outperforming the commercial GPT-4o model, showing its superior ability to consistently break down compound ingredients into precise quantities within meal plans and illustrating its potential to enhance meal customization and nutritional analysis. These findings underscore the potential role of advanced LLMs in precision nutrition and their application in promoting healthier dietary practices tailored to individual preferences and needs.",
-    "full_text": null
+  "title": "Improving Personalized Meal Planning with Large Language Models: Identifying and Decomposing Compound Ingredients",
+  "url": "https://openalex.org/W4409949299",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5067333520",
+      "name": "Leon Kopitar",
+      "affiliations": [
+        "University of Maribor"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5092622623",
+      "name": "Leon Bedrač",
+      "affiliations": [
+        "Leiden University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007045100",
+      "name": "Larissa J. Strath",
+      "affiliations": [
+        "University of Florida"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5030951014",
+      "name": "Jiang Bian",
+      "affiliations": [
+        "Indiana University Bloomington",
+        "Regenstrief Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5017783286",
+      "name": "Gregor Štiglic",
+      "affiliations": [
+        "University of Edinburgh",
+        "University of Maribor"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4394576240",
+    "https://openalex.org/W4391020799",
+    "https://openalex.org/W2996941103",
+    "https://openalex.org/W4386069987",
+    "https://openalex.org/W4389400804",
+    "https://openalex.org/W3165402315",
+    "https://openalex.org/W2786922689",
+    "https://openalex.org/W3046372357",
+    "https://openalex.org/W4406777876",
+    "https://openalex.org/W4403232235",
+    "https://openalex.org/W6809646742",
+    "https://openalex.org/W4394865839",
+    "https://openalex.org/W3113133930",
+    "https://openalex.org/W4225597912",
+    "https://openalex.org/W4400614385",
+    "https://openalex.org/W4393054226",
+    "https://openalex.org/W2095071191",
+    "https://openalex.org/W4221143046"
+  ],
+  "abstract": "Background/Objectives: Identifying and decomposing compound ingredients within meal plans presents meal customization and nutritional analysis challenges. It is essential for accurately identifying and replacing problematic ingredients linked to allergies or intolerances and helping nutritional evaluation. Methods: This study explored the effectiveness of three large language models (LLMs)—GPT-4o, Llama-3 (70B), and Mixtral (8x7B), in decomposing compound ingredients into basic ingredients within meal plans. GPT-4o was used to generate 15 structured meal plans, each containing compound ingredients. Each LLM then identified and decomposed these compound items into basic ingredients. The decomposed ingredients were matched to entries in a subset of the USDA FoodData Central repository using API-based search and mapping techniques. Nutritional values were retrieved and aggregated to evaluate accuracy of decomposition. Performance was assessed through manual review by nutritionists and quantified using accuracy and F1-score. Statistical significance was tested using paired t-tests or Wilcoxon signed-rank tests based on normality. Results: Results showed that large models—both Llama-3 (70B) and GPT-4o—outperformed Mixtral (8x7B), achieving average F1-scores of 0.894 (95% CI: 0.84–0.95) and 0.842 (95% CI: 0.79–0.89), respectively, compared to an F1-score of 0.690 (95% CI: 0.62–0.76) from Mixtral (8x7B). Conclusions: The open-source Llama-3 (70B) model achieved the best performance, outperforming the commercial GPT-4o model, showing its superior ability to consistently break down compound ingredients into precise quantities within meal plans and illustrating its potential to enhance meal customization and nutritional analysis. These findings underscore the potential role of advanced LLMs in precision nutrition and their application in promoting healthier dietary practices tailored to individual preferences and needs.",
+  "full_text": null,
+  "topic": "Meal",
+  "concepts": [
+    {
+      "name": "Meal",
+      "score": 0.433616042137146
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.42090943455696106
+    },
+    {
+      "name": "Food science",
+      "score": 0.3784227669239044
+    },
+    {
+      "name": "Computer science",
+      "score": 0.3691394031047821
+    },
+    {
+      "name": "Biotechnology",
+      "score": 0.3536359369754791
+    },
+    {
+      "name": "Biology",
+      "score": 0.3260614275932312
+    }
+  ]
 }

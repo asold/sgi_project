@@ -1,62 +1,113 @@
 {
-    "title": "TransCD: scene change detection via transformer-based architecture",
-    "url": "https://openalex.org/W3211465673",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2134801783",
-            "name": "Zhixue Wang",
-            "affiliations": [
-                "Southwest Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2023856972",
-            "name": "Yu Zhang",
-            "affiliations": [
-                "Southwest Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1973708332",
-            "name": "Lin Luo",
-            "affiliations": [
-                "Southwest Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1996891910",
-            "name": "Nan Wang",
-            "affiliations": [
-                "Southwest Jiaotong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3010257550",
-        "https://openalex.org/W2169557442",
-        "https://openalex.org/W2021057537",
-        "https://openalex.org/W2111918405",
-        "https://openalex.org/W2140235142",
-        "https://openalex.org/W1994634851",
-        "https://openalex.org/W2606629906",
-        "https://openalex.org/W2164742238",
-        "https://openalex.org/W2886956694",
-        "https://openalex.org/W2480572218",
-        "https://openalex.org/W2610530220",
-        "https://openalex.org/W2038359734",
-        "https://openalex.org/W3183600011",
-        "https://openalex.org/W3177155650",
-        "https://openalex.org/W2170140722",
-        "https://openalex.org/W2525668722",
-        "https://openalex.org/W2970649833",
-        "https://openalex.org/W3094171276",
-        "https://openalex.org/W2986346322",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3096808073",
-        "https://openalex.org/W2187089797",
-        "https://openalex.org/W3105220622"
-    ],
-    "abstract": "Scene change detection (SCD) is a task to identify changes of interest between bi-temporal images acquired at different times. A critical idea of SCD is how to identify interesting changes while overcoming noisy changes induced by camera motion or environment variation, such as viewpoint, dynamic changes and outdoor conditions. The noisy changes cause corresponding pixel pairs to have spatial difference (position relation) and temporal difference (intensity relation). Due to the limitation of local receptive field, it is difficult for traditional models based on convolutional neural network (CNN) to establish long-range relations for the semantic changes. In order to address the above challenges, we explore the potential of a transformer in SCD and propose a transformer-based SCD architecture (TransCD). From the intuition that a SCD model should be able to model both interesting and noisy changes, we incorporate a siamese vision transformer (SViT) in a feature difference SCD framework. Our motivation is that SViT is able to establish global semantic relations and model long-range context, which is more robust to noisy changes. In addition, different from the pure CNN-based models with high computational complexity, the proposed model is more efficient and has fewer parameters. Extensive experiments on the CDNet-2014 dataset demonstrate that the proposed TransCD (SViT-E1-D1-32) outperforms the state-of-the-art SCD models and achieves 0.9361 in terms of the F1 score with an improvement of 7.31%.",
-    "full_text": null
+  "title": "TransCD: scene change detection via transformer-based architecture",
+  "url": "https://openalex.org/W3211465673",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2134801783",
+      "name": "Zhixue Wang",
+      "affiliations": [
+        "Southwest Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2023856972",
+      "name": "Yu Zhang",
+      "affiliations": [
+        "Southwest Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1973708332",
+      "name": "Lin Luo",
+      "affiliations": [
+        "Southwest Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1996891910",
+      "name": "Nan Wang",
+      "affiliations": [
+        "Southwest Jiaotong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3010257550",
+    "https://openalex.org/W2169557442",
+    "https://openalex.org/W2021057537",
+    "https://openalex.org/W2111918405",
+    "https://openalex.org/W2140235142",
+    "https://openalex.org/W1994634851",
+    "https://openalex.org/W2606629906",
+    "https://openalex.org/W2164742238",
+    "https://openalex.org/W2886956694",
+    "https://openalex.org/W2480572218",
+    "https://openalex.org/W2610530220",
+    "https://openalex.org/W2038359734",
+    "https://openalex.org/W3183600011",
+    "https://openalex.org/W3177155650",
+    "https://openalex.org/W2170140722",
+    "https://openalex.org/W2525668722",
+    "https://openalex.org/W2970649833",
+    "https://openalex.org/W3094171276",
+    "https://openalex.org/W2986346322",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3096808073",
+    "https://openalex.org/W2187089797",
+    "https://openalex.org/W3105220622"
+  ],
+  "abstract": "Scene change detection (SCD) is a task to identify changes of interest between bi-temporal images acquired at different times. A critical idea of SCD is how to identify interesting changes while overcoming noisy changes induced by camera motion or environment variation, such as viewpoint, dynamic changes and outdoor conditions. The noisy changes cause corresponding pixel pairs to have spatial difference (position relation) and temporal difference (intensity relation). Due to the limitation of local receptive field, it is difficult for traditional models based on convolutional neural network (CNN) to establish long-range relations for the semantic changes. In order to address the above challenges, we explore the potential of a transformer in SCD and propose a transformer-based SCD architecture (TransCD). From the intuition that a SCD model should be able to model both interesting and noisy changes, we incorporate a siamese vision transformer (SViT) in a feature difference SCD framework. Our motivation is that SViT is able to establish global semantic relations and model long-range context, which is more robust to noisy changes. In addition, different from the pure CNN-based models with high computational complexity, the proposed model is more efficient and has fewer parameters. Extensive experiments on the CDNet-2014 dataset demonstrate that the proposed TransCD (SViT-E1-D1-32) outperforms the state-of-the-art SCD models and achieves 0.9361 in terms of the F1 score with an improvement of 7.31%.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7664623260498047
+    },
+    {
+      "name": "Transformer",
+      "score": 0.608213484287262
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6076993346214294
+    },
+    {
+      "name": "Intuition",
+      "score": 0.6049355268478394
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.572189211845398
+    },
+    {
+      "name": "Pixel",
+      "score": 0.45960429310798645
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.42861032485961914
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,58 +1,93 @@
 {
-    "title": "Improved inter-protein contact prediction using dimensional hybrid residual networks and protein language models",
-    "url": "https://openalex.org/W4319826837",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3127484366",
-            "name": "Yunda Si",
-            "affiliations": [
-                "Huazhong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2127731696",
-            "name": "Chengfei Yan",
-            "affiliations": [
-                "Huazhong University of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2111397525",
-        "https://openalex.org/W2105287154",
-        "https://openalex.org/W1987749411",
-        "https://openalex.org/W2114306742",
-        "https://openalex.org/W2155796229",
-        "https://openalex.org/W2130479394",
-        "https://openalex.org/W3133793061",
-        "https://openalex.org/W2120836664",
-        "https://openalex.org/W2107867854",
-        "https://openalex.org/W2957157683",
-        "https://openalex.org/W3212532687",
-        "https://openalex.org/W3179008260",
-        "https://openalex.org/W2065921821",
-        "https://openalex.org/W1979762151",
-        "https://openalex.org/W2593619857",
-        "https://openalex.org/W4206388217",
-        "https://openalex.org/W2804651207",
-        "https://openalex.org/W4210646117",
-        "https://openalex.org/W3211403530",
-        "https://openalex.org/W3133540795",
-        "https://openalex.org/W3133458480",
-        "https://openalex.org/W3194835771",
-        "https://openalex.org/W2153983456",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2114340287",
-        "https://openalex.org/W2136799255",
-        "https://openalex.org/W3128461460",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3171039768",
-        "https://openalex.org/W2508425869",
-        "https://openalex.org/W3202105508",
-        "https://openalex.org/W4220824576",
-        "https://openalex.org/W4282912737"
-    ],
-    "abstract": "Abstract The knowledge of contacting residue pairs between interacting proteins is very useful for the structural characterization of protein–protein interactions (PPIs). However, accurately identifying the tens of contacting ones from hundreds of thousands of inter-protein residue pairs is extremely challenging, and performances of the state-of-the-art inter-protein contact prediction methods are still quite limited. In this study, we developed a deep learning method for inter-protein contact prediction, which is referred to as DRN-1D2D_Inter. Specifically, we employed pretrained protein language models to generate structural information-enriched input features to residual networks formed by dimensional hybrid residual blocks to perform inter-protein contact prediction. Extensively bechmarking DRN-1D2D_Inter on multiple datasets, including both heteromeric PPIs and homomeric PPIs, we show DRN-1D2D_Inter consistently and significantly outperformed two state-of-the-art inter-protein contact prediction methods, including GLINTER and DeepHomo, although both the latter two methods leveraged the native structures of interacting proteins in the prediction, and DRN-1D2D_Inter made the prediction purely from sequences. We further show that applying the predicted contacts as constraints for protein–protein docking can significantly improve its performance for protein complex structure prediction.",
-    "full_text": null
+  "title": "Improved inter-protein contact prediction using dimensional hybrid residual networks and protein language models",
+  "url": "https://openalex.org/W4319826837",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3127484366",
+      "name": "Yunda Si",
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2127731696",
+      "name": "Chengfei Yan",
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2111397525",
+    "https://openalex.org/W2105287154",
+    "https://openalex.org/W1987749411",
+    "https://openalex.org/W2114306742",
+    "https://openalex.org/W2155796229",
+    "https://openalex.org/W2130479394",
+    "https://openalex.org/W3133793061",
+    "https://openalex.org/W2120836664",
+    "https://openalex.org/W2107867854",
+    "https://openalex.org/W2957157683",
+    "https://openalex.org/W3212532687",
+    "https://openalex.org/W3179008260",
+    "https://openalex.org/W2065921821",
+    "https://openalex.org/W1979762151",
+    "https://openalex.org/W2593619857",
+    "https://openalex.org/W4206388217",
+    "https://openalex.org/W2804651207",
+    "https://openalex.org/W4210646117",
+    "https://openalex.org/W3211403530",
+    "https://openalex.org/W3133540795",
+    "https://openalex.org/W3133458480",
+    "https://openalex.org/W3194835771",
+    "https://openalex.org/W2153983456",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2114340287",
+    "https://openalex.org/W2136799255",
+    "https://openalex.org/W3128461460",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3171039768",
+    "https://openalex.org/W2508425869",
+    "https://openalex.org/W3202105508",
+    "https://openalex.org/W4220824576",
+    "https://openalex.org/W4282912737"
+  ],
+  "abstract": "Abstract The knowledge of contacting residue pairs between interacting proteins is very useful for the structural characterization of protein–protein interactions (PPIs). However, accurately identifying the tens of contacting ones from hundreds of thousands of inter-protein residue pairs is extremely challenging, and performances of the state-of-the-art inter-protein contact prediction methods are still quite limited. In this study, we developed a deep learning method for inter-protein contact prediction, which is referred to as DRN-1D2D_Inter. Specifically, we employed pretrained protein language models to generate structural information-enriched input features to residual networks formed by dimensional hybrid residual blocks to perform inter-protein contact prediction. Extensively bechmarking DRN-1D2D_Inter on multiple datasets, including both heteromeric PPIs and homomeric PPIs, we show DRN-1D2D_Inter consistently and significantly outperformed two state-of-the-art inter-protein contact prediction methods, including GLINTER and DeepHomo, although both the latter two methods leveraged the native structures of interacting proteins in the prediction, and DRN-1D2D_Inter made the prediction purely from sequences. We further show that applying the predicted contacts as constraints for protein–protein docking can significantly improve its performance for protein complex structure prediction.",
+  "full_text": null,
+  "topic": "Residual",
+  "concepts": [
+    {
+      "name": "Residual",
+      "score": 0.7717627286911011
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6482064723968506
+    },
+    {
+      "name": "Protein structure prediction",
+      "score": 0.46359413862228394
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40239763259887695
+    },
+    {
+      "name": "Protein structure",
+      "score": 0.3154742121696472
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.17714041471481323
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.160232275724411
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

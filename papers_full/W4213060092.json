@@ -1,103 +1,154 @@
 {
-    "title": "Transformer-Based Abstractive Summarization for Reddit and Twitter: Single Posts vs. Comment Pools in Three Languages",
-    "url": "https://openalex.org/W4213060092",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5067606425",
-            "name": "Ivan S. Blekanov",
-            "affiliations": [
-                "Yan'an University",
-                "St Petersburg University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102745150",
-            "name": "Nikita Tarasov",
-            "affiliations": [
-                "St Petersburg University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5020072191",
-            "name": "Svetlana S. Bodrunova",
-            "affiliations": [
-                "St Petersburg University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6765362104",
-        "https://openalex.org/W6602848175",
-        "https://openalex.org/W3120147900",
-        "https://openalex.org/W2416353094",
-        "https://openalex.org/W2913130956",
-        "https://openalex.org/W1983719983",
-        "https://openalex.org/W6606263192",
-        "https://openalex.org/W2996346207",
-        "https://openalex.org/W4255428302",
-        "https://openalex.org/W3021053579",
-        "https://openalex.org/W6761370709",
-        "https://openalex.org/W3029581652",
-        "https://openalex.org/W3038221182",
-        "https://openalex.org/W3016372096",
-        "https://openalex.org/W3202059497",
-        "https://openalex.org/W3156450987",
-        "https://openalex.org/W2996264288",
-        "https://openalex.org/W2952138241",
-        "https://openalex.org/W2970419734",
-        "https://openalex.org/W2945918281",
-        "https://openalex.org/W2606974598",
-        "https://openalex.org/W2888482885",
-        "https://openalex.org/W2267186426",
-        "https://openalex.org/W3041133507",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6674330103",
-        "https://openalex.org/W2943552823",
-        "https://openalex.org/W2476001438",
-        "https://openalex.org/W3088257432",
-        "https://openalex.org/W2995089337",
-        "https://openalex.org/W2760781482",
-        "https://openalex.org/W3192376232",
-        "https://openalex.org/W3099286868",
-        "https://openalex.org/W2962788840",
-        "https://openalex.org/W2991605991",
-        "https://openalex.org/W2995559676",
-        "https://openalex.org/W3103298261",
-        "https://openalex.org/W3130164045",
-        "https://openalex.org/W3190367510",
-        "https://openalex.org/W3119920397",
-        "https://openalex.org/W3181636473",
-        "https://openalex.org/W6679410207",
-        "https://openalex.org/W2971034336",
-        "https://openalex.org/W6682631176",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W3080232144",
-        "https://openalex.org/W2668191635",
-        "https://openalex.org/W6780389985",
-        "https://openalex.org/W3022912079",
-        "https://openalex.org/W2902901148",
-        "https://openalex.org/W6763326468",
-        "https://openalex.org/W6804993785",
-        "https://openalex.org/W2149510050",
-        "https://openalex.org/W2963626623",
-        "https://openalex.org/W6799297170",
-        "https://openalex.org/W3192896556",
-        "https://openalex.org/W3199527540",
-        "https://openalex.org/W3103817618",
-        "https://openalex.org/W3040809272",
-        "https://openalex.org/W2095705004",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2135303634",
-        "https://openalex.org/W4200090890",
-        "https://openalex.org/W2936994450",
-        "https://openalex.org/W3185200108",
-        "https://openalex.org/W2948220708",
-        "https://openalex.org/W69371391",
-        "https://openalex.org/W154441183"
-    ],
-    "abstract": "Abstractive summarization is a technique that allows for extracting condensed meanings from long texts, with a variety of potential practical applications. Nonetheless, today’s abstractive summarization research is limited to testing the models on various types of data, which brings only marginal improvements and does not lead to massive practical employment of the method. In particular, abstractive summarization is not used for social media research, where it would be very useful for opinion and topic mining due to the complications that social media data create for other methods of textual analysis. Of all social media, Reddit is most frequently used for testing new neural models of text summarization on large-scale datasets in English, without further testing on real-world smaller-size data in various languages or from various other platforms. Moreover, for social media, summarizing pools of texts (one-author posts, comment threads, discussion cascades, etc.) may bring crucial results relevant for social studies, which have not yet been tested. However, the existing methods of abstractive summarization are not fine-tuned for social media data and have next-to-never been applied to data from platforms beyond Reddit, nor for comments or non-English user texts. We address these research gaps by fine-tuning the newest Transformer-based neural network models LongFormer and T5 and testing them against BART, and on real-world data from Reddit, with improvements of up to 2%. Then, we apply the best model (fine-tuned T5) to pools of comments from Reddit and assess the similarity of post and comment summarizations. Further, to overcome the 500-token limitation of T5 for analyzing social media pools that are usually bigger, we apply LongFormer Large and T5 Large to pools of tweets from a large-scale discussion on the Charlie Hebdo massacre in three languages and prove that pool summarizations may be used for detecting micro-shifts in agendas of networked discussions. Our results show, however, that additional learning is definitely needed for German and French, as the results for these languages are non-satisfactory, and more fine-tuning is needed even in English for Twitter data. Thus, we show that a ‘one-for-all’ neural-network summarization model is still impossible to reach, while fine-tuning for platform affordances works well. We also show that fine-tuned T5 works best for small-scale social media data, but LongFormer is helpful for larger-scale pool summarizations.",
-    "full_text": null
+  "title": "Transformer-Based Abstractive Summarization for Reddit and Twitter: Single Posts vs. Comment Pools in Three Languages",
+  "url": "https://openalex.org/W4213060092",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5067606425",
+      "name": "Ivan S. Blekanov",
+      "affiliations": [
+        "Yan'an University",
+        "St Petersburg University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102745150",
+      "name": "Nikita Tarasov",
+      "affiliations": [
+        "St Petersburg University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5020072191",
+      "name": "Svetlana S. Bodrunova",
+      "affiliations": [
+        "St Petersburg University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6765362104",
+    "https://openalex.org/W6602848175",
+    "https://openalex.org/W3120147900",
+    "https://openalex.org/W2416353094",
+    "https://openalex.org/W2913130956",
+    "https://openalex.org/W1983719983",
+    "https://openalex.org/W6606263192",
+    "https://openalex.org/W2996346207",
+    "https://openalex.org/W4255428302",
+    "https://openalex.org/W3021053579",
+    "https://openalex.org/W6761370709",
+    "https://openalex.org/W3029581652",
+    "https://openalex.org/W3038221182",
+    "https://openalex.org/W3016372096",
+    "https://openalex.org/W3202059497",
+    "https://openalex.org/W3156450987",
+    "https://openalex.org/W2996264288",
+    "https://openalex.org/W2952138241",
+    "https://openalex.org/W2970419734",
+    "https://openalex.org/W2945918281",
+    "https://openalex.org/W2606974598",
+    "https://openalex.org/W2888482885",
+    "https://openalex.org/W2267186426",
+    "https://openalex.org/W3041133507",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6674330103",
+    "https://openalex.org/W2943552823",
+    "https://openalex.org/W2476001438",
+    "https://openalex.org/W3088257432",
+    "https://openalex.org/W2995089337",
+    "https://openalex.org/W2760781482",
+    "https://openalex.org/W3192376232",
+    "https://openalex.org/W3099286868",
+    "https://openalex.org/W2962788840",
+    "https://openalex.org/W2991605991",
+    "https://openalex.org/W2995559676",
+    "https://openalex.org/W3103298261",
+    "https://openalex.org/W3130164045",
+    "https://openalex.org/W3190367510",
+    "https://openalex.org/W3119920397",
+    "https://openalex.org/W3181636473",
+    "https://openalex.org/W6679410207",
+    "https://openalex.org/W2971034336",
+    "https://openalex.org/W6682631176",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W3080232144",
+    "https://openalex.org/W2668191635",
+    "https://openalex.org/W6780389985",
+    "https://openalex.org/W3022912079",
+    "https://openalex.org/W2902901148",
+    "https://openalex.org/W6763326468",
+    "https://openalex.org/W6804993785",
+    "https://openalex.org/W2149510050",
+    "https://openalex.org/W2963626623",
+    "https://openalex.org/W6799297170",
+    "https://openalex.org/W3192896556",
+    "https://openalex.org/W3199527540",
+    "https://openalex.org/W3103817618",
+    "https://openalex.org/W3040809272",
+    "https://openalex.org/W2095705004",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2135303634",
+    "https://openalex.org/W4200090890",
+    "https://openalex.org/W2936994450",
+    "https://openalex.org/W3185200108",
+    "https://openalex.org/W2948220708",
+    "https://openalex.org/W69371391",
+    "https://openalex.org/W154441183"
+  ],
+  "abstract": "Abstractive summarization is a technique that allows for extracting condensed meanings from long texts, with a variety of potential practical applications. Nonetheless, today’s abstractive summarization research is limited to testing the models on various types of data, which brings only marginal improvements and does not lead to massive practical employment of the method. In particular, abstractive summarization is not used for social media research, where it would be very useful for opinion and topic mining due to the complications that social media data create for other methods of textual analysis. Of all social media, Reddit is most frequently used for testing new neural models of text summarization on large-scale datasets in English, without further testing on real-world smaller-size data in various languages or from various other platforms. Moreover, for social media, summarizing pools of texts (one-author posts, comment threads, discussion cascades, etc.) may bring crucial results relevant for social studies, which have not yet been tested. However, the existing methods of abstractive summarization are not fine-tuned for social media data and have next-to-never been applied to data from platforms beyond Reddit, nor for comments or non-English user texts. We address these research gaps by fine-tuning the newest Transformer-based neural network models LongFormer and T5 and testing them against BART, and on real-world data from Reddit, with improvements of up to 2%. Then, we apply the best model (fine-tuned T5) to pools of comments from Reddit and assess the similarity of post and comment summarizations. Further, to overcome the 500-token limitation of T5 for analyzing social media pools that are usually bigger, we apply LongFormer Large and T5 Large to pools of tweets from a large-scale discussion on the Charlie Hebdo massacre in three languages and prove that pool summarizations may be used for detecting micro-shifts in agendas of networked discussions. Our results show, however, that additional learning is definitely needed for German and French, as the results for these languages are non-satisfactory, and more fine-tuning is needed even in English for Twitter data. Thus, we show that a ‘one-for-all’ neural-network summarization model is still impossible to reach, while fine-tuning for platform affordances works well. We also show that fine-tuned T5 works best for small-scale social media data, but LongFormer is helpful for larger-scale pool summarizations.",
+  "full_text": null,
+  "topic": "Automatic summarization",
+  "concepts": [
+    {
+      "name": "Automatic summarization",
+      "score": 0.9765815734863281
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8857060670852661
+    },
+    {
+      "name": "Social media",
+      "score": 0.7373597025871277
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5985562801361084
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.43875443935394287
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.43158888816833496
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4224194884300232
+    },
+    {
+      "name": "Data science",
+      "score": 0.38817018270492554
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.37573128938674927
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

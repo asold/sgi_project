@@ -1,91 +1,170 @@
 {
-    "title": "K-LM: Knowledge Augmenting in Language Models Within the Scholarly Domain",
-    "url": "https://openalex.org/W4293057253",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2100320400",
-            "name": "Vivek Kumar",
-            "affiliations": [
-                "University of Cagliari"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A731390618",
-            "name": "Diego Reforgiato Recupero",
-            "affiliations": [
-                "University of Cagliari"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A336114757",
-            "name": "Rim Helaoui",
-            "affiliations": [
-                "Philips (Netherlands)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A183750669",
-            "name": "Daniele Riboni",
-            "affiliations": [
-                "University of Cagliari"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2165698076",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W2972483465",
-        "https://openalex.org/W6731801563",
-        "https://openalex.org/W2081580037",
-        "https://openalex.org/W6606482852",
-        "https://openalex.org/W102708294",
-        "https://openalex.org/W2022166150",
-        "https://openalex.org/W2094728533",
-        "https://openalex.org/W1512387364",
-        "https://openalex.org/W2080133951",
-        "https://openalex.org/W2759136286",
-        "https://openalex.org/W2283196293",
-        "https://openalex.org/W6638311095",
-        "https://openalex.org/W6638754787",
-        "https://openalex.org/W6608344535",
-        "https://openalex.org/W2099752825",
-        "https://openalex.org/W68132019",
-        "https://openalex.org/W6678830454",
-        "https://openalex.org/W2184957013",
-        "https://openalex.org/W2604314403",
-        "https://openalex.org/W6718112784",
-        "https://openalex.org/W6758075616",
-        "https://openalex.org/W2949972983",
-        "https://openalex.org/W2950393809",
-        "https://openalex.org/W2774837955",
-        "https://openalex.org/W2499696929",
-        "https://openalex.org/W3164758947",
-        "https://openalex.org/W3032390337",
-        "https://openalex.org/W6776906657",
-        "https://openalex.org/W6772406930",
-        "https://openalex.org/W2998385486",
-        "https://openalex.org/W2963906317",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W2988647680",
-        "https://openalex.org/W2991170427",
-        "https://openalex.org/W3111112601",
-        "https://openalex.org/W2889506968",
-        "https://openalex.org/W6746267677",
-        "https://openalex.org/W2014545475",
-        "https://openalex.org/W7034357076",
-        "https://openalex.org/W3097858486",
-        "https://openalex.org/W3092710364",
-        "https://openalex.org/W4285106525",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W160339868",
-        "https://openalex.org/W3099387504",
-        "https://openalex.org/W2949434543",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2572147858",
-        "https://openalex.org/W2951723246"
-    ],
-    "abstract": "The use of superior algorithms and complex architectures in language models have successfully imparted human-like abilities to machines for specific tasks. But two significant constraints, the available training data size and the understanding of domain-specific context, hamper the pre-trained language models from optimal and reliable performance. A potential solution to tackle these limitations is to equip the language models with domain knowledge. While the commonly adopted techniques use Knowledge Graphs Embeddings (KGEs) to inject domain knowledge, we provide a Knowledge Language Model (K-LM) to use the Resource Description Framework (RDF) triples directly, extracted from world knowledge bases. The proposed model works in conjunction with Generative Pretrained Transformer (GPT-2) and Bidirectional Encoder Representations from Transformers (BERT) and uses a well-defined pipeline to select, categorize, and filter the RDF triples. In addition, we introduce heuristic methods to inject domain-specific knowledge in K-LM, leveraging knowledge graphs (KGs). We tested our approaches on the classification task within the scholarly domain using two KGs, and our results show that our proposed language model has significantly outperformed the baselines and BERT for each KG. Our experimental findings also help us conclude the importance of relevance of KG used over the quantity of injected RDF triples. Also, each of our proposed methods for injecting the RDF triples has increased the overall model's accuracy, demonstrating that K-LM is a potential choice for domain adaptation to solve knowledge-driven problems.",
-    "full_text": null
+  "title": "K-LM: Knowledge Augmenting in Language Models Within the Scholarly Domain",
+  "url": "https://openalex.org/W4293057253",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2100320400",
+      "name": "Vivek Kumar",
+      "affiliations": [
+        "University of Cagliari"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A731390618",
+      "name": "Diego Reforgiato Recupero",
+      "affiliations": [
+        "University of Cagliari"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A336114757",
+      "name": "Rim Helaoui",
+      "affiliations": [
+        "Philips (Netherlands)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A183750669",
+      "name": "Daniele Riboni",
+      "affiliations": [
+        "University of Cagliari"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2165698076",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W2972483465",
+    "https://openalex.org/W6731801563",
+    "https://openalex.org/W2081580037",
+    "https://openalex.org/W6606482852",
+    "https://openalex.org/W102708294",
+    "https://openalex.org/W2022166150",
+    "https://openalex.org/W2094728533",
+    "https://openalex.org/W1512387364",
+    "https://openalex.org/W2080133951",
+    "https://openalex.org/W2759136286",
+    "https://openalex.org/W2283196293",
+    "https://openalex.org/W6638311095",
+    "https://openalex.org/W6638754787",
+    "https://openalex.org/W6608344535",
+    "https://openalex.org/W2099752825",
+    "https://openalex.org/W68132019",
+    "https://openalex.org/W6678830454",
+    "https://openalex.org/W2184957013",
+    "https://openalex.org/W2604314403",
+    "https://openalex.org/W6718112784",
+    "https://openalex.org/W6758075616",
+    "https://openalex.org/W2949972983",
+    "https://openalex.org/W2950393809",
+    "https://openalex.org/W2774837955",
+    "https://openalex.org/W2499696929",
+    "https://openalex.org/W3164758947",
+    "https://openalex.org/W3032390337",
+    "https://openalex.org/W6776906657",
+    "https://openalex.org/W6772406930",
+    "https://openalex.org/W2998385486",
+    "https://openalex.org/W2963906317",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W2988647680",
+    "https://openalex.org/W2991170427",
+    "https://openalex.org/W3111112601",
+    "https://openalex.org/W2889506968",
+    "https://openalex.org/W6746267677",
+    "https://openalex.org/W2014545475",
+    "https://openalex.org/W7034357076",
+    "https://openalex.org/W3097858486",
+    "https://openalex.org/W3092710364",
+    "https://openalex.org/W4285106525",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W160339868",
+    "https://openalex.org/W3099387504",
+    "https://openalex.org/W2949434543",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2572147858",
+    "https://openalex.org/W2951723246"
+  ],
+  "abstract": "The use of superior algorithms and complex architectures in language models have successfully imparted human-like abilities to machines for specific tasks. But two significant constraints, the available training data size and the understanding of domain-specific context, hamper the pre-trained language models from optimal and reliable performance. A potential solution to tackle these limitations is to equip the language models with domain knowledge. While the commonly adopted techniques use Knowledge Graphs Embeddings (KGEs) to inject domain knowledge, we provide a Knowledge Language Model (K-LM) to use the Resource Description Framework (RDF) triples directly, extracted from world knowledge bases. The proposed model works in conjunction with Generative Pretrained Transformer (GPT-2) and Bidirectional Encoder Representations from Transformers (BERT) and uses a well-defined pipeline to select, categorize, and filter the RDF triples. In addition, we introduce heuristic methods to inject domain-specific knowledge in K-LM, leveraging knowledge graphs (KGs). We tested our approaches on the classification task within the scholarly domain using two KGs, and our results show that our proposed language model has significantly outperformed the baselines and BERT for each KG. Our experimental findings also help us conclude the importance of relevance of KG used over the quantity of injected RDF triples. Also, each of our proposed methods for injecting the RDF triples has increased the overall model's accuracy, demonstrating that K-LM is a potential choice for domain adaptation to solve knowledge-driven problems.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.833631694316864
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6296031475067139
+    },
+    {
+      "name": "Domain knowledge",
+      "score": 0.5904943943023682
+    },
+    {
+      "name": "Language model",
+      "score": 0.5582380890846252
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5299117565155029
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5069149136543274
+    },
+    {
+      "name": "Domain adaptation",
+      "score": 0.4802042245864868
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.47715848684310913
+    },
+    {
+      "name": "RDF",
+      "score": 0.4706890881061554
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.4279508888721466
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.42774638533592224
+    },
+    {
+      "name": "Categorization",
+      "score": 0.41669464111328125
+    },
+    {
+      "name": "Semantic Web",
+      "score": 0.16862058639526367
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.0
+    }
+  ]
 }

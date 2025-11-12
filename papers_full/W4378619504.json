@@ -1,78 +1,153 @@
 {
-    "title": "Shifted Window Vision Transformer for Blood Cell Classification",
-    "url": "https://openalex.org/W4378619504",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100639720",
-            "name": "Shuwen Chen",
-            "affiliations": [
-                "Jiangsu Second Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028974886",
-            "name": "Siyuan Lu",
-            "affiliations": [
-                "University of Leicester"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007987858",
-            "name": "Shuihua Wang‎",
-            "affiliations": [
-                "University of Leicester",
-                "King Abdulaziz University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5068307922",
-            "name": "Yiyang Ni",
-            "affiliations": [
-                "Jiangsu Second Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100434437",
-            "name": "Yudong Zhang",
-            "affiliations": [
-                "University of Leicester",
-                "King Abdulaziz University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2967127264",
-        "https://openalex.org/W2968859244",
-        "https://openalex.org/W2907322847",
-        "https://openalex.org/W2917675508",
-        "https://openalex.org/W6775726765",
-        "https://openalex.org/W3112918485",
-        "https://openalex.org/W2998825217",
-        "https://openalex.org/W3041373800",
-        "https://openalex.org/W2984155152",
-        "https://openalex.org/W3016457468",
-        "https://openalex.org/W3128934929",
-        "https://openalex.org/W3006315341",
-        "https://openalex.org/W4236594287",
-        "https://openalex.org/W4205211325",
-        "https://openalex.org/W3138537816",
-        "https://openalex.org/W3206019699",
-        "https://openalex.org/W3134789080",
-        "https://openalex.org/W3154984757",
-        "https://openalex.org/W3128834636",
-        "https://openalex.org/W4206361110",
-        "https://openalex.org/W4313307764",
-        "https://openalex.org/W4293144441",
-        "https://openalex.org/W4313509986",
-        "https://openalex.org/W4308661657",
-        "https://openalex.org/W4206685736",
-        "https://openalex.org/W4206283862",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4312443924",
-        "https://openalex.org/W3015505708"
-    ],
-    "abstract": "Blood cells play an important role in the metabolism of the human body, and the status of blood cells can be used for clinical diagnoses, such as the ratio of different blood cells. Therefore, blood cell classification is a primary task, which requires much time for manual analysis. The recent advances in computer vision can be beneficial to free doctors from tedious tasks. In this paper, a novel automated blood cell classification model based on the shifted window vision transformer (SW-ViT) is proposed. The SW-ViT architecture is firstly pre-trained on the ImageNet dataset and fine-tuned on the blood cell images for classification. Two transfer strategies are employed to generate better classification results. One is to fine-tune the entire SW-ViT, and the other is to only fine-tune the linear output layer of the SW-ViT while all the other parameters are frozen. A public dataset named BCCD_Dataset (Blood Cell Count and Detection) is utilized in the experiments. The results show that the SW-ViT outperforms several state-of-the-art methods in terms of classification accuracy. The proposed SW-ViT can be applied in daily clinical diagnosis.",
-    "full_text": null
+  "title": "Shifted Window Vision Transformer for Blood Cell Classification",
+  "url": "https://openalex.org/W4378619504",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100639720",
+      "name": "Shuwen Chen",
+      "affiliations": [
+        "Jiangsu Second Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028974886",
+      "name": "Siyuan Lu",
+      "affiliations": [
+        "University of Leicester"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007987858",
+      "name": "Shuihua Wang‎",
+      "affiliations": [
+        "University of Leicester",
+        "King Abdulaziz University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5068307922",
+      "name": "Yiyang Ni",
+      "affiliations": [
+        "Jiangsu Second Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100434437",
+      "name": "Yudong Zhang",
+      "affiliations": [
+        "University of Leicester",
+        "King Abdulaziz University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2967127264",
+    "https://openalex.org/W2968859244",
+    "https://openalex.org/W2907322847",
+    "https://openalex.org/W2917675508",
+    "https://openalex.org/W6775726765",
+    "https://openalex.org/W3112918485",
+    "https://openalex.org/W2998825217",
+    "https://openalex.org/W3041373800",
+    "https://openalex.org/W2984155152",
+    "https://openalex.org/W3016457468",
+    "https://openalex.org/W3128934929",
+    "https://openalex.org/W3006315341",
+    "https://openalex.org/W4236594287",
+    "https://openalex.org/W4205211325",
+    "https://openalex.org/W3138537816",
+    "https://openalex.org/W3206019699",
+    "https://openalex.org/W3134789080",
+    "https://openalex.org/W3154984757",
+    "https://openalex.org/W3128834636",
+    "https://openalex.org/W4206361110",
+    "https://openalex.org/W4313307764",
+    "https://openalex.org/W4293144441",
+    "https://openalex.org/W4313509986",
+    "https://openalex.org/W4308661657",
+    "https://openalex.org/W4206685736",
+    "https://openalex.org/W4206283862",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4312443924",
+    "https://openalex.org/W3015505708"
+  ],
+  "abstract": "Blood cells play an important role in the metabolism of the human body, and the status of blood cells can be used for clinical diagnoses, such as the ratio of different blood cells. Therefore, blood cell classification is a primary task, which requires much time for manual analysis. The recent advances in computer vision can be beneficial to free doctors from tedious tasks. In this paper, a novel automated blood cell classification model based on the shifted window vision transformer (SW-ViT) is proposed. The SW-ViT architecture is firstly pre-trained on the ImageNet dataset and fine-tuned on the blood cell images for classification. Two transfer strategies are employed to generate better classification results. One is to fine-tune the entire SW-ViT, and the other is to only fine-tune the linear output layer of the SW-ViT while all the other parameters are frozen. A public dataset named BCCD_Dataset (Blood Cell Count and Detection) is utilized in the experiments. The results show that the SW-ViT outperforms several state-of-the-art methods in terms of classification accuracy. The proposed SW-ViT can be applied in daily clinical diagnosis.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.709026575088501
+    },
+    {
+      "name": "Computer science",
+      "score": 0.656426191329956
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.588190495967865
+    },
+    {
+      "name": "Medical diagnosis",
+      "score": 0.5017378330230713
+    },
+    {
+      "name": "Blood smear",
+      "score": 0.499908447265625
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.499788761138916
+    },
+    {
+      "name": "Window (computing)",
+      "score": 0.48671820759773254
+    },
+    {
+      "name": "Transfer of learning",
+      "score": 0.46484890580177307
+    },
+    {
+      "name": "Human blood",
+      "score": 0.4586304724216461
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1459583044052124
+    },
+    {
+      "name": "Medicine",
+      "score": 0.13375607132911682
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08980795741081238
+    },
+    {
+      "name": "Immunology",
+      "score": 0.0832524299621582
+    },
+    {
+      "name": "Pathology",
+      "score": 0.08178383111953735
+    },
+    {
+      "name": "Malaria",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physiology",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

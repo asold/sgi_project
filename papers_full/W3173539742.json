@@ -1,79 +1,122 @@
 {
-    "title": "Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting",
-    "url": "https://openalex.org/W3173539742",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4222803469",
-            "name": "Wu, Haixu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3191661619",
-            "name": "Xu, Jiehui",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1875885280",
-            "name": "Wang, Jianmin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2363346552",
-            "name": "Long, Mingsheng",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2889928394",
-        "https://openalex.org/W1836465849",
-        "https://openalex.org/W1667165204",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W1549063525",
-        "https://openalex.org/W2114001875",
-        "https://openalex.org/W2946709941",
-        "https://openalex.org/W3202406646",
-        "https://openalex.org/W3094953545",
-        "https://openalex.org/W3096746890",
-        "https://openalex.org/W2970309699",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W2969855422",
-        "https://openalex.org/W3119786062",
-        "https://openalex.org/W2970631142",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2765932895",
-        "https://openalex.org/W2811507150",
-        "https://openalex.org/W2992063672",
-        "https://openalex.org/W2773625660",
-        "https://openalex.org/W2797846142",
-        "https://openalex.org/W2747599906",
-        "https://openalex.org/W1543139530",
-        "https://openalex.org/W2902854273",
-        "https://openalex.org/W2604847698",
-        "https://openalex.org/W2964308564",
-        "https://openalex.org/W3125785968",
-        "https://openalex.org/W2994673210",
-        "https://openalex.org/W2603648311",
-        "https://openalex.org/W2980994438",
-        "https://openalex.org/W2088563154",
-        "https://openalex.org/W2896197082",
-        "https://openalex.org/W2154136024",
-        "https://openalex.org/W2069508080",
-        "https://openalex.org/W2519091744",
-        "https://openalex.org/W2028072219",
-        "https://openalex.org/W2890096158",
-        "https://openalex.org/W3008443627",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W2796355439",
-        "https://openalex.org/W3097294131",
-        "https://openalex.org/W2952042565",
-        "https://openalex.org/W2792764867",
-        "https://openalex.org/W1536447791",
-        "https://openalex.org/W2126455177",
-        "https://openalex.org/W3098903812",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2963532813"
-    ],
-    "abstract": "Extending the forecasting time is a critical demand for real applications, such as extreme weather early warning and long-term energy consumption planning. This paper studies the long-term forecasting problem of time series. Prior Transformer-based models adopt various self-attention mechanisms to discover the long-range dependencies. However, intricate temporal patterns of the long-term future prohibit the model from finding reliable dependencies. Also, Transformers have to adopt the sparse versions of point-wise self-attentions for long series efficiency, resulting in the information utilization bottleneck. Going beyond Transformers, we design Autoformer as a novel decomposition architecture with an Auto-Correlation mechanism. We break with the pre-processing convention of series decomposition and renovate it as a basic inner block of deep models. This design empowers Autoformer with progressive decomposition capacities for complex time series. Further, inspired by the stochastic process theory, we design the Auto-Correlation mechanism based on the series periodicity, which conducts the dependencies discovery and representation aggregation at the sub-series level. Auto-Correlation outperforms self-attention in both efficiency and accuracy. In long-term forecasting, Autoformer yields state-of-the-art accuracy, with a 38% relative improvement on six benchmarks, covering five practical applications: energy, traffic, economics, weather and disease. Code is available at this repository: \\url{https://github.com/thuml/Autoformer}.",
-    "full_text": null
+  "title": "Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting",
+  "url": "https://openalex.org/W3173539742",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4222803469",
+      "name": "Wu, Haixu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3191661619",
+      "name": "Xu, Jiehui",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1875885280",
+      "name": "Wang, Jianmin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2363346552",
+      "name": "Long, Mingsheng",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2889928394",
+    "https://openalex.org/W1836465849",
+    "https://openalex.org/W1667165204",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W1549063525",
+    "https://openalex.org/W2114001875",
+    "https://openalex.org/W2946709941",
+    "https://openalex.org/W3202406646",
+    "https://openalex.org/W3094953545",
+    "https://openalex.org/W3096746890",
+    "https://openalex.org/W2970309699",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2969855422",
+    "https://openalex.org/W3119786062",
+    "https://openalex.org/W2970631142",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2765932895",
+    "https://openalex.org/W2811507150",
+    "https://openalex.org/W2992063672",
+    "https://openalex.org/W2773625660",
+    "https://openalex.org/W2797846142",
+    "https://openalex.org/W2747599906",
+    "https://openalex.org/W1543139530",
+    "https://openalex.org/W2902854273",
+    "https://openalex.org/W2604847698",
+    "https://openalex.org/W2964308564",
+    "https://openalex.org/W3125785968",
+    "https://openalex.org/W2994673210",
+    "https://openalex.org/W2603648311",
+    "https://openalex.org/W2980994438",
+    "https://openalex.org/W2088563154",
+    "https://openalex.org/W2896197082",
+    "https://openalex.org/W2154136024",
+    "https://openalex.org/W2069508080",
+    "https://openalex.org/W2519091744",
+    "https://openalex.org/W2028072219",
+    "https://openalex.org/W2890096158",
+    "https://openalex.org/W3008443627",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W2796355439",
+    "https://openalex.org/W3097294131",
+    "https://openalex.org/W2952042565",
+    "https://openalex.org/W2792764867",
+    "https://openalex.org/W1536447791",
+    "https://openalex.org/W2126455177",
+    "https://openalex.org/W3098903812",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2963532813"
+  ],
+  "abstract": "Extending the forecasting time is a critical demand for real applications, such as extreme weather early warning and long-term energy consumption planning. This paper studies the long-term forecasting problem of time series. Prior Transformer-based models adopt various self-attention mechanisms to discover the long-range dependencies. However, intricate temporal patterns of the long-term future prohibit the model from finding reliable dependencies. Also, Transformers have to adopt the sparse versions of point-wise self-attentions for long series efficiency, resulting in the information utilization bottleneck. Going beyond Transformers, we design Autoformer as a novel decomposition architecture with an Auto-Correlation mechanism. We break with the pre-processing convention of series decomposition and renovate it as a basic inner block of deep models. This design empowers Autoformer with progressive decomposition capacities for complex time series. Further, inspired by the stochastic process theory, we design the Auto-Correlation mechanism based on the series periodicity, which conducts the dependencies discovery and representation aggregation at the sub-series level. Auto-Correlation outperforms self-attention in both efficiency and accuracy. In long-term forecasting, Autoformer yields state-of-the-art accuracy, with a 38% relative improvement on six benchmarks, covering five practical applications: energy, traffic, economics, weather and disease. Code is available at this repository: \\url{https://github.com/thuml/Autoformer}.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7050662636756897
+    },
+    {
+      "name": "Bottleneck",
+      "score": 0.5146690011024475
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49262791872024536
+    },
+    {
+      "name": "Data mining",
+      "score": 0.43209826946258545
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3571665287017822
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3228940963745117
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15897423028945923
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,167 +1,194 @@
 {
-    "title": "FedSecurity: A Benchmark for Attacks and Defenses in Federated Learning and Federated LLMs",
-    "url": "https://openalex.org/W4401863166",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101755193",
-            "name": "Shanshan Han",
-            "affiliations": [
-                "University of California, Irvine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5056993728",
-            "name": "Baturalp Buyukates",
-            "affiliations": [
-                "University of Southern California"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066820318",
-            "name": "Zijian Hu",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5014047957",
-            "name": "Han Jin",
-            "affiliations": [
-                "University of Southern California"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5030446964",
-            "name": "Weizhao Jin",
-            "affiliations": [
-                "University of Southern California"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5109962243",
-            "name": "Lichao Sun",
-            "affiliations": [
-                "Lehigh University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100334518",
-            "name": "Xiaoyang Wang",
-            "affiliations": [
-                "Urbana University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101759485",
-            "name": "Wenxuan Wu",
-            "affiliations": [
-                "Texas A&M University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007625243",
-            "name": "Chulin Xie",
-            "affiliations": [
-                "Urbana University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5024257250",
-            "name": "Yuhang Yao",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5113104877",
-            "name": "Kai Zhang",
-            "affiliations": [
-                "Lehigh University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100708489",
-            "name": "Qifan Zhang",
-            "affiliations": [
-                "University of California, Irvine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100624916",
-            "name": "Yuhui Zhang",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5085243096",
-            "name": "Carlee Joe‐Wong",
-            "affiliations": [
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5112726818",
-            "name": "Salman Avestimehr",
-            "affiliations": [
-                "University of Southern California"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5077042043",
-            "name": "Chaoyang He",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4214758645",
-        "https://openalex.org/W51265332",
-        "https://openalex.org/W3201919447",
-        "https://openalex.org/W4385062808",
-        "https://openalex.org/W2952782294",
-        "https://openalex.org/W3210259840",
-        "https://openalex.org/W4318479322",
-        "https://openalex.org/W3014541599",
-        "https://openalex.org/W2942091739",
-        "https://openalex.org/W3094163844",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2591882872",
-        "https://openalex.org/W4207073300",
-        "https://openalex.org/W2970482702",
-        "https://openalex.org/W2025965986",
-        "https://openalex.org/W4224942948",
-        "https://openalex.org/W1493526108",
-        "https://openalex.org/W2112796928",
-        "https://openalex.org/W2896422817",
-        "https://openalex.org/W2963334472",
-        "https://openalex.org/W4399943989",
-        "https://openalex.org/W4285554319",
-        "https://openalex.org/W3094542121",
-        "https://openalex.org/W4226047321",
-        "https://openalex.org/W2963456518",
-        "https://openalex.org/W3175919946",
-        "https://openalex.org/W4213446860",
-        "https://openalex.org/W3129831491",
-        "https://openalex.org/W3138153888",
-        "https://openalex.org/W3210763747",
-        "https://openalex.org/W3087391814",
-        "https://openalex.org/W3212946609",
-        "https://openalex.org/W4300991139",
-        "https://openalex.org/W3100779497",
-        "https://openalex.org/W4313042326",
-        "https://openalex.org/W3012360060",
-        "https://openalex.org/W3045720734",
-        "https://openalex.org/W3172018708",
-        "https://openalex.org/W4232172926",
-        "https://openalex.org/W3213649533",
-        "https://openalex.org/W4287822453",
-        "https://openalex.org/W3017371741",
-        "https://openalex.org/W3111919937",
-        "https://openalex.org/W3146157593"
-    ],
-    "abstract": "This paper introduces FedSecurity, an end-to-end benchmark that serves as a supplementary component of the FedML library for simulating adversarial attacks and corresponding defense mechanisms in Federated Learning (FL). FedSecurity eliminates the need for implementing the fundamental FL procedures, e.g., FL training and data loading, from scratch, thus enables users to focus on developing their own attack and defense strategies. It contains two key components, including FedAttacker that conducts a variety of attacks during FL training, and FedDefender that implements defensive mechanisms to counteract these attacks. FedSecurity has the following features: i) It offers extensive customization options to accommodate a broad range of machine learning models (e.g., Logistic Regression, ResNet, and GAN) and FL optimizers (e.g., FedAVG, FedOPT, and FedNOVA); ii) it enables exploring the effectiveness of attacks and defenses across different datasets and models; and iii) it supports flexible configuration and customization through a configuration file and some APIs. We further demonstrate FedSecurity's utility and adaptability through federated training of Large Language Models (LLMs) to showcase its potential on a wide range of complex applications.",
-    "full_text": null
+  "title": "FedSecurity: A Benchmark for Attacks and Defenses in Federated Learning and Federated LLMs",
+  "url": "https://openalex.org/W4401863166",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101755193",
+      "name": "Shanshan Han",
+      "affiliations": [
+        "University of California, Irvine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5056993728",
+      "name": "Baturalp Buyukates",
+      "affiliations": [
+        "University of Southern California"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066820318",
+      "name": "Zijian Hu",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5014047957",
+      "name": "Han Jin",
+      "affiliations": [
+        "University of Southern California"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5030446964",
+      "name": "Weizhao Jin",
+      "affiliations": [
+        "University of Southern California"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5109962243",
+      "name": "Lichao Sun",
+      "affiliations": [
+        "Lehigh University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100334518",
+      "name": "Xiaoyang Wang",
+      "affiliations": [
+        "Urbana University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101759485",
+      "name": "Wenxuan Wu",
+      "affiliations": [
+        "Texas A&M University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007625243",
+      "name": "Chulin Xie",
+      "affiliations": [
+        "Urbana University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5024257250",
+      "name": "Yuhang Yao",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5113104877",
+      "name": "Kai Zhang",
+      "affiliations": [
+        "Lehigh University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100708489",
+      "name": "Qifan Zhang",
+      "affiliations": [
+        "University of California, Irvine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100624916",
+      "name": "Yuhui Zhang",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5085243096",
+      "name": "Carlee Joe‐Wong",
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5112726818",
+      "name": "Salman Avestimehr",
+      "affiliations": [
+        "University of Southern California"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5077042043",
+      "name": "Chaoyang He",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4214758645",
+    "https://openalex.org/W51265332",
+    "https://openalex.org/W3201919447",
+    "https://openalex.org/W4385062808",
+    "https://openalex.org/W2952782294",
+    "https://openalex.org/W3210259840",
+    "https://openalex.org/W4318479322",
+    "https://openalex.org/W3014541599",
+    "https://openalex.org/W2942091739",
+    "https://openalex.org/W3094163844",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2591882872",
+    "https://openalex.org/W4207073300",
+    "https://openalex.org/W2970482702",
+    "https://openalex.org/W2025965986",
+    "https://openalex.org/W4224942948",
+    "https://openalex.org/W1493526108",
+    "https://openalex.org/W2112796928",
+    "https://openalex.org/W2896422817",
+    "https://openalex.org/W2963334472",
+    "https://openalex.org/W4399943989",
+    "https://openalex.org/W4285554319",
+    "https://openalex.org/W3094542121",
+    "https://openalex.org/W4226047321",
+    "https://openalex.org/W2963456518",
+    "https://openalex.org/W3175919946",
+    "https://openalex.org/W4213446860",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W3138153888",
+    "https://openalex.org/W3210763747",
+    "https://openalex.org/W3087391814",
+    "https://openalex.org/W3212946609",
+    "https://openalex.org/W4300991139",
+    "https://openalex.org/W3100779497",
+    "https://openalex.org/W4313042326",
+    "https://openalex.org/W3012360060",
+    "https://openalex.org/W3045720734",
+    "https://openalex.org/W3172018708",
+    "https://openalex.org/W4232172926",
+    "https://openalex.org/W3213649533",
+    "https://openalex.org/W4287822453",
+    "https://openalex.org/W3017371741",
+    "https://openalex.org/W3111919937",
+    "https://openalex.org/W3146157593"
+  ],
+  "abstract": "This paper introduces FedSecurity, an end-to-end benchmark that serves as a supplementary component of the FedML library for simulating adversarial attacks and corresponding defense mechanisms in Federated Learning (FL). FedSecurity eliminates the need for implementing the fundamental FL procedures, e.g., FL training and data loading, from scratch, thus enables users to focus on developing their own attack and defense strategies. It contains two key components, including FedAttacker that conducts a variety of attacks during FL training, and FedDefender that implements defensive mechanisms to counteract these attacks. FedSecurity has the following features: i) It offers extensive customization options to accommodate a broad range of machine learning models (e.g., Logistic Regression, ResNet, and GAN) and FL optimizers (e.g., FedAVG, FedOPT, and FedNOVA); ii) it enables exploring the effectiveness of attacks and defenses across different datasets and models; and iii) it supports flexible configuration and customization through a configuration file and some APIs. We further demonstrate FedSecurity's utility and adaptability through federated training of Large Language Models (LLMs) to showcase its potential on a wide range of complex applications.",
+  "full_text": null,
+  "topic": "Benchmark (surveying)",
+  "concepts": [
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.8291000127792358
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6414265632629395
+    },
+    {
+      "name": "Computer security",
+      "score": 0.45559075474739075
+    },
+    {
+      "name": "Internet privacy",
+      "score": 0.32977843284606934
+    },
+    {
+      "name": "Geography",
+      "score": 0.06294646859169006
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

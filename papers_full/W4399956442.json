@@ -1,105 +1,140 @@
 {
-    "title": "Distilling the Knowledge from Large-language Model for Health Event Prediction",
-    "url": "https://openalex.org/W4399956442",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2973080406",
-            "name": "Sirui Ding",
-            "affiliations": [
-                "Texas A&M University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2123959257",
-            "name": "Jiancheng Ye",
-            "affiliations": [
-                "Cornell University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104553385",
-            "name": "Xia Hu",
-            "affiliations": [
-                "Rice University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2121889303",
-            "name": "Na Zou",
-            "affiliations": [
-                "University of Houston"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2973080406",
-            "name": "Sirui Ding",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2123959257",
-            "name": "Jiancheng Ye",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2104553385",
-            "name": "Xia Hu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2121889303",
-            "name": "Na Zou",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2594685110",
-        "https://openalex.org/W3209074506",
-        "https://openalex.org/W2899420362",
-        "https://openalex.org/W3099958847",
-        "https://openalex.org/W2982424689",
-        "https://openalex.org/W3005864656",
-        "https://openalex.org/W3131698376",
-        "https://openalex.org/W4295066927",
-        "https://openalex.org/W2998314166",
-        "https://openalex.org/W3048492760",
-        "https://openalex.org/W3159743235",
-        "https://openalex.org/W4248112284",
-        "https://openalex.org/W2946661638",
-        "https://openalex.org/W2031034134",
-        "https://openalex.org/W4308370081",
-        "https://openalex.org/W2610602137",
-        "https://openalex.org/W2110056222",
-        "https://openalex.org/W2105203857",
-        "https://openalex.org/W4385606949",
-        "https://openalex.org/W4286567174",
-        "https://openalex.org/W4384561707",
-        "https://openalex.org/W4200635746",
-        "https://openalex.org/W4225493996",
-        "https://openalex.org/W3160307233",
-        "https://openalex.org/W3127747328",
-        "https://openalex.org/W4385381606",
-        "https://openalex.org/W4386973901",
-        "https://openalex.org/W4390961201",
-        "https://openalex.org/W4388093177",
-        "https://openalex.org/W4383469362",
-        "https://openalex.org/W4387427446",
-        "https://openalex.org/W4283801824",
-        "https://openalex.org/W4390832893",
-        "https://openalex.org/W4389000204",
-        "https://openalex.org/W4389156632",
-        "https://openalex.org/W2508848934",
-        "https://openalex.org/W3196608201",
-        "https://openalex.org/W2886951144",
-        "https://openalex.org/W4391812863",
-        "https://openalex.org/W2998409174",
-        "https://openalex.org/W2981794819",
-        "https://openalex.org/W2517259736",
-        "https://openalex.org/W2690721124",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W2045494721",
-        "https://openalex.org/W4282010954"
-    ],
-    "abstract": "ABSTRACT Health event prediction is empowered by the rapid and wide application of electronic health records (EHR). In the Intensive Care Unit (ICU), precisely predicting the health related events in advance is essential for providing treatment and intervention to improve the patients outcomes. EHR is a kind of multi-modal data containing clinical text, time series, structured data, etc. Most health event prediction works focus on a single modality, e.g., text or tabular EHR. How to effectively learn from the multi-modal EHR for health event prediction remains a challenge. Inspired by the strong capability in text processing of large language model (LLM), we propose the framework CKLE for health event prediction by distilling the knowledge from LLM and learning from multi-modal EHR. There are two challenges of applying LLM in the health event prediction, the first one is most LLM can only handle text data rather than other modalities, e.g., structured data. The second challenge is the privacy issue of health applications requires the LLM to be locally deployed, which may be limited by the computational resource. CKLE solves the challenges of LLM scalability and portability in the healthcare domain by distilling the cross-modality knowledge from LLM into the health event predictive model. To fully take advantage of the strong power of LLM, the raw clinical text is refined and augmented with prompt learning. The embedding of clinical text are generated by LLM. To effectively distill the knowledge of LLM into the predictive model, we design a cross-modality knowledge distillation (KD) method. A specially designed training objective will be used for the KD process with the consideration of multiple modality and patient similarity. The KD loss function consists of two parts. The first one is cross-modality contrastive loss function, which models the correlation of different modalities from the same patient. The second one is patient similarity learning loss function to model the correlations between similar patients. The cross-modality knowledge distillation can distill the rich information in clinical text and the knowledge of LLM into the predictive model on structured EHR data. To demonstrate the effectiveness of CKLE , we evaluate CKLE on two health event prediction tasks in the field of cardiology, heart failure prediction and hypertension prediction. We select the 7125 patients from MIMIC-III dataset and split them into train/validation/test sets. We can achieve a maximum 4.48% improvement in accuracy compared to state-of-the-art predictive model designed for health event prediction. The results demonstrate CKLE can surpass the baseline prediction models significantly on both normal and limited label settings. We also conduct the case study on cardiology disease analysis in the heart failure and hypertension prediction. Through the feature importance calculation, we analyse the salient features related to the cardiology disease which corresponds to the medical domain knowledge. The superior performance and interpretability of CKLE pave a promising way to leverage the power and knowledge of LLM in the health event prediction in real-world clinical settings.",
-    "full_text": null
+  "title": "Distilling the Knowledge from Large-language Model for Health Event Prediction",
+  "url": "https://openalex.org/W4399956442",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2973080406",
+      "name": "Sirui Ding",
+      "affiliations": [
+        "Texas A&M University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2123959257",
+      "name": "Jiancheng Ye",
+      "affiliations": [
+        "Cornell University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104553385",
+      "name": "Xia Hu",
+      "affiliations": [
+        "Rice University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2121889303",
+      "name": "Na Zou",
+      "affiliations": [
+        "University of Houston"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2973080406",
+      "name": "Sirui Ding",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2123959257",
+      "name": "Jiancheng Ye",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2104553385",
+      "name": "Xia Hu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2121889303",
+      "name": "Na Zou",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2594685110",
+    "https://openalex.org/W3209074506",
+    "https://openalex.org/W2899420362",
+    "https://openalex.org/W3099958847",
+    "https://openalex.org/W2982424689",
+    "https://openalex.org/W3005864656",
+    "https://openalex.org/W3131698376",
+    "https://openalex.org/W4295066927",
+    "https://openalex.org/W2998314166",
+    "https://openalex.org/W3048492760",
+    "https://openalex.org/W3159743235",
+    "https://openalex.org/W4248112284",
+    "https://openalex.org/W2946661638",
+    "https://openalex.org/W2031034134",
+    "https://openalex.org/W4308370081",
+    "https://openalex.org/W2610602137",
+    "https://openalex.org/W2110056222",
+    "https://openalex.org/W2105203857",
+    "https://openalex.org/W4385606949",
+    "https://openalex.org/W4286567174",
+    "https://openalex.org/W4384561707",
+    "https://openalex.org/W4200635746",
+    "https://openalex.org/W4225493996",
+    "https://openalex.org/W3160307233",
+    "https://openalex.org/W3127747328",
+    "https://openalex.org/W4385381606",
+    "https://openalex.org/W4386973901",
+    "https://openalex.org/W4390961201",
+    "https://openalex.org/W4388093177",
+    "https://openalex.org/W4383469362",
+    "https://openalex.org/W4387427446",
+    "https://openalex.org/W4283801824",
+    "https://openalex.org/W4390832893",
+    "https://openalex.org/W4389000204",
+    "https://openalex.org/W4389156632",
+    "https://openalex.org/W2508848934",
+    "https://openalex.org/W3196608201",
+    "https://openalex.org/W2886951144",
+    "https://openalex.org/W4391812863",
+    "https://openalex.org/W2998409174",
+    "https://openalex.org/W2981794819",
+    "https://openalex.org/W2517259736",
+    "https://openalex.org/W2690721124",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W2045494721",
+    "https://openalex.org/W4282010954"
+  ],
+  "abstract": "ABSTRACT Health event prediction is empowered by the rapid and wide application of electronic health records (EHR). In the Intensive Care Unit (ICU), precisely predicting the health related events in advance is essential for providing treatment and intervention to improve the patients outcomes. EHR is a kind of multi-modal data containing clinical text, time series, structured data, etc. Most health event prediction works focus on a single modality, e.g., text or tabular EHR. How to effectively learn from the multi-modal EHR for health event prediction remains a challenge. Inspired by the strong capability in text processing of large language model (LLM), we propose the framework CKLE for health event prediction by distilling the knowledge from LLM and learning from multi-modal EHR. There are two challenges of applying LLM in the health event prediction, the first one is most LLM can only handle text data rather than other modalities, e.g., structured data. The second challenge is the privacy issue of health applications requires the LLM to be locally deployed, which may be limited by the computational resource. CKLE solves the challenges of LLM scalability and portability in the healthcare domain by distilling the cross-modality knowledge from LLM into the health event predictive model. To fully take advantage of the strong power of LLM, the raw clinical text is refined and augmented with prompt learning. The embedding of clinical text are generated by LLM. To effectively distill the knowledge of LLM into the predictive model, we design a cross-modality knowledge distillation (KD) method. A specially designed training objective will be used for the KD process with the consideration of multiple modality and patient similarity. The KD loss function consists of two parts. The first one is cross-modality contrastive loss function, which models the correlation of different modalities from the same patient. The second one is patient similarity learning loss function to model the correlations between similar patients. The cross-modality knowledge distillation can distill the rich information in clinical text and the knowledge of LLM into the predictive model on structured EHR data. To demonstrate the effectiveness of CKLE , we evaluate CKLE on two health event prediction tasks in the field of cardiology, heart failure prediction and hypertension prediction. We select the 7125 patients from MIMIC-III dataset and split them into train/validation/test sets. We can achieve a maximum 4.48% improvement in accuracy compared to state-of-the-art predictive model designed for health event prediction. The results demonstrate CKLE can surpass the baseline prediction models significantly on both normal and limited label settings. We also conduct the case study on cardiology disease analysis in the heart failure and hypertension prediction. Through the feature importance calculation, we analyse the salient features related to the cardiology disease which corresponds to the medical domain knowledge. The superior performance and interpretability of CKLE pave a promising way to leverage the power and knowledge of LLM in the health event prediction in real-world clinical settings.",
+  "full_text": null,
+  "topic": "Event (particle physics)",
+  "concepts": [
+    {
+      "name": "Event (particle physics)",
+      "score": 0.584285318851471
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5119117498397827
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4347928762435913
+    },
+    {
+      "name": "Data science",
+      "score": 0.3360258638858795
+    },
+    {
+      "name": "History",
+      "score": 0.3342835605144501
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3336331844329834
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

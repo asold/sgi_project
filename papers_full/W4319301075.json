@@ -1,88 +1,147 @@
 {
-    "title": "Li3DeTr: A LiDAR based 3D Detection Transformer",
-    "url": "https://openalex.org/W4319301075",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4307536570",
-            "name": "Erabati, Gopi Krishna",
-            "affiliations": [
-                "Institute for Systems Engineering and Computers",
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4290873990",
-            "name": "Araujo, Helder",
-            "affiliations": [
-                "Institute for Systems Engineering and Computers",
-                "University of Coimbra"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3035574168",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3167539120",
-        "https://openalex.org/W6785213549",
-        "https://openalex.org/W3109675406",
-        "https://openalex.org/W2555618208",
-        "https://openalex.org/W3003618643",
-        "https://openalex.org/W2601564443",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W4221167453",
-        "https://openalex.org/W2989604896",
-        "https://openalex.org/W3136022415",
-        "https://openalex.org/W2150066425",
-        "https://openalex.org/W2963182550",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2963400571",
-        "https://openalex.org/W2222512263",
-        "https://openalex.org/W2968296999",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2997814983",
-        "https://openalex.org/W4214777292",
-        "https://openalex.org/W4214624153",
-        "https://openalex.org/W3214740560",
-        "https://openalex.org/W3166470370",
-        "https://openalex.org/W2964062501",
-        "https://openalex.org/W6763422710",
-        "https://openalex.org/W6739778489",
-        "https://openalex.org/W3209005318",
-        "https://openalex.org/W6750227808",
-        "https://openalex.org/W6620707391",
-        "https://openalex.org/W3205005447",
-        "https://openalex.org/W3034314779",
-        "https://openalex.org/W2949708697",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2229637417",
-        "https://openalex.org/W3175563878",
-        "https://openalex.org/W2982770724",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3215100485",
-        "https://openalex.org/W3107212734",
-        "https://openalex.org/W6802311648",
-        "https://openalex.org/W6802716934",
-        "https://openalex.org/W2979750740",
-        "https://openalex.org/W2897529137",
-        "https://openalex.org/W2798965597",
-        "https://openalex.org/W3035346742",
-        "https://openalex.org/W2981949127",
-        "https://openalex.org/W3167095230",
-        "https://openalex.org/W3017930107",
-        "https://openalex.org/W2963727135",
-        "https://openalex.org/W3107422826",
-        "https://openalex.org/W6784094891",
-        "https://openalex.org/W4236965008",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W4293584584",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W3106250896",
-        "https://openalex.org/W3107819843"
-    ],
-    "abstract": "Inspired by recent advances in vision transformers for&#13;\\nobject detection, we propose Li3DeTr, an end-to-end LiDAR&#13;\\nbased 3D Detection Transformer for autonomous driving,&#13;\\nthat inputs LiDAR point clouds and regresses 3D bounding&#13;\\nboxes. The LiDAR local and global features are encoded&#13;\\nusing sparse convolution and multi-scale deformable attention&#13;\\nrespectively. In the decoder head, firstly, in the novel&#13;\\nLi3DeTr cross-attention block, we link the LiDAR global&#13;\\nfeatures to 3D predictions leveraging the sparse set of object&#13;\\nqueries learnt from the data. Secondly, the object query&#13;\\ninteractions are formulated using multi-head self-attention.&#13;\\nFinally, the decoder layer is repeated Ldec number of times&#13;\\nto refine the object queries. Inspired by DETR, we employ&#13;\\nset-to-set loss to train the Li3DeTr network. Without&#13;\\nbells and whistles, the Li3DeTr network achieves 61.3%&#13;\\nmAP and 67.6% NDS surpassing the state-of-the-art methods&#13;\\nwith non-maximum suppression (NMS) on the nuScenes&#13;\\ndataset and it also achieves competitive performance on the&#13;\\nKITTI dataset. We also employ knowledge distillation (KD)&#13;\\nusing a teacher and student model that slightly improves the&#13;\\nperformance of our network.",
-    "full_text": null
+  "title": "Li3DeTr: A LiDAR based 3D Detection Transformer",
+  "url": "https://openalex.org/W4319301075",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4307536570",
+      "name": "Erabati, Gopi Krishna",
+      "affiliations": [
+        "Institute for Systems Engineering and Computers",
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4290873990",
+      "name": "Araujo, Helder",
+      "affiliations": [
+        "Institute for Systems Engineering and Computers",
+        "University of Coimbra"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3035574168",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3167539120",
+    "https://openalex.org/W6785213549",
+    "https://openalex.org/W3109675406",
+    "https://openalex.org/W2555618208",
+    "https://openalex.org/W3003618643",
+    "https://openalex.org/W2601564443",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W4221167453",
+    "https://openalex.org/W2989604896",
+    "https://openalex.org/W3136022415",
+    "https://openalex.org/W2150066425",
+    "https://openalex.org/W2963182550",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2963400571",
+    "https://openalex.org/W2222512263",
+    "https://openalex.org/W2968296999",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2997814983",
+    "https://openalex.org/W4214777292",
+    "https://openalex.org/W4214624153",
+    "https://openalex.org/W3214740560",
+    "https://openalex.org/W3166470370",
+    "https://openalex.org/W2964062501",
+    "https://openalex.org/W6763422710",
+    "https://openalex.org/W6739778489",
+    "https://openalex.org/W3209005318",
+    "https://openalex.org/W6750227808",
+    "https://openalex.org/W6620707391",
+    "https://openalex.org/W3205005447",
+    "https://openalex.org/W3034314779",
+    "https://openalex.org/W2949708697",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2229637417",
+    "https://openalex.org/W3175563878",
+    "https://openalex.org/W2982770724",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3215100485",
+    "https://openalex.org/W3107212734",
+    "https://openalex.org/W6802311648",
+    "https://openalex.org/W6802716934",
+    "https://openalex.org/W2979750740",
+    "https://openalex.org/W2897529137",
+    "https://openalex.org/W2798965597",
+    "https://openalex.org/W3035346742",
+    "https://openalex.org/W2981949127",
+    "https://openalex.org/W3167095230",
+    "https://openalex.org/W3017930107",
+    "https://openalex.org/W2963727135",
+    "https://openalex.org/W3107422826",
+    "https://openalex.org/W6784094891",
+    "https://openalex.org/W4236965008",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W4293584584",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W3106250896",
+    "https://openalex.org/W3107819843"
+  ],
+  "abstract": "Inspired by recent advances in vision transformers for&#13;\\nobject detection, we propose Li3DeTr, an end-to-end LiDAR&#13;\\nbased 3D Detection Transformer for autonomous driving,&#13;\\nthat inputs LiDAR point clouds and regresses 3D bounding&#13;\\nboxes. The LiDAR local and global features are encoded&#13;\\nusing sparse convolution and multi-scale deformable attention&#13;\\nrespectively. In the decoder head, firstly, in the novel&#13;\\nLi3DeTr cross-attention block, we link the LiDAR global&#13;\\nfeatures to 3D predictions leveraging the sparse set of object&#13;\\nqueries learnt from the data. Secondly, the object query&#13;\\ninteractions are formulated using multi-head self-attention.&#13;\\nFinally, the decoder layer is repeated Ldec number of times&#13;\\nto refine the object queries. Inspired by DETR, we employ&#13;\\nset-to-set loss to train the Li3DeTr network. Without&#13;\\nbells and whistles, the Li3DeTr network achieves 61.3%&#13;\\nmAP and 67.6% NDS surpassing the state-of-the-art methods&#13;\\nwith non-maximum suppression (NMS) on the nuScenes&#13;\\ndataset and it also achieves competitive performance on the&#13;\\nKITTI dataset. We also employ knowledge distillation (KD)&#13;\\nusing a teacher and student model that slightly improves the&#13;\\nperformance of our network.",
+  "full_text": null,
+  "topic": "Lidar",
+  "concepts": [
+    {
+      "name": "Lidar",
+      "score": 0.9188745021820068
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7786244750022888
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5889581441879272
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5638628005981445
+    },
+    {
+      "name": "Object detection",
+      "score": 0.5527955293655396
+    },
+    {
+      "name": "Point cloud",
+      "score": 0.5383893251419067
+    },
+    {
+      "name": "Bounding overwatch",
+      "score": 0.4619837701320648
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.45417070388793945
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3967650532722473
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.1926860213279724
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07520195841789246
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

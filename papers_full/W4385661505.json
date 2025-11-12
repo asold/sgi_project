@@ -1,86 +1,153 @@
 {
-    "title": "Cformer: An underwater image enhancement hybrid network combining convolution and transformer",
-    "url": "https://openalex.org/W4385661505",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5102968401",
-            "name": "Ruhui Deng",
-            "affiliations": [
-                "Kunming University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5053270468",
-            "name": "Lei Zhao",
-            "affiliations": [
-                "Kunming University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5010421007",
-            "name": "Heng Li",
-            "affiliations": [
-                "Kunming University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5047851681",
-            "name": "Hui Liu",
-            "affiliations": [
-                "Kunming University of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2089621500",
-        "https://openalex.org/W2402985658",
-        "https://openalex.org/W2999811308",
-        "https://openalex.org/W3089880852",
-        "https://openalex.org/W1928779108",
-        "https://openalex.org/W2779235975",
-        "https://openalex.org/W3129020652",
-        "https://openalex.org/W4200606162",
-        "https://openalex.org/W3175634636",
-        "https://openalex.org/W3090677619",
-        "https://openalex.org/W2990176100",
-        "https://openalex.org/W4320900851",
-        "https://openalex.org/W2293581118",
-        "https://openalex.org/W2587107113",
-        "https://openalex.org/W4294871818",
-        "https://openalex.org/W3135038612",
-        "https://openalex.org/W4285025661",
-        "https://openalex.org/W4313003918",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3160694286",
-        "https://openalex.org/W4312950730",
-        "https://openalex.org/W3172509117",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3137278571",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W4310379933",
-        "https://openalex.org/W3034752215",
-        "https://openalex.org/W4313007769",
-        "https://openalex.org/W3099025816",
-        "https://openalex.org/W2964088115",
-        "https://openalex.org/W2962793481",
-        "https://openalex.org/W2767009334",
-        "https://openalex.org/W3006777311",
-        "https://openalex.org/W2565506808",
-        "https://openalex.org/W2971483169",
-        "https://openalex.org/W3153781409",
-        "https://openalex.org/W3157502174",
-        "https://openalex.org/W4382457726",
-        "https://openalex.org/W4322746840",
-        "https://openalex.org/W4312511906",
-        "https://openalex.org/W4283450732",
-        "https://openalex.org/W2905621769",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W2467473805",
-        "https://openalex.org/W3159660641",
-        "https://openalex.org/W3099562471"
-    ],
-    "abstract": "Abstract Underwater images are the most direct and effective ways to obtain underwater information. However, underwater images typically suffer from contrast reduction and colour distortion due to the absorption and scattering of water by light, which seriously limits the further development of underwater visual tasks. Recently, the convolutional neural network has been extensively applied in underwater image enhancement for its powerful local information extraction capabilities, but due to the locality of convolution operation, it cannot capture the global context well. Although the recently emerging Transformer can capture global context, it cannot model local correlations. Cformer is proposed, which is an Unet‐like hybrid network structure. First, a Depth Self‐Calibrated block is proposed to extract the local features of the image effectively. Second, a novel Cross‐Shaped Enhanced Window Transformer block is proposed. It captures long‐range pixel interactions while dramatically reducing the computational complexity of feature maps. Finally, the depth self‐calibrated block and the cross‐shaped enhanced window Transformer block are ingeniously fused to build a global–local Transformer module. Extensive ablation studies are performed on public underwater datasets to demonstrate the effectiveness of individual components in the network. The qualitative and quantitative comparisons indicate that Cformer achieves superior performance compared to other competitive models.",
-    "full_text": null
+  "title": "Cformer: An underwater image enhancement hybrid network combining convolution and transformer",
+  "url": "https://openalex.org/W4385661505",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5102968401",
+      "name": "Ruhui Deng",
+      "affiliations": [
+        "Kunming University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5053270468",
+      "name": "Lei Zhao",
+      "affiliations": [
+        "Kunming University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5010421007",
+      "name": "Heng Li",
+      "affiliations": [
+        "Kunming University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5047851681",
+      "name": "Hui Liu",
+      "affiliations": [
+        "Kunming University of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2089621500",
+    "https://openalex.org/W2402985658",
+    "https://openalex.org/W2999811308",
+    "https://openalex.org/W3089880852",
+    "https://openalex.org/W1928779108",
+    "https://openalex.org/W2779235975",
+    "https://openalex.org/W3129020652",
+    "https://openalex.org/W4200606162",
+    "https://openalex.org/W3175634636",
+    "https://openalex.org/W3090677619",
+    "https://openalex.org/W2990176100",
+    "https://openalex.org/W4320900851",
+    "https://openalex.org/W2293581118",
+    "https://openalex.org/W2587107113",
+    "https://openalex.org/W4294871818",
+    "https://openalex.org/W3135038612",
+    "https://openalex.org/W4285025661",
+    "https://openalex.org/W4313003918",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3160694286",
+    "https://openalex.org/W4312950730",
+    "https://openalex.org/W3172509117",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3137278571",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W4310379933",
+    "https://openalex.org/W3034752215",
+    "https://openalex.org/W4313007769",
+    "https://openalex.org/W3099025816",
+    "https://openalex.org/W2964088115",
+    "https://openalex.org/W2962793481",
+    "https://openalex.org/W2767009334",
+    "https://openalex.org/W3006777311",
+    "https://openalex.org/W2565506808",
+    "https://openalex.org/W2971483169",
+    "https://openalex.org/W3153781409",
+    "https://openalex.org/W3157502174",
+    "https://openalex.org/W4382457726",
+    "https://openalex.org/W4322746840",
+    "https://openalex.org/W4312511906",
+    "https://openalex.org/W4283450732",
+    "https://openalex.org/W2905621769",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W2467473805",
+    "https://openalex.org/W3159660641",
+    "https://openalex.org/W3099562471"
+  ],
+  "abstract": "Abstract Underwater images are the most direct and effective ways to obtain underwater information. However, underwater images typically suffer from contrast reduction and colour distortion due to the absorption and scattering of water by light, which seriously limits the further development of underwater visual tasks. Recently, the convolutional neural network has been extensively applied in underwater image enhancement for its powerful local information extraction capabilities, but due to the locality of convolution operation, it cannot capture the global context well. Although the recently emerging Transformer can capture global context, it cannot model local correlations. Cformer is proposed, which is an Unet‐like hybrid network structure. First, a Depth Self‐Calibrated block is proposed to extract the local features of the image effectively. Second, a novel Cross‐Shaped Enhanced Window Transformer block is proposed. It captures long‐range pixel interactions while dramatically reducing the computational complexity of feature maps. Finally, the depth self‐calibrated block and the cross‐shaped enhanced window Transformer block are ingeniously fused to build a global–local Transformer module. Extensive ablation studies are performed on public underwater datasets to demonstrate the effectiveness of individual components in the network. The qualitative and quantitative comparisons indicate that Cformer achieves superior performance compared to other competitive models.",
+  "full_text": null,
+  "topic": "Underwater",
+  "concepts": [
+    {
+      "name": "Underwater",
+      "score": 0.7723878622055054
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7094645500183105
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6199560761451721
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5867307186126709
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5243037939071655
+    },
+    {
+      "name": "Locality",
+      "score": 0.5178911685943604
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.48105669021606445
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.48063650727272034
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.43372029066085815
+    },
+    {
+      "name": "Voltage",
+      "score": 0.1325491964817047
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10904482007026672
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

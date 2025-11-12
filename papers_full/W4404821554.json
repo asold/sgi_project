@@ -1,165 +1,240 @@
 {
-    "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
-    "url": "https://openalex.org/W4404821554",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5088114018",
-            "name": "Hugo Dalla-Torre",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5018406200",
-            "name": "Liam Gonzalez",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5043529947",
-            "name": "Javier Mendoza‐Revilla",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5063688878",
-            "name": "Nicolás López Carranza",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5108106435",
-            "name": "Adam Grzywaczewski",
-            "affiliations": [
-                "Nvidia (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5048942980",
-            "name": "Francesco Oteri",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5088531553",
-            "name": "Christian Dallago",
-            "affiliations": [
-                "Nvidia (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5023952414",
-            "name": "Evan Trop",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5084912778",
-            "name": "Bernardo P. de Almeida",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5089220782",
-            "name": "Hassan Sirelkhatim",
-            "affiliations": [
-                "Nvidia (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101555791",
-            "name": "Guillaume Richard",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5057759361",
-            "name": "Marcin J. Skwark",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5067029999",
-            "name": "Karim Beguir",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5057502799",
-            "name": "M. Lopez",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5015141560",
-            "name": "Thomas Pierrot",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W3118577024",
-        "https://openalex.org/W4225868104",
-        "https://openalex.org/W3130819465",
-        "https://openalex.org/W2198606573",
-        "https://openalex.org/W3133363356",
-        "https://openalex.org/W4280563114",
-        "https://openalex.org/W2935703330",
-        "https://openalex.org/W2883945062",
-        "https://openalex.org/W3042669608",
-        "https://openalex.org/W2952239877",
-        "https://openalex.org/W3026475692",
-        "https://openalex.org/W4285006295",
-        "https://openalex.org/W3203588026",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W4304607335",
-        "https://openalex.org/W4392095606",
-        "https://openalex.org/W4380488316",
-        "https://openalex.org/W4400451184",
-        "https://openalex.org/W2104549677",
-        "https://openalex.org/W2096465161",
-        "https://openalex.org/W2259938310",
-        "https://openalex.org/W3045910546",
-        "https://openalex.org/W3046013264",
-        "https://openalex.org/W2909194804",
-        "https://openalex.org/W4387966979",
-        "https://openalex.org/W3037888463",
-        "https://openalex.org/W2887831258",
-        "https://openalex.org/W2417483443",
-        "https://openalex.org/W2025943989",
-        "https://openalex.org/W3133859624",
-        "https://openalex.org/W3197364483",
-        "https://openalex.org/W6810081322",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W4242765109",
-        "https://openalex.org/W2901218091",
-        "https://openalex.org/W4388979610",
-        "https://openalex.org/W6675354045",
-        "https://openalex.org/W4294012180",
-        "https://openalex.org/W2964849163",
-        "https://openalex.org/W2077318478",
-        "https://openalex.org/W2770026599",
-        "https://openalex.org/W3037601773",
-        "https://openalex.org/W2988641336",
-        "https://openalex.org/W4225438928",
-        "https://openalex.org/W3118936575"
-    ],
-    "abstract": "The prediction of molecular phenotypes from DNA sequences remains a longstanding challenge in genomics, often driven by limited annotated data and the inability to transfer learnings between tasks. Here, we present an extensive study of foundation models pre-trained on DNA sequences, named Nucleotide Transformer, ranging from 50 million up to 2.5 billion parameters and integrating information from 3,202 human genomes and 850 genomes from diverse species. These transformer models yield context-specific representations of nucleotide sequences, which allow for accurate predictions even in low-data settings. We show that the developed models can be fine-tuned at low cost to solve a variety of genomics applications. Despite no supervision, the models learned to focus attention on key genomic elements and can be used to improve the prioritization of genetic variants. The training and application of foundational models in genomics provides a widely applicable approach for accurate molecular phenotype prediction from DNA sequence.",
-    "full_text": null
+  "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+  "url": "https://openalex.org/W4404821554",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5088114018",
+      "name": "Hugo Dalla-Torre",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5018406200",
+      "name": "Liam Gonzalez",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5043529947",
+      "name": "Javier Mendoza‐Revilla",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5063688878",
+      "name": "Nicolás López Carranza",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5108106435",
+      "name": "Adam Grzywaczewski",
+      "affiliations": [
+        "Nvidia (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5048942980",
+      "name": "Francesco Oteri",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5088531553",
+      "name": "Christian Dallago",
+      "affiliations": [
+        "Nvidia (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5023952414",
+      "name": "Evan Trop",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5084912778",
+      "name": "Bernardo P. de Almeida",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5089220782",
+      "name": "Hassan Sirelkhatim",
+      "affiliations": [
+        "Nvidia (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101555791",
+      "name": "Guillaume Richard",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5057759361",
+      "name": "Marcin J. Skwark",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5067029999",
+      "name": "Karim Beguir",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5057502799",
+      "name": "M. Lopez",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5015141560",
+      "name": "Thomas Pierrot",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W3118577024",
+    "https://openalex.org/W4225868104",
+    "https://openalex.org/W3130819465",
+    "https://openalex.org/W2198606573",
+    "https://openalex.org/W3133363356",
+    "https://openalex.org/W4280563114",
+    "https://openalex.org/W2935703330",
+    "https://openalex.org/W2883945062",
+    "https://openalex.org/W3042669608",
+    "https://openalex.org/W2952239877",
+    "https://openalex.org/W3026475692",
+    "https://openalex.org/W4285006295",
+    "https://openalex.org/W3203588026",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W4304607335",
+    "https://openalex.org/W4392095606",
+    "https://openalex.org/W4380488316",
+    "https://openalex.org/W4400451184",
+    "https://openalex.org/W2104549677",
+    "https://openalex.org/W2096465161",
+    "https://openalex.org/W2259938310",
+    "https://openalex.org/W3045910546",
+    "https://openalex.org/W3046013264",
+    "https://openalex.org/W2909194804",
+    "https://openalex.org/W4387966979",
+    "https://openalex.org/W3037888463",
+    "https://openalex.org/W2887831258",
+    "https://openalex.org/W2417483443",
+    "https://openalex.org/W2025943989",
+    "https://openalex.org/W3133859624",
+    "https://openalex.org/W3197364483",
+    "https://openalex.org/W6810081322",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W4242765109",
+    "https://openalex.org/W2901218091",
+    "https://openalex.org/W4388979610",
+    "https://openalex.org/W6675354045",
+    "https://openalex.org/W4294012180",
+    "https://openalex.org/W2964849163",
+    "https://openalex.org/W2077318478",
+    "https://openalex.org/W2770026599",
+    "https://openalex.org/W3037601773",
+    "https://openalex.org/W2988641336",
+    "https://openalex.org/W4225438928",
+    "https://openalex.org/W3118936575"
+  ],
+  "abstract": "The prediction of molecular phenotypes from DNA sequences remains a longstanding challenge in genomics, often driven by limited annotated data and the inability to transfer learnings between tasks. Here, we present an extensive study of foundation models pre-trained on DNA sequences, named Nucleotide Transformer, ranging from 50 million up to 2.5 billion parameters and integrating information from 3,202 human genomes and 850 genomes from diverse species. These transformer models yield context-specific representations of nucleotide sequences, which allow for accurate predictions even in low-data settings. We show that the developed models can be fine-tuned at low cost to solve a variety of genomics applications. Despite no supervision, the models learned to focus attention on key genomic elements and can be used to improve the prioritization of genetic variants. The training and application of foundational models in genomics provides a widely applicable approach for accurate molecular phenotype prediction from DNA sequence.",
+  "full_text": null,
+  "topic": "Genomics",
+  "concepts": [
+    {
+      "name": "Genomics",
+      "score": 0.7599178552627563
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.557266116142273
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5266963243484497
+    },
+    {
+      "name": "Genome",
+      "score": 0.4929542541503906
+    },
+    {
+      "name": "DNA sequencing",
+      "score": 0.4585028290748596
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4517202079296112
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.42738550901412964
+    },
+    {
+      "name": "Prioritization",
+      "score": 0.41265058517456055
+    },
+    {
+      "name": "Biology",
+      "score": 0.3705543279647827
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3326287269592285
+    },
+    {
+      "name": "Genetics",
+      "score": 0.19885671138763428
+    },
+    {
+      "name": "DNA",
+      "score": 0.19577360153198242
+    },
+    {
+      "name": "Gene",
+      "score": 0.14458978176116943
+    },
+    {
+      "name": "Engineering",
+      "score": 0.12619024515151978
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Management science",
+      "score": 0.0
+    }
+  ]
 }

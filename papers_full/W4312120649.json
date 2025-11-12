@@ -1,86 +1,185 @@
 {
-    "title": "MedBERT: A Pre-trained Language Model for Biomedical Named Entity Recognition",
-    "url": "https://openalex.org/W4312120649",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3155532210",
-            "name": "Charangan Vasantharajan",
-            "affiliations": [
-                "University of Moratuwa"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3169002278",
-            "name": "Kyaw Zin Tun",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4313246066",
-            "name": "Ho Thi Nga",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2183536209",
-            "name": "Sparsh Jain",
-            "affiliations": [
-                "Birla Institute of Technology and Science, Pilani"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2357211287",
-            "name": "Tong Rong",
-            "affiliations": [
-                "Singapore Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1966190765",
-            "name": "Chng Eng Siong",
-            "affiliations": [
-                "Nanyang Technological University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1532940542",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W2169099542",
-        "https://openalex.org/W2168041406",
-        "https://openalex.org/W2346452181",
-        "https://openalex.org/W2047782770",
-        "https://openalex.org/W6759810374",
-        "https://openalex.org/W2040298461",
-        "https://openalex.org/W2743028754",
-        "https://openalex.org/W2624892763",
-        "https://openalex.org/W6768851824",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2963716420",
-        "https://openalex.org/W2985913541",
-        "https://openalex.org/W2104752900",
-        "https://openalex.org/W2123036291",
-        "https://openalex.org/W2141869602",
-        "https://openalex.org/W2162461580",
-        "https://openalex.org/W2012285872",
-        "https://openalex.org/W1996159834",
-        "https://openalex.org/W2250539671",
-        "https://openalex.org/W2734608416",
-        "https://openalex.org/W2488984245",
-        "https://openalex.org/W2971258845",
-        "https://openalex.org/W2110006374",
-        "https://openalex.org/W2121879602",
-        "https://openalex.org/W3095092693",
-        "https://openalex.org/W2987972786",
-        "https://openalex.org/W6685627216",
-        "https://openalex.org/W6603123688",
-        "https://openalex.org/W76749362",
-        "https://openalex.org/W2978017171",
-        "https://openalex.org/W2914431807"
-    ],
-    "abstract": "&lt;p&gt;This paper introduces MedBERT, a new pretrained transformer-based model for biomedical named entity recognition. MedBERT is trained with 57.46M tokens collected from biomedical-related data sources, i.e. datasets acquired from N2C2, BioNLP, CRAFT challenges, and biomedical-related articles crawled from Wikipedia. We validate the effectiveness of MedBERT by comparing it with four publicly available pre-trained models on ten biomedical datasets from BioNLP and CRAFT shared tasks.&lt;/p&gt;&lt;p&gt;Our experimental results show that models fine-tuned on MedBERT achieve state-of-the-art performance in nine datasets that predict Protein, Gene, Chemical, Cellular/Component, Gene Ontology, and Taxonomy entities. Specifically, the model achieved an average of 84.04% F1-micro score on ten test sets from BioNLP and CRAFT challenges with an improvement of3.7% and 7.83% as compared to models that were fine-tuned on BioBERT and Bio ClinicalBERT, respectively.&lt;/p&gt;",
-    "full_text": null
+  "title": "MedBERT: A Pre-trained Language Model for Biomedical Named Entity Recognition",
+  "url": "https://openalex.org/W4312120649",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3155532210",
+      "name": "Charangan Vasantharajan",
+      "affiliations": [
+        "University of Moratuwa"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3169002278",
+      "name": "Kyaw Zin Tun",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4313246066",
+      "name": "Ho Thi Nga",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2183536209",
+      "name": "Sparsh Jain",
+      "affiliations": [
+        "Birla Institute of Technology and Science, Pilani"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2357211287",
+      "name": "Tong Rong",
+      "affiliations": [
+        "Singapore Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1966190765",
+      "name": "Chng Eng Siong",
+      "affiliations": [
+        "Nanyang Technological University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1532940542",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W2169099542",
+    "https://openalex.org/W2168041406",
+    "https://openalex.org/W2346452181",
+    "https://openalex.org/W2047782770",
+    "https://openalex.org/W6759810374",
+    "https://openalex.org/W2040298461",
+    "https://openalex.org/W2743028754",
+    "https://openalex.org/W2624892763",
+    "https://openalex.org/W6768851824",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2963716420",
+    "https://openalex.org/W2985913541",
+    "https://openalex.org/W2104752900",
+    "https://openalex.org/W2123036291",
+    "https://openalex.org/W2141869602",
+    "https://openalex.org/W2162461580",
+    "https://openalex.org/W2012285872",
+    "https://openalex.org/W1996159834",
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2734608416",
+    "https://openalex.org/W2488984245",
+    "https://openalex.org/W2971258845",
+    "https://openalex.org/W2110006374",
+    "https://openalex.org/W2121879602",
+    "https://openalex.org/W3095092693",
+    "https://openalex.org/W2987972786",
+    "https://openalex.org/W6685627216",
+    "https://openalex.org/W6603123688",
+    "https://openalex.org/W76749362",
+    "https://openalex.org/W2978017171",
+    "https://openalex.org/W2914431807"
+  ],
+  "abstract": "&lt;p&gt;This paper introduces MedBERT, a new pretrained transformer-based model for biomedical named entity recognition. MedBERT is trained with 57.46M tokens collected from biomedical-related data sources, i.e. datasets acquired from N2C2, BioNLP, CRAFT challenges, and biomedical-related articles crawled from Wikipedia. We validate the effectiveness of MedBERT by comparing it with four publicly available pre-trained models on ten biomedical datasets from BioNLP and CRAFT shared tasks.&lt;/p&gt;&lt;p&gt;Our experimental results show that models fine-tuned on MedBERT achieve state-of-the-art performance in nine datasets that predict Protein, Gene, Chemical, Cellular/Component, Gene Ontology, and Taxonomy entities. Specifically, the model achieved an average of 84.04% F1-micro score on ten test sets from BioNLP and CRAFT challenges with an improvement of3.7% and 7.83% as compared to models that were fine-tuned on BioBERT and Bio ClinicalBERT, respectively.&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8450813889503479
+    },
+    {
+      "name": "Biomedical text mining",
+      "score": 0.8402411937713623
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5860657691955566
+    },
+    {
+      "name": "Named-entity recognition",
+      "score": 0.5550814867019653
+    },
+    {
+      "name": "Craft",
+      "score": 0.5473674535751343
+    },
+    {
+      "name": "Gene ontology",
+      "score": 0.5296195149421692
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5022156238555908
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4673697352409363
+    },
+    {
+      "name": "F1 score",
+      "score": 0.4432099461555481
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.33391034603118896
+    },
+    {
+      "name": "Data mining",
+      "score": 0.326053261756897
+    },
+    {
+      "name": "Text mining",
+      "score": 0.24073326587677002
+    },
+    {
+      "name": "Gene",
+      "score": 0.10820034146308899
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.08193358778953552
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "History",
+      "score": 0.0
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,116 +1,191 @@
 {
-    "title": "StableYolo: Optimizing Image Generation for Large Language Models",
-    "url": "https://openalex.org/W4389285856",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2954487212",
-            "name": "Harel Berger",
-            "affiliations": [
-                "Georgetown University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5093408719",
-            "name": "Aidan Dakhama",
-            "affiliations": [
-                "King's College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2229258677",
-            "name": "Zishuo Ding",
-            "affiliations": [
-                "University of Waterloo"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2598889342",
-            "name": "Karine Even-Mendoza",
-            "affiliations": [
-                "King's College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1989124461",
-            "name": "David Kelly",
-            "affiliations": [
-                "King's College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2574430939",
-            "name": "Hector Menendez",
-            "affiliations": [
-                "King's College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2567473625",
-            "name": "Rebecca Moussa",
-            "affiliations": [
-                "University College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120263361",
-            "name": "Federica Sarro",
-            "affiliations": [
-                "University College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2954487212",
-            "name": "Harel Berger",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5093408719",
-            "name": "Aidan Dakhama",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2229258677",
-            "name": "Zishuo Ding",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2598889342",
-            "name": "Karine Even-Mendoza",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1989124461",
-            "name": "David Kelly",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2574430939",
-            "name": "Hector Menendez",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2567473625",
-            "name": "Rebecca Moussa",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2120263361",
-            "name": "Federica Sarro",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3216352822",
-        "https://openalex.org/W4385270985",
-        "https://openalex.org/W4392414327",
-        "https://openalex.org/W4386076458",
-        "https://openalex.org/W4226524609",
-        "https://openalex.org/W2965289598",
-        "https://openalex.org/W2963306805",
-        "https://openalex.org/W4281485151",
-        "https://openalex.org/W2966792645"
-    ],
-    "abstract": "AI-based image generation is bounded by system parameters and the way users define prompts. Both prompt engineering and AI tuning configuration are current open research challenges and they require a significant amount of manual effort to generate good quality images. We tackle this problem by applying evolutionary computation to Stable Diffusion, tuning both prompts and model parameters simultaneously. We guide our search process by using Yolo. Our experiments show that our system, dubbed StableYolo, significantly improves image quality (52% on average compared to the baseline), helps identify relevant words for prompts, reduces the number of GPU inference steps per image (from 100 to 45 on average), and keeps the length of the prompt short (≈ 7 keywords).",
-    "full_text": null
+  "title": "StableYolo: Optimizing Image Generation for Large Language Models",
+  "url": "https://openalex.org/W4389285856",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2954487212",
+      "name": "Harel Berger",
+      "affiliations": [
+        "Georgetown University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5093408719",
+      "name": "Aidan Dakhama",
+      "affiliations": [
+        "King's College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2229258677",
+      "name": "Zishuo Ding",
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2598889342",
+      "name": "Karine Even-Mendoza",
+      "affiliations": [
+        "King's College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1989124461",
+      "name": "David Kelly",
+      "affiliations": [
+        "King's College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2574430939",
+      "name": "Hector Menendez",
+      "affiliations": [
+        "King's College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2567473625",
+      "name": "Rebecca Moussa",
+      "affiliations": [
+        "University College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120263361",
+      "name": "Federica Sarro",
+      "affiliations": [
+        "University College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2954487212",
+      "name": "Harel Berger",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5093408719",
+      "name": "Aidan Dakhama",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2229258677",
+      "name": "Zishuo Ding",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2598889342",
+      "name": "Karine Even-Mendoza",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1989124461",
+      "name": "David Kelly",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2574430939",
+      "name": "Hector Menendez",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2567473625",
+      "name": "Rebecca Moussa",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2120263361",
+      "name": "Federica Sarro",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3216352822",
+    "https://openalex.org/W4385270985",
+    "https://openalex.org/W4392414327",
+    "https://openalex.org/W4386076458",
+    "https://openalex.org/W4226524609",
+    "https://openalex.org/W2965289598",
+    "https://openalex.org/W2963306805",
+    "https://openalex.org/W4281485151",
+    "https://openalex.org/W2966792645"
+  ],
+  "abstract": "AI-based image generation is bounded by system parameters and the way users define prompts. Both prompt engineering and AI tuning configuration are current open research challenges and they require a significant amount of manual effort to generate good quality images. We tackle this problem by applying evolutionary computation to Stable Diffusion, tuning both prompts and model parameters simultaneously. We guide our search process by using Yolo. Our experiments show that our system, dubbed StableYolo, significantly improves image quality (52% on average compared to the baseline), helps identify relevant words for prompts, reduces the number of GPU inference steps per image (from 100 to 45 on average), and keeps the length of the prompt short (≈ 7 keywords).",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8680938482284546
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.6395949125289917
+    },
+    {
+      "name": "Inference",
+      "score": 0.5629587173461914
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5262757539749146
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5019066333770752
+    },
+    {
+      "name": "Computation",
+      "score": 0.49872255325317383
+    },
+    {
+      "name": "Bounded function",
+      "score": 0.4653201103210449
+    },
+    {
+      "name": "Approx",
+      "score": 0.4632042646408081
+    },
+    {
+      "name": "Baseline (sea)",
+      "score": 0.45078882575035095
+    },
+    {
+      "name": "Image quality",
+      "score": 0.4364573657512665
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.37071692943573
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.29688215255737305
+    },
+    {
+      "name": "Programming language",
+      "score": 0.11548727750778198
+    },
+    {
+      "name": "Operating system",
+      "score": 0.08346295356750488
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.06718522310256958
+    },
+    {
+      "name": "Geology",
+      "score": 0.0
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

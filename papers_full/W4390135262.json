@@ -1,95 +1,186 @@
 {
-    "title": "Radio galaxy zoo: towards building the first multipurpose foundation model for radio astronomy with self-supervised learning",
-    "url": "https://openalex.org/W4390135262",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3213610457",
-            "name": "Inigo V. Slijepcevic",
-            "affiliations": [
-                "University of Manchester"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3041932667",
-            "name": "Anna M. M. Scaife",
-            "affiliations": [
-                "University of Manchester",
-                "Turing Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2014066172",
-            "name": "Mike Walmsley",
-            "affiliations": [
-                "University of Manchester"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3026935826",
-            "name": "Micah Bowles",
-            "affiliations": [
-                "University of Manchester"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2337792658",
-            "name": "O. Ivy Wong",
-            "affiliations": [
-                "ARC Centre of Excellence for All-sky Astrophysics",
-                "University of Western Australia"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171571101",
-            "name": "Stanislav S. Shabala",
-            "affiliations": [
-                "University of Tasmania",
-                "ARC Centre of Excellence for All-sky Astrophysics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2661971253",
-            "name": "Sarah V. White",
-            "affiliations": [
-                "Rhodes University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2612022385",
-        "https://openalex.org/W2047002529",
-        "https://openalex.org/W3126757032",
-        "https://openalex.org/W3106786448",
-        "https://openalex.org/W2189948602",
-        "https://openalex.org/W2117233176",
-        "https://openalex.org/W3164077380",
-        "https://openalex.org/W3012381473",
-        "https://openalex.org/W3159224251",
-        "https://openalex.org/W3210019006",
-        "https://openalex.org/W3114632476",
-        "https://openalex.org/W2782681900",
-        "https://openalex.org/W3093919508",
-        "https://openalex.org/W2889326414",
-        "https://openalex.org/W2956369515",
-        "https://openalex.org/W4210818292",
-        "https://openalex.org/W3208527882",
-        "https://openalex.org/W4381161836",
-        "https://openalex.org/W2951810666",
-        "https://openalex.org/W3211260837",
-        "https://openalex.org/W3129593320",
-        "https://openalex.org/W4226417520",
-        "https://openalex.org/W3087681349",
-        "https://openalex.org/W2984353870",
-        "https://openalex.org/W3101816355",
-        "https://openalex.org/W3122659035",
-        "https://openalex.org/W4286696412",
-        "https://openalex.org/W2978329087",
-        "https://openalex.org/W569478347",
-        "https://openalex.org/W3103803561",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W4249502209"
-    ],
-    "abstract": "Abstract In this work, we apply self-supervised learning with instance differentiation to learn a robust, multipurpose representation for image analysis of resolved extragalactic continuum images. We train a multi-use model which compresses our unlabelled data into a structured, low dimensional representation which can be used for a variety of downstream tasks (e.g. classification, similarity search). We exceed baseline supervised Fanaroff–Riley classification performance by a statistically significant margin, with our model reducing the test set error by up to half. Our model is also able to maintain high classification accuracy with very few labels, with only $7.79{{\\ \\rm per\\ cent}}$ error when only using 145 labels. We further demonstrate that by using our foundation model, users can efficiently trade off compute, human labelling cost and test set accuracy according to their respective budgets, allowing for efficient classification in a wide variety of scenarios. We highlight the generalizability of our model by showing that it enables accurate classification in a label scarce regime with data from the new MIGHTEE survey without any hyperparameter tuning, where it improves upon the baseline by $\\sim 8{{\\ \\rm per\\ cent}}$. Visualizations of our labelled and un-labelled data show that our model’s representation space is structured with respect to physical properties of the sources, such as angular source extent. We show that the learned representation is scientifically useful even if no labels are available by performing a similarity search, finding hybrid sources in the RGZ DR1 data set without any labels. We show that good augmentation design and hyperparameter choice can help achieve peak performance, while emphasizing that optimal hyperparameters are not required to obtain benefits from self-supervised pre-training.",
-    "full_text": null
+  "title": "Radio galaxy zoo: towards building the first multipurpose foundation model for radio astronomy with self-supervised learning",
+  "url": "https://openalex.org/W4390135262",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3213610457",
+      "name": "Inigo V. Slijepcevic",
+      "affiliations": [
+        "University of Manchester"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3041932667",
+      "name": "Anna M. M. Scaife",
+      "affiliations": [
+        "University of Manchester",
+        "Turing Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2014066172",
+      "name": "Mike Walmsley",
+      "affiliations": [
+        "University of Manchester"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3026935826",
+      "name": "Micah Bowles",
+      "affiliations": [
+        "University of Manchester"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2337792658",
+      "name": "O. Ivy Wong",
+      "affiliations": [
+        "ARC Centre of Excellence for All-sky Astrophysics",
+        "University of Western Australia"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171571101",
+      "name": "Stanislav S. Shabala",
+      "affiliations": [
+        "University of Tasmania",
+        "ARC Centre of Excellence for All-sky Astrophysics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2661971253",
+      "name": "Sarah V. White",
+      "affiliations": [
+        "Rhodes University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2612022385",
+    "https://openalex.org/W2047002529",
+    "https://openalex.org/W3126757032",
+    "https://openalex.org/W3106786448",
+    "https://openalex.org/W2189948602",
+    "https://openalex.org/W2117233176",
+    "https://openalex.org/W3164077380",
+    "https://openalex.org/W3012381473",
+    "https://openalex.org/W3159224251",
+    "https://openalex.org/W3210019006",
+    "https://openalex.org/W3114632476",
+    "https://openalex.org/W2782681900",
+    "https://openalex.org/W3093919508",
+    "https://openalex.org/W2889326414",
+    "https://openalex.org/W2956369515",
+    "https://openalex.org/W4210818292",
+    "https://openalex.org/W3208527882",
+    "https://openalex.org/W4381161836",
+    "https://openalex.org/W2951810666",
+    "https://openalex.org/W3211260837",
+    "https://openalex.org/W3129593320",
+    "https://openalex.org/W4226417520",
+    "https://openalex.org/W3087681349",
+    "https://openalex.org/W2984353870",
+    "https://openalex.org/W3101816355",
+    "https://openalex.org/W3122659035",
+    "https://openalex.org/W4286696412",
+    "https://openalex.org/W2978329087",
+    "https://openalex.org/W569478347",
+    "https://openalex.org/W3103803561",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W4249502209"
+  ],
+  "abstract": "Abstract In this work, we apply self-supervised learning with instance differentiation to learn a robust, multipurpose representation for image analysis of resolved extragalactic continuum images. We train a multi-use model which compresses our unlabelled data into a structured, low dimensional representation which can be used for a variety of downstream tasks (e.g. classification, similarity search). We exceed baseline supervised Fanaroff–Riley classification performance by a statistically significant margin, with our model reducing the test set error by up to half. Our model is also able to maintain high classification accuracy with very few labels, with only $7.79{{\\ \\rm per\\ cent}}$ error when only using 145 labels. We further demonstrate that by using our foundation model, users can efficiently trade off compute, human labelling cost and test set accuracy according to their respective budgets, allowing for efficient classification in a wide variety of scenarios. We highlight the generalizability of our model by showing that it enables accurate classification in a label scarce regime with data from the new MIGHTEE survey without any hyperparameter tuning, where it improves upon the baseline by $\\sim 8{{\\ \\rm per\\ cent}}$. Visualizations of our labelled and un-labelled data show that our model’s representation space is structured with respect to physical properties of the sources, such as angular source extent. We show that the learned representation is scientifically useful even if no labels are available by performing a similarity search, finding hybrid sources in the RGZ DR1 data set without any labels. We show that good augmentation design and hyperparameter choice can help achieve peak performance, while emphasizing that optimal hyperparameters are not required to obtain benefits from self-supervised pre-training.",
+  "full_text": null,
+  "topic": "Generalizability theory",
+  "concepts": [
+    {
+      "name": "Generalizability theory",
+      "score": 0.766025185585022
+    },
+    {
+      "name": "Hyperparameter",
+      "score": 0.6934909820556641
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6209760904312134
+    },
+    {
+      "name": "Similarity (geometry)",
+      "score": 0.6138204336166382
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.5870840549468994
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.5864765644073486
+    },
+    {
+      "name": "Margin (machine learning)",
+      "score": 0.5525710582733154
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5365960597991943
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5043958425521851
+    },
+    {
+      "name": "Nearest neighbor search",
+      "score": 0.48710083961486816
+    },
+    {
+      "name": "Variety (cybernetics)",
+      "score": 0.4598442316055298
+    },
+    {
+      "name": "Test set",
+      "score": 0.4597947299480438
+    },
+    {
+      "name": "Data set",
+      "score": 0.42481788992881775
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.39630386233329773
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3342156410217285
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.27824991941452026
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.22098076343536377
+    },
+    {
+      "name": "Statistics",
+      "score": 0.12915903329849243
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    }
+  ]
 }

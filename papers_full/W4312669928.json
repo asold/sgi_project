@@ -1,63 +1,134 @@
 {
-    "title": "Towards JavaScript program repair with generative pre-trained transformer (GPT-2)",
-    "url": "https://openalex.org/W4312669928",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3145019962",
-            "name": "Márk Lajkó",
-            "affiliations": [
-                "University of Szeged"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2801364809",
-            "name": "Viktor Csuvik",
-            "affiliations": [
-                "University of Szeged"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A85207129",
-            "name": "László Vidács",
-            "affiliations": [
-                "University of Szeged"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3170092793",
-        "https://openalex.org/W2320110444",
-        "https://openalex.org/W2027625187",
-        "https://openalex.org/W2907705732",
-        "https://openalex.org/W3012438487",
-        "https://openalex.org/W3170962973",
-        "https://openalex.org/W2790541099",
-        "https://openalex.org/W3085332162",
-        "https://openalex.org/W2110385988",
-        "https://openalex.org/W3208407575",
-        "https://openalex.org/W2952903800",
-        "https://openalex.org/W2055931054",
-        "https://openalex.org/W4288080276",
-        "https://openalex.org/W4255632703",
-        "https://openalex.org/W2400994325",
-        "https://openalex.org/W2791415964",
-        "https://openalex.org/W841012168",
-        "https://openalex.org/W2274071363",
-        "https://openalex.org/W3043761819",
-        "https://openalex.org/W2537787699",
-        "https://openalex.org/W2465133314",
-        "https://openalex.org/W2078389019",
-        "https://openalex.org/W3183962691",
-        "https://openalex.org/W2153881107",
-        "https://openalex.org/W2883977877",
-        "https://openalex.org/W2972082064",
-        "https://openalex.org/W2122947685",
-        "https://openalex.org/W2344973853",
-        "https://openalex.org/W3089621332",
-        "https://openalex.org/W3101227662",
-        "https://openalex.org/W4299301436"
-    ],
-    "abstract": "The goal of Automated Program Repair (APR) is to find a fix to software bugs, without human intervention. The so-called Generate and Validate (G\\\\&amp;V) approach deemed to be the most popular method in the last few years, where the APR tool creates a patch and it is validated against an oracle. Recent years for Natural Language Processing (NLP) were of great interest, with new pre-trained models shattering records on tasks ranging from sentiment analysis to question answering. Usually these deep learning models inspire the APR community as well. These approaches usually require a large dataset on which the model can be trained (or fine-tuned) and evaluated. The criterion to accept a patch depends on the underlying dataset, but usually the generated patch should be exactly the same as the one created by a human developer. As NLP models are more and more capable to form sentences, and the sentences will form coherent paragraphs, the APR tools are also better and better at generating syntactically and semantically correct source code. As the Generative Pre-trained Transformer (GPT) model is now available to everyone thanks to the NLP and AI research community, it can be fine-tuned to specific tasks (not necessarily on natural language). In this work we use the GPT-2 model to generate source code, to the best of our knowledge, the GPT-2 model was not used for Automated Program Repair so far. The model is fine-tuned for a specific task: it has been taught to fix JavaScript bugs automatically. To do so, we trained the model on 16863 JS code snippets, where it could learn the nature of the observed programming language. In our experiments we observed that the GPT-2 model was able to learn how to write syntactically correct source code almost on every attempt, although it failed to learn good bug-fixes in some cases. Nonetheless it was able to generate the correct fixes in most of the cases, resulting in an overall accuracy up to 17.25\\\\%.",
-    "full_text": null
+  "title": "Towards JavaScript program repair with generative pre-trained transformer (GPT-2)",
+  "url": "https://openalex.org/W4312669928",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3145019962",
+      "name": "Márk Lajkó",
+      "affiliations": [
+        "University of Szeged"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2801364809",
+      "name": "Viktor Csuvik",
+      "affiliations": [
+        "University of Szeged"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A85207129",
+      "name": "László Vidács",
+      "affiliations": [
+        "University of Szeged"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3170092793",
+    "https://openalex.org/W2320110444",
+    "https://openalex.org/W2027625187",
+    "https://openalex.org/W2907705732",
+    "https://openalex.org/W3012438487",
+    "https://openalex.org/W3170962973",
+    "https://openalex.org/W2790541099",
+    "https://openalex.org/W3085332162",
+    "https://openalex.org/W2110385988",
+    "https://openalex.org/W3208407575",
+    "https://openalex.org/W2952903800",
+    "https://openalex.org/W2055931054",
+    "https://openalex.org/W4288080276",
+    "https://openalex.org/W4255632703",
+    "https://openalex.org/W2400994325",
+    "https://openalex.org/W2791415964",
+    "https://openalex.org/W841012168",
+    "https://openalex.org/W2274071363",
+    "https://openalex.org/W3043761819",
+    "https://openalex.org/W2537787699",
+    "https://openalex.org/W2465133314",
+    "https://openalex.org/W2078389019",
+    "https://openalex.org/W3183962691",
+    "https://openalex.org/W2153881107",
+    "https://openalex.org/W2883977877",
+    "https://openalex.org/W2972082064",
+    "https://openalex.org/W2122947685",
+    "https://openalex.org/W2344973853",
+    "https://openalex.org/W3089621332",
+    "https://openalex.org/W3101227662",
+    "https://openalex.org/W4299301436"
+  ],
+  "abstract": "The goal of Automated Program Repair (APR) is to find a fix to software bugs, without human intervention. The so-called Generate and Validate (G\\\\&amp;V) approach deemed to be the most popular method in the last few years, where the APR tool creates a patch and it is validated against an oracle. Recent years for Natural Language Processing (NLP) were of great interest, with new pre-trained models shattering records on tasks ranging from sentiment analysis to question answering. Usually these deep learning models inspire the APR community as well. These approaches usually require a large dataset on which the model can be trained (or fine-tuned) and evaluated. The criterion to accept a patch depends on the underlying dataset, but usually the generated patch should be exactly the same as the one created by a human developer. As NLP models are more and more capable to form sentences, and the sentences will form coherent paragraphs, the APR tools are also better and better at generating syntactically and semantically correct source code. As the Generative Pre-trained Transformer (GPT) model is now available to everyone thanks to the NLP and AI research community, it can be fine-tuned to specific tasks (not necessarily on natural language). In this work we use the GPT-2 model to generate source code, to the best of our knowledge, the GPT-2 model was not used for Automated Program Repair so far. The model is fine-tuned for a specific task: it has been taught to fix JavaScript bugs automatically. To do so, we trained the model on 16863 JS code snippets, where it could learn the nature of the observed programming language. In our experiments we observed that the GPT-2 model was able to learn how to write syntactically correct source code almost on every attempt, although it failed to learn good bug-fixes in some cases. Nonetheless it was able to generate the correct fixes in most of the cases, resulting in an overall accuracy up to 17.25\\\\%.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8399465084075928
+    },
+    {
+      "name": "JavaScript",
+      "score": 0.7518085241317749
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7167521119117737
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6526248455047607
+    },
+    {
+      "name": "Oracle",
+      "score": 0.6408312320709229
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.591200590133667
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.5631189346313477
+    },
+    {
+      "name": "Language model",
+      "score": 0.5224398970603943
+    },
+    {
+      "name": "Source code",
+      "score": 0.49088937044143677
+    },
+    {
+      "name": "Natural language",
+      "score": 0.4698585271835327
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.41993576288223267
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4135705828666687
+    },
+    {
+      "name": "Programming language",
+      "score": 0.27811431884765625
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

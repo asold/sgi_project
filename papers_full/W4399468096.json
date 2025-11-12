@@ -1,104 +1,151 @@
 {
-    "title": "RNA-TorsionBERT: leveraging language models for RNA 3D torsion angles prediction",
-    "url": "https://openalex.org/W4399468096",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101658860",
-            "name": "Clément Bernard",
-            "affiliations": [
-                "Centre National de la Recherche Scientifique",
-                "Informatique, BioInformatique, Systèmes Complexes",
-                "Université Paris-Saclay",
-                "Université d'Évry Val-d'Essonne"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5055433325",
-            "name": "Guillaume Postic",
-            "affiliations": [
-                "Informatique, BioInformatique, Systèmes Complexes",
-                "Université Paris-Saclay",
-                "Université d'Évry Val-d'Essonne"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5000557257",
-            "name": "Sahar Ghannay",
-            "affiliations": [
-                "Centre National de la Recherche Scientifique",
-                "Université Paris-Saclay"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5091493314",
-            "name": "Fariza Tahi",
-            "affiliations": [
-                "Informatique, BioInformatique, Systèmes Complexes",
-                "Université Paris-Saclay",
-                "Université d'Évry Val-d'Essonne"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2993548729",
-        "https://openalex.org/W4396908238",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4387931208",
-        "https://openalex.org/W4386704695",
-        "https://openalex.org/W4396721167",
-        "https://openalex.org/W4399708339",
-        "https://openalex.org/W2106478835",
-        "https://openalex.org/W2101136532",
-        "https://openalex.org/W2138473263",
-        "https://openalex.org/W1984543894",
-        "https://openalex.org/W2104078482",
-        "https://openalex.org/W3209839278",
-        "https://openalex.org/W3164094081",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4213095938",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W4382490702",
-        "https://openalex.org/W1976961172",
-        "https://openalex.org/W2103894153",
-        "https://openalex.org/W3213615006",
-        "https://openalex.org/W2902320679",
-        "https://openalex.org/W3195820203",
-        "https://openalex.org/W2122774834",
-        "https://openalex.org/W3126773939",
-        "https://openalex.org/W3212533323",
-        "https://openalex.org/W4290546063",
-        "https://openalex.org/W4384405439",
-        "https://openalex.org/W4388539614",
-        "https://openalex.org/W2766848373",
-        "https://openalex.org/W2014496495",
-        "https://openalex.org/W2103589755",
-        "https://openalex.org/W2109683504",
-        "https://openalex.org/W2580963738",
-        "https://openalex.org/W3022554208",
-        "https://openalex.org/W3126546267",
-        "https://openalex.org/W4323037252",
-        "https://openalex.org/W3180876344",
-        "https://openalex.org/W2077064224",
-        "https://openalex.org/W1988409793",
-        "https://openalex.org/W2969715383",
-        "https://openalex.org/W4388520896",
-        "https://openalex.org/W4283832815",
-        "https://openalex.org/W3034567160",
-        "https://openalex.org/W2341963847",
-        "https://openalex.org/W2993552072",
-        "https://openalex.org/W2161151688",
-        "https://openalex.org/W2140673705",
-        "https://openalex.org/W2113267464",
-        "https://openalex.org/W2119896557",
-        "https://openalex.org/W2035091896",
-        "https://openalex.org/W4392393183",
-        "https://openalex.org/W4293475204",
-        "https://openalex.org/W4280513900",
-        "https://openalex.org/W4386946092",
-        "https://openalex.org/W4388946853",
-        "https://openalex.org/W4386804219"
-    ],
-    "abstract": "Predicting the 3D structure of RNA is an ongoing challenge that has yet to be completely addressed despite continuous advancements. RNA 3D structures rely on distances between residues and base interactions but also backbone torsional angles. Knowing the torsional angles for each residue could help reconstruct its global folding, which is what we tackle in this work. This paper presents a novel approach for directly predicting RNA torsional angles from raw sequence data. Our method draws inspiration from the successful application of language models in various domains and adapts them to RNA. We have developed a language-based model, RNA-TorsionBERT, incorporating better sequential interactions for predicting RNA torsional and pseudo-torsional angles from the sequence only. Through extensive benchmarking, we demonstrate that our method improves the prediction of torsional angles compared to state-of-the-art methods. In addition, by using our predictive model, we have inferred a torsion angle-dependent scoring function, called RNA-Torsion-A, that replaces the true reference angles by our model prediction. We show that it accurately evaluates the quality of near-native predicted structures, in terms of RNA backbone torsion and pseudo-torsion angle values. Our work demonstrates promising results, suggesting the potential utility of language models in advancing RNA 3D structure prediction. The source code is freely available on the EvryRNA platform: https://evryrna.ibisc.univ-evry.fr/evryrna/RNA-TorsionBERT .",
-    "full_text": null
+  "title": "RNA-TorsionBERT: leveraging language models for RNA 3D torsion angles prediction",
+  "url": "https://openalex.org/W4399468096",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101658860",
+      "name": "Clément Bernard",
+      "affiliations": [
+        "Centre National de la Recherche Scientifique",
+        "Informatique, BioInformatique, Systèmes Complexes",
+        "Université Paris-Saclay",
+        "Université d'Évry Val-d'Essonne"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5055433325",
+      "name": "Guillaume Postic",
+      "affiliations": [
+        "Informatique, BioInformatique, Systèmes Complexes",
+        "Université Paris-Saclay",
+        "Université d'Évry Val-d'Essonne"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5000557257",
+      "name": "Sahar Ghannay",
+      "affiliations": [
+        "Centre National de la Recherche Scientifique",
+        "Université Paris-Saclay"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5091493314",
+      "name": "Fariza Tahi",
+      "affiliations": [
+        "Informatique, BioInformatique, Systèmes Complexes",
+        "Université Paris-Saclay",
+        "Université d'Évry Val-d'Essonne"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2993548729",
+    "https://openalex.org/W4396908238",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4387931208",
+    "https://openalex.org/W4386704695",
+    "https://openalex.org/W4396721167",
+    "https://openalex.org/W4399708339",
+    "https://openalex.org/W2106478835",
+    "https://openalex.org/W2101136532",
+    "https://openalex.org/W2138473263",
+    "https://openalex.org/W1984543894",
+    "https://openalex.org/W2104078482",
+    "https://openalex.org/W3209839278",
+    "https://openalex.org/W3164094081",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4213095938",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W4382490702",
+    "https://openalex.org/W1976961172",
+    "https://openalex.org/W2103894153",
+    "https://openalex.org/W3213615006",
+    "https://openalex.org/W2902320679",
+    "https://openalex.org/W3195820203",
+    "https://openalex.org/W2122774834",
+    "https://openalex.org/W3126773939",
+    "https://openalex.org/W3212533323",
+    "https://openalex.org/W4290546063",
+    "https://openalex.org/W4384405439",
+    "https://openalex.org/W4388539614",
+    "https://openalex.org/W2766848373",
+    "https://openalex.org/W2014496495",
+    "https://openalex.org/W2103589755",
+    "https://openalex.org/W2109683504",
+    "https://openalex.org/W2580963738",
+    "https://openalex.org/W3022554208",
+    "https://openalex.org/W3126546267",
+    "https://openalex.org/W4323037252",
+    "https://openalex.org/W3180876344",
+    "https://openalex.org/W2077064224",
+    "https://openalex.org/W1988409793",
+    "https://openalex.org/W2969715383",
+    "https://openalex.org/W4388520896",
+    "https://openalex.org/W4283832815",
+    "https://openalex.org/W3034567160",
+    "https://openalex.org/W2341963847",
+    "https://openalex.org/W2993552072",
+    "https://openalex.org/W2161151688",
+    "https://openalex.org/W2140673705",
+    "https://openalex.org/W2113267464",
+    "https://openalex.org/W2119896557",
+    "https://openalex.org/W2035091896",
+    "https://openalex.org/W4392393183",
+    "https://openalex.org/W4293475204",
+    "https://openalex.org/W4280513900",
+    "https://openalex.org/W4386946092",
+    "https://openalex.org/W4388946853",
+    "https://openalex.org/W4386804219"
+  ],
+  "abstract": "Predicting the 3D structure of RNA is an ongoing challenge that has yet to be completely addressed despite continuous advancements. RNA 3D structures rely on distances between residues and base interactions but also backbone torsional angles. Knowing the torsional angles for each residue could help reconstruct its global folding, which is what we tackle in this work. This paper presents a novel approach for directly predicting RNA torsional angles from raw sequence data. Our method draws inspiration from the successful application of language models in various domains and adapts them to RNA. We have developed a language-based model, RNA-TorsionBERT, incorporating better sequential interactions for predicting RNA torsional and pseudo-torsional angles from the sequence only. Through extensive benchmarking, we demonstrate that our method improves the prediction of torsional angles compared to state-of-the-art methods. In addition, by using our predictive model, we have inferred a torsion angle-dependent scoring function, called RNA-Torsion-A, that replaces the true reference angles by our model prediction. We show that it accurately evaluates the quality of near-native predicted structures, in terms of RNA backbone torsion and pseudo-torsion angle values. Our work demonstrates promising results, suggesting the potential utility of language models in advancing RNA 3D structure prediction. The source code is freely available on the EvryRNA platform: https://evryrna.ibisc.univ-evry.fr/evryrna/RNA-TorsionBERT .",
+  "full_text": null,
+  "topic": "RNA",
+  "concepts": [
+    {
+      "name": "RNA",
+      "score": 0.6982613205909729
+    },
+    {
+      "name": "Torsion (gastropod)",
+      "score": 0.6886008977890015
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.5699889063835144
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5600094795227051
+    },
+    {
+      "name": "Source code",
+      "score": 0.45381802320480347
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3313620686531067
+    },
+    {
+      "name": "Programming language",
+      "score": 0.11784130334854126
+    },
+    {
+      "name": "Biology",
+      "score": 0.11305344104766846
+    },
+    {
+      "name": "Genetics",
+      "score": 0.079918771982193
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Zoology",
+      "score": 0.0
+    }
+  ]
 }

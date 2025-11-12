@@ -1,76 +1,159 @@
 {
-    "title": "A Hierarchical Representation Model Based on Longformer and Transformer for Extractive Summarization",
-    "url": "https://openalex.org/W4281806453",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101766560",
-            "name": "Shihao Yang",
-            "affiliations": [
-                "Northeast Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5062811073",
-            "name": "Shaoru Zhang",
-            "affiliations": [
-                "Northeast Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101638065",
-            "name": "Ming Fang",
-            "affiliations": [
-                "Northeast Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5061899092",
-            "name": "Fengqin Yang",
-            "affiliations": [
-                "Northeast Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5044641390",
-            "name": "Shuhua Liu",
-            "affiliations": [
-                "Northeast Normal University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1974339500",
-        "https://openalex.org/W2467173223",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2952138241",
-        "https://openalex.org/W2890419630",
-        "https://openalex.org/W6682631176",
-        "https://openalex.org/W6632455782",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W2962965405",
-        "https://openalex.org/W2054211469",
-        "https://openalex.org/W2144270295",
-        "https://openalex.org/W2800965800",
-        "https://openalex.org/W2962972512",
-        "https://openalex.org/W2790702239",
-        "https://openalex.org/W2970419734",
-        "https://openalex.org/W2945918281",
-        "https://openalex.org/W3034353423",
-        "https://openalex.org/W2962762898",
-        "https://openalex.org/W2949423646",
-        "https://openalex.org/W2307381258",
-        "https://openalex.org/W2606974598",
-        "https://openalex.org/W1975579663",
-        "https://openalex.org/W1989420837",
-        "https://openalex.org/W3012064928",
-        "https://openalex.org/W2947673544",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2130942839",
-        "https://openalex.org/W2949615363"
-    ],
-    "abstract": "Automatic text summarization is a method used to compress documents while preserving the main idea of the original text, including extractive summarization and abstractive summarization. Extractive text summarization extracts important sentences from the original document to serve as the summary. The document representation method is crucial for the quality of the generated summarization. To effectively represent the document, we propose a hierarchical document representation model Long-Trans-Extr for Extractive Summarization, which uses Longformer as the sentence encoder and Transformer as the document encoder. The advantage of Longformer as sentence encoder is that the model can input long document up to 4096 tokens with adding relative a little calculation. The proposed model Long-Trans-Extr is evaluated on three benchmark datasets: CNN (Cable News Network), DailyMail, and the combined CNN/DailyMail. It achieves 43.78 (Rouge-1) and 39.71 (Rouge-L) on CNN/DailyMail and 33.75 (Rouge-1), 13.11 (Rouge-2), and 30.44 (Rouge-L) on the CNN datasets. They are very competitive results, and furthermore, they show that our model has better performance on long documents, such as the CNN corpus.",
-    "full_text": null
+  "title": "A Hierarchical Representation Model Based on Longformer and Transformer for Extractive Summarization",
+  "url": "https://openalex.org/W4281806453",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101766560",
+      "name": "Shihao Yang",
+      "affiliations": [
+        "Northeast Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5062811073",
+      "name": "Shaoru Zhang",
+      "affiliations": [
+        "Northeast Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101638065",
+      "name": "Ming Fang",
+      "affiliations": [
+        "Northeast Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5061899092",
+      "name": "Fengqin Yang",
+      "affiliations": [
+        "Northeast Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5044641390",
+      "name": "Shuhua Liu",
+      "affiliations": [
+        "Northeast Normal University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1974339500",
+    "https://openalex.org/W2467173223",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2952138241",
+    "https://openalex.org/W2890419630",
+    "https://openalex.org/W6682631176",
+    "https://openalex.org/W6632455782",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W2962965405",
+    "https://openalex.org/W2054211469",
+    "https://openalex.org/W2144270295",
+    "https://openalex.org/W2800965800",
+    "https://openalex.org/W2962972512",
+    "https://openalex.org/W2790702239",
+    "https://openalex.org/W2970419734",
+    "https://openalex.org/W2945918281",
+    "https://openalex.org/W3034353423",
+    "https://openalex.org/W2962762898",
+    "https://openalex.org/W2949423646",
+    "https://openalex.org/W2307381258",
+    "https://openalex.org/W2606974598",
+    "https://openalex.org/W1975579663",
+    "https://openalex.org/W1989420837",
+    "https://openalex.org/W3012064928",
+    "https://openalex.org/W2947673544",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2130942839",
+    "https://openalex.org/W2949615363"
+  ],
+  "abstract": "Automatic text summarization is a method used to compress documents while preserving the main idea of the original text, including extractive summarization and abstractive summarization. Extractive text summarization extracts important sentences from the original document to serve as the summary. The document representation method is crucial for the quality of the generated summarization. To effectively represent the document, we propose a hierarchical document representation model Long-Trans-Extr for Extractive Summarization, which uses Longformer as the sentence encoder and Transformer as the document encoder. The advantage of Longformer as sentence encoder is that the model can input long document up to 4096 tokens with adding relative a little calculation. The proposed model Long-Trans-Extr is evaluated on three benchmark datasets: CNN (Cable News Network), DailyMail, and the combined CNN/DailyMail. It achieves 43.78 (Rouge-1) and 39.71 (Rouge-L) on CNN/DailyMail and 33.75 (Rouge-1), 13.11 (Rouge-2), and 30.44 (Rouge-L) on the CNN datasets. They are very competitive results, and furthermore, they show that our model has better performance on long documents, such as the CNN corpus.",
+  "full_text": null,
+  "topic": "Automatic summarization",
+  "concepts": [
+    {
+      "name": "Automatic summarization",
+      "score": 0.9561071395874023
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8314095139503479
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7170844078063965
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6992967128753662
+    },
+    {
+      "name": "Sentence",
+      "score": 0.5950382947921753
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5947703123092651
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5876122117042542
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.47906693816185
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.47443142533302307
+    },
+    {
+      "name": "ROUGE",
+      "score": 0.4163374900817871
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3530580401420593
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    }
+  ]
 }

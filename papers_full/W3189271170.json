@@ -1,83 +1,142 @@
 {
-    "title": "MSST-RT: Multi-Stream Spatial-Temporal Relative Transformer for Skeleton-Based Action Recognition",
-    "url": "https://openalex.org/W3189271170",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2098039240",
-            "name": "Yan Sun",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097207931",
-            "name": "Yixin Shen",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2095927084",
-            "name": "Li-Yan Ma",
-            "affiliations": [
-                "Shanghai University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2962730651",
-        "https://openalex.org/W2056898157",
-        "https://openalex.org/W4230005465",
-        "https://openalex.org/W2048821851",
-        "https://openalex.org/W203345490",
-        "https://openalex.org/W2284126738",
-        "https://openalex.org/W2606294640",
-        "https://openalex.org/W2736334449",
-        "https://openalex.org/W1950788856",
-        "https://openalex.org/W2176353499",
-        "https://openalex.org/W1744759976",
-        "https://openalex.org/W2156303437",
-        "https://openalex.org/W2610314550",
-        "https://openalex.org/W2593146028",
-        "https://openalex.org/W2607707631",
-        "https://openalex.org/W4240042586",
-        "https://openalex.org/W2963076818",
-        "https://openalex.org/W2948246283",
-        "https://openalex.org/W2798644314",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2894384847",
-        "https://openalex.org/W3131922516",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W2996901793",
-        "https://openalex.org/W2964491122",
-        "https://openalex.org/W2948058585",
-        "https://openalex.org/W2342311830",
-        "https://openalex.org/W2944006115",
-        "https://openalex.org/W3145352071",
-        "https://openalex.org/W2510185399",
-        "https://openalex.org/W2950568498",
-        "https://openalex.org/W2603861860",
-        "https://openalex.org/W2963369114",
-        "https://openalex.org/W2940457086",
-        "https://openalex.org/W3009946848",
-        "https://openalex.org/W2739179646",
-        "https://openalex.org/W2793547936",
-        "https://openalex.org/W3034999503",
-        "https://openalex.org/W3109306201",
-        "https://openalex.org/W3035050855",
-        "https://openalex.org/W3123784868",
-        "https://openalex.org/W2953273646",
-        "https://openalex.org/W2952186347",
-        "https://openalex.org/W2626778328",
-        "https://openalex.org/W2797947747",
-        "https://openalex.org/W2949573861",
-        "https://openalex.org/W1893516992",
-        "https://openalex.org/W3030520226",
-        "https://openalex.org/W2963165299",
-        "https://openalex.org/W2784435047",
-        "https://openalex.org/W2556782416"
-    ],
-    "abstract": "Skeleton-based human action recognition has made great progress, especially with the development of a graph convolution network (GCN). The most important work is ST-GCN, which automatically learns both spatial and temporal patterns from skeleton sequences. However, this method still has some imperfections: only short-range correlations are appreciated, due to the limited receptive field of graph convolution. However, long-range dependence is essential for recognizing human action. In this work, we propose the use of a spatial-temporal relative transformer (ST-RT) to overcome these defects. Through introducing relay nodes, ST-RT avoids the transformer architecture, breaking the inherent skeleton topology in spatial and the order of skeleton sequence in temporal dimensions. Furthermore, we mine the dynamic information contained in motion at different scales. Finally, four ST-RTs, which extract spatial-temporal features from four kinds of skeleton sequence, are fused to form the final model, multi-stream spatial-temporal relative transformer (MSST-RT), to enhance performance. Extensive experiments evaluate the proposed methods on three benchmarks for skeleton-based action recognition: NTU RGB+D, NTU RGB+D 120 and UAV-Human. The results demonstrate that MSST-RT is on par with SOTA in terms of performance.",
-    "full_text": null
+  "title": "MSST-RT: Multi-Stream Spatial-Temporal Relative Transformer for Skeleton-Based Action Recognition",
+  "url": "https://openalex.org/W3189271170",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2098039240",
+      "name": "Yan Sun",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097207931",
+      "name": "Yixin Shen",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2095927084",
+      "name": "Li-Yan Ma",
+      "affiliations": [
+        "Shanghai University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2962730651",
+    "https://openalex.org/W2056898157",
+    "https://openalex.org/W4230005465",
+    "https://openalex.org/W2048821851",
+    "https://openalex.org/W203345490",
+    "https://openalex.org/W2284126738",
+    "https://openalex.org/W2606294640",
+    "https://openalex.org/W2736334449",
+    "https://openalex.org/W1950788856",
+    "https://openalex.org/W2176353499",
+    "https://openalex.org/W1744759976",
+    "https://openalex.org/W2156303437",
+    "https://openalex.org/W2610314550",
+    "https://openalex.org/W2593146028",
+    "https://openalex.org/W2607707631",
+    "https://openalex.org/W4240042586",
+    "https://openalex.org/W2963076818",
+    "https://openalex.org/W2948246283",
+    "https://openalex.org/W2798644314",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2894384847",
+    "https://openalex.org/W3131922516",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W2996901793",
+    "https://openalex.org/W2964491122",
+    "https://openalex.org/W2948058585",
+    "https://openalex.org/W2342311830",
+    "https://openalex.org/W2944006115",
+    "https://openalex.org/W3145352071",
+    "https://openalex.org/W2510185399",
+    "https://openalex.org/W2950568498",
+    "https://openalex.org/W2603861860",
+    "https://openalex.org/W2963369114",
+    "https://openalex.org/W2940457086",
+    "https://openalex.org/W3009946848",
+    "https://openalex.org/W2739179646",
+    "https://openalex.org/W2793547936",
+    "https://openalex.org/W3034999503",
+    "https://openalex.org/W3109306201",
+    "https://openalex.org/W3035050855",
+    "https://openalex.org/W3123784868",
+    "https://openalex.org/W2953273646",
+    "https://openalex.org/W2952186347",
+    "https://openalex.org/W2626778328",
+    "https://openalex.org/W2797947747",
+    "https://openalex.org/W2949573861",
+    "https://openalex.org/W1893516992",
+    "https://openalex.org/W3030520226",
+    "https://openalex.org/W2963165299",
+    "https://openalex.org/W2784435047",
+    "https://openalex.org/W2556782416"
+  ],
+  "abstract": "Skeleton-based human action recognition has made great progress, especially with the development of a graph convolution network (GCN). The most important work is ST-GCN, which automatically learns both spatial and temporal patterns from skeleton sequences. However, this method still has some imperfections: only short-range correlations are appreciated, due to the limited receptive field of graph convolution. However, long-range dependence is essential for recognizing human action. In this work, we propose the use of a spatial-temporal relative transformer (ST-RT) to overcome these defects. Through introducing relay nodes, ST-RT avoids the transformer architecture, breaking the inherent skeleton topology in spatial and the order of skeleton sequence in temporal dimensions. Furthermore, we mine the dynamic information contained in motion at different scales. Finally, four ST-RTs, which extract spatial-temporal features from four kinds of skeleton sequence, are fused to form the final model, multi-stream spatial-temporal relative transformer (MSST-RT), to enhance performance. Extensive experiments evaluate the proposed methods on three benchmarks for skeleton-based action recognition: NTU RGB+D, NTU RGB+D 120 and UAV-Human. The results demonstrate that MSST-RT is on par with SOTA in terms of performance.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6388434171676636
+    },
+    {
+      "name": "RGB color model",
+      "score": 0.6170266270637512
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5971794128417969
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.57149338722229
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.47448185086250305
+    },
+    {
+      "name": "Graph",
+      "score": 0.4250171184539795
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3896148204803467
+    },
+    {
+      "name": "Topology (electrical circuits)",
+      "score": 0.34791868925094604
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.22481673955917358
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1910059154033661
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15535908937454224
+    },
+    {
+      "name": "Voltage",
+      "score": 0.15030086040496826
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.0
+    }
+  ]
 }

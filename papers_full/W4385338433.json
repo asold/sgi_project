@@ -1,90 +1,145 @@
 {
-    "title": "A Spectrum-Aware Transformer Network for Change Detection in Hyperspectral Imagery",
-    "url": "https://openalex.org/W4385338433",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5035190973",
-            "name": "Wuxia Zhang",
-            "affiliations": [
-                "Xi’an University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5059826791",
-            "name": "L.i-Ming Su",
-            "affiliations": [
-                "Nanjing University of Aeronautics and Astronautics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100321494",
-            "name": "Yuhang Zhang",
-            "affiliations": [
-                "Xi’an University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5018824735",
-            "name": "Xiaoqiang Lu",
-            "affiliations": [
-                "Fuzhou University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2174636480",
-        "https://openalex.org/W2921442714",
-        "https://openalex.org/W4290755378",
-        "https://openalex.org/W3000429716",
-        "https://openalex.org/W4206550078",
-        "https://openalex.org/W1997534118",
-        "https://openalex.org/W3005845245",
-        "https://openalex.org/W2942855565",
-        "https://openalex.org/W2751993439",
-        "https://openalex.org/W3012456963",
-        "https://openalex.org/W3142421496",
-        "https://openalex.org/W3206533587",
-        "https://openalex.org/W2332183138",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W4312358791",
-        "https://openalex.org/W2963446712",
-        "https://openalex.org/W3157519352",
-        "https://openalex.org/W3004423752",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W4312815172",
-        "https://openalex.org/W2118116484",
-        "https://openalex.org/W2914109710",
-        "https://openalex.org/W2789813335",
-        "https://openalex.org/W2901061792",
-        "https://openalex.org/W3195032332",
-        "https://openalex.org/W2811044316",
-        "https://openalex.org/W3095927019",
-        "https://openalex.org/W3011156941",
-        "https://openalex.org/W3157062364",
-        "https://openalex.org/W2803213074",
-        "https://openalex.org/W3215149470",
-        "https://openalex.org/W3009850435",
-        "https://openalex.org/W2911648799",
-        "https://openalex.org/W2896092083",
-        "https://openalex.org/W3189451737",
-        "https://openalex.org/W3122480337",
-        "https://openalex.org/W2894844962",
-        "https://openalex.org/W2809328251",
-        "https://openalex.org/W3120467244",
-        "https://openalex.org/W4292258945",
-        "https://openalex.org/W4226253382",
-        "https://openalex.org/W4292348075",
-        "https://openalex.org/W4312350143",
-        "https://openalex.org/W4312549298",
-        "https://openalex.org/W4226361741",
-        "https://openalex.org/W3027225766",
-        "https://openalex.org/W3180045188",
-        "https://openalex.org/W3048064159",
-        "https://openalex.org/W3036453075",
-        "https://openalex.org/W4226305459",
-        "https://openalex.org/W3037587714"
-    ],
-    "abstract": "Change detection in the HyperSpectral Imagery (HSI) detects the changed pixels or areas in bi-temporal images. HSIs contain hundreds of spectral bands, including a large amount of spectral information. However, most of deep learning-based change detection methods did not focus on the spectral dependency of spectral information in the spectral dimension and just adopted the difference strategy to represent the correlation of learned features, which limited the improvement of the change detection performance. To address the above-mentioned problems, we propose an end-to-end change detection network for HSIs, named Spectrum-Aware Transformer Network (SATNet), which includes SETrans feature extraction module, the transformer-based correlation representation module and the detection module. First, SETrans feature extraction module is employed to extract deep features of HSIs. Then, the transformer-based correlation representation module is presented to explore the spectral dependency of spectral information and capture the correlation of learned features of bi-temporal HSIs from both the perspective of difference and dot-product operations, so as to obtain more discriminative features. Finally, the decision fusion strategy in the detection module is utilized to the learned discriminative features to generate the final change map for better change detection performance. Experimental results on three hyperspectral datasets show that the proposed SATNet is superior to the existing change detection methods.",
-    "full_text": null
+  "title": "A Spectrum-Aware Transformer Network for Change Detection in Hyperspectral Imagery",
+  "url": "https://openalex.org/W4385338433",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5035190973",
+      "name": "Wuxia Zhang",
+      "affiliations": [
+        "Xi’an University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5059826791",
+      "name": "L.i-Ming Su",
+      "affiliations": [
+        "Nanjing University of Aeronautics and Astronautics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100321494",
+      "name": "Yuhang Zhang",
+      "affiliations": [
+        "Xi’an University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5018824735",
+      "name": "Xiaoqiang Lu",
+      "affiliations": [
+        "Fuzhou University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2174636480",
+    "https://openalex.org/W2921442714",
+    "https://openalex.org/W4290755378",
+    "https://openalex.org/W3000429716",
+    "https://openalex.org/W4206550078",
+    "https://openalex.org/W1997534118",
+    "https://openalex.org/W3005845245",
+    "https://openalex.org/W2942855565",
+    "https://openalex.org/W2751993439",
+    "https://openalex.org/W3012456963",
+    "https://openalex.org/W3142421496",
+    "https://openalex.org/W3206533587",
+    "https://openalex.org/W2332183138",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W4312358791",
+    "https://openalex.org/W2963446712",
+    "https://openalex.org/W3157519352",
+    "https://openalex.org/W3004423752",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W4312815172",
+    "https://openalex.org/W2118116484",
+    "https://openalex.org/W2914109710",
+    "https://openalex.org/W2789813335",
+    "https://openalex.org/W2901061792",
+    "https://openalex.org/W3195032332",
+    "https://openalex.org/W2811044316",
+    "https://openalex.org/W3095927019",
+    "https://openalex.org/W3011156941",
+    "https://openalex.org/W3157062364",
+    "https://openalex.org/W2803213074",
+    "https://openalex.org/W3215149470",
+    "https://openalex.org/W3009850435",
+    "https://openalex.org/W2911648799",
+    "https://openalex.org/W2896092083",
+    "https://openalex.org/W3189451737",
+    "https://openalex.org/W3122480337",
+    "https://openalex.org/W2894844962",
+    "https://openalex.org/W2809328251",
+    "https://openalex.org/W3120467244",
+    "https://openalex.org/W4292258945",
+    "https://openalex.org/W4226253382",
+    "https://openalex.org/W4292348075",
+    "https://openalex.org/W4312350143",
+    "https://openalex.org/W4312549298",
+    "https://openalex.org/W4226361741",
+    "https://openalex.org/W3027225766",
+    "https://openalex.org/W3180045188",
+    "https://openalex.org/W3048064159",
+    "https://openalex.org/W3036453075",
+    "https://openalex.org/W4226305459",
+    "https://openalex.org/W3037587714"
+  ],
+  "abstract": "Change detection in the HyperSpectral Imagery (HSI) detects the changed pixels or areas in bi-temporal images. HSIs contain hundreds of spectral bands, including a large amount of spectral information. However, most of deep learning-based change detection methods did not focus on the spectral dependency of spectral information in the spectral dimension and just adopted the difference strategy to represent the correlation of learned features, which limited the improvement of the change detection performance. To address the above-mentioned problems, we propose an end-to-end change detection network for HSIs, named Spectrum-Aware Transformer Network (SATNet), which includes SETrans feature extraction module, the transformer-based correlation representation module and the detection module. First, SETrans feature extraction module is employed to extract deep features of HSIs. Then, the transformer-based correlation representation module is presented to explore the spectral dependency of spectral information and capture the correlation of learned features of bi-temporal HSIs from both the perspective of difference and dot-product operations, so as to obtain more discriminative features. Finally, the decision fusion strategy in the detection module is utilized to the learned discriminative features to generate the final change map for better change detection performance. Experimental results on three hyperspectral datasets show that the proposed SATNet is superior to the existing change detection methods.",
+  "full_text": null,
+  "topic": "Hyperspectral imaging",
+  "concepts": [
+    {
+      "name": "Hyperspectral imaging",
+      "score": 0.9051554203033447
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.7550880312919617
+    },
+    {
+      "name": "Computer science",
+      "score": 0.741762638092041
+    },
+    {
+      "name": "Change detection",
+      "score": 0.7384932041168213
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7073936462402344
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5970158576965332
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.5752848982810974
+    },
+    {
+      "name": "Transformer",
+      "score": 0.44862937927246094
+    },
+    {
+      "name": "Object detection",
+      "score": 0.4232843518257141
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.33019083738327026
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07874703407287598
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,72 +1,123 @@
 {
-    "title": "Transformer with Transfer CNN for Remote-Sensing-Image Object Detection",
-    "url": "https://openalex.org/W4213200979",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2142309649",
-            "name": "Qingyun Li",
-            "affiliations": [
-                "Harbin Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103621309",
-            "name": "Yushi Chen",
-            "affiliations": [
-                "Harbin Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2080414875",
-            "name": "Ying Zeng",
-            "affiliations": [
-                "Harbin Institute of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2308318555",
-        "https://openalex.org/W2992240579",
-        "https://openalex.org/W2035159498",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W2049677900",
-        "https://openalex.org/W2005368619",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W2102605133",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W2512351403",
-        "https://openalex.org/W2888527098",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W2779335303",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2926837263",
-        "https://openalex.org/W2800388963",
-        "https://openalex.org/W2789609993",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2570343428",
-        "https://openalex.org/W3047401433",
-        "https://openalex.org/W3005145900",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2921357635",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3030520226",
-        "https://openalex.org/W3128776197",
-        "https://openalex.org/W3214821343",
-        "https://openalex.org/W3207506706",
-        "https://openalex.org/W3186596917",
-        "https://openalex.org/W3217153199",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2161381512",
-        "https://openalex.org/W6735377749",
-        "https://openalex.org/W2910187721",
-        "https://openalex.org/W2088805832",
-        "https://openalex.org/W2733535455",
-        "https://openalex.org/W2774989306",
-        "https://openalex.org/W2963150697",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W3106250896"
-    ],
-    "abstract": "Object detection in remote-sensing images (RSIs) is always a vibrant research topic in the remote-sensing community. Recently, deep-convolutional-neural-network (CNN)-based methods, including region-CNN-based and You-Only-Look-Once-based methods, have become the de-facto standard for RSI object detection. CNNs are good at local feature extraction but they have limitations in capturing global features. However, the attention-based transformer can obtain the relationships of RSI at a long distance. Therefore, the Transformer for Remote-Sensing Object detection (TRD) is investigated in this study. Specifically, the proposed TRD is a combination of a CNN and a multiple-layer Transformer with encoders and decoders. To detect objects from RSIs, a modified Transformer is designed to aggregate features of global spatial positions on multiple scales and model the interactions between pairwise instances. Then, due to the fact that the source data set (e.g., ImageNet) and the target data set (i.e., RSI data set) are quite different, to reduce the difference between the data sets, the TRD with the transferring CNN (T-TRD) based on the attention mechanism is proposed to adjust the pre-trained model for better RSI object detection. Because the training of the Transformer always needs abundant, well-annotated training samples, and the number of training samples for RSI object detection is usually limited, in order to avoid overfitting, data augmentation is combined with a Transformer to improve the detection performance of RSI. The proposed T-TRD with data augmentation (T-TRD-DA) is tested on the two widely-used data sets (i.e., NWPU VHR-10 and DIOR) and the experimental results reveal that the proposed models provide competitive results (i.e., centuple mean average precision of 87.9 and 66.8 with at most 5.9 and 2.4 higher than the comparison methods on the NWPU VHR-10 and the DIOR data sets, respectively) compared to the competitive benchmark methods, which shows that the Transformer-based method opens a new window for RSI object detection.",
-    "full_text": null
+  "title": "Transformer with Transfer CNN for Remote-Sensing-Image Object Detection",
+  "url": "https://openalex.org/W4213200979",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2142309649",
+      "name": "Qingyun Li",
+      "affiliations": [
+        "Harbin Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103621309",
+      "name": "Yushi Chen",
+      "affiliations": [
+        "Harbin Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2080414875",
+      "name": "Ying Zeng",
+      "affiliations": [
+        "Harbin Institute of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2308318555",
+    "https://openalex.org/W2992240579",
+    "https://openalex.org/W2035159498",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W2049677900",
+    "https://openalex.org/W2005368619",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W2102605133",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W2512351403",
+    "https://openalex.org/W2888527098",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W2779335303",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2926837263",
+    "https://openalex.org/W2800388963",
+    "https://openalex.org/W2789609993",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2570343428",
+    "https://openalex.org/W3047401433",
+    "https://openalex.org/W3005145900",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2921357635",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3030520226",
+    "https://openalex.org/W3128776197",
+    "https://openalex.org/W3214821343",
+    "https://openalex.org/W3207506706",
+    "https://openalex.org/W3186596917",
+    "https://openalex.org/W3217153199",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2161381512",
+    "https://openalex.org/W6735377749",
+    "https://openalex.org/W2910187721",
+    "https://openalex.org/W2088805832",
+    "https://openalex.org/W2733535455",
+    "https://openalex.org/W2774989306",
+    "https://openalex.org/W2963150697",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W3106250896"
+  ],
+  "abstract": "Object detection in remote-sensing images (RSIs) is always a vibrant research topic in the remote-sensing community. Recently, deep-convolutional-neural-network (CNN)-based methods, including region-CNN-based and You-Only-Look-Once-based methods, have become the de-facto standard for RSI object detection. CNNs are good at local feature extraction but they have limitations in capturing global features. However, the attention-based transformer can obtain the relationships of RSI at a long distance. Therefore, the Transformer for Remote-Sensing Object detection (TRD) is investigated in this study. Specifically, the proposed TRD is a combination of a CNN and a multiple-layer Transformer with encoders and decoders. To detect objects from RSIs, a modified Transformer is designed to aggregate features of global spatial positions on multiple scales and model the interactions between pairwise instances. Then, due to the fact that the source data set (e.g., ImageNet) and the target data set (i.e., RSI data set) are quite different, to reduce the difference between the data sets, the TRD with the transferring CNN (T-TRD) based on the attention mechanism is proposed to adjust the pre-trained model for better RSI object detection. Because the training of the Transformer always needs abundant, well-annotated training samples, and the number of training samples for RSI object detection is usually limited, in order to avoid overfitting, data augmentation is combined with a Transformer to improve the detection performance of RSI. The proposed T-TRD with data augmentation (T-TRD-DA) is tested on the two widely-used data sets (i.e., NWPU VHR-10 and DIOR) and the experimental results reveal that the proposed models provide competitive results (i.e., centuple mean average precision of 87.9 and 66.8 with at most 5.9 and 2.4 higher than the comparison methods on the NWPU VHR-10 and the DIOR data sets, respectively) compared to the competitive benchmark methods, which shows that the Transformer-based method opens a new window for RSI object detection.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7916635274887085
+    },
+    {
+      "name": "Overfitting",
+      "score": 0.6513795852661133
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.6148909330368042
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5873233079910278
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5234695672988892
+    },
+    {
+      "name": "Object detection",
+      "score": 0.4938538670539856
+    },
+    {
+      "name": "Pairwise comparison",
+      "score": 0.4431101679801941
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4180063009262085
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.21169042587280273
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07260233163833618
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

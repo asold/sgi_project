@@ -1,105 +1,180 @@
 {
-    "title": "FV-MViT: Mobile Vision Transformer for Finger Vein Recognition",
-    "url": "https://openalex.org/W4391945741",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2226466228",
-            "name": "Xiong-Jun Li",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1998432949",
-            "name": "Jin Feng",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2157230149",
-            "name": "Jilin Cai",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2420227574",
-            "name": "Guowen Lin",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2226466228",
-            "name": "Xiong-Jun Li",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1998432949",
-            "name": "Jin Feng",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2157230149",
-            "name": "Jilin Cai",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2420227574",
-            "name": "Guowen Lin",
-            "affiliations": [
-                "Shenzhen University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2033419168",
-        "https://openalex.org/W2014470493",
-        "https://openalex.org/W2102796633",
-        "https://openalex.org/W2141717716",
-        "https://openalex.org/W2958587321",
-        "https://openalex.org/W2275037134",
-        "https://openalex.org/W2004617923",
-        "https://openalex.org/W2771040504",
-        "https://openalex.org/W2039536345",
-        "https://openalex.org/W2624517164",
-        "https://openalex.org/W3010583178",
-        "https://openalex.org/W4205185742",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2793410607",
-        "https://openalex.org/W1533202230",
-        "https://openalex.org/W2084609952",
-        "https://openalex.org/W2888522463",
-        "https://openalex.org/W2963163009",
-        "https://openalex.org/W2982083293",
-        "https://openalex.org/W4205437765",
-        "https://openalex.org/W3181164069",
-        "https://openalex.org/W4312854023",
-        "https://openalex.org/W3197795290",
-        "https://openalex.org/W4382998944",
-        "https://openalex.org/W4285175773",
-        "https://openalex.org/W4312820255",
-        "https://openalex.org/W4323065905",
-        "https://openalex.org/W3004478798",
-        "https://openalex.org/W3134449933",
-        "https://openalex.org/W2001412060",
-        "https://openalex.org/W2520774990",
-        "https://openalex.org/W191940071",
-        "https://openalex.org/W2058362416",
-        "https://openalex.org/W4385127856"
-    ],
-    "abstract": "In addressing challenges related to high parameter counts and limited training samples for finger vein recognition, we present the FV-MViT model. It serves as a lightweight deep learning solution, emphasizing high accuracy, portable design, and low latency. The FV-MViT introduces two key components. The Mul-MV2 Block utilizes a dual-path inverted residual connection structure for multi-scale convolutions, extracting additional local features. Simultaneously, the Enhanced MobileViT Block eliminates the large-scale convolution block at the beginning of the original MobileViT Block. It converts the Transformer’s self-attention into separable self-attention with linear complexity, optimizing the back end of the original MobileViT Block with depth-wise separable convolutions. This aims to extract global features and effectively reduce parameter counts and feature extraction times. Additionally, we introduce a soft target center cross-entropy loss function to enhance generalization and increase accuracy. Experimental results indicate that the FV-MViT achieves a recognition accuracy of 99.53% and 100.00% on the Shandong University (SDU) and Universiti Teknologi Malaysia (USM) datasets, with equal error rates of 0.47% and 0.02%, respectively. The model has a parameter count of 5.26 million and exhibits a latency of 10.00 milliseconds from the sample input to the recognition output. Comparison with state-of-the-art (SOTA) methods reveals competitive performance for FV-MViT.",
-    "full_text": null
+  "title": "FV-MViT: Mobile Vision Transformer for Finger Vein Recognition",
+  "url": "https://openalex.org/W4391945741",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2226466228",
+      "name": "Xiong-Jun Li",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1998432949",
+      "name": "Jin Feng",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2157230149",
+      "name": "Jilin Cai",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2420227574",
+      "name": "Guowen Lin",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2226466228",
+      "name": "Xiong-Jun Li",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1998432949",
+      "name": "Jin Feng",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2157230149",
+      "name": "Jilin Cai",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2420227574",
+      "name": "Guowen Lin",
+      "affiliations": [
+        "Shenzhen University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2033419168",
+    "https://openalex.org/W2014470493",
+    "https://openalex.org/W2102796633",
+    "https://openalex.org/W2141717716",
+    "https://openalex.org/W2958587321",
+    "https://openalex.org/W2275037134",
+    "https://openalex.org/W2004617923",
+    "https://openalex.org/W2771040504",
+    "https://openalex.org/W2039536345",
+    "https://openalex.org/W2624517164",
+    "https://openalex.org/W3010583178",
+    "https://openalex.org/W4205185742",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2793410607",
+    "https://openalex.org/W1533202230",
+    "https://openalex.org/W2084609952",
+    "https://openalex.org/W2888522463",
+    "https://openalex.org/W2963163009",
+    "https://openalex.org/W2982083293",
+    "https://openalex.org/W4205437765",
+    "https://openalex.org/W3181164069",
+    "https://openalex.org/W4312854023",
+    "https://openalex.org/W3197795290",
+    "https://openalex.org/W4382998944",
+    "https://openalex.org/W4285175773",
+    "https://openalex.org/W4312820255",
+    "https://openalex.org/W4323065905",
+    "https://openalex.org/W3004478798",
+    "https://openalex.org/W3134449933",
+    "https://openalex.org/W2001412060",
+    "https://openalex.org/W2520774990",
+    "https://openalex.org/W191940071",
+    "https://openalex.org/W2058362416",
+    "https://openalex.org/W4385127856"
+  ],
+  "abstract": "In addressing challenges related to high parameter counts and limited training samples for finger vein recognition, we present the FV-MViT model. It serves as a lightweight deep learning solution, emphasizing high accuracy, portable design, and low latency. The FV-MViT introduces two key components. The Mul-MV2 Block utilizes a dual-path inverted residual connection structure for multi-scale convolutions, extracting additional local features. Simultaneously, the Enhanced MobileViT Block eliminates the large-scale convolution block at the beginning of the original MobileViT Block. It converts the Transformer’s self-attention into separable self-attention with linear complexity, optimizing the back end of the original MobileViT Block with depth-wise separable convolutions. This aims to extract global features and effectively reduce parameter counts and feature extraction times. Additionally, we introduce a soft target center cross-entropy loss function to enhance generalization and increase accuracy. Experimental results indicate that the FV-MViT achieves a recognition accuracy of 99.53% and 100.00% on the Shandong University (SDU) and Universiti Teknologi Malaysia (USM) datasets, with equal error rates of 0.47% and 0.02%, respectively. The model has a parameter count of 5.26 million and exhibits a latency of 10.00 milliseconds from the sample input to the recognition output. Comparison with state-of-the-art (SOTA) methods reveals competitive performance for FV-MViT.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6096035838127136
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5344437956809998
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5311599969863892
+    },
+    {
+      "name": "Latency (audio)",
+      "score": 0.456925630569458
+    },
+    {
+      "name": "Transformer",
+      "score": 0.45521777868270874
+    },
+    {
+      "name": "Residual",
+      "score": 0.45407000184059143
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.45138248801231384
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.4384573698043823
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4271855354309082
+    },
+    {
+      "name": "Convolution (computer science)",
+      "score": 0.4132188558578491
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.4011717736721039
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2312215268611908
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.21579229831695557
+    },
+    {
+      "name": "Engineering",
+      "score": 0.2000044286251068
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

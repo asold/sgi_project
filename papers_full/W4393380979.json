@@ -1,80 +1,123 @@
 {
-    "title": "CSDFormer: A cloud and shadow detection method for landsat images based on transformer",
-    "url": "https://openalex.org/W4393380979",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100446489",
-            "name": "Jiayi Li",
-            "affiliations": [
-                "Tongji University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5005729523",
-            "name": "Qunming Wang",
-            "affiliations": [
-                "Minzu University of China",
-                "Tongji University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4308344043",
-        "https://openalex.org/W2020742163",
-        "https://openalex.org/W2923782278",
-        "https://openalex.org/W2326555679",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W6786585107",
-        "https://openalex.org/W1974466511",
-        "https://openalex.org/W2895196240",
-        "https://openalex.org/W3157528469",
-        "https://openalex.org/W3171087525",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2605847660",
-        "https://openalex.org/W2949959536",
-        "https://openalex.org/W2001599060",
-        "https://openalex.org/W4214736485",
-        "https://openalex.org/W1603854802",
-        "https://openalex.org/W2066633241",
-        "https://openalex.org/W2166251851",
-        "https://openalex.org/W2946072066",
-        "https://openalex.org/W2910628332",
-        "https://openalex.org/W6794906783",
-        "https://openalex.org/W2584156879",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W1981435276",
-        "https://openalex.org/W6795177402",
-        "https://openalex.org/W3175862603",
-        "https://openalex.org/W2950314938",
-        "https://openalex.org/W2067304170",
-        "https://openalex.org/W6639824700",
-        "https://openalex.org/W2992697992",
-        "https://openalex.org/W2974408721",
-        "https://openalex.org/W6789425149",
-        "https://openalex.org/W6788023325",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6790555728",
-        "https://openalex.org/W3175515048",
-        "https://openalex.org/W3044075475",
-        "https://openalex.org/W3130494073",
-        "https://openalex.org/W3170544306",
-        "https://openalex.org/W1963732981",
-        "https://openalex.org/W1533693043",
-        "https://openalex.org/W3008439211",
-        "https://openalex.org/W6794556019",
-        "https://openalex.org/W3091877343",
-        "https://openalex.org/W3163222380",
-        "https://openalex.org/W6788620109",
-        "https://openalex.org/W2025745000",
-        "https://openalex.org/W2804737541",
-        "https://openalex.org/W2028240797",
-        "https://openalex.org/W2030851497",
-        "https://openalex.org/W3119686997",
-        "https://openalex.org/W3159637683",
-        "https://openalex.org/W4214520160",
-        "https://openalex.org/W2499316477"
-    ],
-    "abstract": "Cloud and shadow (CS) detection is crucial prerequisite for application of remote sensing images. Current deep learning-based detection algorithms mainly employ Convolutional Neural Networks (CNNs). However, the local receptive field in CNNs cannot effectively capture global contextual information, which hinders accurate characterization of the dependency between clouds and shadows. In vision Transformers, self-attention mechanisms can effectively capture the long-distance dependencies between different regions in an image. Inspired by this, this paper proposed a new CS Detection algorithm based on a Transformer, called CSDFormer. Specifically, we exclusively employed a hierarchical Transformer structure in the encoder stage to extract features of CS. Each Transformer layer contains several multi-head self-attention mechanisms for calculating pixel-wise long-distance connectivity. The designed structure enables the Transformer to better extract global context information, which helps to strengthen the comprehension of the semantic relationships between clouds and shadows. Benefiting from the global feature extraction capability of the encoder stage, we employed several simple multilayer perceptron layers for multi-scale feature map fusion and pixel classification in the decoder stage. The proposed CSDFormer was validated using 898 Landsat 8 Biome images with 512 × 512 pixels, producing an overall accuracy of 95.28 % and a mean intersection over union of 84.08 %, outperforming three state-of-the-art CNN-based algorithms. CSDFormer is consistently more accurate in detection of both clouds and shadows. Owing to the parallel computing capability of the self-attention mechanism, CSDFormer is computationally more efficient than the three CNN-based benchmark methods. For the input spectral bands, the performance of CSDFormer produced can be further enhanced with additional thermal infrared bands.",
-    "full_text": null
+  "title": "CSDFormer: A cloud and shadow detection method for landsat images based on transformer",
+  "url": "https://openalex.org/W4393380979",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100446489",
+      "name": "Jiayi Li",
+      "affiliations": [
+        "Tongji University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5005729523",
+      "name": "Qunming Wang",
+      "affiliations": [
+        "Minzu University of China",
+        "Tongji University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4308344043",
+    "https://openalex.org/W2020742163",
+    "https://openalex.org/W2923782278",
+    "https://openalex.org/W2326555679",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W6786585107",
+    "https://openalex.org/W1974466511",
+    "https://openalex.org/W2895196240",
+    "https://openalex.org/W3157528469",
+    "https://openalex.org/W3171087525",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2605847660",
+    "https://openalex.org/W2949959536",
+    "https://openalex.org/W2001599060",
+    "https://openalex.org/W4214736485",
+    "https://openalex.org/W1603854802",
+    "https://openalex.org/W2066633241",
+    "https://openalex.org/W2166251851",
+    "https://openalex.org/W2946072066",
+    "https://openalex.org/W2910628332",
+    "https://openalex.org/W6794906783",
+    "https://openalex.org/W2584156879",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W1981435276",
+    "https://openalex.org/W6795177402",
+    "https://openalex.org/W3175862603",
+    "https://openalex.org/W2950314938",
+    "https://openalex.org/W2067304170",
+    "https://openalex.org/W6639824700",
+    "https://openalex.org/W2992697992",
+    "https://openalex.org/W2974408721",
+    "https://openalex.org/W6789425149",
+    "https://openalex.org/W6788023325",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6790555728",
+    "https://openalex.org/W3175515048",
+    "https://openalex.org/W3044075475",
+    "https://openalex.org/W3130494073",
+    "https://openalex.org/W3170544306",
+    "https://openalex.org/W1963732981",
+    "https://openalex.org/W1533693043",
+    "https://openalex.org/W3008439211",
+    "https://openalex.org/W6794556019",
+    "https://openalex.org/W3091877343",
+    "https://openalex.org/W3163222380",
+    "https://openalex.org/W6788620109",
+    "https://openalex.org/W2025745000",
+    "https://openalex.org/W2804737541",
+    "https://openalex.org/W2028240797",
+    "https://openalex.org/W2030851497",
+    "https://openalex.org/W3119686997",
+    "https://openalex.org/W3159637683",
+    "https://openalex.org/W4214520160",
+    "https://openalex.org/W2499316477"
+  ],
+  "abstract": "Cloud and shadow (CS) detection is crucial prerequisite for application of remote sensing images. Current deep learning-based detection algorithms mainly employ Convolutional Neural Networks (CNNs). However, the local receptive field in CNNs cannot effectively capture global contextual information, which hinders accurate characterization of the dependency between clouds and shadows. In vision Transformers, self-attention mechanisms can effectively capture the long-distance dependencies between different regions in an image. Inspired by this, this paper proposed a new CS Detection algorithm based on a Transformer, called CSDFormer. Specifically, we exclusively employed a hierarchical Transformer structure in the encoder stage to extract features of CS. Each Transformer layer contains several multi-head self-attention mechanisms for calculating pixel-wise long-distance connectivity. The designed structure enables the Transformer to better extract global context information, which helps to strengthen the comprehension of the semantic relationships between clouds and shadows. Benefiting from the global feature extraction capability of the encoder stage, we employed several simple multilayer perceptron layers for multi-scale feature map fusion and pixel classification in the decoder stage. The proposed CSDFormer was validated using 898 Landsat 8 Biome images with 512 × 512 pixels, producing an overall accuracy of 95.28 % and a mean intersection over union of 84.08 %, outperforming three state-of-the-art CNN-based algorithms. CSDFormer is consistently more accurate in detection of both clouds and shadows. Owing to the parallel computing capability of the self-attention mechanism, CSDFormer is computationally more efficient than the three CNN-based benchmark methods. For the input spectral bands, the performance of CSDFormer produced can be further enhanced with additional thermal infrared bands.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7612329721450806
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6661359071731567
+    },
+    {
+      "name": "Pixel",
+      "score": 0.5454673171043396
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5441878437995911
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4853938817977905
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.48346003890037537
+    },
+    {
+      "name": "Object detection",
+      "score": 0.47620877623558044
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4405040442943573
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.40777093172073364
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

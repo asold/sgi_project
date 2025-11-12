@@ -1,68 +1,127 @@
 {
-    "title": "Paying attention to astronomical transients: introducing the time-series transformer for photometric classification",
-    "url": "https://openalex.org/W4387442017",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5012959482",
-            "name": "Tarek Allam",
-            "affiliations": [
-                "University College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5014128572",
-            "name": "Jason D. McEwen",
-            "affiliations": [
-                "University College London"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4205409248",
-        "https://openalex.org/W2963754333",
-        "https://openalex.org/W2959412897",
-        "https://openalex.org/W3212604410",
-        "https://openalex.org/W3163969316",
-        "https://openalex.org/W2112438328",
-        "https://openalex.org/W2464878756",
-        "https://openalex.org/W2892035503",
-        "https://openalex.org/W2158698691",
-        "https://openalex.org/W3008897641",
-        "https://openalex.org/W3035965352",
-        "https://openalex.org/W571200655",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2182214061",
-        "https://openalex.org/W2118973161",
-        "https://openalex.org/W2159714423",
-        "https://openalex.org/W2734115946",
-        "https://openalex.org/W2762456709",
-        "https://openalex.org/W2116873022",
-        "https://openalex.org/W2039232902",
-        "https://openalex.org/W2922961522",
-        "https://openalex.org/W2292579160",
-        "https://openalex.org/W2892503871",
-        "https://openalex.org/W3109607205",
-        "https://openalex.org/W2913871063",
-        "https://openalex.org/W3088872014",
-        "https://openalex.org/W2931471748",
-        "https://openalex.org/W1853767801",
-        "https://openalex.org/W1502922572",
-        "https://openalex.org/W2624682472",
-        "https://openalex.org/W2073832139",
-        "https://openalex.org/W1498436455",
-        "https://openalex.org/W1910256290",
-        "https://openalex.org/W3110791331",
-        "https://openalex.org/W3128947838",
-        "https://openalex.org/W3106043113",
-        "https://openalex.org/W3102681989",
-        "https://openalex.org/W3099380320",
-        "https://openalex.org/W3099878876",
-        "https://openalex.org/W3103235332",
-        "https://openalex.org/W3098165218",
-        "https://openalex.org/W3104062568",
-        "https://openalex.org/W3100796605"
-    ],
-    "abstract": "Abstract Future surveys such as the Legacy Survey of Space and Time (LSST) of the Vera C. Rubin Observatory will observe an order of magnitude more astrophysical transient events than any previous survey before. With this deluge of photometric data, it will be impossible for all such events to be classified by humans alone. Recent efforts have sought to leverage machine learning methods to tackle the challenge of astronomical transient classification, with ever improving success. Transformers are a recently developed deep learning architecture, first proposed for natural language processing, that have shown a great deal of recent success. In this work, we develop a new transformer architecture, which uses multihead self-attention at its core, for general multivariate time-series data. Furthermore, the proposed time-series transformer architecture supports the inclusion of an arbitrary number of additional features, while also offering interpretability. We apply the time-series transformer to the task of photometric classification, minimizing the reliance of expert domain knowledge for feature selection, while achieving results comparable with state-of-the-art photometric classification methods. We achieve a logarithmic-loss of 0.507 on imbalanced data in a representative setting using data from the Photometric LSST Astronomical Time-Series Classification Challenge. Moreover, we achieve a micro-averaged receiver-operating-characteristic area under curve of 0.98 and micro-averaged precision–recall area under curve of 0.87.",
-    "full_text": null
+  "title": "Paying attention to astronomical transients: introducing the time-series transformer for photometric classification",
+  "url": "https://openalex.org/W4387442017",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5012959482",
+      "name": "Tarek Allam",
+      "affiliations": [
+        "University College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5014128572",
+      "name": "Jason D. McEwen",
+      "affiliations": [
+        "University College London"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4205409248",
+    "https://openalex.org/W2963754333",
+    "https://openalex.org/W2959412897",
+    "https://openalex.org/W3212604410",
+    "https://openalex.org/W3163969316",
+    "https://openalex.org/W2112438328",
+    "https://openalex.org/W2464878756",
+    "https://openalex.org/W2892035503",
+    "https://openalex.org/W2158698691",
+    "https://openalex.org/W3008897641",
+    "https://openalex.org/W3035965352",
+    "https://openalex.org/W571200655",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2182214061",
+    "https://openalex.org/W2118973161",
+    "https://openalex.org/W2159714423",
+    "https://openalex.org/W2734115946",
+    "https://openalex.org/W2762456709",
+    "https://openalex.org/W2116873022",
+    "https://openalex.org/W2039232902",
+    "https://openalex.org/W2922961522",
+    "https://openalex.org/W2292579160",
+    "https://openalex.org/W2892503871",
+    "https://openalex.org/W3109607205",
+    "https://openalex.org/W2913871063",
+    "https://openalex.org/W3088872014",
+    "https://openalex.org/W2931471748",
+    "https://openalex.org/W1853767801",
+    "https://openalex.org/W1502922572",
+    "https://openalex.org/W2624682472",
+    "https://openalex.org/W2073832139",
+    "https://openalex.org/W1498436455",
+    "https://openalex.org/W1910256290",
+    "https://openalex.org/W3110791331",
+    "https://openalex.org/W3128947838",
+    "https://openalex.org/W3106043113",
+    "https://openalex.org/W3102681989",
+    "https://openalex.org/W3099380320",
+    "https://openalex.org/W3099878876",
+    "https://openalex.org/W3103235332",
+    "https://openalex.org/W3098165218",
+    "https://openalex.org/W3104062568",
+    "https://openalex.org/W3100796605"
+  ],
+  "abstract": "Abstract Future surveys such as the Legacy Survey of Space and Time (LSST) of the Vera C. Rubin Observatory will observe an order of magnitude more astrophysical transient events than any previous survey before. With this deluge of photometric data, it will be impossible for all such events to be classified by humans alone. Recent efforts have sought to leverage machine learning methods to tackle the challenge of astronomical transient classification, with ever improving success. Transformers are a recently developed deep learning architecture, first proposed for natural language processing, that have shown a great deal of recent success. In this work, we develop a new transformer architecture, which uses multihead self-attention at its core, for general multivariate time-series data. Furthermore, the proposed time-series transformer architecture supports the inclusion of an arbitrary number of additional features, while also offering interpretability. We apply the time-series transformer to the task of photometric classification, minimizing the reliance of expert domain knowledge for feature selection, while achieving results comparable with state-of-the-art photometric classification methods. We achieve a logarithmic-loss of 0.507 on imbalanced data in a representative setting using data from the Photometric LSST Astronomical Time-Series Classification Challenge. Moreover, we achieve a micro-averaged receiver-operating-characteristic area under curve of 0.98 and micro-averaged precision–recall area under curve of 0.87.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.666858971118927
+    },
+    {
+      "name": "Interpretability",
+      "score": 0.5920201539993286
+    },
+    {
+      "name": "Transformer",
+      "score": 0.48404186964035034
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.46705377101898193
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4619470238685608
+    },
+    {
+      "name": "Architecture",
+      "score": 0.44749730825424194
+    },
+    {
+      "name": "Time series",
+      "score": 0.4336739182472229
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.4267083704471588
+    },
+    {
+      "name": "Data mining",
+      "score": 0.40169307589530945
+    },
+    {
+      "name": "Engineering",
+      "score": 0.16013452410697937
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.09113866090774536
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

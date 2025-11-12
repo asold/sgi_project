@@ -1,60 +1,127 @@
 {
-    "title": "Automated classification of brain MRI reports using fine-tuned large language models",
-    "url": "https://openalex.org/W4400595639",
-    "year": 2024,
-    "authors": [
-        {
-            "id": null,
-            "name": "Kanzawa, Jun",
-            "affiliations": [
-                "University of Tokyo Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2527788263",
-            "name": "Yasaka Koichiro",
-            "affiliations": [
-                "University of Tokyo Hospital"
-            ]
-        },
-        {
-            "id": null,
-            "name": "Fujita, Nana",
-            "affiliations": [
-                "University of Tokyo Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3087813158",
-            "name": "Fujiwara Shin",
-            "affiliations": [
-                "University of Tokyo Hospital"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2167694922",
-            "name": "Abe Osamu",
-            "affiliations": [
-                "University of Tokyo Hospital"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2611753127",
-        "https://openalex.org/W2916892496",
-        "https://openalex.org/W2083255661",
-        "https://openalex.org/W2338526423",
-        "https://openalex.org/W3190730109",
-        "https://openalex.org/W4390919701",
-        "https://openalex.org/W4380422747",
-        "https://openalex.org/W4382182493",
-        "https://openalex.org/W4383186888",
-        "https://openalex.org/W4386757338",
-        "https://openalex.org/W3200849552",
-        "https://openalex.org/W4282983782",
-        "https://openalex.org/W2963676638",
-        "https://openalex.org/W2911489562"
-    ],
-    "abstract": "Abstract Purpose This study aimed to investigate the efficacy of fine-tuned large language models (LLM) in classifying brain MRI reports into pretreatment, posttreatment, and nontumor cases. Methods This retrospective study included 759, 284, and 164 brain MRI reports for training, validation, and test dataset. Radiologists stratified the reports into three groups: nontumor (group 1), posttreatment tumor (group 2), and pretreatment tumor (group 3) cases. A pretrained Bidirectional Encoder Representations from Transformers Japanese model was fine-tuned using the training dataset and evaluated on the validation dataset. The model which demonstrated the highest accuracy on the validation dataset was selected as the final model. Two additional radiologists were involved in classifying reports in the test datasets for the three groups. The model’s performance on test dataset was compared to that of two radiologists. Results The fine-tuned LLM attained an overall accuracy of 0.970 (95% CI: 0.930–0.990). The model’s sensitivity for group 1/2/3 was 1.000/0.864/0.978. The model’s specificity for group1/2/3 was 0.991/0.993/0.958. No statistically significant differences were found in terms of accuracy, sensitivity, and specificity between the LLM and human readers ( p ≥ 0.371). The LLM completed the classification task approximately 20–26-fold faster than the radiologists. The area under the receiver operating characteristic curve for discriminating groups 2 and 3 from group 1 was 0.994 (95% CI: 0.982–1.000) and for discriminating group 3 from groups 1 and 2 was 0.992 (95% CI: 0.982–1.000). Conclusion Fine-tuned LLM demonstrated a comparable performance with radiologists in classifying brain MRI reports, while requiring substantially less time.",
-    "full_text": null
+  "title": "Automated classification of brain MRI reports using fine-tuned large language models",
+  "url": "https://openalex.org/W4400595639",
+  "year": 2024,
+  "authors": [
+    {
+      "id": null,
+      "name": "Kanzawa, Jun",
+      "affiliations": [
+        "University of Tokyo Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2527788263",
+      "name": "Yasaka Koichiro",
+      "affiliations": [
+        "University of Tokyo Hospital"
+      ]
+    },
+    {
+      "id": null,
+      "name": "Fujita, Nana",
+      "affiliations": [
+        "University of Tokyo Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3087813158",
+      "name": "Fujiwara Shin",
+      "affiliations": [
+        "University of Tokyo Hospital"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2167694922",
+      "name": "Abe Osamu",
+      "affiliations": [
+        "University of Tokyo Hospital"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2611753127",
+    "https://openalex.org/W2916892496",
+    "https://openalex.org/W2083255661",
+    "https://openalex.org/W2338526423",
+    "https://openalex.org/W3190730109",
+    "https://openalex.org/W4390919701",
+    "https://openalex.org/W4380422747",
+    "https://openalex.org/W4382182493",
+    "https://openalex.org/W4383186888",
+    "https://openalex.org/W4386757338",
+    "https://openalex.org/W3200849552",
+    "https://openalex.org/W4282983782",
+    "https://openalex.org/W2963676638",
+    "https://openalex.org/W2911489562"
+  ],
+  "abstract": "Abstract Purpose This study aimed to investigate the efficacy of fine-tuned large language models (LLM) in classifying brain MRI reports into pretreatment, posttreatment, and nontumor cases. Methods This retrospective study included 759, 284, and 164 brain MRI reports for training, validation, and test dataset. Radiologists stratified the reports into three groups: nontumor (group 1), posttreatment tumor (group 2), and pretreatment tumor (group 3) cases. A pretrained Bidirectional Encoder Representations from Transformers Japanese model was fine-tuned using the training dataset and evaluated on the validation dataset. The model which demonstrated the highest accuracy on the validation dataset was selected as the final model. Two additional radiologists were involved in classifying reports in the test datasets for the three groups. The model’s performance on test dataset was compared to that of two radiologists. Results The fine-tuned LLM attained an overall accuracy of 0.970 (95% CI: 0.930–0.990). The model’s sensitivity for group 1/2/3 was 1.000/0.864/0.978. The model’s specificity for group1/2/3 was 0.991/0.993/0.958. No statistically significant differences were found in terms of accuracy, sensitivity, and specificity between the LLM and human readers ( p ≥ 0.371). The LLM completed the classification task approximately 20–26-fold faster than the radiologists. The area under the receiver operating characteristic curve for discriminating groups 2 and 3 from group 1 was 0.994 (95% CI: 0.982–1.000) and for discriminating group 3 from groups 1 and 2 was 0.992 (95% CI: 0.982–1.000). Conclusion Fine-tuned LLM demonstrated a comparable performance with radiologists in classifying brain MRI reports, while requiring substantially less time.",
+  "full_text": null,
+  "topic": "Medicine",
+  "concepts": [
+    {
+      "name": "Medicine",
+      "score": 0.773680567741394
+    },
+    {
+      "name": "Receiver operating characteristic",
+      "score": 0.6871899962425232
+    },
+    {
+      "name": "Neuroradiology",
+      "score": 0.5228579044342041
+    },
+    {
+      "name": "Neurology",
+      "score": 0.4452310800552368
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.43434202671051025
+    },
+    {
+      "name": "Diagnostic accuracy",
+      "score": 0.42623716592788696
+    },
+    {
+      "name": "Test (biology)",
+      "score": 0.4255898594856262
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3683278262615204
+    },
+    {
+      "name": "Radiology",
+      "score": 0.3503914475440979
+    },
+    {
+      "name": "Medical physics",
+      "score": 0.33197954297065735
+    },
+    {
+      "name": "Nuclear medicine",
+      "score": 0.327136754989624
+    },
+    {
+      "name": "Computer science",
+      "score": 0.20116588473320007
+    },
+    {
+      "name": "Internal medicine",
+      "score": 0.16679558157920837
+    },
+    {
+      "name": "Psychiatry",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

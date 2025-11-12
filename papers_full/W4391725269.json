@@ -1,92 +1,99 @@
 {
-    "title": "DeGPT: Optimizing Decompiler Output with LLM",
-    "url": "https://openalex.org/W4391725269",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2382185598",
-            "name": "Peiwei Hu",
-            "affiliations": [
-                "University of Chinese Academy of Sciences",
-                "Chinese Academy of Sciences",
-                "Institute of Information Engineering"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2920546194",
-            "name": "Ruigang Liang",
-            "affiliations": [
-                "University of Chinese Academy of Sciences",
-                "Chinese Academy of Sciences",
-                "Institute of Information Engineering"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096335528",
-            "name": "Kai Chen",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "University of Chinese Academy of Sciences",
-                "Institute of Information Engineering"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6762616637",
-        "https://openalex.org/W2998074434",
-        "https://openalex.org/W6850342999",
-        "https://openalex.org/W4311165734",
-        "https://openalex.org/W3193654868",
-        "https://openalex.org/W6679966738",
-        "https://openalex.org/W3093415205",
-        "https://openalex.org/W3015291177",
-        "https://openalex.org/W3180995430",
-        "https://openalex.org/W2115095269",
-        "https://openalex.org/W6753851271",
-        "https://openalex.org/W2949297108",
-        "https://openalex.org/W2731423391",
-        "https://openalex.org/W200681053",
-        "https://openalex.org/W4362707106",
-        "https://openalex.org/W2973871154",
-        "https://openalex.org/W191489030",
-        "https://openalex.org/W2964938167",
-        "https://openalex.org/W3107488247",
-        "https://openalex.org/W3164168419",
-        "https://openalex.org/W3046165031",
-        "https://openalex.org/W3112894679",
-        "https://openalex.org/W3161285349",
-        "https://openalex.org/W6749877055",
-        "https://openalex.org/W4365512576",
-        "https://openalex.org/W6677316912",
-        "https://openalex.org/W4317838010",
-        "https://openalex.org/W6680254529",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6737605631",
-        "https://openalex.org/W127238549",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W6696642037",
-        "https://openalex.org/W2034209539",
-        "https://openalex.org/W6780819823",
-        "https://openalex.org/W3153698034",
-        "https://openalex.org/W2979393298",
-        "https://openalex.org/W3000168638",
-        "https://openalex.org/W4385302156",
-        "https://openalex.org/W3153398259",
-        "https://openalex.org/W2140147547",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2116341502",
-        "https://openalex.org/W3043519510",
-        "https://openalex.org/W1557561422",
-        "https://openalex.org/W4389519421",
-        "https://openalex.org/W2612128870",
-        "https://openalex.org/W2945440850",
-        "https://openalex.org/W4375949262",
-        "https://openalex.org/W2795192879",
-        "https://openalex.org/W2131523719",
-        "https://openalex.org/W76990466",
-        "https://openalex.org/W4287704057",
-        "https://openalex.org/W2884276923"
-    ],
-    "abstract": "Reverse engineering is essential in malware analysis, vulnerability discovery, etc. Decompilers assist the reverse engineers by lifting the assembly to the high-level programming language, which highly boosts binary comprehension.However, decompilers suffer from problems such as meaningless variable names, redundant variables, and lacking comments describing the purpose of the code.Previous studies have shown promising performance in refining the decompiler output by training the models with huge datasets containing various decompiler outputs.However, even datasets that take much time to construct cover limited binaries in the real world.The performance degrades severely facing the binary migration.In this paper, we present DeGPT, an end-to-end framework aiming to optimize the decompiler output to improve its readability and simplicity and further assist the reverse engineers in understanding the binaries better.The Large Language Model (LLM) can mitigate performance degradation with its extraordinary ability endowed by large model size and training set containing rich multi-modal data.However, its potential is difficult to unlock through one-shot use.Thus, we propose the three-role mechanism, which includes referee (R_ref), advisor (R_adv), and operator (R_ope), to adapt the LLM to our optimization tasks.Specifically, R_ref provides the optimization scheme for the target decompiler output, while R_adv gives the rectification measures based on the scheme, and R_ope inspects whether the optimization changes the original function semantics and concludes the final verdict about whether to accept the optimizations.We evaluate DeGPT on the datasets containing decompiler outputs of various software, such as the practical command line tools, malware, a library for audio processing, and implementations of algorithms.The experimental results show that even on the output of the current top-level decompiler (Ghidra), DeGPT can achieve 24.4% reduction in the cognitive burden of understanding the decompiler outputs and provide comments of which 62.9% can provide practical semantics for the reverse engineers to help the understanding of binaries.Our user surveys also show that the optimizations can significantly simplify the code and add helpful semantic information (variable names and comments), facilitating a quick and accurate understanding of the binary.",
-    "full_text": null
+  "title": "DeGPT: Optimizing Decompiler Output with LLM",
+  "url": "https://openalex.org/W4391725269",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2382185598",
+      "name": "Peiwei Hu",
+      "affiliations": [
+        "University of Chinese Academy of Sciences",
+        "Chinese Academy of Sciences",
+        "Institute of Information Engineering"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2920546194",
+      "name": "Ruigang Liang",
+      "affiliations": [
+        "University of Chinese Academy of Sciences",
+        "Chinese Academy of Sciences",
+        "Institute of Information Engineering"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096335528",
+      "name": "Kai Chen",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences",
+        "Institute of Information Engineering"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6762616637",
+    "https://openalex.org/W2998074434",
+    "https://openalex.org/W6850342999",
+    "https://openalex.org/W4311165734",
+    "https://openalex.org/W3193654868",
+    "https://openalex.org/W6679966738",
+    "https://openalex.org/W3093415205",
+    "https://openalex.org/W3015291177",
+    "https://openalex.org/W3180995430",
+    "https://openalex.org/W2115095269",
+    "https://openalex.org/W6753851271",
+    "https://openalex.org/W2949297108",
+    "https://openalex.org/W2731423391",
+    "https://openalex.org/W200681053",
+    "https://openalex.org/W4362707106",
+    "https://openalex.org/W2973871154",
+    "https://openalex.org/W191489030",
+    "https://openalex.org/W2964938167",
+    "https://openalex.org/W3107488247",
+    "https://openalex.org/W3164168419",
+    "https://openalex.org/W3046165031",
+    "https://openalex.org/W3112894679",
+    "https://openalex.org/W3161285349",
+    "https://openalex.org/W6749877055",
+    "https://openalex.org/W4365512576",
+    "https://openalex.org/W6677316912",
+    "https://openalex.org/W4317838010",
+    "https://openalex.org/W6680254529",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6737605631",
+    "https://openalex.org/W127238549",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W6696642037",
+    "https://openalex.org/W2034209539",
+    "https://openalex.org/W6780819823",
+    "https://openalex.org/W3153698034",
+    "https://openalex.org/W2979393298",
+    "https://openalex.org/W3000168638",
+    "https://openalex.org/W4385302156",
+    "https://openalex.org/W3153398259",
+    "https://openalex.org/W2140147547",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2116341502",
+    "https://openalex.org/W3043519510",
+    "https://openalex.org/W1557561422",
+    "https://openalex.org/W4389519421",
+    "https://openalex.org/W2612128870",
+    "https://openalex.org/W2945440850",
+    "https://openalex.org/W4375949262",
+    "https://openalex.org/W2795192879",
+    "https://openalex.org/W2131523719",
+    "https://openalex.org/W76990466",
+    "https://openalex.org/W4287704057",
+    "https://openalex.org/W2884276923"
+  ],
+  "abstract": "Reverse engineering is essential in malware analysis, vulnerability discovery, etc. Decompilers assist the reverse engineers by lifting the assembly to the high-level programming language, which highly boosts binary comprehension.However, decompilers suffer from problems such as meaningless variable names, redundant variables, and lacking comments describing the purpose of the code.Previous studies have shown promising performance in refining the decompiler output by training the models with huge datasets containing various decompiler outputs.However, even datasets that take much time to construct cover limited binaries in the real world.The performance degrades severely facing the binary migration.In this paper, we present DeGPT, an end-to-end framework aiming to optimize the decompiler output to improve its readability and simplicity and further assist the reverse engineers in understanding the binaries better.The Large Language Model (LLM) can mitigate performance degradation with its extraordinary ability endowed by large model size and training set containing rich multi-modal data.However, its potential is difficult to unlock through one-shot use.Thus, we propose the three-role mechanism, which includes referee (R_ref), advisor (R_adv), and operator (R_ope), to adapt the LLM to our optimization tasks.Specifically, R_ref provides the optimization scheme for the target decompiler output, while R_adv gives the rectification measures based on the scheme, and R_ope inspects whether the optimization changes the original function semantics and concludes the final verdict about whether to accept the optimizations.We evaluate DeGPT on the datasets containing decompiler outputs of various software, such as the practical command line tools, malware, a library for audio processing, and implementations of algorithms.The experimental results show that even on the output of the current top-level decompiler (Ghidra), DeGPT can achieve 24.4% reduction in the cognitive burden of understanding the decompiler outputs and provide comments of which 62.9% can provide practical semantics for the reverse engineers to help the understanding of binaries.Our user surveys also show that the optimizations can significantly simplify the code and add helpful semantic information (variable names and comments), facilitating a quick and accurate understanding of the binary.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5577178001403809
+    }
+  ]
 }

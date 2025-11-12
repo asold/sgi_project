@@ -1,90 +1,153 @@
 {
-    "title": "Towards building multilingual language model for medicine",
-    "url": "https://openalex.org/W4402923149",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2161323898",
-            "name": "Pengcheng Qiu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2290108068",
-            "name": "Chaoyi Wu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2107527362",
-            "name": "Xiaoman Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2158158382",
-            "name": "Weixiong Lin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2131229076",
-            "name": "Haicheng Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100362878",
-            "name": "Ya Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2098837876",
-            "name": "Yanfeng Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2413558386",
-            "name": "Weidi Xie",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4377009978",
-        "https://openalex.org/W4394782456",
-        "https://openalex.org/W4366327625",
-        "https://openalex.org/W4381930847",
-        "https://openalex.org/W4389116614",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W6682631176",
-        "https://openalex.org/W6852800892",
-        "https://openalex.org/W4285183303",
-        "https://openalex.org/W4389156617",
-        "https://openalex.org/W4313197536",
-        "https://openalex.org/W4365143687",
-        "https://openalex.org/W6854691855",
-        "https://openalex.org/W6855698372",
-        "https://openalex.org/W4391221150",
-        "https://openalex.org/W6857549670",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W4387821331",
-        "https://openalex.org/W4317214807",
-        "https://openalex.org/W4386875581",
-        "https://openalex.org/W3186799149",
-        "https://openalex.org/W4307104957",
-        "https://openalex.org/W2949818215",
-        "https://openalex.org/W4319662928",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W4391940656",
-        "https://openalex.org/W6852874933",
-        "https://openalex.org/W2970482702",
-        "https://openalex.org/W4381714872",
-        "https://openalex.org/W3083410900",
-        "https://openalex.org/W4307079201",
-        "https://openalex.org/W4318908031",
-        "https://openalex.org/W4385572845",
-        "https://openalex.org/W6892867602",
-        "https://openalex.org/W4221161695",
-        "https://openalex.org/W4402923149",
-        "https://openalex.org/W4384071683"
-    ],
-    "abstract": "Abstract The development of open-source, multilingual medical language models can benefit a wide, linguistically diverse audience from different regions. To promote this domain, we present contributions from the following: First, we construct a multilingual medical corpus, containing approximately 25.5B tokens encompassing 6 main languages, termed as MMedC, enabling auto-regressive domain adaptation for general LLMs; Second, to monitor the development of multilingual medical LLMs, we propose a multilingual medical multi-choice question-answering benchmark with rationale, termed as MMedBench; Third, we have assessed a number of open-source large language models (LLMs) on our benchmark, along with those further auto-regressive trained on MMedC. Our final model, MMed-Llama 3, with only 8B parameters, achieves superior performance compared to all other open-source models on both MMedBench and English benchmarks, even rivaling GPT-4. In conclusion, in this work, We present a large-scale corpus, a benchmark and a series of models to support the development of multilingual medical LLMs.",
-    "full_text": null
+  "title": "Towards building multilingual language model for medicine",
+  "url": "https://openalex.org/W4402923149",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2161323898",
+      "name": "Pengcheng Qiu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2290108068",
+      "name": "Chaoyi Wu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2107527362",
+      "name": "Xiaoman Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2158158382",
+      "name": "Weixiong Lin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2131229076",
+      "name": "Haicheng Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100362878",
+      "name": "Ya Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2098837876",
+      "name": "Yanfeng Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2413558386",
+      "name": "Weidi Xie",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4377009978",
+    "https://openalex.org/W4394782456",
+    "https://openalex.org/W4366327625",
+    "https://openalex.org/W4381930847",
+    "https://openalex.org/W4389116614",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W6682631176",
+    "https://openalex.org/W6852800892",
+    "https://openalex.org/W4285183303",
+    "https://openalex.org/W4389156617",
+    "https://openalex.org/W4313197536",
+    "https://openalex.org/W4365143687",
+    "https://openalex.org/W6854691855",
+    "https://openalex.org/W6855698372",
+    "https://openalex.org/W4391221150",
+    "https://openalex.org/W6857549670",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W4387821331",
+    "https://openalex.org/W4317214807",
+    "https://openalex.org/W4386875581",
+    "https://openalex.org/W3186799149",
+    "https://openalex.org/W4307104957",
+    "https://openalex.org/W2949818215",
+    "https://openalex.org/W4319662928",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W4391940656",
+    "https://openalex.org/W6852874933",
+    "https://openalex.org/W2970482702",
+    "https://openalex.org/W4381714872",
+    "https://openalex.org/W3083410900",
+    "https://openalex.org/W4307079201",
+    "https://openalex.org/W4318908031",
+    "https://openalex.org/W4385572845",
+    "https://openalex.org/W6892867602",
+    "https://openalex.org/W4221161695",
+    "https://openalex.org/W4402923149",
+    "https://openalex.org/W4384071683"
+  ],
+  "abstract": "Abstract The development of open-source, multilingual medical language models can benefit a wide, linguistically diverse audience from different regions. To promote this domain, we present contributions from the following: First, we construct a multilingual medical corpus, containing approximately 25.5B tokens encompassing 6 main languages, termed as MMedC, enabling auto-regressive domain adaptation for general LLMs; Second, to monitor the development of multilingual medical LLMs, we propose a multilingual medical multi-choice question-answering benchmark with rationale, termed as MMedBench; Third, we have assessed a number of open-source large language models (LLMs) on our benchmark, along with those further auto-regressive trained on MMedC. Our final model, MMed-Llama 3, with only 8B parameters, achieves superior performance compared to all other open-source models on both MMedBench and English benchmarks, even rivaling GPT-4. In conclusion, in this work, We present a large-scale corpus, a benchmark and a series of models to support the development of multilingual medical LLMs.",
+  "full_text": null,
+  "topic": "Benchmark (surveying)",
+  "concepts": [
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.8419386148452759
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7003433108329773
+    },
+    {
+      "name": "Construct (python library)",
+      "score": 0.6504032611846924
+    },
+    {
+      "name": "Adaptation (eye)",
+      "score": 0.5753708481788635
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.5443437099456787
+    },
+    {
+      "name": "Language model",
+      "score": 0.5146659016609192
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.42672234773635864
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3953947424888611
+    },
+    {
+      "name": "Psychology",
+      "score": 0.1685720682144165
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09733414649963379
+    },
+    {
+      "name": "Geography",
+      "score": 0.09170305728912354
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    }
+  ]
 }

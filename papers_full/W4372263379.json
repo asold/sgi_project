@@ -1,75 +1,122 @@
 {
-    "title": "AST-SED: An Effective Sound Event Detection Method Based on Audio Spectrogram Transformer",
-    "url": "https://openalex.org/W4372263379",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2047264473",
-            "name": "Kang Li",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103229335",
-            "name": "Yan Song",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2140099189",
-            "name": "Li-Rong Dai",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1910513588",
-            "name": "Ian McLoughlin",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2054710410",
-            "name": "Xin Fang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2003374769",
-            "name": "Lin Liu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2593116425",
-        "https://openalex.org/W3094550259",
-        "https://openalex.org/W2135342008",
-        "https://openalex.org/W2624241755",
-        "https://openalex.org/W3196974791",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W3206996142",
-        "https://openalex.org/W3203468141",
-        "https://openalex.org/W6745136726",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W3015190346",
-        "https://openalex.org/W2963610932",
-        "https://openalex.org/W2963099423",
-        "https://openalex.org/W2591013610",
-        "https://openalex.org/W3162400960",
-        "https://openalex.org/W6733814495",
-        "https://openalex.org/W2959539607",
-        "https://openalex.org/W4225706374",
-        "https://openalex.org/W3196645599",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2765407302",
-        "https://openalex.org/W4221149441",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W2953070460",
-        "https://openalex.org/W3170874841"
-    ],
-    "abstract": "&lt;p dir=\"ltr\"&gt;In this paper, we propose an effective sound event detection (SED) method based on the audio spectrogram transformer (AST) model, pretrained on the large-scale AudioSet for audio tagging (AT) task, termed AST-SED. Pretrained AST models have recently shown promise on DCASE2022 challenge task4 where they help mitigate a lack of sufficient real annotated data. However, mainly due to differences between the AT and SED tasks, it is suboptimal to directly utilize outputs from a pretrained AST model. Hence the proposed AST-SED adopts an encoder-decoder architecture to enable effective and efficient fine-tuning without needing to redesign or retrain the AST model. Specifically, the Frequency-wise Transformer Encoder (FTE) consists of transformers with self attention along the frequency axis to address multiple overlapped audio events issue in a single clip. The Local Gated Recurrent Units Decoder (LGD) consists of nearest-neighbor interpolation (NNI) and Bidirectional Gated Recurrent Units (Bi-GRU) to compensate for temporal resolution loss in the pretrained AST model output. Experimental results on DCASE2022 task4 development set have demonstrated the superiority of the proposed AST-SED with FTE-LGD architecture. Specifically, the Event-Based F1-score (EB-F1) of 59.60% and Polyphonic Sound detection Score scenario1 (PSDS1) of 0.5140 significantly outperform CRNN and other pretrained AST-based systems.&lt;/p&gt;",
-    "full_text": null
+  "title": "AST-SED: An Effective Sound Event Detection Method Based on Audio Spectrogram Transformer",
+  "url": "https://openalex.org/W4372263379",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2047264473",
+      "name": "Kang Li",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103229335",
+      "name": "Yan Song",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2140099189",
+      "name": "Li-Rong Dai",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1910513588",
+      "name": "Ian McLoughlin",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2054710410",
+      "name": "Xin Fang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2003374769",
+      "name": "Lin Liu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2593116425",
+    "https://openalex.org/W3094550259",
+    "https://openalex.org/W2135342008",
+    "https://openalex.org/W2624241755",
+    "https://openalex.org/W3196974791",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W3206996142",
+    "https://openalex.org/W3203468141",
+    "https://openalex.org/W6745136726",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W3015190346",
+    "https://openalex.org/W2963610932",
+    "https://openalex.org/W2963099423",
+    "https://openalex.org/W2591013610",
+    "https://openalex.org/W3162400960",
+    "https://openalex.org/W6733814495",
+    "https://openalex.org/W2959539607",
+    "https://openalex.org/W4225706374",
+    "https://openalex.org/W3196645599",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2765407302",
+    "https://openalex.org/W4221149441",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W2953070460",
+    "https://openalex.org/W3170874841"
+  ],
+  "abstract": "&lt;p dir=\"ltr\"&gt;In this paper, we propose an effective sound event detection (SED) method based on the audio spectrogram transformer (AST) model, pretrained on the large-scale AudioSet for audio tagging (AT) task, termed AST-SED. Pretrained AST models have recently shown promise on DCASE2022 challenge task4 where they help mitigate a lack of sufficient real annotated data. However, mainly due to differences between the AT and SED tasks, it is suboptimal to directly utilize outputs from a pretrained AST model. Hence the proposed AST-SED adopts an encoder-decoder architecture to enable effective and efficient fine-tuning without needing to redesign or retrain the AST model. Specifically, the Frequency-wise Transformer Encoder (FTE) consists of transformers with self attention along the frequency axis to address multiple overlapped audio events issue in a single clip. The Local Gated Recurrent Units Decoder (LGD) consists of nearest-neighbor interpolation (NNI) and Bidirectional Gated Recurrent Units (Bi-GRU) to compensate for temporal resolution loss in the pretrained AST model output. Experimental results on DCASE2022 task4 development set have demonstrated the superiority of the proposed AST-SED with FTE-LGD architecture. Specifically, the Event-Based F1-score (EB-F1) of 59.60% and Polyphonic Sound detection Score scenario1 (PSDS1) of 0.5140 significantly outperform CRNN and other pretrained AST-based systems.&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Spectrogram",
+  "concepts": [
+    {
+      "name": "Spectrogram",
+      "score": 0.750536322593689
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7328392863273621
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7009485960006714
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.6458755731582642
+    },
+    {
+      "name": "Encoder",
+      "score": 0.606979250907898
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40201446413993835
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3600956201553345
+    },
+    {
+      "name": "Engineering",
+      "score": 0.12196385860443115
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08526363968849182
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

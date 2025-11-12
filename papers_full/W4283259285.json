@@ -1,114 +1,197 @@
 {
-    "title": "DTITR: End-to-end drug–target binding affinity prediction with transformers",
-    "url": "https://openalex.org/W4283259285",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2973043896",
-            "name": "Nelson R. C. Monteiro",
-            "affiliations": [
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2915882617",
-            "name": "José L. Oliveira",
-            "affiliations": [
-                "University of Aveiro"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2079177351",
-            "name": "Joel P. Arrais",
-            "affiliations": [
-                "University of Coimbra"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2973043896",
-            "name": "Nelson R. C. Monteiro",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2915882617",
-            "name": "José L. Oliveira",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2079177351",
-            "name": "Joel P. Arrais",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1500036797",
-        "https://openalex.org/W2166550586",
-        "https://openalex.org/W2992586577",
-        "https://openalex.org/W3012012790",
-        "https://openalex.org/W2985881898",
-        "https://openalex.org/W2561981131",
-        "https://openalex.org/W2886544065",
-        "https://openalex.org/W2915292867",
-        "https://openalex.org/W2152964937",
-        "https://openalex.org/W1993554808",
-        "https://openalex.org/W2990367205",
-        "https://openalex.org/W3030054993",
-        "https://openalex.org/W2301371353",
-        "https://openalex.org/W2162011385",
-        "https://openalex.org/W1990836196",
-        "https://openalex.org/W1999798000",
-        "https://openalex.org/W2474575800",
-        "https://openalex.org/W2153838454",
-        "https://openalex.org/W2344084644",
-        "https://openalex.org/W6657916882",
-        "https://openalex.org/W2343107734",
-        "https://openalex.org/W2044002635",
-        "https://openalex.org/W2558698012",
-        "https://openalex.org/W2744720080",
-        "https://openalex.org/W2471196942",
-        "https://openalex.org/W6729614682",
-        "https://openalex.org/W3010821291",
-        "https://openalex.org/W2860192827",
-        "https://openalex.org/W2899788782",
-        "https://openalex.org/W3006737593",
-        "https://openalex.org/W3206585172",
-        "https://openalex.org/W3018980093",
-        "https://openalex.org/W2558999090",
-        "https://openalex.org/W2204695023",
-        "https://openalex.org/W2148512505",
-        "https://openalex.org/W2075020622",
-        "https://openalex.org/W2030286884",
-        "https://openalex.org/W1993285168",
-        "https://openalex.org/W3129321183",
-        "https://openalex.org/W3194618792",
-        "https://openalex.org/W2781821160",
-        "https://openalex.org/W2278744106",
-        "https://openalex.org/W2109991441",
-        "https://openalex.org/W2605952223",
-        "https://openalex.org/W2785947426",
-        "https://openalex.org/W6775542561",
-        "https://openalex.org/W3029836473",
-        "https://openalex.org/W3133246485",
-        "https://openalex.org/W3151148247",
-        "https://openalex.org/W3093397714",
-        "https://openalex.org/W2086286404",
-        "https://openalex.org/W3112376646",
-        "https://openalex.org/W3097145107",
-        "https://openalex.org/W1980969309",
-        "https://openalex.org/W3168436232",
-        "https://openalex.org/W1970799005",
-        "https://openalex.org/W2899663614",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2994689640",
-        "https://openalex.org/W2029348196",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2883204049",
-        "https://openalex.org/W4214553437",
-        "https://openalex.org/W3096561213",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W2214665483"
-    ],
-    "abstract": "The accurate identification of Drug-Target Interactions (DTIs) remains a critical turning point in drug discovery and understanding of the binding process. Despite recent advances in computational solutions to overcome the challenges of in vitro and in vivo experiments, most of the proposed in silico-based methods still focus on binary classification, overlooking the importance of characterizing DTIs with unbiased binding strength values to properly distinguish primary interactions from those with off-targets. Moreover, several of these methods usually simplify the entire interaction mechanism, neglecting the joint contribution of the individual units of each binding component and the interacting substructures involved, and have yet to focus on more explainable and interpretable architectures. In this study, we propose an end-to-end Transformer-based architecture for predicting drug-target binding affinity (DTA) using 1D raw sequential and structural data to represent the proteins and compounds. This architecture exploits self-attention layers to capture the biological and chemical context of the proteins and compounds, respectively, and cross-attention layers to exchange information and capture the pharmacological context of the DTIs. The results show that the proposed architecture is effective in predicting DTA, achieving superior performance in both correctly predicting the value of interaction strength and being able to correctly discriminate the rank order of binding strength compared to state-of-the-art baselines. The combination of multiple Transformer-Encoders was found to result in robust and discriminative aggregate representations of the proteins and compounds for binding affinity prediction, in which the addition of a Cross-Attention Transformer-Encoder was identified as an important block for improving the discriminative power of these representations. Overall, this research study validates the applicability of an end-to-end Transformer-based architecture in the context of drug discovery, capable of self-providing different levels of potential DTI and prediction understanding due to the nature of the attention blocks. The data and source code used in this study are available at: https://github.com/larngroup/DTITR.",
-    "full_text": null
+  "title": "DTITR: End-to-end drug–target binding affinity prediction with transformers",
+  "url": "https://openalex.org/W4283259285",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2973043896",
+      "name": "Nelson R. C. Monteiro",
+      "affiliations": [
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2915882617",
+      "name": "José L. Oliveira",
+      "affiliations": [
+        "University of Aveiro"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2079177351",
+      "name": "Joel P. Arrais",
+      "affiliations": [
+        "University of Coimbra"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2973043896",
+      "name": "Nelson R. C. Monteiro",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2915882617",
+      "name": "José L. Oliveira",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2079177351",
+      "name": "Joel P. Arrais",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1500036797",
+    "https://openalex.org/W2166550586",
+    "https://openalex.org/W2992586577",
+    "https://openalex.org/W3012012790",
+    "https://openalex.org/W2985881898",
+    "https://openalex.org/W2561981131",
+    "https://openalex.org/W2886544065",
+    "https://openalex.org/W2915292867",
+    "https://openalex.org/W2152964937",
+    "https://openalex.org/W1993554808",
+    "https://openalex.org/W2990367205",
+    "https://openalex.org/W3030054993",
+    "https://openalex.org/W2301371353",
+    "https://openalex.org/W2162011385",
+    "https://openalex.org/W1990836196",
+    "https://openalex.org/W1999798000",
+    "https://openalex.org/W2474575800",
+    "https://openalex.org/W2153838454",
+    "https://openalex.org/W2344084644",
+    "https://openalex.org/W6657916882",
+    "https://openalex.org/W2343107734",
+    "https://openalex.org/W2044002635",
+    "https://openalex.org/W2558698012",
+    "https://openalex.org/W2744720080",
+    "https://openalex.org/W2471196942",
+    "https://openalex.org/W6729614682",
+    "https://openalex.org/W3010821291",
+    "https://openalex.org/W2860192827",
+    "https://openalex.org/W2899788782",
+    "https://openalex.org/W3006737593",
+    "https://openalex.org/W3206585172",
+    "https://openalex.org/W3018980093",
+    "https://openalex.org/W2558999090",
+    "https://openalex.org/W2204695023",
+    "https://openalex.org/W2148512505",
+    "https://openalex.org/W2075020622",
+    "https://openalex.org/W2030286884",
+    "https://openalex.org/W1993285168",
+    "https://openalex.org/W3129321183",
+    "https://openalex.org/W3194618792",
+    "https://openalex.org/W2781821160",
+    "https://openalex.org/W2278744106",
+    "https://openalex.org/W2109991441",
+    "https://openalex.org/W2605952223",
+    "https://openalex.org/W2785947426",
+    "https://openalex.org/W6775542561",
+    "https://openalex.org/W3029836473",
+    "https://openalex.org/W3133246485",
+    "https://openalex.org/W3151148247",
+    "https://openalex.org/W3093397714",
+    "https://openalex.org/W2086286404",
+    "https://openalex.org/W3112376646",
+    "https://openalex.org/W3097145107",
+    "https://openalex.org/W1980969309",
+    "https://openalex.org/W3168436232",
+    "https://openalex.org/W1970799005",
+    "https://openalex.org/W2899663614",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2994689640",
+    "https://openalex.org/W2029348196",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2883204049",
+    "https://openalex.org/W4214553437",
+    "https://openalex.org/W3096561213",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W2214665483"
+  ],
+  "abstract": "The accurate identification of Drug-Target Interactions (DTIs) remains a critical turning point in drug discovery and understanding of the binding process. Despite recent advances in computational solutions to overcome the challenges of in vitro and in vivo experiments, most of the proposed in silico-based methods still focus on binary classification, overlooking the importance of characterizing DTIs with unbiased binding strength values to properly distinguish primary interactions from those with off-targets. Moreover, several of these methods usually simplify the entire interaction mechanism, neglecting the joint contribution of the individual units of each binding component and the interacting substructures involved, and have yet to focus on more explainable and interpretable architectures. In this study, we propose an end-to-end Transformer-based architecture for predicting drug-target binding affinity (DTA) using 1D raw sequential and structural data to represent the proteins and compounds. This architecture exploits self-attention layers to capture the biological and chemical context of the proteins and compounds, respectively, and cross-attention layers to exchange information and capture the pharmacological context of the DTIs. The results show that the proposed architecture is effective in predicting DTA, achieving superior performance in both correctly predicting the value of interaction strength and being able to correctly discriminate the rank order of binding strength compared to state-of-the-art baselines. The combination of multiple Transformer-Encoders was found to result in robust and discriminative aggregate representations of the proteins and compounds for binding affinity prediction, in which the addition of a Cross-Attention Transformer-Encoder was identified as an important block for improving the discriminative power of these representations. Overall, this research study validates the applicability of an end-to-end Transformer-based architecture in the context of drug discovery, capable of self-providing different levels of potential DTI and prediction understanding due to the nature of the attention blocks. The data and source code used in this study are available at: https://github.com/larngroup/DTITR.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.637680172920227
+    },
+    {
+      "name": "Transformer",
+      "score": 0.549659252166748
+    },
+    {
+      "name": "In silico",
+      "score": 0.4640257954597473
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.4436832666397095
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.43581289052963257
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42920950055122375
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.4220290780067444
+    },
+    {
+      "name": "Encoder",
+      "score": 0.41142329573631287
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.3571974039077759
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.34428930282592773
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.1747477650642395
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.16550680994987488
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1507890522480011
+    },
+    {
+      "name": "Biology",
+      "score": 0.14350435137748718
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    }
+  ]
 }

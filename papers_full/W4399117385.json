@@ -1,62 +1,145 @@
 {
-    "title": "Automated Smart Contract Vulnerability Detection using Fine-tuned Large Language Models",
-    "url": "https://openalex.org/W4399117385",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3030312568",
-            "name": "Zhiju Yang",
-            "affiliations": [
-                "Seattle University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4365283074",
-            "name": "Gaoyuan Man",
-            "affiliations": [
-                "Arizona State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2128283481",
-            "name": "Songqing Yue",
-            "affiliations": [
-                "University of Wisconsin–Platteville"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4385080392",
-        "https://openalex.org/W3211314335",
-        "https://openalex.org/W3122543528",
-        "https://openalex.org/W3016124762",
-        "https://openalex.org/W4384304916",
-        "https://openalex.org/W2970809537",
-        "https://openalex.org/W3034136313",
-        "https://openalex.org/W6827187071",
-        "https://openalex.org/W2767955225",
-        "https://openalex.org/W2604844934",
-        "https://openalex.org/W2921980263",
-        "https://openalex.org/W2963264685",
-        "https://openalex.org/W2975871742",
-        "https://openalex.org/W2949557841",
-        "https://openalex.org/W2805827286",
-        "https://openalex.org/W3125989628",
-        "https://openalex.org/W2808815243",
-        "https://openalex.org/W2846896781",
-        "https://openalex.org/W2982383932",
-        "https://openalex.org/W2888928288",
-        "https://openalex.org/W2539190473",
-        "https://openalex.org/W6748698346",
-        "https://openalex.org/W2885034081",
-        "https://openalex.org/W2898652659",
-        "https://openalex.org/W2884898944",
-        "https://openalex.org/W4362686680",
-        "https://openalex.org/W4362686580",
-        "https://openalex.org/W3105187050",
-        "https://openalex.org/W4353004773",
-        "https://openalex.org/W2790202156"
-    ],
-    "abstract": "As decentralized finance (DeFi) built on blockchain grows rapidly, the security of smart contracts underpinning DeFi has become a major concern due to exploits leading to billions in damages. Although tools exist for automated vulnerability detection in smart contracts, studies show that most vulnerabilities remain undetected. In this work, we propose using fine-tuned large language models (LLMs) for enhanced automated detection of vulnerabilities in smart contracts. We collected over 26,727 labeled smart contract vulnerabilities and fine-tuned the 13B parameter Llama-2 model. Evaluation of 1,000 unseen functions shows promising precision of 31-36% in predicting vulnerability categories. The fine-tuned LLM demonstrates potential as an auxiliary tool to identify vulnerable code and assist auditors. Future work is outlined for improving performance via larger models, higher-quality data, and specialized binary detection models. We present promising preliminary results on integrating LLMs into smart contract analysis and motivate further research at the intersection of LLMs and blockchain security.",
-    "full_text": null
+  "title": "Automated Smart Contract Vulnerability Detection using Fine-tuned Large Language Models",
+  "url": "https://openalex.org/W4399117385",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3030312568",
+      "name": "Zhiju Yang",
+      "affiliations": [
+        "Seattle University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4365283074",
+      "name": "Gaoyuan Man",
+      "affiliations": [
+        "Arizona State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2128283481",
+      "name": "Songqing Yue",
+      "affiliations": [
+        "University of Wisconsin–Platteville"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4385080392",
+    "https://openalex.org/W3211314335",
+    "https://openalex.org/W3122543528",
+    "https://openalex.org/W3016124762",
+    "https://openalex.org/W4384304916",
+    "https://openalex.org/W2970809537",
+    "https://openalex.org/W3034136313",
+    "https://openalex.org/W6827187071",
+    "https://openalex.org/W2767955225",
+    "https://openalex.org/W2604844934",
+    "https://openalex.org/W2921980263",
+    "https://openalex.org/W2963264685",
+    "https://openalex.org/W2975871742",
+    "https://openalex.org/W2949557841",
+    "https://openalex.org/W2805827286",
+    "https://openalex.org/W3125989628",
+    "https://openalex.org/W2808815243",
+    "https://openalex.org/W2846896781",
+    "https://openalex.org/W2982383932",
+    "https://openalex.org/W2888928288",
+    "https://openalex.org/W2539190473",
+    "https://openalex.org/W6748698346",
+    "https://openalex.org/W2885034081",
+    "https://openalex.org/W2898652659",
+    "https://openalex.org/W2884898944",
+    "https://openalex.org/W4362686680",
+    "https://openalex.org/W4362686580",
+    "https://openalex.org/W3105187050",
+    "https://openalex.org/W4353004773",
+    "https://openalex.org/W2790202156"
+  ],
+  "abstract": "As decentralized finance (DeFi) built on blockchain grows rapidly, the security of smart contracts underpinning DeFi has become a major concern due to exploits leading to billions in damages. Although tools exist for automated vulnerability detection in smart contracts, studies show that most vulnerabilities remain undetected. In this work, we propose using fine-tuned large language models (LLMs) for enhanced automated detection of vulnerabilities in smart contracts. We collected over 26,727 labeled smart contract vulnerabilities and fine-tuned the 13B parameter Llama-2 model. Evaluation of 1,000 unseen functions shows promising precision of 31-36% in predicting vulnerability categories. The fine-tuned LLM demonstrates potential as an auxiliary tool to identify vulnerable code and assist auditors. Future work is outlined for improving performance via larger models, higher-quality data, and specialized binary detection models. We present promising preliminary results on integrating LLMs into smart contract analysis and motivate further research at the intersection of LLMs and blockchain security.",
+  "full_text": null,
+  "topic": "Vulnerability (computing)",
+  "concepts": [
+    {
+      "name": "Vulnerability (computing)",
+      "score": 0.7216424345970154
+    },
+    {
+      "name": "Computer science",
+      "score": 0.684843897819519
+    },
+    {
+      "name": "Exploit",
+      "score": 0.6357958912849426
+    },
+    {
+      "name": "Computer security",
+      "score": 0.6194229125976562
+    },
+    {
+      "name": "Damages",
+      "score": 0.5642649531364441
+    },
+    {
+      "name": "Work (physics)",
+      "score": 0.541893720626831
+    },
+    {
+      "name": "Audit",
+      "score": 0.49462124705314636
+    },
+    {
+      "name": "Intersection (aeronautics)",
+      "score": 0.48981186747550964
+    },
+    {
+      "name": "Smart contract",
+      "score": 0.48970845341682434
+    },
+    {
+      "name": "Underpinning",
+      "score": 0.481847882270813
+    },
+    {
+      "name": "Risk analysis (engineering)",
+      "score": 0.3912646472454071
+    },
+    {
+      "name": "Blockchain",
+      "score": 0.25571519136428833
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15791189670562744
+    },
+    {
+      "name": "Business",
+      "score": 0.15394115447998047
+    },
+    {
+      "name": "Accounting",
+      "score": 0.08939123153686523
+    },
+    {
+      "name": "Aerospace engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Civil engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

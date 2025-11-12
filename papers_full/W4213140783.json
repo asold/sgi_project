@@ -1,82 +1,161 @@
 {
-    "title": "Multimodal Personality Recognition using Cross-attention Transformer and Behaviour Encoding",
-    "url": "https://openalex.org/W4213140783",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3106749175",
-            "name": "Tanay Agrawal",
-            "affiliations": [
-                "Research Centre Inria Sophia Antipolis - Méditerranée"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2349215905",
-            "name": "Dhruv Agarwal",
-            "affiliations": [
-                "Indian Institute of Information Technology Allahabad",
-                "Research Centre Inria Sophia Antipolis - Méditerranée"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A210872577",
-            "name": "Michal Balazia",
-            "affiliations": [
-                "Observatoire de la Côte d’Azur",
-                "Research Centre Inria Sophia Antipolis - Méditerranée",
-                "Université Côte d'Azur"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3206887733",
-            "name": "Neelabh Sinha",
-            "affiliations": [
-                "Birla Institute of Technology and Science, Pilani",
-                "Research Centre Inria Sophia Antipolis - Méditerranée"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A74895045",
-            "name": "François Bremond",
-            "affiliations": [
-                "Observatoire de la Côte d’Azur",
-                "Research Centre Inria Sophia Antipolis - Méditerranée",
-                "Université Côte d'Azur"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2526050071",
-        "https://openalex.org/W2395639500",
-        "https://openalex.org/W3104974011",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3117120142",
-        "https://openalex.org/W2133009022",
-        "https://openalex.org/W2573933330",
-        "https://openalex.org/W4288032208",
-        "https://openalex.org/W2299277274",
-        "https://openalex.org/W2156503193",
-        "https://openalex.org/W2275596573",
-        "https://openalex.org/W2548717229",
-        "https://openalex.org/W2963155035",
-        "https://openalex.org/W2396828657",
-        "https://openalex.org/W55356581",
-        "https://openalex.org/W2411161539",
-        "https://openalex.org/W2769012417",
-        "https://openalex.org/W2763560359",
-        "https://openalex.org/W2749525589",
-        "https://openalex.org/W2607750223",
-        "https://openalex.org/W3159564482",
-        "https://openalex.org/W2792747672",
-        "https://openalex.org/W3168391820",
-        "https://openalex.org/W1970723433",
-        "https://openalex.org/W2786879748",
-        "https://openalex.org/W2573228361",
-        "https://openalex.org/W4294170691",
-        "https://openalex.org/W2740882943",
-        "https://openalex.org/W2964051877",
-        "https://openalex.org/W2194775991"
-    ],
-    "abstract": "Human behavior understanding requires looking at minute details in the large context of a scene containing multiple input modalities. It is necessary as it allows the design of more human-like machines. While transformer approaches have shown great improvements, they face multiple challenges such as lack of data or background noise. To tackle these, we introduce the Forced Attention (FAt) Transformer which utilize forced attention with a modified backbone for input encoding and a use of additional inputs. In addition to improving the performance on different tasks and inputs, the modification requires less time and memory resources. We provide a model for a generalised feature extraction for tasks concerning social signals and behavior analysis. Our focus is on understanding behavior in videos where people are interacting with each other or talking into the camera which simulates the first person point of view in social interaction. FAt Transformers are applied to two downstream tasks: personality recognition and body language recognition. We achieve state-of-the-art results for Udiva v0.5, First Impressions v2 and MPII Group Interaction datasets. We further provide an extensive ablation study of the proposed architecture.",
-    "full_text": null
+  "title": "Multimodal Personality Recognition using Cross-attention Transformer and Behaviour Encoding",
+  "url": "https://openalex.org/W4213140783",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3106749175",
+      "name": "Tanay Agrawal",
+      "affiliations": [
+        "Research Centre Inria Sophia Antipolis - Méditerranée"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2349215905",
+      "name": "Dhruv Agarwal",
+      "affiliations": [
+        "Indian Institute of Information Technology Allahabad",
+        "Research Centre Inria Sophia Antipolis - Méditerranée"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A210872577",
+      "name": "Michal Balazia",
+      "affiliations": [
+        "Observatoire de la Côte d’Azur",
+        "Research Centre Inria Sophia Antipolis - Méditerranée",
+        "Université Côte d'Azur"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3206887733",
+      "name": "Neelabh Sinha",
+      "affiliations": [
+        "Birla Institute of Technology and Science, Pilani",
+        "Research Centre Inria Sophia Antipolis - Méditerranée"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A74895045",
+      "name": "François Bremond",
+      "affiliations": [
+        "Observatoire de la Côte d’Azur",
+        "Research Centre Inria Sophia Antipolis - Méditerranée",
+        "Université Côte d'Azur"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2526050071",
+    "https://openalex.org/W2395639500",
+    "https://openalex.org/W3104974011",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3117120142",
+    "https://openalex.org/W2133009022",
+    "https://openalex.org/W2573933330",
+    "https://openalex.org/W4288032208",
+    "https://openalex.org/W2299277274",
+    "https://openalex.org/W2156503193",
+    "https://openalex.org/W2275596573",
+    "https://openalex.org/W2548717229",
+    "https://openalex.org/W2963155035",
+    "https://openalex.org/W2396828657",
+    "https://openalex.org/W55356581",
+    "https://openalex.org/W2411161539",
+    "https://openalex.org/W2769012417",
+    "https://openalex.org/W2763560359",
+    "https://openalex.org/W2749525589",
+    "https://openalex.org/W2607750223",
+    "https://openalex.org/W3159564482",
+    "https://openalex.org/W2792747672",
+    "https://openalex.org/W3168391820",
+    "https://openalex.org/W1970723433",
+    "https://openalex.org/W2786879748",
+    "https://openalex.org/W2573228361",
+    "https://openalex.org/W4294170691",
+    "https://openalex.org/W2740882943",
+    "https://openalex.org/W2964051877",
+    "https://openalex.org/W2194775991"
+  ],
+  "abstract": "Human behavior understanding requires looking at minute details in the large context of a scene containing multiple input modalities. It is necessary as it allows the design of more human-like machines. While transformer approaches have shown great improvements, they face multiple challenges such as lack of data or background noise. To tackle these, we introduce the Forced Attention (FAt) Transformer which utilize forced attention with a modified backbone for input encoding and a use of additional inputs. In addition to improving the performance on different tasks and inputs, the modification requires less time and memory resources. We provide a model for a generalised feature extraction for tasks concerning social signals and behavior analysis. Our focus is on understanding behavior in videos where people are interacting with each other or talking into the camera which simulates the first person point of view in social interaction. FAt Transformers are applied to two downstream tasks: personality recognition and body language recognition. We achieve state-of-the-art results for Udiva v0.5, First Impressions v2 and MPII Group Interaction datasets. We further provide an extensive ablation study of the proposed architecture.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8188555240631104
+    },
+    {
+      "name": "Exploit",
+      "score": 0.7422314286231995
+    },
+    {
+      "name": "Modalities",
+      "score": 0.7268955707550049
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5939366221427917
+    },
+    {
+      "name": "Multimodal learning",
+      "score": 0.5177725553512573
+    },
+    {
+      "name": "Encoding (memory)",
+      "score": 0.49792981147766113
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.472525417804718
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4558199644088745
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.35984426736831665
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.34264370799064636
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.3271426558494568
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Social science",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,117 +1,192 @@
 {
-    "title": "McSTRA: A multi-branch cascaded swin transformer for point spread function-guided robust MRI reconstruction",
-    "url": "https://openalex.org/W4389298911",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5061049438",
-            "name": "M.M. Ekanayake",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5077684243",
-            "name": "Kamlesh Pawar",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5021790939",
-            "name": "Mehrtash Harandi",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5016614292",
-            "name": "Gary F. Egan",
-            "affiliations": [
-                "Monash University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5058282820",
-            "name": "Zhaolin Chen",
-            "affiliations": [
-                "Monash University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4313524971",
-        "https://openalex.org/W3001554227",
-        "https://openalex.org/W2111388536",
-        "https://openalex.org/W4249760698",
-        "https://openalex.org/W4233764193",
-        "https://openalex.org/W2055151182",
-        "https://openalex.org/W4318263840",
-        "https://openalex.org/W1758598986",
-        "https://openalex.org/W1983804050",
-        "https://openalex.org/W2145020729",
-        "https://openalex.org/W2766889782",
-        "https://openalex.org/W2504284342",
-        "https://openalex.org/W6704060969",
-        "https://openalex.org/W2604388535",
-        "https://openalex.org/W3155605146",
-        "https://openalex.org/W6718484680",
-        "https://openalex.org/W2611467245",
-        "https://openalex.org/W2753305843",
-        "https://openalex.org/W3193111421",
-        "https://openalex.org/W2994754138",
-        "https://openalex.org/W2778924750",
-        "https://openalex.org/W2773850766",
-        "https://openalex.org/W4321793531",
-        "https://openalex.org/W2594014149",
-        "https://openalex.org/W6729455701",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4226133625",
-        "https://openalex.org/W6701262150",
-        "https://openalex.org/W4223589960",
-        "https://openalex.org/W6796191393",
-        "https://openalex.org/W6793601431",
-        "https://openalex.org/W6795430332",
-        "https://openalex.org/W6808287055",
-        "https://openalex.org/W6764686046",
-        "https://openalex.org/W6767273182",
-        "https://openalex.org/W6769115995",
-        "https://openalex.org/W6766104525",
-        "https://openalex.org/W3108244925",
-        "https://openalex.org/W6839353788",
-        "https://openalex.org/W2914014776",
-        "https://openalex.org/W2511986404",
-        "https://openalex.org/W4200384694",
-        "https://openalex.org/W6799694328",
-        "https://openalex.org/W2963532393",
-        "https://openalex.org/W1959447026",
-        "https://openalex.org/W3039236647",
-        "https://openalex.org/W2070167142",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W2006939977",
-        "https://openalex.org/W6680595143",
-        "https://openalex.org/W6674914833",
-        "https://openalex.org/W3022291895",
-        "https://openalex.org/W7034877452",
-        "https://openalex.org/W2911290743",
-        "https://openalex.org/W4282976788",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4288089920",
-        "https://openalex.org/W2900756484",
-        "https://openalex.org/W3175178093",
-        "https://openalex.org/W3105403262",
-        "https://openalex.org/W3105636987",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W3014839492",
-        "https://openalex.org/W3156072047",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W3139049060",
-        "https://openalex.org/W3152750416",
-        "https://openalex.org/W3160284783",
-        "https://openalex.org/W3100730608"
-    ],
-    "abstract": "Deep learning MRI reconstruction methods are often based on Convolutional neural network (CNN) models; however, they are limited in capturing global correlations among image features due to the intrinsic locality of the convolution operation. Conversely, the recent vision transformer models (ViT) are capable of capturing global correlations by applying self-attention operations on image patches. Nevertheless, the existing transformer models for MRI reconstruction rarely leverage the physics of MRI. In this paper, we propose a novel physics-based transformer model titled, the Multi-branch Cascaded Swin Transformers (McSTRA) for robust MRI reconstruction. McSTRA combines several interconnected MRI physics-related concepts with the Swin transformers: it exploits global MRI features via the shifted window self-attention mechanism; it extracts MRI features belonging to different spectral components via a multi-branch setup; it iterates between intermediate de-aliasing and data consistency via a cascaded network with intermediate loss computations; furthermore, we propose a point spread function-guided positional embedding generation mechanism for the Swin transformers which exploit the spread of the aliasing artifacts for effective reconstruction. With the combination of all these components, McSTRA outperforms the state-of-the-art methods while demonstrating robustness in adversarial conditions such as higher accelerations, noisy data, different undersampling protocols, out-of-distribution data, and abnormalities in anatomy.",
-    "full_text": null
+  "title": "McSTRA: A multi-branch cascaded swin transformer for point spread function-guided robust MRI reconstruction",
+  "url": "https://openalex.org/W4389298911",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5061049438",
+      "name": "M.M. Ekanayake",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5077684243",
+      "name": "Kamlesh Pawar",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5021790939",
+      "name": "Mehrtash Harandi",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5016614292",
+      "name": "Gary F. Egan",
+      "affiliations": [
+        "Monash University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5058282820",
+      "name": "Zhaolin Chen",
+      "affiliations": [
+        "Monash University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4313524971",
+    "https://openalex.org/W3001554227",
+    "https://openalex.org/W2111388536",
+    "https://openalex.org/W4249760698",
+    "https://openalex.org/W4233764193",
+    "https://openalex.org/W2055151182",
+    "https://openalex.org/W4318263840",
+    "https://openalex.org/W1758598986",
+    "https://openalex.org/W1983804050",
+    "https://openalex.org/W2145020729",
+    "https://openalex.org/W2766889782",
+    "https://openalex.org/W2504284342",
+    "https://openalex.org/W6704060969",
+    "https://openalex.org/W2604388535",
+    "https://openalex.org/W3155605146",
+    "https://openalex.org/W6718484680",
+    "https://openalex.org/W2611467245",
+    "https://openalex.org/W2753305843",
+    "https://openalex.org/W3193111421",
+    "https://openalex.org/W2994754138",
+    "https://openalex.org/W2778924750",
+    "https://openalex.org/W2773850766",
+    "https://openalex.org/W4321793531",
+    "https://openalex.org/W2594014149",
+    "https://openalex.org/W6729455701",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4226133625",
+    "https://openalex.org/W6701262150",
+    "https://openalex.org/W4223589960",
+    "https://openalex.org/W6796191393",
+    "https://openalex.org/W6793601431",
+    "https://openalex.org/W6795430332",
+    "https://openalex.org/W6808287055",
+    "https://openalex.org/W6764686046",
+    "https://openalex.org/W6767273182",
+    "https://openalex.org/W6769115995",
+    "https://openalex.org/W6766104525",
+    "https://openalex.org/W3108244925",
+    "https://openalex.org/W6839353788",
+    "https://openalex.org/W2914014776",
+    "https://openalex.org/W2511986404",
+    "https://openalex.org/W4200384694",
+    "https://openalex.org/W6799694328",
+    "https://openalex.org/W2963532393",
+    "https://openalex.org/W1959447026",
+    "https://openalex.org/W3039236647",
+    "https://openalex.org/W2070167142",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W2006939977",
+    "https://openalex.org/W6680595143",
+    "https://openalex.org/W6674914833",
+    "https://openalex.org/W3022291895",
+    "https://openalex.org/W7034877452",
+    "https://openalex.org/W2911290743",
+    "https://openalex.org/W4282976788",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4288089920",
+    "https://openalex.org/W2900756484",
+    "https://openalex.org/W3175178093",
+    "https://openalex.org/W3105403262",
+    "https://openalex.org/W3105636987",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W3014839492",
+    "https://openalex.org/W3156072047",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W3139049060",
+    "https://openalex.org/W3152750416",
+    "https://openalex.org/W3160284783",
+    "https://openalex.org/W3100730608"
+  ],
+  "abstract": "Deep learning MRI reconstruction methods are often based on Convolutional neural network (CNN) models; however, they are limited in capturing global correlations among image features due to the intrinsic locality of the convolution operation. Conversely, the recent vision transformer models (ViT) are capable of capturing global correlations by applying self-attention operations on image patches. Nevertheless, the existing transformer models for MRI reconstruction rarely leverage the physics of MRI. In this paper, we propose a novel physics-based transformer model titled, the Multi-branch Cascaded Swin Transformers (McSTRA) for robust MRI reconstruction. McSTRA combines several interconnected MRI physics-related concepts with the Swin transformers: it exploits global MRI features via the shifted window self-attention mechanism; it extracts MRI features belonging to different spectral components via a multi-branch setup; it iterates between intermediate de-aliasing and data consistency via a cascaded network with intermediate loss computations; furthermore, we propose a point spread function-guided positional embedding generation mechanism for the Swin transformers which exploit the spread of the aliasing artifacts for effective reconstruction. With the combination of all these components, McSTRA outperforms the state-of-the-art methods while demonstrating robustness in adversarial conditions such as higher accelerations, noisy data, different undersampling protocols, out-of-distribution data, and abnormalities in anatomy.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6705315709114075
+    },
+    {
+      "name": "Undersampling",
+      "score": 0.6635620594024658
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5704026222229004
+    },
+    {
+      "name": "Transformer",
+      "score": 0.49976563453674316
+    },
+    {
+      "name": "Data consistency",
+      "score": 0.4914594888687134
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.4818233549594879
+    },
+    {
+      "name": "Computation",
+      "score": 0.4529711604118347
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.4469911456108093
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4209059476852417
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.3566263020038605
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3516699969768524
+    },
+    {
+      "name": "Physics",
+      "score": 0.09570929408073425
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

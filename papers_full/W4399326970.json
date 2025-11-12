@@ -1,55 +1,122 @@
 {
-    "title": "BioInstruct: instruction tuning of large language models for biomedical natural language processing",
-    "url": "https://openalex.org/W4399326970",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2120452325",
-            "name": "Hieu Tran",
-            "affiliations": [
-                "Amherst College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107222514",
-            "name": "Zhichao Yang",
-            "affiliations": [
-                "Amherst College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3005683294",
-            "name": "Zonghai Yao",
-            "affiliations": [
-                "Amherst College"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2111112795",
-            "name": "Hong Yu",
-            "affiliations": [
-                "Amherst College",
-                "University of Massachusetts Chan Medical School",
-                "Bedford VA Research Corporation",
-                "University of Massachusetts Lowell"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3160137267",
-        "https://openalex.org/W3198080531",
-        "https://openalex.org/W2768488789",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W3162922479",
-        "https://openalex.org/W1981208470",
-        "https://openalex.org/W2753709519",
-        "https://openalex.org/W2972483465",
-        "https://openalex.org/W3097991493",
-        "https://openalex.org/W4394782456",
-        "https://openalex.org/W4381930847",
-        "https://openalex.org/W4226278401",
-        "https://openalex.org/W2990138404"
-    ],
-    "abstract": "Abstract Objectives To enhance the performance of large language models (LLMs) in biomedical natural language processing (BioNLP) by introducing a domain-specific instruction dataset and examining its impact when combined with multi-task learning principles. Materials and Methods We created the BioInstruct, comprising 25 005 instructions to instruction-tune LLMs (LLaMA 1 and 2, 7B and 13B version). The instructions were created by prompting the GPT-4 language model with 3-seed samples randomly drawn from an 80 human curated instructions. We employed Low-Rank Adaptation (LoRA) for parameter-efficient fine-tuning. We then evaluated these instruction-tuned LLMs on several BioNLP tasks, which can be grouped into 3 major categories: question answering (QA), information extraction (IE), and text generation (GEN). We also examined whether categories (eg, QA, IE, and generation) of instructions impact model performance. Results and Discussion Comparing with LLMs without instruction-tuned, our instruction-tuned LLMs demonstrated marked performance gains: 17.3% in QA on average accuracy metric, 5.7% in IE on average F1 metric, and 96% in Generation tasks on average GPT-4 score metric. Our 7B-parameter instruction-tuned LLaMA 1 model was competitive or even surpassed other LLMs in the biomedical domain that were also fine-tuned from LLaMA 1 with vast domain-specific data or a variety of tasks. Our results also show that the performance gain is significantly higher when instruction fine-tuning is conducted with closely related tasks. Our findings align with the observations of multi-task learning, suggesting the synergies between 2 tasks. Conclusion The BioInstruct dataset serves as a valuable resource and instruction tuned LLMs lead to the best performing BioNLP applications.",
-    "full_text": null
+  "title": "BioInstruct: instruction tuning of large language models for biomedical natural language processing",
+  "url": "https://openalex.org/W4399326970",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2120452325",
+      "name": "Hieu Tran",
+      "affiliations": [
+        "Amherst College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107222514",
+      "name": "Zhichao Yang",
+      "affiliations": [
+        "Amherst College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3005683294",
+      "name": "Zonghai Yao",
+      "affiliations": [
+        "Amherst College"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2111112795",
+      "name": "Hong Yu",
+      "affiliations": [
+        "Amherst College",
+        "University of Massachusetts Chan Medical School",
+        "Bedford VA Research Corporation",
+        "University of Massachusetts Lowell"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3160137267",
+    "https://openalex.org/W3198080531",
+    "https://openalex.org/W2768488789",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W3162922479",
+    "https://openalex.org/W1981208470",
+    "https://openalex.org/W2753709519",
+    "https://openalex.org/W2972483465",
+    "https://openalex.org/W3097991493",
+    "https://openalex.org/W4394782456",
+    "https://openalex.org/W4381930847",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W2990138404"
+  ],
+  "abstract": "Abstract Objectives To enhance the performance of large language models (LLMs) in biomedical natural language processing (BioNLP) by introducing a domain-specific instruction dataset and examining its impact when combined with multi-task learning principles. Materials and Methods We created the BioInstruct, comprising 25 005 instructions to instruction-tune LLMs (LLaMA 1 and 2, 7B and 13B version). The instructions were created by prompting the GPT-4 language model with 3-seed samples randomly drawn from an 80 human curated instructions. We employed Low-Rank Adaptation (LoRA) for parameter-efficient fine-tuning. We then evaluated these instruction-tuned LLMs on several BioNLP tasks, which can be grouped into 3 major categories: question answering (QA), information extraction (IE), and text generation (GEN). We also examined whether categories (eg, QA, IE, and generation) of instructions impact model performance. Results and Discussion Comparing with LLMs without instruction-tuned, our instruction-tuned LLMs demonstrated marked performance gains: 17.3% in QA on average accuracy metric, 5.7% in IE on average F1 metric, and 96% in Generation tasks on average GPT-4 score metric. Our 7B-parameter instruction-tuned LLaMA 1 model was competitive or even surpassed other LLMs in the biomedical domain that were also fine-tuned from LLaMA 1 with vast domain-specific data or a variety of tasks. Our results also show that the performance gain is significantly higher when instruction fine-tuning is conducted with closely related tasks. Our findings align with the observations of multi-task learning, suggesting the synergies between 2 tasks. Conclusion The BioInstruct dataset serves as a valuable resource and instruction tuned LLMs lead to the best performing BioNLP applications.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8251625299453735
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.7550551891326904
+    },
+    {
+      "name": "Biomedical text mining",
+      "score": 0.6676532030105591
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.6426243782043457
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5473334193229675
+    },
+    {
+      "name": "Natural language",
+      "score": 0.49814510345458984
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4964204430580139
+    },
+    {
+      "name": "Natural (archaeology)",
+      "score": 0.43649888038635254
+    },
+    {
+      "name": "Language model",
+      "score": 0.4216504395008087
+    },
+    {
+      "name": "Text mining",
+      "score": 0.18294072151184082
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "History",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    }
+  ]
 }

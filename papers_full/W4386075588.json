@@ -1,116 +1,147 @@
 {
-    "title": "Content-aware Token Sharing for Efficient Semantic Segmentation with Vision Transformers",
-    "url": "https://openalex.org/W4386075588",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2099764636",
-            "name": "Chenyang Lu",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2890440398",
-            "name": "Daan de Geus",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2004008769",
-            "name": "Gijs Dubbelman",
-            "affiliations": [
-                "Eindhoven University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W4313007769",
-        "https://openalex.org/W6784094891",
-        "https://openalex.org/W4312726009",
-        "https://openalex.org/W4214588794",
-        "https://openalex.org/W6737324727",
-        "https://openalex.org/W6797784111",
-        "https://openalex.org/W2737258237",
-        "https://openalex.org/W2340897893",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W4312511177",
-        "https://openalex.org/W2999219213",
-        "https://openalex.org/W4312785900",
-        "https://openalex.org/W6754123467",
-        "https://openalex.org/W6753421600",
-        "https://openalex.org/W6802996638",
-        "https://openalex.org/W6803680838",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W3168649818",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3131500599",
-        "https://openalex.org/W6846053352",
-        "https://openalex.org/W4312849330",
-        "https://openalex.org/W6794345597",
-        "https://openalex.org/W6798837711",
-        "https://openalex.org/W6748481559",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W4312815172",
-        "https://openalex.org/W6838393215",
-        "https://openalex.org/W6788135285",
-        "https://openalex.org/W2395611524",
-        "https://openalex.org/W2963163009",
-        "https://openalex.org/W4214893857",
-        "https://openalex.org/W3175937066",
-        "https://openalex.org/W6796487566",
-        "https://openalex.org/W6811032435",
-        "https://openalex.org/W6803794721",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W6846577953",
-        "https://openalex.org/W6796761347",
-        "https://openalex.org/W4312340826",
-        "https://openalex.org/W6762718338",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4312290555",
-        "https://openalex.org/W6802648153",
-        "https://openalex.org/W4286982960",
-        "https://openalex.org/W4312349930",
-        "https://openalex.org/W6809995052",
-        "https://openalex.org/W6791479011",
-        "https://openalex.org/W2125215748",
-        "https://openalex.org/W6796494063",
-        "https://openalex.org/W3170863103",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W3030520226",
-        "https://openalex.org/W4280496682",
-        "https://openalex.org/W3211490618",
-        "https://openalex.org/W3211783547",
-        "https://openalex.org/W4306886919",
-        "https://openalex.org/W3213165621",
-        "https://openalex.org/W3177939959",
-        "https://openalex.org/W4226161578",
-        "https://openalex.org/W2955425717",
-        "https://openalex.org/W2964217532",
-        "https://openalex.org/W3213783001",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W4287116734",
-        "https://openalex.org/W4214520160",
-        "https://openalex.org/W3177248696",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W3214661002",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4287121196",
-        "https://openalex.org/W4286910290",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2886934227",
-        "https://openalex.org/W4221156361",
-        "https://openalex.org/W3168124404",
-        "https://openalex.org/W4306311936",
-        "https://openalex.org/W2884822772",
-        "https://openalex.org/W3157528469"
-    ],
-    "abstract": "This paper introduces Content-aware Token Sharing (CTS), a token reduction approach that improves the computational efficiency of semantic segmentation networks that use Vision Transformers (ViTs). Existing works have proposed token reduction approaches to improve the efficiency of ViT-based image classification networks, but these methods are not directly applicable to semantic segmentation, which we address in this work. We observe that, for semantic segmentation, multiple image patches can share a token if they contain the same semantic class, as they contain redundant information. Our approach leverages this by employing an efficient, class-agnostic policy network that predicts if image patches contain the same semantic class, and lets them share a token if they do. With experiments, we explore the critical design choices of CTS and show its effectiveness on the ADE20K, Pascal Context and Cityscapes datasets, various ViT backbones, and different segmentation decoders. With Content-aware Token Sharing, we are able to reduce the number of processed tokens by up to 44%, without diminishing the segmentation quality.",
-    "full_text": null
+  "title": "Content-aware Token Sharing for Efficient Semantic Segmentation with Vision Transformers",
+  "url": "https://openalex.org/W4386075588",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2099764636",
+      "name": "Chenyang Lu",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2890440398",
+      "name": "Daan de Geus",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2004008769",
+      "name": "Gijs Dubbelman",
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W4313007769",
+    "https://openalex.org/W6784094891",
+    "https://openalex.org/W4312726009",
+    "https://openalex.org/W4214588794",
+    "https://openalex.org/W6737324727",
+    "https://openalex.org/W6797784111",
+    "https://openalex.org/W2737258237",
+    "https://openalex.org/W2340897893",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W4312511177",
+    "https://openalex.org/W2999219213",
+    "https://openalex.org/W4312785900",
+    "https://openalex.org/W6754123467",
+    "https://openalex.org/W6753421600",
+    "https://openalex.org/W6802996638",
+    "https://openalex.org/W6803680838",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W3168649818",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3131500599",
+    "https://openalex.org/W6846053352",
+    "https://openalex.org/W4312849330",
+    "https://openalex.org/W6794345597",
+    "https://openalex.org/W6798837711",
+    "https://openalex.org/W6748481559",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W4312815172",
+    "https://openalex.org/W6838393215",
+    "https://openalex.org/W6788135285",
+    "https://openalex.org/W2395611524",
+    "https://openalex.org/W2963163009",
+    "https://openalex.org/W4214893857",
+    "https://openalex.org/W3175937066",
+    "https://openalex.org/W6796487566",
+    "https://openalex.org/W6811032435",
+    "https://openalex.org/W6803794721",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W6846577953",
+    "https://openalex.org/W6796761347",
+    "https://openalex.org/W4312340826",
+    "https://openalex.org/W6762718338",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4312290555",
+    "https://openalex.org/W6802648153",
+    "https://openalex.org/W4286982960",
+    "https://openalex.org/W4312349930",
+    "https://openalex.org/W6809995052",
+    "https://openalex.org/W6791479011",
+    "https://openalex.org/W2125215748",
+    "https://openalex.org/W6796494063",
+    "https://openalex.org/W3170863103",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W3030520226",
+    "https://openalex.org/W4280496682",
+    "https://openalex.org/W3211490618",
+    "https://openalex.org/W3211783547",
+    "https://openalex.org/W4306886919",
+    "https://openalex.org/W3213165621",
+    "https://openalex.org/W3177939959",
+    "https://openalex.org/W4226161578",
+    "https://openalex.org/W2955425717",
+    "https://openalex.org/W2964217532",
+    "https://openalex.org/W3213783001",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W4287116734",
+    "https://openalex.org/W4214520160",
+    "https://openalex.org/W3177248696",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W3214661002",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4287121196",
+    "https://openalex.org/W4286910290",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2886934227",
+    "https://openalex.org/W4221156361",
+    "https://openalex.org/W3168124404",
+    "https://openalex.org/W4306311936",
+    "https://openalex.org/W2884822772",
+    "https://openalex.org/W3157528469"
+  ],
+  "abstract": "This paper introduces Content-aware Token Sharing (CTS), a token reduction approach that improves the computational efficiency of semantic segmentation networks that use Vision Transformers (ViTs). Existing works have proposed token reduction approaches to improve the efficiency of ViT-based image classification networks, but these methods are not directly applicable to semantic segmentation, which we address in this work. We observe that, for semantic segmentation, multiple image patches can share a token if they contain the same semantic class, as they contain redundant information. Our approach leverages this by employing an efficient, class-agnostic policy network that predicts if image patches contain the same semantic class, and lets them share a token if they do. With experiments, we explore the critical design choices of CTS and show its effectiveness on the ADE20K, Pascal Context and Cityscapes datasets, various ViT backbones, and different segmentation decoders. With Content-aware Token Sharing, we are able to reduce the number of processed tokens by up to 44%, without diminishing the segmentation quality.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8462134599685669
+    },
+    {
+      "name": "Security token",
+      "score": 0.8251832723617554
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6942943334579468
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4821195602416992
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.4396900236606598
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3517330288887024
+    },
+    {
+      "name": "Computer network",
+      "score": 0.20829558372497559
+    }
+  ]
 }

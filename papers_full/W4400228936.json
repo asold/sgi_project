@@ -1,60 +1,115 @@
 {
-    "title": "An Automatic Sentiment Analysis Method for Short Texts Based on Transformer-BERT Hybrid Model",
-    "url": "https://openalex.org/W4400228936",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5042475126",
-            "name": "Haiyan Xiao",
-            "affiliations": [
-                "Hunan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101390673",
-            "name": "Linghua Luo",
-            "affiliations": [
-                "Hunan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4386385376",
-        "https://openalex.org/W4376608362",
-        "https://openalex.org/W3160810656",
-        "https://openalex.org/W4328031341",
-        "https://openalex.org/W4360858880",
-        "https://openalex.org/W4385978214",
-        "https://openalex.org/W4382680318",
-        "https://openalex.org/W4290715849",
-        "https://openalex.org/W4290612969",
-        "https://openalex.org/W4321792464",
-        "https://openalex.org/W4293528099",
-        "https://openalex.org/W4389396140",
-        "https://openalex.org/W4285094661",
-        "https://openalex.org/W4386776466",
-        "https://openalex.org/W4285142610",
-        "https://openalex.org/W4206073662",
-        "https://openalex.org/W4226112897",
-        "https://openalex.org/W4389495232",
-        "https://openalex.org/W4387975511",
-        "https://openalex.org/W6997126547",
-        "https://openalex.org/W4288685128",
-        "https://openalex.org/W4365145027",
-        "https://openalex.org/W3159523993",
-        "https://openalex.org/W4213441134",
-        "https://openalex.org/W4390423590",
-        "https://openalex.org/W3139172628",
-        "https://openalex.org/W4365420992",
-        "https://openalex.org/W4327640446",
-        "https://openalex.org/W4312822299",
-        "https://openalex.org/W4386038360",
-        "https://openalex.org/W4380887029",
-        "https://openalex.org/W4286282840",
-        "https://openalex.org/W4394773629",
-        "https://openalex.org/W4311306009",
-        "https://openalex.org/W4367049895"
-    ],
-    "abstract": "Sentiment analysis towards short texts is always facing challenges, because short texts only contain limited semantic characteristics. As a result, this paper constructs a specific large language structure to deal with this issue. In all, a novel automatic sentiment analysis method for short texts based on Transformer-BERT hybrid model is proposed by this paper. Firstly, BERT structure is utilized to extract word vectors, and is integrated with topic vectors to improve textual feature expression ability. Then, the fused word vectors are input into a Bidirectional Gated Recurrent Unit (Bi-GRU) structure to learn contextual features. In this part, a Transformer structure is applied behind the Bi-GRU and combined with the previous module to output sentiment analysis results. In addition, Accuracy, Precision, Recall and F1 indexes were collected from real-world Twitter datasets and shopping data to evaluate the performance of the proposed method. The experimental results show that the method performs well in many indexes. Compared with traditional method, it has achieved remarkable performance improvement, and this method achieves higher accuracy and efficiency in sentiment analysis of short texts, and has good generalization ability.",
-    "full_text": null
+  "title": "An Automatic Sentiment Analysis Method for Short Texts Based on Transformer-BERT Hybrid Model",
+  "url": "https://openalex.org/W4400228936",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5042475126",
+      "name": "Haiyan Xiao",
+      "affiliations": [
+        "Hunan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101390673",
+      "name": "Linghua Luo",
+      "affiliations": [
+        "Hunan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4386385376",
+    "https://openalex.org/W4376608362",
+    "https://openalex.org/W3160810656",
+    "https://openalex.org/W4328031341",
+    "https://openalex.org/W4360858880",
+    "https://openalex.org/W4385978214",
+    "https://openalex.org/W4382680318",
+    "https://openalex.org/W4290715849",
+    "https://openalex.org/W4290612969",
+    "https://openalex.org/W4321792464",
+    "https://openalex.org/W4293528099",
+    "https://openalex.org/W4389396140",
+    "https://openalex.org/W4285094661",
+    "https://openalex.org/W4386776466",
+    "https://openalex.org/W4285142610",
+    "https://openalex.org/W4206073662",
+    "https://openalex.org/W4226112897",
+    "https://openalex.org/W4389495232",
+    "https://openalex.org/W4387975511",
+    "https://openalex.org/W6997126547",
+    "https://openalex.org/W4288685128",
+    "https://openalex.org/W4365145027",
+    "https://openalex.org/W3159523993",
+    "https://openalex.org/W4213441134",
+    "https://openalex.org/W4390423590",
+    "https://openalex.org/W3139172628",
+    "https://openalex.org/W4365420992",
+    "https://openalex.org/W4327640446",
+    "https://openalex.org/W4312822299",
+    "https://openalex.org/W4386038360",
+    "https://openalex.org/W4380887029",
+    "https://openalex.org/W4286282840",
+    "https://openalex.org/W4394773629",
+    "https://openalex.org/W4311306009",
+    "https://openalex.org/W4367049895"
+  ],
+  "abstract": "Sentiment analysis towards short texts is always facing challenges, because short texts only contain limited semantic characteristics. As a result, this paper constructs a specific large language structure to deal with this issue. In all, a novel automatic sentiment analysis method for short texts based on Transformer-BERT hybrid model is proposed by this paper. Firstly, BERT structure is utilized to extract word vectors, and is integrated with topic vectors to improve textual feature expression ability. Then, the fused word vectors are input into a Bidirectional Gated Recurrent Unit (Bi-GRU) structure to learn contextual features. In this part, a Transformer structure is applied behind the Bi-GRU and combined with the previous module to output sentiment analysis results. In addition, Accuracy, Precision, Recall and F1 indexes were collected from real-world Twitter datasets and shopping data to evaluate the performance of the proposed method. The experimental results show that the method performs well in many indexes. Compared with traditional method, it has achieved remarkable performance improvement, and this method achieves higher accuracy and efficiency in sentiment analysis of short texts, and has good generalization ability.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8539477586746216
+    },
+    {
+      "name": "Sentiment analysis",
+      "score": 0.7481920719146729
+    },
+    {
+      "name": "Transformer",
+      "score": 0.710513174533844
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5993307828903198
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.48239386081695557
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.4651658833026886
+    },
+    {
+      "name": "Precision and recall",
+      "score": 0.45936813950538635
+    },
+    {
+      "name": "Language model",
+      "score": 0.4357922673225403
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0765916109085083
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

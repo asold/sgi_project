@@ -1,113 +1,172 @@
 {
-    "title": "CTFuseNet: A Multi-Scale CNN-Transformer Feature Fused Network for Crop Type Segmentation on UAV Remote Sensing Imagery",
-    "url": "https://openalex.org/W4321373639",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5017391636",
-            "name": "Jianjian Xiang",
-            "affiliations": [
-                "China University of Geosciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100409763",
-            "name": "Jia Liu",
-            "affiliations": [
-                "China University of Geosciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5111300870",
-            "name": "Chen Du",
-            "affiliations": [
-                "China University of Geosciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101418633",
-            "name": "Qi Xiong",
-            "affiliations": [
-                "China University of Geosciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5075849219",
-            "name": "Chongjiu Deng",
-            "affiliations": [
-                "China University of Geosciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4244713694",
-        "https://openalex.org/W2038782607",
-        "https://openalex.org/W3209915885",
-        "https://openalex.org/W2947467370",
-        "https://openalex.org/W6803483288",
-        "https://openalex.org/W2951898785",
-        "https://openalex.org/W3007597990",
-        "https://openalex.org/W2953757725",
-        "https://openalex.org/W2900323551",
-        "https://openalex.org/W2894214161",
-        "https://openalex.org/W2998998031",
-        "https://openalex.org/W6804773651",
-        "https://openalex.org/W1903029394",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W3013810479",
-        "https://openalex.org/W3120513023",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W2752782242",
-        "https://openalex.org/W2964231884",
-        "https://openalex.org/W6797399245",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4313032421",
-        "https://openalex.org/W3176945377",
-        "https://openalex.org/W4224269597",
-        "https://openalex.org/W4312950730",
-        "https://openalex.org/W3006025044",
-        "https://openalex.org/W4213200979",
-        "https://openalex.org/W4210798363",
-        "https://openalex.org/W6839523444",
-        "https://openalex.org/W4283653444",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2964309882",
-        "https://openalex.org/W2884822772",
-        "https://openalex.org/W6687483927",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2910628332",
-        "https://openalex.org/W2340897893",
-        "https://openalex.org/W2737258237",
-        "https://openalex.org/W2955058313",
-        "https://openalex.org/W3114830334",
-        "https://openalex.org/W3049655825",
-        "https://openalex.org/W3096412484",
-        "https://openalex.org/W3047601730",
-        "https://openalex.org/W4200322799",
-        "https://openalex.org/W2616247523",
-        "https://openalex.org/W6796931752",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3160694286",
-        "https://openalex.org/W2084413241",
-        "https://openalex.org/W2168481151",
-        "https://openalex.org/W3073623721",
-        "https://openalex.org/W3206694203",
-        "https://openalex.org/W2991488782",
-        "https://openalex.org/W3115319128",
-        "https://openalex.org/W4210788561",
-        "https://openalex.org/W3017303867",
-        "https://openalex.org/W3004591935",
-        "https://openalex.org/W3150573203",
-        "https://openalex.org/W3213734590",
-        "https://openalex.org/W3102564565",
-        "https://openalex.org/W3212334227",
-        "https://openalex.org/W3171087525",
-        "https://openalex.org/W4285212662",
-        "https://openalex.org/W3211490618"
-    ],
-    "abstract": "Timely and accurate acquisition of crop type information is significant for irrigation scheduling, yield estimation, harvesting arrangement, etc. The unmanned aerial vehicle (UAV) has emerged as an effective way to obtain high resolution remote sensing images for crop type mapping. Convolutional neural network (CNN)-based methods have been widely used to predict crop types according to UAV remote sensing imagery, which has excellent local feature extraction capabilities. However, its receptive field limits the capture of global contextual information. To solve this issue, this study introduced the self-attention-based transformer that obtained long-term feature dependencies of remote sensing imagery as supplementary to local details for accurate crop-type segmentation in UAV remote sensing imagery and proposed an end-to-end CNN–transformer feature-fused network (CTFuseNet). The proposed CTFuseNet first provided a parallel structure of CNN and transformer branches in the encoder to extract both local and global semantic features from the imagery. A new feature-fusion module was designed to flexibly aggregate the multi-scale global and local features from the two branches. Finally, the FPNHead of feature pyramid network served as the decoder for the improved adaptation to the multi-scale fused features and output the crop-type segmentation results. Our comprehensive experiments indicated that the proposed CTFuseNet achieved a higher crop-type-segmentation accuracy, with a mean intersection over union of 85.33% and a pixel accuracy of 92.46% on the benchmark remote sensing dataset and outperformed the state-of-the-art networks, including U-Net, PSPNet, DeepLabV3+, DANet, OCRNet, SETR, and SegFormer. Therefore, the proposed CTFuseNet was beneficial for crop-type segmentation, revealing the advantage of fusing the features found by the CNN and the transformer. Further work is needed to promote accuracy and efficiency of this approach, as well as to assess the model transferability.",
-    "full_text": null
+  "title": "CTFuseNet: A Multi-Scale CNN-Transformer Feature Fused Network for Crop Type Segmentation on UAV Remote Sensing Imagery",
+  "url": "https://openalex.org/W4321373639",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5017391636",
+      "name": "Jianjian Xiang",
+      "affiliations": [
+        "China University of Geosciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100409763",
+      "name": "Jia Liu",
+      "affiliations": [
+        "China University of Geosciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5111300870",
+      "name": "Chen Du",
+      "affiliations": [
+        "China University of Geosciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101418633",
+      "name": "Qi Xiong",
+      "affiliations": [
+        "China University of Geosciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5075849219",
+      "name": "Chongjiu Deng",
+      "affiliations": [
+        "China University of Geosciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4244713694",
+    "https://openalex.org/W2038782607",
+    "https://openalex.org/W3209915885",
+    "https://openalex.org/W2947467370",
+    "https://openalex.org/W6803483288",
+    "https://openalex.org/W2951898785",
+    "https://openalex.org/W3007597990",
+    "https://openalex.org/W2953757725",
+    "https://openalex.org/W2900323551",
+    "https://openalex.org/W2894214161",
+    "https://openalex.org/W2998998031",
+    "https://openalex.org/W6804773651",
+    "https://openalex.org/W1903029394",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W3013810479",
+    "https://openalex.org/W3120513023",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W2752782242",
+    "https://openalex.org/W2964231884",
+    "https://openalex.org/W6797399245",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4313032421",
+    "https://openalex.org/W3176945377",
+    "https://openalex.org/W4224269597",
+    "https://openalex.org/W4312950730",
+    "https://openalex.org/W3006025044",
+    "https://openalex.org/W4213200979",
+    "https://openalex.org/W4210798363",
+    "https://openalex.org/W6839523444",
+    "https://openalex.org/W4283653444",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2964309882",
+    "https://openalex.org/W2884822772",
+    "https://openalex.org/W6687483927",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2910628332",
+    "https://openalex.org/W2340897893",
+    "https://openalex.org/W2737258237",
+    "https://openalex.org/W2955058313",
+    "https://openalex.org/W3114830334",
+    "https://openalex.org/W3049655825",
+    "https://openalex.org/W3096412484",
+    "https://openalex.org/W3047601730",
+    "https://openalex.org/W4200322799",
+    "https://openalex.org/W2616247523",
+    "https://openalex.org/W6796931752",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3160694286",
+    "https://openalex.org/W2084413241",
+    "https://openalex.org/W2168481151",
+    "https://openalex.org/W3073623721",
+    "https://openalex.org/W3206694203",
+    "https://openalex.org/W2991488782",
+    "https://openalex.org/W3115319128",
+    "https://openalex.org/W4210788561",
+    "https://openalex.org/W3017303867",
+    "https://openalex.org/W3004591935",
+    "https://openalex.org/W3150573203",
+    "https://openalex.org/W3213734590",
+    "https://openalex.org/W3102564565",
+    "https://openalex.org/W3212334227",
+    "https://openalex.org/W3171087525",
+    "https://openalex.org/W4285212662",
+    "https://openalex.org/W3211490618"
+  ],
+  "abstract": "Timely and accurate acquisition of crop type information is significant for irrigation scheduling, yield estimation, harvesting arrangement, etc. The unmanned aerial vehicle (UAV) has emerged as an effective way to obtain high resolution remote sensing images for crop type mapping. Convolutional neural network (CNN)-based methods have been widely used to predict crop types according to UAV remote sensing imagery, which has excellent local feature extraction capabilities. However, its receptive field limits the capture of global contextual information. To solve this issue, this study introduced the self-attention-based transformer that obtained long-term feature dependencies of remote sensing imagery as supplementary to local details for accurate crop-type segmentation in UAV remote sensing imagery and proposed an end-to-end CNN–transformer feature-fused network (CTFuseNet). The proposed CTFuseNet first provided a parallel structure of CNN and transformer branches in the encoder to extract both local and global semantic features from the imagery. A new feature-fusion module was designed to flexibly aggregate the multi-scale global and local features from the two branches. Finally, the FPNHead of feature pyramid network served as the decoder for the improved adaptation to the multi-scale fused features and output the crop-type segmentation results. Our comprehensive experiments indicated that the proposed CTFuseNet achieved a higher crop-type-segmentation accuracy, with a mean intersection over union of 85.33% and a pixel accuracy of 92.46% on the benchmark remote sensing dataset and outperformed the state-of-the-art networks, including U-Net, PSPNet, DeepLabV3+, DANet, OCRNet, SETR, and SegFormer. Therefore, the proposed CTFuseNet was beneficial for crop-type segmentation, revealing the advantage of fusing the features found by the CNN and the transformer. Further work is needed to promote accuracy and efficiency of this approach, as well as to assess the model transferability.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7893329858779907
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6295068264007568
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5333148837089539
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.4712771773338318
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.471157431602478
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4587981104850769
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4369988441467285
+    },
+    {
+      "name": "Encoder",
+      "score": 0.43029627203941345
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.42976775765419006
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4213878810405731
+    },
+    {
+      "name": "Geography",
+      "score": 0.08031293749809265
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

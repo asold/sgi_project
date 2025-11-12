@@ -1,76 +1,139 @@
 {
-    "title": "PL-DINO: An Improved Transformer-Based Method for Plant Leaf Disease Detection",
-    "url": "https://openalex.org/W4396599504",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1963853028",
-            "name": "Wei Li",
-            "affiliations": [
-                "Southeast University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2326390707",
-            "name": "Lizhou Zhu",
-            "affiliations": [
-                "Southeast University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097653880",
-            "name": "Jun Liu",
-            "affiliations": [
-                "Jiangsu Academy of Agricultural Sciences"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2585846469",
-        "https://openalex.org/W3200837324",
-        "https://openalex.org/W3095722810",
-        "https://openalex.org/W4386779901",
-        "https://openalex.org/W4362638856",
-        "https://openalex.org/W4323318616",
-        "https://openalex.org/W4378082753",
-        "https://openalex.org/W3202844853",
-        "https://openalex.org/W639708223",
-        "https://openalex.org/W2964241181",
-        "https://openalex.org/W3210586215",
-        "https://openalex.org/W4286492040",
-        "https://openalex.org/W2944599236",
-        "https://openalex.org/W3035016091",
-        "https://openalex.org/W4296218720",
-        "https://openalex.org/W4212965978",
-        "https://openalex.org/W4313389338",
-        "https://openalex.org/W3135589907",
-        "https://openalex.org/W4309731542",
-        "https://openalex.org/W2975915077",
-        "https://openalex.org/W4286250615",
-        "https://openalex.org/W4282588160",
-        "https://openalex.org/W6857265405",
-        "https://openalex.org/W4205458670",
-        "https://openalex.org/W4366352743",
-        "https://openalex.org/W2981188200",
-        "https://openalex.org/W3034601242",
-        "https://openalex.org/W2963351448",
-        "https://openalex.org/W4312577413",
-        "https://openalex.org/W2963691377",
-        "https://openalex.org/W2952120674",
-        "https://openalex.org/W2989646980",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3092462694",
-        "https://openalex.org/W2884585870",
-        "https://openalex.org/W3035552357",
-        "https://openalex.org/W2752782242",
-        "https://openalex.org/W4386076325",
-        "https://openalex.org/W3034552520",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3016719260",
-        "https://openalex.org/W3106505022",
-        "https://openalex.org/W4387410129"
-    ],
-    "abstract": "Agriculture is important for ecology. The early detection and treatment of agricultural crop diseases are meaningful and challenging tasks in agriculture. Currently, the identification of plant diseases relies on manual detection, which has the disadvantages of long operation time and low efficiency, ultimately impacting the crop yield and quality. To overcome these disadvantages, we propose a new object detection method named “Plant Leaf Detection transformer with Improved deNoising anchOr boxes (PL-DINO)”. This method incorporates a Convolutional Block Attention Module (CBAM) into the ResNet50 backbone network. With the assistance of the CBAM block, the representative features can be effectively extracted from leaf images. Next, an EQualization Loss (EQL) is employed to address the problem of class imbalance in the relevant datasets. The proposed PL-DINO is evaluated using the publicly available PlantDoc dataset. Experimental results demonstrate the superiority of PL-DINO over the related advanced approaches. Specifically, PL-DINO achieves a mean average precision of 70.3%, surpassing conventional object detection algorithms such as Faster R-CNN and YOLOv7 for leaf disease detection in natural environments. In brief, PL-DINO offers a practical technology for smart agriculture and ecological monitoring.",
-    "full_text": null
+  "title": "PL-DINO: An Improved Transformer-Based Method for Plant Leaf Disease Detection",
+  "url": "https://openalex.org/W4396599504",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1963853028",
+      "name": "Wei Li",
+      "affiliations": [
+        "Southeast University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2326390707",
+      "name": "Lizhou Zhu",
+      "affiliations": [
+        "Southeast University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097653880",
+      "name": "Jun Liu",
+      "affiliations": [
+        "Jiangsu Academy of Agricultural Sciences"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2585846469",
+    "https://openalex.org/W3200837324",
+    "https://openalex.org/W3095722810",
+    "https://openalex.org/W4386779901",
+    "https://openalex.org/W4362638856",
+    "https://openalex.org/W4323318616",
+    "https://openalex.org/W4378082753",
+    "https://openalex.org/W3202844853",
+    "https://openalex.org/W639708223",
+    "https://openalex.org/W2964241181",
+    "https://openalex.org/W3210586215",
+    "https://openalex.org/W4286492040",
+    "https://openalex.org/W2944599236",
+    "https://openalex.org/W3035016091",
+    "https://openalex.org/W4296218720",
+    "https://openalex.org/W4212965978",
+    "https://openalex.org/W4313389338",
+    "https://openalex.org/W3135589907",
+    "https://openalex.org/W4309731542",
+    "https://openalex.org/W2975915077",
+    "https://openalex.org/W4286250615",
+    "https://openalex.org/W4282588160",
+    "https://openalex.org/W6857265405",
+    "https://openalex.org/W4205458670",
+    "https://openalex.org/W4366352743",
+    "https://openalex.org/W2981188200",
+    "https://openalex.org/W3034601242",
+    "https://openalex.org/W2963351448",
+    "https://openalex.org/W4312577413",
+    "https://openalex.org/W2963691377",
+    "https://openalex.org/W2952120674",
+    "https://openalex.org/W2989646980",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3092462694",
+    "https://openalex.org/W2884585870",
+    "https://openalex.org/W3035552357",
+    "https://openalex.org/W2752782242",
+    "https://openalex.org/W4386076325",
+    "https://openalex.org/W3034552520",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3016719260",
+    "https://openalex.org/W3106505022",
+    "https://openalex.org/W4387410129"
+  ],
+  "abstract": "Agriculture is important for ecology. The early detection and treatment of agricultural crop diseases are meaningful and challenging tasks in agriculture. Currently, the identification of plant diseases relies on manual detection, which has the disadvantages of long operation time and low efficiency, ultimately impacting the crop yield and quality. To overcome these disadvantages, we propose a new object detection method named “Plant Leaf Detection transformer with Improved deNoising anchOr boxes (PL-DINO)”. This method incorporates a Convolutional Block Attention Module (CBAM) into the ResNet50 backbone network. With the assistance of the CBAM block, the representative features can be effectively extracted from leaf images. Next, an EQualization Loss (EQL) is employed to address the problem of class imbalance in the relevant datasets. The proposed PL-DINO is evaluated using the publicly available PlantDoc dataset. Experimental results demonstrate the superiority of PL-DINO over the related advanced approaches. Specifically, PL-DINO achieves a mean average precision of 70.3%, surpassing conventional object detection algorithms such as Faster R-CNN and YOLOv7 for leaf disease detection in natural environments. In brief, PL-DINO offers a practical technology for smart agriculture and ecological monitoring.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.5846683979034424
+    },
+    {
+      "name": "Block (permutation group theory)",
+      "score": 0.48117098212242126
+    },
+    {
+      "name": "Agriculture",
+      "score": 0.47943419218063354
+    },
+    {
+      "name": "Object detection",
+      "score": 0.4567798376083374
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4448549151420593
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4303179979324341
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3807166814804077
+    },
+    {
+      "name": "Agricultural engineering",
+      "score": 0.32218560576438904
+    },
+    {
+      "name": "Biology",
+      "score": 0.21764931082725525
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.20656919479370117
+    },
+    {
+      "name": "Ecology",
+      "score": 0.1680111289024353
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1339883804321289
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08106133341789246
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

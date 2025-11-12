@@ -1,72 +1,135 @@
 {
-    "title": "A transformer-based framework for automatic COVID19 diagnosis in chest CTs",
-    "url": "https://openalex.org/W3211135382",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2082114532",
-            "name": "Lei Zhang",
-            "affiliations": [
-                "University of Lincoln"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122491824",
-            "name": "Yan Wen",
-            "affiliations": [
-                "University of Lincoln"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2082114532",
-            "name": "Lei Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2122491824",
-            "name": "Yan Wen",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3054666633",
-        "https://openalex.org/W3097217077",
-        "https://openalex.org/W3208040116",
-        "https://openalex.org/W6782312386",
-        "https://openalex.org/W2769215776",
-        "https://openalex.org/W6794368435",
-        "https://openalex.org/W3011149445",
-        "https://openalex.org/W2885263082",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W6757817989",
-        "https://openalex.org/W3002539152",
-        "https://openalex.org/W3145185940",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W3016010853",
-        "https://openalex.org/W3008985036",
-        "https://openalex.org/W6796413496",
-        "https://openalex.org/W6787269822",
-        "https://openalex.org/W3007497549",
-        "https://openalex.org/W3006643024",
-        "https://openalex.org/W6795115069",
-        "https://openalex.org/W6795276571",
-        "https://openalex.org/W6793164127",
-        "https://openalex.org/W3028070348",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3086650124",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W3145444543",
-        "https://openalex.org/W3103199493",
-        "https://openalex.org/W3154692872",
-        "https://openalex.org/W3164472293",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3161930193",
-        "https://openalex.org/W3114166611",
-        "https://openalex.org/W3161120562",
-        "https://openalex.org/W2963403868"
-    ],
-    "abstract": "&lt;p&gt;Automated diagnosis of covid19 in chest CTs is becoming a clinically important technique to support precision and efficient diagnosis and treatment planning. A few efforts have been made to automatically diagnose the COVID-19 in CTs using CNNs, and the task still remains a challenge. In this paper, we present a transformer-based framework for COVID19 classification. We attempt to expand the adaption of vision transformer as a robust feature learner to the 3D CTs to diagnose the COVID-19. The framework consists of two main stages: lung segmentation using UNet followed by the classification, in which the features extracted from each CT slice using Swin transformer in a CT scan are aggregated into 3D volume level feature. We also investigated the performance of using the robust CNNs (BiT and EfficientNetV2) as backbones in the framework. The dataset from the ICCV workshop: MIA-COV19D, is used in our experiments. The evaluation results show that the method with the backbone of Swin transformer gain the best F1 score of 0.935 on the validation dataset, while the CNN based backbone of EfficientNetV2 has the competitive classification performance with the best precision of 93.7%. The final prediction model with Swin transformer achieves the F1 score of 0.84 on the test dataset, which doesn't require an additional post-processing stage.&lt;/p&gt;",
-    "full_text": null
+  "title": "A transformer-based framework for automatic COVID19 diagnosis in chest CTs",
+  "url": "https://openalex.org/W3211135382",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2082114532",
+      "name": "Lei Zhang",
+      "affiliations": [
+        "University of Lincoln"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122491824",
+      "name": "Yan Wen",
+      "affiliations": [
+        "University of Lincoln"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2082114532",
+      "name": "Lei Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2122491824",
+      "name": "Yan Wen",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3054666633",
+    "https://openalex.org/W3097217077",
+    "https://openalex.org/W3208040116",
+    "https://openalex.org/W6782312386",
+    "https://openalex.org/W2769215776",
+    "https://openalex.org/W6794368435",
+    "https://openalex.org/W3011149445",
+    "https://openalex.org/W2885263082",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W6757817989",
+    "https://openalex.org/W3002539152",
+    "https://openalex.org/W3145185940",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W3016010853",
+    "https://openalex.org/W3008985036",
+    "https://openalex.org/W6796413496",
+    "https://openalex.org/W6787269822",
+    "https://openalex.org/W3007497549",
+    "https://openalex.org/W3006643024",
+    "https://openalex.org/W6795115069",
+    "https://openalex.org/W6795276571",
+    "https://openalex.org/W6793164127",
+    "https://openalex.org/W3028070348",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3086650124",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W3145444543",
+    "https://openalex.org/W3103199493",
+    "https://openalex.org/W3154692872",
+    "https://openalex.org/W3164472293",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3161930193",
+    "https://openalex.org/W3114166611",
+    "https://openalex.org/W3161120562",
+    "https://openalex.org/W2963403868"
+  ],
+  "abstract": "&lt;p&gt;Automated diagnosis of covid19 in chest CTs is becoming a clinically important technique to support precision and efficient diagnosis and treatment planning. A few efforts have been made to automatically diagnose the COVID-19 in CTs using CNNs, and the task still remains a challenge. In this paper, we present a transformer-based framework for COVID19 classification. We attempt to expand the adaption of vision transformer as a robust feature learner to the 3D CTs to diagnose the COVID-19. The framework consists of two main stages: lung segmentation using UNet followed by the classification, in which the features extracted from each CT slice using Swin transformer in a CT scan are aggregated into 3D volume level feature. We also investigated the performance of using the robust CNNs (BiT and EfficientNetV2) as backbones in the framework. The dataset from the ICCV workshop: MIA-COV19D, is used in our experiments. The evaluation results show that the method with the backbone of Swin transformer gain the best F1 score of 0.935 on the validation dataset, while the CNN based backbone of EfficientNetV2 has the competitive classification performance with the best precision of 93.7%. The final prediction model with Swin transformer achieves the F1 score of 0.84 on the test dataset, which doesn't require an additional post-processing stage.&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.6838062405586243
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6731806993484497
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5945974588394165
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.5137858986854553
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.5065101385116577
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4652702808380127
+    },
+    {
+      "name": "Coronavirus disease 2019 (COVID-19)",
+      "score": 0.44439923763275146
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3472539186477661
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14843767881393433
+    },
+    {
+      "name": "Medicine",
+      "score": 0.13118773698806763
+    },
+    {
+      "name": "Voltage",
+      "score": 0.12679222226142883
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Disease",
+      "score": 0.0
+    },
+    {
+      "name": "Infectious disease (medical specialty)",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

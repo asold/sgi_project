@@ -1,66 +1,137 @@
 {
-    "title": "Generation of Dual-Target Compounds Using a Transformer Chemical Language Model",
-    "url": "https://openalex.org/W4401027501",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2509170035",
-            "name": "Sanjana Srinivasan",
-            "affiliations": [
-                "University of Bonn"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A192274276",
-            "name": "Jürgen Bajorath",
-            "affiliations": [
-                "University of Bonn"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2160592148",
-        "https://openalex.org/W4309506674",
-        "https://openalex.org/W3042289107",
-        "https://openalex.org/W4401027501",
-        "https://openalex.org/W4384820718",
-        "https://openalex.org/W2937307539",
-        "https://openalex.org/W4293713156",
-        "https://openalex.org/W3186149425",
-        "https://openalex.org/W4312810284",
-        "https://openalex.org/W2463036497",
-        "https://openalex.org/W4318981550",
-        "https://openalex.org/W3201230437",
-        "https://openalex.org/W3208103455",
-        "https://openalex.org/W2156779720",
-        "https://openalex.org/W1530167222",
-        "https://openalex.org/W3087418839",
-        "https://openalex.org/W1981433258",
-        "https://openalex.org/W3094640617",
-        "https://openalex.org/W2402506318",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W1984673823",
-        "https://openalex.org/W1964421503",
-        "https://openalex.org/W2936578763",
-        "https://openalex.org/W2104337806",
-        "https://openalex.org/W4318952054",
-        "https://openalex.org/W4282964820",
-        "https://openalex.org/W3158615084",
-        "https://openalex.org/W3028460107",
-        "https://openalex.org/W2151697120",
-        "https://openalex.org/W3165571652",
-        "https://openalex.org/W1999318478",
-        "https://openalex.org/W3012012790",
-        "https://openalex.org/W2884740260",
-        "https://openalex.org/W2101234009",
-        "https://openalex.org/W1988037271",
-        "https://openalex.org/W4318930739",
-        "https://openalex.org/W1965555277",
-        "https://openalex.org/W2989456286",
-        "https://openalex.org/W2043509228",
-        "https://openalex.org/W3114271647",
-        "https://openalex.org/W2069126953"
-    ],
-    "abstract": "Compounds with defined multi-target activity are candidates for the treatment of multi-factorial diseases. Such compounds are mostly discovered experimentally, for example, by multi-stage screening campaigns or target profiling. However, multi-target compounds are also topical in drug design. In medicinal chemistry, design of compounds with desired activity against two targets is typically attempted by pharmacophore fusion. In addition, machine learning models can be constructed for multi-task (target) prediction or virtually screening of compound libraries against arrays of single-target classifiers (computational target profiling). Furthermore, multi-target compounds can also be predicted by deep generative modeling. However, compared to pharmacophore approaches and classification models, generative design of multi-target compounds is still in its very early stages. Herein, we introduce transformer-based chemical language model variants for the design of dual-target compounds. Alternative models were pre-trained by learning mappings of single- to dual-target compounds of increasing similarity. Then, different models were optimized for generating compounds with defined activity against pairs of functionally unrelated targets using a new technique termed cross fine-tuning, applying compound similarity constraints corresponding to pre-training. Control models were devised to confirm that pre-trained and fine-tuned models indeed charted chemical space of dual-target compounds. As a stringent criterion for predictive performance, the final models were found to exactly reproduce known dual-target compounds excluded from model derivation. In addition, many structural analogues of such compounds were generated, thus lending credence to the design approach.",
-    "full_text": null
+  "title": "Generation of Dual-Target Compounds Using a Transformer Chemical Language Model",
+  "url": "https://openalex.org/W4401027501",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2509170035",
+      "name": "Sanjana Srinivasan",
+      "affiliations": [
+        "University of Bonn"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A192274276",
+      "name": "Jürgen Bajorath",
+      "affiliations": [
+        "University of Bonn"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2160592148",
+    "https://openalex.org/W4309506674",
+    "https://openalex.org/W3042289107",
+    "https://openalex.org/W4401027501",
+    "https://openalex.org/W4384820718",
+    "https://openalex.org/W2937307539",
+    "https://openalex.org/W4293713156",
+    "https://openalex.org/W3186149425",
+    "https://openalex.org/W4312810284",
+    "https://openalex.org/W2463036497",
+    "https://openalex.org/W4318981550",
+    "https://openalex.org/W3201230437",
+    "https://openalex.org/W3208103455",
+    "https://openalex.org/W2156779720",
+    "https://openalex.org/W1530167222",
+    "https://openalex.org/W3087418839",
+    "https://openalex.org/W1981433258",
+    "https://openalex.org/W3094640617",
+    "https://openalex.org/W2402506318",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W1984673823",
+    "https://openalex.org/W1964421503",
+    "https://openalex.org/W2936578763",
+    "https://openalex.org/W2104337806",
+    "https://openalex.org/W4318952054",
+    "https://openalex.org/W4282964820",
+    "https://openalex.org/W3158615084",
+    "https://openalex.org/W3028460107",
+    "https://openalex.org/W2151697120",
+    "https://openalex.org/W3165571652",
+    "https://openalex.org/W1999318478",
+    "https://openalex.org/W3012012790",
+    "https://openalex.org/W2884740260",
+    "https://openalex.org/W2101234009",
+    "https://openalex.org/W1988037271",
+    "https://openalex.org/W4318930739",
+    "https://openalex.org/W1965555277",
+    "https://openalex.org/W2989456286",
+    "https://openalex.org/W2043509228",
+    "https://openalex.org/W3114271647",
+    "https://openalex.org/W2069126953"
+  ],
+  "abstract": "Compounds with defined multi-target activity are candidates for the treatment of multi-factorial diseases. Such compounds are mostly discovered experimentally, for example, by multi-stage screening campaigns or target profiling. However, multi-target compounds are also topical in drug design. In medicinal chemistry, design of compounds with desired activity against two targets is typically attempted by pharmacophore fusion. In addition, machine learning models can be constructed for multi-task (target) prediction or virtually screening of compound libraries against arrays of single-target classifiers (computational target profiling). Furthermore, multi-target compounds can also be predicted by deep generative modeling. However, compared to pharmacophore approaches and classification models, generative design of multi-target compounds is still in its very early stages. Herein, we introduce transformer-based chemical language model variants for the design of dual-target compounds. Alternative models were pre-trained by learning mappings of single- to dual-target compounds of increasing similarity. Then, different models were optimized for generating compounds with defined activity against pairs of functionally unrelated targets using a new technique termed cross fine-tuning, applying compound similarity constraints corresponding to pre-training. Control models were devised to confirm that pre-trained and fine-tuned models indeed charted chemical space of dual-target compounds. As a stringent criterion for predictive performance, the final models were found to exactly reproduce known dual-target compounds excluded from model derivation. In addition, many structural analogues of such compounds were generated, thus lending credence to the design approach.",
+  "full_text": null,
+  "topic": "Pharmacophore",
+  "concepts": [
+    {
+      "name": "Pharmacophore",
+      "score": 0.7765167355537415
+    },
+    {
+      "name": "Chemical space",
+      "score": 0.7313951849937439
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6519556045532227
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.556455135345459
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.49541962146759033
+    },
+    {
+      "name": "Profiling (computer programming)",
+      "score": 0.486714631319046
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4851978123188019
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.47582319378852844
+    },
+    {
+      "name": "Training set",
+      "score": 0.4682983458042145
+    },
+    {
+      "name": "Generative model",
+      "score": 0.4676985740661621
+    },
+    {
+      "name": "Drug discovery",
+      "score": 0.3127405047416687
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.1541461944580078
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11478695273399353
+    },
+    {
+      "name": "Biology",
+      "score": 0.08219638466835022
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

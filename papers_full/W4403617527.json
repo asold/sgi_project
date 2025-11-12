@@ -1,63 +1,122 @@
 {
-    "title": "PIP: Detecting Adversarial Examples in Large Vision-Language Models via Attention Patterns of Irrelevant Probe Questions",
-    "url": "https://openalex.org/W4403617527",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1764129425",
-            "name": "Zhang Yu-dong",
-            "affiliations": [
-                "Tsinghua University",
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2380519356",
-            "name": "Xie, Ruobing",
-            "affiliations": [
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1386860973",
-            "name": "Chen Jiansheng",
-            "affiliations": [
-                "University of Science and Technology Beijing"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4311555009",
-            "name": "Sun, Xingwu",
-            "affiliations": [
-                "University of Macau",
-                "Tencent (China)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2047520290",
-            "name": "Wang Yu",
-            "affiliations": [
-                "Tsinghua University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2087347434",
-        "https://openalex.org/W2963857521",
-        "https://openalex.org/W4388189238",
-        "https://openalex.org/W2561975083",
-        "https://openalex.org/W4390889737",
-        "https://openalex.org/W2966391112",
-        "https://openalex.org/W2618043096",
-        "https://openalex.org/W2180612164",
-        "https://openalex.org/W4393157467",
-        "https://openalex.org/W4387969689",
-        "https://openalex.org/W4304092585",
-        "https://openalex.org/W4283317927",
-        "https://openalex.org/W4400524868",
-        "https://openalex.org/W3102964708",
-        "https://openalex.org/W2999905431"
-    ],
-    "abstract": "Large Vision-Language Models (LVLMs) have demonstrated their powerful\\nmultimodal capabilities. However, they also face serious safety problems, as\\nadversaries can induce robustness issues in LVLMs through the use of\\nwell-designed adversarial examples. Therefore, LVLMs are in urgent need of\\ndetection tools for adversarial examples to prevent incorrect responses. In\\nthis work, we first discover that LVLMs exhibit regular attention patterns for\\nclean images when presented with probe questions. We propose an unconventional\\nmethod named PIP, which utilizes the attention patterns of one randomly\\nselected irrelevant probe question (e.g., \"Is there a clock?\") to distinguish\\nadversarial examples from clean examples. Regardless of the image to be tested\\nand its corresponding question, PIP only needs to perform one additional\\ninference of the image to be tested and the probe question, and then achieves\\nsuccessful detection of adversarial examples. Even under black-box attacks and\\nopen dataset scenarios, our PIP, coupled with a simple SVM, still achieves more\\nthan 98% recall and a precision of over 90%. Our PIP is the first attempt to\\ndetect adversarial attacks on LVLMs via simple irrelevant probe questions,\\nshedding light on deeper understanding and introspection within LVLMs. The code\\nis available at https://github.com/btzyd/pip.\\n",
-    "full_text": null
+  "title": "PIP: Detecting Adversarial Examples in Large Vision-Language Models via Attention Patterns of Irrelevant Probe Questions",
+  "url": "https://openalex.org/W4403617527",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1764129425",
+      "name": "Zhang Yu-dong",
+      "affiliations": [
+        "Tsinghua University",
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2380519356",
+      "name": "Xie, Ruobing",
+      "affiliations": [
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1386860973",
+      "name": "Chen Jiansheng",
+      "affiliations": [
+        "University of Science and Technology Beijing"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4311555009",
+      "name": "Sun, Xingwu",
+      "affiliations": [
+        "University of Macau",
+        "Tencent (China)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2047520290",
+      "name": "Wang Yu",
+      "affiliations": [
+        "Tsinghua University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2087347434",
+    "https://openalex.org/W2963857521",
+    "https://openalex.org/W4388189238",
+    "https://openalex.org/W2561975083",
+    "https://openalex.org/W4390889737",
+    "https://openalex.org/W2966391112",
+    "https://openalex.org/W2618043096",
+    "https://openalex.org/W2180612164",
+    "https://openalex.org/W4393157467",
+    "https://openalex.org/W4387969689",
+    "https://openalex.org/W4304092585",
+    "https://openalex.org/W4283317927",
+    "https://openalex.org/W4400524868",
+    "https://openalex.org/W3102964708",
+    "https://openalex.org/W2999905431"
+  ],
+  "abstract": "Large Vision-Language Models (LVLMs) have demonstrated their powerful\\nmultimodal capabilities. However, they also face serious safety problems, as\\nadversaries can induce robustness issues in LVLMs through the use of\\nwell-designed adversarial examples. Therefore, LVLMs are in urgent need of\\ndetection tools for adversarial examples to prevent incorrect responses. In\\nthis work, we first discover that LVLMs exhibit regular attention patterns for\\nclean images when presented with probe questions. We propose an unconventional\\nmethod named PIP, which utilizes the attention patterns of one randomly\\nselected irrelevant probe question (e.g., \"Is there a clock?\") to distinguish\\nadversarial examples from clean examples. Regardless of the image to be tested\\nand its corresponding question, PIP only needs to perform one additional\\ninference of the image to be tested and the probe question, and then achieves\\nsuccessful detection of adversarial examples. Even under black-box attacks and\\nopen dataset scenarios, our PIP, coupled with a simple SVM, still achieves more\\nthan 98% recall and a precision of over 90%. Our PIP is the first attempt to\\ndetect adversarial attacks on LVLMs via simple irrelevant probe questions,\\nshedding light on deeper understanding and introspection within LVLMs. The code\\nis available at https://github.com/btzyd/pip.\\n",
+  "full_text": null,
+  "topic": "Adversarial system",
+  "concepts": [
+    {
+      "name": "Adversarial system",
+      "score": 0.871050238609314
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7843216061592102
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.6197569370269775
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6019086837768555
+    },
+    {
+      "name": "Inference",
+      "score": 0.5317334532737732
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4413614273071289
+    },
+    {
+      "name": "Gesture",
+      "score": 0.44069257378578186
+    },
+    {
+      "name": "Simple (philosophy)",
+      "score": 0.4271838963031769
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3251100778579712
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.0
+    }
+  ]
 }

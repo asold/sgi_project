@@ -1,56 +1,131 @@
 {
-    "title": "OmniNA: A foundation model for nucleotide sequences",
-    "url": "https://openalex.org/W4390892968",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5025477684",
-            "name": "Xilin Shen",
-            "affiliations": [
-                "Tianjin Medical University Cancer Institute and Hospital",
-                "National Clinical Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5090763809",
-            "name": "Xiangchun Li",
-            "affiliations": [
-                "Tianjin Medical University Cancer Institute and Hospital"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4385948838",
-        "https://openalex.org/W4386080660",
-        "https://openalex.org/W4386697749",
-        "https://openalex.org/W4377121531",
-        "https://openalex.org/W4312933868",
-        "https://openalex.org/W3203588026",
-        "https://openalex.org/W4382989753",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W3155806510",
-        "https://openalex.org/W2038473742",
-        "https://openalex.org/W2988641336",
-        "https://openalex.org/W3092353457",
-        "https://openalex.org/W2033201031",
-        "https://openalex.org/W2259938310",
-        "https://openalex.org/W2953306855",
-        "https://openalex.org/W2888955024",
-        "https://openalex.org/W2909194804",
-        "https://openalex.org/W4313544615",
-        "https://openalex.org/W2770026599",
-        "https://openalex.org/W2961729414",
-        "https://openalex.org/W3008594856",
-        "https://openalex.org/W4213068753",
-        "https://openalex.org/W1968630368",
-        "https://openalex.org/W4280563114",
-        "https://openalex.org/W2809442901",
-        "https://openalex.org/W4285006295",
-        "https://openalex.org/W3209435229",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4383904219"
-    ],
-    "abstract": "Abstract Foundation models have demonstrated exceptional efficacy across diverse downstream tasks. However, within the realms of genomics and transcriptomics, a notable gap persists in the availability of models that afford a comprehensive understanding of nucleotide sequence principles across various species. Here, we present OmniNA, a foundation generative model designed for comprehensive nucleotide sequence learning. The model was pre-trained on 91.7 million nucleotide sequences and the corresponding annotations encompassing 1076.2 billion bases and 197 million words spanning a multitude of species. We demonstrated OmniNA gains the capacity to understand the semantics of the nucleotide sequence and textual annotations by analyzing the learned representation of the pre-trained model. OmniNA can be fine-tuned to align multiple nucleotide learning tasks with natural language paradigms. We demonstrate OmniNA-1.7B surpasses or rivals state-of-the art methods in 17 nucleotide tasks, encompassing nucleotide sequences detection and species classification. The model’s understanding of nucleotide grammars enhances its capability to reveal the mutation effect of nucleotide sequence on DNA and RNA processing. We hereby release the OmniNA-1.7B model as an open-source contribution to the research community. This foundation model signifies a step toward advancing our comprehension of nucleotide sequences across diverse species and holds substantial promise to facilitating genomics and transcriptomics research.",
-    "full_text": null
+  "title": "OmniNA: A foundation model for nucleotide sequences",
+  "url": "https://openalex.org/W4390892968",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5025477684",
+      "name": "Xilin Shen",
+      "affiliations": [
+        "Tianjin Medical University Cancer Institute and Hospital",
+        "National Clinical Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5090763809",
+      "name": "Xiangchun Li",
+      "affiliations": [
+        "Tianjin Medical University Cancer Institute and Hospital"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4385948838",
+    "https://openalex.org/W4386080660",
+    "https://openalex.org/W4386697749",
+    "https://openalex.org/W4377121531",
+    "https://openalex.org/W4312933868",
+    "https://openalex.org/W3203588026",
+    "https://openalex.org/W4382989753",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W3155806510",
+    "https://openalex.org/W2038473742",
+    "https://openalex.org/W2988641336",
+    "https://openalex.org/W3092353457",
+    "https://openalex.org/W2033201031",
+    "https://openalex.org/W2259938310",
+    "https://openalex.org/W2953306855",
+    "https://openalex.org/W2888955024",
+    "https://openalex.org/W2909194804",
+    "https://openalex.org/W4313544615",
+    "https://openalex.org/W2770026599",
+    "https://openalex.org/W2961729414",
+    "https://openalex.org/W3008594856",
+    "https://openalex.org/W4213068753",
+    "https://openalex.org/W1968630368",
+    "https://openalex.org/W4280563114",
+    "https://openalex.org/W2809442901",
+    "https://openalex.org/W4285006295",
+    "https://openalex.org/W3209435229",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4383904219"
+  ],
+  "abstract": "Abstract Foundation models have demonstrated exceptional efficacy across diverse downstream tasks. However, within the realms of genomics and transcriptomics, a notable gap persists in the availability of models that afford a comprehensive understanding of nucleotide sequence principles across various species. Here, we present OmniNA, a foundation generative model designed for comprehensive nucleotide sequence learning. The model was pre-trained on 91.7 million nucleotide sequences and the corresponding annotations encompassing 1076.2 billion bases and 197 million words spanning a multitude of species. We demonstrated OmniNA gains the capacity to understand the semantics of the nucleotide sequence and textual annotations by analyzing the learned representation of the pre-trained model. OmniNA can be fine-tuned to align multiple nucleotide learning tasks with natural language paradigms. We demonstrate OmniNA-1.7B surpasses or rivals state-of-the art methods in 17 nucleotide tasks, encompassing nucleotide sequences detection and species classification. The model’s understanding of nucleotide grammars enhances its capability to reveal the mutation effect of nucleotide sequence on DNA and RNA processing. We hereby release the OmniNA-1.7B model as an open-source contribution to the research community. This foundation model signifies a step toward advancing our comprehension of nucleotide sequences across diverse species and holds substantial promise to facilitating genomics and transcriptomics research.",
+  "full_text": null,
+  "topic": "Nucleic acid sequence",
+  "concepts": [
+    {
+      "name": "Nucleic acid sequence",
+      "score": 0.5226081013679504
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4880779981613159
+    },
+    {
+      "name": "Nucleotide",
+      "score": 0.476601779460907
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.4697447419166565
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.46589195728302
+    },
+    {
+      "name": "Genomics",
+      "score": 0.4202965795993805
+    },
+    {
+      "name": "DNA sequencing",
+      "score": 0.41653797030448914
+    },
+    {
+      "name": "Biology",
+      "score": 0.4143826961517334
+    },
+    {
+      "name": "Generative model",
+      "score": 0.41147756576538086
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4015509784221649
+    },
+    {
+      "name": "Generative grammar",
+      "score": 0.32076185941696167
+    },
+    {
+      "name": "Genome",
+      "score": 0.3033312261104584
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.28935760259628296
+    },
+    {
+      "name": "Genetics",
+      "score": 0.25591421127319336
+    },
+    {
+      "name": "DNA",
+      "score": 0.16830074787139893
+    },
+    {
+      "name": "Gene",
+      "score": 0.16312256455421448
+    },
+    {
+      "name": "Geography",
+      "score": 0.11490720510482788
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    }
+  ]
 }

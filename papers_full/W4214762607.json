@@ -1,86 +1,165 @@
 {
-    "title": "A Transformer-Based Coarse-to-Fine Wide-Swath SAR Image Registration Method under Weak Texture Conditions",
-    "url": "https://openalex.org/W4214762607",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5085004179",
-            "name": "Yibo Fan",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100669010",
-            "name": "Feng Wang",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100405762",
-            "name": "Haipeng Wang",
-            "affiliations": [
-                "Fudan University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2999000103",
-        "https://openalex.org/W2928579688",
-        "https://openalex.org/W2980661908",
-        "https://openalex.org/W99071287",
-        "https://openalex.org/W2140580419",
-        "https://openalex.org/W2790893584",
-        "https://openalex.org/W2996158895",
-        "https://openalex.org/W2151103935",
-        "https://openalex.org/W2145072179",
-        "https://openalex.org/W2030233108",
-        "https://openalex.org/W6797264716",
-        "https://openalex.org/W2913429812",
-        "https://openalex.org/W4205397352",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W2410591237",
-        "https://openalex.org/W3012162230",
-        "https://openalex.org/W2781778455",
-        "https://openalex.org/W2946535694",
-        "https://openalex.org/W2791873954",
-        "https://openalex.org/W3165710677",
-        "https://openalex.org/W3186994328",
-        "https://openalex.org/W3167169752",
-        "https://openalex.org/W3201351856",
-        "https://openalex.org/W2117228865",
-        "https://openalex.org/W2754925132",
-        "https://openalex.org/W6668990524",
-        "https://openalex.org/W2085261163",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W2754361766",
-        "https://openalex.org/W6785720554",
-        "https://openalex.org/W2554820184",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4200604770",
-        "https://openalex.org/W4205568244",
-        "https://openalex.org/W3217153199",
-        "https://openalex.org/W3166285241",
-        "https://openalex.org/W1677409904",
-        "https://openalex.org/W1532362218",
-        "https://openalex.org/W1491719799",
-        "https://openalex.org/W2916798096",
-        "https://openalex.org/W6783944145",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W2946948417",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W2963760790",
-        "https://openalex.org/W2618039218",
-        "https://openalex.org/W2612112834",
-        "https://openalex.org/W2973665503",
-        "https://openalex.org/W6679388247",
-        "https://openalex.org/W4206335875",
-        "https://openalex.org/W2144552105",
-        "https://openalex.org/W3175531063",
-        "https://openalex.org/W3101684954"
-    ],
-    "abstract": "As an all-weather and all-day remote sensing image data source, SAR (Synthetic Aperture Radar) images have been widely applied, and their registration accuracy has a direct impact on the downstream task effectiveness. The existing registration algorithms mainly focus on small sub-images, and there is a lack of available accurate matching methods for large-size images. This paper proposes a high-precision, rapid, large-size SAR image dense-matching method. The method mainly includes four steps: down-sampling image pre-registration, sub-image acquisition, dense matching, and the transformation solution. First, the ORB (Oriented FAST and Rotated BRIEF) operator and the GMS (Grid-based Motion Statistics) method are combined to perform rough matching in the semantically rich down-sampled image. In addition, according to the feature point pairs, a group of clustering centers and corresponding images are obtained. Subsequently, a deep learning method based on Transformers is used to register images under weak texture conditions. Finally, the global transformation relationship can be obtained through RANSAC (Random Sample Consensus). Compared with the SOTA algorithm, our method’s correct matching point numbers are increased by more than 2.47 times, and the root mean squared error (RMSE) is reduced by more than 4.16%. The experimental results demonstrate that our proposed method is efficient and accurate, which provides a new idea for SAR image registration.",
-    "full_text": null
+  "title": "A Transformer-Based Coarse-to-Fine Wide-Swath SAR Image Registration Method under Weak Texture Conditions",
+  "url": "https://openalex.org/W4214762607",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5085004179",
+      "name": "Yibo Fan",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100669010",
+      "name": "Feng Wang",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100405762",
+      "name": "Haipeng Wang",
+      "affiliations": [
+        "Fudan University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2999000103",
+    "https://openalex.org/W2928579688",
+    "https://openalex.org/W2980661908",
+    "https://openalex.org/W99071287",
+    "https://openalex.org/W2140580419",
+    "https://openalex.org/W2790893584",
+    "https://openalex.org/W2996158895",
+    "https://openalex.org/W2151103935",
+    "https://openalex.org/W2145072179",
+    "https://openalex.org/W2030233108",
+    "https://openalex.org/W6797264716",
+    "https://openalex.org/W2913429812",
+    "https://openalex.org/W4205397352",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W2410591237",
+    "https://openalex.org/W3012162230",
+    "https://openalex.org/W2781778455",
+    "https://openalex.org/W2946535694",
+    "https://openalex.org/W2791873954",
+    "https://openalex.org/W3165710677",
+    "https://openalex.org/W3186994328",
+    "https://openalex.org/W3167169752",
+    "https://openalex.org/W3201351856",
+    "https://openalex.org/W2117228865",
+    "https://openalex.org/W2754925132",
+    "https://openalex.org/W6668990524",
+    "https://openalex.org/W2085261163",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W2754361766",
+    "https://openalex.org/W6785720554",
+    "https://openalex.org/W2554820184",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4200604770",
+    "https://openalex.org/W4205568244",
+    "https://openalex.org/W3217153199",
+    "https://openalex.org/W3166285241",
+    "https://openalex.org/W1677409904",
+    "https://openalex.org/W1532362218",
+    "https://openalex.org/W1491719799",
+    "https://openalex.org/W2916798096",
+    "https://openalex.org/W6783944145",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2946948417",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W2963760790",
+    "https://openalex.org/W2618039218",
+    "https://openalex.org/W2612112834",
+    "https://openalex.org/W2973665503",
+    "https://openalex.org/W6679388247",
+    "https://openalex.org/W4206335875",
+    "https://openalex.org/W2144552105",
+    "https://openalex.org/W3175531063",
+    "https://openalex.org/W3101684954"
+  ],
+  "abstract": "As an all-weather and all-day remote sensing image data source, SAR (Synthetic Aperture Radar) images have been widely applied, and their registration accuracy has a direct impact on the downstream task effectiveness. The existing registration algorithms mainly focus on small sub-images, and there is a lack of available accurate matching methods for large-size images. This paper proposes a high-precision, rapid, large-size SAR image dense-matching method. The method mainly includes four steps: down-sampling image pre-registration, sub-image acquisition, dense matching, and the transformation solution. First, the ORB (Oriented FAST and Rotated BRIEF) operator and the GMS (Grid-based Motion Statistics) method are combined to perform rough matching in the semantically rich down-sampled image. In addition, according to the feature point pairs, a group of clustering centers and corresponding images are obtained. Subsequently, a deep learning method based on Transformers is used to register images under weak texture conditions. Finally, the global transformation relationship can be obtained through RANSAC (Random Sample Consensus). Compared with the SOTA algorithm, our method’s correct matching point numbers are increased by more than 2.47 times, and the root mean squared error (RMSE) is reduced by more than 4.16%. The experimental results demonstrate that our proposed method is efficient and accurate, which provides a new idea for SAR image registration.",
+  "full_text": null,
+  "topic": "Artificial intelligence",
+  "concepts": [
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7460882067680359
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7275744676589966
+    },
+    {
+      "name": "RANSAC",
+      "score": 0.7268690466880798
+    },
+    {
+      "name": "Image registration",
+      "score": 0.6330846548080444
+    },
+    {
+      "name": "Synthetic aperture radar",
+      "score": 0.5839109420776367
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5555779337882996
+    },
+    {
+      "name": "Transformation (genetics)",
+      "score": 0.4578375816345215
+    },
+    {
+      "name": "Mean squared error",
+      "score": 0.43664222955703735
+    },
+    {
+      "name": "Point set registration",
+      "score": 0.4314941167831421
+    },
+    {
+      "name": "Matching (statistics)",
+      "score": 0.4265884459018707
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.39361217617988586
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.30728739500045776
+    },
+    {
+      "name": "Point (geometry)",
+      "score": 0.2350398302078247
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2233436405658722
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Geometry",
+      "score": 0.0
+    }
+  ]
 }

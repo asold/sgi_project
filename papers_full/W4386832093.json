@@ -1,66 +1,157 @@
 {
-    "title": "Long-Term Prediction Model for NOx Emission Based on LSTM–Transformer",
-    "url": "https://openalex.org/W4386832093",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2588191435",
-            "name": "Youlin Guo",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2635381255",
-            "name": "Zhizhong Mao",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2588191435",
-            "name": "Youlin Guo",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2635381255",
-            "name": "Zhizhong Mao",
-            "affiliations": [
-                "Northeastern University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2059433485",
-        "https://openalex.org/W4210629572",
-        "https://openalex.org/W3016699715",
-        "https://openalex.org/W2986602512",
-        "https://openalex.org/W2095089989",
-        "https://openalex.org/W2094429529",
-        "https://openalex.org/W3012237329",
-        "https://openalex.org/W2030477110",
-        "https://openalex.org/W1989931811",
-        "https://openalex.org/W2110485445",
-        "https://openalex.org/W2589067192",
-        "https://openalex.org/W2078110518",
-        "https://openalex.org/W2107878631",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2925872868",
-        "https://openalex.org/W2991232089",
-        "https://openalex.org/W3049683529",
-        "https://openalex.org/W2948490758",
-        "https://openalex.org/W3213897726",
-        "https://openalex.org/W1753482797",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2964199361",
-        "https://openalex.org/W6679436768",
-        "https://openalex.org/W1902237438",
-        "https://openalex.org/W3177318507",
-        "https://openalex.org/W6687483927",
-        "https://openalex.org/W2054804828"
-    ],
-    "abstract": "Excessive nitrogen oxide (NOx) emissions result in growing environmental problems and increasingly stringent emission standards. This requires a precise control for NOx emissions. A prerequisite for precise control is accurate NOx emission detection. However, the NOx measurement sensors currently in use have serious lag problems in measurement due to the harsh operating environment and other problems. To address this issue, we need to make long-term prediction for NOx emissions. In this paper, we propose a long-term prediction model based on LSTM–Transformer. First, the model uses self-attention to capture long-term trend. Second, long short-term memory network (LSTM) is used to capture short-term trends and as secondary position encoding to provide positional information. We construct them using a parallel structure. In long-term prediction, experimental results on two real datasets with different sampling intervals show that the proposed prediction model performs better than the currently popular methods, with 28.2% and 19.1% relative average improvements on the two datasets, respectively.",
-    "full_text": null
+  "title": "Long-Term Prediction Model for NOx Emission Based on LSTM–Transformer",
+  "url": "https://openalex.org/W4386832093",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2588191435",
+      "name": "Youlin Guo",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2635381255",
+      "name": "Zhizhong Mao",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2588191435",
+      "name": "Youlin Guo",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2635381255",
+      "name": "Zhizhong Mao",
+      "affiliations": [
+        "Northeastern University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2059433485",
+    "https://openalex.org/W4210629572",
+    "https://openalex.org/W3016699715",
+    "https://openalex.org/W2986602512",
+    "https://openalex.org/W2095089989",
+    "https://openalex.org/W2094429529",
+    "https://openalex.org/W3012237329",
+    "https://openalex.org/W2030477110",
+    "https://openalex.org/W1989931811",
+    "https://openalex.org/W2110485445",
+    "https://openalex.org/W2589067192",
+    "https://openalex.org/W2078110518",
+    "https://openalex.org/W2107878631",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2925872868",
+    "https://openalex.org/W2991232089",
+    "https://openalex.org/W3049683529",
+    "https://openalex.org/W2948490758",
+    "https://openalex.org/W3213897726",
+    "https://openalex.org/W1753482797",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2964199361",
+    "https://openalex.org/W6679436768",
+    "https://openalex.org/W1902237438",
+    "https://openalex.org/W3177318507",
+    "https://openalex.org/W6687483927",
+    "https://openalex.org/W2054804828"
+  ],
+  "abstract": "Excessive nitrogen oxide (NOx) emissions result in growing environmental problems and increasingly stringent emission standards. This requires a precise control for NOx emissions. A prerequisite for precise control is accurate NOx emission detection. However, the NOx measurement sensors currently in use have serious lag problems in measurement due to the harsh operating environment and other problems. To address this issue, we need to make long-term prediction for NOx emissions. In this paper, we propose a long-term prediction model based on LSTM–Transformer. First, the model uses self-attention to capture long-term trend. Second, long short-term memory network (LSTM) is used to capture short-term trends and as secondary position encoding to provide positional information. We construct them using a parallel structure. In long-term prediction, experimental results on two real datasets with different sampling intervals show that the proposed prediction model performs better than the currently popular methods, with 28.2% and 19.1% relative average improvements on the two datasets, respectively.",
+  "full_text": null,
+  "topic": "NOx",
+  "concepts": [
+    {
+      "name": "NOx",
+      "score": 0.8860622644424438
+    },
+    {
+      "name": "Term (time)",
+      "score": 0.6865326166152954
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6043934226036072
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5870391726493835
+    },
+    {
+      "name": "Long short term memory",
+      "score": 0.49611005187034607
+    },
+    {
+      "name": "Nitrogen oxide",
+      "score": 0.47734692692756653
+    },
+    {
+      "name": "Lag",
+      "score": 0.44596022367477417
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4294314980506897
+    },
+    {
+      "name": "Nitrogen oxides",
+      "score": 0.41236698627471924
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3403055667877197
+    },
+    {
+      "name": "Engineering",
+      "score": 0.216458261013031
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.19790756702423096
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.16230857372283936
+    },
+    {
+      "name": "Voltage",
+      "score": 0.07502785325050354
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.06587427854537964
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Computer network",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Waste management",
+      "score": 0.0
+    },
+    {
+      "name": "Combustion",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

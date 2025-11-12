@@ -1,133 +1,164 @@
 {
-    "title": "Tissue concepts: Supervised foundation models in computational pathology",
-    "url": "https://openalex.org/W4406270447",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5049373288",
-            "name": "Till Nicke",
-            "affiliations": [
-                "Fraunhofer Institute for Digital Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5040388865",
-            "name": "Raphael Schäfer",
-            "affiliations": [
-                "Fraunhofer Institute for Digital Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5073442460",
-            "name": "Henning Höfener",
-            "affiliations": [
-                "Fraunhofer Institute for Digital Medicine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5057185329",
-            "name": "Friedrich Feuerhake",
-            "affiliations": [
-                "Medizinische Hochschule Hannover",
-                "University Medical Center Freiburg",
-                "University of Freiburg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5064747056",
-            "name": "Dorit Merhof",
-            "affiliations": [
-                "Fraunhofer Institute for Digital Medicine",
-                "University of Regensburg"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028314781",
-            "name": "Fabian Kießling",
-            "affiliations": [
-                "Fraunhofer Institute for Digital Medicine",
-                "RWTH Aachen University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101970063",
-            "name": "Johannes Lotz",
-            "affiliations": [
-                "Fraunhofer Institute for Digital Medicine"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4384525864",
-        "https://openalex.org/W6790598159",
-        "https://openalex.org/W3146983201",
-        "https://openalex.org/W3164332865",
-        "https://openalex.org/W6633658626",
-        "https://openalex.org/W2945807221",
-        "https://openalex.org/W3025011581",
-        "https://openalex.org/W4288809219",
-        "https://openalex.org/W3048650942",
-        "https://openalex.org/W4281786142",
-        "https://openalex.org/W6858215500",
-        "https://openalex.org/W6838969430",
-        "https://openalex.org/W4389430914",
-        "https://openalex.org/W2913340405",
-        "https://openalex.org/W3186679119",
-        "https://openalex.org/W3021508389",
-        "https://openalex.org/W4309477120",
-        "https://openalex.org/W4281643269",
-        "https://openalex.org/W4392947521",
-        "https://openalex.org/W2956228567",
-        "https://openalex.org/W4229049871",
-        "https://openalex.org/W4388210672",
-        "https://openalex.org/W4391451171",
-        "https://openalex.org/W3135547872",
-        "https://openalex.org/W6803426362",
-        "https://openalex.org/W2900118953",
-        "https://openalex.org/W6776205138",
-        "https://openalex.org/W6747701563",
-        "https://openalex.org/W2914568698",
-        "https://openalex.org/W2805735218",
-        "https://openalex.org/W2769999077",
-        "https://openalex.org/W4389688203",
-        "https://openalex.org/W6800162299",
-        "https://openalex.org/W2949226441",
-        "https://openalex.org/W2885650974",
-        "https://openalex.org/W3176446229",
-        "https://openalex.org/W4205900565",
-        "https://openalex.org/W6807637238",
-        "https://openalex.org/W2922239620",
-        "https://openalex.org/W2344480160",
-        "https://openalex.org/W4309915768",
-        "https://openalex.org/W6848691829",
-        "https://openalex.org/W3214733388",
-        "https://openalex.org/W4387778010",
-        "https://openalex.org/W6810938606",
-        "https://openalex.org/W2117539524",
-        "https://openalex.org/W3209367260",
-        "https://openalex.org/W4391756091",
-        "https://openalex.org/W4385576721",
-        "https://openalex.org/W3157788795",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4385551808",
-        "https://openalex.org/W4387595925",
-        "https://openalex.org/W4283650500",
-        "https://openalex.org/W4400831136",
-        "https://openalex.org/W4245185022",
-        "https://openalex.org/W2990138404",
-        "https://openalex.org/W3128646645",
-        "https://openalex.org/W4388892070",
-        "https://openalex.org/W4387580644",
-        "https://openalex.org/W4207066074",
-        "https://openalex.org/W3104440123",
-        "https://openalex.org/W4366208220",
-        "https://openalex.org/W4313197215",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W3195577433",
-        "https://openalex.org/W4285020079",
-        "https://openalex.org/W3145450063",
-        "https://openalex.org/W2885824038"
-    ],
-    "abstract": "Due to the increasing workload of pathologists, the need for automation to support diagnostic tasks and quantitative biomarker evaluation is becoming more and more apparent. Foundation models have the potential to improve generalizability within and across centers and serve as starting points for data efficient development of specialized yet robust AI models. However, the training of foundation models themselves is usually very expensive in terms of data, computation, and time. This paper proposes a supervised training method that drastically reduces these expenses. The proposed method is based on multi-task learning to train a joint encoder, by combining 16 different classification, segmentation, and detection tasks on a total of 912,000 patches. Since the encoder is capable of capturing the properties of the samples, we term it the Tissue Concepts encoder. To evaluate the performance and generalizability of the Tissue Concepts encoder across centers, classification of whole slide images from four of the most prevalent solid cancers - breast, colon, lung, and prostate - was used. The experiments show that the Tissue Concepts model achieve comparable performance to models trained with self-supervision, while requiring only 6% of the amount of training patches. Furthermore, the Tissue Concepts encoder outperforms an ImageNet pre-trained encoder on both in-domain and out-of-domain data. The pre-trained models and will be made available under https://github.com/FraunhoferMEVIS/MedicalMultitaskModeling.",
-    "full_text": null
+  "title": "Tissue concepts: Supervised foundation models in computational pathology",
+  "url": "https://openalex.org/W4406270447",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5049373288",
+      "name": "Till Nicke",
+      "affiliations": [
+        "Fraunhofer Institute for Digital Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5040388865",
+      "name": "Raphael Schäfer",
+      "affiliations": [
+        "Fraunhofer Institute for Digital Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5073442460",
+      "name": "Henning Höfener",
+      "affiliations": [
+        "Fraunhofer Institute for Digital Medicine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5057185329",
+      "name": "Friedrich Feuerhake",
+      "affiliations": [
+        "Medizinische Hochschule Hannover",
+        "University Medical Center Freiburg",
+        "University of Freiburg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5064747056",
+      "name": "Dorit Merhof",
+      "affiliations": [
+        "Fraunhofer Institute for Digital Medicine",
+        "University of Regensburg"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028314781",
+      "name": "Fabian Kießling",
+      "affiliations": [
+        "Fraunhofer Institute for Digital Medicine",
+        "RWTH Aachen University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101970063",
+      "name": "Johannes Lotz",
+      "affiliations": [
+        "Fraunhofer Institute for Digital Medicine"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4384525864",
+    "https://openalex.org/W6790598159",
+    "https://openalex.org/W3146983201",
+    "https://openalex.org/W3164332865",
+    "https://openalex.org/W6633658626",
+    "https://openalex.org/W2945807221",
+    "https://openalex.org/W3025011581",
+    "https://openalex.org/W4288809219",
+    "https://openalex.org/W3048650942",
+    "https://openalex.org/W4281786142",
+    "https://openalex.org/W6858215500",
+    "https://openalex.org/W6838969430",
+    "https://openalex.org/W4389430914",
+    "https://openalex.org/W2913340405",
+    "https://openalex.org/W3186679119",
+    "https://openalex.org/W3021508389",
+    "https://openalex.org/W4309477120",
+    "https://openalex.org/W4281643269",
+    "https://openalex.org/W4392947521",
+    "https://openalex.org/W2956228567",
+    "https://openalex.org/W4229049871",
+    "https://openalex.org/W4388210672",
+    "https://openalex.org/W4391451171",
+    "https://openalex.org/W3135547872",
+    "https://openalex.org/W6803426362",
+    "https://openalex.org/W2900118953",
+    "https://openalex.org/W6776205138",
+    "https://openalex.org/W6747701563",
+    "https://openalex.org/W2914568698",
+    "https://openalex.org/W2805735218",
+    "https://openalex.org/W2769999077",
+    "https://openalex.org/W4389688203",
+    "https://openalex.org/W6800162299",
+    "https://openalex.org/W2949226441",
+    "https://openalex.org/W2885650974",
+    "https://openalex.org/W3176446229",
+    "https://openalex.org/W4205900565",
+    "https://openalex.org/W6807637238",
+    "https://openalex.org/W2922239620",
+    "https://openalex.org/W2344480160",
+    "https://openalex.org/W4309915768",
+    "https://openalex.org/W6848691829",
+    "https://openalex.org/W3214733388",
+    "https://openalex.org/W4387778010",
+    "https://openalex.org/W6810938606",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W3209367260",
+    "https://openalex.org/W4391756091",
+    "https://openalex.org/W4385576721",
+    "https://openalex.org/W3157788795",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4385551808",
+    "https://openalex.org/W4387595925",
+    "https://openalex.org/W4283650500",
+    "https://openalex.org/W4400831136",
+    "https://openalex.org/W4245185022",
+    "https://openalex.org/W2990138404",
+    "https://openalex.org/W3128646645",
+    "https://openalex.org/W4388892070",
+    "https://openalex.org/W4387580644",
+    "https://openalex.org/W4207066074",
+    "https://openalex.org/W3104440123",
+    "https://openalex.org/W4366208220",
+    "https://openalex.org/W4313197215",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W3195577433",
+    "https://openalex.org/W4285020079",
+    "https://openalex.org/W3145450063",
+    "https://openalex.org/W2885824038"
+  ],
+  "abstract": "Due to the increasing workload of pathologists, the need for automation to support diagnostic tasks and quantitative biomarker evaluation is becoming more and more apparent. Foundation models have the potential to improve generalizability within and across centers and serve as starting points for data efficient development of specialized yet robust AI models. However, the training of foundation models themselves is usually very expensive in terms of data, computation, and time. This paper proposes a supervised training method that drastically reduces these expenses. The proposed method is based on multi-task learning to train a joint encoder, by combining 16 different classification, segmentation, and detection tasks on a total of 912,000 patches. Since the encoder is capable of capturing the properties of the samples, we term it the Tissue Concepts encoder. To evaluate the performance and generalizability of the Tissue Concepts encoder across centers, classification of whole slide images from four of the most prevalent solid cancers - breast, colon, lung, and prostate - was used. The experiments show that the Tissue Concepts model achieve comparable performance to models trained with self-supervision, while requiring only 6% of the amount of training patches. Furthermore, the Tissue Concepts encoder outperforms an ImageNet pre-trained encoder on both in-domain and out-of-domain data. The pre-trained models and will be made available under https://github.com/FraunhoferMEVIS/MedicalMultitaskModeling.",
+  "full_text": null,
+  "topic": "Foundation (evidence)",
+  "concepts": [
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.6601439118385315
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6064281463623047
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42646318674087524
+    },
+    {
+      "name": "Pathology",
+      "score": 0.3409927189350128
+    },
+    {
+      "name": "Medicine",
+      "score": 0.24692347645759583
+    },
+    {
+      "name": "Geography",
+      "score": 0.08675670623779297
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    }
+  ]
 }

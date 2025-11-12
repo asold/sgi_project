@@ -1,78 +1,165 @@
 {
-    "title": "Latent L-systems: Transformer-based Tree Generator",
-    "url": "https://openalex.org/W4387502952",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096938499",
-            "name": "Jae Joong Lee",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2136904761",
-            "name": "Bosheng Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2093959614",
-            "name": "Bedrich Benes",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2015965979",
-        "https://openalex.org/W2949820503",
-        "https://openalex.org/W4232787297",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2983765792",
-        "https://openalex.org/W2130855572",
-        "https://openalex.org/W2772474126",
-        "https://openalex.org/W2953602496",
-        "https://openalex.org/W2902691505",
-        "https://openalex.org/W2800581496",
-        "https://openalex.org/W2985840885",
-        "https://openalex.org/W3147816945",
-        "https://openalex.org/W3031883024",
-        "https://openalex.org/W2963248348",
-        "https://openalex.org/W2097626031",
-        "https://openalex.org/W3165740030",
-        "https://openalex.org/W2618239361",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W2062199832",
-        "https://openalex.org/W3108720268",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3206849198",
-        "https://openalex.org/W4385288908",
-        "https://openalex.org/W3125893632",
-        "https://openalex.org/W2792593939",
-        "https://openalex.org/W2010769244",
-        "https://openalex.org/W2090714607",
-        "https://openalex.org/W2000346009",
-        "https://openalex.org/W2989341556",
-        "https://openalex.org/W2080574968",
-        "https://openalex.org/W1585513135",
-        "https://openalex.org/W4232695163",
-        "https://openalex.org/W1973950944",
-        "https://openalex.org/W2010403194",
-        "https://openalex.org/W2472662034",
-        "https://openalex.org/W2034205349",
-        "https://openalex.org/W2131440240",
-        "https://openalex.org/W4200494876",
-        "https://openalex.org/W2137635505",
-        "https://openalex.org/W1549847324",
-        "https://openalex.org/W2138181514",
-        "https://openalex.org/W1955601057",
-        "https://openalex.org/W2073549223",
-        "https://openalex.org/W2889160509",
-        "https://openalex.org/W2022317134",
-        "https://openalex.org/W2016589492",
-        "https://openalex.org/W1979092426",
-        "https://openalex.org/W4386108493",
-        "https://openalex.org/W4320013936",
-        "https://openalex.org/W1551515536",
-        "https://openalex.org/W3158916343",
-        "https://openalex.org/W4212863985"
-    ],
-    "abstract": "We show how a Transformer can encode hierarchical tree-like string structures by introducing a new deep learning-based framework for generating 3D biological tree models represented as Lindenmayer system (L-system) strings. L-systems are string-rewriting procedural systems that encode tree topology and geometry. L-systems are efficient, but creating the production rules is one of the most critical problems precluding their usage in practice. We substitute the procedural rules creation with a deep neural model. Instead of writing the rules, we train a deep neural model that produces the output strings. We train our model on 155k tree geometries that are encoded as L-strings, de-parameterized, and converted to a hierarchy of linear sequences corresponding to branches. An end-to-end deep learning model with an attention mechanism then learns the distributions of geometric operations and branches from the input, effectively replacing the L-system rewriting rule generation. The trained deep model generates new L-strings representing 3D tree models in the same way L-systems do by providing the starting string. Our model allows for the generation of a wide variety of new trees, and the deep model agrees with the input by 93.7% in branching angles, 97.2% in branch lengths, and 92.3% in an extracted list of geometric features. We also validate the generated trees using perceptual metrics showing 97% agreement with input geometric models.",
-    "full_text": null
+  "title": "Latent L-systems: Transformer-based Tree Generator",
+  "url": "https://openalex.org/W4387502952",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096938499",
+      "name": "Jae Joong Lee",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2136904761",
+      "name": "Bosheng Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2093959614",
+      "name": "Bedrich Benes",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2015965979",
+    "https://openalex.org/W2949820503",
+    "https://openalex.org/W4232787297",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2983765792",
+    "https://openalex.org/W2130855572",
+    "https://openalex.org/W2772474126",
+    "https://openalex.org/W2953602496",
+    "https://openalex.org/W2902691505",
+    "https://openalex.org/W2800581496",
+    "https://openalex.org/W2985840885",
+    "https://openalex.org/W3147816945",
+    "https://openalex.org/W3031883024",
+    "https://openalex.org/W2963248348",
+    "https://openalex.org/W2097626031",
+    "https://openalex.org/W3165740030",
+    "https://openalex.org/W2618239361",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W2062199832",
+    "https://openalex.org/W3108720268",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3206849198",
+    "https://openalex.org/W4385288908",
+    "https://openalex.org/W3125893632",
+    "https://openalex.org/W2792593939",
+    "https://openalex.org/W2010769244",
+    "https://openalex.org/W2090714607",
+    "https://openalex.org/W2000346009",
+    "https://openalex.org/W2989341556",
+    "https://openalex.org/W2080574968",
+    "https://openalex.org/W1585513135",
+    "https://openalex.org/W4232695163",
+    "https://openalex.org/W1973950944",
+    "https://openalex.org/W2010403194",
+    "https://openalex.org/W2472662034",
+    "https://openalex.org/W2034205349",
+    "https://openalex.org/W2131440240",
+    "https://openalex.org/W4200494876",
+    "https://openalex.org/W2137635505",
+    "https://openalex.org/W1549847324",
+    "https://openalex.org/W2138181514",
+    "https://openalex.org/W1955601057",
+    "https://openalex.org/W2073549223",
+    "https://openalex.org/W2889160509",
+    "https://openalex.org/W2022317134",
+    "https://openalex.org/W2016589492",
+    "https://openalex.org/W1979092426",
+    "https://openalex.org/W4386108493",
+    "https://openalex.org/W4320013936",
+    "https://openalex.org/W1551515536",
+    "https://openalex.org/W3158916343",
+    "https://openalex.org/W4212863985"
+  ],
+  "abstract": "We show how a Transformer can encode hierarchical tree-like string structures by introducing a new deep learning-based framework for generating 3D biological tree models represented as Lindenmayer system (L-system) strings. L-systems are string-rewriting procedural systems that encode tree topology and geometry. L-systems are efficient, but creating the production rules is one of the most critical problems precluding their usage in practice. We substitute the procedural rules creation with a deep neural model. Instead of writing the rules, we train a deep neural model that produces the output strings. We train our model on 155k tree geometries that are encoded as L-strings, de-parameterized, and converted to a hierarchy of linear sequences corresponding to branches. An end-to-end deep learning model with an attention mechanism then learns the distributions of geometric operations and branches from the input, effectively replacing the L-system rewriting rule generation. The trained deep model generates new L-strings representing 3D tree models in the same way L-systems do by providing the starting string. Our model allows for the generation of a wide variety of new trees, and the deep model agrees with the input by 93.7% in branching angles, 97.2% in branch lengths, and 92.3% in an extracted list of geometric features. We also validate the generated trees using perceptual metrics showing 97% agreement with input geometric models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6515989303588867
+    },
+    {
+      "name": "Rewriting",
+      "score": 0.6105434894561768
+    },
+    {
+      "name": "Parameterized complexity",
+      "score": 0.5048876404762268
+    },
+    {
+      "name": "ENCODE",
+      "score": 0.46423426270484924
+    },
+    {
+      "name": "Tree (set theory)",
+      "score": 0.46108362078666687
+    },
+    {
+      "name": "String (physics)",
+      "score": 0.46010956168174744
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.45757269859313965
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.438334584236145
+    },
+    {
+      "name": "Branching (polymer chemistry)",
+      "score": 0.42982804775238037
+    },
+    {
+      "name": "Tree structure",
+      "score": 0.42020711302757263
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.4108020067214966
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.2642441391944885
+    },
+    {
+      "name": "Binary tree",
+      "score": 0.12790176272392273
+    },
+    {
+      "name": "Combinatorics",
+      "score": 0.11771565675735474
+    },
+    {
+      "name": "Programming language",
+      "score": 0.10117131471633911
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Composite material",
+      "score": 0.0
+    },
+    {
+      "name": "Materials science",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical physics",
+      "score": 0.0
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

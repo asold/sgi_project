@@ -1,118 +1,137 @@
 {
-    "title": "Graph Transformer GANs With Graph Masked Modeling for Architectural Layout Generation",
-    "url": "https://openalex.org/W4390940330",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5050748634",
-            "name": "Hao Tang",
-            "affiliations": [
-                "ETH Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5082634513",
-            "name": "Ling Shao",
-            "affiliations": [
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5027171279",
-            "name": "Nicu Sebe",
-            "affiliations": [
-                "University of Trento"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5001254143",
-            "name": "Luc Van Gool",
-            "affiliations": [
-                "Sofia University \"St. Kliment Ohridski\"",
-                "ETH Zurich"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2960202457",
-        "https://openalex.org/W3021945924",
-        "https://openalex.org/W2987919422",
-        "https://openalex.org/W2963184176",
-        "https://openalex.org/W3107547765",
-        "https://openalex.org/W3034917353",
-        "https://openalex.org/W3170260075",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W3168649818",
-        "https://openalex.org/W3203841574",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W6784094891",
-        "https://openalex.org/W3108516375",
-        "https://openalex.org/W3092878394",
-        "https://openalex.org/W3175199633",
-        "https://openalex.org/W3176974620",
-        "https://openalex.org/W3158817284",
-        "https://openalex.org/W4386065813",
-        "https://openalex.org/W2962770929",
-        "https://openalex.org/W2982041717",
-        "https://openalex.org/W4221124239",
-        "https://openalex.org/W4304480443",
-        "https://openalex.org/W6678815747",
-        "https://openalex.org/W2963767194",
-        "https://openalex.org/W2964024144",
-        "https://openalex.org/W4386065752",
-        "https://openalex.org/W4312977351",
-        "https://openalex.org/W4312805760",
-        "https://openalex.org/W6728889164",
-        "https://openalex.org/W3106811106",
-        "https://openalex.org/W4311888423",
-        "https://openalex.org/W3177421482",
-        "https://openalex.org/W6782325630",
-        "https://openalex.org/W2953096069",
-        "https://openalex.org/W2962974533",
-        "https://openalex.org/W3034954643",
-        "https://openalex.org/W3197618116",
-        "https://openalex.org/W3093407252",
-        "https://openalex.org/W6846937298",
-        "https://openalex.org/W4385237348",
-        "https://openalex.org/W6752009473",
-        "https://openalex.org/W3196878101",
-        "https://openalex.org/W3204757729",
-        "https://openalex.org/W3035108870",
-        "https://openalex.org/W3112646048",
-        "https://openalex.org/W4214744553",
-        "https://openalex.org/W3167280680",
-        "https://openalex.org/W4312335509",
-        "https://openalex.org/W3188511781",
-        "https://openalex.org/W4312249545",
-        "https://openalex.org/W4366748084",
-        "https://openalex.org/W3095422700",
-        "https://openalex.org/W3210279979",
-        "https://openalex.org/W4319068967",
-        "https://openalex.org/W4200633922",
-        "https://openalex.org/W6802122185",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4313156423",
-        "https://openalex.org/W4312804044",
-        "https://openalex.org/W3147983081",
-        "https://openalex.org/W4290876361",
-        "https://openalex.org/W4382317738",
-        "https://openalex.org/W3034616321",
-        "https://openalex.org/W6752378368",
-        "https://openalex.org/W6755977528",
-        "https://openalex.org/W2963907666",
-        "https://openalex.org/W2954388973",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W3167290312",
-        "https://openalex.org/W6765779288",
-        "https://openalex.org/W1965142824",
-        "https://openalex.org/W4310283148",
-        "https://openalex.org/W3099345087",
-        "https://openalex.org/W2125389028",
-        "https://openalex.org/W4221153759",
-        "https://openalex.org/W2899663614"
-    ],
-    "abstract": "We present a novel graph Transformer generative adversarial network (GTGAN) to learn effective graph node relations in an end-to-end fashion for challenging graph-constrained architectural layout generation tasks. The proposed graph-Transformer-based generator includes a novel graph Transformer encoder that combines graph convolutions and self-attentions in a Transformer to model both local and global interactions across connected and non-connected graph nodes. Specifically, the proposed connected node attention (CNA) and non-connected node attention (NNA) aim to capture the global relations across connected nodes and non-connected nodes in the input graph, respectively. The proposed graph modeling block (GMB) aims to exploit local vertex interactions based on a house layout topology. Moreover, we propose a new node classification-based discriminator to preserve the high-level semantic and discriminative node features for different house components. To maintain the relative spatial relationships between ground truth and predicted graphs, we also propose a novel graph-based cycle-consistency loss. Finally, we propose a novel self-guided pre-training method for graph representation learning. This approach involves simultaneous masking of nodes and edges at an elevated mask ratio (i.e., 40%) and their subsequent reconstruction using an asymmetric graph-centric autoencoder architecture. This method markedly improves the model's learning proficiency and expediency. Experiments on three challenging graph-constrained architectural layout generation tasks (i.e., house layout generation, house roof generation, and building layout generation) with three public datasets demonstrate the effectiveness of the proposed method in terms of objective quantitative scores and subjective visual realism. New state-of-the-art results are established by large margins on these three tasks.",
-    "full_text": null
+  "title": "Graph Transformer GANs With Graph Masked Modeling for Architectural Layout Generation",
+  "url": "https://openalex.org/W4390940330",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5050748634",
+      "name": "Hao Tang",
+      "affiliations": [
+        "ETH Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5082634513",
+      "name": "Ling Shao",
+      "affiliations": [
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5027171279",
+      "name": "Nicu Sebe",
+      "affiliations": [
+        "University of Trento"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5001254143",
+      "name": "Luc Van Gool",
+      "affiliations": [
+        "Sofia University \"St. Kliment Ohridski\"",
+        "ETH Zurich"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2960202457",
+    "https://openalex.org/W3021945924",
+    "https://openalex.org/W2987919422",
+    "https://openalex.org/W2963184176",
+    "https://openalex.org/W3107547765",
+    "https://openalex.org/W3034917353",
+    "https://openalex.org/W3170260075",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W3168649818",
+    "https://openalex.org/W3203841574",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W6784094891",
+    "https://openalex.org/W3108516375",
+    "https://openalex.org/W3092878394",
+    "https://openalex.org/W3175199633",
+    "https://openalex.org/W3176974620",
+    "https://openalex.org/W3158817284",
+    "https://openalex.org/W4386065813",
+    "https://openalex.org/W2962770929",
+    "https://openalex.org/W2982041717",
+    "https://openalex.org/W4221124239",
+    "https://openalex.org/W4304480443",
+    "https://openalex.org/W6678815747",
+    "https://openalex.org/W2963767194",
+    "https://openalex.org/W2964024144",
+    "https://openalex.org/W4386065752",
+    "https://openalex.org/W4312977351",
+    "https://openalex.org/W4312805760",
+    "https://openalex.org/W6728889164",
+    "https://openalex.org/W3106811106",
+    "https://openalex.org/W4311888423",
+    "https://openalex.org/W3177421482",
+    "https://openalex.org/W6782325630",
+    "https://openalex.org/W2953096069",
+    "https://openalex.org/W2962974533",
+    "https://openalex.org/W3034954643",
+    "https://openalex.org/W3197618116",
+    "https://openalex.org/W3093407252",
+    "https://openalex.org/W6846937298",
+    "https://openalex.org/W4385237348",
+    "https://openalex.org/W6752009473",
+    "https://openalex.org/W3196878101",
+    "https://openalex.org/W3204757729",
+    "https://openalex.org/W3035108870",
+    "https://openalex.org/W3112646048",
+    "https://openalex.org/W4214744553",
+    "https://openalex.org/W3167280680",
+    "https://openalex.org/W4312335509",
+    "https://openalex.org/W3188511781",
+    "https://openalex.org/W4312249545",
+    "https://openalex.org/W4366748084",
+    "https://openalex.org/W3095422700",
+    "https://openalex.org/W3210279979",
+    "https://openalex.org/W4319068967",
+    "https://openalex.org/W4200633922",
+    "https://openalex.org/W6802122185",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4313156423",
+    "https://openalex.org/W4312804044",
+    "https://openalex.org/W3147983081",
+    "https://openalex.org/W4290876361",
+    "https://openalex.org/W4382317738",
+    "https://openalex.org/W3034616321",
+    "https://openalex.org/W6752378368",
+    "https://openalex.org/W6755977528",
+    "https://openalex.org/W2963907666",
+    "https://openalex.org/W2954388973",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W3167290312",
+    "https://openalex.org/W6765779288",
+    "https://openalex.org/W1965142824",
+    "https://openalex.org/W4310283148",
+    "https://openalex.org/W3099345087",
+    "https://openalex.org/W2125389028",
+    "https://openalex.org/W4221153759",
+    "https://openalex.org/W2899663614"
+  ],
+  "abstract": "We present a novel graph Transformer generative adversarial network (GTGAN) to learn effective graph node relations in an end-to-end fashion for challenging graph-constrained architectural layout generation tasks. The proposed graph-Transformer-based generator includes a novel graph Transformer encoder that combines graph convolutions and self-attentions in a Transformer to model both local and global interactions across connected and non-connected graph nodes. Specifically, the proposed connected node attention (CNA) and non-connected node attention (NNA) aim to capture the global relations across connected nodes and non-connected nodes in the input graph, respectively. The proposed graph modeling block (GMB) aims to exploit local vertex interactions based on a house layout topology. Moreover, we propose a new node classification-based discriminator to preserve the high-level semantic and discriminative node features for different house components. To maintain the relative spatial relationships between ground truth and predicted graphs, we also propose a novel graph-based cycle-consistency loss. Finally, we propose a novel self-guided pre-training method for graph representation learning. This approach involves simultaneous masking of nodes and edges at an elevated mask ratio (i.e., 40%) and their subsequent reconstruction using an asymmetric graph-centric autoencoder architecture. This method markedly improves the model's learning proficiency and expediency. Experiments on three challenging graph-constrained architectural layout generation tasks (i.e., house layout generation, house roof generation, and building layout generation) with three public datasets demonstrate the effectiveness of the proposed method in terms of objective quantitative scores and subjective visual realism. New state-of-the-art results are established by large margins on these three tasks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7052416801452637
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.4899114966392517
+    },
+    {
+      "name": "Graph embedding",
+      "score": 0.4820705056190491
+    },
+    {
+      "name": "Graph",
+      "score": 0.40179920196533203
+    }
+  ]
 }

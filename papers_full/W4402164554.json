@@ -1,75 +1,142 @@
 {
-    "title": "Foundation model-driven distributed learning for enhanced retinal age prediction",
-    "url": "https://openalex.org/W4402164554",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5051207655",
-            "name": "Christopher Sivert Nielsen",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5021288984",
-            "name": "Raissa Souza",
-            "affiliations": [
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5108108098",
-            "name": "Matthias Wilms",
-            "affiliations": [
-                "Alberta Children's Hospital",
-                "University of Calgary"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5040728822",
-            "name": "Nils D. Forkert",
-            "affiliations": [
-                "Alberta Children's Hospital",
-                "University of Calgary"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4324304708",
-        "https://openalex.org/W4205094332",
-        "https://openalex.org/W4287958479",
-        "https://openalex.org/W4310946626",
-        "https://openalex.org/W4212912434",
-        "https://openalex.org/W4206842719",
-        "https://openalex.org/W3040372498",
-        "https://openalex.org/W2982580298",
-        "https://openalex.org/W4385481142",
-        "https://openalex.org/W3194979994",
-        "https://openalex.org/W3088943327",
-        "https://openalex.org/W3009543607",
-        "https://openalex.org/W4318619660",
-        "https://openalex.org/W2795354529",
-        "https://openalex.org/W4226226914",
-        "https://openalex.org/W4307337446",
-        "https://openalex.org/W4309586674",
-        "https://openalex.org/W4387580598",
-        "https://openalex.org/W4391470418",
-        "https://openalex.org/W4386697749",
-        "https://openalex.org/W4221028123",
-        "https://openalex.org/W2895486342",
-        "https://openalex.org/W2162800060",
-        "https://openalex.org/W4391171934",
-        "https://openalex.org/W2962579127",
-        "https://openalex.org/W4300407188",
-        "https://openalex.org/W4391609962",
-        "https://openalex.org/W3111870364",
-        "https://openalex.org/W2118305126",
-        "https://openalex.org/W3007007518",
-        "https://openalex.org/W4283801824",
-        "https://openalex.org/W2160473736",
-        "https://openalex.org/W4206898619",
-        "https://openalex.org/W4207061586"
-    ],
-    "abstract": "Abstract Objectives The retinal age gap (RAG) is emerging as a potential biomarker for various diseases of the human body, yet its utility depends on machine learning models capable of accurately predicting biological retinal age from fundus images. However, training generalizable models is hindered by potential shortages of diverse training data. To overcome these obstacles, this work develops a novel and computationally efficient distributed learning framework for retinal age prediction. Materials and Methods The proposed framework employs a memory-efficient 8-bit quantized version of RETFound, a cutting-edge foundation model for retinal image analysis, to extract features from fundus images. These features are then used to train an efficient linear regression head model for predicting retinal age. The framework explores federated learning (FL) as well as traveling model (TM) approaches for distributed training of the linear regression head. To evaluate this framework, we simulate a client network using fundus image data from the UK Biobank. Additionally, data from patients with type 1 diabetes from the UK Biobank and the Brazilian Multilabel Ophthalmological Dataset (BRSET) were utilized to explore the clinical utility of the developed methods. Results Our findings reveal that the developed distributed learning framework achieves retinal age prediction performance on par with centralized methods, with FL and TM providing similar performance (mean absolute error of 3.57 ± 0.18 years for centralized learning, 3.60 ± 0.16 years for TM, and 3.63 ± 0.19 years for FL). Notably, the TM was found to converge with fewer local updates than FL. Moreover, patients with type 1 diabetes exhibited significantly higher RAG values than healthy controls in all models, for both the UK Biobank and BRSET datasets (P &amp;lt; .001). Discussion The high computational and memory efficiency of the developed distributed learning framework makes it well suited for resource-constrained environments. Conclusion The capacity of this framework to integrate data from underrepresented populations for training of retinal age prediction models could significantly enhance the accessibility of the RAG as an important disease biomarker.",
-    "full_text": null
+  "title": "Foundation model-driven distributed learning for enhanced retinal age prediction",
+  "url": "https://openalex.org/W4402164554",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5051207655",
+      "name": "Christopher Sivert Nielsen",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5021288984",
+      "name": "Raissa Souza",
+      "affiliations": [
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5108108098",
+      "name": "Matthias Wilms",
+      "affiliations": [
+        "Alberta Children's Hospital",
+        "University of Calgary"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5040728822",
+      "name": "Nils D. Forkert",
+      "affiliations": [
+        "Alberta Children's Hospital",
+        "University of Calgary"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4324304708",
+    "https://openalex.org/W4205094332",
+    "https://openalex.org/W4287958479",
+    "https://openalex.org/W4310946626",
+    "https://openalex.org/W4212912434",
+    "https://openalex.org/W4206842719",
+    "https://openalex.org/W3040372498",
+    "https://openalex.org/W2982580298",
+    "https://openalex.org/W4385481142",
+    "https://openalex.org/W3194979994",
+    "https://openalex.org/W3088943327",
+    "https://openalex.org/W3009543607",
+    "https://openalex.org/W4318619660",
+    "https://openalex.org/W2795354529",
+    "https://openalex.org/W4226226914",
+    "https://openalex.org/W4307337446",
+    "https://openalex.org/W4309586674",
+    "https://openalex.org/W4387580598",
+    "https://openalex.org/W4391470418",
+    "https://openalex.org/W4386697749",
+    "https://openalex.org/W4221028123",
+    "https://openalex.org/W2895486342",
+    "https://openalex.org/W2162800060",
+    "https://openalex.org/W4391171934",
+    "https://openalex.org/W2962579127",
+    "https://openalex.org/W4300407188",
+    "https://openalex.org/W4391609962",
+    "https://openalex.org/W3111870364",
+    "https://openalex.org/W2118305126",
+    "https://openalex.org/W3007007518",
+    "https://openalex.org/W4283801824",
+    "https://openalex.org/W2160473736",
+    "https://openalex.org/W4206898619",
+    "https://openalex.org/W4207061586"
+  ],
+  "abstract": "Abstract Objectives The retinal age gap (RAG) is emerging as a potential biomarker for various diseases of the human body, yet its utility depends on machine learning models capable of accurately predicting biological retinal age from fundus images. However, training generalizable models is hindered by potential shortages of diverse training data. To overcome these obstacles, this work develops a novel and computationally efficient distributed learning framework for retinal age prediction. Materials and Methods The proposed framework employs a memory-efficient 8-bit quantized version of RETFound, a cutting-edge foundation model for retinal image analysis, to extract features from fundus images. These features are then used to train an efficient linear regression head model for predicting retinal age. The framework explores federated learning (FL) as well as traveling model (TM) approaches for distributed training of the linear regression head. To evaluate this framework, we simulate a client network using fundus image data from the UK Biobank. Additionally, data from patients with type 1 diabetes from the UK Biobank and the Brazilian Multilabel Ophthalmological Dataset (BRSET) were utilized to explore the clinical utility of the developed methods. Results Our findings reveal that the developed distributed learning framework achieves retinal age prediction performance on par with centralized methods, with FL and TM providing similar performance (mean absolute error of 3.57 ± 0.18 years for centralized learning, 3.60 ± 0.16 years for TM, and 3.63 ± 0.19 years for FL). Notably, the TM was found to converge with fewer local updates than FL. Moreover, patients with type 1 diabetes exhibited significantly higher RAG values than healthy controls in all models, for both the UK Biobank and BRSET datasets (P &amp;lt; .001). Discussion The high computational and memory efficiency of the developed distributed learning framework makes it well suited for resource-constrained environments. Conclusion The capacity of this framework to integrate data from underrepresented populations for training of retinal age prediction models could significantly enhance the accessibility of the RAG as an important disease biomarker.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.748468816280365
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6530912518501282
+    },
+    {
+      "name": "Economic shortage",
+      "score": 0.6018776297569275
+    },
+    {
+      "name": "Fundus (uterus)",
+      "score": 0.5909430980682373
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5785769820213318
+    },
+    {
+      "name": "Biobank",
+      "score": 0.5608324408531189
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.5581122636795044
+    },
+    {
+      "name": "Linear regression",
+      "score": 0.47770074009895325
+    },
+    {
+      "name": "Retinal",
+      "score": 0.4262014925479889
+    },
+    {
+      "name": "Bioinformatics",
+      "score": 0.1396324336528778
+    },
+    {
+      "name": "Medicine",
+      "score": 0.11086809635162354
+    },
+    {
+      "name": "Ophthalmology",
+      "score": 0.08046931028366089
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Government (linguistics)",
+      "score": 0.0
+    }
+  ]
 }

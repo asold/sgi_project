@@ -1,73 +1,144 @@
 {
-    "title": "AI-Generated Text Detector for Arabic Language Using Encoder-Based Transformer Architecture",
-    "url": "https://openalex.org/W4392913295",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5102580418",
-            "name": "Hamed Alshammari",
-            "affiliations": [
-                "University of Bridgeport"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5071487645",
-            "name": "Ahmed El-Sayed",
-            "affiliations": [
-                "University of Bridgeport"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5070765307",
-            "name": "Khaled Elleithy",
-            "affiliations": [
-                "University of Bridgeport"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4210491685",
-        "https://openalex.org/W4360770798",
-        "https://openalex.org/W3032746405",
-        "https://openalex.org/W1984708705",
-        "https://openalex.org/W3149627794",
-        "https://openalex.org/W6681530644",
-        "https://openalex.org/W4392946376",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4381949325",
-        "https://openalex.org/W4390236844",
-        "https://openalex.org/W4361002760",
-        "https://openalex.org/W3174685870",
-        "https://openalex.org/W4283170666",
-        "https://openalex.org/W4324046518",
-        "https://openalex.org/W4313294616",
-        "https://openalex.org/W4321116084",
-        "https://openalex.org/W4386576626",
-        "https://openalex.org/W4382583857",
-        "https://openalex.org/W4321106177",
-        "https://openalex.org/W6763240421",
-        "https://openalex.org/W2951080837",
-        "https://openalex.org/W3101891351",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2970295111",
-        "https://openalex.org/W3046357466",
-        "https://openalex.org/W3172475066",
-        "https://openalex.org/W4285272223",
-        "https://openalex.org/W2963748441",
-        "https://openalex.org/W2950681488",
-        "https://openalex.org/W4390489178",
-        "https://openalex.org/W4205266770",
-        "https://openalex.org/W2986154550",
-        "https://openalex.org/W4318672916",
-        "https://openalex.org/W3035390927",
-        "https://openalex.org/W2970960342",
-        "https://openalex.org/W3045462440",
-        "https://openalex.org/W3035497479",
-        "https://openalex.org/W2585345551",
-        "https://openalex.org/W3103187652",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4211260480"
-    ],
-    "abstract": "The effectiveness of existing AI detectors is notably hampered when processing Arabic texts. This study introduces a novel AI text classifier designed specifically for Arabic, tackling the distinct challenges inherent in processing this language. A particular focus is placed on accurately recognizing human-written texts (HWTs), an area where existing AI detectors have demonstrated significant limitations. To achieve this goal, this paper utilized and fine-tuned two Transformer-based models, AraELECTRA and XLM-R, by training them on two distinct datasets: a large dataset comprising 43,958 examples and a custom dataset with 3078 examples that contain HWT and AI-generated texts (AIGTs) from various sources, including ChatGPT 3.5, ChatGPT-4, and BARD. The proposed architecture is adaptable to any language, but this work evaluates these models’ efficiency in recognizing HWTs versus AIGTs in Arabic as an example of Semitic languages. The performance of the proposed models has been compared against the two prominent existing AI detectors, GPTZero and OpenAI Text Classifier, particularly on the AIRABIC benchmark dataset. The results reveal that the proposed classifiers outperform both GPTZero and OpenAI Text Classifier with 81% accuracy compared to 63% and 50% for GPTZero and OpenAI Text Classifier, respectively. Furthermore, integrating a Dediacritization Layer prior to the classification model demonstrated a significant enhancement in the detection accuracy of both HWTs and AIGTs. This Dediacritization step markedly improved the classification accuracy, elevating it from 81% to as high as 99% and, in some instances, even achieving 100%.",
-    "full_text": null
+  "title": "AI-Generated Text Detector for Arabic Language Using Encoder-Based Transformer Architecture",
+  "url": "https://openalex.org/W4392913295",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5102580418",
+      "name": "Hamed Alshammari",
+      "affiliations": [
+        "University of Bridgeport"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5071487645",
+      "name": "Ahmed El-Sayed",
+      "affiliations": [
+        "University of Bridgeport"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5070765307",
+      "name": "Khaled Elleithy",
+      "affiliations": [
+        "University of Bridgeport"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4210491685",
+    "https://openalex.org/W4360770798",
+    "https://openalex.org/W3032746405",
+    "https://openalex.org/W1984708705",
+    "https://openalex.org/W3149627794",
+    "https://openalex.org/W6681530644",
+    "https://openalex.org/W4392946376",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4381949325",
+    "https://openalex.org/W4390236844",
+    "https://openalex.org/W4361002760",
+    "https://openalex.org/W3174685870",
+    "https://openalex.org/W4283170666",
+    "https://openalex.org/W4324046518",
+    "https://openalex.org/W4313294616",
+    "https://openalex.org/W4321116084",
+    "https://openalex.org/W4386576626",
+    "https://openalex.org/W4382583857",
+    "https://openalex.org/W4321106177",
+    "https://openalex.org/W6763240421",
+    "https://openalex.org/W2951080837",
+    "https://openalex.org/W3101891351",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2970295111",
+    "https://openalex.org/W3046357466",
+    "https://openalex.org/W3172475066",
+    "https://openalex.org/W4285272223",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2950681488",
+    "https://openalex.org/W4390489178",
+    "https://openalex.org/W4205266770",
+    "https://openalex.org/W2986154550",
+    "https://openalex.org/W4318672916",
+    "https://openalex.org/W3035390927",
+    "https://openalex.org/W2970960342",
+    "https://openalex.org/W3045462440",
+    "https://openalex.org/W3035497479",
+    "https://openalex.org/W2585345551",
+    "https://openalex.org/W3103187652",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4211260480"
+  ],
+  "abstract": "The effectiveness of existing AI detectors is notably hampered when processing Arabic texts. This study introduces a novel AI text classifier designed specifically for Arabic, tackling the distinct challenges inherent in processing this language. A particular focus is placed on accurately recognizing human-written texts (HWTs), an area where existing AI detectors have demonstrated significant limitations. To achieve this goal, this paper utilized and fine-tuned two Transformer-based models, AraELECTRA and XLM-R, by training them on two distinct datasets: a large dataset comprising 43,958 examples and a custom dataset with 3078 examples that contain HWT and AI-generated texts (AIGTs) from various sources, including ChatGPT 3.5, ChatGPT-4, and BARD. The proposed architecture is adaptable to any language, but this work evaluates these models’ efficiency in recognizing HWTs versus AIGTs in Arabic as an example of Semitic languages. The performance of the proposed models has been compared against the two prominent existing AI detectors, GPTZero and OpenAI Text Classifier, particularly on the AIRABIC benchmark dataset. The results reveal that the proposed classifiers outperform both GPTZero and OpenAI Text Classifier with 81% accuracy compared to 63% and 50% for GPTZero and OpenAI Text Classifier, respectively. Furthermore, integrating a Dediacritization Layer prior to the classification model demonstrated a significant enhancement in the detection accuracy of both HWTs and AIGTs. This Dediacritization step markedly improved the classification accuracy, elevating it from 81% to as high as 99% and, in some instances, even achieving 100%.",
+  "full_text": null,
+  "topic": "Arabic",
+  "concepts": [
+    {
+      "name": "Arabic",
+      "score": 0.7394804954528809
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6810973882675171
+    },
+    {
+      "name": "Encoder",
+      "score": 0.6339687705039978
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6297850608825684
+    },
+    {
+      "name": "Architecture",
+      "score": 0.6193447113037109
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5911551713943481
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.48246318101882935
+    },
+    {
+      "name": "Detector",
+      "score": 0.45456627011299133
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.3009521961212158
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.16288968920707703
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14879679679870605
+    },
+    {
+      "name": "Voltage",
+      "score": 0.12404635548591614
+    },
+    {
+      "name": "Art",
+      "score": 0.11187922954559326
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.06253567337989807
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.04809081554412842
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

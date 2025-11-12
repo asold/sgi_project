@@ -1,99 +1,134 @@
 {
-    "title": "Fine-tuning Large Language Models for Rare Disease Concept Normalization",
-    "url": "https://openalex.org/W4390403247",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2097188443",
-            "name": "Andy Wang",
-            "affiliations": [
-                "Columbia University",
-                "Peddie School"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2068681617",
-            "name": "Cong Liu",
-            "affiliations": [
-                "Peddie School"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117827137",
-            "name": "Jingye Yang",
-            "affiliations": [
-                "University of Pennsylvania"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113027333",
-            "name": "Chunhua Weng",
-            "affiliations": [
-                "Peddie School"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097188443",
-            "name": "Andy Wang",
-            "affiliations": [
-                "Peddie School",
-                "Columbia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2068681617",
-            "name": "Cong Liu",
-            "affiliations": [
-                "Peddie School"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117827137",
-            "name": "Jingye Yang",
-            "affiliations": [
-                "University of Pennsylvania"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2113027333",
-            "name": "Chunhua Weng",
-            "affiliations": [
-                "Peddie School"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W106471462",
-        "https://openalex.org/W1829450080",
-        "https://openalex.org/W2604401930",
-        "https://openalex.org/W2014474824",
-        "https://openalex.org/W2810528414",
-        "https://openalex.org/W2807640626",
-        "https://openalex.org/W2799806969",
-        "https://openalex.org/W3044247947",
-        "https://openalex.org/W2886173545",
-        "https://openalex.org/W3092486910",
-        "https://openalex.org/W3036263923",
-        "https://openalex.org/W2122402213",
-        "https://openalex.org/W1550258693",
-        "https://openalex.org/W2946102094",
-        "https://openalex.org/W3092557781",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4321351832",
-        "https://openalex.org/W4388037391",
-        "https://openalex.org/W4365511667",
-        "https://openalex.org/W3160596727",
-        "https://openalex.org/W4385848332",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W2980282514",
-        "https://openalex.org/W2888828233",
-        "https://openalex.org/W4252076394",
-        "https://openalex.org/W2107651176",
-        "https://openalex.org/W2012361142",
-        "https://openalex.org/W3031191781"
-    ],
-    "abstract": "ABSTRACT Objective We aim to develop a novel method for rare disease concept normalization by fine-tuning Llama 2, an open-source large language model (LLM), using a domain-specific corpus sourced from the Human Phenotype Ontology (HPO). Methods We developed an in-house template-based script to generate two corpora for fine-tuning. The first (NAME) contains standardized HPO names, sourced from the HPO vocabularies, along with their corresponding identifiers. The second (NAME+SYN) includes HPO names and half of the concept’s synonyms as well as identifiers. Subsequently, we fine-tuned Llama2 (Llama2-7B) for each sentence set and conducted an evaluation using a range of sentence prompts and various phenotype terms. Results When the phenotype terms for normalization were included in the fine-tuning corpora, both models demonstrated nearly perfect performance, averaging over 99% accuracy. In comparison, ChatGPT-3.5 has only ∼20% accuracy in identifying HPO IDs for phenotype terms. When single-character typos were introduced in the phenotype terms, the accuracy of NAME and NAME+SYN is 10.2% and 36.1%, respectively, but increases to 61.8% (NAME+SYN) with additional typo-specific fine-tuning. For terms sourced from HPO vocabularies as unseen synonyms, the NAME model achieved 11.2% accuracy, while the NAME+SYN model achieved 92.7% accuracy. Conclusion Our fine-tuned models demonstrate ability to normalize phenotype terms unseen in the fine-tuning corpus, including misspellings, synonyms, terms from other ontologies, and laymen’s terms. Our approach provides a solution for the use of LLM to identify named medical entities from the clinical narratives, while successfully normalizing them to standard concepts in a controlled vocabulary.",
-    "full_text": null
+  "title": "Fine-tuning Large Language Models for Rare Disease Concept Normalization",
+  "url": "https://openalex.org/W4390403247",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2097188443",
+      "name": "Andy Wang",
+      "affiliations": [
+        "Columbia University",
+        "Peddie School"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2068681617",
+      "name": "Cong Liu",
+      "affiliations": [
+        "Peddie School"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117827137",
+      "name": "Jingye Yang",
+      "affiliations": [
+        "University of Pennsylvania"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113027333",
+      "name": "Chunhua Weng",
+      "affiliations": [
+        "Peddie School"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097188443",
+      "name": "Andy Wang",
+      "affiliations": [
+        "Peddie School",
+        "Columbia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2068681617",
+      "name": "Cong Liu",
+      "affiliations": [
+        "Peddie School"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117827137",
+      "name": "Jingye Yang",
+      "affiliations": [
+        "University of Pennsylvania"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2113027333",
+      "name": "Chunhua Weng",
+      "affiliations": [
+        "Peddie School"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W106471462",
+    "https://openalex.org/W1829450080",
+    "https://openalex.org/W2604401930",
+    "https://openalex.org/W2014474824",
+    "https://openalex.org/W2810528414",
+    "https://openalex.org/W2807640626",
+    "https://openalex.org/W2799806969",
+    "https://openalex.org/W3044247947",
+    "https://openalex.org/W2886173545",
+    "https://openalex.org/W3092486910",
+    "https://openalex.org/W3036263923",
+    "https://openalex.org/W2122402213",
+    "https://openalex.org/W1550258693",
+    "https://openalex.org/W2946102094",
+    "https://openalex.org/W3092557781",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4321351832",
+    "https://openalex.org/W4388037391",
+    "https://openalex.org/W4365511667",
+    "https://openalex.org/W3160596727",
+    "https://openalex.org/W4385848332",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W2980282514",
+    "https://openalex.org/W2888828233",
+    "https://openalex.org/W4252076394",
+    "https://openalex.org/W2107651176",
+    "https://openalex.org/W2012361142",
+    "https://openalex.org/W3031191781"
+  ],
+  "abstract": "ABSTRACT Objective We aim to develop a novel method for rare disease concept normalization by fine-tuning Llama 2, an open-source large language model (LLM), using a domain-specific corpus sourced from the Human Phenotype Ontology (HPO). Methods We developed an in-house template-based script to generate two corpora for fine-tuning. The first (NAME) contains standardized HPO names, sourced from the HPO vocabularies, along with their corresponding identifiers. The second (NAME+SYN) includes HPO names and half of the concept’s synonyms as well as identifiers. Subsequently, we fine-tuned Llama2 (Llama2-7B) for each sentence set and conducted an evaluation using a range of sentence prompts and various phenotype terms. Results When the phenotype terms for normalization were included in the fine-tuning corpora, both models demonstrated nearly perfect performance, averaging over 99% accuracy. In comparison, ChatGPT-3.5 has only ∼20% accuracy in identifying HPO IDs for phenotype terms. When single-character typos were introduced in the phenotype terms, the accuracy of NAME and NAME+SYN is 10.2% and 36.1%, respectively, but increases to 61.8% (NAME+SYN) with additional typo-specific fine-tuning. For terms sourced from HPO vocabularies as unseen synonyms, the NAME model achieved 11.2% accuracy, while the NAME+SYN model achieved 92.7% accuracy. Conclusion Our fine-tuned models demonstrate ability to normalize phenotype terms unseen in the fine-tuning corpus, including misspellings, synonyms, terms from other ontologies, and laymen’s terms. Our approach provides a solution for the use of LLM to identify named medical entities from the clinical narratives, while successfully normalizing them to standard concepts in a controlled vocabulary.",
+  "full_text": null,
+  "topic": "Normalization (sociology)",
+  "concepts": [
+    {
+      "name": "Normalization (sociology)",
+      "score": 0.7843422889709473
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5593097805976868
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4491340219974518
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3437381386756897
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.32015836238861084
+    },
+    {
+      "name": "Sociology",
+      "score": 0.1338086724281311
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.11119511723518372
+    },
+    {
+      "name": "Anthropology",
+      "score": 0.0
+    }
+  ]
 }

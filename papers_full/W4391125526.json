@@ -1,118 +1,181 @@
 {
-    "title": "SSR: Spatial Sequential Hybrid Architecture for Latency Throughput Tradeoff in Transformer Acceleration",
-    "url": "https://openalex.org/W4391125526",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3205897644",
-            "name": "Jinming Zhuang",
-            "affiliations": [
-                "University of Pittsburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4319903034",
-            "name": "Zhuoping Yang",
-            "affiliations": [
-                "University of Pittsburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2497353118",
-            "name": "Shixin Ji",
-            "affiliations": [
-                "University of Pittsburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117477526",
-            "name": "Heng Huang",
-            "affiliations": [
-                "University of Maryland, College Park"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2130178155",
-            "name": "Alex K. Jones",
-            "affiliations": [
-                "University of Pittsburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2149874961",
-            "name": "Jingtong Hu",
-            "affiliations": [
-                "University of Pittsburgh"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2112093511",
-            "name": "Yiyu Shi",
-            "affiliations": [
-                "University of Notre Dame"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2109342718",
-            "name": "Peipei Zhou",
-            "affiliations": [
-                "University of Pittsburgh"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2944647778",
-        "https://openalex.org/W2133156997",
-        "https://openalex.org/W2542189141",
-        "https://openalex.org/W2798534715",
-        "https://openalex.org/W2883929540",
-        "https://openalex.org/W2606722458",
-        "https://openalex.org/W4307652670",
-        "https://openalex.org/W4389470891",
-        "https://openalex.org/W2899915146",
-        "https://openalex.org/W4213446428",
-        "https://openalex.org/W3199934250",
-        "https://openalex.org/W3206749822",
-        "https://openalex.org/W4380881063",
-        "https://openalex.org/W4319870545",
-        "https://openalex.org/W4386977973",
-        "https://openalex.org/W4393145479",
-        "https://openalex.org/W4312121097",
-        "https://openalex.org/W4293024037",
-        "https://openalex.org/W4389166756",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W2896983500",
-        "https://openalex.org/W4280489237",
-        "https://openalex.org/W3158233068",
-        "https://openalex.org/W4360831795",
-        "https://openalex.org/W4360831786",
-        "https://openalex.org/W4290858055",
-        "https://openalex.org/W3163275603",
-        "https://openalex.org/W3112948415",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W3213528054",
-        "https://openalex.org/W4386763982",
-        "https://openalex.org/W4250503569",
-        "https://openalex.org/W4221163762",
-        "https://openalex.org/W2517617279",
-        "https://openalex.org/W4313913124",
-        "https://openalex.org/W4256629673",
-        "https://openalex.org/W3170874841",
-        "https://openalex.org/W4295312788",
-        "https://openalex.org/W4389162879",
-        "https://openalex.org/W3008905965",
-        "https://openalex.org/W2990138404",
-        "https://openalex.org/W4389156555",
-        "https://openalex.org/W3082569543",
-        "https://openalex.org/W4239385313",
-        "https://openalex.org/W4291333192",
-        "https://openalex.org/W4389166751",
-        "https://openalex.org/W4321637455",
-        "https://openalex.org/W2626696598",
-        "https://openalex.org/W4321637298",
-        "https://openalex.org/W4230315356",
-        "https://openalex.org/W95608104"
-    ],
-    "abstract": "With the increase in the computation intensity of the chip, the mismatch\\nbetween computation layer shapes and the available computation resource\\nsignificantly limits the utilization of the chip. Driven by this observation,\\nprior works discuss spatial accelerators or dataflow architecture to maximize\\nthe throughput. However, using spatial accelerators could potentially increase\\nthe execution latency. In this work, we first systematically investigate two\\nexecution models: (1) sequentially (temporally) launch one monolithic\\naccelerator, and (2) spatially launch multiple accelerators. From the\\nobservations, we find that there is a latency throughput tradeoff between these\\ntwo execution models, and combining these two strategies together can give us a\\nmore efficient latency throughput Pareto front. To achieve this, we propose\\nspatial sequential architecture (SSR) and SSR design automation framework to\\nexplore both strategies together when deploying deep learning inference. We use\\nthe 7nm AMD Versal ACAP VCK190 board to implement SSR accelerators for four\\nend-to-end transformer-based deep learning models. SSR achieves average\\nthroughput gains of 2.53x, 35.71x, and 14.20x under different batch sizes\\ncompared to the 8nm Nvidia GPU A10G, 16nm AMD FPGAs ZCU102, and U250. The\\naverage energy efficiency gains are 8.51x, 6.75x, and 21.22x, respectively.\\nCompared with the sequential-only solution and spatial-only solution on VCK190,\\nour spatial-sequential-hybrid solutions achieve higher throughput under the\\nsame latency requirement and lower latency under the same throughput\\nrequirement. We also use SSR analytical models to demonstrate how to use SSR to\\noptimize solutions on other computing platforms, e.g., 14nm Intel Stratix 10\\nNX.\\n",
-    "full_text": null
+  "title": "SSR: Spatial Sequential Hybrid Architecture for Latency Throughput Tradeoff in Transformer Acceleration",
+  "url": "https://openalex.org/W4391125526",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3205897644",
+      "name": "Jinming Zhuang",
+      "affiliations": [
+        "University of Pittsburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4319903034",
+      "name": "Zhuoping Yang",
+      "affiliations": [
+        "University of Pittsburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2497353118",
+      "name": "Shixin Ji",
+      "affiliations": [
+        "University of Pittsburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117477526",
+      "name": "Heng Huang",
+      "affiliations": [
+        "University of Maryland, College Park"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2130178155",
+      "name": "Alex K. Jones",
+      "affiliations": [
+        "University of Pittsburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2149874961",
+      "name": "Jingtong Hu",
+      "affiliations": [
+        "University of Pittsburgh"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2112093511",
+      "name": "Yiyu Shi",
+      "affiliations": [
+        "University of Notre Dame"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2109342718",
+      "name": "Peipei Zhou",
+      "affiliations": [
+        "University of Pittsburgh"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2944647778",
+    "https://openalex.org/W2133156997",
+    "https://openalex.org/W2542189141",
+    "https://openalex.org/W2798534715",
+    "https://openalex.org/W2883929540",
+    "https://openalex.org/W2606722458",
+    "https://openalex.org/W4307652670",
+    "https://openalex.org/W4389470891",
+    "https://openalex.org/W2899915146",
+    "https://openalex.org/W4213446428",
+    "https://openalex.org/W3199934250",
+    "https://openalex.org/W3206749822",
+    "https://openalex.org/W4380881063",
+    "https://openalex.org/W4319870545",
+    "https://openalex.org/W4386977973",
+    "https://openalex.org/W4393145479",
+    "https://openalex.org/W4312121097",
+    "https://openalex.org/W4293024037",
+    "https://openalex.org/W4389166756",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W2896983500",
+    "https://openalex.org/W4280489237",
+    "https://openalex.org/W3158233068",
+    "https://openalex.org/W4360831795",
+    "https://openalex.org/W4360831786",
+    "https://openalex.org/W4290858055",
+    "https://openalex.org/W3163275603",
+    "https://openalex.org/W3112948415",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W3213528054",
+    "https://openalex.org/W4386763982",
+    "https://openalex.org/W4250503569",
+    "https://openalex.org/W4221163762",
+    "https://openalex.org/W2517617279",
+    "https://openalex.org/W4313913124",
+    "https://openalex.org/W4256629673",
+    "https://openalex.org/W3170874841",
+    "https://openalex.org/W4295312788",
+    "https://openalex.org/W4389162879",
+    "https://openalex.org/W3008905965",
+    "https://openalex.org/W2990138404",
+    "https://openalex.org/W4389156555",
+    "https://openalex.org/W3082569543",
+    "https://openalex.org/W4239385313",
+    "https://openalex.org/W4291333192",
+    "https://openalex.org/W4389166751",
+    "https://openalex.org/W4321637455",
+    "https://openalex.org/W2626696598",
+    "https://openalex.org/W4321637298",
+    "https://openalex.org/W4230315356",
+    "https://openalex.org/W95608104"
+  ],
+  "abstract": "With the increase in the computation intensity of the chip, the mismatch\\nbetween computation layer shapes and the available computation resource\\nsignificantly limits the utilization of the chip. Driven by this observation,\\nprior works discuss spatial accelerators or dataflow architecture to maximize\\nthe throughput. However, using spatial accelerators could potentially increase\\nthe execution latency. In this work, we first systematically investigate two\\nexecution models: (1) sequentially (temporally) launch one monolithic\\naccelerator, and (2) spatially launch multiple accelerators. From the\\nobservations, we find that there is a latency throughput tradeoff between these\\ntwo execution models, and combining these two strategies together can give us a\\nmore efficient latency throughput Pareto front. To achieve this, we propose\\nspatial sequential architecture (SSR) and SSR design automation framework to\\nexplore both strategies together when deploying deep learning inference. We use\\nthe 7nm AMD Versal ACAP VCK190 board to implement SSR accelerators for four\\nend-to-end transformer-based deep learning models. SSR achieves average\\nthroughput gains of 2.53x, 35.71x, and 14.20x under different batch sizes\\ncompared to the 8nm Nvidia GPU A10G, 16nm AMD FPGAs ZCU102, and U250. The\\naverage energy efficiency gains are 8.51x, 6.75x, and 21.22x, respectively.\\nCompared with the sequential-only solution and spatial-only solution on VCK190,\\nour spatial-sequential-hybrid solutions achieve higher throughput under the\\nsame latency requirement and lower latency under the same throughput\\nrequirement. We also use SSR analytical models to demonstrate how to use SSR to\\noptimize solutions on other computing platforms, e.g., 14nm Intel Stratix 10\\nNX.\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8079665899276733
+    },
+    {
+      "name": "Dataflow",
+      "score": 0.7131770849227905
+    },
+    {
+      "name": "Latency (audio)",
+      "score": 0.6658670902252197
+    },
+    {
+      "name": "Field-programmable gate array",
+      "score": 0.6221333742141724
+    },
+    {
+      "name": "Computation",
+      "score": 0.6197789907455444
+    },
+    {
+      "name": "Throughput",
+      "score": 0.6018417477607727
+    },
+    {
+      "name": "Hardware acceleration",
+      "score": 0.5537470579147339
+    },
+    {
+      "name": "Parallel computing",
+      "score": 0.44828593730926514
+    },
+    {
+      "name": "Computer architecture",
+      "score": 0.42572319507598877
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.38996821641921997
+    },
+    {
+      "name": "Computer engineering",
+      "score": 0.35142821073532104
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.1234898567199707
+    },
+    {
+      "name": "Operating system",
+      "score": 0.09760400652885437
+    },
+    {
+      "name": "Telecommunications",
+      "score": 0.0
+    },
+    {
+      "name": "Wireless",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,113 +1,176 @@
 {
-    "title": "Retrieval-Based Transformer Pseudocode Generation",
-    "url": "https://openalex.org/W4212788259",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4213849585",
-            "name": "Anas Alokla",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2231641322",
-            "name": "Walaa Gad",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A142813711",
-            "name": "Waleed Nazih",
-            "affiliations": [
-                "Prince Sattam Bin Abdulaziz University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3196500289",
-            "name": "Mustafa Aref",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4213849588",
-            "name": "Abdel Badeeh Salem",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4213849585",
-            "name": "Anas Alokla",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2231641322",
-            "name": "Walaa Gad",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A142813711",
-            "name": "Waleed Nazih",
-            "affiliations": [
-                "Prince Sattam Bin Abdulaziz University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3196500289",
-            "name": "Mustafa Aref",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4213849588",
-            "name": "Abdel Badeeh Salem",
-            "affiliations": [
-                "Ain Shams University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6801622860",
-        "https://openalex.org/W3186152447",
-        "https://openalex.org/W2907344080",
-        "https://openalex.org/W2242083635",
-        "https://openalex.org/W2964325845",
-        "https://openalex.org/W2963655793",
-        "https://openalex.org/W2964284687",
-        "https://openalex.org/W4211185538",
-        "https://openalex.org/W2946926542",
-        "https://openalex.org/W2605887895",
-        "https://openalex.org/W2610002206",
-        "https://openalex.org/W3094316335",
-        "https://openalex.org/W2963829526",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2922006620",
-        "https://openalex.org/W3088337517",
-        "https://openalex.org/W2964165364",
-        "https://openalex.org/W2889467844",
-        "https://openalex.org/W2282866165",
-        "https://openalex.org/W2884276923",
-        "https://openalex.org/W2949297108",
-        "https://openalex.org/W3091730360",
-        "https://openalex.org/W2152311353",
-        "https://openalex.org/W2165612380",
-        "https://openalex.org/W2888312537",
-        "https://openalex.org/W1647671624",
-        "https://openalex.org/W2806532810",
-        "https://openalex.org/W2133333349",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W3202039224",
-        "https://openalex.org/W4295312788",
-        "https://openalex.org/W4385245566"
-    ],
-    "abstract": "The comprehension of source code is very difficult, especially if the programmer is not familiar with the programming language. Pseudocode explains and describes code contents that are based on the semantic analysis and understanding of the source code. In this paper, a novel retrieval-based transformer pseudocode generation model is proposed. The proposed model adopts different retrieval similarity methods and neural machine translation to generate pseudocode. The proposed model handles words of low frequency and words that do not exist in the training dataset. It consists of three steps. First, we retrieve the sentences that are similar to the input sentence using different similarity methods. Second, pass the source code retrieved (input retrieved) to the deep learning model based on the transformer to generate the pseudocode retrieved. Third, the replacement process is performed to obtain the target pseudo code. The proposed model is evaluated using Django and SPoC datasets. The experiments show promising performance results compared to other language models of machine translation. It reaches 61.96 and 50.28 in terms of BLEU performance measures for Django and SPoC, respectively.",
-    "full_text": null
+  "title": "Retrieval-Based Transformer Pseudocode Generation",
+  "url": "https://openalex.org/W4212788259",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4213849585",
+      "name": "Anas Alokla",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2231641322",
+      "name": "Walaa Gad",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A142813711",
+      "name": "Waleed Nazih",
+      "affiliations": [
+        "Prince Sattam Bin Abdulaziz University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3196500289",
+      "name": "Mustafa Aref",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4213849588",
+      "name": "Abdel Badeeh Salem",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4213849585",
+      "name": "Anas Alokla",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2231641322",
+      "name": "Walaa Gad",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A142813711",
+      "name": "Waleed Nazih",
+      "affiliations": [
+        "Prince Sattam Bin Abdulaziz University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3196500289",
+      "name": "Mustafa Aref",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4213849588",
+      "name": "Abdel Badeeh Salem",
+      "affiliations": [
+        "Ain Shams University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6801622860",
+    "https://openalex.org/W3186152447",
+    "https://openalex.org/W2907344080",
+    "https://openalex.org/W2242083635",
+    "https://openalex.org/W2964325845",
+    "https://openalex.org/W2963655793",
+    "https://openalex.org/W2964284687",
+    "https://openalex.org/W4211185538",
+    "https://openalex.org/W2946926542",
+    "https://openalex.org/W2605887895",
+    "https://openalex.org/W2610002206",
+    "https://openalex.org/W3094316335",
+    "https://openalex.org/W2963829526",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2922006620",
+    "https://openalex.org/W3088337517",
+    "https://openalex.org/W2964165364",
+    "https://openalex.org/W2889467844",
+    "https://openalex.org/W2282866165",
+    "https://openalex.org/W2884276923",
+    "https://openalex.org/W2949297108",
+    "https://openalex.org/W3091730360",
+    "https://openalex.org/W2152311353",
+    "https://openalex.org/W2165612380",
+    "https://openalex.org/W2888312537",
+    "https://openalex.org/W1647671624",
+    "https://openalex.org/W2806532810",
+    "https://openalex.org/W2133333349",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W3202039224",
+    "https://openalex.org/W4295312788",
+    "https://openalex.org/W4385245566"
+  ],
+  "abstract": "The comprehension of source code is very difficult, especially if the programmer is not familiar with the programming language. Pseudocode explains and describes code contents that are based on the semantic analysis and understanding of the source code. In this paper, a novel retrieval-based transformer pseudocode generation model is proposed. The proposed model adopts different retrieval similarity methods and neural machine translation to generate pseudocode. The proposed model handles words of low frequency and words that do not exist in the training dataset. It consists of three steps. First, we retrieve the sentences that are similar to the input sentence using different similarity methods. Second, pass the source code retrieved (input retrieved) to the deep learning model based on the transformer to generate the pseudocode retrieved. Third, the replacement process is performed to obtain the target pseudo code. The proposed model is evaluated using Django and SPoC datasets. The experiments show promising performance results compared to other language models of machine translation. It reaches 61.96 and 50.28 in terms of BLEU performance measures for Django and SPoC, respectively.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8851325511932373
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7820479869842529
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6012071967124939
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.5898165106773376
+    },
+    {
+      "name": "Source code",
+      "score": 0.5808538794517517
+    },
+    {
+      "name": "Sentence",
+      "score": 0.5726221799850464
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5689720511436462
+    },
+    {
+      "name": "Programmer",
+      "score": 0.4506525993347168
+    },
+    {
+      "name": "Code generation",
+      "score": 0.437716007232666
+    },
+    {
+      "name": "Programming language",
+      "score": 0.37561967968940735
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

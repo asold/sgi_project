@@ -1,96 +1,163 @@
 {
-    "title": "Codeformer: A GNN-Nested Transformer Model for Binary Code Similarity Detection",
-    "url": "https://openalex.org/W4362615084",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100686818",
-            "name": "Liu Guang-ming",
-            "affiliations": [
-                null,
-                "Zhengzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100709810",
-            "name": "Xin Zhou",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5049750136",
-            "name": "Jianmin Pang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100381165",
-            "name": "Yue Feng",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102839952",
-            "name": "Wenfu Liu",
-            "affiliations": [
-                null,
-                "State Key Laboratory of Complex Electromagnetic Environment Effects on Electronics and Information System",
-                "National Engineering Research Center of Electromagnetic Radiation Control Materials"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5020902466",
-            "name": "Junchao Wang",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2602815560",
-        "https://openalex.org/W2532962075",
-        "https://openalex.org/W2926178846",
-        "https://openalex.org/W3097608674",
-        "https://openalex.org/W3160804878",
-        "https://openalex.org/W6606151733",
-        "https://openalex.org/W2500288818",
-        "https://openalex.org/W1548500763",
-        "https://openalex.org/W2049138229",
-        "https://openalex.org/W1990762361",
-        "https://openalex.org/W2618635610",
-        "https://openalex.org/W2009614414",
-        "https://openalex.org/W2145657894",
-        "https://openalex.org/W2107697055",
-        "https://openalex.org/W4244720976",
-        "https://openalex.org/W1580559113",
-        "https://openalex.org/W6839237461",
-        "https://openalex.org/W3127424491",
-        "https://openalex.org/W2911432304",
-        "https://openalex.org/W2787662294",
-        "https://openalex.org/W2547625248",
-        "https://openalex.org/W1942295288",
-        "https://openalex.org/W3011088748",
-        "https://openalex.org/W1659617390",
-        "https://openalex.org/W2749008552",
-        "https://openalex.org/W2997915791",
-        "https://openalex.org/W2888320512",
-        "https://openalex.org/W3007413911",
-        "https://openalex.org/W4285586654",
-        "https://openalex.org/W3108936298",
-        "https://openalex.org/W3014339000",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6802099057",
-        "https://openalex.org/W6736685754",
-        "https://openalex.org/W3193122818",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3105926539",
-        "https://openalex.org/W152854583",
-        "https://openalex.org/W3212640459",
-        "https://openalex.org/W3195235276"
-    ],
-    "abstract": "Binary code similarity detection is used to calculate the code similarity of a pair of binary functions or files, through a certain calculation method and judgment method. It is a fundamental task in the field of computer binary security. Traditional methods of similarity detection usually use graph matching algorithms, but these methods have poor performance and unsatisfactory effects. Recently, graph neural networks have become an effective method for analyzing graph embeddings in natural language processing. Although these methods are effective, the existing methods still do not sufficiently learn the information of the binary code. To solve this problem, we propose Codeformer, an iterative model of a graph neural network (GNN)-nested Transformer. The model uses a Transformer to obtain an embedding vector of the basic block and uses the GNN to update the embedding vector of each basic block of the control flow graph (CFG). Codeformer iteratively executes basic block embedding to learn abundant global information and finally uses the GNN to aggregate all the basic blocks of a function. We conducted experiments on the OpenSSL, Clamav and Curl datasets. The evaluation results show that our method outperforms the state-of-the-art models.",
-    "full_text": null
+  "title": "Codeformer: A GNN-Nested Transformer Model for Binary Code Similarity Detection",
+  "url": "https://openalex.org/W4362615084",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100686818",
+      "name": "Liu Guang-ming",
+      "affiliations": [
+        null,
+        "Zhengzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100709810",
+      "name": "Xin Zhou",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5049750136",
+      "name": "Jianmin Pang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100381165",
+      "name": "Yue Feng",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102839952",
+      "name": "Wenfu Liu",
+      "affiliations": [
+        null,
+        "State Key Laboratory of Complex Electromagnetic Environment Effects on Electronics and Information System",
+        "National Engineering Research Center of Electromagnetic Radiation Control Materials"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5020902466",
+      "name": "Junchao Wang",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2602815560",
+    "https://openalex.org/W2532962075",
+    "https://openalex.org/W2926178846",
+    "https://openalex.org/W3097608674",
+    "https://openalex.org/W3160804878",
+    "https://openalex.org/W6606151733",
+    "https://openalex.org/W2500288818",
+    "https://openalex.org/W1548500763",
+    "https://openalex.org/W2049138229",
+    "https://openalex.org/W1990762361",
+    "https://openalex.org/W2618635610",
+    "https://openalex.org/W2009614414",
+    "https://openalex.org/W2145657894",
+    "https://openalex.org/W2107697055",
+    "https://openalex.org/W4244720976",
+    "https://openalex.org/W1580559113",
+    "https://openalex.org/W6839237461",
+    "https://openalex.org/W3127424491",
+    "https://openalex.org/W2911432304",
+    "https://openalex.org/W2787662294",
+    "https://openalex.org/W2547625248",
+    "https://openalex.org/W1942295288",
+    "https://openalex.org/W3011088748",
+    "https://openalex.org/W1659617390",
+    "https://openalex.org/W2749008552",
+    "https://openalex.org/W2997915791",
+    "https://openalex.org/W2888320512",
+    "https://openalex.org/W3007413911",
+    "https://openalex.org/W4285586654",
+    "https://openalex.org/W3108936298",
+    "https://openalex.org/W3014339000",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6802099057",
+    "https://openalex.org/W6736685754",
+    "https://openalex.org/W3193122818",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3105926539",
+    "https://openalex.org/W152854583",
+    "https://openalex.org/W3212640459",
+    "https://openalex.org/W3195235276"
+  ],
+  "abstract": "Binary code similarity detection is used to calculate the code similarity of a pair of binary functions or files, through a certain calculation method and judgment method. It is a fundamental task in the field of computer binary security. Traditional methods of similarity detection usually use graph matching algorithms, but these methods have poor performance and unsatisfactory effects. Recently, graph neural networks have become an effective method for analyzing graph embeddings in natural language processing. Although these methods are effective, the existing methods still do not sufficiently learn the information of the binary code. To solve this problem, we propose Codeformer, an iterative model of a graph neural network (GNN)-nested Transformer. The model uses a Transformer to obtain an embedding vector of the basic block and uses the GNN to update the embedding vector of each basic block of the control flow graph (CFG). Codeformer iteratively executes basic block embedding to learn abundant global information and finally uses the GNN to aggregate all the basic blocks of a function. We conducted experiments on the OpenSSL, Clamav and Curl datasets. The evaluation results show that our method outperforms the state-of-the-art models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7011476159095764
+    },
+    {
+      "name": "Graph embedding",
+      "score": 0.5286009311676025
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5284941792488098
+    },
+    {
+      "name": "Binary number",
+      "score": 0.526017963886261
+    },
+    {
+      "name": "Embedding",
+      "score": 0.49950122833251953
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.48846712708473206
+    },
+    {
+      "name": "Binary code",
+      "score": 0.44165748357772827
+    },
+    {
+      "name": "Graph",
+      "score": 0.4234578013420105
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.39603191614151
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38506457209587097
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.35022151470184326
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.17409437894821167
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Arithmetic",
+      "score": 0.0
+    }
+  ]
 }

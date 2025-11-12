@@ -1,77 +1,112 @@
 {
-    "title": "Time Series Classification With Large Language Models via Linguistic Scaffolding",
-    "url": "https://openalex.org/W4403183073",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2757784191",
-            "name": "Hyeongwon Jang",
-            "affiliations": [
-                "Seoul National University",
-                "National Institute for Mathematical Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3097050891",
-            "name": "June Yong Yang",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097559674",
-            "name": "Jae-Ryong Hwang",
-            "affiliations": [
-                "Korea Naval Academy"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2171972029",
-            "name": "Eunho Yang",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6847363464",
-        "https://openalex.org/W3080253043",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W6846825190",
-        "https://openalex.org/W4389664922",
-        "https://openalex.org/W6856926427",
-        "https://openalex.org/W6852357257",
-        "https://openalex.org/W6850493425",
-        "https://openalex.org/W6856192372",
-        "https://openalex.org/W6802566335",
-        "https://openalex.org/W6850783765",
-        "https://openalex.org/W2604847698",
-        "https://openalex.org/W6803444062",
-        "https://openalex.org/W2982438846",
-        "https://openalex.org/W3173748501",
-        "https://openalex.org/W6797297377",
-        "https://openalex.org/W6845625448",
-        "https://openalex.org/W6839352926",
-        "https://openalex.org/W4382203079",
-        "https://openalex.org/W6810637551",
-        "https://openalex.org/W6809860847",
-        "https://openalex.org/W6759891849",
-        "https://openalex.org/W2964010366",
-        "https://openalex.org/W6768707575",
-        "https://openalex.org/W6780817209",
-        "https://openalex.org/W3176196442",
-        "https://openalex.org/W6759258263",
-        "https://openalex.org/W6856859693",
-        "https://openalex.org/W6856157795",
-        "https://openalex.org/W6857005926",
-        "https://openalex.org/W6838540236",
-        "https://openalex.org/W6755529311",
-        "https://openalex.org/W2026297770",
-        "https://openalex.org/W2995282027",
-        "https://openalex.org/W6631190155"
-    ],
-    "abstract": "Time series classification requires specialized models that can effectively capture temporal structures. Consequently, Large Language Models (LLMs) have emerged as promising candidates due to their proficiency in sequence modeling and semantic reasoning. However, converting time series data into text results in sequences that exceed the maximum token limit, necessitating truncation or the removal of word embeddings for fixed-length time series embeddings. This restriction not only sacrifices semantic reasoning capabilities accessed through natural language but also limits the ability to handle temporal irregularities. To overcome these challenges, we propose the Language-Scaffolded Time Series Transformer (LSTST), which combines linguistic components and time series embeddings to effectively harness LLMs while overcoming dimensional constraints. Our Language Scaffold reformulates time series classification as a contextual question-answering task, with time series embeddings as context, facilitating the LLM to utilize its inherent semantic knowledge. Moreover, the preserved linguistic structure allows a dynamic number of input context embeddings with real-time positional encoding, handling length restrictions and irregularity in the temporal dimension. Through experiments, we show that LSTST achieves state-of-the-art performance on regular time series classification and also handles irregular time series without any model modifications.",
-    "full_text": null
+  "title": "Time Series Classification With Large Language Models via Linguistic Scaffolding",
+  "url": "https://openalex.org/W4403183073",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2757784191",
+      "name": "Hyeongwon Jang",
+      "affiliations": [
+        "Seoul National University",
+        "National Institute for Mathematical Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3097050891",
+      "name": "June Yong Yang",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097559674",
+      "name": "Jae-Ryong Hwang",
+      "affiliations": [
+        "Korea Naval Academy"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2171972029",
+      "name": "Eunho Yang",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6847363464",
+    "https://openalex.org/W3080253043",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W6846825190",
+    "https://openalex.org/W4389664922",
+    "https://openalex.org/W6856926427",
+    "https://openalex.org/W6852357257",
+    "https://openalex.org/W6850493425",
+    "https://openalex.org/W6856192372",
+    "https://openalex.org/W6802566335",
+    "https://openalex.org/W6850783765",
+    "https://openalex.org/W2604847698",
+    "https://openalex.org/W6803444062",
+    "https://openalex.org/W2982438846",
+    "https://openalex.org/W3173748501",
+    "https://openalex.org/W6797297377",
+    "https://openalex.org/W6845625448",
+    "https://openalex.org/W6839352926",
+    "https://openalex.org/W4382203079",
+    "https://openalex.org/W6810637551",
+    "https://openalex.org/W6809860847",
+    "https://openalex.org/W6759891849",
+    "https://openalex.org/W2964010366",
+    "https://openalex.org/W6768707575",
+    "https://openalex.org/W6780817209",
+    "https://openalex.org/W3176196442",
+    "https://openalex.org/W6759258263",
+    "https://openalex.org/W6856859693",
+    "https://openalex.org/W6856157795",
+    "https://openalex.org/W6857005926",
+    "https://openalex.org/W6838540236",
+    "https://openalex.org/W6755529311",
+    "https://openalex.org/W2026297770",
+    "https://openalex.org/W2995282027",
+    "https://openalex.org/W6631190155"
+  ],
+  "abstract": "Time series classification requires specialized models that can effectively capture temporal structures. Consequently, Large Language Models (LLMs) have emerged as promising candidates due to their proficiency in sequence modeling and semantic reasoning. However, converting time series data into text results in sequences that exceed the maximum token limit, necessitating truncation or the removal of word embeddings for fixed-length time series embeddings. This restriction not only sacrifices semantic reasoning capabilities accessed through natural language but also limits the ability to handle temporal irregularities. To overcome these challenges, we propose the Language-Scaffolded Time Series Transformer (LSTST), which combines linguistic components and time series embeddings to effectively harness LLMs while overcoming dimensional constraints. Our Language Scaffold reformulates time series classification as a contextual question-answering task, with time series embeddings as context, facilitating the LLM to utilize its inherent semantic knowledge. Moreover, the preserved linguistic structure allows a dynamic number of input context embeddings with real-time positional encoding, handling length restrictions and irregularity in the temporal dimension. Through experiments, we show that LSTST achieves state-of-the-art performance on regular time series classification and also handles irregular time series without any model modifications.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7273644804954529
+    },
+    {
+      "name": "Series (stratigraphy)",
+      "score": 0.5763389468193054
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4507102072238922
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.42900368571281433
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.428928017616272
+    },
+    {
+      "name": "Geology",
+      "score": 0.10982120037078857
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    }
+  ]
 }

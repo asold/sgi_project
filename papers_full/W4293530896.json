@@ -1,138 +1,205 @@
 {
-    "title": "Genome-wide prediction of disease variants with a deep protein language model",
-    "url": "https://openalex.org/W4293530896",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2260100301",
-            "name": "Nadav Brandes",
-            "affiliations": [
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3159000232",
-            "name": "Grant Goldman",
-            "affiliations": [
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3021873036",
-            "name": "Charlotte H. Wang",
-            "affiliations": [
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2305502507",
-            "name": "Chun Jimmie Ye",
-            "affiliations": [
-                "Parker Institute for Cancer Immunotherapy",
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2405637266",
-            "name": "Vasilis Ntranos",
-            "affiliations": [
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2260100301",
-            "name": "Nadav Brandes",
-            "affiliations": [
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3159000232",
-            "name": "Grant Goldman",
-            "affiliations": [
-                null,
-                "University of California, San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3021873036",
-            "name": "Charlotte H. Wang",
-            "affiliations": [
-                "University of California, San Francisco",
-                "University of San Francisco"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2305502507",
-            "name": "Chun Jimmie Ye",
-            "affiliations": [
-                "University of California, San Francisco",
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2405637266",
-            "name": "Vasilis Ntranos",
-            "affiliations": [
-                "University of California, San Francisco",
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3195230255",
-        "https://openalex.org/W2051978340",
-        "https://openalex.org/W3010305620",
-        "https://openalex.org/W3209435229",
-        "https://openalex.org/W2901303766",
-        "https://openalex.org/W2119412782",
-        "https://openalex.org/W1844405070",
-        "https://openalex.org/W3184953764",
-        "https://openalex.org/W3216782976",
-        "https://openalex.org/W2174602966",
-        "https://openalex.org/W2987965949",
-        "https://openalex.org/W4206229719",
-        "https://openalex.org/W2331911623",
-        "https://openalex.org/W2245592118",
-        "https://openalex.org/W2143238378",
-        "https://openalex.org/W1563940013",
-        "https://openalex.org/W2905452503",
-        "https://openalex.org/W3144701084",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W2999481648",
-        "https://openalex.org/W2980789587",
-        "https://openalex.org/W4205773061",
-        "https://openalex.org/W2472351724",
-        "https://openalex.org/W3179485843",
-        "https://openalex.org/W2010595044",
-        "https://openalex.org/W2982247245",
-        "https://openalex.org/W966012335",
-        "https://openalex.org/W2110646848",
-        "https://openalex.org/W2161317138",
-        "https://openalex.org/W2017730572",
-        "https://openalex.org/W1999260084",
-        "https://openalex.org/W2025570007",
-        "https://openalex.org/W2144761225",
-        "https://openalex.org/W2279930231",
-        "https://openalex.org/W2036681136",
-        "https://openalex.org/W2055996155",
-        "https://openalex.org/W2043416934",
-        "https://openalex.org/W2570257422",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W4213097893",
-        "https://openalex.org/W2781534540",
-        "https://openalex.org/W3045929934",
-        "https://openalex.org/W4224053046",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W1965092590",
-        "https://openalex.org/W3009209436",
-        "https://openalex.org/W2781028774",
-        "https://openalex.org/W2727251566",
-        "https://openalex.org/W3012384638",
-        "https://openalex.org/W4206951418",
-        "https://openalex.org/W3211728297"
-    ],
-    "abstract": "Abstract Distinguishing between damaging and neutral missense variants is an ongoing challenge in human genetics, with profound implications for clinical diagnosis, genetic studies and protein engineering. Recently, deep-learning models have achieved state-of-the-art performance in classifying variants as pathogenic or benign. However, these models are currently unable to provide predictions over all missense variants, either because of dependency on close protein homologs or due to software limitations. Here we leveraged ESM1b, a 650M-parameter protein language model, to predict the functional impact of human coding variation at scale. To overcome existing technical limitations, we developed a modified ESM1b workflow and functionalized, for the first time, all proteins in the human genome, resulting in predictions for all ∼450M possible missense variant effects. ESM1b was able to distinguish between pathogenic and benign variants across ∼150K variants annotated in ClinVar and HGMD, outperforming existing state-of-the-art methods. ESM1b also exceeded the state of the art at predicting the experimental results of deep mutational scans. We further annotated ∼2M variants across ∼9K alternatively-spliced genes as damaging in certain protein isoforms while neutral in others, demonstrating the importance of considering all isoforms when functionalizing variant effects. The complete catalog of variant effect predictions is available at: https://huggingface.co/spaces/ntranoslab/esm_variants .",
-    "full_text": null
+  "title": "Genome-wide prediction of disease variants with a deep protein language model",
+  "url": "https://openalex.org/W4293530896",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2260100301",
+      "name": "Nadav Brandes",
+      "affiliations": [
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3159000232",
+      "name": "Grant Goldman",
+      "affiliations": [
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3021873036",
+      "name": "Charlotte H. Wang",
+      "affiliations": [
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2305502507",
+      "name": "Chun Jimmie Ye",
+      "affiliations": [
+        "Parker Institute for Cancer Immunotherapy",
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2405637266",
+      "name": "Vasilis Ntranos",
+      "affiliations": [
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2260100301",
+      "name": "Nadav Brandes",
+      "affiliations": [
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3159000232",
+      "name": "Grant Goldman",
+      "affiliations": [
+        null,
+        "University of California, San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3021873036",
+      "name": "Charlotte H. Wang",
+      "affiliations": [
+        "University of California, San Francisco",
+        "University of San Francisco"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2305502507",
+      "name": "Chun Jimmie Ye",
+      "affiliations": [
+        "University of California, San Francisco",
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2405637266",
+      "name": "Vasilis Ntranos",
+      "affiliations": [
+        "University of California, San Francisco",
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3195230255",
+    "https://openalex.org/W2051978340",
+    "https://openalex.org/W3010305620",
+    "https://openalex.org/W3209435229",
+    "https://openalex.org/W2901303766",
+    "https://openalex.org/W2119412782",
+    "https://openalex.org/W1844405070",
+    "https://openalex.org/W3184953764",
+    "https://openalex.org/W3216782976",
+    "https://openalex.org/W2174602966",
+    "https://openalex.org/W2987965949",
+    "https://openalex.org/W4206229719",
+    "https://openalex.org/W2331911623",
+    "https://openalex.org/W2245592118",
+    "https://openalex.org/W2143238378",
+    "https://openalex.org/W1563940013",
+    "https://openalex.org/W2905452503",
+    "https://openalex.org/W3144701084",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W2999481648",
+    "https://openalex.org/W2980789587",
+    "https://openalex.org/W4205773061",
+    "https://openalex.org/W2472351724",
+    "https://openalex.org/W3179485843",
+    "https://openalex.org/W2010595044",
+    "https://openalex.org/W2982247245",
+    "https://openalex.org/W966012335",
+    "https://openalex.org/W2110646848",
+    "https://openalex.org/W2161317138",
+    "https://openalex.org/W2017730572",
+    "https://openalex.org/W1999260084",
+    "https://openalex.org/W2025570007",
+    "https://openalex.org/W2144761225",
+    "https://openalex.org/W2279930231",
+    "https://openalex.org/W2036681136",
+    "https://openalex.org/W2055996155",
+    "https://openalex.org/W2043416934",
+    "https://openalex.org/W2570257422",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W4213097893",
+    "https://openalex.org/W2781534540",
+    "https://openalex.org/W3045929934",
+    "https://openalex.org/W4224053046",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W1965092590",
+    "https://openalex.org/W3009209436",
+    "https://openalex.org/W2781028774",
+    "https://openalex.org/W2727251566",
+    "https://openalex.org/W3012384638",
+    "https://openalex.org/W4206951418",
+    "https://openalex.org/W3211728297"
+  ],
+  "abstract": "Abstract Distinguishing between damaging and neutral missense variants is an ongoing challenge in human genetics, with profound implications for clinical diagnosis, genetic studies and protein engineering. Recently, deep-learning models have achieved state-of-the-art performance in classifying variants as pathogenic or benign. However, these models are currently unable to provide predictions over all missense variants, either because of dependency on close protein homologs or due to software limitations. Here we leveraged ESM1b, a 650M-parameter protein language model, to predict the functional impact of human coding variation at scale. To overcome existing technical limitations, we developed a modified ESM1b workflow and functionalized, for the first time, all proteins in the human genome, resulting in predictions for all ∼450M possible missense variant effects. ESM1b was able to distinguish between pathogenic and benign variants across ∼150K variants annotated in ClinVar and HGMD, outperforming existing state-of-the-art methods. ESM1b also exceeded the state of the art at predicting the experimental results of deep mutational scans. We further annotated ∼2M variants across ∼9K alternatively-spliced genes as damaging in certain protein isoforms while neutral in others, demonstrating the importance of considering all isoforms when functionalizing variant effects. The complete catalog of variant effect predictions is available at: https://huggingface.co/spaces/ntranoslab/esm_variants .",
+  "full_text": null,
+  "topic": "Missense mutation",
+  "concepts": [
+    {
+      "name": "Missense mutation",
+      "score": 0.8428428173065186
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.6080943942070007
+    },
+    {
+      "name": "Genetic variants",
+      "score": 0.568821907043457
+    },
+    {
+      "name": "Human genome",
+      "score": 0.5164434909820557
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5081288814544678
+    },
+    {
+      "name": "Workflow",
+      "score": 0.5046132802963257
+    },
+    {
+      "name": "Genetics",
+      "score": 0.4883005619049072
+    },
+    {
+      "name": "Genome",
+      "score": 0.4698547124862671
+    },
+    {
+      "name": "Gene isoform",
+      "score": 0.46746304631233215
+    },
+    {
+      "name": "Gene",
+      "score": 0.4598061144351959
+    },
+    {
+      "name": "Biology",
+      "score": 0.39583802223205566
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38689985871315
+    },
+    {
+      "name": "Mutation",
+      "score": 0.36367297172546387
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.34516412019729614
+    },
+    {
+      "name": "Genotype",
+      "score": 0.0
+    },
+    {
+      "name": "Database",
+      "score": 0.0
+    }
+  ]
 }

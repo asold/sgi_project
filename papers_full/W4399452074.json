@@ -1,86 +1,145 @@
 {
-    "title": "DTCNet: Transformer-CNN Distillation for Super-Resolution of Remote Sensing Image",
-    "url": "https://openalex.org/W4399452074",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2098762661",
-            "name": "Cong Lin",
-            "affiliations": [
-                "Guangdong Ocean University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099267605",
-            "name": "Xin Mao",
-            "affiliations": [
-                "Guangdong Ocean University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2642423048",
-            "name": "Chenghao Qiu",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2161015916",
-            "name": "Lilan Zou",
-            "affiliations": [
-                "Guangdong Ocean University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4309534737",
-        "https://openalex.org/W4285301580",
-        "https://openalex.org/W4381886284",
-        "https://openalex.org/W4383220087",
-        "https://openalex.org/W4389778595",
-        "https://openalex.org/W3121000959",
-        "https://openalex.org/W4391547538",
-        "https://openalex.org/W1586298956",
-        "https://openalex.org/W2157190232",
-        "https://openalex.org/W2604334942",
-        "https://openalex.org/W2120577161",
-        "https://openalex.org/W2121058967",
-        "https://openalex.org/W1981199328",
-        "https://openalex.org/W2138598313",
-        "https://openalex.org/W2117709736",
-        "https://openalex.org/W2038036044",
-        "https://openalex.org/W2324396614",
-        "https://openalex.org/W1885185971",
-        "https://openalex.org/W3000775737",
-        "https://openalex.org/W4319300717",
-        "https://openalex.org/W4294982794",
-        "https://openalex.org/W4388634307",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3207918547",
-        "https://openalex.org/W3035022492",
-        "https://openalex.org/W4287020683",
-        "https://openalex.org/W4390272253",
-        "https://openalex.org/W3034368386",
-        "https://openalex.org/W6839053282",
-        "https://openalex.org/W6840352845",
-        "https://openalex.org/W3205825741",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W4383818974",
-        "https://openalex.org/W4206433182",
-        "https://openalex.org/W4291653231",
-        "https://openalex.org/W2963468606",
-        "https://openalex.org/W4378070202",
-        "https://openalex.org/W2592962403",
-        "https://openalex.org/W1980038761",
-        "https://openalex.org/W2515866431",
-        "https://openalex.org/W2005368619",
-        "https://openalex.org/W2920074116",
-        "https://openalex.org/W2133665775",
-        "https://openalex.org/W2010319424",
-        "https://openalex.org/W2102166818",
-        "https://openalex.org/W3105577662",
-        "https://openalex.org/W3138154797"
-    ],
-    "abstract": "Super-resolution reconstruction technology is a crucial approach to enhance the quality of remote sensing optical images. Currently, the mainstream reconstruction methods leverage convolutional neural networks (CNNs). However, they overlook the global information of the images, thereby impacting the reconstruction effectiveness. Methods based on Transformer networks have demonstrated the capability to improve reconstruction quality, but the high model complexity renders them unsuitable for remote sensing devices. To enhance reconstruction performance while maintaining the model lightweight, a distillation Transform-CNN Network is proposed in this article. The strategy employs the Transformer network as a teacher network, guiding its long-range features into a compact CNN, achieving distillation across networks. Simultaneously, to rectify misinformation in the teacher network, prior information is introduced to ensure accurate information transfer. Concerning the student network, a novel upsampling approach is devised, utilizing inherent information in downsampled feature maps for padding, thereby avoiding the introduction of zero-information feature points in the traditional deconvolution process. Experimental evaluations conducted on multiple publicly available remote sensing image datasets demonstrate that the proposed method, while maintaining a smaller parameter count, achieves outstanding reconstruction quality for remote sensing images, surpassing existing approaches.",
-    "full_text": null
+  "title": "DTCNet: Transformer-CNN Distillation for Super-Resolution of Remote Sensing Image",
+  "url": "https://openalex.org/W4399452074",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2098762661",
+      "name": "Cong Lin",
+      "affiliations": [
+        "Guangdong Ocean University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099267605",
+      "name": "Xin Mao",
+      "affiliations": [
+        "Guangdong Ocean University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2642423048",
+      "name": "Chenghao Qiu",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2161015916",
+      "name": "Lilan Zou",
+      "affiliations": [
+        "Guangdong Ocean University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4309534737",
+    "https://openalex.org/W4285301580",
+    "https://openalex.org/W4381886284",
+    "https://openalex.org/W4383220087",
+    "https://openalex.org/W4389778595",
+    "https://openalex.org/W3121000959",
+    "https://openalex.org/W4391547538",
+    "https://openalex.org/W1586298956",
+    "https://openalex.org/W2157190232",
+    "https://openalex.org/W2604334942",
+    "https://openalex.org/W2120577161",
+    "https://openalex.org/W2121058967",
+    "https://openalex.org/W1981199328",
+    "https://openalex.org/W2138598313",
+    "https://openalex.org/W2117709736",
+    "https://openalex.org/W2038036044",
+    "https://openalex.org/W2324396614",
+    "https://openalex.org/W1885185971",
+    "https://openalex.org/W3000775737",
+    "https://openalex.org/W4319300717",
+    "https://openalex.org/W4294982794",
+    "https://openalex.org/W4388634307",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3207918547",
+    "https://openalex.org/W3035022492",
+    "https://openalex.org/W4287020683",
+    "https://openalex.org/W4390272253",
+    "https://openalex.org/W3034368386",
+    "https://openalex.org/W6839053282",
+    "https://openalex.org/W6840352845",
+    "https://openalex.org/W3205825741",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W4383818974",
+    "https://openalex.org/W4206433182",
+    "https://openalex.org/W4291653231",
+    "https://openalex.org/W2963468606",
+    "https://openalex.org/W4378070202",
+    "https://openalex.org/W2592962403",
+    "https://openalex.org/W1980038761",
+    "https://openalex.org/W2515866431",
+    "https://openalex.org/W2005368619",
+    "https://openalex.org/W2920074116",
+    "https://openalex.org/W2133665775",
+    "https://openalex.org/W2010319424",
+    "https://openalex.org/W2102166818",
+    "https://openalex.org/W3105577662",
+    "https://openalex.org/W3138154797"
+  ],
+  "abstract": "Super-resolution reconstruction technology is a crucial approach to enhance the quality of remote sensing optical images. Currently, the mainstream reconstruction methods leverage convolutional neural networks (CNNs). However, they overlook the global information of the images, thereby impacting the reconstruction effectiveness. Methods based on Transformer networks have demonstrated the capability to improve reconstruction quality, but the high model complexity renders them unsuitable for remote sensing devices. To enhance reconstruction performance while maintaining the model lightweight, a distillation Transform-CNN Network is proposed in this article. The strategy employs the Transformer network as a teacher network, guiding its long-range features into a compact CNN, achieving distillation across networks. Simultaneously, to rectify misinformation in the teacher network, prior information is introduced to ensure accurate information transfer. Concerning the student network, a novel upsampling approach is devised, utilizing inherent information in downsampled feature maps for padding, thereby avoiding the introduction of zero-information feature points in the traditional deconvolution process. Experimental evaluations conducted on multiple publicly available remote sensing image datasets demonstrate that the proposed method, while maintaining a smaller parameter count, achieves outstanding reconstruction quality for remote sensing images, surpassing existing approaches.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6655721068382263
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5787950754165649
+    },
+    {
+      "name": "Image resolution",
+      "score": 0.5538691282272339
+    },
+    {
+      "name": "Distillation",
+      "score": 0.46394845843315125
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4621691405773163
+    },
+    {
+      "name": "Resolution (logic)",
+      "score": 0.43912386894226074
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4373747408390045
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.3298785388469696
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.10109150409698486
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09817427396774292
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09503477811813354
+    },
+    {
+      "name": "Geology",
+      "score": 0.07864904403686523
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,150 +1,209 @@
 {
-    "title": "Sample Size Considerations for Fine-Tuning Large Language Models for Named Entity Recognition Tasks: Methodological Study",
-    "url": "https://openalex.org/W4396985403",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2009944189",
-            "name": "Zoltan P. Majdik",
-            "affiliations": [
-                "North Dakota State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2161613057",
-            "name": "S. Scott Graham",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5095694439",
-            "name": "Jade C Shiva Edward",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103203692",
-            "name": "Sabrina N Rodriguez",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4296418435",
-            "name": "Martha S Karnes",
-            "affiliations": [
-                "University of Arkansas at Little Rock"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3020186908",
-            "name": "Jared T. Jensen",
-            "affiliations": [
-                "The University of Texas at Austin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2790830829",
-            "name": "Joshua B. Barbour",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2787694935",
-            "name": "Justin F. Rousseau",
-            "affiliations": [
-                "Southwestern Medical Center",
-                "The University of Texas Southwestern Medical Center"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2009944189",
-            "name": "Zoltan P. Majdik",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2161613057",
-            "name": "S. Scott Graham",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5095694439",
-            "name": "Jade C Shiva Edward",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5103203692",
-            "name": "Sabrina N Rodriguez",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4296418435",
-            "name": "Martha S Karnes",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3020186908",
-            "name": "Jared T. Jensen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2790830829",
-            "name": "Joshua B. Barbour",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2787694935",
-            "name": "Justin F. Rousseau",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2169818249",
-        "https://openalex.org/W2970198438",
-        "https://openalex.org/W1550258693",
-        "https://openalex.org/W2114039834",
-        "https://openalex.org/W3129597052",
-        "https://openalex.org/W3209006175",
-        "https://openalex.org/W2125117006",
-        "https://openalex.org/W2727926256",
-        "https://openalex.org/W4285734150",
-        "https://openalex.org/W3210886649",
-        "https://openalex.org/W2735580341",
-        "https://openalex.org/W2002514548",
-        "https://openalex.org/W4389636360",
-        "https://openalex.org/W4319662928",
-        "https://openalex.org/W3207678513",
-        "https://openalex.org/W3043929364",
-        "https://openalex.org/W2080848531",
-        "https://openalex.org/W4252608096",
-        "https://openalex.org/W4378649992",
-        "https://openalex.org/W4280565440",
-        "https://openalex.org/W2954075147",
-        "https://openalex.org/W1524642381",
-        "https://openalex.org/W2769851464",
-        "https://openalex.org/W2911448018",
-        "https://openalex.org/W3177034450",
-        "https://openalex.org/W2025083459",
-        "https://openalex.org/W1714980748",
-        "https://openalex.org/W4296418336",
-        "https://openalex.org/W2785045356",
-        "https://openalex.org/W2343875755",
-        "https://openalex.org/W2624639612",
-        "https://openalex.org/W2150297838",
-        "https://openalex.org/W4281750366",
-        "https://openalex.org/W3012447582",
-        "https://openalex.org/W2904452850",
-        "https://openalex.org/W3101585848",
-        "https://openalex.org/W2465750682",
-        "https://openalex.org/W4245295309",
-        "https://openalex.org/W2765083428",
-        "https://openalex.org/W2983570302",
-        "https://openalex.org/W4385571011",
-        "https://openalex.org/W4385227045"
-    ],
-    "abstract": "Background Large language models (LLMs) have the potential to support promising new applications in health informatics. However, practical data on sample size considerations for fine-tuning LLMs to perform specific tasks in biomedical and health policy contexts are lacking. Objective This study aims to evaluate sample size and sample selection techniques for fine-tuning LLMs to support improved named entity recognition (NER) for a custom data set of conflicts of interest disclosure statements. Methods A random sample of 200 disclosure statements was prepared for annotation. All “PERSON” and “ORG” entities were identified by each of the 2 raters, and once appropriate agreement was established, the annotators independently annotated an additional 290 disclosure statements. From the 490 annotated documents, 2500 stratified random samples in different size ranges were drawn. The 2500 training set subsamples were used to fine-tune a selection of language models across 2 model architectures (Bidirectional Encoder Representations from Transformers [BERT] and Generative Pre-trained Transformer [GPT]) for improved NER, and multiple regression was used to assess the relationship between sample size (sentences), entity density (entities per sentence [EPS]), and trained model performance (F1-score). Additionally, single-predictor threshold regression models were used to evaluate the possibility of diminishing marginal returns from increased sample size or entity density. Results Fine-tuned models ranged in topline NER performance from F1-score=0.79 to F1-score=0.96 across architectures. Two-predictor multiple linear regression models were statistically significant with multiple R2 ranging from 0.6057 to 0.7896 (all P&lt;.001). EPS and the number of sentences were significant predictors of F1-scores in all cases ( P&lt;.001), except for the GPT-2_large model, where EPS was not a significant predictor (P=.184). Model thresholds indicate points of diminishing marginal return from increased training data set sample size measured by the number of sentences, with point estimates ranging from 439 sentences for RoBERTa_large to 527 sentences for GPT-2_large. Likewise, the threshold regression models indicate a diminishing marginal return for EPS with point estimates between 1.36 and 1.38. Conclusions Relatively modest sample sizes can be used to fine-tune LLMs for NER tasks applied to biomedical text, and training data entity density should representatively approximate entity density in production data. Training data quality and a model architecture’s intended use (text generation vs text processing or classification) may be as, or more, important as training data volume and model parameter size.",
-    "full_text": null
+  "title": "Sample Size Considerations for Fine-Tuning Large Language Models for Named Entity Recognition Tasks: Methodological Study",
+  "url": "https://openalex.org/W4396985403",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2009944189",
+      "name": "Zoltan P. Majdik",
+      "affiliations": [
+        "North Dakota State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2161613057",
+      "name": "S. Scott Graham",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5095694439",
+      "name": "Jade C Shiva Edward",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103203692",
+      "name": "Sabrina N Rodriguez",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4296418435",
+      "name": "Martha S Karnes",
+      "affiliations": [
+        "University of Arkansas at Little Rock"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3020186908",
+      "name": "Jared T. Jensen",
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2790830829",
+      "name": "Joshua B. Barbour",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2787694935",
+      "name": "Justin F. Rousseau",
+      "affiliations": [
+        "Southwestern Medical Center",
+        "The University of Texas Southwestern Medical Center"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2009944189",
+      "name": "Zoltan P. Majdik",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2161613057",
+      "name": "S. Scott Graham",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5095694439",
+      "name": "Jade C Shiva Edward",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5103203692",
+      "name": "Sabrina N Rodriguez",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4296418435",
+      "name": "Martha S Karnes",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3020186908",
+      "name": "Jared T. Jensen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2790830829",
+      "name": "Joshua B. Barbour",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2787694935",
+      "name": "Justin F. Rousseau",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2169818249",
+    "https://openalex.org/W2970198438",
+    "https://openalex.org/W1550258693",
+    "https://openalex.org/W2114039834",
+    "https://openalex.org/W3129597052",
+    "https://openalex.org/W3209006175",
+    "https://openalex.org/W2125117006",
+    "https://openalex.org/W2727926256",
+    "https://openalex.org/W4285734150",
+    "https://openalex.org/W3210886649",
+    "https://openalex.org/W2735580341",
+    "https://openalex.org/W2002514548",
+    "https://openalex.org/W4389636360",
+    "https://openalex.org/W4319662928",
+    "https://openalex.org/W3207678513",
+    "https://openalex.org/W3043929364",
+    "https://openalex.org/W2080848531",
+    "https://openalex.org/W4252608096",
+    "https://openalex.org/W4378649992",
+    "https://openalex.org/W4280565440",
+    "https://openalex.org/W2954075147",
+    "https://openalex.org/W1524642381",
+    "https://openalex.org/W2769851464",
+    "https://openalex.org/W2911448018",
+    "https://openalex.org/W3177034450",
+    "https://openalex.org/W2025083459",
+    "https://openalex.org/W1714980748",
+    "https://openalex.org/W4296418336",
+    "https://openalex.org/W2785045356",
+    "https://openalex.org/W2343875755",
+    "https://openalex.org/W2624639612",
+    "https://openalex.org/W2150297838",
+    "https://openalex.org/W4281750366",
+    "https://openalex.org/W3012447582",
+    "https://openalex.org/W2904452850",
+    "https://openalex.org/W3101585848",
+    "https://openalex.org/W2465750682",
+    "https://openalex.org/W4245295309",
+    "https://openalex.org/W2765083428",
+    "https://openalex.org/W2983570302",
+    "https://openalex.org/W4385571011",
+    "https://openalex.org/W4385227045"
+  ],
+  "abstract": "Background Large language models (LLMs) have the potential to support promising new applications in health informatics. However, practical data on sample size considerations for fine-tuning LLMs to perform specific tasks in biomedical and health policy contexts are lacking. Objective This study aims to evaluate sample size and sample selection techniques for fine-tuning LLMs to support improved named entity recognition (NER) for a custom data set of conflicts of interest disclosure statements. Methods A random sample of 200 disclosure statements was prepared for annotation. All “PERSON” and “ORG” entities were identified by each of the 2 raters, and once appropriate agreement was established, the annotators independently annotated an additional 290 disclosure statements. From the 490 annotated documents, 2500 stratified random samples in different size ranges were drawn. The 2500 training set subsamples were used to fine-tune a selection of language models across 2 model architectures (Bidirectional Encoder Representations from Transformers [BERT] and Generative Pre-trained Transformer [GPT]) for improved NER, and multiple regression was used to assess the relationship between sample size (sentences), entity density (entities per sentence [EPS]), and trained model performance (F1-score). Additionally, single-predictor threshold regression models were used to evaluate the possibility of diminishing marginal returns from increased sample size or entity density. Results Fine-tuned models ranged in topline NER performance from F1-score=0.79 to F1-score=0.96 across architectures. Two-predictor multiple linear regression models were statistically significant with multiple R2 ranging from 0.6057 to 0.7896 (all P&lt;.001). EPS and the number of sentences were significant predictors of F1-scores in all cases ( P&lt;.001), except for the GPT-2_large model, where EPS was not a significant predictor (P=.184). Model thresholds indicate points of diminishing marginal return from increased training data set sample size measured by the number of sentences, with point estimates ranging from 439 sentences for RoBERTa_large to 527 sentences for GPT-2_large. Likewise, the threshold regression models indicate a diminishing marginal return for EPS with point estimates between 1.36 and 1.38. Conclusions Relatively modest sample sizes can be used to fine-tune LLMs for NER tasks applied to biomedical text, and training data entity density should representatively approximate entity density in production data. Training data quality and a model architecture’s intended use (text generation vs text processing or classification) may be as, or more, important as training data volume and model parameter size.",
+  "full_text": null,
+  "topic": "Sample size determination",
+  "concepts": [
+    {
+      "name": "Sample size determination",
+      "score": 0.7096860408782959
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6364462375640869
+    },
+    {
+      "name": "F1 score",
+      "score": 0.5479415059089661
+    },
+    {
+      "name": "Sample (material)",
+      "score": 0.5165075659751892
+    },
+    {
+      "name": "Sentence",
+      "score": 0.4640452265739441
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.449273943901062
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.43258345127105713
+    },
+    {
+      "name": "Language model",
+      "score": 0.42418092489242554
+    },
+    {
+      "name": "Regression",
+      "score": 0.41299015283584595
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.33709806203842163
+    },
+    {
+      "name": "Statistics",
+      "score": 0.31605273485183716
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.15093931555747986
+    },
+    {
+      "name": "Chromatography",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    }
+  ]
 }

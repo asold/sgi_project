@@ -1,143 +1,222 @@
 {
-    "title": "Decoding selective auditory attention with EEG using a transformer model",
-    "url": "https://openalex.org/W4223920619",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2166994266",
-            "name": "Zihao Xu",
-            "affiliations": [
-                "Tianjin Medical University",
-                "Tianjin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101757389",
-            "name": "Yanru Bai",
-            "affiliations": [
-                "Tianjin University",
-                "Tianjin Medical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107963097",
-            "name": "Ran Zhao",
-            "affiliations": [
-                "Tianjin University",
-                "Tianjin Medical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100453711",
-            "name": "Hongmei Hu",
-            "affiliations": [
-                "Hearing4all"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2100361809",
-            "name": "Guangjian Ni",
-            "affiliations": [
-                "Tianjin Medical University",
-                "Tianjin University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2124626771",
-            "name": "Dong Ming",
-            "affiliations": [
-                "Tianjin University",
-                "Tianjin Medical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2166994266",
-            "name": "Zihao Xu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2101757389",
-            "name": "Yanru Bai",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2107963097",
-            "name": "Ran Zhao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100453711",
-            "name": "Hongmei Hu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2100361809",
-            "name": "Guangjian Ni",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2124626771",
-            "name": "Dong Ming",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2026895393",
-        "https://openalex.org/W1989881358",
-        "https://openalex.org/W2010501479",
-        "https://openalex.org/W12773428",
-        "https://openalex.org/W2082183045",
-        "https://openalex.org/W2118980133",
-        "https://openalex.org/W3193706553",
-        "https://openalex.org/W2981815944",
-        "https://openalex.org/W1974932989",
-        "https://openalex.org/W2138164020",
-        "https://openalex.org/W2027250573",
-        "https://openalex.org/W2586872202",
-        "https://openalex.org/W2005066437",
-        "https://openalex.org/W2082451326",
-        "https://openalex.org/W3131166446",
-        "https://openalex.org/W3038121656",
-        "https://openalex.org/W1965972662",
-        "https://openalex.org/W1975115027",
-        "https://openalex.org/W2948163068",
-        "https://openalex.org/W2157617037",
-        "https://openalex.org/W3159696612",
-        "https://openalex.org/W2158904676",
-        "https://openalex.org/W2128681980",
-        "https://openalex.org/W2606067354",
-        "https://openalex.org/W2775454033",
-        "https://openalex.org/W2553024757",
-        "https://openalex.org/W2968050947",
-        "https://openalex.org/W2038156098",
-        "https://openalex.org/W2150597844",
-        "https://openalex.org/W2091432036",
-        "https://openalex.org/W3033188311",
-        "https://openalex.org/W6771429369",
-        "https://openalex.org/W2892009249",
-        "https://openalex.org/W3095277453",
-        "https://openalex.org/W2067393309",
-        "https://openalex.org/W2558802391",
-        "https://openalex.org/W1977630746",
-        "https://openalex.org/W2778438370",
-        "https://openalex.org/W3117748486",
-        "https://openalex.org/W3112626072",
-        "https://openalex.org/W2559463885",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3086573485",
-        "https://openalex.org/W2950767783",
-        "https://openalex.org/W2980767905",
-        "https://openalex.org/W2990116258",
-        "https://openalex.org/W2019630663",
-        "https://openalex.org/W2978943562",
-        "https://openalex.org/W2767841979",
-        "https://openalex.org/W2923248388",
-        "https://openalex.org/W2742722178",
-        "https://openalex.org/W2408166852",
-        "https://openalex.org/W3163547718",
-        "https://openalex.org/W3034655362",
-        "https://openalex.org/W3102455230"
-    ],
-    "abstract": "The human auditory system extracts valid information in noisy environments while ignoring other distractions, relying primarily on auditory attention. Studies have shown that the cerebral cortex responds differently to the sound source locations and that auditory attention is time-varying. In this work, we proposed a data-driven encoder-decoder architecture model for auditory attention detection (AAD), denoted as AAD-transformer. The model contains temporal self-attention and channel attention modules and could reconstruct the speech envelope by dynamically assigning weights according to the temporal self-attention and channel attention mechanisms of electroencephalogram (EEG). In addition, the model is conducted based on data-driven without additional preprocessing steps. The proposed model was validated using a binaural listening dataset, in which the speech stimulus was Mandarin, and compared with other models. The results showed that the decoding accuracy of the AAD-transformer in the 0.15-second decoding time window was 76.35%, which was much higher than the accuracy of the linear model using temporal response function in the 3-second decoding time window (increased by 16.27%). This work provides a novel auditory attention detection method, and the data-driven characteristic makes it convenient for neural-steered hearing devices, especially those who speak tonal languages.",
-    "full_text": null
+  "title": "Decoding selective auditory attention with EEG using a transformer model",
+  "url": "https://openalex.org/W4223920619",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2166994266",
+      "name": "Zihao Xu",
+      "affiliations": [
+        "Tianjin Medical University",
+        "Tianjin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101757389",
+      "name": "Yanru Bai",
+      "affiliations": [
+        "Tianjin University",
+        "Tianjin Medical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107963097",
+      "name": "Ran Zhao",
+      "affiliations": [
+        "Tianjin University",
+        "Tianjin Medical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100453711",
+      "name": "Hongmei Hu",
+      "affiliations": [
+        "Hearing4all"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2100361809",
+      "name": "Guangjian Ni",
+      "affiliations": [
+        "Tianjin Medical University",
+        "Tianjin University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2124626771",
+      "name": "Dong Ming",
+      "affiliations": [
+        "Tianjin University",
+        "Tianjin Medical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2166994266",
+      "name": "Zihao Xu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2101757389",
+      "name": "Yanru Bai",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2107963097",
+      "name": "Ran Zhao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100453711",
+      "name": "Hongmei Hu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2100361809",
+      "name": "Guangjian Ni",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2124626771",
+      "name": "Dong Ming",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2026895393",
+    "https://openalex.org/W1989881358",
+    "https://openalex.org/W2010501479",
+    "https://openalex.org/W12773428",
+    "https://openalex.org/W2082183045",
+    "https://openalex.org/W2118980133",
+    "https://openalex.org/W3193706553",
+    "https://openalex.org/W2981815944",
+    "https://openalex.org/W1974932989",
+    "https://openalex.org/W2138164020",
+    "https://openalex.org/W2027250573",
+    "https://openalex.org/W2586872202",
+    "https://openalex.org/W2005066437",
+    "https://openalex.org/W2082451326",
+    "https://openalex.org/W3131166446",
+    "https://openalex.org/W3038121656",
+    "https://openalex.org/W1965972662",
+    "https://openalex.org/W1975115027",
+    "https://openalex.org/W2948163068",
+    "https://openalex.org/W2157617037",
+    "https://openalex.org/W3159696612",
+    "https://openalex.org/W2158904676",
+    "https://openalex.org/W2128681980",
+    "https://openalex.org/W2606067354",
+    "https://openalex.org/W2775454033",
+    "https://openalex.org/W2553024757",
+    "https://openalex.org/W2968050947",
+    "https://openalex.org/W2038156098",
+    "https://openalex.org/W2150597844",
+    "https://openalex.org/W2091432036",
+    "https://openalex.org/W3033188311",
+    "https://openalex.org/W6771429369",
+    "https://openalex.org/W2892009249",
+    "https://openalex.org/W3095277453",
+    "https://openalex.org/W2067393309",
+    "https://openalex.org/W2558802391",
+    "https://openalex.org/W1977630746",
+    "https://openalex.org/W2778438370",
+    "https://openalex.org/W3117748486",
+    "https://openalex.org/W3112626072",
+    "https://openalex.org/W2559463885",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3086573485",
+    "https://openalex.org/W2950767783",
+    "https://openalex.org/W2980767905",
+    "https://openalex.org/W2990116258",
+    "https://openalex.org/W2019630663",
+    "https://openalex.org/W2978943562",
+    "https://openalex.org/W2767841979",
+    "https://openalex.org/W2923248388",
+    "https://openalex.org/W2742722178",
+    "https://openalex.org/W2408166852",
+    "https://openalex.org/W3163547718",
+    "https://openalex.org/W3034655362",
+    "https://openalex.org/W3102455230"
+  ],
+  "abstract": "The human auditory system extracts valid information in noisy environments while ignoring other distractions, relying primarily on auditory attention. Studies have shown that the cerebral cortex responds differently to the sound source locations and that auditory attention is time-varying. In this work, we proposed a data-driven encoder-decoder architecture model for auditory attention detection (AAD), denoted as AAD-transformer. The model contains temporal self-attention and channel attention modules and could reconstruct the speech envelope by dynamically assigning weights according to the temporal self-attention and channel attention mechanisms of electroencephalogram (EEG). In addition, the model is conducted based on data-driven without additional preprocessing steps. The proposed model was validated using a binaural listening dataset, in which the speech stimulus was Mandarin, and compared with other models. The results showed that the decoding accuracy of the AAD-transformer in the 0.15-second decoding time window was 76.35%, which was much higher than the accuracy of the linear model using temporal response function in the 3-second decoding time window (increased by 16.27%). This work provides a novel auditory attention detection method, and the data-driven characteristic makes it convenient for neural-steered hearing devices, especially those who speak tonal languages.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7611088752746582
+    },
+    {
+      "name": "Decoding methods",
+      "score": 0.7234121561050415
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.6740553379058838
+    },
+    {
+      "name": "Auditory cortex",
+      "score": 0.5437783002853394
+    },
+    {
+      "name": "Neural decoding",
+      "score": 0.5103177428245544
+    },
+    {
+      "name": "Encoder",
+      "score": 0.4859253466129303
+    },
+    {
+      "name": "Preprocessor",
+      "score": 0.4823610186576843
+    },
+    {
+      "name": "Electroencephalography",
+      "score": 0.4757026135921478
+    },
+    {
+      "name": "Transformer",
+      "score": 0.46656787395477295
+    },
+    {
+      "name": "Binaural recording",
+      "score": 0.4288483262062073
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.406451940536499
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.36031320691108704
+    },
+    {
+      "name": "Psychology",
+      "score": 0.15868452191352844
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.13974657654762268
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.08375561237335205
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

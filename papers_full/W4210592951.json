@@ -1,112 +1,227 @@
 {
-    "title": "Automating Genetic Algorithm Mutations for Molecules Using a Masked Language Model",
-    "url": "https://openalex.org/W4210592951",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2030487054",
-            "name": "Andrew E. Blanchard",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3007925515",
-            "name": "Mayanka Chandra-Shekar",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104484959",
-            "name": "Gao Shang",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2734772578",
-            "name": "John Gounley",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2605765330",
-            "name": "Isaac Lyngaas",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2114151169",
-            "name": "Jens Gläser",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1988289531",
-            "name": "Debsindhu Bhowmik",
-            "affiliations": [
-                "Oak Ridge National Laboratory"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2774185825",
-        "https://openalex.org/W2107160601",
-        "https://openalex.org/W2168696093",
-        "https://openalex.org/W2479609865",
-        "https://openalex.org/W2151083897",
-        "https://openalex.org/W2796306022",
-        "https://openalex.org/W2110791536",
-        "https://openalex.org/W2914542247",
-        "https://openalex.org/W2900694120",
-        "https://openalex.org/W1998693213",
-        "https://openalex.org/W2027478081",
-        "https://openalex.org/W2066810295",
-        "https://openalex.org/W1592238003",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2121879602",
-        "https://openalex.org/W6727690538",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W6781031682",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2578240541",
-        "https://openalex.org/W2806351858",
-        "https://openalex.org/W3133325765",
-        "https://openalex.org/W2769423117",
-        "https://openalex.org/W2989615256",
-        "https://openalex.org/W2999242200",
-        "https://openalex.org/W2973114758",
-        "https://openalex.org/W6784526300",
-        "https://openalex.org/W4221074165",
-        "https://openalex.org/W6770131888",
-        "https://openalex.org/W2947423323",
-        "https://openalex.org/W3123901912",
-        "https://openalex.org/W6783248943",
-        "https://openalex.org/W3101449015",
-        "https://openalex.org/W2034549041",
-        "https://openalex.org/W2160592148",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W3129831491",
-        "https://openalex.org/W3006889321",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W1988037271",
-        "https://openalex.org/W4303478269",
-        "https://openalex.org/W2121438595",
-        "https://openalex.org/W2962687375",
-        "https://openalex.org/W3093934881",
-        "https://openalex.org/W3103092523",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W3100839802",
-        "https://openalex.org/W2986232138",
-        "https://openalex.org/W3169948074",
-        "https://openalex.org/W2525778437",
-        "https://openalex.org/W3046375318",
-        "https://openalex.org/W1522301498"
-    ],
-    "abstract": "Inspired by the evolution of biological systems, genetic algorithms have been applied to generate solutions for optimization problems in a variety of scientific and engineering disciplines. For a given problem, a suitable genome representation must be defined along with a mutation operator to generate subsequent generations. Unlike natural systems which display a variety of complex rearrangements (e.g. mobile genetic elements), mutation for genetic algorithms commonly utilizes only random point-wise changes. Furthermore, generalizing beyond point-wise mutations poses a key difficulty as useful genome rearrangements depend on the representation and problem domain. To move beyond the limitations of manually defined point-wise changes, here we propose the use of techniques from masked language models to automatically generate mutations. As a first step, common subsequences within a given population are used to generate a vocabulary. The vocabulary is then used to tokenize each genome. A masked language model is trained on the tokenized data in order to generate possible rearrangements (i.e. mutations). In order to illustrate the proposed strategy, we use string representations of molecules and use a genetic algorithm to optimize for drug-likeness and synthesizability. Finally, our results show that moving beyond random point-wise mutations accelerates genetic algorithm optimization.",
-    "full_text": null
+  "title": "Automating Genetic Algorithm Mutations for Molecules Using a Masked Language Model",
+  "url": "https://openalex.org/W4210592951",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2030487054",
+      "name": "Andrew E. Blanchard",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3007925515",
+      "name": "Mayanka Chandra-Shekar",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104484959",
+      "name": "Gao Shang",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2734772578",
+      "name": "John Gounley",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2605765330",
+      "name": "Isaac Lyngaas",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2114151169",
+      "name": "Jens Gläser",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1988289531",
+      "name": "Debsindhu Bhowmik",
+      "affiliations": [
+        "Oak Ridge National Laboratory"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2774185825",
+    "https://openalex.org/W2107160601",
+    "https://openalex.org/W2168696093",
+    "https://openalex.org/W2479609865",
+    "https://openalex.org/W2151083897",
+    "https://openalex.org/W2796306022",
+    "https://openalex.org/W2110791536",
+    "https://openalex.org/W2914542247",
+    "https://openalex.org/W2900694120",
+    "https://openalex.org/W1998693213",
+    "https://openalex.org/W2027478081",
+    "https://openalex.org/W2066810295",
+    "https://openalex.org/W1592238003",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2121879602",
+    "https://openalex.org/W6727690538",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W6781031682",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2578240541",
+    "https://openalex.org/W2806351858",
+    "https://openalex.org/W3133325765",
+    "https://openalex.org/W2769423117",
+    "https://openalex.org/W2989615256",
+    "https://openalex.org/W2999242200",
+    "https://openalex.org/W2973114758",
+    "https://openalex.org/W6784526300",
+    "https://openalex.org/W4221074165",
+    "https://openalex.org/W6770131888",
+    "https://openalex.org/W2947423323",
+    "https://openalex.org/W3123901912",
+    "https://openalex.org/W6783248943",
+    "https://openalex.org/W3101449015",
+    "https://openalex.org/W2034549041",
+    "https://openalex.org/W2160592148",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W3006889321",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W1988037271",
+    "https://openalex.org/W4303478269",
+    "https://openalex.org/W2121438595",
+    "https://openalex.org/W2962687375",
+    "https://openalex.org/W3093934881",
+    "https://openalex.org/W3103092523",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W3100839802",
+    "https://openalex.org/W2986232138",
+    "https://openalex.org/W3169948074",
+    "https://openalex.org/W2525778437",
+    "https://openalex.org/W3046375318",
+    "https://openalex.org/W1522301498"
+  ],
+  "abstract": "Inspired by the evolution of biological systems, genetic algorithms have been applied to generate solutions for optimization problems in a variety of scientific and engineering disciplines. For a given problem, a suitable genome representation must be defined along with a mutation operator to generate subsequent generations. Unlike natural systems which display a variety of complex rearrangements (e.g. mobile genetic elements), mutation for genetic algorithms commonly utilizes only random point-wise changes. Furthermore, generalizing beyond point-wise mutations poses a key difficulty as useful genome rearrangements depend on the representation and problem domain. To move beyond the limitations of manually defined point-wise changes, here we propose the use of techniques from masked language models to automatically generate mutations. As a first step, common subsequences within a given population are used to generate a vocabulary. The vocabulary is then used to tokenize each genome. A masked language model is trained on the tokenized data in order to generate possible rearrangements (i.e. mutations). In order to illustrate the proposed strategy, we use string representations of molecules and use a genetic algorithm to optimize for drug-likeness and synthesizability. Finally, our results show that moving beyond random point-wise mutations accelerates genetic algorithm optimization.",
+  "full_text": null,
+  "topic": "Pointwise",
+  "concepts": [
+    {
+      "name": "Pointwise",
+      "score": 0.8903012275695801
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6080875396728516
+    },
+    {
+      "name": "Mutation",
+      "score": 0.53347247838974
+    },
+    {
+      "name": "Population",
+      "score": 0.5239298939704895
+    },
+    {
+      "name": "Variety (cybernetics)",
+      "score": 0.510959804058075
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.5008692741394043
+    },
+    {
+      "name": "Genetic algorithm",
+      "score": 0.4937032163143158
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.46346086263656616
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.4601363241672516
+    },
+    {
+      "name": "Genetic representation",
+      "score": 0.4448188841342926
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.4393709897994995
+    },
+    {
+      "name": "String (physics)",
+      "score": 0.4352007508277893
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.41384586691856384
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3854530453681946
+    },
+    {
+      "name": "Genetics",
+      "score": 0.26313889026641846
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.23481351137161255
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.19807234406471252
+    },
+    {
+      "name": "Biology",
+      "score": 0.18501845002174377
+    },
+    {
+      "name": "Gene",
+      "score": 0.10887542366981506
+    },
+    {
+      "name": "Mathematical physics",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Demography",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    }
+  ]
 }

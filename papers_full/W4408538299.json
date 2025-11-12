@@ -1,69 +1,108 @@
 {
-    "title": "Development of an Automated Construction Contract Review Framework Using Large Language Model and Domain Knowledge",
-    "url": "https://openalex.org/W4408538299",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2736934117",
-            "name": "Eu Wang Kim",
-            "affiliations": [
-                "Chung-Ang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2962872144",
-            "name": "Yeon-Ju Shin",
-            "affiliations": [
-                "Chung-Ang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2118690882",
-            "name": "Kyong Ju Kim",
-            "affiliations": [
-                "Chung-Ang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2116121977",
-            "name": "Sehoon Kwon",
-            "affiliations": [
-                "Samsung (South Korea)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6681127299",
-        "https://openalex.org/W583420398",
-        "https://openalex.org/W6760821124",
-        "https://openalex.org/W2804062678",
-        "https://openalex.org/W2909418764",
-        "https://openalex.org/W2272126491",
-        "https://openalex.org/W2896232617",
-        "https://openalex.org/W1967622519",
-        "https://openalex.org/W3181600572",
-        "https://openalex.org/W3197037074",
-        "https://openalex.org/W2156224628",
-        "https://openalex.org/W4220766254",
-        "https://openalex.org/W2076383389",
-        "https://openalex.org/W3189345904",
-        "https://openalex.org/W3005595604",
-        "https://openalex.org/W4284886889",
-        "https://openalex.org/W4289830445",
-        "https://openalex.org/W4283219089",
-        "https://openalex.org/W4388094126",
-        "https://openalex.org/W4390291322",
-        "https://openalex.org/W4385436742",
-        "https://openalex.org/W4390716172",
-        "https://openalex.org/W4388059974",
-        "https://openalex.org/W4385721175",
-        "https://openalex.org/W4385570777",
-        "https://openalex.org/W2490968336",
-        "https://openalex.org/W3157758108",
-        "https://openalex.org/W4403248625",
-        "https://openalex.org/W2921828969",
-        "https://openalex.org/W2142039047"
-    ],
-    "abstract": "Construction contract review demands specialized expertise, requiring comprehensive understanding of both technical and legal aspects. While AI advancements offer potential solutions, two problems exist: LLMs lack sufficient domain-specific knowledge to analyze construction contracts; existing RAG approaches do not effectively utilize domain expertise. This study aims to develop an automated contract review system that integrates domain expertise with AI capabilities while ensuring reliable analysis. By transforming expert knowledge into a structured knowledge base aligned with the SCF classification, the proposed structured knowledge-integrated RAG pipeline is expected to enable context-aware contract analysis. This enhanced performance is achieved through three key components: (1) integrating structured domain knowledge with LLMs, (2) implementing filtering combined with hybrid dense–sparse retrieval mechanisms, and (3) employing reference-based answer generation. Validation using Oman’s standard contract conditions demonstrated the system’s effectiveness in assisting construction professionals with contract analysis. Performance evaluation showed significant improvements, achieving a 52.6% improvement in Context Recall and a 48.3% improvement in Faithfulness compared to basic RAG approaches. This study contributes to enhancing the reliability of construction contract review by applying a structured knowledge-integrated RAG pipeline that enables the accurate retrieval of expert knowledge, thereby addressing the industry’s need for precise contract analysis.",
-    "full_text": null
+  "title": "Development of an Automated Construction Contract Review Framework Using Large Language Model and Domain Knowledge",
+  "url": "https://openalex.org/W4408538299",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2736934117",
+      "name": "Eu Wang Kim",
+      "affiliations": [
+        "Chung-Ang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2962872144",
+      "name": "Yeon-Ju Shin",
+      "affiliations": [
+        "Chung-Ang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2118690882",
+      "name": "Kyong Ju Kim",
+      "affiliations": [
+        "Chung-Ang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2116121977",
+      "name": "Sehoon Kwon",
+      "affiliations": [
+        "Samsung (South Korea)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6681127299",
+    "https://openalex.org/W583420398",
+    "https://openalex.org/W6760821124",
+    "https://openalex.org/W2804062678",
+    "https://openalex.org/W2909418764",
+    "https://openalex.org/W2272126491",
+    "https://openalex.org/W2896232617",
+    "https://openalex.org/W1967622519",
+    "https://openalex.org/W3181600572",
+    "https://openalex.org/W3197037074",
+    "https://openalex.org/W2156224628",
+    "https://openalex.org/W4220766254",
+    "https://openalex.org/W2076383389",
+    "https://openalex.org/W3189345904",
+    "https://openalex.org/W3005595604",
+    "https://openalex.org/W4284886889",
+    "https://openalex.org/W4289830445",
+    "https://openalex.org/W4283219089",
+    "https://openalex.org/W4388094126",
+    "https://openalex.org/W4390291322",
+    "https://openalex.org/W4385436742",
+    "https://openalex.org/W4390716172",
+    "https://openalex.org/W4388059974",
+    "https://openalex.org/W4385721175",
+    "https://openalex.org/W4385570777",
+    "https://openalex.org/W2490968336",
+    "https://openalex.org/W3157758108",
+    "https://openalex.org/W4403248625",
+    "https://openalex.org/W2921828969",
+    "https://openalex.org/W2142039047"
+  ],
+  "abstract": "Construction contract review demands specialized expertise, requiring comprehensive understanding of both technical and legal aspects. While AI advancements offer potential solutions, two problems exist: LLMs lack sufficient domain-specific knowledge to analyze construction contracts; existing RAG approaches do not effectively utilize domain expertise. This study aims to develop an automated contract review system that integrates domain expertise with AI capabilities while ensuring reliable analysis. By transforming expert knowledge into a structured knowledge base aligned with the SCF classification, the proposed structured knowledge-integrated RAG pipeline is expected to enable context-aware contract analysis. This enhanced performance is achieved through three key components: (1) integrating structured domain knowledge with LLMs, (2) implementing filtering combined with hybrid dense–sparse retrieval mechanisms, and (3) employing reference-based answer generation. Validation using Oman’s standard contract conditions demonstrated the system’s effectiveness in assisting construction professionals with contract analysis. Performance evaluation showed significant improvements, achieving a 52.6% improvement in Context Recall and a 48.3% improvement in Faithfulness compared to basic RAG approaches. This study contributes to enhancing the reliability of construction contract review by applying a structured knowledge-integrated RAG pipeline that enables the accurate retrieval of expert knowledge, thereby addressing the industry’s need for precise contract analysis.",
+  "full_text": null,
+  "topic": "Domain (mathematical analysis)",
+  "concepts": [
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.541526734828949
+    },
+    {
+      "name": "Computer science",
+      "score": 0.48241671919822693
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.4656416177749634
+    },
+    {
+      "name": "Knowledge management",
+      "score": 0.4612165689468384
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.45276251435279846
+    },
+    {
+      "name": "Engineering management",
+      "score": 0.37522947788238525
+    },
+    {
+      "name": "Engineering",
+      "score": 0.32046276330947876
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,172 +1,227 @@
 {
-    "title": "Scale matters: Large language models with billions (rather than millions) of parameters better match neural representations of natural language",
-    "url": "https://openalex.org/W4403651116",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3105168530",
-            "name": "Zhuoqiao Hong",
-            "affiliations": [
-                "Princeton University",
-                "Neuroscience Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2102349674",
-            "name": "Haocheng WANG",
-            "affiliations": [
-                "Princeton University",
-                "Neuroscience Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2970642882",
-            "name": "Zaid Zada",
-            "affiliations": [
-                "Neuroscience Institute",
-                "Princeton University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1412001018",
-            "name": "Harshvardhan Gazula",
-            "affiliations": [
-                "McGovern Institute for Brain Research",
-                "Massachusetts Institute of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1976067962",
-            "name": "David Turner",
-            "affiliations": [
-                "Neuroscience Institute",
-                "Princeton University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2970260353",
-            "name": "Bobbi Aubrey",
-            "affiliations": [
-                "Princeton University",
-                "Neuroscience Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3179829526",
-            "name": "Leonard Niekerken",
-            "affiliations": [
-                "Princeton University",
-                "Neuroscience Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2158319624",
-            "name": "Werner Doyle",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2062973952",
-            "name": "Sasha Devore",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2235222557",
-            "name": "Patricia Dugan",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2082443098",
-            "name": "Daniel Friedman",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A277843997",
-            "name": "Orrin Devinsky",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1975429482",
-            "name": "Adeen Flinker",
-            "affiliations": [
-                "New York University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2182450596",
-            "name": "Uri Hasson",
-            "affiliations": [
-                "Neuroscience Institute",
-                "Princeton University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2072350497",
-            "name": "Samuel A. Nastase",
-            "affiliations": [
-                "Princeton University",
-                "Neuroscience Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2285538401",
-            "name": "Ariel Goldstein",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6853400716",
-        "https://openalex.org/W6800751262",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6862948370",
-        "https://openalex.org/W3154773080",
-        "https://openalex.org/W4212828284",
-        "https://openalex.org/W6862906177",
-        "https://openalex.org/W1988812422",
-        "https://openalex.org/W6788175385",
-        "https://openalex.org/W4393343917",
-        "https://openalex.org/W6854504275",
-        "https://openalex.org/W4220949944",
-        "https://openalex.org/W6863912664",
-        "https://openalex.org/W2883992483",
-        "https://openalex.org/W3004619146",
-        "https://openalex.org/W4301594491",
-        "https://openalex.org/W4387700780",
-        "https://openalex.org/W6772383348",
-        "https://openalex.org/W2176287621",
-        "https://openalex.org/W4288368497",
-        "https://openalex.org/W4386096102",
-        "https://openalex.org/W3018827121",
-        "https://openalex.org/W6789232148",
-        "https://openalex.org/W3031914912",
-        "https://openalex.org/W6861795357",
-        "https://openalex.org/W2138790588",
-        "https://openalex.org/W6948936239",
-        "https://openalex.org/W2978368159",
-        "https://openalex.org/W2084332617",
-        "https://openalex.org/W3210923133",
-        "https://openalex.org/W6763027002",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W7030677884",
-        "https://openalex.org/W6802728921",
-        "https://openalex.org/W2274405424",
-        "https://openalex.org/W2029996593",
-        "https://openalex.org/W2566079294",
-        "https://openalex.org/W6811340617",
-        "https://openalex.org/W3103536442",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W4393559805",
-        "https://openalex.org/W2947012833"
-    ],
-    "abstract": "Abstract Recent research has used large language models (LLMs) to study the neural basis of naturalistic language processing in the human brain. LLMs have rapidly grown in complexity, leading to improved language processing capabilities. However, neuroscience researchers haven’t kept up with the quick progress in LLM development. Here, we utilized several families of transformer-based LLMs to investigate the relationship between model size and their ability to capture linguistic information in the human brain. Crucially, a subset of LLMs were trained on a fixed training set, enabling us to dissociate model size from architecture and training set size. We used electrocorticography (ECoG) to measure neural activity in epilepsy patients while they listened to a 30-minute naturalistic audio story. We fit electrode-wise encoding models using contextual embeddings extracted from each hidden layer of the LLMs to predict word-level neural signals. In line with prior work, we found that larger LLMs better capture the structure of natural language and better predict neural activity. We also found a log-linear relationship where the encoding performance peaks in relatively earlier layers as model size increases. We also observed variations in the best-performing layer across different brain regions, corresponding to an organized language processing hierarchy.",
-    "full_text": null
+  "title": "Scale matters: Large language models with billions (rather than millions) of parameters better match neural representations of natural language",
+  "url": "https://openalex.org/W4403651116",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3105168530",
+      "name": "Zhuoqiao Hong",
+      "affiliations": [
+        "Princeton University",
+        "Neuroscience Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2102349674",
+      "name": "Haocheng WANG",
+      "affiliations": [
+        "Princeton University",
+        "Neuroscience Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2970642882",
+      "name": "Zaid Zada",
+      "affiliations": [
+        "Neuroscience Institute",
+        "Princeton University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1412001018",
+      "name": "Harshvardhan Gazula",
+      "affiliations": [
+        "McGovern Institute for Brain Research",
+        "Massachusetts Institute of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1976067962",
+      "name": "David Turner",
+      "affiliations": [
+        "Neuroscience Institute",
+        "Princeton University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2970260353",
+      "name": "Bobbi Aubrey",
+      "affiliations": [
+        "Princeton University",
+        "Neuroscience Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3179829526",
+      "name": "Leonard Niekerken",
+      "affiliations": [
+        "Princeton University",
+        "Neuroscience Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2158319624",
+      "name": "Werner Doyle",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2062973952",
+      "name": "Sasha Devore",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2235222557",
+      "name": "Patricia Dugan",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2082443098",
+      "name": "Daniel Friedman",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A277843997",
+      "name": "Orrin Devinsky",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1975429482",
+      "name": "Adeen Flinker",
+      "affiliations": [
+        "New York University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2182450596",
+      "name": "Uri Hasson",
+      "affiliations": [
+        "Neuroscience Institute",
+        "Princeton University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2072350497",
+      "name": "Samuel A. Nastase",
+      "affiliations": [
+        "Princeton University",
+        "Neuroscience Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2285538401",
+      "name": "Ariel Goldstein",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6853400716",
+    "https://openalex.org/W6800751262",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6862948370",
+    "https://openalex.org/W3154773080",
+    "https://openalex.org/W4212828284",
+    "https://openalex.org/W6862906177",
+    "https://openalex.org/W1988812422",
+    "https://openalex.org/W6788175385",
+    "https://openalex.org/W4393343917",
+    "https://openalex.org/W6854504275",
+    "https://openalex.org/W4220949944",
+    "https://openalex.org/W6863912664",
+    "https://openalex.org/W2883992483",
+    "https://openalex.org/W3004619146",
+    "https://openalex.org/W4301594491",
+    "https://openalex.org/W4387700780",
+    "https://openalex.org/W6772383348",
+    "https://openalex.org/W2176287621",
+    "https://openalex.org/W4288368497",
+    "https://openalex.org/W4386096102",
+    "https://openalex.org/W3018827121",
+    "https://openalex.org/W6789232148",
+    "https://openalex.org/W3031914912",
+    "https://openalex.org/W6861795357",
+    "https://openalex.org/W2138790588",
+    "https://openalex.org/W6948936239",
+    "https://openalex.org/W2978368159",
+    "https://openalex.org/W2084332617",
+    "https://openalex.org/W3210923133",
+    "https://openalex.org/W6763027002",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W7030677884",
+    "https://openalex.org/W6802728921",
+    "https://openalex.org/W2274405424",
+    "https://openalex.org/W2029996593",
+    "https://openalex.org/W2566079294",
+    "https://openalex.org/W6811340617",
+    "https://openalex.org/W3103536442",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W4393559805",
+    "https://openalex.org/W2947012833"
+  ],
+  "abstract": "Abstract Recent research has used large language models (LLMs) to study the neural basis of naturalistic language processing in the human brain. LLMs have rapidly grown in complexity, leading to improved language processing capabilities. However, neuroscience researchers haven’t kept up with the quick progress in LLM development. Here, we utilized several families of transformer-based LLMs to investigate the relationship between model size and their ability to capture linguistic information in the human brain. Crucially, a subset of LLMs were trained on a fixed training set, enabling us to dissociate model size from architecture and training set size. We used electrocorticography (ECoG) to measure neural activity in epilepsy patients while they listened to a 30-minute naturalistic audio story. We fit electrode-wise encoding models using contextual embeddings extracted from each hidden layer of the LLMs to predict word-level neural signals. In line with prior work, we found that larger LLMs better capture the structure of natural language and better predict neural activity. We also found a log-linear relationship where the encoding performance peaks in relatively earlier layers as model size increases. We also observed variations in the best-performing layer across different brain regions, corresponding to an organized language processing hierarchy.",
+  "full_text": null,
+  "topic": "Scale (ratio)",
+  "concepts": [
+    {
+      "name": "Scale (ratio)",
+      "score": 0.6779358386993408
+    },
+    {
+      "name": "Natural (archaeology)",
+      "score": 0.613246500492096
+    },
+    {
+      "name": "Computer science",
+      "score": 0.607660174369812
+    },
+    {
+      "name": "Natural language",
+      "score": 0.5384179949760437
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.48648497462272644
+    },
+    {
+      "name": "Language model",
+      "score": 0.42805010080337524
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.40569519996643066
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.38215744495391846
+    },
+    {
+      "name": "History",
+      "score": 0.13937655091285706
+    },
+    {
+      "name": "Geography",
+      "score": 0.09972399473190308
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.06438496708869934
+    },
+    {
+      "name": "Cartography",
+      "score": 0.06398218870162964
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    }
+  ]
 }

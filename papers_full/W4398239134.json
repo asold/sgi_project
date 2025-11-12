@@ -1,96 +1,155 @@
 {
-    "title": "DyFish-DETR: Underwater Fish Image Recognition Based on Detection Transformer",
-    "url": "https://openalex.org/W4398239134",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2136000826",
-            "name": "Zhuowei Wang",
-            "affiliations": [
-                "Guangdong University of Technology",
-                "Guangzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5111252522",
-            "name": "Zhukang Ruan",
-            "affiliations": [
-                "Guangdong University of Technology",
-                "Guangzhou University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096350482",
-            "name": "Chong Chen",
-            "affiliations": [
-                "Guangzhou University",
-                "Guangdong University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2136000826",
-            "name": "Zhuowei Wang",
-            "affiliations": [
-                "Guangzhou University",
-                "Guangdong University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5111252522",
-            "name": "Zhukang Ruan",
-            "affiliations": [
-                "Guangzhou University",
-                "Guangdong University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096350482",
-            "name": "Chong Chen",
-            "affiliations": [
-                "Guangzhou University",
-                "Guangdong University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2973696262",
-        "https://openalex.org/W4312339253",
-        "https://openalex.org/W4307900253",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W4297676427",
-        "https://openalex.org/W2615126350",
-        "https://openalex.org/W3018757597",
-        "https://openalex.org/W2897654901",
-        "https://openalex.org/W4297775537",
-        "https://openalex.org/W1972842671",
-        "https://openalex.org/W3172986704",
-        "https://openalex.org/W4384648050",
-        "https://openalex.org/W4379538355",
-        "https://openalex.org/W3095056294",
-        "https://openalex.org/W4221116484",
-        "https://openalex.org/W3082843304",
-        "https://openalex.org/W4382630561",
-        "https://openalex.org/W4308539429",
-        "https://openalex.org/W4386076325",
-        "https://openalex.org/W4295549179",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W4379031914",
-        "https://openalex.org/W4210447461",
-        "https://openalex.org/W3184439416",
-        "https://openalex.org/W4293584584",
-        "https://openalex.org/W3009758881",
-        "https://openalex.org/W4221146106",
-        "https://openalex.org/W3110213826",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W4366400469",
-        "https://openalex.org/W3001975036",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3161418236",
-        "https://openalex.org/W4281679836",
-        "https://openalex.org/W4309609828",
-        "https://openalex.org/W4310581309",
-        "https://openalex.org/W4285110782"
-    ],
-    "abstract": "Due to the complexity of underwater environments and the lack of training samples, the application of target detection algorithms to the underwater environment has yet to provide satisfactory results. It is crucial to design specialized underwater target recognition algorithms for different underwater tasks. In order to achieve this goal, we created a dataset of freshwater fish captured from multiple angles and lighting conditions, aiming to improve underwater target detection of freshwater fish in natural environments. We propose a method suitable for underwater target detection, called DyFish-DETR (Dynamic Fish Detection with Transformers). In DyFish-DETR, we propose a DyFishNet (Dynamic Fish Net) to better extract fish body texture features. A Slim Hybrid Encoder is designed to fuse fish body feature information. The results of ablation experiments show that DyFishNet can effectively improve the mean Average Precision (mAP) of model detection. The Slim Hybrid Encoder can effectively improve Frame Per Second (FPS). Both DyFishNet and the Slim Hybrid Encoder can reduce model parameters and Floating Point Operations (FLOPs). In our proposed freshwater fish dataset, DyFish-DETR achieved a mAP of 96.6%. The benchmarking experimental results show that the Average Precision (AP) and Average Recall (AR) of DyFish-DETR are higher than several state-of-the-art methods. Additionally, DyFish-DETR, respectively, achieved 99%, 98.8%, and 83.2% mAP in other underwater datasets.",
-    "full_text": null
+  "title": "DyFish-DETR: Underwater Fish Image Recognition Based on Detection Transformer",
+  "url": "https://openalex.org/W4398239134",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2136000826",
+      "name": "Zhuowei Wang",
+      "affiliations": [
+        "Guangdong University of Technology",
+        "Guangzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5111252522",
+      "name": "Zhukang Ruan",
+      "affiliations": [
+        "Guangdong University of Technology",
+        "Guangzhou University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096350482",
+      "name": "Chong Chen",
+      "affiliations": [
+        "Guangzhou University",
+        "Guangdong University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2136000826",
+      "name": "Zhuowei Wang",
+      "affiliations": [
+        "Guangzhou University",
+        "Guangdong University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5111252522",
+      "name": "Zhukang Ruan",
+      "affiliations": [
+        "Guangzhou University",
+        "Guangdong University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096350482",
+      "name": "Chong Chen",
+      "affiliations": [
+        "Guangzhou University",
+        "Guangdong University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2973696262",
+    "https://openalex.org/W4312339253",
+    "https://openalex.org/W4307900253",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W4297676427",
+    "https://openalex.org/W2615126350",
+    "https://openalex.org/W3018757597",
+    "https://openalex.org/W2897654901",
+    "https://openalex.org/W4297775537",
+    "https://openalex.org/W1972842671",
+    "https://openalex.org/W3172986704",
+    "https://openalex.org/W4384648050",
+    "https://openalex.org/W4379538355",
+    "https://openalex.org/W3095056294",
+    "https://openalex.org/W4221116484",
+    "https://openalex.org/W3082843304",
+    "https://openalex.org/W4382630561",
+    "https://openalex.org/W4308539429",
+    "https://openalex.org/W4386076325",
+    "https://openalex.org/W4295549179",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W4379031914",
+    "https://openalex.org/W4210447461",
+    "https://openalex.org/W3184439416",
+    "https://openalex.org/W4293584584",
+    "https://openalex.org/W3009758881",
+    "https://openalex.org/W4221146106",
+    "https://openalex.org/W3110213826",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W4366400469",
+    "https://openalex.org/W3001975036",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3161418236",
+    "https://openalex.org/W4281679836",
+    "https://openalex.org/W4309609828",
+    "https://openalex.org/W4310581309",
+    "https://openalex.org/W4285110782"
+  ],
+  "abstract": "Due to the complexity of underwater environments and the lack of training samples, the application of target detection algorithms to the underwater environment has yet to provide satisfactory results. It is crucial to design specialized underwater target recognition algorithms for different underwater tasks. In order to achieve this goal, we created a dataset of freshwater fish captured from multiple angles and lighting conditions, aiming to improve underwater target detection of freshwater fish in natural environments. We propose a method suitable for underwater target detection, called DyFish-DETR (Dynamic Fish Detection with Transformers). In DyFish-DETR, we propose a DyFishNet (Dynamic Fish Net) to better extract fish body texture features. A Slim Hybrid Encoder is designed to fuse fish body feature information. The results of ablation experiments show that DyFishNet can effectively improve the mean Average Precision (mAP) of model detection. The Slim Hybrid Encoder can effectively improve Frame Per Second (FPS). Both DyFishNet and the Slim Hybrid Encoder can reduce model parameters and Floating Point Operations (FLOPs). In our proposed freshwater fish dataset, DyFish-DETR achieved a mAP of 96.6%. The benchmarking experimental results show that the Average Precision (AP) and Average Recall (AR) of DyFish-DETR are higher than several state-of-the-art methods. Additionally, DyFish-DETR, respectively, achieved 99%, 98.8%, and 83.2% mAP in other underwater datasets.",
+  "full_text": null,
+  "topic": "Underwater",
+  "concepts": [
+    {
+      "name": "Underwater",
+      "score": 0.7033604383468628
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4880200922489166
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4516375660896301
+    },
+    {
+      "name": "Environmental science",
+      "score": 0.43713632225990295
+    },
+    {
+      "name": "Fish <Actinopterygii>",
+      "score": 0.4349799156188965
+    },
+    {
+      "name": "Fishery",
+      "score": 0.38400623202323914
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3652886152267456
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3280852735042572
+    },
+    {
+      "name": "Geology",
+      "score": 0.2167898714542389
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14630624651908875
+    },
+    {
+      "name": "Biology",
+      "score": 0.12363404035568237
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.11842212080955505
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.08363422751426697
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

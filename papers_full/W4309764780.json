@@ -1,66 +1,157 @@
 {
-    "title": "A Transformer Based Approach for Abuse Detection in Code Mixed Indic Languages.",
-    "url": "https://openalex.org/W4309764780",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3179823585",
-            "name": "Vibhuti Bansal",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3004483178",
-            "name": "Mrinal Tyagi",
-            "affiliations": [
-                "Bharati Vidyapeeth Deemed University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097450922",
-            "name": "Rajesh Sharma",
-            "affiliations": [
-                "University of Tartu"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2228573326",
-            "name": "Vedika Gupta",
-            "affiliations": [
-                "O. P. Jindal Global University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1973973772",
-            "name": "Qin Xin",
-            "affiliations": [
-                "University of the Faroe Islands"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3179823585",
-            "name": "Vibhuti Bansal",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1975423998",
-        "https://openalex.org/W2508628588",
-        "https://openalex.org/W4319778858",
-        "https://openalex.org/W3123409579",
-        "https://openalex.org/W2952937483",
-        "https://openalex.org/W3176502972",
-        "https://openalex.org/W2941193813",
-        "https://openalex.org/W2607388700",
-        "https://openalex.org/W2142423963",
-        "https://openalex.org/W3105113320",
-        "https://openalex.org/W3185138704",
-        "https://openalex.org/W3211864559",
-        "https://openalex.org/W2954858824",
-        "https://openalex.org/W2563826943",
-        "https://openalex.org/W2551706664",
-        "https://openalex.org/W2612077511",
-        "https://openalex.org/W4391156274"
-    ],
-    "abstract": "The advancement in the number of online social media platforms has entailed active participation from the web users globally. This has also lead to subsequent increase in the cyberbullying cases online. Such incidents diminish an individual’s reputation or defame a community, also posing a threat to the privacy of users in cyberspace. Traditionally, manual checks and handling mechanisms have been used to deal with such textual content. However, an automatic computer-based approach would provide far better solutions to this problem. Existing approaches to automate this task majorly involves classical machine learning models which tend to perform poorly on low resource languages. Owing to the varied background and language of web users, the cyberspace witnesses the presence of multilingual text. An integrated approach to accommodate multilingual text could be the appropriate solution. This paper explores various methods to detect abusive content in 13 Indic code-mixed languages. Firstly, baseline classical machine learning models are compared with Transformer based architecture. Secondly, the paper presents the experimental analysis of four state-of-the-art transformer-based models vis à vis XLM-RoBERTa, indic-BERT, MurilBert and mBERT, out of which XLM Roberta with BiGRU outperforms. Thirdly, the experimental setup of the best performing model XLM-RoBERTa is fed with emoji embeddings that leads to further enhancement of overall performance of the employed model. Finally, the model is trained with the combined dataset of 13 Indic languages, to compare its performance with those of individual language models. The performance of combined model surpassed those of the individual models in terms of F1 score and accuracy, supporting the fact that combined model fits the data better possibly due to its code-mixed nature. This model reports a F1 score of 0.88 on test data while rendering a training loss of 0.28, validation loss of 0.31 and an AUC score of 0.94 for both training and validation.",
-    "full_text": null
+  "title": "A Transformer Based Approach for Abuse Detection in Code Mixed Indic Languages.",
+  "url": "https://openalex.org/W4309764780",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3179823585",
+      "name": "Vibhuti Bansal",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3004483178",
+      "name": "Mrinal Tyagi",
+      "affiliations": [
+        "Bharati Vidyapeeth Deemed University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097450922",
+      "name": "Rajesh Sharma",
+      "affiliations": [
+        "University of Tartu"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2228573326",
+      "name": "Vedika Gupta",
+      "affiliations": [
+        "O. P. Jindal Global University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1973973772",
+      "name": "Qin Xin",
+      "affiliations": [
+        "University of the Faroe Islands"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3179823585",
+      "name": "Vibhuti Bansal",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1975423998",
+    "https://openalex.org/W2508628588",
+    "https://openalex.org/W4319778858",
+    "https://openalex.org/W3123409579",
+    "https://openalex.org/W2952937483",
+    "https://openalex.org/W3176502972",
+    "https://openalex.org/W2941193813",
+    "https://openalex.org/W2607388700",
+    "https://openalex.org/W2142423963",
+    "https://openalex.org/W3105113320",
+    "https://openalex.org/W3185138704",
+    "https://openalex.org/W3211864559",
+    "https://openalex.org/W2954858824",
+    "https://openalex.org/W2563826943",
+    "https://openalex.org/W2551706664",
+    "https://openalex.org/W2612077511",
+    "https://openalex.org/W4391156274"
+  ],
+  "abstract": "The advancement in the number of online social media platforms has entailed active participation from the web users globally. This has also lead to subsequent increase in the cyberbullying cases online. Such incidents diminish an individual’s reputation or defame a community, also posing a threat to the privacy of users in cyberspace. Traditionally, manual checks and handling mechanisms have been used to deal with such textual content. However, an automatic computer-based approach would provide far better solutions to this problem. Existing approaches to automate this task majorly involves classical machine learning models which tend to perform poorly on low resource languages. Owing to the varied background and language of web users, the cyberspace witnesses the presence of multilingual text. An integrated approach to accommodate multilingual text could be the appropriate solution. This paper explores various methods to detect abusive content in 13 Indic code-mixed languages. Firstly, baseline classical machine learning models are compared with Transformer based architecture. Secondly, the paper presents the experimental analysis of four state-of-the-art transformer-based models vis à vis XLM-RoBERTa, indic-BERT, MurilBert and mBERT, out of which XLM Roberta with BiGRU outperforms. Thirdly, the experimental setup of the best performing model XLM-RoBERTa is fed with emoji embeddings that leads to further enhancement of overall performance of the employed model. Finally, the model is trained with the combined dataset of 13 Indic languages, to compare its performance with those of individual language models. The performance of combined model surpassed those of the individual models in terms of F1 score and accuracy, supporting the fact that combined model fits the data better possibly due to its code-mixed nature. This model reports a F1 score of 0.88 on test data while rendering a training loss of 0.28, validation loss of 0.31 and an AUC score of 0.94 for both training and validation.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7631164193153381
+    },
+    {
+      "name": "Cyberspace",
+      "score": 0.6680877208709717
+    },
+    {
+      "name": "Language model",
+      "score": 0.5343064069747925
+    },
+    {
+      "name": "Reputation",
+      "score": 0.5135424137115479
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4902198910713196
+    },
+    {
+      "name": "Transformer",
+      "score": 0.48856982588768005
+    },
+    {
+      "name": "Social media",
+      "score": 0.4513888657093048
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.44835102558135986
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.4290158450603485
+    },
+    {
+      "name": "Architecture",
+      "score": 0.4181933104991913
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.41323941946029663
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4091435670852661
+    },
+    {
+      "name": "The Internet",
+      "score": 0.2501850128173828
+    },
+    {
+      "name": "Programming language",
+      "score": 0.1498526930809021
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10308974981307983
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Art",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Social science",
+      "score": 0.0
+    },
+    {
+      "name": "Visual arts",
+      "score": 0.0
+    }
+  ]
 }

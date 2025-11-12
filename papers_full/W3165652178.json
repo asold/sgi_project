@@ -1,124 +1,187 @@
 {
-    "title": "Short-Circuited Turn Fault Diagnosis in Transformers by Using Vibration Signals, Statistical Time Features, and Support Vector Machines on FPGA",
-    "url": "https://openalex.org/W3165652178",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4208092022",
-            "name": "José R. Huerta Rosales",
-            "affiliations": [
-                "Autonomous University of Queretaro"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2582436931",
-            "name": "David Granados Lieberman",
-            "affiliations": [
-                "Instituto Tecnológico Superior de Irapuato",
-                "Tecnológico Nacional de México"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104533709",
-            "name": "Arturo García Pérez",
-            "affiliations": [
-                "Universidad de Guanajuato"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2563874725",
-            "name": "David Camarena Martinez",
-            "affiliations": [
-                "Universidad de Guanajuato"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4207647145",
-            "name": "Juan P. Amezquita-Sanchez",
-            "affiliations": [
-                "Autonomous University of Queretaro"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2783467156",
-            "name": "Martin Valtierra-Rodriguez",
-            "affiliations": [
-                "Autonomous University of Queretaro"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2050124321",
-        "https://openalex.org/W2965005217",
-        "https://openalex.org/W2965074050",
-        "https://openalex.org/W2605738098",
-        "https://openalex.org/W2127392509",
-        "https://openalex.org/W2924502565",
-        "https://openalex.org/W2771983901",
-        "https://openalex.org/W2990920633",
-        "https://openalex.org/W2740956509",
-        "https://openalex.org/W3020184481",
-        "https://openalex.org/W2806067784",
-        "https://openalex.org/W2073542605",
-        "https://openalex.org/W2137270140",
-        "https://openalex.org/W2790391631",
-        "https://openalex.org/W3016195024",
-        "https://openalex.org/W2149782216",
-        "https://openalex.org/W2901962925",
-        "https://openalex.org/W2754735132",
-        "https://openalex.org/W6681953942",
-        "https://openalex.org/W2192244518",
-        "https://openalex.org/W2076380517",
-        "https://openalex.org/W2488751652",
-        "https://openalex.org/W2251652412",
-        "https://openalex.org/W2133022997",
-        "https://openalex.org/W2976054942",
-        "https://openalex.org/W2098479114",
-        "https://openalex.org/W2886794804",
-        "https://openalex.org/W2923467900",
-        "https://openalex.org/W2895933188",
-        "https://openalex.org/W2614556125",
-        "https://openalex.org/W3006730271",
-        "https://openalex.org/W2944174688",
-        "https://openalex.org/W2744933063",
-        "https://openalex.org/W2605417236",
-        "https://openalex.org/W2021417606",
-        "https://openalex.org/W2759531725",
-        "https://openalex.org/W2555448499",
-        "https://openalex.org/W1487321909",
-        "https://openalex.org/W1675477313",
-        "https://openalex.org/W2738939700",
-        "https://openalex.org/W2914650326",
-        "https://openalex.org/W2956413013",
-        "https://openalex.org/W2740623735",
-        "https://openalex.org/W2474531587",
-        "https://openalex.org/W2791149978",
-        "https://openalex.org/W2016928105",
-        "https://openalex.org/W2583858375",
-        "https://openalex.org/W2090578011",
-        "https://openalex.org/W2559999082",
-        "https://openalex.org/W2437021528",
-        "https://openalex.org/W2921155119",
-        "https://openalex.org/W1897892887",
-        "https://openalex.org/W6675601258",
-        "https://openalex.org/W2081028792",
-        "https://openalex.org/W2442309921",
-        "https://openalex.org/W2791052411",
-        "https://openalex.org/W2587820918",
-        "https://openalex.org/W2614937618",
-        "https://openalex.org/W2891425084",
-        "https://openalex.org/W2592345322",
-        "https://openalex.org/W2053315995",
-        "https://openalex.org/W2574872833",
-        "https://openalex.org/W2943651712",
-        "https://openalex.org/W2998018264",
-        "https://openalex.org/W3124112234",
-        "https://openalex.org/W2507677318",
-        "https://openalex.org/W3037801075",
-        "https://openalex.org/W2885960709",
-        "https://openalex.org/W2146522578",
-        "https://openalex.org/W2104027187"
-    ],
-    "abstract": "One of the most critical devices in an electrical system is the transformer. It is continuously under different electrical and mechanical stresses that can produce failures in its components and other electrical network devices. The short-circuited turns (SCTs) are a common winding failure. This type of fault has been widely studied in literature employing the vibration signals produced in the transformer. Although promising results have been obtained, it is not a trivial task if different severity levels and a common high-level noise are considered. This paper presents a methodology based on statistical time features (STFs) and support vector machines (SVM) to diagnose a transformer under several SCTs conditions. As STFs, 19 indicators from the transformer vibration signals are computed; then, the most discriminant features are selected using the Fisher score analysis, and the linear discriminant analysis is used for dimension reduction. Finally, a support vector machine classifier is employed to carry out the diagnosis in an automatic way. Once the methodology has been developed, it is implemented on a field-programmable gate array (FPGA) to provide a system-on-a-chip solution. A modified transformer capable of emulating different SCTs severities is employed to validate and test the methodology and its FPGA implementation. Results demonstrate the effectiveness of the proposal for diagnosing the transformer condition as an accuracy of 96.82% is obtained.",
-    "full_text": null
+  "title": "Short-Circuited Turn Fault Diagnosis in Transformers by Using Vibration Signals, Statistical Time Features, and Support Vector Machines on FPGA",
+  "url": "https://openalex.org/W3165652178",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4208092022",
+      "name": "José R. Huerta Rosales",
+      "affiliations": [
+        "Autonomous University of Queretaro"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2582436931",
+      "name": "David Granados Lieberman",
+      "affiliations": [
+        "Instituto Tecnológico Superior de Irapuato",
+        "Tecnológico Nacional de México"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104533709",
+      "name": "Arturo García Pérez",
+      "affiliations": [
+        "Universidad de Guanajuato"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2563874725",
+      "name": "David Camarena Martinez",
+      "affiliations": [
+        "Universidad de Guanajuato"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4207647145",
+      "name": "Juan P. Amezquita-Sanchez",
+      "affiliations": [
+        "Autonomous University of Queretaro"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2783467156",
+      "name": "Martin Valtierra-Rodriguez",
+      "affiliations": [
+        "Autonomous University of Queretaro"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2050124321",
+    "https://openalex.org/W2965005217",
+    "https://openalex.org/W2965074050",
+    "https://openalex.org/W2605738098",
+    "https://openalex.org/W2127392509",
+    "https://openalex.org/W2924502565",
+    "https://openalex.org/W2771983901",
+    "https://openalex.org/W2990920633",
+    "https://openalex.org/W2740956509",
+    "https://openalex.org/W3020184481",
+    "https://openalex.org/W2806067784",
+    "https://openalex.org/W2073542605",
+    "https://openalex.org/W2137270140",
+    "https://openalex.org/W2790391631",
+    "https://openalex.org/W3016195024",
+    "https://openalex.org/W2149782216",
+    "https://openalex.org/W2901962925",
+    "https://openalex.org/W2754735132",
+    "https://openalex.org/W6681953942",
+    "https://openalex.org/W2192244518",
+    "https://openalex.org/W2076380517",
+    "https://openalex.org/W2488751652",
+    "https://openalex.org/W2251652412",
+    "https://openalex.org/W2133022997",
+    "https://openalex.org/W2976054942",
+    "https://openalex.org/W2098479114",
+    "https://openalex.org/W2886794804",
+    "https://openalex.org/W2923467900",
+    "https://openalex.org/W2895933188",
+    "https://openalex.org/W2614556125",
+    "https://openalex.org/W3006730271",
+    "https://openalex.org/W2944174688",
+    "https://openalex.org/W2744933063",
+    "https://openalex.org/W2605417236",
+    "https://openalex.org/W2021417606",
+    "https://openalex.org/W2759531725",
+    "https://openalex.org/W2555448499",
+    "https://openalex.org/W1487321909",
+    "https://openalex.org/W1675477313",
+    "https://openalex.org/W2738939700",
+    "https://openalex.org/W2914650326",
+    "https://openalex.org/W2956413013",
+    "https://openalex.org/W2740623735",
+    "https://openalex.org/W2474531587",
+    "https://openalex.org/W2791149978",
+    "https://openalex.org/W2016928105",
+    "https://openalex.org/W2583858375",
+    "https://openalex.org/W2090578011",
+    "https://openalex.org/W2559999082",
+    "https://openalex.org/W2437021528",
+    "https://openalex.org/W2921155119",
+    "https://openalex.org/W1897892887",
+    "https://openalex.org/W6675601258",
+    "https://openalex.org/W2081028792",
+    "https://openalex.org/W2442309921",
+    "https://openalex.org/W2791052411",
+    "https://openalex.org/W2587820918",
+    "https://openalex.org/W2614937618",
+    "https://openalex.org/W2891425084",
+    "https://openalex.org/W2592345322",
+    "https://openalex.org/W2053315995",
+    "https://openalex.org/W2574872833",
+    "https://openalex.org/W2943651712",
+    "https://openalex.org/W2998018264",
+    "https://openalex.org/W3124112234",
+    "https://openalex.org/W2507677318",
+    "https://openalex.org/W3037801075",
+    "https://openalex.org/W2885960709",
+    "https://openalex.org/W2146522578",
+    "https://openalex.org/W2104027187"
+  ],
+  "abstract": "One of the most critical devices in an electrical system is the transformer. It is continuously under different electrical and mechanical stresses that can produce failures in its components and other electrical network devices. The short-circuited turns (SCTs) are a common winding failure. This type of fault has been widely studied in literature employing the vibration signals produced in the transformer. Although promising results have been obtained, it is not a trivial task if different severity levels and a common high-level noise are considered. This paper presents a methodology based on statistical time features (STFs) and support vector machines (SVM) to diagnose a transformer under several SCTs conditions. As STFs, 19 indicators from the transformer vibration signals are computed; then, the most discriminant features are selected using the Fisher score analysis, and the linear discriminant analysis is used for dimension reduction. Finally, a support vector machine classifier is employed to carry out the diagnosis in an automatic way. Once the methodology has been developed, it is implemented on a field-programmable gate array (FPGA) to provide a system-on-a-chip solution. A modified transformer capable of emulating different SCTs severities is employed to validate and test the methodology and its FPGA implementation. Results demonstrate the effectiveness of the proposal for diagnosing the transformer condition as an accuracy of 96.82% is obtained.",
+  "full_text": null,
+  "topic": "Support vector machine",
+  "concepts": [
+    {
+      "name": "Support vector machine",
+      "score": 0.7092498540878296
+    },
+    {
+      "name": "Vibration",
+      "score": 0.6503605842590332
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6168332695960999
+    },
+    {
+      "name": "Linear discriminant analysis",
+      "score": 0.5137220621109009
+    },
+    {
+      "name": "Field-programmable gate array",
+      "score": 0.5095512866973877
+    },
+    {
+      "name": "Engineering",
+      "score": 0.45592689514160156
+    },
+    {
+      "name": "Electronic engineering",
+      "score": 0.4466868042945862
+    },
+    {
+      "name": "Computer science",
+      "score": 0.41608166694641113
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3718387186527252
+    },
+    {
+      "name": "Voltage",
+      "score": 0.34933003783226013
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2914735674858093
+    },
+    {
+      "name": "Embedded system",
+      "score": 0.18572530150413513
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.18085211515426636
+    },
+    {
+      "name": "Acoustics",
+      "score": 0.15116798877716064
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

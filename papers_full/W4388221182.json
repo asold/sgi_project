@@ -1,68 +1,163 @@
 {
-    "title": "Achieving Sales Forecasting with Higher Accuracy and Efficiency: A New Model Based on Modified Transformer",
-    "url": "https://openalex.org/W4388221182",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101960893",
-            "name": "Qianying Li",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101778460",
-            "name": "Mingyang Yu",
-            "affiliations": [
-                "Shanghai Jiao Tong University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2966639544",
-        "https://openalex.org/W2093564481",
-        "https://openalex.org/W3021733045",
-        "https://openalex.org/W2944851425",
-        "https://openalex.org/W3192534131",
-        "https://openalex.org/W3149792909",
-        "https://openalex.org/W4283746258",
-        "https://openalex.org/W2000765441",
-        "https://openalex.org/W2901312569",
-        "https://openalex.org/W4246587917",
-        "https://openalex.org/W3037882977",
-        "https://openalex.org/W3006914768",
-        "https://openalex.org/W3195582505",
-        "https://openalex.org/W3172514114",
-        "https://openalex.org/W2991265252",
-        "https://openalex.org/W2023514985",
-        "https://openalex.org/W2909454083",
-        "https://openalex.org/W3032502637",
-        "https://openalex.org/W3194821224",
-        "https://openalex.org/W3096411517",
-        "https://openalex.org/W3029422813",
-        "https://openalex.org/W2626561952",
-        "https://openalex.org/W3023881809",
-        "https://openalex.org/W2930037971",
-        "https://openalex.org/W1968475341",
-        "https://openalex.org/W2988044524",
-        "https://openalex.org/W2984864928",
-        "https://openalex.org/W3171095691",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3042247364",
-        "https://openalex.org/W4226144567",
-        "https://openalex.org/W3198316914",
-        "https://openalex.org/W4297538756",
-        "https://openalex.org/W4303648548",
-        "https://openalex.org/W6797155008",
-        "https://openalex.org/W4225494949",
-        "https://openalex.org/W6786852218",
-        "https://openalex.org/W6889955440",
-        "https://openalex.org/W2885195348",
-        "https://openalex.org/W4243457454",
-        "https://openalex.org/W3212890323",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3177318507"
-    ],
-    "abstract": "With the exponential expansion of e-commerce, an immense volume of historical sales data has been generated and amassed. This influx of data has created an opportunity for more accurate sales forecasting. While various sales forecasting methods and models have been applied in practice, existing ones often struggle to fully harness sales data and manage significant fluctuations. As a result, they frequently fail to make accurate predictions, falling short of meeting enterprise needs. Therefore, it is imperative to explore new models to enhance the accuracy and efficiency of sales forecasting. In this paper, we introduce a model tailored for sales forecasting based on a Transformer with encoder–decoder architecture and multi-head attention mechanisms. We have made specific modifications to the standard Transformer model, such as removing the Softmax layer in the last layer and adapting input embedding, position encoding, and feedforward network components to align with the unique characteristics of sales forecast data and the specific requirements of sales forecasting. The multi-head attention mechanism in our proposed model can directly compute the dot product results in a single step, addressing long-term time-dependent computation challenges while maintaining lower time complexity and greater interpretability. This enhancement significantly contributes to improving the model’s accuracy and efficiency. Furthermore, we provide a comprehensive formula representation of the model for the first time, facilitating better understanding and implementation. We conducted experiments using sales datasets that incorporate various factors influencing sales forecasts, such as seasons, holidays, and promotions. The results demonstrate that our proposed model significantly outperforms seven selected benchmark methods, reducing RMSLE, RMSWLE, NWRMSLE, and RMALE by approximately 48.2%, 48.5%, 45.2, and 63.0%, respectively. Additionally, ablation experiments on the multi-head attention and the number of encoder–decoders validate the rationality of our chosen model parameters.",
-    "full_text": null
+  "title": "Achieving Sales Forecasting with Higher Accuracy and Efficiency: A New Model Based on Modified Transformer",
+  "url": "https://openalex.org/W4388221182",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101960893",
+      "name": "Qianying Li",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101778460",
+      "name": "Mingyang Yu",
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2966639544",
+    "https://openalex.org/W2093564481",
+    "https://openalex.org/W3021733045",
+    "https://openalex.org/W2944851425",
+    "https://openalex.org/W3192534131",
+    "https://openalex.org/W3149792909",
+    "https://openalex.org/W4283746258",
+    "https://openalex.org/W2000765441",
+    "https://openalex.org/W2901312569",
+    "https://openalex.org/W4246587917",
+    "https://openalex.org/W3037882977",
+    "https://openalex.org/W3006914768",
+    "https://openalex.org/W3195582505",
+    "https://openalex.org/W3172514114",
+    "https://openalex.org/W2991265252",
+    "https://openalex.org/W2023514985",
+    "https://openalex.org/W2909454083",
+    "https://openalex.org/W3032502637",
+    "https://openalex.org/W3194821224",
+    "https://openalex.org/W3096411517",
+    "https://openalex.org/W3029422813",
+    "https://openalex.org/W2626561952",
+    "https://openalex.org/W3023881809",
+    "https://openalex.org/W2930037971",
+    "https://openalex.org/W1968475341",
+    "https://openalex.org/W2988044524",
+    "https://openalex.org/W2984864928",
+    "https://openalex.org/W3171095691",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3042247364",
+    "https://openalex.org/W4226144567",
+    "https://openalex.org/W3198316914",
+    "https://openalex.org/W4297538756",
+    "https://openalex.org/W4303648548",
+    "https://openalex.org/W6797155008",
+    "https://openalex.org/W4225494949",
+    "https://openalex.org/W6786852218",
+    "https://openalex.org/W6889955440",
+    "https://openalex.org/W2885195348",
+    "https://openalex.org/W4243457454",
+    "https://openalex.org/W3212890323",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3177318507"
+  ],
+  "abstract": "With the exponential expansion of e-commerce, an immense volume of historical sales data has been generated and amassed. This influx of data has created an opportunity for more accurate sales forecasting. While various sales forecasting methods and models have been applied in practice, existing ones often struggle to fully harness sales data and manage significant fluctuations. As a result, they frequently fail to make accurate predictions, falling short of meeting enterprise needs. Therefore, it is imperative to explore new models to enhance the accuracy and efficiency of sales forecasting. In this paper, we introduce a model tailored for sales forecasting based on a Transformer with encoder–decoder architecture and multi-head attention mechanisms. We have made specific modifications to the standard Transformer model, such as removing the Softmax layer in the last layer and adapting input embedding, position encoding, and feedforward network components to align with the unique characteristics of sales forecast data and the specific requirements of sales forecasting. The multi-head attention mechanism in our proposed model can directly compute the dot product results in a single step, addressing long-term time-dependent computation challenges while maintaining lower time complexity and greater interpretability. This enhancement significantly contributes to improving the model’s accuracy and efficiency. Furthermore, we provide a comprehensive formula representation of the model for the first time, facilitating better understanding and implementation. We conducted experiments using sales datasets that incorporate various factors influencing sales forecasts, such as seasons, holidays, and promotions. The results demonstrate that our proposed model significantly outperforms seven selected benchmark methods, reducing RMSLE, RMSWLE, NWRMSLE, and RMALE by approximately 48.2%, 48.5%, 45.2, and 63.0%, respectively. Additionally, ablation experiments on the multi-head attention and the number of encoder–decoders validate the rationality of our chosen model parameters.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7765381932258606
+    },
+    {
+      "name": "Interpretability",
+      "score": 0.5374809503555298
+    },
+    {
+      "name": "Sales forecasting",
+      "score": 0.5091821551322937
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4746181070804596
+    },
+    {
+      "name": "Encoder",
+      "score": 0.47086870670318604
+    },
+    {
+      "name": "Softmax function",
+      "score": 0.4638614058494568
+    },
+    {
+      "name": "Sales management",
+      "score": 0.42785704135894775
+    },
+    {
+      "name": "Demand forecasting",
+      "score": 0.4176163673400879
+    },
+    {
+      "name": "Embedding",
+      "score": 0.4165398180484772
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.37165987491607666
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3472770154476166
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3408082127571106
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.30761247873306274
+    },
+    {
+      "name": "Operations research",
+      "score": 0.2480132281780243
+    },
+    {
+      "name": "Econometrics",
+      "score": 0.19641026854515076
+    },
+    {
+      "name": "Marketing",
+      "score": 0.09977877140045166
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Business",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,70 +1,125 @@
 {
-    "title": "TransformerLight: A Novel Sequence Modeling Based Traffic Signaling Mechanism via Gated Transformer",
-    "url": "https://openalex.org/W4385568146",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2113220268",
-            "name": "Qiang Wu",
-            "affiliations": [
-                "University of Electronic Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2097395873",
-            "name": "Ming-Yuan Li",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1988806642",
-            "name": "Jun Shen",
-            "affiliations": [
-                "University of Wollongong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2120090010",
-            "name": "Linyuan Lu",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1911857409",
-            "name": "Bo Du",
-            "affiliations": [
-                "University of Wollongong"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2088962425",
-            "name": "Ke Zhang",
-            "affiliations": [
-                "Beijing University of Posts and Telecommunications"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2998187693",
-        "https://openalex.org/W1516835682",
-        "https://openalex.org/W3090457543",
-        "https://openalex.org/W6688475801",
-        "https://openalex.org/W3213789840",
-        "https://openalex.org/W4362590704",
-        "https://openalex.org/W2963027910",
-        "https://openalex.org/W3093139241",
-        "https://openalex.org/W5525483",
-        "https://openalex.org/W2983178256",
-        "https://openalex.org/W2809148419",
-        "https://openalex.org/W4210742101",
-        "https://openalex.org/W2988973041",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W4287126489",
-        "https://openalex.org/W2913668833",
-        "https://openalex.org/W2210077926"
-    ],
-    "abstract": "Traffic signal control (TSC) is still one of the most significant and challenging research problems in the transportation field. Reinforcement learning (RL) has achieved great success in TSC but suffers from critically high learning costs in practical applications due to the excessive trial-and-error learning process. Offline RL is a promising method to reduce learning costs whereas the data distribution shift issue is still up in the air. To this end, in this paper, we formulate TSC as a sequence modeling problem with a sequence of Markov decision process described by states, actions, and rewards from the traffic environment. A novel framework, namely TransformerLight, is introduced, which does not aim to fit into value functions by averaging all possible returns, but produces the best possible actions using a gated Transformer. Additionally, the learning process of TransformerLight is much more stable by replacing the residual connections with gated transformer blocks due to a dynamic system perspective. Through numerical experiments on offline datasets, we demonstrate that the TransformerLight model: (1) can build a high-performance adaptive TSC model without dynamic programming; (2) achieves a new state-of-the-art compared to most published offline RL methods so far; and (3) shows a more stable learning process than offline RL and recent Transformer-based methods. The relevant dataset and code are available at Github.",
-    "full_text": null
+  "title": "TransformerLight: A Novel Sequence Modeling Based Traffic Signaling Mechanism via Gated Transformer",
+  "url": "https://openalex.org/W4385568146",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2113220268",
+      "name": "Qiang Wu",
+      "affiliations": [
+        "University of Electronic Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2097395873",
+      "name": "Ming-Yuan Li",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1988806642",
+      "name": "Jun Shen",
+      "affiliations": [
+        "University of Wollongong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2120090010",
+      "name": "Linyuan Lu",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1911857409",
+      "name": "Bo Du",
+      "affiliations": [
+        "University of Wollongong"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2088962425",
+      "name": "Ke Zhang",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2998187693",
+    "https://openalex.org/W1516835682",
+    "https://openalex.org/W3090457543",
+    "https://openalex.org/W6688475801",
+    "https://openalex.org/W3213789840",
+    "https://openalex.org/W4362590704",
+    "https://openalex.org/W2963027910",
+    "https://openalex.org/W3093139241",
+    "https://openalex.org/W5525483",
+    "https://openalex.org/W2983178256",
+    "https://openalex.org/W2809148419",
+    "https://openalex.org/W4210742101",
+    "https://openalex.org/W2988973041",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W4287126489",
+    "https://openalex.org/W2913668833",
+    "https://openalex.org/W2210077926"
+  ],
+  "abstract": "Traffic signal control (TSC) is still one of the most significant and challenging research problems in the transportation field. Reinforcement learning (RL) has achieved great success in TSC but suffers from critically high learning costs in practical applications due to the excessive trial-and-error learning process. Offline RL is a promising method to reduce learning costs whereas the data distribution shift issue is still up in the air. To this end, in this paper, we formulate TSC as a sequence modeling problem with a sequence of Markov decision process described by states, actions, and rewards from the traffic environment. A novel framework, namely TransformerLight, is introduced, which does not aim to fit into value functions by averaging all possible returns, but produces the best possible actions using a gated Transformer. Additionally, the learning process of TransformerLight is much more stable by replacing the residual connections with gated transformer blocks due to a dynamic system perspective. Through numerical experiments on offline datasets, we demonstrate that the TransformerLight model: (1) can build a high-performance adaptive TSC model without dynamic programming; (2) achieves a new state-of-the-art compared to most published offline RL methods so far; and (3) shows a more stable learning process than offline RL and recent Transformer-based methods. The relevant dataset and code are available at Github.",
+  "full_text": null,
+  "topic": "Reinforcement learning",
+  "concepts": [
+    {
+      "name": "Reinforcement learning",
+      "score": 0.8368314504623413
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7597898244857788
+    },
+    {
+      "name": "Markov decision process",
+      "score": 0.7372970581054688
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6889086365699768
+    },
+    {
+      "name": "Hidden Markov model",
+      "score": 0.5489729046821594
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4519377648830414
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3872693181037903
+    },
+    {
+      "name": "Markov process",
+      "score": 0.31192833185195923
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14902961254119873
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08012863993644714
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    }
+  ]
 }

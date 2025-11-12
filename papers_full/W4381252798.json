@@ -1,77 +1,136 @@
 {
-    "title": "CSIT: Channel Spatial Integrated Transformer for human pose estimation",
-    "url": "https://openalex.org/W4381252798",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5056257433",
-            "name": "Shaohua Li",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5012637690",
-            "name": "Haixiang Zhang",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101196349",
-            "name": "Hanjie Ma",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5052017667",
-            "name": "Jie Feng",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5002822938",
-            "name": "Mingfeng Jiang",
-            "affiliations": [
-                "Zhejiang Sci-Tech University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4210773761",
-        "https://openalex.org/W3093657173",
-        "https://openalex.org/W2754854484",
-        "https://openalex.org/W3026090589",
-        "https://openalex.org/W4317402228",
-        "https://openalex.org/W4296623032",
-        "https://openalex.org/W2559085405",
-        "https://openalex.org/W3176892444",
-        "https://openalex.org/W4312614783",
-        "https://openalex.org/W4313127332",
-        "https://openalex.org/W2307770531",
-        "https://openalex.org/W2963402313",
-        "https://openalex.org/W2916798096",
-        "https://openalex.org/W2964304707",
-        "https://openalex.org/W3034399482",
-        "https://openalex.org/W3173964191",
-        "https://openalex.org/W4214573223",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W3151130473",
-        "https://openalex.org/W3167456680",
-        "https://openalex.org/W3096609285",
-        "https://openalex.org/W3165924482",
-        "https://openalex.org/W3136525061",
-        "https://openalex.org/W4226280811",
-        "https://openalex.org/W4318773898",
-        "https://openalex.org/W2578797046",
-        "https://openalex.org/W2964221239",
-        "https://openalex.org/W2963781481",
-        "https://openalex.org/W4288089799"
-    ],
-    "abstract": "Abstract Human keypoints detection is different from general detection tasks and requires networks that can learn visual information and anatomical constraints. Since CNN is excellent in extracting texture features of images and transformer can learn the correlation among keypoints well, many CTPNets (CNN+transformer type human pose estimation networks) have emerged. However, these networks are unconcerned with the processing of the features extracted from the CNN and naturally expand only from the channel dimension, ignoring the spatial features in the visual information that are essential for complex detection tasks like pose estimation. So the channel spatial integrated transformer for human pose estimation, termed CSIT, is proposed. The visual information are summarized as texture and spatial information, and a parallel network is used to expand the feature maps in the channel and spatial dimensions to learn texture features and spatial features respectively. In addition, anatomically constrained information is learned by keypoint embeddings. At the end of the network, the 1D vector representation method with more advanced performance and more compatible with transformer's characteristics is used to predict keypoints. Experiments show that CSIT outperforms the mainstream CTPNets on the COCO test‐dev dataset, and also show satisfactory results on the MPII dataset.",
-    "full_text": null
+  "title": "CSIT: Channel Spatial Integrated Transformer for human pose estimation",
+  "url": "https://openalex.org/W4381252798",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5056257433",
+      "name": "Shaohua Li",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5012637690",
+      "name": "Haixiang Zhang",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101196349",
+      "name": "Hanjie Ma",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5052017667",
+      "name": "Jie Feng",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5002822938",
+      "name": "Mingfeng Jiang",
+      "affiliations": [
+        "Zhejiang Sci-Tech University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4210773761",
+    "https://openalex.org/W3093657173",
+    "https://openalex.org/W2754854484",
+    "https://openalex.org/W3026090589",
+    "https://openalex.org/W4317402228",
+    "https://openalex.org/W4296623032",
+    "https://openalex.org/W2559085405",
+    "https://openalex.org/W3176892444",
+    "https://openalex.org/W4312614783",
+    "https://openalex.org/W4313127332",
+    "https://openalex.org/W2307770531",
+    "https://openalex.org/W2963402313",
+    "https://openalex.org/W2916798096",
+    "https://openalex.org/W2964304707",
+    "https://openalex.org/W3034399482",
+    "https://openalex.org/W3173964191",
+    "https://openalex.org/W4214573223",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W3151130473",
+    "https://openalex.org/W3167456680",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W3165924482",
+    "https://openalex.org/W3136525061",
+    "https://openalex.org/W4226280811",
+    "https://openalex.org/W4318773898",
+    "https://openalex.org/W2578797046",
+    "https://openalex.org/W2964221239",
+    "https://openalex.org/W2963781481",
+    "https://openalex.org/W4288089799"
+  ],
+  "abstract": "Abstract Human keypoints detection is different from general detection tasks and requires networks that can learn visual information and anatomical constraints. Since CNN is excellent in extracting texture features of images and transformer can learn the correlation among keypoints well, many CTPNets (CNN+transformer type human pose estimation networks) have emerged. However, these networks are unconcerned with the processing of the features extracted from the CNN and naturally expand only from the channel dimension, ignoring the spatial features in the visual information that are essential for complex detection tasks like pose estimation. So the channel spatial integrated transformer for human pose estimation, termed CSIT, is proposed. The visual information are summarized as texture and spatial information, and a parallel network is used to expand the feature maps in the channel and spatial dimensions to learn texture features and spatial features respectively. In addition, anatomically constrained information is learned by keypoint embeddings. At the end of the network, the 1D vector representation method with more advanced performance and more compatible with transformer's characteristics is used to predict keypoints. Experiments show that CSIT outperforms the mainstream CTPNets on the COCO test‐dev dataset, and also show satisfactory results on the MPII dataset.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7490139007568359
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7432329654693604
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6526442766189575
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.6220329403877258
+    },
+    {
+      "name": "Pose",
+      "score": 0.5600609183311462
+    },
+    {
+      "name": "Spatial analysis",
+      "score": 0.5398094058036804
+    },
+    {
+      "name": "Channel (broadcasting)",
+      "score": 0.4618280231952667
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.43575966358184814
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1595413088798523
+    },
+    {
+      "name": "Engineering",
+      "score": 0.07004138827323914
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Statistics",
+      "score": 0.0
+    },
+    {
+      "name": "Computer network",
+      "score": 0.0
+    }
+  ]
 }

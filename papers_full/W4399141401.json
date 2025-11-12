@@ -1,44 +1,99 @@
 {
-    "title": "AutoRD: An Automatic and End-to-End System for Rare Disease Knowledge Graph Construction Based on Ontology-enhanced Large Language Models (Preprint)",
-    "url": "https://openalex.org/W4399141401",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2146251712",
-            "name": "Lang Cao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2110385854",
-            "name": "Jimeng Sun",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2552167123",
-            "name": "Adam Cross",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4214613209",
-        "https://openalex.org/W2973267506",
-        "https://openalex.org/W2988630324",
-        "https://openalex.org/W3205669862",
-        "https://openalex.org/W2921313412",
-        "https://openalex.org/W2159583324",
-        "https://openalex.org/W3106811464",
-        "https://openalex.org/W4377197101",
-        "https://openalex.org/W4319662928",
-        "https://openalex.org/W4321020604",
-        "https://openalex.org/W4312183907",
-        "https://openalex.org/W4385230039",
-        "https://openalex.org/W4388608412",
-        "https://openalex.org/W4390607929",
-        "https://openalex.org/W4224037213",
-        "https://openalex.org/W3191499914",
-        "https://openalex.org/W4387933459",
-        "https://openalex.org/W2963716420"
-    ],
-    "abstract": "<sec> <title>BACKGROUND</title> Rare diseases affect millions worldwide but often face limited research focus due to their low prevalence. This results in prolonged diagnoses and a lack of approved therapies. Recent advancements in Large Language Models (LLMs) have shown promise in automating the extraction of medical information, offering potential to improve rare disease diagnosis and management. </sec> <sec> <title>OBJECTIVE</title> Our objective is to create an end-to-end system called AutoRD, which automates extracting information from medical text about rare diseases. We conducted various experiments to evaluate the performance of AutoRD and highlighted its strengths and limitations in this paper. </sec> <sec> <title>METHODS</title> AutoRD is a pipeline system involving data preprocessing, entity extraction, relation extraction, entity calibration, and knowledge graph construction. We implement this using large language models and medical knowledge graphs developed from open-source medical ontologies. We quantitatively evaluate our system on entity extraction, relation extraction, and the performance of knowledge graph construction. </sec> <sec> <title>RESULTS</title> AutoRD achieves an average of entity F1 score and relation F1 score of 47.3%, a 14.4% improvement compared to the base LLM. In detail, AutoRD achieves an overall entity extraction F1 score of 56.1% (‘rare_disease’: 83.5%, disease: 35.8%, ‘symptom_and_sign’: 46.1%, anaphor: 67.5%) and an overall relation extraction F1 score of 38.6% (‘produces’: 34.7%, ‘increases_risk_of’: 12.4%, ‘is_a’: 37.4%, ‘is_acronym’: 44.1%, ‘is_synonym’: 16.3%, ‘anaphora’: 57.5%). The qualitative experiment also demonstrates that the constructed knowledge graph’s performance is respectable. </sec> <sec> <title>CONCLUSIONS</title> AutoRD is an automated end-to-end system for extracting rare disease information from text to build knowledge graphs. It uses ontology-enhanced LLMs for a robust medical knowledge base. The superior performance of AutoRD is validated by experimental evaluations, demonstrating the potential of LLMs in healthcare. </sec> <sec> <title>CLINICALTRIAL</title> <p/> </sec>",
-    "full_text": null
+  "title": "AutoRD: An Automatic and End-to-End System for Rare Disease Knowledge Graph Construction Based on Ontology-enhanced Large Language Models (Preprint)",
+  "url": "https://openalex.org/W4399141401",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2146251712",
+      "name": "Lang Cao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2110385854",
+      "name": "Jimeng Sun",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2552167123",
+      "name": "Adam Cross",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4214613209",
+    "https://openalex.org/W2973267506",
+    "https://openalex.org/W2988630324",
+    "https://openalex.org/W3205669862",
+    "https://openalex.org/W2921313412",
+    "https://openalex.org/W2159583324",
+    "https://openalex.org/W3106811464",
+    "https://openalex.org/W4377197101",
+    "https://openalex.org/W4319662928",
+    "https://openalex.org/W4321020604",
+    "https://openalex.org/W4312183907",
+    "https://openalex.org/W4385230039",
+    "https://openalex.org/W4388608412",
+    "https://openalex.org/W4390607929",
+    "https://openalex.org/W4224037213",
+    "https://openalex.org/W3191499914",
+    "https://openalex.org/W4387933459",
+    "https://openalex.org/W2963716420"
+  ],
+  "abstract": "<sec> <title>BACKGROUND</title> Rare diseases affect millions worldwide but often face limited research focus due to their low prevalence. This results in prolonged diagnoses and a lack of approved therapies. Recent advancements in Large Language Models (LLMs) have shown promise in automating the extraction of medical information, offering potential to improve rare disease diagnosis and management. </sec> <sec> <title>OBJECTIVE</title> Our objective is to create an end-to-end system called AutoRD, which automates extracting information from medical text about rare diseases. We conducted various experiments to evaluate the performance of AutoRD and highlighted its strengths and limitations in this paper. </sec> <sec> <title>METHODS</title> AutoRD is a pipeline system involving data preprocessing, entity extraction, relation extraction, entity calibration, and knowledge graph construction. We implement this using large language models and medical knowledge graphs developed from open-source medical ontologies. We quantitatively evaluate our system on entity extraction, relation extraction, and the performance of knowledge graph construction. </sec> <sec> <title>RESULTS</title> AutoRD achieves an average of entity F1 score and relation F1 score of 47.3%, a 14.4% improvement compared to the base LLM. In detail, AutoRD achieves an overall entity extraction F1 score of 56.1% (‘rare_disease’: 83.5%, disease: 35.8%, ‘symptom_and_sign’: 46.1%, anaphor: 67.5%) and an overall relation extraction F1 score of 38.6% (‘produces’: 34.7%, ‘increases_risk_of’: 12.4%, ‘is_a’: 37.4%, ‘is_acronym’: 44.1%, ‘is_synonym’: 16.3%, ‘anaphora’: 57.5%). The qualitative experiment also demonstrates that the constructed knowledge graph’s performance is respectable. </sec> <sec> <title>CONCLUSIONS</title> AutoRD is an automated end-to-end system for extracting rare disease information from text to build knowledge graphs. It uses ontology-enhanced LLMs for a robust medical knowledge base. The superior performance of AutoRD is validated by experimental evaluations, demonstrating the potential of LLMs in healthcare. </sec> <sec> <title>CLINICALTRIAL</title> <p/> </sec>",
+  "full_text": null,
+  "topic": "Preprint",
+  "concepts": [
+    {
+      "name": "Preprint",
+      "score": 0.9324326515197754
+    },
+    {
+      "name": "End-to-end principle",
+      "score": 0.7507092952728271
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6375986337661743
+    },
+    {
+      "name": "Knowledge graph",
+      "score": 0.5831259489059448
+    },
+    {
+      "name": "Ontology",
+      "score": 0.5437613129615784
+    },
+    {
+      "name": "Graph",
+      "score": 0.4792909026145935
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.33542633056640625
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.32980436086654663
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3088219463825226
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.2832452058792114
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.27538809180259705
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.09931331872940063
+    },
+    {
+      "name": "Epistemology",
+      "score": 0.07612931728363037
+    }
+  ]
 }

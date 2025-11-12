@@ -1,62 +1,117 @@
 {
-    "title": "Improving Transformer‐Based Neural Machine Translation with Prior Alignments",
-    "url": "https://openalex.org/W3162632210",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2134526459",
-            "name": "Thien Nguyen",
-            "affiliations": [
-                "Ton Duc Thang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122663062",
-            "name": "Lam Nguyen",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2124570904",
-            "name": "Phuoc Tran",
-            "affiliations": [
-                "Ton Duc Thang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2184762245",
-            "name": "Huu Nguyen",
-            "affiliations": [
-                "Ton Duc Thang University",
-                "Ho Chi Minh City University of Industry and Trade"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2124807415",
-        "https://openalex.org/W2998243336",
-        "https://openalex.org/W2970045405",
-        "https://openalex.org/W2091957306",
-        "https://openalex.org/W1498238796",
-        "https://openalex.org/W2156985047",
-        "https://openalex.org/W2006969979",
-        "https://openalex.org/W2622084140",
-        "https://openalex.org/W2757154661",
-        "https://openalex.org/W2892244498",
-        "https://openalex.org/W2942807473",
-        "https://openalex.org/W2962712961",
-        "https://openalex.org/W3088265803",
-        "https://openalex.org/W3110027409",
-        "https://openalex.org/W2782238183",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W3037109418",
-        "https://openalex.org/W3110838845",
-        "https://openalex.org/W2933138175",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2008184426",
-        "https://openalex.org/W3104453603",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W3094771832"
-    ],
-    "abstract": "Transformer is a neural machine translation model which revolutionizes machine translation. Compared with traditional statistical machine translation models and other neural machine translation models, the recently proposed transformer model radically and fundamentally changes machine translation with its self‐attention and cross‐attention mechanisms. These mechanisms effectively model token alignments between source and target sentences. It has been reported that the transformer model provides accurate posterior alignments. In this work, we empirically prove the reverse effect, showing that prior alignments help transformer models produce better translations. Experiment results on Vietnamese‐English news translation task show not only the positive effect of manually annotated alignments on transformer models but also the surprising outperformance of statistically constructed alignments reinforced with the flexibility of token‐type selection over manual alignments in improving transformer models. Statistically constructed word‐to‐lemma alignments are used to train a word‐to‐word transformer model. The novel hybrid transformer model improves the baseline transformer model and transformer model trained with manual alignments by 2.53 and 0.79 BLEU, respectively. In addition to BLEU score, we make limited human judgment on translation results. Strong correlation between human and machine judgment confirms our findings.",
-    "full_text": null
+  "title": "Improving Transformer‐Based Neural Machine Translation with Prior Alignments",
+  "url": "https://openalex.org/W3162632210",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2134526459",
+      "name": "Thien Nguyen",
+      "affiliations": [
+        "Ton Duc Thang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122663062",
+      "name": "Lam Nguyen",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2124570904",
+      "name": "Phuoc Tran",
+      "affiliations": [
+        "Ton Duc Thang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2184762245",
+      "name": "Huu Nguyen",
+      "affiliations": [
+        "Ton Duc Thang University",
+        "Ho Chi Minh City University of Industry and Trade"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2124807415",
+    "https://openalex.org/W2998243336",
+    "https://openalex.org/W2970045405",
+    "https://openalex.org/W2091957306",
+    "https://openalex.org/W1498238796",
+    "https://openalex.org/W2156985047",
+    "https://openalex.org/W2006969979",
+    "https://openalex.org/W2622084140",
+    "https://openalex.org/W2757154661",
+    "https://openalex.org/W2892244498",
+    "https://openalex.org/W2942807473",
+    "https://openalex.org/W2962712961",
+    "https://openalex.org/W3088265803",
+    "https://openalex.org/W3110027409",
+    "https://openalex.org/W2782238183",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W3037109418",
+    "https://openalex.org/W3110838845",
+    "https://openalex.org/W2933138175",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2008184426",
+    "https://openalex.org/W3104453603",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W3094771832"
+  ],
+  "abstract": "Transformer is a neural machine translation model which revolutionizes machine translation. Compared with traditional statistical machine translation models and other neural machine translation models, the recently proposed transformer model radically and fundamentally changes machine translation with its self‐attention and cross‐attention mechanisms. These mechanisms effectively model token alignments between source and target sentences. It has been reported that the transformer model provides accurate posterior alignments. In this work, we empirically prove the reverse effect, showing that prior alignments help transformer models produce better translations. Experiment results on Vietnamese‐English news translation task show not only the positive effect of manually annotated alignments on transformer models but also the surprising outperformance of statistically constructed alignments reinforced with the flexibility of token‐type selection over manual alignments in improving transformer models. Statistically constructed word‐to‐lemma alignments are used to train a word‐to‐word transformer model. The novel hybrid transformer model improves the baseline transformer model and transformer model trained with manual alignments by 2.53 and 0.79 BLEU, respectively. In addition to BLEU score, we make limited human judgment on translation results. Strong correlation between human and machine judgment confirms our findings.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7148398160934448
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7021035552024841
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.5859100818634033
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5342364311218262
+    },
+    {
+      "name": "Translation (biology)",
+      "score": 0.5222926139831543
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3403220474720001
+    },
+    {
+      "name": "Voltage",
+      "score": 0.14240601658821106
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.11422011256217957
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.09985437989234924
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09516695141792297
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Messenger RNA",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

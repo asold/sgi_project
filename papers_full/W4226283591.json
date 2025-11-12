@@ -1,119 +1,162 @@
 {
-    "title": "Interpretable Federated Transformer Log Learning for Cloud Threat Forensics",
-    "url": "https://openalex.org/W4226283591",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5019305085",
-            "name": "Gonzalo De La Torre Parra",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5027601888",
-            "name": "Luis Selvera",
-            "affiliations": [
-                "The University of Texas at San Antonio"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5088881526",
-            "name": "Joseph D. Khoury",
-            "affiliations": [
-                "The University of Texas at San Antonio"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5045830011",
-            "name": "Hector Irizarry",
-            "affiliations": [
-                "RTX (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5039079298",
-            "name": "Elias Bou‐Harb",
-            "affiliations": [
-                "The University of Texas at San Antonio"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114027757",
-            "name": "Paul Rad",
-            "affiliations": [
-                "The University of Texas at San Antonio"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3046653923",
-        "https://openalex.org/W6781819027",
-        "https://openalex.org/W2565939857",
-        "https://openalex.org/W2113709784",
-        "https://openalex.org/W2792645615",
-        "https://openalex.org/W4393493400",
-        "https://openalex.org/W6773668168",
-        "https://openalex.org/W3108069407",
-        "https://openalex.org/W1499241274",
-        "https://openalex.org/W6733113481",
-        "https://openalex.org/W2991507433",
-        "https://openalex.org/W6673252407",
-        "https://openalex.org/W179699880",
-        "https://openalex.org/W2762028850",
-        "https://openalex.org/W6744198397",
-        "https://openalex.org/W3095840026",
-        "https://openalex.org/W2302058010",
-        "https://openalex.org/W2461373307",
-        "https://openalex.org/W3035286387",
-        "https://openalex.org/W3119693685",
-        "https://openalex.org/W6696473490",
-        "https://openalex.org/W47175211",
-        "https://openalex.org/W2963212250",
-        "https://openalex.org/W2092235748",
-        "https://openalex.org/W2397699236",
-        "https://openalex.org/W3086579950",
-        "https://openalex.org/W2397065307",
-        "https://openalex.org/W2790557990",
-        "https://openalex.org/W2898998129",
-        "https://openalex.org/W2541884796",
-        "https://openalex.org/W2965838158",
-        "https://openalex.org/W2998420555",
-        "https://openalex.org/W6601359990",
-        "https://openalex.org/W208057840",
-        "https://openalex.org/W1594076931",
-        "https://openalex.org/W6982661246",
-        "https://openalex.org/W2884826434",
-        "https://openalex.org/W6661744845",
-        "https://openalex.org/W2761599262",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2926701059",
-        "https://openalex.org/W3016178469",
-        "https://openalex.org/W2039157918",
-        "https://openalex.org/W6783924570",
-        "https://openalex.org/W2949522309",
-        "https://openalex.org/W2947815220",
-        "https://openalex.org/W2994688391",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4241387713",
-        "https://openalex.org/W2293351723",
-        "https://openalex.org/W2964304846",
-        "https://openalex.org/W2963673968",
-        "https://openalex.org/W3046014872",
-        "https://openalex.org/W1858703999",
-        "https://openalex.org/W4245671428",
-        "https://openalex.org/W4255411440",
-        "https://openalex.org/W2043701535",
-        "https://openalex.org/W2624397504",
-        "https://openalex.org/W3089718532",
-        "https://openalex.org/W2754665629",
-        "https://openalex.org/W3006208173",
-        "https://openalex.org/W1543621719",
-        "https://openalex.org/W4318619660",
-        "https://openalex.org/W2583874385",
-        "https://openalex.org/W35047313",
-        "https://openalex.org/W2949839345"
-    ],
-    "abstract": "Threat detection and forensics have become an imperative objective for any digital forensic triage.Supervised approaches have been proposed for inferring system and network anomalies; including anomaly detection contributions using syslogs.Nevertheless, most works downplay the importance of the interpretability of a model's decision-making process.In this research, we are among the first to propose an interpretable federated transformer log learning model for threat detection supporting explainable cyber forensics.The proposed model is generated by training a local transformer-based threat detection model at each client in an organizational unit.Local models learn the system's normal behavior from the syslogs which keep records of execution flows.Subsequently, a federated learning server aggregates the learned model parameters from local models to generate a global federated learning model.Log time-series capturing normal behavior are expected to differ from those possessing cyber threat activity.We demonstrate this difference through a goodness of fit test based on Karl-Pearson's Chi-square statistic.To provide insights on actions triggering this difference, we integrate an attention-based interpretability module.We implement and evaluate our proposed model using HDFS, a publicly available log dataset, and an in-house collected and publicly-released dataset named CTDD, which consists of more than 8 million syslogs representing cloud collaboration services and systems compromised by different classes of cyber threats.Moreover, through different experiments, we demonstrate the log agnostic capability and applicability of our approach on realworld operational settings such as edge computing systems.Our interpretability module manifests significant attention difference between normal and abnormal logs which provide insightful interpretability of the model's decision-making process.Finally, we deem the obtained results as a validation for the appropriate adoption of our approach in achieving threat forensics in the real world.",
-    "full_text": null
+  "title": "Interpretable Federated Transformer Log Learning for Cloud Threat Forensics",
+  "url": "https://openalex.org/W4226283591",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5019305085",
+      "name": "Gonzalo De La Torre Parra",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5027601888",
+      "name": "Luis Selvera",
+      "affiliations": [
+        "The University of Texas at San Antonio"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5088881526",
+      "name": "Joseph D. Khoury",
+      "affiliations": [
+        "The University of Texas at San Antonio"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5045830011",
+      "name": "Hector Irizarry",
+      "affiliations": [
+        "RTX (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5039079298",
+      "name": "Elias Bou‐Harb",
+      "affiliations": [
+        "The University of Texas at San Antonio"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114027757",
+      "name": "Paul Rad",
+      "affiliations": [
+        "The University of Texas at San Antonio"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3046653923",
+    "https://openalex.org/W6781819027",
+    "https://openalex.org/W2565939857",
+    "https://openalex.org/W2113709784",
+    "https://openalex.org/W2792645615",
+    "https://openalex.org/W4393493400",
+    "https://openalex.org/W6773668168",
+    "https://openalex.org/W3108069407",
+    "https://openalex.org/W1499241274",
+    "https://openalex.org/W6733113481",
+    "https://openalex.org/W2991507433",
+    "https://openalex.org/W6673252407",
+    "https://openalex.org/W179699880",
+    "https://openalex.org/W2762028850",
+    "https://openalex.org/W6744198397",
+    "https://openalex.org/W3095840026",
+    "https://openalex.org/W2302058010",
+    "https://openalex.org/W2461373307",
+    "https://openalex.org/W3035286387",
+    "https://openalex.org/W3119693685",
+    "https://openalex.org/W6696473490",
+    "https://openalex.org/W47175211",
+    "https://openalex.org/W2963212250",
+    "https://openalex.org/W2092235748",
+    "https://openalex.org/W2397699236",
+    "https://openalex.org/W3086579950",
+    "https://openalex.org/W2397065307",
+    "https://openalex.org/W2790557990",
+    "https://openalex.org/W2898998129",
+    "https://openalex.org/W2541884796",
+    "https://openalex.org/W2965838158",
+    "https://openalex.org/W2998420555",
+    "https://openalex.org/W6601359990",
+    "https://openalex.org/W208057840",
+    "https://openalex.org/W1594076931",
+    "https://openalex.org/W6982661246",
+    "https://openalex.org/W2884826434",
+    "https://openalex.org/W6661744845",
+    "https://openalex.org/W2761599262",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2926701059",
+    "https://openalex.org/W3016178469",
+    "https://openalex.org/W2039157918",
+    "https://openalex.org/W6783924570",
+    "https://openalex.org/W2949522309",
+    "https://openalex.org/W2947815220",
+    "https://openalex.org/W2994688391",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4241387713",
+    "https://openalex.org/W2293351723",
+    "https://openalex.org/W2964304846",
+    "https://openalex.org/W2963673968",
+    "https://openalex.org/W3046014872",
+    "https://openalex.org/W1858703999",
+    "https://openalex.org/W4245671428",
+    "https://openalex.org/W4255411440",
+    "https://openalex.org/W2043701535",
+    "https://openalex.org/W2624397504",
+    "https://openalex.org/W3089718532",
+    "https://openalex.org/W2754665629",
+    "https://openalex.org/W3006208173",
+    "https://openalex.org/W1543621719",
+    "https://openalex.org/W4318619660",
+    "https://openalex.org/W2583874385",
+    "https://openalex.org/W35047313",
+    "https://openalex.org/W2949839345"
+  ],
+  "abstract": "Threat detection and forensics have become an imperative objective for any digital forensic triage.Supervised approaches have been proposed for inferring system and network anomalies; including anomaly detection contributions using syslogs.Nevertheless, most works downplay the importance of the interpretability of a model's decision-making process.In this research, we are among the first to propose an interpretable federated transformer log learning model for threat detection supporting explainable cyber forensics.The proposed model is generated by training a local transformer-based threat detection model at each client in an organizational unit.Local models learn the system's normal behavior from the syslogs which keep records of execution flows.Subsequently, a federated learning server aggregates the learned model parameters from local models to generate a global federated learning model.Log time-series capturing normal behavior are expected to differ from those possessing cyber threat activity.We demonstrate this difference through a goodness of fit test based on Karl-Pearson's Chi-square statistic.To provide insights on actions triggering this difference, we integrate an attention-based interpretability module.We implement and evaluate our proposed model using HDFS, a publicly available log dataset, and an in-house collected and publicly-released dataset named CTDD, which consists of more than 8 million syslogs representing cloud collaboration services and systems compromised by different classes of cyber threats.Moreover, through different experiments, we demonstrate the log agnostic capability and applicability of our approach on realworld operational settings such as edge computing systems.Our interpretability module manifests significant attention difference between normal and abnormal logs which provide insightful interpretability of the model's decision-making process.Finally, we deem the obtained results as a validation for the appropriate adoption of our approach in achieving threat forensics in the real world.",
+  "full_text": null,
+  "topic": "Cloud computing",
+  "concepts": [
+    {
+      "name": "Cloud computing",
+      "score": 0.740187406539917
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7105086445808411
+    },
+    {
+      "name": "Digital forensics",
+      "score": 0.5275352001190186
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4955798387527466
+    },
+    {
+      "name": "Computer security",
+      "score": 0.4902239441871643
+    },
+    {
+      "name": "Network forensics",
+      "score": 0.4453940689563751
+    },
+    {
+      "name": "Operating system",
+      "score": 0.12780681252479553
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11149775981903076
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

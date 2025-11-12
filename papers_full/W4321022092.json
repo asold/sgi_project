@@ -1,56 +1,99 @@
 {
-    "title": "Transformer Encoder Model for Sequential Prediction of Student Performance Based on Their Log Activities",
-    "url": "https://openalex.org/W4321022092",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2129603457",
-            "name": "Sri Suning Kusumawardani",
-            "affiliations": [
-                "Universitas Gadjah Mada"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2592626115",
-            "name": "Syukron Abu Ishaq Alfarozi",
-            "affiliations": [
-                "Universitas Gadjah Mada"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2608120015",
-        "https://openalex.org/W3021058087",
-        "https://openalex.org/W3020516357",
-        "https://openalex.org/W6713888625",
-        "https://openalex.org/W3035629225",
-        "https://openalex.org/W2983382509",
-        "https://openalex.org/W4252227190",
-        "https://openalex.org/W2986991381",
-        "https://openalex.org/W3093186795",
-        "https://openalex.org/W3046782012",
-        "https://openalex.org/W3041198872",
-        "https://openalex.org/W2945013125",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2769342982",
-        "https://openalex.org/W3091847065",
-        "https://openalex.org/W3048957892",
-        "https://openalex.org/W2896866209",
-        "https://openalex.org/W2887019297",
-        "https://openalex.org/W6756105659",
-        "https://openalex.org/W2935241266",
-        "https://openalex.org/W2895615678",
-        "https://openalex.org/W3094091106",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W6631190155",
-        "https://openalex.org/W2963587345",
-        "https://openalex.org/W4212774754",
-        "https://openalex.org/W1522301498",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2948904503",
-        "https://openalex.org/W2896457183"
-    ],
-    "abstract": "Learning management systems (LMSs) have been used massively due to the growing utilization of distance learning. This advancement has led to increased educational data that can be analyzed to improve the quality of the learning process. Learning analytics (LA) is one of the most important methods that can be used to analyze student performance. In this paper, we proposed an LA method based on deep learning, i.e., transformer encoder, to sequentially predict the student&#x2019;s final performance based on log activities provided by an LMS. The objective is to predict at-risk students of failing so that they can be mitigated as soon as possible. The proposed model was evaluated on the Open University LA Dataset (OULAD) for daily or weekly prediction. The results show that the model could predict at the early stage with an accuracy of 83.17&#x0025; on withdrawn versus pass-distinction classes. Meanwhile, for the other tasks, i.e., withdrawn-fail versus pass-distinction and fail versus pass-distinction tasks, the accuracy was at least 76&#x0025; at the early stage. The proposed model was compared to the LSTM model. We found that the transformer encoder performed better than the LSTM, with the average difference values from 1&#x0025; to 3&#x0025; in terms of accuracy and from 3&#x0025; to 7&#x0025; in terms of F1-score for all tasks, based on the statistical testing. Furthermore, the ablation study using positional encoding, different feature aggregation methods, and weighted loss function for the imbalanced class problem was conducted. In OULAD, we found that model without positional encoding was better in all cases. Furthermore, the weekly feature aggregation and the use of a weighted loss function performed better in some cases.",
-    "full_text": null
+  "title": "Transformer Encoder Model for Sequential Prediction of Student Performance Based on Their Log Activities",
+  "url": "https://openalex.org/W4321022092",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2129603457",
+      "name": "Sri Suning Kusumawardani",
+      "affiliations": [
+        "Universitas Gadjah Mada"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2592626115",
+      "name": "Syukron Abu Ishaq Alfarozi",
+      "affiliations": [
+        "Universitas Gadjah Mada"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2608120015",
+    "https://openalex.org/W3021058087",
+    "https://openalex.org/W3020516357",
+    "https://openalex.org/W6713888625",
+    "https://openalex.org/W3035629225",
+    "https://openalex.org/W2983382509",
+    "https://openalex.org/W4252227190",
+    "https://openalex.org/W2986991381",
+    "https://openalex.org/W3093186795",
+    "https://openalex.org/W3046782012",
+    "https://openalex.org/W3041198872",
+    "https://openalex.org/W2945013125",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2769342982",
+    "https://openalex.org/W3091847065",
+    "https://openalex.org/W3048957892",
+    "https://openalex.org/W2896866209",
+    "https://openalex.org/W2887019297",
+    "https://openalex.org/W6756105659",
+    "https://openalex.org/W2935241266",
+    "https://openalex.org/W2895615678",
+    "https://openalex.org/W3094091106",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W6631190155",
+    "https://openalex.org/W2963587345",
+    "https://openalex.org/W4212774754",
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2948904503",
+    "https://openalex.org/W2896457183"
+  ],
+  "abstract": "Learning management systems (LMSs) have been used massively due to the growing utilization of distance learning. This advancement has led to increased educational data that can be analyzed to improve the quality of the learning process. Learning analytics (LA) is one of the most important methods that can be used to analyze student performance. In this paper, we proposed an LA method based on deep learning, i.e., transformer encoder, to sequentially predict the student&#x2019;s final performance based on log activities provided by an LMS. The objective is to predict at-risk students of failing so that they can be mitigated as soon as possible. The proposed model was evaluated on the Open University LA Dataset (OULAD) for daily or weekly prediction. The results show that the model could predict at the early stage with an accuracy of 83.17&#x0025; on withdrawn versus pass-distinction classes. Meanwhile, for the other tasks, i.e., withdrawn-fail versus pass-distinction and fail versus pass-distinction tasks, the accuracy was at least 76&#x0025; at the early stage. The proposed model was compared to the LSTM model. We found that the transformer encoder performed better than the LSTM, with the average difference values from 1&#x0025; to 3&#x0025; in terms of accuracy and from 3&#x0025; to 7&#x0025; in terms of F1-score for all tasks, based on the statistical testing. Furthermore, the ablation study using positional encoding, different feature aggregation methods, and weighted loss function for the imbalanced class problem was conducted. In OULAD, we found that model without positional encoding was better in all cases. Furthermore, the weekly feature aggregation and the use of a weighted loss function performed better in some cases.",
+  "full_text": null,
+  "topic": "Encoder",
+  "concepts": [
+    {
+      "name": "Encoder",
+      "score": 0.7168664932250977
+    },
+    {
+      "name": "Computer science",
+      "score": 0.706739068031311
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5635709762573242
+    },
+    {
+      "name": "Data modeling",
+      "score": 0.4625309109687805
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.3560580313205719
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.12369263172149658
+    },
+    {
+      "name": "Database",
+      "score": 0.11410468816757202
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11121508479118347
+    },
+    {
+      "name": "Operating system",
+      "score": 0.10860368609428406
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09243673086166382
+    }
+  ]
 }

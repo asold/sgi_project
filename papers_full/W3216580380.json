@@ -1,105 +1,156 @@
 {
-    "title": "Interpreting Potts and Transformer Protein Models Through the Lens of Simplified Attention",
-    "url": "https://openalex.org/W3216580380",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2809895471",
-            "name": "Nicholas Bhattacharya",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2026027357",
-            "name": "Neil Thomas",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2514474769",
-            "name": "Roshan Rao",
-            "affiliations": [
-                "University of California, Berkeley"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2520319250",
-            "name": "Justas Dauparas",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098770236",
-            "name": "Peter K Koo",
-            "affiliations": [
-                "Cold Spring Harbor Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1961781263",
-            "name": "David Baker",
-            "affiliations": [
-                "University of Washington"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2126139250",
-            "name": "Yun S. Song",
-            "affiliations": [
-                "University of California, Berkeley",
-                "Chan Zuckerberg Initiative (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2554076456",
-            "name": "Sergey Ovchinnikov",
-            "affiliations": [
-                "Harvard University Press"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2953008890",
-        "https://openalex.org/W3186179742",
-        "https://openalex.org/W2169478909",
-        "https://openalex.org/W2027542060",
-        "https://openalex.org/W2051210555",
-        "https://openalex.org/W2977360892",
-        "https://openalex.org/W3106745904",
-        "https://openalex.org/W4290802519",
-        "https://openalex.org/W2038296759",
-        "https://openalex.org/W2013425283",
-        "https://openalex.org/W2176135968",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W2983468544",
-        "https://openalex.org/W2159237107",
-        "https://openalex.org/W1979762151",
-        "https://openalex.org/W2949867299",
-        "https://openalex.org/W1541258411",
-        "https://openalex.org/W2971227267",
-        "https://openalex.org/W2107867854",
-        "https://openalex.org/W2114340287",
-        "https://openalex.org/W2999044305",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W2076048958",
-        "https://openalex.org/W2102461176",
-        "https://openalex.org/W4206087583",
-        "https://openalex.org/W2972411752",
-        "https://openalex.org/W2137566700",
-        "https://openalex.org/W4206948363",
-        "https://openalex.org/W2092006899",
-        "https://openalex.org/W2997234557",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W2106694138",
-        "https://openalex.org/W2902353954",
-        "https://openalex.org/W2146891463",
-        "https://openalex.org/W1970483693",
-        "https://openalex.org/W2069458148",
-        "https://openalex.org/W2765742208"
-    ],
-    "abstract": "The established approach to unsupervised protein contact prediction estimates coevolving positions using undirected graphical models. This approach trains a Potts model on a Multiple Sequence Alignment. Increasingly large Transformers are being pretrained on unlabeled, unaligned protein sequence databases and showing competitive performance on protein contact prediction. We argue that attention is a principled model of protein interactions, grounded in real properties of protein family data. We introduce an energy-based attention layer, factored attention, which, in a certain limit, recovers a Potts model, and use it to contrast Potts and Transformers. We show that the Transformer leverages hierarchical signal in protein family databases not captured by single-layer models. This raises the exciting possibility for the development of powerful structured models of protein family databases.",
-    "full_text": null
+  "title": "Interpreting Potts and Transformer Protein Models Through the Lens of Simplified Attention",
+  "url": "https://openalex.org/W3216580380",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2809895471",
+      "name": "Nicholas Bhattacharya",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2026027357",
+      "name": "Neil Thomas",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2514474769",
+      "name": "Roshan Rao",
+      "affiliations": [
+        "University of California, Berkeley"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2520319250",
+      "name": "Justas Dauparas",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098770236",
+      "name": "Peter K Koo",
+      "affiliations": [
+        "Cold Spring Harbor Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1961781263",
+      "name": "David Baker",
+      "affiliations": [
+        "University of Washington"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2126139250",
+      "name": "Yun S. Song",
+      "affiliations": [
+        "University of California, Berkeley",
+        "Chan Zuckerberg Initiative (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2554076456",
+      "name": "Sergey Ovchinnikov",
+      "affiliations": [
+        "Harvard University Press"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2953008890",
+    "https://openalex.org/W3186179742",
+    "https://openalex.org/W2169478909",
+    "https://openalex.org/W2027542060",
+    "https://openalex.org/W2051210555",
+    "https://openalex.org/W2977360892",
+    "https://openalex.org/W3106745904",
+    "https://openalex.org/W4290802519",
+    "https://openalex.org/W2038296759",
+    "https://openalex.org/W2013425283",
+    "https://openalex.org/W2176135968",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W2983468544",
+    "https://openalex.org/W2159237107",
+    "https://openalex.org/W1979762151",
+    "https://openalex.org/W2949867299",
+    "https://openalex.org/W1541258411",
+    "https://openalex.org/W2971227267",
+    "https://openalex.org/W2107867854",
+    "https://openalex.org/W2114340287",
+    "https://openalex.org/W2999044305",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W2076048958",
+    "https://openalex.org/W2102461176",
+    "https://openalex.org/W4206087583",
+    "https://openalex.org/W2972411752",
+    "https://openalex.org/W2137566700",
+    "https://openalex.org/W4206948363",
+    "https://openalex.org/W2092006899",
+    "https://openalex.org/W2997234557",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W2106694138",
+    "https://openalex.org/W2902353954",
+    "https://openalex.org/W2146891463",
+    "https://openalex.org/W1970483693",
+    "https://openalex.org/W2069458148",
+    "https://openalex.org/W2765742208"
+  ],
+  "abstract": "The established approach to unsupervised protein contact prediction estimates coevolving positions using undirected graphical models. This approach trains a Potts model on a Multiple Sequence Alignment. Increasingly large Transformers are being pretrained on unlabeled, unaligned protein sequence databases and showing competitive performance on protein contact prediction. We argue that attention is a principled model of protein interactions, grounded in real properties of protein family data. We introduce an energy-based attention layer, factored attention, which, in a certain limit, recovers a Potts model, and use it to contrast Potts and Transformers. We show that the Transformer leverages hierarchical signal in protein family databases not captured by single-layer models. This raises the exciting possibility for the development of powerful structured models of protein family databases.",
+  "full_text": null,
+  "topic": "Transformer",
+  "concepts": [
+    {
+      "name": "Transformer",
+      "score": 0.7372793555259705
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6832203269004822
+    },
+    {
+      "name": "Potts model",
+      "score": 0.6263436079025269
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5019128322601318
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4132387340068817
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3290579319000244
+    },
+    {
+      "name": "Voltage",
+      "score": 0.1222602128982544
+    },
+    {
+      "name": "Ising model",
+      "score": 0.09301277995109558
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08748131990432739
+    },
+    {
+      "name": "Statistical physics",
+      "score": 0.06587332487106323
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

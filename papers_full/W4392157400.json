@@ -1,71 +1,170 @@
 {
-    "title": "CryoTransformer: a transformer model for picking protein particles from cryo-EM micrographs",
-    "url": "https://openalex.org/W4392157400",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2243449946",
-            "name": "Ashwin Dhakal",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4209336299",
-            "name": "Rajan Gyawali",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2124316218",
-            "name": "Liguo Wang",
-            "affiliations": [
-                "Brookhaven National Laboratory"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2141057972",
-            "name": "Jianlin Cheng",
-            "affiliations": [
-                "University of Missouri"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2950003311",
-        "https://openalex.org/W3105695732",
-        "https://openalex.org/W4280560666",
-        "https://openalex.org/W2793402357",
-        "https://openalex.org/W2999597532",
-        "https://openalex.org/W4381686770",
-        "https://openalex.org/W3215525389",
-        "https://openalex.org/W4313890332",
-        "https://openalex.org/W2076155035",
-        "https://openalex.org/W6631943919",
-        "https://openalex.org/W2963364133",
-        "https://openalex.org/W4310035804",
-        "https://openalex.org/W2684441367",
-        "https://openalex.org/W2091096627",
-        "https://openalex.org/W2576780822",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W2021767145",
-        "https://openalex.org/W2044319700",
-        "https://openalex.org/W3035894262",
-        "https://openalex.org/W3127564879",
-        "https://openalex.org/W2587625522",
-        "https://openalex.org/W1982295411",
-        "https://openalex.org/W3093872090",
-        "https://openalex.org/W2977933365",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2952729952",
-        "https://openalex.org/W2963568497",
-        "https://openalex.org/W2578975883",
-        "https://openalex.org/W3101982572",
-        "https://openalex.org/W1533861849",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3103292928"
-    ],
-    "abstract": "Abstract Motivation Cryo-electron microscopy (cryo-EM) is a powerful technique for determining the structures of large protein complexes. Picking single protein particles from cryo-EM micrographs (images) is a crucial step in reconstructing protein structures from them. However, the widely used template-based particle picking process requires some manual particle picking and is labor-intensive and time-consuming. Though machine learning and artificial intelligence (AI) can potentially automate particle picking, the current AI methods pick particles with low precision or low recall. The erroneously picked particles can severely reduce the quality of reconstructed protein structures, especially for the micrographs with low signal-to-noise ratio. Results To address these shortcomings, we devised CryoTransformer based on transformers, residual networks, and image processing techniques to accurately pick protein particles from cryo-EM micrographs. CryoTransformer was trained and tested on the largest labeled cryo-EM protein particle dataset—CryoPPP. It outperforms the current state-of-the-art machine learning methods of particle picking in terms of the resolution of 3D density maps reconstructed from the picked particles as well as F1-score, and is poised to facilitate the automation of the cryo-EM protein particle picking. Availability and implementation The source code and data for CryoTransformer are openly available at: https://github.com/jianlin-cheng/CryoTransformer.",
-    "full_text": null
+  "title": "CryoTransformer: a transformer model for picking protein particles from cryo-EM micrographs",
+  "url": "https://openalex.org/W4392157400",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2243449946",
+      "name": "Ashwin Dhakal",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4209336299",
+      "name": "Rajan Gyawali",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2124316218",
+      "name": "Liguo Wang",
+      "affiliations": [
+        "Brookhaven National Laboratory"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2141057972",
+      "name": "Jianlin Cheng",
+      "affiliations": [
+        "University of Missouri"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2950003311",
+    "https://openalex.org/W3105695732",
+    "https://openalex.org/W4280560666",
+    "https://openalex.org/W2793402357",
+    "https://openalex.org/W2999597532",
+    "https://openalex.org/W4381686770",
+    "https://openalex.org/W3215525389",
+    "https://openalex.org/W4313890332",
+    "https://openalex.org/W2076155035",
+    "https://openalex.org/W6631943919",
+    "https://openalex.org/W2963364133",
+    "https://openalex.org/W4310035804",
+    "https://openalex.org/W2684441367",
+    "https://openalex.org/W2091096627",
+    "https://openalex.org/W2576780822",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W2021767145",
+    "https://openalex.org/W2044319700",
+    "https://openalex.org/W3035894262",
+    "https://openalex.org/W3127564879",
+    "https://openalex.org/W2587625522",
+    "https://openalex.org/W1982295411",
+    "https://openalex.org/W3093872090",
+    "https://openalex.org/W2977933365",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2952729952",
+    "https://openalex.org/W2963568497",
+    "https://openalex.org/W2578975883",
+    "https://openalex.org/W3101982572",
+    "https://openalex.org/W1533861849",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3103292928"
+  ],
+  "abstract": "Abstract Motivation Cryo-electron microscopy (cryo-EM) is a powerful technique for determining the structures of large protein complexes. Picking single protein particles from cryo-EM micrographs (images) is a crucial step in reconstructing protein structures from them. However, the widely used template-based particle picking process requires some manual particle picking and is labor-intensive and time-consuming. Though machine learning and artificial intelligence (AI) can potentially automate particle picking, the current AI methods pick particles with low precision or low recall. The erroneously picked particles can severely reduce the quality of reconstructed protein structures, especially for the micrographs with low signal-to-noise ratio. Results To address these shortcomings, we devised CryoTransformer based on transformers, residual networks, and image processing techniques to accurately pick protein particles from cryo-EM micrographs. CryoTransformer was trained and tested on the largest labeled cryo-EM protein particle dataset—CryoPPP. It outperforms the current state-of-the-art machine learning methods of particle picking in terms of the resolution of 3D density maps reconstructed from the picked particles as well as F1-score, and is poised to facilitate the automation of the cryo-EM protein particle picking. Availability and implementation The source code and data for CryoTransformer are openly available at: https://github.com/jianlin-cheng/CryoTransformer.",
+  "full_text": null,
+  "topic": "Electron micrographs",
+  "concepts": [
+    {
+      "name": "Electron micrographs",
+      "score": 0.7102031707763672
+    },
+    {
+      "name": "Micrograph",
+      "score": 0.6952980160713196
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6019283533096313
+    },
+    {
+      "name": "Cryo-electron microscopy",
+      "score": 0.5844569206237793
+    },
+    {
+      "name": "Single particle analysis",
+      "score": 0.572259247303009
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5702794790267944
+    },
+    {
+      "name": "Particle (ecology)",
+      "score": 0.5135760307312012
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4171863794326782
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.39333540201187134
+    },
+    {
+      "name": "Electron microscope",
+      "score": 0.35596925020217896
+    },
+    {
+      "name": "Materials science",
+      "score": 0.31744384765625
+    },
+    {
+      "name": "Scanning electron microscope",
+      "score": 0.2540462613105774
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.178000807762146
+    },
+    {
+      "name": "Optics",
+      "score": 0.13546821475028992
+    },
+    {
+      "name": "Engineering",
+      "score": 0.12605363130569458
+    },
+    {
+      "name": "Physics",
+      "score": 0.1110270619392395
+    },
+    {
+      "name": "Nuclear magnetic resonance",
+      "score": 0.09935656189918518
+    },
+    {
+      "name": "Biology",
+      "score": 0.08163657784461975
+    },
+    {
+      "name": "Composite material",
+      "score": 0.08133584260940552
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Aerosol",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Ecology",
+      "score": 0.0
+    }
+  ]
 }

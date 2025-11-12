@@ -1,88 +1,175 @@
 {
-    "title": "When Large Vision-Language Models Meet Person Re-Identification",
-    "url": "https://openalex.org/W4405262876",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4323683969",
-            "name": "Qizao Wang",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1996936749",
-            "name": "Bin Li",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2145662684",
-            "name": "Xiangyang Xue",
-            "affiliations": [
-                "Fudan University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4323683969",
-            "name": "Qizao Wang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1996936749",
-            "name": "Bin Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2145662684",
-            "name": "Xiangyang Xue",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2998792609",
-        "https://openalex.org/W2996695408",
-        "https://openalex.org/W4386081685",
-        "https://openalex.org/W3098711604",
-        "https://openalex.org/W2966961956",
-        "https://openalex.org/W2997987796",
-        "https://openalex.org/W2998493658",
-        "https://openalex.org/W3173635859",
-        "https://openalex.org/W3195399086",
-        "https://openalex.org/W4382460786",
-        "https://openalex.org/W3135367836",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W6871553294",
-        "https://openalex.org/W6851592950",
-        "https://openalex.org/W4402727764",
-        "https://openalex.org/W4318718936",
-        "https://openalex.org/W4403853618",
-        "https://openalex.org/W2511791013",
-        "https://openalex.org/W2204750386",
-        "https://openalex.org/W2963842104",
-        "https://openalex.org/W2795758732",
-        "https://openalex.org/W2979931389",
-        "https://openalex.org/W2963049565",
-        "https://openalex.org/W3034580371",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4214736485",
-        "https://openalex.org/W4312361652",
-        "https://openalex.org/W3143016713",
-        "https://openalex.org/W3126337491",
-        "https://openalex.org/W4225323055",
-        "https://openalex.org/W4366850747",
-        "https://openalex.org/W6735531217",
-        "https://openalex.org/W4200635168",
-        "https://openalex.org/W1982925187",
-        "https://openalex.org/W2584637367",
-        "https://openalex.org/W2998508940",
-        "https://openalex.org/W4230405732",
-        "https://openalex.org/W3105077954",
-        "https://openalex.org/W3100506510",
-        "https://openalex.org/W3125736290"
-    ],
-    "abstract": "Large Vision-Language Models (LVLMs) that incorporate visual models and Large Language Models (LLMs) have achieved impressive results across various cross-modal understanding and reasoning tasks. In recent years, person re-identification (ReID) has also started to explore cross-modal semantics to improve the accuracy of identity recognition. However, effectively utilizing LVLMs for ReID remains an open challenge. While LVLMs operate under a generative paradigm by predicting the next output word, ReID requires the extraction of discriminative identity features to match pedestrians across cameras. In this paper, we propose LVLM-ReID, a novel framework that harnesses the strengths of LVLMs to promote ReID. Specifically, we employ instructions to guide the LVLM in generating one pedestrian semantic token that encapsulates key appearance semantics from the person image. This token is further refined through our Semantic-Guided Interaction (SGI) module, establishing a reciprocal interaction between the semantic token and visual tokens. Ultimately, the reinforced semantic token serves as the pedestrian identity representation. Our framework integrates the semantic understanding and generation capabilities of LVLMs into end-to-end ReID training, allowing LVLMs to capture rich semantic cues from pedestrian images during both training and inference. Our method achieves competitive results on multiple benchmarks without additional image-text annotations, demonstrating the potential of LVLM-generated semantics to advance person ReID and offering a promising direction for future research.",
-    "full_text": null
+  "title": "When Large Vision-Language Models Meet Person Re-Identification",
+  "url": "https://openalex.org/W4405262876",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4323683969",
+      "name": "Qizao Wang",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1996936749",
+      "name": "Bin Li",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2145662684",
+      "name": "Xiangyang Xue",
+      "affiliations": [
+        "Fudan University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4323683969",
+      "name": "Qizao Wang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1996936749",
+      "name": "Bin Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2145662684",
+      "name": "Xiangyang Xue",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2998792609",
+    "https://openalex.org/W2996695408",
+    "https://openalex.org/W4386081685",
+    "https://openalex.org/W3098711604",
+    "https://openalex.org/W2966961956",
+    "https://openalex.org/W2997987796",
+    "https://openalex.org/W2998493658",
+    "https://openalex.org/W3173635859",
+    "https://openalex.org/W3195399086",
+    "https://openalex.org/W4382460786",
+    "https://openalex.org/W3135367836",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W6871553294",
+    "https://openalex.org/W6851592950",
+    "https://openalex.org/W4402727764",
+    "https://openalex.org/W4318718936",
+    "https://openalex.org/W4403853618",
+    "https://openalex.org/W2511791013",
+    "https://openalex.org/W2204750386",
+    "https://openalex.org/W2963842104",
+    "https://openalex.org/W2795758732",
+    "https://openalex.org/W2979931389",
+    "https://openalex.org/W2963049565",
+    "https://openalex.org/W3034580371",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4214736485",
+    "https://openalex.org/W4312361652",
+    "https://openalex.org/W3143016713",
+    "https://openalex.org/W3126337491",
+    "https://openalex.org/W4225323055",
+    "https://openalex.org/W4366850747",
+    "https://openalex.org/W6735531217",
+    "https://openalex.org/W4200635168",
+    "https://openalex.org/W1982925187",
+    "https://openalex.org/W2584637367",
+    "https://openalex.org/W2998508940",
+    "https://openalex.org/W4230405732",
+    "https://openalex.org/W3105077954",
+    "https://openalex.org/W3100506510",
+    "https://openalex.org/W3125736290"
+  ],
+  "abstract": "Large Vision-Language Models (LVLMs) that incorporate visual models and Large Language Models (LLMs) have achieved impressive results across various cross-modal understanding and reasoning tasks. In recent years, person re-identification (ReID) has also started to explore cross-modal semantics to improve the accuracy of identity recognition. However, effectively utilizing LVLMs for ReID remains an open challenge. While LVLMs operate under a generative paradigm by predicting the next output word, ReID requires the extraction of discriminative identity features to match pedestrians across cameras. In this paper, we propose LVLM-ReID, a novel framework that harnesses the strengths of LVLMs to promote ReID. Specifically, we employ instructions to guide the LVLM in generating one pedestrian semantic token that encapsulates key appearance semantics from the person image. This token is further refined through our Semantic-Guided Interaction (SGI) module, establishing a reciprocal interaction between the semantic token and visual tokens. Ultimately, the reinforced semantic token serves as the pedestrian identity representation. Our framework integrates the semantic understanding and generation capabilities of LVLMs into end-to-end ReID training, allowing LVLMs to capture rich semantic cues from pedestrian images during both training and inference. Our method achieves competitive results on multiple benchmarks without additional image-text annotations, demonstrating the potential of LVLM-generated semantics to advance person ReID and offering a promising direction for future research.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8106189370155334
+    },
+    {
+      "name": "Security token",
+      "score": 0.6929961442947388
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.6533600091934204
+    },
+    {
+      "name": "Inference",
+      "score": 0.6273864507675171
+    },
+    {
+      "name": "Semantics (computer science)",
+      "score": 0.6173889636993408
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.58156418800354
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5534480214118958
+    },
+    {
+      "name": "Identification (biology)",
+      "score": 0.514472484588623
+    },
+    {
+      "name": "Identity (music)",
+      "score": 0.4887409210205078
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.4202496409416199
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.41838452219963074
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.34444862604141235
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09166252613067627
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Acoustics",
+      "score": 0.0
+    },
+    {
+      "name": "Botany",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    }
+  ]
 }

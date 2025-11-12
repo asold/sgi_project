@@ -1,83 +1,138 @@
 {
-    "title": "pLM-BLAST: distant homology detection based on direct comparison of sequence representations from protein language models",
-    "url": "https://openalex.org/W4386860638",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2125629991",
-            "name": "Kamil Kaminski",
-            "affiliations": [
-                "Institute for Structural Research",
-                "University of Warsaw",
-                "Institut de Biologia Evolutiva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2789194906",
-            "name": "Jan Ludwiczak",
-            "affiliations": [
-                "Institut de Biologia Evolutiva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2752302794",
-            "name": "Kamil Pawlicki",
-            "affiliations": [
-                "Institut de Biologia Evolutiva"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2123207086",
-            "name": "Vikram Alva",
-            "affiliations": [
-                "Max Planck Institute for Biology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4228869495",
-            "name": "Stanislaw Dunin-Horkawicz",
-            "affiliations": [
-                "Institut de Biologia Evolutiva",
-                "Max Planck Institute for Biology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2158714788",
-        "https://openalex.org/W2211953232",
-        "https://openalex.org/W3166142427",
-        "https://openalex.org/W4290546426",
-        "https://openalex.org/W2036149515",
-        "https://openalex.org/W3143063265",
-        "https://openalex.org/W2040233577",
-        "https://openalex.org/W1965827393",
-        "https://openalex.org/W2138122982",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W3088911218",
-        "https://openalex.org/W2102255568",
-        "https://openalex.org/W2143210482",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3122018424",
-        "https://openalex.org/W3125294413",
-        "https://openalex.org/W2761495217",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W4311661986",
-        "https://openalex.org/W3113219874",
-        "https://openalex.org/W2074231493",
-        "https://openalex.org/W2051210555",
-        "https://openalex.org/W4309609816",
-        "https://openalex.org/W2950954328",
-        "https://openalex.org/W2972411752",
-        "https://openalex.org/W2136560561",
-        "https://openalex.org/W4205192056",
-        "https://openalex.org/W4293475204",
-        "https://openalex.org/W2980805969",
-        "https://openalex.org/W2774178591",
-        "https://openalex.org/W4213380773",
-        "https://openalex.org/W4390590489",
-        "https://openalex.org/W4206950245",
-        "https://openalex.org/W4360858616"
-    ],
-    "abstract": "Abstract Motivation The detection of homology through sequence comparison is a typical first step in the study of protein function and evolution. In this work, we explore the applicability of protein language models to this task. Results We introduce pLM-BLAST, a tool inspired by BLAST, that detects distant homology by comparing single-sequence representations (embeddings) derived from a protein language model, ProtT5. Our benchmarks reveal that pLM-BLAST maintains a level of accuracy on par with HHsearch for both highly similar sequences (with &amp;gt;50% identity) and markedly divergent sequences (with &amp;lt;30% identity), while being significantly faster. Additionally, pLM-BLAST stands out among other embedding-based tools due to its ability to compute local alignments. We show that these local alignments, produced by pLM-BLAST, often connect highly divergent proteins, thereby highlighting its potential to uncover previously undiscovered homologous relationships and improve protein annotation. Availability and implementation pLM-BLAST is accessible via the MPI Bioinformatics Toolkit as a web server for searching precomputed databases (https://toolkit.tuebingen.mpg.de/tools/plmblast). It is also available as a standalone tool for building custom databases and performing batch searches (https://github.com/labstructbioinf/pLM-BLAST).",
-    "full_text": null
+  "title": "pLM-BLAST: distant homology detection based on direct comparison of sequence representations from protein language models",
+  "url": "https://openalex.org/W4386860638",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2125629991",
+      "name": "Kamil Kaminski",
+      "affiliations": [
+        "Institute for Structural Research",
+        "University of Warsaw",
+        "Institut de Biologia Evolutiva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2789194906",
+      "name": "Jan Ludwiczak",
+      "affiliations": [
+        "Institut de Biologia Evolutiva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2752302794",
+      "name": "Kamil Pawlicki",
+      "affiliations": [
+        "Institut de Biologia Evolutiva"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2123207086",
+      "name": "Vikram Alva",
+      "affiliations": [
+        "Max Planck Institute for Biology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4228869495",
+      "name": "Stanislaw Dunin-Horkawicz",
+      "affiliations": [
+        "Institut de Biologia Evolutiva",
+        "Max Planck Institute for Biology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2158714788",
+    "https://openalex.org/W2211953232",
+    "https://openalex.org/W3166142427",
+    "https://openalex.org/W4290546426",
+    "https://openalex.org/W2036149515",
+    "https://openalex.org/W3143063265",
+    "https://openalex.org/W2040233577",
+    "https://openalex.org/W1965827393",
+    "https://openalex.org/W2138122982",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W3088911218",
+    "https://openalex.org/W2102255568",
+    "https://openalex.org/W2143210482",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3122018424",
+    "https://openalex.org/W3125294413",
+    "https://openalex.org/W2761495217",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W4311661986",
+    "https://openalex.org/W3113219874",
+    "https://openalex.org/W2074231493",
+    "https://openalex.org/W2051210555",
+    "https://openalex.org/W4309609816",
+    "https://openalex.org/W2950954328",
+    "https://openalex.org/W2972411752",
+    "https://openalex.org/W2136560561",
+    "https://openalex.org/W4205192056",
+    "https://openalex.org/W4293475204",
+    "https://openalex.org/W2980805969",
+    "https://openalex.org/W2774178591",
+    "https://openalex.org/W4213380773",
+    "https://openalex.org/W4390590489",
+    "https://openalex.org/W4206950245",
+    "https://openalex.org/W4360858616"
+  ],
+  "abstract": "Abstract Motivation The detection of homology through sequence comparison is a typical first step in the study of protein function and evolution. In this work, we explore the applicability of protein language models to this task. Results We introduce pLM-BLAST, a tool inspired by BLAST, that detects distant homology by comparing single-sequence representations (embeddings) derived from a protein language model, ProtT5. Our benchmarks reveal that pLM-BLAST maintains a level of accuracy on par with HHsearch for both highly similar sequences (with &amp;gt;50% identity) and markedly divergent sequences (with &amp;lt;30% identity), while being significantly faster. Additionally, pLM-BLAST stands out among other embedding-based tools due to its ability to compute local alignments. We show that these local alignments, produced by pLM-BLAST, often connect highly divergent proteins, thereby highlighting its potential to uncover previously undiscovered homologous relationships and improve protein annotation. Availability and implementation pLM-BLAST is accessible via the MPI Bioinformatics Toolkit as a web server for searching precomputed databases (https://toolkit.tuebingen.mpg.de/tools/plmblast). It is also available as a standalone tool for building custom databases and performing batch searches (https://github.com/labstructbioinf/pLM-BLAST).",
+  "full_text": null,
+  "topic": "Homology (biology)",
+  "concepts": [
+    {
+      "name": "Homology (biology)",
+      "score": 0.6107709407806396
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6024506092071533
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.57133948802948
+    },
+    {
+      "name": "Sequence homology",
+      "score": 0.5210937261581421
+    },
+    {
+      "name": "Sequence alignment",
+      "score": 0.48285871744155884
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.46199584007263184
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.40833598375320435
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38752055168151855
+    },
+    {
+      "name": "Programming language",
+      "score": 0.36020219326019287
+    },
+    {
+      "name": "Peptide sequence",
+      "score": 0.3412137031555176
+    },
+    {
+      "name": "Biology",
+      "score": 0.2632853388786316
+    },
+    {
+      "name": "Genetics",
+      "score": 0.25113117694854736
+    },
+    {
+      "name": "Gene",
+      "score": 0.1431722342967987
+    }
+  ]
 }

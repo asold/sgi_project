@@ -1,85 +1,160 @@
 {
-    "title": "OmniActions: Predicting Digital Actions in Response to Real-World Multimodal Sensory Inputs with LLMs",
-    "url": "https://openalex.org/W4396832321",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5028570020",
-            "name": "Jiahao Nick Li",
-            "affiliations": [
-                "University of California, Los Angeles"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5064730192",
-            "name": "Yan Xu",
-            "affiliations": [
-                "META Health"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5058485609",
-            "name": "Tovi Grossman",
-            "affiliations": [
-                "University of Toronto"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5000507697",
-            "name": "Stephanie Santosa",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5075344578",
-            "name": "M. Li",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1499226393",
-        "https://openalex.org/W2141990085",
-        "https://openalex.org/W2096091650",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W1995635152",
-        "https://openalex.org/W1966642888",
-        "https://openalex.org/W1995435389",
-        "https://openalex.org/W2170723298",
-        "https://openalex.org/W2110277250",
-        "https://openalex.org/W3005279352",
-        "https://openalex.org/W4221047484",
-        "https://openalex.org/W1994349244",
-        "https://openalex.org/W1536680647",
-        "https://openalex.org/W3205786327",
-        "https://openalex.org/W6665580293",
-        "https://openalex.org/W1992221677",
-        "https://openalex.org/W4319167005",
-        "https://openalex.org/W4366547453",
-        "https://openalex.org/W2070671805",
-        "https://openalex.org/W3152835281",
-        "https://openalex.org/W2978533520",
-        "https://openalex.org/W2739069594",
-        "https://openalex.org/W2980956911",
-        "https://openalex.org/W3021091026",
-        "https://openalex.org/W4307475457",
-        "https://openalex.org/W4366729084",
-        "https://openalex.org/W2405622356",
-        "https://openalex.org/W2895817099",
-        "https://openalex.org/W3003645575",
-        "https://openalex.org/W2024486844",
-        "https://openalex.org/W2126145938",
-        "https://openalex.org/W2172064665",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W2963712589",
-        "https://openalex.org/W1551137640",
-        "https://openalex.org/W2311815372",
-        "https://openalex.org/W3106143313",
-        "https://openalex.org/W2768343520",
-        "https://openalex.org/W2285672838"
-    ],
-    "abstract": "The progression to \"Pervasive Augmented Reality\" envisions easy access to multimodal information continuously. However, in many everyday scenarios, users are occupied physically, cognitively or socially. This may increase the friction to act upon the multimodal information that users encounter in the world. To reduce such friction, future interactive interfaces should intelligently provide quick access to digital actions based on users' context. To explore the range of possible digital actions, we conducted a diary study that required participants to capture and share the media that they intended to perform actions on (e.g., images or audio), along with their desired actions and other contextual information. Using this data, we generated a holistic design space of digital follow-up actions that could be performed in response to different types of multimodal sensory inputs. We then designed OmniActions, a pipeline powered by large language models (LLMs) that processes multimodal sensory inputs and predicts follow-up actions on the target information grounded in the derived design space. Using the empirical data collected in the diary study, we performed quantitative evaluations on three variations of LLM techniques (intent classification, in-context learning and finetuning) and identified the most effective technique for our task. Additionally, as an instantiation of the pipeline, we developed an interactive prototype and reported preliminary user feedback about how people perceive and react to the action predictions and its errors.",
-    "full_text": null
+  "title": "OmniActions: Predicting Digital Actions in Response to Real-World Multimodal Sensory Inputs with LLMs",
+  "url": "https://openalex.org/W4396832321",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5028570020",
+      "name": "Jiahao Nick Li",
+      "affiliations": [
+        "University of California, Los Angeles"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5064730192",
+      "name": "Yan Xu",
+      "affiliations": [
+        "META Health"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5058485609",
+      "name": "Tovi Grossman",
+      "affiliations": [
+        "University of Toronto"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5000507697",
+      "name": "Stephanie Santosa",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5075344578",
+      "name": "M. Li",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1499226393",
+    "https://openalex.org/W2141990085",
+    "https://openalex.org/W2096091650",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W1995635152",
+    "https://openalex.org/W1966642888",
+    "https://openalex.org/W1995435389",
+    "https://openalex.org/W2170723298",
+    "https://openalex.org/W2110277250",
+    "https://openalex.org/W3005279352",
+    "https://openalex.org/W4221047484",
+    "https://openalex.org/W1994349244",
+    "https://openalex.org/W1536680647",
+    "https://openalex.org/W3205786327",
+    "https://openalex.org/W6665580293",
+    "https://openalex.org/W1992221677",
+    "https://openalex.org/W4319167005",
+    "https://openalex.org/W4366547453",
+    "https://openalex.org/W2070671805",
+    "https://openalex.org/W3152835281",
+    "https://openalex.org/W2978533520",
+    "https://openalex.org/W2739069594",
+    "https://openalex.org/W2980956911",
+    "https://openalex.org/W3021091026",
+    "https://openalex.org/W4307475457",
+    "https://openalex.org/W4366729084",
+    "https://openalex.org/W2405622356",
+    "https://openalex.org/W2895817099",
+    "https://openalex.org/W3003645575",
+    "https://openalex.org/W2024486844",
+    "https://openalex.org/W2126145938",
+    "https://openalex.org/W2172064665",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W2963712589",
+    "https://openalex.org/W1551137640",
+    "https://openalex.org/W2311815372",
+    "https://openalex.org/W3106143313",
+    "https://openalex.org/W2768343520",
+    "https://openalex.org/W2285672838"
+  ],
+  "abstract": "The progression to \"Pervasive Augmented Reality\" envisions easy access to multimodal information continuously. However, in many everyday scenarios, users are occupied physically, cognitively or socially. This may increase the friction to act upon the multimodal information that users encounter in the world. To reduce such friction, future interactive interfaces should intelligently provide quick access to digital actions based on users' context. To explore the range of possible digital actions, we conducted a diary study that required participants to capture and share the media that they intended to perform actions on (e.g., images or audio), along with their desired actions and other contextual information. Using this data, we generated a holistic design space of digital follow-up actions that could be performed in response to different types of multimodal sensory inputs. We then designed OmniActions, a pipeline powered by large language models (LLMs) that processes multimodal sensory inputs and predicts follow-up actions on the target information grounded in the derived design space. Using the empirical data collected in the diary study, we performed quantitative evaluations on three variations of LLM techniques (intent classification, in-context learning and finetuning) and identified the most effective technique for our task. Additionally, as an instantiation of the pipeline, we developed an interactive prototype and reported preliminary user feedback about how people perceive and react to the action predictions and its errors.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7809616327285767
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.7224925756454468
+    },
+    {
+      "name": "Pipeline (software)",
+      "score": 0.6899377703666687
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.6580905318260193
+    },
+    {
+      "name": "Action (physics)",
+      "score": 0.570923924446106
+    },
+    {
+      "name": "Multimodal interaction",
+      "score": 0.5650575757026672
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5423044562339783
+    },
+    {
+      "name": "Multimodality",
+      "score": 0.4913307726383209
+    },
+    {
+      "name": "Interaction design",
+      "score": 0.41527003049850464
+    },
+    {
+      "name": "Multimedia",
+      "score": 0.33252036571502686
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.17944249510765076
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09931626915931702
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    }
+  ]
 }

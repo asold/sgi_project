@@ -1,75 +1,130 @@
 {
-    "title": "Multi-modal transformer for fake news detection",
-    "url": "https://openalex.org/W4383426019",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2154714753",
-            "name": "Pingping Yang",
-            "affiliations": [
-                "Heilongjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2205549991",
-            "name": "Jiachen Ma",
-            "affiliations": [
-                "Heilongjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098300734",
-            "name": "Yong Liu",
-            "affiliations": [
-                "Heilongjiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2099346936",
-            "name": "Meng Liu",
-            "affiliations": [
-                "National University of Defense Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2901340969",
-        "https://openalex.org/W3011345566",
-        "https://openalex.org/W2766462585",
-        "https://openalex.org/W2912305564",
-        "https://openalex.org/W2994071599",
-        "https://openalex.org/W2809476703",
-        "https://openalex.org/W2982137384",
-        "https://openalex.org/W3013743800",
-        "https://openalex.org/W3037666784",
-        "https://openalex.org/W3108090976",
-        "https://openalex.org/W3206626709",
-        "https://openalex.org/W2108598243",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3177047401",
-        "https://openalex.org/W4220720806",
-        "https://openalex.org/W2798966390",
-        "https://openalex.org/W2912078280",
-        "https://openalex.org/W2989424501",
-        "https://openalex.org/W3012655778",
-        "https://openalex.org/W3194651497",
-        "https://openalex.org/W4321162597",
-        "https://openalex.org/W4286978428",
-        "https://openalex.org/W2742330194",
-        "https://openalex.org/W2531862055",
-        "https://openalex.org/W3003961771",
-        "https://openalex.org/W3157731560",
-        "https://openalex.org/W6600129504",
-        "https://openalex.org/W3176713826",
-        "https://openalex.org/W3197618246",
-        "https://openalex.org/W4320913149",
-        "https://openalex.org/W4224324956",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2773666902",
-        "https://openalex.org/W2147800946",
-        "https://openalex.org/W2517194566",
-        "https://openalex.org/W3101739755"
-    ],
-    "abstract": "&lt;abstract&gt;&lt;p&gt;Fake news has already become a severe problem on social media, with substantially more detrimental impacts on society than previously thought. Research on multi-modal fake news detection has substantial practical significance since online fake news that includes multimedia elements are more likely to mislead users and propagate widely than text-only fake news. However, the existing multi-modal fake news detection methods have the following problems: 1) Existing methods usually use traditional CNN models and their variants to extract image features, which cannot fully extract high-quality visual features. 2) Existing approaches usually adopt a simple concatenate approach to fuse inter-modal features, leading to unsatisfactory detection results. 3) Most fake news has large disparity in feature similarity between images and texts, yet existing models do not fully utilize this aspect. Thus, we propose a novel model (TGA) based on transformers and multi-modal fusion to address the above problems. Specifically, we extract text and image features by different transformers and fuse features by attention mechanisms. In addition, we utilize the degree of feature similarity between texts and images in the classifier to improve the performance of TGA. Experimental results on the public datasets show the effectiveness of TGA&lt;sup&gt;*&lt;/sup&gt;.&lt;/p&gt; &lt;p&gt;&lt;sup&gt;*&lt;/sup&gt; Our code is available at &lt;ext-link ext-link-type=\"uri\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"https://github.com/PPEXCEPED/TGA\"&gt;https://github.com/PPEXCEPED/TGA&lt;/ext-link&gt;.&lt;/p&gt; &lt;/abstract&gt;",
-    "full_text": null
+  "title": "Multi-modal transformer for fake news detection",
+  "url": "https://openalex.org/W4383426019",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2154714753",
+      "name": "Pingping Yang",
+      "affiliations": [
+        "Heilongjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2205549991",
+      "name": "Jiachen Ma",
+      "affiliations": [
+        "Heilongjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098300734",
+      "name": "Yong Liu",
+      "affiliations": [
+        "Heilongjiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2099346936",
+      "name": "Meng Liu",
+      "affiliations": [
+        "National University of Defense Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2901340969",
+    "https://openalex.org/W3011345566",
+    "https://openalex.org/W2766462585",
+    "https://openalex.org/W2912305564",
+    "https://openalex.org/W2994071599",
+    "https://openalex.org/W2809476703",
+    "https://openalex.org/W2982137384",
+    "https://openalex.org/W3013743800",
+    "https://openalex.org/W3037666784",
+    "https://openalex.org/W3108090976",
+    "https://openalex.org/W3206626709",
+    "https://openalex.org/W2108598243",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3177047401",
+    "https://openalex.org/W4220720806",
+    "https://openalex.org/W2798966390",
+    "https://openalex.org/W2912078280",
+    "https://openalex.org/W2989424501",
+    "https://openalex.org/W3012655778",
+    "https://openalex.org/W3194651497",
+    "https://openalex.org/W4321162597",
+    "https://openalex.org/W4286978428",
+    "https://openalex.org/W2742330194",
+    "https://openalex.org/W2531862055",
+    "https://openalex.org/W3003961771",
+    "https://openalex.org/W3157731560",
+    "https://openalex.org/W6600129504",
+    "https://openalex.org/W3176713826",
+    "https://openalex.org/W3197618246",
+    "https://openalex.org/W4320913149",
+    "https://openalex.org/W4224324956",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2773666902",
+    "https://openalex.org/W2147800946",
+    "https://openalex.org/W2517194566",
+    "https://openalex.org/W3101739755"
+  ],
+  "abstract": "&lt;abstract&gt;&lt;p&gt;Fake news has already become a severe problem on social media, with substantially more detrimental impacts on society than previously thought. Research on multi-modal fake news detection has substantial practical significance since online fake news that includes multimedia elements are more likely to mislead users and propagate widely than text-only fake news. However, the existing multi-modal fake news detection methods have the following problems: 1) Existing methods usually use traditional CNN models and their variants to extract image features, which cannot fully extract high-quality visual features. 2) Existing approaches usually adopt a simple concatenate approach to fuse inter-modal features, leading to unsatisfactory detection results. 3) Most fake news has large disparity in feature similarity between images and texts, yet existing models do not fully utilize this aspect. Thus, we propose a novel model (TGA) based on transformers and multi-modal fusion to address the above problems. Specifically, we extract text and image features by different transformers and fuse features by attention mechanisms. In addition, we utilize the degree of feature similarity between texts and images in the classifier to improve the performance of TGA. Experimental results on the public datasets show the effectiveness of TGA&lt;sup&gt;*&lt;/sup&gt;.&lt;/p&gt; &lt;p&gt;&lt;sup&gt;*&lt;/sup&gt; Our code is available at &lt;ext-link ext-link-type=\"uri\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"https://github.com/PPEXCEPED/TGA\"&gt;https://github.com/PPEXCEPED/TGA&lt;/ext-link&gt;.&lt;/p&gt; &lt;/abstract&gt;",
+  "full_text": null,
+  "topic": "Modal",
+  "concepts": [
+    {
+      "name": "Modal",
+      "score": 0.7568529844284058
+    },
+    {
+      "name": "Computer science",
+      "score": 0.623680830001831
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5863357186317444
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.5815904140472412
+    },
+    {
+      "name": "Fuse (electrical)",
+      "score": 0.513335645198822
+    },
+    {
+      "name": "Source code",
+      "score": 0.4854174554347992
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4594060480594635
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1340082287788391
+    },
+    {
+      "name": "Programming language",
+      "score": 0.09114819765090942
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

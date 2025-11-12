@@ -1,83 +1,138 @@
 {
-    "title": "AutoKG: Efficient Automated Knowledge Graph Generation for Language Models",
-    "url": "https://openalex.org/W4391093148",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2099840342",
-            "name": "Bohan Chen",
-            "affiliations": [
-                "University of California, Los Angeles"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A692166387",
-            "name": "Andrea L. Bertozzi",
-            "affiliations": [
-                "University of California, Los Angeles"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6766673545",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6810081322",
-        "https://openalex.org/W6838552513",
-        "https://openalex.org/W3198377975",
-        "https://openalex.org/W6767057552",
-        "https://openalex.org/W4309674289",
-        "https://openalex.org/W2970476646",
-        "https://openalex.org/W4385573164",
-        "https://openalex.org/W6849898756",
-        "https://openalex.org/W6798344543",
-        "https://openalex.org/W6777615688",
-        "https://openalex.org/W3157758108",
-        "https://openalex.org/W4390692489",
-        "https://openalex.org/W6848738564",
-        "https://openalex.org/W4385571271",
-        "https://openalex.org/W2949694638",
-        "https://openalex.org/W3003265726",
-        "https://openalex.org/W3157651462",
-        "https://openalex.org/W277886906",
-        "https://openalex.org/W3156082048",
-        "https://openalex.org/W4386443326",
-        "https://openalex.org/W2020278455",
-        "https://openalex.org/W2068882115",
-        "https://openalex.org/W1978394996",
-        "https://openalex.org/W2107598941",
-        "https://openalex.org/W4366327286",
-        "https://openalex.org/W3035251962",
-        "https://openalex.org/W6856206093",
-        "https://openalex.org/W6857519185",
-        "https://openalex.org/W6845952779",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W6849479259",
-        "https://openalex.org/W4382020836",
-        "https://openalex.org/W6678914141",
-        "https://openalex.org/W2150593711",
-        "https://openalex.org/W2132914434",
-        "https://openalex.org/W2427881153",
-        "https://openalex.org/W6680434193",
-        "https://openalex.org/W6846201122",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W2299467264",
-        "https://openalex.org/W2968297680",
-        "https://openalex.org/W4281483318",
-        "https://openalex.org/W3212422886",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4392669753",
-        "https://openalex.org/W4321177655",
-        "https://openalex.org/W4313483736",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W4224308101",
-        "https://openalex.org/W4393147025",
-        "https://openalex.org/W4307207418",
-        "https://openalex.org/W4393152682",
-        "https://openalex.org/W4307003748"
-    ],
-    "abstract": "Traditional methods of linking large language models (LLMs) to knowledge bases via the semantic similarity search often fall short of capturing complex relational dynamics. To address these limitations, we introduce AutoKG, a lightweight and efficient approach for automated knowledge graph (KG) construction. For a given knowledge base consisting of text blocks, AutoKG first extracts keywords using a LLM and then evaluates the relationship weight between each pair of keywords using graph Laplace learning. We employ a hybrid search scheme combining vector similarity and graph-based associations to enrich LLM responses. Preliminary experiments demonstrate that AutoKG offers a more comprehensive and interconnected knowledge retrieval mechanism compared to the semantic similarity search, thereby enhancing the capabilities of LLMs in generating more insightful and relevant outputs.",
-    "full_text": null
+  "title": "AutoKG: Efficient Automated Knowledge Graph Generation for Language Models",
+  "url": "https://openalex.org/W4391093148",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2099840342",
+      "name": "Bohan Chen",
+      "affiliations": [
+        "University of California, Los Angeles"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A692166387",
+      "name": "Andrea L. Bertozzi",
+      "affiliations": [
+        "University of California, Los Angeles"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6766673545",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6810081322",
+    "https://openalex.org/W6838552513",
+    "https://openalex.org/W3198377975",
+    "https://openalex.org/W6767057552",
+    "https://openalex.org/W4309674289",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W4385573164",
+    "https://openalex.org/W6849898756",
+    "https://openalex.org/W6798344543",
+    "https://openalex.org/W6777615688",
+    "https://openalex.org/W3157758108",
+    "https://openalex.org/W4390692489",
+    "https://openalex.org/W6848738564",
+    "https://openalex.org/W4385571271",
+    "https://openalex.org/W2949694638",
+    "https://openalex.org/W3003265726",
+    "https://openalex.org/W3157651462",
+    "https://openalex.org/W277886906",
+    "https://openalex.org/W3156082048",
+    "https://openalex.org/W4386443326",
+    "https://openalex.org/W2020278455",
+    "https://openalex.org/W2068882115",
+    "https://openalex.org/W1978394996",
+    "https://openalex.org/W2107598941",
+    "https://openalex.org/W4366327286",
+    "https://openalex.org/W3035251962",
+    "https://openalex.org/W6856206093",
+    "https://openalex.org/W6857519185",
+    "https://openalex.org/W6845952779",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W6849479259",
+    "https://openalex.org/W4382020836",
+    "https://openalex.org/W6678914141",
+    "https://openalex.org/W2150593711",
+    "https://openalex.org/W2132914434",
+    "https://openalex.org/W2427881153",
+    "https://openalex.org/W6680434193",
+    "https://openalex.org/W6846201122",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W2299467264",
+    "https://openalex.org/W2968297680",
+    "https://openalex.org/W4281483318",
+    "https://openalex.org/W3212422886",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4392669753",
+    "https://openalex.org/W4321177655",
+    "https://openalex.org/W4313483736",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W4224308101",
+    "https://openalex.org/W4393147025",
+    "https://openalex.org/W4307207418",
+    "https://openalex.org/W4393152682",
+    "https://openalex.org/W4307003748"
+  ],
+  "abstract": "Traditional methods of linking large language models (LLMs) to knowledge bases via the semantic similarity search often fall short of capturing complex relational dynamics. To address these limitations, we introduce AutoKG, a lightweight and efficient approach for automated knowledge graph (KG) construction. For a given knowledge base consisting of text blocks, AutoKG first extracts keywords using a LLM and then evaluates the relationship weight between each pair of keywords using graph Laplace learning. We employ a hybrid search scheme combining vector similarity and graph-based associations to enrich LLM responses. Preliminary experiments demonstrate that AutoKG offers a more comprehensive and interconnected knowledge retrieval mechanism compared to the semantic similarity search, thereby enhancing the capabilities of LLMs in generating more insightful and relevant outputs.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7633463144302368
+    },
+    {
+      "name": "Knowledge base",
+      "score": 0.5654285550117493
+    },
+    {
+      "name": "Graph",
+      "score": 0.5458533763885498
+    },
+    {
+      "name": "Similarity (geometry)",
+      "score": 0.5175597071647644
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.45142096281051636
+    },
+    {
+      "name": "Scheme (mathematics)",
+      "score": 0.44784724712371826
+    },
+    {
+      "name": "Semantic similarity",
+      "score": 0.43771716952323914
+    },
+    {
+      "name": "Knowledge graph",
+      "score": 0.43004685640335083
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3401980400085449
+    },
+    {
+      "name": "Theoretical computer science",
+      "score": 0.3372338116168976
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.07723280787467957
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

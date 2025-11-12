@@ -1,72 +1,107 @@
 {
-    "title": "RxBERT: Enhancing drug labeling text mining and analysis with AI language modeling",
-    "url": "https://openalex.org/W4390546587",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5101869895",
-            "name": "Leihong Wu",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5044068491",
-            "name": "Magnus Gray",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5076602978",
-            "name": "Oanh Dang",
-            "affiliations": [
-                "Center for Drug Evaluation and Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5024782080",
-            "name": "Joshua Xu",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5103228349",
-            "name": "Hong Fang",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5068886380",
-            "name": "Weida Tong",
-            "affiliations": [
-                "National Center for Toxicological Research"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3108846574",
-        "https://openalex.org/W2422461554",
-        "https://openalex.org/W2087561463",
-        "https://openalex.org/W2921465693",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W2999089077",
-        "https://openalex.org/W3202031169",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W6636364444",
-        "https://openalex.org/W4380729715",
-        "https://openalex.org/W3090154146",
-        "https://openalex.org/W4385209632",
-        "https://openalex.org/W4200098147",
-        "https://openalex.org/W4308922056",
-        "https://openalex.org/W4365458920",
-        "https://openalex.org/W3184324824",
-        "https://openalex.org/W4366989525",
-        "https://openalex.org/W4367312358",
-        "https://openalex.org/W4324148013"
-    ],
-    "abstract": "The US drug labeling document contains essential information on drug efficacy and safety, making it a crucial regulatory resource for Food and Drug Administration (FDA) drug reviewers. Due to its extensive volume and the presence of free-text, conventional text mining analysis have encountered challenges in processing these data. Recent advances in artificial intelligence (AI) for natural language processing (NLP) have provided an unprecedented opportunity to identify key information from drug labeling, thereby enhancing safety reviews and support for regulatory decisions. We developed RxBERT, a Bidirectional Encoder Representations from Transformers (BERT) model pretrained on FDA human prescription drug labeling documents for an enhanced application of drug labeling documents in both research and drug review. RxBERT was derived from BioBERT with further training on human prescription drug labeling documents. RxBERT was demonstrated in several tasks using regulatory datasets, including those involved in the National Institutes of Technology Text Analysis Challenge Dataset (NIST TAC dataset), the FDA Adverse Drug Event Evaluation Dataset (ADE Eval dataset), and the classification of texts from submission packages into labeling sections (US Drug Labeling dataset). For all these tasks, RxBERT reached 86.5 F1-scores in both TAC and ADE Eval classification, respectively, and prediction accuracy of 87% for the US Drug Labeling dataset. Overall, RxBERT was shown to be as competitive or have better performance compared to other NLP approaches such as BERT, BioBERT, etc. In summary, we developed RxBERT, a transformer-based model specific for drug labeling that outperformed the original BERT model. RxBERT has the potential to be used to assist research scientists and FDA reviewers to better process and utilize drug labeling information toward the advancement of drug effectiveness and safety for public health. This proof-of-concept study also demonstrated a potential pathway to customized large language models (LLMs) tailored to the sensitive regulatory documents for internal application.",
-    "full_text": null
+  "title": "RxBERT: Enhancing drug labeling text mining and analysis with AI language modeling",
+  "url": "https://openalex.org/W4390546587",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5101869895",
+      "name": "Leihong Wu",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5044068491",
+      "name": "Magnus Gray",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5076602978",
+      "name": "Oanh Dang",
+      "affiliations": [
+        "Center for Drug Evaluation and Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5024782080",
+      "name": "Joshua Xu",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5103228349",
+      "name": "Hong Fang",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5068886380",
+      "name": "Weida Tong",
+      "affiliations": [
+        "National Center for Toxicological Research"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3108846574",
+    "https://openalex.org/W2422461554",
+    "https://openalex.org/W2087561463",
+    "https://openalex.org/W2921465693",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W2999089077",
+    "https://openalex.org/W3202031169",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W6636364444",
+    "https://openalex.org/W4380729715",
+    "https://openalex.org/W3090154146",
+    "https://openalex.org/W4385209632",
+    "https://openalex.org/W4200098147",
+    "https://openalex.org/W4308922056",
+    "https://openalex.org/W4365458920",
+    "https://openalex.org/W3184324824",
+    "https://openalex.org/W4366989525",
+    "https://openalex.org/W4367312358",
+    "https://openalex.org/W4324148013"
+  ],
+  "abstract": "The US drug labeling document contains essential information on drug efficacy and safety, making it a crucial regulatory resource for Food and Drug Administration (FDA) drug reviewers. Due to its extensive volume and the presence of free-text, conventional text mining analysis have encountered challenges in processing these data. Recent advances in artificial intelligence (AI) for natural language processing (NLP) have provided an unprecedented opportunity to identify key information from drug labeling, thereby enhancing safety reviews and support for regulatory decisions. We developed RxBERT, a Bidirectional Encoder Representations from Transformers (BERT) model pretrained on FDA human prescription drug labeling documents for an enhanced application of drug labeling documents in both research and drug review. RxBERT was derived from BioBERT with further training on human prescription drug labeling documents. RxBERT was demonstrated in several tasks using regulatory datasets, including those involved in the National Institutes of Technology Text Analysis Challenge Dataset (NIST TAC dataset), the FDA Adverse Drug Event Evaluation Dataset (ADE Eval dataset), and the classification of texts from submission packages into labeling sections (US Drug Labeling dataset). For all these tasks, RxBERT reached 86.5 F1-scores in both TAC and ADE Eval classification, respectively, and prediction accuracy of 87% for the US Drug Labeling dataset. Overall, RxBERT was shown to be as competitive or have better performance compared to other NLP approaches such as BERT, BioBERT, etc. In summary, we developed RxBERT, a transformer-based model specific for drug labeling that outperformed the original BERT model. RxBERT has the potential to be used to assist research scientists and FDA reviewers to better process and utilize drug labeling information toward the advancement of drug effectiveness and safety for public health. This proof-of-concept study also demonstrated a potential pathway to customized large language models (LLMs) tailored to the sensitive regulatory documents for internal application.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6807337403297424
+    },
+    {
+      "name": "Drug",
+      "score": 0.5695213675498962
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.545303463935852
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5279406905174255
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.42254653573036194
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.326052188873291
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1685720682144165
+    },
+    {
+      "name": "Pharmacology",
+      "score": 0.12419277429580688
+    }
+  ]
 }

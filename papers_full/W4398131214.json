@@ -1,60 +1,103 @@
 {
-    "title": "Improving Generalization Beyond Training Data with Compositional Generalization in Large Language Models",
-    "url": "https://openalex.org/W4398131214",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5098721573",
-            "name": "Wong Ho-tin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A5098714766",
-            "name": "Gar-lai Yip",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4361866080",
-        "https://openalex.org/W4386978369",
-        "https://openalex.org/W4379769651",
-        "https://openalex.org/W4396701991",
-        "https://openalex.org/W4389520259",
-        "https://openalex.org/W4390298466",
-        "https://openalex.org/W4375869868",
-        "https://openalex.org/W4380558379",
-        "https://openalex.org/W4390583459",
-        "https://openalex.org/W4379087247",
-        "https://openalex.org/W4385337322",
-        "https://openalex.org/W4392913756",
-        "https://openalex.org/W3017374003",
-        "https://openalex.org/W4386409617",
-        "https://openalex.org/W4387596421",
-        "https://openalex.org/W4396762959",
-        "https://openalex.org/W4392936081",
-        "https://openalex.org/W4391901128",
-        "https://openalex.org/W4387723499",
-        "https://openalex.org/W4308538981",
-        "https://openalex.org/W4392914055",
-        "https://openalex.org/W4390833320",
-        "https://openalex.org/W4375957915",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W4377371819",
-        "https://openalex.org/W3214193653",
-        "https://openalex.org/W4388691793",
-        "https://openalex.org/W4388963640",
-        "https://openalex.org/W4226146865",
-        "https://openalex.org/W4390092199",
-        "https://openalex.org/W4281690148",
-        "https://openalex.org/W4226399820",
-        "https://openalex.org/W4379347837",
-        "https://openalex.org/W3048889251",
-        "https://openalex.org/W4388154035",
-        "https://openalex.org/W4319653572",
-        "https://openalex.org/W4362598512",
-        "https://openalex.org/W4391940723",
-        "https://openalex.org/W4378942305"
-    ],
-    "abstract": "Enhancing compositional generalization in language models addresses a crucial challenge in natural language processing, significantly improving their ability to understand and generate novel combinations of known concepts. The investigation utilized the Mistral 7x8B model, employing advanced data augmentation and refined training methodologies to enhance performance. By incorporating diverse and challenging compositions during training, the model demonstrated substantial gains in standard evaluation metrics, including accuracy, precision, recall, and F1-score. Specialized metrics such as compositional accuracy and contextual coherence also showed marked improvement, reflecting the model's enhanced capacity to generate correct and contextually relevant outputs when faced with novel compositions. The study further highlighted a significant reduction in hallucination rates, underscoring the model's increased logical consistency and factual accuracy. This reduction was statistically significant, indicating a robust enhancement in the model's performance. Qualitative analysis corroborated these findings, revealing more coherent narratives and accurate information retrieval in the generated responses. These improvements are particularly important for real-world applications where the reliability and contextual appropriateness of language models are essential. The comprehensive evaluation demonstrated the effectiveness of the proposed compositional generalization techniques, providing valuable insights into the underlying mechanisms that contribute to improved model performance. The findings underscore the importance of iterative experimentation and validation in refining model architectures and training techniques. By advancing the generalization capabilities of language models, this research contributes to the development of more robust, flexible, and reliable AI systems capable of handling a broader range of linguistic tasks with greater accuracy and contextual understanding.",
-    "full_text": null
+  "title": "Improving Generalization Beyond Training Data with Compositional Generalization in Large Language Models",
+  "url": "https://openalex.org/W4398131214",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5098721573",
+      "name": "Wong Ho-tin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A5098714766",
+      "name": "Gar-lai Yip",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4361866080",
+    "https://openalex.org/W4386978369",
+    "https://openalex.org/W4379769651",
+    "https://openalex.org/W4396701991",
+    "https://openalex.org/W4389520259",
+    "https://openalex.org/W4390298466",
+    "https://openalex.org/W4375869868",
+    "https://openalex.org/W4380558379",
+    "https://openalex.org/W4390583459",
+    "https://openalex.org/W4379087247",
+    "https://openalex.org/W4385337322",
+    "https://openalex.org/W4392913756",
+    "https://openalex.org/W3017374003",
+    "https://openalex.org/W4386409617",
+    "https://openalex.org/W4387596421",
+    "https://openalex.org/W4396762959",
+    "https://openalex.org/W4392936081",
+    "https://openalex.org/W4391901128",
+    "https://openalex.org/W4387723499",
+    "https://openalex.org/W4308538981",
+    "https://openalex.org/W4392914055",
+    "https://openalex.org/W4390833320",
+    "https://openalex.org/W4375957915",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W4377371819",
+    "https://openalex.org/W3214193653",
+    "https://openalex.org/W4388691793",
+    "https://openalex.org/W4388963640",
+    "https://openalex.org/W4226146865",
+    "https://openalex.org/W4390092199",
+    "https://openalex.org/W4281690148",
+    "https://openalex.org/W4226399820",
+    "https://openalex.org/W4379347837",
+    "https://openalex.org/W3048889251",
+    "https://openalex.org/W4388154035",
+    "https://openalex.org/W4319653572",
+    "https://openalex.org/W4362598512",
+    "https://openalex.org/W4391940723",
+    "https://openalex.org/W4378942305"
+  ],
+  "abstract": "Enhancing compositional generalization in language models addresses a crucial challenge in natural language processing, significantly improving their ability to understand and generate novel combinations of known concepts. The investigation utilized the Mistral 7x8B model, employing advanced data augmentation and refined training methodologies to enhance performance. By incorporating diverse and challenging compositions during training, the model demonstrated substantial gains in standard evaluation metrics, including accuracy, precision, recall, and F1-score. Specialized metrics such as compositional accuracy and contextual coherence also showed marked improvement, reflecting the model's enhanced capacity to generate correct and contextually relevant outputs when faced with novel compositions. The study further highlighted a significant reduction in hallucination rates, underscoring the model's increased logical consistency and factual accuracy. This reduction was statistically significant, indicating a robust enhancement in the model's performance. Qualitative analysis corroborated these findings, revealing more coherent narratives and accurate information retrieval in the generated responses. These improvements are particularly important for real-world applications where the reliability and contextual appropriateness of language models are essential. The comprehensive evaluation demonstrated the effectiveness of the proposed compositional generalization techniques, providing valuable insights into the underlying mechanisms that contribute to improved model performance. The findings underscore the importance of iterative experimentation and validation in refining model architectures and training techniques. By advancing the generalization capabilities of language models, this research contributes to the development of more robust, flexible, and reliable AI systems capable of handling a broader range of linguistic tasks with greater accuracy and contextual understanding.",
+  "full_text": null,
+  "topic": "Generalization",
+  "concepts": [
+    {
+      "name": "Generalization",
+      "score": 0.8887077569961548
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5213219523429871
+    },
+    {
+      "name": "Training (meteorology)",
+      "score": 0.46903571486473083
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.42279180884361267
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.42278993129730225
+    },
+    {
+      "name": "Training set",
+      "score": 0.4171919524669647
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.18141016364097595
+    },
+    {
+      "name": "Geography",
+      "score": 0.10289314389228821
+    },
+    {
+      "name": "Meteorology",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,86 +1,125 @@
 {
-    "title": "Effect of tokenization granularity for Turkish large language models",
-    "url": "https://openalex.org/W4391426158",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4365944755",
-            "name": "Yiğit Bekir Kaya",
-            "affiliations": [
-                "Istanbul Technical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4371093524",
-            "name": "A. Cüneyd Tantuğ",
-            "affiliations": [
-                "Istanbul Technical University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4365944755",
-            "name": "Yiğit Bekir Kaya",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4371093524",
-            "name": "A. Cüneyd Tantuğ",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6788818730",
-        "https://openalex.org/W3004203327",
-        "https://openalex.org/W6855179440",
-        "https://openalex.org/W2081494362",
-        "https://openalex.org/W1982611008",
-        "https://openalex.org/W6748648494",
-        "https://openalex.org/W1488969938",
-        "https://openalex.org/W2535341833",
-        "https://openalex.org/W6764501317",
-        "https://openalex.org/W6691704032",
-        "https://openalex.org/W6794698710",
-        "https://openalex.org/W2874672999",
-        "https://openalex.org/W6802417662",
-        "https://openalex.org/W6802645506",
-        "https://openalex.org/W3186181777",
-        "https://openalex.org/W6741990110",
-        "https://openalex.org/W6770212877",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W3001816066",
-        "https://openalex.org/W2402817887",
-        "https://openalex.org/W3094055843",
-        "https://openalex.org/W6770426517",
-        "https://openalex.org/W6784619622",
-        "https://openalex.org/W6803446149",
-        "https://openalex.org/W2948902769",
-        "https://openalex.org/W6600040991",
-        "https://openalex.org/W4360951492",
-        "https://openalex.org/W2147777361",
-        "https://openalex.org/W6795818498",
-        "https://openalex.org/W6752878166",
-        "https://openalex.org/W6681569484",
-        "https://openalex.org/W6772523313",
-        "https://openalex.org/W6731803677",
-        "https://openalex.org/W4231262920",
-        "https://openalex.org/W4247528323",
-        "https://openalex.org/W4243048897",
-        "https://openalex.org/W4236703367",
-        "https://openalex.org/W4246708511",
-        "https://openalex.org/W4255065551",
-        "https://openalex.org/W3140514123",
-        "https://openalex.org/W3092366774",
-        "https://openalex.org/W398859631",
-        "https://openalex.org/W4385681388",
-        "https://openalex.org/W3156502742",
-        "https://openalex.org/W3207615986",
-        "https://openalex.org/W3209051700",
-        "https://openalex.org/W2599674900",
-        "https://openalex.org/W204033330",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W4236030988",
-        "https://openalex.org/W4253748013"
-    ],
-    "abstract": "Transformer-based language models such as BERT (and its optimized versions) have outperformed previous models, achieving state-of-the-art results on many English benchmark tasks. These multi-layered self-attention-based architectures are capable of producing contextual word vector representations. However, the tokens created in the tokenization preprocessing step are not necessarily words, particularly for languages with complex morphology, such as Turkish. While previous research has often focused on tokenization algorithms and has explored optimal vocabulary sizes for machine translation in English, our study extends the scope by investigating the impact of varying vocabulary sizes and explores the feasilitiy of incorporating morphological tagging for Turkish. The granularity of the generated tokens is a feature determined by various factors related to tokenization, especially by the vocabulary size. This study presents a new collection of BERT models (ITUTurkBERT) trained using various tokenization methods on the corpus of the BERTurk and 1 BW corpora. We fine-tuned these models for named entity recognition, sentiment analysis, and question-answering downstream tasks in Turkish and achieved state-of-the-art performance on all of these tasks. Our empirical experiments show that increasing the vocabulary size improves performance on these tasks, except for sentiment analysis, which requires further investigation.",
-    "full_text": null
+  "title": "Effect of tokenization granularity for Turkish large language models",
+  "url": "https://openalex.org/W4391426158",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4365944755",
+      "name": "Yiğit Bekir Kaya",
+      "affiliations": [
+        "Istanbul Technical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4371093524",
+      "name": "A. Cüneyd Tantuğ",
+      "affiliations": [
+        "Istanbul Technical University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4365944755",
+      "name": "Yiğit Bekir Kaya",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4371093524",
+      "name": "A. Cüneyd Tantuğ",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6788818730",
+    "https://openalex.org/W3004203327",
+    "https://openalex.org/W6855179440",
+    "https://openalex.org/W2081494362",
+    "https://openalex.org/W1982611008",
+    "https://openalex.org/W6748648494",
+    "https://openalex.org/W1488969938",
+    "https://openalex.org/W2535341833",
+    "https://openalex.org/W6764501317",
+    "https://openalex.org/W6691704032",
+    "https://openalex.org/W6794698710",
+    "https://openalex.org/W2874672999",
+    "https://openalex.org/W6802417662",
+    "https://openalex.org/W6802645506",
+    "https://openalex.org/W3186181777",
+    "https://openalex.org/W6741990110",
+    "https://openalex.org/W6770212877",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W3001816066",
+    "https://openalex.org/W2402817887",
+    "https://openalex.org/W3094055843",
+    "https://openalex.org/W6770426517",
+    "https://openalex.org/W6784619622",
+    "https://openalex.org/W6803446149",
+    "https://openalex.org/W2948902769",
+    "https://openalex.org/W6600040991",
+    "https://openalex.org/W4360951492",
+    "https://openalex.org/W2147777361",
+    "https://openalex.org/W6795818498",
+    "https://openalex.org/W6752878166",
+    "https://openalex.org/W6681569484",
+    "https://openalex.org/W6772523313",
+    "https://openalex.org/W6731803677",
+    "https://openalex.org/W4231262920",
+    "https://openalex.org/W4247528323",
+    "https://openalex.org/W4243048897",
+    "https://openalex.org/W4236703367",
+    "https://openalex.org/W4246708511",
+    "https://openalex.org/W4255065551",
+    "https://openalex.org/W3140514123",
+    "https://openalex.org/W3092366774",
+    "https://openalex.org/W398859631",
+    "https://openalex.org/W4385681388",
+    "https://openalex.org/W3156502742",
+    "https://openalex.org/W3207615986",
+    "https://openalex.org/W3209051700",
+    "https://openalex.org/W2599674900",
+    "https://openalex.org/W204033330",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W4236030988",
+    "https://openalex.org/W4253748013"
+  ],
+  "abstract": "Transformer-based language models such as BERT (and its optimized versions) have outperformed previous models, achieving state-of-the-art results on many English benchmark tasks. These multi-layered self-attention-based architectures are capable of producing contextual word vector representations. However, the tokens created in the tokenization preprocessing step are not necessarily words, particularly for languages with complex morphology, such as Turkish. While previous research has often focused on tokenization algorithms and has explored optimal vocabulary sizes for machine translation in English, our study extends the scope by investigating the impact of varying vocabulary sizes and explores the feasilitiy of incorporating morphological tagging for Turkish. The granularity of the generated tokens is a feature determined by various factors related to tokenization, especially by the vocabulary size. This study presents a new collection of BERT models (ITUTurkBERT) trained using various tokenization methods on the corpus of the BERTurk and 1 BW corpora. We fine-tuned these models for named entity recognition, sentiment analysis, and question-answering downstream tasks in Turkish and achieved state-of-the-art performance on all of these tasks. Our empirical experiments show that increasing the vocabulary size improves performance on these tasks, except for sentiment analysis, which requires further investigation.",
+  "full_text": null,
+  "topic": "Turkish",
+  "concepts": [
+    {
+      "name": "Turkish",
+      "score": 0.859563946723938
+    },
+    {
+      "name": "Granularity",
+      "score": 0.854216456413269
+    },
+    {
+      "name": "Lexical analysis",
+      "score": 0.6542301177978516
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5978488922119141
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.46598783135414124
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.40172332525253296
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3434995710849762
+    },
+    {
+      "name": "Programming language",
+      "score": 0.2778191864490509
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.07305064797401428
+    }
+  ]
 }

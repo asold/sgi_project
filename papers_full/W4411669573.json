@@ -1,67 +1,134 @@
 {
-    "title": "Enhancing retrieval-augmented generation for interoperable industrial knowledge representation and inference toward cognitive digital twins",
-    "url": "https://openalex.org/W4411669573",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2109783745",
-            "name": "Dachuan Shi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2106315836",
-            "name": "Jianzhang Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2428051394",
-            "name": "Olga Meyer",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1350779151",
-            "name": "Thomas Bauernhansl",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4387800173",
-        "https://openalex.org/W4402740813",
-        "https://openalex.org/W3155638005",
-        "https://openalex.org/W4399834021",
-        "https://openalex.org/W4283311509",
-        "https://openalex.org/W4390962868",
-        "https://openalex.org/W4390810458",
-        "https://openalex.org/W4389984066",
-        "https://openalex.org/W6826116265",
-        "https://openalex.org/W4387321091",
-        "https://openalex.org/W4317039121",
-        "https://openalex.org/W6861703535",
-        "https://openalex.org/W2964192819",
-        "https://openalex.org/W4286213843",
-        "https://openalex.org/W6857120469",
-        "https://openalex.org/W6607574207",
-        "https://openalex.org/W4386453620",
-        "https://openalex.org/W3201617077",
-        "https://openalex.org/W2883908928",
-        "https://openalex.org/W6857428335",
-        "https://openalex.org/W4252076394",
-        "https://openalex.org/W4362529232",
-        "https://openalex.org/W3138502017",
-        "https://openalex.org/W4403841614",
-        "https://openalex.org/W4401009345",
-        "https://openalex.org/W4206427312",
-        "https://openalex.org/W6871778184",
-        "https://openalex.org/W4393140159",
-        "https://openalex.org/W4399116142",
-        "https://openalex.org/W4393284236",
-        "https://openalex.org/W6601691205",
-        "https://openalex.org/W4200415632",
-        "https://openalex.org/W4390563409",
-        "https://openalex.org/W4391792375",
-        "https://openalex.org/W4401880674",
-        "https://openalex.org/W4399727984"
-    ],
-    "abstract": "The escalating volume and complexity of digital data within the manufacturing sector highlight an urgent need for an efficient knowledge representation and inference solution. Traditional approaches, which often rely on ontologies, knowledge graphs, or digital twins (DTs) for knowledge representation, and rule-based algorithms for inference, are becoming insufficient. The emergence of generative AI, particularly large language models (LLM) and retrieval-augmented generation (RAG), offers a more efficient and intelligent alternative. However, the performance of an RAG system is heavily dependent on the quality of retrieval results, which can be compromised by domain-specific knowledge and retrieval distractors. To address this challenge, we propose to enhance RAG systems tailored for the manufacturing industry in two aspects. First, we utilize the Asset Administration Shell (AAS), which represents the German industrial perspective on cognitive DTs, to create a representation of assets and knowledge in standardized information models. This establishes a robust foundation for the retrieval sources. Second, we propose a contrastive selection loss (CSL) to fine-tune an open-source LLM to refine the retrieval results. Fine-tuned LLMs possess higher efficiency and accuracy on task- and domain-specific datasets, while the CSL further enhances the model's ability to distinguish true positives from similar distractors. The enhanced RAG system is demonstrated in a robotic work cell integration use case and evaluated through a novel evaluation protocol. Additionally, the retrieval effectiveness of the RAG system, specifically the LLM fine-tuned with CSL, is extensively validated through statistical experiments. The results confirm its superior performance over state-of-the-art methods, including GPT-4 with in-context learning prompts and other fine-tuned models.",
-    "full_text": null
+  "title": "Enhancing retrieval-augmented generation for interoperable industrial knowledge representation and inference toward cognitive digital twins",
+  "url": "https://openalex.org/W4411669573",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2109783745",
+      "name": "Dachuan Shi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2106315836",
+      "name": "Jianzhang Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2428051394",
+      "name": "Olga Meyer",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1350779151",
+      "name": "Thomas Bauernhansl",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4387800173",
+    "https://openalex.org/W4402740813",
+    "https://openalex.org/W3155638005",
+    "https://openalex.org/W4399834021",
+    "https://openalex.org/W4283311509",
+    "https://openalex.org/W4390962868",
+    "https://openalex.org/W4390810458",
+    "https://openalex.org/W4389984066",
+    "https://openalex.org/W6826116265",
+    "https://openalex.org/W4387321091",
+    "https://openalex.org/W4317039121",
+    "https://openalex.org/W6861703535",
+    "https://openalex.org/W2964192819",
+    "https://openalex.org/W4286213843",
+    "https://openalex.org/W6857120469",
+    "https://openalex.org/W6607574207",
+    "https://openalex.org/W4386453620",
+    "https://openalex.org/W3201617077",
+    "https://openalex.org/W2883908928",
+    "https://openalex.org/W6857428335",
+    "https://openalex.org/W4252076394",
+    "https://openalex.org/W4362529232",
+    "https://openalex.org/W3138502017",
+    "https://openalex.org/W4403841614",
+    "https://openalex.org/W4401009345",
+    "https://openalex.org/W4206427312",
+    "https://openalex.org/W6871778184",
+    "https://openalex.org/W4393140159",
+    "https://openalex.org/W4399116142",
+    "https://openalex.org/W4393284236",
+    "https://openalex.org/W6601691205",
+    "https://openalex.org/W4200415632",
+    "https://openalex.org/W4390563409",
+    "https://openalex.org/W4391792375",
+    "https://openalex.org/W4401880674",
+    "https://openalex.org/W4399727984"
+  ],
+  "abstract": "The escalating volume and complexity of digital data within the manufacturing sector highlight an urgent need for an efficient knowledge representation and inference solution. Traditional approaches, which often rely on ontologies, knowledge graphs, or digital twins (DTs) for knowledge representation, and rule-based algorithms for inference, are becoming insufficient. The emergence of generative AI, particularly large language models (LLM) and retrieval-augmented generation (RAG), offers a more efficient and intelligent alternative. However, the performance of an RAG system is heavily dependent on the quality of retrieval results, which can be compromised by domain-specific knowledge and retrieval distractors. To address this challenge, we propose to enhance RAG systems tailored for the manufacturing industry in two aspects. First, we utilize the Asset Administration Shell (AAS), which represents the German industrial perspective on cognitive DTs, to create a representation of assets and knowledge in standardized information models. This establishes a robust foundation for the retrieval sources. Second, we propose a contrastive selection loss (CSL) to fine-tune an open-source LLM to refine the retrieval results. Fine-tuned LLMs possess higher efficiency and accuracy on task- and domain-specific datasets, while the CSL further enhances the model's ability to distinguish true positives from similar distractors. The enhanced RAG system is demonstrated in a robotic work cell integration use case and evaluated through a novel evaluation protocol. Additionally, the retrieval effectiveness of the RAG system, specifically the LLM fine-tuned with CSL, is extensively validated through statistical experiments. The results confirm its superior performance over state-of-the-art methods, including GPT-4 with in-context learning prompts and other fine-tuned models.",
+  "full_text": null,
+  "topic": "Interoperability",
+  "concepts": [
+    {
+      "name": "Interoperability",
+      "score": 0.7689075469970703
+    },
+    {
+      "name": "Inference",
+      "score": 0.6878358125686646
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.5889932513237
+    },
+    {
+      "name": "Knowledge representation and reasoning",
+      "score": 0.5770196914672852
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5664471983909607
+    },
+    {
+      "name": "Cognition",
+      "score": 0.5388187766075134
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4304145574569702
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.39496392011642456
+    },
+    {
+      "name": "Human–computer interaction",
+      "score": 0.33369511365890503
+    },
+    {
+      "name": "Cognitive science",
+      "score": 0.3235704302787781
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.23139503598213196
+    },
+    {
+      "name": "Psychology",
+      "score": 0.19344109296798706
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Neuroscience",
+      "score": 0.0
+    }
+  ]
 }

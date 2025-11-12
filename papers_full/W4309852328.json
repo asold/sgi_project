@@ -1,131 +1,202 @@
 {
-    "title": "Driving Fatigue Detection with Three Non-Hair-Bearing EEG Channels and Modified Transformer Model",
-    "url": "https://openalex.org/W4309852328",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100440116",
-            "name": "Jie Wang",
-            "affiliations": [
-                "Zhejiang Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102944211",
-            "name": "Yanting Xu",
-            "affiliations": [
-                "Zhejiang Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5077236029",
-            "name": "Jinghong Tian",
-            "affiliations": [
-                "Zhejiang Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5015063174",
-            "name": "Huayun Li",
-            "affiliations": [
-                "Zhejiang Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5021453047",
-            "name": "Weidong Jiao",
-            "affiliations": [
-                "Zhejiang Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5068936523",
-            "name": "Yu Sun",
-            "affiliations": [
-                "Zhejiang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5066392622",
-            "name": "Gang Li",
-            "affiliations": [
-                "Zhejiang Normal University",
-                "Zhejiang University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2147558499",
-        "https://openalex.org/W2023133322",
-        "https://openalex.org/W2933338709",
-        "https://openalex.org/W2589408790",
-        "https://openalex.org/W2537107822",
-        "https://openalex.org/W3048670727",
-        "https://openalex.org/W3017161802",
-        "https://openalex.org/W2000040796",
-        "https://openalex.org/W4293778440",
-        "https://openalex.org/W2051610037",
-        "https://openalex.org/W3114868246",
-        "https://openalex.org/W2583751936",
-        "https://openalex.org/W2890770085",
-        "https://openalex.org/W2782522902",
-        "https://openalex.org/W3031861466",
-        "https://openalex.org/W3130728323",
-        "https://openalex.org/W2890431171",
-        "https://openalex.org/W2918092040",
-        "https://openalex.org/W2892217709",
-        "https://openalex.org/W2990018093",
-        "https://openalex.org/W2908578648",
-        "https://openalex.org/W3093598039",
-        "https://openalex.org/W6787735218",
-        "https://openalex.org/W4312665711",
-        "https://openalex.org/W2883298646",
-        "https://openalex.org/W1990338937",
-        "https://openalex.org/W3177939085",
-        "https://openalex.org/W2964346239",
-        "https://openalex.org/W2092307234",
-        "https://openalex.org/W1965018875",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3009259306",
-        "https://openalex.org/W3043900038",
-        "https://openalex.org/W3158818505",
-        "https://openalex.org/W3142319417",
-        "https://openalex.org/W2128495200",
-        "https://openalex.org/W2766391539",
-        "https://openalex.org/W4295122555",
-        "https://openalex.org/W2919290281",
-        "https://openalex.org/W2912351236",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W2567070169",
-        "https://openalex.org/W2192203593",
-        "https://openalex.org/W2189149359",
-        "https://openalex.org/W4239510810",
-        "https://openalex.org/W2122111042",
-        "https://openalex.org/W2911964244",
-        "https://openalex.org/W3107732005",
-        "https://openalex.org/W3213351100",
-        "https://openalex.org/W4220996532",
-        "https://openalex.org/W3216520818",
-        "https://openalex.org/W2183341477",
-        "https://openalex.org/W2162571494",
-        "https://openalex.org/W1970346097",
-        "https://openalex.org/W2010451491",
-        "https://openalex.org/W2201979468",
-        "https://openalex.org/W4205830265",
-        "https://openalex.org/W6647265823",
-        "https://openalex.org/W3174086521",
-        "https://openalex.org/W3216660278",
-        "https://openalex.org/W6755308174",
-        "https://openalex.org/W7006806681",
-        "https://openalex.org/W2095155039",
-        "https://openalex.org/W2794614045",
-        "https://openalex.org/W2523947784",
-        "https://openalex.org/W3202428668",
-        "https://openalex.org/W1988847151",
-        "https://openalex.org/W4213237138",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W3114735065"
-    ],
-    "abstract": "Driving fatigue is the main cause of traffic accidents, which seriously affects people’s life and property safety. Many researchers have applied electroencephalogram (EEG) signals for driving fatigue detection to reduce negative effects. The main challenges are the practicality and accuracy of the EEG-based driving fatigue detection method when it is applied on the real road. In our previous study, we attempted to improve the practicality of fatigue detection based on the proposed non-hair-bearing (NHB) montage with fewer EEG channels, but the recognition accuracy was only 76.47% with the random forest (RF) model. In order to improve the accuracy with NHB montage, this study proposed an improved transformer architecture for one-dimensional feature vector classification based on introducing the Gated Linear Unit (GLU) in the Attention sub-block and Feed-Forward Networks (FFN) sub-block of a transformer, called GLU-Oneformer. Moreover, we constructed an NHB-EEG-based feature set, including the same EEG features (power ratio, approximate entropy, and mutual information (MI)) in our previous study, and the lateralization features of the power ratio and approximate entropy based on the strategy of brain lateralization. The results indicated that our GLU-Oneformer method significantly improved the recognition performance and achieved an accuracy of 86.97%. Our framework demonstrated that the combination of the NHB montage and the proposed GLU-Oneformer model could well support driving fatigue detection.",
-    "full_text": null
+  "title": "Driving Fatigue Detection with Three Non-Hair-Bearing EEG Channels and Modified Transformer Model",
+  "url": "https://openalex.org/W4309852328",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100440116",
+      "name": "Jie Wang",
+      "affiliations": [
+        "Zhejiang Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102944211",
+      "name": "Yanting Xu",
+      "affiliations": [
+        "Zhejiang Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5077236029",
+      "name": "Jinghong Tian",
+      "affiliations": [
+        "Zhejiang Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5015063174",
+      "name": "Huayun Li",
+      "affiliations": [
+        "Zhejiang Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5021453047",
+      "name": "Weidong Jiao",
+      "affiliations": [
+        "Zhejiang Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5068936523",
+      "name": "Yu Sun",
+      "affiliations": [
+        "Zhejiang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5066392622",
+      "name": "Gang Li",
+      "affiliations": [
+        "Zhejiang Normal University",
+        "Zhejiang University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2147558499",
+    "https://openalex.org/W2023133322",
+    "https://openalex.org/W2933338709",
+    "https://openalex.org/W2589408790",
+    "https://openalex.org/W2537107822",
+    "https://openalex.org/W3048670727",
+    "https://openalex.org/W3017161802",
+    "https://openalex.org/W2000040796",
+    "https://openalex.org/W4293778440",
+    "https://openalex.org/W2051610037",
+    "https://openalex.org/W3114868246",
+    "https://openalex.org/W2583751936",
+    "https://openalex.org/W2890770085",
+    "https://openalex.org/W2782522902",
+    "https://openalex.org/W3031861466",
+    "https://openalex.org/W3130728323",
+    "https://openalex.org/W2890431171",
+    "https://openalex.org/W2918092040",
+    "https://openalex.org/W2892217709",
+    "https://openalex.org/W2990018093",
+    "https://openalex.org/W2908578648",
+    "https://openalex.org/W3093598039",
+    "https://openalex.org/W6787735218",
+    "https://openalex.org/W4312665711",
+    "https://openalex.org/W2883298646",
+    "https://openalex.org/W1990338937",
+    "https://openalex.org/W3177939085",
+    "https://openalex.org/W2964346239",
+    "https://openalex.org/W2092307234",
+    "https://openalex.org/W1965018875",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3009259306",
+    "https://openalex.org/W3043900038",
+    "https://openalex.org/W3158818505",
+    "https://openalex.org/W3142319417",
+    "https://openalex.org/W2128495200",
+    "https://openalex.org/W2766391539",
+    "https://openalex.org/W4295122555",
+    "https://openalex.org/W2919290281",
+    "https://openalex.org/W2912351236",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W2567070169",
+    "https://openalex.org/W2192203593",
+    "https://openalex.org/W2189149359",
+    "https://openalex.org/W4239510810",
+    "https://openalex.org/W2122111042",
+    "https://openalex.org/W2911964244",
+    "https://openalex.org/W3107732005",
+    "https://openalex.org/W3213351100",
+    "https://openalex.org/W4220996532",
+    "https://openalex.org/W3216520818",
+    "https://openalex.org/W2183341477",
+    "https://openalex.org/W2162571494",
+    "https://openalex.org/W1970346097",
+    "https://openalex.org/W2010451491",
+    "https://openalex.org/W2201979468",
+    "https://openalex.org/W4205830265",
+    "https://openalex.org/W6647265823",
+    "https://openalex.org/W3174086521",
+    "https://openalex.org/W3216660278",
+    "https://openalex.org/W6755308174",
+    "https://openalex.org/W7006806681",
+    "https://openalex.org/W2095155039",
+    "https://openalex.org/W2794614045",
+    "https://openalex.org/W2523947784",
+    "https://openalex.org/W3202428668",
+    "https://openalex.org/W1988847151",
+    "https://openalex.org/W4213237138",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W3114735065"
+  ],
+  "abstract": "Driving fatigue is the main cause of traffic accidents, which seriously affects people’s life and property safety. Many researchers have applied electroencephalogram (EEG) signals for driving fatigue detection to reduce negative effects. The main challenges are the practicality and accuracy of the EEG-based driving fatigue detection method when it is applied on the real road. In our previous study, we attempted to improve the practicality of fatigue detection based on the proposed non-hair-bearing (NHB) montage with fewer EEG channels, but the recognition accuracy was only 76.47% with the random forest (RF) model. In order to improve the accuracy with NHB montage, this study proposed an improved transformer architecture for one-dimensional feature vector classification based on introducing the Gated Linear Unit (GLU) in the Attention sub-block and Feed-Forward Networks (FFN) sub-block of a transformer, called GLU-Oneformer. Moreover, we constructed an NHB-EEG-based feature set, including the same EEG features (power ratio, approximate entropy, and mutual information (MI)) in our previous study, and the lateralization features of the power ratio and approximate entropy based on the strategy of brain lateralization. The results indicated that our GLU-Oneformer method significantly improved the recognition performance and achieved an accuracy of 86.97%. Our framework demonstrated that the combination of the NHB montage and the proposed GLU-Oneformer model could well support driving fatigue detection.",
+  "full_text": null,
+  "topic": "Electroencephalography",
+  "concepts": [
+    {
+      "name": "Electroencephalography",
+      "score": 0.7094995379447937
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6642687320709229
+    },
+    {
+      "name": "Random forest",
+      "score": 0.6564767360687256
+    },
+    {
+      "name": "Entropy (arrow of time)",
+      "score": 0.5807424187660217
+    },
+    {
+      "name": "Support vector machine",
+      "score": 0.5648548007011414
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.5254620313644409
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5146557092666626
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4829525351524353
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.4516177177429199
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.42245903611183167
+    },
+    {
+      "name": "Engineering",
+      "score": 0.21038520336151123
+    },
+    {
+      "name": "Voltage",
+      "score": 0.093102365732193
+    },
+    {
+      "name": "Psychology",
+      "score": 0.08659115433692932
+    },
+    {
+      "name": "Psychiatry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

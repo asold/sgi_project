@@ -1,63 +1,146 @@
 {
-    "title": "Unsupervised Adaptation of Recurrent Neural Network Language Models",
-    "url": "https://openalex.org/W2513257850",
-    "year": 2016,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2104811043",
-            "name": "Siva Reddy Gangireddy",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1638413727",
-            "name": "Pawel Swietojanski",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1998127437",
-            "name": "Peter Bell",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1982737555",
-            "name": "Steve Renals",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2404114959",
-        "https://openalex.org/W2271177914",
-        "https://openalex.org/W2026149468",
-        "https://openalex.org/W2138309071",
-        "https://openalex.org/W1631260214",
-        "https://openalex.org/W2998704965",
-        "https://openalex.org/W4285719527",
-        "https://openalex.org/W1880262756",
-        "https://openalex.org/W2399550240",
-        "https://openalex.org/W2114858359",
-        "https://openalex.org/W2292656914",
-        "https://openalex.org/W2131342762",
-        "https://openalex.org/W1524333225",
-        "https://openalex.org/W2150355110",
-        "https://openalex.org/W101286142",
-        "https://openalex.org/W1487724677",
-        "https://openalex.org/W1932968309",
-        "https://openalex.org/W2401969231",
-        "https://openalex.org/W2598933668",
-        "https://openalex.org/W2288371874",
-        "https://openalex.org/W1989549063",
-        "https://openalex.org/W4231510805",
-        "https://openalex.org/W1970689298",
-        "https://openalex.org/W1999965501",
-        "https://openalex.org/W2157143168",
-        "https://openalex.org/W2094147890",
-        "https://openalex.org/W2251150025",
-        "https://openalex.org/W179875071",
-        "https://openalex.org/W2171928131",
-        "https://openalex.org/W1934041838",
-        "https://openalex.org/W2239847623",
-        "https://openalex.org/W1520465330"
-    ],
-    "abstract": "&lt;p&gt;Recurrent neural network language models (RNNLMs) have been shown to consistently improve Word Error Rates (WERs) of large vocabulary speech recognition systems employing n-gram LMs. In this paper we investigate supervised and unsupervised discriminative adaptation of RNNLMs in a broadcast transcription task to target domains defined by either genre or show. We have explored two approaches based on (1) scaling forward-propagated hidden activations (Learning Hidden Unit Contributions (LHUC) technique) and (2) direct fine-tuning of the parameters of the whole RNNLM. To investigate the effectiveness of the proposed methods we carry out experiments on multi-genre broadcast (MGB) data following the MGB-2015 challenge protocol. We observe small but significant improvements in WER compared to a strong unadapted RNNLM model.&lt;/p&gt;",
-    "full_text": null
+  "title": "Unsupervised Adaptation of Recurrent Neural Network Language Models",
+  "url": "https://openalex.org/W2513257850",
+  "year": 2016,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2104811043",
+      "name": "Siva Reddy Gangireddy",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1638413727",
+      "name": "Pawel Swietojanski",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1998127437",
+      "name": "Peter Bell",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1982737555",
+      "name": "Steve Renals",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2404114959",
+    "https://openalex.org/W2271177914",
+    "https://openalex.org/W2026149468",
+    "https://openalex.org/W2138309071",
+    "https://openalex.org/W1631260214",
+    "https://openalex.org/W2998704965",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W1880262756",
+    "https://openalex.org/W2399550240",
+    "https://openalex.org/W2114858359",
+    "https://openalex.org/W2292656914",
+    "https://openalex.org/W2131342762",
+    "https://openalex.org/W1524333225",
+    "https://openalex.org/W2150355110",
+    "https://openalex.org/W101286142",
+    "https://openalex.org/W1487724677",
+    "https://openalex.org/W1932968309",
+    "https://openalex.org/W2401969231",
+    "https://openalex.org/W2598933668",
+    "https://openalex.org/W2288371874",
+    "https://openalex.org/W1989549063",
+    "https://openalex.org/W4231510805",
+    "https://openalex.org/W1970689298",
+    "https://openalex.org/W1999965501",
+    "https://openalex.org/W2157143168",
+    "https://openalex.org/W2094147890",
+    "https://openalex.org/W2251150025",
+    "https://openalex.org/W179875071",
+    "https://openalex.org/W2171928131",
+    "https://openalex.org/W1934041838",
+    "https://openalex.org/W2239847623",
+    "https://openalex.org/W1520465330"
+  ],
+  "abstract": "&lt;p&gt;Recurrent neural network language models (RNNLMs) have been shown to consistently improve Word Error Rates (WERs) of large vocabulary speech recognition systems employing n-gram LMs. In this paper we investigate supervised and unsupervised discriminative adaptation of RNNLMs in a broadcast transcription task to target domains defined by either genre or show. We have explored two approaches based on (1) scaling forward-propagated hidden activations (Learning Hidden Unit Contributions (LHUC) technique) and (2) direct fine-tuning of the parameters of the whole RNNLM. To investigate the effectiveness of the proposed methods we carry out experiments on multi-genre broadcast (MGB) data following the MGB-2015 challenge protocol. We observe small but significant improvements in WER compared to a strong unadapted RNNLM model.&lt;/p&gt;",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8282694816589355
+    },
+    {
+      "name": "Discriminative model",
+      "score": 0.7917957305908203
+    },
+    {
+      "name": "Language model",
+      "score": 0.6719706654548645
+    },
+    {
+      "name": "Vocabulary",
+      "score": 0.6690232157707214
+    },
+    {
+      "name": "Adaptation (eye)",
+      "score": 0.6455913782119751
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.6024268865585327
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5740886330604553
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.5535778999328613
+    },
+    {
+      "name": "Word error rate",
+      "score": 0.5220346450805664
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.4823712408542633
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.4533492922782898
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.44928574562072754
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.389295756816864
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3265809416770935
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Optics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

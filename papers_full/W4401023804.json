@@ -1,89 +1,164 @@
 {
-    "title": "T-T: Table Transformer for Tagging-based Aspect Sentiment Triplet Extraction",
-    "url": "https://openalex.org/W4401023804",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5100365369",
-            "name": "Jiaqi Wang",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5101912906",
-            "name": "Junyu Luo",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5024079930",
-            "name": "Muchao Ye",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100401925",
-            "name": "Xiaochen Wang",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100310779",
-            "name": "Yuan Zhong",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102622763",
-            "name": "Aofei Chang",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5053986669",
-            "name": "Guanjie Huang",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100710229",
-            "name": "Ziyi Yin",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5100645991",
-            "name": "Cao Xiao",
-            "affiliations": [
-                "General Electric (Spain)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5084279065",
-            "name": "Jimeng Sun",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5001030192",
-            "name": "Fenglong Ma",
-            "affiliations": [
-                "Pennsylvania State University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2964006392"
-    ],
-    "abstract": "Aspect sentiment triplet extraction (ASTE) aims to extract triplets composed of aspect terms, opinion terms, and sentiment polarities from given sentences. The table tagging method is a popular approach to addressing this task, which encodes a sentence into a 2-dimensional table, allowing for the tagging of relations between any two words. Previous efforts have focused on designing various downstream relation learning modules to better capture interactions between tokens in the table, revealing that a stronger capability in relation capture can lead to greater improvements in the model. Motivated by this, we attempt to directly utilize transformer layers as downstream relation learning modules. Due to the powerful semantic modeling capability of transformers, it is foreseeable that this will lead to excellent improvement. However, owing to the quadratic relation between the length of the table and the length of the input sentence sequence, using transformers directly faces two challenges: overly long table sequences and unfair local attention interaction. To address these challenges, we propose a novel Table-Transformer (T-T) for the tagging-based ASTE method. Specifically, we introduce a stripe attention mechanism with a loop-shift strategy to tackle these challenges. The former modifies the global attention mechanism to only attend to a 2-dimensional local attention window, while the latter facilitates interaction between different attention windows. Extensive and comprehensive experiments demonstrate that the T-T, as a downstream relation learning module, achieves state-of-the-art performance with lower computational costs.",
-    "full_text": null
+  "title": "T-T: Table Transformer for Tagging-based Aspect Sentiment Triplet Extraction",
+  "url": "https://openalex.org/W4401023804",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5100365369",
+      "name": "Jiaqi Wang",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5101912906",
+      "name": "Junyu Luo",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5024079930",
+      "name": "Muchao Ye",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100401925",
+      "name": "Xiaochen Wang",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100310779",
+      "name": "Yuan Zhong",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102622763",
+      "name": "Aofei Chang",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5053986669",
+      "name": "Guanjie Huang",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100710229",
+      "name": "Ziyi Yin",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5100645991",
+      "name": "Cao Xiao",
+      "affiliations": [
+        "General Electric (Spain)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5084279065",
+      "name": "Jimeng Sun",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5001030192",
+      "name": "Fenglong Ma",
+      "affiliations": [
+        "Pennsylvania State University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2964006392"
+  ],
+  "abstract": "Aspect sentiment triplet extraction (ASTE) aims to extract triplets composed of aspect terms, opinion terms, and sentiment polarities from given sentences. The table tagging method is a popular approach to addressing this task, which encodes a sentence into a 2-dimensional table, allowing for the tagging of relations between any two words. Previous efforts have focused on designing various downstream relation learning modules to better capture interactions between tokens in the table, revealing that a stronger capability in relation capture can lead to greater improvements in the model. Motivated by this, we attempt to directly utilize transformer layers as downstream relation learning modules. Due to the powerful semantic modeling capability of transformers, it is foreseeable that this will lead to excellent improvement. However, owing to the quadratic relation between the length of the table and the length of the input sentence sequence, using transformers directly faces two challenges: overly long table sequences and unfair local attention interaction. To address these challenges, we propose a novel Table-Transformer (T-T) for the tagging-based ASTE method. Specifically, we introduce a stripe attention mechanism with a loop-shift strategy to tackle these challenges. The former modifies the global attention mechanism to only attend to a 2-dimensional local attention window, while the latter facilitates interaction between different attention windows. Extensive and comprehensive experiments demonstrate that the T-T, as a downstream relation learning module, achieves state-of-the-art performance with lower computational costs.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7267134189605713
+    },
+    {
+      "name": "Data science",
+      "score": 0.6172147989273071
+    },
+    {
+      "name": "Health records",
+      "score": 0.6108110547065735
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.593421995639801
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5898741483688354
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5629791021347046
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5513262748718262
+    },
+    {
+      "name": "Categorization",
+      "score": 0.5471890568733215
+    },
+    {
+      "name": "Predictive analytics",
+      "score": 0.5449796915054321
+    },
+    {
+      "name": "Health care",
+      "score": 0.49967408180236816
+    },
+    {
+      "name": "Data modeling",
+      "score": 0.46882814168930054
+    },
+    {
+      "name": "Predictive modelling",
+      "score": 0.4640558958053589
+    },
+    {
+      "name": "Electronic health record",
+      "score": 0.4108380079269409
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.10620400309562683
+    },
+    {
+      "name": "Engineering",
+      "score": 0.10522881150245667
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.09277433156967163
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Economic growth",
+      "score": 0.0
+    }
+  ]
 }

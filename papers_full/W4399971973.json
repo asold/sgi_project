@@ -1,161 +1,232 @@
 {
-    "title": "Differentially Private Fine-tuning of Language Models",
-    "url": "https://openalex.org/W4399971973",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2109105283",
-            "name": "Da Yu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2208055852",
-            "name": "Saurabh Naik",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1962177433",
-            "name": "Arturs Backurs",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105579994",
-            "name": "Sivakanth Gopi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1990119672",
-            "name": "Huseyin A Inan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2171967840",
-            "name": "Gautam Kamath",
-            "affiliations": [
-                "University of Waterloo"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2138149793",
-            "name": "Janardhan Kulkarni",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2131898379",
-            "name": "Yin Tat Lee",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2428655407",
-            "name": "André Manoel",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2318088954",
-            "name": "Lukas Wutschitz",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2261881876",
-            "name": "Sergey Yekhanin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2157666745",
-            "name": "Zhang Huishuai",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2171967840",
-            "name": "Gautam Kamath",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963807318",
-        "https://openalex.org/W2891003389",
-        "https://openalex.org/W1557833142",
-        "https://openalex.org/W4297799122",
-        "https://openalex.org/W4281722692",
-        "https://openalex.org/W4283816219",
-        "https://openalex.org/W4391382837",
-        "https://openalex.org/W2963477238",
-        "https://openalex.org/W4287553002",
-        "https://openalex.org/W3041206960",
-        "https://openalex.org/W4287122891",
-        "https://openalex.org/W4302305417",
-        "https://openalex.org/W2899663614",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W4229442835",
-        "https://openalex.org/W3177323791",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W4206178588",
-        "https://openalex.org/W2021426916",
-        "https://openalex.org/W4387994968",
-        "https://openalex.org/W4225150360",
-        "https://openalex.org/W3196927184",
-        "https://openalex.org/W4302010013",
-        "https://openalex.org/W3174770825",
-        "https://openalex.org/W2763421725",
-        "https://openalex.org/W2115358662",
-        "https://openalex.org/W4281984841",
-        "https://openalex.org/W1985511977",
-        "https://openalex.org/W2768663569",
-        "https://openalex.org/W3188505388",
-        "https://openalex.org/W2946930197",
-        "https://openalex.org/W2964303773",
-        "https://openalex.org/W3175645569",
-        "https://openalex.org/W4322717491",
-        "https://openalex.org/W2963846996",
-        "https://openalex.org/W4226277587",
-        "https://openalex.org/W3125098139",
-        "https://openalex.org/W2473418344",
-        "https://openalex.org/W2923014074",
-        "https://openalex.org/W1873763122",
-        "https://openalex.org/W3035261884",
-        "https://openalex.org/W4287663285",
-        "https://openalex.org/W4379474720",
-        "https://openalex.org/W2148437670",
-        "https://openalex.org/W4226149970",
-        "https://openalex.org/W2997195635",
-        "https://openalex.org/W2982273290",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3046392445",
-        "https://openalex.org/W4385573380",
-        "https://openalex.org/W4310822350",
-        "https://openalex.org/W3207429447",
-        "https://openalex.org/W4249014631",
-        "https://openalex.org/W2963912046",
-        "https://openalex.org/W4386081881",
-        "https://openalex.org/W2999251207",
-        "https://openalex.org/W2908510526",
-        "https://openalex.org/W4287112812",
-        "https://openalex.org/W4231844697",
-        "https://openalex.org/W3170764772",
-        "https://openalex.org/W4386755323",
-        "https://openalex.org/W2750779823",
-        "https://openalex.org/W3034751955",
-        "https://openalex.org/W2784621220",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W3113004165",
-        "https://openalex.org/W3167530662",
-        "https://openalex.org/W4387323203",
-        "https://openalex.org/W4233907442",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W2965528577",
-        "https://openalex.org/W4311555033",
-        "https://openalex.org/W4312266295",
-        "https://openalex.org/W3110164654",
-        "https://openalex.org/W2805580603",
-        "https://openalex.org/W4297781211",
-        "https://openalex.org/W2986886197",
-        "https://openalex.org/W2785361959",
-        "https://openalex.org/W4386435720",
-        "https://openalex.org/W3166560088",
-        "https://openalex.org/W4302016406",
-        "https://openalex.org/W3113151582"
-    ],
-    "abstract": "We give simpler, sparser, and faster algorithms for differentially private fine-tuning of large-scale pre-trained language models, which achieve the state-of-the-art privacy versus utility tradeoffs on many standard NLP tasks. We propose a meta-framework for this problem, inspired by the recent success of highly parameter-efficient methods for fine-tuning. Our experiments show that differentially private adaptations of these approaches outperform previous private algorithms in three important dimensions: utility, privacy, and the computational and memory cost of private training. On many commonly studied datasets, the utility of private models approaches that of non-private models. For example, on the MNLI dataset we achieve an accuracy of $87.8\\%$ using RoBERTa-Large and $83.5\\%$ using RoBERTa-Base with a privacy budget of $\\epsilon = 6.7$. In comparison, absent privacy constraints, RoBERTa-Large achieves an accuracy of $90.2\\%$. Our findings are similar for natural language generation tasks. Privately fine-tuning with DART, GPT-2-Small, GPT-2-Medium, GPT-2-Large, and GPT-2-XL achieve BLEU scores of 38.5, 42.0, 43.1, and 43.8 respectively (privacy budget of $\\epsilon = 6.8,\\delta=$ 1e-5) whereas the non-private baseline is $48.1$. All our experiments suggest that larger models are better suited for private fine-tuning: while they are well known to achieve superior accuracy non-privately, we find that they also better maintain their accuracy when privacy is introduced.",
-    "full_text": null
+  "title": "Differentially Private Fine-tuning of Language Models",
+  "url": "https://openalex.org/W4399971973",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2109105283",
+      "name": "Da Yu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2208055852",
+      "name": "Saurabh Naik",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1962177433",
+      "name": "Arturs Backurs",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105579994",
+      "name": "Sivakanth Gopi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1990119672",
+      "name": "Huseyin A Inan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2171967840",
+      "name": "Gautam Kamath",
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2138149793",
+      "name": "Janardhan Kulkarni",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2131898379",
+      "name": "Yin Tat Lee",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2428655407",
+      "name": "André Manoel",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2318088954",
+      "name": "Lukas Wutschitz",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2261881876",
+      "name": "Sergey Yekhanin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2157666745",
+      "name": "Zhang Huishuai",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2171967840",
+      "name": "Gautam Kamath",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963807318",
+    "https://openalex.org/W2891003389",
+    "https://openalex.org/W1557833142",
+    "https://openalex.org/W4297799122",
+    "https://openalex.org/W4281722692",
+    "https://openalex.org/W4283816219",
+    "https://openalex.org/W4391382837",
+    "https://openalex.org/W2963477238",
+    "https://openalex.org/W4287553002",
+    "https://openalex.org/W3041206960",
+    "https://openalex.org/W4287122891",
+    "https://openalex.org/W4302305417",
+    "https://openalex.org/W2899663614",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W4229442835",
+    "https://openalex.org/W3177323791",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W4206178588",
+    "https://openalex.org/W2021426916",
+    "https://openalex.org/W4387994968",
+    "https://openalex.org/W4225150360",
+    "https://openalex.org/W3196927184",
+    "https://openalex.org/W4302010013",
+    "https://openalex.org/W3174770825",
+    "https://openalex.org/W2763421725",
+    "https://openalex.org/W2115358662",
+    "https://openalex.org/W4281984841",
+    "https://openalex.org/W1985511977",
+    "https://openalex.org/W2768663569",
+    "https://openalex.org/W3188505388",
+    "https://openalex.org/W2946930197",
+    "https://openalex.org/W2964303773",
+    "https://openalex.org/W3175645569",
+    "https://openalex.org/W4322717491",
+    "https://openalex.org/W2963846996",
+    "https://openalex.org/W4226277587",
+    "https://openalex.org/W3125098139",
+    "https://openalex.org/W2473418344",
+    "https://openalex.org/W2923014074",
+    "https://openalex.org/W1873763122",
+    "https://openalex.org/W3035261884",
+    "https://openalex.org/W4287663285",
+    "https://openalex.org/W4379474720",
+    "https://openalex.org/W2148437670",
+    "https://openalex.org/W4226149970",
+    "https://openalex.org/W2997195635",
+    "https://openalex.org/W2982273290",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3046392445",
+    "https://openalex.org/W4385573380",
+    "https://openalex.org/W4310822350",
+    "https://openalex.org/W3207429447",
+    "https://openalex.org/W4249014631",
+    "https://openalex.org/W2963912046",
+    "https://openalex.org/W4386081881",
+    "https://openalex.org/W2999251207",
+    "https://openalex.org/W2908510526",
+    "https://openalex.org/W4287112812",
+    "https://openalex.org/W4231844697",
+    "https://openalex.org/W3170764772",
+    "https://openalex.org/W4386755323",
+    "https://openalex.org/W2750779823",
+    "https://openalex.org/W3034751955",
+    "https://openalex.org/W2784621220",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W3113004165",
+    "https://openalex.org/W3167530662",
+    "https://openalex.org/W4387323203",
+    "https://openalex.org/W4233907442",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W2965528577",
+    "https://openalex.org/W4311555033",
+    "https://openalex.org/W4312266295",
+    "https://openalex.org/W3110164654",
+    "https://openalex.org/W2805580603",
+    "https://openalex.org/W4297781211",
+    "https://openalex.org/W2986886197",
+    "https://openalex.org/W2785361959",
+    "https://openalex.org/W4386435720",
+    "https://openalex.org/W3166560088",
+    "https://openalex.org/W4302016406",
+    "https://openalex.org/W3113151582"
+  ],
+  "abstract": "We give simpler, sparser, and faster algorithms for differentially private fine-tuning of large-scale pre-trained language models, which achieve the state-of-the-art privacy versus utility tradeoffs on many standard NLP tasks. We propose a meta-framework for this problem, inspired by the recent success of highly parameter-efficient methods for fine-tuning. Our experiments show that differentially private adaptations of these approaches outperform previous private algorithms in three important dimensions: utility, privacy, and the computational and memory cost of private training. On many commonly studied datasets, the utility of private models approaches that of non-private models. For example, on the MNLI dataset we achieve an accuracy of $87.8\\%$ using RoBERTa-Large and $83.5\\%$ using RoBERTa-Base with a privacy budget of $\\epsilon = 6.7$. In comparison, absent privacy constraints, RoBERTa-Large achieves an accuracy of $90.2\\%$. Our findings are similar for natural language generation tasks. Privately fine-tuning with DART, GPT-2-Small, GPT-2-Medium, GPT-2-Large, and GPT-2-XL achieve BLEU scores of 38.5, 42.0, 43.1, and 43.8 respectively (privacy budget of $\\epsilon = 6.8,\\delta=$ 1e-5) whereas the non-private baseline is $48.1$. All our experiments suggest that larger models are better suited for private fine-tuning: while they are well known to achieve superior accuracy non-privately, we find that they also better maintain their accuracy when privacy is introduced.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.678368330001831
+    },
+    {
+      "name": "Private speech",
+      "score": 0.5540030002593994
+    },
+    {
+      "name": "Base (topology)",
+      "score": 0.5363174080848694
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5251034498214722
+    },
+    {
+      "name": "Private information retrieval",
+      "score": 0.5086086988449097
+    },
+    {
+      "name": "Language model",
+      "score": 0.4734765291213989
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4623502492904663
+    },
+    {
+      "name": "Scale (ratio)",
+      "score": 0.42926862835884094
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3399196267127991
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3350456953048706
+    },
+    {
+      "name": "Computer security",
+      "score": 0.20618951320648193
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1385592222213745
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Developmental psychology",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

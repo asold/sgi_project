@@ -1,138 +1,221 @@
 {
-    "title": "Lawformer: A pre-trained language model for Chinese legal long documents",
-    "url": "https://openalex.org/W3177382889",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2881708739",
-            "name": "Chaojun Xiao",
-            "affiliations": [
-                "National Engineering Research Center for Information Technology in Agriculture",
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2139160350",
-            "name": "Xueyu Hu",
-            "affiliations": [
-                "Beihang University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2051269448",
-            "name": "Zhiyuan Liu",
-            "affiliations": [
-                "Tsinghua University",
-                "National Engineering Research Center for Information Technology in Agriculture"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2119971483",
-            "name": "Cunchao Tu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2157167650",
-            "name": "Maosong Sun",
-            "affiliations": [
-                "National Engineering Research Center for Information Technology in Agriculture",
-                "Tsinghua University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2881708739",
-            "name": "Chaojun Xiao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2139160350",
-            "name": "Xueyu Hu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2051269448",
-            "name": "Zhiyuan Liu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2119971483",
-            "name": "Cunchao Tu",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2157167650",
-            "name": "Maosong Sun",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6761260114",
-        "https://openalex.org/W6767306326",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6763079019",
-        "https://openalex.org/W6786476334",
-        "https://openalex.org/W2009751122",
-        "https://openalex.org/W6757998062",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6770075756",
-        "https://openalex.org/W6785555404",
-        "https://openalex.org/W6770001302",
-        "https://openalex.org/W6776277508",
-        "https://openalex.org/W6788196044",
-        "https://openalex.org/W1979482500",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W6785770234",
-        "https://openalex.org/W6794956066",
-        "https://openalex.org/W6748634344",
-        "https://openalex.org/W6770018571",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6791895758",
-        "https://openalex.org/W6779937712",
-        "https://openalex.org/W6763355497",
-        "https://openalex.org/W6785446202",
-        "https://openalex.org/W6786076092",
-        "https://openalex.org/W6748880078",
-        "https://openalex.org/W6781533629",
-        "https://openalex.org/W6754495996",
-        "https://openalex.org/W6776505381",
-        "https://openalex.org/W6770242157",
-        "https://openalex.org/W2946567085",
-        "https://openalex.org/W3015468748",
-        "https://openalex.org/W2985237994",
-        "https://openalex.org/W2970771982",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W2963716420",
-        "https://openalex.org/W3034238904",
-        "https://openalex.org/W2964121744",
-        "https://openalex.org/W2890026792",
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W3034707327",
-        "https://openalex.org/W2788187279",
-        "https://openalex.org/W3106298483",
-        "https://openalex.org/W3108610837",
-        "https://openalex.org/W2949382160",
-        "https://openalex.org/W3082274269",
-        "https://openalex.org/W2787560479",
-        "https://openalex.org/W2164386086",
-        "https://openalex.org/W3136275640",
-        "https://openalex.org/W3101273072",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W3045733172",
-        "https://openalex.org/W2911109671",
-        "https://openalex.org/W3035668167",
-        "https://openalex.org/W2858159822",
-        "https://openalex.org/W2948586190",
-        "https://openalex.org/W3135190223",
-        "https://openalex.org/W3105134823",
-        "https://openalex.org/W3156716744",
-        "https://openalex.org/W3117737817",
-        "https://openalex.org/W2998733856",
-        "https://openalex.org/W2983841094",
-        "https://openalex.org/W3210120707",
-        "https://openalex.org/W3103181983",
-        "https://openalex.org/W3099641295"
-    ],
-    "abstract": "Legal artificial intelligence (LegalAI) aims to benefit legal systems with the technology of artificial intelligence, especially natural language processing (NLP). Recently, inspired by the success of pre-trained language models (PLMs) in the generic domain, many LegalAI researchers devote their effort to applying PLMs to legal tasks. However, utilizing PLMs to address legal tasks is still challenging, as the legal documents usually consist of thousands of tokens, which is far longer than the length that mainstream PLMs can process. In this paper, we release the Longformer-based pre-trained language model, named as Lawformer, for Chinese legal long documents understanding. We evaluate Lawformer on a variety of LegalAI tasks, including judgment prediction, similar case retrieval, legal reading comprehension, and legal question answering. The experimental results demonstrate that our model can achieve promising improvement on tasks with long documents as inputs. The code and parameters are available at https://github.com/thunlp/LegalPLMs.",
-    "full_text": null
+  "title": "Lawformer: A pre-trained language model for Chinese legal long documents",
+  "url": "https://openalex.org/W3177382889",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2881708739",
+      "name": "Chaojun Xiao",
+      "affiliations": [
+        "National Engineering Research Center for Information Technology in Agriculture",
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2139160350",
+      "name": "Xueyu Hu",
+      "affiliations": [
+        "Beihang University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2051269448",
+      "name": "Zhiyuan Liu",
+      "affiliations": [
+        "Tsinghua University",
+        "National Engineering Research Center for Information Technology in Agriculture"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2119971483",
+      "name": "Cunchao Tu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2157167650",
+      "name": "Maosong Sun",
+      "affiliations": [
+        "National Engineering Research Center for Information Technology in Agriculture",
+        "Tsinghua University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2881708739",
+      "name": "Chaojun Xiao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2139160350",
+      "name": "Xueyu Hu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2051269448",
+      "name": "Zhiyuan Liu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2119971483",
+      "name": "Cunchao Tu",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2157167650",
+      "name": "Maosong Sun",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6761260114",
+    "https://openalex.org/W6767306326",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6763079019",
+    "https://openalex.org/W6786476334",
+    "https://openalex.org/W2009751122",
+    "https://openalex.org/W6757998062",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6770075756",
+    "https://openalex.org/W6785555404",
+    "https://openalex.org/W6770001302",
+    "https://openalex.org/W6776277508",
+    "https://openalex.org/W6788196044",
+    "https://openalex.org/W1979482500",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W6785770234",
+    "https://openalex.org/W6794956066",
+    "https://openalex.org/W6748634344",
+    "https://openalex.org/W6770018571",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6791895758",
+    "https://openalex.org/W6779937712",
+    "https://openalex.org/W6763355497",
+    "https://openalex.org/W6785446202",
+    "https://openalex.org/W6786076092",
+    "https://openalex.org/W6748880078",
+    "https://openalex.org/W6781533629",
+    "https://openalex.org/W6754495996",
+    "https://openalex.org/W6776505381",
+    "https://openalex.org/W6770242157",
+    "https://openalex.org/W2946567085",
+    "https://openalex.org/W3015468748",
+    "https://openalex.org/W2985237994",
+    "https://openalex.org/W2970771982",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W2963716420",
+    "https://openalex.org/W3034238904",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2890026792",
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W3034707327",
+    "https://openalex.org/W2788187279",
+    "https://openalex.org/W3106298483",
+    "https://openalex.org/W3108610837",
+    "https://openalex.org/W2949382160",
+    "https://openalex.org/W3082274269",
+    "https://openalex.org/W2787560479",
+    "https://openalex.org/W2164386086",
+    "https://openalex.org/W3136275640",
+    "https://openalex.org/W3101273072",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W3045733172",
+    "https://openalex.org/W2911109671",
+    "https://openalex.org/W3035668167",
+    "https://openalex.org/W2858159822",
+    "https://openalex.org/W2948586190",
+    "https://openalex.org/W3135190223",
+    "https://openalex.org/W3105134823",
+    "https://openalex.org/W3156716744",
+    "https://openalex.org/W3117737817",
+    "https://openalex.org/W2998733856",
+    "https://openalex.org/W2983841094",
+    "https://openalex.org/W3210120707",
+    "https://openalex.org/W3103181983",
+    "https://openalex.org/W3099641295"
+  ],
+  "abstract": "Legal artificial intelligence (LegalAI) aims to benefit legal systems with the technology of artificial intelligence, especially natural language processing (NLP). Recently, inspired by the success of pre-trained language models (PLMs) in the generic domain, many LegalAI researchers devote their effort to applying PLMs to legal tasks. However, utilizing PLMs to address legal tasks is still challenging, as the legal documents usually consist of thousands of tokens, which is far longer than the length that mainstream PLMs can process. In this paper, we release the Longformer-based pre-trained language model, named as Lawformer, for Chinese legal long documents understanding. We evaluate Lawformer on a variety of LegalAI tasks, including judgment prediction, similar case retrieval, legal reading comprehension, and legal question answering. The experimental results demonstrate that our model can achieve promising improvement on tasks with long documents as inputs. The code and parameters are available at https://github.com/thunlp/LegalPLMs.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7881438732147217
+    },
+    {
+      "name": "Variety (cybernetics)",
+      "score": 0.6465789675712585
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6138925552368164
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5922369360923767
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.5409148931503296
+    },
+    {
+      "name": "Question answering",
+      "score": 0.5234674215316772
+    },
+    {
+      "name": "Reading (process)",
+      "score": 0.4731922149658203
+    },
+    {
+      "name": "Domain (mathematical analysis)",
+      "score": 0.47152695059776306
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.4527381956577301
+    },
+    {
+      "name": "Mainstream",
+      "score": 0.42455995082855225
+    },
+    {
+      "name": "Language model",
+      "score": 0.4227459728717804
+    },
+    {
+      "name": "Natural language understanding",
+      "score": 0.41967466473579407
+    },
+    {
+      "name": "Natural language",
+      "score": 0.3451319932937622
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.16832560300827026
+    },
+    {
+      "name": "Programming language",
+      "score": 0.12353900074958801
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Theology",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    }
+  ]
 }

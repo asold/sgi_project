@@ -1,61 +1,156 @@
 {
-    "title": "ERNIE at SemEval-2020 Task 10: Learning Word Emphasis Selection by Pre-trained Language Model",
-    "url": "https://openalex.org/W3084385448",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2481649705",
-            "name": "Huang, Zhengjie",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2744257146",
-            "name": "Feng, Shikun",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2412839505",
-            "name": "Su WeiYue",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2354368699",
-            "name": "Chen Xu-yi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4227503009",
-            "name": "Wang, Shuohuan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1846007773",
-            "name": "Liu Jiaxiang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2392478501",
-            "name": "Ouyang Xuan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2091853334",
-            "name": "Sun Yu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2983040767",
-        "https://openalex.org/W2938830017",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W2996428491",
-        "https://openalex.org/W2525778437",
-        "https://openalex.org/W3114688549",
-        "https://openalex.org/W2953061889",
-        "https://openalex.org/W2963310665",
-        "https://openalex.org/W2997200074"
-    ],
-    "abstract": "This paper describes the system designed by ERNIE Team which achieved the first place in SemEval-2020 Task 10: Emphasis Selection For Written Text in Visual Media. Given a sentence, we are asked to find out the most important words as the suggestion for automated design. We leverage the unsupervised pre-training model and finetune these models on our task. After our investigation, we found that the following models achieved an excellent performance in this task: ERNIE 2.0, XLM-ROBERTA, ROBERTA and ALBERT. We combine a pointwise regression loss and a pairwise ranking loss which is more close to the final M atchm metric to finetune our models. And we also find that additional feature engineering and data augmentation can help improve the performance. Our best model achieves the highest score of 0.823 and ranks first for all kinds of metrics",
-    "full_text": "ERNIE at SemEval-2020 Task 10: Learning Word Emphasis Selection by\nPre-trained Language Model\nZhengjie Huang, Shikun Feng, Weiyue Su, Xuyi Chen,\nShuohuan Wang, Jiaxiang Liu, Xuan Ouyang, Yu Sun\nBaidu Inc., China\n{huangzhengjie,fengshikun01,suweiyue,chenxuyi}@baidu.com\n{wangshuohuan,liujiaxiang,ouyangxuan,sunyu02}@baidu.com\nAbstract\nThis paper describes the system designed by ERNIE Team which achieved the ﬁrst place in\nSemEval-2020 Task 10: Emphasis Selection For Written Text in Visual Media. Given a sentence,\nwe are asked to ﬁnd out the most important words as the suggestion for automated design. We\nleverage the unsupervised pre-training model and ﬁnetune these models on our task. After our\ninvestigation, we found that the following models achieved an excellent performance in this task:\nERNIE 2.0, XLM-ROBERTA, ROBERTA and ALBERT. We combine a pointwise regression\nloss and a pairwise ranking loss which is more close to the ﬁnal Matchm metric to ﬁnetune our\nmodels. And we also ﬁnd that additional feature engineering and data augmentation can help\nimprove the performance. Our best model achieves the highest score of 0.823 and ranks ﬁrst for\nall kinds of metrics.\n1 Introduction\nEmphasis selection for written text in visual media is proposed by Shirani et al. (2020) and Shirani et\nal. (2019). The purpose of this shared task is to design automatic methods for emphasis selection, i.e.\nchoosing candidates for emphasis in short written text, to enable automated design assistance in authoring.\nFor example, Shirani et al. (2019) mentions that such a technique can be applied to some graphic design\napplications such as Adobe Spark to perform automatic text layout using templates that include images\nand text with different fonts and colors. The major challenge is that given only thousands of annotated\nshort text data without any context about the text or visual background images, we are asked to learn the\nauthor- or domain-speciﬁc emphatic about the short text. Besides, these short text data are annotated by\ncrowd-sourcing workers. And we ﬁnd that different annotators have different standards, which increases\nthe difﬁculty of this task.\nTo identify the most important words, we model the task as a sequential labeling problem. Our base\nmodels leverage different unsupervised language model such as ERNIE 2.0 (Sun et al., 2019b), XLM-\nROBERTA (Conneau et al., 2019), ROBERTA (Liu et al., 2019) and ALBERT (Lan et al., 2019). These\nlarge unsupervised models are pre-trained on a large amount of unannotated data and carry valuable\nlexical, syntactic, and semantic information in training corpora. Our approach is as follows: ﬁrstly, the\nword-level output representations for the sentence are computed by pre-trained models and then fed\ninto a designed downstream neural network for word selections; secondly, we ﬁnetune the downstream\nnetworks together with the pre-trained models on the annotated training data; thirdly, we investigate\nseveral different objective functions to learn our model; and ﬁnally, we apply feature engineering and\nseveral data augmentation strategies for further improvement.\nThe rest of the paper is organized as follows. In Section 2, we will brieﬂy overview some related works\nto our system. Section 3 shows the details of our approach. Our experiments will be shown in Section 4,\nand Section 5 concludes.\nThis work is licensed under a Creative Commons Attribution 4.0 International License. License details: http://\ncreativecommons.org/licenses/by/4.0/.\narXiv:2009.03706v1  [cs.CL]  8 Sep 2020\n2 Related Work\nRecently pre-trained models have achieved state-of-the-art results in various language understanding\ntasks such as BERT (Devlin et al., 2018), XLM-ROBERTA (Conneau et al., 2019), ROBERTA (Liu\net al., 2019), ALBERT (Lan et al., 2019) and ERNIE 2.0 (Sun et al., 2019b). (Devlin et al., 2018)\nﬁrst introduced a bidirectional encoder representation from transformers called BERT. They developed\nseveral pretraining strategies such as masked language models and a next sentence prediction task. Since\nthen, many studies about pretraining strategies come out and most of them share similar neural network\narchitectures but with different pretraining schemes. For example, ROBERTA (Liu et al., 2019) ﬁnds\nthat dynamically changing the masking for the masked language model and removing the next sentence\nprediction task can help with improving the performance in downstream tasks. ALBERT (Lan et al.,\n2019) adds sentence order prediction task and optimizes the memory usage of original BERT to achieve\nbetter results. XLM-ROBERTA (Conneau et al., 2019) trains its models over one hundred languages with\nmultilingual settings and gets the ﬁrst single large model for all languages.\nERNIE 2.0 (Sun et al., 2019b) is an improvement of ERNIE 1.0 (Sun et al., 2019a) and the worlds ﬁrst\nmodel to score over 90 in terms of the macro-average score on GLUE benchmark (Wang et al., 2018).\nERNIE 1.0 (Sun et al., 2019a) introduces knowledge masking strategies. It gains a large beneﬁt from\nentity-level and phrase-level masked language models. ERNIE 2.0 (Sun et al., 2019b) proposes a continual\npre-training framework that incrementally builds pre-training tasks and then learns pre-trained models\non these constructed tasks via continual multi-task learning. ERNIE 2.0 constructs three kinds of tasks\nincluding word-aware tasks, structure-aware tasks and semantic-aware tasks. All of these pre-training\ntasks rely on self-supervised or weak-supervised signals that could be obtained from massive data without\nhuman annotation. A continual multi-task learning method is proposed to improve the model’s memory\nover different pre-training tasks.\nThe researchers of ERNIE 2.0 released a new version recently which made a few improvements on\nknowledge masking and application-oriented tasks, aiming to advance the model’s general semantic\nrepresentation capability. In order to improve the knowledge masking strategy, they proposed a new\nmutual information-based dynamic knowledge masking algorithm. They also constructed speciﬁc pre-\ntraining tasks for different applications. For example, they added a coreference resolution task to identify\nall expressions in a text that refer to the same entity. Details can be found on the blog1 .\nFollowing the current trends of pre-training and ﬁne-tuning paradigm for natural language processing,\nour system adopts these models as our base word and sentence representation.\n3 Our Approach\n3.1 Word Emphasis Regression with Subword Alignment\nInstead of learning label distributions with KL divergence loss like Shirani et al. (2019), we directly learn\nto regress the emphasis probability values with mean squared error (MSE) loss. Our model is shown in\nFigure 1. We simply plug in the task-speciﬁc inputs and outputs into the pre-trained model like ERNIE\n2.0 does. Words are preprocessed into subword level with the WordPiece tokenizer (Wu et al., 2016) like\nmost of the BERT-style ﬁne-tuning tasks. The subword tokens are then fed into ERNIE 2.0 to compute\nthe contextual representations for each subword. The task-speciﬁc output layer is a fully connected neural\nnetwork with sigmoid activation to constrain the output between 0 and 1. Since our model is based on the\nsubword level, the ground-truth scores of the words are split into pieces and each subword piece will learn\nits aligned emphasis value. All the parameters of ERNIE 2.0 and the ﬁnal fully connected neural network\nwill be tuned together. During the inference stage, word emphasis score will be computed by aggregating\nits corresponding subword scores on average as shown in Figure 1b.\n3.2 Subword-level Pairwise Ranking Loss\nSince the ﬁnal metrics only consider the top 4 words with the highest emphasis scores, the individual\nsubword level regression task ignores relative scores between the tokens and might hurt the performance.\n1http://research.baidu.com/Blog/index-view?id=128\n(a)\n (b)\nFigure 1: The input sentence will be tokenized into subword level by WordPiece algorithm. Then we use\npre-trained models such as ERNIE 2.0 to get the subword representations. Next we apply a regression\nlayer on the model as described in Figure 1a. Finally we will aggregate subword scores to get the ﬁnal\nword emphasis like Figure 1b.\nTo overcome this issue, we develop a pairwise ranking loss, which considers all pairs of the subword\npieces and learns the relative orders of the emphasis probability. As shown in Figure 2, the emphasis will\nbe also split at subword level. Each subword piece will be compared with all other subword pieces that\nhave lower scores. Then the loss is computed as follows:\nJ = 1\nN2\nN∑\ni\nN∑\nj\n−max(score(wi) −score(wj),0) ∗log σ(s(wi) −s(wj)), (1)\nwhere σis sigmoid function and the score(.) function returns the ground-truth emphasis probability labels\nfor each subword and the s(.) is the output of the logits score (without sigmoid activation). The loss is\nweighted by the gap of scores.\nIf   you   hav ##e   the   abi ##lity to lov ##e,  lov ##e you ##r ##self  fir ##st.\n…\nlov\nlov\n##e\n##self\nsubword\n0.78\n0.78\n0.67\n0.33\nlov ##e lov … ##self fir ##st\n0.78 0.78 0.67 0.33 0.00 0.00\n> > > > >\n> > > >\n> > >\n##e\n0.67\n##e0.67\n…\n0.56\nyou\n>\n…\n>\n> > >\n…\n…\n…\n…\n> > >>\n…\n#Score\n> >\nFigure 2: Pairwise ranking loss.\n3.3 Word Emphasis Lexical Feature\nAfter further investigating the short text data, we ﬁnd that some additional features about the capitalization\nof words and the appearance of hashtags can bring further improvements. The statistics of the average\nscore for different word types are shown in Table 1. Obviously, words with hashtag or capital letters\nare more likely to be annotated as important words. However, WordPiece algorithm separates words\ninto pieces and drops the information about the preﬁx of words. For example, ”#plantgang” is split into\n”#”, ”plant”, and ”##gang”. In our model, regression loss is computed for each individual word so it is\ndifﬁcult for the word piece ”plant” and ”##gang” to capture the preﬁx information. Therefore, the explicit\nfeatures about the special meaning of hashtag in social media and visual impact of uppercase characters\nare valuable. These features about the words are denoted as 0-1 vectors and concatenated with the ERNIE\nembedding as the inputs of the ﬁnal fully-connected layers as shown in Figure 3.\nWord Types Avg. Score\nAll 0.284\nStarts with a capital letter 0.369\nWord in uppercase 0.333\nStarts with hashtag 0.611\nTable 1: Word types and its corresponding scores.\n Figure 3: Additional features.\n3.4 Data Augmentations\nBecause there are only 2000 annotated data, it’s quite easy to overﬁt the training data even with pre-trained\nmodels. To enlarge the amount of annotated data, we design several data augmentation strategies as\nfollows: 1) randomly remove a word, 2) randomly uppercase a word, and 3) randomly reverse a sentence.\nWe ﬁnd that the augmentation can help delay the overﬁtting occurrence, especially for large models. The\ndetails of the augmentation schemes are shown in Table 2. Each scheme is triggered independently for\neach word and sentence with the given probabilities. Therefore, we can have many different modiﬁed\nversions of the origin sentences to delay the phenomenon of overﬁtting.\nAugmentation Schemes Probability\nRandomly remove a word 1%\nRandomly uppercase a word 5%\nReverse the sentence 10%\nTable 2: Data augmentation settings.\n4 Experimental Results\nAll experiments are executed on an Nvidia V100 GPU. Each model runs 10 epochs with early stopping\nstrategies based on the performance in the validation set. Since the training and validation data are both\nsmall, we ﬁnd that models have a large variant performances among each run.2 So we combine all the\nprovided training and validation sets, then split them in a random 8-Fold settings. For each model in each\nfold, we run ﬁve times and we will report the average score on our 8-Fold settings to get a much more\nstable analysis.\nTable 3 shows the score across different models, we ﬁnd that ERNIE 2.0 is the most powerful base\nmodel among several different pre-trained models, and gets 0.781 average ranking score over 8-Fold\ncross-validation.\nTable 4 shows the score gains across different ﬁne-tuning strategies. We report the average gain and the\nmaximum gain over the average score for each base model on the 8-Fold settings. We ﬁnd that not all\n2The performance on different fold can have a large variance differents. For example, XLM-ROBERTA-LARGE can achieve\nrank score from 76.7% to 80.1% in different fold runs.\nModel 8FoldsCV-A VG. Rank\nERNIE 2.0-LARGE 0.7810\nXLM-ROBERTA-LARGE 0.7791\nROBERTA-LARGE 0.7764\nALBERT-XXLARGE-v2 0.7755\nTable 3: The results of different models.\nStrategies Average Gain Max Gain\nPairWise Loss -0.00544 0.00385\nLexical Features 0.00105 0.00709\nData Augmentation -0.00144 0.00344\nTable 4: The score gains from different strategies.\nmodels can beneﬁt from these training schemes. However, they still bring large improvement to some of\nour models. In Figure 4, we draw the box plot of the model scores. The box plot shows that the lexical\nfeature is the most effective strategy. Besides, data augmentation and pairwise loss can also achieve a\nhigher score.\nFigure 4: Validation scores among different strategies.\nFor ﬁnal submission, we ensemble our best strategies and we achieve the highest score 0.823 ranking\nﬁrst for all kinds of the metrics.\n5 Conclusion\nIn this paper, we present our system that ranks ﬁrst in SemEval-2020 Task 10. Our solution contains\nseveral strategies and we provide detailed experiments to analyze which of them are effective. Our\nexperiments show that models empowered by pre-trained language models are most effective, especially\nfor ERNIE 2.0. Besides, lexical features, pairwise loss, and data augmentation can also bring improvement\nfor some of our models.\nReferences\nAlexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzm´an,\nEdouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov. 2019. Unsupervised cross-lingual repre-\nsentation learning at scale. arXiv preprint arXiv:1911.02116.\nJacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2018. Bert: Pre-training of deep bidirec-\ntional transformers for language understanding. arXiv preprint arXiv:1810.04805.\nZhenzhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, and Radu Soricut. 2019.\nAlbert: A lite bert for self-supervised learning of language representations. arXiv preprint arXiv:1909.11942.\nYinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke\nZettlemoyer, and Veselin Stoyanov. 2019. Roberta: A robustly optimized bert pretraining approach. arXiv\npreprint arXiv:1907.11692.\nAmirreza Shirani, Franck Dernoncourt, Paul Asente, Nedim Lipka, Seokhwan Kim, Jose Echevarria, and Thamar\nSolorio. 2019. Learning emphasis selection for written text in visual media from crowd-sourced label distri-\nbutions. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages\n1167–1172, Florence, Italy, July. Association for Computational Linguistics.\nAmirreza Shirani, Franck Dernoncourt, Nedim Lipka, Paul Asente, Jose Echevarria, and Thamar Solorio. 2020.\nSemeval-2020 task 10: Emphasis selection for written text in visual media. In Proceedings of the 14th Interna-\ntional Workshop on Semantic Evaluation.\nYu Sun, Shuohuan Wang, Yukun Li, Shikun Feng, Xuyi Chen, Han Zhang, Xin Tian, Danxiang Zhu, Hao\nTian, and Hua Wu. 2019a. Ernie: Enhanced representation through knowledge integration. arXiv preprint\narXiv:1904.09223.\nYu Sun, Shuohuan Wang, Yukun Li, Shikun Feng, Hao Tian, Hua Wu, and Haifeng Wang. 2019b. Ernie 2.0: A\ncontinual pre-training framework for language understanding. arXiv preprint arXiv:1907.12412.\nAlex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R Bowman. 2018.\nGlue: A multi-task benchmark and analysis platform for natural language understanding. arXiv preprint\narXiv:1804.07461.\nYonghui Wu, Mike Schuster, Zhifeng Chen, Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim\nKrikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. 2016. Google’s neural machine translation system: Bridg-\ning the gap between human and machine translation. arXiv preprint arXiv:1609.08144."
+  "title": "ERNIE at SemEval-2020 Task 10: Learning Word Emphasis Selection by Pre-trained Language Model",
+  "url": "https://openalex.org/W3084385448",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2481649705",
+      "name": "Huang, Zhengjie",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2744257146",
+      "name": "Feng, Shikun",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2412839505",
+      "name": "Su WeiYue",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2354368699",
+      "name": "Chen Xu-yi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4227503009",
+      "name": "Wang, Shuohuan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1846007773",
+      "name": "Liu Jiaxiang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2392478501",
+      "name": "Ouyang Xuan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2091853334",
+      "name": "Sun Yu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2983040767",
+    "https://openalex.org/W2938830017",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W2525778437",
+    "https://openalex.org/W3114688549",
+    "https://openalex.org/W2953061889",
+    "https://openalex.org/W2963310665",
+    "https://openalex.org/W2997200074"
+  ],
+  "abstract": "This paper describes the system designed by ERNIE Team which achieved the first place in SemEval-2020 Task 10: Emphasis Selection For Written Text in Visual Media. Given a sentence, we are asked to find out the most important words as the suggestion for automated design. We leverage the unsupervised pre-training model and finetune these models on our task. After our investigation, we found that the following models achieved an excellent performance in this task: ERNIE 2.0, XLM-ROBERTA, ROBERTA and ALBERT. We combine a pointwise regression loss and a pairwise ranking loss which is more close to the final M atchm metric to finetune our models. And we also find that additional feature engineering and data augmentation can help improve the performance. Our best model achieves the highest score of 0.823 and ranks first for all kinds of metrics",
+  "full_text": "ERNIE at SemEval-2020 Task 10: Learning Word Emphasis Selection by\nPre-trained Language Model\nZhengjie Huang, Shikun Feng, Weiyue Su, Xuyi Chen,\nShuohuan Wang, Jiaxiang Liu, Xuan Ouyang, Yu Sun\nBaidu Inc., China\n{huangzhengjie,fengshikun01,suweiyue,chenxuyi}@baidu.com\n{wangshuohuan,liujiaxiang,ouyangxuan,sunyu02}@baidu.com\nAbstract\nThis paper describes the system designed by ERNIE Team which achieved the ﬁrst place in\nSemEval-2020 Task 10: Emphasis Selection For Written Text in Visual Media. Given a sentence,\nwe are asked to ﬁnd out the most important words as the suggestion for automated design. We\nleverage the unsupervised pre-training model and ﬁnetune these models on our task. After our\ninvestigation, we found that the following models achieved an excellent performance in this task:\nERNIE 2.0, XLM-ROBERTA, ROBERTA and ALBERT. We combine a pointwise regression\nloss and a pairwise ranking loss which is more close to the ﬁnal Matchm metric to ﬁnetune our\nmodels. And we also ﬁnd that additional feature engineering and data augmentation can help\nimprove the performance. Our best model achieves the highest score of 0.823 and ranks ﬁrst for\nall kinds of metrics.\n1 Introduction\nEmphasis selection for written text in visual media is proposed by Shirani et al. (2020) and Shirani et\nal. (2019). The purpose of this shared task is to design automatic methods for emphasis selection, i.e.\nchoosing candidates for emphasis in short written text, to enable automated design assistance in authoring.\nFor example, Shirani et al. (2019) mentions that such a technique can be applied to some graphic design\napplications such as Adobe Spark to perform automatic text layout using templates that include images\nand text with different fonts and colors. The major challenge is that given only thousands of annotated\nshort text data without any context about the text or visual background images, we are asked to learn the\nauthor- or domain-speciﬁc emphatic about the short text. Besides, these short text data are annotated by\ncrowd-sourcing workers. And we ﬁnd that different annotators have different standards, which increases\nthe difﬁculty of this task.\nTo identify the most important words, we model the task as a sequential labeling problem. Our base\nmodels leverage different unsupervised language model such as ERNIE 2.0 (Sun et al., 2019b), XLM-\nROBERTA (Conneau et al., 2019), ROBERTA (Liu et al., 2019) and ALBERT (Lan et al., 2019). These\nlarge unsupervised models are pre-trained on a large amount of unannotated data and carry valuable\nlexical, syntactic, and semantic information in training corpora. Our approach is as follows: ﬁrstly, the\nword-level output representations for the sentence are computed by pre-trained models and then fed\ninto a designed downstream neural network for word selections; secondly, we ﬁnetune the downstream\nnetworks together with the pre-trained models on the annotated training data; thirdly, we investigate\nseveral different objective functions to learn our model; and ﬁnally, we apply feature engineering and\nseveral data augmentation strategies for further improvement.\nThe rest of the paper is organized as follows. In Section 2, we will brieﬂy overview some related works\nto our system. Section 3 shows the details of our approach. Our experiments will be shown in Section 4,\nand Section 5 concludes.\nThis work is licensed under a Creative Commons Attribution 4.0 International License. License details: http://\ncreativecommons.org/licenses/by/4.0/.\narXiv:2009.03706v1  [cs.CL]  8 Sep 2020\n2 Related Work\nRecently pre-trained models have achieved state-of-the-art results in various language understanding\ntasks such as BERT (Devlin et al., 2018), XLM-ROBERTA (Conneau et al., 2019), ROBERTA (Liu\net al., 2019), ALBERT (Lan et al., 2019) and ERNIE 2.0 (Sun et al., 2019b). (Devlin et al., 2018)\nﬁrst introduced a bidirectional encoder representation from transformers called BERT. They developed\nseveral pretraining strategies such as masked language models and a next sentence prediction task. Since\nthen, many studies about pretraining strategies come out and most of them share similar neural network\narchitectures but with different pretraining schemes. For example, ROBERTA (Liu et al., 2019) ﬁnds\nthat dynamically changing the masking for the masked language model and removing the next sentence\nprediction task can help with improving the performance in downstream tasks. ALBERT (Lan et al.,\n2019) adds sentence order prediction task and optimizes the memory usage of original BERT to achieve\nbetter results. XLM-ROBERTA (Conneau et al., 2019) trains its models over one hundred languages with\nmultilingual settings and gets the ﬁrst single large model for all languages.\nERNIE 2.0 (Sun et al., 2019b) is an improvement of ERNIE 1.0 (Sun et al., 2019a) and the worlds ﬁrst\nmodel to score over 90 in terms of the macro-average score on GLUE benchmark (Wang et al., 2018).\nERNIE 1.0 (Sun et al., 2019a) introduces knowledge masking strategies. It gains a large beneﬁt from\nentity-level and phrase-level masked language models. ERNIE 2.0 (Sun et al., 2019b) proposes a continual\npre-training framework that incrementally builds pre-training tasks and then learns pre-trained models\non these constructed tasks via continual multi-task learning. ERNIE 2.0 constructs three kinds of tasks\nincluding word-aware tasks, structure-aware tasks and semantic-aware tasks. All of these pre-training\ntasks rely on self-supervised or weak-supervised signals that could be obtained from massive data without\nhuman annotation. A continual multi-task learning method is proposed to improve the model’s memory\nover different pre-training tasks.\nThe researchers of ERNIE 2.0 released a new version recently which made a few improvements on\nknowledge masking and application-oriented tasks, aiming to advance the model’s general semantic\nrepresentation capability. In order to improve the knowledge masking strategy, they proposed a new\nmutual information-based dynamic knowledge masking algorithm. They also constructed speciﬁc pre-\ntraining tasks for different applications. For example, they added a coreference resolution task to identify\nall expressions in a text that refer to the same entity. Details can be found on the blog1 .\nFollowing the current trends of pre-training and ﬁne-tuning paradigm for natural language processing,\nour system adopts these models as our base word and sentence representation.\n3 Our Approach\n3.1 Word Emphasis Regression with Subword Alignment\nInstead of learning label distributions with KL divergence loss like Shirani et al. (2019), we directly learn\nto regress the emphasis probability values with mean squared error (MSE) loss. Our model is shown in\nFigure 1. We simply plug in the task-speciﬁc inputs and outputs into the pre-trained model like ERNIE\n2.0 does. Words are preprocessed into subword level with the WordPiece tokenizer (Wu et al., 2016) like\nmost of the BERT-style ﬁne-tuning tasks. The subword tokens are then fed into ERNIE 2.0 to compute\nthe contextual representations for each subword. The task-speciﬁc output layer is a fully connected neural\nnetwork with sigmoid activation to constrain the output between 0 and 1. Since our model is based on the\nsubword level, the ground-truth scores of the words are split into pieces and each subword piece will learn\nits aligned emphasis value. All the parameters of ERNIE 2.0 and the ﬁnal fully connected neural network\nwill be tuned together. During the inference stage, word emphasis score will be computed by aggregating\nits corresponding subword scores on average as shown in Figure 1b.\n3.2 Subword-level Pairwise Ranking Loss\nSince the ﬁnal metrics only consider the top 4 words with the highest emphasis scores, the individual\nsubword level regression task ignores relative scores between the tokens and might hurt the performance.\n1http://research.baidu.com/Blog/index-view?id=128\n(a)\n (b)\nFigure 1: The input sentence will be tokenized into subword level by WordPiece algorithm. Then we use\npre-trained models such as ERNIE 2.0 to get the subword representations. Next we apply a regression\nlayer on the model as described in Figure 1a. Finally we will aggregate subword scores to get the ﬁnal\nword emphasis like Figure 1b.\nTo overcome this issue, we develop a pairwise ranking loss, which considers all pairs of the subword\npieces and learns the relative orders of the emphasis probability. As shown in Figure 2, the emphasis will\nbe also split at subword level. Each subword piece will be compared with all other subword pieces that\nhave lower scores. Then the loss is computed as follows:\nJ = 1\nN2\nN∑\ni\nN∑\nj\n−max(score(wi) −score(wj),0) ∗log σ(s(wi) −s(wj)), (1)\nwhere σis sigmoid function and the score(.) function returns the ground-truth emphasis probability labels\nfor each subword and the s(.) is the output of the logits score (without sigmoid activation). The loss is\nweighted by the gap of scores.\nIf   you   hav ##e   the   abi ##lity to lov ##e,  lov ##e you ##r ##self  fir ##st.\n…\nlov\nlov\n##e\n##self\nsubword\n0.78\n0.78\n0.67\n0.33\nlov ##e lov … ##self fir ##st\n0.78 0.78 0.67 0.33 0.00 0.00\n> > > > >\n> > > >\n> > >\n##e\n0.67\n##e0.67\n…\n0.56\nyou\n>\n…\n>\n> > >\n…\n…\n…\n…\n> > >>\n…\n#Score\n> >\nFigure 2: Pairwise ranking loss.\n3.3 Word Emphasis Lexical Feature\nAfter further investigating the short text data, we ﬁnd that some additional features about the capitalization\nof words and the appearance of hashtags can bring further improvements. The statistics of the average\nscore for different word types are shown in Table 1. Obviously, words with hashtag or capital letters\nare more likely to be annotated as important words. However, WordPiece algorithm separates words\ninto pieces and drops the information about the preﬁx of words. For example, ”#plantgang” is split into\n”#”, ”plant”, and ”##gang”. In our model, regression loss is computed for each individual word so it is\ndifﬁcult for the word piece ”plant” and ”##gang” to capture the preﬁx information. Therefore, the explicit\nfeatures about the special meaning of hashtag in social media and visual impact of uppercase characters\nare valuable. These features about the words are denoted as 0-1 vectors and concatenated with the ERNIE\nembedding as the inputs of the ﬁnal fully-connected layers as shown in Figure 3.\nWord Types Avg. Score\nAll 0.284\nStarts with a capital letter 0.369\nWord in uppercase 0.333\nStarts with hashtag 0.611\nTable 1: Word types and its corresponding scores.\n Figure 3: Additional features.\n3.4 Data Augmentations\nBecause there are only 2000 annotated data, it’s quite easy to overﬁt the training data even with pre-trained\nmodels. To enlarge the amount of annotated data, we design several data augmentation strategies as\nfollows: 1) randomly remove a word, 2) randomly uppercase a word, and 3) randomly reverse a sentence.\nWe ﬁnd that the augmentation can help delay the overﬁtting occurrence, especially for large models. The\ndetails of the augmentation schemes are shown in Table 2. Each scheme is triggered independently for\neach word and sentence with the given probabilities. Therefore, we can have many different modiﬁed\nversions of the origin sentences to delay the phenomenon of overﬁtting.\nAugmentation Schemes Probability\nRandomly remove a word 1%\nRandomly uppercase a word 5%\nReverse the sentence 10%\nTable 2: Data augmentation settings.\n4 Experimental Results\nAll experiments are executed on an Nvidia V100 GPU. Each model runs 10 epochs with early stopping\nstrategies based on the performance in the validation set. Since the training and validation data are both\nsmall, we ﬁnd that models have a large variant performances among each run.2 So we combine all the\nprovided training and validation sets, then split them in a random 8-Fold settings. For each model in each\nfold, we run ﬁve times and we will report the average score on our 8-Fold settings to get a much more\nstable analysis.\nTable 3 shows the score across different models, we ﬁnd that ERNIE 2.0 is the most powerful base\nmodel among several different pre-trained models, and gets 0.781 average ranking score over 8-Fold\ncross-validation.\nTable 4 shows the score gains across different ﬁne-tuning strategies. We report the average gain and the\nmaximum gain over the average score for each base model on the 8-Fold settings. We ﬁnd that not all\n2The performance on different fold can have a large variance differents. For example, XLM-ROBERTA-LARGE can achieve\nrank score from 76.7% to 80.1% in different fold runs.\nModel 8FoldsCV-A VG. Rank\nERNIE 2.0-LARGE 0.7810\nXLM-ROBERTA-LARGE 0.7791\nROBERTA-LARGE 0.7764\nALBERT-XXLARGE-v2 0.7755\nTable 3: The results of different models.\nStrategies Average Gain Max Gain\nPairWise Loss -0.00544 0.00385\nLexical Features 0.00105 0.00709\nData Augmentation -0.00144 0.00344\nTable 4: The score gains from different strategies.\nmodels can beneﬁt from these training schemes. However, they still bring large improvement to some of\nour models. In Figure 4, we draw the box plot of the model scores. The box plot shows that the lexical\nfeature is the most effective strategy. Besides, data augmentation and pairwise loss can also achieve a\nhigher score.\nFigure 4: Validation scores among different strategies.\nFor ﬁnal submission, we ensemble our best strategies and we achieve the highest score 0.823 ranking\nﬁrst for all kinds of the metrics.\n5 Conclusion\nIn this paper, we present our system that ranks ﬁrst in SemEval-2020 Task 10. Our solution contains\nseveral strategies and we provide detailed experiments to analyze which of them are effective. Our\nexperiments show that models empowered by pre-trained language models are most effective, especially\nfor ERNIE 2.0. Besides, lexical features, pairwise loss, and data augmentation can also bring improvement\nfor some of our models.\nReferences\nAlexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzm´an,\nEdouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov. 2019. Unsupervised cross-lingual repre-\nsentation learning at scale. arXiv preprint arXiv:1911.02116.\nJacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2018. Bert: Pre-training of deep bidirec-\ntional transformers for language understanding. arXiv preprint arXiv:1810.04805.\nZhenzhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, and Radu Soricut. 2019.\nAlbert: A lite bert for self-supervised learning of language representations. arXiv preprint arXiv:1909.11942.\nYinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke\nZettlemoyer, and Veselin Stoyanov. 2019. Roberta: A robustly optimized bert pretraining approach. arXiv\npreprint arXiv:1907.11692.\nAmirreza Shirani, Franck Dernoncourt, Paul Asente, Nedim Lipka, Seokhwan Kim, Jose Echevarria, and Thamar\nSolorio. 2019. Learning emphasis selection for written text in visual media from crowd-sourced label distri-\nbutions. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages\n1167–1172, Florence, Italy, July. Association for Computational Linguistics.\nAmirreza Shirani, Franck Dernoncourt, Nedim Lipka, Paul Asente, Jose Echevarria, and Thamar Solorio. 2020.\nSemeval-2020 task 10: Emphasis selection for written text in visual media. In Proceedings of the 14th Interna-\ntional Workshop on Semantic Evaluation.\nYu Sun, Shuohuan Wang, Yukun Li, Shikun Feng, Xuyi Chen, Han Zhang, Xin Tian, Danxiang Zhu, Hao\nTian, and Hua Wu. 2019a. Ernie: Enhanced representation through knowledge integration. arXiv preprint\narXiv:1904.09223.\nYu Sun, Shuohuan Wang, Yukun Li, Shikun Feng, Hao Tian, Hua Wu, and Haifeng Wang. 2019b. Ernie 2.0: A\ncontinual pre-training framework for language understanding. arXiv preprint arXiv:1907.12412.\nAlex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R Bowman. 2018.\nGlue: A multi-task benchmark and analysis platform for natural language understanding. arXiv preprint\narXiv:1804.07461.\nYonghui Wu, Mike Schuster, Zhifeng Chen, Quoc V Le, Mohammad Norouzi, Wolfgang Macherey, Maxim\nKrikun, Yuan Cao, Qin Gao, Klaus Macherey, et al. 2016. Google’s neural machine translation system: Bridg-\ning the gap between human and machine translation. arXiv preprint arXiv:1609.08144.",
+  "topic": "SemEval",
+  "concepts": [
+    {
+      "name": "SemEval",
+      "score": 0.9078775644302368
+    },
+    {
+      "name": "Computer science",
+      "score": 0.790929913520813
+    },
+    {
+      "name": "Leverage (statistics)",
+      "score": 0.7278239130973816
+    },
+    {
+      "name": "Pointwise",
+      "score": 0.6965019106864929
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6788508892059326
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6182268261909485
+    },
+    {
+      "name": "Sentence",
+      "score": 0.6001687049865723
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5686703324317932
+    },
+    {
+      "name": "Selection (genetic algorithm)",
+      "score": 0.5682370662689209
+    },
+    {
+      "name": "Metric (unit)",
+      "score": 0.5134004354476929
+    },
+    {
+      "name": "Pairwise comparison",
+      "score": 0.5016434192657471
+    },
+    {
+      "name": "Language model",
+      "score": 0.49124664068222046
+    },
+    {
+      "name": "Feature selection",
+      "score": 0.44599205255508423
+    },
+    {
+      "name": "Ranking (information retrieval)",
+      "score": 0.42797398567199707
+    },
+    {
+      "name": "Word (group theory)",
+      "score": 0.4271267056465149
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.34179896116256714
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.16539964079856873
+    },
+    {
+      "name": "Mathematical analysis",
+      "score": 0.0
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.0
+    },
+    {
+      "name": "Operations management",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

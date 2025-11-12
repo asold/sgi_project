@@ -1,72 +1,127 @@
 {
-    "title": "Understanding the natural language of DNA using encoder–decoder foundation models with byte-level precision",
-    "url": "https://openalex.org/W4401792704",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2948443847",
-            "name": "Aditya Malusare",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2228322776",
-            "name": "Harish Kothandaraman",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3006939831",
-            "name": "Dipesh Tamboli",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2919035481",
-            "name": "Nadia A. Lanman",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2159065125",
-            "name": "Vaneet Aggarwal",
-            "affiliations": [
-                "Purdue University West Lafayette"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2104549677",
-        "https://openalex.org/W3203588026",
-        "https://openalex.org/W1988533731",
-        "https://openalex.org/W3080773980",
-        "https://openalex.org/W4394769874",
-        "https://openalex.org/W3177500196",
-        "https://openalex.org/W4387451333",
-        "https://openalex.org/W6797080668",
-        "https://openalex.org/W4229079441",
-        "https://openalex.org/W4367597910",
-        "https://openalex.org/W2096465161",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W4307068738",
-        "https://openalex.org/W4386020160",
-        "https://openalex.org/W4307843054",
-        "https://openalex.org/W2173732482",
-        "https://openalex.org/W4378086268",
-        "https://openalex.org/W2780329783",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W4293199644",
-        "https://openalex.org/W2963739921",
-        "https://openalex.org/W4225917625",
-        "https://openalex.org/W4315641887",
-        "https://openalex.org/W4297982512",
-        "https://openalex.org/W3173026327",
-        "https://openalex.org/W4388024559"
-    ],
-    "abstract": "Abstract Summary This article presents the Ensemble Nucleotide Byte-level Encoder-Decoder (ENBED) foundation model, analyzing DNA sequences at byte-level precision with an encoder–decoder Transformer architecture. ENBED uses a subquadratic implementation of attention to develop an efficient model capable of sequence-to-sequence transformations, generalizing previous genomic models with encoder-only or decoder-only architectures. We use Masked Language Modeling to pretrain the foundation model using reference genome sequences and apply it in the following downstream tasks: (i) identification of enhancers, promotors, and splice sites, (ii) recognition of sequences containing base call mismatches and insertion/deletion errors, an advantage over tokenization schemes involving multiple base pairs, which lose the ability to analyze with byte-level precision, (iii) identification of biological function annotations of genomic sequences, and (iv) generating mutations of the Influenza virus using the encoder–decoder architecture and validating them against real-world observations. In each of these tasks, we demonstrate significant improvement as compared to the existing state-of-the-art results. Availability and implementation The source code used to develop and fine-tune the foundation model has been released on Github (https://github.itap.purdue.edu/Clan-labs/ENBED).",
-    "full_text": null
+  "title": "Understanding the natural language of DNA using encoder–decoder foundation models with byte-level precision",
+  "url": "https://openalex.org/W4401792704",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2948443847",
+      "name": "Aditya Malusare",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2228322776",
+      "name": "Harish Kothandaraman",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3006939831",
+      "name": "Dipesh Tamboli",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2919035481",
+      "name": "Nadia A. Lanman",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2159065125",
+      "name": "Vaneet Aggarwal",
+      "affiliations": [
+        "Purdue University West Lafayette"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2104549677",
+    "https://openalex.org/W3203588026",
+    "https://openalex.org/W1988533731",
+    "https://openalex.org/W3080773980",
+    "https://openalex.org/W4394769874",
+    "https://openalex.org/W3177500196",
+    "https://openalex.org/W4387451333",
+    "https://openalex.org/W6797080668",
+    "https://openalex.org/W4229079441",
+    "https://openalex.org/W4367597910",
+    "https://openalex.org/W2096465161",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W4307068738",
+    "https://openalex.org/W4386020160",
+    "https://openalex.org/W4307843054",
+    "https://openalex.org/W2173732482",
+    "https://openalex.org/W4378086268",
+    "https://openalex.org/W2780329783",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W4293199644",
+    "https://openalex.org/W2963739921",
+    "https://openalex.org/W4225917625",
+    "https://openalex.org/W4315641887",
+    "https://openalex.org/W4297982512",
+    "https://openalex.org/W3173026327",
+    "https://openalex.org/W4388024559"
+  ],
+  "abstract": "Abstract Summary This article presents the Ensemble Nucleotide Byte-level Encoder-Decoder (ENBED) foundation model, analyzing DNA sequences at byte-level precision with an encoder–decoder Transformer architecture. ENBED uses a subquadratic implementation of attention to develop an efficient model capable of sequence-to-sequence transformations, generalizing previous genomic models with encoder-only or decoder-only architectures. We use Masked Language Modeling to pretrain the foundation model using reference genome sequences and apply it in the following downstream tasks: (i) identification of enhancers, promotors, and splice sites, (ii) recognition of sequences containing base call mismatches and insertion/deletion errors, an advantage over tokenization schemes involving multiple base pairs, which lose the ability to analyze with byte-level precision, (iii) identification of biological function annotations of genomic sequences, and (iv) generating mutations of the Influenza virus using the encoder–decoder architecture and validating them against real-world observations. In each of these tasks, we demonstrate significant improvement as compared to the existing state-of-the-art results. Availability and implementation The source code used to develop and fine-tune the foundation model has been released on Github (https://github.itap.purdue.edu/Clan-labs/ENBED).",
+  "full_text": null,
+  "topic": "Byte",
+  "concepts": [
+    {
+      "name": "Byte",
+      "score": 0.7369363307952881
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6494830846786499
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5795294046401978
+    },
+    {
+      "name": "Foundation (evidence)",
+      "score": 0.5790436267852783
+    },
+    {
+      "name": "Natural (archaeology)",
+      "score": 0.48333093523979187
+    },
+    {
+      "name": "Natural language",
+      "score": 0.41676604747772217
+    },
+    {
+      "name": "Programming language",
+      "score": 0.4089176654815674
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.2998098134994507
+    },
+    {
+      "name": "Operating system",
+      "score": 0.11061364412307739
+    },
+    {
+      "name": "Biology",
+      "score": 0.07993665337562561
+    },
+    {
+      "name": "History",
+      "score": 0.07791316509246826
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Archaeology",
+      "score": 0.0
+    }
+  ]
 }

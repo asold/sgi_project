@@ -1,135 +1,198 @@
 {
-    "title": "A Proposal for Multimodal Emotion Recognition Using Aural Transformers and Action Units on RAVDESS Dataset",
-    "url": "https://openalex.org/W4205633160",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2953370670",
-            "name": "Cristina Luna-Jimenez",
-            "affiliations": [
-                "Universidad Politécnica de Madrid"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2950644255",
-            "name": "Ricardo Kleinlein",
-            "affiliations": [
-                "Universidad Politécnica de Madrid"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2194908618",
-            "name": "David Griol",
-            "affiliations": [
-                "Universidad de Granada",
-                "Software (Spain)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2101762997",
-            "name": "Zoraida Callejas",
-            "affiliations": [
-                "Software (Spain)",
-                "Universidad de Granada"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2990769295",
-            "name": "Juan M. Montero",
-            "affiliations": [
-                "Universidad Politécnica de Madrid"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2151592979",
-            "name": "Fernando Fernández Martínez",
-            "affiliations": [
-                "Universidad Politécnica de Madrid"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3191131351",
-        "https://openalex.org/W216945601",
-        "https://openalex.org/W2793000014",
-        "https://openalex.org/W3042183479",
-        "https://openalex.org/W3130873418",
-        "https://openalex.org/W2972437046",
-        "https://openalex.org/W3188077261",
-        "https://openalex.org/W2791956126",
-        "https://openalex.org/W2917647482",
-        "https://openalex.org/W4239187549",
-        "https://openalex.org/W4254718357",
-        "https://openalex.org/W3084484668",
-        "https://openalex.org/W3213879871",
-        "https://openalex.org/W3113497772",
-        "https://openalex.org/W3207246414",
-        "https://openalex.org/W2290844432",
-        "https://openalex.org/W6798885717",
-        "https://openalex.org/W4251591997",
-        "https://openalex.org/W2803193013",
-        "https://openalex.org/W175750906",
-        "https://openalex.org/W2165857685",
-        "https://openalex.org/W2045528981",
-        "https://openalex.org/W2745497104",
-        "https://openalex.org/W2146334809",
-        "https://openalex.org/W3126297201",
-        "https://openalex.org/W2997399314",
-        "https://openalex.org/W3139270985",
-        "https://openalex.org/W3145643603",
-        "https://openalex.org/W2085662862",
-        "https://openalex.org/W6639350448",
-        "https://openalex.org/W2964370293",
-        "https://openalex.org/W3186192207",
-        "https://openalex.org/W3197642003",
-        "https://openalex.org/W3008039831",
-        "https://openalex.org/W3118826611",
-        "https://openalex.org/W3178599867",
-        "https://openalex.org/W3111613338",
-        "https://openalex.org/W2980587061",
-        "https://openalex.org/W3157429286",
-        "https://openalex.org/W2966269089",
-        "https://openalex.org/W2746419079",
-        "https://openalex.org/W3094550259",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W6677618333",
-        "https://openalex.org/W2613016420",
-        "https://openalex.org/W4200350537",
-        "https://openalex.org/W1588539311",
-        "https://openalex.org/W2402052410",
-        "https://openalex.org/W3146434006",
-        "https://openalex.org/W2060201548",
-        "https://openalex.org/W3100362702",
-        "https://openalex.org/W2807126412",
-        "https://openalex.org/W2976137249",
-        "https://openalex.org/W3157999215",
-        "https://openalex.org/W3137043336",
-        "https://openalex.org/W3094595351",
-        "https://openalex.org/W2619383789",
-        "https://openalex.org/W3206842948",
-        "https://openalex.org/W3097075955",
-        "https://openalex.org/W4255216604",
-        "https://openalex.org/W3085812513",
-        "https://openalex.org/W3164046946",
-        "https://openalex.org/W3177602233",
-        "https://openalex.org/W3198429080",
-        "https://openalex.org/W3036601975",
-        "https://openalex.org/W2995929068",
-        "https://openalex.org/W6601908271",
-        "https://openalex.org/W6675354045",
-        "https://openalex.org/W1628791547",
-        "https://openalex.org/W2963712766",
-        "https://openalex.org/W3201747069",
-        "https://openalex.org/W2962855291",
-        "https://openalex.org/W2970971581",
-        "https://openalex.org/W3096615741",
-        "https://openalex.org/W46948191",
-        "https://openalex.org/W3182484575",
-        "https://openalex.org/W2115252128",
-        "https://openalex.org/W1875231349",
-        "https://openalex.org/W2101234009",
-        "https://openalex.org/W3122081138"
-    ],
-    "abstract": "Emotion recognition is attracting the attention of the research community due to its multiple applications in different fields, such as medicine or autonomous driving. In this paper, we proposed an automatic emotion recognizer system that consisted of a speech emotion recognizer (SER) and a facial emotion recognizer (FER). For the SER, we evaluated a pre-trained xlsr-Wav2Vec2.0 transformer using two transfer-learning techniques: embedding extraction and fine-tuning. The best accuracy results were achieved when we fine-tuned the whole model by appending a multilayer perceptron on top of it, confirming that the training was more robust when it did not start from scratch and the previous knowledge of the network was similar to the task to adapt. Regarding the facial emotion recognizer, we extracted the Action Units of the videos and compared the performance between employing static models against sequential models. Results showed that sequential models beat static models by a narrow difference. Error analysis reported that the visual systems could improve with a detector of high-emotional load frames, which opened a new line of research to discover new ways to learn from videos. Finally, combining these two modalities with a late fusion strategy, we achieved 86.70% accuracy on the RAVDESS dataset on a subject-wise 5-CV evaluation, classifying eight emotions. Results demonstrated that these modalities carried relevant information to detect users’ emotional state and their combination allowed to improve the final system performance.",
-    "full_text": null
+  "title": "A Proposal for Multimodal Emotion Recognition Using Aural Transformers and Action Units on RAVDESS Dataset",
+  "url": "https://openalex.org/W4205633160",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2953370670",
+      "name": "Cristina Luna-Jimenez",
+      "affiliations": [
+        "Universidad Politécnica de Madrid"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2950644255",
+      "name": "Ricardo Kleinlein",
+      "affiliations": [
+        "Universidad Politécnica de Madrid"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2194908618",
+      "name": "David Griol",
+      "affiliations": [
+        "Universidad de Granada",
+        "Software (Spain)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2101762997",
+      "name": "Zoraida Callejas",
+      "affiliations": [
+        "Software (Spain)",
+        "Universidad de Granada"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2990769295",
+      "name": "Juan M. Montero",
+      "affiliations": [
+        "Universidad Politécnica de Madrid"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2151592979",
+      "name": "Fernando Fernández Martínez",
+      "affiliations": [
+        "Universidad Politécnica de Madrid"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3191131351",
+    "https://openalex.org/W216945601",
+    "https://openalex.org/W2793000014",
+    "https://openalex.org/W3042183479",
+    "https://openalex.org/W3130873418",
+    "https://openalex.org/W2972437046",
+    "https://openalex.org/W3188077261",
+    "https://openalex.org/W2791956126",
+    "https://openalex.org/W2917647482",
+    "https://openalex.org/W4239187549",
+    "https://openalex.org/W4254718357",
+    "https://openalex.org/W3084484668",
+    "https://openalex.org/W3213879871",
+    "https://openalex.org/W3113497772",
+    "https://openalex.org/W3207246414",
+    "https://openalex.org/W2290844432",
+    "https://openalex.org/W6798885717",
+    "https://openalex.org/W4251591997",
+    "https://openalex.org/W2803193013",
+    "https://openalex.org/W175750906",
+    "https://openalex.org/W2165857685",
+    "https://openalex.org/W2045528981",
+    "https://openalex.org/W2745497104",
+    "https://openalex.org/W2146334809",
+    "https://openalex.org/W3126297201",
+    "https://openalex.org/W2997399314",
+    "https://openalex.org/W3139270985",
+    "https://openalex.org/W3145643603",
+    "https://openalex.org/W2085662862",
+    "https://openalex.org/W6639350448",
+    "https://openalex.org/W2964370293",
+    "https://openalex.org/W3186192207",
+    "https://openalex.org/W3197642003",
+    "https://openalex.org/W3008039831",
+    "https://openalex.org/W3118826611",
+    "https://openalex.org/W3178599867",
+    "https://openalex.org/W3111613338",
+    "https://openalex.org/W2980587061",
+    "https://openalex.org/W3157429286",
+    "https://openalex.org/W2966269089",
+    "https://openalex.org/W2746419079",
+    "https://openalex.org/W3094550259",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W6677618333",
+    "https://openalex.org/W2613016420",
+    "https://openalex.org/W4200350537",
+    "https://openalex.org/W1588539311",
+    "https://openalex.org/W2402052410",
+    "https://openalex.org/W3146434006",
+    "https://openalex.org/W2060201548",
+    "https://openalex.org/W3100362702",
+    "https://openalex.org/W2807126412",
+    "https://openalex.org/W2976137249",
+    "https://openalex.org/W3157999215",
+    "https://openalex.org/W3137043336",
+    "https://openalex.org/W3094595351",
+    "https://openalex.org/W2619383789",
+    "https://openalex.org/W3206842948",
+    "https://openalex.org/W3097075955",
+    "https://openalex.org/W4255216604",
+    "https://openalex.org/W3085812513",
+    "https://openalex.org/W3164046946",
+    "https://openalex.org/W3177602233",
+    "https://openalex.org/W3198429080",
+    "https://openalex.org/W3036601975",
+    "https://openalex.org/W2995929068",
+    "https://openalex.org/W6601908271",
+    "https://openalex.org/W6675354045",
+    "https://openalex.org/W1628791547",
+    "https://openalex.org/W2963712766",
+    "https://openalex.org/W3201747069",
+    "https://openalex.org/W2962855291",
+    "https://openalex.org/W2970971581",
+    "https://openalex.org/W3096615741",
+    "https://openalex.org/W46948191",
+    "https://openalex.org/W3182484575",
+    "https://openalex.org/W2115252128",
+    "https://openalex.org/W1875231349",
+    "https://openalex.org/W2101234009",
+    "https://openalex.org/W3122081138"
+  ],
+  "abstract": "Emotion recognition is attracting the attention of the research community due to its multiple applications in different fields, such as medicine or autonomous driving. In this paper, we proposed an automatic emotion recognizer system that consisted of a speech emotion recognizer (SER) and a facial emotion recognizer (FER). For the SER, we evaluated a pre-trained xlsr-Wav2Vec2.0 transformer using two transfer-learning techniques: embedding extraction and fine-tuning. The best accuracy results were achieved when we fine-tuned the whole model by appending a multilayer perceptron on top of it, confirming that the training was more robust when it did not start from scratch and the previous knowledge of the network was similar to the task to adapt. Regarding the facial emotion recognizer, we extracted the Action Units of the videos and compared the performance between employing static models against sequential models. Results showed that sequential models beat static models by a narrow difference. Error analysis reported that the visual systems could improve with a detector of high-emotional load frames, which opened a new line of research to discover new ways to learn from videos. Finally, combining these two modalities with a late fusion strategy, we achieved 86.70% accuracy on the RAVDESS dataset on a subject-wise 5-CV evaluation, classifying eight emotions. Results demonstrated that these modalities carried relevant information to detect users’ emotional state and their combination allowed to improve the final system performance.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7934082746505737
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5919570922851562
+    },
+    {
+      "name": "Modalities",
+      "score": 0.5485627055168152
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5483109354972839
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.5437747836112976
+    },
+    {
+      "name": "Emotion recognition",
+      "score": 0.49259477853775024
+    },
+    {
+      "name": "Multilayer perceptron",
+      "score": 0.441707581281662
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.3901386260986328
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3654925227165222
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3570406436920166
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09437334537506104
+    },
+    {
+      "name": "Voltage",
+      "score": 0.08334261178970337
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Social science",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    }
+  ]
 }

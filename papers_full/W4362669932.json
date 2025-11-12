@@ -1,98 +1,157 @@
 {
-    "title": "Deep hierarchical transformer for change detection in high-resolution remote sensing images",
-    "url": "https://openalex.org/W4362669932",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1973602695",
-            "name": "Bing Liu",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2418859528",
-            "name": "Anzhu Yu",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3033323902",
-            "name": "Xibing Zuo",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2133415267",
-            "name": "Ruirui Wang",
-            "affiliations": [
-                "Henan Institute of Geological Survey"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2488000894",
-            "name": "Chunping Qiu",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2121355136",
-            "name": "Xuchu Yu",
-            "affiliations": [
-                "PLA Information Engineering University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1967381020",
-        "https://openalex.org/W4312549298",
-        "https://openalex.org/W2153864221",
-        "https://openalex.org/W2144552105",
-        "https://openalex.org/W4285243313",
-        "https://openalex.org/W3206772442",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W3180045188",
-        "https://openalex.org/W3027225766",
-        "https://openalex.org/W2997043451",
-        "https://openalex.org/W3009942016",
-        "https://openalex.org/W3172749486",
-        "https://openalex.org/W3174635444",
-        "https://openalex.org/W2995250549",
-        "https://openalex.org/W3163207600",
-        "https://openalex.org/W3214719104",
-        "https://openalex.org/W3200451575",
-        "https://openalex.org/W3037640242",
-        "https://openalex.org/W3142599962",
-        "https://openalex.org/W2601202827",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3099850646",
-        "https://openalex.org/W2898204262",
-        "https://openalex.org/W2768537477",
-        "https://openalex.org/W4226361741",
-        "https://openalex.org/W3012377709",
-        "https://openalex.org/W2792827505",
-        "https://openalex.org/W3004369358",
-        "https://openalex.org/W3048064159",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2395611524",
-        "https://openalex.org/W3176330035",
-        "https://openalex.org/W3027201985",
-        "https://openalex.org/W3118142692",
-        "https://openalex.org/W2134969826",
-        "https://openalex.org/W2577832105",
-        "https://openalex.org/W2884822772",
-        "https://openalex.org/W4312462271",
-        "https://openalex.org/W4226228401",
-        "https://openalex.org/W2896092083",
-        "https://openalex.org/W3036453075",
-        "https://openalex.org/W2412588858",
-        "https://openalex.org/W2560023338",
-        "https://openalex.org/W2953120679",
-        "https://openalex.org/W3102127038"
-    ],
-    "abstract": "ABSTRACTDeep learning instantiated by convolutional neural networks has achieved great success in high-resolution remote-sensing image change detection. However, such networks have a limited receptive field, being unable to extract long-range dependencies in a scene. As the transformer model with self-attention can better describe long-range dependencies, we introduce a hierarchical transformer model to improve the precision of change detection in high-resolution remote sensing images. First, the hierarchical transformer extracts abstract features from multitemporal remote sensing images. To effectively minimize the model’s complexity and enhance the feature representation, we limit the self-attention calculation of each transformer layer to local windows with different sizes. Then, we combine the features extracted by the hierarchical transformer and input them into a nested U-Net to obtain the change detection results. Furthermore, a simple but effective model fusion strategy is adopted to improve the change detection accuracy. Extensive experiments are carried out on two large-scale data sets for change detection, LEVIR-CD and SYSU-CD. The quantitative and qualitative experimental results suggest that the proposed method outperforms the advanced methods in terms of detection performance.",
-    "full_text": null
+  "title": "Deep hierarchical transformer for change detection in high-resolution remote sensing images",
+  "url": "https://openalex.org/W4362669932",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1973602695",
+      "name": "Bing Liu",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2418859528",
+      "name": "Anzhu Yu",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3033323902",
+      "name": "Xibing Zuo",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2133415267",
+      "name": "Ruirui Wang",
+      "affiliations": [
+        "Henan Institute of Geological Survey"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2488000894",
+      "name": "Chunping Qiu",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2121355136",
+      "name": "Xuchu Yu",
+      "affiliations": [
+        "PLA Information Engineering University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1967381020",
+    "https://openalex.org/W4312549298",
+    "https://openalex.org/W2153864221",
+    "https://openalex.org/W2144552105",
+    "https://openalex.org/W4285243313",
+    "https://openalex.org/W3206772442",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W3180045188",
+    "https://openalex.org/W3027225766",
+    "https://openalex.org/W2997043451",
+    "https://openalex.org/W3009942016",
+    "https://openalex.org/W3172749486",
+    "https://openalex.org/W3174635444",
+    "https://openalex.org/W2995250549",
+    "https://openalex.org/W3163207600",
+    "https://openalex.org/W3214719104",
+    "https://openalex.org/W3200451575",
+    "https://openalex.org/W3037640242",
+    "https://openalex.org/W3142599962",
+    "https://openalex.org/W2601202827",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3099850646",
+    "https://openalex.org/W2898204262",
+    "https://openalex.org/W2768537477",
+    "https://openalex.org/W4226361741",
+    "https://openalex.org/W3012377709",
+    "https://openalex.org/W2792827505",
+    "https://openalex.org/W3004369358",
+    "https://openalex.org/W3048064159",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2395611524",
+    "https://openalex.org/W3176330035",
+    "https://openalex.org/W3027201985",
+    "https://openalex.org/W3118142692",
+    "https://openalex.org/W2134969826",
+    "https://openalex.org/W2577832105",
+    "https://openalex.org/W2884822772",
+    "https://openalex.org/W4312462271",
+    "https://openalex.org/W4226228401",
+    "https://openalex.org/W2896092083",
+    "https://openalex.org/W3036453075",
+    "https://openalex.org/W2412588858",
+    "https://openalex.org/W2560023338",
+    "https://openalex.org/W2953120679",
+    "https://openalex.org/W3102127038"
+  ],
+  "abstract": "ABSTRACTDeep learning instantiated by convolutional neural networks has achieved great success in high-resolution remote-sensing image change detection. However, such networks have a limited receptive field, being unable to extract long-range dependencies in a scene. As the transformer model with self-attention can better describe long-range dependencies, we introduce a hierarchical transformer model to improve the precision of change detection in high-resolution remote sensing images. First, the hierarchical transformer extracts abstract features from multitemporal remote sensing images. To effectively minimize the model’s complexity and enhance the feature representation, we limit the self-attention calculation of each transformer layer to local windows with different sizes. Then, we combine the features extracted by the hierarchical transformer and input them into a nested U-Net to obtain the change detection results. Furthermore, a simple but effective model fusion strategy is adopted to improve the change detection accuracy. Extensive experiments are carried out on two large-scale data sets for change detection, LEVIR-CD and SYSU-CD. The quantitative and qualitative experimental results suggest that the proposed method outperforms the advanced methods in terms of detection performance.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7329380512237549
+    },
+    {
+      "name": "Change detection",
+      "score": 0.6814970374107361
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6569669246673584
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5985305905342102
+    },
+    {
+      "name": "High resolution",
+      "score": 0.48141026496887207
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.47326138615608215
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4700789749622345
+    },
+    {
+      "name": "Remote sensing",
+      "score": 0.3590671420097351
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.3481755256652832
+    },
+    {
+      "name": "Data mining",
+      "score": 0.3397606611251831
+    },
+    {
+      "name": "Geography",
+      "score": 0.1230367124080658
+    },
+    {
+      "name": "Engineering",
+      "score": 0.09069141745567322
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0654911994934082
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

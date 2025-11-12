@@ -1,79 +1,134 @@
 {
-    "title": "Lightweight URL-based phishing detection using natural language processing transformers for mobile devices",
-    "url": "https://openalex.org/W3197388494",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2474299315",
-            "name": "Katherine Haynes",
-            "affiliations": [
-                "Colorado State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2132385391",
-            "name": "Hossein Shirazi",
-            "affiliations": [
-                "Colorado State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1966110232",
-            "name": "Indrakshi Ray",
-            "affiliations": [
-                "Colorado State University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2474299315",
-            "name": "Katherine Haynes",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2132385391",
-            "name": "Hossein Shirazi",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1966110232",
-            "name": "Indrakshi Ray",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2982523005",
-        "https://openalex.org/W3033350892",
-        "https://openalex.org/W6779735269",
-        "https://openalex.org/W3123820292",
-        "https://openalex.org/W3161935901",
-        "https://openalex.org/W3126895599",
-        "https://openalex.org/W2996035354",
-        "https://openalex.org/W6763640781",
-        "https://openalex.org/W6782313159",
-        "https://openalex.org/W3010740019",
-        "https://openalex.org/W6757619627",
-        "https://openalex.org/W3027172182",
-        "https://openalex.org/W2910607259",
-        "https://openalex.org/W3007485446",
-        "https://openalex.org/W6777170107",
-        "https://openalex.org/W2953822176",
-        "https://openalex.org/W3043219553",
-        "https://openalex.org/W2906351126",
-        "https://openalex.org/W2113207845",
-        "https://openalex.org/W6676179485",
-        "https://openalex.org/W2979826702",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3023514002",
-        "https://openalex.org/W4302282827",
-        "https://openalex.org/W2948344613",
-        "https://openalex.org/W3049199750",
-        "https://openalex.org/W3037374573",
-        "https://openalex.org/W3098824823",
-        "https://openalex.org/W2106411961",
-        "https://openalex.org/W3091965511",
-        "https://openalex.org/W2787538540",
-        "https://openalex.org/W2909737018"
-    ],
-    "abstract": "Hackers are increasingly launching phishing attacks via SMS and social media. Games and dating apps introduce yet another attack vector. However, current deep learning-based phishing detection applications are not applicable to mobile devices due to the computational burden. We propose a lightweight phishing detection algorithm that distinguishes phishing from legitimate websites solely from URLs to be used in mobile devices. As a baseline performance, we apply Artificial Neural Networks (ANNs) to URL-based and HTML-based website features. A model search results in 15 ANN models with accuracies >96%, comparable to state-of-the-art approaches. Next, we test the performance of deep ANNs on URL-based features only; however, all models perform poorly with the highest accuracy of 86.2%, indicating that URL-based features alone are not adequate to detect phishing websites even with deep ANNs. Since language transformers learn to represent context-dependent text sequences, we hypothesize that they will be able to learn directly from the text in URLs to distinguish between legitimate and malicious websites. We apply two state-of-the-art deep transformers (BERT and ELECTRA) for phishing detection. Testing custom and standard vocabularies, we find that pre-trained transformers available for immediate use (with fine-tuning) outperform the model trained with the custom URL-based vocabulary. Using pre-trained transformers to predict phishing websites from only URLs has four advantages: 1) requires little training time (~8 minutes), 2) is more easily updatable than feature-based approaches because no pre-processing of URLs is required, 3) is safer to use because phishing websites can be predicted without physically visiting the malicious sites and 4) is easily deployable for real-time detection and is applicable to run on mobile devices.",
-    "full_text": null
+  "title": "Lightweight URL-based phishing detection using natural language processing transformers for mobile devices",
+  "url": "https://openalex.org/W3197388494",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2474299315",
+      "name": "Katherine Haynes",
+      "affiliations": [
+        "Colorado State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2132385391",
+      "name": "Hossein Shirazi",
+      "affiliations": [
+        "Colorado State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1966110232",
+      "name": "Indrakshi Ray",
+      "affiliations": [
+        "Colorado State University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2474299315",
+      "name": "Katherine Haynes",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2132385391",
+      "name": "Hossein Shirazi",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1966110232",
+      "name": "Indrakshi Ray",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2982523005",
+    "https://openalex.org/W3033350892",
+    "https://openalex.org/W6779735269",
+    "https://openalex.org/W3123820292",
+    "https://openalex.org/W3161935901",
+    "https://openalex.org/W3126895599",
+    "https://openalex.org/W2996035354",
+    "https://openalex.org/W6763640781",
+    "https://openalex.org/W6782313159",
+    "https://openalex.org/W3010740019",
+    "https://openalex.org/W6757619627",
+    "https://openalex.org/W3027172182",
+    "https://openalex.org/W2910607259",
+    "https://openalex.org/W3007485446",
+    "https://openalex.org/W6777170107",
+    "https://openalex.org/W2953822176",
+    "https://openalex.org/W3043219553",
+    "https://openalex.org/W2906351126",
+    "https://openalex.org/W2113207845",
+    "https://openalex.org/W6676179485",
+    "https://openalex.org/W2979826702",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3023514002",
+    "https://openalex.org/W4302282827",
+    "https://openalex.org/W2948344613",
+    "https://openalex.org/W3049199750",
+    "https://openalex.org/W3037374573",
+    "https://openalex.org/W3098824823",
+    "https://openalex.org/W2106411961",
+    "https://openalex.org/W3091965511",
+    "https://openalex.org/W2787538540",
+    "https://openalex.org/W2909737018"
+  ],
+  "abstract": "Hackers are increasingly launching phishing attacks via SMS and social media. Games and dating apps introduce yet another attack vector. However, current deep learning-based phishing detection applications are not applicable to mobile devices due to the computational burden. We propose a lightweight phishing detection algorithm that distinguishes phishing from legitimate websites solely from URLs to be used in mobile devices. As a baseline performance, we apply Artificial Neural Networks (ANNs) to URL-based and HTML-based website features. A model search results in 15 ANN models with accuracies >96%, comparable to state-of-the-art approaches. Next, we test the performance of deep ANNs on URL-based features only; however, all models perform poorly with the highest accuracy of 86.2%, indicating that URL-based features alone are not adequate to detect phishing websites even with deep ANNs. Since language transformers learn to represent context-dependent text sequences, we hypothesize that they will be able to learn directly from the text in URLs to distinguish between legitimate and malicious websites. We apply two state-of-the-art deep transformers (BERT and ELECTRA) for phishing detection. Testing custom and standard vocabularies, we find that pre-trained transformers available for immediate use (with fine-tuning) outperform the model trained with the custom URL-based vocabulary. Using pre-trained transformers to predict phishing websites from only URLs has four advantages: 1) requires little training time (~8 minutes), 2) is more easily updatable than feature-based approaches because no pre-processing of URLs is required, 3) is safer to use because phishing websites can be predicted without physically visiting the malicious sites and 4) is easily deployable for real-time detection and is applicable to run on mobile devices.",
+  "full_text": null,
+  "topic": "Phishing",
+  "concepts": [
+    {
+      "name": "Phishing",
+      "score": 0.928704023361206
+    },
+    {
+      "name": "Computer science",
+      "score": 0.8728898763656616
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6007095575332642
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5494692325592041
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4999709129333496
+    },
+    {
+      "name": "Mobile device",
+      "score": 0.4517856538295746
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.4462578594684601
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4316787123680115
+    },
+    {
+      "name": "The Internet",
+      "score": 0.3418644070625305
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.30437415838241577
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,47 +1,90 @@
 {
-    "title": "Type-migrating C-to-Rust translation using a large language model",
-    "url": "https://openalex.org/W4403486309",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2128973722",
-            "name": "Jae-Min Hong",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2147806369",
-            "name": "Sukyoung Ryu",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4313547549",
-        "https://openalex.org/W1976721395",
-        "https://openalex.org/W6600050674",
-        "https://openalex.org/W4399557965",
-        "https://openalex.org/W3205049031",
-        "https://openalex.org/W4362676373",
-        "https://openalex.org/W4384345745",
-        "https://openalex.org/W3098605233",
-        "https://openalex.org/W6601399257",
-        "https://openalex.org/W4384345830",
-        "https://openalex.org/W2779850521",
-        "https://openalex.org/W2074032109",
-        "https://openalex.org/W4401996408",
-        "https://openalex.org/W6600234944",
-        "https://openalex.org/W4384302891",
-        "https://openalex.org/W2013892605",
-        "https://openalex.org/W1972141422",
-        "https://openalex.org/W2054855378",
-        "https://openalex.org/W2247864914",
-        "https://openalex.org/W4394769102",
-        "https://openalex.org/W3198685994",
-        "https://openalex.org/W4384345708",
-        "https://openalex.org/W4388598889",
-        "https://openalex.org/W4400582609",
-        "https://openalex.org/W4384471416",
-        "https://openalex.org/W2169974813"
-    ],
-    "abstract": "Abstract Rust, a modern system programming language, introduces new types that prevent memory bugs and data races. This makes translating legacy system programs from C to Rust a promising approach to enhance their reliability. Since manual code translation is time-consuming, it is desirable to automate the translation. To yield satisfactory results, the translator should have the ability to perform type migration , i.e., removing C types and introducing Rust types in the code. In this work, we aim to automatically port an entire C program to Rust by translating each C function to a Rust function with a signature containing proper Rust types through type migration. This goal is challenging because (1) type migration cannot be achieved through syntactic mappings between type names, and (2) after type migration, function bodies should be correctly restructured based on the precise understanding of the functions’ behavior. To address these difficulties, we leverage large language models (LLMs), which possess knowledge of program semantics and programming idioms. However, naïvely instructing LLMs to translate each function produces unsatisfactory Rust code, containing unmigrated or improperly migrated types and a huge number of type errors. To resolve these issues, we propose three techniques: (1) generating candidate signatures, (2) providing translated callees’ signatures to LLMs, and (3) iteratively fixing type errors using compiler feedback. Our evaluation shows that the proposed approach yields a 63.5% increase in migrated types and a 71.5% decrease in type errors compared to the baseline (the naïve LLM-based translation) with modest performance overhead.",
-    "full_text": null
+  "title": "Type-migrating C-to-Rust translation using a large language model",
+  "url": "https://openalex.org/W4403486309",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2128973722",
+      "name": "Jae-Min Hong",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2147806369",
+      "name": "Sukyoung Ryu",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4313547549",
+    "https://openalex.org/W1976721395",
+    "https://openalex.org/W6600050674",
+    "https://openalex.org/W4399557965",
+    "https://openalex.org/W3205049031",
+    "https://openalex.org/W4362676373",
+    "https://openalex.org/W4384345745",
+    "https://openalex.org/W3098605233",
+    "https://openalex.org/W6601399257",
+    "https://openalex.org/W4384345830",
+    "https://openalex.org/W2779850521",
+    "https://openalex.org/W2074032109",
+    "https://openalex.org/W4401996408",
+    "https://openalex.org/W6600234944",
+    "https://openalex.org/W4384302891",
+    "https://openalex.org/W2013892605",
+    "https://openalex.org/W1972141422",
+    "https://openalex.org/W2054855378",
+    "https://openalex.org/W2247864914",
+    "https://openalex.org/W4394769102",
+    "https://openalex.org/W3198685994",
+    "https://openalex.org/W4384345708",
+    "https://openalex.org/W4388598889",
+    "https://openalex.org/W4400582609",
+    "https://openalex.org/W4384471416",
+    "https://openalex.org/W2169974813"
+  ],
+  "abstract": "Abstract Rust, a modern system programming language, introduces new types that prevent memory bugs and data races. This makes translating legacy system programs from C to Rust a promising approach to enhance their reliability. Since manual code translation is time-consuming, it is desirable to automate the translation. To yield satisfactory results, the translator should have the ability to perform type migration , i.e., removing C types and introducing Rust types in the code. In this work, we aim to automatically port an entire C program to Rust by translating each C function to a Rust function with a signature containing proper Rust types through type migration. This goal is challenging because (1) type migration cannot be achieved through syntactic mappings between type names, and (2) after type migration, function bodies should be correctly restructured based on the precise understanding of the functions’ behavior. To address these difficulties, we leverage large language models (LLMs), which possess knowledge of program semantics and programming idioms. However, naïvely instructing LLMs to translate each function produces unsatisfactory Rust code, containing unmigrated or improperly migrated types and a huge number of type errors. To resolve these issues, we propose three techniques: (1) generating candidate signatures, (2) providing translated callees’ signatures to LLMs, and (3) iteratively fixing type errors using compiler feedback. Our evaluation shows that the proposed approach yields a 63.5% increase in migrated types and a 71.5% decrease in type errors compared to the baseline (the naïve LLM-based translation) with modest performance overhead.",
+  "full_text": null,
+  "topic": "Translation (biology)",
+  "concepts": [
+    {
+      "name": "Translation (biology)",
+      "score": 0.6525342464447021
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5862758159637451
+    },
+    {
+      "name": "Rust (programming language)",
+      "score": 0.49274757504463196
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.45063960552215576
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4023347795009613
+    },
+    {
+      "name": "Programming language",
+      "score": 0.3125619888305664
+    },
+    {
+      "name": "Biology",
+      "score": 0.06227898597717285
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Messenger RNA",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    }
+  ]
 }

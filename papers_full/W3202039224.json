@@ -1,65 +1,144 @@
 {
-    "title": "DLBT: Deep Learning-Based Transformer to Generate Pseudo-Code from Source Code",
-    "url": "https://openalex.org/W3202039224",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2231641322",
-            "name": "Walaa Gad",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4213849585",
-            "name": "Anas Alokla",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A142813711",
-            "name": "Waleed Nazih",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3196500289",
-            "name": "Mustafa Aref",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4213849588",
-            "name": "Abdel Badeeh Salem",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6745275677",
-        "https://openalex.org/W6757355021",
-        "https://openalex.org/W6690065790",
-        "https://openalex.org/W6775628819",
-        "https://openalex.org/W3094316335",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W6713098461",
-        "https://openalex.org/W6696287704",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2806532810",
-        "https://openalex.org/W6679434410",
-        "https://openalex.org/W2922006620",
-        "https://openalex.org/W6783134120",
-        "https://openalex.org/W6698308462",
-        "https://openalex.org/W6736356258",
-        "https://openalex.org/W6753916358",
-        "https://openalex.org/W6750282825",
-        "https://openalex.org/W6695202613",
-        "https://openalex.org/W6753851271",
-        "https://openalex.org/W2949297108",
-        "https://openalex.org/W6785022916",
-        "https://openalex.org/W6683258052",
-        "https://openalex.org/W6745537798",
-        "https://openalex.org/W6764140423",
-        "https://openalex.org/W6766978945",
-        "https://openalex.org/W2304113845",
-        "https://openalex.org/W3102624033",
-        "https://openalex.org/W2951577679",
-        "https://openalex.org/W3016399951"
-    ],
-    "abstract": "Understanding the content of the source code and its regular expression is very difficult when they are written in an unfamiliar language. Pseudo-code explains and describes the content of the code without using syntax or programming language technologies. However, writing Pseudo-code to each code instruction is laborious. Recently, neural machine translation is used to generate textual descriptions for the source code. In this paper, a novel deep learning-based transformer (DLBT) model is proposed for automatic Pseudo-code generation from the source code. The proposed model uses deep learning which is based on Neural Machine Translation (NMT) to work as a language translator. The DLBT is based on the transformer which is an encoder-decoder structure. There are three major components: tokenizer and embeddings, transformer, and post-processing. Each code line is tokenized to dense vector. Then transformer captures the relatedness between the source code and the matching Pseudo-code without the need of Recurrent Neural Network (RNN). At the post-processing step, the generated Pseudo-code is optimized. The proposed model is assessed using a real Python dataset, which contains more than 18,800 lines of a source code written in Python. The experiments show promising performance results compared with other machine translation methods such as Recurrent Neural Network (RNN). The proposed DLBT records 47.32, 68. 49 accuracy and BLEU performance measures, respectively.",
-    "full_text": null
+  "title": "DLBT: Deep Learning-Based Transformer to Generate Pseudo-Code from Source Code",
+  "url": "https://openalex.org/W3202039224",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2231641322",
+      "name": "Walaa Gad",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4213849585",
+      "name": "Anas Alokla",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A142813711",
+      "name": "Waleed Nazih",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3196500289",
+      "name": "Mustafa Aref",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4213849588",
+      "name": "Abdel Badeeh Salem",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6745275677",
+    "https://openalex.org/W6757355021",
+    "https://openalex.org/W6690065790",
+    "https://openalex.org/W6775628819",
+    "https://openalex.org/W3094316335",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W6713098461",
+    "https://openalex.org/W6696287704",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2806532810",
+    "https://openalex.org/W6679434410",
+    "https://openalex.org/W2922006620",
+    "https://openalex.org/W6783134120",
+    "https://openalex.org/W6698308462",
+    "https://openalex.org/W6736356258",
+    "https://openalex.org/W6753916358",
+    "https://openalex.org/W6750282825",
+    "https://openalex.org/W6695202613",
+    "https://openalex.org/W6753851271",
+    "https://openalex.org/W2949297108",
+    "https://openalex.org/W6785022916",
+    "https://openalex.org/W6683258052",
+    "https://openalex.org/W6745537798",
+    "https://openalex.org/W6764140423",
+    "https://openalex.org/W6766978945",
+    "https://openalex.org/W2304113845",
+    "https://openalex.org/W3102624033",
+    "https://openalex.org/W2951577679",
+    "https://openalex.org/W3016399951"
+  ],
+  "abstract": "Understanding the content of the source code and its regular expression is very difficult when they are written in an unfamiliar language. Pseudo-code explains and describes the content of the code without using syntax or programming language technologies. However, writing Pseudo-code to each code instruction is laborious. Recently, neural machine translation is used to generate textual descriptions for the source code. In this paper, a novel deep learning-based transformer (DLBT) model is proposed for automatic Pseudo-code generation from the source code. The proposed model uses deep learning which is based on Neural Machine Translation (NMT) to work as a language translator. The DLBT is based on the transformer which is an encoder-decoder structure. There are three major components: tokenizer and embeddings, transformer, and post-processing. Each code line is tokenized to dense vector. Then transformer captures the relatedness between the source code and the matching Pseudo-code without the need of Recurrent Neural Network (RNN). At the post-processing step, the generated Pseudo-code is optimized. The proposed model is assessed using a real Python dataset, which contains more than 18,800 lines of a source code written in Python. The experiments show promising performance results compared with other machine translation methods such as Recurrent Neural Network (RNN). The proposed DLBT records 47.32, 68. 49 accuracy and BLEU performance measures, respectively.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8056060671806335
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.7915710210800171
+    },
+    {
+      "name": "Source code",
+      "score": 0.6808962225914001
+    },
+    {
+      "name": "Machine translation",
+      "score": 0.6261330842971802
+    },
+    {
+      "name": "Code generation",
+      "score": 0.6210914850234985
+    },
+    {
+      "name": "Transformer",
+      "score": 0.6041818261146545
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.585012674331665
+    },
+    {
+      "name": "Recurrent neural network",
+      "score": 0.5402341485023499
+    },
+    {
+      "name": "Programming language",
+      "score": 0.5279216766357422
+    },
+    {
+      "name": "Encoder",
+      "score": 0.49449583888053894
+    },
+    {
+      "name": "Deep learning",
+      "score": 0.48996415734291077
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.4552322030067444
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.44579529762268066
+    },
+    {
+      "name": "Redundant code",
+      "score": 0.4137214124202728
+    },
+    {
+      "name": "Operating system",
+      "score": 0.08730420470237732
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

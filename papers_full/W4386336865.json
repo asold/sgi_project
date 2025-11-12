@@ -1,86 +1,137 @@
 {
-    "title": "Investigating Pre-trained Language Models on Cross-Domain Datasets, a Step Closer to General AI",
-    "url": "https://openalex.org/W4386336865",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5067691988",
-            "name": "Mohamad Ballout",
-            "affiliations": [
-                "Osnabrück University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5050933199",
-            "name": "Ulf Krumnack",
-            "affiliations": [
-                "Osnabrück University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5036545001",
-            "name": "Gunther Heidemann",
-            "affiliations": [
-                "Osnabrück University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5057201291",
-            "name": "Kai‐Uwe Kühnberger",
-            "affiliations": [
-                "Osnabrück University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6784333009",
-        "https://openalex.org/W6754299077",
-        "https://openalex.org/W2981852735",
-        "https://openalex.org/W6769311223",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6785783668",
-        "https://openalex.org/W6763868836",
-        "https://openalex.org/W6791141078",
-        "https://openalex.org/W6676297131",
-        "https://openalex.org/W6807153347",
-        "https://openalex.org/W6769741184",
-        "https://openalex.org/W6779879114",
-        "https://openalex.org/W6790885451",
-        "https://openalex.org/W6792860290",
-        "https://openalex.org/W6739811675",
-        "https://openalex.org/W6750443981",
-        "https://openalex.org/W6787972765",
-        "https://openalex.org/W6781533629",
-        "https://openalex.org/W6776048684",
-        "https://openalex.org/W6779163297",
-        "https://openalex.org/W6771626834",
-        "https://openalex.org/W6761628794",
-        "https://openalex.org/W2616957565",
-        "https://openalex.org/W6759579507",
-        "https://openalex.org/W2898402099",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2963393721",
-        "https://openalex.org/W4206833365",
-        "https://openalex.org/W3034999214",
-        "https://openalex.org/W3103682594",
-        "https://openalex.org/W3133029875",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W2730845691",
-        "https://openalex.org/W4295838474",
-        "https://openalex.org/W4287704453",
-        "https://openalex.org/W3033529678",
-        "https://openalex.org/W4249142012",
-        "https://openalex.org/W4323654151",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W2963211188",
-        "https://openalex.org/W2626792426",
-        "https://openalex.org/W3134307371",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3118608800",
-        "https://openalex.org/W3015468748"
-    ],
-    "abstract": "Pre-trained language models have recently emerged as a powerful tool for fine-tuning a variety of language tasks. Ideally, when models are pre-trained on large amount of data, they are expected to gain implicit knowledge. In this paper, we investigate the ability of pre-trained language models to generalize to different non-language tasks. In particular, we test them on tasks from different domains such as computer vision, reasoning on hierarchical data, and protein fold prediction. The four pre-trained models that we used, T5, BART, BERT, and GPT-2 achieve outstanding results. They all have similar performance and they outperform transformers that are trained from scratch by a large margin. For instance, pre-trained language models perform better on the Listops dataset, with an average accuracy of 58.7%, compared to transformers trained from scratch, which have an average accuracy of 29.0%. The significant improvement demonstrated across three types of datasets suggests that pre-training on language helps the models to acquire general knowledge, bringing us a step closer to general AI. We also showed that reducing the number of parameters in pre-trained language models does not have a great impact as the performance drops slightly when using T5-Small instead of T5-Base. In fact, when using only 2% of the parameters, we achieved a great improvement compared to training from scratch. Finally, in contrast to prior work, we find out that using pre-trained embeddings for the input layer is necessary to achieve the desired results.",
-    "full_text": null
+  "title": "Investigating Pre-trained Language Models on Cross-Domain Datasets, a Step Closer to General AI",
+  "url": "https://openalex.org/W4386336865",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5067691988",
+      "name": "Mohamad Ballout",
+      "affiliations": [
+        "Osnabrück University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5050933199",
+      "name": "Ulf Krumnack",
+      "affiliations": [
+        "Osnabrück University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5036545001",
+      "name": "Gunther Heidemann",
+      "affiliations": [
+        "Osnabrück University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5057201291",
+      "name": "Kai‐Uwe Kühnberger",
+      "affiliations": [
+        "Osnabrück University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6784333009",
+    "https://openalex.org/W6754299077",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W6769311223",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6785783668",
+    "https://openalex.org/W6763868836",
+    "https://openalex.org/W6791141078",
+    "https://openalex.org/W6676297131",
+    "https://openalex.org/W6807153347",
+    "https://openalex.org/W6769741184",
+    "https://openalex.org/W6779879114",
+    "https://openalex.org/W6790885451",
+    "https://openalex.org/W6792860290",
+    "https://openalex.org/W6739811675",
+    "https://openalex.org/W6750443981",
+    "https://openalex.org/W6787972765",
+    "https://openalex.org/W6781533629",
+    "https://openalex.org/W6776048684",
+    "https://openalex.org/W6779163297",
+    "https://openalex.org/W6771626834",
+    "https://openalex.org/W6761628794",
+    "https://openalex.org/W2616957565",
+    "https://openalex.org/W6759579507",
+    "https://openalex.org/W2898402099",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2963393721",
+    "https://openalex.org/W4206833365",
+    "https://openalex.org/W3034999214",
+    "https://openalex.org/W3103682594",
+    "https://openalex.org/W3133029875",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W2730845691",
+    "https://openalex.org/W4295838474",
+    "https://openalex.org/W4287704453",
+    "https://openalex.org/W3033529678",
+    "https://openalex.org/W4249142012",
+    "https://openalex.org/W4323654151",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W2963211188",
+    "https://openalex.org/W2626792426",
+    "https://openalex.org/W3134307371",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3118608800",
+    "https://openalex.org/W3015468748"
+  ],
+  "abstract": "Pre-trained language models have recently emerged as a powerful tool for fine-tuning a variety of language tasks. Ideally, when models are pre-trained on large amount of data, they are expected to gain implicit knowledge. In this paper, we investigate the ability of pre-trained language models to generalize to different non-language tasks. In particular, we test them on tasks from different domains such as computer vision, reasoning on hierarchical data, and protein fold prediction. The four pre-trained models that we used, T5, BART, BERT, and GPT-2 achieve outstanding results. They all have similar performance and they outperform transformers that are trained from scratch by a large margin. For instance, pre-trained language models perform better on the Listops dataset, with an average accuracy of 58.7%, compared to transformers trained from scratch, which have an average accuracy of 29.0%. The significant improvement demonstrated across three types of datasets suggests that pre-training on language helps the models to acquire general knowledge, bringing us a step closer to general AI. We also showed that reducing the number of parameters in pre-trained language models does not have a great impact as the performance drops slightly when using T5-Small instead of T5-Base. In fact, when using only 2% of the parameters, we achieved a great improvement compared to training from scratch. Finally, in contrast to prior work, we find out that using pre-trained embeddings for the input layer is necessary to achieve the desired results.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.9118472337722778
+    },
+    {
+      "name": "Scratch",
+      "score": 0.846149742603302
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7040178775787354
+    },
+    {
+      "name": "Language model",
+      "score": 0.6826710104942322
+    },
+    {
+      "name": "Margin (machine learning)",
+      "score": 0.597130298614502
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.546542227268219
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5185295343399048
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.3967132568359375
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    }
+  ]
 }

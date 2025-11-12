@@ -1,131 +1,182 @@
 {
-    "title": "Prompt learning for metonymy resolution: Enhancing performance with internal prior knowledge of pre-trained language models",
-    "url": "https://openalex.org/W4386102205",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2108573488",
-            "name": "Biao Zhao",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2702015373",
-            "name": "Weiqiang Jin",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2023856972",
-            "name": "Yu Zhang",
-            "affiliations": [
-                "Xi'an Jiaotong University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2767380496",
-            "name": "Subin Huang",
-            "affiliations": [
-                "Anhui Polytechnic University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1990782487",
-            "name": "Guang Yang",
-            "affiliations": [
-                "Imperial College London"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2108573488",
-            "name": "Biao Zhao",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2702015373",
-            "name": "Weiqiang Jin",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2023856972",
-            "name": "Yu Zhang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2767380496",
-            "name": "Subin Huang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1990782487",
-            "name": "Guang Yang",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4220700131",
-        "https://openalex.org/W6784924566",
-        "https://openalex.org/W6741960701",
-        "https://openalex.org/W6795440867",
-        "https://openalex.org/W6810428088",
-        "https://openalex.org/W7052510521",
-        "https://openalex.org/W6798057236",
-        "https://openalex.org/W4297385049",
-        "https://openalex.org/W4313487628",
-        "https://openalex.org/W6784512941",
-        "https://openalex.org/W6788701349",
-        "https://openalex.org/W6788732509",
-        "https://openalex.org/W6799271272",
-        "https://openalex.org/W6793835273",
-        "https://openalex.org/W6803842174",
-        "https://openalex.org/W6803634491",
-        "https://openalex.org/W6852164732",
-        "https://openalex.org/W6651369691",
-        "https://openalex.org/W6680086284",
-        "https://openalex.org/W2059975940",
-        "https://openalex.org/W6691069491",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6767278183",
-        "https://openalex.org/W6793601707",
-        "https://openalex.org/W6800819532",
-        "https://openalex.org/W6769627184",
-        "https://openalex.org/W6839640180",
-        "https://openalex.org/W4381149195",
-        "https://openalex.org/W4294567976",
-        "https://openalex.org/W3192478068",
-        "https://openalex.org/W6790003725",
-        "https://openalex.org/W6752946794",
-        "https://openalex.org/W2032327522",
-        "https://openalex.org/W6696884364",
-        "https://openalex.org/W6691431627",
-        "https://openalex.org/W6748634344",
-        "https://openalex.org/W6796963063",
-        "https://openalex.org/W6801420120",
-        "https://openalex.org/W2596567068",
-        "https://openalex.org/W2768663569",
-        "https://openalex.org/W4238634189",
-        "https://openalex.org/W4288089799",
-        "https://openalex.org/W2892181857",
-        "https://openalex.org/W2593831809",
-        "https://openalex.org/W108600807",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W2751936342",
-        "https://openalex.org/W3214177038",
-        "https://openalex.org/W2912083425",
-        "https://openalex.org/W4353007425",
-        "https://openalex.org/W4238846128",
-        "https://openalex.org/W1603598191",
-        "https://openalex.org/W4386002638",
-        "https://openalex.org/W2916803445",
-        "https://openalex.org/W4365799947",
-        "https://openalex.org/W4308791833",
-        "https://openalex.org/W4285161181",
-        "https://openalex.org/W4205807230",
-        "https://openalex.org/W1502957213"
-    ],
-    "abstract": "Linguistic metonymy is a common type of figurative language in natural language processing (NLP), where a concept is represented by a closely associated word or phrase, for example \"business executives suits\". As a result, metonymy resolution has become an important NLP task aimed at correctly identifying metonymic expressions within sentences. Previous approaches to this task have typically relied on pre-trained language models (PLMs) using a fine-tuning process. However, this can be time-consuming and resource-intensive, and may lead to a loss of factual prior knowledge. The emergence of a novel learning paradigm termed \"prompt learning\" or \"prompt-tuning\" has recently sparked widespread interest and captured considerable attention, as it has proven to yield remarkable results and surpass previous benchmarks. This approach uses a \"pre-train→prompt→predict\" paradigm and has been shown to better utilize the internal prior knowledge of a PLM, especially in situations with limited supervised resources. Inspired by this success, we investigated how prompt learning could improve metonymy resolution. We have developed a series of prompt learning approaches, called PromptMR, for metonymy resolution, and applied them to several widely-used metonymy resolution datasets. We also designed additional prompt-tuning augmentation strategies to further enhance the potential of prompt learning. Our experiments demonstrated that our method achieved state-of-the-art performance over multiple competitive baselines in both data-sufficient and data-scarce scenarios. The code implementations for PromptMR are accessible on GitHub via the URL: https://github.com/albert-jin/PromptTuning2MetonymyResolution.",
-    "full_text": null
+  "title": "Prompt learning for metonymy resolution: Enhancing performance with internal prior knowledge of pre-trained language models",
+  "url": "https://openalex.org/W4386102205",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2108573488",
+      "name": "Biao Zhao",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2702015373",
+      "name": "Weiqiang Jin",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2023856972",
+      "name": "Yu Zhang",
+      "affiliations": [
+        "Xi'an Jiaotong University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2767380496",
+      "name": "Subin Huang",
+      "affiliations": [
+        "Anhui Polytechnic University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1990782487",
+      "name": "Guang Yang",
+      "affiliations": [
+        "Imperial College London"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2108573488",
+      "name": "Biao Zhao",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2702015373",
+      "name": "Weiqiang Jin",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2023856972",
+      "name": "Yu Zhang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2767380496",
+      "name": "Subin Huang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1990782487",
+      "name": "Guang Yang",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4220700131",
+    "https://openalex.org/W6784924566",
+    "https://openalex.org/W6741960701",
+    "https://openalex.org/W6795440867",
+    "https://openalex.org/W6810428088",
+    "https://openalex.org/W7052510521",
+    "https://openalex.org/W6798057236",
+    "https://openalex.org/W4297385049",
+    "https://openalex.org/W4313487628",
+    "https://openalex.org/W6784512941",
+    "https://openalex.org/W6788701349",
+    "https://openalex.org/W6788732509",
+    "https://openalex.org/W6799271272",
+    "https://openalex.org/W6793835273",
+    "https://openalex.org/W6803842174",
+    "https://openalex.org/W6803634491",
+    "https://openalex.org/W6852164732",
+    "https://openalex.org/W6651369691",
+    "https://openalex.org/W6680086284",
+    "https://openalex.org/W2059975940",
+    "https://openalex.org/W6691069491",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6767278183",
+    "https://openalex.org/W6793601707",
+    "https://openalex.org/W6800819532",
+    "https://openalex.org/W6769627184",
+    "https://openalex.org/W6839640180",
+    "https://openalex.org/W4381149195",
+    "https://openalex.org/W4294567976",
+    "https://openalex.org/W3192478068",
+    "https://openalex.org/W6790003725",
+    "https://openalex.org/W6752946794",
+    "https://openalex.org/W2032327522",
+    "https://openalex.org/W6696884364",
+    "https://openalex.org/W6691431627",
+    "https://openalex.org/W6748634344",
+    "https://openalex.org/W6796963063",
+    "https://openalex.org/W6801420120",
+    "https://openalex.org/W2596567068",
+    "https://openalex.org/W2768663569",
+    "https://openalex.org/W4238634189",
+    "https://openalex.org/W4288089799",
+    "https://openalex.org/W2892181857",
+    "https://openalex.org/W2593831809",
+    "https://openalex.org/W108600807",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W2751936342",
+    "https://openalex.org/W3214177038",
+    "https://openalex.org/W2912083425",
+    "https://openalex.org/W4353007425",
+    "https://openalex.org/W4238846128",
+    "https://openalex.org/W1603598191",
+    "https://openalex.org/W4386002638",
+    "https://openalex.org/W2916803445",
+    "https://openalex.org/W4365799947",
+    "https://openalex.org/W4308791833",
+    "https://openalex.org/W4285161181",
+    "https://openalex.org/W4205807230",
+    "https://openalex.org/W1502957213"
+  ],
+  "abstract": "Linguistic metonymy is a common type of figurative language in natural language processing (NLP), where a concept is represented by a closely associated word or phrase, for example \"business executives suits\". As a result, metonymy resolution has become an important NLP task aimed at correctly identifying metonymic expressions within sentences. Previous approaches to this task have typically relied on pre-trained language models (PLMs) using a fine-tuning process. However, this can be time-consuming and resource-intensive, and may lead to a loss of factual prior knowledge. The emergence of a novel learning paradigm termed \"prompt learning\" or \"prompt-tuning\" has recently sparked widespread interest and captured considerable attention, as it has proven to yield remarkable results and surpass previous benchmarks. This approach uses a \"pre-train→prompt→predict\" paradigm and has been shown to better utilize the internal prior knowledge of a PLM, especially in situations with limited supervised resources. Inspired by this success, we investigated how prompt learning could improve metonymy resolution. We have developed a series of prompt learning approaches, called PromptMR, for metonymy resolution, and applied them to several widely-used metonymy resolution datasets. We also designed additional prompt-tuning augmentation strategies to further enhance the potential of prompt learning. Our experiments demonstrated that our method achieved state-of-the-art performance over multiple competitive baselines in both data-sufficient and data-scarce scenarios. The code implementations for PromptMR are accessible on GitHub via the URL: https://github.com/albert-jin/PromptTuning2MetonymyResolution.",
+  "full_text": null,
+  "topic": "Metonymy",
+  "concepts": [
+    {
+      "name": "Metonymy",
+      "score": 0.8171247243881226
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7742555141448975
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.6068111062049866
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5868327021598816
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5660178065299988
+    },
+    {
+      "name": "Literal and figurative language",
+      "score": 0.4375477135181427
+    },
+    {
+      "name": "Resolution (logic)",
+      "score": 0.43690451979637146
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.2132473886013031
+    },
+    {
+      "name": "Metaphor",
+      "score": 0.09511911869049072
+    },
+    {
+      "name": "Economics",
+      "score": 0.0
+    },
+    {
+      "name": "Management",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    }
+  ]
 }

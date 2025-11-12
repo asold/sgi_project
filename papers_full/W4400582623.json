@@ -1,79 +1,142 @@
 {
-    "title": "A Quantitative and Qualitative Evaluation of LLM-Based Explainable Fault Localization",
-    "url": "https://openalex.org/W4400582623",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2110737808",
-            "name": "Sung-Min Kang",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2889062780",
-            "name": "Gabin An",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122406214",
-            "name": "Shin Yoo",
-            "affiliations": [
-                "Korea Advanced Institute of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2153418968",
-        "https://openalex.org/W1843474218",
-        "https://openalex.org/W3105943882",
-        "https://openalex.org/W4400582623",
-        "https://openalex.org/W6902175771",
-        "https://openalex.org/W6902019724",
-        "https://openalex.org/W4309940971",
-        "https://openalex.org/W2740264376",
-        "https://openalex.org/W4389208936",
-        "https://openalex.org/W2150290224",
-        "https://openalex.org/W2966980041",
-        "https://openalex.org/W4384304728",
-        "https://openalex.org/W2156723666",
-        "https://openalex.org/W4362679230",
-        "https://openalex.org/W4384345748",
-        "https://openalex.org/W2084429940",
-        "https://openalex.org/W2467903332",
-        "https://openalex.org/W4281557260",
-        "https://openalex.org/W3162747997",
-        "https://openalex.org/W2958754741",
-        "https://openalex.org/W3160492491",
-        "https://openalex.org/W3042956498",
-        "https://openalex.org/W4384302785",
-        "https://openalex.org/W2953998535",
-        "https://openalex.org/W2537787699",
-        "https://openalex.org/W1990785546",
-        "https://openalex.org/W1950030762",
-        "https://openalex.org/W2067436653",
-        "https://openalex.org/W4361866031",
-        "https://openalex.org/W4353112996",
-        "https://openalex.org/W4287212576",
-        "https://openalex.org/W4384918448",
-        "https://openalex.org/W3160700180",
-        "https://openalex.org/W4221161695",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W4289976876",
-        "https://openalex.org/W4308643065",
-        "https://openalex.org/W2013655083",
-        "https://openalex.org/W2343875716",
-        "https://openalex.org/W4386302809",
-        "https://openalex.org/W4307412413",
-        "https://openalex.org/W4318902699",
-        "https://openalex.org/W2578469907",
-        "https://openalex.org/W2110706065",
-        "https://openalex.org/W4304195432",
-        "https://openalex.org/W4284702776",
-        "https://openalex.org/W2962715466"
-    ],
-    "abstract": "Fault Localization (FL), in which a developer seeks to identify which part of the code is malfunctioning and needs to be fixed, is a recurring challenge in debugging. To reduce developer burden, many automated FL techniques have been proposed. However, prior work has noted that existing techniques fail to provide rationales for the suggested locations, hindering developer adoption of these techniques. With this in mind, we propose AutoFL, a Large Language Model (LLM)-based FL technique that generates an explanation of the bug along with a suggested fault location. AutoFL prompts an LLM to use function calls to navigate a repository, so that it can effectively localize faults over a large software repository and overcome the limit of the LLM context length. Extensive experiments on 798 real-world bugs in Java and Python reveal AutoFL improves method-level acc@1 by up to 233.3% over baselines. Furthermore, developers were interviewed on their impression of AutoFL-generated explanations, showing that developers generally liked the natural language explanations of AutoFL, and that they preferred reading a few, high-quality explanations instead of many.",
-    "full_text": null
+  "title": "A Quantitative and Qualitative Evaluation of LLM-Based Explainable Fault Localization",
+  "url": "https://openalex.org/W4400582623",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2110737808",
+      "name": "Sung-Min Kang",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2889062780",
+      "name": "Gabin An",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122406214",
+      "name": "Shin Yoo",
+      "affiliations": [
+        "Korea Advanced Institute of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2153418968",
+    "https://openalex.org/W1843474218",
+    "https://openalex.org/W3105943882",
+    "https://openalex.org/W4400582623",
+    "https://openalex.org/W6902175771",
+    "https://openalex.org/W6902019724",
+    "https://openalex.org/W4309940971",
+    "https://openalex.org/W2740264376",
+    "https://openalex.org/W4389208936",
+    "https://openalex.org/W2150290224",
+    "https://openalex.org/W2966980041",
+    "https://openalex.org/W4384304728",
+    "https://openalex.org/W2156723666",
+    "https://openalex.org/W4362679230",
+    "https://openalex.org/W4384345748",
+    "https://openalex.org/W2084429940",
+    "https://openalex.org/W2467903332",
+    "https://openalex.org/W4281557260",
+    "https://openalex.org/W3162747997",
+    "https://openalex.org/W2958754741",
+    "https://openalex.org/W3160492491",
+    "https://openalex.org/W3042956498",
+    "https://openalex.org/W4384302785",
+    "https://openalex.org/W2953998535",
+    "https://openalex.org/W2537787699",
+    "https://openalex.org/W1990785546",
+    "https://openalex.org/W1950030762",
+    "https://openalex.org/W2067436653",
+    "https://openalex.org/W4361866031",
+    "https://openalex.org/W4353112996",
+    "https://openalex.org/W4287212576",
+    "https://openalex.org/W4384918448",
+    "https://openalex.org/W3160700180",
+    "https://openalex.org/W4221161695",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W4289976876",
+    "https://openalex.org/W4308643065",
+    "https://openalex.org/W2013655083",
+    "https://openalex.org/W2343875716",
+    "https://openalex.org/W4386302809",
+    "https://openalex.org/W4307412413",
+    "https://openalex.org/W4318902699",
+    "https://openalex.org/W2578469907",
+    "https://openalex.org/W2110706065",
+    "https://openalex.org/W4304195432",
+    "https://openalex.org/W4284702776",
+    "https://openalex.org/W2962715466"
+  ],
+  "abstract": "Fault Localization (FL), in which a developer seeks to identify which part of the code is malfunctioning and needs to be fixed, is a recurring challenge in debugging. To reduce developer burden, many automated FL techniques have been proposed. However, prior work has noted that existing techniques fail to provide rationales for the suggested locations, hindering developer adoption of these techniques. With this in mind, we propose AutoFL, a Large Language Model (LLM)-based FL technique that generates an explanation of the bug along with a suggested fault location. AutoFL prompts an LLM to use function calls to navigate a repository, so that it can effectively localize faults over a large software repository and overcome the limit of the LLM context length. Extensive experiments on 798 real-world bugs in Java and Python reveal AutoFL improves method-level acc@1 by up to 233.3% over baselines. Furthermore, developers were interviewed on their impression of AutoFL-generated explanations, showing that developers generally liked the natural language explanations of AutoFL, and that they preferred reading a few, high-quality explanations instead of many.",
+  "full_text": null,
+  "topic": "Debugging",
+  "concepts": [
+    {
+      "name": "Debugging",
+      "score": 0.8619811534881592
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7621650099754333
+    },
+    {
+      "name": "Java",
+      "score": 0.7068639397621155
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.701815664768219
+    },
+    {
+      "name": "Software quality",
+      "score": 0.5508414506912231
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.5128917694091797
+    },
+    {
+      "name": "Software",
+      "score": 0.49880075454711914
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.4751451015472412
+    },
+    {
+      "name": "Software bug",
+      "score": 0.44311416149139404
+    },
+    {
+      "name": "Programming language",
+      "score": 0.37708181142807007
+    },
+    {
+      "name": "Data science",
+      "score": 0.35880839824676514
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3559987545013428
+    },
+    {
+      "name": "Software development",
+      "score": 0.1979360580444336
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

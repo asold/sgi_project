@@ -1,104 +1,191 @@
 {
-    "title": "TULIP: A transformer-based unsupervised language model for interacting peptides and T cell receptors that generalizes to unseen epitopes",
-    "url": "https://openalex.org/W4399375446",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4282688712",
-            "name": "Barthelemy Meynard-Piganeau",
-            "affiliations": [
-                "Centre National de la Recherche Scientifique",
-                "Laboratoire de Biologie Computationnelle et Quantitative",
-                "Sorbonne Université",
-                "Bocconi University",
-                "Institut de Biologie Paris-Seine"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A688734139",
-            "name": "Christoph Feinauer",
-            "affiliations": [
-                "Bocconi University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1928148156",
-            "name": "Martin Weigt",
-            "affiliations": [
-                "Centre National de la Recherche Scientifique",
-                "Sorbonne Université",
-                "Institut de Biologie Paris-Seine",
-                "Laboratoire de Biologie Computationnelle et Quantitative"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1965540366",
-            "name": "Aleksandra M. Walczak",
-            "affiliations": [
-                "Sorbonne Paris Cité",
-                "Sorbonne Université",
-                "Université Paris Cité",
-                "Centre National de la Recherche Scientifique"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2138365685",
-            "name": "Thierry Mora",
-            "affiliations": [
-                "Centre National de la Recherche Scientifique",
-                "Sorbonne Paris Cité",
-                "Sorbonne Université",
-                "Université Paris Cité"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2063131697",
-        "https://openalex.org/W2131601255",
-        "https://openalex.org/W3135325120",
-        "https://openalex.org/W4376133743",
-        "https://openalex.org/W4317532687",
-        "https://openalex.org/W4362451367",
-        "https://openalex.org/W2671261300",
-        "https://openalex.org/W2670890989",
-        "https://openalex.org/W2979330275",
-        "https://openalex.org/W2898389621",
-        "https://openalex.org/W2613978126",
-        "https://openalex.org/W6703492272",
-        "https://openalex.org/W4319159750",
-        "https://openalex.org/W3196626346",
-        "https://openalex.org/W3036326371",
-        "https://openalex.org/W3105082142",
-        "https://openalex.org/W3138156743",
-        "https://openalex.org/W3160420762",
-        "https://openalex.org/W4323320132",
-        "https://openalex.org/W3163602801",
-        "https://openalex.org/W4367295958",
-        "https://openalex.org/W3196225703",
-        "https://openalex.org/W2968803773",
-        "https://openalex.org/W2023038954",
-        "https://openalex.org/W2063555458",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W4382931089",
-        "https://openalex.org/W3042130878",
-        "https://openalex.org/W2061720803",
-        "https://openalex.org/W2997084988",
-        "https://openalex.org/W4280529341",
-        "https://openalex.org/W3024570138",
-        "https://openalex.org/W2117685295",
-        "https://openalex.org/W2913665794",
-        "https://openalex.org/W4210670805",
-        "https://openalex.org/W1539988689",
-        "https://openalex.org/W2024812157",
-        "https://openalex.org/W2002038445",
-        "https://openalex.org/W3025534864",
-        "https://openalex.org/W3103140952",
-        "https://openalex.org/W2791104810",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4385874083",
-        "https://openalex.org/W4292779060"
-    ],
-    "abstract": "The accurate prediction of binding between T cell receptors (TCR) and their cognate epitopes is key to understanding the adaptive immune response and developing immunotherapies. Current methods face two significant limitations: the shortage of comprehensive high-quality data and the bias introduced by the selection of the negative training data commonly used in the supervised learning approaches. We propose a method, Transformer-based Unsupervised Language model for Interacting Peptides and T cell receptors (TULIP), that addresses both limitations by leveraging incomplete data and unsupervised learning and using the transformer architecture of language models. Our model is flexible and integrates all possible data sources, regardless of their quality or completeness. We demonstrate the existence of a bias introduced by the sampling procedure used in previous supervised approaches, emphasizing the need for an unsupervised approach. TULIP recognizes the specific TCRs binding an epitope, performing well on unseen epitopes. Our model outperforms state-of-the-art models and offers a promising direction for the development of more accurate TCR epitope recognition models.",
-    "full_text": null
+  "title": "TULIP: A transformer-based unsupervised language model for interacting peptides and T cell receptors that generalizes to unseen epitopes",
+  "url": "https://openalex.org/W4399375446",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4282688712",
+      "name": "Barthelemy Meynard-Piganeau",
+      "affiliations": [
+        "Centre National de la Recherche Scientifique",
+        "Laboratoire de Biologie Computationnelle et Quantitative",
+        "Sorbonne Université",
+        "Bocconi University",
+        "Institut de Biologie Paris-Seine"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A688734139",
+      "name": "Christoph Feinauer",
+      "affiliations": [
+        "Bocconi University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1928148156",
+      "name": "Martin Weigt",
+      "affiliations": [
+        "Centre National de la Recherche Scientifique",
+        "Sorbonne Université",
+        "Institut de Biologie Paris-Seine",
+        "Laboratoire de Biologie Computationnelle et Quantitative"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1965540366",
+      "name": "Aleksandra M. Walczak",
+      "affiliations": [
+        "Sorbonne Paris Cité",
+        "Sorbonne Université",
+        "Université Paris Cité",
+        "Centre National de la Recherche Scientifique"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2138365685",
+      "name": "Thierry Mora",
+      "affiliations": [
+        "Centre National de la Recherche Scientifique",
+        "Sorbonne Paris Cité",
+        "Sorbonne Université",
+        "Université Paris Cité"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2063131697",
+    "https://openalex.org/W2131601255",
+    "https://openalex.org/W3135325120",
+    "https://openalex.org/W4376133743",
+    "https://openalex.org/W4317532687",
+    "https://openalex.org/W4362451367",
+    "https://openalex.org/W2671261300",
+    "https://openalex.org/W2670890989",
+    "https://openalex.org/W2979330275",
+    "https://openalex.org/W2898389621",
+    "https://openalex.org/W2613978126",
+    "https://openalex.org/W6703492272",
+    "https://openalex.org/W4319159750",
+    "https://openalex.org/W3196626346",
+    "https://openalex.org/W3036326371",
+    "https://openalex.org/W3105082142",
+    "https://openalex.org/W3138156743",
+    "https://openalex.org/W3160420762",
+    "https://openalex.org/W4323320132",
+    "https://openalex.org/W3163602801",
+    "https://openalex.org/W4367295958",
+    "https://openalex.org/W3196225703",
+    "https://openalex.org/W2968803773",
+    "https://openalex.org/W2023038954",
+    "https://openalex.org/W2063555458",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W4382931089",
+    "https://openalex.org/W3042130878",
+    "https://openalex.org/W2061720803",
+    "https://openalex.org/W2997084988",
+    "https://openalex.org/W4280529341",
+    "https://openalex.org/W3024570138",
+    "https://openalex.org/W2117685295",
+    "https://openalex.org/W2913665794",
+    "https://openalex.org/W4210670805",
+    "https://openalex.org/W1539988689",
+    "https://openalex.org/W2024812157",
+    "https://openalex.org/W2002038445",
+    "https://openalex.org/W3025534864",
+    "https://openalex.org/W3103140952",
+    "https://openalex.org/W2791104810",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4385874083",
+    "https://openalex.org/W4292779060"
+  ],
+  "abstract": "The accurate prediction of binding between T cell receptors (TCR) and their cognate epitopes is key to understanding the adaptive immune response and developing immunotherapies. Current methods face two significant limitations: the shortage of comprehensive high-quality data and the bias introduced by the selection of the negative training data commonly used in the supervised learning approaches. We propose a method, Transformer-based Unsupervised Language model for Interacting Peptides and T cell receptors (TULIP), that addresses both limitations by leveraging incomplete data and unsupervised learning and using the transformer architecture of language models. Our model is flexible and integrates all possible data sources, regardless of their quality or completeness. We demonstrate the existence of a bias introduced by the sampling procedure used in previous supervised approaches, emphasizing the need for an unsupervised approach. TULIP recognizes the specific TCRs binding an epitope, performing well on unseen epitopes. Our model outperforms state-of-the-art models and offers a promising direction for the development of more accurate TCR epitope recognition models.",
+  "full_text": null,
+  "topic": "Epitope",
+  "concepts": [
+    {
+      "name": "Epitope",
+      "score": 0.7774480581283569
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6636029481887817
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6046645641326904
+    },
+    {
+      "name": "T-cell receptor",
+      "score": 0.546606719493866
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5136882662773132
+    },
+    {
+      "name": "Unsupervised learning",
+      "score": 0.4840635359287262
+    },
+    {
+      "name": "Language model",
+      "score": 0.46493053436279297
+    },
+    {
+      "name": "Economic shortage",
+      "score": 0.4605969190597534
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.45333394408226013
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.4073539078235626
+    },
+    {
+      "name": "T cell",
+      "score": 0.2656681537628174
+    },
+    {
+      "name": "Biology",
+      "score": 0.2565508484840393
+    },
+    {
+      "name": "Immune system",
+      "score": 0.19557443261146545
+    },
+    {
+      "name": "Antigen",
+      "score": 0.1498878002166748
+    },
+    {
+      "name": "Immunology",
+      "score": 0.10346996784210205
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Government (linguistics)",
+      "score": 0.0
+    }
+  ]
 }

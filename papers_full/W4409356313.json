@@ -1,83 +1,158 @@
 {
-    "title": "Classifying the Information Needs of Survivors of Domestic Violence in Online Health Communities Using Large Language Models: Prediction Model Development and Evaluation Study",
-    "url": "https://openalex.org/W4409356313",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2465328719",
-            "name": "Shaowei Guan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2461646005",
-            "name": "Vivian Hui",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A73310800",
-            "name": "Gregor Stiglic",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2334088608",
-            "name": "Rose Eva Constantino",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2167010623",
-            "name": "Young-Ji Lee",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2592230571",
-            "name": "Arkers Kwan Ching Wong",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W1966976587",
-        "https://openalex.org/W4251117206",
-        "https://openalex.org/W4367339613",
-        "https://openalex.org/W2132380583",
-        "https://openalex.org/W4223608815",
-        "https://openalex.org/W4382048752",
-        "https://openalex.org/W4220845758",
-        "https://openalex.org/W4394836788",
-        "https://openalex.org/W3011850463",
-        "https://openalex.org/W1769126207",
-        "https://openalex.org/W4324095540",
-        "https://openalex.org/W2892090722",
-        "https://openalex.org/W2936331919",
-        "https://openalex.org/W2919115771",
-        "https://openalex.org/W2064675550",
-        "https://openalex.org/W4381683870",
-        "https://openalex.org/W4392972000",
-        "https://openalex.org/W4390745503",
-        "https://openalex.org/W4376653873",
-        "https://openalex.org/W4399049946",
-        "https://openalex.org/W4381930847",
-        "https://openalex.org/W4391047180",
-        "https://openalex.org/W4390573302",
-        "https://openalex.org/W4401489026",
-        "https://openalex.org/W4386204820",
-        "https://openalex.org/W4294214983",
-        "https://openalex.org/W3193441875",
-        "https://openalex.org/W3134374200",
-        "https://openalex.org/W2148143831",
-        "https://openalex.org/W4388722144",
-        "https://openalex.org/W4322718191",
-        "https://openalex.org/W2144499799",
-        "https://openalex.org/W1971816555",
-        "https://openalex.org/W4365445570",
-        "https://openalex.org/W3107577028",
-        "https://openalex.org/W4395666066",
-        "https://openalex.org/W2911588830",
-        "https://openalex.org/W2264856678",
-        "https://openalex.org/W4254034712",
-        "https://openalex.org/W4252608096",
-        "https://openalex.org/W2971296908",
-        "https://openalex.org/W4389520455"
-    ],
-    "abstract": "Background Domestic violence (DV) is a significant public health concern affecting the physical and mental well-being of numerous women, imposing a substantial health care burden. However, women facing DV often encounter barriers to seeking in-person help due to stigma, shame, and embarrassment. As a result, many survivors of DV turn to online health communities as a safe and anonymous space to share their experiences and seek support. Understanding the information needs of survivors of DV in online health communities through multiclass classification is crucial for providing timely and appropriate support. Objective The objective was to develop a fine-tuned large language model (LLM) that can provide fast and accurate predictions of the information needs of survivors of DV from their online posts, enabling health care professionals to offer timely and personalized assistance. Methods We collected 294 posts from Reddit subcommunities focused on DV shared by women aged ≥18 years who self-identified as experiencing intimate partner violence. We identified 8 types of information needs: shelters/DV centers/agencies; legal; childbearing; police; DV report procedure/documentation; safety planning; DV knowledge; and communication. Data augmentation was applied using GPT-3.5 to expand our dataset to 2216 samples by generating 1922 additional posts that imitated the existing data. We adopted a progressive training strategy to fine-tune GPT-3.5 for multiclass text classification using 2032 posts. We trained the model on 1 class at a time, monitoring performance closely. When suboptimal results were observed, we generated additional samples of the misclassified ones to give them more attention. We reserved 184 posts for internal testing and 74 for external validation. Model performance was evaluated using accuracy, recall, precision, and F1-score, along with CIs for each metric. Results Using 40 real posts and 144 artificial intelligence–generated posts as the test dataset, our model achieved an F1-score of 70.49% (95% CI 60.63%-80.35%) for real posts, outperforming the original GPT-3.5 and GPT-4, fine-tuned Llama 2-7B and Llama 3-8B, and long short-term memory. On artificial intelligence–generated posts, our model attained an F1-score of 84.58% (95% CI 80.38%-88.78%), surpassing all baselines. When tested on an external validation dataset (n=74), the model achieved an F1-score of 59.67% (95% CI 51.86%-67.49%), outperforming other models. Statistical analysis revealed that our model significantly outperformed the others in F1-score (P=.047 for real posts; P&lt;.001 for external validation posts). Furthermore, our model was faster, taking 19.108 seconds for predictions versus 1150 seconds for manual assessment. Conclusions Our fine-tuned LLM can accurately and efficiently extract and identify DV-related information needs through multiclass classification from online posts. In addition, we used LLM-based data augmentation techniques to overcome the limitations of a relatively small and imbalanced dataset. By generating timely and accurate predictions, we can empower health care professionals to provide rapid and suitable assistance to survivors of DV.",
-    "full_text": null
+  "title": "Classifying the Information Needs of Survivors of Domestic Violence in Online Health Communities Using Large Language Models: Prediction Model Development and Evaluation Study",
+  "url": "https://openalex.org/W4409356313",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2465328719",
+      "name": "Shaowei Guan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2461646005",
+      "name": "Vivian Hui",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A73310800",
+      "name": "Gregor Stiglic",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2334088608",
+      "name": "Rose Eva Constantino",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2167010623",
+      "name": "Young-Ji Lee",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2592230571",
+      "name": "Arkers Kwan Ching Wong",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W1966976587",
+    "https://openalex.org/W4251117206",
+    "https://openalex.org/W4367339613",
+    "https://openalex.org/W2132380583",
+    "https://openalex.org/W4223608815",
+    "https://openalex.org/W4382048752",
+    "https://openalex.org/W4220845758",
+    "https://openalex.org/W4394836788",
+    "https://openalex.org/W3011850463",
+    "https://openalex.org/W1769126207",
+    "https://openalex.org/W4324095540",
+    "https://openalex.org/W2892090722",
+    "https://openalex.org/W2936331919",
+    "https://openalex.org/W2919115771",
+    "https://openalex.org/W2064675550",
+    "https://openalex.org/W4381683870",
+    "https://openalex.org/W4392972000",
+    "https://openalex.org/W4390745503",
+    "https://openalex.org/W4376653873",
+    "https://openalex.org/W4399049946",
+    "https://openalex.org/W4381930847",
+    "https://openalex.org/W4391047180",
+    "https://openalex.org/W4390573302",
+    "https://openalex.org/W4401489026",
+    "https://openalex.org/W4386204820",
+    "https://openalex.org/W4294214983",
+    "https://openalex.org/W3193441875",
+    "https://openalex.org/W3134374200",
+    "https://openalex.org/W2148143831",
+    "https://openalex.org/W4388722144",
+    "https://openalex.org/W4322718191",
+    "https://openalex.org/W2144499799",
+    "https://openalex.org/W1971816555",
+    "https://openalex.org/W4365445570",
+    "https://openalex.org/W3107577028",
+    "https://openalex.org/W4395666066",
+    "https://openalex.org/W2911588830",
+    "https://openalex.org/W2264856678",
+    "https://openalex.org/W4254034712",
+    "https://openalex.org/W4252608096",
+    "https://openalex.org/W2971296908",
+    "https://openalex.org/W4389520455"
+  ],
+  "abstract": "Background Domestic violence (DV) is a significant public health concern affecting the physical and mental well-being of numerous women, imposing a substantial health care burden. However, women facing DV often encounter barriers to seeking in-person help due to stigma, shame, and embarrassment. As a result, many survivors of DV turn to online health communities as a safe and anonymous space to share their experiences and seek support. Understanding the information needs of survivors of DV in online health communities through multiclass classification is crucial for providing timely and appropriate support. Objective The objective was to develop a fine-tuned large language model (LLM) that can provide fast and accurate predictions of the information needs of survivors of DV from their online posts, enabling health care professionals to offer timely and personalized assistance. Methods We collected 294 posts from Reddit subcommunities focused on DV shared by women aged ≥18 years who self-identified as experiencing intimate partner violence. We identified 8 types of information needs: shelters/DV centers/agencies; legal; childbearing; police; DV report procedure/documentation; safety planning; DV knowledge; and communication. Data augmentation was applied using GPT-3.5 to expand our dataset to 2216 samples by generating 1922 additional posts that imitated the existing data. We adopted a progressive training strategy to fine-tune GPT-3.5 for multiclass text classification using 2032 posts. We trained the model on 1 class at a time, monitoring performance closely. When suboptimal results were observed, we generated additional samples of the misclassified ones to give them more attention. We reserved 184 posts for internal testing and 74 for external validation. Model performance was evaluated using accuracy, recall, precision, and F1-score, along with CIs for each metric. Results Using 40 real posts and 144 artificial intelligence–generated posts as the test dataset, our model achieved an F1-score of 70.49% (95% CI 60.63%-80.35%) for real posts, outperforming the original GPT-3.5 and GPT-4, fine-tuned Llama 2-7B and Llama 3-8B, and long short-term memory. On artificial intelligence–generated posts, our model attained an F1-score of 84.58% (95% CI 80.38%-88.78%), surpassing all baselines. When tested on an external validation dataset (n=74), the model achieved an F1-score of 59.67% (95% CI 51.86%-67.49%), outperforming other models. Statistical analysis revealed that our model significantly outperformed the others in F1-score (P=.047 for real posts; P&lt;.001 for external validation posts). Furthermore, our model was faster, taking 19.108 seconds for predictions versus 1150 seconds for manual assessment. Conclusions Our fine-tuned LLM can accurately and efficiently extract and identify DV-related information needs through multiclass classification from online posts. In addition, we used LLM-based data augmentation techniques to overcome the limitations of a relatively small and imbalanced dataset. By generating timely and accurate predictions, we can empower health care professionals to provide rapid and suitable assistance to survivors of DV.",
+  "full_text": null,
+  "topic": "Preprint",
+  "concepts": [
+    {
+      "name": "Preprint",
+      "score": 0.9263737201690674
+    },
+    {
+      "name": "Occupational safety and health",
+      "score": 0.4888114631175995
+    },
+    {
+      "name": "Poison control",
+      "score": 0.4654935598373413
+    },
+    {
+      "name": "Suicide prevention",
+      "score": 0.4614352881908417
+    },
+    {
+      "name": "Human factors and ergonomics",
+      "score": 0.4590837061405182
+    },
+    {
+      "name": "Injury prevention",
+      "score": 0.4289623498916626
+    },
+    {
+      "name": "Health information",
+      "score": 0.42569616436958313
+    },
+    {
+      "name": "Computer science",
+      "score": 0.42463403940200806
+    },
+    {
+      "name": "Data science",
+      "score": 0.3717469573020935
+    },
+    {
+      "name": "Psychology",
+      "score": 0.3644134998321533
+    },
+    {
+      "name": "Internet privacy",
+      "score": 0.3365618586540222
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.2917221784591675
+    },
+    {
+      "name": "Environmental health",
+      "score": 0.26996999979019165
+    },
+    {
+      "name": "Health care",
+      "score": 0.2625143527984619
+    },
+    {
+      "name": "Medicine",
+      "score": 0.2583407759666443
+    },
+    {
+      "name": "Political science",
+      "score": 0.13688397407531738
+    },
+    {
+      "name": "Pathology",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    }
+  ]
 }

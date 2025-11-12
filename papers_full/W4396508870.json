@@ -1,135 +1,202 @@
 {
-    "title": "Language models can identify enzymatic binding sites in protein sequences",
-    "url": "https://openalex.org/W4396508870",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5088564400",
-            "name": "Yves Gaëtan Nana Teukam",
-            "affiliations": [
-                "IBM Research - Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5021058044",
-            "name": "Loıc Kwate Dassi",
-            "affiliations": [
-                "IBM Research - Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5005561269",
-            "name": "Matteo Manica",
-            "affiliations": [
-                "IBM Research - Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5046410250",
-            "name": "Daniel Probst",
-            "affiliations": [
-                null,
-                "IBM Research - Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028051805",
-            "name": "Philippe Schwaller",
-            "affiliations": [
-                null,
-                "IBM Research - Zurich"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5080069398",
-            "name": "Teodoro Laino",
-            "affiliations": [
-                null,
-                "IBM Research - Zurich"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W3148323213",
-        "https://openalex.org/W6753742271",
-        "https://openalex.org/W3010145447",
-        "https://openalex.org/W3157679602",
-        "https://openalex.org/W6791955017",
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W3151478830",
-        "https://openalex.org/W1975147762",
-        "https://openalex.org/W2038702914",
-        "https://openalex.org/W3146384714",
-        "https://openalex.org/W3146944767",
-        "https://openalex.org/W6763868836",
-        "https://openalex.org/W6780110802",
-        "https://openalex.org/W4391147477",
-        "https://openalex.org/W4388901968",
-        "https://openalex.org/W6823846954",
-        "https://openalex.org/W6800696538",
-        "https://openalex.org/W2960015584",
-        "https://openalex.org/W3186179742",
-        "https://openalex.org/W2061685714",
-        "https://openalex.org/W3149170781",
-        "https://openalex.org/W2043886357",
-        "https://openalex.org/W2102524821",
-        "https://openalex.org/W2617750324",
-        "https://openalex.org/W3183967699",
-        "https://openalex.org/W2140538197",
-        "https://openalex.org/W3097054638",
-        "https://openalex.org/W2090649877",
-        "https://openalex.org/W2611792444",
-        "https://openalex.org/W3095583226",
-        "https://openalex.org/W2158714788",
-        "https://openalex.org/W2113944588",
-        "https://openalex.org/W6683269296",
-        "https://openalex.org/W2008056655",
-        "https://openalex.org/W4213314063",
-        "https://openalex.org/W3088999551",
-        "https://openalex.org/W2947423323",
-        "https://openalex.org/W4383217278",
-        "https://openalex.org/W3027819927",
-        "https://openalex.org/W3105895642",
-        "https://openalex.org/W6803785435",
-        "https://openalex.org/W6768923680",
-        "https://openalex.org/W6684373968",
-        "https://openalex.org/W3112376646",
-        "https://openalex.org/W6746583512",
-        "https://openalex.org/W2025816743",
-        "https://openalex.org/W3168436232",
-        "https://openalex.org/W2134967712",
-        "https://openalex.org/W2130479394",
-        "https://openalex.org/W2169678694",
-        "https://openalex.org/W6639490048",
-        "https://openalex.org/W6676471145",
-        "https://openalex.org/W6852760319",
-        "https://openalex.org/W6858341429",
-        "https://openalex.org/W4236136712",
-        "https://openalex.org/W4242719469",
-        "https://openalex.org/W2979585142",
-        "https://openalex.org/W3211718555",
-        "https://openalex.org/W2108552973",
-        "https://openalex.org/W4285651992",
-        "https://openalex.org/W2781528640",
-        "https://openalex.org/W1881549354",
-        "https://openalex.org/W29374554",
-        "https://openalex.org/W3103092523",
-        "https://openalex.org/W3200409031",
-        "https://openalex.org/W2951433247",
-        "https://openalex.org/W4379540180",
-        "https://openalex.org/W2165373392",
-        "https://openalex.org/W2769423117",
-        "https://openalex.org/W4236377898",
-        "https://openalex.org/W4390740875",
-        "https://openalex.org/W2002011878",
-        "https://openalex.org/W2971227267",
-        "https://openalex.org/W2965373594",
-        "https://openalex.org/W4281763794",
-        "https://openalex.org/W4394875082",
-        "https://openalex.org/W3134307371",
-        "https://openalex.org/W3197928146"
-    ],
-    "abstract": "Recent advances in language modeling have had a tremendous impact on how we handle sequential data in science. Language architectures have emerged as a hotbed of innovation and creativity in natural language processing over the last decade, and have since gained prominence in modeling proteins and chemical processes, elucidating structural relationships from textual/sequential data. Surprisingly, some of these relationships refer to three-dimensional structural features, raising important questions on the dimensionality of the information encoded within sequential data. Here, we demonstrate that the unsupervised use of a language model architecture to a language representation of bio-catalyzed chemical reactions can capture the signal at the base of the substrate-binding site atomic interactions. This allows us to identify the three-dimensional binding site position in unknown protein sequences. The language representation comprises a reaction-simplified molecular-input line-entry system (SMILES) for substrate and products, and amino acid sequence information for the enzyme. This approach can recover, with no supervision, 52.13% of the binding site when considering co-crystallized substrate-enzyme structures as ground truth, vastly outperforming other attention-based models.",
-    "full_text": null
+  "title": "Language models can identify enzymatic binding sites in protein sequences",
+  "url": "https://openalex.org/W4396508870",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5088564400",
+      "name": "Yves Gaëtan Nana Teukam",
+      "affiliations": [
+        "IBM Research - Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5021058044",
+      "name": "Loıc Kwate Dassi",
+      "affiliations": [
+        "IBM Research - Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5005561269",
+      "name": "Matteo Manica",
+      "affiliations": [
+        "IBM Research - Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5046410250",
+      "name": "Daniel Probst",
+      "affiliations": [
+        null,
+        "IBM Research - Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028051805",
+      "name": "Philippe Schwaller",
+      "affiliations": [
+        null,
+        "IBM Research - Zurich"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5080069398",
+      "name": "Teodoro Laino",
+      "affiliations": [
+        null,
+        "IBM Research - Zurich"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W3148323213",
+    "https://openalex.org/W6753742271",
+    "https://openalex.org/W3010145447",
+    "https://openalex.org/W3157679602",
+    "https://openalex.org/W6791955017",
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W3151478830",
+    "https://openalex.org/W1975147762",
+    "https://openalex.org/W2038702914",
+    "https://openalex.org/W3146384714",
+    "https://openalex.org/W3146944767",
+    "https://openalex.org/W6763868836",
+    "https://openalex.org/W6780110802",
+    "https://openalex.org/W4391147477",
+    "https://openalex.org/W4388901968",
+    "https://openalex.org/W6823846954",
+    "https://openalex.org/W6800696538",
+    "https://openalex.org/W2960015584",
+    "https://openalex.org/W3186179742",
+    "https://openalex.org/W2061685714",
+    "https://openalex.org/W3149170781",
+    "https://openalex.org/W2043886357",
+    "https://openalex.org/W2102524821",
+    "https://openalex.org/W2617750324",
+    "https://openalex.org/W3183967699",
+    "https://openalex.org/W2140538197",
+    "https://openalex.org/W3097054638",
+    "https://openalex.org/W2090649877",
+    "https://openalex.org/W2611792444",
+    "https://openalex.org/W3095583226",
+    "https://openalex.org/W2158714788",
+    "https://openalex.org/W2113944588",
+    "https://openalex.org/W6683269296",
+    "https://openalex.org/W2008056655",
+    "https://openalex.org/W4213314063",
+    "https://openalex.org/W3088999551",
+    "https://openalex.org/W2947423323",
+    "https://openalex.org/W4383217278",
+    "https://openalex.org/W3027819927",
+    "https://openalex.org/W3105895642",
+    "https://openalex.org/W6803785435",
+    "https://openalex.org/W6768923680",
+    "https://openalex.org/W6684373968",
+    "https://openalex.org/W3112376646",
+    "https://openalex.org/W6746583512",
+    "https://openalex.org/W2025816743",
+    "https://openalex.org/W3168436232",
+    "https://openalex.org/W2134967712",
+    "https://openalex.org/W2130479394",
+    "https://openalex.org/W2169678694",
+    "https://openalex.org/W6639490048",
+    "https://openalex.org/W6676471145",
+    "https://openalex.org/W6852760319",
+    "https://openalex.org/W6858341429",
+    "https://openalex.org/W4236136712",
+    "https://openalex.org/W4242719469",
+    "https://openalex.org/W2979585142",
+    "https://openalex.org/W3211718555",
+    "https://openalex.org/W2108552973",
+    "https://openalex.org/W4285651992",
+    "https://openalex.org/W2781528640",
+    "https://openalex.org/W1881549354",
+    "https://openalex.org/W29374554",
+    "https://openalex.org/W3103092523",
+    "https://openalex.org/W3200409031",
+    "https://openalex.org/W2951433247",
+    "https://openalex.org/W4379540180",
+    "https://openalex.org/W2165373392",
+    "https://openalex.org/W2769423117",
+    "https://openalex.org/W4236377898",
+    "https://openalex.org/W4390740875",
+    "https://openalex.org/W2002011878",
+    "https://openalex.org/W2971227267",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W4281763794",
+    "https://openalex.org/W4394875082",
+    "https://openalex.org/W3134307371",
+    "https://openalex.org/W3197928146"
+  ],
+  "abstract": "Recent advances in language modeling have had a tremendous impact on how we handle sequential data in science. Language architectures have emerged as a hotbed of innovation and creativity in natural language processing over the last decade, and have since gained prominence in modeling proteins and chemical processes, elucidating structural relationships from textual/sequential data. Surprisingly, some of these relationships refer to three-dimensional structural features, raising important questions on the dimensionality of the information encoded within sequential data. Here, we demonstrate that the unsupervised use of a language model architecture to a language representation of bio-catalyzed chemical reactions can capture the signal at the base of the substrate-binding site atomic interactions. This allows us to identify the three-dimensional binding site position in unknown protein sequences. The language representation comprises a reaction-simplified molecular-input line-entry system (SMILES) for substrate and products, and amino acid sequence information for the enzyme. This approach can recover, with no supervision, 52.13% of the binding site when considering co-crystallized substrate-enzyme structures as ground truth, vastly outperforming other attention-based models.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.6232104897499084
+    },
+    {
+      "name": "Representation (politics)",
+      "score": 0.6182446479797363
+    },
+    {
+      "name": "Substrate (aquarium)",
+      "score": 0.5159538388252258
+    },
+    {
+      "name": "Natural language",
+      "score": 0.4910399913787842
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.4585838317871094
+    },
+    {
+      "name": "Curse of dimensionality",
+      "score": 0.45313918590545654
+    },
+    {
+      "name": "Binding site",
+      "score": 0.44198253750801086
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.38054266571998596
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.36595553159713745
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.2990983724594116
+    },
+    {
+      "name": "Biology",
+      "score": 0.15404126048088074
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.10937857627868652
+    },
+    {
+      "name": "Politics",
+      "score": 0.0
+    },
+    {
+      "name": "Law",
+      "score": 0.0
+    },
+    {
+      "name": "Political science",
+      "score": 0.0
+    },
+    {
+      "name": "Ecology",
+      "score": 0.0
+    }
+  ]
 }

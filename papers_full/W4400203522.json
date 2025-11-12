@@ -1,93 +1,184 @@
 {
-    "title": "Enhancing Program Synthesis with Large Language Models Using Many-Objective Grammar-Guided Genetic Programming",
-    "url": "https://openalex.org/W4400203522",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1897293698",
-            "name": "Ning-tao",
-            "affiliations": [
-                "University College Dublin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2265296113",
-            "name": "Anthony Ventresque",
-            "affiliations": [
-                "Trinity College Dublin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2305196692",
-            "name": "Vivek Nallur",
-            "affiliations": [
-                "University College Dublin"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2098259391",
-            "name": "Takfarinas Saber",
-            "affiliations": [
-                "Ollscoil na Gaillimhe – University of Galway"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2047958655",
-        "https://openalex.org/W3088690717",
-        "https://openalex.org/W3011403236",
-        "https://openalex.org/W2474547659",
-        "https://openalex.org/W2901853653",
-        "https://openalex.org/W1966723841",
-        "https://openalex.org/W4310557242",
-        "https://openalex.org/W2798628553",
-        "https://openalex.org/W4385519566",
-        "https://openalex.org/W4367176064",
-        "https://openalex.org/W4380757966",
-        "https://openalex.org/W2963821837",
-        "https://openalex.org/W4378942570",
-        "https://openalex.org/W4385190040",
-        "https://openalex.org/W3034413776",
-        "https://openalex.org/W2011933251",
-        "https://openalex.org/W4391249722",
-        "https://openalex.org/W4312641386",
-        "https://openalex.org/W4391249841",
-        "https://openalex.org/W4294811514",
-        "https://openalex.org/W4226106502",
-        "https://openalex.org/W4210562976",
-        "https://openalex.org/W2962724148",
-        "https://openalex.org/W4311887664",
-        "https://openalex.org/W4285734663",
-        "https://openalex.org/W2604556510",
-        "https://openalex.org/W4388483640",
-        "https://openalex.org/W6850135255",
-        "https://openalex.org/W4384026634",
-        "https://openalex.org/W4386982649",
-        "https://openalex.org/W3038680626",
-        "https://openalex.org/W2035653731",
-        "https://openalex.org/W2752702842",
-        "https://openalex.org/W3136013235",
-        "https://openalex.org/W1978661986",
-        "https://openalex.org/W6638085146",
-        "https://openalex.org/W6629371693",
-        "https://openalex.org/W2092224777",
-        "https://openalex.org/W3083478733",
-        "https://openalex.org/W2956095626",
-        "https://openalex.org/W2793552896",
-        "https://openalex.org/W2922424533",
-        "https://openalex.org/W3083208505",
-        "https://openalex.org/W2901730283",
-        "https://openalex.org/W2888117147",
-        "https://openalex.org/W4226510082",
-        "https://openalex.org/W4379086787",
-        "https://openalex.org/W2161052636",
-        "https://openalex.org/W2766078762",
-        "https://openalex.org/W2138756793",
-        "https://openalex.org/W4252211664",
-        "https://openalex.org/W3173777717",
-        "https://openalex.org/W6683347645",
-        "https://openalex.org/W4322631505"
-    ],
-    "abstract": "The ability to automatically generate code, i.e., program synthesis, is one of the most important applications of artificial intelligence (AI). Currently, two AI techniques are leading the way: large language models (LLMs) and genetic programming (GP) methods—each with its strengths and weaknesses. While LLMs have shown success in program synthesis from a task description, they often struggle to generate the correct code due to ambiguity in task specifications, complex programming syntax, and lack of reliability in the generated code. Furthermore, their generative nature limits their ability to fix erroneous code with iterative LLM prompting. Grammar-guided genetic programming (G3P, i.e., one of the top GP methods) has been shown capable of evolving programs that fit a defined Backus–Naur-form (BNF) grammar based on a set of input/output tests that help guide the search process while ensuring that the generated code does not include calls to untrustworthy libraries or poorly structured snippets. However, G3P still faces issues generating code for complex tasks. A recent study attempting to combine both approaches (G3P and LLMs) by seeding an LLM-generated program into the initial population of the G3P has shown promising results. However, the approach rapidly loses the seeded information over the evolutionary process, which hinders its performance. In this work, we propose combining an LLM (specifically ChatGPT) with a many-objective G3P (MaOG3P) framework in two parts: (i) provide the LLM-generated code as a seed to the evolutionary process following a grammar-mapping phase that creates an avenue for program evolution and error correction; and (ii) leverage many-objective similarity measures towards the LLM-generated code to guide the search process throughout the evolution. The idea behind using the similarity measures is that the LLM-generated code is likely to be close to the correct fitting code. Our approach compels any generated program to adhere to the BNF grammar, ultimately mitigating security risks and improving code quality. Experiments on a well-known and widely used program synthesis dataset show that our approach successfully improves the synthesis of grammar-fitting code for several tasks.",
-    "full_text": null
+  "title": "Enhancing Program Synthesis with Large Language Models Using Many-Objective Grammar-Guided Genetic Programming",
+  "url": "https://openalex.org/W4400203522",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1897293698",
+      "name": "Ning-tao",
+      "affiliations": [
+        "University College Dublin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2265296113",
+      "name": "Anthony Ventresque",
+      "affiliations": [
+        "Trinity College Dublin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2305196692",
+      "name": "Vivek Nallur",
+      "affiliations": [
+        "University College Dublin"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2098259391",
+      "name": "Takfarinas Saber",
+      "affiliations": [
+        "Ollscoil na Gaillimhe – University of Galway"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2047958655",
+    "https://openalex.org/W3088690717",
+    "https://openalex.org/W3011403236",
+    "https://openalex.org/W2474547659",
+    "https://openalex.org/W2901853653",
+    "https://openalex.org/W1966723841",
+    "https://openalex.org/W4310557242",
+    "https://openalex.org/W2798628553",
+    "https://openalex.org/W4385519566",
+    "https://openalex.org/W4367176064",
+    "https://openalex.org/W4380757966",
+    "https://openalex.org/W2963821837",
+    "https://openalex.org/W4378942570",
+    "https://openalex.org/W4385190040",
+    "https://openalex.org/W3034413776",
+    "https://openalex.org/W2011933251",
+    "https://openalex.org/W4391249722",
+    "https://openalex.org/W4312641386",
+    "https://openalex.org/W4391249841",
+    "https://openalex.org/W4294811514",
+    "https://openalex.org/W4226106502",
+    "https://openalex.org/W4210562976",
+    "https://openalex.org/W2962724148",
+    "https://openalex.org/W4311887664",
+    "https://openalex.org/W4285734663",
+    "https://openalex.org/W2604556510",
+    "https://openalex.org/W4388483640",
+    "https://openalex.org/W6850135255",
+    "https://openalex.org/W4384026634",
+    "https://openalex.org/W4386982649",
+    "https://openalex.org/W3038680626",
+    "https://openalex.org/W2035653731",
+    "https://openalex.org/W2752702842",
+    "https://openalex.org/W3136013235",
+    "https://openalex.org/W1978661986",
+    "https://openalex.org/W6638085146",
+    "https://openalex.org/W6629371693",
+    "https://openalex.org/W2092224777",
+    "https://openalex.org/W3083478733",
+    "https://openalex.org/W2956095626",
+    "https://openalex.org/W2793552896",
+    "https://openalex.org/W2922424533",
+    "https://openalex.org/W3083208505",
+    "https://openalex.org/W2901730283",
+    "https://openalex.org/W2888117147",
+    "https://openalex.org/W4226510082",
+    "https://openalex.org/W4379086787",
+    "https://openalex.org/W2161052636",
+    "https://openalex.org/W2766078762",
+    "https://openalex.org/W2138756793",
+    "https://openalex.org/W4252211664",
+    "https://openalex.org/W3173777717",
+    "https://openalex.org/W6683347645",
+    "https://openalex.org/W4322631505"
+  ],
+  "abstract": "The ability to automatically generate code, i.e., program synthesis, is one of the most important applications of artificial intelligence (AI). Currently, two AI techniques are leading the way: large language models (LLMs) and genetic programming (GP) methods—each with its strengths and weaknesses. While LLMs have shown success in program synthesis from a task description, they often struggle to generate the correct code due to ambiguity in task specifications, complex programming syntax, and lack of reliability in the generated code. Furthermore, their generative nature limits their ability to fix erroneous code with iterative LLM prompting. Grammar-guided genetic programming (G3P, i.e., one of the top GP methods) has been shown capable of evolving programs that fit a defined Backus–Naur-form (BNF) grammar based on a set of input/output tests that help guide the search process while ensuring that the generated code does not include calls to untrustworthy libraries or poorly structured snippets. However, G3P still faces issues generating code for complex tasks. A recent study attempting to combine both approaches (G3P and LLMs) by seeding an LLM-generated program into the initial population of the G3P has shown promising results. However, the approach rapidly loses the seeded information over the evolutionary process, which hinders its performance. In this work, we propose combining an LLM (specifically ChatGPT) with a many-objective G3P (MaOG3P) framework in two parts: (i) provide the LLM-generated code as a seed to the evolutionary process following a grammar-mapping phase that creates an avenue for program evolution and error correction; and (ii) leverage many-objective similarity measures towards the LLM-generated code to guide the search process throughout the evolution. The idea behind using the similarity measures is that the LLM-generated code is likely to be close to the correct fitting code. Our approach compels any generated program to adhere to the BNF grammar, ultimately mitigating security risks and improving code quality. Experiments on a well-known and widely used program synthesis dataset show that our approach successfully improves the synthesis of grammar-fitting code for several tasks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7880291938781738
+    },
+    {
+      "name": "Genetic programming",
+      "score": 0.7581970691680908
+    },
+    {
+      "name": "Programming language",
+      "score": 0.595872700214386
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5146811604499817
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.4994544982910156
+    },
+    {
+      "name": "Grammar",
+      "score": 0.49638110399246216
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.4659636318683624
+    },
+    {
+      "name": "Syntax",
+      "score": 0.46374568343162537
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.45204147696495056
+    },
+    {
+      "name": "Code generation",
+      "score": 0.43255606293678284
+    },
+    {
+      "name": "Population",
+      "score": 0.41825827956199646
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.4065423607826233
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.38600802421569824
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.32748955488204956
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.08305415511131287
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08255642652511597
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    },
+    {
+      "name": "Demography",
+      "score": 0.0
+    },
+    {
+      "name": "Sociology",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Key (lock)",
+      "score": 0.0
+    }
+  ]
 }

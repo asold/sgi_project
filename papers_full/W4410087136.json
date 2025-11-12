@@ -1,70 +1,105 @@
 {
-    "title": "Synthetic Data Generation with Large Language Models for Personalized Community Question Answering",
-    "url": "https://openalex.org/W4410087136",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2557844255",
-            "name": "Marco Braga",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4306327189",
-            "name": "Pranav Kasela",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2259244113",
-            "name": "Alessandro Raganato",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A280681230",
-            "name": "Gabriella Pasi",
-            "affiliations": [
-                "University of Milano-Bicocca"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2147823173",
-        "https://openalex.org/W4401042591",
-        "https://openalex.org/W4400524651",
-        "https://openalex.org/W1982858363",
-        "https://openalex.org/W4396844090",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W4402671806",
-        "https://openalex.org/W6850326110",
-        "https://openalex.org/W4366549000",
-        "https://openalex.org/W4284669679",
-        "https://openalex.org/W4387849079",
-        "https://openalex.org/W6865118152",
-        "https://openalex.org/W6768851824",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3174519801",
-        "https://openalex.org/W4366588626",
-        "https://openalex.org/W6800875267",
-        "https://openalex.org/W4366587430",
-        "https://openalex.org/W6809361247",
-        "https://openalex.org/W6846771582",
-        "https://openalex.org/W4385570982",
-        "https://openalex.org/W3101007570",
-        "https://openalex.org/W4389519059",
-        "https://openalex.org/W6851329192",
-        "https://openalex.org/W4298227090",
-        "https://openalex.org/W2944145673",
-        "https://openalex.org/W4386890097",
-        "https://openalex.org/W4225575967",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2250342921",
-        "https://openalex.org/W6860028411"
-    ],
-    "abstract": "Personalization in Information Retrieval (IR) is a topic studied by the research community since a long time. However, there is still a lack of datasets to conduct large-scale evaluations of personalized IR; this is mainly due to the fact that collecting and curating high-quality user-related information requires significant costs and time investment. Furthermore, the creation of datasets for Personalized IR (PIR) tasks is affected by both privacy concerns and the need for accurate user-related data, which are often not publicly available. Recently, researchers have started to explore the use of Large Language Models (LLMs) to generate synthetic datasets, which is a possible solution to generate data for low-resource tasks. In this paper, we investigate the potential of Large Language Models (LLMs) for generating synthetic documents to train an IR system for a Personalized Community Question Answering task. To study the effectiveness of IR models fine-tuned on LLM-generated data, we introduce a new dataset, named Sy-SE-PQA. We build Sy-SE-PQA based on an existing dataset, SE-PQA11https://zenodo.org/records/10679181, which consists of questions and answers posted on the popular StackExchange communities. Starting from questions in SE-PQA, we generate synthetic answers using different prompt techniques and LLMs. Our findings suggest that LLMs have high potential in generating data tailored to users' needs. The synthetic data can replace human-written training data, even if the generated data may contain incorrect information.",
-    "full_text": null
+  "title": "Synthetic Data Generation with Large Language Models for Personalized Community Question Answering",
+  "url": "https://openalex.org/W4410087136",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2557844255",
+      "name": "Marco Braga",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4306327189",
+      "name": "Pranav Kasela",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2259244113",
+      "name": "Alessandro Raganato",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A280681230",
+      "name": "Gabriella Pasi",
+      "affiliations": [
+        "University of Milano-Bicocca"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2147823173",
+    "https://openalex.org/W4401042591",
+    "https://openalex.org/W4400524651",
+    "https://openalex.org/W1982858363",
+    "https://openalex.org/W4396844090",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W4402671806",
+    "https://openalex.org/W6850326110",
+    "https://openalex.org/W4366549000",
+    "https://openalex.org/W4284669679",
+    "https://openalex.org/W4387849079",
+    "https://openalex.org/W6865118152",
+    "https://openalex.org/W6768851824",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3174519801",
+    "https://openalex.org/W4366588626",
+    "https://openalex.org/W6800875267",
+    "https://openalex.org/W4366587430",
+    "https://openalex.org/W6809361247",
+    "https://openalex.org/W6846771582",
+    "https://openalex.org/W4385570982",
+    "https://openalex.org/W3101007570",
+    "https://openalex.org/W4389519059",
+    "https://openalex.org/W6851329192",
+    "https://openalex.org/W4298227090",
+    "https://openalex.org/W2944145673",
+    "https://openalex.org/W4386890097",
+    "https://openalex.org/W4225575967",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2250342921",
+    "https://openalex.org/W6860028411"
+  ],
+  "abstract": "Personalization in Information Retrieval (IR) is a topic studied by the research community since a long time. However, there is still a lack of datasets to conduct large-scale evaluations of personalized IR; this is mainly due to the fact that collecting and curating high-quality user-related information requires significant costs and time investment. Furthermore, the creation of datasets for Personalized IR (PIR) tasks is affected by both privacy concerns and the need for accurate user-related data, which are often not publicly available. Recently, researchers have started to explore the use of Large Language Models (LLMs) to generate synthetic datasets, which is a possible solution to generate data for low-resource tasks. In this paper, we investigate the potential of Large Language Models (LLMs) for generating synthetic documents to train an IR system for a Personalized Community Question Answering task. To study the effectiveness of IR models fine-tuned on LLM-generated data, we introduce a new dataset, named Sy-SE-PQA. We build Sy-SE-PQA based on an existing dataset, SE-PQA11https://zenodo.org/records/10679181, which consists of questions and answers posted on the popular StackExchange communities. Starting from questions in SE-PQA, we generate synthetic answers using different prompt techniques and LLMs. Our findings suggest that LLMs have high potential in generating data tailored to users' needs. The synthetic data can replace human-written training data, even if the generated data may contain incorrect information.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7581911087036133
+    },
+    {
+      "name": "Question answering",
+      "score": 0.746996283531189
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5062262415885925
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.43066149950027466
+    },
+    {
+      "name": "Language model",
+      "score": 0.41926223039627075
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3848186731338501
+    },
+    {
+      "name": "Data science",
+      "score": 0.3494364619255066
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.3476145267486572
+    }
+  ]
 }

@@ -1,74 +1,141 @@
 {
-    "title": "High-Precision Peach Fruit Segmentation under Adverse Conditions Using Swin Transformer",
-    "url": "https://openalex.org/W4399431529",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5014172330",
-            "name": "Dasom Seo",
-            "affiliations": [
-                "Jeonbuk National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5023689839",
-            "name": "Seul Ki Lee",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5028656378",
-            "name": "Jin Gook Kim",
-            "affiliations": [
-                "Gyeongsang National University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102014617",
-            "name": "Il-Seok Oh",
-            "affiliations": [
-                "Jeonbuk National University"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4318224841",
-        "https://openalex.org/W3020952808",
-        "https://openalex.org/W1925668245",
-        "https://openalex.org/W4386906359",
-        "https://openalex.org/W3083926560",
-        "https://openalex.org/W2953151638",
-        "https://openalex.org/W2998489076",
-        "https://openalex.org/W4320474871",
-        "https://openalex.org/W4221010126",
-        "https://openalex.org/W2999206534",
-        "https://openalex.org/W4388075532",
-        "https://openalex.org/W4205711541",
-        "https://openalex.org/W4378573919",
-        "https://openalex.org/W4381165959",
-        "https://openalex.org/W4390075285",
-        "https://openalex.org/W2963037989",
-        "https://openalex.org/W2613718673",
-        "https://openalex.org/W2963150697",
-        "https://openalex.org/W2993182889",
-        "https://openalex.org/W2193145675",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3211592992",
-        "https://openalex.org/W2565639579",
-        "https://openalex.org/W6784930956",
-        "https://openalex.org/W1861492603",
-        "https://openalex.org/W2963243172",
-        "https://openalex.org/W4281491679",
-        "https://openalex.org/W6771540649",
-        "https://openalex.org/W3175851321",
-        "https://openalex.org/W4366714581",
-        "https://openalex.org/W3093600664",
-        "https://openalex.org/W3103795537",
-        "https://openalex.org/W2991229128",
-        "https://openalex.org/W3106250896"
-    ],
-    "abstract": "In the realm of agricultural automation, the efficient management of tasks like yield estimation, harvesting, and monitoring is crucial. While fruits are typically detected using bounding boxes, pixel-level segmentation is essential for extracting detailed information such as color, maturity, and shape. Furthermore, while previous studies have typically focused on controlled environments and scenes, achieving robust performance in real orchard conditions is also imperative. To prioritize these aspects, we propose the following two considerations: first, a novel peach image dataset designed for rough orchard environments, focusing on pixel-level segmentation for detailed insights; and second, utilizing a transformer-based instance segmentation model, specifically the Swin Transformer as a backbone of Mask R-CNN. We achieve superior results compared to CNN-based models, reaching 60.2 AP on the proposed peach image dataset. The proposed transformer-based approach specially excels in detecting small or obscured peaches, making it highly suitable for practical field applications. The proposed model achieved 40.4 AP for small objects, nearly doubling that of CNN-based models. This advancement significantly enhances automated agricultural systems, especially in yield estimation, harvesting, and crop monitoring.",
-    "full_text": null
+  "title": "High-Precision Peach Fruit Segmentation under Adverse Conditions Using Swin Transformer",
+  "url": "https://openalex.org/W4399431529",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5014172330",
+      "name": "Dasom Seo",
+      "affiliations": [
+        "Jeonbuk National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5023689839",
+      "name": "Seul Ki Lee",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5028656378",
+      "name": "Jin Gook Kim",
+      "affiliations": [
+        "Gyeongsang National University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102014617",
+      "name": "Il-Seok Oh",
+      "affiliations": [
+        "Jeonbuk National University"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4318224841",
+    "https://openalex.org/W3020952808",
+    "https://openalex.org/W1925668245",
+    "https://openalex.org/W4386906359",
+    "https://openalex.org/W3083926560",
+    "https://openalex.org/W2953151638",
+    "https://openalex.org/W2998489076",
+    "https://openalex.org/W4320474871",
+    "https://openalex.org/W4221010126",
+    "https://openalex.org/W2999206534",
+    "https://openalex.org/W4388075532",
+    "https://openalex.org/W4205711541",
+    "https://openalex.org/W4378573919",
+    "https://openalex.org/W4381165959",
+    "https://openalex.org/W4390075285",
+    "https://openalex.org/W2963037989",
+    "https://openalex.org/W2613718673",
+    "https://openalex.org/W2963150697",
+    "https://openalex.org/W2993182889",
+    "https://openalex.org/W2193145675",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3211592992",
+    "https://openalex.org/W2565639579",
+    "https://openalex.org/W6784930956",
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W2963243172",
+    "https://openalex.org/W4281491679",
+    "https://openalex.org/W6771540649",
+    "https://openalex.org/W3175851321",
+    "https://openalex.org/W4366714581",
+    "https://openalex.org/W3093600664",
+    "https://openalex.org/W3103795537",
+    "https://openalex.org/W2991229128",
+    "https://openalex.org/W3106250896"
+  ],
+  "abstract": "In the realm of agricultural automation, the efficient management of tasks like yield estimation, harvesting, and monitoring is crucial. While fruits are typically detected using bounding boxes, pixel-level segmentation is essential for extracting detailed information such as color, maturity, and shape. Furthermore, while previous studies have typically focused on controlled environments and scenes, achieving robust performance in real orchard conditions is also imperative. To prioritize these aspects, we propose the following two considerations: first, a novel peach image dataset designed for rough orchard environments, focusing on pixel-level segmentation for detailed insights; and second, utilizing a transformer-based instance segmentation model, specifically the Swin Transformer as a backbone of Mask R-CNN. We achieve superior results compared to CNN-based models, reaching 60.2 AP on the proposed peach image dataset. The proposed transformer-based approach specially excels in detecting small or obscured peaches, making it highly suitable for practical field applications. The proposed model achieved 40.4 AP for small objects, nearly doubling that of CNN-based models. This advancement significantly enhances automated agricultural systems, especially in yield estimation, harvesting, and crop monitoring.",
+  "full_text": null,
+  "topic": "Segmentation",
+  "concepts": [
+    {
+      "name": "Segmentation",
+      "score": 0.7136485576629639
+    },
+    {
+      "name": "Computer science",
+      "score": 0.683700442314148
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6103107929229736
+    },
+    {
+      "name": "Pixel",
+      "score": 0.5563216805458069
+    },
+    {
+      "name": "Automation",
+      "score": 0.5512892603874207
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5335797667503357
+    },
+    {
+      "name": "Orchard",
+      "score": 0.5260617136955261
+    },
+    {
+      "name": "Image segmentation",
+      "score": 0.41915658116340637
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.40144097805023193
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3542371392250061
+    },
+    {
+      "name": "Voltage",
+      "score": 0.11862078309059143
+    },
+    {
+      "name": "Agronomy",
+      "score": 0.09796664118766785
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08661288022994995
+    },
+    {
+      "name": "Mechanical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,109 +1,144 @@
 {
-    "title": "CoRAL: Collaborative Retrieval-Augmented Large Language Models Improve Long-tail Recommendation",
-    "url": "https://openalex.org/W4401864021",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2911085312",
-            "name": "Junda Wu",
-            "affiliations": [
-                "University of California, San Diego"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2543646585",
-            "name": "Cheng-Chun Chang",
-            "affiliations": [
-                "Columbia University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104208929",
-            "name": "Tong Yu",
-            "affiliations": [
-                "Adobe Systems (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2799677316",
-            "name": "Zhankui He",
-            "affiliations": [
-                "University of California, San Diego"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2103809590",
-            "name": "Jianing Wang",
-            "affiliations": [
-                "University of California, San Diego"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2614276125",
-            "name": "Yupeng Hou",
-            "affiliations": [
-                "University of California, San Diego"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2041520510",
-            "name": "Julian McAuley",
-            "affiliations": [
-                "University of California, San Diego"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3134330728",
-        "https://openalex.org/W3183638647",
-        "https://openalex.org/W2629213068",
-        "https://openalex.org/W2996863522",
-        "https://openalex.org/W2475334473",
-        "https://openalex.org/W2963691377",
-        "https://openalex.org/W4386729356",
-        "https://openalex.org/W3093601757",
-        "https://openalex.org/W4386729952",
-        "https://openalex.org/W1974848861",
-        "https://openalex.org/W4389519826",
-        "https://openalex.org/W4387848745",
-        "https://openalex.org/W3115572006",
-        "https://openalex.org/W3088231800",
-        "https://openalex.org/W4392367559",
-        "https://openalex.org/W4386729004",
-        "https://openalex.org/W2907454463",
-        "https://openalex.org/W4387848742",
-        "https://openalex.org/W2145339207",
-        "https://openalex.org/W2971196067",
-        "https://openalex.org/W3012600133",
-        "https://openalex.org/W4284713500",
-        "https://openalex.org/W4396758712",
-        "https://openalex.org/W4386728930",
-        "https://openalex.org/W2969314833",
-        "https://openalex.org/W4226315423",
-        "https://openalex.org/W2964182926",
-        "https://openalex.org/W6818183974",
-        "https://openalex.org/W2340526403",
-        "https://openalex.org/W4221143046",
-        "https://openalex.org/W3097679710",
-        "https://openalex.org/W4284675209",
-        "https://openalex.org/W3205346281",
-        "https://openalex.org/W4385562483",
-        "https://openalex.org/W2972801466",
-        "https://openalex.org/W4210670585",
-        "https://openalex.org/W4384648240",
-        "https://openalex.org/W3157014581",
-        "https://openalex.org/W4385568114",
-        "https://openalex.org/W3156622960",
-        "https://openalex.org/W4396734745",
-        "https://openalex.org/W4304083153",
-        "https://openalex.org/W3103310105",
-        "https://openalex.org/W4247132965",
-        "https://openalex.org/W3170713142",
-        "https://openalex.org/W3200172637",
-        "https://openalex.org/W3175865138",
-        "https://openalex.org/W3101148092",
-        "https://openalex.org/W3127259869"
-    ],
-    "abstract": "The long-tail recommendation is a challenging task for traditional recommender systems, due to data sparsity and data imbalance issues. The recent development of large language models (LLMs) has shown their abilities in complex reasoning, which can help to deduce users' preferences based on very few previous interactions. However, since most LLM-based systems rely on items' semantic meaning as the sole evidence for reasoning, the collaborative information of user-item interactions is neglected, which can cause the LLM's reasoning to be misaligned with task-specific collaborative information of the dataset. To further align LLMs' reasoning to task-specific user-item interaction knowledge, we introduce collaborative retrieval-augmented LLMs, CoRAL, which directly incorporate collaborative evidence into the prompts. Based on the retrieved user-item interactions, the LLM can analyze shared and distinct preferences among users, and summarize the patterns indicating which types of users would be attracted by certain items. The retrieved collaborative evidence prompts the LLM to align its reasoning with the user-item interaction patterns in the dataset. However, since the capacity of the input prompt is limited, finding the minimally-sufficient collaborative information for recommendation tasks can be challenging. We propose to find the optimal interaction set through a sequential decision-making process and develop a retrieval policy learned through a reinforcement learning (RL) framework, CoRAL. Our experimental results show that CoRAL can significantly improve LLMs' reasoning abilities on specific recommendation tasks. Our analysis also reveals that CoRAL can more efficiently explore collaborative information through reinforcement learning.",
-    "full_text": null
+  "title": "CoRAL: Collaborative Retrieval-Augmented Large Language Models Improve Long-tail Recommendation",
+  "url": "https://openalex.org/W4401864021",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2911085312",
+      "name": "Junda Wu",
+      "affiliations": [
+        "University of California, San Diego"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2543646585",
+      "name": "Cheng-Chun Chang",
+      "affiliations": [
+        "Columbia University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104208929",
+      "name": "Tong Yu",
+      "affiliations": [
+        "Adobe Systems (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2799677316",
+      "name": "Zhankui He",
+      "affiliations": [
+        "University of California, San Diego"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2103809590",
+      "name": "Jianing Wang",
+      "affiliations": [
+        "University of California, San Diego"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2614276125",
+      "name": "Yupeng Hou",
+      "affiliations": [
+        "University of California, San Diego"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2041520510",
+      "name": "Julian McAuley",
+      "affiliations": [
+        "University of California, San Diego"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3134330728",
+    "https://openalex.org/W3183638647",
+    "https://openalex.org/W2629213068",
+    "https://openalex.org/W2996863522",
+    "https://openalex.org/W2475334473",
+    "https://openalex.org/W2963691377",
+    "https://openalex.org/W4386729356",
+    "https://openalex.org/W3093601757",
+    "https://openalex.org/W4386729952",
+    "https://openalex.org/W1974848861",
+    "https://openalex.org/W4389519826",
+    "https://openalex.org/W4387848745",
+    "https://openalex.org/W3115572006",
+    "https://openalex.org/W3088231800",
+    "https://openalex.org/W4392367559",
+    "https://openalex.org/W4386729004",
+    "https://openalex.org/W2907454463",
+    "https://openalex.org/W4387848742",
+    "https://openalex.org/W2145339207",
+    "https://openalex.org/W2971196067",
+    "https://openalex.org/W3012600133",
+    "https://openalex.org/W4284713500",
+    "https://openalex.org/W4396758712",
+    "https://openalex.org/W4386728930",
+    "https://openalex.org/W2969314833",
+    "https://openalex.org/W4226315423",
+    "https://openalex.org/W2964182926",
+    "https://openalex.org/W6818183974",
+    "https://openalex.org/W2340526403",
+    "https://openalex.org/W4221143046",
+    "https://openalex.org/W3097679710",
+    "https://openalex.org/W4284675209",
+    "https://openalex.org/W3205346281",
+    "https://openalex.org/W4385562483",
+    "https://openalex.org/W2972801466",
+    "https://openalex.org/W4210670585",
+    "https://openalex.org/W4384648240",
+    "https://openalex.org/W3157014581",
+    "https://openalex.org/W4385568114",
+    "https://openalex.org/W3156622960",
+    "https://openalex.org/W4396734745",
+    "https://openalex.org/W4304083153",
+    "https://openalex.org/W3103310105",
+    "https://openalex.org/W4247132965",
+    "https://openalex.org/W3170713142",
+    "https://openalex.org/W3200172637",
+    "https://openalex.org/W3175865138",
+    "https://openalex.org/W3101148092",
+    "https://openalex.org/W3127259869"
+  ],
+  "abstract": "The long-tail recommendation is a challenging task for traditional recommender systems, due to data sparsity and data imbalance issues. The recent development of large language models (LLMs) has shown their abilities in complex reasoning, which can help to deduce users' preferences based on very few previous interactions. However, since most LLM-based systems rely on items' semantic meaning as the sole evidence for reasoning, the collaborative information of user-item interactions is neglected, which can cause the LLM's reasoning to be misaligned with task-specific collaborative information of the dataset. To further align LLMs' reasoning to task-specific user-item interaction knowledge, we introduce collaborative retrieval-augmented LLMs, CoRAL, which directly incorporate collaborative evidence into the prompts. Based on the retrieved user-item interactions, the LLM can analyze shared and distinct preferences among users, and summarize the patterns indicating which types of users would be attracted by certain items. The retrieved collaborative evidence prompts the LLM to align its reasoning with the user-item interaction patterns in the dataset. However, since the capacity of the input prompt is limited, finding the minimally-sufficient collaborative information for recommendation tasks can be challenging. We propose to find the optimal interaction set through a sequential decision-making process and develop a retrieval policy learned through a reinforcement learning (RL) framework, CoRAL. Our experimental results show that CoRAL can significantly improve LLMs' reasoning abilities on specific recommendation tasks. Our analysis also reveals that CoRAL can more efficiently explore collaborative information through reinforcement learning.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7480649948120117
+    },
+    {
+      "name": "Coral",
+      "score": 0.7422834634780884
+    },
+    {
+      "name": "Language model",
+      "score": 0.5088129639625549
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.4217906594276428
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.4095071852207184
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3496910333633423
+    },
+    {
+      "name": "Oceanography",
+      "score": 0.28984808921813965
+    },
+    {
+      "name": "Geology",
+      "score": 0.17642176151275635
+    }
+  ]
 }

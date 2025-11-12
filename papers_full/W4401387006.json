@@ -1,64 +1,147 @@
 {
-    "title": "Zero and Few Short Learning Using Large Language Models for De-Identification of Medical Records",
-    "url": "https://openalex.org/W4401387006",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A3011381470",
-            "name": "Y S Yashwanth",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A1949652232",
-            "name": "Rajashree Shettar",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2902152998",
-        "https://openalex.org/W3043970791",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W4385988359",
-        "https://openalex.org/W6810738896",
-        "https://openalex.org/W6854475153",
-        "https://openalex.org/W6838865847",
-        "https://openalex.org/W6628254273",
-        "https://openalex.org/W2160987310",
-        "https://openalex.org/W1995228216",
-        "https://openalex.org/W2963956191",
-        "https://openalex.org/W2131774270",
-        "https://openalex.org/W4206192903",
-        "https://openalex.org/W6761810294",
-        "https://openalex.org/W2016648380",
-        "https://openalex.org/W28412257",
-        "https://openalex.org/W2123442489",
-        "https://openalex.org/W2987767100",
-        "https://openalex.org/W6684549341",
-        "https://openalex.org/W2953405390",
-        "https://openalex.org/W2051434435",
-        "https://openalex.org/W6772180295",
-        "https://openalex.org/W2744160972",
-        "https://openalex.org/W2993961432",
-        "https://openalex.org/W6731031554",
-        "https://openalex.org/W6747248625",
-        "https://openalex.org/W2396881363",
-        "https://openalex.org/W2488984245",
-        "https://openalex.org/W6850462617",
-        "https://openalex.org/W6850202480",
-        "https://openalex.org/W6851077998",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W1034374084",
-        "https://openalex.org/W4384389802",
-        "https://openalex.org/W4294367149",
-        "https://openalex.org/W2563351168",
-        "https://openalex.org/W4226278401",
-        "https://openalex.org/W4321649710",
-        "https://openalex.org/W4404658388",
-        "https://openalex.org/W4353007316",
-        "https://openalex.org/W2169423212",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4281557260"
-    ],
-    "abstract": "The paper aims to evaluate and provide a comparative analysis of the performance and fine-tuning cost of various Large Language Models (LLMs) such as GPT-3.5, GPT-4, PaLM, Bard, and Llama in automating the de-identification of Protected Health Information (PHI) from medical records, ensuring patient and healthcare professional privacy. Zero-shot learning was utilized initially to assess the capabilities of these LLMs in de-identifying medical data. Subsequently, each model was fine-tuned with varying training set sizes to observe changes in performance. The study also investigates the impact of the specificity of prompts on the accuracy of de-identification tasks. Fine-tuning LLMs with specific examples significantly enhanced the accuracy of the de-identification process, surpassing the zero-shot learning accuracy of pre-trained counterparts. Notably, a fine-tuned GPT-3.5 model with a few-shot learning technique was able to exceed the performance of a zero-shot learning GPT-4 model, with 99% accuracy. Detailed prompts resulted in higher task accuracy across all models, yet fine-tuned models with brief instructions still outperformed pre-trained models given detailed prompts. Also, the fine-tuned models were more resilient to medical record format change than the zero-shot models. Code, calculations, and comparisons are available at <uri>https://github.com/YashwanthYS/De-Identification-of-medical-Records</uri>. The findings underscore the potential of LLMs, particularly when fine-tuned, to effectively automate the de-identification of PHI in medical records. The study highlights the importance of model training and prompt specificity in achieving high accuracy in de-identification tasks.",
-    "full_text": null
+  "title": "Zero and Few Short Learning Using Large Language Models for De-Identification of Medical Records",
+  "url": "https://openalex.org/W4401387006",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A3011381470",
+      "name": "Y S Yashwanth",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A1949652232",
+      "name": "Rajashree Shettar",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2902152998",
+    "https://openalex.org/W3043970791",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W4385988359",
+    "https://openalex.org/W6810738896",
+    "https://openalex.org/W6854475153",
+    "https://openalex.org/W6838865847",
+    "https://openalex.org/W6628254273",
+    "https://openalex.org/W2160987310",
+    "https://openalex.org/W1995228216",
+    "https://openalex.org/W2963956191",
+    "https://openalex.org/W2131774270",
+    "https://openalex.org/W4206192903",
+    "https://openalex.org/W6761810294",
+    "https://openalex.org/W2016648380",
+    "https://openalex.org/W28412257",
+    "https://openalex.org/W2123442489",
+    "https://openalex.org/W2987767100",
+    "https://openalex.org/W6684549341",
+    "https://openalex.org/W2953405390",
+    "https://openalex.org/W2051434435",
+    "https://openalex.org/W6772180295",
+    "https://openalex.org/W2744160972",
+    "https://openalex.org/W2993961432",
+    "https://openalex.org/W6731031554",
+    "https://openalex.org/W6747248625",
+    "https://openalex.org/W2396881363",
+    "https://openalex.org/W2488984245",
+    "https://openalex.org/W6850462617",
+    "https://openalex.org/W6850202480",
+    "https://openalex.org/W6851077998",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W1034374084",
+    "https://openalex.org/W4384389802",
+    "https://openalex.org/W4294367149",
+    "https://openalex.org/W2563351168",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W4321649710",
+    "https://openalex.org/W4404658388",
+    "https://openalex.org/W4353007316",
+    "https://openalex.org/W2169423212",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4281557260"
+  ],
+  "abstract": "The paper aims to evaluate and provide a comparative analysis of the performance and fine-tuning cost of various Large Language Models (LLMs) such as GPT-3.5, GPT-4, PaLM, Bard, and Llama in automating the de-identification of Protected Health Information (PHI) from medical records, ensuring patient and healthcare professional privacy. Zero-shot learning was utilized initially to assess the capabilities of these LLMs in de-identifying medical data. Subsequently, each model was fine-tuned with varying training set sizes to observe changes in performance. The study also investigates the impact of the specificity of prompts on the accuracy of de-identification tasks. Fine-tuning LLMs with specific examples significantly enhanced the accuracy of the de-identification process, surpassing the zero-shot learning accuracy of pre-trained counterparts. Notably, a fine-tuned GPT-3.5 model with a few-shot learning technique was able to exceed the performance of a zero-shot learning GPT-4 model, with 99% accuracy. Detailed prompts resulted in higher task accuracy across all models, yet fine-tuned models with brief instructions still outperformed pre-trained models given detailed prompts. Also, the fine-tuned models were more resilient to medical record format change than the zero-shot models. Code, calculations, and comparisons are available at <uri>https://github.com/YashwanthYS/De-Identification-of-medical-Records</uri>. The findings underscore the potential of LLMs, particularly when fine-tuned, to effectively automate the de-identification of PHI in medical records. The study highlights the importance of model training and prompt specificity in achieving high accuracy in de-identification tasks.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7110209465026855
+    },
+    {
+      "name": "Medical record",
+      "score": 0.6373643279075623
+    },
+    {
+      "name": "Identification (biology)",
+      "score": 0.6302518844604492
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6246821880340576
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.5492973327636719
+    },
+    {
+      "name": "Task (project management)",
+      "score": 0.5292255878448486
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.4932994246482849
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.4731482267379761
+    },
+    {
+      "name": "Shot (pellet)",
+      "score": 0.4663827419281006
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.44675445556640625
+    },
+    {
+      "name": "Medicine",
+      "score": 0.1529897153377533
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08932599425315857
+    },
+    {
+      "name": "Botany",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Radiology",
+      "score": 0.0
+    },
+    {
+      "name": "Systems engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Organic chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,132 +1,167 @@
 {
-    "title": "Decoupling the Role of Data, Attention, and Losses in Multimodal Transformers",
-    "url": "https://openalex.org/W3184369217",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2115890459",
-            "name": "Lisa Anne Hendricks",
-            "affiliations": [
-                "DeepMind (United Kingdom)",
-                "Google (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2143007487",
-            "name": "John Mellor",
-            "affiliations": [
-                "DeepMind (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2499024957",
-            "name": "Rosalia Schneider",
-            "affiliations": [
-                "Google (United Kingdom)",
-                "DeepMind (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4207765906",
-            "name": "Jean-Baptiste Alayrac",
-            "affiliations": [
-                "DeepMind (United Kingdom)",
-                "Google (United Kingdom)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2117710609",
-            "name": "Aida Nematzadeh",
-            "affiliations": [
-                "DeepMind (United Kingdom)",
-                "Google (United Kingdom)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3034381157",
-        "https://openalex.org/W2745461083",
-        "https://openalex.org/W1933349210",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3106784008",
-        "https://openalex.org/W6639432524",
-        "https://openalex.org/W3090449556",
-        "https://openalex.org/W2888166343",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W1666447063",
-        "https://openalex.org/W6747225742",
-        "https://openalex.org/W6678470764",
-        "https://openalex.org/W2963496089",
-        "https://openalex.org/W2070753207",
-        "https://openalex.org/W2560730294",
-        "https://openalex.org/W2970862333",
-        "https://openalex.org/W6775188310",
-        "https://openalex.org/W1905882502",
-        "https://openalex.org/W6631516269",
-        "https://openalex.org/W2277195237",
-        "https://openalex.org/W2963250244",
-        "https://openalex.org/W6788995615",
-        "https://openalex.org/W2998356391",
-        "https://openalex.org/W6767279747",
-        "https://openalex.org/W3091588028",
-        "https://openalex.org/W2966715458",
-        "https://openalex.org/W2463565445",
-        "https://openalex.org/W3035635319",
-        "https://openalex.org/W6750041603",
-        "https://openalex.org/W2984008963",
-        "https://openalex.org/W6844194202",
-        "https://openalex.org/W6676497082",
-        "https://openalex.org/W3095670406",
-        "https://openalex.org/W6620707391",
-        "https://openalex.org/W2886641317",
-        "https://openalex.org/W3035276082",
-        "https://openalex.org/W6775644863",
-        "https://openalex.org/W2981851019",
-        "https://openalex.org/W2970231061",
-        "https://openalex.org/W2964345214",
-        "https://openalex.org/W6763442200",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3104235057",
-        "https://openalex.org/W2963389687",
-        "https://openalex.org/W6600827882",
-        "https://openalex.org/W6763701032",
-        "https://openalex.org/W6758109434",
-        "https://openalex.org/W6762287338",
-        "https://openalex.org/W2185175083",
-        "https://openalex.org/W2914924671",
-        "https://openalex.org/W2559655401",
-        "https://openalex.org/W3016672431",
-        "https://openalex.org/W2899505139",
-        "https://openalex.org/W4287813958",
-        "https://openalex.org/W1889081078",
-        "https://openalex.org/W2842511635",
-        "https://openalex.org/W3121480429",
-        "https://openalex.org/W2970597249",
-        "https://openalex.org/W2911681509",
-        "https://openalex.org/W2613718673",
-        "https://openalex.org/W3108655343",
-        "https://openalex.org/W2796207103",
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W2995435108",
-        "https://openalex.org/W2774267535",
-        "https://openalex.org/W3014611590",
-        "https://openalex.org/W2612690371",
-        "https://openalex.org/W2963341956",
-        "https://openalex.org/W2963403868",
-        "https://openalex.org/W1527575280",
-        "https://openalex.org/W2949517790",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W2970608575",
-        "https://openalex.org/W2604272474",
-        "https://openalex.org/W2109586012",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W21006490",
-        "https://openalex.org/W2963499204",
-        "https://openalex.org/W2968124245",
-        "https://openalex.org/W2990138404",
-        "https://openalex.org/W2963668159",
-        "https://openalex.org/W2123024445"
-    ],
-    "abstract": "Abstract Recently, multimodal transformer models have gained popularity because their performance on downstream tasks suggests they learn rich visual-linguistic representations. Focusing on zero-shot image retrieval tasks, we study three important factors that can impact the quality of learned representations: pretraining data, the attention mechanism, and loss functions. By pretraining models on six datasets, we observe that dataset noise and language similarity to our downstream task are important indicators of model performance. Through architectural analysis, we learn that models with a multimodal attention mechanism can outperform deeper models with modality-specific attention mechanisms. Finally, we show that successful contrastive losses used in the self-supervised learning literature do not yield similar performance gains when used in multimodal transformers.",
-    "full_text": null
+  "title": "Decoupling the Role of Data, Attention, and Losses in Multimodal Transformers",
+  "url": "https://openalex.org/W3184369217",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2115890459",
+      "name": "Lisa Anne Hendricks",
+      "affiliations": [
+        "DeepMind (United Kingdom)",
+        "Google (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2143007487",
+      "name": "John Mellor",
+      "affiliations": [
+        "DeepMind (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2499024957",
+      "name": "Rosalia Schneider",
+      "affiliations": [
+        "Google (United Kingdom)",
+        "DeepMind (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4207765906",
+      "name": "Jean-Baptiste Alayrac",
+      "affiliations": [
+        "DeepMind (United Kingdom)",
+        "Google (United Kingdom)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2117710609",
+      "name": "Aida Nematzadeh",
+      "affiliations": [
+        "DeepMind (United Kingdom)",
+        "Google (United Kingdom)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3034381157",
+    "https://openalex.org/W2745461083",
+    "https://openalex.org/W1933349210",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3106784008",
+    "https://openalex.org/W6639432524",
+    "https://openalex.org/W3090449556",
+    "https://openalex.org/W2888166343",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W1666447063",
+    "https://openalex.org/W6747225742",
+    "https://openalex.org/W6678470764",
+    "https://openalex.org/W2963496089",
+    "https://openalex.org/W2070753207",
+    "https://openalex.org/W2560730294",
+    "https://openalex.org/W2970862333",
+    "https://openalex.org/W6775188310",
+    "https://openalex.org/W1905882502",
+    "https://openalex.org/W6631516269",
+    "https://openalex.org/W2277195237",
+    "https://openalex.org/W2963250244",
+    "https://openalex.org/W6788995615",
+    "https://openalex.org/W2998356391",
+    "https://openalex.org/W6767279747",
+    "https://openalex.org/W3091588028",
+    "https://openalex.org/W2966715458",
+    "https://openalex.org/W2463565445",
+    "https://openalex.org/W3035635319",
+    "https://openalex.org/W6750041603",
+    "https://openalex.org/W2984008963",
+    "https://openalex.org/W6844194202",
+    "https://openalex.org/W6676497082",
+    "https://openalex.org/W3095670406",
+    "https://openalex.org/W6620707391",
+    "https://openalex.org/W2886641317",
+    "https://openalex.org/W3035276082",
+    "https://openalex.org/W6775644863",
+    "https://openalex.org/W2981851019",
+    "https://openalex.org/W2970231061",
+    "https://openalex.org/W2964345214",
+    "https://openalex.org/W6763442200",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3104235057",
+    "https://openalex.org/W2963389687",
+    "https://openalex.org/W6600827882",
+    "https://openalex.org/W6763701032",
+    "https://openalex.org/W6758109434",
+    "https://openalex.org/W6762287338",
+    "https://openalex.org/W2185175083",
+    "https://openalex.org/W2914924671",
+    "https://openalex.org/W2559655401",
+    "https://openalex.org/W3016672431",
+    "https://openalex.org/W2899505139",
+    "https://openalex.org/W4287813958",
+    "https://openalex.org/W1889081078",
+    "https://openalex.org/W2842511635",
+    "https://openalex.org/W3121480429",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W2911681509",
+    "https://openalex.org/W2613718673",
+    "https://openalex.org/W3108655343",
+    "https://openalex.org/W2796207103",
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W2995435108",
+    "https://openalex.org/W2774267535",
+    "https://openalex.org/W3014611590",
+    "https://openalex.org/W2612690371",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W1527575280",
+    "https://openalex.org/W2949517790",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W2970608575",
+    "https://openalex.org/W2604272474",
+    "https://openalex.org/W2109586012",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W21006490",
+    "https://openalex.org/W2963499204",
+    "https://openalex.org/W2968124245",
+    "https://openalex.org/W2990138404",
+    "https://openalex.org/W2963668159",
+    "https://openalex.org/W2123024445"
+  ],
+  "abstract": "Abstract Recently, multimodal transformer models have gained popularity because their performance on downstream tasks suggests they learn rich visual-linguistic representations. Focusing on zero-shot image retrieval tasks, we study three important factors that can impact the quality of learned representations: pretraining data, the attention mechanism, and loss functions. By pretraining models on six datasets, we observe that dataset noise and language similarity to our downstream task are important indicators of model performance. Through architectural analysis, we learn that models with a multimodal attention mechanism can outperform deeper models with modality-specific attention mechanisms. Finally, we show that successful contrastive losses used in the self-supervised learning literature do not yield similar performance gains when used in multimodal transformers.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8214187622070312
+    },
+    {
+      "name": "Transformer",
+      "score": 0.7039717435836792
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5179089903831482
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.4618159532546997
+    },
+    {
+      "name": "Multimodal learning",
+      "score": 0.44443291425704956
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    }
+  ]
 }

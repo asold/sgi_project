@@ -1,73 +1,144 @@
 {
-    "title": "Predictive Business Process Monitoring Approach Based on Hierarchical Transformer",
-    "url": "https://openalex.org/W4323566020",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2099892979",
-            "name": "Wei-Jian Ni",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2104136079",
-            "name": "Gang Zhao",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1979146288",
-            "name": "Tong Liu",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2138163956",
-            "name": "Qingtian Zeng",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4323619053",
-            "name": "Xingzong Xu",
-            "affiliations": [
-                "Shandong University of Science and Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4285543424",
-        "https://openalex.org/W2399031645",
-        "https://openalex.org/W1973573653",
-        "https://openalex.org/W1998640084",
-        "https://openalex.org/W163693903",
-        "https://openalex.org/W2963928259",
-        "https://openalex.org/W2610829762",
-        "https://openalex.org/W7036566294",
-        "https://openalex.org/W2581522324",
-        "https://openalex.org/W2892354434",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6764409202",
-        "https://openalex.org/W2984100107",
-        "https://openalex.org/W4213019189",
-        "https://openalex.org/W2944716568",
-        "https://openalex.org/W2783973656",
-        "https://openalex.org/W3207409396",
-        "https://openalex.org/W2964066696",
-        "https://openalex.org/W2966756122",
-        "https://openalex.org/W2969940319",
-        "https://openalex.org/W2746780440",
-        "https://openalex.org/W4221115074",
-        "https://openalex.org/W3017239579",
-        "https://openalex.org/W4233413206",
-        "https://openalex.org/W2097178527",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3188829651"
-    ],
-    "abstract": "Predictive business process monitoring is predicting the next stage of the business process based on the sequence of events that have occurred in the business process instance, which is positive for promoting the rational allocation of resources and the improvement of execution efficiency. There are drawbacks in modeling business process instances, such as conceptual drift phenomenon and long event sequences. Therefore, we propose a hierarchical Transformer-based business process prediction model to improve the performance of the Transformer-based predictive business process monitoring model. We encode the event features using two different encoding methods to obtain the relationship between activities and attributes. A drift detection algorithm is proposed to segment the business process and calculate the correlation between activities and segments by using cross-attention. Furthermore, learnable position encoding is designed to capture the relative position information of subsequences. Finally, the information of different granularity, such as event attributes, event subsequences, and complete instances, is fused by different weights. Experiments were run on seven real event logs for the next activity prediction and remaining time prediction, and the next activity prediction accuracy improved by 6.32% on average, and the mean absolute error of remaining time prediction reduces by 21% on average.",
-    "full_text": null
+  "title": "Predictive Business Process Monitoring Approach Based on Hierarchical Transformer",
+  "url": "https://openalex.org/W4323566020",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2099892979",
+      "name": "Wei-Jian Ni",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2104136079",
+      "name": "Gang Zhao",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1979146288",
+      "name": "Tong Liu",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2138163956",
+      "name": "Qingtian Zeng",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4323619053",
+      "name": "Xingzong Xu",
+      "affiliations": [
+        "Shandong University of Science and Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4285543424",
+    "https://openalex.org/W2399031645",
+    "https://openalex.org/W1973573653",
+    "https://openalex.org/W1998640084",
+    "https://openalex.org/W163693903",
+    "https://openalex.org/W2963928259",
+    "https://openalex.org/W2610829762",
+    "https://openalex.org/W7036566294",
+    "https://openalex.org/W2581522324",
+    "https://openalex.org/W2892354434",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6764409202",
+    "https://openalex.org/W2984100107",
+    "https://openalex.org/W4213019189",
+    "https://openalex.org/W2944716568",
+    "https://openalex.org/W2783973656",
+    "https://openalex.org/W3207409396",
+    "https://openalex.org/W2964066696",
+    "https://openalex.org/W2966756122",
+    "https://openalex.org/W2969940319",
+    "https://openalex.org/W2746780440",
+    "https://openalex.org/W4221115074",
+    "https://openalex.org/W3017239579",
+    "https://openalex.org/W4233413206",
+    "https://openalex.org/W2097178527",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3188829651"
+  ],
+  "abstract": "Predictive business process monitoring is predicting the next stage of the business process based on the sequence of events that have occurred in the business process instance, which is positive for promoting the rational allocation of resources and the improvement of execution efficiency. There are drawbacks in modeling business process instances, such as conceptual drift phenomenon and long event sequences. Therefore, we propose a hierarchical Transformer-based business process prediction model to improve the performance of the Transformer-based predictive business process monitoring model. We encode the event features using two different encoding methods to obtain the relationship between activities and attributes. A drift detection algorithm is proposed to segment the business process and calculate the correlation between activities and segments by using cross-attention. Furthermore, learnable position encoding is designed to capture the relative position information of subsequences. Finally, the information of different granularity, such as event attributes, event subsequences, and complete instances, is fused by different weights. Experiments were run on seven real event logs for the next activity prediction and remaining time prediction, and the next activity prediction accuracy improved by 6.32% on average, and the mean absolute error of remaining time prediction reduces by 21% on average.",
+  "full_text": null,
+  "topic": "Business process",
+  "concepts": [
+    {
+      "name": "Business process",
+      "score": 0.7014956474304199
+    },
+    {
+      "name": "Granularity",
+      "score": 0.6626824140548706
+    },
+    {
+      "name": "Computer science",
+      "score": 0.648220419883728
+    },
+    {
+      "name": "Process mining",
+      "score": 0.6387287378311157
+    },
+    {
+      "name": "Data mining",
+      "score": 0.6037946939468384
+    },
+    {
+      "name": "Event (particle physics)",
+      "score": 0.5567511916160583
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.4444766938686371
+    },
+    {
+      "name": "Business process discovery",
+      "score": 0.41527092456817627
+    },
+    {
+      "name": "Business process management",
+      "score": 0.38906747102737427
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3385974168777466
+    },
+    {
+      "name": "Business process modeling",
+      "score": 0.32472729682922363
+    },
+    {
+      "name": "Work in process",
+      "score": 0.25579598546028137
+    },
+    {
+      "name": "Engineering",
+      "score": 0.15006107091903687
+    },
+    {
+      "name": "Operations management",
+      "score": 0.08051702380180359
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

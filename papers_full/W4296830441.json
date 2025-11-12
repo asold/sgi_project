@@ -1,80 +1,159 @@
 {
-    "title": "Gait Recognition with Self-Supervised Learning of Gait Features Based on Vision Transformers",
-    "url": "https://openalex.org/W4296830441",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5012395775",
-            "name": "Domagoj Pinčić",
-            "affiliations": [
-                "University of Rijeka"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5077449371",
-            "name": "Diego Sušanj",
-            "affiliations": [
-                "University of Rijeka"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5080471570",
-            "name": "Kristijan Lenac",
-            "affiliations": [
-                "University of Rijeka"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2126680226",
-        "https://openalex.org/W2026800967",
-        "https://openalex.org/W2900572353",
-        "https://openalex.org/W3035400973",
-        "https://openalex.org/W2977530922",
-        "https://openalex.org/W6684191040",
-        "https://openalex.org/W2322772590",
-        "https://openalex.org/W2960957522",
-        "https://openalex.org/W3032457936",
-        "https://openalex.org/W2965924798",
-        "https://openalex.org/W2793655483",
-        "https://openalex.org/W2995927862",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4214669216",
-        "https://openalex.org/W3093251642",
-        "https://openalex.org/W6779326418",
-        "https://openalex.org/W3005680577",
-        "https://openalex.org/W3035524453",
-        "https://openalex.org/W3159481202",
-        "https://openalex.org/W2964744899",
-        "https://openalex.org/W4312428231",
-        "https://openalex.org/W2011058239",
-        "https://openalex.org/W3033060862",
-        "https://openalex.org/W2510190030",
-        "https://openalex.org/W2940710034",
-        "https://openalex.org/W3159765692",
-        "https://openalex.org/W2966138416",
-        "https://openalex.org/W3186826246",
-        "https://openalex.org/W3168423733",
-        "https://openalex.org/W3104352412",
-        "https://openalex.org/W2765328347",
-        "https://openalex.org/W2517225990",
-        "https://openalex.org/W6779997284",
-        "https://openalex.org/W4226055600",
-        "https://openalex.org/W3161902240",
-        "https://openalex.org/W3116489684",
-        "https://openalex.org/W2520774990",
-        "https://openalex.org/W6675575696",
-        "https://openalex.org/W2788751553",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W3015784669",
-        "https://openalex.org/W3186238294",
-        "https://openalex.org/W2798991696",
-        "https://openalex.org/W3036224891",
-        "https://openalex.org/W3035060554",
-        "https://openalex.org/W2104335344",
-        "https://openalex.org/W2163605009",
-        "https://openalex.org/W3094345665"
-    ],
-    "abstract": "Gait is a unique biometric trait with several useful properties. It can be recognized remotely and without the cooperation of the individual, with low-resolution cameras, and it is difficult to obscure. Therefore, it is suitable for crime investigation, surveillance, and access control. Existing approaches for gait recognition generally belong to the supervised learning domain, where all samples in the dataset are annotated. In the real world, annotation is often expensive and time-consuming. Moreover, convolutional neural networks (CNNs) have dominated the field of gait recognition for many years and have been extensively researched, while other recent methods such as vision transformer (ViT) remain unexplored. In this manuscript, we propose a self-supervised learning (SSL) approach for pretraining the feature extractor using the DINO model to automatically learn useful gait features with the vision transformer architecture. The feature extractor is then used for extracting gait features on which the fully connected neural network classifier is trained using the supervised approach. Experiments on CASIA-B and OU-MVLP gait datasets show the effectiveness of the proposed approach.",
-    "full_text": null
+  "title": "Gait Recognition with Self-Supervised Learning of Gait Features Based on Vision Transformers",
+  "url": "https://openalex.org/W4296830441",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5012395775",
+      "name": "Domagoj Pinčić",
+      "affiliations": [
+        "University of Rijeka"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5077449371",
+      "name": "Diego Sušanj",
+      "affiliations": [
+        "University of Rijeka"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5080471570",
+      "name": "Kristijan Lenac",
+      "affiliations": [
+        "University of Rijeka"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2126680226",
+    "https://openalex.org/W2026800967",
+    "https://openalex.org/W2900572353",
+    "https://openalex.org/W3035400973",
+    "https://openalex.org/W2977530922",
+    "https://openalex.org/W6684191040",
+    "https://openalex.org/W2322772590",
+    "https://openalex.org/W2960957522",
+    "https://openalex.org/W3032457936",
+    "https://openalex.org/W2965924798",
+    "https://openalex.org/W2793655483",
+    "https://openalex.org/W2995927862",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4214669216",
+    "https://openalex.org/W3093251642",
+    "https://openalex.org/W6779326418",
+    "https://openalex.org/W3005680577",
+    "https://openalex.org/W3035524453",
+    "https://openalex.org/W3159481202",
+    "https://openalex.org/W2964744899",
+    "https://openalex.org/W4312428231",
+    "https://openalex.org/W2011058239",
+    "https://openalex.org/W3033060862",
+    "https://openalex.org/W2510190030",
+    "https://openalex.org/W2940710034",
+    "https://openalex.org/W3159765692",
+    "https://openalex.org/W2966138416",
+    "https://openalex.org/W3186826246",
+    "https://openalex.org/W3168423733",
+    "https://openalex.org/W3104352412",
+    "https://openalex.org/W2765328347",
+    "https://openalex.org/W2517225990",
+    "https://openalex.org/W6779997284",
+    "https://openalex.org/W4226055600",
+    "https://openalex.org/W3161902240",
+    "https://openalex.org/W3116489684",
+    "https://openalex.org/W2520774990",
+    "https://openalex.org/W6675575696",
+    "https://openalex.org/W2788751553",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W3015784669",
+    "https://openalex.org/W3186238294",
+    "https://openalex.org/W2798991696",
+    "https://openalex.org/W3036224891",
+    "https://openalex.org/W3035060554",
+    "https://openalex.org/W2104335344",
+    "https://openalex.org/W2163605009",
+    "https://openalex.org/W3094345665"
+  ],
+  "abstract": "Gait is a unique biometric trait with several useful properties. It can be recognized remotely and without the cooperation of the individual, with low-resolution cameras, and it is difficult to obscure. Therefore, it is suitable for crime investigation, surveillance, and access control. Existing approaches for gait recognition generally belong to the supervised learning domain, where all samples in the dataset are annotated. In the real world, annotation is often expensive and time-consuming. Moreover, convolutional neural networks (CNNs) have dominated the field of gait recognition for many years and have been extensively researched, while other recent methods such as vision transformer (ViT) remain unexplored. In this manuscript, we propose a self-supervised learning (SSL) approach for pretraining the feature extractor using the DINO model to automatically learn useful gait features with the vision transformer architecture. The feature extractor is then used for extracting gait features on which the fully connected neural network classifier is trained using the supervised approach. Experiments on CASIA-B and OU-MVLP gait datasets show the effectiveness of the proposed approach.",
+  "full_text": null,
+  "topic": "Artificial intelligence",
+  "concepts": [
+    {
+      "name": "Artificial intelligence",
+      "score": 0.715247631072998
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6650494933128357
+    },
+    {
+      "name": "Gait",
+      "score": 0.6409534811973572
+    },
+    {
+      "name": "Biometrics",
+      "score": 0.6396076679229736
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5716328024864197
+    },
+    {
+      "name": "Classifier (UML)",
+      "score": 0.554756224155426
+    },
+    {
+      "name": "Supervised learning",
+      "score": 0.5173601508140564
+    },
+    {
+      "name": "Feature extraction",
+      "score": 0.5006823539733887
+    },
+    {
+      "name": "Extractor",
+      "score": 0.4728567600250244
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.450314998626709
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.44434720277786255
+    },
+    {
+      "name": "Transformer",
+      "score": 0.43180179595947266
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.41885337233543396
+    },
+    {
+      "name": "Engineering",
+      "score": 0.1649966835975647
+    },
+    {
+      "name": "Physical medicine and rehabilitation",
+      "score": 0.0654512345790863
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    },
+    {
+      "name": "Process engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Medicine",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,70 +1,133 @@
 {
-    "title": "Evaluating the Reasoning Capabilities of Large Language Models for Medical Coding and Hospital Readmission Risk Stratification: Zero-Shot Prompting Approach",
-    "url": "https://openalex.org/W4411184942",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5015986084",
-            "name": "Parvati Naliyatthaliyazchayil",
-            "affiliations": [
-                null,
-                "Indiana University – Purdue University Indianapolis"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5116651915",
-            "name": "Raajitha Muthyala",
-            "affiliations": [
-                null,
-                "Indiana University – Purdue University Indianapolis"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5076075666",
-            "name": "Judy Wawira Gichoya",
-            "affiliations": [
-                null,
-                "Emory University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5075722115",
-            "name": "Saptarshi Purkayastha",
-            "affiliations": [
-                null,
-                "Indiana University – Purdue University Indianapolis"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4391766565",
-        "https://openalex.org/W4385227045",
-        "https://openalex.org/W4406058556",
-        "https://openalex.org/W4394943312",
-        "https://openalex.org/W4384561707",
-        "https://openalex.org/W2163072879",
-        "https://openalex.org/W4361289889",
-        "https://openalex.org/W4391591648",
-        "https://openalex.org/W4400104548",
-        "https://openalex.org/W102264027",
-        "https://openalex.org/W2970771982",
-        "https://openalex.org/W2800716056",
-        "https://openalex.org/W4411147644",
-        "https://openalex.org/W4300537458",
-        "https://openalex.org/W4409112120",
-        "https://openalex.org/W4313439128",
-        "https://openalex.org/W4396856309",
-        "https://openalex.org/W4389301995",
-        "https://openalex.org/W4221148722",
-        "https://openalex.org/W4400527198",
-        "https://openalex.org/W4402671398",
-        "https://openalex.org/W2132781587",
-        "https://openalex.org/W4316829871",
-        "https://openalex.org/W4389917881",
-        "https://openalex.org/W4385365799",
-        "https://openalex.org/W3181414820",
-        "https://openalex.org/W2903777941"
-    ],
-    "abstract": "Abstract Background Large language models (LLMs) such as ChatGPT-4, LLaMA-3.1, Gemini-1.5, DeepSeek-R1, and OpenAI-O3 have shown promising potential in health care, particularly for clinical reasoning and decision support. However, their reliability across critical tasks like diagnosis, medical coding, and risk prediction has received mixed reviews, especially in real-world settings without task-specific training. Objective This study aims to evaluate and compare the zero-shot performance of reasoning and nonreasoning LLMs in three essential clinical tasks: (1) primary diagnosis generation, (2) ICD-9 ( International Classification of Diseases, Ninth Revision ) medical code prediction, and (3) hospital readmission risk stratification. The goal is to assess whether these models can serve as general-purpose clinical decision support tools and to identify gaps in current capabilities. Methods Using the Medical Information Mart for Intensive Care-IV dataset, we selected a random cohort of 300 hospital discharge summaries. Prompts were engineered to include structured clinical content from 5 note sections: chief complaints, past medical history, surgical history, laboratories, and imaging. Prompts were standardized and zero-shot, with no model fine-tuning or repetition across runs. All model interactions were conducted through publicly available web user interfaces, without using application programming interfaces, to simulate real-world accessibility for nontechnical users. We incorporated rationale elicitation into prompts to evaluate model transparency, especially in reasoning models. Ground-truth labels were derived from the primary diagnosis documented in clinical notes, structured ICD-9 codes from diagnosis, and hospital-recorded readmission frequencies for risk stratification. Performance was measured using F 1 -scores and correctness percentages, and comparative performance was analyzed statistically. Results Among nonreasoning models, LLaMA-3.1 achieved the highest primary diagnosis accuracy (n=255, 85%), followed by ChatGPT-4 (n=254, 84.7%) and Gemini-1.5 (n=237, 79%). For ICD-9 prediction, correctness dropped significantly across all models: LLaMA-3.1 (n=128, 42.6%), ChatGPT-4 (n=122, 40.6%), and Gemini-1.5 (n=44, 14.6%). Hospital readmission risk prediction showed low performance in nonreasoning models: LLaMA-3.1 (n=124, 41.3%), Gemini-1.5 (n=122, 40.7%), and ChatGPT-4 (n=99, 33%). Among reasoning models, OpenAI-O3 outperformed in diagnosis (n=270, 90%) and ICD-9 coding (n=136, 45.3%), while DeepSeek-R1 performed slightly better in the readmission risk prediction (n=218, 72.6% vs O3’s n=212, 70.6%). Despite improved explainability, reasoning models generated verbose responses. None of the models met clinical standards across all tasks, and performance in medical coding remained the weakest area across all models. Conclusions Current LLMs exhibit moderate success in zero-shot diagnosis and risk prediction but underperform in ICD-9 code generation, reinforcing findings from prior studies. Reasoning models offer marginally better performance and increased interpretability, with limited reliability. Overall, statistical analysis between the models revealed that OpenAI-O3 outperformed the other models. These results highlight the need for task-specific fine-tuning and need human-in-the-loop checking. Future work will explore fine-tuning, stability through repeated trials, and evaluation on a different subset of deidentified real-world data with a larger sample size.",
-    "full_text": null
+  "title": "Evaluating the Reasoning Capabilities of Large Language Models for Medical Coding and Hospital Readmission Risk Stratification: Zero-Shot Prompting Approach",
+  "url": "https://openalex.org/W4411184942",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5015986084",
+      "name": "Parvati Naliyatthaliyazchayil",
+      "affiliations": [
+        null,
+        "Indiana University – Purdue University Indianapolis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5116651915",
+      "name": "Raajitha Muthyala",
+      "affiliations": [
+        null,
+        "Indiana University – Purdue University Indianapolis"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5076075666",
+      "name": "Judy Wawira Gichoya",
+      "affiliations": [
+        null,
+        "Emory University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5075722115",
+      "name": "Saptarshi Purkayastha",
+      "affiliations": [
+        null,
+        "Indiana University – Purdue University Indianapolis"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4391766565",
+    "https://openalex.org/W4385227045",
+    "https://openalex.org/W4406058556",
+    "https://openalex.org/W4394943312",
+    "https://openalex.org/W4384561707",
+    "https://openalex.org/W2163072879",
+    "https://openalex.org/W4361289889",
+    "https://openalex.org/W4391591648",
+    "https://openalex.org/W4400104548",
+    "https://openalex.org/W102264027",
+    "https://openalex.org/W2970771982",
+    "https://openalex.org/W2800716056",
+    "https://openalex.org/W4411147644",
+    "https://openalex.org/W4300537458",
+    "https://openalex.org/W4409112120",
+    "https://openalex.org/W4313439128",
+    "https://openalex.org/W4396856309",
+    "https://openalex.org/W4389301995",
+    "https://openalex.org/W4221148722",
+    "https://openalex.org/W4400527198",
+    "https://openalex.org/W4402671398",
+    "https://openalex.org/W2132781587",
+    "https://openalex.org/W4316829871",
+    "https://openalex.org/W4389917881",
+    "https://openalex.org/W4385365799",
+    "https://openalex.org/W3181414820",
+    "https://openalex.org/W2903777941"
+  ],
+  "abstract": "Abstract Background Large language models (LLMs) such as ChatGPT-4, LLaMA-3.1, Gemini-1.5, DeepSeek-R1, and OpenAI-O3 have shown promising potential in health care, particularly for clinical reasoning and decision support. However, their reliability across critical tasks like diagnosis, medical coding, and risk prediction has received mixed reviews, especially in real-world settings without task-specific training. Objective This study aims to evaluate and compare the zero-shot performance of reasoning and nonreasoning LLMs in three essential clinical tasks: (1) primary diagnosis generation, (2) ICD-9 ( International Classification of Diseases, Ninth Revision ) medical code prediction, and (3) hospital readmission risk stratification. The goal is to assess whether these models can serve as general-purpose clinical decision support tools and to identify gaps in current capabilities. Methods Using the Medical Information Mart for Intensive Care-IV dataset, we selected a random cohort of 300 hospital discharge summaries. Prompts were engineered to include structured clinical content from 5 note sections: chief complaints, past medical history, surgical history, laboratories, and imaging. Prompts were standardized and zero-shot, with no model fine-tuning or repetition across runs. All model interactions were conducted through publicly available web user interfaces, without using application programming interfaces, to simulate real-world accessibility for nontechnical users. We incorporated rationale elicitation into prompts to evaluate model transparency, especially in reasoning models. Ground-truth labels were derived from the primary diagnosis documented in clinical notes, structured ICD-9 codes from diagnosis, and hospital-recorded readmission frequencies for risk stratification. Performance was measured using F 1 -scores and correctness percentages, and comparative performance was analyzed statistically. Results Among nonreasoning models, LLaMA-3.1 achieved the highest primary diagnosis accuracy (n=255, 85%), followed by ChatGPT-4 (n=254, 84.7%) and Gemini-1.5 (n=237, 79%). For ICD-9 prediction, correctness dropped significantly across all models: LLaMA-3.1 (n=128, 42.6%), ChatGPT-4 (n=122, 40.6%), and Gemini-1.5 (n=44, 14.6%). Hospital readmission risk prediction showed low performance in nonreasoning models: LLaMA-3.1 (n=124, 41.3%), Gemini-1.5 (n=122, 40.7%), and ChatGPT-4 (n=99, 33%). Among reasoning models, OpenAI-O3 outperformed in diagnosis (n=270, 90%) and ICD-9 coding (n=136, 45.3%), while DeepSeek-R1 performed slightly better in the readmission risk prediction (n=218, 72.6% vs O3’s n=212, 70.6%). Despite improved explainability, reasoning models generated verbose responses. None of the models met clinical standards across all tasks, and performance in medical coding remained the weakest area across all models. Conclusions Current LLMs exhibit moderate success in zero-shot diagnosis and risk prediction but underperform in ICD-9 code generation, reinforcing findings from prior studies. Reasoning models offer marginally better performance and increased interpretability, with limited reliability. Overall, statistical analysis between the models revealed that OpenAI-O3 outperformed the other models. These results highlight the need for task-specific fine-tuning and need human-in-the-loop checking. Future work will explore fine-tuning, stability through repeated trials, and evaluation on a different subset of deidentified real-world data with a larger sample size.",
+  "full_text": null,
+  "topic": "Preprint",
+  "concepts": [
+    {
+      "name": "Preprint",
+      "score": 0.9021918177604675
+    },
+    {
+      "name": "Risk stratification",
+      "score": 0.5145227313041687
+    },
+    {
+      "name": "Coding (social sciences)",
+      "score": 0.4864954352378845
+    },
+    {
+      "name": "Zero (linguistics)",
+      "score": 0.43108314275741577
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4267571270465851
+    },
+    {
+      "name": "Psychology",
+      "score": 0.3731170892715454
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.345251202583313
+    },
+    {
+      "name": "Medicine",
+      "score": 0.33193239569664
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.32468879222869873
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.20646557211875916
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.18651548027992249
+    },
+    {
+      "name": "Statistics",
+      "score": 0.17971140146255493
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.16848614811897278
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Cardiology",
+      "score": 0.0
+    }
+  ]
 }

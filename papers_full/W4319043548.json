@@ -1,108 +1,163 @@
 {
-    "title": "WLiT: Windows and Linear Transformer for Video Action Recognition",
-    "url": "https://openalex.org/W4319043548",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5102776191",
-            "name": "Ruoxi Sun",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute",
-                "ShanghaiTech University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5083819190",
-            "name": "Tianzhao Zhang",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute",
-                "University of Chinese Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5009936061",
-            "name": "Yong Wan",
-            "affiliations": [
-                "Institute of Rock and Soil Mechanics"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5041256730",
-            "name": "Fuping Zhang",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5056113267",
-            "name": "Jianming Wei",
-            "affiliations": [
-                "Chinese Academy of Sciences",
-                "Shanghai Advanced Research Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3126721948",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6729983426",
-        "https://openalex.org/W4312443924",
-        "https://openalex.org/W1522734439",
-        "https://openalex.org/W2963524571",
-        "https://openalex.org/W6756911974",
-        "https://openalex.org/W6779879114",
-        "https://openalex.org/W2962784628",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W3179869055",
-        "https://openalex.org/W3016719260",
-        "https://openalex.org/W4312881242",
-        "https://openalex.org/W4214493665",
-        "https://openalex.org/W3175515048",
-        "https://openalex.org/W3108450508",
-        "https://openalex.org/W3166702123",
-        "https://openalex.org/W4312560592",
-        "https://openalex.org/W7015296915",
-        "https://openalex.org/W2020163092",
-        "https://openalex.org/W2068611653",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W2147800946",
-        "https://openalex.org/W2016053056",
-        "https://openalex.org/W1923404803",
-        "https://openalex.org/W2553594924",
-        "https://openalex.org/W3034572008",
-        "https://openalex.org/W2964191259",
-        "https://openalex.org/W2963155035",
-        "https://openalex.org/W2883429621",
-        "https://openalex.org/W2963820951",
-        "https://openalex.org/W2507009361",
-        "https://openalex.org/W2901751978",
-        "https://openalex.org/W3035303837",
-        "https://openalex.org/W3175528717",
-        "https://openalex.org/W4206706211",
-        "https://openalex.org/W3109304426",
-        "https://openalex.org/W3210279979",
-        "https://openalex.org/W4214612132",
-        "https://openalex.org/W4214614183",
-        "https://openalex.org/W3034573343",
-        "https://openalex.org/W2963925437",
-        "https://openalex.org/W2625366777",
-        "https://openalex.org/W2126579184",
-        "https://openalex.org/W2964491122",
-        "https://openalex.org/W3096833468",
-        "https://openalex.org/W6797206543",
-        "https://openalex.org/W4286212078",
-        "https://openalex.org/W2963645879",
-        "https://openalex.org/W3009812836",
-        "https://openalex.org/W2997582214",
-        "https://openalex.org/W4294253316",
-        "https://openalex.org/W2024868105",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W2949846184",
-        "https://openalex.org/W3170860705"
-    ],
-    "abstract": "The emergence of Transformer has led to the rapid development of video understanding, but it also brings the problem of high computational complexity. Previously, there were methods to divide the feature maps into windows along the spatiotemporal dimensions and then calculate the attention. There are also methods to perform down-sampling during attention computation to reduce the spatiotemporal resolution of features. Although the complexity is effectively reduced, there is still room for further optimization. Thus, we present the Windows and Linear Transformer (WLiT) for efficient video action recognition, by combining Spatial-Windows attention with Linear attention. We first divide the feature maps into multiple windows along the spatial dimensions and calculate the attention separately inside the windows. Therefore, our model further reduces the computational complexity compared with previous methods. However, the perceptual field of Spatial-Windows attention is small, and global spatiotemporal information cannot be obtained. To address this problem, we then calculate Linear attention along the channel dimension so that the model can capture complete spatiotemporal information. Our method achieves better recognition accuracy with less computational complexity through this mechanism. We conduct extensive experiments on four public datasets, namely Something-Something V2 (SSV2), Kinetics400 (K400), UCF101, and HMDB51. On the SSV2 dataset, our method reduces the computational complexity by 28% and improves the recognition accuracy by 1.6% compared to the State-Of-The-Art (SOTA) method. On the K400 and two other datasets, our method achieves SOTA-level accuracy while reducing the complexity by about 49%.",
-    "full_text": null
+  "title": "WLiT: Windows and Linear Transformer for Video Action Recognition",
+  "url": "https://openalex.org/W4319043548",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5102776191",
+      "name": "Ruoxi Sun",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute",
+        "ShanghaiTech University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5083819190",
+      "name": "Tianzhao Zhang",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute",
+        "University of Chinese Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5009936061",
+      "name": "Yong Wan",
+      "affiliations": [
+        "Institute of Rock and Soil Mechanics"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5041256730",
+      "name": "Fuping Zhang",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5056113267",
+      "name": "Jianming Wei",
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Shanghai Advanced Research Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3126721948",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6729983426",
+    "https://openalex.org/W4312443924",
+    "https://openalex.org/W1522734439",
+    "https://openalex.org/W2963524571",
+    "https://openalex.org/W6756911974",
+    "https://openalex.org/W6779879114",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W3179869055",
+    "https://openalex.org/W3016719260",
+    "https://openalex.org/W4312881242",
+    "https://openalex.org/W4214493665",
+    "https://openalex.org/W3175515048",
+    "https://openalex.org/W3108450508",
+    "https://openalex.org/W3166702123",
+    "https://openalex.org/W4312560592",
+    "https://openalex.org/W7015296915",
+    "https://openalex.org/W2020163092",
+    "https://openalex.org/W2068611653",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W2147800946",
+    "https://openalex.org/W2016053056",
+    "https://openalex.org/W1923404803",
+    "https://openalex.org/W2553594924",
+    "https://openalex.org/W3034572008",
+    "https://openalex.org/W2964191259",
+    "https://openalex.org/W2963155035",
+    "https://openalex.org/W2883429621",
+    "https://openalex.org/W2963820951",
+    "https://openalex.org/W2507009361",
+    "https://openalex.org/W2901751978",
+    "https://openalex.org/W3035303837",
+    "https://openalex.org/W3175528717",
+    "https://openalex.org/W4206706211",
+    "https://openalex.org/W3109304426",
+    "https://openalex.org/W3210279979",
+    "https://openalex.org/W4214612132",
+    "https://openalex.org/W4214614183",
+    "https://openalex.org/W3034573343",
+    "https://openalex.org/W2963925437",
+    "https://openalex.org/W2625366777",
+    "https://openalex.org/W2126579184",
+    "https://openalex.org/W2964491122",
+    "https://openalex.org/W3096833468",
+    "https://openalex.org/W6797206543",
+    "https://openalex.org/W4286212078",
+    "https://openalex.org/W2963645879",
+    "https://openalex.org/W3009812836",
+    "https://openalex.org/W2997582214",
+    "https://openalex.org/W4294253316",
+    "https://openalex.org/W2024868105",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W2949846184",
+    "https://openalex.org/W3170860705"
+  ],
+  "abstract": "The emergence of Transformer has led to the rapid development of video understanding, but it also brings the problem of high computational complexity. Previously, there were methods to divide the feature maps into windows along the spatiotemporal dimensions and then calculate the attention. There are also methods to perform down-sampling during attention computation to reduce the spatiotemporal resolution of features. Although the complexity is effectively reduced, there is still room for further optimization. Thus, we present the Windows and Linear Transformer (WLiT) for efficient video action recognition, by combining Spatial-Windows attention with Linear attention. We first divide the feature maps into multiple windows along the spatial dimensions and calculate the attention separately inside the windows. Therefore, our model further reduces the computational complexity compared with previous methods. However, the perceptual field of Spatial-Windows attention is small, and global spatiotemporal information cannot be obtained. To address this problem, we then calculate Linear attention along the channel dimension so that the model can capture complete spatiotemporal information. Our method achieves better recognition accuracy with less computational complexity through this mechanism. We conduct extensive experiments on four public datasets, namely Something-Something V2 (SSV2), Kinetics400 (K400), UCF101, and HMDB51. On the SSV2 dataset, our method reduces the computational complexity by 28% and improves the recognition accuracy by 1.6% compared to the State-Of-The-Art (SOTA) method. On the K400 and two other datasets, our method achieves SOTA-level accuracy while reducing the complexity by about 49%.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7487766742706299
+    },
+    {
+      "name": "Computational complexity theory",
+      "score": 0.7270488739013672
+    },
+    {
+      "name": "Computation",
+      "score": 0.6361842155456543
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5148174166679382
+    },
+    {
+      "name": "Transformer",
+      "score": 0.4752609133720398
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.4650600552558899
+    },
+    {
+      "name": "Action recognition",
+      "score": 0.42871707677841187
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.3285801410675049
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.2987052798271179
+    },
+    {
+      "name": "Voltage",
+      "score": 0.09442567825317383
+    },
+    {
+      "name": "Quantum mechanics",
+      "score": 0.0
+    },
+    {
+      "name": "Class (philosophy)",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,55 +1,102 @@
 {
-    "title": "Words Mark the Nerds: Computational Models of Personality Recognition through Language",
-    "url": "https://openalex.org/W2620931863",
-    "year": 2006,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5052178615",
-            "name": "Franc ̧ois Mairesse",
-            "affiliations": [
-                "University of Sheffield"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5104105328",
-            "name": "Marilyn Walker",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2092128171",
-        "https://openalex.org/W1985449126",
-        "https://openalex.org/W2032282529",
-        "https://openalex.org/W2123037604",
-        "https://openalex.org/W1518481329",
-        "https://openalex.org/W1551332915",
-        "https://openalex.org/W2014347022",
-        "https://openalex.org/W1530186825",
-        "https://openalex.org/W2119842871",
-        "https://openalex.org/W2037418516",
-        "https://openalex.org/W1641003075",
-        "https://openalex.org/W2122725421",
-        "https://openalex.org/W1570448133",
-        "https://openalex.org/W2115474071",
-        "https://openalex.org/W2032358072",
-        "https://openalex.org/W2034417199",
-        "https://openalex.org/W2010113892",
-        "https://openalex.org/W1875231349",
-        "https://openalex.org/W73056518",
-        "https://openalex.org/W1973193261",
-        "https://openalex.org/W2126933251",
-        "https://openalex.org/W2249418430",
-        "https://openalex.org/W2036045338",
-        "https://openalex.org/W2170809941",
-        "https://openalex.org/W2025380177",
-        "https://openalex.org/W2064757779",
-        "https://openalex.org/W150740463",
-        "https://openalex.org/W2807319586",
-        "https://openalex.org/W1995944709",
-        "https://openalex.org/W1972820248"
-    ],
-    "abstract": "Words Mark the Nerds: Computational Models of Personality Recognition through Language Franc¸ois Mairesse (F.Mairesse@sheffield.ac.uk) Department of Computer Science, University of Sheffield 211 Portobello Street, Sheffield S1 4DP, United Kingdom Marilyn Walker (M.A.Walker@sheffield.ac.uk) Department of Computer Science, University of Sheffield 211 Portobello Street, Sheffield S1 4DP, United Kingdom Abstract ent parties involved. Personality traits influence many aspects of individual behaviour, such as the attitude toward machines (Sigurdsson, 1991), overall job performance (Furnham, Jack- son & Miller, 1999), as well as academic motivation (Komar- raju & Karau, 2005); this last finding suggests that training systems would be more efficient if they could adapt to the learner’s personality. Our goal is to develop models to recognize the user’s per- sonality, and use them to modify the output generation of a dialogue system. This paper presents non-linear statistical models of the five most essential personality traits, learned automatically via machine learning on different sources of data. Results show that extraversion, emotional stability and conscientiousness are easier to model, and recognition mod- els based on observed personality perform significantly bet- ter than a baseline returning the average personality score, as well as better than models using self-reports. An analysis of decision trees confirms previous findings linking language and personality, while revealing many new linguistic markers. User models in human-computer interfaces have focused on various user characteristics, but there is little user modeling of the most fundamental dimension of variation between hu- mans: personality traits. We explore here the possibility of automatically acquiring such models by simply observing the user’s language. We automatically learn models for personality recognition from different corpora and sources of personality evaluation. The models are completely transparent, i.e. they can run in the background evaluating the user at every con- versational turn, and provide input for the system to adapt to the user. Results show that recognition models based on ob- served personality perform significantly better than a baseline of the average personality score, as well as better than mod- els using self-reports. An analysis of decision trees confirms previous findings linking language and personality, while re- vealing many new linguistic markers. Keywords: Personality; Statistical model; Machine learn- ing; Language; Conversation; EAR; Big Five; Pragmatics; Five factor model; Dialogue systems Introduction Personality traits and language Many scientists have focused on how to optimize our inter- actions with machines, by finding the best way to select and communicate information. However, because users behave in different ways, computer systems need to adapt to their con- versational partner, as humans do (Funder & Sneed, 1993; McLarney-Vesotski et al., in press); this is the purpose of user models in dialogue systems (Zukerman & Litman, 2001). One approach to user modeling is to elicit user preferences by asking the user (Linden, Hanks & Lesh, 1997), but other work develops such models through observation, i.e. by ana- lyzing the user’s language. Rich (1979) successfully maps user’s keywords to content selection and language genera- tion parameters, while Maloor & Chai (2000) estimate the user’s expertise using dialogue features. Researchers have also learned user models from data, e.g. for sentence plan- ning (Mairesse & Walker, 2005) and dialogue management (Litman et al., 2000). Rather than modeling specific user preferences, we pro- pose modeling personality traits. By definition, personal- ity is the highest level variable characterizing individuals. Computer users can detect a machine’s personality and pre- fer working with a computer exhibiting the same personality as theirs (Reeves & Nass, 1996). Personalities of real estate agents were used as a basis for the design of an e-commerce website (Fuchs, 2001). In addition, many studies have shown that the success of interpersonal tasks depends on the personalities of the differ- Trait identification Personality can be described as a set of attributes characteriz- ing an individual. The number of those attributes seems to be extremely large. Indeed, when talking about a close friend, one can usually come up with many adjectives describing his or her behaviour. To be able to reason about personality, psy- chologists have tried to identify the most essential traits, re- ferred to as the Big Five (Norman, 1963): • Extraversion (sociability, activity, assertiveness) • Emotional stability (as opposed to neuroticism) • Agreeableness to other people • Conscientiousness (discipline) • Openness to experience (intellect) Such traits were obtained by doing a factor analysis over the adjectives used in personality description questionnaires. They are therefore based on the assumption that the most rel- evant individual differences are encoded into the language, and the more important the difference, the more likely it is to be expressed as a single word. This is referred to as the Lexical Hypothesis. While there are known limits to the Big Five model (Eysenck, 1991; Paunonen & Jackson, 2000), we shall use it in our models, as it provides a very general framework for reasoning about individual differences, and it has become a standard in psychology as it was replicated many times (Nor- man, 1963; Peabody & Goldberg, 1989).",
-    "full_text": null
+  "title": "Words Mark the Nerds: Computational Models of Personality Recognition through Language",
+  "url": "https://openalex.org/W2620931863",
+  "year": 2006,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5052178615",
+      "name": "Franc ̧ois Mairesse",
+      "affiliations": [
+        "University of Sheffield"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5104105328",
+      "name": "Marilyn Walker",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2092128171",
+    "https://openalex.org/W1985449126",
+    "https://openalex.org/W2032282529",
+    "https://openalex.org/W2123037604",
+    "https://openalex.org/W1518481329",
+    "https://openalex.org/W1551332915",
+    "https://openalex.org/W2014347022",
+    "https://openalex.org/W1530186825",
+    "https://openalex.org/W2119842871",
+    "https://openalex.org/W2037418516",
+    "https://openalex.org/W1641003075",
+    "https://openalex.org/W2122725421",
+    "https://openalex.org/W1570448133",
+    "https://openalex.org/W2115474071",
+    "https://openalex.org/W2032358072",
+    "https://openalex.org/W2034417199",
+    "https://openalex.org/W2010113892",
+    "https://openalex.org/W1875231349",
+    "https://openalex.org/W73056518",
+    "https://openalex.org/W1973193261",
+    "https://openalex.org/W2126933251",
+    "https://openalex.org/W2249418430",
+    "https://openalex.org/W2036045338",
+    "https://openalex.org/W2170809941",
+    "https://openalex.org/W2025380177",
+    "https://openalex.org/W2064757779",
+    "https://openalex.org/W150740463",
+    "https://openalex.org/W2807319586",
+    "https://openalex.org/W1995944709",
+    "https://openalex.org/W1972820248"
+  ],
+  "abstract": "Words Mark the Nerds: Computational Models of Personality Recognition through Language Franc¸ois Mairesse (F.Mairesse@sheffield.ac.uk) Department of Computer Science, University of Sheffield 211 Portobello Street, Sheffield S1 4DP, United Kingdom Marilyn Walker (M.A.Walker@sheffield.ac.uk) Department of Computer Science, University of Sheffield 211 Portobello Street, Sheffield S1 4DP, United Kingdom Abstract ent parties involved. Personality traits influence many aspects of individual behaviour, such as the attitude toward machines (Sigurdsson, 1991), overall job performance (Furnham, Jack- son & Miller, 1999), as well as academic motivation (Komar- raju & Karau, 2005); this last finding suggests that training systems would be more efficient if they could adapt to the learner’s personality. Our goal is to develop models to recognize the user’s per- sonality, and use them to modify the output generation of a dialogue system. This paper presents non-linear statistical models of the five most essential personality traits, learned automatically via machine learning on different sources of data. Results show that extraversion, emotional stability and conscientiousness are easier to model, and recognition mod- els based on observed personality perform significantly bet- ter than a baseline returning the average personality score, as well as better than models using self-reports. An analysis of decision trees confirms previous findings linking language and personality, while revealing many new linguistic markers. User models in human-computer interfaces have focused on various user characteristics, but there is little user modeling of the most fundamental dimension of variation between hu- mans: personality traits. We explore here the possibility of automatically acquiring such models by simply observing the user’s language. We automatically learn models for personality recognition from different corpora and sources of personality evaluation. The models are completely transparent, i.e. they can run in the background evaluating the user at every con- versational turn, and provide input for the system to adapt to the user. Results show that recognition models based on ob- served personality perform significantly better than a baseline of the average personality score, as well as better than mod- els using self-reports. An analysis of decision trees confirms previous findings linking language and personality, while re- vealing many new linguistic markers. Keywords: Personality; Statistical model; Machine learn- ing; Language; Conversation; EAR; Big Five; Pragmatics; Five factor model; Dialogue systems Introduction Personality traits and language Many scientists have focused on how to optimize our inter- actions with machines, by finding the best way to select and communicate information. However, because users behave in different ways, computer systems need to adapt to their con- versational partner, as humans do (Funder & Sneed, 1993; McLarney-Vesotski et al., in press); this is the purpose of user models in dialogue systems (Zukerman & Litman, 2001). One approach to user modeling is to elicit user preferences by asking the user (Linden, Hanks & Lesh, 1997), but other work develops such models through observation, i.e. by ana- lyzing the user’s language. Rich (1979) successfully maps user’s keywords to content selection and language genera- tion parameters, while Maloor & Chai (2000) estimate the user’s expertise using dialogue features. Researchers have also learned user models from data, e.g. for sentence plan- ning (Mairesse & Walker, 2005) and dialogue management (Litman et al., 2000). Rather than modeling specific user preferences, we pro- pose modeling personality traits. By definition, personal- ity is the highest level variable characterizing individuals. Computer users can detect a machine’s personality and pre- fer working with a computer exhibiting the same personality as theirs (Reeves & Nass, 1996). Personalities of real estate agents were used as a basis for the design of an e-commerce website (Fuchs, 2001). In addition, many studies have shown that the success of interpersonal tasks depends on the personalities of the differ- Trait identification Personality can be described as a set of attributes characteriz- ing an individual. The number of those attributes seems to be extremely large. Indeed, when talking about a close friend, one can usually come up with many adjectives describing his or her behaviour. To be able to reason about personality, psy- chologists have tried to identify the most essential traits, re- ferred to as the Big Five (Norman, 1963): • Extraversion (sociability, activity, assertiveness) • Emotional stability (as opposed to neuroticism) • Agreeableness to other people • Conscientiousness (discipline) • Openness to experience (intellect) Such traits were obtained by doing a factor analysis over the adjectives used in personality description questionnaires. They are therefore based on the assumption that the most rel- evant individual differences are encoded into the language, and the more important the difference, the more likely it is to be expressed as a single word. This is referred to as the Lexical Hypothesis. While there are known limits to the Big Five model (Eysenck, 1991; Paunonen & Jackson, 2000), we shall use it in our models, as it provides a very general framework for reasoning about individual differences, and it has become a standard in psychology as it was replicated many times (Nor- man, 1963; Peabody & Goldberg, 1989).",
+  "full_text": null,
+  "topic": "Personality",
+  "concepts": [
+    {
+      "name": "Personality",
+      "score": 0.7829760313034058
+    },
+    {
+      "name": "Conscientiousness",
+      "score": 0.7794363498687744
+    },
+    {
+      "name": "Extraversion and introversion",
+      "score": 0.7212706804275513
+    },
+    {
+      "name": "Big Five personality traits",
+      "score": 0.6881250739097595
+    },
+    {
+      "name": "Dimension (graph theory)",
+      "score": 0.5661396384239197
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5009737014770508
+    },
+    {
+      "name": "Computer science",
+      "score": 0.4481050372123718
+    },
+    {
+      "name": "Psychology",
+      "score": 0.41003745794296265
+    },
+    {
+      "name": "Social psychology",
+      "score": 0.3691527247428894
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.1679883599281311
+    },
+    {
+      "name": "Pure mathematics",
+      "score": 0.0
+    }
+  ]
 }

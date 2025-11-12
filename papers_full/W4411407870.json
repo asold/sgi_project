@@ -1,88 +1,131 @@
 {
-    "title": "A large-scale foundation model for bulk transcriptomes",
-    "url": "https://openalex.org/W4411407870",
-    "year": 2025,
-    "authors": [
-        {
-            "id": "https://openalex.org/A5000684726",
-            "name": "B. S. Kang",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5007508326",
-            "name": "Rui Fan",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5081366047",
-            "name": "M.-J. Yi",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5068254913",
-            "name": "Chunmei Cui",
-            "affiliations": [
-                null
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5027886490",
-            "name": "Qinghua Cui",
-            "affiliations": [
-                null
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3030163527",
-        "https://openalex.org/W4401443086",
-        "https://openalex.org/W3127238141",
-        "https://openalex.org/W4290546063",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W4401455022",
-        "https://openalex.org/W4406369633",
-        "https://openalex.org/W4378838672",
-        "https://openalex.org/W4392168151",
-        "https://openalex.org/W4399387478",
-        "https://openalex.org/W4403174218",
-        "https://openalex.org/W4404230384",
-        "https://openalex.org/W4297243391",
-        "https://openalex.org/W4405688978",
-        "https://openalex.org/W4410255551",
-        "https://openalex.org/W4404442837",
-        "https://openalex.org/W2020541351",
-        "https://openalex.org/W2953067954",
-        "https://openalex.org/W6702248584",
-        "https://openalex.org/W4391821988",
-        "https://openalex.org/W4388979610",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W2990621560",
-        "https://openalex.org/W2103017472",
-        "https://openalex.org/W4294216483",
-        "https://openalex.org/W2023377017",
-        "https://openalex.org/W2130410032",
-        "https://openalex.org/W2791235391",
-        "https://openalex.org/W4388425030",
-        "https://openalex.org/W2889326414",
-        "https://openalex.org/W3139511935",
-        "https://openalex.org/W2121604817",
-        "https://openalex.org/W2612467560",
-        "https://openalex.org/W4390507853",
-        "https://openalex.org/W2065361941",
-        "https://openalex.org/W3126851937",
-        "https://openalex.org/W2108068107",
-        "https://openalex.org/W4388845139",
-        "https://openalex.org/W2765720106",
-        "https://openalex.org/W4404764528",
-        "https://openalex.org/W2741508285",
-        "https://openalex.org/W4388615740"
-    ],
-    "abstract": "Abstract Large language models (LLMs) have emerged as powerful foundation models leading to breakthroughs in transcriptome analysis. However, current RNA-seq foundation models are exclusively pretrained on sparse single-cell RNA-seq (scRNA-seq) data, which typically detects only ∼3000 genes per cell. This thus creates a critical gap in models specifically designed for bulk transcriptomes, a fundamentally different modality capable of profiling ∼16,000 genes per sample. Here we propose BulkFormer, a large-scale foundation model for bulk transcriptome analysis. With 150 million parameters covering about 20,000 protein-coding genes, BulkFormer is pretrained on over 500,000 human bulk transcriptomic profiles. BulkFormer incorporates a hybrid encoder architecture, combining a graph neural network to capture explicit gene-gene interactions and a performer module to model global expression dependencies. As a result, despite incurring much lower training costs than scRNA-seq foundation models, BulkFormer consistently outperforms them in all six downstream tasks: transcriptome imputation, disease annotation, prognosis modeling, drug response prediction, compound perturbation simulation, and gene essentiality scoring. Notably, BulkFormer not only enhances the discovery of novel clinical biomarkers but also uncovers latent disease mechanisms by imputing biologically meaningful gene expression. Collectively, these results demonstrate BulkFormer’s power as a versatile and robust framework for bulk transcriptome modeling and biomedical discovery, bridging a critical gap in the current foundation model landscape.",
-    "full_text": null
+  "title": "A large-scale foundation model for bulk transcriptomes",
+  "url": "https://openalex.org/W4411407870",
+  "year": 2025,
+  "authors": [
+    {
+      "id": "https://openalex.org/A5000684726",
+      "name": "B. S. Kang",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5007508326",
+      "name": "Rui Fan",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5081366047",
+      "name": "M.-J. Yi",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5068254913",
+      "name": "Chunmei Cui",
+      "affiliations": [
+        null
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5027886490",
+      "name": "Qinghua Cui",
+      "affiliations": [
+        null
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3030163527",
+    "https://openalex.org/W4401443086",
+    "https://openalex.org/W3127238141",
+    "https://openalex.org/W4290546063",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W4401455022",
+    "https://openalex.org/W4406369633",
+    "https://openalex.org/W4378838672",
+    "https://openalex.org/W4392168151",
+    "https://openalex.org/W4399387478",
+    "https://openalex.org/W4403174218",
+    "https://openalex.org/W4404230384",
+    "https://openalex.org/W4297243391",
+    "https://openalex.org/W4405688978",
+    "https://openalex.org/W4410255551",
+    "https://openalex.org/W4404442837",
+    "https://openalex.org/W2020541351",
+    "https://openalex.org/W2953067954",
+    "https://openalex.org/W6702248584",
+    "https://openalex.org/W4391821988",
+    "https://openalex.org/W4388979610",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W2990621560",
+    "https://openalex.org/W2103017472",
+    "https://openalex.org/W4294216483",
+    "https://openalex.org/W2023377017",
+    "https://openalex.org/W2130410032",
+    "https://openalex.org/W2791235391",
+    "https://openalex.org/W4388425030",
+    "https://openalex.org/W2889326414",
+    "https://openalex.org/W3139511935",
+    "https://openalex.org/W2121604817",
+    "https://openalex.org/W2612467560",
+    "https://openalex.org/W4390507853",
+    "https://openalex.org/W2065361941",
+    "https://openalex.org/W3126851937",
+    "https://openalex.org/W2108068107",
+    "https://openalex.org/W4388845139",
+    "https://openalex.org/W2765720106",
+    "https://openalex.org/W4404764528",
+    "https://openalex.org/W2741508285",
+    "https://openalex.org/W4388615740"
+  ],
+  "abstract": "Abstract Large language models (LLMs) have emerged as powerful foundation models leading to breakthroughs in transcriptome analysis. However, current RNA-seq foundation models are exclusively pretrained on sparse single-cell RNA-seq (scRNA-seq) data, which typically detects only ∼3000 genes per cell. This thus creates a critical gap in models specifically designed for bulk transcriptomes, a fundamentally different modality capable of profiling ∼16,000 genes per sample. Here we propose BulkFormer, a large-scale foundation model for bulk transcriptome analysis. With 150 million parameters covering about 20,000 protein-coding genes, BulkFormer is pretrained on over 500,000 human bulk transcriptomic profiles. BulkFormer incorporates a hybrid encoder architecture, combining a graph neural network to capture explicit gene-gene interactions and a performer module to model global expression dependencies. As a result, despite incurring much lower training costs than scRNA-seq foundation models, BulkFormer consistently outperforms them in all six downstream tasks: transcriptome imputation, disease annotation, prognosis modeling, drug response prediction, compound perturbation simulation, and gene essentiality scoring. Notably, BulkFormer not only enhances the discovery of novel clinical biomarkers but also uncovers latent disease mechanisms by imputing biologically meaningful gene expression. Collectively, these results demonstrate BulkFormer’s power as a versatile and robust framework for bulk transcriptome modeling and biomedical discovery, bridging a critical gap in the current foundation model landscape.",
+  "full_text": null,
+  "topic": "Transcriptome",
+  "concepts": [
+    {
+      "name": "Transcriptome",
+      "score": 0.7394477128982544
+    },
+    {
+      "name": "Computer science",
+      "score": 0.5909700989723206
+    },
+    {
+      "name": "Annotation",
+      "score": 0.5002799034118652
+    },
+    {
+      "name": "Computational biology",
+      "score": 0.47500789165496826
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4174477458000183
+    },
+    {
+      "name": "Gene",
+      "score": 0.3676910400390625
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.32892993092536926
+    },
+    {
+      "name": "Biology",
+      "score": 0.290030300617218
+    },
+    {
+      "name": "Gene expression",
+      "score": 0.26011940836906433
+    },
+    {
+      "name": "Genetics",
+      "score": 0.16242074966430664
+    }
+  ]
 }

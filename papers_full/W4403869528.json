@@ -1,72 +1,119 @@
 {
-    "title": "Lexical Error Guard: Leveraging Large Language Models for Enhanced ASR Error Correction",
-    "url": "https://openalex.org/W4403869528",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A1990819210",
-            "name": "Mei Si",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114446297",
-            "name": "Omar Cobas",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114446298",
-            "name": "Michael Fababeir",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1990819210",
-            "name": "Mei Si",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114446297",
-            "name": "Omar Cobas",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5114446298",
-            "name": "Michael Fababeir",
-            "affiliations": [
-                "Rensselaer Polytechnic Institute"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4402112422",
-        "https://openalex.org/W3024308166",
-        "https://openalex.org/W4221160683",
-        "https://openalex.org/W3197797812",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W1494198834",
-        "https://openalex.org/W4311000453",
-        "https://openalex.org/W6780218876",
-        "https://openalex.org/W4385823363",
-        "https://openalex.org/W4200629210",
-        "https://openalex.org/W3097777922",
-        "https://openalex.org/W4391021773",
-        "https://openalex.org/W4392931626",
-        "https://openalex.org/W3158699857",
-        "https://openalex.org/W4385822949",
-        "https://openalex.org/W38194800",
-        "https://openalex.org/W3036601975",
-        "https://openalex.org/W3034775979",
-        "https://openalex.org/W4292779060"
-    ],
-    "abstract": "Error correction is a vital element in modern automatic speech recognition (ASR) systems. A significant portion of ASR error correction work is closely integrated within specific ASR systems, which creates challenges for adapting these solutions to different ASR frameworks. This research introduces Lexical Error Guard (LEG), which leverages the extensive pre-trained knowledge of large language models (LLMs) and employs instructional learning to create an adaptable error correction system compatible with various ASR platforms. Additionally, a parameter-efficient fine-tuning method is utilized using quantized low-rank adaptation (QLoRA) to facilitate fast training of the system. Tested on the LibriSpeech data corpus, the results indicate that LEG improves ASR results when used with various Whisper model sizes. Improvements in WER are made, with a decrease from 2.27% to 2.21% on the “Test Clean” dataset for Whisper Large with beam search. Improvements on the “Test Other” dataset for Whisper Large with beam search are also made, from 4.93% to 4.72%.",
-    "full_text": null
+  "title": "Lexical Error Guard: Leveraging Large Language Models for Enhanced ASR Error Correction",
+  "url": "https://openalex.org/W4403869528",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A1990819210",
+      "name": "Mei Si",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114446297",
+      "name": "Omar Cobas",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114446298",
+      "name": "Michael Fababeir",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1990819210",
+      "name": "Mei Si",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114446297",
+      "name": "Omar Cobas",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5114446298",
+      "name": "Michael Fababeir",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4402112422",
+    "https://openalex.org/W3024308166",
+    "https://openalex.org/W4221160683",
+    "https://openalex.org/W3197797812",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W1494198834",
+    "https://openalex.org/W4311000453",
+    "https://openalex.org/W6780218876",
+    "https://openalex.org/W4385823363",
+    "https://openalex.org/W4200629210",
+    "https://openalex.org/W3097777922",
+    "https://openalex.org/W4391021773",
+    "https://openalex.org/W4392931626",
+    "https://openalex.org/W3158699857",
+    "https://openalex.org/W4385822949",
+    "https://openalex.org/W38194800",
+    "https://openalex.org/W3036601975",
+    "https://openalex.org/W3034775979",
+    "https://openalex.org/W4292779060"
+  ],
+  "abstract": "Error correction is a vital element in modern automatic speech recognition (ASR) systems. A significant portion of ASR error correction work is closely integrated within specific ASR systems, which creates challenges for adapting these solutions to different ASR frameworks. This research introduces Lexical Error Guard (LEG), which leverages the extensive pre-trained knowledge of large language models (LLMs) and employs instructional learning to create an adaptable error correction system compatible with various ASR platforms. Additionally, a parameter-efficient fine-tuning method is utilized using quantized low-rank adaptation (QLoRA) to facilitate fast training of the system. Tested on the LibriSpeech data corpus, the results indicate that LEG improves ASR results when used with various Whisper model sizes. Improvements in WER are made, with a decrease from 2.27% to 2.21% on the “Test Clean” dataset for Whisper Large with beam search. Improvements on the “Test Other” dataset for Whisper Large with beam search are also made, from 4.93% to 4.72%.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7660396099090576
+    },
+    {
+      "name": "Guard (computer science)",
+      "score": 0.6981226801872253
+    },
+    {
+      "name": "Error detection and correction",
+      "score": 0.6212997436523438
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.5025613307952881
+    },
+    {
+      "name": "Speech recognition",
+      "score": 0.4851711392402649
+    },
+    {
+      "name": "Error analysis",
+      "score": 0.42364221811294556
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.36542218923568726
+    },
+    {
+      "name": "Programming language",
+      "score": 0.2516319155693054
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.20996850728988647
+    },
+    {
+      "name": "Mathematics",
+      "score": 0.08700883388519287
+    },
+    {
+      "name": "Applied mathematics",
+      "score": 0.0
+    }
+  ]
 }

@@ -1,112 +1,207 @@
 {
-    "title": "Anomaly-PTG: A Time Series Data-Anomaly-Detection Transformer Framework in Multiple Scenarios",
-    "url": "https://openalex.org/W4310378815",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2096872982",
-            "name": "Gang Li",
-            "affiliations": [
-                "Qilu University of Technology",
-                "Shandong Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107414805",
-            "name": "Zeyu Yang",
-            "affiliations": [
-                "Qilu University of Technology",
-                "Shandong Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2311686975",
-            "name": "Honglin Wan",
-            "affiliations": [
-                "Shandong Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2060578647",
-            "name": "Min Li",
-            "affiliations": [
-                "Qilu University of Technology",
-                "Shandong Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2096872982",
-            "name": "Gang Li",
-            "affiliations": [
-                "Shandong Academy of Sciences",
-                "Qilu University of Technology"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107414805",
-            "name": "Zeyu Yang",
-            "affiliations": [
-                "Qilu University of Technology",
-                "Shandong Academy of Sciences"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2311686975",
-            "name": "Honglin Wan",
-            "affiliations": [
-                "Shandong Normal University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2060578647",
-            "name": "Min Li",
-            "affiliations": [
-                "Shandong Academy of Sciences",
-                "Qilu University of Technology"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W4283331794",
-        "https://openalex.org/W2608911009",
-        "https://openalex.org/W4303644396",
-        "https://openalex.org/W3012539654",
-        "https://openalex.org/W2762644836",
-        "https://openalex.org/W2964248614",
-        "https://openalex.org/W2786827964",
-        "https://openalex.org/W2948517885",
-        "https://openalex.org/W3005893373",
-        "https://openalex.org/W3108036267",
-        "https://openalex.org/W3128634608",
-        "https://openalex.org/W2902455138",
-        "https://openalex.org/W2786088545",
-        "https://openalex.org/W2963166639",
-        "https://openalex.org/W3160826979",
-        "https://openalex.org/W2950361482",
-        "https://openalex.org/W4281929036",
-        "https://openalex.org/W3169450514",
-        "https://openalex.org/W3113720674",
-        "https://openalex.org/W2911200746",
-        "https://openalex.org/W7053349295",
-        "https://openalex.org/W6755207826",
-        "https://openalex.org/W6778883912",
-        "https://openalex.org/W3094502228",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W4296501355",
-        "https://openalex.org/W6771626834",
-        "https://openalex.org/W2954731415",
-        "https://openalex.org/W4291415180",
-        "https://openalex.org/W6786852218",
-        "https://openalex.org/W4283318673",
-        "https://openalex.org/W3151000187",
-        "https://openalex.org/W3204263062",
-        "https://openalex.org/W3188872815",
-        "https://openalex.org/W3106543020",
-        "https://openalex.org/W3099185017",
-        "https://openalex.org/W3177318507",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W3105931142"
-    ],
-    "abstract": "In actual scenarios, industrial and cloud computing platforms usually need to monitor equipment and traffic anomalies through multivariable time series data. However, the existing anomaly detection methods can not capture the long-distance temporal correlations of data and the potential relationships between features simultaneously, and only have high detection accuracy for specific time sequence anomaly detection scenarios without good generalization ability. This paper proposes a time-series anomaly-detection framework for multiple scenarios, Anomaly-PTG (anomaly parallel transformer GRU), given the above limitations. The model uses the parallel transformer GRU as the information extraction module of the model to learn the long-distance correlation between timestamps and the global feature relationship of multivariate time series, which enhances the ability to extract hidden information from time series data. After extracting the information, the model learns the sequential representation of the data, conducts the sequential modeling, and transmits the data to the full connection layer for prediction. At the same time, it also uses the autoencoder to learn the potential representation of the data and reconstruct the data. The two are optimally combined to form an anomaly detection module of the model. The module combines timestamp prediction with time series data reconstruction, improving the detection rate of rare anomalies and detection accuracy. By using three public datasets of physical devices and one dataset of network traffic intrusion detection, the model’s effectiveness was verified, and the model’s generalization ability and strong robustness were demonstrated. Compared with the most advanced method, the average F1 value of the Anomaly-PTG model on four datasets was increased by 2.2%, and the F1 value on each dataset was over 94%.",
-    "full_text": null
+  "title": "Anomaly-PTG: A Time Series Data-Anomaly-Detection Transformer Framework in Multiple Scenarios",
+  "url": "https://openalex.org/W4310378815",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2096872982",
+      "name": "Gang Li",
+      "affiliations": [
+        "Qilu University of Technology",
+        "Shandong Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107414805",
+      "name": "Zeyu Yang",
+      "affiliations": [
+        "Qilu University of Technology",
+        "Shandong Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2311686975",
+      "name": "Honglin Wan",
+      "affiliations": [
+        "Shandong Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2060578647",
+      "name": "Min Li",
+      "affiliations": [
+        "Qilu University of Technology",
+        "Shandong Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2096872982",
+      "name": "Gang Li",
+      "affiliations": [
+        "Shandong Academy of Sciences",
+        "Qilu University of Technology"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107414805",
+      "name": "Zeyu Yang",
+      "affiliations": [
+        "Qilu University of Technology",
+        "Shandong Academy of Sciences"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2311686975",
+      "name": "Honglin Wan",
+      "affiliations": [
+        "Shandong Normal University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2060578647",
+      "name": "Min Li",
+      "affiliations": [
+        "Shandong Academy of Sciences",
+        "Qilu University of Technology"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W4283331794",
+    "https://openalex.org/W2608911009",
+    "https://openalex.org/W4303644396",
+    "https://openalex.org/W3012539654",
+    "https://openalex.org/W2762644836",
+    "https://openalex.org/W2964248614",
+    "https://openalex.org/W2786827964",
+    "https://openalex.org/W2948517885",
+    "https://openalex.org/W3005893373",
+    "https://openalex.org/W3108036267",
+    "https://openalex.org/W3128634608",
+    "https://openalex.org/W2902455138",
+    "https://openalex.org/W2786088545",
+    "https://openalex.org/W2963166639",
+    "https://openalex.org/W3160826979",
+    "https://openalex.org/W2950361482",
+    "https://openalex.org/W4281929036",
+    "https://openalex.org/W3169450514",
+    "https://openalex.org/W3113720674",
+    "https://openalex.org/W2911200746",
+    "https://openalex.org/W7053349295",
+    "https://openalex.org/W6755207826",
+    "https://openalex.org/W6778883912",
+    "https://openalex.org/W3094502228",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W4296501355",
+    "https://openalex.org/W6771626834",
+    "https://openalex.org/W2954731415",
+    "https://openalex.org/W4291415180",
+    "https://openalex.org/W6786852218",
+    "https://openalex.org/W4283318673",
+    "https://openalex.org/W3151000187",
+    "https://openalex.org/W3204263062",
+    "https://openalex.org/W3188872815",
+    "https://openalex.org/W3106543020",
+    "https://openalex.org/W3099185017",
+    "https://openalex.org/W3177318507",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W3105931142"
+  ],
+  "abstract": "In actual scenarios, industrial and cloud computing platforms usually need to monitor equipment and traffic anomalies through multivariable time series data. However, the existing anomaly detection methods can not capture the long-distance temporal correlations of data and the potential relationships between features simultaneously, and only have high detection accuracy for specific time sequence anomaly detection scenarios without good generalization ability. This paper proposes a time-series anomaly-detection framework for multiple scenarios, Anomaly-PTG (anomaly parallel transformer GRU), given the above limitations. The model uses the parallel transformer GRU as the information extraction module of the model to learn the long-distance correlation between timestamps and the global feature relationship of multivariate time series, which enhances the ability to extract hidden information from time series data. After extracting the information, the model learns the sequential representation of the data, conducts the sequential modeling, and transmits the data to the full connection layer for prediction. At the same time, it also uses the autoencoder to learn the potential representation of the data and reconstruct the data. The two are optimally combined to form an anomaly detection module of the model. The module combines timestamp prediction with time series data reconstruction, improving the detection rate of rare anomalies and detection accuracy. By using three public datasets of physical devices and one dataset of network traffic intrusion detection, the model’s effectiveness was verified, and the model’s generalization ability and strong robustness were demonstrated. Compared with the most advanced method, the average F1 value of the Anomaly-PTG model on four datasets was increased by 2.2%, and the F1 value on each dataset was over 94%.",
+  "full_text": null,
+  "topic": "Anomaly detection",
+  "concepts": [
+    {
+      "name": "Anomaly detection",
+      "score": 0.7978092432022095
+    },
+    {
+      "name": "Computer science",
+      "score": 0.693941593170166
+    },
+    {
+      "name": "Data mining",
+      "score": 0.6593284606933594
+    },
+    {
+      "name": "Timestamp",
+      "score": 0.6516019105911255
+    },
+    {
+      "name": "Time series",
+      "score": 0.5402382016181946
+    },
+    {
+      "name": "Autoencoder",
+      "score": 0.48880288004875183
+    },
+    {
+      "name": "Anomaly (physics)",
+      "score": 0.46803927421569824
+    },
+    {
+      "name": "Robustness (evolution)",
+      "score": 0.4645753800868988
+    },
+    {
+      "name": "Transformer",
+      "score": 0.42388486862182617
+    },
+    {
+      "name": "Intrusion detection system",
+      "score": 0.419597327709198
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.39666396379470825
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3787664771080017
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.23927608132362366
+    },
+    {
+      "name": "Artificial neural network",
+      "score": 0.22494390606880188
+    },
+    {
+      "name": "Real-time computing",
+      "score": 0.21012330055236816
+    },
+    {
+      "name": "Engineering",
+      "score": 0.14198142290115356
+    },
+    {
+      "name": "Gene",
+      "score": 0.0
+    },
+    {
+      "name": "Biochemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Condensed matter physics",
+      "score": 0.0
+    },
+    {
+      "name": "Chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

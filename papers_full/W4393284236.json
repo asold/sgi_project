@@ -1,73 +1,160 @@
 {
-    "title": "Generation of Asset Administration Shell With Large Language Model Agents: Toward Semantic Interoperability in Digital Twins in the Context of Industry 4.0",
-    "url": "https://openalex.org/W4393284236",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2101511801",
-            "name": "Yuchen Xia",
-            "affiliations": [
-                "University of Stuttgart"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5102689561",
-            "name": "Zhewen Xiao",
-            "affiliations": [
-                "University of Stuttgart"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A1973800278",
-            "name": "Nasser Jazdi",
-            "affiliations": [
-                "University of Stuttgart"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2294352014",
-            "name": "Michael Weyrich",
-            "affiliations": [
-                "University of Stuttgart"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6907348687",
-        "https://openalex.org/W4312300824",
-        "https://openalex.org/W3193546106",
-        "https://openalex.org/W4379364323",
-        "https://openalex.org/W4387567409",
-        "https://openalex.org/W3010694149",
-        "https://openalex.org/W6852061017",
-        "https://openalex.org/W3094757917",
-        "https://openalex.org/W3038816108",
-        "https://openalex.org/W2988506138",
-        "https://openalex.org/W4388918785",
-        "https://openalex.org/W4387583639",
-        "https://openalex.org/W6849302084",
-        "https://openalex.org/W4386526154",
-        "https://openalex.org/W4386072525",
-        "https://openalex.org/W4362529232",
-        "https://openalex.org/W4377968495",
-        "https://openalex.org/W2980451580",
-        "https://openalex.org/W4386122022",
-        "https://openalex.org/W3092606750",
-        "https://openalex.org/W3016846886",
-        "https://openalex.org/W4386065789",
-        "https://openalex.org/W3211819767",
-        "https://openalex.org/W4387579585",
-        "https://openalex.org/W6736923733",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W3118485687",
-        "https://openalex.org/W4387583561",
-        "https://openalex.org/W4387567460",
-        "https://openalex.org/W6854866820",
-        "https://openalex.org/W6860710830",
-        "https://openalex.org/W6852043138",
-        "https://openalex.org/W4392456132",
-        "https://openalex.org/W6868552229"
-    ],
-    "abstract": "This research introduces a novel approach for achieving semantic\\ninteroperability in digital twins and assisting the creation of Asset\\nAdministration Shell (AAS) as digital twin model within the context of Industry\\n4.0. The foundational idea of our research is that the communication based on\\nsemantics and the generation of meaningful textual data are directly linked,\\nand we posit that these processes are equivalent if the exchanged information\\ncan be serialized in text form. Based on this, we construct a \"semantic node\"\\ndata structure in our research to capture the semantic essence of textual data.\\nThen, a system powered by large language models is designed and implemented to\\nprocess the \"semantic node\" and generate standardized digital twin models from\\nraw textual data collected from datasheets describing technical assets. Our\\nevaluation demonstrates an effective generation rate of 62-79%, indicating a\\nsubstantial proportion of the information from the source text can be\\ntranslated error-free to the target digital twin instance model with the\\ngenerative capability of large language models. This result has a direct\\napplication in the context of Industry 4.0, and the designed system is\\nimplemented as a data model generation tool for reducing the manual effort in\\ncreating AAS model. In our evaluation, a comparative analysis of different LLMs\\nand an in-depth ablation study of Retrieval-Augmented Generation (RAG)\\nmechanisms provide insights into the effectiveness of LLM systems for\\ninterpreting technical concepts and translating data. Our findings emphasize\\nLLMs' capability to automate AAS instance creation and contribute to the\\nbroader field of semantic interoperability for digital twins in industrial\\napplications. The prototype implementation and evaluation results are presented\\non our GitHub Repository: https://github.com/YuchenXia/AASbyLLM.\\n",
-    "full_text": null
+  "title": "Generation of Asset Administration Shell With Large Language Model Agents: Toward Semantic Interoperability in Digital Twins in the Context of Industry 4.0",
+  "url": "https://openalex.org/W4393284236",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2101511801",
+      "name": "Yuchen Xia",
+      "affiliations": [
+        "University of Stuttgart"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5102689561",
+      "name": "Zhewen Xiao",
+      "affiliations": [
+        "University of Stuttgart"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A1973800278",
+      "name": "Nasser Jazdi",
+      "affiliations": [
+        "University of Stuttgart"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2294352014",
+      "name": "Michael Weyrich",
+      "affiliations": [
+        "University of Stuttgart"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6907348687",
+    "https://openalex.org/W4312300824",
+    "https://openalex.org/W3193546106",
+    "https://openalex.org/W4379364323",
+    "https://openalex.org/W4387567409",
+    "https://openalex.org/W3010694149",
+    "https://openalex.org/W6852061017",
+    "https://openalex.org/W3094757917",
+    "https://openalex.org/W3038816108",
+    "https://openalex.org/W2988506138",
+    "https://openalex.org/W4388918785",
+    "https://openalex.org/W4387583639",
+    "https://openalex.org/W6849302084",
+    "https://openalex.org/W4386526154",
+    "https://openalex.org/W4386072525",
+    "https://openalex.org/W4362529232",
+    "https://openalex.org/W4377968495",
+    "https://openalex.org/W2980451580",
+    "https://openalex.org/W4386122022",
+    "https://openalex.org/W3092606750",
+    "https://openalex.org/W3016846886",
+    "https://openalex.org/W4386065789",
+    "https://openalex.org/W3211819767",
+    "https://openalex.org/W4387579585",
+    "https://openalex.org/W6736923733",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W3118485687",
+    "https://openalex.org/W4387583561",
+    "https://openalex.org/W4387567460",
+    "https://openalex.org/W6854866820",
+    "https://openalex.org/W6860710830",
+    "https://openalex.org/W6852043138",
+    "https://openalex.org/W4392456132",
+    "https://openalex.org/W6868552229"
+  ],
+  "abstract": "This research introduces a novel approach for achieving semantic\\ninteroperability in digital twins and assisting the creation of Asset\\nAdministration Shell (AAS) as digital twin model within the context of Industry\\n4.0. The foundational idea of our research is that the communication based on\\nsemantics and the generation of meaningful textual data are directly linked,\\nand we posit that these processes are equivalent if the exchanged information\\ncan be serialized in text form. Based on this, we construct a \"semantic node\"\\ndata structure in our research to capture the semantic essence of textual data.\\nThen, a system powered by large language models is designed and implemented to\\nprocess the \"semantic node\" and generate standardized digital twin models from\\nraw textual data collected from datasheets describing technical assets. Our\\nevaluation demonstrates an effective generation rate of 62-79%, indicating a\\nsubstantial proportion of the information from the source text can be\\ntranslated error-free to the target digital twin instance model with the\\ngenerative capability of large language models. This result has a direct\\napplication in the context of Industry 4.0, and the designed system is\\nimplemented as a data model generation tool for reducing the manual effort in\\ncreating AAS model. In our evaluation, a comparative analysis of different LLMs\\nand an in-depth ablation study of Retrieval-Augmented Generation (RAG)\\nmechanisms provide insights into the effectiveness of LLM systems for\\ninterpreting technical concepts and translating data. Our findings emphasize\\nLLMs' capability to automate AAS instance creation and contribute to the\\nbroader field of semantic interoperability for digital twins in industrial\\napplications. The prototype implementation and evaluation results are presented\\non our GitHub Repository: https://github.com/YuchenXia/AASbyLLM.\\n",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.7767764329910278
+    },
+    {
+      "name": "Semantic interoperability",
+      "score": 0.6761512160301208
+    },
+    {
+      "name": "Context (archaeology)",
+      "score": 0.6168566942214966
+    },
+    {
+      "name": "Interoperability",
+      "score": 0.5888886451721191
+    },
+    {
+      "name": "Asset (computer security)",
+      "score": 0.5343697667121887
+    },
+    {
+      "name": "Semantics (computer science)",
+      "score": 0.5128538608551025
+    },
+    {
+      "name": "Process (computing)",
+      "score": 0.42180880904197693
+    },
+    {
+      "name": "Node (physics)",
+      "score": 0.41702917218208313
+    },
+    {
+      "name": "Data modeling",
+      "score": 0.4120282530784607
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.3563257157802582
+    },
+    {
+      "name": "Data science",
+      "score": 0.33873260021209717
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.337353378534317
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.3348461985588074
+    },
+    {
+      "name": "World Wide Web",
+      "score": 0.22813868522644043
+    },
+    {
+      "name": "Software engineering",
+      "score": 0.20162636041641235
+    },
+    {
+      "name": "Engineering",
+      "score": 0.11039385199546814
+    },
+    {
+      "name": "Programming language",
+      "score": 0.10532066226005554
+    },
+    {
+      "name": "Structural engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Paleontology",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Computer security",
+      "score": 0.0
+    }
+  ]
 }

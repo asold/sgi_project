@@ -1,81 +1,128 @@
 {
-    "title": "On the Use of Transformer-Based Models for Intent Detection Using Clustering Algorithms",
-    "url": "https://openalex.org/W4366771357",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4365923945",
-            "name": "Moura, André",
-            "affiliations": [
-                "Universidade da Madeira"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2750143643",
-            "name": "Lima Pedro",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3162523110",
-            "name": "Mendonca Fabio",
-            "affiliations": [
-                "Universidade da Madeira"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2750790255",
-            "name": "Mostafa Sheikh Shanawaz",
-            "affiliations": []
-        },
-        {
-            "id": null,
-            "name": "Dias, Fernando Morgado",
-            "affiliations": [
-                "Universidade da Madeira"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6691521709",
-        "https://openalex.org/W2803392141",
-        "https://openalex.org/W3037301272",
-        "https://openalex.org/W2186038540",
-        "https://openalex.org/W2159642830",
-        "https://openalex.org/W2910726423",
-        "https://openalex.org/W2583461040",
-        "https://openalex.org/W2889636191",
-        "https://openalex.org/W2888939716",
-        "https://openalex.org/W3116878798",
-        "https://openalex.org/W2998721586",
-        "https://openalex.org/W2002382481",
-        "https://openalex.org/W6763425312",
-        "https://openalex.org/W6676223633",
-        "https://openalex.org/W2988964532",
-        "https://openalex.org/W1614298861",
-        "https://openalex.org/W2153579005",
-        "https://openalex.org/W2970641574",
-        "https://openalex.org/W3005282503",
-        "https://openalex.org/W2962739339",
-        "https://openalex.org/W2963026768",
-        "https://openalex.org/W2963918774",
-        "https://openalex.org/W2975059944",
-        "https://openalex.org/W2950813464",
-        "https://openalex.org/W2996035354",
-        "https://openalex.org/W2895645998",
-        "https://openalex.org/W2856110280",
-        "https://openalex.org/W2970209913",
-        "https://openalex.org/W3206224646",
-        "https://openalex.org/W2027461913",
-        "https://openalex.org/W2889326414",
-        "https://openalex.org/W2020735245",
-        "https://openalex.org/W2138615112",
-        "https://openalex.org/W6762945437",
-        "https://openalex.org/W2911489562",
-        "https://openalex.org/W2955483668",
-        "https://openalex.org/W2963662719",
-        "https://openalex.org/W2243869100",
-        "https://openalex.org/W2187089797"
-    ],
-    "abstract": "Chatbots are becoming increasingly popular and require the ability to interpret natural language to provide clear communication with humans. To achieve this, intent detection is crucial. However, current applications typically need a significant amount of annotated data, which is time-consuming and expensive to acquire. This article assesses the effectiveness of different text representations for annotating unlabeled dialog data through a pipeline that examines both classical approaches and pre-trained transformer models for word embedding. The resulting embeddings were then used to create sentence embeddings through pooling, followed by dimensionality reduction, before being fed into a clustering algorithm to determine the user’s intents. Therefore, various pooling, dimension reduction, and clustering algorithms were evaluated to determine the most appropriate approach. The evaluation dataset contains a variety of user intents across different domains, with varying intent taxonomies within the same domain. Results demonstrate that transformer-based models perform better text representation than classical approaches. However, combining several clustering algorithms and embeddings from dissimilar origins through ensemble clustering considerably improves the final clustering solution. Additionally, applying the uniform manifold approximation and projection algorithm for dimension reduction can substantially improve performance (up to 20%) while using a much smaller representation.",
-    "full_text": null
+  "title": "On the Use of Transformer-Based Models for Intent Detection Using Clustering Algorithms",
+  "url": "https://openalex.org/W4366771357",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4365923945",
+      "name": "Moura, André",
+      "affiliations": [
+        "Universidade da Madeira"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2750143643",
+      "name": "Lima Pedro",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3162523110",
+      "name": "Mendonca Fabio",
+      "affiliations": [
+        "Universidade da Madeira"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2750790255",
+      "name": "Mostafa Sheikh Shanawaz",
+      "affiliations": []
+    },
+    {
+      "id": null,
+      "name": "Dias, Fernando Morgado",
+      "affiliations": [
+        "Universidade da Madeira"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6691521709",
+    "https://openalex.org/W2803392141",
+    "https://openalex.org/W3037301272",
+    "https://openalex.org/W2186038540",
+    "https://openalex.org/W2159642830",
+    "https://openalex.org/W2910726423",
+    "https://openalex.org/W2583461040",
+    "https://openalex.org/W2889636191",
+    "https://openalex.org/W2888939716",
+    "https://openalex.org/W3116878798",
+    "https://openalex.org/W2998721586",
+    "https://openalex.org/W2002382481",
+    "https://openalex.org/W6763425312",
+    "https://openalex.org/W6676223633",
+    "https://openalex.org/W2988964532",
+    "https://openalex.org/W1614298861",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2970641574",
+    "https://openalex.org/W3005282503",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W2963918774",
+    "https://openalex.org/W2975059944",
+    "https://openalex.org/W2950813464",
+    "https://openalex.org/W2996035354",
+    "https://openalex.org/W2895645998",
+    "https://openalex.org/W2856110280",
+    "https://openalex.org/W2970209913",
+    "https://openalex.org/W3206224646",
+    "https://openalex.org/W2027461913",
+    "https://openalex.org/W2889326414",
+    "https://openalex.org/W2020735245",
+    "https://openalex.org/W2138615112",
+    "https://openalex.org/W6762945437",
+    "https://openalex.org/W2911489562",
+    "https://openalex.org/W2955483668",
+    "https://openalex.org/W2963662719",
+    "https://openalex.org/W2243869100",
+    "https://openalex.org/W2187089797"
+  ],
+  "abstract": "Chatbots are becoming increasingly popular and require the ability to interpret natural language to provide clear communication with humans. To achieve this, intent detection is crucial. However, current applications typically need a significant amount of annotated data, which is time-consuming and expensive to acquire. This article assesses the effectiveness of different text representations for annotating unlabeled dialog data through a pipeline that examines both classical approaches and pre-trained transformer models for word embedding. The resulting embeddings were then used to create sentence embeddings through pooling, followed by dimensionality reduction, before being fed into a clustering algorithm to determine the user’s intents. Therefore, various pooling, dimension reduction, and clustering algorithms were evaluated to determine the most appropriate approach. The evaluation dataset contains a variety of user intents across different domains, with varying intent taxonomies within the same domain. Results demonstrate that transformer-based models perform better text representation than classical approaches. However, combining several clustering algorithms and embeddings from dissimilar origins through ensemble clustering considerably improves the final clustering solution. Additionally, applying the uniform manifold approximation and projection algorithm for dimension reduction can substantially improve performance (up to 20%) while using a much smaller representation.",
+  "full_text": null,
+  "topic": "Cluster analysis",
+  "concepts": [
+    {
+      "name": "Cluster analysis",
+      "score": 0.8237622976303101
+    },
+    {
+      "name": "Dimensionality reduction",
+      "score": 0.7305892109870911
+    },
+    {
+      "name": "Computer science",
+      "score": 0.728985607624054
+    },
+    {
+      "name": "Embedding",
+      "score": 0.45484575629234314
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.4405198097229004
+    },
+    {
+      "name": "Fuzzy clustering",
+      "score": 0.4316372871398926
+    },
+    {
+      "name": "Pooling",
+      "score": 0.42922961711883545
+    },
+    {
+      "name": "Data mining",
+      "score": 0.4229251742362976
+    },
+    {
+      "name": "Clustering high-dimensional data",
+      "score": 0.4157828092575073
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.36600422859191895
+    },
+    {
+      "name": "Algorithm",
+      "score": 0.33321627974510193
+    }
+  ]
 }

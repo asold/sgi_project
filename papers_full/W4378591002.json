@@ -1,86 +1,133 @@
 {
-    "title": "Large Language Models Are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models",
-    "url": "https://openalex.org/W4378591002",
-    "year": 2023,
-    "authors": [
-        {
-            "id": "https://openalex.org/A4284905371",
-            "name": "Yinlin Deng",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4308643667",
-            "name": "Chunqiu Steven Xia",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2133230515",
-            "name": "Haoran Peng",
-            "affiliations": [
-                "University of Science and Technology of China"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2164068433",
-            "name": "Chenyuan Yang",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2107392162",
-            "name": "Lingming Zhang",
-            "affiliations": [
-                "University of Illinois Urbana-Champaign"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3170092793",
-        "https://openalex.org/W3049735680",
-        "https://openalex.org/W2157331557",
-        "https://openalex.org/W2808279976",
-        "https://openalex.org/W4308643012",
-        "https://openalex.org/W3098605233",
-        "https://openalex.org/W1971650562",
-        "https://openalex.org/W1993760289",
-        "https://openalex.org/W2583649498",
-        "https://openalex.org/W4284708930",
-        "https://openalex.org/W3123045479",
-        "https://openalex.org/W2142403498",
-        "https://openalex.org/W2883395840",
-        "https://openalex.org/W2964241064",
-        "https://openalex.org/W2980167976",
-        "https://openalex.org/W2170737051",
-        "https://openalex.org/W2757104921",
-        "https://openalex.org/W4205991051",
-        "https://openalex.org/W4221144766",
-        "https://openalex.org/W3185341429",
-        "https://openalex.org/W4310625358",
-        "https://openalex.org/W2954903132",
-        "https://openalex.org/W3160638507",
-        "https://openalex.org/W2039522160",
-        "https://openalex.org/W3104663419",
-        "https://openalex.org/W4284686707",
-        "https://openalex.org/W4285490440",
-        "https://openalex.org/W4281763794",
-        "https://openalex.org/W4238083723",
-        "https://openalex.org/W3154106427",
-        "https://openalex.org/W2888307014",
-        "https://openalex.org/W2950911860",
-        "https://openalex.org/W2276356546",
-        "https://openalex.org/W2350778671",
-        "https://openalex.org/W3104664063",
-        "https://openalex.org/W4246553962",
-        "https://openalex.org/W2912500072",
-        "https://openalex.org/W2604272474",
-        "https://openalex.org/W1988524530",
-        "https://openalex.org/W2930957955"
-    ],
-    "abstract": "This is the artifact for the ISSTA'2023 paper \"Large Language Models Are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models\".\\n\\nDeep Learning (DL) systems have received exponential growth in popularity and have become ubiquitous in our everyday life. Such systems are built on top of popular DL libraries, e.g., TensorFlow and PyTorch which provide APIs as building blocks for DL systems. Detecting bugs in these DL libraries is critical for almost all downstream DL systems in ensuring effectiveness/safety for end users. Meanwhile, traditional fuzzing techniques can be hardly effective for such a challenging domain since the input DL programs need to satisfy both the input language (e.g., Python) syntax/semantics and the DL API input/shape constraints for tensor computations.\\n\\n\\nTo address these limitations, we propose TitanFuzz – the first approach to directly leveraging Large Language Models (LLMs) to generate input programs for fuzzing DL libraries. LLMs are titanic models trained on billions of code snippets and can autoregressively generate human-like code snippets. Our key insight is that modern LLMs can also include numerous code snippets invoking DL library APIs in their training corpora, and thus can implicitly learn both language syntax/semantics and intricate DL API constraints for valid DL program generation. More specifically, we use both generative and infilling LLMs (e.g., Codex/InCoder) to generate and mutate valid/diverse input DL programs for fuzzing. Our experimental results demonstrate that TitanFuzz can achieve 30.38%/50.84% higher code coverage than state-of-the-art fuzzers on TensorFlow/PyTorch. Furthermore, TitanFuzz is able to detect 65 bugs, with 44 already confirmed as previously unknown bugs. \\n\\n\\nThis paper demonstrates that modern titanic LLMs can be leveraged to directly perform both generation-based and mutation-based fuzzing studied for decades, while being fully automated, generalizable, and applicable to domains challenging for traditional approaches (such as DL systems). We hope TitanFuzz can stimulate more work in this promising direction of LLMs for fuzzing.",
-    "full_text": null
+  "title": "Large Language Models Are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models",
+  "url": "https://openalex.org/W4378591002",
+  "year": 2023,
+  "authors": [
+    {
+      "id": "https://openalex.org/A4284905371",
+      "name": "Yinlin Deng",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4308643667",
+      "name": "Chunqiu Steven Xia",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2133230515",
+      "name": "Haoran Peng",
+      "affiliations": [
+        "University of Science and Technology of China"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2164068433",
+      "name": "Chenyuan Yang",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2107392162",
+      "name": "Lingming Zhang",
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3170092793",
+    "https://openalex.org/W3049735680",
+    "https://openalex.org/W2157331557",
+    "https://openalex.org/W2808279976",
+    "https://openalex.org/W4308643012",
+    "https://openalex.org/W3098605233",
+    "https://openalex.org/W1971650562",
+    "https://openalex.org/W1993760289",
+    "https://openalex.org/W2583649498",
+    "https://openalex.org/W4284708930",
+    "https://openalex.org/W3123045479",
+    "https://openalex.org/W2142403498",
+    "https://openalex.org/W2883395840",
+    "https://openalex.org/W2964241064",
+    "https://openalex.org/W2980167976",
+    "https://openalex.org/W2170737051",
+    "https://openalex.org/W2757104921",
+    "https://openalex.org/W4205991051",
+    "https://openalex.org/W4221144766",
+    "https://openalex.org/W3185341429",
+    "https://openalex.org/W4310625358",
+    "https://openalex.org/W2954903132",
+    "https://openalex.org/W3160638507",
+    "https://openalex.org/W2039522160",
+    "https://openalex.org/W3104663419",
+    "https://openalex.org/W4284686707",
+    "https://openalex.org/W4285490440",
+    "https://openalex.org/W4281763794",
+    "https://openalex.org/W4238083723",
+    "https://openalex.org/W3154106427",
+    "https://openalex.org/W2888307014",
+    "https://openalex.org/W2950911860",
+    "https://openalex.org/W2276356546",
+    "https://openalex.org/W2350778671",
+    "https://openalex.org/W3104664063",
+    "https://openalex.org/W4246553962",
+    "https://openalex.org/W2912500072",
+    "https://openalex.org/W2604272474",
+    "https://openalex.org/W1988524530",
+    "https://openalex.org/W2930957955"
+  ],
+  "abstract": "This is the artifact for the ISSTA'2023 paper \"Large Language Models Are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models\".\\n\\nDeep Learning (DL) systems have received exponential growth in popularity and have become ubiquitous in our everyday life. Such systems are built on top of popular DL libraries, e.g., TensorFlow and PyTorch which provide APIs as building blocks for DL systems. Detecting bugs in these DL libraries is critical for almost all downstream DL systems in ensuring effectiveness/safety for end users. Meanwhile, traditional fuzzing techniques can be hardly effective for such a challenging domain since the input DL programs need to satisfy both the input language (e.g., Python) syntax/semantics and the DL API input/shape constraints for tensor computations.\\n\\n\\nTo address these limitations, we propose TitanFuzz – the first approach to directly leveraging Large Language Models (LLMs) to generate input programs for fuzzing DL libraries. LLMs are titanic models trained on billions of code snippets and can autoregressively generate human-like code snippets. Our key insight is that modern LLMs can also include numerous code snippets invoking DL library APIs in their training corpora, and thus can implicitly learn both language syntax/semantics and intricate DL API constraints for valid DL program generation. More specifically, we use both generative and infilling LLMs (e.g., Codex/InCoder) to generate and mutate valid/diverse input DL programs for fuzzing. Our experimental results demonstrate that TitanFuzz can achieve 30.38%/50.84% higher code coverage than state-of-the-art fuzzers on TensorFlow/PyTorch. Furthermore, TitanFuzz is able to detect 65 bugs, with 44 already confirmed as previously unknown bugs. \\n\\n\\nThis paper demonstrates that modern titanic LLMs can be leveraged to directly perform both generation-based and mutation-based fuzzing studied for decades, while being fully automated, generalizable, and applicable to domains challenging for traditional approaches (such as DL systems). We hope TitanFuzz can stimulate more work in this promising direction of LLMs for fuzzing.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8708295822143555
+    },
+    {
+      "name": "Fuzz testing",
+      "score": 0.8460988402366638
+    },
+    {
+      "name": "Programming language",
+      "score": 0.6325519680976868
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.6100170612335205
+    },
+    {
+      "name": "Python (programming language)",
+      "score": 0.5994572043418884
+    },
+    {
+      "name": "Syntax",
+      "score": 0.4869045317173004
+    },
+    {
+      "name": "Semantics (computer science)",
+      "score": 0.4792045056819916
+    },
+    {
+      "name": "Code (set theory)",
+      "score": 0.45115742087364197
+    },
+    {
+      "name": "Natural language processing",
+      "score": 0.40366441011428833
+    },
+    {
+      "name": "Software",
+      "score": 0.1270250380039215
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.0
+    }
+  ]
 }

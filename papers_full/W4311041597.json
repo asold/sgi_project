@@ -1,134 +1,185 @@
 {
-    "title": "Automated multi-modal Transformer network (AMTNet) for 3D medical images segmentation",
-    "url": "https://openalex.org/W4311041597",
-    "year": 2022,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2716664442",
-            "name": "Shenhai Zheng",
-            "affiliations": [
-                "Chongqing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2307185920",
-            "name": "Jiaxin Tan",
-            "affiliations": [
-                "Chongqing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4308237798",
-            "name": "Chuangbo Jiang",
-            "affiliations": [
-                "Chongqing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2284400136",
-            "name": "Laquan Li",
-            "affiliations": [
-                "Chongqing University of Posts and Telecommunications"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2716664442",
-            "name": "Shenhai Zheng",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2307185920",
-            "name": "Jiaxin Tan",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A4308237798",
-            "name": "Chuangbo Jiang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2284400136",
-            "name": "Laquan Li",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2943931219",
-        "https://openalex.org/W6780226713",
-        "https://openalex.org/W2963881378",
-        "https://openalex.org/W6798128096",
-        "https://openalex.org/W2751069891",
-        "https://openalex.org/W6684538388",
-        "https://openalex.org/W6682063170",
-        "https://openalex.org/W6778485988",
-        "https://openalex.org/W2412782625",
-        "https://openalex.org/W1973880112",
-        "https://openalex.org/W6797360341",
-        "https://openalex.org/W3130171175",
-        "https://openalex.org/W6791637211",
-        "https://openalex.org/W6687483927",
-        "https://openalex.org/W6755977528",
-        "https://openalex.org/W2511730936",
-        "https://openalex.org/W2895328943",
-        "https://openalex.org/W6792155083",
-        "https://openalex.org/W6756801453",
-        "https://openalex.org/W6640054144",
-        "https://openalex.org/W1641498739",
-        "https://openalex.org/W6718240422",
-        "https://openalex.org/W2168057128",
-        "https://openalex.org/W6755875945",
-        "https://openalex.org/W6718933344",
-        "https://openalex.org/W6639824700",
-        "https://openalex.org/W6637373629",
-        "https://openalex.org/W2080593651",
-        "https://openalex.org/W6786850268",
-        "https://openalex.org/W3202642596",
-        "https://openalex.org/W6674914833",
-        "https://openalex.org/W4312265179",
-        "https://openalex.org/W6775515071",
-        "https://openalex.org/W6791241316",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6791764970",
-        "https://openalex.org/W2782993895",
-        "https://openalex.org/W3169059866",
-        "https://openalex.org/W2959687571",
-        "https://openalex.org/W6786774184",
-        "https://openalex.org/W6798839178",
-        "https://openalex.org/W2902972155",
-        "https://openalex.org/W6788620109",
-        "https://openalex.org/W2778355115",
-        "https://openalex.org/W6777586169",
-        "https://openalex.org/W6801350836",
-        "https://openalex.org/W3172316935",
-        "https://openalex.org/W3203480968",
-        "https://openalex.org/W3027177008",
-        "https://openalex.org/W4385245566",
-        "https://openalex.org/W3198035652",
-        "https://openalex.org/W3106546328",
-        "https://openalex.org/W4313007769",
-        "https://openalex.org/W2963446712",
-        "https://openalex.org/W3170841864",
-        "https://openalex.org/W3030520226",
-        "https://openalex.org/W4212875960",
-        "https://openalex.org/W2962914239",
-        "https://openalex.org/W3106286734",
-        "https://openalex.org/W2441649867",
-        "https://openalex.org/W2902018698",
-        "https://openalex.org/W2963046541",
-        "https://openalex.org/W4287100534",
-        "https://openalex.org/W1686810756",
-        "https://openalex.org/W2097117768",
-        "https://openalex.org/W2148596671",
-        "https://openalex.org/W3203841574",
-        "https://openalex.org/W2166742463",
-        "https://openalex.org/W3203934469",
-        "https://openalex.org/W2899663614",
-        "https://openalex.org/W3172752666",
-        "https://openalex.org/W3138516171",
-        "https://openalex.org/W2194775991",
-        "https://openalex.org/W1901129140",
-        "https://openalex.org/W2395611524"
-    ],
-    "abstract": "Abstract Objective. Over the past years, convolutional neural networks based methods have dominated the field of medical image segmentation. But the main drawback of these methods is that they have difficulty representing long-range dependencies. Recently, the Transformer has demonstrated super performance in computer vision and has also been successfully applied to medical image segmentation because of the self-attention mechanism and long-range dependencies encoding on images. To the best of our knowledge, only a few works focus on cross-modalities of image segmentation using the Transformer. Hence, the main objective of this study was to design, propose and validate a deep learning method to extend the application of Transformer to multi-modality medical image segmentation. Approach. This paper proposes a novel automated multi-modal Transformer network termed AMTNet for 3D medical image segmentation. Especially, the network is a well-modeled U-shaped network architecture where many effective and significant changes have been made in the feature encoding, fusion, and decoding parts. The encoding part comprises 3D embedding, 3D multi-modal Transformer, and 3D Co-learn down-sampling blocks. Symmetrically, the 3D Transformer block, upsampling block, and 3D-expanding blocks are included in the decoding part. In addition, a Transformer-based adaptive channel interleaved Transformer feature fusion module is designed to fully fuse features of different modalities. Main results. We provide a comprehensive experimental analysis of the Prostate and BraTS2021 datasets. The results show that our method achieves an average DSC of 0.907 and 0.851 (0.734 for ET, 0.895 for TC, and 0.924 for WT) on these two datasets, respectively. These values show that AMTNet yielded significant improvements over the state-of-the-art segmentation networks. Significance. The proposed 3D segmentation network exploits complementary features of different modalities during the feature extraction process at multiple scales to increase the 3D feature representations and improve the segmentation efficiency. This powerful network enriches the research of the Transformer to multi-modal medical image segmentation.",
-    "full_text": null
+  "title": "Automated multi-modal Transformer network (AMTNet) for 3D medical images segmentation",
+  "url": "https://openalex.org/W4311041597",
+  "year": 2022,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2716664442",
+      "name": "Shenhai Zheng",
+      "affiliations": [
+        "Chongqing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2307185920",
+      "name": "Jiaxin Tan",
+      "affiliations": [
+        "Chongqing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4308237798",
+      "name": "Chuangbo Jiang",
+      "affiliations": [
+        "Chongqing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2284400136",
+      "name": "Laquan Li",
+      "affiliations": [
+        "Chongqing University of Posts and Telecommunications"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2716664442",
+      "name": "Shenhai Zheng",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2307185920",
+      "name": "Jiaxin Tan",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A4308237798",
+      "name": "Chuangbo Jiang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2284400136",
+      "name": "Laquan Li",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2943931219",
+    "https://openalex.org/W6780226713",
+    "https://openalex.org/W2963881378",
+    "https://openalex.org/W6798128096",
+    "https://openalex.org/W2751069891",
+    "https://openalex.org/W6684538388",
+    "https://openalex.org/W6682063170",
+    "https://openalex.org/W6778485988",
+    "https://openalex.org/W2412782625",
+    "https://openalex.org/W1973880112",
+    "https://openalex.org/W6797360341",
+    "https://openalex.org/W3130171175",
+    "https://openalex.org/W6791637211",
+    "https://openalex.org/W6687483927",
+    "https://openalex.org/W6755977528",
+    "https://openalex.org/W2511730936",
+    "https://openalex.org/W2895328943",
+    "https://openalex.org/W6792155083",
+    "https://openalex.org/W6756801453",
+    "https://openalex.org/W6640054144",
+    "https://openalex.org/W1641498739",
+    "https://openalex.org/W6718240422",
+    "https://openalex.org/W2168057128",
+    "https://openalex.org/W6755875945",
+    "https://openalex.org/W6718933344",
+    "https://openalex.org/W6639824700",
+    "https://openalex.org/W6637373629",
+    "https://openalex.org/W2080593651",
+    "https://openalex.org/W6786850268",
+    "https://openalex.org/W3202642596",
+    "https://openalex.org/W6674914833",
+    "https://openalex.org/W4312265179",
+    "https://openalex.org/W6775515071",
+    "https://openalex.org/W6791241316",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6791764970",
+    "https://openalex.org/W2782993895",
+    "https://openalex.org/W3169059866",
+    "https://openalex.org/W2959687571",
+    "https://openalex.org/W6786774184",
+    "https://openalex.org/W6798839178",
+    "https://openalex.org/W2902972155",
+    "https://openalex.org/W6788620109",
+    "https://openalex.org/W2778355115",
+    "https://openalex.org/W6777586169",
+    "https://openalex.org/W6801350836",
+    "https://openalex.org/W3172316935",
+    "https://openalex.org/W3203480968",
+    "https://openalex.org/W3027177008",
+    "https://openalex.org/W4385245566",
+    "https://openalex.org/W3198035652",
+    "https://openalex.org/W3106546328",
+    "https://openalex.org/W4313007769",
+    "https://openalex.org/W2963446712",
+    "https://openalex.org/W3170841864",
+    "https://openalex.org/W3030520226",
+    "https://openalex.org/W4212875960",
+    "https://openalex.org/W2962914239",
+    "https://openalex.org/W3106286734",
+    "https://openalex.org/W2441649867",
+    "https://openalex.org/W2902018698",
+    "https://openalex.org/W2963046541",
+    "https://openalex.org/W4287100534",
+    "https://openalex.org/W1686810756",
+    "https://openalex.org/W2097117768",
+    "https://openalex.org/W2148596671",
+    "https://openalex.org/W3203841574",
+    "https://openalex.org/W2166742463",
+    "https://openalex.org/W3203934469",
+    "https://openalex.org/W2899663614",
+    "https://openalex.org/W3172752666",
+    "https://openalex.org/W3138516171",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W1901129140",
+    "https://openalex.org/W2395611524"
+  ],
+  "abstract": "Abstract Objective. Over the past years, convolutional neural networks based methods have dominated the field of medical image segmentation. But the main drawback of these methods is that they have difficulty representing long-range dependencies. Recently, the Transformer has demonstrated super performance in computer vision and has also been successfully applied to medical image segmentation because of the self-attention mechanism and long-range dependencies encoding on images. To the best of our knowledge, only a few works focus on cross-modalities of image segmentation using the Transformer. Hence, the main objective of this study was to design, propose and validate a deep learning method to extend the application of Transformer to multi-modality medical image segmentation. Approach. This paper proposes a novel automated multi-modal Transformer network termed AMTNet for 3D medical image segmentation. Especially, the network is a well-modeled U-shaped network architecture where many effective and significant changes have been made in the feature encoding, fusion, and decoding parts. The encoding part comprises 3D embedding, 3D multi-modal Transformer, and 3D Co-learn down-sampling blocks. Symmetrically, the 3D Transformer block, upsampling block, and 3D-expanding blocks are included in the decoding part. In addition, a Transformer-based adaptive channel interleaved Transformer feature fusion module is designed to fully fuse features of different modalities. Main results. We provide a comprehensive experimental analysis of the Prostate and BraTS2021 datasets. The results show that our method achieves an average DSC of 0.907 and 0.851 (0.734 for ET, 0.895 for TC, and 0.924 for WT) on these two datasets, respectively. These values show that AMTNet yielded significant improvements over the state-of-the-art segmentation networks. Significance. The proposed 3D segmentation network exploits complementary features of different modalities during the feature extraction process at multiple scales to increase the 3D feature representations and improve the segmentation efficiency. This powerful network enriches the research of the Transformer to multi-modal medical image segmentation.",
+  "full_text": null,
+  "topic": "Modal",
+  "concepts": [
+    {
+      "name": "Modal",
+      "score": 0.6936889886856079
+    },
+    {
+      "name": "Computer science",
+      "score": 0.6286841630935669
+    },
+    {
+      "name": "Segmentation",
+      "score": 0.6094285845756531
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5732174515724182
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.5227439403533936
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5083860754966736
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3602202236652374
+    },
+    {
+      "name": "Materials science",
+      "score": 0.16289526224136353
+    },
+    {
+      "name": "Voltage",
+      "score": 0.10705065727233887
+    },
+    {
+      "name": "Engineering",
+      "score": 0.08375945687294006
+    },
+    {
+      "name": "Polymer chemistry",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    }
+  ]
 }

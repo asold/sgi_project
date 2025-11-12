@@ -1,80 +1,167 @@
 {
-    "title": "Retrieval Augmented Protein Language Models for Protein Structure Prediction",
-    "url": "https://openalex.org/W4405044274",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2119656127",
-            "name": "Pan Li",
-            "affiliations": [
-                "Institut für biologische Forschung"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2758817447",
-            "name": "Xingyi Cheng",
-            "affiliations": [
-                "Mohamed bin Zayed University of Artificial Intelligence"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2105801009",
-            "name": "Le Song",
-            "affiliations": [
-                "Institut für biologische Forschung"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A3168967200",
-            "name": "Eric Xing",
-            "affiliations": [
-                "Mohamed bin Zayed University of Artificial Intelligence",
-                "Carnegie Mellon University"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2119656127",
-            "name": "Pan Li",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2758817447",
-            "name": "Xingyi Cheng",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2105801009",
-            "name": "Le Song",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A3168967200",
-            "name": "Eric Xing",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W3177828909",
-        "https://openalex.org/W2999044305",
-        "https://openalex.org/W4327550249",
-        "https://openalex.org/W4400231442",
-        "https://openalex.org/W4383550741",
-        "https://openalex.org/W2972411752",
-        "https://openalex.org/W4320465836",
-        "https://openalex.org/W2557595285",
-        "https://openalex.org/W4399470739",
-        "https://openalex.org/W2069458148",
-        "https://openalex.org/W2896457183",
-        "https://openalex.org/W4399561893",
-        "https://openalex.org/W3155806510",
-        "https://openalex.org/W2997234557",
-        "https://openalex.org/W3168867926",
-        "https://openalex.org/W4389472984",
-        "https://openalex.org/W4380551121",
-        "https://openalex.org/W4321606216",
-        "https://openalex.org/W4399013804",
-        "https://openalex.org/W4385774716"
-    ],
-    "abstract": "Abstract The advent of advanced artificial intelligence technology has significantly accelerated progress in protein structure prediction, with AlphaFold2 setting a new benchmark for prediction accuracy by leveraging the Evoformer module to automatically extract co-evolutionary information from multiple sequence alignments (MSA). To address AlphaFold2’s dependence on MSA depth and quality, we propose two novel models: AIDO.RAGPLM and AIDO.RAGFold, pretrained modules for R etrieval- A u G mented protein language model and structure prediction in an AI-driven Digital Organism (Song et al., 2024). AIDO.RAGPLM integrates pre-trained protein language models with retrieved MSA, surpassing single-sequence protein language models in perplexity, contact prediction, and fitness prediction. When sufficient MSA is available, AIDO.RAGFold achieves TM-scores comparable to AlphaFold2 while operating up to eight times faster, and significantly outperforms AlphaFold2 when MSA is insufficient (ΔTM-score=0.379, 0.116 and 0.059 for 0, 5 and 10 MSA sequences as input). Additionally, we developed an MSA retriever using hierarchical ID generation that is 45 to 90 times faster than traditional methods, expanding the MSA training set for AIDO.RAGPLM by 32%. Our findings suggest that AIDO.RAGPLM provides an efficient and accurate solution for protein structure prediction, particularly in scenarios with limited MSA data. The AIDO.RAGPLM model has been open-sourced and is available on https://huggingface.co/genbio-ai/AIDO.Protein-RAG-3B .",
-    "full_text": null
+  "title": "Retrieval Augmented Protein Language Models for Protein Structure Prediction",
+  "url": "https://openalex.org/W4405044274",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2119656127",
+      "name": "Pan Li",
+      "affiliations": [
+        "Institut für biologische Forschung"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2758817447",
+      "name": "Xingyi Cheng",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2105801009",
+      "name": "Le Song",
+      "affiliations": [
+        "Institut für biologische Forschung"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A3168967200",
+      "name": "Eric Xing",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence",
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2119656127",
+      "name": "Pan Li",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2758817447",
+      "name": "Xingyi Cheng",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2105801009",
+      "name": "Le Song",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A3168967200",
+      "name": "Eric Xing",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W3177828909",
+    "https://openalex.org/W2999044305",
+    "https://openalex.org/W4327550249",
+    "https://openalex.org/W4400231442",
+    "https://openalex.org/W4383550741",
+    "https://openalex.org/W2972411752",
+    "https://openalex.org/W4320465836",
+    "https://openalex.org/W2557595285",
+    "https://openalex.org/W4399470739",
+    "https://openalex.org/W2069458148",
+    "https://openalex.org/W2896457183",
+    "https://openalex.org/W4399561893",
+    "https://openalex.org/W3155806510",
+    "https://openalex.org/W2997234557",
+    "https://openalex.org/W3168867926",
+    "https://openalex.org/W4389472984",
+    "https://openalex.org/W4380551121",
+    "https://openalex.org/W4321606216",
+    "https://openalex.org/W4399013804",
+    "https://openalex.org/W4385774716"
+  ],
+  "abstract": "Abstract The advent of advanced artificial intelligence technology has significantly accelerated progress in protein structure prediction, with AlphaFold2 setting a new benchmark for prediction accuracy by leveraging the Evoformer module to automatically extract co-evolutionary information from multiple sequence alignments (MSA). To address AlphaFold2’s dependence on MSA depth and quality, we propose two novel models: AIDO.RAGPLM and AIDO.RAGFold, pretrained modules for R etrieval- A u G mented protein language model and structure prediction in an AI-driven Digital Organism (Song et al., 2024). AIDO.RAGPLM integrates pre-trained protein language models with retrieved MSA, surpassing single-sequence protein language models in perplexity, contact prediction, and fitness prediction. When sufficient MSA is available, AIDO.RAGFold achieves TM-scores comparable to AlphaFold2 while operating up to eight times faster, and significantly outperforms AlphaFold2 when MSA is insufficient (ΔTM-score=0.379, 0.116 and 0.059 for 0, 5 and 10 MSA sequences as input). Additionally, we developed an MSA retriever using hierarchical ID generation that is 45 to 90 times faster than traditional methods, expanding the MSA training set for AIDO.RAGPLM by 32%. Our findings suggest that AIDO.RAGPLM provides an efficient and accurate solution for protein structure prediction, particularly in scenarios with limited MSA data. The AIDO.RAGPLM model has been open-sourced and is available on https://huggingface.co/genbio-ai/AIDO.Protein-RAG-3B .",
+  "full_text": null,
+  "topic": "Perplexity",
+  "concepts": [
+    {
+      "name": "Perplexity",
+      "score": 0.7243430614471436
+    },
+    {
+      "name": "Computer science",
+      "score": 0.7135068774223328
+    },
+    {
+      "name": "Protein structure prediction",
+      "score": 0.5957192778587341
+    },
+    {
+      "name": "Benchmark (surveying)",
+      "score": 0.5873209834098816
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.5329737663269043
+    },
+    {
+      "name": "Set (abstract data type)",
+      "score": 0.5229142904281616
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.47945132851600647
+    },
+    {
+      "name": "Language model",
+      "score": 0.4772101044654846
+    },
+    {
+      "name": "Sequence (biology)",
+      "score": 0.4385574162006378
+    },
+    {
+      "name": "Machine learning",
+      "score": 0.40715497732162476
+    },
+    {
+      "name": "Data mining",
+      "score": 0.37635987997055054
+    },
+    {
+      "name": "Protein structure",
+      "score": 0.25008684396743774
+    },
+    {
+      "name": "Genetics",
+      "score": 0.0
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Physics",
+      "score": 0.0
+    },
+    {
+      "name": "Biology",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Geodesy",
+      "score": 0.0
+    },
+    {
+      "name": "Programming language",
+      "score": 0.0
+    },
+    {
+      "name": "Nuclear magnetic resonance",
+      "score": 0.0
+    },
+    {
+      "name": "Geography",
+      "score": 0.0
+    }
+  ]
 }

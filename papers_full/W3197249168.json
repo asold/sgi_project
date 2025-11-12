@@ -1,75 +1,146 @@
 {
-    "title": "A Position-Aware Transformer for Image Captioning",
-    "url": "https://openalex.org/W3197249168",
-    "year": 2021,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2136523698",
-            "name": "Zelin Deng",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2023302107",
-            "name": "Bo Zhou",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2058123289",
-            "name": "Pei He",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2096195879",
-            "name": "Jianfeng Huang",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2303821228",
-            "name": "Osama Alfarraj",
-            "affiliations": []
-        },
-        {
-            "id": "https://openalex.org/A2707918834",
-            "name": "Amr Tolba",
-            "affiliations": []
-        }
-    ],
-    "references": [
-        "https://openalex.org/W6639657675",
-        "https://openalex.org/W6666153608",
-        "https://openalex.org/W1987835821",
-        "https://openalex.org/W2618530766",
-        "https://openalex.org/W3080842357",
-        "https://openalex.org/W3044298633",
-        "https://openalex.org/W3027029340",
-        "https://openalex.org/W2943343980",
-        "https://openalex.org/W2463955103",
-        "https://openalex.org/W6749731246",
-        "https://openalex.org/W6683258052",
-        "https://openalex.org/W6728925852",
-        "https://openalex.org/W6742999658",
-        "https://openalex.org/W6731895421",
-        "https://openalex.org/W6739901393",
-        "https://openalex.org/W6775036401",
-        "https://openalex.org/W6770800577",
-        "https://openalex.org/W6730903564",
-        "https://openalex.org/W6898505805",
-        "https://openalex.org/W6641064462",
-        "https://openalex.org/W6680111315",
-        "https://openalex.org/W6725318829",
-        "https://openalex.org/W6729995908",
-        "https://openalex.org/W6639102338",
-        "https://openalex.org/W6639809013",
-        "https://openalex.org/W6772372853",
-        "https://openalex.org/W2996980088",
-        "https://openalex.org/W6686164453",
-        "https://openalex.org/W2101105183",
-        "https://openalex.org/W2560313346",
-        "https://openalex.org/W2952469094",
-        "https://openalex.org/W1956340063",
-        "https://openalex.org/W2990818246",
-        "https://openalex.org/W1895577753"
-    ],
-    "abstract": "Image captioning aims to generate a corresponding description of an image. In recent years, neural encoder-decoder models have been the dominant approaches, in which the Convolutional Neural Network (CNN) and Long Short Term Memory (LSTM) are used to translate an image into a natural language description. Among these approaches, the visual attention mechanisms are widely used to enable deeper image understanding through fine-grained analysis and even multiple steps of reasoning. However, most conventional visual attention mechanisms are based on high-level image features, ignoring the effects of other image features, and giving insufficient consideration to the relative positions between image features. In this work, we propose a Position-Aware Transformer model with image-feature attention and position-aware attention mechanisms for the above problems. The image-feature attention firstly extracts multi-level features by using Feature Pyramid Network (FPN), then utilizes the scaled-dot-product to fuse these features, which enables our model to detect objects of different scales in the image more effectively without increasing parameters. In the position-aware attention mechanism, the relative positions between image features are obtained at first, afterwards the relative positions are incorporated into the original image features to generate captions more accurately. Experiments are carried out on the MSCOCO dataset and our approach achieves competitive BLEU-4, METEOR, ROUGE-L, CIDEr scores compared with some state-of-the-art approaches, demonstrating the effectiveness of our approach.",
-    "full_text": null
+  "title": "A Position-Aware Transformer for Image Captioning",
+  "url": "https://openalex.org/W3197249168",
+  "year": 2021,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2136523698",
+      "name": "Zelin Deng",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2023302107",
+      "name": "Bo Zhou",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2058123289",
+      "name": "Pei He",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2096195879",
+      "name": "Jianfeng Huang",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2303821228",
+      "name": "Osama Alfarraj",
+      "affiliations": []
+    },
+    {
+      "id": "https://openalex.org/A2707918834",
+      "name": "Amr Tolba",
+      "affiliations": []
+    }
+  ],
+  "references": [
+    "https://openalex.org/W6639657675",
+    "https://openalex.org/W6666153608",
+    "https://openalex.org/W1987835821",
+    "https://openalex.org/W2618530766",
+    "https://openalex.org/W3080842357",
+    "https://openalex.org/W3044298633",
+    "https://openalex.org/W3027029340",
+    "https://openalex.org/W2943343980",
+    "https://openalex.org/W2463955103",
+    "https://openalex.org/W6749731246",
+    "https://openalex.org/W6683258052",
+    "https://openalex.org/W6728925852",
+    "https://openalex.org/W6742999658",
+    "https://openalex.org/W6731895421",
+    "https://openalex.org/W6739901393",
+    "https://openalex.org/W6775036401",
+    "https://openalex.org/W6770800577",
+    "https://openalex.org/W6730903564",
+    "https://openalex.org/W6898505805",
+    "https://openalex.org/W6641064462",
+    "https://openalex.org/W6680111315",
+    "https://openalex.org/W6725318829",
+    "https://openalex.org/W6729995908",
+    "https://openalex.org/W6639102338",
+    "https://openalex.org/W6639809013",
+    "https://openalex.org/W6772372853",
+    "https://openalex.org/W2996980088",
+    "https://openalex.org/W6686164453",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2560313346",
+    "https://openalex.org/W2952469094",
+    "https://openalex.org/W1956340063",
+    "https://openalex.org/W2990818246",
+    "https://openalex.org/W1895577753"
+  ],
+  "abstract": "Image captioning aims to generate a corresponding description of an image. In recent years, neural encoder-decoder models have been the dominant approaches, in which the Convolutional Neural Network (CNN) and Long Short Term Memory (LSTM) are used to translate an image into a natural language description. Among these approaches, the visual attention mechanisms are widely used to enable deeper image understanding through fine-grained analysis and even multiple steps of reasoning. However, most conventional visual attention mechanisms are based on high-level image features, ignoring the effects of other image features, and giving insufficient consideration to the relative positions between image features. In this work, we propose a Position-Aware Transformer model with image-feature attention and position-aware attention mechanisms for the above problems. The image-feature attention firstly extracts multi-level features by using Feature Pyramid Network (FPN), then utilizes the scaled-dot-product to fuse these features, which enables our model to detect objects of different scales in the image more effectively without increasing parameters. In the position-aware attention mechanism, the relative positions between image features are obtained at first, afterwards the relative positions are incorporated into the original image features to generate captions more accurately. Experiments are carried out on the MSCOCO dataset and our approach achieves competitive BLEU-4, METEOR, ROUGE-L, CIDEr scores compared with some state-of-the-art approaches, demonstrating the effectiveness of our approach.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8089996576309204
+    },
+    {
+      "name": "Closed captioning",
+      "score": 0.7820920348167419
+    },
+    {
+      "name": "Artificial intelligence",
+      "score": 0.7070828080177307
+    },
+    {
+      "name": "Image (mathematics)",
+      "score": 0.5520277619361877
+    },
+    {
+      "name": "Transformer",
+      "score": 0.5365725755691528
+    },
+    {
+      "name": "Feature (linguistics)",
+      "score": 0.5216870307922363
+    },
+    {
+      "name": "Convolutional neural network",
+      "score": 0.5145987272262573
+    },
+    {
+      "name": "Encoder",
+      "score": 0.5050275921821594
+    },
+    {
+      "name": "Computer vision",
+      "score": 0.4818538427352905
+    },
+    {
+      "name": "Fuse (electrical)",
+      "score": 0.44344860315322876
+    },
+    {
+      "name": "Pattern recognition (psychology)",
+      "score": 0.3940531611442566
+    },
+    {
+      "name": "Engineering",
+      "score": 0.06435546278953552
+    },
+    {
+      "name": "Linguistics",
+      "score": 0.0
+    },
+    {
+      "name": "Philosophy",
+      "score": 0.0
+    },
+    {
+      "name": "Operating system",
+      "score": 0.0
+    },
+    {
+      "name": "Electrical engineering",
+      "score": 0.0
+    },
+    {
+      "name": "Voltage",
+      "score": 0.0
+    }
+  ]
 }

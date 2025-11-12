@@ -1,59 +1,110 @@
 {
-    "title": "Automating pharmacovigilance evidence generation: using large language models to produce context-aware structured query language",
-    "url": "https://openalex.org/W4407348628",
-    "year": 2024,
-    "authors": [
-        {
-            "id": "https://openalex.org/A2764028787",
-            "name": "Jeffery L. Painter",
-            "affiliations": [
-                "GlaxoSmithKline (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A5099230377",
-            "name": "Venkateswara Rao Chalamalasetti",
-            "affiliations": [
-                "GlaxoSmithKline (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A4280682282",
-            "name": "Raymond Kassekert",
-            "affiliations": [
-                "GlaxoSmithKline (United States)"
-            ]
-        },
-        {
-            "id": "https://openalex.org/A2122919072",
-            "name": "Andrew Bate",
-            "affiliations": [
-                "London School of Hygiene & Tropical Medicine",
-                "University of London",
-                "GlaxoSmithKline (United Kingdom)"
-            ]
-        }
-    ],
-    "references": [
-        "https://openalex.org/W2886532741",
-        "https://openalex.org/W2132516581",
-        "https://openalex.org/W4391135101",
-        "https://openalex.org/W4385443777",
-        "https://openalex.org/W4399115971",
-        "https://openalex.org/W2885090162",
-        "https://openalex.org/W2103219113",
-        "https://openalex.org/W2567070169",
-        "https://openalex.org/W4375869868",
-        "https://openalex.org/W4386302905",
-        "https://openalex.org/W4400811492",
-        "https://openalex.org/W4391212040",
-        "https://openalex.org/W4392081538",
-        "https://openalex.org/W4399062224",
-        "https://openalex.org/W4292779060",
-        "https://openalex.org/W4286769130",
-        "https://openalex.org/W3027879771",
-        "https://openalex.org/W3149201378"
-    ],
-    "abstract": "Abstract Objective To enhance the accuracy of information retrieval from pharmacovigilance (PV) databases by employing Large Language Models (LLMs) to convert natural language queries (NLQs) into Structured Query Language (SQL) queries, leveraging a business context document. Materials and Methods We utilized OpenAI’s GPT-4 model within a retrieval-augmented generation (RAG) framework, enriched with a business context document, to transform NLQs into executable SQL queries. Each NLQ was presented to the LLM randomly and independently to prevent memorization. The study was conducted in 3 phases, varying query complexity, and assessing the LLM’s performance both with and without the business context document. Results Our approach significantly improved NLQ-to-SQL accuracy, increasing from 8.3% with the database schema alone to 78.3% with the business context document. This enhancement was consistent across low, medium, and high complexity queries, indicating the critical role of contextual knowledge in query generation. Discussion The integration of a business context document markedly improved the LLM’s ability to generate accurate SQL queries (ie, both executable and returning semantically appropriate results). Performance achieved a maximum of 85% when high complexity queries are excluded, suggesting promise for routine deployment. Conclusion This study presents a novel approach to employing LLMs for safety data retrieval and analysis, demonstrating significant advancements in query generation accuracy. The methodology offers a framework applicable to various data-intensive domains, enhancing the accessibility of information retrieval for non-technical users.",
-    "full_text": null
+  "title": "Automating pharmacovigilance evidence generation: using large language models to produce context-aware structured query language",
+  "url": "https://openalex.org/W4407348628",
+  "year": 2024,
+  "authors": [
+    {
+      "id": "https://openalex.org/A2764028787",
+      "name": "Jeffery L. Painter",
+      "affiliations": [
+        "GlaxoSmithKline (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A5099230377",
+      "name": "Venkateswara Rao Chalamalasetti",
+      "affiliations": [
+        "GlaxoSmithKline (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A4280682282",
+      "name": "Raymond Kassekert",
+      "affiliations": [
+        "GlaxoSmithKline (United States)"
+      ]
+    },
+    {
+      "id": "https://openalex.org/A2122919072",
+      "name": "Andrew Bate",
+      "affiliations": [
+        "London School of Hygiene & Tropical Medicine",
+        "University of London",
+        "GlaxoSmithKline (United Kingdom)"
+      ]
+    }
+  ],
+  "references": [
+    "https://openalex.org/W2886532741",
+    "https://openalex.org/W2132516581",
+    "https://openalex.org/W4391135101",
+    "https://openalex.org/W4385443777",
+    "https://openalex.org/W4399115971",
+    "https://openalex.org/W2885090162",
+    "https://openalex.org/W2103219113",
+    "https://openalex.org/W2567070169",
+    "https://openalex.org/W4375869868",
+    "https://openalex.org/W4386302905",
+    "https://openalex.org/W4400811492",
+    "https://openalex.org/W4391212040",
+    "https://openalex.org/W4392081538",
+    "https://openalex.org/W4399062224",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4286769130",
+    "https://openalex.org/W3027879771",
+    "https://openalex.org/W3149201378"
+  ],
+  "abstract": "Abstract Objective To enhance the accuracy of information retrieval from pharmacovigilance (PV) databases by employing Large Language Models (LLMs) to convert natural language queries (NLQs) into Structured Query Language (SQL) queries, leveraging a business context document. Materials and Methods We utilized OpenAI’s GPT-4 model within a retrieval-augmented generation (RAG) framework, enriched with a business context document, to transform NLQs into executable SQL queries. Each NLQ was presented to the LLM randomly and independently to prevent memorization. The study was conducted in 3 phases, varying query complexity, and assessing the LLM’s performance both with and without the business context document. Results Our approach significantly improved NLQ-to-SQL accuracy, increasing from 8.3% with the database schema alone to 78.3% with the business context document. This enhancement was consistent across low, medium, and high complexity queries, indicating the critical role of contextual knowledge in query generation. Discussion The integration of a business context document markedly improved the LLM’s ability to generate accurate SQL queries (ie, both executable and returning semantically appropriate results). Performance achieved a maximum of 85% when high complexity queries are excluded, suggesting promise for routine deployment. Conclusion This study presents a novel approach to employing LLMs for safety data retrieval and analysis, demonstrating significant advancements in query generation accuracy. The methodology offers a framework applicable to various data-intensive domains, enhancing the accessibility of information retrieval for non-technical users.",
+  "full_text": null,
+  "topic": "Computer science",
+  "concepts": [
+    {
+      "name": "Computer science",
+      "score": 0.8517376184463501
+    },
+    {
+      "name": "Query language",
+      "score": 0.6794689297676086
+    },
+    {
+      "name": "SQL",
+      "score": 0.6574065685272217
+    },
+    {
+      "name": "Information retrieval",
+      "score": 0.6283965110778809
+    },
+    {
+      "name": "Query expansion",
+      "score": 0.5308877825737
+    },
+    {
+      "name": "Executable",
+      "score": 0.5190199613571167
+    },
+    {
+      "name": "RDF query language",
+      "score": 0.45604661107063293
+    },
+    {
+      "name": "Database",
+      "score": 0.3970017731189728
+    },
+    {
+      "name": "Web query classification",
+      "score": 0.3106071949005127
+    },
+    {
+      "name": "Web search query",
+      "score": 0.29079222679138184
+    },
+    {
+      "name": "Programming language",
+      "score": 0.21353763341903687
+    },
+    {
+      "name": "Search engine",
+      "score": 0.1359550654888153
+    }
+  ]
 }
